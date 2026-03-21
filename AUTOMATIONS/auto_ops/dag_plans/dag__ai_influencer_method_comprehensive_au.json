@@ -1,0 +1,38 @@
+{
+  "name": "integration__ai_influencer_method_comprehensive_au",
+  "created": "2026-03-20T18:10:01.095554",
+  "method": "# AI INFLUENCER METHOD: COMPREHENSIVE AUDIT  **Date:** 2026-02-06 **Status:** AUDIT COMPLETE **Data Sources:** 6 deep research files (~3,000+ lines), execution plan (793 lines), MEGA_SHEET TAB1 (8 AI_",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_persona_images_batch",
+        "write_captions_claude",
+        "select_trending_audio_hooks"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "assembly",
+      "steps": [
+        "pair_images_captions",
+        "add_cta_overlays",
+        "format_per_platform"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "schedule_optimal_times",
+        "log_to_content_tracker"
+      ],
+      "parallel": false,
+      "depends_on": "assembly"
+    }
+  ],
+  "status": "READY"
+}

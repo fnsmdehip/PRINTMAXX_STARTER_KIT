@@ -1,0 +1,49 @@
+{
+  "name": "integration__building_a_business_with_openclaw_day",
+  "created": "2026-03-20T18:09:57.966194",
+  "method": " building a business with @openclaw (day 6):- first stripe payment hit, $3600 for month 1- shut down my agency last year to be with my newborn, the restart is finally restarting- moltbook went viral, ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "detect_viral",
+      "steps": [
+        "scan_hn_front_page",
+        "scan_twitter_trending_ai",
+        "scan_reddit_technology",
+        "check_producthunt_launches"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_event",
+      "steps": [
+        "score_virality_velocity",
+        "check_relevance_to_niches",
+        "check_not_already_covered"
+      ],
+      "parallel": false,
+      "depends_on": "detect_viral"
+    },
+    {
+      "name": "generate_response",
+      "steps": [
+        "generate_expert_quote",
+        "generate_twitter_thread",
+        "generate_linkedin_post",
+        "generate_reddit_comment"
+      ],
+      "parallel": true,
+      "depends_on": "qualify_event"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "log_to_content_performance"
+      ],
+      "parallel": false,
+      "depends_on": "generate_response"
+    }
+  ],
+  "status": "READY"
+}

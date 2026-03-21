@@ -1,0 +1,36 @@
+{
+  "name": "integration__people_who_actually_make_money_with_aff",
+  "created": "2026-03-20T18:09:57.465021",
+  "method": " people who actually make money with affiliate marketing, can i ask you something? ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "generate_hooks",
+      "steps": [
+        "generate 5 question-format hooks targeting affiliate marketers, ecom sellers, content creators using template: 'people who actually [verb] with [method], can I ask you something?'",
+        "vary niches: affiliate, dropshipping, SaaS, content monetization, freelancing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "post_and_monitor",
+      "steps": [
+        "post hooks to Twitter/Reddit/indie hacker communities via posting queue",
+        "monitor replies for 48h using background_reddit_scraper and twitter_alpha_scraper"
+      ],
+      "parallel": true,
+      "depends_on": "generate_hooks"
+    },
+    {
+      "name": "extract_and_route",
+      "steps": [
+        "scrape reply threads for specific methods, tools, revenue numbers",
+        "filter through engagement_bait_converter 5-point test",
+        "route APPROVE entries to ALPHA_STAGING, CONTENT_ONLY to posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "post_and_monitor"
+    }
+  ],
+  "status": "READY"
+}

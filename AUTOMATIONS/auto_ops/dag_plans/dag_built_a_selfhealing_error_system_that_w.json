@@ -1,0 +1,38 @@
+{
+  "name": "integration_built_a_selfhealing_error_system_that_w",
+  "created": "2026-03-20T18:35:52.407448",
+  "method": "Built a self-healing error system that watches my prod logs, launches Claude to fix bugs, and I approve fixes from Telegram I run a couple of Node.js services and got really tired of constantly checki",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scan_logs",
+      "steps": [
+        "tail_cron_logs",
+        "tail_agent_logs",
+        "tail_scraper_logs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "fingerprint",
+      "steps": [
+        "hash_errors",
+        "deduplicate",
+        "severity_classify"
+      ],
+      "parallel": false,
+      "depends_on": "scan_logs"
+    },
+    {
+      "name": "fix_gen",
+      "steps": [
+        "claude_p_generate_fix",
+        "validate_fix_syntax",
+        "queue_for_approval"
+      ],
+      "parallel": false,
+      "depends_on": "fingerprint"
+    }
+  ],
+  "status": "READY"
+}

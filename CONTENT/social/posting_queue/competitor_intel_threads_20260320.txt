@@ -1,0 +1,112 @@
+## TWEET 1: MCP Security Gap
+
+Nobody is auditing MCP servers for safety.
+
+19,000+ servers across 5 directories.
+
+Zero verification.
+
+OpenClaw had 512 vulnerabilities and 20% malicious skills before anyone noticed.
+
+The "Verified Safe" badge does not exist yet.
+
+That's the product.
+
+---
+
+## TWEET 2: Faith App Market Gap
+
+Hallow: $51M ARR. Catholic only.
+
+Muslim Pro: $34.99/year. Trying to serve all Muslims as one.
+
+YouVersion: free + generic. 600M downloads, zero focus.
+
+Nobody serves Lutherans. Methodists. Orthodox. Shia specifically. Sunni specifically.
+
+These are identity-first communities. They want an app that speaks their tradition.
+
+20 denomination apps already built. Just need Stripe + App Store.
+
+---
+
+## TWEET 3: The Cold Email Platform Gap (thread)
+
+The cold email stack in 2026:
+
+Apollo: $49-$119/user/month for leads
+Instantly: $37-$97/month for sending
+Durable: $15-$95/month for building websites
+
+You're paying 3 companies to do what should be one pipeline.
+
+Find the business → contact them → build the product → deliver it.
+
+None of these tools does the full loop.
+
+The margin is in the vertical integration.
+
+Local business websites:
+- Cost to build: $3-25/month (AI builder)
+- Cost of outreach: $39-80/month (Smartlead)
+- Selling price: $500-2,000/site
+- Margin: 87%+
+
+The scraper already exists.
+The email templates already exist.
+The AI builder already exists.
+
+The only missing piece: Smartlead account.
+
+---
+
+## THREAD: MCP Marketplace Opportunity (for launch day)
+
+1/ I indexed 51 MCP servers this week.
+
+30 are verified safe. The rest are "community" — meaning you're on your own.
+
+Here's what I found while building the only MCP directory with security auditing:
+
+2/ There are 5 MCP directories right now:
+- Glama: 19,000 servers
+- MCP.so: 18,000 servers
+- PulseMCP: 11,000 servers
+- Official Registry: raw API
+- Various GitHub lists
+
+None of them tell you if the server is safe.
+
+3/ OpenClaw had 512 documented vulnerabilities.
+20% of its skills were malicious.
+250,000 stars on GitHub.
+Nobody checked.
+
+Stars are not security.
+
+4/ We built a verification layer:
+
+For servers from official sources (Anthropic, Stripe, MongoDB, Grafana, Cloudflare) → Verified Safe badge.
+
+For community servers → listed but clearly marked as unaudited.
+
+Simple. Obvious. Nobody did it.
+
+5/ The monetization:
+
+Featured listings: $29/month
+Verified badge for server authors: $49/month
+Enterprise (custom guide + analytics): $99/month
+
+At 100 paying listings: $5K/month.
+At 500: $25K/month.
+
+The ecosystem is growing. The picks and shovels play.
+
+6/ MCPHub is live: https://mcp-marketplace.surge.sh
+
+51 servers. 30 verified. Searchable. One-command install.
+
+If you build an MCP server and want the Verified badge → reply or DM.
+
+First 10 are free.

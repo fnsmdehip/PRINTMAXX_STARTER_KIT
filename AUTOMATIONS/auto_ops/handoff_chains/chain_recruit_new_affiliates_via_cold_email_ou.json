@@ -1,0 +1,29 @@
+{
+  "name": "chain_recruit_new_affiliates_via_cold_email_ou",
+  "created": "2026-03-20T13:50:39.531897",
+  "method": "recruit new affiliates via cold email outreach",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Reddit r/Affiliatemarketing, r/juststart, Twitter affiliate hashtags for people actively promoting products in our niches (productivity, religious apps, AI tools). Extract name, email/DM handle, audience size, current products promoted.",
+      "output": "affiliate_prospects_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score prospects by: audience size (>500 followers), engagement rate (>2%), niche relevance to our products, existing affiliate activity. Filter to top 20 per week.",
+      "output": "affiliate_prospects_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold email using procedural memory cold email framework: mention their specific content, offer 30-50% commission on our digital products, one clear CTA. Send via custom SMTP script.",
+      "output": "affiliate_outreach_log.json"
+    },
+    {
+      "agent": "tracker",
+      "task": "Track replies, signups, and revenue per affiliate. Feed results back to qualifier to improve scoring.",
+      "output": "affiliate_performance.json"
+    }
+  ],
+  "status": "READY"
+}

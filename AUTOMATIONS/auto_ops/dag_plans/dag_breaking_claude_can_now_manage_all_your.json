@@ -1,0 +1,49 @@
+{
+  "name": "integration_breaking_claude_can_now_manage_all_your",
+  "created": "2026-03-20T13:50:41.848157",
+  "method": "BREAKING: CLAUDE can now manage all your social media on autopilot, better than $600/hour community managers !\n\nHere are 7 insane Claude prompts to start automating your social media ecom brands strat",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "template_generation",
+      "steps": [
+        "load_niche_voice_models",
+        "load_cinematic_prompt_templates",
+        "load_trending_topics"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_production",
+      "steps": [
+        "generate_twitter_batch",
+        "generate_ig_captions",
+        "generate_linkedin_posts",
+        "generate_tiktok_scripts"
+      ],
+      "parallel": true,
+      "depends_on": "template_generation"
+    },
+    {
+      "name": "quality_gate",
+      "steps": [
+        "slop_filter",
+        "engagement_score_prediction",
+        "dedup_against_posted"
+      ],
+      "parallel": false,
+      "depends_on": "content_production"
+    },
+    {
+      "name": "queue_and_distribute",
+      "steps": [
+        "write_to_posting_queue",
+        "update_content_calendar",
+        "trigger_warmup_poster"
+      ],
+      "parallel": false,
+      "depends_on": "quality_gate"
+    }
+  ],
+  "status": "READY"
+}

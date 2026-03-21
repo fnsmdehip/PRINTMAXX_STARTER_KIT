@@ -1,0 +1,35 @@
+{
+  "name": "integration_i_made_2460_today_from_a_viral_tiktok_s",
+  "created": "2026-03-20T18:35:50.254049",
+  "method": "I made $2460 Today from a viral tiktok slideshow\nwhich literally took me 2 mins to make\n\nI swear to god this is the easiest business model ever\n\nKids are LITERALLY making thousands a day\n\nwant the bre",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "source_hooks",
+      "steps": [
+        "scrape_trending_hooks_from_alpha",
+        "pull_top_performing_slideshow_formats_from_competitors"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_slides",
+      "steps": [
+        "render_text_overlay_images_via_image_factory",
+        "generate_captions_and_hashtags_via_claude"
+      ],
+      "parallel": true,
+      "depends_on": "source_hooks"
+    },
+    {
+      "name": "assemble_and_queue",
+      "steps": [
+        "compile_slideshow_package_per_niche",
+        "add_to_posting_queue_with_optimal_time_slots"
+      ],
+      "parallel": false,
+      "depends_on": "generate_slides"
+    }
+  ],
+  "status": "READY"
+}

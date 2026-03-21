@@ -1,0 +1,38 @@
+{
+  "name": "integration_built_a_programmatic_seo_site_to_700k_im",
+  "created": "2026-03-20T13:50:40.046165",
+  "method": "Built a programmatic SEO site to 700K impressions in 12 months while working ful",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "keyword_discovery",
+      "steps": [
+        "scrape_serp_suggestions",
+        "cluster_longtail_keywords",
+        "score_competition_volume"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_page_templates",
+        "populate_with_claude",
+        "inject_internal_links"
+      ],
+      "parallel": true,
+      "depends_on": "keyword_discovery"
+    },
+    {
+      "name": "deploy_and_track",
+      "steps": [
+        "deploy_to_surge",
+        "submit_to_gsc",
+        "add_to_sitemap"
+      ],
+      "parallel": false,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

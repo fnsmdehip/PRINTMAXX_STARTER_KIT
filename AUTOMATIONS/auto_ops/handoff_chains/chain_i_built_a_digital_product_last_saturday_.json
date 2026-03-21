@@ -1,0 +1,34 @@
+{
+  "name": "chain_i_built_a_digital_product_last_saturday_",
+  "created": "2026-03-20T18:35:51.515850",
+  "method": "i built a digital product last saturday morning and it made $1,100 by sunday night\n\nnot because it was good. because it was specific.\n\nhere's exactly what i did hour by hour:\n\n9am: opened facebook gro",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Mine Facebook groups + Reddit for repeated specific pain points across faith/fitness/tech niches",
+      "output": "pain_points_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Cluster by frequency, score specificity (reject vague), rank top 3 product opportunities",
+      "output": "product_opportunities_ranked.json"
+    },
+    {
+      "agent": "creator",
+      "task": "Generate hyper-specific digital product (PDF/template/checklist) using Claude for top-ranked opportunity",
+      "output": "product_draft/"
+    },
+    {
+      "agent": "lister",
+      "task": "Create marketplace listing with pain-point-matched copy, set price $9-27",
+      "output": "listing_draft.md"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post solution back to source communities + content queue",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

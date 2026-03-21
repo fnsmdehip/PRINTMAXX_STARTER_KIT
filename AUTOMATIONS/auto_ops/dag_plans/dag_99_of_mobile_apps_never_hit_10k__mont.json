@@ -1,0 +1,38 @@
+{
+  "name": "integration_99_of_mobile_apps_never_hit_10k__mont",
+  "created": "2026-03-20T18:35:50.259641",
+  "method": "99% of mobile apps never hit $10k / month.\n\nMy last app hit $44k/month, and my current app is at $90k/month.\n\nHere\u2019s how to take your app to $10k/month in 2025:\n\n",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_tactics",
+      "steps": [
+        "fetch_thread_via_twitter_scraper",
+        "extract_numbered_tactics_list",
+        "classify_each_tactic_by_type"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_against_portfolio",
+      "steps": [
+        "load_47_live_app_urls",
+        "score_each_app_against_each_tactic",
+        "rank_by_effort_vs_revenue_lift"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_tactics"
+    },
+    {
+      "name": "generate_actions",
+      "steps": [
+        "create_prioritized_optimization_queue",
+        "update_app_factory_methods_csv",
+        "update_aso_keywords_csv"
+      ],
+      "parallel": false,
+      "depends_on": "score_against_portfolio"
+    }
+  ],
+  "status": "READY"
+}

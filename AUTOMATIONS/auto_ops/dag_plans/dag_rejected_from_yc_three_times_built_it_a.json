@@ -1,0 +1,47 @@
+{
+  "name": "integration_rejected_from_yc_three_times_built_it_a",
+  "created": "2026-03-20T13:50:40.730043",
+  "method": "Rejected from YC three times, built it anyway",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_narratives",
+      "steps": [
+        "scrape_r_saas_bootstrap_stories",
+        "scrape_r_startups_yc_rejection_posts",
+        "scrape_twitter_buildinpublic_rejection_threads"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_templates",
+      "steps": [
+        "extract_narrative_arcs",
+        "extract_traction_metrics",
+        "classify_rejection_type"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_narratives"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_twitter_threads_from_templates",
+        "generate_reddit_posts",
+        "route_concrete_saas_tactics_to_app_venture"
+      ],
+      "parallel": true,
+      "depends_on": "extract_templates"
+    },
+    {
+      "name": "queue_and_distribute",
+      "steps": [
+        "add_to_posting_queue",
+        "schedule_via_content_repurposer"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

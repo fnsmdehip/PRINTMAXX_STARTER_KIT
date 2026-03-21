@@ -1,0 +1,47 @@
+{
+  "name": "integration_monetize_existing_skills_portfolio_no_n",
+  "created": "2026-03-20T18:09:55.580478",
+  "method": "Monetize existing skills portfolio. No new builds needed. Prep top 5 skills with README + demo screenshot. List on AgentPowers.ai (10% fee, one-command publish). Cross-list on SkillsMP and SkillHub. B",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "inventory_and_research",
+      "steps": [
+        "scan_automations_for_top_skills",
+        "verify_marketplace_urls_and_submission_process"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "package",
+      "steps": [
+        "generate_readme_per_skill",
+        "capture_demo_screenshots_playwright",
+        "create_gumroad_bundle_listing_md"
+      ],
+      "parallel": true,
+      "depends_on": "inventory_and_research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "submit_to_agentpowers",
+        "submit_to_skillsmp",
+        "submit_to_skillhub",
+        "prep_gumroad_listing"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    },
+    {
+      "name": "amplify",
+      "steps": [
+        "generate_launch_tweets",
+        "post_to_indiehackers_reddit"
+      ],
+      "parallel": true,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

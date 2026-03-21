@@ -1,0 +1,49 @@
+{
+  "name": "integration__mit_repo_agencyenterprisereactnative",
+  "created": "2026-03-20T18:09:58.090112",
+  "method": " mit repo: agencyenterprise/react-native-health (1130 stars, objective-c) ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit_existing",
+      "steps": [
+        "inventory all 6 fitness streak PWAs",
+        "map current data model per app",
+        "identify HealthKit data types per app (steps\u2192fitness, poses\u2192yoga, reps\u2192pushup)"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "scaffold_native",
+      "steps": [
+        "generate React Native project shell with react-native-health dependency",
+        "create shared HealthKit permission request module",
+        "create shared health data sync service"
+      ],
+      "parallel": true,
+      "depends_on": "audit_existing"
+    },
+    {
+      "name": "integrate_per_app",
+      "steps": [
+        "wire HealthKit step data into fitness-streak",
+        "wire workout data into hiit-streak and cycling-streak",
+        "wire activity data into plank-streak and pushup-streak",
+        "wire mindfulness minutes into yoga-streak"
+      ],
+      "parallel": true,
+      "depends_on": "scaffold_native"
+    },
+    {
+      "name": "monetize",
+      "steps": [
+        "add RevenueCat subscription paywall (free=manual entry, pro=$3.99/mo=HealthKit sync)",
+        "create App Store listings with health data screenshots",
+        "wire Stripe fallback for web version"
+      ],
+      "parallel": false,
+      "depends_on": "integrate_per_app"
+    }
+  ],
+  "status": "READY"
+}

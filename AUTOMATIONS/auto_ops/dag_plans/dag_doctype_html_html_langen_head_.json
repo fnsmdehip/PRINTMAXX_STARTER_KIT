@@ -1,0 +1,38 @@
+{
+  "name": "integration_doctype_html_html_langen_head_",
+  "created": "2026-03-20T18:10:00.538655",
+  "method": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\"> <meta name=\"theme-color\" cont",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "locate CoreDay HTML file",
+        "check if already in APP_FACTORY_METHODS.csv",
+        "check if already deployed to surge"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "register_and_deploy",
+      "steps": [
+        "add to APP_FACTORY_METHODS.csv if missing",
+        "deploy to surge.sh if not live",
+        "add to DEPLOYMENT_URLS.md"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    },
+    {
+      "name": "monetize_and_distribute",
+      "steps": [
+        "wire Stripe payment link for premium",
+        "generate ASO listing per procedural memory",
+        "generate 3 tweets + 1 thread for launch"
+      ],
+      "parallel": true,
+      "depends_on": "register_and_deploy"
+    }
+  ],
+  "status": "READY"
+}

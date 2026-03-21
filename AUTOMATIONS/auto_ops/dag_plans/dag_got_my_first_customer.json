@@ -1,0 +1,37 @@
+{
+  "name": "integration_got_my_first_customer",
+  "created": "2026-03-20T13:50:39.719209",
+  "method": "Got my first customer",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_channels",
+      "steps": [
+        "scrape_r_saas_first_customer_posts",
+        "scrape_r_indiehackers_launch_stories",
+        "extract_acquisition_channels"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "match_apps",
+      "steps": [
+        "categorize_our_47_apps_by_niche",
+        "map_channels_to_app_categories"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_channels"
+    },
+    {
+      "name": "execute",
+      "steps": [
+        "generate_launch_posts_per_app",
+        "queue_cold_outreach_to_niche_communities",
+        "create_show_hn_drafts"
+      ],
+      "parallel": true,
+      "depends_on": "match_apps"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "integration_landscaping_might_be_the_most_obvious_ro",
+  "created": "2026-03-20T23:12:24.856019",
+  "method": "Landscaping might be the most obvious roll-up in home services right now",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "Google Maps scrape: landscaping + top 20 metros",
+        "Yelp scrape: lawn care + landscaping, filter 4+ stars",
+        "Extract: business name, owner name, phone, email, website, review count, years active"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "Score each biz: web presence gap (no SEO = higher score), review volume 20-200 (not too small, not corporate), domain age signal (5+ years = established owner-op), no social presence (easy win to offer)",
+        "Filter top 20% by composite score",
+        "Enrich: find owner LinkedIn, personal email via Hunter.io free tier"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "Generate personalized cold email: reference their specific city + review count + missing SEO signal",
+        "Angle: 'landscaping businesses are being acquired at 3-5x EBITDA right now \u2014 operators who run clean digital ops get top offers. I help local landscapers get acquisition-ready in 90 days.' NOT selling consulting. Selling exit optionality.",
+        "Send via SMTP (no paid tool needed)"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "Append to LEDGER/FREELANCE_PIPELINE_ACTIVE.csv",
+        "Log open/reply in outreach tracker"
+      ],
+      "parallel": false,
+      "depends_on": "outreach"
+    }
+  ],
+  "status": "READY"
+}

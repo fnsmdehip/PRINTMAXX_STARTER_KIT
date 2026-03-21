@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_built_a_tool_that_turns_a_restaurants",
+  "created": "2026-03-20T13:50:40.615702",
+  "method": "I built a tool that turns a restaurant's PDF menu into a professional digital me",
+  "venture": "LOCAL_BIZ",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Google Maps/Yelp for restaurants with PDF menus on their websites. Extract PDF URLs and owner contact info.",
+      "output": "restaurant_leads.json"
+    },
+    {
+      "agent": "converter",
+      "task": "Download PDFs, use Claude to extract menu items/prices/sections, generate clean HTML digital menu page per restaurant.",
+      "output": "digital_menus/"
+    },
+    {
+      "agent": "deployer",
+      "task": "Deploy each generated menu page to unique surge.sh URL as a free preview.",
+      "output": "preview_urls.json"
+    },
+    {
+      "agent": "outreach",
+      "task": "Cold email restaurant owner with preview link: 'I digitized your menu for free \u2014 want to use it? $29/mo or $199 one-time.' Use existing cold email scripts.",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

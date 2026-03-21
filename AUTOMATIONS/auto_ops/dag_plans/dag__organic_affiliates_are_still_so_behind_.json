@@ -1,0 +1,38 @@
+{
+  "name": "integration__organic_affiliates_are_still_so_behind_",
+  "created": "2026-03-20T23:12:24.849122",
+  "method": " organic affiliates are still so behind on this ai video stuff i know a handful of people in my space who are really using it to its full potentialso many people are still crushing it without it me le",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan CREATOR_PROGRAMS.csv for top EPC offers",
+        "pull trending hooks from WINNING_CONTENT_STRUCTURES.csv",
+        "check CONTENT_TREND_PIPELINE for current viral formats"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "claude -p to write 3 video scripts per offer (hook+body+CTA)",
+        "generate B-roll shot list and text overlay copy",
+        "produce Remotion video via video_factory"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "append to CONTENT/social/posting_queue/",
+        "run engagement_bait_converter.py on script text for 3 companion tweets",
+        "log to AI_VIDEO_CONTENT_TRACKER.csv with offer + affiliate link"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

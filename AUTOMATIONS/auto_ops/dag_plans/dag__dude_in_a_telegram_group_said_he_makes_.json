@@ -1,0 +1,49 @@
+{
+  "name": "integration__dude_in_a_telegram_group_said_he_makes_",
+  "created": "2026-03-20T18:10:02.585296",
+  "method": " dude in a telegram group said he makes money \"rating products\"thought he meant like amazon reviews or some scam shitnope$17k last month\"rating products?\"\"i buy digital products in my niche. review th",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "scrape_products",
+      "steps": [
+        "scrape_app_stores",
+        "scrape_product_hunt",
+        "scrape_gumroad_competitors",
+        "scrape_g2_alternatives"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_rank",
+      "steps": [
+        "claude_review_scoring",
+        "feature_matrix_generation",
+        "price_value_scoring"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_products"
+    },
+    {
+      "name": "generate_guide",
+      "steps": [
+        "write_ranking_guide_md",
+        "generate_comparison_tables",
+        "build_landing_page_html"
+      ],
+      "parallel": true,
+      "depends_on": "analyze_rank"
+    },
+    {
+      "name": "publish",
+      "steps": [
+        "deploy_landing_surge",
+        "create_stripe_product",
+        "add_to_content_queue"
+      ],
+      "parallel": false,
+      "depends_on": "generate_guide"
+    }
+  ],
+  "status": "READY"
+}

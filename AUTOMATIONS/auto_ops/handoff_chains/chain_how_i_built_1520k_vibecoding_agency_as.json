@@ -1,0 +1,29 @@
+{
+  "name": "chain_how_i_built_1520k_vibecoding_agency_as",
+  "created": "2026-03-20T13:50:39.499536",
+  "method": "How I built $15-20k vibecoding agency as non-technical history undergrad",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Upwork/Reddit/IndieHackers for prospects requesting app builds, MVP development, or website creation",
+      "output": "vibecoding_prospects_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score prospects by budget signals ($500+ mentioned), urgency (deadline language), and scope fit (can be AI-built in <1 week)",
+      "output": "vibecoding_qualified.json"
+    },
+    {
+      "agent": "proposal_gen",
+      "task": "Generate personalized proposal using Claude referencing prospect's specific need, estimated timeline, and portfolio of existing PRINTMAXX app builds as proof",
+      "output": "vibecoding_proposals.json"
+    },
+    {
+      "agent": "outreach",
+      "task": "Send proposals via platform DM or cold email, log responses",
+      "output": "vibecoding_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

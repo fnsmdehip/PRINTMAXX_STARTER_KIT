@@ -1,0 +1,44 @@
+{
+  "name": "integration__your_customers_are_literally_trying_to_",
+  "created": "2026-03-20T18:09:59.914297",
+  "method": " your customers are literally trying to pay you $50,000+ a year and you're accidentally rejecting themthis isn't a metaphorif you sell subscriptions or recurring products online, 8-15% of your monthly",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "detect",
+      "steps": [
+        "query_stripe_failed_charges",
+        "query_stripe_expiring_cards"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "classify",
+      "steps": [
+        "classify_decline_codes",
+        "score_recovery_probability"
+      ],
+      "parallel": true,
+      "depends_on": "detect"
+    },
+    {
+      "name": "recover",
+      "steps": [
+        "smart_retry_by_decline_type",
+        "trigger_card_updater_api"
+      ],
+      "parallel": true,
+      "depends_on": "classify"
+    },
+    {
+      "name": "dunning",
+      "steps": [
+        "send_dunning_email_sequence",
+        "log_recovery_outcomes"
+      ],
+      "parallel": false,
+      "depends_on": "recover"
+    }
+  ],
+  "status": "READY"
+}

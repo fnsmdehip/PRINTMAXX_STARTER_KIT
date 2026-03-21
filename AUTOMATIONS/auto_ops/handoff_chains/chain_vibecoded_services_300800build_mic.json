@@ -1,0 +1,29 @@
+{
+  "name": "chain_vibecoded_services_300800build_mic",
+  "created": "2026-03-20T18:35:55.096970",
+  "method": "vibe-coded services: $300-800/build. micro-saas $5-15/mo. tools + maintenance = recurring. vibe coding services: custom builds $300-800. micro-saas $5-15/mo (10-20 users). internal tools $300-1k + $50",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "lead_scanner",
+      "task": "Scrape Upwork/Reddit/Twitter for vibe-code build requests matching our stack (Next.js, Python, PWA, Capacitor)",
+      "output": "vibe_leads_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads by budget fit ($300-800), stack match, timeline, upsell potential (maintenance retainer)",
+      "output": "vibe_leads_qualified.json"
+    },
+    {
+      "agent": "proposal_gen",
+      "task": "Generate scoped proposal with timeline, deliverables, and price using claude -p from request description",
+      "output": "proposals_ready.json"
+    },
+    {
+      "agent": "outreach",
+      "task": "Submit proposals on platform or send cold DM with portfolio links",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

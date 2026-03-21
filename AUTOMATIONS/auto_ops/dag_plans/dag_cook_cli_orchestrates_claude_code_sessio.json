@@ -1,0 +1,39 @@
+{
+  "name": "integration_cook_cli_orchestrates_claude_code_sessio",
+  "created": "2026-03-20T13:50:39.519821",
+  "method": "Cook CLI orchestrates Claude Code sessions. Compare to our Ralph loops. Key features to study: session management, task routing, context handling. Potential improvement source for our autonomous pipel",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "fetch_cook_cli_repo",
+        "parse_session_management_code",
+        "parse_task_routing_code",
+        "parse_context_handling_code"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "compare",
+      "steps": [
+        "benchmark_session_mgmt_vs_ralph",
+        "benchmark_context_vs_ralph",
+        "benchmark_routing_vs_ralph"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "list_portable_improvements",
+        "score_effort_vs_impact",
+        "draft_patches"
+      ],
+      "parallel": false,
+      "depends_on": "compare"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "integration__post_i_spent_8_months_building_in_stea",
+  "created": "2026-03-20T18:35:54.876799",
+  "method": " post: i spent 8 months building in stealth and launched to complete silence. here's what i do differently now. | content: submission/commenting rules:1) 10 comment karma in /r/entrepreneur to postto ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "gather_build_signals",
+      "steps": [
+        "parse_git_log_for_milestones",
+        "parse_session_logs_for_launches",
+        "parse_deploy_urls_for_live_products"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "convert_signals_to_reddit_posts",
+        "generate_comment_replies_for_karma"
+      ],
+      "parallel": true,
+      "depends_on": "gather_build_signals"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_comments_to_karma_farm_threads",
+        "queue_posts_for_eligible_subreddits"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

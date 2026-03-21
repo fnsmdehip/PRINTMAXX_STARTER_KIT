@@ -1,0 +1,24 @@
+{
+  "name": "chain_my_bot_scanned_400000_wallets_to_find_t",
+  "created": "2026-03-20T18:09:52.381502",
+  "method": "my bot scanned 400,000 wallets to find the best trader on polymarket\n\n$4.7M profit. 91% win rate. 23,000 positions.\n\nthen i found 30 wallets doing the exact same trades within 800 milliseconds of his\n",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Query Polygon blockchain for Polymarket wallet positions and PnL using free RPC (Alchemy/Infura free tier or public RPC)",
+      "output": "polymarket_wallets_raw.json"
+    },
+    {
+      "agent": "analyzer",
+      "task": "Cluster wallets by funding source, trade timing correlation (<1s), and position overlap. Identify parent-child groups.",
+      "output": "whale_clusters.json"
+    },
+    {
+      "agent": "content_writer",
+      "task": "Convert top 3 whale clusters into Twitter threads with specific numbers, wallet addresses (truncated), and timing analysis",
+      "output": "CONTENT/social/posting_queue/polymarket_whale_intel.txt"
+    }
+  ],
+  "status": "READY"
+}

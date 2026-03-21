@@ -1,0 +1,38 @@
+{
+  "name": "integration_i_made_100k_for_an_brand_in_under_2_mon",
+  "created": "2026-03-20T13:50:43.180373",
+  "method": "I made $100K for an brand in under 2 months on TikTok Shop\n\n- no wasted samples\n- no lost time \n- no bs \n- no fluff\n\nI put together a brand new comprehensive playbook I used to scale this brand with U",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_tiktok_shop_trending",
+        "scrape_top_ugc_creators",
+        "extract_hook_patterns"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_ai_ugc_scripts",
+        "create_hook_variations",
+        "write_content_briefs"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "cross_post_hooks_to_other_platforms",
+        "update_playbook_product"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

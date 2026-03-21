@@ -1,0 +1,37 @@
+{
+  "name": "integration_i_spent_90000_developing_a_smart_athle",
+  "created": "2026-03-20T13:50:40.773784",
+  "method": "I Spent $90,000 Developing a Smart Athletic Tape",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "parse_story_for_lessons",
+        "extract_cost_breakdown",
+        "identify_failure_points"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_engagement_bait_tweets",
+        "generate_cautionary_thread",
+        "generate_digital_product_outline"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "queue_to_posting_queue",
+        "queue_product_outline_to_digital_products"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "integration_build_coldemailwriter_bot_on_poe_first_",
+  "created": "2026-03-20T18:09:56.080311",
+  "method": "Build ColdEmailWriter bot on Poe first (highest WTP). Then PrayerPlanner (cross-promo PrayerLock). 2-3 hours per bot. Poe handles hosting/billing/users. Each bot doubles as lead gen \u2014 links to paid pr",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "design_bots",
+      "steps": [
+        "design_coldemailwriter_prompt_with_lead_gen_hooks",
+        "design_prayerplanner_prompt_with_prayerlock_crosspromo"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "create_bots",
+      "steps": [
+        "create_coldemailwriter_on_poe",
+        "create_prayerplanner_on_poe",
+        "generate_build_in_public_content"
+      ],
+      "parallel": true,
+      "depends_on": "design_bots"
+    },
+    {
+      "name": "wire_funnels",
+      "steps": [
+        "add_prayerlock_download_links_in_prayerplanner_responses",
+        "add_cold_email_product_links_in_coldemailwriter_responses",
+        "update_prayerlock_landing_with_poe_bot_link"
+      ],
+      "parallel": true,
+      "depends_on": "create_bots"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_launch_content_to_twitter_reddit_ph",
+        "add_bots_to_deployment_urls",
+        "update_cross_pollination_matrix"
+      ],
+      "parallel": true,
+      "depends_on": "wire_funnels"
+    }
+  ],
+  "status": "READY"
+}

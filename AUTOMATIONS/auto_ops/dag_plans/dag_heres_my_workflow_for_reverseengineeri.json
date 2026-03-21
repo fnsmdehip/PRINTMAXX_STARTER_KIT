@@ -1,0 +1,37 @@
+{
+  "name": "integration_heres_my_workflow_for_reverseengineeri",
+  "created": "2026-03-20T13:50:42.929966",
+  "method": "Here's my workflow for reverse-engineering any creator's style using AI:\n\nI feed a 65-second video to an AI agent with one prompt\n\n\"Break down the style, transcribe the script, and give me a replicati",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_creators",
+      "steps": [
+        "identify_top_creators_by_niche",
+        "scrape_recent_videos_transcripts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_styles",
+      "steps": [
+        "claude_style_breakdown",
+        "extract_hooks_and_patterns",
+        "build_replication_playbook"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_creators"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "feed_playbooks_to_content_multiplier",
+        "generate_styled_posts_bulk",
+        "queue_to_posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "analyze_styles"
+    }
+  ],
+  "status": "READY"
+}

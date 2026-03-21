@@ -1,0 +1,35 @@
+{
+  "name": "integration_we_said_no_to_25m_vc_money_and_im_sti",
+  "created": "2026-03-20T18:35:52.325898",
+  "method": "We said no to $2.5m vc money and I'm still kinda shocked we did it lol Three founders here, plus one assistant who deserves a raise, no full-time hires yet, and the saas is already covering our bills ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_linkedin_saas_content_patterns",
+        "extract_agency_smb_pain_points_from_reddit"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "create",
+      "steps": [
+        "generate_linkedin_posts_bootstrapper_angle",
+        "optimize_landing_seo_agency_keywords"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_linkedin_posts_to_buffer",
+        "update_content_calendar"
+      ],
+      "parallel": false,
+      "depends_on": "create"
+    }
+  ],
+  "status": "READY"
+}

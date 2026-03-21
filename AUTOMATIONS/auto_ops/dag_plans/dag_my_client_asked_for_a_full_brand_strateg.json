@@ -1,0 +1,47 @@
+{
+  "name": "integration_my_client_asked_for_a_full_brand_strateg",
+  "created": "2026-03-20T18:35:50.265403",
+  "method": "My client asked for a full brand strategy.\n\n3 weeks. $8,000 budget.\n\nI opened Claude.\nPasted one mega-prompt.\nHad the entire strategy in 14 minutes.\n\nHere are the prompts that replaced the process \n\n(",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "prompt_library_build",
+      "steps": [
+        "compile_12_brand_strategy_mega_prompts",
+        "create_prompt_template_files",
+        "build_client_intake_questionnaire"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "product_packaging",
+      "steps": [
+        "package_prompt_library_as_digital_product",
+        "create_gumroad_listing_copy",
+        "create_fiverr_gig_listing_copy"
+      ],
+      "parallel": true,
+      "depends_on": "prompt_library_build"
+    },
+    {
+      "name": "fulfillment_pipeline",
+      "steps": [
+        "build_client_brief_to_strategy_script",
+        "create_output_formatter_md_to_pdf",
+        "wire_into_service_fulfillment_chain"
+      ],
+      "parallel": true,
+      "depends_on": "prompt_library_build"
+    },
+    {
+      "name": "outreach_activation",
+      "steps": [
+        "generate_cold_outreach_templates_for_brand_gigs",
+        "add_proposals_to_weekly_cron"
+      ],
+      "parallel": false,
+      "depends_on": "product_packaging"
+    }
+  ],
+  "status": "READY"
+}

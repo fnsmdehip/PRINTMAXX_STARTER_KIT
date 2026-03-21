@@ -1,0 +1,38 @@
+{
+  "name": "integration_bro_created_a_skill_inspired_by_karpathy",
+  "created": "2026-03-20T23:12:25.535951",
+  "method": "bro created a skill inspired by Karpathy's autoresearch to fine-tune his other Claude Code skills and iteratively make them better. one skill went from 56% \u2192 92% in just 4 rounds of changes.\n\nthe meth",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "glob all skill files in .claude/skills/",
+        "define 5-point eval rubric per skill category (clarity, specificity, actionability, output quality, edge case handling)",
+        "baseline score each skill 0-100 via claude -p"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "refine",
+      "steps": [
+        "select bottom 20% scored skills",
+        "for each: run 4 refinement cycles (read\u2192test\u2192critique\u2192rewrite)",
+        "re-score after each cycle, stop at 90%+"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    },
+    {
+      "name": "package",
+      "steps": [
+        "bundle top 10 refined skills into DIGITAL_PRODUCTS/ready_to_sell/",
+        "generate Gumroad listing copy ($29-47) with before/after score proof",
+        "generate 3 tweets showing 56%\u219292% style case study"
+      ],
+      "parallel": true,
+      "depends_on": "refine"
+    }
+  ],
+  "status": "READY"
+}

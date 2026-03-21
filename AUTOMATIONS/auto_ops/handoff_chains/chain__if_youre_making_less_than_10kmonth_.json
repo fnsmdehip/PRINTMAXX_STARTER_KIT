@@ -1,0 +1,29 @@
+{
+  "name": "chain__if_youre_making_less_than_10kmonth_",
+  "created": "2026-03-20T18:09:59.714704",
+  "method": " if you're making less than $10k/month & you're obsessed with \"building\" products, then you've got your priorities completely backwards...there's thousands of products out there that have already prov",
+  "venture": "MONETIZE",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape affiliate network leaderboards (ClickBank gravity, ShareASale EPC, Impact top programs) for products in faith/fitness/tech/productivity niches with EPC > $1 and gravity > 20",
+      "output": "affiliate_candidates.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score candidates by: niche fit (do we have audience?), commission rate, cookie duration, existing competition on our sites, free trial availability. Filter to top 5 per niche",
+      "output": "qualified_affiliates.json"
+    },
+    {
+      "agent": "builder",
+      "task": "Generate comparison landing pages (X vs Y format) and 5 social posts per product using engagement_bait_converter.py patterns",
+      "output": "affiliate_content_batch/"
+    },
+    {
+      "agent": "distributor",
+      "task": "Deploy pages to surge, queue social content, inject affiliate links into relevant existing app landing pages (sidebar/footer CTA)",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

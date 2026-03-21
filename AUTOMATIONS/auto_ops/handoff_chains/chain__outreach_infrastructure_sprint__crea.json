@@ -1,0 +1,34 @@
+{
+  "name": "chain__outreach_infrastructure_sprint__crea",
+  "created": "2026-03-20T18:10:02.790875",
+  "method": "# Outreach Infrastructure Sprint  **Created:** 2026-02-19 **Status:** READY TO EXECUTE **Assets:** 9,123 hot leads (HOT_LEADS_QUALIFIED.csv) | 13,221 cold emails pre-generated (cold_emails_ready.csv) ",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "data_janitor",
+      "task": "Validate and dedupe HOT_LEADS_QUALIFIED.csv against existing OUTBOUND leads, remove stale/bounced domains",
+      "output": "verified_leads.csv"
+    },
+    {
+      "agent": "lead_machine",
+      "task": "Score leads by recency and signal strength, prioritize highest-intent leads for first batches",
+      "output": "prioritized_send_queue.csv"
+    },
+    {
+      "agent": "email_sender",
+      "task": "Send daily batch of 50 emails from cold_emails_ready.csv using warmed accounts (BLOCKED: needs accounts)",
+      "output": "send_log.jsonl"
+    },
+    {
+      "agent": "response_tracker",
+      "task": "Monitor replies, classify as positive/negative/bounce, route positive to INBOUND_LEADS.csv",
+      "output": "response_log.jsonl"
+    },
+    {
+      "agent": "loop_closer",
+      "task": "Positive replies \u2192 schedule follow-up, update OUTREACH_PIPELINE.csv status, trigger KPI update",
+      "output": "closed_loops.jsonl"
+    }
+  ],
+  "status": "READY"
+}

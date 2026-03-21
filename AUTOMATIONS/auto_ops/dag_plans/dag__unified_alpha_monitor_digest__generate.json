@@ -1,0 +1,37 @@
+{
+  "name": "integration__unified_alpha_monitor_digest__generate",
+  "created": "2026-03-20T18:10:01.869467",
+  "method": "# Unified Alpha Monitor Digest  Generated: 2026-03-12 05:42:35  ---  ## 1. App-Specific Reddit Activity  ### PrayerLock (11 mentions)  - **r/TrueChristian** (score: 8) [app_mention]   I need to beat t",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_truechristian_new_posts",
+        "scrape_nofap_christian_posts",
+        "scrape_pornfree_posts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "filter_addiction_accountability_phone_usage_threads",
+        "score_by_engagement_and_recency"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_helpful_reply_with_prayerlock_mention",
+        "generate_social_content_from_pain_points",
+        "update_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "qualify"
+    }
+  ],
+  "status": "READY"
+}

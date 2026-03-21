@@ -1,0 +1,37 @@
+{
+  "name": "integration_your_last_chance_email_could_cost_you_",
+  "created": "2026-03-20T18:09:55.501633",
+  "method": "Your \"Last Chance\" Email Could Cost You $1,500 Per Send I see a lot of brands still doing this. The \"sale ends tonight\" email that magically reappears tomorrow. The Final Hours subject line on a deal ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan_email_templates_for_fake_urgency",
+        "scan_cold_outreach_sequences",
+        "check_landing_page_countdown_timers"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "remediate",
+      "steps": [
+        "rewrite_flagged_templates_with_real_deadlines_or_remove_urgency",
+        "update_compliance_log"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    },
+    {
+      "name": "content_capitalize",
+      "steps": [
+        "generate_cema_warning_thread",
+        "generate_email_compliance_checklist_post",
+        "generate_controversial_take_brands_getting_sued"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    }
+  ],
+  "status": "READY"
+}

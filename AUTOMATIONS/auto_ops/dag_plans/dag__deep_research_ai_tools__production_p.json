@@ -1,0 +1,38 @@
+{
+  "name": "integration__deep_research_ai_tools__production_p",
+  "created": "2026-03-20T23:12:24.850251",
+  "method": "# DEEP RESEARCH: AI Tools & Production Pipeline for NSFW Content Creation  **Date:** 2026-02-05 **Status:** COMPLETE **Scope:** AI image generators, video generators, voice tools, workflow optimizatio",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research_and_generate",
+      "steps": [
+        "scrape trending topics from Reddit adult subs (requests JSON API)",
+        "generate 5-10 AI images via local Stable Diffusion API (localhost:7860)",
+        "generate captions + CTAs via claude -p"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "quality_gate",
+      "steps": [
+        "run platform compliance check (no minors, no real person likenesses)",
+        "watermark with account handle",
+        "score engagement-bait potential of caption"
+      ],
+      "parallel": false,
+      "depends_on": "research_and_generate"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue to posting_queue/ for Fanvue (requires human account)",
+        "post teaser to Reddit adult subs via playwright",
+        "log asset to AI_VIDEO_CONTENT_TRACKER.csv"
+      ],
+      "parallel": true,
+      "depends_on": "quality_gate"
+    }
+  ],
+  "status": "READY"
+}

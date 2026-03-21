@@ -1,0 +1,39 @@
+{
+  "name": "integration_i_built_31_n8n_workflows_this_month_that",
+  "created": "2026-03-20T18:35:51.086805",
+  "method": "i built 31 n8n workflows this month that replace\nthe most overpriced saas tools businesses pay for.\n\n\u2192 $299/mo email marketing platform \u2014 replaced\n\u2192 $199/mo social scheduling tool \u2014 replaced\n\u2192 $149/mo",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "build_workflows",
+      "steps": [
+        "export_email_marketing_n8n_json",
+        "export_social_scheduler_n8n_json",
+        "export_lead_scoring_n8n_json",
+        "export_crm_connector_n8n_json"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "package_product",
+      "steps": [
+        "create_workflow_bundle_zip",
+        "write_setup_guide_per_workflow",
+        "generate_landing_page"
+      ],
+      "parallel": true,
+      "depends_on": "build_workflows"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "create_gumroad_listing",
+        "generate_twitter_thread",
+        "post_to_indie_hackers_reddit"
+      ],
+      "parallel": true,
+      "depends_on": "package_product"
+    }
+  ],
+  "status": "READY"
+}

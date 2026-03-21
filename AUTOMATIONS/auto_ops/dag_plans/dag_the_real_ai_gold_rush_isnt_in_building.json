@@ -1,0 +1,36 @@
+{
+  "name": "integration_the_real_ai_gold_rush_isnt_in_building",
+  "created": "2026-03-20T18:35:53.524130",
+  "method": "The real AI gold rush isn\u2019t in building. It\u2019s in babysitting. Times have changed quickly...\n\nI was reading about a developer on Reddit shut down his funded startup last week because Claude can now bui",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "scrape_leads",
+      "steps": [
+        "scrape_reddit_vibecodefails",
+        "scrape_hn_saas_commoditization",
+        "scrape_twitter_ai_maintenance"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "score_leads_by_pain_and_budget",
+        "dedupe_against_existing_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_leads"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_personalized_cold_email",
+        "add_to_outreach_pipeline_csv"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    }
+  ],
+  "status": "READY"
+}

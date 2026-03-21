@@ -1,0 +1,37 @@
+{
+  "name": "integration_my_fiction_paid_newsletter_on_substack_",
+  "created": "2026-03-20T13:50:41.918010",
+  "method": "My fiction paid newsletter on Substack, Commercial Fiction Club, is up to $13k ARR.\n\nGoal is to hit $100k ARR by end of the year.\n\n\nhttps://\nnicolascolefiction.substack.com",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_trending_substack_topics_in_niche",
+        "pull_alpha_from_LEDGER_for_newsletter_fodder",
+        "check_competitor_newsletters"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "claude_draft_newsletter_from_research",
+        "generate_subject_lines_ab_variants"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_to_substack_via_api",
+        "cross_post_teaser_to_twitter",
+        "cross_post_to_linkedin"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

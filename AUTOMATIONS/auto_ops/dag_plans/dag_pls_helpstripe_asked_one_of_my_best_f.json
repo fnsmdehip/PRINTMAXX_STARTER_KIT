@@ -1,0 +1,39 @@
+{
+  "name": "integration_pls_helpstripe_asked_one_of_my_best_f",
+  "created": "2026-03-20T18:35:50.249987",
+  "method": "PLS HELP!\n\nStripe asked one of my best friends (bootstrapped consumer company, $12m ARR in 9 mos) to move his in app billing from Apple & helped him with the whole migration.\n\nApple terminated his app",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_intel",
+      "steps": [
+        "parse_story_facts",
+        "identify_content_angles",
+        "flag_app_factory_compliance_risk"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_twitter_thread",
+        "generate_linkedin_post",
+        "generate_carousel_copy",
+        "generate_short_video_script"
+      ],
+      "parallel": true,
+      "depends_on": "extract_intel"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "update_content_calendar",
+        "update_app_factory_compliance_rules"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

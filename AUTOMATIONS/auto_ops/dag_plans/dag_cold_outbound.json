@@ -1,0 +1,47 @@
+{
+  "name": "integration_cold_outbound",
+  "created": "2026-03-20T18:09:51.717283",
+  "method": "COLD_OUTBOUND",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "signal_scrape",
+      "steps": [
+        "scrape_hiring_boards",
+        "scrape_crunchbase_funding",
+        "scrape_techstack_changes",
+        "scrape_reddit_pain_points"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "enrich_qualify",
+      "steps": [
+        "dedupe_leads",
+        "enrich_contact_info",
+        "score_intent_signals"
+      ],
+      "parallel": false,
+      "depends_on": "signal_scrape"
+    },
+    {
+      "name": "personalize",
+      "steps": [
+        "generate_first_lines_claude",
+        "select_template_by_signal_type"
+      ],
+      "parallel": true,
+      "depends_on": "enrich_qualify"
+    },
+    {
+      "name": "send_track",
+      "steps": [
+        "send_via_warmed_smtp",
+        "log_to_outreach_pipeline_csv"
+      ],
+      "parallel": false,
+      "depends_on": "personalize"
+    }
+  ],
+  "status": "READY"
+}

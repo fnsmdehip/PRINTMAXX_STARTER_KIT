@@ -1,0 +1,38 @@
+{
+  "name": "integration__i_built_the_full_backend_of_my_saas_in_",
+  "created": "2026-03-20T18:09:57.552706",
+  "method": " i built the full backend of my saas in under an hour and recorded the entire thing.\n\nai analysis. stripe payments. customer portal. google auth. database setup.\n\n44 minutes breakdown. everything expl",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scaffold",
+      "steps": [
+        "generate_stripe_checkout_integration",
+        "generate_google_auth_module",
+        "generate_db_schema_and_crud",
+        "generate_customer_portal_page"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "wire",
+      "steps": [
+        "connect_modules_into_single_app",
+        "inject_env_var_config",
+        "add_deployment_manifest"
+      ],
+      "parallel": false,
+      "depends_on": "scaffold"
+    },
+    {
+      "name": "content",
+      "steps": [
+        "generate_build_log_tweet_thread",
+        "generate_short_form_video_script"
+      ],
+      "parallel": true,
+      "depends_on": "wire"
+    }
+  ],
+  "status": "READY"
+}

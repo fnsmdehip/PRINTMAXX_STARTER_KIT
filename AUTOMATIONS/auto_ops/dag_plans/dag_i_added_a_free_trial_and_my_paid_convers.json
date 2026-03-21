@@ -1,0 +1,48 @@
+{
+  "name": "integration_i_added_a_free_trial_and_my_paid_convers",
+  "created": "2026-03-20T18:35:53.946876",
+  "method": "I added a free trial and my paid conversion went from 2% to 11%. Here's the exact setup. when I launched my app I had a hard paywall. User would open it, saw what it could do, hit a screen asking you ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit_apps",
+      "steps": [
+        "scan MONEY_METHODS/APP_FACTORY/builds/ for paywall patterns",
+        "scan LANDING/app-marketing-pages/ for pricing gates",
+        "classify each as hard_paywall|soft_paywall|free_trial|no_paywall"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_trial_code",
+      "steps": [
+        "create universal trial-gate.js (localStorage 7-day timer, graceful degradation)",
+        "create trial-expiry-modal.html component",
+        "create analytics ping for trial_start and trial_convert events"
+      ],
+      "parallel": true,
+      "depends_on": "audit_apps"
+    },
+    {
+      "name": "inject_and_deploy",
+      "steps": [
+        "inject trial gate into all hard_paywall apps",
+        "update landing pages with 'Start Free Trial' CTA replacing 'Buy Now'",
+        "surge deploy updated apps"
+      ],
+      "parallel": false,
+      "depends_on": "generate_trial_code"
+    },
+    {
+      "name": "verify_and_track",
+      "steps": [
+        "playwright test each updated app for trial flow",
+        "add conversion tracking to KPI dashboard",
+        "update DEPLOYMENT_URLS.md with trial status"
+      ],
+      "parallel": true,
+      "depends_on": "inject_and_deploy"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "integration__your_first_digital_product_should_take_",
+  "created": "2026-03-20T18:10:02.617269",
+  "method": " your first digital product should take 4 hours to make and sell for $47not 4 months. not a 200 page course. not some \"comprehensive system\"a single template that solves one specific problem for one s",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "pain_point_scan",
+      "steps": [
+        "scan_reddit_pain_points",
+        "scan_alpha_staging_product_ideas",
+        "scan_fiverr_demand"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_and_select",
+      "steps": [
+        "score_by_specificity_urgency_market_size",
+        "select_top_3_candidates",
+        "check_existing_products_for_overlap"
+      ],
+      "parallel": false,
+      "depends_on": "pain_point_scan"
+    },
+    {
+      "name": "create_product",
+      "steps": [
+        "generate_template_content_via_claude",
+        "create_landing_copy",
+        "generate_mockup_image"
+      ],
+      "parallel": true,
+      "depends_on": "score_and_select"
+    },
+    {
+      "name": "list_and_promote",
+      "steps": [
+        "queue_gumroad_listing",
+        "generate_3_promo_tweets",
+        "generate_reddit_value_post",
+        "add_to_content_calendar"
+      ],
+      "parallel": true,
+      "depends_on": "create_product"
+    }
+  ],
+  "status": "READY"
+}

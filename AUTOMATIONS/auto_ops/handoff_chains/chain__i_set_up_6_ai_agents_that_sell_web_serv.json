@@ -1,0 +1,39 @@
+{
+  "name": "chain__i_set_up_6_ai_agents_that_sell_web_serv",
+  "created": "2026-03-20T18:09:58.193860",
+  "method": " i set up 6 ai agents that sell web services 24/7 (full breakdown) i know \"ai agents\" sounds like tech bro nonsense so let me explain it simply.\n\nai agent is just an ai that does a specific task on it",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "lead_scraper",
+      "task": "Scrape GMB, Yelp, Google Maps for businesses with no website or PageSpeed < 30. Use local_biz_website_scraper.py pattern",
+      "output": "raw_leads.json"
+    },
+    {
+      "agent": "lead_qualifier",
+      "task": "Score leads 1-10 on: has revenue signals, industry margins, website quality gap, contact info available",
+      "output": "qualified_leads.json"
+    },
+    {
+      "agent": "outreach_agent",
+      "task": "Generate personalized cold email with free mini-audit (PageSpeed score, mobile issues, SEO gaps) as hook. Use claude -p for personalization",
+      "output": "outreach_queue.json"
+    },
+    {
+      "agent": "objection_handler",
+      "task": "Auto-respond to replies using procedural memory sales scripts. Handle: too expensive, need to think, already have someone, can you do cheaper",
+      "output": "conversation_log.json"
+    },
+    {
+      "agent": "delivery_agent",
+      "task": "Generate website mockup or SEO audit report using claude -p + HTML templates. Deliver via email as PDF",
+      "output": "deliverables_log.json"
+    },
+    {
+      "agent": "followup_agent",
+      "task": "3-7-14 day followup cadence for non-responders. Value-add each touchpoint (new insight about their site)",
+      "output": "followup_log.json"
+    }
+  ],
+  "status": "READY"
+}

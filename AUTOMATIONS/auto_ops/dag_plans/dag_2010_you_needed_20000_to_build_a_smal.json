@@ -1,0 +1,42 @@
+{
+  "name": "integration_2010_you_needed_20000_to_build_a_smal",
+  "created": "2026-03-20T18:35:50.238400",
+  "method": "2010: You needed $20,000 to build a small MVP.  \n\n2026: You just need $60 for: \n- Rork AI \u2192 Build your mobile app\n- Lovable \u2192 Build your web app or landing page\n- Cursor AI, Claude Code\u2192 Build your ba",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "tool_research",
+      "steps": [
+        "research_rork_ai_pricing_and_capabilities",
+        "research_lovable_pricing_and_capabilities"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "evaluate_fit",
+      "steps": [
+        "compare_to_current_app_factory_flow",
+        "check_free_tier_limits"
+      ],
+      "parallel": true,
+      "depends_on": "tool_research"
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_zero_cost_mvp_thread",
+        "generate_3_tweets_on_vibe_coding_tools"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "integrate_if_viable",
+      "steps": [
+        "update_app_factory_autopilot_with_new_tool_path_if_free_tier_exists"
+      ],
+      "parallel": false,
+      "depends_on": "evaluate_fit"
+    }
+  ],
+  "status": "READY"
+}

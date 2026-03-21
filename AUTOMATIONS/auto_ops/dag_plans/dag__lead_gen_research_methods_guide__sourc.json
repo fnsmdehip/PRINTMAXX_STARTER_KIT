@@ -1,0 +1,36 @@
+{
+  "name": "integration__lead_gen_research_methods_guide__sourc",
+  "created": "2026-03-20T18:10:00.571178",
+  "method": "# Lead gen research methods guide  Source: high-signal Twitter intel extraction. all methods are legal. some have compliance requirements noted.  Status: ALL methods PENDING_REVIEW for human validatio",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "read_orphan_doc_full_content",
+        "parse_methods_table_into_individual_entries"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score",
+      "steps": [
+        "score_each_method_cost_speed_automation",
+        "filter_phase0_compatible_only"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "stage_actionable_methods_to_alpha_staging",
+        "update_outbound_venture_with_new_tactics",
+        "generate_content_hooks_from_methods"
+      ],
+      "parallel": true,
+      "depends_on": "score"
+    }
+  ],
+  "status": "READY"
+}

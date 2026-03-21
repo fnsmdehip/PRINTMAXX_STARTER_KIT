@@ -1,0 +1,53 @@
+{
+  "name": "integration_i_built_8_email_automations_for_my_322u",
+  "created": "2026-03-20T18:35:54.109187",
+  "method": "I built 8 email automations for my 322-user app  in one week. Personalized emails got 18% CTR vs 2.5% on generic ones. Here's the exact setup. I'm a solo founder with a fintech app and \\~300 users. No",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "setup_brevo",
+      "steps": [
+        "create_brevo_account_api_key",
+        "define_8_sequence_templates",
+        "create_contact_attributes_schema"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "wire_apps",
+      "steps": [
+        "add_email_capture_to_deployed_apps",
+        "build_firebase_to_brevo_attribute_sync",
+        "set_cron_4h_sync"
+      ],
+      "parallel": true,
+      "depends_on": "setup_brevo"
+    },
+    {
+      "name": "build_sequences",
+      "steps": [
+        "onboarding_sequence",
+        "activation_sequence",
+        "reengagement_sequence",
+        "upgrade_nudge_sequence",
+        "milestone_sequence",
+        "winback_sequence",
+        "feature_adoption_sequence",
+        "referral_ask_sequence"
+      ],
+      "parallel": true,
+      "depends_on": "wire_apps"
+    },
+    {
+      "name": "optimize",
+      "steps": [
+        "ab_test_subject_lines",
+        "track_ctr_per_sequence",
+        "auto_disable_underperformers"
+      ],
+      "parallel": false,
+      "depends_on": "build_sequences"
+    }
+  ],
+  "status": "READY"
+}

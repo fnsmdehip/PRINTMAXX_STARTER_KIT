@@ -1,0 +1,48 @@
+{
+  "name": "integration_im_building_a_youtube_intelligence_api_",
+  "created": "2026-03-20T18:35:54.034700",
+  "method": "I'm building a YouTube Intelligence API because vidIQ and TubeBuddy have 30M users but zero public API access Hey everyone. I've been deep in the YouTube creator tools space and noticed something wild",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research_validate",
+      "steps": [
+        "scan RapidAPI for existing YouTube intelligence APIs and their pricing",
+        "check YouTube Data API v3 free quota limits and endpoint coverage",
+        "identify top 5 data points vidIQ/TubeBuddy users want but cant get via API"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_core",
+      "steps": [
+        "build FastAPI service with endpoints: keyword_score, channel_benchmark, video_performance, trending_niches",
+        "implement YouTube Data API v3 client with quota management and caching",
+        "add rate limiting and API key auth"
+      ],
+      "parallel": false,
+      "depends_on": "research_validate"
+    },
+    {
+      "name": "deploy_list",
+      "steps": [
+        "deploy to Railway free tier or Vercel serverless",
+        "create RapidAPI listing with free tier (100 calls/day) and paid tiers",
+        "generate API docs with example responses"
+      ],
+      "parallel": true,
+      "depends_on": "build_core"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post on r/SideProject r/webdev r/youtube showing the API gap",
+        "create 3 tweets about the vidIQ/TubeBuddy API gap with link",
+        "submit to Product Hunt as a maker"
+      ],
+      "parallel": true,
+      "depends_on": "deploy_list"
+    }
+  ],
+  "status": "READY"
+}

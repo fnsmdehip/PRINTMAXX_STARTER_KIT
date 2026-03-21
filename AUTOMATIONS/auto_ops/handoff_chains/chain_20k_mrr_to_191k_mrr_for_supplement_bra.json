@@ -1,0 +1,29 @@
+{
+  "name": "chain_20k_mrr_to_191k_mrr_for_supplement_bra",
+  "created": "2026-03-20T18:35:52.131510",
+  "method": "$20k MRR to $191K MRR for supplement brand (I will not promote) heres every step of how we took a wellness brand from $20K MRR to $191K MRR in 7 months. It wasn\u2019t all sunshine and rainbows but right n",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Meta Ad Library and TikTok Creative Center for DTC supplement/wellness brands running 20+ creatives/month with declining CTR or high frequency",
+      "output": "dtc_brands_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score brands by ad spend inefficiency signals (high creative volume + low engagement), filter to $10-50K MRR estimate based on product pricing and review volume, verify founder email/LinkedIn",
+      "output": "dtc_qualified_leads.json"
+    },
+    {
+      "agent": "content_gen",
+      "task": "Generate personalized AI audit: their current creative costs vs AI UGC pipeline (OpenClaw/Arcads), automated A/B testing savings, AI copywriting ROI projection",
+      "output": "audit_reports/"
+    },
+    {
+      "agent": "outreach",
+      "task": "Cold email with PDF audit, subject line referencing their specific brand, LinkedIn DM follow-up day 3, track in CRM pipeline",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

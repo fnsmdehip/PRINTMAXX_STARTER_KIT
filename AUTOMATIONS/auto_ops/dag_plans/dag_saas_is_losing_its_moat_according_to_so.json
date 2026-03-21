@@ -1,0 +1,47 @@
+{
+  "name": "integration_saas_is_losing_its_moat_according_to_so",
+  "created": "2026-03-20T18:35:53.599414",
+  "method": "SaaS is losing its moat (according to some VCs) VCs are apparently done funding workflow stickiness. That phrase used to be the magic word in every SaaS pitch deck. Get humans to do their work inside ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_reddit_saas_threads_for_moat_erosion_signals",
+        "scan_hn_for_vc_agent_disruption_takes",
+        "query_alpha_index_for_saas_vulnerability_patterns"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "synthesize",
+      "steps": [
+        "extract_top5_vulnerable_saas_categories",
+        "map_agent_replacement_opportunities_to_app_factory"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_twitter_thread_saas_moat_death",
+        "generate_reddit_post_with_data_backing",
+        "generate_linkedin_contrarian_take"
+      ],
+      "parallel": true,
+      "depends_on": "synthesize"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "append_to_posting_queue",
+        "update_competitive_intel_master",
+        "feed_app_factory_priority_queue_with_clone_targets"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

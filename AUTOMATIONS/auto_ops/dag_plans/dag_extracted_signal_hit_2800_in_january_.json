@@ -1,0 +1,47 @@
+{
+  "name": "integration_extracted_signal_hit_2800_in_january_",
+  "created": "2026-03-20T18:09:56.625507",
+  "method": "extracted signal: hit $2,800 in january but traffic hasn't grown since december. can't figure out why affiliate_seo ",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "crawl_deployed_affiliate_pages",
+        "check_google_index_status_via_site_query",
+        "scrape_serp_positions_for_target_keywords"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "diagnose",
+      "steps": [
+        "detect_content_decay_signals",
+        "compare_competitor_freshness",
+        "check_internal_link_density"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "fix",
+      "steps": [
+        "regenerate_stale_sections_with_claude",
+        "add_internal_crosslinks_between_affiliate_pages",
+        "update_meta_descriptions_and_titles"
+      ],
+      "parallel": true,
+      "depends_on": "diagnose"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "redeploy_updated_pages_to_surge",
+        "submit_updated_urls_to_google_indexing"
+      ],
+      "parallel": false,
+      "depends_on": "fix"
+    }
+  ],
+  "status": "READY"
+}

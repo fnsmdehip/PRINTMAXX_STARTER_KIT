@@ -1,0 +1,29 @@
+{
+  "name": "chain_just_paid_out_one_of_our_organic_ai_crea",
+  "created": "2026-03-20T13:50:42.868090",
+  "method": "Just paid out one of our Organic AI creators $200k for February (and he did $100k in January)  \n\nHe runs some of the Instagram/Facebook pages you see screenshotted by LARPers daily on twitter to sell ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_generator",
+      "task": "Generate niche AI carousels and reel scripts optimized for Meta algo (saves + DM shares priority)",
+      "output": "meta_content_batch.json"
+    },
+    {
+      "agent": "product_matcher",
+      "task": "Match generated content to existing DIGITAL_PRODUCTS PDFs, generate CTAs and link-in-bio pages",
+      "output": "product_content_map.json"
+    },
+    {
+      "agent": "posting_scheduler",
+      "task": "Format content to platform specs, schedule at optimal Meta engagement windows, queue to CONTENT/social/posting_queue/",
+      "output": "meta_posting_schedule.json"
+    },
+    {
+      "agent": "revenue_tracker",
+      "task": "Track engagement \u2192 click \u2192 sale funnel, report daily conversion metrics",
+      "output": "meta_funnel_metrics.json"
+    }
+  ],
+  "status": "READY"
+}

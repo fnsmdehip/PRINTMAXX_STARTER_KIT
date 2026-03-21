@@ -1,0 +1,56 @@
+{
+  "name": "integration__i_set_up_6_ai_agents_that_sell_web_serv",
+  "created": "2026-03-20T18:09:58.180312",
+  "method": " i set up 6 ai agents that sell web services 24/7 (full breakdown) i know \"ai agents\" sounds like tech bro nonsense so let me explain it simply.\n\nai agent is just an ai that does a specific task on it",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "scrape_and_qualify",
+      "steps": [
+        "scrape_gmb_yelp_for_bad_websites",
+        "scrape_reddit_upwork_for_web_service_demand",
+        "check_existing_leads_for_duplicates"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_and_segment",
+      "steps": [
+        "score_leads_by_revenue_signals",
+        "segment_by_service_type_website_seo_redesign"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_and_qualify"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_personalized_audit_per_lead",
+        "draft_cold_email_with_audit_hook",
+        "queue_emails_for_send"
+      ],
+      "parallel": false,
+      "depends_on": "score_and_segment"
+    },
+    {
+      "name": "engage",
+      "steps": [
+        "monitor_replies",
+        "objection_handler_auto_respond",
+        "escalate_hot_leads_to_human"
+      ],
+      "parallel": true,
+      "depends_on": "outreach"
+    },
+    {
+      "name": "deliver_and_followup",
+      "steps": [
+        "generate_website_or_seo_deliverable",
+        "send_followup_sequence_3_7_14"
+      ],
+      "parallel": true,
+      "depends_on": "engage"
+    }
+  ],
+  "status": "READY"
+}

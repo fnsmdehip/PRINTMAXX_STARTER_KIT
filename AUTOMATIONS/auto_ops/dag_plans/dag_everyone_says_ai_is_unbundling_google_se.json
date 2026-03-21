@@ -1,0 +1,37 @@
+{
+  "name": "integration_everyone_says_ai_is_unbundling_google_se",
+  "created": "2026-03-20T18:35:50.237315",
+  "method": "Everyone says AI is unbundling Google Search.\n\nChatGPT processes 1.6 billion queries a day. Perplexity grew 340% last year. The narrative writes itself.\n\nBut look closer at the numbers and something e",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_insight",
+      "steps": [
+        "parse_source_data_points",
+        "calculate_google_vs_ai_traffic_ratio",
+        "identify_competitor_seo_abandonment_signals"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "contrarian_thread_google_not_dying",
+        "data_backed_seo_doubledown_post",
+        "engagement_bait_ai_search_myth"
+      ],
+      "parallel": true,
+      "depends_on": "extract_insight"
+    },
+    {
+      "name": "route_and_queue",
+      "steps": [
+        "add_to_posting_queue",
+        "update_seo_strategy_notes"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

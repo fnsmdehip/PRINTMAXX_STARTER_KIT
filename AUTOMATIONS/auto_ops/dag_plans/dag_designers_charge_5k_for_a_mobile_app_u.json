@@ -1,0 +1,48 @@
+{
+  "name": "integration_designers_charge_5k_for_a_mobile_app_u",
+  "created": "2026-03-20T18:35:50.257709",
+  "method": "Designers charge $5k+ for a mobile app UI.\n\nI built mine in 3 prompts.\n\nIf your app still looks like it's from 2010, the problem isn't AI.\n\nIt's your prompts.\n\nWatch how I did it ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "screenshot_all_deployed_apps",
+        "score_ui_quality_1_to_10",
+        "rank_by_worst_first"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "craft_ui_prompts_per_app_category",
+        "generate_improved_css_html",
+        "generate_color_palette_typography"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "apply",
+      "steps": [
+        "apply_ui_updates_to_html",
+        "redeploy_updated_apps",
+        "verify_no_broken_layouts"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    },
+    {
+      "name": "content",
+      "steps": [
+        "generate_before_after_screenshots",
+        "create_3_tweets_plus_thread",
+        "package_prompt_pack_for_gumroad"
+      ],
+      "parallel": true,
+      "depends_on": "apply"
+    }
+  ],
+  "status": "READY"
+}

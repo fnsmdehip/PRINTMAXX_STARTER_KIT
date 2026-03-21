@@ -1,0 +1,26 @@
+{
+  "name": "integration_ai_is_going_to_massively_increase_the_nu",
+  "created": "2026-03-20T18:35:50.244301",
+  "method": "ai is going to massively increase the number of one person companies within the next ~10 years\n\n- 1 one person $10b company\n- 10 one person $1b companies\n- 100 one person $100m companies\n- 1,000 one p",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_extraction",
+      "steps": [
+        "extract_pyramid_format_as_template",
+        "generate_3_variant_posts_with_printmaxx_positioning"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "route_to_posting_queue",
+        "add_to_content_calendar"
+      ],
+      "parallel": true,
+      "depends_on": "content_extraction"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "integration_i_ran_my_bots_trade_history_against_the",
+  "created": "2026-03-20T18:09:52.274148",
+  "method": "i ran my bot's trade history against the actual outcomes of 14,000 events\n\nit wasn't predicting the future\n\nit was predicting when other bots would panic-sell\n\n$187K profit in 6 weeks. not from readin",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "fetch_polymarket_orderbook_snapshots",
+        "fetch_recent_trade_history_via_api"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "detect_correlated_sell_clusters",
+        "identify_bot_signature_patterns",
+        "calculate_panic_sell_frequency"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "generate_weekly_report",
+        "convert_to_content_threads",
+        "append_to_alpha_staging"
+      ],
+      "parallel": false,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

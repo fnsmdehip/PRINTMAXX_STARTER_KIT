@@ -1,0 +1,47 @@
+{
+  "name": "integration_47m_hn_items_as_parquet_dataset_query_d",
+  "created": "2026-03-20T13:50:39.511493",
+  "method": "47M HN items as Parquet dataset. Query directly instead of scraping. Enables bulk trend analysis and alpha mining without rate limits.",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "acquire",
+      "steps": [
+        "download_parquet_if_stale",
+        "verify_integrity"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "index",
+      "steps": [
+        "build_duckdb_index",
+        "create_keyword_catalog"
+      ],
+      "parallel": true,
+      "depends_on": "acquire"
+    },
+    {
+      "name": "mine",
+      "steps": [
+        "query_rising_tools_show_hn",
+        "query_revenue_methods_mrr_arr",
+        "query_competitor_patterns",
+        "query_emerging_niches"
+      ],
+      "parallel": true,
+      "depends_on": "index"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "score_findings_dedup",
+        "stage_to_alpha_csv",
+        "generate_content_hooks"
+      ],
+      "parallel": false,
+      "depends_on": "mine"
+    }
+  ],
+  "status": "READY"
+}

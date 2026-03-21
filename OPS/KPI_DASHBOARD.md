@@ -554,3 +554,1080 @@ These are the gates between $0 and first revenue. Every day they stay undone is 
 *This dashboard is consumed by: CEO Agent (Phase 3.5), Revenue Projector, Decision Engine, Daily Digest, Session Briefing.*
 *Update frequency: Weekly manual review, daily automated metrics via control_panel.py (localhost:9999)*
 *Source data: PRINTMAXX_MASTER_OPS_ENHANCED_2026-03-03.xlsx, CAPITAL_GENESIS_PRIORITY_STACK.md, industry benchmarks*
+
+| $65K/yr side hustle at 10% margin, is go | 3 qualified ecommerce leads contacted per week with personal | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| E-commerce Industry News Recap 🔥 Week of | Weekly: publish 1 e-commerce news recap thread + cross-post  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Hit $1K/month building mobile apps on th | Track weekly app revenue across all 47 deployed apps. Target | APP | AUTO | DAILY | 2026-03-20 |
+
+| NEW RULES for the IndieHackers subreddit | Weekly: verify r/indiehackers posts not removed. Check post  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I analyzed 1,500 bootstrapped startups | Review weekly bootstrapped-startup pattern report, route top | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| I almost killed my own conversion rate t | Track engagement on cautionary-tale format posts vs standard | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Built a SaaS over 13 years (70 clients,  | Extract 3+ bootstrapped SaaS retention/growth tactics from t | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| How I built $15-20k vibecoding agency as | 2 vibecoding outreach emails sent per week targeting busines | EAS | AUTO | DAILY | 2026-03-20 |
+
+| Scaled My Side Hustle to $3,000/Month | Review 3 extracted passive income methods per week, route to | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| I got tired of spending hours in After E | Weekly: check video template downloads and update Remotion t | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| There’s one AI business model that gets  | Send 5 cold emails/day using sticky-AI positioning to busine | EAS | AUTO | DAILY | 2026-03-20 |
+
+| Best of Passive Income: March 2026 | Check reddit_roundup_extractor output biweekly — count new m | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| Is anyone else hitting a wall with lead  | Post 1 engagement thread per week on r/SaaS showing our lead | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| itunes.apple.com | Check iTunes scraper output daily — new competitor apps dete | APP | AUTO | DAILY | 2026-03-20 |
+
+| [r/sidehustle] Hit $1K/month building mo | Track APP_FACTORY MRR weekly — target $1K across portfolio o | APP | AUTO | DAILY | 2026-03-20 |
+
+| 18 months using Facebook groups for affi | Track Facebook group post reach and affiliate click-throughs | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| quick tip that might save you money if y | Check discount code leakage report daily; rotate any codes f | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| Built an iOS app because my wife had 40, | Check app_factory_priority_queue.json weekly for underserved | APP | AUTO | DAILY | 2026-03-20 |
+
+| Reducing SaaS overhead: A self-hosted PD | Check pdfmaxx landing page visits weekly; track if cost-savi | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Build in public: testing Instagram autom | Convert 1 automation session into 1 build-in-public thread p | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Month 2 of serious restructure | Weekly: review restructure audit report, implement top 3 pag | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How to earn 30–50% annual returns by inv | Weekly: review top 5 app acquisition listings, note niche +  | APP | AUTO | DAILY | 2026-03-20 |
+
+| Opened Google Search Console after weeks | Weekly: check GSC for keyword opportunities on deployed site | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I built 8 email automations for my 322-u | Track email CTR daily across all sequences. Target: 15%+ CTR | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Side hustle with a truck and trailer | Route 1 truck/trailer side hustle story per week into conten | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| shopify really said ‘what if we just cha | Track Shopify fee complaint leads scraped + outreach sent +  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Online business acquisition framework (O | Review 2x/week deal scanner output for content-worthy deals  | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| I tracked which marketing channels actua | Check channel_attribution_report.md daily — verify conversio | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| https://reddit.com/r/Meditation/comments | 2x/week: repurpose top meditation Reddit posts into 3+ socia | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Utility-first SEO play: build searchable | Track weekly: indexed pages count, organic impressions, Redd | APP | AUTO | DAILY | 2026-03-20 |
+
+| Cook CLI orchestrates Claude Code sessio | Weekly: check if Ralph loop completion rate improved after p | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| 47M HN items as Parquet dataset. Query d | Weekly: run HN Parquet trend scan, review top 10 findings st | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| What 81,000 people want from AI | Weekly: 3+ engagement posts from AI demand intel, 1 thread m | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I'm building a YouTube Intelligence API  | Daily: check YouTube scraper output for new keyword gaps and | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| What is the best ad intelligence softwar | Track affiliate page impressions + clicks via surge analytic | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| So I built something | Weekly: review top 5 r/MicroSaas build reports, score for ap | APP | AUTO | DAILY | 2026-03-20 |
+
+| recruit new affiliates via cold email ou | Weekly: 20 affiliate recruitment emails sent, track reply ra | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Negotiate Influencer Brand Deals Without | Weekly: 1 influencer negotiation content piece published, 1  | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| [r/SaaS] I made $413 from 1,700 users in | Post 2 transparent breakdown threads per week (Mon/Thu). Tra | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I analyzed HeyGen, Deel, and Vercel’s ex | 2 SaaS growth teardown threads per week posted to Twitter/Re | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| built my MVP in 5 hours and got to $10k  | Weekly: 1 new MVP identified, specced, and scaffolded. Track | APP | AUTO | DAILY | 2026-03-20 |
+
+| Got my first customer | Weekly: pick 3 apps, execute 1 first-customer acquisition ta | APP | AUTO | DAILY | 2026-03-20 |
+
+| My entire sales funnel is Reddit comment | Post 3-5 Reddit comments per day on threads matching product | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I wasted 5 months manually pinning befor | Track daily pins scheduled, weekly impressions, click-throug | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I scaled products to six figures using f | Weekly: review 3 product listings and verify classic framewo | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| create an ai influencer using foxy ai | Track AI influencer account follower growth weekly, engageme | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Using a White-Label or Reseller Program  | Weekly: check scanner output for new free-tier reseller prog | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| Expanding local flower shop to start sel | Check local_biz_pipeline for new florist leads weekly | LOCAL_BIZ | AUTO | DAILY | 2026-03-20 |
+
+| Is Social Media A Waste OF Time | Post 1 contrarian-take thread per week using debate hook str | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Went live on Twitch to show my AI compan | 2 dashboard clips generated per week, posted to Twitter/TikT | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Built a programmatic SEO site to 700K im | Weekly: check GSC impressions growth, pages indexed count, t | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Amazon Affiliate Dashboard | Weekly: check Amazon Associates dashboard for clicks/convers | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| Looking for Affiliates (10% flat commiss | Review affiliate_program_scout output weekly — sign up for t | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| Built a Shopify profit tracker because I | Track calculator page visits and spreadsheet downloads weekl | APP | AUTO | DAILY | 2026-03-20 |
+
+| What's the best tool to use for digital  | Generate 10 ad creative templates per week, list 1 new Fiver | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Anyone else just completely given up on  | Post 1 value-first comment in r/SaaS or r/indiehackers daily | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How many new creatives should I test a m | 50+ creative variations generated/week, track win rate (>3%  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Trying to monetise my IG page (42k+ orga | Track social monetization readiness: follower count mileston | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 48 SVG backgrounds. Copy/paste into land | Track bounce rate and time-on-page for upgraded pages vs bas | APP | AUTO | DAILY | 2026-03-20 |
+
+| I almost deleted this video after 12 vie | Weekly: check recycled content performance vs original posts | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Got successful PE exit at bootstrapped A | Check r/Entrepreneur weekly for B2B SaaS exit case studies - | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| What type of content works best for prom | Review SaaS content performance weekly — which formats (tuto | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Launched DistillNote - knowledge vault t | Process 2 competitor videos/podcasts per week through existi | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Remote assistant work as a side hustle | Check 3 new remote assistant leads daily, send 2 proposals m | EAS | AUTO | DAILY | 2026-03-20 |
+
+| Built a tool to auto-generate Reddit pos | Check CONTENT/social/posting_queue/ for Reddit-formatted pos | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| The dashboard we built for ourselves bec | Weekly: review top 3 productization candidates, check if any | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| what metric actually tells you your Shop | Add 3 Shopify support-automation pain points to EAS outreach | EAS | AUTO | DAILY | 2026-03-20 |
+
+| We're profitable but I pay myself less t | Weekly: check r/SaaS pain-point scrape output, route 3+ lead | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I got tired of spending hours on Binance | Track 'I got tired of X so I built Y' content template usage | APP | AUTO | DAILY | 2026-03-20 |
+
+| Your store looks great | Track store review replies posted per day and inbound DMs/le | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| If had no followers, no email list, and  | Post 1 value-first Reddit/forum post daily linking to free l | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I built a tool that turns a restaurant's | Weekly: 20 restaurants scraped, 20 digital menus generated,  | LOCAL_BIZ | AUTO | DAILY | 2026-03-20 |
+
+| Does posting auto-generated AI Shorts (h | Generate and queue 3 AI Shorts per day across history/scary/ | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I analyzed 1000+ Reddit comments to see  | Review weekly demand signal report, check if top 3 pain poin | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| lost $1.5M in less than 2 years | Generate 3 consequence-first hook posts per week using loss/ | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 50 platforms to sell your digital produc | List 2 products on 2 new platforms per week. Track total pla | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Rejected from YC three times, built it a | Weekly: 2 rejection-narrative posts published, track engagem | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I spent 4 hours a day on Reddit to get m | 3 Reddit value responses drafted per day, track referral cli | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I Spent $90,000 Developing a Smart Athle | Weekly: check posting_queue for product-dev-story content, p | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I walked away from a 13-month project an | Weekly check: monitor AI agent marketplace competitors (e.g. | APP | AUTO | DAILY | 2026-03-20 |
+
+| I Created A Tool To Bring Organic Traffi | Track weekly indexed page count and organic impressions via  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| linkedin automation tools that won't get | Track weekly: connection requests sent, acceptance rate, mes | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Managing Instagram, TikTok, LinkedIn &am | Verify existing content_repurposer.py covers IG/TikTok/Linke | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| （Beta） Switching between tasks and entry | Check r/AlphaandBetaUsers weekly for beta tools gaining trac | APP | AUTO | DAILY | 2026-03-20 |
+
+| I recently joined a LinkedIn engagement  | Post 1 AI-related LinkedIn post daily + engage with 10 pod m | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Shutting down our free tier tomorrow | Check free_tier_death_monitor output daily. Track: companies | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| After 6 months of fighting "uncanny" AI  | Repurpose 1 build-in-public story per week into engagement t | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I just got into Y Combinator | Weekly: check new YC companies scraped, outreach sent, repli | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| i built a side hustle turning ugly sprea | Generate 5 sample dashboards from scraped local biz data per | LOCAL_BIZ | AUTO | DAILY | 2026-03-20 |
+
+| Lessons Learned Thread | Weekly: 2+ flipping lessons-learned posts converted to engag | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How do you approach getting to speak to  | Send 5 personalized cold DMs/emails per day to qualified lea | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| 0 signups on startup waitlist page. How  | Weekly: check landing page signup conversion rate across all | APP | AUTO | DAILY | 2026-03-20 |
+
+| Why is branding so much harder than codi | Post 1 founder-pain-point engagement thread per week using b | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I built an iOS app to keep track of task | Track posts to beta subreddits per week and inbound signups/ | APP | AUTO | DAILY | 2026-03-20 |
+
+| How are you getting your first 100 users | Review r/micro_saas weekly scrape output for specific first- | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Solopreneurs: what AI tools are you usin | Weekly: check ai_tool_intel output, publish 1 comparison pos | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Launched my product silently 5 months ag | Weekly: verify 5 directory listings live, track inbound sign | APP | AUTO | DAILY | 2026-03-20 |
+
+| A business owner was spending 40 hours a | Add 'social media time burden' as qualifying question in out | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| US HOUSEHOLD WEALTH HITS RECORD AS STOCK | Post 1 finance/wealth data commentary thread per week using  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| The #UXLINK exploiter sold 5,496 $ETH($1 | Check whale_alert posting queue daily — target 3-5 whale mov | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| $FDX FedEx Q3 Earnings
+
+Adjusted EPS $5. | none | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Mar 19 Update:
+
+#Bitcoin ETFs:
+1D NetFlo | Check if daily crypto ETF flow tweet was generated and queue | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Cursor just dropped Composer 2 and it's  | Post 1 AI model comparison thread per week on printmaxxer Tw | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Meshup – a social app to meet people nea | Track weekly posts to beta subreddits and resulting signups/ | APP | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0x049b opened 20x shorts on 428.73 | Check whale alert content queue daily, ensure 1-2 whale post | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I built my entire mobile app in UNDER a  | Generate 3 tweets per app factory build showing speed metric | APP | AUTO | DAILY | 2026-03-20 |
+
+| Trader BlueHorseshoe86, who previously m | Check polymarket whale alerts, post 1-2 whale move threads d | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| BREAKING: CLAUDE can now manage all your | Generate 20+ social posts daily across 3 niches using cinema | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| The #Matrixport-linked whale closed a 40 | Check whale content posts for engagement metrics, aim for 1  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Mar 18 Update:
+
+#Bitcoin ETFs:
+1D NetFlo | Check daily ETF flow post generated and queued in CONTENT/so | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| My fiction paid newsletter on Substack,  | Track Substack subscriber count, free-to-paid conversion rat | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Someone created a new wallet and spent $ | Check Polymarket whale scraper output daily, route top 2 sto | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| At the Agents Anonymous SF meetup last n | Post 1 survey-data tweet per day for 5 days, track impressio | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| A #BitcoinOG with 5K $BTC($356M) sold an | Check whale_pnl_content_generator output daily, verify 2+ po | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| FED SIGNALS MODEST RATE CUTS, STICKY INF | none | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| i spent 3 months and $8K building a trad | Post 1 thread per week on 'Claude Code found X making $Y' pa | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Last year, Donald Trump Jr. invested in  | Generate 2 political-investment signal threads per week from | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Pippin has crashed 85% from its peak! 
+
+ | Check whale_wallet_content_scraper output daily, route 1-2 b | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| We've built our paid newsletter Write Wi | Track newsletter subscriber count, open rate, and digital pr | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 97% of visitors to Google perform a sear | Weekly: check audience_engagement_optimizer output, verify d | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale bc1qfs has been buying $BTC every  | Check whale alert content queue, post 1-2 whale movement twe | SCRAPING | AUTO | DAILY | 2026-03-20 |
+
+| Guru Twitter: "I made $847K last month,  | Generate 3 contrarian 'guru debunker' posts daily. Track eng | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whales are buying $ETH!
+
+Whale 0x7143 wi | none | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| As price edged above $74k this week, the | Post 1 on-chain insight thread per day to crypto audience ch | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| me: buys a mac mini and installs opencla | Generate 1 'me vs also me' contrast post per week using this | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  The Complete AI Bundle for Your Busines | Weekly: check bundle downloads, update bundle with new promp | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Abraxas Capital is shorting #oil.
+
+In th | Check whale alert content performance daily — track impressi | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| $10k/mo = cover your bills
+
+$25K-$30K =  | Generate 2 income-milestone-format posts per week using our  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| App developers don't want you to know th | Monitor 3 vibecoding communities daily for 'stuck at 80%' po | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| I made $3424 Today from a viral tiktok s | Generate 3 TikTok slideshows/day, track views and completion | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Mar 17 Update:
+
+#Bitcoin ETFs:
+1D NetFlo | Check crypto ETF flow content generated daily, verify 1+ twe | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| blackhats adapt to everything.
+
+credit l | Use Meta ad fraud stats in 1 platform-economics thread per w | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| It took me 11 months to go from $1k-$10k | Post 1 monthly revenue progression update with real numbers  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Cal AI has been acquired by MyFitnessPal | Post 1 Cal AI narrative thread this week; apply 1 extracted  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| the biggest AI opportunity right now is  | Daily: 20 mid-market companies identified, 5 scored as high- | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Just paid out one of our Organic AI crea | Daily: 3 IG carousels generated + queued, 1 reel concept cre | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Chinese mobile app studio printing $4M/m | Weekly: check App Store Connect for identifier app downloads | APP | AUTO | DAILY | 2026-03-20 |
+
+| Michael Saylor(
+@saylor
+)'s 
+@Strategy
+  | Track whale move posts engagement rate vs baseline. Target:  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Here's my workflow for reverse-engineeri | Weekly: reverse-engineer 5 top creators in target niches, ge | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| “no way it cost $0.50, you mean $0.50/s” | Generate 15 Sora video prompts daily, track videos created v | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| i pointed Claude Code at the pentagon's  | Weekly: check FPDS scan results, post 1 government-waste thr | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| After holding $TRUMP for 8 months, whale | Track whale alert posts generated per day and engagement rat | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 2019: "Dropshipping is dead."
+2020: "Dro | Generate 3 posts/week using contrarian 'X is dead / meanwhil | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Kinda, in 2014 I made $5K/mo with Nomad  | Weekly: identify 1 underserved niche directory opportunity,  | APP | AUTO | DAILY | 2026-03-20 |
+
+| Here are the best performing NASDAQ 100  | Check stock recap post engagement daily; track follows from  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Another great argument for running Claud | Post 1 Claude Code tip/pain point tweet per day from posting | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I made $100K for an brand in under 2 mon | Daily: 5 AI UGC scripts generated, 3 TikTok content pieces q | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0x743d just spent 3.79M $USDT to b | Check whale_alert posting queue daily — target 1-2 whale ale | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Here are the worst performing NASDAQ 100 | Weekly: verify NASDAQ underperformer scrape ran, review gene | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Follow up on our simulation.
+Same 200 us | Generate 1 simulation-style comparison thread per week reusi | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How to make $1 million on X
+
+1) Visit ev | Daily: 3 adapted viral posts published, reply to 10 comments | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Turkish mobile app studio printing $900k | Weekly: check App Store Connect rankings for AI wrapper apps | APP | AUTO | DAILY | 2026-03-20 |
+
+| Before stock options, early startup empl | Weekly: 3 creator-equity-gap posts published, 5 underpaid cr | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| I spent 6 months figuring out AI UGC so  | Daily: generate 3 AI UGC clips, post to 2+ platforms, track  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Worst and best SaaS tools you’ve ever us | Check weekly: 1 comparison listicle published from SaaS sent | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| The biggest fumble in business ever migh | Post 1 corporate fumble thread per week across Twitter/Linke | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I wasted 90 days chasing the “perfect” i | Generate 3 'time wasted before first $' posts per week using | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Running four sales channels at once is w | Check if multi-channel pain content gets >2% engagement vs b | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I almost quit my side hustle because I t | Weekly: review friction scores for top 10 landing pages, fix | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| I either study for 12+ hours straight in | Route to engagement_bait_converter.py as CONTENT_ONLY. Use m | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Mar 13 Update:
+
+#Bitcoin ETFs:
+1D NetFlo | Verify daily ETF flow post generated from existing pipeline  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Mar 10 Update:
+
+#Bitcoin ETFs:
+1D NetFlo | Check ETF flow post engagement daily — track impressions and | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Mar 16 Update:
+
+#Bitcoin ETFs:
+1D NetFlo | Check daily ETF flow post generated and queued in CONTENT/so | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whales have rotated from #gold into $ETH | Post 1 whale-tracking content piece to crypto audience chann | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Tron ranked #1 in revenue, far ahead of  | Weekly: check DeFiLlama chain revenue rankings, generate 1 c | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Mar 11 Update:
+
+#Bitcoin ETFs:
+1D NetFlo | Post 1 daily crypto ETF flow update thread across Twitter/Li | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0x2d85, who sold $ETH at a high pr | Track whale alert post engagement (likes, RTs, replies) dail | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0x17c3 keeps adding to his short o | Post 1 whale-tracking thread per week using on-chain data fr | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whales are buying $ETH!
+
+Someone created | Post 1 crypto whale alert thread per day when whale data ava | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| An industrial piping contractor on Claud | Check engagement on 'non-tech uses Claude Code' content dail | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| One year ago, whale DNTpoX spent 30M $US | Repurpose 1 whale-tracking data point into engagement thread | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I lost $2,300 on my first Amazon Private | Weekly: check engagement rate on loss-story format posts vs  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Fitness MCP server. Bridges Claude to fi | Weekly: check fitness app premium tier signups, AI coach eng | APP | AUTO | DAILY | 2026-03-20 |
+
+| Today marks 16 years since the attempt t | Post 1 SEO-history engagement thread this week across Twitte | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Same
+
+Tech bros in :
+
+Entry Level: $400  | Post 2 salary-comparison or geo-arbitrage threads per week.  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Oil’s extreme intraday moves are challen | Check if market signal content posts got >avg engagement vs  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Accidentally made $442 from a small GPT  | Weekly: check app factory queue for GPT microtool candidates | APP | AUTO | DAILY | 2026-03-20 |
+
+| Stripe Machine Payments Protocol (MPP) - | Weekly: check Stripe MPP API status, count agent-initiated p | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| Mar 9 Update:
+
+#Bitcoin ETFs:
+1D NetFlow | Check that daily ETF flow content auto-posts from existing p | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0x15a4 opened 20x longs on 600 $BT | Check whale tracker output and post 1 whale movement thread  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 24BLFj is selling $BTC to buy $PUM | Post 1 whale-watch thread per week using on-chain data from  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Wallpaper app (macOS) monetization: laun | Weekly: wallpaper packs generated, landing page visits, paym | APP | AUTO | DAILY | 2026-03-20 |
+
+| Salary in NY
+
+Plastic Surgeon $4m
+Vultur | Weekly: generate 5 city salary comparison posts, track engag | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Show HN: Real-time local TTS (31M params | Generate 3 narrated video scripts/day using local TTS, measu | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Claude Code custom skills for Godot. Pat | Weekly: 1 new skill pack domain researched + generated. Trac | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| my AI woke me up at 3am with a message:  | Track prediction market API availability, content engagement | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Curious on what the best methods of earn | Weekly: affiliate links placed count, affiliate page impress | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| COLD_OUTBOUND | Daily: leads scraped, emails personalized, emails sent, repl | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| The headlines on monetization in 2026:
+
+ | Weekly: count of apps with live Stripe web payment links vs  | APP | AUTO | DAILY | 2026-03-20 |
+
+| Designers charge $5k+ for a mobile app U | Refresh UI on 2 existing app factory builds per week using A | APP | AUTO | DAILY | 2026-03-20 |
+
+| i replaced the cofounder i couldn't find | Track: cofounder-pain posts scraped, AI cofounder template d | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| I'm building a SaaS in public and docume | Daily: verify 3+ build-in-public posts queued from yesterday | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| two openclaw bots on polymarket have bee | Check Polymarket bot scanner output for new adversarial bot  | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| Oil bear 0x985f deposited another 4M $US | Check if whale content thread was auto-generated and queued  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Two Prime appears to be selling large am | Check whale_alert posting queue daily — target 2+ whale aler | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I made $2460 Today from a viral tiktok s | Post 3 TikTok slideshows/day (already tracked via existing C | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 2010: You needed $20,000 to build a smal | Evaluate Rork AI output quality vs current PWA/Capacitor sta | APP | AUTO | DAILY | 2026-03-20 |
+
+| My client asked for a full brand strateg | Weekly: send 10 cold outreach emails to businesses needing b | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| New in Claude Code: Code Review. A team  | Track engagement on Claude Code review content posts; monito | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0x985f deposited 9.5M $USDC into H | Check whale tracker output daily, ensure 1-2 whale alert pos | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Trader 0x8A21, who sold 499 $ETH($2.21M) | Post 1-2 whale movement tweets daily from posting queue, tra | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| have been stagnating like crazy since th | Post 1 thread about using Claude Code for business diagnosti | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| PLS HELP!
+
+Stripe asked one of my best f | Post 1 Apple IAP cautionary content piece to Twitter/LinkedI | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Backend developers charge $10k+ for this | Track template deployments and client conversions from cold  | EAS | AUTO | DAILY | 2026-03-20 |
+
+| 99% of mobile apps never hit $10k / mont | Weekly: pick 3 apps from optimization queue, apply top tacti | APP | AUTO | DAILY | 2026-03-20 |
+
+|  BREAKING: Anthropic quietly dropped a 3 | Weekly: check if Claude Skills product listed, track downloa | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| i ran my bot's trade history against the | Weekly: check Polymarket bot-pattern report, convert top fin | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| "you said you would start with $0"
+
+and  | DMs sent to asset sellers this week (target: 50/wk), deals i | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| ai is going to massively increase the nu | Post 1 one-person-company positioning thread per week using  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Oil prices are going down, and Rune (
+@R | Check whale tracker output daily, route interesting moves to | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| my bot scanned 400,000 wallets to find t | Daily: check whale scanner output, post 1 thread from findin | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Everyone says AI is unbundling Google Se | Weekly: 1 data-backed contrarian SEO thread posted across Tw | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| OpenClaw + Arcads = 550 videos per day
+
+ | Daily: videos generated count, top-performing hook variant,  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| i've been telling people faceless conten | Daily: 15 faceless videos posted across 3 niches, track view | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| btw if you can build a category leader o | Weekly: check GitHub stars on agent-soul, track dev communit | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Oil prices are surging.
+
+loracle.hl (
+@l | Check if whale alert content was generated and queued for po | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| #BTC Whale Order Analysis shows strong b | Post 1 whale alert tweet per day from scraped order book dat | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| BREAKING: Sweden's Central Bank is recom | Post 1 contrarian finance take per day using news items like | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| CBB(
+@Cbb0fe
+), the whale who publicly f | Check whale position tracker output, post 1 whale-move threa | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| IRAN WAR LIFTS MARKET MELTDOWN RISK
+
+Ed  | Check macro signal feeds daily; generate 1 market-fear conte | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| A whale(0xefe2) copied 
+@RuneKek
+'s trad | Check whale tracker output daily, post 1-2 whale movement tw | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Prediction markets are on fire 
+
+Polymar | Daily: 1 prediction market thread posted (trending markets,  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Here's how the largest S&P 500 stocks ha | Post 1 market commentary thread per weekday from auto-genera | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Has #gold already topped? 
+
+We noticed t | Check whale_gold_tracker output 3x/day, post top whale move  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Trader pension-usdt.eth opened another 3 | Check whale_alert posting queue daily — 1-2 whale alert post | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| most people think you need thousands of  | Generate 3 problem-focused tweets per day linking to digital | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Go Claim $100 Claude API credits + $250  | HUMAN ACTION (P1, 5 min): Go to Lovable dashboard → Offer se | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| the FASTEST way to learn AI (save this): | Generate 3 save-bait educational threads/week using 'FASTEST | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| A trader I know blew 5 accounts in 2 yea | Generate 3 posts/week using the 'repeated failure with speci | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Four wallets (possibly owned by the same | Post 2-3 whale movement threads/day to crypto Twitter; track | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How to get to $1 million MRR in 90 days: | Route to engagement_bait_converter.py — extract hook structu | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whales are FOMO-ing long #oil!
+
+In the p | Check whale alert content queue daily — 1 whale-watch post p | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| IndieDevJake launched an AI task manager | Track n8n template downloads/sales weekly. Target: 1 sale in | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Cursor's real-time collab feature droppe | Post 1 SaaS-vs-DIY comparison thread per week; track impress | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Bye Bye Web developers...
+
+I just surpas | Track Convex-based app factory builds and compare deploy spe | APP | AUTO | DAILY | 2026-03-20 |
+
+| this is one of those stories that sounds | Weekly: identify 1 new photo-AI utility niche, create 3 TikT | APP | AUTO | DAILY | 2026-03-20 |
+
+| Stop what you’re doing right now.
+
+Anthr | Publish 1 thread reviewing Anthropic academy courses this we | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| i built a digital product last saturday  | Weekly: 1 new pain-point-derived digital product created and | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| i built 31 n8n workflows this month that | Weekly: build 2 new n8n SaaS-replacement workflows, list as  | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| 336 page drop from 100k+ apps, 1b+ trans | Weekly: check app conversion rates against RevenueCat top-25 | APP | AUTO | DAILY | 2026-03-20 |
+
+| Mar 6 Update:
+
+#Bitcoin ETFs:
+1D NetFlow | Post 1 crypto ETF flow update to Twitter daily using existin | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Unpopular opinion:
+
+You don't need VC fu | Weekly: check app factory apps for MRR milestones and exit r | APP | AUTO | DAILY | 2026-03-20 |
+
+| BlackRock keeps accumulating $BTC, with  | Post 1 institutional BTC flow thread per trading day to cryp | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| WTI oil futures are pumping.
+
+But trader | Post 1 whale alert thread per week from on-chain signals to  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Clari: $310/user. Gong: $150/user. Sales | Generate 3 pricing-teardown posts per week using competitor  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0xf4b8 has closed his #oil long an | Track whale position content posts published per day and eng | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Someone created a new wallet "Idothisfro | Check polymarket whale content queue daily, post 1 whale-bet | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I Made $4,884 today
+
+no product, no face | Daily: generate 3 slideshows, post 1-2 to TikTok, track view | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| The chillest business you can run right  | Track: pages created, affiliate applications sent, content p | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Women aged 35-55 are the most profitable | Weekly: check if any demographic-targeted content variants o | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| An Ethereum ICO wallet (0xF37b) transfer | Check whale_alert_content_scraper output daily, post top 1-2 | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Went from $0 to $1k MRR. If I started my | Review app factory queue weekly: apps with recurring usage p | APP | AUTO | DAILY | 2026-03-20 |
+
+| just got back from an industry conferenc | Post 1 contrarian 'conferences vs cold outbound' thread per  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I built a tiny open-source “gym” that nu | Post 1 developer-health-meets-AI-coding tweet per week targe | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| The real AI gold rush isn’t in building. | Track replies/engagement on 'AI babysitting' content series; | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Simplest Way I Turn My SaaS Demos Into R | Track demo posts made per week and click-through to deployed | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I built an AI system that creates thousa | Daily: generate 3 AI UGC test videos, pitch 2 brands needing | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I Analyses 200 posts and 17,946 comments | Weekly: check LEDGER/REDDIT_PAIN_POINTS.csv for new top-rank | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| I spent &gt; $60K/month on PR agencies a | Weekly: send 5 personalized press pitches to relevant journa | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| email marketing tools really said “what  | Publish email tool comparison page + 3 social posts driving  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 2k users, $800 with a Habit Tracker - I  | Track weekly Reddit posts to habit/productivity subreddits,  | APP | AUTO | DAILY | 2026-03-20 |
+
+| http://
+photoai.com is a 40,870 line fil | Track AI photo tool signups, generations, and Stripe revenue | APP | AUTO | DAILY | 2026-03-20 |
+
+| I made a website for organizing projects | Add r/InternetIsBeautiful to CONTENT/social/distribution tar | APP | AUTO | DAILY | 2026-03-20 |
+
+| Built a self-healing error system that w | Check self-healing monitor output daily: errors caught, fixe | APP | AUTO | DAILY | 2026-03-20 |
+
+| I made a digital product in one day and  | 2 new interactive HTML products generated and listed per wee | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Making $250/month with game apps (what w | Track affiliate signups from reward app content posts (weekl | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How we automated LinkedIn lead gen using | Track daily: keywords monitored, posts found, comments draft | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| $20k MRR to $191K MRR for supplement bra | Post 1 DTC-scaling thread per week to Twitter/LinkedIn; trac | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How I Added 16 New Customers in 30 Days  | Daily: 50 LinkedIn messages sent, 500 cold emails queued, de | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Sold my SaaS for $6M. After talking to 3 | Post SaaS exit thread on Twitter + cross-post to Reddit r/Sa | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| We said no to $2.5m vc money and I'm sti | Post 1 LinkedIn-style bootstrapping thread per week to Twitt | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I'm watching an AI agent try to build a  | Daily: 1 'AI agent building a business' thread posted from r | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 1.3k users, but only $35 MRR. Is it time | Weekly: check conversion rate across all apps with payment l | APP | AUTO | DAILY | 2026-03-20 |
+
+| My first app just got its first paying u | Track streak app retention before/after gamification layer a | APP | AUTO | DAILY | 2026-03-20 |
+
+| I analyzed 963k iOS apps + 471k reviews  | Weekly: review top 5 app gaps from ios_appstore_demand_scann | APP | AUTO | DAILY | 2026-03-20 |
+
+| I was getting 4,000 visitors a month and | Weekly: check funnel_audit_report.json for sites with score  | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| How I got my first paying user. Here's t | Track weekly: unique paywall page visits, Stripe payment int | APP | AUTO | DAILY | 2026-03-20 |
+
+| I spent 4 months building a micro SaaS n | Weekly: review problem-validation scores for top 10 app fact | APP | AUTO | DAILY | 2026-03-20 |
+
+| 6 months. 3 apps. 9 USD MRR. Here's what | Track engagement rate on indie-app-failure content vs other  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| $350 in ads across X, TikTok and Instagr | When ad budget unlocked: track Instagram ad CPA vs organic C | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I built an open source portfolio builder | Track weekly portfolio builder signups, completed portfolios | APP | AUTO | DAILY | 2026-03-20 |
+
+| Day 200. Just hit $12k in revenue. It st | Daily: 5+ intent-matched posts identified, 3+ contextual rep | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| client paid me $1800 for a project. my t | Track: proposals sent, projects won, avg delivery time, reve | EAS | AUTO | DAILY | 2026-03-20 |
+
+| I spent > $60K/month on PR agencies at a | Send 10 journalist pitches per week, track open rates and co | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| SaaS is losing its moat (according to so | 2 thought-leadership posts/week on agent-native vs SaaS moat | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Building SaaS in 2026? My best advice *  | Weekly: count apps with Google OAuth enabled, count apps wit | APP | AUTO | DAILY | 2026-03-20 |
+
+| Lesson I learned this year that doubled  | Check APP_FACTORY priority queue weekly for items sourced fr | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Every mentionable SaaS/tech startup seem | Post 1 bootstrapping-vs-VC debate thread per week across X a | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 1 more to my 500th user and here are my  | Generate 1 'vulnerable milestone' format post per week using | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I Compared Paid Ads vs Affiliates And Th | Track affiliate signups per week via cold outreach. Target:  | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| How I’d use OpenClaw to replace a $15k/m | Post 1 'ops replacement' case study thread per week showing  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I got 400 signups in 30 days and made $0 | Weekly: check how many deployed apps have working payment li | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| what I actually did in the first 10 days | Check Google Search Console for new indexed pages daily. Tar | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I’m 21, I just failed my dream job exam  | Weekly: 1 building-in-public Reddit post using struggle-stor | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Stop playing 'Founder' and start buildin | Post 1 anti-founder-theater contrarian take per week using t | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I Got Paid $25k to Build an AI Ad System | 2 qualified ecom leads prospected per week, 1 proposal sent  | EAS | AUTO | DAILY | 2026-03-20 |
+
+| It's so fking hard to juggle a 9-5, fami | Post 1 building-in-public story per week to r/SideProject or | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Affiliate program for iOS apps | Check Apple Services Performance Partners dashboard for clic | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| Hit $60 MRR, then ghosted my own SaaS fo | Track bet-tracker app signups, trial-to-paid conversion, and | APP | AUTO | DAILY | 2026-03-20 |
+
+| Your "Last Chance" Email Could Cost You  | Weekly email compliance scan: 0 fake urgency violations in o | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How do you all source reliable video pro | Track daily: leads scraped, leads qualified, samples generat | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Price niche streak apps at $2.99 (50% be | Track weekly: streak app installs, trial-to-paid conversion  | APP | AUTO | DAILY | 2026-03-20 |
+
+| Monetize existing skills portfolio. No n | Track skills listed per marketplace, weekly downloads, Gumro | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| I spent almost $500 on AI coding tools i | Post 1 AI-tool-comparison engagement post per week to printm | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I stalked a dead URL for a decade, waiti | Review dead-service scanner output weekly for clone-worthy t | APP | AUTO | DAILY | 2026-03-20 |
+
+| Facebook Creator Fast Track + Content Mo | Daily: verify 15+ Reels posted across 3 pages, track view co | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I added a free trial and my paid convers | Weekly: check trial start count vs paid conversion count per | APP | AUTO | DAILY | 2026-03-20 |
+
+| Looking for a small group of founders to | Track active founder partnerships, cross-promo impressions,  | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| I replaced Google Analytics with somethi | Weekly: check LEDGER/REVENUE_ATTRIBUTION.csv for top 3 refer | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| Spent $10,500 assuming I knew where my c | Post 1 channel-validation cautionary tale thread per week fr | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I set up 6 AI agents that sell web servi | Track daily: prospects scraped, emails sent, replies receive | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| I just made my first sale! [https://trus | Post 1 build-in-public update per week to r/buildinpublic or | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| How to spot an SEO noob who's full of sh | Post 1 contrarian SEO myth-busting thread per week across Tw | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I set up an AI agent that runs 24/7 and  | Generate 3 social posts per week showing real AI agent autom | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I made a Tinder like app that you can di | Track daily active swipes, stars saved, and premium conversi | APP | AUTO | DAILY | 2026-03-20 |
+
+| 14 PH launches today - HIGH quality B2B  | Daily: check PH launches scraped, emails composed, reply rat | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| SaaS free tier shutdowns trending (r/Saa | Check free_tier_killer_scanner output daily. Track: shutdown | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Zero PRINTMAXX Android apps. 72% global  | Track: Android APKs built, Play Store submissions pending, P | APP | AUTO | DAILY | 2026-03-20 |
+
+| Build ColdEmailWriter bot on Poe first ( | Check Poe bot analytics daily: messages served, creator reve | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Package existing stack as client service | Daily: emails sent (target 10/day), replies received (target | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Got a legal threat letter for my bakery  | Track: sites scanned per week, vulnerability hit rate, outre | LOCAL_BIZ | AUTO | DAILY | 2026-03-20 |
+
+| 1,850 visitors, $113 in revenue, and 30  | Track bet-tracker landing page visits, affiliate click-throu | APP | AUTO | DAILY | 2026-03-20 |
+
+| ChatGPT and Ecommerce SEO **ChatGPT pull | Weekly: count of product pages with valid Product schema mar | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| $9M ARR App AMA on r/AppBusiness. Anonym | Apply top 3 pricing/distribution tactics from AMA to next 5  | APP | AUTO | DAILY | 2026-03-20 |
+
+| the fastest path to $5k/month isn't a re | Weekly: check top 5 boring-service niches from demand scan,  | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+|  post: how much do you think this app is | Check /r/appbusiness scrape results daily for undervalued ap | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| sell ai prompt packs. youtube automation | Weekly: check prompt pack downloads + Fiverr gig impressions | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| affiliate review structure. honesty conv | Weekly: check affiliate click-through rates on deployed revi | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| Built 6 SaaS, 0 customers: shipping feat | Before each app factory build: run validation gate, log scor | APP | AUTO | DAILY | 2026-03-20 |
+
+|  post: launched my first saas yesterday. | Weekly: check r/SaaS for new launch stories with 50+ upvotes | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  post: how we got 700 organic visitors i | Track weekly: new backlinks acquired, organic visitors per s | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| extracted signal: hit $2,800 in january  | Weekly: check affiliate page index status, refresh 2 stale p | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+|  post: my forgotten side project outrank | Track ranking positions for top 20 targeted long-tail keywor | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| saas mrr milestones psychology. cross-re | Weekly: 2 SaaS milestone psychology threads posted, track en | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  post: i built a site where people renam | Weekly: 1 new micro-tool deployed + posted to 3 subreddits.  | APP | AUTO | DAILY | 2026-03-20 |
+
+| domain age arbitrage. instant da. $500-5 | Review top 5 expired domain opportunities daily, flag any DA | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| monetization method. summary: $amzn - am | Post 3 AMZN slump content pieces across Twitter/LinkedIn wit | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  post: i spent 8 months building in stea | Track comment karma per subreddit account, posts queued vs p | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  as a saas founder - what role do you en | 2x/week contrarian founder posts published across Twitter +  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  post: 53 paying customers, $4,150 mrr,  | Post 1 bootstrapped SaaS thread/week with real numbers (MRR, | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 4-day saas validation. vibe coding. gemi | Track active 4-day validations: ideas started, MVPs deployed | APP | AUTO | DAILY | 2026-03-20 |
+
+| build niche apps with vibe tools. ship i | Weekly: identify 3 new niche app opportunities, build 1 new  | APP | AUTO | DAILY | 2026-03-20 |
+
+| $500+ ugc cost reduced to pennies. 38% c | 2x/week: generate 3 AI UGC samples, send 10 cold outreach em | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  one of the most interesting categories  | Add 'AI replaces X service' angle to content calendar — 1 po | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| revenue-based financing guide. 7 provide | Monthly: check RBF guide page traffic + affiliate click-thro | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  post: built 9 different product types i | Weekly: check product-type revenue per lane, kill lanes unde | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  the robinhood platinum card will have a | Weekly: 2+ finance comparison posts published to posting que | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| vibe-coded services: $300-800/build. mic | Track: leads found today, proposals sent, builds in progress | EAS | AUTO | DAILY | 2026-03-20 |
+
+|  €10k left, 2 saas projects, and the con | Check engagement on bootstrapper-struggle posts twice/week.  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| SaaSpocalypse: $300B SaaS value wiped. D | Weekly: 3 vulnerable SaaS targets identified, 1 alternative  | APP | AUTO | DAILY | 2026-03-20 |
+
+| $500 to $35k/month ai influencer. fanvue | Daily: posts scheduled (target 3), chatter scripts refreshed | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  post: show me your startup website and  | Post 3 'show me your website' threads per week across Reddit | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  cursor's real-time collab feature dropp | Post 1 dev-tool comparison thread per week; track engagement | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  this app is making 100k installs monthl | Track quiz completion rate, points-to-paywall conversion rat | APP | AUTO | DAILY | 2026-03-20 |
+
+|  ideal app to easily make $10k/month 
+
+– | Track weekly: waitlist signups, lesson completions, premium  | APP | AUTO | DAILY | 2026-03-20 |
+
+| niche gpt wrapper + religious content +  | Track weekly: AI feature usage per app, subscription convers | APP | AUTO | DAILY | 2026-03-20 |
+
+|  people who actually make money with aff | Track engagement rate on question-format posts vs statement  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  pattern i see every week:
+
+→ agency sig | Post 1 agency-pipeline-death thread per week; track replies  | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+|  made $3,200 last month with faceless af | Daily: 3 faceless videos scripted + 1 blog post drafted + af | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  i built the full backend of my saas in  | Each new app factory build uses the SaaS scaffold template;  | APP | AUTO | DAILY | 2026-03-20 |
+
+| source viral us products from aliexpress | Daily: products scanned, supply gaps found, listings generat | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  this girl built up an account over 18 m | Daily: post 3+ pieces per niche account, track follower delt | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| tool/technique alpha. summary: i mass pa | Generate 3 tweets + 1 thread comparing AI subscription costs | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Boring tool strategy: $5K/mo path = tool | Daily: count new validated pain points found (target 3+/day) | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  unpopular opinion:
+
+you don't need vc f | Weekly: 5 pain points sourced, 1 new app candidate scored, 2 | APP | AUTO | DAILY | 2026-03-20 |
+
+|  i tracked which marketing channels actu | Weekly: review channel attribution report, kill 0-conversion | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+|  i just watched the most important 2 hou | Post 1 AI industry growth thread per week using Anthropic re | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  reducing saas overhead: a self-hosted p | Track PDFMaxx landing page visits and signups weekly. Target | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  curious on what the best methods of ear | Weekly: check affiliate signups completed, new pages deploye | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+|  best infrastructure setup for micro saa | Track engagement on infrastructure content posts; measure DM | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  building a clay alternative for lead en | Track leads enriched per day, enrichment hit rate (%), and g | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  i am your client &amp; sell me your ser | Post 1 reverse-prospecting thread per week on X. Track reply | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  building a business with @openclaw (day | Track newsjacking posts published per day and engagement rat | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  to get your website seen on chatgpt, ge | Weekly: check AI chatbot responses for PRINTMAXX product men | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  my latest saas-app: iso weather. built  | Weekly: identify 1 new utility niche, launch 1 utility PWA p | APP | AUTO | DAILY | 2026-03-20 |
+
+| extracted signal: 95% of affiliates are  | Weekly: verify all promoted affiliate programs are recurring | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+|  mit repo: agencyenterprise/react-native | Track weekly: number of fitness apps upgraded to HealthKit,  | APP | AUTO | DAILY | 2026-03-20 |
+
+|  i wish someone would have told me this  | Post 3 'wish I knew' format posts per week across platforms, | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| case study with real numbers. analyze fu | Weekly: 1 case-study thread published, 3 B2B ecommerce SaaS  | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  i set up 6 ai agents that sell web serv | Daily: leads scraped, emails sent, replies received, audits  | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+|  what’s the smallest flip you’ve done th | 2x/week: verify flip content generated and queued for postin | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  for reference this original video on le | 2 UGC clone videos generated per week targeting top 3 apps b | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  how are you building up brand mentions  | Daily: check Perplexity for 5 brand queries, track citation  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  how i pay my tuition selling mystery bo | Weekly: 1 digital mystery bundle listed, 3 mystery-box-hustl | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  boost your conversions with 
+http://
+va | Weekly: check AB_EXPERIMENTS_MASTER.csv for any test with 10 | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+|  how i optimized scheduling for a local  | Track: local service businesses scraped per week, outreach e | LOCAL_BIZ | AUTO | DAILY | 2026-03-20 |
+
+|  seasonal apps could be a huge money gra | Track seasonal app builds queued, TikToks posted per day, in | APP | AUTO | DAILY | 2026-03-20 |
+
+|  what i learnt after the first year of b | Weekly: publish 2 'lessons learned' narrative threads across | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  mit repo: dunky11/react-saas-template ( | Track SaaS apps scaffolded from react-saas-template and thei | APP | AUTO | DAILY | 2026-03-20 |
+
+|  i doubled our mrr from $25k to $50k in  | Weekly: check conversion rate on premium upgrade CTAs across | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+|  if you liked this post, you'll love the | Track newsletter signup rate from social posts (target: 2-5% | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  mit repo: scosman/cmsaasstarter (2293 s | Track SaaS templates cataloged and SaaS products launched fr | APP | AUTO | DAILY | 2026-03-20 |
+
+|  i find it funny how ai thought leaders  | Post 2 contrarian AI takes per day, track engagement rate vs | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # PRINTMAXX Compliance Scan Report **Dat | Weekly: CRITICAL compliance issues resolved vs new (target:  | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+|  mit repo: ixartz/saas-boilerplate (6921 | Track SaaS products shipped from boilerplate per week. Targe | APP | AUTO | DAILY | 2026-03-20 |
+
+|  how to clone your competitor's entire t | Weekly: review tech stack intel for tool upgrades and conten | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+|  triggering events nobody tracks:- leade | Daily: check triggering_event_scanner output, count new trig | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+|  parallel dialers.most sdrs make 50 call | Track parallel email batch send rate vs sequential. Target 5 | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+|  if you're making less than $10k/month & | Weekly: 3 new affiliate products scouted, 1 new comparison p | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+|  most dropshippers find a winning produc | Weekly: verify 5+ new supplier matches found, 1+ report gene | SCRAPING | AUTO | DAILY | 2026-03-20 |
+
+|  your customers are literally trying to  | Daily: check Stripe for failed charges, verify retry queue p | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  tendersinfo .comgovernment contracts be | Daily: check new tenders scraped, leads qualified, outreach  | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| # GITHUB AUTOMATION TOOLS CATALOG ## Ope | Weekly: check if any new tools from catalog have been adopte | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # Extracted Daily Research & Ops Pattern | Weekly check: how many new repeatable patterns were extracte | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # ALL 33 NICHES: Complete Content & Bran | Weekly: verify niche strategy doc is consumed by content pip | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Telegram Community Playbooks for All 3 | Track Telegram channel subscriber count weekly across 3 chan | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Content Calendar Framework - All 33 Ni | Verify content_multiplier.py references niche calendar for p | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Brand Names for All 33 PRINTMAXX Niche | When creating any new platform account, reference brand nami | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| <!DOCTYPE html> <html lang="en"> <head>  | Track CoreDay daily active users and conversion to premium t | APP | AUTO | DAILY | 2026-03-20 |
+
+| # Lead gen research methods guide  Sourc | Review extracted lead gen methods weekly, validate 3 methods | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| # Master Content Swipe File - All 33 Nic | Verify 3+ content pieces per day use swipe-file hooks instea | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # CONTENT FARM AUDIT OUTPUT  **Date:** 2 | Publish 20 content pieces/day from draft backlog. Track: pie | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # AUDIT: Missing Cross-Pollination Oppor | Weekly: check CROSS_POLLINATION_MATRIX.csv for new synergy l | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # Alpha Integration Playbooks -- Top 20  | Weekly: check orphan count trending down — target zero orpha | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # RobloxMaxx: Open Source and Commercial | Weekly: check roblox_competitor_scanner output for new entra | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # MONEY_METHODS Comprehensive Audit **Da | Weekly: verify MONEY_METHODS/ has symlinks or copies of all  | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # DIRECTORY SUBMISSION SPRINT  **Created | Weekly: check LAUNCH_DIRECTORY_TRACKER.csv for pending submi | APP | AUTO | DAILY | 2026-03-20 |
+
+| # Reddit Alpha Research - February 2026  | Weekly: verify 0 orphan alpha docs remain unprocessed (Sunda | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # Discord Community Strategies - All 33  | Weekly: check Discord content bank size per niche (target 30 | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| # Service Fulfillment SOPs  **Purpose:** | When first client lands: load SOP, track delivery milestones | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| # DIRECTIONAL SIGNALS 2026 - WHERE MONEY | Review directional signals doc quarterly (next: 2026-04-27). | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Sleep YouTube Video Descriptions  Pre- | Generate 10 video metadata sets per week across sleep/ambien | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Open-Source Money-Making Tools & Repos | Weekly: cross-reference new OSS tool discoveries against TEC | SCRAPING | AUTO | DAILY | 2026-03-20 |
+
+| # AI INFLUENCER METHOD: COMPREHENSIVE AU | Daily: 3 AI influencer posts published, engagement rate trac | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # GitHub Solopreneur Repo Audit - Februa | Weekly: check new solopreneur repos discovered and content p | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| # VA Task Standard Operating Procedures  | Weekly: check if revenue threshold ($500/mo) crossed to trig | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| # PRINTMAXX Legal Templates Collection   | Weekly audit: count live apps missing legal pages, target 0  | APP | AUTO | DAILY | 2026-03-20 |
+
+| # Vision API Wrapper Factory  **Last upd | Build and deploy 2 vision wrapper apps per week. Track: apps | APP | AUTO | DAILY | 2026-03-20 |
+
+| # FINDOM PRICING PSYCHOLOGY & BEHAVIORAL | Weekly: review pricing_recommendations.csv, apply top 3 pric | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| ALPHA804,r/SideProject + IndieHackers,ht | Weekly: count of apps with live payment links, total portfol | APP | AUTO | DAILY | 2026-03-20 |
+
+| # Ops Pilot Delivery Playbook  **How to  | 3x/week: review qualified ops pilot prospects, send 5 person | EAS | AUTO | DAILY | 2026-03-20 |
+
+| # Faceless/AI YouTube Channel Due Dilige | Track: videos published/week, view count growth, subscriber  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # RAMADAN LAUNCH SPRINT - 9 DAYS TO GO   | Daily until Eid: post 3 ramadan-themed posts timed to iftar/ | APP | AUTO | DAILY | 2026-03-20 |
+
+| # Unified Alpha Monitor Digest  Generate | Check prayerlock_reddit_monitor output daily — reply to 3-5  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # PRINTMAXX master prompt library  20 re | Verify prompt library is referenced by content_multiplier.py | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # GUMROAD SPEED UPLOAD -- 13 PRODUCTS IN | Weekly: check Gumroad dashboard for sales, views, conversion | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| # FASTEST MONEY TODAY -- Revenue Plays R | Check CAPITAL_GENESIS_PRIORITY_STACK.md daily — execute top  | MONETIZE | AUTO | DAILY | 2026-03-20 |
+
+| # Roblox Ecosystem Meta Research - Febru | Check Roblox game publish status + weekly DevForum trending  | APP | AUTO | DAILY | 2026-03-20 |
+
+|  two girls dmed me january 3rd asking ho | Post 3 digital-product transformation stories daily across p | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  you don’t realise how early you are so  | Track affiliate content pieces published per day (target: 3) | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  most digital product sellers are postin | Weekly: generate 4 high-conversion posts for digital product | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Entity SEO + Agent-Readiness implement | Weekly: check Google Search Console for rich result impressi | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  the days of the broke college student a | Track clips published with affiliate links embedded — target | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Quote Tweet Templates - ALL 33 NICHES  | 3 quote tweets queued per day across niches; track QT engage | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| P2 | Track swimming-streak daily installs + premium conversions.  | APP | AUTO | DAILY | 2026-03-20 |
+
+|  asked a guy at a hotel bar what he does | Track: active subscribers count, monthly churn rate, MRR fro | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| alpha_id,source,source_url,category,tact | Weekly: compare our app portfolio count and MRR against port | APP | AUTO | DAILY | 2026-03-20 |
+
+|  70% of ecom subs will churn within 90 d | Post 1 ecom-churn-angle piece per week across Twitter/Linked | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  i've launched 11 digital products in th | Track pre-launch sequences active, products listed this week | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  this is a genius format to use to push  | Track: shorts published/week, shorts-to-longform click-throu | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  you can build an extremely profitable a | Track daily: videos posted per account, affiliate link click | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  dude in a telegram group said he makes  | Weekly: 1 new niche ranking guide published and listed. Trac | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  your first digital product should take  | 2 new $47 micro-products listed per week. Track: products_cr | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  met a girl in a discord server who said | Track: templates created per week, listings published, subre | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  dm'd a girl on x last week who had 340  | Track micro-creators scouted per week, product concepts extr | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+|  heres an actual way to make $10k a mont | Post 3 TikTok slide carousels/day across niches, track views | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  sold my first faceless account last mon | Weekly: check follower growth rate + MRR per faceless accoun | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # Outreach Infrastructure Sprint  **Crea | Daily: emails sent count, reply rate %, positive reply count | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Just one day later, things flipped.
+
+lor | Post 1 whale-movement thread per week using lookonchain-styl | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  OIL ALERT: COULD BRENT CRUDE HIT $135?
+ | Post 1 market-commentary thread per week using commodity/mac | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| HORMUZ CLOSURE COULD PUSH OIL TO $150
+
+M | Post 1 financial market commentary thread when major commodi | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  BREAKING — one of the strongest OpenCla | Post 1 Polymarket/prediction-market-bot thread to X this wee | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Whale 0xf4b8 added another $5.72M short  | Post 1 whale-signal thread per week to @printmaxxer using wh | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| We launched a 7 figure Amazon brand on t | Track: brands scraped, creators scraped, matches generated,  | BROKERING | AUTO | DAILY | 2026-03-20 |
+
+| CLI Progress Bar Most terminal progress  | None - deferred until post-revenue phase. If activated: trac | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Stop building useless sh*t "Check out my | Post 1 contrarian take per day on X calling out indie hacker | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Enterprise customers are slow and painfu | Track enterprise-angle content engagement rate vs indie-angl | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| # PRINTMAXX AUTONOMOUS AGENT SYSTEM — MA | Weekly: verify OPS/PRINTMAXX_SYSTEM_MAP.md matches actual cr | RESEARCH | AUTO | DAILY | 2026-03-20 |
+
+| How are you guys handling quick website  | Check if 3 posts generated from this pain point hit queue at | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| One month ago, Arthur Hayes(
+@CryptoHaye | Verify 1 whale movement post generated and queued to CONTENT | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| I'm 3 years old and just sold my SaaS fo | 2x satirical founder posts per week; track engagement rate v | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Want to make a post | 3 reddit posts/week to r/digitalnomad — track upvotes + prof | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| https://reddit.com/r/indiehackers/commen | Weekly: verify ih_milestone_hook_extractor ran, check CONTEN | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| # DEEP RESEARCH: AI Tools & Production P | Daily: count AI assets generated, count posted, count platfo | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| https://reddit.com/r/SideProject/comment | Weekly: post in 3+ Discord servers per niche, track click-th | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| $22k/mo service business built with just | Daily: emails sent (target 50), reply rate (target >3%), mee | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| https://reddit.com/r/SaaS/comments/1rvgr | Daily: check CONTENT/social/posting_queue/ for staged posts  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Landscaping might be the most obvious ro | Weekly: 50 landscaping businesses scraped and scored, 10 col | EAS | AUTO | DAILY | 2026-03-20 |
+
+| My first real week of sales on my websit | Weekly: (1) did first_week_sales_miner.py produce >= 5 new t | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  organic affiliates are still so behind  | Daily: count AI videos queued → produced → posted → affiliat | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  you want to make $5k/month selling digi | Daily: check visitor count on product landing pages (target  | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| https://reddit.com/r/AppBusiness/comment | Weekly: audit app factory portfolio — any app at 0 revenue/d | APP | AUTO | DAILY | 2026-03-20 |
+
+| # COLD OUTBOUND Audit Output (MM007)  ** | emails sent per day (target: 20), reply rate (target: 2%), b | OUTBOUND | AUTO | DAILY | 2026-03-20 |
+
+| Series D Unicorn Startup Offer Review (I | Check r/startups for 3+ new offer/equity posts daily; verify | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| {   "name": "robloxmaxx-api",   "version | Check robloxmaxx-api deploy URL returns 200; count registere | APP | AUTO | DAILY | 2026-03-20 |
+
+| bro created a skill inspired by Karpathy | Track skill quality scores weekly: count skills above 80%, c | PRODUCT | AUTO | DAILY | 2026-03-20 |

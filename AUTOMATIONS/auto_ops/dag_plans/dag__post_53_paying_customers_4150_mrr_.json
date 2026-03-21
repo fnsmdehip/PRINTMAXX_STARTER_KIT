@@ -1,0 +1,36 @@
+{
+  "name": "integration__post_53_paying_customers_4150_mrr_",
+  "created": "2026-03-20T18:35:55.279568",
+  "method": " post: 53 paying customers, $4,150 mrr, and a cease-and-desist. ama. | content: aboutdiscussions and useful links for saas owners, online business owners, and more.rules1.submission guidelinesfollow t",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "extract_saas_growth_method_from_ama",
+        "extract_can_spam_compliance_notes"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_milestone_thread_4150mrr",
+        "generate_cd_legal_challenge_story",
+        "generate_can_spam_compliance_checklist"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "queue_content_to_posting_queue",
+        "update_cold_outbound_compliance_docs"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

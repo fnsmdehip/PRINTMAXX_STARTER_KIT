@@ -1,0 +1,29 @@
+{
+  "name": "chain_22kmo_service_business_built_with_just",
+  "created": "2026-03-20T23:12:24.855674",
+  "method": "$22k/mo service business built with just cold emails and DMs",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "prospect_scraper",
+      "task": "Scrape LinkedIn job postings, r/entrepreneur, r/coldemail, HN 'Ask HN: Who's hiring' for businesses matching ICP (service-hungry SMBs, 5-50 employees, pain signals). Output 50 prospects/day.",
+      "output": "AUTOMATIONS/leads/cold_email_prospects_daily.json"
+    },
+    {
+      "agent": "signal_qualifier",
+      "task": "Score each prospect 1-10 using trigger event framework: recent hire (+3), product launch (+2), bad G2/Capterra review (+2), site redesign (+1), funding announcement (+2). Keep score >= 6 only.",
+      "output": "AUTOMATIONS/leads/cold_email_qualified.json"
+    },
+    {
+      "agent": "email_personalizer",
+      "task": "Generate personalized cold email per qualified lead using procedural memory 6-question framework: What you do, Who for, How, Proof, Price anchor, CTA. Under 100 words. Mention specific page on their site or recent trigger. CTA = 'Worth a 10-min call this week?'",
+      "output": "AUTOMATIONS/leads/cold_email_ready.json"
+    },
+    {
+      "agent": "multi_touch_sender",
+      "task": "Send email via warmed SMTP (cold_outbound.py). Simultaneously queue DM on Twitter/LinkedIn via playwright MCP for top 10 leads. Log all sends to LEDGER/FREELANCE_PIPELINE_ACTIVE.csv.",
+      "output": "AUTOMATIONS/leads/outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

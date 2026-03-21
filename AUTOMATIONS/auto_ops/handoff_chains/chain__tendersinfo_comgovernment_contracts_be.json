@@ -1,0 +1,29 @@
+{
+  "name": "chain__tendersinfo_comgovernment_contracts_be",
+  "created": "2026-03-20T18:09:59.967088",
+  "method": " tendersinfo .comgovernment contracts before they close.filter by country, department, budget, deadline.$500b+ in government spending every year. most of it posted publicly. nobody cold emails for it.",
+  "venture": "BROKERING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape SAM.gov API (free, no auth needed for public data) + state procurement portals for new tenders. Filter: budget >$50K, deadline >14 days, categories matching our service capabilities",
+      "output": "gov_tenders_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score tenders by: set-aside status (small biz preferred), competition level (fewer bidders = better), budget size, alignment with services we can broker. Reject: classified, requires clearance, budget <$25K",
+      "output": "gov_tenders_qualified.json"
+    },
+    {
+      "agent": "matcher",
+      "task": "For each qualified tender, find 3-5 small businesses on SAM.gov entity registry that match the NAICS code and have active registrations. Extract contact info.",
+      "output": "business_matches.json"
+    },
+    {
+      "agent": "outreach",
+      "task": "Cold email matched businesses: 'Found a $X government contract in [category] with deadline [date]. Your firm matches the requirements. Want the full RFP details?' Monetize via: referral fee, monthly lead subscription, or commission on won contracts.",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

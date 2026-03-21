@@ -1,0 +1,38 @@
+{
+  "name": "integration_the_fastest_path_to_5kmonth_isnt_a_re",
+  "created": "2026-03-20T18:35:54.636264",
+  "method": "the fastest path to $5k/month isn't a revolutionary idea",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scan_demand",
+      "steps": [
+        "scan_reddit_pain_points",
+        "scan_app_store_reviews",
+        "check_existing_app_factory_methods"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "rank_opportunities",
+      "steps": [
+        "score_by_demand_vs_competition",
+        "filter_zero_cost_buildable",
+        "rank_by_time_to_revenue"
+      ],
+      "parallel": false,
+      "depends_on": "scan_demand"
+    },
+    {
+      "name": "generate_mvp_spec",
+      "steps": [
+        "create_landing_page_spec",
+        "wire_payment_link",
+        "add_to_app_factory_queue"
+      ],
+      "parallel": true,
+      "depends_on": "rank_opportunities"
+    }
+  ],
+  "status": "READY"
+}

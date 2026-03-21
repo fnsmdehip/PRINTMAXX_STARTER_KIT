@@ -1,0 +1,45 @@
+{
+  "name": "integration__most_dropshippers_find_a_winning_produc",
+  "created": "2026-03-20T18:09:59.824449",
+  "method": " most dropshippers find a winning product and have no idea where their competitor actually sources it.they\u2019re stuck on aliexpress paying $12 for something that costs $3 at the factory.here\u2019s the play:",
+  "venture": "SCRAPING",
+  "phases": [
+    {
+      "name": "data_collection",
+      "steps": [
+        "scrape_importyeti_free",
+        "scrape_usa_trade_online",
+        "scrape_volza_free_tier"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "product_matching",
+      "steps": [
+        "pull_trending_aliexpress_products",
+        "pull_amazon_bestsellers_in_dropship_niches"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "cross_reference",
+      "steps": [
+        "match_customs_shipments_to_trending_products",
+        "extract_factory_names_addresses_volumes"
+      ],
+      "parallel": false,
+      "depends_on": "data_collection"
+    },
+    {
+      "name": "report_generation",
+      "steps": [
+        "generate_niche_supplier_report_pdf",
+        "create_gumroad_listing_copy",
+        "generate_cold_outreach_email_to_dropshippers"
+      ],
+      "parallel": true,
+      "depends_on": "cross_reference"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,132 @@
+{
+  "cycle": 85,
+  "timestamp": "2026-03-20T16:37:33.659436+00:00",
+  "strategy": "SPORTS_PERFORMANCE + LANGUAGE_CULTURE + BUSINESS_SKILLS + WELLNESS_MINDFULNESS",
+  "total_niches": 15,
+  "blue_oceans": 9,
+  "soft_competition": 5,
+  "occupied": 1,
+  "total_community": 14071000,
+  "scored_niches": [
+    {
+      "niche": "daily_swimming_stroke_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 318000,
+      "priority": "P2",
+      "streak_app_exists": false,
+      "notes": "318K swimming community. Apps are workout generators or lap trackers. No app gamifies the daily stroke-improvement habit"
+    },
+    {
+      "niche": "daily_tennis_serve_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 1345000,
+      "priority": "P0",
+      "streak_app_exists": false,
+      "notes": "1.35M tennis community. Apps are AI video analysis or match trackers. No dedicated daily serve/rally habit streak app wi"
+    },
+    {
+      "niche": "daily_golf_practice_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 930000,
+      "priority": "P1",
+      "streak_app_exists": false,
+      "notes": "930K golf community. Apps are GPS/scorecard tools for on-course use. Zero apps gamify the daily off-course practice habi"
+    },
+    {
+      "niche": "daily_bjj_techniques_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 750000,
+      "priority": "P1",
+      "streak_app_exists": false,
+      "notes": "750K BJJ community. Apps are instructional video libraries or generic timers. No app gamifies the daily BJJ practice hab"
+    },
+    {
+      "niche": "daily_sign_language_streak",
+      "verdict": "SOFT_COMPETITION",
+      "community_total": 255000,
+      "priority": "MONITOR",
+      "streak_app_exists": true,
+      "notes": "255K community. Lingvano (4.7, 15K reviews) has daily streak feature and ASL/BSL. Not purely dominated \u2014 Lingvano is fre"
+    },
+    {
+      "niche": "daily_arabic_script_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 520000,
+      "priority": "P1",
+      "streak_app_exists": false,
+      "notes": "520K Arabic learning community. Duolingo covers Arabic generally. No dedicated app gamifies the daily Arabic script mast"
+    },
+    {
+      "niche": "daily_mandarin_tones_streak",
+      "verdict": "SOFT_COMPETITION",
+      "community_total": 685000,
+      "priority": "MONITOR",
+      "streak_app_exists": true,
+      "notes": "685K community. HelloChinese (4.7, 185K reviews) covers Mandarin with some streak features. Pleco is the power-user gold"
+    },
+    {
+      "niche": "daily_korean_hangul_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 690000,
+      "priority": "P1",
+      "streak_app_exists": false,
+      "notes": "690K Korean learning community. Duolingo/Pimsleur cover Korean generally. No dedicated app gamifies the daily Hangul mas"
+    },
+    {
+      "niche": "daily_cold_email_sales_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 675000,
+      "priority": "P1",
+      "streak_app_exists": false,
+      "notes": "675K sales community. Apps are CRM and outbound tools. Zero apps gamify the daily cold-email skill-building habit (one s"
+    },
+    {
+      "niche": "daily_public_speaking_streak",
+      "verdict": "SOFT_COMPETITION",
+      "community_total": 228000,
+      "priority": "MONITOR",
+      "streak_app_exists": true,
+      "notes": "228K community. Speeko (4.7, 28K) has daily lessons, Orai has AI feedback. Gap still exists for pure micro-niche streak-"
+    },
+    {
+      "niche": "daily_negotiation_skills_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 735000,
+      "priority": "P1",
+      "streak_app_exists": false,
+      "notes": "735K negotiation/sales community. Apps are podcasts or course platforms. Zero apps gamify the daily negotiation skill ha"
+    },
+    {
+      "niche": "daily_financial_literacy_streak",
+      "verdict": "BLUE_OCEAN",
+      "community_total": 4000000,
+      "priority": "P0",
+      "streak_app_exists": false,
+      "notes": "4M personal finance community (r/personalfinance + r/fi). Apps are budget trackers or brokerages. Zero apps gamify the d"
+    },
+    {
+      "niche": "daily_breathwork_streak",
+      "verdict": "SOFT_COMPETITION",
+      "community_total": 720000,
+      "priority": "MONITOR",
+      "streak_app_exists": true,
+      "notes": "720K community. Breathwrk, Oak, Wim Hof Method all have streak features. Space is real but competitive. Multiple paid ap"
+    },
+    {
+      "niche": "daily_cold_therapy_streak",
+      "verdict": "SOFT_COMPETITION",
+      "community_total": 1120000,
+      "priority": "MONITOR",
+      "streak_app_exists": true,
+      "notes": "1.12M community. Wim Hof has streak. IceMan and Cold Turkey are dedicated cold shower streak apps. Space is genuinely co"
+    },
+    {
+      "niche": "daily_gratitude_journaling_streak",
+      "verdict": "OCCUPIED",
+      "community_total": 1100000,
+      "priority": "SKIP",
+      "streak_app_exists": true,
+      "notes": "1.1M journaling community. Gratitude (4.9, 95K), Five Minute Journal (4.8, 112K), Reflectly (4.7, 78K) all have dedicate"
+    }
+  ]
+}

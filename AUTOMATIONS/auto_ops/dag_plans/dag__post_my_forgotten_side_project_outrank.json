@@ -1,0 +1,45 @@
+{
+  "name": "integration__post_my_forgotten_side_project_outrank",
+  "created": "2026-03-20T18:35:55.129983",
+  "method": " post: my forgotten side project outranks zillow for dozens of searches. here's the accidental playbook | content: aboutattention throwaways and new accounts: a minimum of 10 comment karma is required",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "keyword_discovery",
+      "steps": [
+        "scrape_existing_site_queries_from_search_console_or_serp",
+        "identify_niche_longtail_clusters_around_deployed_apps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "gap_analysis",
+      "steps": [
+        "check_top3_results_for_each_keyword_cluster",
+        "score_competitor_page_quality_thin_vs_deep",
+        "filter_to_gaps_where_generic_pages_rank"
+      ],
+      "parallel": true,
+      "depends_on": "keyword_discovery"
+    },
+    {
+      "name": "page_generation",
+      "steps": [
+        "generate_programmatic_pages_for_top50_gaps",
+        "deploy_to_existing_surge_domains"
+      ],
+      "parallel": false,
+      "depends_on": "gap_analysis"
+    },
+    {
+      "name": "monitoring",
+      "steps": [
+        "log_generated_pages_to_LEDGER",
+        "schedule_rank_tracking_weekly"
+      ],
+      "parallel": false,
+      "depends_on": "page_generation"
+    }
+  ],
+  "status": "READY"
+}

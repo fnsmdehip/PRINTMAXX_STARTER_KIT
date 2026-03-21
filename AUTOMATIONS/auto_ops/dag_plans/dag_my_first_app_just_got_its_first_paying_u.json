@@ -1,0 +1,38 @@
+{
+  "name": "integration_my_first_app_just_got_its_first_paying_u",
+  "created": "2026-03-20T18:35:52.210115",
+  "method": "My first app just got its first paying user \ud83e\udd73 Hey everyone,\n\nSmall milestone but I\u2019m pretty hyped: I just got my first paying user on my app **Habitum**, a gamified habit tracker.\n\nIt\u2019s my first app, ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit_existing_apps",
+      "steps": [
+        "scan_all_streak_app_builds_for_xp_system",
+        "identify_apps_missing_gamification",
+        "rank_by_traffic_and_monetization_potential"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "inject_gamification",
+      "steps": [
+        "create_shared_xp_leveling_module",
+        "map_streak_categories_to_life_areas",
+        "add_level_up_animations_and_badges"
+      ],
+      "parallel": true,
+      "depends_on": "audit_existing_apps"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "generate_build_in_public_reddit_posts",
+        "create_first_paying_user_milestone_templates",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "inject_gamification"
+    }
+  ],
+  "status": "READY"
+}

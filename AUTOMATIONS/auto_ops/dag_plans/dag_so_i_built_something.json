@@ -1,0 +1,36 @@
+{
+  "name": "integration_so_i_built_something",
+  "created": "2026-03-20T13:50:39.532376",
+  "method": "So I built something",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_r_microsaas_top_weekly",
+        "scrape_r_microsaas_comments_for_revenue_proof"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "extract_pain_points_and_methods",
+        "check_existing_app_factory_coverage",
+        "score_replication_feasibility"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_landing_page_if_gap_found",
+        "create_app_factory_entry"
+      ],
+      "parallel": false,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

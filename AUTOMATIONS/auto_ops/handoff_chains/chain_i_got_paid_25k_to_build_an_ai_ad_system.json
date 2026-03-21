@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_got_paid_25k_to_build_an_ai_ad_system",
+  "created": "2026-03-20T18:35:54.071044",
+  "method": "I Got Paid $25k to Build an AI Ad System with Claude Code So I may have cracked ads with AI...\n\nI like to talk about my journey as an AI business owner who builds AI solutions for medium sized compani",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape BuiltWith for Shopify Plus stores + Facebook Ad Library for brands running 50+ active ad creatives (proxy for 5-figure spend)",
+      "output": "ecom_ad_prospects_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score by: ad creative count, store revenue tier (SimilarWeb/traffic estimates), tech stack complexity, whether they use Klaviyo/Attentive (signals sophisticated marketing ops willing to pay for AI tooling)",
+      "output": "ecom_ad_prospects_qualified.json"
+    },
+    {
+      "agent": "creator",
+      "task": "For top 5 prospects: pull their current top ad creative, generate 3 AI-duplicated variations using Claude as proof-of-concept demo. Package as PDF pitch deck.",
+      "output": "ad_demo_decks/"
+    },
+    {
+      "agent": "outreach",
+      "task": "Cold email founder/CMO with demo deck attached. Subject: 'I rebuilt your top 3 ads with AI in 10 minutes \u2014 here's the output'. Route through existing cold outbound pipeline.",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "integration_have_been_stagnating_like_crazy_since_th",
+  "created": "2026-03-20T18:35:50.217205",
+  "method": "have been stagnating like crazy since then \n\nMRR is actually lower now, back under $900 (less if I only count Adkit) \n\nI spent 3 days investigating trying to figure out what's happening using Claude c",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_hooks",
+      "steps": [
+        "parse_stagnation_narrative_for_content_hooks",
+        "identify_relatable_pain_points_mrr_plateau_churn"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_3_tweet_hooks_on_saas_diagnostics_with_claude_code",
+        "create_1_thread_on_connecting_llm_to_analytics_stack"
+      ],
+      "parallel": true,
+      "depends_on": "extract_hooks"
+    },
+    {
+      "name": "route_content",
+      "steps": [
+        "queue_to_posting_queue",
+        "tag_for_engagement_bait_converter"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "integration_built_a_saas_over_13_years_70_clients_",
+  "created": "2026-03-20T12:04:46.175229",
+  "method": "Built a SaaS over 13 years (70 clients, no funding) \u2014 what would you do at this ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_r_saas_bootstrapped_posts",
+        "scrape_r_microsaas_launches",
+        "scrape_r_indiehackers_milestones"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "extract_acquisition_tactics",
+        "extract_retention_patterns",
+        "extract_pricing_models",
+        "extract_founder_contacts"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "generate_twitter_threads",
+        "feed_cold_outbound_pipeline",
+        "update_alpha_staging_with_tactics"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    }
+  ],
+  "status": "READY"
+}

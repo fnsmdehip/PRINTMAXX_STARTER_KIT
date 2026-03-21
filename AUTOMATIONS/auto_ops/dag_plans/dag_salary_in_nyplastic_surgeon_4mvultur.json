@@ -1,0 +1,38 @@
+{
+  "name": "integration_salary_in_nyplastic_surgeon_4mvultur",
+  "created": "2026-03-20T18:35:50.196948",
+  "method": "Salary in NY\n\nPlastic Surgeon $4m\nVulture Capitalist $3.5m\nHead of Eng. (AI)  $2.45m\nDentist $1.2m\nSex Worker $284k - $1.2m\n\n...\n\nUber Driver $100k\nDog Walker $92k\nSubway Conductor $83k\nDoorman $75k\nD",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "data_collection",
+      "steps": [
+        "scrape_bls_salary_data",
+        "scrape_glassdoor_free_estimates",
+        "pull_existing_viral_salary_tweets_for_format_reference"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_city_variants_ny_sf_la_miami_austin",
+        "generate_niche_variants_tech_faith_fitness",
+        "generate_controversial_pairs_surgeon_vs_uber"
+      ],
+      "parallel": true,
+      "depends_on": "data_collection"
+    },
+    {
+      "name": "queue_and_distribute",
+      "steps": [
+        "format_for_twitter_thread",
+        "format_for_linkedin_carousel",
+        "push_to_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

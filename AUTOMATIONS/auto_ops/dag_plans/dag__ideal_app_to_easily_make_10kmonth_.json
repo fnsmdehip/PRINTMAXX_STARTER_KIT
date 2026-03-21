@@ -1,0 +1,48 @@
+{
+  "name": "integration__ideal_app_to_easily_make_10kmonth_",
+  "created": "2026-03-20T18:09:57.379900",
+  "method": " ideal app to easily make $10k/month \n\n\u2013 #1 duolingo for vibe coding for non-tech users ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_duolingo_ux_patterns",
+        "audit_existing_vibecoding_courses",
+        "extract_curriculum_from_our_claude_code_expertise"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_content",
+      "steps": [
+        "generate_30_lessons_via_claude_p",
+        "create_lesson_progression_tree",
+        "build_quiz_and_challenge_content"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "build_app",
+      "steps": [
+        "fork_streak_template_as_vibecode_academy",
+        "wire_firebase_auth_and_progress",
+        "add_stripe_payment_link_premium_tier"
+      ],
+      "parallel": false,
+      "depends_on": "build_content"
+    },
+    {
+      "name": "deploy_and_market",
+      "steps": [
+        "surge_deploy_pwa",
+        "generate_5_launch_tweets_and_1_thread",
+        "submit_to_product_hunt_and_directories"
+      ],
+      "parallel": true,
+      "depends_on": "build_app"
+    }
+  ],
+  "status": "READY"
+}

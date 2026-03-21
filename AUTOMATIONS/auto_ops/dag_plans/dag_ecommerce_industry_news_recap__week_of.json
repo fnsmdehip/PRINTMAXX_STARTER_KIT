@@ -1,0 +1,47 @@
+{
+  "name": "integration_ecommerce_industry_news_recap__week_of",
+  "created": "2026-03-20T13:50:39.495826",
+  "method": "E-commerce Industry News Recap \ud83d\udd25 Week of Mar 16th, 2026",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_reddit_ecommerce_subs",
+        "scrape_hn_ecommerce",
+        "scrape_rss_feeds"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "curate",
+      "steps": [
+        "llm_score_relevance",
+        "deduplicate",
+        "rank_top_15"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_digest_markdown",
+        "generate_twitter_thread",
+        "inject_affiliate_links"
+      ],
+      "parallel": true,
+      "depends_on": "curate"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "queue_to_newsletter_draft"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

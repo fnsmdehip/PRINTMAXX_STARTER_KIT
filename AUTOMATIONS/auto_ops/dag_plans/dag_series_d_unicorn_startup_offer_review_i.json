@@ -1,0 +1,36 @@
+{
+  "name": "integration_series_d_unicorn_startup_offer_review_i",
+  "created": "2026-03-20T23:12:24.851643",
+  "method": "Series D Unicorn Startup Offer Review (I will not promote)",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "ingest",
+      "steps": [
+        "scrape r/startups JSON API for posts tagged 'offer review', 'equity', 'series D', 'unicorn' (top 50, 7d window)",
+        "score by upvotes + comment density (proxy for validation hunger)"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "extract_and_content",
+      "steps": [
+        "extract data points: company stage, equity %, vesting schedule, cliff, total comp, red flags",
+        "generate 3 Twitter threads from extracted data (equity literacy angle, no company named)",
+        "generate 1 LinkedIn long-form breakdown post"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "route",
+      "steps": [
+        "append threads to CONTENT/social/posting_queue/",
+        "log leads (commenters asking follow-up equity questions) to LEDGER/INBOUND_LEADS.csv",
+        "stage any novel equity structure as ALPHA_STAGING entry for product ideation"
+      ],
+      "parallel": false,
+      "depends_on": "extract_and_content"
+    }
+  ],
+  "status": "READY"
+}

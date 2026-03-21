@@ -1,0 +1,48 @@
+{
+  "name": "integration_i_made_a_digital_product_in_one_day_and_",
+  "created": "2026-03-20T18:35:52.516038",
+  "method": "I made a digital product in one day and listed it for $17. Here's the honest breakdown of what I built and why that price. Not a huge success story (yet). But I want to share\nthe thinking because I th",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "identify_underserved_freelancer_niche",
+        "scrape_top_prompts_in_niche",
+        "analyze_competitor_prompt_packs_on_gumroad"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "claude_generate_150_role_specific_prompts",
+        "build_searchable_html_app_template",
+        "inject_prompts_into_html_with_filter_ui"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "package",
+      "steps": [
+        "create_gumroad_listing_copy",
+        "generate_preview_screenshots",
+        "create_landing_page_section"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    },
+    {
+      "name": "stage",
+      "steps": [
+        "save_to_DIGITAL_PRODUCTS_ready_to_sell",
+        "update_PRODUCTS_listings",
+        "queue_launch_tweets"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    }
+  ],
+  "status": "READY"
+}

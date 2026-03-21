@@ -1,0 +1,57 @@
+{
+  "name": "integration__sold_my_first_faceless_account_last_mon",
+  "created": "2026-03-20T18:10:02.754193",
+  "method": " sold my first faceless account last month for $47,000i built it in 11 weekslet me explain why this is the most underrated play in digital products right nowfaceless accounts sell for 30-40x monthly r",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "marketplace_intel",
+      "steps": [
+        "scrape_fameswap_listings",
+        "scrape_socialtradia_prices",
+        "extract_niche_multiples"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "niche_selection",
+      "steps": [
+        "rank_niches_by_sale_multiple_and_growth_speed",
+        "select_top3_niches_for_build"
+      ],
+      "parallel": false,
+      "depends_on": "marketplace_intel"
+    },
+    {
+      "name": "account_build",
+      "steps": [
+        "create_content_calendars_per_niche",
+        "generate_30day_content_batch_claude",
+        "setup_posting_schedule"
+      ],
+      "parallel": true,
+      "depends_on": "niche_selection"
+    },
+    {
+      "name": "growth_engine",
+      "steps": [
+        "engagement_warming_protocol",
+        "hashtag_rotation",
+        "cross_promote_from_existing_accounts"
+      ],
+      "parallel": true,
+      "depends_on": "account_build"
+    },
+    {
+      "name": "valuation_tracking",
+      "steps": [
+        "calculate_monthly_revenue_per_account",
+        "compute_sale_price_at_30x_multiple",
+        "flag_sale_ready_accounts"
+      ],
+      "parallel": false,
+      "depends_on": "growth_engine"
+    }
+  ],
+  "status": "READY"
+}

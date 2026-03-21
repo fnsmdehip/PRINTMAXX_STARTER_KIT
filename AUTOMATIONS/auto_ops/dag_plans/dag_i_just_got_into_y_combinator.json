@@ -1,0 +1,36 @@
+{
+  "name": "integration_i_just_got_into_y_combinator",
+  "created": "2026-03-20T13:50:41.147153",
+  "method": "I just got into Y Combinator",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_yc_company_directory",
+        "scrape_yc_launch_posts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "score_by_niche_fit",
+        "extract_founder_contacts",
+        "check_tech_stack"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_personalized_cold_emails",
+        "queue_for_sending"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    }
+  ],
+  "status": "READY"
+}

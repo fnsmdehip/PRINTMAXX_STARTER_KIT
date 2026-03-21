@@ -1,0 +1,50 @@
+{
+  "name": "integration_how_do_you_all_source_reliable_video_pro",
+  "created": "2026-03-20T18:09:55.523471",
+  "method": "How do you all source reliable video production for SaaS marketing when you are still small? Small team in Denver running a SaaS that automates customer success workflows for mid sized B2B companies. ",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "scrape_demand",
+      "steps": [
+        "scrape_reddit_saas_video_asks",
+        "scrape_reddit_startups_video_asks",
+        "scrape_hn_video_mentions",
+        "scrape_indiehackers_video_asks"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "dedupe_leads",
+        "enrich_saas_website",
+        "score_budget_signals",
+        "filter_min_threshold"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_demand"
+    },
+    {
+      "name": "generate_sample",
+      "steps": [
+        "extract_saas_value_prop",
+        "select_remotion_template",
+        "render_60s_explainer"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "compose_personalized_dm",
+        "send_reddit_dm_or_email",
+        "log_to_outreach_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "generate_sample"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "integration_here_are_the_worst_performing_nasdaq_100",
+  "created": "2026-03-20T13:50:43.280267",
+  "method": "Here are the worst performing NASDAQ 100 $QQQ stocks so far in 2026\n\nAtlassian $TEAM -53.6%\nWorkday $WDAY -38%\nCostar $CSGP -35.1%\nIntuit $INTU -33.6%\nApplovin $APP -31.9%\nZscaler $ZS -31.6%\nAdobe $AD",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "fetch_nasdaq100_ytd_performance",
+        "fetch_sector_context"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "rank_worst_performers",
+        "flag_cost_cutting_candidates",
+        "detect_trend_reversals"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_fintwit_posts",
+        "generate_linkedin_data_posts",
+        "queue_outbound_leads"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "push_to_posting_queue",
+        "push_to_eas_lead_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

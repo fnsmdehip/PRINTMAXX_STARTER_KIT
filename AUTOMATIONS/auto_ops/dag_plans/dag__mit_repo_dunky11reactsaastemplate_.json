@@ -1,0 +1,38 @@
+{
+  "name": "integration__mit_repo_dunky11reactsaastemplate_",
+  "created": "2026-03-20T18:09:58.486463",
+  "method": " mit repo: dunky11/react-saas-template (1961 stars, javascript) ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "clone_and_audit",
+      "steps": [
+        "git_clone_template",
+        "security_audit_deps",
+        "strip_branding"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "customize",
+      "steps": [
+        "inject_niche_copy",
+        "wire_stripe_checkout",
+        "add_analytics"
+      ],
+      "parallel": true,
+      "depends_on": "clone_and_audit"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "build_static",
+        "deploy_surge_or_vercel",
+        "verify_live"
+      ],
+      "parallel": false,
+      "depends_on": "customize"
+    }
+  ],
+  "status": "READY"
+}

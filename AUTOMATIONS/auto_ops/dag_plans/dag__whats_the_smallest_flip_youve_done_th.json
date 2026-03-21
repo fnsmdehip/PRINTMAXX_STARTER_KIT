@@ -1,0 +1,35 @@
+{
+  "name": "integration__whats_the_smallest_flip_youve_done_th",
+  "created": "2026-03-20T18:09:58.209232",
+  "method": " what\u2019s the smallest flip you\u2019ve done that actually felt worth it?. i sold an old remote control i found in a $5 electronics bin. paid basically nothing for it. sold for $24 plus shipping. nothing cra",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_sold_data",
+      "steps": [
+        "scrape_ebay_sold_listings_high_margin_categories",
+        "scrape_reddit_flipping_subreddit_wins"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_and_generate",
+      "steps": [
+        "extract_top_margin_items_and_stats",
+        "generate_3_engagement_posts_with_real_numbers"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_sold_data"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "route_to_posting_queue",
+        "route_best_to_engagement_bait_converter"
+      ],
+      "parallel": true,
+      "depends_on": "analyze_and_generate"
+    }
+  ],
+  "status": "READY"
+}

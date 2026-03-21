@@ -1,0 +1,35 @@
+{
+  "name": "integration_i_spent_almost_500_on_ai_coding_tools_i",
+  "created": "2026-03-20T18:35:54.398143",
+  "method": "I spent almost $500 on AI coding tools in a month. The real lesson was about patience. Last month I spent close to $500 on AI coding tools while building a side project. At the time it felt like the t",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_top_ai_tool_spending_posts_reddit",
+        "extract_engagement_patterns_and_hooks"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "create_3_printmaxxer_voice_posts",
+        "create_thread_version_for_twitter"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "add_to_posting_queue",
+        "schedule_across_platforms"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

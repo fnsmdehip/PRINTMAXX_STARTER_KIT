@@ -1,0 +1,52 @@
+{
+  "name": "integration_4day_saas_validation_vibe_coding_gemi",
+  "created": "2026-03-20T18:35:55.243127",
+  "method": "4-day saas validation. vibe coding. gemini flash stack. stripe day 1.  ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "idea_score",
+      "steps": [
+        "query_alpha_for_saas_gaps",
+        "score_ideas_by_capital_genesis",
+        "pick_top_idea",
+        "check_competitor_density"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "scaffold",
+      "steps": [
+        "generate_stripe_product_and_price",
+        "create_payment_link",
+        "scaffold_nextjs_or_html_app",
+        "generate_landing_copy"
+      ],
+      "parallel": true,
+      "depends_on": "idea_score"
+    },
+    {
+      "name": "build_and_deploy",
+      "steps": [
+        "vibe_code_mvp_with_claude",
+        "wire_stripe_checkout",
+        "deploy_to_surge_or_vercel",
+        "add_to_deployment_urls"
+      ],
+      "parallel": false,
+      "depends_on": "scaffold"
+    },
+    {
+      "name": "validate",
+      "steps": [
+        "launch_product_hunt",
+        "cold_outreach_50_leads",
+        "post_3_tweets_1_thread",
+        "track_signups_72h_kill_gate"
+      ],
+      "parallel": true,
+      "depends_on": "build_and_deploy"
+    }
+  ],
+  "status": "READY"
+}

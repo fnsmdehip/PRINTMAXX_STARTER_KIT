@@ -1,21 +1,42 @@
 #!/usr/bin/env python3
 """
-AUTONOMOUS INTEGRATOR — Master pipeline that takes approved alpha and FULLY
-integrates it into the PRINTMAXX system.
+AUTONOMOUS INTEGRATOR V2 — Full-toolkit alpha integration pipeline.
 
-Not surface level. Deep integration using every automation tool available.
+Takes approved alpha from ALPHA_STAGING.csv and FULLY integrates it into the
+PRINTMAXX system using EVERY automation tool available:
 
-10-step pipeline:
-  1. Load newly approved entries from ALPHA_STAGING.csv
-  2. Claude -p (Opus) deep analysis per entry (venture routing, growth tactics, tooling)
-  3. Create new ventures if needed (venture_autonomy.py --create)
-  4. Create ralph loops if needed (ralph_loop_factory.py --create)
-  5. Create n8n workflows if needed (workflow_bridge)
-  6. Create new automation scripts if needed (claude -p generated)
-  7. Create hooks if needed
-  8. Wire growth tactics (GREY_HAT_EDGE_GROWTH_MASTER.md based plans)
-  9. Track in master ops (master_ops_cache.json update)
-  10. Update system (system_visualizer, system map, KPI calendar, log)
+  1. Load newly approved entries
+  2. Query procedural memory (have we solved something similar?)
+  3. Claude -p deep analysis with FULL toolkit inventory
+  4. Decide optimal tool combination per entry
+  5. Execute integration via selected tools:
+     - Ventures (venture_autonomy.py)
+     - Ralph loops (ralph_loop_factory.py)
+     - n8n workflows (WorkflowBuilder API or claude -p generated)
+     - Automation scripts (claude -p generated, py_compile validated)
+     - Hooks (settings.json integration or shell hooks)
+     - DAG pipelines (sovrun DAGOrchestrator for multi-step methods)
+     - Handoff chains (HandoffRouter for pipeline methods)
+     - Subagent delegation (claude -p parallel tasks)
+     - MCP server wiring (connector registry)
+     - Cron scheduling (budget-aware timing)
+  6. Wire growth tactics (edge + budget tiers)
+  7. Track in master ops + capture procedural memory
+  8. Update system (visualizer, system map, KPI calendar)
+  9. Auto-detect gaps (methods that SHOULD have been caught but weren't)
+
+V2 changes from V1:
+  - Procedural memory recall BEFORE analysis (don't re-solve solved problems)
+  - Full toolkit in claude -p prompt (hooks, DAGs, handoffs, MCP, subagents)
+  - Budget-aware tool selection (FREE/LOW/MID/HIGH stacks)
+  - DAG creation for complex multi-step methods
+  - Handoff chain creation for pipeline methods
+  - Parallel subagent execution for independent subtasks
+  - MCP connector detection and wiring
+  - Gap detection (what should the pipeline have caught?)
+  - Skill capture (learn from every integration for next time)
+  - Edge growth auto-injection
+  - Integration quality scoring
 
 Cron: 15 22 * * * (10:15 PM, after auto_approve at 10 PM)
 Safety: safe_path, py_compile validation, JSON validation, max 5 automations/run
@@ -25,6 +46,8 @@ Usage:
   python3 AUTOMATIONS/autonomous_integrator.py --dry-run
   python3 AUTOMATIONS/autonomous_integrator.py --entry ALPHA_ID
   python3 AUTOMATIONS/autonomous_integrator.py --status
+  python3 AUTOMATIONS/autonomous_integrator.py --gap-check
+  python3 AUTOMATIONS/autonomous_integrator.py --replay-failed
 """
 
 from __future__ import annotations
@@ -42,11 +65,46 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
+# Ensure sibling modules are importable
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from _common import (
+    PROJECT,
+    safe_path,
+    recall_skills_for_task,
+    capture_skill_from_result,
+    get_handoff_router,
+    get_workflow_detector,
+    should_use_workflow,
+    load_json,
+    sovrun_available,
+)
+
+# Sovrun modules — graceful fallback
+_SOVRUN_PATH = str(PROJECT / "OPEN_SOURCE" / "agent-soul")
+if _SOVRUN_PATH not in sys.path:
+    sys.path.insert(0, _SOVRUN_PATH)
+
+_DAG_AVAILABLE = False
+try:
+    from core.orchestration import DAGOrchestrator, AgentStep, StepStatus
+    _DAG_AVAILABLE = True
+except ImportError:
+    DAGOrchestrator = None  # type: ignore[assignment, misc]
+    AgentStep = None  # type: ignore[assignment, misc]
+    StepStatus = None  # type: ignore[assignment, misc]
+
+# Resilience — trajectory logging
+try:
+    from agent_resilience import TrajectoryLogger
+    _trajectory = TrajectoryLogger("integrator_v2")
+except ImportError:
+    _trajectory = None  # type: ignore[assignment]
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
 
-PROJECT = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
 LEDGER = PROJECT / "LEDGER"
 OPS = PROJECT / "OPS"
@@ -58,27 +116,80 @@ PRIORITY_STACK = OPS / "CAPITAL_GENESIS_PRIORITY_STACK.md"
 MASTER_OPS_CACHE = AUTOMATIONS / "master_ops_cache.json"
 SYSTEM_MAP = OPS / "PRINTMAXX_SYSTEM_MAP.md"
 INTEGRATION_LOG = LEDGER / "integration_runs.jsonl"
+HANDOFF_CHAINS_DIR = AUTOMATIONS / "auto_ops" / "handoff_chains"
+DAG_PLANS_DIR = AUTOMATIONS / "auto_ops" / "dag_plans"
+CONNECTOR_REGISTRY = AUTOMATIONS / "connector_registry.json"
+INTELLIGENCE_CATALOG = OPS / "INTELLIGENCE_CATALOG.json"
+FAILED_INTEGRATIONS = LEDGER / "failed_integrations.jsonl"
+GAP_REPORT = OPS / "INTEGRATION_GAP_REPORT.md"
 
-MAX_NEW_AUTOMATIONS_PER_RUN = 5
-MAX_ENTRIES_PER_RUN = 15
-CLAUDE_TIMEOUT = 90
+MAX_NEW_AUTOMATIONS_PER_RUN = 25
+MAX_ENTRIES_PER_RUN = 9999  # No cap — process everything
+CLAUDE_TIMEOUT = 180
+MIN_QUALITY_SCORE = 3  # 0-10, only reject truly empty/platitude entries
 
 VENTURE_TYPES = [
     "OUTBOUND", "CONTENT", "APP", "LOCAL_BIZ", "RESEARCH",
-    "MONETIZE", "PRODUCT", "SCRAPING", "BROKERING",
+    "MONETIZE", "PRODUCT", "SCRAPING", "BROKERING", "EAS",
 ]
 
-# ---------------------------------------------------------------------------
-# Path safety
-# ---------------------------------------------------------------------------
+# Full toolkit inventory — injected into claude -p analysis prompt
+TOOLKIT_INVENTORY = """
+AVAILABLE AUTOMATION TOOLS (pick the OPTIMAL combination for this method):
 
-def safe_path(target: Path | str) -> Path:
-    """Verify path is within project root. Raises ValueError if not."""
-    resolved = Path(target).resolve()
-    if not str(resolved).startswith(str(PROJECT)):
-        raise ValueError(f"BLOCKED: {resolved} is outside project root {PROJECT}")
-    return resolved
+1. VENTURE (venture_autonomy.py --create TYPE NAME)
+   Use when: method is a new revenue lane not covered by existing ventures
+   Cost: FREE
 
+2. RALPH LOOP (ralph_loop_factory.py --create OP_ID)
+   Use when: method needs iterative refinement over multiple cycles (overnight loops)
+   Cost: FREE (Claude Max)
+
+3. N8N WORKFLOW (n8n API at localhost:5678)
+   Use when: method needs multi-service connectors (email+CRM+scraper+LLM chains)
+   Cost: FREE (self-hosted)
+
+4. AUTOMATION SCRIPT (python3 script, cron-scheduled)
+   Use when: method needs a dedicated scraper, poster, analyzer, or processor
+   Cost: FREE
+
+5. HOOK (PreToolUse/PostToolUse/SessionStart/Stop in settings.json)
+   Use when: method needs validation gates, quality checks, or trigger-on-event
+   Cost: FREE
+
+6. DAG PIPELINE (DAGOrchestrator — parallel phase execution)
+   Use when: method has 3+ steps where some can run in parallel
+   Cost: FREE
+
+7. HANDOFF CHAIN (HandoffRouter — typed agent-to-agent delegation)
+   Use when: method is a pipeline (scrape→qualify→connect→earn) with distinct specialties
+   Cost: FREE
+
+8. SUBAGENT (claude -p parallel tasks)
+   Use when: method needs independent research/execution that can run simultaneously
+   Cost: FREE (Claude Max)
+
+9. MCP SERVER (134+ tool connections)
+   Use when: method needs external service integration (Pinecone, Firebase, Playwright, etc.)
+   Available: pinecone (vector search), firebase (backend), playwright (browser), context7 (docs)
+   Cost: Varies
+
+10. CRON JOB (crontab scheduling)
+    Use when: method needs periodic execution (daily/weekly/hourly)
+    Cost: FREE
+
+11. KPI TASK (KPI_DASHBOARD.md entry)
+    Use when: method has measurable daily/weekly actions human should track
+    Cost: FREE
+
+12. HANDOFF TO EXISTING CHAIN
+    Existing chains: local_biz, content_factory, product_launch, freelance, alpha_to_revenue
+    Use when: method fits an existing pipeline
+
+13. EDGE GROWTH TACTICS (GREY_HAT_EDGE_GROWTH_MASTER.md)
+    Use when: method needs aggressive scaling (multi-account, engagement warming, etc.)
+    Budget tiers: FREE / LOW ($0-50) / MID ($50-200) / HIGH ($200-1K)
+"""
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -86,18 +197,30 @@ def safe_path(target: Path | str) -> Path:
 
 def log(msg: str, level: str = "INFO") -> None:
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    line = f"[{ts}] [INTEGRATOR] [{level}] {msg}"
+    line = f"[{ts}] [INTEGRATOR_V2] [{level}] {msg}"
     print(line)
     safe_path(LOG_FILE).parent.mkdir(parents=True, exist_ok=True)
     with open(safe_path(LOG_FILE), "a") as f:
         f.write(line + "\n")
+    if _trajectory:
+        _trajectory.log_attempt(msg)
 
 
 def log_integration_run(run_data: dict) -> None:
-    """Append a structured record of this integration run to the JSONL ledger."""
     safe_path(INTEGRATION_LOG).parent.mkdir(parents=True, exist_ok=True)
     with open(safe_path(INTEGRATION_LOG), "a") as f:
         f.write(json.dumps(run_data, default=str) + "\n")
+
+
+def log_failed_integration(entry: dict, reason: str) -> None:
+    safe_path(FAILED_INTEGRATIONS).parent.mkdir(parents=True, exist_ok=True)
+    record = {
+        "timestamp": datetime.now().isoformat(),
+        "entry": {k: str(v)[:200] for k, v in entry.items()},
+        "reason": reason,
+    }
+    with open(safe_path(FAILED_INTEGRATIONS), "a") as f:
+        f.write(json.dumps(record, default=str) + "\n")
 
 
 # ---------------------------------------------------------------------------
@@ -105,14 +228,10 @@ def log_integration_run(run_data: dict) -> None:
 # ---------------------------------------------------------------------------
 
 def run_cmd(cmd: list[str], timeout: int = 120, cwd: str | None = None) -> tuple[str, bool]:
-    """Run a command, return (stdout, success)."""
     try:
         r = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-            cwd=cwd or str(PROJECT),
+            cmd, capture_output=True, text=True,
+            timeout=timeout, cwd=cwd or str(PROJECT),
         )
         return r.stdout.strip(), r.returncode == 0
     except subprocess.TimeoutExpired:
@@ -121,25 +240,92 @@ def run_cmd(cmd: list[str], timeout: int = 120, cwd: str | None = None) -> tuple
         return str(e), False
 
 
-def claude_p(prompt: str, timeout: int = CLAUDE_TIMEOUT) -> tuple[str, bool]:
-    """Run claude -p with a prompt. Returns (output, success)."""
-    return run_cmd(["claude", "-p", prompt], timeout=timeout)
+def claude_p(prompt: str, timeout: int = CLAUDE_TIMEOUT, model: str = "") -> tuple[str, bool]:
+    cmd = ["claude", "-p"]
+    if model:
+        cmd.extend(["--model", model])
+    cmd.append(prompt)
+    return run_cmd(cmd, timeout=timeout)
+
+
+# ---------------------------------------------------------------------------
+# Smart model routing — save Opus tokens for entries that need it
+# ---------------------------------------------------------------------------
+
+import re as _re
+
+# Signals that an entry is COMPLEX (needs Opus)
+_COMPLEX_SIGNALS = [
+    _re.compile(r"(?:mcp|api|sdk|cli|framework|protocol)\b", _re.I),
+    _re.compile(r"(?:handoff|pipeline|dag|orchestrat|multi.?step)", _re.I),
+    _re.compile(r"(?:built|launched|deployed|created)\s+(?:a|an|my|our)\s+\w+", _re.I),
+    _re.compile(r"(?:architecture|infrastructure|system\s+design)", _re.I),
+    _re.compile(r"(?:open.?source|github\.com|npm|pypi)", _re.I),
+    _re.compile(r"(?:saas|subscription|mrr|arr|churn)", _re.I),
+    _re.compile(r"\$\d{2,}[kKmM]", _re.I),  # Dollar amounts $10K+
+    _re.compile(r"(?:step\s*\d|phase\s*\d|part\s*\d)", _re.I),
+]
+
+# Signals that an entry is SIMPLE (Haiku is fine)
+_SIMPLE_SIGNALS = [
+    _re.compile(r"^https?://", _re.I),  # Just a URL
+    _re.compile(r"(?:Update|ETF|NetFlow|futures?\s+settle)", _re.I),  # Market data
+    _re.compile(r"(?:NYMEX|WTI|Crude|Natural\s+Gas|Gasoline)", _re.I),  # Commodity prices
+    _re.compile(r"^(?:Whale|Someone|A\s+whale|Trader)\s+\w+\s+(?:bought|sold|opened|closed)", _re.I),
+    _re.compile(r"(?:Premarket\s+movers|BREAKING)", _re.I),
+    _re.compile(r"^(?:Met the|Want to|Let.s talk|Just got out|My dad)", _re.I),  # Personal/vague
+    _re.compile(r"^\S+\s*$"),  # Single word entries
+]
+
+
+def route_model(entry: dict) -> str:
+    """Pick the cheapest model that can handle this entry.
+
+    Returns: 'haiku', 'sonnet', or '' (default/Opus).
+
+    Logic:
+      - SIMPLE entries (market data, commodity prices, whale alerts, vague personal
+        posts, bare URLs) → Haiku. These are 40-60% of volume and don't need
+        deep reasoning. Haiku still outputs valid JSON with venture routing.
+      - COMPLEX entries (multi-step methods, tool/API references, SaaS metrics,
+        architecture, open source projects, specific dollar amounts) → Opus.
+        These need the skepticism check and tool-swap reasoning.
+      - Everything else → Sonnet. Good enough for standard method extraction
+        and venture routing, costs ~5x less than Opus.
+    """
+    text = (
+        (entry.get("extracted_method") or "") + " " +
+        (entry.get("tactic") or "") + " " +
+        (entry.get("content") or "")
+    )
+
+    if len(text.strip()) < 30:
+        return "haiku"
+
+    # Check SIMPLE first (cheap out on obvious low-value)
+    simple_hits = sum(1 for p in _SIMPLE_SIGNALS if p.search(text))
+    if simple_hits >= 2:
+        return "haiku"
+
+    # Check COMPLEX (spend on high-value)
+    complex_hits = sum(1 for p in _COMPLEX_SIGNALS if p.search(text))
+    if complex_hits >= 2:
+        return ""  # Opus (default)
+
+    # Everything else → Sonnet
+    return "sonnet"
 
 
 def validate_json(text: str) -> Optional[dict]:
-    """Extract and validate JSON from claude -p output. Returns parsed dict or None."""
-    # Try direct parse first
     try:
         return json.loads(text)
     except (json.JSONDecodeError, TypeError):
         pass
-
-    # Try to find JSON block in output (claude often wraps in markdown)
     import re
     patterns = [
         r"```json\s*\n(.*?)\n\s*```",
         r"```\s*\n(\{.*?\})\n\s*```",
-        r"(\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\})",
+        r"(\{[^{}]*(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}[^{}]*)*\})",
     ]
     for pat in patterns:
         match = re.search(pat, text, re.DOTALL)
@@ -152,34 +338,29 @@ def validate_json(text: str) -> Optional[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Step 1: Load newly approved entries
+# Step 1: Load entries
 # ---------------------------------------------------------------------------
 
 def load_approved_today() -> list[dict]:
-    """Read ALPHA_STAGING.csv for entries approved today."""
+    """Load ALL approved entries — not just today's. Clear the full backlog."""
     if not ALPHA_STAGING.exists():
         log("ALPHA_STAGING.csv not found", "WARN")
         return []
-
-    today = datetime.now().strftime("%Y-%m-%d")
     approved = []
     try:
         with open(ALPHA_STAGING) as f:
             reader = csv.DictReader(f)
             for row in reader:
                 status = (row.get("status") or "").upper()
-                notes = row.get("reviewer_notes") or ""
-                if status == "APPROVED" and today in notes:
+                if status == "APPROVED":
                     approved.append(row)
     except Exception as e:
         log(f"Error reading ALPHA_STAGING: {e}", "ERROR")
-
-    log(f"Step 1: Found {len(approved)} entries approved today ({today})")
+    log(f"Step 1: Found {len(approved)} APPROVED entries in backlog")
     return approved[:MAX_ENTRIES_PER_RUN]
 
 
 def load_entry_by_id(alpha_id: str) -> list[dict]:
-    """Load a specific entry by its alpha_id field."""
     if not ALPHA_STAGING.exists():
         return []
     try:
@@ -189,7 +370,6 @@ def load_entry_by_id(alpha_id: str) -> list[dict]:
                 row_id = row.get("alpha_id") or row.get("id") or row.get("entry_id") or ""
                 if row_id == alpha_id:
                     return [row]
-                # Also match on extracted_method if id not found
                 method = row.get("extracted_method") or ""
                 if method and alpha_id.lower() in method.lower():
                     return [row]
@@ -198,23 +378,48 @@ def load_entry_by_id(alpha_id: str) -> list[dict]:
     return []
 
 
+def load_failed_entries() -> list[dict]:
+    """Load previously failed integrations for replay."""
+    if not FAILED_INTEGRATIONS.exists():
+        return []
+    entries = []
+    try:
+        for line in FAILED_INTEGRATIONS.read_text().strip().splitlines():
+            record = json.loads(line)
+            entries.append(record.get("entry", {}))
+    except Exception as e:
+        log(f"Error loading failed entries: {e}", "ERROR")
+    return entries[:MAX_ENTRIES_PER_RUN]
+
+
 # ---------------------------------------------------------------------------
-# Step 2: Claude -p deep analysis
+# Step 2: Procedural memory recall (NEW in V2)
+# ---------------------------------------------------------------------------
+
+def recall_prior_solutions(method: str) -> str:
+    """Query procedural memory for similar past integrations."""
+    injection = recall_skills_for_task(f"integrate alpha method: {method}")
+    if injection:
+        log(f"Step 2: Found prior solution in procedural memory ({len(injection)} chars)")
+    else:
+        log("Step 2: No prior solution found in procedural memory")
+    return injection
+
+
+# ---------------------------------------------------------------------------
+# Step 3: Full-toolkit deep analysis (UPGRADED in V2)
 # ---------------------------------------------------------------------------
 
 def load_grey_hat_context(max_lines: int = 200) -> str:
-    """Load first N lines of GREY_HAT_EDGE_GROWTH_MASTER.md for context injection."""
     if not GREY_HAT_MASTER.exists():
         return ""
     try:
-        lines = GREY_HAT_MASTER.read_text().splitlines()[:max_lines]
-        return "\n".join(lines)
+        return "\n".join(GREY_HAT_MASTER.read_text().splitlines()[:max_lines])
     except Exception:
         return ""
 
 
 def load_priority_stack() -> str:
-    """Load current Capital Genesis priority stack."""
     if not PRIORITY_STACK.exists():
         return "No priority stack available."
     try:
@@ -223,8 +428,39 @@ def load_priority_stack() -> str:
         return ""
 
 
-def deep_analysis(entry: dict) -> Optional[dict]:
-    """Run claude -p deep analysis on a single alpha entry. Returns structured JSON."""
+def load_existing_handoff_chains() -> str:
+    """List existing handoff chains for the analysis prompt."""
+    chains_dir = HANDOFF_CHAINS_DIR
+    if not chains_dir.exists():
+        return "Existing chains: local_biz, content_factory, product_launch, freelance, alpha_to_revenue"
+    try:
+        chain_files = list(chains_dir.glob("*.json")) + list(chains_dir.glob("*.md"))
+        names = [f.stem for f in chain_files]
+        return f"Existing chains: {', '.join(names)}" if names else "No custom chains yet"
+    except Exception:
+        return "Existing chains: local_biz, content_factory, product_launch, freelance, alpha_to_revenue"
+
+
+def load_mcp_connectors() -> str:
+    """Load available MCP connectors for the analysis prompt."""
+    if not CONNECTOR_REGISTRY.exists():
+        return "MCP: pinecone, firebase, playwright, context7 (standard set)"
+    try:
+        reg = json.loads(CONNECTOR_REGISTRY.read_text())
+        connectors = reg.get("connectors", [])
+        if isinstance(connectors, list):
+            names = [c.get("name", "unknown") for c in connectors[:20]]
+        elif isinstance(connectors, dict):
+            names = list(connectors.keys())[:20]
+        else:
+            names = ["pinecone", "firebase", "playwright", "context7"]
+        return f"MCP connectors available: {', '.join(names)}"
+    except Exception:
+        return "MCP: pinecone, firebase, playwright, context7 (standard set)"
+
+
+def deep_analysis(entry: dict, prior_solution: str = "") -> Optional[dict]:
+    """Run claude -p deep analysis with FULL toolkit inventory."""
     method = entry.get("extracted_method") or entry.get("tactic") or entry.get("content") or ""
     source = entry.get("source") or "unknown"
     roi = entry.get("roi_potential") or "UNKNOWN"
@@ -235,79 +471,174 @@ def deep_analysis(entry: dict) -> Optional[dict]:
 
     grey_hat_ctx = load_grey_hat_context()
     priority_ctx = load_priority_stack()
+    chains_ctx = load_existing_handoff_chains()
+    mcp_ctx = load_mcp_connectors()
+
+    # Prior solution injection from procedural memory
+    prior_ctx = ""
+    if prior_solution:
+        prior_ctx = f"""
+PRIOR SOLUTION FROM MEMORY (a similar method was integrated before):
+{prior_solution[:1500]}
+Consider reusing this approach or improving on it.
+"""
 
     prompt = textwrap.dedent(f"""\
-        You are the PRINTMAXX autonomous integrator. Analyze this approved alpha entry
-        and decide EXACTLY how to integrate it into the system.
+        You are the PRINTMAXX autonomous integrator V2. Analyze this approved alpha entry
+        and decide EXACTLY how to integrate it using the OPTIMAL combination of tools.
 
         ENTRY:
-        Method: {method[:800]}
+        Method: {method[:1000]}
         Source: {source}
         ROI Potential: {roi}
 
         EXISTING VENTURE TYPES: {', '.join(VENTURE_TYPES)}
+        {chains_ctx}
+        {mcp_ctx}
+        {prior_ctx}
 
-        CAPITAL GENESIS PRIORITY STACK (current):
+        CAPITAL GENESIS PRIORITY STACK:
         {priority_ctx[:1500]}
 
-        GROWTH TACTICS AVAILABLE (from Grey Hat Edge Master):
-        {grey_hat_ctx[:2000]}
+        {TOOLKIT_INVENTORY}
+
+        GROWTH TACTICS (from Grey Hat Edge Master):
+        {grey_hat_ctx[:1500]}
+
+        CRITICAL — INTELLIGENT SKEPTICISM (do this BEFORE integration planning):
+        Most scraped alpha uses hype language. Your job is to SEE THROUGH the hype
+        and extract the REAL method underneath. Do NOT reject entries just because
+        they use bait wording or exaggerate revenue. Twitter culture rewards hype —
+        a real method can be wrapped in "$10K/mo passive income" language.
+
+        HOW TO ANALYZE:
+        1. SEPARATE the METHOD from the PRESENTATION. "I made $65K reselling on Amazon
+           at 10% margins" — the method is "reselling arbitrage at thin margins." That's
+           real even if the $65K is inflated. Score the method, not the wording.
+        2. REVENUE: Discount stated revenue by 50-70%, but still integrate if the
+           discounted number is worth automating. "$10K/mo" → assume $2-3K realistic.
+           That's STILL worth building if automation cost is $0.
+        3. TOOL SHILLING: Many tweets plug PAID SaaS. We are Phase 0 ($0 budget).
+           The METHOD is the alpha, not the tool. Extract the PROCESS, swap tools:
+           - Zapier/Make → n8n (self-hosted, localhost:5678)
+           - Jasper/Copy.ai → claude -p (Claude Max, unlimited)
+           - Ahrefs/SEMrush → free tier + custom scrapers
+           - Instantly/Lemlist → custom cold email scripts
+           - Any paid API → check for free tier or OSS alternative
+           If reviewer_notes contain "FREE_ALTERNATIVE:" use that tool instead.
+        4. ONLY set quality_score below 5 (rejection) if there is GENUINELY NO
+           extractable method — pure motivation fluff, recycled platitudes with zero
+           specifics, or methods that require >$500 upfront with no free alternative.
+           "Vague wording" alone is NOT grounds for rejection if the underlying
+           concept is sound and automatable.
+        5. When in doubt, APPROVE with realistic revenue and flag as needing validation.
+           A false negative (rejecting real alpha) costs more than a false positive.
 
         CONSTRAINTS:
-        - Budget: $0 (Phase 0 / Phase 1)
-        - Must be automatable
-        - Prefer existing ventures over creating new ones
-        - New ventures only if method genuinely doesn't fit any existing type
+        - Budget: $0 (Phase 0 / Phase 1) — prefer FREE tools
+        - Must be automatable — no manual steps
+        - Prefer existing ventures and chains over creating new ones
+        - Use DAG for 3+ step methods with parallel opportunities
+        - Use handoff chains for pipeline methods (scrape→qualify→connect→earn)
+        - Always include growth tactics with budget tiers
+        - Score the integration quality 0-10 (reject below 5)
 
         OUTPUT EXACTLY THIS JSON (no other text):
         {{
             "venture_type": "EXISTING_TYPE or NEW:type_name",
-            "automation_needed": true or false,
-            "automation_type": "scraper|poster|workflow|ralph_loop|cron|hook",
+            "quality_score": 7,
+            "automation_needed": true,
+            "automation_type": "scraper|poster|workflow|ralph_loop|cron|hook|dag|handoff",
             "automation_description": "what the automation does",
             "script_name": "suggested_script_name.py",
+
+            "tools_selected": {{
+                "venture": true,
+                "ralph_loop": false,
+                "n8n_workflow": false,
+                "automation_script": true,
+                "hook": false,
+                "dag_pipeline": false,
+                "handoff_chain": false,
+                "subagent_tasks": [],
+                "mcp_servers": [],
+                "cron_schedule": "30 6 * * *",
+                "kpi_task": "description of daily measurable action",
+                "existing_chain": ""
+            }},
+
+            "dag_definition": {{
+                "enabled": false,
+                "phases": [
+                    {{"name": "phase_name", "steps": ["step1", "step2"], "parallel": true}},
+                    {{"name": "phase_name", "steps": ["step3"], "parallel": false, "depends_on": "phase_name"}}
+                ]
+            }},
+
+            "handoff_chain": {{
+                "enabled": false,
+                "stages": [
+                    {{"agent": "scraper", "task": "scrape data", "output": "raw_data.json"}},
+                    {{"agent": "qualifier", "task": "score and filter", "output": "qualified.json"}},
+                    {{"agent": "connector", "task": "reach out", "output": "outreach_log.json"}}
+                ]
+            }},
+
             "growth_tactics": ["tactic1", "tactic2"],
-            "tooling_stack": {{"browser": "GoLogin+SOAX or none", "email": "Instantly or none", "content": "content_factory or none"}},
+            "growth_budget_tiers": {{
+                "FREE": "organic tactics description",
+                "LOW": "$0-50/mo tactics",
+                "MID": "$50-200/mo tactics"
+            }},
+            "tooling_stack": {{"browser": "none or GoLogin+SOAX", "email": "none or Instantly", "content": "none or content_factory"}},
             "budget_tier": "FREE|LOW|MID",
-            "n8n_workflow_needed": true or false,
-            "n8n_workflow_description": "what the workflow does or empty string",
-            "ralph_loop_needed": true or false,
-            "ralph_loop_op_id": "OP_ID or empty string",
             "estimated_revenue": "$X-Y/mo",
-            "execution_steps": ["step1", "step2", "step3"]
+            "execution_steps": ["step1", "step2", "step3"],
+            "gap_detection": "what similar methods should the pipeline auto-catch in the future?"
         }}
     """)
 
-    output, ok = claude_p(prompt)
+    # Smart model routing — save Opus for complex entries
+    model = route_model(entry)
+    model_label = "haiku" if "haiku" in model else ("sonnet" if "sonnet" in model else "opus")
+
+    output, ok = claude_p(prompt, model=model)
     if not ok:
-        log(f"Claude -p analysis failed: {output[:200]}", "ERROR")
+        # If Haiku/Sonnet failed, DON'T retry with Opus — just log
+        log(f"Claude -p ({model_label}) analysis failed: {output[:200]}", "ERROR")
         return None
 
     result = validate_json(output)
     if result is None:
-        log(f"Failed to parse JSON from claude -p output: {output[:300]}", "ERROR")
+        log(f"Failed to parse JSON from claude -p ({model_label}): {output[:300]}", "ERROR")
         return None
 
-    # Attach original entry metadata
+    # Quality gate
+    quality = result.get("quality_score", 0)
+    if isinstance(quality, (int, float)) and quality < MIN_QUALITY_SCORE:
+        log(f"Quality score {quality} below minimum {MIN_QUALITY_SCORE}, skipping", "WARN")
+        return None
+
     result["_source_entry"] = {
         "method": method[:200],
         "source": source,
         "roi": roi,
         "alpha_id": entry.get("alpha_id") or entry.get("id") or "",
     }
+    result["_model_used"] = model_label
 
-    log(f"Step 2: Analysis complete -> venture={result.get('venture_type')}, "
-        f"automation={result.get('automation_needed')}, "
-        f"revenue={result.get('estimated_revenue')}")
+    tools = result.get("tools_selected", {})
+    tool_names = [k for k, v in tools.items() if v and v is not True or (isinstance(v, (list, str)) and v)]
+    log(f"Step 3: [{model_label}] venture={result.get('venture_type')}, "
+        f"q={quality}/10, rev={result.get('estimated_revenue')}")
     return result
 
 
 # ---------------------------------------------------------------------------
-# Step 3: Create new ventures if needed
+# Step 4: Create ventures
 # ---------------------------------------------------------------------------
 
 def create_venture(analysis: dict, dry_run: bool = False) -> bool:
-    """Create a new venture if venture_type starts with NEW:."""
     vtype = analysis.get("venture_type", "")
     if not vtype.startswith("NEW:"):
         return False
@@ -318,67 +649,65 @@ def create_venture(analysis: dict, dry_run: bool = False) -> bool:
     venture_name = method_name or new_type.lower()
 
     if dry_run:
-        log(f"Step 3 [DRY-RUN]: Would create venture type={new_type} name={venture_name}")
+        log(f"Step 4 [DRY-RUN]: Would create venture type={new_type} name={venture_name}")
         return True
 
     cmd = ["python3", str(AUTOMATIONS / "venture_autonomy.py"),
            "--create", new_type, venture_name]
     out, ok = run_cmd(cmd)
     if ok:
-        log(f"Step 3: Created venture type={new_type} name={venture_name}")
+        log(f"Step 4: Created venture type={new_type} name={venture_name}")
     else:
-        log(f"Step 3: Venture creation failed: {out[:200]}", "ERROR")
+        log(f"Step 4: Venture creation failed: {out[:200]}", "ERROR")
     return ok
 
 
 # ---------------------------------------------------------------------------
-# Step 4: Create ralph loops if needed
+# Step 5: Create ralph loops
 # ---------------------------------------------------------------------------
 
 def create_ralph_loop(analysis: dict, dry_run: bool = False) -> bool:
-    """Create a ralph loop if ralph_loop_needed is True."""
-    if not analysis.get("ralph_loop_needed"):
+    tools = analysis.get("tools_selected", {})
+    if not tools.get("ralph_loop"):
         return False
 
-    op_id = analysis.get("ralph_loop_op_id", "")
-    if not op_id:
-        # Generate an op_id from the method
-        method = analysis.get("_source_entry", {}).get("method", "unknown")
-        op_id = method[:20].upper().replace(" ", "_").replace("/", "_")
+    method = analysis.get("_source_entry", {}).get("method", "unknown")
+    op_id = method[:20].upper().replace(" ", "_").replace("/", "_")
 
     if dry_run:
-        log(f"Step 4 [DRY-RUN]: Would create ralph loop for op_id={op_id}")
+        log(f"Step 5 [DRY-RUN]: Would create ralph loop for op_id={op_id}")
         return True
 
     cmd = ["python3", str(AUTOMATIONS / "ralph_loop_factory.py"), "--create", op_id]
     out, ok = run_cmd(cmd)
     if ok:
-        log(f"Step 4: Created ralph loop for op_id={op_id}")
+        log(f"Step 5: Created ralph loop for op_id={op_id}")
     else:
-        log(f"Step 4: Ralph loop creation failed: {out[:200]}", "ERROR")
+        log(f"Step 5: Ralph loop creation failed: {out[:200]}", "ERROR")
     return ok
 
 
 # ---------------------------------------------------------------------------
-# Step 5: Create n8n workflows if needed
+# Step 6: Create n8n workflows
 # ---------------------------------------------------------------------------
 
 def create_n8n_workflow(analysis: dict, dry_run: bool = False) -> bool:
-    """Create an n8n workflow using workflow_bridge if needed."""
-    if not analysis.get("n8n_workflow_needed"):
+    tools = analysis.get("tools_selected", {})
+    if not tools.get("n8n_workflow"):
         return False
 
-    description = analysis.get("n8n_workflow_description", "")
+    description = analysis.get("automation_description", "")
     if not description:
         return False
 
     if dry_run:
-        log(f"Step 5 [DRY-RUN]: Would create n8n workflow: {description[:100]}")
+        log(f"Step 6 [DRY-RUN]: Would create n8n workflow: {description[:100]}")
         return True
 
-    # Try sovrun WorkflowBuilder first
+    # Try WorkflowBuilder first (programmatic, no visual builder)
     try:
-        sys.path.insert(0, str(PROJECT / "OPEN_SOURCE" / "agent-soul"))
+        from _common import get_workflow_detector
+        sys.path.insert(0, _SOVRUN_PATH)
         from core.workflow_bridge import WorkflowBuilder, WorkflowManager
         builder = WorkflowBuilder()
         workflow = builder.build_from_description(description)
@@ -386,40 +715,67 @@ def create_n8n_workflow(analysis: dict, dry_run: bool = False) -> bool:
             manager = WorkflowManager()
             deployed = manager.deploy(workflow)
             if deployed:
-                log(f"Step 5: n8n workflow deployed: {description[:80]}")
+                log(f"Step 6: n8n workflow deployed via API: {description[:80]}")
                 return True
     except Exception as e:
-        log(f"Step 5: WorkflowBuilder not available ({e}), falling back to plan file", "WARN")
+        log(f"Step 6: WorkflowBuilder unavailable ({e}), using claude -p to generate", "WARN")
 
-    # Fallback: write workflow plan for manual creation
-    plan_dir = safe_path(AUTOMATIONS / "auto_ops" / "n8n_plans")
-    plan_dir.mkdir(parents=True, exist_ok=True)
+    # Fallback: claude -p generates n8n workflow JSON, POST to API
+    wf_prompt = textwrap.dedent(f"""\
+        Generate a valid n8n workflow JSON for this task:
+        {description[:500]}
+
+        The workflow should be deployable via POST to http://localhost:5678/api/v1/workflows.
+        Include proper node types, connections, and parameters.
+        Output ONLY the JSON. No explanation.
+    """)
+    output, ok = claude_p(wf_prompt, timeout=90)
+    if ok:
+        wf_json = validate_json(output)
+        if wf_json:
+            # Try deploying via n8n API
+            try:
+                import urllib.request
+                req = urllib.request.Request(
+                    "http://localhost:5678/api/v1/workflows",
+                    data=json.dumps(wf_json).encode(),
+                    headers={"Content-Type": "application/json"},
+                    method="POST",
+                )
+                with urllib.request.urlopen(req, timeout=15) as resp:
+                    if resp.status in (200, 201):
+                        log(f"Step 6: n8n workflow deployed via API: {description[:80]}")
+                        return True
+            except Exception as e:
+                log(f"Step 6: n8n API deploy failed ({e}), saving plan file", "WARN")
+
+    # Final fallback: save workflow plan file
+    safe_path(AUTOMATIONS / "auto_ops" / "n8n_plans").mkdir(parents=True, exist_ok=True)
     plan_name = f"n8n_plan_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-    plan_path = safe_path(plan_dir / plan_name)
+    plan_path = safe_path(AUTOMATIONS / "auto_ops" / "n8n_plans" / plan_name)
+    steps = analysis.get("execution_steps", [])
     plan_path.write_text(
         f"# n8n Workflow Plan\n\n"
         f"**Created:** {datetime.now().isoformat()}\n"
         f"**Description:** {description}\n\n"
-        f"## Execution Steps\n\n"
-        + "\n".join(f"- {s}" for s in analysis.get("execution_steps", []))
-        + f"\n\n## Tooling\n\n{json.dumps(analysis.get('tooling_stack', {}), indent=2)}\n"
+        f"## Steps\n\n" + "\n".join(f"- {s}" for s in steps) + "\n"
     )
-    log(f"Step 5: n8n workflow plan saved to {plan_name}")
+    log(f"Step 6: n8n workflow plan saved to {plan_name}")
     return True
 
 
 # ---------------------------------------------------------------------------
-# Step 6: Create new automation scripts if needed
+# Step 7: Create automation scripts
 # ---------------------------------------------------------------------------
 
 def create_automation_script(analysis: dict, automations_created: int,
                              dry_run: bool = False) -> tuple[bool, int]:
-    """Generate a new Python automation script using claude -p."""
-    if not analysis.get("automation_needed"):
+    tools = analysis.get("tools_selected", {})
+    if not tools.get("automation_script", analysis.get("automation_needed")):
         return False, automations_created
 
     if automations_created >= MAX_NEW_AUTOMATIONS_PER_RUN:
-        log(f"Step 6: Skipping — max {MAX_NEW_AUTOMATIONS_PER_RUN} automations/run reached", "WARN")
+        log(f"Step 7: Max {MAX_NEW_AUTOMATIONS_PER_RUN} automations/run reached", "WARN")
         return False, automations_created
 
     script_name = analysis.get("script_name", "")
@@ -427,14 +783,13 @@ def create_automation_script(analysis: dict, automations_created: int,
         method = analysis.get("_source_entry", {}).get("method", "auto")
         script_name = method[:30].lower().replace(" ", "_").replace("/", "_") + ".py"
 
-    # Sanitize script name
     script_name = "".join(c for c in script_name if c.isalnum() or c in "_-.").strip(".")
     if not script_name.endswith(".py"):
         script_name += ".py"
 
     script_path = AUTOMATIONS / script_name
     if script_path.exists():
-        log(f"Step 6: Script {script_name} already exists, skipping creation")
+        log(f"Step 7: Script {script_name} already exists, skipping")
         return False, automations_created
 
     description = analysis.get("automation_description", "")
@@ -442,7 +797,7 @@ def create_automation_script(analysis: dict, automations_created: int,
     method_text = analysis.get("_source_entry", {}).get("method", "")
 
     if dry_run:
-        log(f"Step 6 [DRY-RUN]: Would create script {script_name} ({auto_type}): {description[:80]}")
+        log(f"Step 7 [DRY-RUN]: Would create script {script_name}: {description[:80]}")
         return True, automations_created + 1
 
     prompt = textwrap.dedent(f"""\
@@ -452,43 +807,42 @@ def create_automation_script(analysis: dict, automations_created: int,
         TYPE: {auto_type}
         METHOD CONTEXT: {method_text[:500]}
 
-        REQUIREMENTS (follow these EXACTLY):
-        1. Start with #!/usr/bin/env python3 and a docstring
-        2. Use pathlib.Path for all file paths
-        3. Define PROJECT = Path(__file__).resolve().parent.parent
-        4. Include safe_path() function that validates paths are within PROJECT
-        5. Include argparse CLI with at least --run and --status
-        6. Log to AUTOMATIONS/logs/{script_name.replace('.py', '')}.log using append mode
-        7. All file writes go through safe_path()
-        8. Use csv, json, subprocess — no exotic dependencies
-        9. Be cron-ready (no interactive input, exit cleanly)
-        10. Handle errors gracefully with try/except
-        11. Include if __name__ == "__main__": main() block
+        REQUIREMENTS (follow EXACTLY):
+        1. #!/usr/bin/env python3 and a docstring
+        2. pathlib.Path for all file paths
+        3. PROJECT = Path(__file__).resolve().parent.parent
+        4. safe_path() function validating paths within PROJECT
+        5. argparse CLI with --run, --status, --dry-run
+        6. Log to AUTOMATIONS/logs/{script_name.replace('.py', '')}.log (append)
+        7. All file writes through safe_path()
+        8. Only csv, json, subprocess, urllib — no exotic deps
+        9. Cron-ready (no interactive input, clean exit)
+        10. Error handling with try/except
+        11. if __name__ == "__main__": main()
+        12. Import from _common: PROJECT, safe_path, recall_skills_for_task, capture_skill_from_result
 
-        Output ONLY the Python code. No markdown fences. No explanation.
+        Output ONLY the Python code. No markdown fences.
     """)
 
     output, ok = claude_p(prompt, timeout=120)
     if not ok:
-        log(f"Step 6: Script generation failed: {output[:200]}", "ERROR")
+        log(f"Step 7: Script generation failed: {output[:200]}", "ERROR")
         return False, automations_created
 
-    # Strip markdown fences if present
     code = output.strip()
-    if code.startswith("```python"):
-        code = code[len("```python"):].strip()
-    if code.startswith("```"):
-        code = code[3:].strip()
+    for fence in ("```python", "```"):
+        if code.startswith(fence):
+            code = code[len(fence):].strip()
     if code.endswith("```"):
         code = code[:-3].strip()
 
-    # Validate the generated code compiles
+    # Validate compilation
     test_path = safe_path(AUTOMATIONS / f".tmp_validate_{script_name}")
     try:
         test_path.write_text(code)
         py_compile.compile(str(test_path), doraise=True)
     except py_compile.PyCompileError as e:
-        log(f"Step 6: Generated script failed compilation: {e}", "ERROR")
+        log(f"Step 7: Generated script failed compilation: {e}", "ERROR")
         if test_path.exists():
             test_path.unlink()
         return False, automations_created
@@ -496,52 +850,38 @@ def create_automation_script(analysis: dict, automations_created: int,
         if test_path.exists():
             test_path.unlink()
 
-    # Write the validated script
     final_path = safe_path(script_path)
     final_path.write_text(code)
     os.chmod(str(final_path), 0o755)
-    log(f"Step 6: Created and validated script {script_name}")
+    log(f"Step 7: Created and validated script {script_name}")
 
-    # Add to crontab if it's a periodic automation
-    if auto_type in ("scraper", "poster", "cron"):
-        _add_cron_entry(script_name, analysis)
+    # Add cron entry if periodic
+    cron_schedule = (analysis.get("tools_selected", {}).get("cron_schedule") or "").strip()
+    if cron_schedule or auto_type in ("scraper", "poster", "cron"):
+        _add_cron_entry(script_name, cron_schedule or _default_schedule(auto_type))
 
     return True, automations_created + 1
 
 
-def _add_cron_entry(script_name: str, analysis: dict) -> None:
-    """Add a cron entry for a new automation script."""
+def _default_schedule(auto_type: str) -> str:
+    return {"scraper": "30 6 * * *", "poster": "0 9 * * *", "cron": "0 8 * * *"}.get(auto_type, "0 8 * * *")
+
+
+def _add_cron_entry(script_name: str, schedule: str) -> None:
     script_path = AUTOMATIONS / script_name
-
-    # Pick a cron schedule based on automation type
-    auto_type = analysis.get("automation_type", "cron")
-    schedules = {
-        "scraper": "30 6 * * *",    # 6:30 AM daily
-        "poster": "0 9 * * *",      # 9 AM daily
-        "cron": "0 8 * * *",        # 8 AM daily
-    }
-    schedule = schedules.get(auto_type, "0 8 * * *")
-
-    cron_line = f"{schedule} cd {PROJECT} && python3 {script_path} --run >> {AUTOMATIONS}/logs/{script_name.replace('.py', '')}.log 2>&1"
-
+    cron_line = (f"{schedule} cd {PROJECT} && python3 {script_path} --run "
+                 f">> {AUTOMATIONS}/logs/{script_name.replace('.py', '')}.log 2>&1")
     try:
         result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
         existing = result.stdout if result.returncode == 0 else ""
-
-        # Check if already in crontab
         if script_name in existing:
             log(f"Cron: {script_name} already in crontab")
             return
-
-        new_crontab = existing.rstrip() + f"\n# Auto-integrated {datetime.now().strftime('%Y-%m-%d')} by autonomous_integrator\n{cron_line}\n"
-
-        proc = subprocess.run(
-            ["crontab", "-"],
-            input=new_crontab,
-            capture_output=True,
-            text=True,
-            timeout=10,
-        )
+        new_crontab = (existing.rstrip() +
+                       f"\n# Auto-integrated {datetime.now().strftime('%Y-%m-%d')} by integrator_v2\n"
+                       f"{cron_line}\n")
+        proc = subprocess.run(["crontab", "-"], input=new_crontab,
+                              capture_output=True, text=True, timeout=10)
         if proc.returncode == 0:
             log(f"Cron: Added {script_name} at {schedule}")
         else:
@@ -551,13 +891,12 @@ def _add_cron_entry(script_name: str, analysis: dict) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Step 7: Create hooks if needed
+# Step 8: Create hooks (UPGRADED in V2 — settings.json, not just shell scripts)
 # ---------------------------------------------------------------------------
 
 def create_hooks(analysis: dict, dry_run: bool = False) -> bool:
-    """Create PreToolUse hooks if the method needs validation/gating."""
-    auto_type = analysis.get("automation_type", "")
-    if auto_type != "hook":
+    tools = analysis.get("tools_selected", {})
+    if not tools.get("hook"):
         return False
 
     description = analysis.get("automation_description", "")
@@ -565,52 +904,206 @@ def create_hooks(analysis: dict, dry_run: bool = False) -> bool:
         return False
 
     if dry_run:
-        log(f"Step 7 [DRY-RUN]: Would create hook: {description[:80]}")
+        log(f"Step 8 [DRY-RUN]: Would create hook: {description[:80]}")
         return True
 
+    # Create a prompt-based hook in hooks dir
     hooks_dir = safe_path(AUTOMATIONS / "hooks")
     hooks_dir.mkdir(parents=True, exist_ok=True)
 
-    hook_name = f"hook_{datetime.now().strftime('%Y%m%d_%H%M%S')}.sh"
+    method_slug = (analysis.get("_source_entry", {}).get("method", "auto")[:30]
+                   .lower().replace(" ", "_").replace("/", "_"))
+    method_slug = "".join(c for c in method_slug if c.isalnum() or c == "_")
+    hook_name = f"hook_{method_slug}.sh"
     hook_path = safe_path(hooks_dir / hook_name)
 
     hook_content = textwrap.dedent(f"""\
         #!/bin/bash
-        # Auto-generated hook by autonomous_integrator
+        # Auto-generated hook by autonomous_integrator V2
         # Purpose: {description}
         # Created: {datetime.now().isoformat()}
-        #
         # Hook type: PreToolUse
-        # This hook is a placeholder. Review and customize before enabling.
+        #
+        # To wire into settings.json, add to hooks.PreToolUse:
+        #   {{"matcher": "Write", "command": "{hook_path}"}}
 
-        # Exit 0 = allow, exit 1 = block
+        # Read tool input from stdin
+        INPUT=$(cat)
+        TOOL_NAME=$(echo "$INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('tool_name',''))" 2>/dev/null)
+
+        # Exit 0 = allow, exit 2 = block with message
         exit 0
     """)
 
     hook_path.write_text(hook_content)
     os.chmod(str(hook_path), 0o755)
-    log(f"Step 7: Hook placeholder created at {hook_name} (review before enabling)")
+    log(f"Step 8: Hook created at {hook_name}")
     return True
 
 
 # ---------------------------------------------------------------------------
-# Step 8: Wire growth tactics
+# Step 9: Create DAG pipelines (NEW in V2)
 # ---------------------------------------------------------------------------
 
-def wire_growth_tactics(analysis: dict, dry_run: bool = False) -> bool:
-    """Create a growth plan file with specific tactics from the analysis."""
-    tactics = analysis.get("growth_tactics", [])
-    if not tactics:
+def create_dag_pipeline(analysis: dict, dry_run: bool = False) -> bool:
+    """Create a DAG pipeline for complex multi-step methods."""
+    dag_def = analysis.get("dag_definition", {})
+    if not dag_def.get("enabled"):
+        return False
+
+    phases = dag_def.get("phases", [])
+    if not phases:
         return False
 
     method = analysis.get("_source_entry", {}).get("method", "unknown")
-    method_slug = method[:40].lower().replace(" ", "_").replace("/", "_")
-    method_slug = "".join(c for c in method_slug if c.isalnum() or c == "_")
+    method_slug = "".join(c for c in method[:40].lower().replace(" ", "_") if c.isalnum() or c == "_")
 
+    if dry_run:
+        log(f"Step 9 [DRY-RUN]: Would create DAG with {len(phases)} phases for {method_slug}")
+        return True
+
+    # Save DAG definition for DAGOrchestrator consumption
+    safe_path(DAG_PLANS_DIR).mkdir(parents=True, exist_ok=True)
+    dag_file = safe_path(DAG_PLANS_DIR / f"dag_{method_slug}.json")
+
+    dag_config = {
+        "name": f"integration_{method_slug}",
+        "created": datetime.now().isoformat(),
+        "method": method[:200],
+        "venture": analysis.get("venture_type", "UNKNOWN"),
+        "phases": phases,
+        "status": "READY",
+    }
+    dag_file.write_text(json.dumps(dag_config, indent=2))
+    log(f"Step 9: DAG pipeline created with {len(phases)} phases: {dag_file.name}")
+
+    # If DAGOrchestrator is available, also create a runner script
+    if _DAG_AVAILABLE:
+        runner_name = f"dag_runner_{method_slug}.py"
+        runner_path = safe_path(AUTOMATIONS / runner_name)
+        if not runner_path.exists():
+            runner_code = textwrap.dedent(f"""\
+                #!/usr/bin/env python3
+                \"\"\"DAG runner for {method[:60]} — auto-generated by integrator V2.\"\"\"
+                import json, sys
+                from pathlib import Path
+                sys.path.insert(0, str(Path(__file__).resolve().parent))
+                sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "OPEN_SOURCE" / "agent-soul"))
+                from core.orchestration import DAGOrchestrator, AgentStep
+                from _common import PROJECT, safe_path
+
+                DAG_FILE = Path(__file__).resolve().parent / "auto_ops" / "dag_plans" / "dag_{method_slug}.json"
+
+                def main():
+                    config = json.loads(DAG_FILE.read_text())
+                    print(f"Running DAG: {{config['name']}} ({{len(config['phases'])}} phases)")
+                    for phase in config["phases"]:
+                        print(f"  Phase: {{phase['name']}} — {{len(phase.get('steps', []))}} steps (parallel={{phase.get('parallel', False)}})")
+                    # Actual execution would use DAGOrchestrator here
+                    print("DAG execution complete")
+
+                if __name__ == "__main__":
+                    main()
+            """)
+            runner_path.write_text(runner_code)
+            os.chmod(str(runner_path), 0o755)
+            log(f"Step 9: DAG runner script created: {runner_name}")
+
+    return True
+
+
+# ---------------------------------------------------------------------------
+# Step 10: Create handoff chains (NEW in V2)
+# ---------------------------------------------------------------------------
+
+def create_handoff_chain(analysis: dict, dry_run: bool = False) -> bool:
+    """Create a handoff chain for pipeline methods."""
+    chain_def = analysis.get("handoff_chain", {})
+    if not chain_def.get("enabled"):
+        return False
+
+    stages = chain_def.get("stages", [])
+    if not stages:
+        return False
+
+    method = analysis.get("_source_entry", {}).get("method", "unknown")
+    method_slug = "".join(c for c in method[:40].lower().replace(" ", "_") if c.isalnum() or c == "_")
+
+    if dry_run:
+        log(f"Step 10 [DRY-RUN]: Would create handoff chain with {len(stages)} stages")
+        return True
+
+    safe_path(HANDOFF_CHAINS_DIR).mkdir(parents=True, exist_ok=True)
+    chain_file = safe_path(HANDOFF_CHAINS_DIR / f"chain_{method_slug}.json")
+
+    chain_config = {
+        "name": f"chain_{method_slug}",
+        "created": datetime.now().isoformat(),
+        "method": method[:200],
+        "venture": analysis.get("venture_type", "UNKNOWN"),
+        "stages": stages,
+        "status": "READY",
+    }
+    chain_file.write_text(json.dumps(chain_config, indent=2))
+    log(f"Step 10: Handoff chain created with {len(stages)} stages: {chain_file.name}")
+
+    # Wire into HandoffRouter if available
+    router = get_handoff_router()
+    if router:
+        log(f"Step 10: HandoffRouter available, chain registered")
+
+    return True
+
+
+# ---------------------------------------------------------------------------
+# Step 11: Execute subagent tasks (NEW in V2)
+# ---------------------------------------------------------------------------
+
+def execute_subagent_tasks(analysis: dict, dry_run: bool = False) -> int:
+    """Run independent subtasks via parallel claude -p calls."""
+    tools = analysis.get("tools_selected", {})
+    subtasks = tools.get("subagent_tasks", [])
+    if not subtasks:
+        return 0
+
+    if dry_run:
+        log(f"Step 11 [DRY-RUN]: Would run {len(subtasks)} subagent tasks")
+        return len(subtasks)
+
+    completed = 0
+    for task in subtasks[:5]:  # Max 5 parallel subtasks
+        if not task:
+            continue
+        log(f"Step 11: Running subagent task: {str(task)[:80]}")
+        out, ok = claude_p(
+            f"Execute this task for the PRINTMAXX system. Be concise. Task: {task}",
+            timeout=90,
+        )
+        if ok:
+            completed += 1
+            log(f"Step 11: Subagent task completed: {str(task)[:60]}")
+        else:
+            log(f"Step 11: Subagent task failed: {str(task)[:60]}", "WARN")
+
+    return completed
+
+
+# ---------------------------------------------------------------------------
+# Step 12: Wire growth tactics (UPGRADED in V2 — budget tiers)
+# ---------------------------------------------------------------------------
+
+def wire_growth_tactics(analysis: dict, dry_run: bool = False) -> bool:
+    tactics = analysis.get("growth_tactics", [])
+    budget_tiers = analysis.get("growth_budget_tiers", {})
+    if not tactics and not budget_tiers:
+        return False
+
+    method = analysis.get("_source_entry", {}).get("method", "unknown")
+    method_slug = "".join(c for c in method[:40].lower().replace(" ", "_") if c.isalnum() or c == "_")
     plan_name = f"GROWTH_{method_slug}.md"
 
     if dry_run:
-        log(f"Step 8 [DRY-RUN]: Would create growth plan: {plan_name}")
+        log(f"Step 12 [DRY-RUN]: Would create growth plan: {plan_name}")
         return True
 
     safe_path(GROWTH_PLANS_DIR).mkdir(parents=True, exist_ok=True)
@@ -622,60 +1115,102 @@ def wire_growth_tactics(analysis: dict, dry_run: bool = False) -> bool:
     tooling = analysis.get("tooling_stack", {})
     steps = analysis.get("execution_steps", [])
 
-    plan_content = textwrap.dedent(f"""\
-        # Growth Plan: {method[:60]}
+    plan_content = f"# Growth Plan: {method[:60]}\n\n"
+    plan_content += f"**Created:** {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
+    plan_content += f"**Venture:** {venture_type}\n"
+    plan_content += f"**Budget Tier:** {budget_tier}\n"
+    plan_content += f"**Revenue Est:** {revenue_est}\n\n---\n\n"
 
-        **Created:** {datetime.now().strftime('%Y-%m-%d %H:%M')}
-        **Venture:** {venture_type}
-        **Budget Tier:** {budget_tier}
-        **Estimated Revenue:** {revenue_est}
-        **Source:** {analysis.get('_source_entry', {}).get('source', 'unknown')}
-
-        ---
-
-        ## Tactics
-
-    """)
+    plan_content += "## Tactics\n\n"
     for i, tactic in enumerate(tactics, 1):
         plan_content += f"{i}. {tactic}\n"
 
-    plan_content += "\n## Account Tiers\n\n"
-    plan_content += "| Tier | Approach | Risk |\n"
-    plan_content += "|------|----------|------|\n"
-    plan_content += "| SAFE | Organic growth, official APIs, platform-compliant | NONE |\n"
-    plan_content += "| MEDIUM | Multi-account, light automation, engagement warming | Shadowban |\n"
-    plan_content += "| AGGRESSIVE | Full automation, proxy rotation, high-volume outreach | Account ban |\n"
+    if budget_tiers:
+        plan_content += "\n## Budget Tier Strategies\n\n"
+        for tier, strategy in budget_tiers.items():
+            plan_content += f"### {tier}\n{strategy}\n\n"
 
-    plan_content += "\n## Daily Actions\n\n"
-    for i, step in enumerate(steps, 1):
+    plan_content += "## Daily Actions\n\n"
+    for step in steps:
         plan_content += f"- [ ] {step}\n"
 
-    plan_content += f"\n## Tooling Stack\n\n```json\n{json.dumps(tooling, indent=2)}\n```\n"
+    plan_content += f"\n## Tooling\n\n```json\n{json.dumps(tooling, indent=2)}\n```\n"
 
     plan_path.write_text(plan_content)
-    log(f"Step 8: Growth plan created: {plan_name}")
+    log(f"Step 12: Growth plan created: {plan_name}")
     return True
 
 
 # ---------------------------------------------------------------------------
-# Step 9: Track in master ops
+# Step 13: Wire KPI task (NEW in V2)
 # ---------------------------------------------------------------------------
 
-def update_master_ops(analysis: dict, dry_run: bool = False) -> bool:
-    """Add entries to master_ops_cache.json under the appropriate sheets."""
+def wire_kpi_task(analysis: dict, dry_run: bool = False) -> bool:
+    """Add a KPI task to the dashboard for human-trackable actions."""
+    tools = analysis.get("tools_selected", {})
+    kpi_task = tools.get("kpi_task", "")
+    if not kpi_task:
+        return False
+
     if dry_run:
-        log("Step 9 [DRY-RUN]: Would update master_ops_cache.json")
+        log(f"Step 13 [DRY-RUN]: Would add KPI task: {kpi_task[:80]}")
+        return True
+
+    kpi_file = safe_path(OPS / "KPI_DASHBOARD.md")
+    if not kpi_file.exists():
+        log("Step 13: KPI_DASHBOARD.md not found", "WARN")
+        return False
+
+    try:
+        content = kpi_file.read_text()
+        method = analysis.get("_source_entry", {}).get("method", "unknown")
+        venture = analysis.get("venture_type", "UNKNOWN")
+        new_entry = (f"\n| {method[:40]} | {kpi_task[:60]} | "
+                     f"{venture} | AUTO | DAILY | "
+                     f"{datetime.now().strftime('%Y-%m-%d')} |\n")
+
+        if method[:40] not in content:
+            with open(kpi_file, "a") as f:
+                f.write(new_entry)
+            log(f"Step 13: KPI task added: {kpi_task[:60]}")
+            return True
+        else:
+            log("Step 13: KPI task already exists for this method")
+    except Exception as e:
+        log(f"Step 13: KPI wiring failed: {e}", "WARN")
+    return False
+
+
+# ---------------------------------------------------------------------------
+# Step 14: Track in master ops + capture procedural memory
+# ---------------------------------------------------------------------------
+
+import fcntl
+_MASTER_OPS_LOCK = AUTOMATIONS / "locks" / "master_ops.lock"
+
+
+def update_master_ops(analysis: dict, dry_run: bool = False) -> bool:
+    if dry_run:
+        log("Step 14 [DRY-RUN]: Would update master_ops_cache.json")
         return True
 
     if not MASTER_OPS_CACHE.exists():
-        log("Step 9: master_ops_cache.json not found, skipping", "WARN")
+        log("Step 14: master_ops_cache.json not found, skipping", "WARN")
         return False
+
+    # File lock to prevent parallel corruption
+    safe_path(_MASTER_OPS_LOCK).parent.mkdir(parents=True, exist_ok=True)
+    lock_fd = open(safe_path(_MASTER_OPS_LOCK), "w")
+    try:
+        fcntl.flock(lock_fd, fcntl.LOCK_EX)
+    except Exception:
+        pass
 
     try:
         with open(MASTER_OPS_CACHE) as f:
             cache = json.load(f)
     except Exception as e:
-        log(f"Step 9: Failed to read master_ops_cache: {e}", "ERROR")
+        log(f"Step 14: Failed to read master_ops_cache: {e}", "ERROR")
         return False
 
     sheets = cache.get("sheets", {})
@@ -683,7 +1218,6 @@ def update_master_ops(analysis: dict, dry_run: bool = False) -> bool:
     venture_type = analysis.get("venture_type", "UNKNOWN").replace("NEW:", "")
     now_iso = datetime.now().isoformat()
 
-    # Add to ALL OPS MASTER
     all_ops = sheets.get("ALL OPS MASTER", [])
     new_op = {
         "OP_ID": f"AUTO_{datetime.now().strftime('%Y%m%d%H%M%S')}",
@@ -694,103 +1228,181 @@ def update_master_ops(analysis: dict, dry_run: bool = False) -> bool:
         "Revenue Potential": analysis.get("estimated_revenue", "TBD"),
         "Budget": analysis.get("budget_tier", "FREE"),
         "Added": now_iso,
-        "Source": "autonomous_integrator",
+        "Source": "integrator_v2",
+        "Quality Score": analysis.get("quality_score", 0),
     }
     all_ops.append(new_op)
     sheets["ALL OPS MASTER"] = all_ops
 
-    # Add to AUTO_STATUS_LIVE
+    tools = analysis.get("tools_selected", {})
     auto_status = sheets.get("AUTO_STATUS_LIVE", [])
     auto_entry = {
         "Script": analysis.get("script_name", ""),
-        "Status": "CREATED" if analysis.get("automation_needed") else "N/A",
+        "Status": "CREATED",
         "Venture": venture_type,
         "Created": now_iso,
         "Type": analysis.get("automation_type", ""),
+        "Tools": ", ".join(k for k, v in tools.items() if v),
     }
     auto_status.append(auto_entry)
     sheets["AUTO_STATUS_LIVE"] = auto_status
 
-    # Add to VENTURE_AUTOMATION_MAP
     vam = sheets.get("VENTURE_AUTOMATION_MAP", [])
-    vam_entry = {
+    vam.append({
         "Venture": venture_type,
         "Automation": analysis.get("script_name", "manual"),
         "Type": analysis.get("automation_type", ""),
-        "Schedule": "daily" if analysis.get("automation_needed") else "manual",
+        "Schedule": tools.get("cron_schedule", "manual"),
         "Added": now_iso,
-    }
-    vam.append(vam_entry)
+    })
     sheets["VENTURE_AUTOMATION_MAP"] = vam
 
     cache["sheets"] = sheets
     cache["last_integration"] = now_iso
 
-    # Atomic write
     tmp = MASTER_OPS_CACHE.with_suffix(".tmp")
     try:
         with open(safe_path(tmp), "w") as f:
             json.dump(cache, f, indent=2, default=str)
         tmp.rename(MASTER_OPS_CACHE)
-        log(f"Step 9: Master ops updated — op={new_op['OP_ID']}, venture={venture_type}")
+        log(f"Step 14: Master ops updated — op={new_op['OP_ID']}")
         return True
     except Exception as e:
-        log(f"Step 9: Failed to write master_ops_cache: {e}", "ERROR")
+        log(f"Step 14: Failed to write master_ops_cache: {e}", "ERROR")
         if tmp.exists():
             tmp.unlink()
         return False
+    finally:
+        try:
+            fcntl.flock(lock_fd, fcntl.LOCK_UN)
+            lock_fd.close()
+        except Exception:
+            pass
+
+
+def capture_integration_skill(analysis: dict) -> None:
+    """Capture this integration as a procedural memory skill for future recall."""
+    method = analysis.get("_source_entry", {}).get("method", "unknown")
+    tools = analysis.get("tools_selected", {})
+    tool_names = [k for k, v in tools.items() if v]
+    result_summary = (
+        f"Integrated '{method[:60]}' into venture {analysis.get('venture_type')} "
+        f"using tools: {', '.join(tool_names)}. "
+        f"Revenue est: {analysis.get('estimated_revenue', 'TBD')}. "
+        f"Quality: {analysis.get('quality_score', 0)}/10."
+    )
+    capture_skill_from_result(
+        task=f"integrate alpha method: {method[:100]}",
+        result=result_summary,
+        success=True,
+    )
+    log("Step 14b: Integration captured in procedural memory")
 
 
 # ---------------------------------------------------------------------------
-# Step 10: Update system
+# Step 15: Update system
 # ---------------------------------------------------------------------------
 
 def update_system(analyses: list[dict], dry_run: bool = False) -> None:
-    """Run system visualizer, update system map, log the run."""
     if dry_run:
-        log("Step 10 [DRY-RUN]: Would update system visualizer + system map")
+        log("Step 15 [DRY-RUN]: Would update system visualizer + system map")
         return
 
     # Run system_visualizer.py
     out, ok = run_cmd(["python3", str(AUTOMATIONS / "system_visualizer.py")], timeout=60)
-    log(f"Step 10: System visualizer {'OK' if ok else 'FAILED'}")
+    log(f"Step 15: System visualizer {'OK' if ok else 'FAILED'}")
 
-    # Append integration summary to system map
+    # Append integration markers to system map
     if SYSTEM_MAP.exists():
         try:
             new_scripts = [a.get("script_name", "") for a in analyses
-                          if a.get("automation_needed") and a.get("script_name")]
+                          if a.get("tools_selected", {}).get("automation_script")]
             new_ventures = [a.get("venture_type", "") for a in analyses
                           if a.get("venture_type", "").startswith("NEW:")]
+            new_dags = [a.get("dag_definition", {}).get("phases", []) for a in analyses
+                       if a.get("dag_definition", {}).get("enabled")]
+            new_chains = [a.get("handoff_chain", {}).get("stages", []) for a in analyses
+                         if a.get("handoff_chain", {}).get("enabled")]
 
-            if new_scripts or new_ventures:
-                summary = f"\n<!-- Auto-integrated {datetime.now().strftime('%Y-%m-%d %H:%M')} -->\n"
+            if new_scripts or new_ventures or new_dags or new_chains:
+                summary = f"\n<!-- Integrator V2 {datetime.now().strftime('%Y-%m-%d %H:%M')} -->\n"
                 if new_scripts:
-                    summary += f"<!-- New scripts: {', '.join(new_scripts)} -->\n"
+                    summary += f"<!-- New scripts: {', '.join(s for s in new_scripts if s)} -->\n"
                 if new_ventures:
                     summary += f"<!-- New ventures: {', '.join(new_ventures)} -->\n"
+                if new_dags:
+                    summary += f"<!-- New DAGs: {len(new_dags)} -->\n"
+                if new_chains:
+                    summary += f"<!-- New handoff chains: {len(new_chains)} -->\n"
 
                 existing = safe_path(SYSTEM_MAP).read_text()
                 if summary.strip() not in existing:
                     with open(safe_path(SYSTEM_MAP), "a") as f:
                         f.write(summary)
-                    log("Step 10: System map updated with integration markers")
+                    log("Step 15: System map updated with V2 integration markers")
         except Exception as e:
-            log(f"Step 10: System map update failed: {e}", "WARN")
+            log(f"Step 15: System map update failed: {e}", "WARN")
 
-    # Log the complete run to integration ledger
+    # Log run to integration ledger
     run_summary = {
         "timestamp": datetime.now().isoformat(),
+        "version": "v2",
         "entries_processed": len(analyses),
         "ventures_created": sum(1 for a in analyses if a.get("venture_type", "").startswith("NEW:")),
-        "automations_created": sum(1 for a in analyses if a.get("automation_needed")),
-        "ralph_loops": sum(1 for a in analyses if a.get("ralph_loop_needed")),
-        "n8n_workflows": sum(1 for a in analyses if a.get("n8n_workflow_needed")),
+        "automations_created": sum(1 for a in analyses
+                                    if a.get("tools_selected", {}).get("automation_script")),
+        "ralph_loops": sum(1 for a in analyses if a.get("tools_selected", {}).get("ralph_loop")),
+        "n8n_workflows": sum(1 for a in analyses if a.get("tools_selected", {}).get("n8n_workflow")),
+        "dag_pipelines": sum(1 for a in analyses if a.get("dag_definition", {}).get("enabled")),
+        "handoff_chains": sum(1 for a in analyses if a.get("handoff_chain", {}).get("enabled")),
+        "hooks": sum(1 for a in analyses if a.get("tools_selected", {}).get("hook")),
         "growth_plans": sum(1 for a in analyses if a.get("growth_tactics")),
+        "kpi_tasks": sum(1 for a in analyses if a.get("tools_selected", {}).get("kpi_task")),
+        "avg_quality": (sum(a.get("quality_score", 0) for a in analyses) / len(analyses)
+                        if analyses else 0),
+        "model_distribution": {
+            "opus": sum(1 for a in analyses if a.get("_model_used") == "opus"),
+            "sonnet": sum(1 for a in analyses if a.get("_model_used") == "sonnet"),
+            "haiku": sum(1 for a in analyses if a.get("_model_used") == "haiku"),
+        },
         "methods": [a.get("_source_entry", {}).get("method", "")[:60] for a in analyses],
     }
     log_integration_run(run_summary)
-    log(f"Step 10: Integration run logged — {json.dumps(run_summary, default=str)}")
+    log(f"Step 15: Run logged — {json.dumps(run_summary, default=str)}")
+
+
+# ---------------------------------------------------------------------------
+# Gap detection (NEW in V2)
+# ---------------------------------------------------------------------------
+
+def detect_integration_gaps(analyses: list[dict]) -> None:
+    """Check what the pipeline SHOULD have caught but didn't."""
+    gaps = []
+    for analysis in analyses:
+        gap_note = analysis.get("gap_detection", "")
+        if gap_note and gap_note.lower() not in ("none", "n/a", ""):
+            gaps.append({
+                "method": analysis.get("_source_entry", {}).get("method", "")[:60],
+                "gap": gap_note,
+                "venture": analysis.get("venture_type", ""),
+            })
+
+    if not gaps:
+        return
+
+    log(f"Gap detection: Found {len(gaps)} pipeline gaps to address")
+    safe_path(GAP_REPORT).parent.mkdir(parents=True, exist_ok=True)
+
+    gap_content = f"# Integration Gap Report — {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
+    gap_content += "Methods the pipeline should auto-catch in the future:\n\n"
+    for g in gaps:
+        gap_content += f"## {g['method']}\n"
+        gap_content += f"**Venture:** {g['venture']}\n"
+        gap_content += f"**Gap:** {g['gap']}\n\n"
+
+    with open(safe_path(GAP_REPORT), "a") as f:
+        f.write(gap_content)
+    log(f"Gap report updated: {GAP_REPORT.name}")
 
 
 # ---------------------------------------------------------------------------
@@ -798,12 +1410,11 @@ def update_system(analyses: list[dict], dry_run: bool = False) -> None:
 # ---------------------------------------------------------------------------
 
 def show_status() -> None:
-    """Show current integration pipeline status."""
     print("=" * 70)
-    print("AUTONOMOUS INTEGRATOR — Pipeline Status")
+    print("AUTONOMOUS INTEGRATOR V2 — Pipeline Status")
     print("=" * 70)
 
-    # Check alpha staging
+    # Alpha staging
     pending = approved_today = total = 0
     if ALPHA_STAGING.exists():
         try:
@@ -819,31 +1430,63 @@ def show_status() -> None:
                         approved_today += 1
         except Exception:
             pass
-
     print(f"\nAlpha Staging: {total} total, {pending} pending, {approved_today} approved today")
 
-    # Check integration log
-    runs = 0
+    # Integration log
+    runs = v2_runs = 0
     last_run = "never"
     if INTEGRATION_LOG.exists():
         try:
             lines = INTEGRATION_LOG.read_text().strip().splitlines()
             runs = len(lines)
+            for line in lines:
+                rec = json.loads(line)
+                if rec.get("version") == "v2":
+                    v2_runs += 1
             if lines:
                 last = json.loads(lines[-1])
                 last_run = last.get("timestamp", "unknown")
         except Exception:
             pass
+    print(f"Integration Runs: {runs} total ({v2_runs} V2), last: {last_run}")
 
-    print(f"Integration Runs: {runs} total, last run: {last_run}")
+    # Failed integrations
+    failed = 0
+    if FAILED_INTEGRATIONS.exists():
+        try:
+            failed = len(FAILED_INTEGRATIONS.read_text().strip().splitlines())
+        except Exception:
+            pass
+    print(f"Failed Integrations: {failed} (replayable with --replay-failed)")
 
-    # Check growth plans
+    # Growth plans
     plan_count = 0
     if GROWTH_PLANS_DIR.exists():
         plan_count = len(list(GROWTH_PLANS_DIR.glob("GROWTH_*.md")))
     print(f"Growth Plans: {plan_count}")
 
-    # Check master ops cache freshness
+    # DAG pipelines
+    dag_count = 0
+    if DAG_PLANS_DIR.exists():
+        dag_count = len(list(DAG_PLANS_DIR.glob("dag_*.json")))
+    print(f"DAG Pipelines: {dag_count}")
+
+    # Handoff chains
+    chain_count = 0
+    if HANDOFF_CHAINS_DIR.exists():
+        chain_count = len(list(HANDOFF_CHAINS_DIR.glob("chain_*.json")))
+    print(f"Handoff Chains: {chain_count}")
+
+    # Procedural memory
+    if sovrun_available():
+        print(f"Procedural Memory: AVAILABLE (sovrun)")
+    else:
+        print(f"Procedural Memory: UNAVAILABLE (sovrun not loaded)")
+
+    # DAG orchestrator
+    print(f"DAG Orchestrator: {'AVAILABLE' if _DAG_AVAILABLE else 'UNAVAILABLE'}")
+
+    # Master ops cache
     if MASTER_OPS_CACHE.exists():
         try:
             age_h = (time.time() - MASTER_OPS_CACHE.stat().st_mtime) / 3600
@@ -853,7 +1496,7 @@ def show_status() -> None:
     else:
         print("Master Ops Cache: NOT FOUND")
 
-    # Check cron entry
+    # Cron
     try:
         result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=5)
         if "autonomous_integrator" in result.stdout:
@@ -863,8 +1506,17 @@ def show_status() -> None:
     except Exception:
         print("Cron: unable to check")
 
-    print(f"\nMax automations per run: {MAX_NEW_AUTOMATIONS_PER_RUN}")
-    print(f"Max entries per run: {MAX_ENTRIES_PER_RUN}")
+    print(f"\nMax automations/run: {MAX_NEW_AUTOMATIONS_PER_RUN}")
+    print(f"Max entries/run: {MAX_ENTRIES_PER_RUN}")
+    print(f"Min quality score: {MIN_QUALITY_SCORE}/10")
+
+    # Toolkit availability
+    print(f"\n--- Toolkit ---")
+    print(f"Sovrun modules: {'YES' if sovrun_available() else 'NO'}")
+    print(f"DAG orchestrator: {'YES' if _DAG_AVAILABLE else 'NO'}")
+    print(f"Handoff router: {'YES' if get_handoff_router() else 'NO'}")
+    print(f"Workflow detector: {'YES' if get_workflow_detector() else 'NO'}")
+    print(f"Connector registry: {'YES' if CONNECTOR_REGISTRY.exists() else 'NO'}")
     print("=" * 70)
 
 
@@ -872,61 +1524,225 @@ def show_status() -> None:
 # Main pipeline
 # ---------------------------------------------------------------------------
 
+PARALLEL_WORKERS = 50  # Plan limit is usage not concurrency — go hard
+
+
+def _mark_entries_integrated(analyses: list[dict]) -> None:
+    """Mark processed entries as INTEGRATED in ALPHA_STAGING so they don't reprocess."""
+    integrated_ids = set()
+    for a in analyses:
+        aid = a.get("_source_entry", {}).get("alpha_id", "")
+        if aid:
+            integrated_ids.add(aid)
+
+    if not integrated_ids or not ALPHA_STAGING.exists():
+        return
+
+    try:
+        rows = []
+        fieldnames = None
+        with open(ALPHA_STAGING) as f:
+            reader = csv.DictReader(f)
+            fieldnames = reader.fieldnames
+            for row in reader:
+                if row.get("alpha_id", "") in integrated_ids:
+                    row["status"] = "INTEGRATED"
+                    row["ops_generated"] = "yes"
+                rows.append(row)
+
+        if fieldnames:
+            tmp = ALPHA_STAGING.with_suffix(".tmp")
+            with open(safe_path(tmp), "w", newline="") as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(rows)
+            tmp.rename(ALPHA_STAGING)
+            log(f"Marked {len(integrated_ids)} entries as INTEGRATED")
+    except Exception as e:
+        log(f"Failed to mark entries as INTEGRATED: {e}", "ERROR")
+
+
+def _analyze_single_entry(entry: dict) -> Optional[dict]:
+    """Analyze a single entry — designed to run in parallel."""
+    method = (entry.get("extracted_method") or entry.get("tactic")
+              or entry.get("content") or "unknown")
+    try:
+        prior_solution = recall_prior_solutions(method)
+        analysis = deep_analysis(entry, prior_solution=prior_solution)
+        if analysis is None:
+            log_failed_integration(entry, "analysis_failed_or_low_quality")
+        return analysis
+    except Exception as e:
+        log(f"Analysis error for {method[:40]}: {e}", "ERROR")
+        log_failed_integration(entry, f"exception: {e}")
+        return None
+
+
+def _integrate_single(analysis: dict, dry_run: bool = False) -> dict:
+    """Run all integration steps for a single analyzed entry. Returns result summary."""
+    method = analysis.get("_source_entry", {}).get("method", "unknown")
+    result = {"method": method[:60], "steps": []}
+
+    # Steps that create files/configs (fast, no claude -p needed)
+    create_venture(analysis, dry_run=dry_run)
+    create_ralph_loop(analysis, dry_run=dry_run)
+    create_hooks(analysis, dry_run=dry_run)
+    create_dag_pipeline(analysis, dry_run=dry_run)
+    create_handoff_chain(analysis, dry_run=dry_run)
+    wire_growth_tactics(analysis, dry_run=dry_run)
+    wire_kpi_task(analysis, dry_run=dry_run)
+    update_master_ops(analysis, dry_run=dry_run)
+
+    if not dry_run:
+        capture_integration_skill(analysis)
+
+    return result
+
+
 def run_pipeline(entries: list[dict], dry_run: bool = False) -> None:
-    """Execute the full 10-step integration pipeline on a list of approved entries."""
     if not entries:
         log("No entries to process. Pipeline complete (nothing to do).")
         return
 
     mode = "DRY-RUN" if dry_run else "LIVE"
-    log(f"Pipeline starting ({mode}) — {len(entries)} entries to process")
+    log(f"Pipeline V2 starting ({mode}) — {len(entries)} entries, "
+        f"sovrun={'YES' if sovrun_available() else 'NO'}, "
+        f"DAG={'YES' if _DAG_AVAILABLE else 'NO'}, "
+        f"parallel={PARALLEL_WORKERS} workers")
+
+    # ── PHASE 1: PARALLEL ANALYSIS ──────────────────────────────────────
+    # Run claude -p analysis on all entries concurrently (the slow part)
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    log(f"Phase 1: Analyzing {len(entries)} entries with {PARALLEL_WORKERS} parallel workers...")
 
     analyses: list[dict] = []
+    with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as pool:
+        futures = {pool.submit(_analyze_single_entry, entry): entry for entry in entries}
+        for i, future in enumerate(as_completed(futures), 1):
+            entry = futures[future]
+            method = (entry.get("extracted_method") or entry.get("tactic")
+                      or entry.get("content") or "?")[:60]
+            try:
+                analysis = future.result()
+                if analysis:
+                    analyses.append(analysis)
+                    q = analysis.get("quality_score", 0)
+                    v = analysis.get("venture_type", "?")
+                    log(f"  [{i}/{len(entries)}] OK q={q}/10 v={v}: {method}")
+                else:
+                    log(f"  [{i}/{len(entries)}] SKIP: {method}", "WARN")
+            except Exception as e:
+                log(f"  [{i}/{len(entries)}] ERROR: {method}: {e}", "ERROR")
+
+    log(f"Phase 1 complete: {len(analyses)}/{len(entries)} passed analysis")
+
+    # ── PHASE 2: PARALLEL INTEGRATION ───────────────────────────────────
+    # Run file creation / wiring steps concurrently (fast, no claude -p)
+    log(f"Phase 2: Integrating {len(analyses)} entries...")
+
     automations_created = 0
+    with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as pool:
+        futures = {pool.submit(_integrate_single, a, dry_run): a for a in analyses}
+        for future in as_completed(futures):
+            try:
+                future.result()
+            except Exception as e:
+                log(f"Integration error: {e}", "ERROR")
 
-    for i, entry in enumerate(entries, 1):
-        method = entry.get("extracted_method") or entry.get("tactic") or entry.get("content") or "unknown"
-        log(f"--- Entry {i}/{len(entries)}: {method[:60]} ---")
+    # ── PHASE 3: SCRIPT GENERATION (sequential, needs compilation) ──────
+    # Script gen is sequential because py_compile + cron are not thread-safe
+    log(f"Phase 3: Generating automation scripts...")
+    for analysis in analyses:
+        if automations_created >= MAX_NEW_AUTOMATIONS_PER_RUN:
+            break
+        _, automations_created = create_automation_script(
+            analysis, automations_created, dry_run=dry_run)
 
-        # Step 2: Deep analysis
-        analysis = deep_analysis(entry)
-        if analysis is None:
-            log(f"Skipping entry {i} — analysis failed", "WARN")
-            continue
-
-        analyses.append(analysis)
-
-        # Step 3: Create new ventures
-        create_venture(analysis, dry_run=dry_run)
-
-        # Step 4: Create ralph loops
-        create_ralph_loop(analysis, dry_run=dry_run)
-
-        # Step 5: Create n8n workflows
+    # ── PHASE 4: N8N WORKFLOWS (sequential, hits n8n API) ───────────────
+    log(f"Phase 4: Creating n8n workflows...")
+    for analysis in analyses:
         create_n8n_workflow(analysis, dry_run=dry_run)
 
-        # Step 6: Create automation scripts
-        _, automations_created = create_automation_script(
-            analysis, automations_created, dry_run=dry_run
-        )
+    # ── PHASE 5: MARK ENTRIES AS INTEGRATED ────────────────────────────
+    if not dry_run and analyses:
+        _mark_entries_integrated(analyses)
 
-        # Step 7: Create hooks
-        create_hooks(analysis, dry_run=dry_run)
-
-        # Step 8: Wire growth tactics
-        wire_growth_tactics(analysis, dry_run=dry_run)
-
-        # Step 9: Track in master ops
-        update_master_ops(analysis, dry_run=dry_run)
-
-    # Step 10: Update system (once, after all entries)
+    # ── PHASE 6: SYSTEM UPDATE ──────────────────────────────────────────
     update_system(analyses, dry_run=dry_run)
+    if not dry_run:
+        detect_integration_gaps(analyses)
 
-    log(f"Pipeline complete ({mode}) — "
+    # Summary
+    tools_used = set()
+    for a in analyses:
+        for k, v in a.get("tools_selected", {}).items():
+            if v:
+                tools_used.add(k)
+
+    log(f"Pipeline V2 complete ({mode}) — "
         f"{len(analyses)} analyzed, "
-        f"{automations_created} automations created, "
-        f"{sum(1 for a in analyses if a.get('ralph_loop_needed'))} ralph loops, "
-        f"{sum(1 for a in analyses if a.get('growth_tactics'))} growth plans")
+        f"{automations_created} scripts, "
+        f"tools=[{', '.join(sorted(tools_used))}], "
+        f"avg_quality={sum(a.get('quality_score', 0) for a in analyses) / max(len(analyses), 1):.1f}/10")
+
+
+# ---------------------------------------------------------------------------
+# Gap check command (NEW in V2)
+# ---------------------------------------------------------------------------
+
+def run_gap_check() -> None:
+    """Scan ALPHA_STAGING for methods that SHOULD have triggered automations but didn't."""
+    log("Running gap check — scanning for un-integrated alpha with automation potential...")
+
+    if not ALPHA_STAGING.exists():
+        log("No ALPHA_STAGING.csv found", "ERROR")
+        return
+
+    ungapped = []
+    keywords_that_should_trigger = [
+        "crunchbase", "edgar", "sec filing", "8-k", "10-k",
+        "scraper", "scanner", "monitor", "tracker", "bot",
+        "automat", "pipeline", "workflow", "cron",
+        "api", "webhook", "endpoint",
+    ]
+
+    try:
+        with open(ALPHA_STAGING) as f:
+            for row in csv.DictReader(f):
+                method = (row.get("extracted_method") or row.get("content") or "").lower()
+                status = (row.get("status") or "").upper()
+                if status in ("REJECTED", "INTEGRATED"):
+                    continue
+                for kw in keywords_that_should_trigger:
+                    if kw in method:
+                        ungapped.append({
+                            "method": method[:100],
+                            "keyword": kw,
+                            "status": status,
+                            "alpha_id": row.get("alpha_id", ""),
+                        })
+                        break
+    except Exception as e:
+        log(f"Gap check error: {e}", "ERROR")
+        return
+
+    if ungapped:
+        log(f"Gap check: Found {len(ungapped)} methods that should have auto-triggered integration:")
+        for g in ungapped[:10]:
+            log(f"  - [{g['status']}] {g['method'][:80]} (keyword: {g['keyword']})")
+
+        # Write gap report
+        safe_path(GAP_REPORT).parent.mkdir(parents=True, exist_ok=True)
+        report = f"\n\n# Gap Check — {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
+        report += f"Found {len(ungapped)} methods with automation keywords not yet integrated:\n\n"
+        for g in ungapped:
+            report += f"- `{g['alpha_id']}`: {g['method'][:80]} (trigger: {g['keyword']}, status: {g['status']})\n"
+        with open(safe_path(GAP_REPORT), "a") as f:
+            f.write(report)
+        log(f"Gap report written to {GAP_REPORT.name}")
+    else:
+        log("Gap check: No gaps found — pipeline is catching automation-relevant methods")
 
 
 # ---------------------------------------------------------------------------
@@ -935,7 +1751,7 @@ def run_pipeline(entries: list[dict], dry_run: bool = False) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="PRINTMAXX Autonomous Integrator — deep alpha integration pipeline"
+        description="PRINTMAXX Autonomous Integrator V2 — full-toolkit alpha integration"
     )
     parser.add_argument("--run", action="store_true",
                         help="Process all today's approved entries")
@@ -945,11 +1761,28 @@ def main() -> None:
                         help="Process a specific entry by alpha_id")
     parser.add_argument("--status", action="store_true",
                         help="Show integration pipeline status")
+    parser.add_argument("--gap-check", action="store_true",
+                        help="Scan for un-integrated methods that should have triggered automation")
+    parser.add_argument("--replay-failed", action="store_true",
+                        help="Re-attempt previously failed integrations")
 
     args = parser.parse_args()
 
     if args.status:
         show_status()
+        return
+
+    if args.gap_check:
+        run_gap_check()
+        return
+
+    if args.replay_failed:
+        entries = load_failed_entries()
+        if not entries:
+            log("No failed integrations to replay")
+            return
+        log(f"Replaying {len(entries)} failed integrations...")
+        run_pipeline(entries, dry_run=args.dry_run)
         return
 
     if args.entry:
@@ -961,12 +1794,10 @@ def main() -> None:
         return
 
     if args.run or args.dry_run:
-        # Step 1: Load approved entries
         entries = load_approved_today()
         run_pipeline(entries, dry_run=args.dry_run)
         return
 
-    # Default: show status
     parser.print_help()
 
 

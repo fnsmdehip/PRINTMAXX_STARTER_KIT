@@ -1,0 +1,48 @@
+{
+  "name": "integration_cal_ai_has_been_acquired_by_myfitnesspal",
+  "created": "2026-03-20T13:50:42.768050",
+  "method": "Cal AI has been acquired by MyFitnessPal \n\nHenry and I started Cal AI as 17-year old high school students with one mission: make calorie tracking easier with AI.\n\nIn just 18 months, we\u2019ve helped milli",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_cal_ai_app_store_data",
+        "scrape_cal_ai_social_presence",
+        "extract_pricing_and_feature_model"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "build_growth_playbook",
+        "identify_replicable_patterns_for_streak_apps",
+        "score_health_fitness_ai_vertical"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_engagement_posts_from_narrative",
+        "generate_contrarian_take_thread",
+        "generate_app_factory_improvement_brief"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "route_posts_to_posting_queue",
+        "route_playbook_to_app_factory_command_center",
+        "update_competitive_intel_ledger"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,77 @@
+{
+  "name": "integration__ive_launched_11_digital_products_in_th",
+  "created": "2026-03-20T18:10:02.457117",
+  "method": " i've launched 11 digital products in the last 9 months8 were profitable within 7 daysthe other 3 flopped immediately and i killed themthe difference had nothing to do with the product itselfit was wh",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "product_audit",
+      "steps": [
+        "scan_ready_products_from_DIGITAL_PRODUCTS",
+        "score_by_market_demand_and_competition",
+        "select_next_product_for_launch"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "community_mapping",
+      "steps": [
+        "identify_3_subreddits_per_product",
+        "identify_2_twitter_communities",
+        "identify_1_discord_or_slack",
+        "map_posting_schedule"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "day_minus_3",
+      "steps": [
+        "post_problem_awareness_content_to_communities",
+        "engage_in_existing_threads_about_the_problem",
+        "save_engagement_metrics"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "day_minus_2",
+      "steps": [
+        "post_WIP_teaser_showing_solution",
+        "reply_to_day3_engagers_with_update",
+        "collect_early_interest_DMs"
+      ],
+      "parallel": true,
+      "depends_on": "day_minus_3"
+    },
+    {
+      "name": "day_minus_1",
+      "steps": [
+        "post_launch_tomorrow_CTA",
+        "DM_interested_users_with_early_access_link",
+        "prepare_listing_copy_and_assets"
+      ],
+      "parallel": true,
+      "depends_on": "day_minus_2"
+    },
+    {
+      "name": "day_0_launch",
+      "steps": [
+        "publish_listing_on_platform",
+        "post_launch_announcement_all_channels",
+        "reply_to_all_prior_thread_participants_with_link"
+      ],
+      "parallel": true,
+      "depends_on": "day_minus_1"
+    },
+    {
+      "name": "day_plus_1_compound",
+      "steps": [
+        "collect_first_reviews",
+        "post_social_proof_screenshots",
+        "kill_or_double_down_decision_at_48h"
+      ],
+      "parallel": true,
+      "depends_on": "day_0_launch"
+    }
+  ],
+  "status": "READY"
+}

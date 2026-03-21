@@ -1,0 +1,48 @@
+{
+  "name": "integration__mit_repo_ixartzsaasboilerplate_6921",
+  "created": "2026-03-20T18:09:59.083531",
+  "method": " mit repo: ixartz/saas-boilerplate (6921 stars, typescript) ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "clone_and_audit",
+      "steps": [
+        "git_clone_boilerplate",
+        "security_audit_deps",
+        "map_feature_set"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "templatize",
+      "steps": [
+        "extract_brand_config_layer",
+        "create_niche_config_schema",
+        "wire_stripe_product_creation"
+      ],
+      "parallel": true,
+      "depends_on": "clone_and_audit"
+    },
+    {
+      "name": "generate_instance",
+      "steps": [
+        "apply_niche_config",
+        "swap_copy_and_assets",
+        "inject_payment_links"
+      ],
+      "parallel": false,
+      "depends_on": "templatize"
+    },
+    {
+      "name": "deploy_and_market",
+      "steps": [
+        "deploy_to_vercel",
+        "generate_landing_content",
+        "add_to_deployment_urls"
+      ],
+      "parallel": true,
+      "depends_on": "generate_instance"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "integration_httpsredditcomrsideprojectcomment",
+  "created": "2026-03-20T23:12:24.850747",
+  "method": "https://reddit.com/r/SideProject/comments/1rvfp51/thesis_discord_is_an_underrated_platform_for/",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "discover",
+      "steps": [
+        "scrape_disboard_by_tag",
+        "scrape_discord_me_by_tag",
+        "merge_dedupe_servers"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "filter_min_500_members",
+        "filter_active_last_30d",
+        "rank_by_niche_match"
+      ],
+      "parallel": false,
+      "depends_on": "discover"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "draft_value_post_per_niche",
+        "draft_soft_promo_post_per_niche"
+      ],
+      "parallel": true,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "write_to_posting_queue",
+        "update_kpi_dashboard"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

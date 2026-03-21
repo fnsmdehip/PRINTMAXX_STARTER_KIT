@@ -1,0 +1,29 @@
+{
+  "name": "chain_500_to_35kmonth_ai_influencer_fanvue",
+  "created": "2026-03-20T18:09:57.245411",
+  "method": "$500 to $35k/month ai influencer. fanvue > patreon. chatter labor arbitrage.  ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_generator",
+      "task": "Generate AI persona images + captions using local SD/Flux, batch 10-20 per run",
+      "output": "ai_influencer_content_batch.json"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post teaser content to Twitter/Reddit/TikTok with traffic funnels to Fanvue",
+      "output": "distribution_log.json"
+    },
+    {
+      "agent": "chatter_scriptwriter",
+      "task": "Generate tiered chatter response scripts (free tier, paid tier, PPV upsell) via Claude",
+      "output": "chatter_scripts.json"
+    },
+    {
+      "agent": "analytics",
+      "task": "Track sub count, churn, ARPU, best-converting content types",
+      "output": "influencer_metrics.json"
+    }
+  ],
+  "status": "READY"
+}

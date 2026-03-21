@@ -1,0 +1,39 @@
+{
+  "name": "integration_at_the_agents_anonymous_sf_meetup_last_n",
+  "created": "2026-03-20T13:50:41.958334",
+  "method": "At the Agents Anonymous SF meetup last night we did another  AI usage survey, here are the est. numbers:\n\nUsage stats:\n- 90% Claude Code \n- 60% Codex \n- 30% Cursor\n- 20% OpenCode\n- 10% Conductor\n- 10%",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_angles",
+      "steps": [
+        "parse_survey_numbers",
+        "identify_contrarian_angles",
+        "match_to_our_products"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "5_tweet_variants_specific_numbers",
+        "1_thread_claude_code_dominance",
+        "1_contrarian_cursor_overhyped",
+        "1_mobile_coding_angle"
+      ],
+      "parallel": true,
+      "depends_on": "extract_angles"
+    },
+    {
+      "name": "route_and_position",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "update_digital_product_positioning",
+        "add_to_content_calendar"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "integration_httpphotoaicom_is_a_40870_line_fil",
+  "created": "2026-03-20T18:35:51.938783",
+  "method": "http://\nphotoai.com is a 40,870 line file called index.php\n\n$105,000/mo revenue\n\n$80,000/mo profit",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_photoai_pricing_page_and_feature_set",
+        "scan_app_store_for_ai_photo_tool_gaps",
+        "check_reddit_complaints_about_photoai_alternatives"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "niche_select",
+      "steps": [
+        "score_5_underserved_ai_wrapper_niches_by_demand_vs_competition",
+        "pick_highest_roi_niche_for_single_file_mvp"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_single_file_html_js_app_with_stripe_link",
+        "add_claude_api_backend_for_ai_processing",
+        "deploy_to_surge"
+      ],
+      "parallel": false,
+      "depends_on": "niche_select"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "create_product_hunt_draft",
+        "generate_3_tweets_about_build",
+        "post_to_indiehackers_show"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    }
+  ],
+  "status": "READY"
+}

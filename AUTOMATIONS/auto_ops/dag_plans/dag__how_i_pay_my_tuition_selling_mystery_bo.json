@@ -1,0 +1,36 @@
+{
+  "name": "integration__how_i_pay_my_tuition_selling_mystery_bo",
+  "created": "2026-03-20T18:09:58.309092",
+  "method": " how i pay my tuition selling mystery boxes (and the $2k lesson 99% of suppliers won't tell you). as a broke student, i\u2019ve tried every hustle in the book\u2014flipping furniture, delivery apps, you name it",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_liquidation_trending_categories",
+        "scrape_tiktok_mystery_box_hashtag_volume"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_mystery_box_hustle_threads",
+        "generate_tiktok_script_hooks",
+        "generate_digital_bundle_listing_copy"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "product_build",
+      "steps": [
+        "curate_digital_asset_bundle",
+        "create_whop_gumroad_listing"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

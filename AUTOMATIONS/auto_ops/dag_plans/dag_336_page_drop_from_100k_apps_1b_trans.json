@@ -1,0 +1,49 @@
+{
+  "name": "integration_336_page_drop_from_100k_apps_1b_trans",
+  "created": "2026-03-20T18:35:51.373936",
+  "method": "336 page drop from 100k+ apps, 1b+ transactions from \n@RevenueCat\n \n\nTop 25% of apps grew 80% yoy\nAI apps convert 40% better but churn 30% faster\n\n\nhttps://\nrevenuecat.com/state-of-subsc\nription-apps/",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_benchmarks",
+      "steps": [
+        "fetch_revenuecat_report_page",
+        "extract_key_metrics_tables",
+        "parse_ai_app_specific_data"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_portfolio",
+      "steps": [
+        "load_47_deployed_apps",
+        "score_each_app_vs_benchmarks",
+        "flag_underperformers"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_benchmarks"
+    },
+    {
+      "name": "generate_optimizations",
+      "steps": [
+        "pricing_recommendations",
+        "trial_length_optimization",
+        "anti_churn_streak_mechanics",
+        "ai_feature_conversion_boost"
+      ],
+      "parallel": true,
+      "depends_on": "analyze_portfolio"
+    },
+    {
+      "name": "apply_and_track",
+      "steps": [
+        "update_app_factory_methods_csv",
+        "update_aso_keywords",
+        "create_kpi_entries"
+      ],
+      "parallel": false,
+      "depends_on": "generate_optimizations"
+    }
+  ],
+  "status": "READY"
+}

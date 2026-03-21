@@ -1,0 +1,24 @@
+{
+  "name": "chain_i_ran_my_bots_trade_history_against_the",
+  "created": "2026-03-20T18:35:50.260114",
+  "method": "i ran my bot's trade history against the actual outcomes of 14,000 events\n\nit wasn't predicting the future\n\nit was predicting when other bots would panic-sell\n\n$187K profit in 6 weeks. not from readin",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_extractor",
+      "task": "Extract core concept: second-order bot-behavior prediction on Polymarket. Strip hype, keep the framework: identify panic-sell signatures in order flow, front-run liquidation cascades",
+      "output": "extracted_method.json"
+    },
+    {
+      "agent": "engagement_bait_converter",
+      "task": "Convert into 3 posts: (1) contrarian take thread on reading machines not markets, (2) breakdown of bot-vs-bot dynamics on prediction markets, (3) what retail traders miss about algorithmic order flow",
+      "output": "posting_queue/meta_trading_posts.txt"
+    },
+    {
+      "agent": "content_qualifier",
+      "task": "Score posts for engagement potential, add to CONTENT/social/posting_queue/ with platform routing (Twitter primary, LinkedIn secondary)",
+      "output": "qualified_posts.json"
+    }
+  ],
+  "status": "READY"
+}

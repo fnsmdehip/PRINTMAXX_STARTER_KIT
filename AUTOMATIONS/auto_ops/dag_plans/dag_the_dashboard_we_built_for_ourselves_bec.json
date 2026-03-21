@@ -1,0 +1,46 @@
+{
+  "name": "integration_the_dashboard_we_built_for_ourselves_bec",
+  "created": "2026-03-20T13:50:40.442515",
+  "method": "The dashboard we built for ourselves became our product",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan_all_scripts_for_standalone_value",
+        "score_external_demand_via_reddit_ph_search",
+        "check_existing_competitors"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "rank",
+      "steps": [
+        "composite_score_productization_candidates",
+        "filter_top5_by_effort_vs_revenue"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    },
+    {
+      "name": "package",
+      "steps": [
+        "generate_product_spec_md",
+        "create_landing_page_html",
+        "draft_gumroad_listing"
+      ],
+      "parallel": true,
+      "depends_on": "rank"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "route_to_content_engine_for_launch_posts",
+        "add_to_product_hunt_queue"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    }
+  ],
+  "status": "READY"
+}

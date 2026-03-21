@@ -1,0 +1,45 @@
+{
+  "name": "integration_app_developers_dont_want_you_to_know_th",
+  "created": "2026-03-20T13:50:42.562143",
+  "method": "App developers don't want you to know this secret.\n\nBecause if you did, you wouldn't need to hire them.\n\nHere's how I build apps without writing code:\n\nStep 1: Use vibe coding app like Rork\n\u00b7 Type wha",
+  "venture": "BROKERING",
+  "phases": [
+    {
+      "name": "scrape_leads",
+      "steps": [
+        "scrape_twitter_vibecoding_keywords",
+        "scrape_reddit_nocode_subs",
+        "scrape_upwork_vibecoding_gigs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "score_leads_by_budget_signals",
+        "filter_has_80pct_app_needs_polish"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_leads"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_personalized_cold_msg",
+        "send_via_existing_eas_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "content",
+      "steps": [
+        "generate_3_tweets_vibecoding_finishing",
+        "generate_thread_80_20_method"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_leads"
+    }
+  ],
+  "status": "READY"
+}

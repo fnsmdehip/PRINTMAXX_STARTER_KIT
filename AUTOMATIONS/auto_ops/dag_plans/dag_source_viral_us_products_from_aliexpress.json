@@ -1,0 +1,60 @@
+{
+  "name": "integration_source_viral_us_products_from_aliexpress",
+  "created": "2026-03-20T18:35:55.167624",
+  "method": "source viral us products from aliexpress. list on nordic platforms in local language. klarna/vipps/swish payments. ioss for eu vat. phase 1: dropship. phase 2: eu warehouse. nordic ecom arbitrage: us ",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "source_products",
+      "steps": [
+        "scrape_aliexpress_trending_us",
+        "scrape_temu_viral",
+        "scrape_amazon_movers_shakers"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "gap_analysis",
+      "steps": [
+        "scrape_finn_no_categories",
+        "scrape_cdon_categories",
+        "scrape_dba_dk_categories",
+        "scrape_tori_fi_categories"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "match_and_price",
+      "steps": [
+        "cross_reference_supply_gaps",
+        "calculate_landed_cost_with_ioss_vat",
+        "filter_margin_above_40pct"
+      ],
+      "parallel": false,
+      "depends_on": "gap_analysis"
+    },
+    {
+      "name": "listing_gen",
+      "steps": [
+        "translate_to_norwegian",
+        "translate_to_swedish",
+        "translate_to_danish",
+        "translate_to_finnish",
+        "generate_product_images_spec"
+      ],
+      "parallel": true,
+      "depends_on": "match_and_price"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "rank_by_margin_and_demand",
+        "export_ready_to_list_cards",
+        "update_ledger"
+      ],
+      "parallel": false,
+      "depends_on": "listing_gen"
+    }
+  ],
+  "status": "READY"
+}

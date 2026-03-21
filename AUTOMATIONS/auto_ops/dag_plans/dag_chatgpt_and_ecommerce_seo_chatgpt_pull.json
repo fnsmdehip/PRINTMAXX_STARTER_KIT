@@ -1,0 +1,38 @@
+{
+  "name": "integration_chatgpt_and_ecommerce_seo_chatgpt_pull",
+  "created": "2026-03-20T18:35:53.159066",
+  "method": "ChatGPT and Ecommerce SEO **ChatGPT pulls from Google Shopping for product results**\n\nWhen you ask ChatGPT for product recommendations, it runs encoded \"fan-out\" queries through Google Shopping in the",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan all deployed product/landing URLs from DEPLOYMENT_URLS.md",
+        "check each for Product JSON-LD schema markup",
+        "check for price, availability, review, image fields"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "fix",
+      "steps": [
+        "inject missing Product schema into landing pages missing it",
+        "generate Google Merchant Center product feed XML from PRODUCTS/ data",
+        "add canonical URLs and OpenGraph product tags"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "monitor",
+      "steps": [
+        "query ChatGPT for product recommendations in our niches (streak apps, prayer apps, PDF tools)",
+        "log which competitors appear in AI shopping carousels",
+        "track our appearance rate week-over-week"
+      ],
+      "parallel": false,
+      "depends_on": "fix"
+    }
+  ],
+  "status": "READY"
+}

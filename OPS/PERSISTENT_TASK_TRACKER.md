@@ -1114,3 +1114,68 @@ If context was compacted and you lost track:
 - [P2] Combined potential: $300-800/mo at 5-15 sales/mo (source: swarm/revenue_report_20260317.md)
 - [P2] `DIGITAL_PRODUCTS/ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html` — the actual product file (source: swarm/revenue_report_20260317.md)
 - [P2] `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/REDDIT_MONEY_MACHINE.md` — the actual product (source: swarm/revenue_report_20260317.md)
+
+### BEFORE YOU — Ancestry Narrative Product — 2026-03-20
+- **Status:** ACTIVE (MVP BUILT)
+- **Venture ID:** before_you_product_narrative_001
+- **Type:** PRODUCT + MONETIZE (affiliate)
+- **What:** AI ancestry narrative website generator. Users input family data, system generates editorial-quality scroll site.
+- **Revenue:** Free/$0, Standard/$19.99, Premium/$39.99 + Ancestry.com affiliate
+- **Cost per generation:** ~$0.02
+- **Live URLs:**
+  - Landing: https://before-you-landing.surge.sh
+  - Example personal: https://donnelly-ancestry.surge.sh
+  - Example family: https://donnelly-family-heritage.surge.sh
+- **Codebase:** /Users/macbookpro/Documents/ancestry-research/before-you/
+- **Built:**
+  - [x] Generator pipeline (content selector + LLM + data assembler + Vite builder)
+  - [x] Content blocks (Ireland 4 files, Italy 3 files)
+  - [x] Parameterized template (React + Vite + Tailwind + Framer Motion)
+  - [x] Landing page with 4-step intake form wizard
+  - [x] Affiliate CTAs (Ancestry.com) on all generated sites
+  - [x] Registered in autonomy_state.json
+- **Remaining:**
+  - [x] [P1] Stripe checkout integration (env var payment links, sessionStorage flow)
+  - [x] [P1] Backend API endpoint (server.js: POST /api/generate with NDJSON streaming)
+  - [x] [P2] England + Germany content blocks (2 files each, deep-past + medieval-modern)
+  - [x] [P2] Template Colophon parameterization (reads from colophon.js data file)
+  - [ ] [P2] End-to-end test with real Anthropic API key
+  - [ ] [P2] Stripe OAuth authentication (MCP connected but auth failing)
+  - [ ] [P3] iOS app / mobile optimization
+  - [ ] [P3] PDF generation for premium tier
+- **Cross-pollination:**
+  - Genealogy content -> CONTENT_FARM
+  - Cold email templates -> COLD_OUTBOUND
+  - Narrative engine -> DIGITAL_PRODUCTS (reusable for other verticals)
+  - Ancestry affiliate -> AFFILIATE pipeline
+  - META_ADS_AUTONOMOUS -> paid traffic for Before You tiers
+
+### META ADS AUTONOMOUS — Cross-Venture Ad Management — 2026-03-20
+- **Status:** ACTIVE (SCAFFOLDED, ORCHESTRATOR BUILT, NEEDS API CREDS)
+- **Type:** INFRASTRUCTURE (serves all ventures with paid traffic)
+- **What:** Fully autonomous Meta ads management. Agent monitors, kills bleeders, scales winners, writes copy from top performers, uploads creative directly. Replaces daily Ads Manager ritual.
+- **Stack:** social-cli (Meta Marketing API wrapper) + OpenClaw/agent skills + Groq API (free)
+- **Cost:** $0 incremental (social-cli + Meta API free, Groq free tier for copy gen, ad spend separate)
+- **Key insight:** frequency > 3.5 = audience cooked. CPA > 2.5x target for 48hrs = auto-pause.
+- **6-step loop:** health check -> fatigue detect -> auto-pause/budget shift -> copy gen -> upload -> morning brief
+- **Built:**
+  - [x] Full playbook (META_ADS_PLAYBOOK.md)
+  - [x] Registered in PRINTMAXX_SYSTEM_MAP.md
+  - [x] Cross-pollination mapped (Before You, App Factory, Digital Products, Newsletter, EAS)
+  - [x] Directory scaffold (config/, logs/, scripts/)
+  - [x] targets.json with per-venture CPA targets and thresholds
+  - [x] orchestrator.py (full 6-step loop, dry-run mode, single-step mode, Telegram delivery)
+  - [x] CSV/JSON log files initialized (fatigue_log, actions_log, copy_queue)
+- **Remaining:**
+  - [ ] [P0] Set up Meta Marketing API credentials (developers.facebook.com) + install social-cli
+  - [ ] [P1] Test orchestrator.py --dry-run with live API credentials
+  - [ ] [P1] Set up Telegram bot for morning brief delivery
+  - [ ] [P2] Add Claude/Groq copy generation to Step 4 in orchestrator
+  - [ ] [P2] Add ad upload to Step 5 (social-cli meta ad create)
+  - [ ] [P2] Set up cron schedule (daily 6AM)
+  - [ ] [P3] Remove human approval gate once confidence established
+- **Cross-pollination:**
+  - Drives paid traffic for: Before You, App Factory, Digital Products, Newsletter
+  - EAS case study: "we built an autonomous ad manager, we can build yours"
+  - Content Farm organic winners -> ad creative candidates
+  - Newsletter subscribers -> Meta lookalike seed audiences

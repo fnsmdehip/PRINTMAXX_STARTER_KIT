@@ -1,0 +1,38 @@
+{
+  "name": "integration__sleep_youtube_video_descriptions__pre",
+  "created": "2026-03-20T18:10:01.033357",
+  "method": "# Sleep YouTube Video Descriptions  Pre-written titles, descriptions, tags for first 10 videos. Copy-paste ready.  ---  ## Video 1: Rain Sounds  **Title (77 chars):** ``` 8 Hour Rain Sounds for Sleep ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_top_sleep_youtube_titles",
+        "extract_keyword_patterns",
+        "analyze_competitor_descriptions"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_titles_from_patterns",
+        "generate_descriptions_with_timestamps_and_cta",
+        "generate_tag_sets_from_keywords"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "write_metadata_files",
+        "update_content_calendar",
+        "queue_for_upload"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

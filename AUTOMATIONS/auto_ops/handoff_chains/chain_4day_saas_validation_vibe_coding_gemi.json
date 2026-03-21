@@ -1,0 +1,29 @@
+{
+  "name": "chain_4day_saas_validation_vibe_coding_gemi",
+  "created": "2026-03-20T18:35:55.248515",
+  "method": "4-day saas validation. vibe coding. gemini flash stack. stripe day 1.  ",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "alpha_scorer",
+      "task": "scan ALPHA_STAGING + APP_IDEATION_RESULTS for unfilled SaaS niches with <3 competitors and >1K monthly searches",
+      "output": "saas_idea_ranked.json"
+    },
+    {
+      "agent": "builder",
+      "task": "scaffold MVP from top idea using app_factory templates + wire Stripe payment link via payment_integrator.py",
+      "output": "mvp_deployed_url.txt"
+    },
+    {
+      "agent": "launcher",
+      "task": "deploy + submit to 5 directories + cold email 50 leads from INBOUND_LEADS.csv matching the niche",
+      "output": "launch_metrics.json"
+    },
+    {
+      "agent": "validator",
+      "task": "at 72h check signup count \u2014 if 0 signups mark KILL, if >5 signups mark DOUBLE_DOWN in APP_FACTORY_METHODS.csv",
+      "output": "validation_result.json"
+    }
+  ],
+  "status": "READY"
+}

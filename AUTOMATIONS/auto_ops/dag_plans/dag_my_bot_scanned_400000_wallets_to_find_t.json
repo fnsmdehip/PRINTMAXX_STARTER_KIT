@@ -1,0 +1,45 @@
+{
+  "name": "integration_my_bot_scanned_400000_wallets_to_find_t",
+  "created": "2026-03-20T18:35:50.249510",
+  "method": "my bot scanned 400,000 wallets to find the best trader on polymarket\n\n$4.7M profit. 91% win rate. 23,000 positions.\n\nthen i found 30 wallets doing the exact same trades within 800 milliseconds of his\n",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_wallets",
+      "steps": [
+        "fetch_polymarket_leaderboard_public_api",
+        "identify_top_pnl_wallets_polygon_rpc"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "detect_clusters",
+      "steps": [
+        "analyze_funding_patterns_parent_child",
+        "flag_coordinated_wallets_by_timing"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_wallets"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_whale_breakdown_thread",
+        "create_copy_trade_detection_explainer",
+        "create_prediction_market_alpha_post"
+      ],
+      "parallel": true,
+      "depends_on": "detect_clusters"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "route_to_posting_queue",
+        "tag_for_crypto_trading_audience"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

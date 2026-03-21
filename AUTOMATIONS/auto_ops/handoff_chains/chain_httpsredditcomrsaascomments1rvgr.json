@@ -1,0 +1,24 @@
+{
+  "name": "chain_httpsredditcomrsaascomments1rvgr",
+  "created": "2026-03-20T23:12:24.853029",
+  "method": "https://reddit.com/r/SaaS/comments/1rvgrhv/launched_my_first_saas/",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "fetch Reddit post + top 25 comments via JSON API (no browser, append .json to URL), extract: founder pain-points, launch tactics, MRR mentioned, tools used, what failed",
+      "output": "AUTOMATIONS/reddit_scraper_output/saas_launch_intel.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "transform pain-points and lessons into 3 posts: (1) contrarian take on why most SaaS launches fail at this stage, (2) engagement hook using specific numbers from post, (3) thread with our own launch playbook angle",
+      "output": "CONTENT/social/posting_queue/saas_launch_intel_posts.txt"
+    },
+    {
+      "agent": "lead_qualifier",
+      "task": "if founder has a website/product link in post, add to LEDGER/INBOUND_LEADS.csv as outbound target (newly launched SaaS = perfect EAS/vibe-coding upsell lead)",
+      "output": "LEDGER/INBOUND_LEADS.csv"
+    }
+  ],
+  "status": "READY"
+}

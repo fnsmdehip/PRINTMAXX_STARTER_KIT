@@ -1,0 +1,37 @@
+{
+  "name": "integration_building_saas_in_2026_my_best_advice__",
+  "created": "2026-03-20T18:35:52.479829",
+  "method": "Building SaaS in 2026? My best advice * Offer Google login. Most people won't bother making an account otherwise.\n* Paying users = real demand. If no one has paid yet then it's not validated. \n* Build",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scan_apps",
+      "steps": [
+        "crawl_deployment_urls",
+        "extract_html_features_per_app"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "audit",
+      "steps": [
+        "check_google_oauth",
+        "check_payment_integration",
+        "check_retention_hooks",
+        "check_marketing_assets"
+      ],
+      "parallel": true,
+      "depends_on": "scan_apps"
+    },
+    {
+      "name": "report_and_route",
+      "steps": [
+        "generate_compliance_scorecard",
+        "route_fixes_to_app_factory_autopilot"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    }
+  ],
+  "status": "READY"
+}

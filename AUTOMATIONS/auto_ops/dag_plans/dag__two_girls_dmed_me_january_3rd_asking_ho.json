@@ -1,0 +1,36 @@
+{
+  "name": "integration__two_girls_dmed_me_january_3rd_asking_ho",
+  "created": "2026-03-20T18:10:01.816951",
+  "method": " two girls dmed me january 3rd asking how to start selling digital productsboth had 400 followersboth had $0 in savingsboth worked full-time jobs they hatedboth had the same 2 hours per night to work ",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_transformation_hooks",
+        "generate_before_after_stories",
+        "generate_results_screenshots"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "product_match",
+      "steps": [
+        "map_content_to_product",
+        "create_dm_response_templates"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "schedule_cross_platform"
+      ],
+      "parallel": false,
+      "depends_on": "product_match"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "integration_cursor_just_dropped_composer_2_and_its_",
+  "created": "2026-03-20T13:50:41.629027",
+  "method": "Cursor just dropped Composer 2 and it's honestly insane.\n\nTheir own coding model. 61.7% on Terminal-Bench 2.0, which beats Claude Opus 4.6 sitting at 58.0%.\n\nBut here's what actually matters:\n\n$0.50 p",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scan_releases",
+      "steps": [
+        "scrape_ai_news_sources",
+        "check_huggingface_trending",
+        "check_twitter_ai_announcements"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "extract_benchmarks",
+        "calculate_cost_per_token_rankings",
+        "identify_hot_take_angles"
+      ],
+      "parallel": true,
+      "depends_on": "scan_releases"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "write_comparison_thread",
+        "write_contrarian_take",
+        "write_engagement_bait_post"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "add_to_posting_queue",
+        "tag_with_optimal_post_time"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

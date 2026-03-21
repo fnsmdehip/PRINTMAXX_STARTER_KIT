@@ -1,0 +1,29 @@
+{
+  "name": "chain_app_developers_dont_want_you_to_know_th",
+  "created": "2026-03-20T13:50:42.568459",
+  "method": "App developers don't want you to know this secret.\n\nBecause if you did, you wouldn't need to hire them.\n\nHere's how I build apps without writing code:\n\nStep 1: Use vibe coding app like Rork\n\u00b7 Type wha",
+  "venture": "BROKERING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Twitter/Reddit/Upwork for 'vibe coding stuck' signals \u2014 keywords: 'Rork', 'Bolt.new', 'Lovable', 'Cursor bug', 'almost done but', 'need a dev to finish'",
+      "output": "vibecoding_leads_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads: has budget? has 80% app? specific tech stack we can handle? Filter to hot leads",
+      "output": "vibecoding_leads_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized pitch: reference their specific app, show our 47-app portfolio, offer fixed-price finishing service $200-500",
+      "output": "vibecoding_outreach_log.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Convert the lead patterns into 3 tweets + 1 thread about finishing vibe-coded apps",
+      "output": "vibecoding_content_queue.txt"
+    }
+  ],
+  "status": "READY"
+}

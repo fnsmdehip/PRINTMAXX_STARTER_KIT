@@ -1,0 +1,58 @@
+{
+  "name": "integration__you_can_build_an_extremely_profitable_a",
+  "created": "2026-03-20T18:10:02.550558",
+  "method": " you can build an extremely profitable affiliate business with tiktok decently easily with ai now you can just have 10 accounts pushing authentic looking ugc content similar to this style no one will ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_trending_affiliate_products",
+        "scrape_viral_ugc_hooks_and_formats",
+        "identify_top_converting_niches"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_ugc_scripts_claude",
+        "generate_voiceover_tts",
+        "render_video_remotion"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "account_mgmt",
+      "steps": [
+        "warmup_accounts_engagement",
+        "rotate_posting_schedule",
+        "check_shadowban_status"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "post_to_tiktok_accounts",
+        "add_affiliate_links_bio_comments",
+        "cross_post_reels_shorts"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    },
+    {
+      "name": "tracking",
+      "steps": [
+        "scrape_tiktok_analytics",
+        "track_affiliate_conversions",
+        "optimize_best_performers"
+      ],
+      "parallel": true,
+      "depends_on": "distribution"
+    }
+  ],
+  "status": "READY"
+}

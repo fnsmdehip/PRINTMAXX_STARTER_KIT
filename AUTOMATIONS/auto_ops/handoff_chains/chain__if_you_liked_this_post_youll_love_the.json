@@ -1,0 +1,24 @@
+{
+  "name": "chain__if_you_liked_this_post_youll_love_the",
+  "created": "2026-03-20T18:09:58.758379",
+  "method": " if you liked this post, you'll love the whale brief.my private newsletter where i share what's working and what's dying before it hits the timeline.join free ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_factory",
+      "task": "Generate 3-5 high-engagement social posts per day with newsletter CTA appended",
+      "output": "posts_with_cta.json"
+    },
+    {
+      "agent": "newsletter_compiler",
+      "task": "Weekly: compile top alpha findings, trend signals, and actionable methods into newsletter digest",
+      "output": "newsletter_draft.md"
+    },
+    {
+      "agent": "distribution_engine",
+      "task": "Post social content across platforms, track which posts drive most signups",
+      "output": "signup_attribution.json"
+    }
+  ],
+  "status": "READY"
+}

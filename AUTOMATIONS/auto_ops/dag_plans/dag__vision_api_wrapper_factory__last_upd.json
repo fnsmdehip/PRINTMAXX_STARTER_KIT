@@ -1,0 +1,44 @@
+{
+  "name": "integration__vision_api_wrapper_factory__last_upd",
+  "created": "2026-03-20T18:10:01.245879",
+  "method": "# Vision API Wrapper Factory  **Last updated:** 2026-02-27 **Purpose:** Build 10 niche camera apps that wrap powerful vision APIs behind beautiful, niche-specific mobile UIs. Each app is a separate $4",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "niche_research",
+      "steps": [
+        "scrape App Store for camera/ID app gaps",
+        "rank niches by search volume vs competition"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "template_build",
+      "steps": [
+        "create vision-app base template with camera capture + API call + result display",
+        "wire RevenueCat paywall into template"
+      ],
+      "parallel": true,
+      "depends_on": "niche_research"
+    },
+    {
+      "name": "app_generation",
+      "steps": [
+        "generate 10 niche variants from template (plant-id, food-cal, bird-id, rock-id, insect-id, dog-breed, car-id, skin-check, art-id, mushroom-id)",
+        "create niche-specific landing pages"
+      ],
+      "parallel": true,
+      "depends_on": "template_build"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy landing pages via surge",
+        "submit iOS builds via existing Capacitor pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "app_generation"
+    }
+  ],
+  "status": "READY"
+}

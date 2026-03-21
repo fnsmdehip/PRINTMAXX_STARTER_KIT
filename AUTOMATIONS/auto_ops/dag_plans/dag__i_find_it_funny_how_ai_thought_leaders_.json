@@ -1,0 +1,46 @@
+{
+  "name": "integration__i_find_it_funny_how_ai_thought_leaders_",
+  "created": "2026-03-20T18:09:58.933205",
+  "method": " i find it funny how ai thought leaders have the whole ai crowd switching subscriptions every 2 weeks lmfao\"x is better than y, switch rn\"why?, bc ai influencer #647 said so - most of the ppl of this ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_hype",
+      "steps": [
+        "scrape_ai_influencer_tool_recommendations",
+        "scrape_ai_subreddits_for_complaints_about_switching"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "extract_hype_claims_with_specific_tools_named",
+        "pull_real_benchmarks_or_feature_diffs",
+        "identify_most_repeated_hype_of_the_day"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_hype"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_contrarian_posts_with_data_backing",
+        "generate_ratio_reply_templates_for_hype_tweets",
+        "generate_thread_comparing_actual_vs_claimed_differences"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "route_to_posting_queue_with_optimal_timing",
+        "tag_for_engagement_bait_converter_reformat"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "chain__ops_pilot_delivery_playbook__how_to_",
+  "created": "2026-03-20T18:10:01.371631",
+  "method": "# Ops Pilot Delivery Playbook  **How to deliver a Back-Office Automation Pilot in 10 days**  ---  ## Overview  The Ops Pilot automates a single back-office workflow that the client identified during t",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Indeed/LinkedIn for companies posting data-entry, manual-processing, back-office-coordinator roles \u2014 these signal automatable workflows",
+      "output": "ops_pilot_prospects_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score prospects by: company size (10-200 employees sweet spot), tech stack signals, number of ops roles posted, industry (legal/logistics/finance = high-value). Filter to top 20 per batch",
+      "output": "ops_pilot_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold email using prospect's specific job posting as proof they need automation. Template: 'I noticed you're hiring for [ROLE]. That workflow can be automated in 10 days for a fixed fee \u2014 no ongoing contract.' Leverage procedural memory for objection handling",
+      "output": "ops_pilot_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

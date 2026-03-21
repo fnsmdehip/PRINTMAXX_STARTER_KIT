@@ -1,0 +1,38 @@
+{
+  "name": "integration_6_months_3_apps_9_usd_mrr_heres_what",
+  "created": "2026-03-20T18:35:53.105357",
+  "method": "6 months. 3 apps. 9 USD MRR. Here's what I learned. I'm a full-time engineer. For the last 6 months I've been waking up early and going to bed late to build apps on the side. Three apps shipped across",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "parse_failure_patterns",
+        "identify_saturated_categories",
+        "extract_anti_pattern_rules"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "create_contrarian_hooks",
+        "write_3_social_posts",
+        "write_1_thread"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "queue_to_posting_queue",
+        "update_app_factory_negative_signals",
+        "log_to_content_performance"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

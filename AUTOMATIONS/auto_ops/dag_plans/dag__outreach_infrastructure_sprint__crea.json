@@ -1,0 +1,50 @@
+{
+  "name": "integration__outreach_infrastructure_sprint__crea",
+  "created": "2026-03-20T18:10:02.785332",
+  "method": "# Outreach Infrastructure Sprint  **Created:** 2026-02-19 **Status:** READY TO EXECUTE **Assets:** 9,123 hot leads (HOT_LEADS_QUALIFIED.csv) | 13,221 cold emails pre-generated (cold_emails_ready.csv) ",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "verify_assets",
+      "steps": [
+        "validate_hot_leads_csv_exists",
+        "validate_cold_emails_csv_exists",
+        "validate_email_sender_script",
+        "validate_response_tracker_script",
+        "check_demo_sites_live"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "prepare_pipeline",
+      "steps": [
+        "dedupe_leads_against_existing_outbound",
+        "merge_into_outbound_venture_state",
+        "register_scripts_in_agent_swarm"
+      ],
+      "parallel": false,
+      "depends_on": "verify_assets"
+    },
+    {
+      "name": "wire_sending",
+      "steps": [
+        "configure_daily_send_batches_50_per_day",
+        "wire_response_tracker_to_inbound_leads_csv",
+        "add_cron_entry_for_daily_sends"
+      ],
+      "parallel": false,
+      "depends_on": "prepare_pipeline"
+    },
+    {
+      "name": "growth_prep",
+      "steps": [
+        "generate_3_email_variants_per_template",
+        "build_ab_test_tracker_for_subject_lines",
+        "create_followup_sequence_3_touches"
+      ],
+      "parallel": true,
+      "depends_on": "prepare_pipeline"
+    }
+  ],
+  "status": "READY"
+}

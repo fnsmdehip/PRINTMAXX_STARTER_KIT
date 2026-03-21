@@ -1,0 +1,29 @@
+{
+  "name": "chain_series_d_unicorn_startup_offer_review_i",
+  "created": "2026-03-20T23:12:24.913221",
+  "method": "Series D Unicorn Startup Offer Review (I will not promote)",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "reddit_scraper",
+      "task": "pull r/startups offer review posts via JSON API, filter by upvotes > 50",
+      "output": "raw_offer_posts.json"
+    },
+    {
+      "agent": "equity_analyzer",
+      "task": "extract comp structure + flag red/green terms, classify as seed/series/unicorn",
+      "output": "equity_signals.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "generate equity literacy threads + LinkedIn post from signals",
+      "output": "CONTENT/social/posting_queue/equity_threads_{date}.txt"
+    },
+    {
+      "agent": "lead_router",
+      "task": "extract commenters with intent signals (evaluating offers, asking for analysis) \u2192 INBOUND_LEADS",
+      "output": "LEDGER/INBOUND_LEADS.csv"
+    }
+  ],
+  "status": "READY"
+}

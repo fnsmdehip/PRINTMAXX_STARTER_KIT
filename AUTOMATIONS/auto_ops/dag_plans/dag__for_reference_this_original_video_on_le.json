@@ -1,0 +1,55 @@
+{
+  "name": "integration__for_reference_this_original_video_on_le",
+  "created": "2026-03-20T18:09:58.242735",
+  "method": " for reference this original video on left has 525.1k views and added $15k mrr to the product it promotedall i did was just coped the link, pasted that into stunt and it generated me a clone of the ug",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "discover",
+      "steps": [
+        "scrape_viral_ugc_tiktok",
+        "scrape_viral_ugc_ig_reels",
+        "scrape_viral_ugc_x"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "transcribe_with_whisper",
+        "extract_hook_structure",
+        "score_by_views_and_engagement"
+      ],
+      "parallel": false,
+      "depends_on": "discover"
+    },
+    {
+      "name": "clone",
+      "steps": [
+        "generate_adapted_script_per_product",
+        "select_best_product_match"
+      ],
+      "parallel": false,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "produce",
+      "steps": [
+        "render_video_remotion_or_ffmpeg",
+        "add_captions_and_cta"
+      ],
+      "parallel": false,
+      "depends_on": "clone"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "generate_3_platform_variants"
+      ],
+      "parallel": true,
+      "depends_on": "produce"
+    }
+  ],
+  "status": "READY"
+}

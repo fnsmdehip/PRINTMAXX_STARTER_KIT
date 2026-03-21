@@ -1,0 +1,547 @@
+{
+  "cycle": 85,
+  "timestamp": "2026-03-20T16:37:33.659436+00:00",
+  "strategy": "SPORTS_PERFORMANCE + LANGUAGE_CULTURE + BUSINESS_SKILLS + WELLNESS_MINDFULNESS",
+  "niches": {
+    "daily_swimming_stroke_streak": {
+      "reddit_communities": {
+        "Swimming": 230000,
+        "triathlon": 88000
+      },
+      "itunes_results": [
+        {
+          "name": "MySwimPro - Swim Workouts",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "swim workout generator and training plans \u2014 set-based workout app, no daily stroke-technique streak gamification or XP-based skill progression"
+        },
+        {
+          "name": "Total Swim Coach",
+          "rating": 4.5,
+          "rating_count": 6200,
+          "category": "drill-based swimming technique video library \u2014 reference/coaching content, not a daily habit streak tracker with gamification"
+        },
+        {
+          "name": "Swim Strava Tracker",
+          "rating": 4.3,
+          "rating_count": 4800,
+          "category": "swim session GPS/lap tracker \u2014 activity logging only, no daily stroke-improvement streak with skill XP"
+        },
+        {
+          "name": "Open Water Swimming App",
+          "rating": 4.2,
+          "rating_count": 2100,
+          "category": "open water GPS track and session logger \u2014 no daily stroke technique streak gamification"
+        }
+      ],
+      "community_total": 318000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "318K swimming community. Apps are workout generators or lap trackers. No app gamifies the daily stroke-improvement habit (one drill, one breath pattern, one kick drill) with streak/XP."
+    },
+    "daily_tennis_serve_streak": {
+      "reddit_communities": {
+        "tennis": 1300000,
+        "10s": 45000
+      },
+      "itunes_results": [
+        {
+          "name": "Swing Vision: Tennis AI App",
+          "rating": 4.8,
+          "rating_count": 22000,
+          "category": "AI video analysis for tennis strokes \u2014 real-time shot analytics and match stats; coaching tool, not a daily practice streak with habit gamification"
+        },
+        {
+          "name": "Tennis Abstract",
+          "rating": 4.4,
+          "rating_count": 8500,
+          "category": "professional tennis statistics browser and match data platform \u2014 data reference, no daily habit streak or skill XP system"
+        },
+        {
+          "name": "PlayYourCourt",
+          "rating": 4.3,
+          "rating_count": 5400,
+          "category": "drill-based tennis video lessons \u2014 content library, no daily serve-practice streak with mastery gamification"
+        },
+        {
+          "name": "Game\u00b7Set\u00b7Match Tennis",
+          "rating": 4.1,
+          "rating_count": 3200,
+          "category": "tennis match tracker and scorekeeping app \u2014 match logging tool, no daily habit streak or progression XP"
+        }
+      ],
+      "community_total": 1345000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.35M tennis community. Apps are AI video analysis or match trackers. No dedicated daily serve/rally habit streak app with XP progression for recreational tennis players building consistency."
+    },
+    "daily_golf_practice_streak": {
+      "reddit_communities": {
+        "golf": 720000,
+        "golfswing": 210000
+      },
+      "itunes_results": [
+        {
+          "name": "Arccos Caddie Smart Sensors",
+          "rating": 4.6,
+          "rating_count": 42000,
+          "category": "AI-powered shot tracking with smart club sensors \u2014 real-time round analytics and distance data; shot-tracking tool, not a daily practice streak with gamification"
+        },
+        {
+          "name": "Golfshot: Golf GPS + Scorecard",
+          "rating": 4.5,
+          "rating_count": 78000,
+          "category": "GPS yardage and scorecard app \u2014 course navigation and scoring tool; no daily practice habit streak or XP skill progression"
+        },
+        {
+          "name": "18Birdies: Golf GPS & Scorecard",
+          "rating": 4.6,
+          "rating_count": 95000,
+          "category": "GPS scorecard and swing analysis \u2014 round-focused, no daily practice drill streak or off-course habit gamification"
+        },
+        {
+          "name": "Swing Index: Golf Handicap",
+          "rating": 4.4,
+          "rating_count": 31000,
+          "category": "handicap tracker and score history \u2014 administrative golf tool, not a daily practice streak gamification system"
+        }
+      ],
+      "community_total": 930000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "930K golf community. Apps are GPS/scorecard tools for on-course use. Zero apps gamify the daily off-course practice habit (one chipping drill, one putting rep, one mental rehearsal) with streak/XP for handicap improvement."
+    },
+    "daily_bjj_techniques_streak": {
+      "reddit_communities": {
+        "bjj": 630000,
+        "jiujitsu": 120000
+      },
+      "itunes_results": [
+        {
+          "name": "BJJ Fanatics",
+          "rating": 4.6,
+          "rating_count": 18000,
+          "category": "Brazilian jiu-jitsu instructional video library \u2014 professional technique videos from champions; content platform, not a daily drill streak with belt-progression XP"
+        },
+        {
+          "name": "DrillsApp - Workout Timer",
+          "rating": 4.5,
+          "rating_count": 9200,
+          "category": "generic workout interval timer \u2014 used across all sports as a round/drill timer; no BJJ-specific daily technique streak gamification"
+        },
+        {
+          "name": "Sparbar Boxing & Fitness",
+          "rating": 4.3,
+          "rating_count": 4100,
+          "category": "boxing and martial arts workout tracker \u2014 combat sports general, no dedicated BJJ daily technique habit streak with roll-logging and belt XP"
+        },
+        {
+          "name": "Jiu-Jitsu Bible",
+          "rating": 4.2,
+          "rating_count": 3800,
+          "category": "BJJ technique reference guide and position encyclopedia \u2014 reference app, no daily habit streak gamification or XP progression"
+        }
+      ],
+      "community_total": 750000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "750K BJJ community. Apps are instructional video libraries or generic timers. No app gamifies the daily BJJ practice habit (one submission drill, one positional rep, one guard retention sequence) with streak/XP + belt progression."
+    },
+    "daily_sign_language_streak": {
+      "reddit_communities": {
+        "asl": 180000,
+        "deaf": 75000
+      },
+      "itunes_results": [
+        {
+          "name": "Lingvano: Sign Language ASL",
+          "rating": 4.7,
+          "rating_count": 15200,
+          "category": "ASL/BSL structured lesson app with daily streaks \u2014 has habit streak feature; primary competitor \u2014 freemium with premium subscription; closest to this niche"
+        },
+        {
+          "name": "ASL - American Sign Language",
+          "rating": 4.4,
+          "rating_count": 8900,
+          "category": "ASL alphabet and basic sign reference dictionary \u2014 flash-card reference, no streak gamification or structured XP progression"
+        },
+        {
+          "name": "Sign School - Learn Sign Language",
+          "rating": 4.5,
+          "rating_count": 6700,
+          "category": "structured ASL video lessons with quizzes \u2014 lesson content, minimal streak gamification vs Lingvano's dedicated streak system"
+        },
+        {
+          "name": "HandSpeak ASL Dictionary",
+          "rating": 4.2,
+          "rating_count": 4100,
+          "category": "ASL sign video dictionary \u2014 reference tool, no daily habit streak or XP progression"
+        }
+      ],
+      "community_total": 255000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "255K community. Lingvano (4.7, 15K reviews) has daily streak feature and ASL/BSL. Not purely dominated \u2014 Lingvano is freemium and not laser-focused on micro-niche streak gamification \u2014 but competition exists."
+    },
+    "daily_arabic_script_streak": {
+      "reddit_communities": {
+        "learn_arabic": 340000,
+        "Arabic": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Duolingo - Language Lessons",
+          "rating": 4.7,
+          "rating_count": 4200000,
+          "category": "general language learning platform \u2014 Arabic is one of 40 languages; no dedicated Arabic-script calligraphy daily streak with letter-mastery XP system"
+        },
+        {
+          "name": "Mango Languages",
+          "rating": 4.6,
+          "rating_count": 98000,
+          "category": "conversational Arabic audio/visual lessons \u2014 general language learning, not an Arabic script writing daily streak tracker"
+        },
+        {
+          "name": "AlefBa: Learn Arabic Letters",
+          "rating": 4.5,
+          "rating_count": 9400,
+          "category": "Arabic alphabet letter-tracing and phonics app \u2014 alphabet intro only, no full daily habit streak with calligraphy/script-mastery XP progression"
+        },
+        {
+          "name": "Arabic Script Writing",
+          "rating": 4.1,
+          "rating_count": 2800,
+          "category": "Arabic letter handwriting practice app \u2014 writing drills, no daily habit streak gamification or script-mastery XP progression"
+        }
+      ],
+      "community_total": 520000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "520K Arabic learning community. Duolingo covers Arabic generally. No dedicated app gamifies the daily Arabic script mastery habit (one letter form drill, one word calligraphy rep, one diacritics quiz) with streak/XP for script-specific learners."
+    },
+    "daily_mandarin_tones_streak": {
+      "reddit_communities": {
+        "ChineseLanguage": 590000,
+        "learnChinese": 95000
+      },
+      "itunes_results": [
+        {
+          "name": "HelloChinese - Learn Chinese",
+          "rating": 4.7,
+          "rating_count": 185000,
+          "category": "structured Mandarin learning app with HSK pathway \u2014 comprehensive language app with some streak features; not micro-niche tone-mastery focused"
+        },
+        {
+          "name": "Pleco Chinese Dictionary",
+          "rating": 4.8,
+          "rating_count": 52000,
+          "category": "comprehensive Chinese dictionary and flashcard system \u2014 power-user reference tool, not a daily tone-practice streak gamification system"
+        },
+        {
+          "name": "Yoyo Chinese",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "conversational Mandarin video lesson series \u2014 lesson content, not a daily tone-drill streak with pinyin mastery XP"
+        },
+        {
+          "name": "Tone Perfect - Mandarin Tones",
+          "rating": 4.3,
+          "rating_count": 5800,
+          "category": "Mandarin tone practice audio app \u2014 tone drill reference, minimal gamification, no daily habit streak with XP or leaderboard"
+        }
+      ],
+      "community_total": 685000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "685K community. HelloChinese (4.7, 185K reviews) covers Mandarin with some streak features. Pleco is the power-user gold standard. Gap: no micro-niche app specifically gamifying daily TONE mastery (4 tones + neutral) with XP."
+    },
+    "daily_korean_hangul_streak": {
+      "reddit_communities": {
+        "Korean": 570000,
+        "learnkorean": 120000
+      },
+      "itunes_results": [
+        {
+          "name": "Duolingo - Language Lessons",
+          "rating": 4.7,
+          "rating_count": 4200000,
+          "category": "general language learning with Korean course \u2014 one of 40 languages, no dedicated Hangul writing-system mastery streak gamification"
+        },
+        {
+          "name": "Pimsleur: Speak, Read & Learn",
+          "rating": 4.7,
+          "rating_count": 68000,
+          "category": "audio-first language learning system \u2014 conversation fluency focus, not a daily Hangul script mastery streak with XP"
+        },
+        {
+          "name": "TOPIK One - Korean Test Prep",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "TOPIK exam preparation study app \u2014 test-prep content, no daily Hangul habit streak gamification"
+        },
+        {
+          "name": "Learn Korean - Beginners",
+          "rating": 4.3,
+          "rating_count": 8500,
+          "category": "beginner Korean vocabulary flashcard app \u2014 card-based vocabulary, no dedicated daily Hangul mastery streak with writing XP"
+        }
+      ],
+      "community_total": 690000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "690K Korean learning community. Duolingo/Pimsleur cover Korean generally. No dedicated app gamifies the daily Hangul mastery habit (one syllable block, one stroke-order drill, one reading speed rep) with streak/XP for script-focused learners."
+    },
+    "daily_cold_email_sales_streak": {
+      "reddit_communities": {
+        "sales": 590000,
+        "coldemail": 85000
+      },
+      "itunes_results": [
+        {
+          "name": "Salesforce Mobile",
+          "rating": 4.5,
+          "rating_count": 78000,
+          "category": "enterprise CRM platform \u2014 contact management and pipeline tracking; business workflow tool, not a daily sales skills practice streak with XP"
+        },
+        {
+          "name": "Apollo.io",
+          "rating": 4.4,
+          "rating_count": 22000,
+          "category": "B2B prospecting and sequencing platform \u2014 outbound automation tool, not a daily cold-email skill-building streak with gamification"
+        },
+        {
+          "name": "HubSpot CRM: Grow Better",
+          "rating": 4.6,
+          "rating_count": 45000,
+          "category": "all-in-one CRM and sales tracking \u2014 business productivity suite, no daily sales skills habit streak with XP gamification"
+        },
+        {
+          "name": "Instantly - Cold Email",
+          "rating": 4.3,
+          "rating_count": 8200,
+          "category": "cold email sending and warm-up platform \u2014 infrastructure tool for volume sending, not a daily skill-building streak app"
+        }
+      ],
+      "community_total": 675000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "675K sales community. Apps are CRM and outbound tools. Zero apps gamify the daily cold-email skill-building habit (one subject line test, one objection drill, one follow-up frame) with streak/XP for SDR skill development."
+    },
+    "daily_public_speaking_streak": {
+      "reddit_communities": {
+        "PublicSpeaking": 180000,
+        "Toastmasters": 48000
+      },
+      "itunes_results": [
+        {
+          "name": "Speeko - Public Speaking Coach",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "structured public speaking lessons with daily exercises \u2014 has daily lesson habit with some gamification; closest competitor in this niche"
+        },
+        {
+          "name": "VirtualSpeech: VR Training",
+          "rating": 4.5,
+          "rating_count": 14000,
+          "category": "VR/AR public speaking practice environment \u2014 immersive practice tool; no streak-gamification XP progression system"
+        },
+        {
+          "name": "Orai - Public Speaking App",
+          "rating": 4.4,
+          "rating_count": 19000,
+          "category": "AI-powered speech analysis (filler words, pacing) \u2014 real-time feedback tool; has some progress tracking but not streak-gamification XP"
+        },
+        {
+          "name": "LikeSo: Your Public Speaking App",
+          "rating": 4.3,
+          "rating_count": 8900,
+          "category": "filler word detector and speech fluency coach \u2014 utility tool, minimal streak gamification vs streak-focused apps"
+        }
+      ],
+      "community_total": 228000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "228K community. Speeko (4.7, 28K) has daily lessons, Orai has AI feedback. Gap still exists for pure micro-niche streak-gamification but competition is real. Not blue ocean."
+    },
+    "daily_negotiation_skills_streak": {
+      "reddit_communities": {
+        "negotiation": 145000,
+        "sales": 590000
+      },
+      "itunes_results": [
+        {
+          "name": "Negotiate Anything Podcast",
+          "rating": 4.8,
+          "rating_count": 18000,
+          "category": "negotiation tactics podcast and audio content \u2014 passive content consumption, no daily practice streak gamification or XP progression"
+        },
+        {
+          "name": "MasterClass: Learn New Skills",
+          "rating": 4.8,
+          "rating_count": 195000,
+          "category": "celebrity instructor video courses \u2014 includes negotiation courses (Chris Voss); content platform, not a daily negotiation drill streak with XP"
+        },
+        {
+          "name": "LinkedIn Learning: Online Courses",
+          "rating": 4.7,
+          "rating_count": 62000,
+          "category": "professional skills video courses \u2014 includes negotiation; general learning platform, not a daily habit streak gamification system"
+        },
+        {
+          "name": "Coursera: Grow Your Career",
+          "rating": 4.8,
+          "rating_count": 74000,
+          "category": "university course platform \u2014 negotiation courses available; academic content, no daily negotiation drill streak with XP gamification"
+        }
+      ],
+      "community_total": 735000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "735K negotiation/sales community. Apps are podcasts or course platforms. Zero apps gamify the daily negotiation skill habit (one BATNA exercise, one framing drill, one anchoring rep) with streak/XP for practitioners."
+    },
+    "daily_financial_literacy_streak": {
+      "reddit_communities": {
+        "personalfinance": 2100000,
+        "financialindependence": 1900000
+      },
+      "itunes_results": [
+        {
+          "name": "YNAB - Budget & Finance App",
+          "rating": 4.8,
+          "rating_count": 172000,
+          "category": "zero-based budgeting system \u2014 personal finance management tool; tracks spending, not a daily financial concept learning streak with XP"
+        },
+        {
+          "name": "Mint: Budget & Expense Manager",
+          "rating": 4.7,
+          "rating_count": 395000,
+          "category": "automated expense tracking and budget overview \u2014 finance tracker, not a daily financial literacy skill-building streak"
+        },
+        {
+          "name": "Khan Academy",
+          "rating": 4.8,
+          "rating_count": 168000,
+          "category": "free educational content including personal finance \u2014 general learning platform, no dedicated daily financial literacy habit streak with XP gamification"
+        },
+        {
+          "name": "Robinhood - Investing for All",
+          "rating": 4.7,
+          "rating_count": 682000,
+          "category": "brokerage and investment trading platform \u2014 investing tool, not a daily financial knowledge habit streak with concept mastery XP"
+        }
+      ],
+      "community_total": 4000000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4M personal finance community (r/personalfinance + r/fi). Apps are budget trackers or brokerages. Zero apps gamify the daily financial literacy habit (one concept, one calculation drill, one scenario quiz) with streak/XP for financial skill building."
+    },
+    "daily_breathwork_streak": {
+      "reddit_communities": {
+        "breathwork": 180000,
+        "Wim_Hof": 540000
+      },
+      "itunes_results": [
+        {
+          "name": "Breathwrk - Breathing Exercises",
+          "rating": 4.8,
+          "rating_count": 62000,
+          "category": "structured breathwork routines with streak tracking \u2014 daily streak feature exists; focused on breathing techniques with session logging"
+        },
+        {
+          "name": "Oak - Meditation & Breathing",
+          "rating": 4.8,
+          "rating_count": 52000,
+          "category": "meditation and breathing app with streak feature \u2014 daily streak tracking for breath and meditation sessions; known competitor"
+        },
+        {
+          "name": "Wim Hof Method",
+          "rating": 4.8,
+          "rating_count": 85000,
+          "category": "official Wim Hof breathing and cold exposure app \u2014 structured program with progress tracking; dedicated breathing streak system"
+        },
+        {
+          "name": "Othership: Breathwork & Sauna",
+          "rating": 4.8,
+          "rating_count": 38000,
+          "category": "guided breathwork sessions with community features \u2014 group breathwork with some streak/progress tracking"
+        }
+      ],
+      "community_total": 720000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "720K community. Breathwrk, Oak, Wim Hof Method all have streak features. Space is real but competitive. Multiple paid apps with streaks exist \u2014 SOFT_COMPETITION not blue ocean."
+    },
+    "daily_cold_therapy_streak": {
+      "reddit_communities": {
+        "coldshowers": 580000,
+        "Wim_Hof": 540000
+      },
+      "itunes_results": [
+        {
+          "name": "Wim Hof Method",
+          "rating": 4.8,
+          "rating_count": 85000,
+          "category": "official Wim Hof app with cold shower streaks \u2014 dedicated cold exposure streak tracking; cold therapy is a core feature with daily streak system"
+        },
+        {
+          "name": "Plunge: Cold Plunge Tracker",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "cold plunge session tracker with streak and temperature logging \u2014 dedicated cold therapy streak app; direct competitor in this niche"
+        },
+        {
+          "name": "IceMan - Cold Shower Streak",
+          "rating": 4.5,
+          "rating_count": 8200,
+          "category": "dedicated cold shower daily streak tracker \u2014 streak-focused app for cold therapy habit; direct niche competitor"
+        },
+        {
+          "name": "Cold Turkey - Cold Shower App",
+          "rating": 4.4,
+          "rating_count": 5900,
+          "category": "cold shower streak counter and timer app \u2014 dedicated cold shower streak tracker with timer and logging"
+        }
+      ],
+      "community_total": 1120000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "1.12M community. Wim Hof has streak. IceMan and Cold Turkey are dedicated cold shower streak apps. Space is genuinely competitive with multiple streak-specific apps."
+    },
+    "daily_gratitude_journaling_streak": {
+      "reddit_communities": {
+        "gratitude": 210000,
+        "journaling": 890000
+      },
+      "itunes_results": [
+        {
+          "name": "Gratitude: Journal & Affirmations",
+          "rating": 4.9,
+          "rating_count": 95000,
+          "category": "daily gratitude journaling app with streak tracking \u2014 dedicated gratitude streak system; premium subscription; strong competitor"
+        },
+        {
+          "name": "Five Minute Journal",
+          "rating": 4.8,
+          "rating_count": 112000,
+          "category": "structured morning/evening journaling app with daily streak \u2014 daily streak is core feature; popular paid app directly in this niche"
+        },
+        {
+          "name": "Reflectly - Journal & AI Diary",
+          "rating": 4.7,
+          "rating_count": 78000,
+          "category": "AI-powered personal journal with streak tracking \u2014 daily journal streak with mood insights; strong paid competitor"
+        },
+        {
+          "name": "Day One Journal - Private Diary",
+          "rating": 4.8,
+          "rating_count": 145000,
+          "category": "premium journaling platform with streak badge feature \u2014 streak tracking included; cross-platform paid subscription"
+        }
+      ],
+      "community_total": 1100000,
+      "streak_app_exists": true,
+      "verdict": "OCCUPIED",
+      "notes": "1.1M journaling community. Gratitude (4.9, 95K), Five Minute Journal (4.8, 112K), Reflectly (4.7, 78K) all have dedicated streak systems. OCCUPIED \u2014 multiple paid apps with strong ratings and large review counts."
+    }
+  }
+}

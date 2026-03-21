@@ -1,0 +1,38 @@
+{
+  "name": "integration_i_analyzed_963k_ios_apps__471k_reviews_",
+  "created": "2026-03-20T18:35:52.586093",
+  "method": "I analyzed 963k iOS apps + 471k reviews I've built too many apps that people downloaded and then... never paid for. Not a cent. So i did what any sane person would do and went full spreadsheet goblin ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_app_store_top_charts_by_category",
+        "scrape_reviews_for_low_rated_paid_apps",
+        "pull_competitor_pricing_tiers"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "sentiment_classify_reviews_via_claude",
+        "extract_specific_pain_points",
+        "map_frustration_to_feature_gaps"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "score",
+      "steps": [
+        "score_gaps_by_revenue_potential_and_buildability",
+        "cross_reference_with_existing_app_factory_builds",
+        "output_ranked_opportunities_to_APP_FACTORY_METHODS_csv"
+      ],
+      "parallel": false,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

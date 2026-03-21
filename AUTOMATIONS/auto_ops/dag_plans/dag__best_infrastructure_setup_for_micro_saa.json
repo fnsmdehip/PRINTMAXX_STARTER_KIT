@@ -1,0 +1,36 @@
+{
+  "name": "integration__best_infrastructure_setup_for_micro_saa",
+  "created": "2026-03-20T18:09:57.843806",
+  "method": " best infrastructure setup for micro saas founders trying to avoid vendor lock in something i\u2019ve been thinking about lately is how **infrastructure choices affect micro saas long term**.\n\nmost of us s",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_method",
+      "steps": [
+        "parse_infrastructure_alpha_into_structured_advice",
+        "map_vendor_lockin_alternatives_at_zero_cost"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_twitter_thread_infrastructure_mistakes",
+        "generate_linkedin_post_saas_infra_decisions",
+        "generate_newsletter_section_infra_guide"
+      ],
+      "parallel": true,
+      "depends_on": "extract_method"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "seed_into_cold_outreach_hooks_for_saas_founders"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

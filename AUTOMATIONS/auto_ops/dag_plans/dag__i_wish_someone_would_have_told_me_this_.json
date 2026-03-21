@@ -1,0 +1,47 @@
+{
+  "name": "integration__i_wish_someone_would_have_told_me_this_",
+  "created": "2026-03-20T18:09:58.121098",
+  "method": " i wish someone would have told me this before building my 1st saas ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_patterns",
+      "steps": [
+        "scrape_reddit_saas_regrets",
+        "scrape_twitter_wish_i_knew",
+        "scrape_hn_saas_lessons"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_structures",
+      "steps": [
+        "extract_hook_patterns",
+        "extract_lesson_categories",
+        "score_engagement_rates"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_patterns"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_tech_niche_variants",
+        "generate_faith_niche_variants",
+        "generate_fitness_niche_variants"
+      ],
+      "parallel": true,
+      "depends_on": "extract_structures"
+    },
+    {
+      "name": "queue_and_schedule",
+      "steps": [
+        "route_to_posting_queue",
+        "update_content_calendar"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

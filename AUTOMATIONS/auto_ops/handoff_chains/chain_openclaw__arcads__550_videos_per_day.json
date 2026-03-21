@@ -1,0 +1,34 @@
+{
+  "name": "chain_openclaw__arcads__550_videos_per_day",
+  "created": "2026-03-20T18:09:52.431990",
+  "method": "OpenClaw + Arcads = 550 videos per day\n\nFully-realistic UGC ads \u2014 cinematic lighting, human motion, perfect pacing \u2014 powered by AI agents.\n\nUGC cost: $5\nProduction time: minutes\nScale: instant\n\nOne AI",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "trend_scanner",
+      "task": "scan TikTok/IG trending hooks and UGC formats",
+      "output": "trending_hooks.json"
+    },
+    {
+      "agent": "script_writer",
+      "task": "generate 10-20 ad script variants per product angle using claude -p",
+      "output": "ad_scripts.json"
+    },
+    {
+      "agent": "video_factory",
+      "task": "render UGC videos via Remotion templates + free TTS",
+      "output": "rendered_videos/"
+    },
+    {
+      "agent": "quality_gate",
+      "task": "score videos on hook strength, pacing, CTA clarity \u2014 reject below 6",
+      "output": "approved_videos.json"
+    },
+    {
+      "agent": "distributor",
+      "task": "push approved videos to posting queue with platform-specific formatting",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

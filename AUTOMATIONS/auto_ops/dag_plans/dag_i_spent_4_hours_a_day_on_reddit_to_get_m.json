@@ -1,0 +1,44 @@
+{
+  "name": "integration_i_spent_4_hours_a_day_on_reddit_to_get_m",
+  "created": "2026-03-20T13:50:40.752662",
+  "method": "I spent 4 hours a day on Reddit to get my first 50 customers",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "run reddit_deep_scraper on target subreddits",
+        "pull new posts with keywords matching our products"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "score threads by intent (asking for tool, complaining about problem, comparing solutions)",
+        "filter to threads <24h old with <20 comments"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "draft",
+      "steps": [
+        "generate value-first response using claude -p (answer the question genuinely, mention product only if directly relevant)",
+        "add to posting queue with subreddit context and thread URL"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "log drafted responses to CONTENT/social/posting_queue/reddit_engagement.jsonl",
+        "update KPI dashboard with daily counts"
+      ],
+      "parallel": true,
+      "depends_on": "draft"
+    }
+  ],
+  "status": "READY"
+}

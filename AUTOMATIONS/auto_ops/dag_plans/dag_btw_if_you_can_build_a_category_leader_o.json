@@ -1,0 +1,46 @@
+{
+  "name": "integration_btw_if_you_can_build_a_category_leader_o",
+  "created": "2026-03-20T18:09:52.475092",
+  "method": "btw if you can build a category leader open source project in ai engineering right now the market acquihire rate is ~$10-$100m per ai engineer.\n\nyou do not need to figure out a business model, you do ",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "scan_trends",
+      "steps": [
+        "scrape_github_trending_ai",
+        "scrape_hn_show_ai",
+        "scrape_twitter_ai_eng_accounts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_gaps",
+      "steps": [
+        "compare_trending_vs_sovrun_modules",
+        "identify_unmet_needs",
+        "score_opportunity_by_demand"
+      ],
+      "parallel": false,
+      "depends_on": "scan_trends"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_dev_post_from_top_gap",
+        "create_twitter_thread_on_finding"
+      ],
+      "parallel": true,
+      "depends_on": "analyze_gaps"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_to_dev_communities",
+        "update_sovrun_roadmap_priorities"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

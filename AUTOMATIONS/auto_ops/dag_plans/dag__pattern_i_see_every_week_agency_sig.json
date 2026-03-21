@@ -1,0 +1,35 @@
+{
+  "name": "integration__pattern_i_see_every_week_agency_sig",
+  "created": "2026-03-20T18:09:57.495035",
+  "method": " pattern i see every week:\n\n\u2192 agency signs 3 clients\n\u2192 pauses outreach to \"focus on delivery\"\n\u2192 pipeline dies\n\u2192 client churns\n\u2192 panic\n\u2192 signs next bad fit\n\nstuck at $6k/mo for 8 months because they ne",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_engagement_posts",
+        "generate_thread_narrative",
+        "generate_reply_bait_hooks"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "product_creation",
+      "steps": [
+        "draft_agency_pipeline_checklist_pdf"
+      ],
+      "parallel": false,
+      "depends_on": "content_generation"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "add_to_cold_outreach_templates"
+      ],
+      "parallel": true,
+      "depends_on": "product_creation"
+    }
+  ],
+  "status": "READY"
+}

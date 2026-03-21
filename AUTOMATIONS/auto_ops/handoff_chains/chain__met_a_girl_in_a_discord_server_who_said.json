@@ -1,0 +1,34 @@
+{
+  "name": "chain__met_a_girl_in_a_discord_server_who_said",
+  "created": "2026-03-20T18:10:02.660559",
+  "method": " met a girl in a discord server who said she makes \"digital stuff\"\"like what\"\"templates\"\"how's that going\"\"$31k last month\"she had 1,400 followers. no website. profile pic was a cartoon.\"how\"\"i found ",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "pain_point_scraper",
+      "task": "Scan r/freelance, r/smallbusiness, r/Entrepreneur, r/invoicing, r/Bookkeeping, r/graphic_design, r/webdev + 40 more for complaints about specific tools/processes. Extract: exact complaint text, upvotes, comment count, subreddit, tool/process named",
+      "output": "pain_points_raw.json"
+    },
+    {
+      "agent": "pain_clusterer",
+      "task": "Group pain points by category (invoicing, proposals, contracts, onboarding, SOPs, tracking). Rank by: frequency * avg_upvotes * willingness_to_pay_signal. Filter to top 10 opportunities per cycle",
+      "output": "pain_points_ranked.json"
+    },
+    {
+      "agent": "template_builder",
+      "task": "For each top pain point: generate a Google Sheets/Notion/Canva template that solves it. Use Claude to create the actual template content, formulas, structure. Output as downloadable file",
+      "output": "templates_built/"
+    },
+    {
+      "agent": "listing_creator",
+      "task": "Write Gumroad/Whop listing using EXACT language from complaints as hooks. Title = solution to their words. Description = their pain restated + how this fixes it. Price: $7-19 for singles, $29-47 for bundles",
+      "output": "listings_ready.json"
+    },
+    {
+      "agent": "distribution_agent",
+      "task": "Post helpful answer in original complaint threads linking to free version or landing page. Queue tweets showing template + pain point. Create SEO longtail page per template category",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

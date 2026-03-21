@@ -1,0 +1,29 @@
+{
+  "name": "chain_my_client_asked_for_a_full_brand_strateg",
+  "created": "2026-03-20T18:35:50.293374",
+  "method": "My client asked for a full brand strategy.\n\n3 weeks. $8,000 budget.\n\nI opened Claude.\nPasted one mega-prompt.\nHad the entire strategy in 14 minutes.\n\nHere are the prompts that replaced the process \n\n(",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "lead_finder",
+      "task": "Scan Upwork/Fiverr/Reddit for brand strategy RFPs and small biz owners asking for branding help",
+      "output": "brand_leads.json"
+    },
+    {
+      "agent": "proposal_writer",
+      "task": "Generate custom proposal from client brief using mega-prompt library preview as proof of capability",
+      "output": "proposals_sent.json"
+    },
+    {
+      "agent": "fulfillment_engine",
+      "task": "On client accept: run full 12-prompt brand strategy suite against client brief, assemble deliverable",
+      "output": "brand_strategy_deliverable.md"
+    },
+    {
+      "agent": "upsell_agent",
+      "task": "After delivery, pitch ongoing content calendar and social media strategy as retainer ($500-1500/mo)",
+      "output": "upsell_log.json"
+    }
+  ],
+  "status": "READY"
+}

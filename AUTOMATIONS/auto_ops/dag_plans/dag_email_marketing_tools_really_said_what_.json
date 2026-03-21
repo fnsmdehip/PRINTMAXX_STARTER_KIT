@@ -1,0 +1,37 @@
+{
+  "name": "integration_email_marketing_tools_really_said_what_",
+  "created": "2026-03-20T18:35:52.367552",
+  "method": "email marketing tools really said \u201cwhat if we just charged more\u201d huh sooo\u2026 just noticed something while checking a few email marketing tools this week and\u2026 bruh.\n\na lot of them quietly raise the price",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_pricing",
+      "steps": [
+        "scrape_top10_email_tool_pricing_pages",
+        "extract_tier_breakpoints_and_feature_diffs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_comparison_longtail_page",
+        "generate_reddit_pain_point_posts",
+        "generate_twitter_thread_on_pricing_trap"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_pricing"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_longtail_to_landing",
+        "queue_social_posts",
+        "submit_to_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

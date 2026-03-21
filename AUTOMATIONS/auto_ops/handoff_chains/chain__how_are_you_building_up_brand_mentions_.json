@@ -1,0 +1,29 @@
+{
+  "name": "chain__how_are_you_building_up_brand_mentions_",
+  "created": "2026-03-20T18:09:58.291414",
+  "method": " how are you building up brand mentions in llms? trying to come up with an aeo strategy for my saas startup and realized i was really on the wrong track researching things like how to get cited as a s",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "researcher",
+      "task": "Query Perplexity and ChatGPT with 50 niche-relevant questions (faith apps, streak apps, productivity tools, MCP marketplace), log which competitors get cited and which queries have no good answer",
+      "output": "aeo_opportunity_map.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "For each uncited opportunity, generate structured content (FAQ schema, comparison tables, how-to with specific tool names) optimized for LLM retrieval",
+      "output": "aeo_content_batch.json"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post answers to Reddit (target subs), dev.to, Medium, GitHub discussions \u2014 places Perplexity crawls. Include natural brand mentions of our apps/tools",
+      "output": "distribution_log.json"
+    },
+    {
+      "agent": "monitor",
+      "task": "Re-query same questions weekly, track if our content now appears in LLM responses, measure citation delta",
+      "output": "aeo_metrics.json"
+    }
+  ],
+  "status": "READY"
+}

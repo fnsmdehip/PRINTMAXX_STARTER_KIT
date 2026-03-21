@@ -1,0 +1,29 @@
+{
+  "name": "chain_cold_outbound",
+  "created": "2026-03-20T18:09:51.755106",
+  "method": "COLD_OUTBOUND",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "signal_scraper",
+      "task": "Scrape 4 signal sources in parallel: job boards for ICP-matching hires, Crunchbase/SEC for funding events, BuiltWith for tech stack changes, Reddit for pain point threads",
+      "output": "raw_signals.json"
+    },
+    {
+      "agent": "lead_enricher",
+      "task": "Dedupe across sources, extract decision-maker emails via Hunter.io free tier / custom scraping, score intent 1-10 based on signal recency and relevance",
+      "output": "qualified_leads.json"
+    },
+    {
+      "agent": "email_personalizer",
+      "task": "Generate hyper-personalized first lines using claude -p referencing the specific trigger event (their hire, their funding, their tech change)",
+      "output": "personalized_emails.json"
+    },
+    {
+      "agent": "sender",
+      "task": "Send via warmed SMTP (custom Python smtplib, NOT Instantly), log to LEDGER/OUTREACH_PIPELINE.csv, schedule follow-ups at day 3 and day 7",
+      "output": "send_log.json"
+    }
+  ],
+  "status": "READY"
+}

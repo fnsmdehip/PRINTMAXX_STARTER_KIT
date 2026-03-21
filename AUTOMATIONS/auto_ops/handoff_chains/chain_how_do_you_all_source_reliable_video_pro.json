@@ -1,0 +1,29 @@
+{
+  "name": "chain_how_do_you_all_source_reliable_video_pro",
+  "created": "2026-03-20T18:35:53.636872",
+  "method": "How do you all source reliable video production for SaaS marketing when you are still small? Small team in Denver running a SaaS that automates customer success workflows for mid sized B2B companies. ",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape r/SaaS, r/startups, r/smallbusiness, Twitter for keywords: 'video production SaaS', 'explainer video startup', 'iMovie look dated', 'motion graphics budget'",
+      "output": "video_leads_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for B2B SaaS companies sub-50 employees, no agency mention, budget signals under $5K, extract company name + product description + founder contact",
+      "output": "video_leads_qualified.json"
+    },
+    {
+      "agent": "creator",
+      "task": "Use Remotion to generate 30-second sample explainer matching their product description, host on surge.sh",
+      "output": "sample_videos.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Send personalized cold outreach via Reddit DM or email with sample video link, pricing $500-1500/video",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

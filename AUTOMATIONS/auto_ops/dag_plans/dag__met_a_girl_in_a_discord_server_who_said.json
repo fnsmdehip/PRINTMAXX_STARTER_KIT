@@ -1,0 +1,58 @@
+{
+  "name": "integration__met_a_girl_in_a_discord_server_who_said",
+  "created": "2026-03-20T18:10:02.652860",
+  "method": " met a girl in a discord server who said she makes \"digital stuff\"\"like what\"\"templates\"\"how's that going\"\"$31k last month\"she had 1,400 followers. no website. profile pic was a cartoon.\"how\"\"i found ",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "pain_point_mining",
+      "steps": [
+        "scrape_freelancer_subreddits",
+        "scrape_small_biz_subreddits",
+        "scrape_creator_subreddits"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "clustering",
+      "steps": [
+        "dedupe_complaints",
+        "cluster_by_tool_or_process",
+        "rank_by_frequency_and_willingness_to_pay"
+      ],
+      "parallel": false,
+      "depends_on": "pain_point_mining"
+    },
+    {
+      "name": "template_generation",
+      "steps": [
+        "generate_spreadsheet_templates",
+        "generate_notion_templates",
+        "generate_document_templates"
+      ],
+      "parallel": true,
+      "depends_on": "clustering"
+    },
+    {
+      "name": "listing_creation",
+      "steps": [
+        "write_listing_copy_using_exact_complaint_language",
+        "generate_mockup_images",
+        "create_gumroad_whop_listing"
+      ],
+      "parallel": false,
+      "depends_on": "template_generation"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "post_solution_in_original_subreddit",
+        "create_seo_landing_page",
+        "queue_social_posts"
+      ],
+      "parallel": true,
+      "depends_on": "listing_creation"
+    }
+  ],
+  "status": "READY"
+}

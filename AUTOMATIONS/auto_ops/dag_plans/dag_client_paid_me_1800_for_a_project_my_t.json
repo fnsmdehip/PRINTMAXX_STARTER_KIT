@@ -1,0 +1,48 @@
+{
+  "name": "integration_client_paid_me_1800_for_a_project_my_t",
+  "created": "2026-03-20T18:35:53.997540",
+  "method": "client paid me $1800 for a project. my tool cost was $0.53. feeling like a goddamn genius rn ok so breakdown of my business economics:  \nclient project: landing page + contact form + chatbot client  \n",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "lead_capture",
+      "steps": [
+        "scrape_upwork_landing_page_gigs",
+        "scrape_reddit_forhire_webdev",
+        "monitor_inbound_leads_csv"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_and_propose",
+      "steps": [
+        "score_leads_by_budget_and_fit",
+        "generate_personalized_proposal",
+        "calculate_pricing_by_scope"
+      ],
+      "parallel": true,
+      "depends_on": "lead_capture"
+    },
+    {
+      "name": "fulfill",
+      "steps": [
+        "generate_landing_page_from_brief",
+        "add_contact_form_integration",
+        "wire_chatbot_widget"
+      ],
+      "parallel": false,
+      "depends_on": "qualify_and_propose"
+    },
+    {
+      "name": "deliver_and_compound",
+      "steps": [
+        "deploy_to_client_domain",
+        "generate_case_study_content",
+        "request_testimonial_and_referral"
+      ],
+      "parallel": true,
+      "depends_on": "fulfill"
+    }
+  ],
+  "status": "READY"
+}

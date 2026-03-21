@@ -1,0 +1,29 @@
+{
+  "name": "chain__most_dropshippers_find_a_winning_produc",
+  "created": "2026-03-20T18:09:59.836273",
+  "method": " most dropshippers find a winning product and have no idea where their competitor actually sources it.they\u2019re stuck on aliexpress paying $12 for something that costs $3 at the factory.here\u2019s the play:",
+  "venture": "SCRAPING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape ImportYeti (free, no login), USA Trade Online, Volza free results for HS codes matching trending product categories",
+      "output": "customs_raw_data.json"
+    },
+    {
+      "agent": "product_matcher",
+      "task": "Cross-reference customs shipment consignees with AliExpress top sellers to identify which factories supply which storefronts",
+      "output": "supplier_matches.json"
+    },
+    {
+      "agent": "report_generator",
+      "task": "Generate niche supplier intelligence reports (factory name, location, volume, pricing estimate, MOQ) formatted as sellable PDFs",
+      "output": "DIGITAL_PRODUCTS/supplier_intel_reports/"
+    },
+    {
+      "agent": "distribution",
+      "task": "Create Gumroad/Whop listings, generate 3 tweets + 1 thread about customs data hack, cold email dropshipper communities",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

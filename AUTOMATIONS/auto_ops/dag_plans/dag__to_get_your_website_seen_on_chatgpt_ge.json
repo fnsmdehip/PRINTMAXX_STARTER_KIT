@@ -1,0 +1,54 @@
+{
+  "name": "integration__to_get_your_website_seen_on_chatgpt_ge",
+  "created": "2026-03-20T18:09:58.007301",
+  "method": " to get your website seen on chatgpt, gemini, and the rest, do this:1. add a detailed summary about your product or services as an llms.txt file on your website 2. then submit the page to these websit",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "inventory",
+      "steps": [
+        "parse OPS/DEPLOYMENT_URLS.md for all live site URLs",
+        "categorize sites by type (app landing, marketplace, tool, affiliate)"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate llms.txt for each site using structured template (name, description, features, pricing, URL)",
+        "generate llms-full.txt with extended detail per llms.txt spec"
+      ],
+      "parallel": true,
+      "depends_on": "inventory"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "write llms.txt to each surge.sh site via surge deploy",
+        "verify llms.txt is accessible at each URL/llms.txt"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    },
+    {
+      "name": "submit",
+      "steps": [
+        "submit all URLs to llmstxt.site",
+        "submit all URLs to directory.llmstxt.cloud",
+        "submit to any additional discovered directories"
+      ],
+      "parallel": true,
+      "depends_on": "deploy"
+    },
+    {
+      "name": "verify",
+      "steps": [
+        "confirm directory listings are live",
+        "log submission results to LEDGER"
+      ],
+      "parallel": false,
+      "depends_on": "submit"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_spent__60kmonth_on_pr_agencies_at_a",
+  "created": "2026-03-20T18:35:53.675635",
+  "method": "I spent > $60K/month on PR agencies at a startup that raised $680M. Here's what I learned about getting press as an early-stage operator - i will not promote I was the first marketing employee (head o",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Build journalist contact list from free sources (Twitter, mastheads, HARO)",
+      "output": "media_contacts.csv"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score contacts by beat relevance to our niches (faith/fitness/tech apps)",
+      "output": "qualified_media.csv"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Generate personalized pitches per journalist using Claude",
+      "output": "pitch_drafts.json"
+    },
+    {
+      "agent": "outbound",
+      "task": "Send pitches via cold email infra, track responses",
+      "output": "pr_outreach_log.csv"
+    }
+  ],
+  "status": "READY"
+}

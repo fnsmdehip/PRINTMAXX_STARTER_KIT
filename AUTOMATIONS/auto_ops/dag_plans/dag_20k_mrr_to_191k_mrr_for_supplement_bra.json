@@ -1,0 +1,48 @@
+{
+  "name": "integration_20k_mrr_to_191k_mrr_for_supplement_bra",
+  "created": "2026-03-20T18:35:52.122880",
+  "method": "$20k MRR to $191K MRR for supplement brand (I will not promote) heres every step of how we took a wellness brand from $20K MRR to $191K MRR in 7 months. It wasn\u2019t all sunshine and rainbows but right n",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "scrape_dtc_targets",
+      "steps": [
+        "scrape_meta_ad_library_supplement_wellness",
+        "scrape_tiktok_creative_center_dtc",
+        "scrape_reddit_r_dtc_r_supplements_for_founders"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_leads",
+      "steps": [
+        "score_by_ad_frequency_vs_engagement_ratio",
+        "filter_10k_50k_mrr_range_by_product_pricing_volume",
+        "extract_founder_contact_info"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_dtc_targets"
+    },
+    {
+      "name": "generate_audit",
+      "steps": [
+        "analyze_their_current_ad_creatives_via_ai",
+        "calculate_cost_savings_ai_ugc_vs_manual",
+        "generate_personalized_pdf_audit_report"
+      ],
+      "parallel": false,
+      "depends_on": "qualify_leads"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "cold_email_with_audit_attachment",
+        "linkedin_dm_followup_day3",
+        "log_responses_to_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "generate_audit"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "chain_i_built_a_side_hustle_turning_ugly_sprea",
+  "created": "2026-03-20T13:50:41.191579",
+  "method": "i built a side hustle turning ugly spreadsheets into dashboards for local businesses",
+  "venture": "LOCAL_BIZ",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Find local businesses with public ugly spreadsheets/reports (Google Sheets links, PDF reports, messy website tables)",
+      "output": "raw_biz_data.json"
+    },
+    {
+      "agent": "dashboard_generator",
+      "task": "Auto-convert raw data into clean plotly/streamlit dashboard with 3 template styles",
+      "output": "sample_dashboards/"
+    },
+    {
+      "agent": "outreach",
+      "task": "Cold email business owner with before/after screenshot, link to hosted sample dashboard",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

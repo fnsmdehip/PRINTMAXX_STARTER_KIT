@@ -1,0 +1,41 @@
+{
+  "name": "integration_i_analyzed_1000_reddit_comments_to_see_",
+  "created": "2026-03-20T13:50:40.660063",
+  "method": "I analyzed 1000+ Reddit comments to see what marketers actually want in an SEO t",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_subreddit_comments_seo",
+        "scrape_subreddit_comments_microsaas",
+        "scrape_subreddit_comments_marketing",
+        "scrape_subreddit_comments_saas",
+        "scrape_subreddit_comments_entrepreneur"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "llm_classify_demand_signals",
+        "extract_competitor_mentions",
+        "extract_feature_requests",
+        "extract_pricing_complaints"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "update_app_factory_priority_queue",
+        "generate_content_hooks_from_pain_points",
+        "update_competitive_intel_ledger"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    }
+  ],
+  "status": "READY"
+}

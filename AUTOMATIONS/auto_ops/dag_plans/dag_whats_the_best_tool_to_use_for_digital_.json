@@ -1,0 +1,38 @@
+{
+  "name": "integration_whats_the_best_tool_to_use_for_digital_",
+  "created": "2026-03-20T13:50:40.170024",
+  "method": "What's the best tool to use for digital ad creatives and product images",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "scrape_styles",
+      "steps": [
+        "scrape_competitor_ads",
+        "extract_color_palettes",
+        "catalog_layout_patterns"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_templates",
+      "steps": [
+        "build_html_templates",
+        "render_via_image_factory",
+        "generate_copy_variants"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_styles"
+    },
+    {
+      "name": "package_output",
+      "steps": [
+        "create_fiverr_listing_copy",
+        "add_to_product_catalog",
+        "queue_social_content"
+      ],
+      "parallel": true,
+      "depends_on": "generate_templates"
+    }
+  ],
+  "status": "READY"
+}

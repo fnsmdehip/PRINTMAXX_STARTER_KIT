@@ -1,0 +1,36 @@
+{
+  "name": "integration__you_want_to_make_5kmonth_selling_digi",
+  "created": "2026-03-20T23:12:24.854779",
+  "method": " you want to make $5k/month selling digital productslet me break down the math that makes this embarrassingly simple$5,000 \u00f7 30 days = $167/dayone product at $47$167 \u00f7 $47 = 3.5 sales per daycall it 4",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "measure",
+      "steps": [
+        "pull surge.sh access logs for all 16 product landing pages",
+        "parse visitor counts and referrer sources"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "diagnose",
+      "steps": [
+        "flag pages under 50 visitors/day",
+        "calculate conversion rate per page"
+      ],
+      "parallel": false,
+      "depends_on": "measure"
+    },
+    {
+      "name": "respond",
+      "steps": [
+        "run content_repurposer.py on flagged pages",
+        "post traffic-driving content via posting_queue",
+        "append results to LEDGER/DIGITAL_PRODUCT_FUNNEL.csv"
+      ],
+      "parallel": true,
+      "depends_on": "diagnose"
+    }
+  ],
+  "status": "READY"
+}

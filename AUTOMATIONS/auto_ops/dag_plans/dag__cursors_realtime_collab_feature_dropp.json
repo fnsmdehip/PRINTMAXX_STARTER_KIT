@@ -1,0 +1,39 @@
+{
+  "name": "integration__cursors_realtime_collab_feature_dropp",
+  "created": "2026-03-20T18:09:57.321373",
+  "method": " cursor's real-time collab feature dropped 90 mins ago and solo devs are calling it 'pair programming with ai'.\n\ni've been pair programming with claude api for 8 months.\n\ncursor's feature: $20/month\nm",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "intel_gather",
+      "steps": [
+        "scrape_cursor_changelog_and_pricing",
+        "scrape_hn_reddit_devtwitter_reactions",
+        "pull_our_claude_api_cost_data_from_logs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_create",
+      "steps": [
+        "generate_cost_comparison_table",
+        "generate_3_tweets_hot_take_format",
+        "generate_1_thread_own_infra_angle",
+        "generate_landing_page_section_for_claude_code_guide"
+      ],
+      "parallel": true,
+      "depends_on": "intel_gather"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "feed_engagement_bait_converter",
+        "update_digital_product_landing_with_comparison"
+      ],
+      "parallel": true,
+      "depends_on": "content_create"
+    }
+  ],
+  "status": "READY"
+}

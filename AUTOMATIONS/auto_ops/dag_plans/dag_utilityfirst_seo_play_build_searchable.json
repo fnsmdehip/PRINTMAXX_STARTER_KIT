@@ -1,0 +1,49 @@
+{
+  "name": "integration_utilityfirst_seo_play_build_searchable",
+  "created": "2026-03-20T13:50:39.522024",
+  "method": "Utility-first SEO play: build searchable database of 1000+ cancellation URLs (subscriptioncat.space). Free tool, viral Reddit distribution (245 upvotes, 0.96 ratio). SEO: every company + \"cancel\" is l",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_urls",
+      "steps": [
+        "scrape_cancellation_links_from_saas_sites",
+        "scrape_reddit_tips_threads",
+        "parse_existing_databases_justdeleteme"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_database",
+      "steps": [
+        "deduplicate_normalize_urls",
+        "categorize_by_industry",
+        "add_difficulty_rating"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_urls"
+    },
+    {
+      "name": "generate_site",
+      "steps": [
+        "generate_longtail_seo_pages_per_company",
+        "build_search_index_json",
+        "generate_sitemap_xml",
+        "build_landing_homepage"
+      ],
+      "parallel": true,
+      "depends_on": "build_database"
+    },
+    {
+      "name": "deploy_distribute",
+      "steps": [
+        "deploy_to_surge",
+        "submit_sitemap_to_google",
+        "queue_reddit_posts_for_distribution"
+      ],
+      "parallel": true,
+      "depends_on": "generate_site"
+    }
+  ],
+  "status": "READY"
+}

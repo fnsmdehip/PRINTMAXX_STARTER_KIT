@@ -1,0 +1,46 @@
+{
+  "name": "integration_show_hn_realtime_local_tts_31m_params",
+  "created": "2026-03-20T18:09:51.730774",
+  "method": "Show HN: Real-time local TTS (31M params, 5.6x CPU, voice cloning, ONNX). Hi guys and gals, I made a TTS model based on my highly upgraded VITS base, conditioned on external speaker embeddings (Resemb",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "setup",
+      "steps": [
+        "clone_repo_and_install_onnx_runtime",
+        "download_pretrained_model_weights",
+        "extract_speaker_embeddings_for_voice_cloning"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "pull_scripts_from_content_queue",
+        "run_tts_inference_on_each_script",
+        "normalize_audio_output"
+      ],
+      "parallel": false,
+      "depends_on": "setup"
+    },
+    {
+      "name": "assemble",
+      "steps": [
+        "feed_audio_to_remotion_video_factory",
+        "render_narrated_shorts"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "log_to_content_performance"
+      ],
+      "parallel": true,
+      "depends_on": "assemble"
+    }
+  ],
+  "status": "READY"
+}

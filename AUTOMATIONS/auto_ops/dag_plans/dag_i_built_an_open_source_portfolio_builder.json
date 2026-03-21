@@ -1,0 +1,50 @@
+{
+  "name": "integration_i_built_an_open_source_portfolio_builder",
+  "created": "2026-03-20T18:35:52.253105",
+  "method": "I built an open source portfolio builder for anyone who works in web/tech. Last week I was made redundant and started preparing to re-enter the job market. I\u2019ve heard it has been a tough time for deve",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_github_portfolio_builders",
+        "scrape_producthunt_portfolio_tools",
+        "extract_feature_matrix"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_landing_page",
+        "build_portfolio_template_engine",
+        "create_3_premium_themes"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy_to_surge",
+        "wire_stripe_payment_link",
+        "create_gumroad_theme_listing"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_r_webdev",
+        "post_r_sideproject",
+        "post_hn_show",
+        "post_devto_article",
+        "generate_3_tweets"
+      ],
+      "parallel": true,
+      "depends_on": "deploy"
+    }
+  ],
+  "status": "READY"
+}

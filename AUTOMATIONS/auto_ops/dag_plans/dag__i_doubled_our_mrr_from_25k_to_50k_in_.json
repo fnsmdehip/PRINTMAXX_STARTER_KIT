@@ -1,0 +1,38 @@
+{
+  "name": "integration__i_doubled_our_mrr_from_25k_to_50k_in_",
+  "created": "2026-03-20T18:09:58.514459",
+  "method": " i doubled our mrr from $25k to $50k in 30 days. ",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan_all_apps_for_pricing_pages",
+        "identify_missing_upsell_ctas",
+        "check_existing_stripe_products_pricing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "optimize",
+      "steps": [
+        "add_price_anchoring_to_landing_pages",
+        "create_annual_plan_discount_offers",
+        "build_churn_save_email_sequence"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "activate",
+      "steps": [
+        "wire_upgrade_ctas_into_apps",
+        "deploy_updated_pages",
+        "schedule_churn_save_emails"
+      ],
+      "parallel": false,
+      "depends_on": "optimize"
+    }
+  ],
+  "status": "READY"
+}

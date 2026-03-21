@@ -1,0 +1,47 @@
+{
+  "name": "integration_i_analyses_200_posts_and_17946_comments",
+  "created": "2026-03-20T18:35:52.552205",
+  "method": "I Analyses 200 posts and 17,946 comments from r/SaaS and r/Entrepreneur. Here's the deep-dive on lead generation \u2014 The #1 pain point nobody's actually solved. I scraped 200 posts and 17,946 comments f",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_validate",
+      "steps": [
+        "scrape_rsaas_leadgen_threads",
+        "scrape_rentrepreneur_leadgen_threads",
+        "extract_specific_complaints_and_tools"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "cluster_pain_points_by_subtopic",
+        "identify_tool_gaps_no_free_solution",
+        "score_content_angles_by_engagement"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_validate"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_3_twitter_threads_on_leadgen_pain",
+        "generate_reddit_response_templates",
+        "update_app_factory_priority_for_leadgen_apps"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_content_to_posting_queue",
+        "update_content_calendar_with_leadgen_series"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

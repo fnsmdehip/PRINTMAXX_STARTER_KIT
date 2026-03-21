@@ -1,0 +1,47 @@
+{
+  "name": "integration_p2",
+  "created": "2026-03-20T18:10:02.221478",
+  "method": "P2",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "clone_and_brand",
+      "steps": [
+        "clone_fitness_streak_template",
+        "rebrand_to_swimming_stroke_streak",
+        "add_swimming_specific_features_laps_strokes_distance"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_and_aso",
+      "steps": [
+        "generate_aso_keywords_swimming_lap_swim_pool_streak",
+        "generate_landing_page_copy",
+        "generate_3_launch_tweets"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "build_landing_page",
+        "deploy_surge_sh",
+        "wire_stripe_payment_link"
+      ],
+      "parallel": false,
+      "depends_on": "clone_and_brand"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_to_r_swimming_r_triathlon_r_openwater",
+        "submit_to_product_hunt",
+        "cross_link_from_fitness_streak_family"
+      ],
+      "parallel": true,
+      "depends_on": "deploy"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration_1850_visitors_113_in_revenue_and_30_",
+  "created": "2026-03-20T18:35:54.600082",
+  "method": "1,850 visitors, $113 in revenue, and 30 days of zero motivation. We see a lot of \"up and to the right\" graphs here, so I wanted to share what my messy journey looks like right now.  \nI\u2019m building mybe",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_metrics",
+      "steps": [
+        "pull_live_metrics_from_kpi_dashboard",
+        "pull_deployment_count_from_ops",
+        "pull_script_count"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "format_transparent_metrics_post",
+        "generate_3_tweet_variants",
+        "generate_reddit_longform"
+      ],
+      "parallel": true,
+      "depends_on": "extract_metrics"
+    },
+    {
+      "name": "queue_and_log",
+      "steps": [
+        "append_to_posting_queue",
+        "log_to_content_performance",
+        "add_bet_tracker_to_app_factory_queue"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

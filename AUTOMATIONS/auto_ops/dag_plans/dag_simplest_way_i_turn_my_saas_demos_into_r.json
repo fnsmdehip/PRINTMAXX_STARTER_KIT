@@ -1,0 +1,46 @@
+{
+  "name": "integration_simplest_way_i_turn_my_saas_demos_into_r",
+  "created": "2026-03-20T18:09:53.870790",
+  "method": "Simplest Way I Turn My SaaS Demos Into Real Users (Small workflow that started working for me) Simplest Way I Turn My SaaS Demos Into Real Users (Small workflow that started working for me)\n\nIn the mo",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "identify_top_apps",
+      "steps": [
+        "rank_deployed_apps_by_niche_demand",
+        "select_top_5_for_demo_cycle"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_demo_content",
+      "steps": [
+        "playwright_screenshot_each_app",
+        "generate_gif_walkthrough",
+        "write_demo_post_copy_per_platform"
+      ],
+      "parallel": true,
+      "depends_on": "identify_top_apps"
+    },
+    {
+      "name": "distribute_demos",
+      "steps": [
+        "post_to_target_subreddits",
+        "post_to_twitter_with_demo_gif",
+        "post_to_indiehackers_hn"
+      ],
+      "parallel": true,
+      "depends_on": "generate_demo_content"
+    },
+    {
+      "name": "track_conversions",
+      "steps": [
+        "log_post_urls_and_engagement",
+        "check_app_analytics_for_new_visits"
+      ],
+      "parallel": false,
+      "depends_on": "distribute_demos"
+    }
+  ],
+  "status": "READY"
+}

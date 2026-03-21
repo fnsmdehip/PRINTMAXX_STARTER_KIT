@@ -1,0 +1,36 @@
+{
+  "name": "integration_were_profitable_but_i_pay_myself_less_t",
+  "created": "2026-03-20T13:50:40.527167",
+  "method": "We're profitable but I pay myself less than my employees",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_rsaas_founder_comp_threads",
+        "scrape_rsaas_profitability_threads"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "extract_revenue_numbers",
+        "extract_founder_pain_signals",
+        "extract_hiring_benchmarks"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "route_leads_to_outbound_queue",
+        "route_stories_to_content_queue"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    }
+  ],
+  "status": "READY"
+}

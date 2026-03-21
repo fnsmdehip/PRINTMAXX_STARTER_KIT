@@ -1,0 +1,35 @@
+{
+  "name": "integration_indiedevjake_launched_an_ai_task_manager",
+  "created": "2026-03-20T18:35:51.751473",
+  "method": "IndieDevJake launched an AI task manager claiming 50% less planning time and solopreneurs are already throwing money at it.\n\nI built a task prioritization agent with Claude + n8n last month that:\n- pu",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "build_template",
+      "steps": [
+        "create n8n workflow JSON template with Notion+Claude+Calendar nodes",
+        "write setup guide and README"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "package",
+      "steps": [
+        "create Gumroad-ready listing copy",
+        "build landing page with demo GIF"
+      ],
+      "parallel": true,
+      "depends_on": "build_template"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate 3 tweets showing the workflow in action",
+        "post to r/notion and r/productivity"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    }
+  ],
+  "status": "READY"
+}

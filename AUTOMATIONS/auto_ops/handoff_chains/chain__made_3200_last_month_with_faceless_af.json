@@ -1,0 +1,34 @@
+{
+  "name": "chain__made_3200_last_month_with_faceless_af",
+  "created": "2026-03-20T18:09:58.346357",
+  "method": " made $3,200 last month with faceless affiliate content (6 month breakdown). started doing this about 6 months ago after losing my job. didn't want to be on camera so i focused on faceless content. te",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "researcher",
+      "task": "scan affiliate networks (Impact, ShareASale, Amazon Associates, PartnerStack) for products matching faith/fitness/tech niches with >15% commission or >$20 per sale",
+      "output": "affiliate_programs_ranked.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "generate 30 faceless content pieces (10 per niche) using hooks from CONTENT/social/WINNING_CONTENT_STRUCTURES.csv, each with embedded affiliate CTA",
+      "output": "faceless_content_batch.json"
+    },
+    {
+      "agent": "media_factory",
+      "task": "produce visual assets \u2014 Remotion for short-form video, image_factory for carousels, all faceless (text overlays, stock footage, screen recordings)",
+      "output": "media_assets/"
+    },
+    {
+      "agent": "distributor",
+      "task": "push to posting_queue with platform-specific formatting, generate buffer CSV imports for all 12 accounts",
+      "output": "distribution_log.json"
+    },
+    {
+      "agent": "tracker",
+      "task": "weekly affiliate revenue check via link shortener click data, update LEDGER/REVENUE_STREAMS_TRACKER.csv",
+      "output": "affiliate_performance.json"
+    }
+  ],
+  "status": "READY"
+}

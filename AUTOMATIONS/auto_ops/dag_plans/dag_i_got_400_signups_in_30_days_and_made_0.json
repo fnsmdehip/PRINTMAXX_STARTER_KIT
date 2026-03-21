@@ -1,0 +1,38 @@
+{
+  "name": "integration_i_got_400_signups_in_30_days_and_made_0",
+  "created": "2026-03-20T18:35:53.485630",
+  "method": "I got 400 signups in 30 days and made $0. Two months later, developers are finally paying. Here's what changed. I build developer tools. I know how developers think because I am one. That turned out t",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "audit_deployed_apps",
+      "steps": [
+        "scan DEPLOYMENT_URLS for all live apps",
+        "check each for payment integration status",
+        "flag apps with zero payment gates"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_paywalls",
+      "steps": [
+        "create usage-limit logic per app type",
+        "generate upgrade CTA copy using content hook patterns",
+        "create Stripe payment link per app"
+      ],
+      "parallel": true,
+      "depends_on": "audit_deployed_apps"
+    },
+    {
+      "name": "apply_and_track",
+      "steps": [
+        "inject paywall code into flagged apps",
+        "add conversion tracking pixels",
+        "update KPI dashboard with conversion funnel"
+      ],
+      "parallel": false,
+      "depends_on": "generate_paywalls"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "integration_how_to_make_1_million_on_x1_visit_ev",
+  "created": "2026-03-20T13:50:43.333278",
+  "method": "How to make $1 million on X\n\n1) Visit every large creator (>100k)\n2) Click on Filter Posts\n3) Switch to Most Liked\n4) Steal the top 10 posts\n5) Change the caption slightly\n6) Tweet it\n7) Reply to the ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_top_posts_from_50_creators",
+        "extract_engagement_metrics"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "filter",
+      "steps": [
+        "rank_by_likes_and_retweets",
+        "dedupe_against_posted_history",
+        "filter_last_7_days"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "rewrite",
+      "steps": [
+        "rewrite_top_10_captions_via_claude",
+        "add_hook_structures_from_procedural_memory",
+        "generate_reply_bait_comments"
+      ],
+      "parallel": true,
+      "depends_on": "filter"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "push_to_posting_queue",
+        "schedule_optimal_times"
+      ],
+      "parallel": false,
+      "depends_on": "rewrite"
+    },
+    {
+      "name": "engage",
+      "steps": [
+        "auto_reply_first_10_comments",
+        "like_early_commenters",
+        "quote_tweet_own_post_4h_later"
+      ],
+      "parallel": true,
+      "depends_on": "queue"
+    }
+  ],
+  "status": "READY"
+}

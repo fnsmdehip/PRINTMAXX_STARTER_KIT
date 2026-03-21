@@ -1,0 +1,35 @@
+{
+  "name": "integration__70_of_ecom_subs_will_churn_within_90_d",
+  "created": "2026-03-20T18:10:02.415886",
+  "method": " 70% of ecom subs will churn within 90 days and it has nothing to do with your productthe subscription model is completely fucked for most ecom brands and nobody wants to talk about whythey launch sub",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_twitter_thread_ecom_churn",
+        "generate_linkedin_post_ecom_churn",
+        "generate_reddit_post_r_ecommerce"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "outreach_prep",
+      "steps": [
+        "draft_cold_email_churn_hook",
+        "add_to_outreach_pipeline_ecom_brands"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "route_cold_email_to_outbound_venture"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

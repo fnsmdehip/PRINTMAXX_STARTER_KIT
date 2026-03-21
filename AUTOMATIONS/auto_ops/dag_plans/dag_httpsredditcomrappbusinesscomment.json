@@ -1,0 +1,35 @@
+{
+  "name": "integration_httpsredditcomrappbusinesscomment",
+  "created": "2026-03-20T23:12:24.869848",
+  "method": "https://reddit.com/r/AppBusiness/comments/1rva997/built_5_apps_4_failed_at_0_one_hit_7k_mrr_heres/",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_case_studies",
+      "steps": [
+        "scrape r/AppBusiness for posts with revenue numbers in title (regex: '$XK MRR', 'X apps', 'failed at $0')",
+        "scrape r/SideProject and r/indiehackers for parallel app launch posts with revenue data"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_patterns",
+      "steps": [
+        "LLM extract per post: niche, revenue, pricing tier, ASO keywords used, kill criteria, what differentiated winner",
+        "Diff extracted signals against our existing APP_FACTORY_METHODS.csv \u2014 flag new niche signals"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_case_studies"
+    },
+    {
+      "name": "update_factory",
+      "steps": [
+        "Re-rank app_factory_command_center.py queue using extracted niche win-rate signals",
+        "Auto-flag our portfolio apps with 0 revenue at 30d for kill decision in PERSISTENT_TASK_TRACKER"
+      ],
+      "parallel": true,
+      "depends_on": "extract_patterns"
+    }
+  ],
+  "status": "READY"
+}

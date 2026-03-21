@@ -1,0 +1,46 @@
+{
+  "name": "integration_how_many_new_creatives_should_i_test_a_m",
+  "created": "2026-03-20T13:50:40.213059",
+  "method": "How many new creatives should I test a month",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "generate_variants",
+      "steps": [
+        "load top-performing content from posting_queue",
+        "generate 5 hook variations per piece via claude -p",
+        "generate 3 format variations (thread/single/carousel)"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_existing",
+      "steps": [
+        "pull engagement data from posted content",
+        "classify winners (>3%) vs losers (<1%) vs mid",
+        "extract winning patterns (hook type, length, CTA style)"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "optimize",
+      "steps": [
+        "feed winning patterns into next generation prompt",
+        "kill underperforming formats from rotation",
+        "update creative_testing_scorecard.json"
+      ],
+      "parallel": false,
+      "depends_on": "score_existing"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "push top variants to CONTENT/social/posting_queue/",
+        "tag with test_batch_id for tracking"
+      ],
+      "parallel": false,
+      "depends_on": "generate_variants"
+    }
+  ],
+  "status": "READY"
+}

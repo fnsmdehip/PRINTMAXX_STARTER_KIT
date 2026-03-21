@@ -1,0 +1,48 @@
+{
+  "name": "integration_weve_built_our_paid_newsletter_write_wi",
+  "created": "2026-03-20T13:50:42.091912",
+  "method": "We've built our paid newsletter Write With AI to $400k in annual subscription revenue and $800k+ in digital product sales.\n\nThis is the exact roadmap to follow if you want to launch your own newslette",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "setup",
+      "steps": [
+        "create_beehiiv_free_account_landing",
+        "generate_newsletter_positioning_and_name",
+        "build_signup_landing_page"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_engine",
+      "steps": [
+        "generate_newsletter_editions_from_alpha_pipeline",
+        "create_social_teaser_posts_per_edition",
+        "build_lead_magnet_from_best_content"
+      ],
+      "parallel": true,
+      "depends_on": "setup"
+    },
+    {
+      "name": "monetization",
+      "steps": [
+        "bundle_top_editions_into_digital_product",
+        "create_upsell_email_sequence",
+        "wire_product_into_existing_gumroad_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "content_engine"
+    },
+    {
+      "name": "growth_loop",
+      "steps": [
+        "cross_post_newsletter_excerpts_to_twitter_reddit",
+        "engagement_bait_converter_on_each_edition",
+        "referral_program_setup"
+      ],
+      "parallel": true,
+      "depends_on": "content_engine"
+    }
+  ],
+  "status": "READY"
+}

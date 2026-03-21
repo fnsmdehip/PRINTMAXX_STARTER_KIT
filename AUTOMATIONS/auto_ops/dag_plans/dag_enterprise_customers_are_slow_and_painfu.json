@@ -1,0 +1,35 @@
+{
+  "name": "integration_enterprise_customers_are_slow_and_painfu",
+  "created": "2026-03-20T18:35:54.226169",
+  "method": "Enterprise customers are slow and painful to land\u2026 but the LTV makes it worth it Founder here. Quick story time.\n\nBack in June 2024 we started talking with a large Fortune 300 company. Getting a seat ",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "extract_method",
+      "steps": [
+        "parse enterprise sales cycle stages: prospecting\u2192legal\u2192security\u2192procurement\u2192trial\u2192close",
+        "extract timing benchmarks: 11mo cycle, 3mo trial, Fortune 300 tier"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate 3 tweets: enterprise LTV math, patience as competitive moat, why most indie hackers quit too early",
+        "generate 1 thread: enterprise vs SMB unit economics breakdown"
+      ],
+      "parallel": true,
+      "depends_on": "extract_method"
+    },
+    {
+      "name": "strategic_filing",
+      "steps": [
+        "append enterprise sales playbook notes to EAS venture knowledge base",
+        "update OUTBOUND venture with enterprise tier qualification criteria: only pursue when MRR > $5K"
+      ],
+      "parallel": true,
+      "depends_on": "extract_method"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,7 +1,2 @@
 test_id,category,stack_a,stack_b,metric,start_date,end_date,status,stack_a_result,stack_b_result,winner,notes
-AB001,newsletter,Kit (10K free subs),Beehiiv (2500 free subs),subscriber_growth_rate,2026-02-08,,RUNNING,,,,"Volume vs growth tools. Kit has 4x free subs but Beehiiv has referral/recs network."
-AB002,anti_detect,Dolphin{anty} (10 free),GoLogin (3 free),account_survival_rate,2026-02-08,,RUNNING,,,,"Free profile count vs UX quality. Dolphin 10 profiles covers more accounts."
-AB003,landing_pages,Systeme.io (free all-in-one),Carrd (3 free sites),conversion_rate,2026-02-08,,PLANNED,,,,"Full funnel builder vs simple one-pagers. Systeme.io has email + courses built in."
-AB004,email_warmup,TrulyInbox (free forever),Built-in (Instantly $37/mo),inbox_placement_rate,2026-02-08,,PLANNED,,,,"Free standalone warmup vs paid bundled warmup. Key question: does TrulyInbox match paid quality?"
-AB005,social_scheduling,Tweetlio (free X plan),Buffer (3 channels free),engagement_rate,2026-02-08,,PLANNED,,,,"X/Twitter-specific vs multi-platform. Tweetlio has engagement features."
-AB006,proxies,Webshare (10 free IPs),Bright Data (15 IPs + 2GB free),scrape_success_rate,2026-02-08,,PLANNED,,,,"Datacenter vs enterprise free tiers for scraping tasks."
+AB001,newsletter,Kit (10K free subs),Beehiiv (2500 free subs),subscriber_growth_rate,2026-02-08,,RUNNING,,,,Volume vs growth tools. Kit has 4x free subs but Beehiiv has referral/recs network.

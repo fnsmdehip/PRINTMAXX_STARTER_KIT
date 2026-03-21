@@ -1,0 +1,34 @@
+{
+  "name": "chain_you_said_you_would_start_with_0and_",
+  "created": "2026-03-20T18:35:50.294612",
+  "method": "\"you said you would start with $0\"\n\nand i did\n\n- i sent 500+ dms to different accounts offering to buy ($0 spent)\n\n- i found the best one and negotiated the price down ($0 spent)\n\n- i'm paying $500 ac",
+  "venture": "BROKERING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan platforms for accounts 1K-50K followers with low post frequency, no link-in-bio monetization, niche alignment with our verticals (faith, fitness, tech)",
+      "output": "target_accounts.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score by engagement_rate * follower_count * niche_rpm. Filter to top 20%. Flag accounts where BNPL monthly < projected monthly revenue",
+      "output": "qualified_accounts.json"
+    },
+    {
+      "agent": "outreach",
+      "task": "Generate personalized DM: compliment specific post + offer. Rate limit 50 DMs/day. Track sent/opened/replied/negotiating",
+      "output": "outreach_log.json"
+    },
+    {
+      "agent": "deal_closer",
+      "task": "Calculate BNPL terms across Klarna/Afterpay/Affirm. Generate counter-offers anchored at 60% of asking. Ensure monthly payment < projected account revenue",
+      "output": "deals.json"
+    },
+    {
+      "agent": "monetizer",
+      "task": "Route acquired accounts to content_factory for immediate posting. Wire affiliate links. Track first 30-day revenue vs BNPL obligation",
+      "output": "monetization_tracking.json"
+    }
+  ],
+  "status": "READY"
+}

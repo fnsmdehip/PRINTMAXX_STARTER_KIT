@@ -1,0 +1,37 @@
+{
+  "name": "integration_stop_building_useless_sht_check_out_my",
+  "created": "2026-03-20T18:35:53.706281",
+  "method": "Stop building useless sh*t \"Check out my SaaS directory list\" - no one cares\n\n\n\n\"I Hit 10k MRR in 30 Days: Here's How\" - stop lying\n\n\n\n\"I created an AI-powered chatbot\" - no, you didn't create anythin",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_angles",
+      "steps": [
+        "parse_reddit_post_for_specific_claims",
+        "identify_contrarian_hooks",
+        "cross_ref_our_deployment_stats_as_proof"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_3_tweets_contrarian_takes",
+        "generate_1_thread_what_actually_works",
+        "generate_1_linkedin_post_anti_cursor_hype"
+      ],
+      "parallel": true,
+      "depends_on": "extract_angles"
+    },
+    {
+      "name": "route_to_queue",
+      "steps": [
+        "write_to_posting_queue",
+        "tag_as_contrarian_engagement_bait"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

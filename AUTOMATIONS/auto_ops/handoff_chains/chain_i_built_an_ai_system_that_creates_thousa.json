@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_built_an_ai_system_that_creates_thousa",
+  "created": "2026-03-20T18:09:53.908865",
+  "method": "I built an AI system that creates thousands of UGC videos per month \u2014 for a single brand.\n\nNo creators. \nNo briefs. \nNo $500 per video. \nJust output.\n\nHere\u2019s the full pipeline:\n\n\u2192 AI generates a reali",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "scrape brands posting UGC job listings on Upwork/Fiverr/Twitter \u2014 these are buyers",
+      "output": "ugc_brand_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "score brands by budget signals (follower count, ad spend indicators, product price point)",
+      "output": "qualified_ugc_leads.json"
+    },
+    {
+      "agent": "creator",
+      "task": "generate 3 sample AI UGC videos per qualified brand using their product imagery",
+      "output": "sample_videos/"
+    },
+    {
+      "agent": "connector",
+      "task": "cold outreach with sample video attached \u2014 DM or email",
+      "output": "ugc_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -7,7 +7,8 @@
     "category": "Productivity",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-slack",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "GitHub MCP Server",
@@ -17,7 +18,8 @@
     "category": "Developer Tools",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-github",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Filesystem MCP Server",
@@ -27,7 +29,8 @@
     "category": "Developer Tools",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-filesystem /path/to/allowed",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "PostgreSQL MCP Server",
@@ -37,7 +40,8 @@
     "category": "Data",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-postgres postgresql://localhost/mydb",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Brave Search MCP Server",
@@ -47,7 +51,8 @@
     "category": "AI/ML",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-brave-search",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Puppeteer MCP Server",
@@ -57,7 +62,8 @@
     "category": "Developer Tools",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-puppeteer",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Google Drive MCP Server",
@@ -67,7 +73,8 @@
     "category": "Productivity",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-gdrive",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "SQLite MCP Server",
@@ -77,7 +84,8 @@
     "category": "Data",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-sqlite /path/to/db.sqlite",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Fetch MCP Server",
@@ -87,7 +95,8 @@
     "category": "Developer Tools",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-fetch",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Memory MCP Server",
@@ -97,7 +106,8 @@
     "category": "AI/ML",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-memory",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Sentry MCP Server",
@@ -107,7 +117,8 @@
     "category": "Developer Tools",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-sentry",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Google Maps MCP Server",
@@ -117,7 +128,8 @@
     "category": "Data",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-google-maps",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Playwright MCP Server",
@@ -127,7 +139,8 @@
     "category": "Developer Tools",
     "stars": 1800,
     "install_command": "npx -y @anthropic/mcp-playwright",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Supabase MCP Server",
@@ -137,7 +150,8 @@
     "category": "Data",
     "stars": 620,
     "install_command": "npx -y supabase-mcp-server",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Notion MCP Server",
@@ -147,7 +161,8 @@
     "category": "Productivity",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-notion",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Stripe MCP Server",
@@ -157,7 +172,8 @@
     "category": "Finance",
     "stars": 450,
     "install_command": "npx -y @stripe/mcp-server",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Linear MCP Server",
@@ -177,7 +193,8 @@
     "category": "Developer Tools",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-docker",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Firecrawl MCP Server",
@@ -187,7 +204,8 @@
     "category": "Data",
     "stars": 520,
     "install_command": "npx -y firecrawl-mcp",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Obsidian MCP Server",
@@ -217,7 +235,8 @@
     "category": "Developer Tools",
     "stars": 890,
     "install_command": "npx -y @cloudflare/mcp-server-cloudflare",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Raygun MCP Server",
@@ -287,7 +306,8 @@
     "category": "AI/ML",
     "stars": 480,
     "install_command": "npx -y exa-mcp-server",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Neon MCP Server",
@@ -317,7 +337,8 @@
     "category": "Developer Tools",
     "stars": 3200,
     "install_command": "npx -y @upstash/context7-mcp",
-    "featured": true
+    "featured": true,
+    "verified": true
   },
   {
     "name": "Sequential Thinking MCP Server",
@@ -327,7 +348,8 @@
     "category": "AI/ML",
     "stars": 15200,
     "install_command": "npx -y @modelcontextprotocol/server-sequential-thinking",
-    "featured": false
+    "featured": false,
+    "verified": true
   },
   {
     "name": "Airtable MCP Server",
@@ -338,5 +360,192 @@
     "stars": 190,
     "install_command": "npx -y airtable-mcp-server",
     "featured": false
+  },
+  {
+    "name": "Redis MCP Server",
+    "description": "read and write Redis keys, lists, sets, hashes. full Redis command coverage from your AI.",
+    "author": "modelcontextprotocol",
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
+    "category": "Data",
+    "stars": 15200,
+    "install_command": "npx -y @modelcontextprotocol/server-redis redis://localhost:6379",
+    "featured": false,
+    "verified": true
+  },
+  {
+    "name": "GitLab MCP Server",
+    "description": "manage GitLab repos, merge requests, issues, CI/CD pipelines. full GitLab API access.",
+    "author": "modelcontextprotocol",
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab",
+    "category": "Developer Tools",
+    "stars": 15200,
+    "install_command": "npx -y @modelcontextprotocol/server-gitlab",
+    "featured": false,
+    "verified": true
+  },
+  {
+    "name": "Time MCP Server",
+    "description": "get current time, convert between timezones, calculate time differences. essential utility for any AI workflow.",
+    "author": "modelcontextprotocol",
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+    "category": "Utilities",
+    "stars": 15200,
+    "install_command": "npx -y @modelcontextprotocol/server-time",
+    "featured": false,
+    "verified": true
+  },
+  {
+    "name": "MongoDB MCP Server",
+    "description": "query MongoDB databases, inspect collections, run aggregations, manage documents. official MongoDB release.",
+    "author": "mongodb",
+    "github_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "category": "Data",
+    "stars": 800,
+    "install_command": "npx -y mongodb-mcp-server",
+    "featured": true,
+    "verified": true
+  },
+  {
+    "name": "Grafana MCP Server",
+    "description": "query Grafana dashboards, alert rules, data sources. bring observability data directly into your AI workflows.",
+    "author": "grafana",
+    "github_url": "https://github.com/grafana/mcp-grafana",
+    "category": "Developer Tools",
+    "stars": 1200,
+    "install_command": "npx -y @grafana/mcp-grafana",
+    "featured": false,
+    "verified": true
+  },
+  {
+    "name": "Prisma MCP Server",
+    "description": "introspect your Prisma schema, query your database via Prisma ORM. type-safe AI database access.",
+    "author": "prisma",
+    "github_url": "https://github.com/prisma/prisma/tree/main/packages/mcp",
+    "category": "Data",
+    "stars": 4200,
+    "install_command": "npx -y @prisma/mcp",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "Kubernetes MCP Server",
+    "description": "manage pods, deployments, services, namespaces. kubectl-level k8s access from your AI assistant.",
+    "author": "manusa",
+    "github_url": "https://github.com/manusa/kubernetes-mcp-server",
+    "category": "Developer Tools",
+    "stars": 950,
+    "install_command": "npx -y kubernetes-mcp-server",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "Datadog MCP Server",
+    "description": "query metrics, logs, traces, monitors, incidents. bring your Datadog observability data into AI workflows.",
+    "author": "DataDog",
+    "github_url": "https://github.com/DataDog/datadog-mcp-server",
+    "category": "Developer Tools",
+    "stars": 620,
+    "install_command": "npx -y @datadog/mcp-server",
+    "featured": true,
+    "verified": true
+  },
+  {
+    "name": "Wikipedia MCP Server",
+    "description": "search and read Wikipedia articles. give your AI access to the world's largest knowledge base.",
+    "author": "community",
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/wikipedia",
+    "category": "Research",
+    "stars": 2100,
+    "install_command": "npx -y @modelcontextprotocol/server-wikipedia",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "Google Calendar MCP Server",
+    "description": "read, create, update Google Calendar events. schedule meetings and manage time directly from your AI.",
+    "author": "community",
+    "github_url": "https://github.com/nspady/google-calendar-mcp",
+    "category": "Productivity",
+    "stars": 730,
+    "install_command": "npx -y google-calendar-mcp",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "Perplexity MCP Server",
+    "description": "run Perplexity AI searches with cited sources. real-time web research with academic-quality sourcing.",
+    "author": "community",
+    "github_url": "https://github.com/ppl-ai/perplexity-mcp",
+    "category": "AI/ML",
+    "stars": 580,
+    "install_command": "npx -y @perplexity-ai/mcp-server",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "HubSpot MCP Server",
+    "description": "manage CRM contacts, deals, companies, tickets. bring HubSpot data into your AI workflows.",
+    "author": "community",
+    "github_url": "https://github.com/HubSpot/hubspot-mcp-server",
+    "category": "Productivity",
+    "stars": 450,
+    "install_command": "npx -y @hubspot/mcp-server",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "ClickHouse MCP Server",
+    "description": "run ClickHouse queries, inspect tables, analyze billions of rows of analytics data.",
+    "author": "ClickHouse",
+    "github_url": "https://github.com/ClickHouse/mcp-clickhouse",
+    "category": "Data",
+    "stars": 380,
+    "install_command": "npx -y @clickhouse/mcp-server",
+    "featured": false,
+    "verified": true
+  },
+  {
+    "name": "Spotify MCP Server",
+    "description": "control playback, search tracks, manage playlists, read user library. Spotify API access from Claude.",
+    "author": "community",
+    "github_url": "https://github.com/varunneal/spotify-mcp",
+    "category": "Media",
+    "stars": 420,
+    "install_command": "npx -y spotify-mcp",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "Jira MCP Server",
+    "description": "create and manage Jira issues, sprints, projects, boards. AI-powered project management.",
+    "author": "community",
+    "github_url": "https://github.com/sooperset/mcp-atlassian",
+    "category": "Productivity",
+    "stars": 1100,
+    "install_command": "npx -y mcp-atlassian",
+    "featured": true,
+    "verified": false
+  },
+  {
+    "name": "Gmail MCP Server",
+    "description": "read, send, search, label Gmail messages. manage your inbox with AI assistance.",
+    "author": "community",
+    "github_url": "https://github.com/gongrzhe/gmail-mcp-server",
+    "category": "Productivity",
+    "stars": 340,
+    "install_command": "npx -y @gongrzhe/gmail-mcp-server",
+    "featured": false,
+    "verified": false
+  },
+  {
+    "name": "Anthropic Computer Use",
+    "description": "give Claude the ability to control a computer: click, type, screenshot, scroll. autonomous computer control.",
+    "author": "anthropic",
+    "github_url": "https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo",
+    "category": "AI/ML",
+    "stars": 8900,
+    "install_command": "docker run -p 5900:5900 -p 8501:8501 ghcr.io/anthropics/anthropic-quickstarts:computer-use-demo-latest",
+    "featured": true,
+    "verified": true
   }
 ]

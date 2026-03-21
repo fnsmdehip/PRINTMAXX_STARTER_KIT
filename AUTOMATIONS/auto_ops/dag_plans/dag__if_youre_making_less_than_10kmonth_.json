@@ -1,0 +1,48 @@
+{
+  "name": "integration__if_youre_making_less_than_10kmonth_",
+  "created": "2026-03-20T18:09:59.699706",
+  "method": " if you're making less than $10k/month & you're obsessed with \"building\" products, then you've got your priorities completely backwards...there's thousands of products out there that have already prov",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "scout",
+      "steps": [
+        "scrape_affiliate_network_leaderboards",
+        "extract_top_epc_products_matching_our_niches",
+        "check_existing_affiliate_pages_for_gaps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_comparison_landing_page",
+        "generate_review_social_content",
+        "create_email_sequence_for_affiliate_promo"
+      ],
+      "parallel": true,
+      "depends_on": "scout"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_landing_page_surge",
+        "queue_social_posts_to_posting_queue",
+        "add_affiliate_links_to_existing_app_landing_pages"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "add_kpi_entry",
+        "update_affiliate_revenue_tracker",
+        "schedule_performance_check_7d"
+      ],
+      "parallel": false,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

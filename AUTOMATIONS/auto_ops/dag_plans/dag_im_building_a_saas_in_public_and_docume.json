@@ -1,0 +1,37 @@
+{
+  "name": "integration_im_building_a_saas_in_public_and_docume",
+  "created": "2026-03-20T18:35:50.222912",
+  "method": "I'm building a SaaS in public and documenting EVERYTHING.\n\nBut most of you will miss 90% of it because of the algorithm.\n\nThat's exactly why I built AI MVP Builders.\n\n1,600+ builders are already insid",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "gather_signals",
+      "steps": [
+        "pull_git_log_24h",
+        "pull_deploy_stats",
+        "pull_revenue_metrics"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "format_build_update_post",
+        "add_algorithm_fomo_hook",
+        "generate_thread_variant"
+      ],
+      "parallel": true,
+      "depends_on": "gather_signals"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "log_to_content_performance"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

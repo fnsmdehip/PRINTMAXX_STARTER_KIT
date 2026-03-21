@@ -1,0 +1,24 @@
+{
+  "name": "chain__triggering_events_nobody_tracks_leade",
+  "created": "2026-03-20T18:09:59.180545",
+  "method": " triggering events nobody tracks:- leadership change (theorg)- office move (google alerts + address)- bad glassdoor reviews spike (means problems = budget)- competitor layoffs (linkedin)- job posting ",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "trigger_scraper",
+      "task": "Scrape 6 trigger sources in parallel (TheOrg, Glassdoor, LinkedIn, job boards, SEC EDGAR, Google Alerts)",
+      "output": "LEDGER/TRIGGERING_EVENTS_RAW.json"
+    },
+    {
+      "agent": "signal_scorer",
+      "task": "Score each company 1-10 by signal density (multiple triggers = higher score), filter <5, enrich with contact info",
+      "output": "LEDGER/TRIGGERING_EVENTS_SCORED.csv"
+    },
+    {
+      "agent": "outreach_router",
+      "task": "Generate personalized cold email using trigger event as hook (procedural memory: mention specific trigger + 6-question framework), feed to eas_lead_pipeline",
+      "output": "AUTOMATIONS/leads/trigger_outreach_queue.json"
+    }
+  ],
+  "status": "READY"
+}

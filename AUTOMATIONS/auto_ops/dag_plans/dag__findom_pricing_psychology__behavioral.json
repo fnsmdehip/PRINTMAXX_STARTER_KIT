@@ -1,0 +1,39 @@
+{
+  "name": "integration__findom_pricing_psychology__behavioral",
+  "created": "2026-03-20T18:10:01.305854",
+  "method": "# FINDOM PRICING PSYCHOLOGY & BEHAVIORAL ECONOMICS DEEP RESEARCH  **Date:** 2026-02-05 **Classification:** Quant-Level Behavioral Economics Research **Purpose:** Optimize AI findom persona monetizatio",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "audit_current_pricing",
+      "steps": [
+        "scan PRODUCTS.csv for all active listings",
+        "scan DIGITAL_PRODUCTS/ for Gumroad/Fiverr draft pricing",
+        "scan APP_FACTORY builds for premium tier pricing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "apply_frameworks",
+      "steps": [
+        "apply anchoring (show crossed-out higher price)",
+        "apply decoy effect (3-tier good/better/best)",
+        "apply charm pricing ($47 not $50, $29 not $30)",
+        "apply loss aversion framing in copy"
+      ],
+      "parallel": true,
+      "depends_on": "audit_current_pricing"
+    },
+    {
+      "name": "generate_output",
+      "steps": [
+        "write pricing_recommendations.csv with before/after",
+        "generate A/B test variants for LEDGER/AB_TESTS_MASTER.csv",
+        "update product listing files with optimized pricing copy"
+      ],
+      "parallel": false,
+      "depends_on": "apply_frameworks"
+    }
+  ],
+  "status": "READY"
+}

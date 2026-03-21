@@ -1,0 +1,38 @@
+{
+  "name": "integration_ive_been_telling_people_faceless_conten",
+  "created": "2026-03-20T18:35:50.263810",
+  "method": "i've been telling people faceless content accounts are a real business and they look at me like i'm crazy. \n\nthis guy spent $2M on them and made $15M+ back. \n\nimo that should end the debate. paid crea",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "intel_gather",
+      "steps": [
+        "scan_account_cpm_performance",
+        "pull_tiktok_creator_rewards_rates",
+        "check_niche_cpm_rankings"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_optimize",
+      "steps": [
+        "rank_niches_by_cpm_spread",
+        "generate_batch_content_for_top3_niches",
+        "optimize_for_completion_rate_algo"
+      ],
+      "parallel": true,
+      "depends_on": "intel_gather"
+    },
+    {
+      "name": "distribute_track",
+      "steps": [
+        "queue_posts_via_content_multiplier",
+        "set_per_account_kpi_tracking",
+        "flag_high_cpm_accounts_for_doubledown"
+      ],
+      "parallel": false,
+      "depends_on": "content_optimize"
+    }
+  ],
+  "status": "READY"
+}

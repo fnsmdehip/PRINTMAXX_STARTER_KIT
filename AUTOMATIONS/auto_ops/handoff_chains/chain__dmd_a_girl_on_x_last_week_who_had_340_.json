@@ -1,0 +1,29 @@
+{
+  "name": "chain__dmd_a_girl_on_x_last_week_who_had_340_",
+  "created": "2026-03-20T18:10:02.693282",
+  "method": " dm'd a girl on x last week who had 340 followers and a bio that said \"digital products\"figured she was another one just starting outchecked her gumroad. 1 product. a $39 notion template for tracking ",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Search X for accounts with <1K followers + bio keywords (digital products, templates, notion, gumroad, creator). Extract profile, follower count, bio, links.",
+      "output": "micro_creators_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Check each creator's Gumroad/Whop/Etsy link. Extract product name, price, niche, estimated sales. Score by niche demand and replicability.",
+      "output": "product_concepts_qualified.json"
+    },
+    {
+      "agent": "generator",
+      "task": "For top-scoring concepts, generate equivalent Notion templates with better design and copy. Package with screenshots and listing copy.",
+      "output": "templates_ready/"
+    },
+    {
+      "agent": "lister",
+      "task": "Create Gumroad listings with SEO-optimized titles, descriptions, and pricing ($19-39 range). Queue for posting.",
+      "output": "gumroad_listings.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "integration_trader_bluehorseshoe86_who_previously_m",
+  "created": "2026-03-20T13:50:41.827253",
+  "method": "Trader BlueHorseshoe86, who previously made $260K betting on \"Maduro out\", is back.\n\nHe has now spent $92K betting that US x Iran ceasefire by April 15 or April 30.\n\n\nhttps://\npolymarket.com/0x44de2a5",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "fetch_polymarket_api_large_positions",
+        "fetch_known_whale_wallets"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "identify_whale_moves_over_10k",
+        "cross_reference_past_accuracy",
+        "score_conviction_level"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "create_twitter_thread_from_whale_move",
+        "add_to_posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

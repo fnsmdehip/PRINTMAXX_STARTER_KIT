@@ -1,0 +1,34 @@
+{
+  "name": "chain__post_show_me_your_startup_website_and_",
+  "created": "2026-03-20T18:09:57.302572",
+  "method": " post: show me your startup website and i'll give you actionable feedback | content: inspirational resourcestransparent startupsindie hackers | comment1: built and shipped a seasonal micro-saas in pub",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_creator",
+      "task": "Generate platform-native 'show me your website' posts with hooks that maximize replies (curiosity gap, social proof, specificity)",
+      "output": "feedback_bait_posts.json"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post to r/SideProject, r/startups, r/Entrepreneur, r/indiehackers, IndieHackers.com, Twitter",
+      "output": "distribution_log.json"
+    },
+    {
+      "agent": "scraper",
+      "task": "Monitor threads for submitted URLs, extract and store website URLs with poster info",
+      "output": "submitted_websites.json"
+    },
+    {
+      "agent": "analyzer",
+      "task": "Run Lighthouse + Claude analysis on each URL, generate 3-5 specific actionable improvements per site",
+      "output": "feedback_reports.json"
+    },
+    {
+      "agent": "converter",
+      "task": "Post feedback publicly (builds authority), then DM founders with deepest issues offering paid fix",
+      "output": "conversion_log.json"
+    }
+  ],
+  "status": "READY"
+}

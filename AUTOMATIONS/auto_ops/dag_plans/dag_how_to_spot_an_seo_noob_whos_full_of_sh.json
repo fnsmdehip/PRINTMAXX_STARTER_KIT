@@ -1,0 +1,35 @@
+{
+  "name": "integration_how_to_spot_an_seo_noob_whos_full_of_sh",
+  "created": "2026-03-20T18:09:55.902704",
+  "method": "How to spot an SEO noob who's full of shit and you should never buy their services or courses? they're telling you to implement llms.txt! I've been in this industry for almost 20 years.\n\nIf someone is",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_intel",
+      "steps": [
+        "log llms.txt=useless to LEDGER/TECH_STACK_INTEL.csv",
+        "check if any deployed sites have llms.txt and flag for removal"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "run engagement_bait_converter.py with contrarian SEO hook structure",
+        "generate 3 tweets + 1 thread debunking SEO cargo cults (llms.txt, schema-for-AI, AI-readiness audits)"
+      ],
+      "parallel": true,
+      "depends_on": "extract_intel"
+    },
+    {
+      "name": "queue_distribution",
+      "steps": [
+        "add to CONTENT/social/posting_queue/ with high-priority flag",
+        "cross-post plan: Twitter thread, LinkedIn post, Reddit r/SEO comment"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

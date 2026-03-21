@@ -1,0 +1,37 @@
+{
+  "name": "integration_backend_developers_charge_10k_for_this",
+  "created": "2026-03-20T18:09:52.199839",
+  "method": "Backend developers charge $10k+ for this.\n\nI built it in 2 hours. By myself. With AI.\n\n\u2192 Google OAuth\n\u2192 Stripe payments\n\u2192 Customer portal\n\u2192 AI integration\n\u2192 Full database\n\u2192 Everything\n\nAll deployed an",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "template_build",
+      "steps": [
+        "scaffold_nextjs_boilerplate_with_google_oauth_stripe_postgres_ai",
+        "create_one_click_deploy_script"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_3_tweets_showing_build_speed",
+        "generate_thread_breaking_down_10k_app_in_2hrs",
+        "create_cold_email_template_targeting_non_technical_founders"
+      ],
+      "parallel": true,
+      "depends_on": "template_build"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "route_cold_emails_to_eas_outbound_pipeline",
+        "post_content_to_posting_queue",
+        "add_template_as_digital_product_listing"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "chain_weve_built_our_paid_newsletter_write_wi",
+  "created": "2026-03-20T13:50:42.097212",
+  "method": "We've built our paid newsletter Write With AI to $400k in annual subscription revenue and $800k+ in digital product sales.\n\nThis is the exact roadmap to follow if you want to launch your own newslette",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_creator",
+      "task": "Generate newsletter edition from top alpha entries and trending topics in our niche verticals (AI tools, solopreneur tactics, automation)",
+      "output": "newsletter_draft.md"
+    },
+    {
+      "agent": "quality_gate",
+      "task": "Score newsletter draft against engagement metrics and no-slop rules. Reject if below 7/10.",
+      "output": "approved_edition.md"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post to Beehiiv, generate 3 social teasers, queue cross-posts",
+      "output": "distribution_log.json"
+    },
+    {
+      "agent": "product_builder",
+      "task": "Every 10 editions, bundle into paid digital product (PDF guide, template pack). Route to DIGITAL_PRODUCTS pipeline.",
+      "output": "product_listing.md"
+    }
+  ],
+  "status": "READY"
+}

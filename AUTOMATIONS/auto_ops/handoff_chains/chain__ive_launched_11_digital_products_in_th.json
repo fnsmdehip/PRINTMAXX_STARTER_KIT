@@ -1,0 +1,39 @@
+{
+  "name": "chain__ive_launched_11_digital_products_in_th",
+  "created": "2026-03-20T18:10:02.465350",
+  "method": " i've launched 11 digital products in the last 9 months8 were profitable within 7 daysthe other 3 flopped immediately and i killed themthe difference had nothing to do with the product itselfit was wh",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "product_scorer",
+      "task": "Score ready products by demand signals from REDDIT_PAIN_POINTS + ALPHA_STAGING",
+      "output": "launch_queue_ranked.json"
+    },
+    {
+      "agent": "community_mapper",
+      "task": "Map 5-6 communities per product niche using RESEARCH_SUBREDDITS + COMMUNITY_INTEL",
+      "output": "community_targets.json"
+    },
+    {
+      "agent": "content_warmup",
+      "task": "Generate 3-day content sequence: problem\u2192teaser\u2192CTA using engagement_bait_converter",
+      "output": "prelaunch_content_calendar.json"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post content per schedule, track engagement, adjust timing",
+      "output": "distribution_log.json"
+    },
+    {
+      "agent": "launcher",
+      "task": "Publish listing, announce across channels, collect social proof",
+      "output": "launch_metrics.json"
+    },
+    {
+      "agent": "kill_or_scale",
+      "task": "At 48h: <$5 revenue = kill, >$20 = double content spend, between = one more week",
+      "output": "decision_log.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration_rsaas_i_made_413_from_1700_users_in",
+  "created": "2026-03-20T13:50:39.519745",
+  "method": "[r/SaaS] I made $413 from 1,700 users in 3 months...here's the honest breakdown.",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "metrics_gather",
+      "steps": [
+        "scrape_app_analytics_from_deployment_urls",
+        "pull_git_commit_counts_and_build_dates",
+        "calculate_real_metrics_per_app"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generate",
+      "steps": [
+        "generate_honest_breakdown_post_reddit_format",
+        "generate_twitter_thread_version",
+        "generate_hn_show_version"
+      ],
+      "parallel": true,
+      "depends_on": "metrics_gather"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "route_to_content_repurposer",
+        "route_to_engagement_bait_converter"
+      ],
+      "parallel": true,
+      "depends_on": "content_generate"
+    }
+  ],
+  "status": "READY"
+}

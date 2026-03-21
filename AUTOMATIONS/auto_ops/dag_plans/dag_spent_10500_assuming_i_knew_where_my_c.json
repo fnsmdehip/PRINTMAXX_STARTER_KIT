@@ -1,0 +1,38 @@
+{
+  "name": "integration_spent_10500_assuming_i_knew_where_my_c",
+  "created": "2026-03-20T18:09:55.781673",
+  "method": "Spent $10,500 assuming I knew where my customers were. I didn't. I run an ops as a service business where I help founders of small service companies get out of the weeds so they can actually run their",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "parse_core_lesson_channel_validation",
+        "parse_ops_as_service_model_details",
+        "extract_dollar_amounts_and_timeline"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_3_tweets_cautionary_tale",
+        "generate_1_thread_10500_wasted",
+        "generate_contrarian_take_linkedin_is_dead_for_service_biz"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "append_to_posting_queue",
+        "tag_for_engagement_bait_converter",
+        "update_content_calendar"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

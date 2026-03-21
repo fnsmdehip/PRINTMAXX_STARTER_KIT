@@ -1,0 +1,34 @@
+{
+  "name": "chain__for_reference_this_original_video_on_le",
+  "created": "2026-03-20T18:09:58.251376",
+  "method": " for reference this original video on left has 525.1k views and added $15k mrr to the product it promotedall i did was just coped the link, pasted that into stunt and it generated me a clone of the ug",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Find UGC videos with 100K+ views promoting apps/SaaS, download via yt-dlp",
+      "output": "viral_ugc_raw.json"
+    },
+    {
+      "agent": "analyzer",
+      "task": "Whisper transcribe, extract hook/body/CTA structure, score replicability",
+      "output": "ugc_templates.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Rewrite scripts for our products preserving proven structure, swap product refs",
+      "output": "clone_scripts.json"
+    },
+    {
+      "agent": "producer",
+      "task": "Assemble video via Remotion or ffmpeg with captions overlay",
+      "output": "ready_videos/"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post to TikTok/IG/X via posting queue with platform-specific edits",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

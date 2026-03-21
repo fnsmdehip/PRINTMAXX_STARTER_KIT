@@ -1,0 +1,58 @@
+{
+  "name": "integration_chinese_mobile_app_studio_printing_4mm",
+  "created": "2026-03-20T13:50:42.885272",
+  "method": "Chinese mobile app studio printing $4M/month with simple AI app wrappers\n\n\u2192 CoinSnap: Coin Identifier ( $700K/month )\n\u2192 AntiqSnap: Antique Identifier  ( $400K/month)\n\u2192 Calo: AI Food Calorie Counter ( ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "niche_research",
+      "steps": [
+        "scrape_app_store_identifier_keywords",
+        "score_niches_by_revenue_and_competition",
+        "select_top_5_niches"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "template_build",
+      "steps": [
+        "build_camera_capture_component",
+        "build_ai_vision_api_layer",
+        "build_result_card_ui",
+        "build_subscription_paywall"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "app_generation",
+      "steps": [
+        "generate_app_per_niche_from_template",
+        "customize_branding_and_aso_copy",
+        "generate_app_store_screenshots"
+      ],
+      "parallel": true,
+      "depends_on": "template_build"
+    },
+    {
+      "name": "deploy_and_optimize",
+      "steps": [
+        "build_landing_pages_per_app",
+        "submit_to_app_store",
+        "deploy_landing_to_surge"
+      ],
+      "parallel": true,
+      "depends_on": "app_generation"
+    },
+    {
+      "name": "aso_growth",
+      "steps": [
+        "monitor_keyword_rankings",
+        "ab_test_screenshots_and_descriptions",
+        "cross_promote_between_identifier_apps"
+      ],
+      "parallel": false,
+      "depends_on": "deploy_and_optimize"
+    }
+  ],
+  "status": "READY"
+}

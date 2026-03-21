@@ -1,0 +1,38 @@
+{
+  "name": "integration_online_business_acquisition_framework_o",
+  "created": "2026-03-20T13:50:39.502414",
+  "method": "Online business acquisition framework (Onfolio, Nasdaq: ONFO): buy at 3-3.5x annual cash flow. Opportunity cost of management energy constant regardless of deal size. Small deals only as bolt-ons to e",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "scrape_marketplaces",
+      "steps": [
+        "scrape_flippa_api",
+        "scrape_acquire_rss",
+        "scrape_bizbuysell_listings"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_and_filter",
+      "steps": [
+        "calculate_cash_flow_multiple",
+        "flag_under_3x_deals",
+        "check_institutional_knowledge_risk"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_marketplaces"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "generate_deal_alert_report",
+        "generate_acquisition_analysis_thread",
+        "append_to_alpha_staging"
+      ],
+      "parallel": true,
+      "depends_on": "score_and_filter"
+    }
+  ],
+  "status": "READY"
+}

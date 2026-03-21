@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_spent_4_hours_a_day_on_reddit_to_get_m",
+  "created": "2026-03-20T13:50:40.759302",
+  "method": "I spent 4 hours a day on Reddit to get my first 50 customers",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "reddit_monitor",
+      "task": "scrape target subreddits for threads matching product keywords (streak apps, prayer apps, focus apps, MCP tools, Claude Code tips)",
+      "output": "reddit_opportunities.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "score each thread: intent (1-10), recency (<24h), competition (few replies = better), subreddit rules compliance",
+      "output": "qualified_threads.json"
+    },
+    {
+      "agent": "response_drafter",
+      "task": "draft helpful response that genuinely answers the question, weave in product mention only when directly relevant, match subreddit tone",
+      "output": "draft_responses.json"
+    },
+    {
+      "agent": "queue_manager",
+      "task": "add to posting queue with cooldown tracking (max 3 posts/sub/day, vary timing, no spam patterns)",
+      "output": "posting_queue.jsonl"
+    }
+  ],
+  "status": "READY"
+}

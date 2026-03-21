@@ -1,0 +1,46 @@
+{
+  "name": "integration_vibecoded_services_300800build_mic",
+  "created": "2026-03-20T18:35:55.091777",
+  "method": "vibe-coded services: $300-800/build. micro-saas $5-15/mo. tools + maintenance = recurring. vibe coding services: custom builds $300-800. micro-saas $5-15/mo (10-20 users). internal tools $300-1k + $50",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "scan_demand",
+      "steps": [
+        "scrape_upwork_vibe_coding_requests",
+        "scrape_reddit_forhire_buildmysaas",
+        "scrape_twitter_looking_for_developer"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_leads",
+      "steps": [
+        "score_by_budget_and_stack_match",
+        "filter_to_our_capabilities"
+      ],
+      "parallel": false,
+      "depends_on": "scan_demand"
+    },
+    {
+      "name": "generate_proposals",
+      "steps": [
+        "auto_scope_from_description",
+        "generate_quote_300_800_range",
+        "draft_portfolio_proof"
+      ],
+      "parallel": true,
+      "depends_on": "qualify_leads"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "send_proposals_via_platform",
+        "log_to_freelance_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "generate_proposals"
+    }
+  ],
+  "status": "READY"
+}

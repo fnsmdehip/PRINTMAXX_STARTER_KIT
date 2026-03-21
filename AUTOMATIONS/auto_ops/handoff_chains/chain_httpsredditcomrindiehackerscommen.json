@@ -1,0 +1,24 @@
+{
+  "name": "chain_httpsredditcomrindiehackerscommen",
+  "created": "2026-03-20T23:12:24.844288",
+  "method": "https://reddit.com/r/indiehackers/comments/1rqp0po/im_a_solo_founder_and_today_is_the_biggest_day_of/",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape top 50 r/indiehackers posts matching 'biggest day|first sale|hit.*MRR|launched|just crossed' sorted by top/month. Extract title, body, upvotes, comment count.",
+      "output": "ih_milestone_raw.json"
+    },
+    {
+      "agent": "analyzer",
+      "task": "Run claude -p on each post: extract (1) hook sentence structure, (2) vulnerability/emotion word used, (3) specific number/milestone anchored, (4) CTA or social proof at end. Score engagement = upvotes * sqrt(comments).",
+      "output": "ih_hook_templates.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Map top 10 hook templates to PRINTMAXX milestones: app launches, first Stripe revenue, streak app user #1, deployment count milestones. Generate 3 posts per template. Route to CONTENT/social/posting_queue/.",
+      "output": "ih_derived_posts.txt"
+    }
+  ],
+  "status": "READY"
+}

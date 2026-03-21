@@ -1,0 +1,35 @@
+{
+  "name": "integration_making_250month_with_game_apps_what_w",
+  "created": "2026-03-20T18:09:54.150197",
+  "method": "Making $250/month with game apps (what worked for me) Been using [Playful](http://hustleap.com) (get paid to play app) for a few months now. Not life changing money but it genuinely covers my phone bi",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_top_reward_apps_affiliate_programs",
+        "extract_payout_structures_and_referral_rates"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_3_engagement_bait_posts_reward_app_income",
+        "generate_1_thread_comparing_reward_apps_earnings"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "wire_affiliate_links_into_posts"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

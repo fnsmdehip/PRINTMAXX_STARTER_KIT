@@ -1,0 +1,38 @@
+{
+  "name": "integration_women_aged_3555_are_the_most_profitable",
+  "created": "2026-03-20T18:35:51.197403",
+  "method": "Women aged 35-55 are the most profitable and most ignored audience on the entire internet and the numbers on this are actually insane\u2026\n\nThis demographic controls 85% of household purchasing decisions ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan DEPLOYMENT_URLS for all live apps",
+        "score each for W35-55 appeal (colors, copy, features, pain points)",
+        "identify top 10 repositioning candidates"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "reposition",
+      "steps": [
+        "generate alternate headlines/copy targeting W35-55 pain points (household management, wellness, faith, organization)",
+        "create Pinterest-optimized image descriptions",
+        "create Facebook ad copy variants"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue repositioned content to CONTENT/social/posting_queue/",
+        "create A/B test entries in LEDGER/AB_TESTS_MASTER.csv",
+        "log results to LEDGER/CONTENT_PERFORMANCE_LOG.csv"
+      ],
+      "parallel": false,
+      "depends_on": "reposition"
+    }
+  ],
+  "status": "READY"
+}

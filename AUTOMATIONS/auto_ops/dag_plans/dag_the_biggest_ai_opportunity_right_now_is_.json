@@ -1,0 +1,40 @@
+{
+  "name": "integration_the_biggest_ai_opportunity_right_now_is_",
+  "created": "2026-03-20T13:50:42.833903",
+  "method": "the biggest AI opportunity right now is mid-market companies ($5M-$50M+ revenue):\n\n\u2022 too big for cookie-cutter solutions\n\u2022 too small for enterprise consulting \n\u2022 drowning in manual workflows\n\u2022 have bu",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "scrape_sources",
+      "steps": [
+        "scrape_indeed_manual_workflow_jobs",
+        "scrape_linkedin_company_signals",
+        "scrape_crunchbase_revenue_filter",
+        "scrape_builtwith_for_legacy_stack"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_and_score",
+      "steps": [
+        "merge_dedupe_companies",
+        "score_ai_readiness_0_to_10",
+        "filter_5M_50M_revenue_band",
+        "detect_manual_workflow_density"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_sources"
+    },
+    {
+      "name": "generate_outreach",
+      "steps": [
+        "generate_custom_audit_proposal_per_company",
+        "personalize_cold_email_with_workflow_pain_points",
+        "queue_to_outbound_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "qualify_and_score"
+    }
+  ],
+  "status": "READY"
+}

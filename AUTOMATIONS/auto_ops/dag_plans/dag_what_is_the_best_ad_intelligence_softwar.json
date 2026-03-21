@@ -1,0 +1,37 @@
+{
+  "name": "integration_what_is_the_best_ad_intelligence_softwar",
+  "created": "2026-03-20T13:50:39.532437",
+  "method": "What is the best ad intelligence software affiliate marketers",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_affiliate_program_details",
+        "extract_payout_structures",
+        "identify_free_trial_hooks"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "build_comparison_page_html",
+        "build_vs_pages_top3_tools",
+        "generate_social_posts"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy_to_surge",
+        "submit_to_content_distribution"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

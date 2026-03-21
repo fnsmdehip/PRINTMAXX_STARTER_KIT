@@ -1,0 +1,38 @@
+{
+  "name": "integration_stop_what_youre_doing_right_nowanthr",
+  "created": "2026-03-20T18:35:51.153609",
+  "method": "Stop what you\u2019re doing right now.\n\nAnthropic just dropped a free AI academy with 13 courses and official certificates across MCP, APIs, Claude Code, and fluency.\n\nPeople used to pay $2k for bootcamps ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_academy_course_list",
+        "extract_cert_requirements",
+        "identify_gaps_vs_our_products"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_3_tweets_academy_signal",
+        "generate_1_thread_free_vs_paid_bootcamp",
+        "generate_comparison_post_academy_vs_advanced_guides"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "update_digital_product_listings_with_cert_credibility",
+        "add_academy_link_to_claude_code_guide_listings"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "integration_500_ugc_cost_reduced_to_pennies_38_c",
+  "created": "2026-03-20T18:09:56.978829",
+  "method": "$500+ ugc cost reduced to pennies. 38% conversion boost. sell as service.  ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "generate_assets",
+      "steps": [
+        "claude_script_writer_5_niches",
+        "remotion_render_sample_videos",
+        "build_portfolio_landing_page"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "prospect",
+      "steps": [
+        "scrape_ig_ads_library_for_ugc_spenders",
+        "scrape_fiverr_ugc_buyers",
+        "qualify_leads_by_ad_spend"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_cold_emails_with_portfolio",
+        "send_via_cold_email_script"
+      ],
+      "parallel": false,
+      "depends_on": "generate_assets"
+    },
+    {
+      "name": "fulfill",
+      "steps": [
+        "client_brief_to_script",
+        "remotion_render",
+        "deliver_revisions"
+      ],
+      "parallel": false,
+      "depends_on": "outreach"
+    }
+  ],
+  "status": "READY"
+}

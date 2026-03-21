@@ -1,0 +1,46 @@
+{
+  "name": "integration__this_is_a_genius_format_to_use_to_push_",
+  "created": "2026-03-20T18:10:02.515791",
+  "method": " this is a genius format to use to push traffic for whop affiliate on youtube i hardly see anyone using yt in this way but it\u2019s genius they utilise shorts and push the traffic from shorts to their you",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_planning",
+      "steps": [
+        "generate_longform_script_with_whop_angle",
+        "identify_3_clip_moments_per_longform"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "production",
+      "steps": [
+        "generate_shorts_scripts_with_cta_hooks",
+        "write_longform_description_with_affiliate_links",
+        "create_pinned_comment_templates"
+      ],
+      "parallel": true,
+      "depends_on": "content_planning"
+    },
+    {
+      "name": "optimization",
+      "steps": [
+        "ab_test_cta_variants",
+        "optimize_shorts_titles_for_algo",
+        "inject_whop_affiliate_links_in_all_surfaces"
+      ],
+      "parallel": true,
+      "depends_on": "production"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "schedule_shorts_posting_cadence",
+        "cross_post_shorts_to_tiktok_ig_reels"
+      ],
+      "parallel": true,
+      "depends_on": "optimization"
+    }
+  ],
+  "status": "READY"
+}

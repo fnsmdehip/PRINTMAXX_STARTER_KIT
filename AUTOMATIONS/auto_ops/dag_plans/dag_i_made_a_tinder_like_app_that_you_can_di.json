@@ -1,0 +1,47 @@
+{
+  "name": "integration_i_made_a_tinder_like_app_that_you_can_di",
+  "created": "2026-03-20T18:09:55.964117",
+  "method": "I made a Tinder like app that you can discover and star repos (Android version)",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "data_harvest",
+      "steps": [
+        "scrape_github_trending_api",
+        "scrape_github_topics_api",
+        "fetch_repo_metadata_readmes"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_cards",
+      "steps": [
+        "generate_swipe_card_json",
+        "extract_screenshots_og_images",
+        "score_repos_by_stars_recency_activity"
+      ],
+      "parallel": true,
+      "depends_on": "data_harvest"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "build_pwa_with_swipe_ui_template",
+        "deploy_to_surge"
+      ],
+      "parallel": false,
+      "depends_on": "build_cards"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_to_reddit_sideproject_webdev",
+        "tweet_from_tech_account",
+        "submit_to_product_hunt"
+      ],
+      "parallel": true,
+      "depends_on": "deploy"
+    }
+  ],
+  "status": "READY"
+}

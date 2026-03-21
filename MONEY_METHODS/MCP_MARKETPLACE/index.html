@@ -8,19 +8,24 @@
   <meta property="og:title" content="MCPHub - MCP server directory">
   <meta property="og:description" content="find the MCP server you need in 30 seconds. 30+ curated servers, searchable, filterable.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mcphub.surge.sh/">
+  <meta property="og:url" content="https://mcp-marketplace.surge.sh/">
   <meta property="og:site_name" content="MCPHub">
-  <meta property="og:image" content="https://mcphub.surge.sh/og-image.png">
-  <meta name="keywords" content="MCP server directory, model context protocol servers, claude MCP servers, MCP server list, AI tool servers, claude tools directory, MCP marketplace 2026">
+  <meta property="og:image" content="https://mcp-marketplace.surge.sh/og-image.png">
+  <meta name="keywords" content="MCP server directory, model context protocol servers, claude MCP servers, MCP server list, AI tool servers, claude tools directory, MCP marketplace 2026, best MCP servers, claude code MCP, model context protocol marketplace">
   <meta name="robots" content="index, follow">
+  <meta name="author" content="PRINTMAXX">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@printmaxxer">
+  <meta name="twitter:creator" content="@printmaxxer">
   <meta name="twitter:title" content="MCPHub - MCP Server Directory">
   <meta name="twitter:description" content="find the MCP server you need in 30 seconds. 30+ curated servers for Claude and any AI client.">
-  <meta name="twitter:image" content="https://mcphub.surge.sh/og-image.png">
-  <link rel="canonical" href="https://mcphub.surge.sh/">
+  <meta name="twitter:image" content="https://mcp-marketplace.surge.sh/og-image.png">
+  <link rel="canonical" href="https://mcp-marketplace.surge.sh/">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"MCPHub","description":"The directory of MCP servers for Claude, ChatGPT, and any AI client. Search 30+ servers, filter by category, install in one command.","url":"https://mcphub.surge.sh/","applicationCategory":"DeveloperApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"keywords":"MCP server directory, model context protocol, claude tools, AI server marketplace"}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"MCPHub - MCP Server Directory","description":"The directory of MCP servers for Claude, ChatGPT, and any AI client. Search 30+ servers, filter by category, install in one command.","url":"https://mcp-marketplace.surge.sh/","applicationCategory":"DeveloperApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"keywords":"MCP server directory, model context protocol, claude tools, AI server marketplace","sameAs":["https://mcphub.surge.sh/"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an MCP server?","acceptedAnswer":{"@type":"Answer","text":"MCP (Model Context Protocol) servers are plugins that extend AI assistants like Claude with new capabilities. They let Claude read files, search the web, query databases, and control applications. MCPHub lists 30+ curated servers with one-command installation."}},{"@type":"Question","name":"Which MCP servers work with Claude Code?","acceptedAnswer":{"@type":"Answer","text":"Most MCP servers in the MCPHub directory work with Claude Code. Popular options include filesystem access, GitHub integration, database connectors, web search, Slack, and more. Each listing includes the Claude Code install command."}},{"@type":"Question","name":"How do I install an MCP server?","acceptedAnswer":{"@type":"Answer","text":"Copy the install command from any server listing on MCPHub and paste it into your terminal. Most MCP servers install in under 60 seconds using npx or pip. No account required."}}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -206,6 +211,21 @@
       border-radius: 4px; font-weight: 600; text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+    .verified-badge {
+      font-size: 10px; padding: 2px 6px;
+      background: var(--green-dim); color: var(--green);
+      border-radius: 4px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex; align-items: center; gap: 3px;
+    }
+    .security-banner {
+      background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(6,182,212,0.08));
+      border: 1px solid rgba(34,197,94,0.2);
+      border-radius: var(--radius-lg); padding: 16px 24px;
+      max-width: 800px; margin: 32px auto 0;
+      text-align: center; font-size: 14px; color: var(--text-dim);
+    }
+    .security-banner strong { color: var(--green); }
     .server-stars {
       display: flex; align-items: center; gap: 4px;
       font-size: 13px; color: var(--text-dim);
@@ -361,7 +381,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-badge">33 servers indexed and counting</div>
+    <div class="hero-badge">51 servers indexed — 30 verified safe</div>
     <h1>find the <span class="gradient">MCP server</span> you need in 30 seconds</h1>
     <p>the directory for Model Context Protocol servers. search, filter, copy the install command. done.</p>
     <div class="search-container">
@@ -372,17 +392,21 @@
     </div>
     <div class="stats">
       <div class="stat">
-        <div class="stat-num" id="total-servers">33</div>
+        <div class="stat-num" id="total-servers">51</div>
         <div class="stat-label">servers indexed</div>
       </div>
       <div class="stat">
-        <div class="stat-num">7</div>
-        <div class="stat-label">categories</div>
+        <div class="stat-num" id="verified-count">30</div>
+        <div class="stat-label">verified safe</div>
       </div>
       <div class="stat">
         <div class="stat-num">1 cmd</div>
         <div class="stat-label">to install</div>
       </div>
+    </div>
+    <div class="security-banner">
+      <strong>verified safe</strong> — we audit official and well-known servers so you don't install something malicious.
+      OpenClaw had 512 vulnerabilities and 20% malicious skills. we check so you don't have to.
     </div>
   </div>
 
@@ -431,6 +455,21 @@
         <span class="cat-icon">%</span>
         <div class="cat-name">e-commerce</div>
         <div class="cat-count" id="count-E-commerce"></div>
+      </div>
+      <div class="cat-card" data-category="Utilities" onclick="filterCategory('Utilities', this)">
+        <span class="cat-icon">#</span>
+        <div class="cat-name">utilities</div>
+        <div class="cat-count" id="count-Utilities"></div>
+      </div>
+      <div class="cat-card" data-category="Research" onclick="filterCategory('Research', this)">
+        <span class="cat-icon">?</span>
+        <div class="cat-name">research</div>
+        <div class="cat-count" id="count-Research"></div>
+      </div>
+      <div class="cat-card" data-category="Media" onclick="filterCategory('Media', this)">
+        <span class="cat-icon">&gt;</span>
+        <div class="cat-name">media</div>
+        <div class="cat-count" id="count-Media"></div>
       </div>
     </div>
   </section>
@@ -525,6 +564,11 @@
         if (el) el.textContent = cats[cat] + ' servers';
       });
       document.getElementById('total-servers').textContent = servers.length;
+      var verifiedEl = document.getElementById('verified-count');
+      if (verifiedEl) {
+        var verifiedCount = servers.filter(function(s) { return s.verified; }).length;
+        verifiedEl.textContent = verifiedCount;
+      }
     }
 
     function renderFeatured() {
@@ -562,6 +606,12 @@
         badge.className = 'featured-badge';
         badge.textContent = 'featured';
         nameDiv.appendChild(badge);
+      }
+      if (s.verified) {
+        var vbadge = document.createElement('span');
+        vbadge.className = 'verified-badge';
+        vbadge.textContent = '✓ verified';
+        nameDiv.appendChild(vbadge);
       }
 
       var starsDiv = document.createElement('div');

@@ -1,0 +1,49 @@
+{
+  "name": "integration__how_are_you_building_up_brand_mentions_",
+  "created": "2026-03-20T18:09:58.277438",
+  "method": " how are you building up brand mentions in llms? trying to come up with an aeo strategy for my saas startup and realized i was really on the wrong track researching things like how to get cited as a s",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_perplexity_for_niche_queries",
+        "scrape_chatgpt_trending_questions",
+        "identify_uncited_opportunity_queries"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_creation",
+      "steps": [
+        "generate_structured_faq_pages",
+        "generate_comparison_pages",
+        "generate_authoritative_how_to_guides"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "post_to_reddit_target_subs",
+        "post_to_devto_medium",
+        "update_existing_landing_pages_with_schema",
+        "seed_github_discussions"
+      ],
+      "parallel": true,
+      "depends_on": "content_creation"
+    },
+    {
+      "name": "monitoring",
+      "steps": [
+        "query_perplexity_api_for_brand_mentions",
+        "log_citation_changes",
+        "update_aeo_dashboard"
+      ],
+      "parallel": false,
+      "depends_on": "distribution"
+    }
+  ],
+  "status": "READY"
+}

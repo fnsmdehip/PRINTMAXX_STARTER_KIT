@@ -1,0 +1,36 @@
+{
+  "name": "integration_the_headlines_on_monetization_in_2026",
+  "created": "2026-03-20T18:35:50.201739",
+  "method": "The headlines on monetization in 2026:\n\nAI sells, but it doesn\u2019t stick: AI-powered apps generate 41% more revenue per payer\u00a0but churn 30% faster\n\n\u00a0Web monetization is a defining trait of success: 41% ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit_web_monetization",
+      "steps": [
+        "scan DEPLOYMENT_URLS for payment links",
+        "categorize apps: has_web_payment vs app_only vs no_payment"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "add_web_payments",
+      "steps": [
+        "generate Stripe payment links for unmonetized apps",
+        "inject payment CTA into landing pages",
+        "add anti-churn streak reinforcement UI to AI apps"
+      ],
+      "parallel": true,
+      "depends_on": "audit_web_monetization"
+    },
+    {
+      "name": "monitor_churn",
+      "steps": [
+        "set up weekly churn rate check via Stripe MCP",
+        "log web_revenue vs iap_revenue split"
+      ],
+      "parallel": false,
+      "depends_on": "add_web_payments"
+    }
+  ],
+  "status": "READY"
+}

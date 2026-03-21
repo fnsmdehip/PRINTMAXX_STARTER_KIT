@@ -1,0 +1,24 @@
+{
+  "name": "chain__service_fulfillment_sops__purpose",
+  "created": "2026-03-20T18:10:00.932121",
+  "method": "# Service Fulfillment SOPs  **Purpose:** Step-by-step checklists for delivering all 8 PRINTMAXX services. Use these to train VAs or execute yourself.  **Philosophy:** Under-promise, over-deliver. Ship",
+  "venture": "MONETIZE",
+  "stages": [
+    {
+      "agent": "qualifier",
+      "task": "Match inbound lead to one of 8 service types from FREELANCE_PIPELINE_ACTIVE.csv",
+      "output": "matched_service.json"
+    },
+    {
+      "agent": "fulfillment",
+      "task": "Load correct SOP checklist, generate timeline and deliverable list for client",
+      "output": "delivery_plan.md"
+    },
+    {
+      "agent": "communicator",
+      "task": "Generate proactive client update emails at each milestone",
+      "output": "client_comms.json"
+    }
+  ],
+  "status": "READY"
+}

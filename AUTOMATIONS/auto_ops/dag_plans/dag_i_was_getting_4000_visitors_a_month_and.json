@@ -1,0 +1,49 @@
+{
+  "name": "integration_i_was_getting_4000_visitors_a_month_and",
+  "created": "2026-03-20T18:35:52.834188",
+  "method": "I was getting 4,000 visitors a month and making $0. Here's what was actually broken. The traffic was real. Google Analytics confirmed it every morning. 4,000 unique visitors in month 3. I thought I wa",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "crawl_all_sites",
+      "steps": [
+        "load_deployment_urls_from_OPS",
+        "playwright_visit_each_site",
+        "extract_page_structure_cta_payment_links"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_funnels",
+      "steps": [
+        "check_cta_exists_above_fold",
+        "check_payment_link_resolves",
+        "check_pricing_visible",
+        "check_email_capture_exists",
+        "check_value_prop_clarity",
+        "check_mobile_responsiveness"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "prioritize_fixes",
+      "steps": [
+        "rank_sites_by_traffic_x_conversion_gap",
+        "generate_fix_script_per_site"
+      ],
+      "parallel": false,
+      "depends_on": "score_funnels"
+    },
+    {
+      "name": "apply_and_redeploy",
+      "steps": [
+        "apply_highest_priority_fixes",
+        "redeploy_to_surge",
+        "verify_post_deploy"
+      ],
+      "parallel": false,
+      "depends_on": "prioritize_fixes"
+    }
+  ],
+  "status": "READY"
+}

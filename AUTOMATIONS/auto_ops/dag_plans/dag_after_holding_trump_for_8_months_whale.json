@@ -1,0 +1,37 @@
+{
+  "name": "integration_after_holding_trump_for_8_months_whale",
+  "created": "2026-03-20T13:50:43.003788",
+  "method": "After holding $TRUMP for 8 months, whale 2sBcbh finally gave up and sold 211,343 $TRUMP($847K) at a $1.29M loss. \n\nHe bought 211,343 $TRUMP($2.13M) at $10 eight months ago.\n\nHe also bought 18,787 $SOL",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_wallets",
+      "steps": [
+        "query_solscan_api_for_tracked_wallets",
+        "query_arkham_free_explorer_for_movements"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "detect_signals",
+      "steps": [
+        "filter_significant_moves_over_100k",
+        "calculate_pnl_and_loss_amounts",
+        "rank_by_engagement_potential"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_wallets"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "format_whale_alert_post_with_exact_numbers",
+        "add_consequence_first_hook",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "detect_signals"
+    }
+  ],
+  "status": "READY"
+}

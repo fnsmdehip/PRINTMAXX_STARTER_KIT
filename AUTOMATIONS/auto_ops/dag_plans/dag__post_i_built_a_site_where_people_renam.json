@@ -1,0 +1,37 @@
+{
+  "name": "integration__post_i_built_a_site_where_people_renam",
+  "created": "2026-03-20T18:35:54.980737",
+  "method": " post: i built a site where people rename world geography | content: welcome to r/sideproject, a subreddit for sharing and receiving constructive feedback on side projects.this is also a subreddit to ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_viral_tool_ideas_reddit",
+        "score_ideas_by_virality_and_build_effort"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_tool_from_template",
+        "add_ad_monetization_snippet"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy_distribute",
+      "steps": [
+        "deploy_to_surge",
+        "post_to_sideproject_subreddit",
+        "post_to_hn_show",
+        "generate_3_tweets"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    }
+  ],
+  "status": "READY"
+}

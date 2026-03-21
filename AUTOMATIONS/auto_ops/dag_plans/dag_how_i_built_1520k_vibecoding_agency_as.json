@@ -1,0 +1,48 @@
+{
+  "name": "integration_how_i_built_1520k_vibecoding_agency_as",
+  "created": "2026-03-20T12:04:46.173772",
+  "method": "How I built $15-20k vibecoding agency as non-technical history undergrad",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "scrape_leads",
+      "steps": [
+        "scrape_reddit_app_requests",
+        "scrape_twitter_need_app",
+        "scrape_upwork_mvp_gigs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "score_budget_signals",
+        "check_urgency",
+        "filter_already_contacted"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_leads"
+    },
+    {
+      "name": "generate_proposals",
+      "steps": [
+        "match_portfolio_to_need",
+        "generate_custom_proposal",
+        "attach_proof_of_work"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "send_cold_dm",
+        "send_cold_email",
+        "log_to_crm"
+      ],
+      "parallel": true,
+      "depends_on": "generate_proposals"
+    }
+  ],
+  "status": "READY"
+}

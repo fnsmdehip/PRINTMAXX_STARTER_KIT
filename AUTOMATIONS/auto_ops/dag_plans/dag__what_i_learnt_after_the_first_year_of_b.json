@@ -1,0 +1,35 @@
+{
+  "name": "integration__what_i_learnt_after_the_first_year_of_b",
+  "created": "2026-03-20T18:09:58.458859",
+  "method": " what i learnt after the first year of bootstrapping a saas product hey fellow builders \ud83d\udc4b\n\nsometimes it is necessary to look back and reflect on the journey. decided to try and share my thoughts.\n\n**m",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_lessons",
+      "steps": [
+        "scrape_reddit_r_saas_r_startups_indiehackers_for_bootstrapping_narratives",
+        "scrape_hn_show_launches_with_retrospective_posts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_patterns",
+      "steps": [
+        "extract_lesson_categories_pricing_churn_marketing_tech_debt_mental_health",
+        "score_lessons_by_novelty_and_applicability_to_printmaxx_niches"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_lessons"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_3_narrative_threads_per_niche_using_consequence_first_hooks",
+        "queue_to_posting_queue_with_platform_specific_formatting"
+      ],
+      "parallel": false,
+      "depends_on": "extract_patterns"
+    }
+  ],
+  "status": "READY"
+}

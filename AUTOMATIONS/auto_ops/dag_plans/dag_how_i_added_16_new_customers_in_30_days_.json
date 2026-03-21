@@ -1,0 +1,47 @@
+{
+  "name": "integration_how_i_added_16_new_customers_in_30_days_",
+  "created": "2026-03-20T18:35:53.238596",
+  "method": "How I Added 16 New Customers in 30 Days (+31% MRR) Hey everybody, hope it\u2019s going well.\n\nI want to share the results of my last 30 days running my SaaS, what worked, what didn\u2019t, and what I\u2019ll improve",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "prospect_build",
+      "steps": [
+        "scrape_linkedin_targets_from_icp",
+        "scrape_email_leads_from_apollo_free_tier",
+        "scrape_reddit_subreddit_posters"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_enrich",
+      "steps": [
+        "score_leads_by_icp_fit",
+        "enrich_with_company_data",
+        "deduplicate_across_channels"
+      ],
+      "parallel": true,
+      "depends_on": "prospect_build"
+    },
+    {
+      "name": "outreach_execute",
+      "steps": [
+        "linkedin_ai_agent_messages_36_per_day",
+        "cold_email_sequences_500_per_day",
+        "reddit_value_comments_10_per_day"
+      ],
+      "parallel": true,
+      "depends_on": "qualify_enrich"
+    },
+    {
+      "name": "demo_convert",
+      "steps": [
+        "track_replies_and_book_demos",
+        "prep_demo_context_from_lead_data"
+      ],
+      "parallel": false,
+      "depends_on": "outreach_execute"
+    }
+  ],
+  "status": "READY"
+}

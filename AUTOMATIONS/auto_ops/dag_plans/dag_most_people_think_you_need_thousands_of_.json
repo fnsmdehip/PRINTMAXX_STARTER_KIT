@@ -1,0 +1,35 @@
+{
+  "name": "integration_most_people_think_you_need_thousands_of_",
+  "created": "2026-03-20T18:35:51.685086",
+  "method": "most people think you need thousands of followers to make money with digital products\n\ni had 411 followers when i made my first $2K month\n\nhere's what actually happened and why follower count is the b",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_problems",
+      "steps": [
+        "scrape_reddit_pain_points_3_niches",
+        "scrape_twitter_complaints_in_niche"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "match_products",
+      "steps": [
+        "map_pain_points_to_existing_digital_products",
+        "identify_product_gaps"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_problems"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_problem_first_tweets_with_product_links",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "match_products"
+    }
+  ],
+  "status": "READY"
+}

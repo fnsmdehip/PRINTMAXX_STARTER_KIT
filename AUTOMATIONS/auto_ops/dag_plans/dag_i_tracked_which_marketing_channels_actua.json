@@ -1,0 +1,47 @@
+{
+  "name": "integration_i_tracked_which_marketing_channels_actua",
+  "created": "2026-03-20T18:35:53.910032",
+  "method": "I tracked which marketing channels actually make money vs just send traffic. The results surprised me. I sell a $39 digital product. After a month of marketing across every channel I could find, I fin",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "instrument",
+      "steps": [
+        "add_utm_params_to_all_product_links",
+        "create_redirect_tracker_endpoints"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "collect",
+      "steps": [
+        "scrape_surge_access_logs",
+        "parse_utm_referrers",
+        "count_clicks_by_channel"
+      ],
+      "parallel": true,
+      "depends_on": "instrument"
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "compute_conversion_rate_per_channel",
+        "compute_cost_per_acquisition",
+        "rank_channels_by_roi"
+      ],
+      "parallel": false,
+      "depends_on": "collect"
+    },
+    {
+      "name": "reallocate",
+      "steps": [
+        "update_posting_queue_channel_weights",
+        "generate_channel_performance_report",
+        "flag_zero_conversion_channels"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

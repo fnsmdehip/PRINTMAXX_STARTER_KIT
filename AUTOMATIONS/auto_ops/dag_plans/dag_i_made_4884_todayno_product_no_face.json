@@ -1,0 +1,47 @@
+{
+  "name": "integration_i_made_4884_todayno_product_no_face",
+  "created": "2026-03-20T18:35:51.889070",
+  "method": "I Made $4,884 today\n\nno product, no face, no prior audience\njust making viral TikTok slideshows\n\nif you won't pull at least $1K in the first 7 days there is literally 0 hope for you man\n\nRetweet & Com",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_trending_tiktok_topics",
+        "identify_high_cpm_niches",
+        "pull_viral_slideshow_formats"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "write_slideshow_scripts_5x",
+        "generate_slide_images_via_html_screenshot",
+        "select_trending_audio_tags"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "compile",
+      "steps": [
+        "assemble_slideshow_sequences",
+        "add_text_overlays_and_hooks",
+        "write_captions_with_cta"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "add_to_posting_queue",
+        "log_kpi_metrics"
+      ],
+      "parallel": true,
+      "depends_on": "compile"
+    }
+  ],
+  "status": "READY"
+}

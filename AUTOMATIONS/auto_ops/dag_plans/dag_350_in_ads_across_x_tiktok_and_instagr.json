@@ -1,0 +1,37 @@
+{
+  "name": "integration_350_in_ads_across_x_tiktok_and_instagr",
+  "created": "2026-03-20T18:35:53.409890",
+  "method": "$350 in ads across X, TikTok and Instagram. Only one platform worked (kinda) We ran paid ads for our SaaS on X, TikTok and Instagram.\n\nX:\n\n$100 \u2192 \\~300 website visits\n\nSignups: 1\n\nA lot of it looked l",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_intelligence",
+      "steps": [
+        "parse_ad_performance_data",
+        "calculate_true_cpc_per_signup",
+        "flag_misclick_ratio_per_platform"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "update_knowledge_base",
+      "steps": [
+        "append_to_MARKETING_CHANNELS_MASTER",
+        "update_ad_spend_routing_rules",
+        "log_organic_residual_insight"
+      ],
+      "parallel": true,
+      "depends_on": "extract_intelligence"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_thread_ad_spend_breakdown",
+        "create_contrarian_post_tiktok_ads_waste"
+      ],
+      "parallel": true,
+      "depends_on": "extract_intelligence"
+    }
+  ],
+  "status": "READY"
+}

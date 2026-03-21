@@ -366,7 +366,11 @@ def run_tasks(day: int | None = None, dry_run: bool = False) -> dict[str, Any]:
 
     theme = plan.get("theme", "UNKNOWN")
     tasks = plan.get("tasks", [])
-    logger.info("Theme: %s | Total tasks: %d", theme, len(tasks))
+
+    # Inject rolled-over tasks from previous days
+    tasks = _inject_rollover_tasks(tasks, target_day)
+
+    logger.info("Theme: %s | Total tasks: %d (incl. rollovers)", theme, len(tasks))
 
     auto_tasks = [t for t in tasks if t.get("tag") == "AUTO"]
     semi_tasks = [t for t in tasks if t.get("tag") == "SEMI"]
@@ -475,6 +479,9 @@ def run_tasks(day: int | None = None, dry_run: bool = False) -> dict[str, Any]:
                 auto_success, len(auto_tasks), len(semi_results),
                 len(manual_reminders), total_elapsed)
 
+    # Rollover failed/incomplete tasks to next day
+    _rollover_incomplete(summary, target_day, plans, dry_run=dry_run)
+
     # Write report
     _write_report(summary)
 
@@ -557,6 +564,158 @@ def _write_report(summary: dict[str, Any]) -> None:
 
     REPORT_FILE.write_text("\n".join(lines), encoding="utf-8")
     logger.info("Report written to %s", REPORT_FILE)
+
+
+ROLLOVER_STATE_FILE = AUTOMATIONS / "agent" / "kpi_rollover_state.json"
+
+
+def _rollover_incomplete(summary: dict[str, Any], current_day: int,
+                          plans: dict[int, dict[str, Any]],
+                          dry_run: bool = False) -> int:
+    """Roll over failed/incomplete AUTO and unreviewed SEMI tasks to next day.
+
+    Writes rollover state to a JSON file that can be loaded by the next day's
+    executor run. Tasks that fail 3 days in a row get escalated to MANUAL.
+    """
+    rollover_tasks: list[dict[str, Any]] = []
+
+    # Failed AUTO tasks
+    for result in summary.get("auto_results", []):
+        if result.get("status") in ("partial_failure", "failed", "timeout"):
+            rollover_tasks.append({
+                "text": result.get("task", ""),
+                "tag": "AUTO",
+                "detail": "",  # Will be re-extracted from plan on next run
+                "reason": f"Failed on day {current_day}: {result.get('status')}",
+                "original_day": current_day,
+                "failure_count": 1,
+            })
+
+    # Unreviewed SEMI tasks (all SEMI tasks are rollover candidates)
+    for result in summary.get("semi_results", []):
+        if result.get("status") == "queued_for_review":
+            rollover_tasks.append({
+                "text": result.get("task", ""),
+                "tag": "SEMI",
+                "detail": result.get("detail_preview", ""),
+                "reason": f"Unreviewed on day {current_day}",
+                "original_day": current_day,
+                "failure_count": 0,
+            })
+
+    if not rollover_tasks:
+        logger.info("Rollover: no tasks to roll over")
+        return 0
+
+    # Load existing rollover state and merge
+    existing_rollovers: list[dict[str, Any]] = []
+    if ROLLOVER_STATE_FILE.exists():
+        try:
+            state = json.loads(safe_path(ROLLOVER_STATE_FILE).read_text())
+            existing_rollovers = state.get("tasks", [])
+        except Exception:
+            pass
+
+    # Merge: increment failure_count for recurring failures
+    merged: list[dict[str, Any]] = []
+    existing_texts = {r["text"] for r in existing_rollovers}
+
+    for task in rollover_tasks:
+        # Check if this task was already rolled over before
+        prev = next((r for r in existing_rollovers if r["text"] == task["text"]), None)
+        if prev:
+            task["failure_count"] = prev.get("failure_count", 0) + 1
+            task["original_day"] = prev.get("original_day", current_day)
+
+        # Escalate to MANUAL after 3 consecutive failures
+        if task["failure_count"] >= 3:
+            task["tag"] = "MANUAL"
+            task["reason"] += f" (ESCALATED after {task['failure_count']} failures)"
+            logger.warning("Rollover: ESCALATED to MANUAL after %d failures: %s",
+                           task["failure_count"], task["text"])
+
+        merged.append(task)
+
+    # Add existing rollovers that weren't in today's results (still pending)
+    for existing in existing_rollovers:
+        if existing["text"] not in {t["text"] for t in rollover_tasks}:
+            # This task wasn't attempted today — keep it in rollover
+            merged.append(existing)
+
+    # Write rollover state
+    next_day = (current_day % 30) + 1
+    rollover_state = {
+        "last_updated": datetime.now().isoformat(),
+        "source_day": current_day,
+        "target_day": next_day,
+        "task_count": len(merged),
+        "tasks": merged,
+    }
+
+    if dry_run:
+        logger.info("Rollover [DRY-RUN]: %d tasks would roll to day %d", len(merged), next_day)
+        return len(merged)
+
+    safe_path(ROLLOVER_STATE_FILE).parent.mkdir(parents=True, exist_ok=True)
+    safe_path(ROLLOVER_STATE_FILE).write_text(
+        json.dumps(rollover_state, indent=2, default=str))
+    logger.info("Rollover: %d tasks rolled to day %d (state: %s)",
+                len(merged), next_day, ROLLOVER_STATE_FILE.name)
+
+    return len(merged)
+
+
+def _load_rollover_tasks() -> list[dict[str, Any]]:
+    """Load tasks rolled over from previous days."""
+    if not ROLLOVER_STATE_FILE.exists():
+        return []
+    try:
+        state = json.loads(safe_path(ROLLOVER_STATE_FILE).read_text())
+        return state.get("tasks", [])
+    except Exception:
+        return []
+
+
+def _inject_rollover_tasks(tasks: list[dict[str, Any]], day: int) -> list[dict[str, Any]]:
+    """Inject rolled-over tasks into today's task list."""
+    rollovers = _load_rollover_tasks()
+    if not rollovers:
+        return tasks
+
+    injected = list(tasks)  # Copy
+    for r in rollovers:
+        # Check if task already exists in today's plan
+        if any(t.get("text") == r["text"] for t in injected):
+            continue
+        rollover_task = {
+            "text": f"[ROLLOVER D{r.get('original_day', '?')}] {r['text']}",
+            "tag": r.get("tag", "AUTO"),
+            "detail": r.get("detail", ""),
+        }
+        injected.append(rollover_task)
+        logger.info("Injected rollover task: %s", rollover_task["text"])
+
+    return injected
+
+
+def show_rollover() -> None:
+    """Show current rollover state."""
+    rollovers = _load_rollover_tasks()
+    print(f"\nKPI ROLLOVER STATE")
+    print(f"{'=' * 50}")
+    if not rollovers:
+        print("  No tasks in rollover queue.")
+        return
+
+    print(f"  Tasks pending rollover: {len(rollovers)}")
+    print()
+    for i, r in enumerate(rollovers, 1):
+        tag = r.get("tag", "?")
+        failures = r.get("failure_count", 0)
+        original = r.get("original_day", "?")
+        print(f"  {i}. [{tag}] {r.get('text', '?')}")
+        print(f"     Origin: Day {original} | Failures: {failures} | Reason: {r.get('reason', '?')}")
+    print()
 
 
 def _write_semi_queue(semi_results: list[dict[str, Any]], day: int, theme: str) -> None:
@@ -716,10 +875,13 @@ def main() -> None:
     parser.add_argument("--review", action="store_true", help="Show SEMI tasks needing review")
     parser.add_argument("--dry-run", action="store_true", help="Preview without executing")
     parser.add_argument("--day", type=int, default=None, help="Specific day (1-30)")
+    parser.add_argument("--rollover", action="store_true", help="Show rollover state")
 
     args = parser.parse_args()
 
-    if args.status:
+    if args.rollover:
+        show_rollover()
+    elif args.status:
         show_status(args.day)
     elif args.review:
         show_review(args.day)

@@ -1,0 +1,48 @@
+{
+  "name": "integration_i_spent__60kmonth_on_pr_agencies_at_a",
+  "created": "2026-03-20T18:35:53.671109",
+  "method": "I spent > $60K/month on PR agencies at a startup that raised $680M. Here's what I learned about getting press as an early-stage operator - i will not promote I was the first marketing employee (head o",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "build_media_list",
+      "steps": [
+        "scrape_twitter_journalist_bios",
+        "scrape_publication_mastheads",
+        "parse_haro_queries"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_contacts",
+      "steps": [
+        "filter_by_beat_relevance",
+        "score_by_domain_authority",
+        "dedupe_and_enrich"
+      ],
+      "parallel": false,
+      "depends_on": "build_media_list"
+    },
+    {
+      "name": "generate_pitches",
+      "steps": [
+        "create_angle_per_product",
+        "personalize_per_journalist",
+        "ab_test_subject_lines"
+      ],
+      "parallel": true,
+      "depends_on": "qualify_contacts"
+    },
+    {
+      "name": "send_and_track",
+      "steps": [
+        "send_via_cold_email_infra",
+        "track_opens_replies",
+        "log_coverage_hits"
+      ],
+      "parallel": false,
+      "depends_on": "generate_pitches"
+    }
+  ],
+  "status": "READY"
+}

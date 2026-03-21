@@ -1,0 +1,38 @@
+{
+  "name": "integration_shutting_down_our_free_tier_tomorrow",
+  "created": "2026-03-20T13:50:41.103960",
+  "method": "Shutting down our free tier tomorrow",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "detect",
+      "steps": [
+        "scrape_rsaas_free_tier_kills",
+        "scrape_hn_pricing_changes",
+        "scrape_twitter_saas_pricing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "match_against_our_apps",
+        "score_migration_demand",
+        "extract_user_pain_points"
+      ],
+      "parallel": true,
+      "depends_on": "detect"
+    },
+    {
+      "name": "capture",
+      "steps": [
+        "generate_alternative_landing_page",
+        "create_comparison_content",
+        "post_in_complaint_threads"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

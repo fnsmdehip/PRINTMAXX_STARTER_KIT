@@ -1,0 +1,38 @@
+{
+  "name": "integration_last_year_donald_trump_jr_invested_in_",
+  "created": "2026-03-20T13:50:42.042592",
+  "method": "Last year, Donald Trump Jr. invested in a rare earths startup at a $200 million valuation, per Bloomberg.\n\nThree months later, the U.S. government announced a major loan backstop. \n\nNow the company is",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_sources",
+      "steps": [
+        "scrape_senate_stock_disclosures",
+        "scrape_house_stock_disclosures",
+        "scrape_sec_form4_political",
+        "scrape_gov_loan_announcements"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "cross_reference",
+      "steps": [
+        "match_political_buys_to_gov_contracts",
+        "score_signal_strength"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_sources"
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_twitter_threads",
+        "generate_newsletter_blurb",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "cross_reference"
+    }
+  ],
+  "status": "READY"
+}

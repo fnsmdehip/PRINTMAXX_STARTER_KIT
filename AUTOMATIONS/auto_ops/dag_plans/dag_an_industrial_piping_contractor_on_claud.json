@@ -1,0 +1,45 @@
+{
+  "name": "integration_an_industrial_piping_contractor_on_claud",
+  "created": "2026-03-20T18:09:51.719224",
+  "method": "An industrial piping contractor on Claude Code [video]",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_signal",
+      "steps": [
+        "scrape HN thread + comments for specific contractor workflows mentioned",
+        "check Reddit r/construction r/plumbing r/electricians for similar Claude Code mentions"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_method",
+      "steps": [
+        "extract specific use-cases: estimating, permit paperwork, code compliance lookups, bid generation, invoice automation",
+        "cross-reference with our existing Claude Code product features"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_signal"
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate 3 twitter threads: contractor angle, 'AI for trades' angle, 'Claude Code for non-coders' angle",
+        "generate 1 linkedin post targeting trade business owners",
+        "generate 1 reddit post for r/ClaudeAI or r/Construction"
+      ],
+      "parallel": true,
+      "depends_on": "extract_method"
+    },
+    {
+      "name": "funnel_wire",
+      "steps": [
+        "append CTA to digital product listings in all generated content",
+        "update DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_for_nontechnical_founders.md with contractor-specific use cases"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

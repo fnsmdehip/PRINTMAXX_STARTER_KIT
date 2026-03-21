@@ -1,0 +1,29 @@
+{
+  "name": "chain__cold_outbound_audit_output_mm007__",
+  "created": "2026-03-20T23:12:24.893288",
+  "method": "# COLD OUTBOUND Audit Output (MM007)  **Date:** 2026-02-06 **Auditor:** PRINTMAXX Ops **Method ID:** MM007 (COLD_OUTBOUND) + MM070 (WEB_REDESIGN_COLD_OUTREACH) **Status:** Planning (Phase 2) | $0 reve",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "scrape 50 biz/SaaS sites needing redesign using Playwright, score site quality 1-10 on mobile/speed/modernity",
+      "output": "LEDGER/OUTBOUND_PROSPECTS_RAW.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "filter to top 20 by score, enrich with owner email via Hunter-style extraction from contact page",
+      "output": "LEDGER/OUTBOUND_QUALIFIED.json"
+    },
+    {
+      "agent": "copywriter",
+      "task": "generate personalized cold email per lead via claude -p using site-specific pain point observed in scrape",
+      "output": "LEDGER/OUTBOUND_EMAILS_READY.json"
+    },
+    {
+      "agent": "sender",
+      "task": "send emails via SMTP, log results, flag replies for human follow-up",
+      "output": "LEDGER/OUTREACH_PIPELINE.csv"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration_i_replaced_the_cofounder_i_couldnt_find",
+  "created": "2026-03-20T18:09:51.720105",
+  "method": "i replaced the cofounder i couldn't find with an ai agent",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_cofounder_pain_posts",
+        "extract_top_roles_needed",
+        "map_roles_to_existing_agents"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "package",
+      "steps": [
+        "create_agent_template_bundles_per_role",
+        "write_setup_guides",
+        "price_and_list_on_gumroad_whop"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_3_tweets_plus_thread",
+        "create_reddit_case_study_post",
+        "route_to_content_factory_chain"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    }
+  ],
+  "status": "READY"
+}

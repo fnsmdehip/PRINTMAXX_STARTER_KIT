@@ -1,0 +1,34 @@
+{
+  "name": "chain__your_first_digital_product_should_take_",
+  "created": "2026-03-20T18:10:02.629171",
+  "method": " your first digital product should take 4 hours to make and sell for $47not 4 months. not a 200 page course. not some \"comprehensive system\"a single template that solves one specific problem for one s",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "pain_scanner",
+      "task": "Extract single-problem pain points from Reddit, alpha, Fiverr demand data. Filter for: specific problem, identifiable persona, solvable with a template/checklist/tool",
+      "output": "product_candidates.json"
+    },
+    {
+      "agent": "product_architect",
+      "task": "For top candidate: define exact deliverable (template type, format, word count <3000), title, subtitle, price ($27-$47), target persona in one sentence",
+      "output": "product_spec.json"
+    },
+    {
+      "agent": "content_creator",
+      "task": "Generate the actual product content: template, checklist, or tool. Max 10 pages. One problem, one solution, zero fluff",
+      "output": "DIGITAL_PRODUCTS/ready_to_sell/product_NAME/"
+    },
+    {
+      "agent": "listing_creator",
+      "task": "Generate paste-ready Gumroad/Whop listing: title, description, bullet points, price, cover image prompt. Apply engagement hooks from procedural memory",
+      "output": "DIGITAL_PRODUCTS/ready_to_sell/LISTING_NAME.md"
+    },
+    {
+      "agent": "promo_engine",
+      "task": "Generate 3 tweets + 1 thread + 1 Reddit value post promoting the product without being salesy. Use consequence-first hooks",
+      "output": "CONTENT/social/posting_queue/promo_product_NAME.txt"
+    }
+  ],
+  "status": "READY"
+}

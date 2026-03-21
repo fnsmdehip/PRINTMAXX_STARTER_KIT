@@ -1,0 +1,46 @@
+{
+  "name": "integration__cold_outbound_audit_output_mm007__",
+  "created": "2026-03-20T23:12:24.840343",
+  "method": "# COLD OUTBOUND Audit Output (MM007)  **Date:** 2026-02-06 **Auditor:** PRINTMAXX Ops **Method ID:** MM007 (COLD_OUTBOUND) + MM070 (WEB_REDESIGN_COLD_OUTREACH) **Status:** Planning (Phase 2) | $0 reve",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "prospect_discovery",
+      "steps": [
+        "scrape_local_biz_sites",
+        "scrape_saas_landing_pages",
+        "pull_existing_leads_csv"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualification",
+      "steps": [
+        "score_site_quality",
+        "filter_no_mobile",
+        "filter_outdated_stack"
+      ],
+      "parallel": true,
+      "depends_on": "prospect_discovery"
+    },
+    {
+      "name": "personalization",
+      "steps": [
+        "generate_email_per_lead_claude"
+      ],
+      "parallel": false,
+      "depends_on": "qualification"
+    },
+    {
+      "name": "send_and_track",
+      "steps": [
+        "send_via_smtp",
+        "log_to_outreach_pipeline_csv",
+        "update_kpi_dashboard"
+      ],
+      "parallel": false,
+      "depends_on": "personalization"
+    }
+  ],
+  "status": "READY"
+}

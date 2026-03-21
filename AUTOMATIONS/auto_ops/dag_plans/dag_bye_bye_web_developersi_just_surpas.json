@@ -1,0 +1,36 @@
+{
+  "name": "integration_bye_bye_web_developersi_just_surpas",
+  "created": "2026-03-20T18:35:51.233270",
+  "method": "Bye Bye Web developers...\n\nI just surpassed $3k in revenue and 2,400 users with my fully vibecoded SaaS\n\nRankInPublic was completely vibecoded using Claude Opus 4.6\n\nIt took 7 days to develop, 12 hour",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape Convex pricing and free tier limits",
+        "scrape Dodo Payments fee structure",
+        "compare vs Firebase and Stripe current usage"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "evaluate",
+      "steps": [
+        "score Convex vs Firebase for app factory template suitability",
+        "score Dodo vs Stripe for Phase 0 micro-SaaS"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "update",
+      "steps": [
+        "update LEDGER/TECH_STACK_INTEL.csv with findings",
+        "update app factory template recommendations if Convex wins on any dimension"
+      ],
+      "parallel": false,
+      "depends_on": "evaluate"
+    }
+  ],
+  "status": "READY"
+}

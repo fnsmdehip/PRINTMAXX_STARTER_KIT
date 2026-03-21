@@ -1,0 +1,47 @@
+{
+  "name": "integration__gumroad_speed_upload__13_products_in",
+  "created": "2026-03-20T18:10:01.582213",
+  "method": "# GUMROAD SPEED UPLOAD -- 13 PRODUCTS IN 30 MINUTES  **STATUS:** All 13 PDFs exist at `PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/` **Total pipeline value:** $500-2,000/month (Gumroad marketplace + direct t",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "prepare_listings",
+      "steps": [
+        "scan_pdfs_extract_metadata",
+        "generate_titles_descriptions_pricing",
+        "generate_cover_images_html_to_png"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "upload",
+      "steps": [
+        "authenticate_gumroad_api",
+        "bulk_create_products_with_files"
+      ],
+      "parallel": false,
+      "depends_on": "prepare_listings"
+    },
+    {
+      "name": "optimize",
+      "steps": [
+        "set_discover_tags_categories",
+        "create_bundle_offer_for_3plus",
+        "add_cross_sell_links_between_products"
+      ],
+      "parallel": true,
+      "depends_on": "upload"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_3_tweets_announcing_products",
+        "create_link_in_bio_page",
+        "add_to_landing_pages_as_cta"
+      ],
+      "parallel": true,
+      "depends_on": "upload"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "integration_i_analyzed_1500_bootstrapped_startups",
+  "created": "2026-03-20T13:50:39.500316",
+  "method": "I analyzed 1,500 bootstrapped startups",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_indiehackers_json",
+        "scrape_producthunt_api",
+        "scrape_reddit_startup_subs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "normalize",
+      "steps": [
+        "merge_datasets",
+        "deduplicate",
+        "extract_revenue_signals"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "pattern_detection",
+        "niche_clustering",
+        "survival_rate_calc"
+      ],
+      "parallel": true,
+      "depends_on": "normalize"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "update_capital_genesis_scores",
+        "generate_pdf_report",
+        "generate_twitter_threads"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

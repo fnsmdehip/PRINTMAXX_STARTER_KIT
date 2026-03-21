@@ -1,0 +1,29 @@
+{
+  "name": "chain_looking_for_a_small_group_of_founders_to",
+  "created": "2026-03-20T18:09:55.721540",
+  "method": "Looking for a small group of founders to grow with I\u2019ve noticed something interesting with a few founders I know.\n\nThe ones growing the fastest usually aren\u2019t building alone. They tend to have small g",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape r/buildinpublic r/SaaS r/indiehackers r/Entrepreneur for posts containing 'founder group' OR 'mastermind' OR 'accountability group' OR 'cross-promote' OR 'launch support'. Also scrape Twitter for #buildinpublic founders with 500-10K followers and recent product launches.",
+      "output": "founder_pod_candidates.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each candidate on: audience overlap with our niches (faith/fitness/tech/solopreneur), product complementarity (not direct competitor), engagement rate >2%, active posting last 14 days, has shipped something live. Filter to top 20 per cycle.",
+      "output": "qualified_founders.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized outreach DM/comment offering specific cross-promo value: 'I run X apps in Y niche, happy to boost your next launch to our Z followers if you do the same'. Track sent, replied, converted.",
+      "output": "outreach_log.json"
+    },
+    {
+      "agent": "tracker",
+      "task": "Log active partnerships, schedule mutual boosts around launches, track referral clicks via UTM params, flag inactive partners for re-engagement or replacement.",
+      "output": "partnership_tracker.json"
+    }
+  ],
+  "status": "READY"
+}

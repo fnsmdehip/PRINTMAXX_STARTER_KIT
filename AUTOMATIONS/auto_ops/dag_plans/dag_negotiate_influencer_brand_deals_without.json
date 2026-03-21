@@ -1,0 +1,36 @@
+{
+  "name": "integration_negotiate_influencer_brand_deals_without",
+  "created": "2026-03-20T13:50:39.532981",
+  "method": "Negotiate Influencer Brand Deals Without Overpaying",
+  "venture": "BROKERING",
+  "phases": [
+    {
+      "name": "scrape_benchmarks",
+      "steps": [
+        "scrape_influencer_rate_databases",
+        "scrape_reddit_affiliate_threads_for_rate_data"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_rates",
+      "steps": [
+        "calculate_fair_cpm_by_niche",
+        "build_negotiation_template_library"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_benchmarks"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_content_threads",
+        "update_digital_product_listing",
+        "post_to_queue"
+      ],
+      "parallel": true,
+      "depends_on": "analyze_rates"
+    }
+  ],
+  "status": "READY"
+}

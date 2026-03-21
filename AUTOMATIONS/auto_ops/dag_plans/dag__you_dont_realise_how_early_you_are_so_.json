@@ -1,0 +1,47 @@
+{
+  "name": "integration__you_dont_realise_how_early_you_are_so_",
+  "created": "2026-03-20T18:10:01.966816",
+  "method": " you don\u2019t realise how early you are so many people are missing out on this opportunity and they don\u2019t even release it using ai to promote organic affiliate is still so untapped i know so many people ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_high_commission_free_affiliate_programs",
+        "extract_product_features_for_comparison",
+        "pull_longtail_keywords_for_each_product"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_comparison_articles",
+        "generate_tutorial_content",
+        "generate_social_snippets_with_affiliate_cta"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_articles_to_landing_pages",
+        "queue_social_posts_to_posting_queue",
+        "submit_to_seo_longtail_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "log_published_urls_and_affiliate_ids",
+        "wire_utm_params_for_conversion_tracking"
+      ],
+      "parallel": false,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

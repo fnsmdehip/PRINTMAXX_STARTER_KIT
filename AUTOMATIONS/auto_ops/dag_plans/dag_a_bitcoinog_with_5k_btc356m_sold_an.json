@@ -1,0 +1,27 @@
+{
+  "name": "integration_a_bitcoinog_with_5k_btc356m_sold_an",
+  "created": "2026-03-20T13:50:41.980734",
+  "method": "A #BitcoinOG with 5K $BTC($356M) sold another 1,000 $BTC($71.57M) 8 hours ago.\n\nThis OG received 5K $BTC(cost $1.66M) at $332 12 years ago, and started selling $BTC on Nov 26, 2024, selling a total of",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_whale_data",
+      "steps": [
+        "fetch_blockchain_api_large_txns",
+        "fetch_historical_price_at_acquisition"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "calculate_pnl_and_multiplier",
+        "format_viral_template",
+        "queue_to_posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_whale_data"
+    }
+  ],
+  "status": "READY"
+}

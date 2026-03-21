@@ -1,0 +1,37 @@
+{
+  "name": "integration_lesson_i_learned_this_year_that_doubled_",
+  "created": "2026-03-20T18:09:54.825749",
+  "method": "Lesson I learned this year that doubled my income, I will not promote For the past year, I\u2019ve been selling basic dorm stuff near campus: plastic hangers, foldable storage bins, under-bed boxes, you kn",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_principle",
+      "steps": [
+        "parse_reddit_post_for_core_method",
+        "discount_revenue_claims_by_60pct",
+        "identify_digital_equivalent_of_demand_pull"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_3_tweets_demand_pull_angle",
+        "generate_1_thread_product_expansion_framework",
+        "add_to_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "extract_principle"
+    },
+    {
+      "name": "signal_enhancement",
+      "steps": [
+        "add_demand_pattern_regex_to_reddit_scraper",
+        "log_enhancement_to_system_map"
+      ],
+      "parallel": false,
+      "depends_on": "extract_principle"
+    }
+  ],
+  "status": "READY"
+}

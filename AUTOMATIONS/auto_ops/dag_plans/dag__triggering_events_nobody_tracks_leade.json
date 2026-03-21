@@ -1,0 +1,41 @@
+{
+  "name": "integration__triggering_events_nobody_tracks_leade",
+  "created": "2026-03-20T18:09:59.163878",
+  "method": " triggering events nobody tracks:- leadership change (theorg)- office move (google alerts + address)- bad glassdoor reviews spike (means problems = budget)- competitor layoffs (linkedin)- job posting ",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "parallel_scrape",
+      "steps": [
+        "scrape_theorg_leadership",
+        "scrape_glassdoor_spikes",
+        "scrape_linkedin_layoffs",
+        "check_job_posting_removals",
+        "scan_10k_language_changes",
+        "check_google_alerts_office_moves"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "normalize_and_dedupe",
+      "steps": [
+        "merge_all_signals",
+        "dedupe_by_company",
+        "enrich_with_domain_and_contact"
+      ],
+      "parallel": false,
+      "depends_on": "parallel_scrape"
+    },
+    {
+      "name": "score_and_route",
+      "steps": [
+        "score_by_signal_density",
+        "filter_by_company_size_and_industry",
+        "route_to_outreach_queue"
+      ],
+      "parallel": false,
+      "depends_on": "normalize_and_dedupe"
+    }
+  ],
+  "status": "READY"
+}

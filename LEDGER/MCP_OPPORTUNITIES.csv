@@ -1,11 +1,2 @@
 opp_id,niche,description,existing_solutions,competition_level,effort_estimate,revenue_potential,status,notes
 MCP001,CRM,Salesforce/HubSpot MCP server,None found,LOW,40 hours,HIGH,OPEN,Enterprise sales teams want AI + CRM. First mover.
-MCP002,E-commerce,Shopify/WooCommerce MCP server,None found,LOW,30 hours,HIGH,OPEN,AI product management. Order tracking.
-MCP003,Analytics,GA4/Mixpanel MCP server,Partial GA4,LOW,25 hours,MEDIUM,OPEN,AI-powered analytics queries.
-MCP004,Payment,Stripe/PayPal MCP server,Basic Stripe exists,MEDIUM,20 hours,MEDIUM,RESEARCH,Check if Stripe MCP adequate.
-MCP005,Email,SendGrid/Mailgun MCP server,None found,LOW,20 hours,MEDIUM,OPEN,AI email campaign management.
-MCP006,Calendar,Google Calendar/Outlook MCP,Google exists,MEDIUM,15 hours,LOW,DEPRIORITIZE,Google Calendar MCP already good.
-MCP007,Project Management,Notion/Linear MCP server,Notion partial,MEDIUM,30 hours,MEDIUM,OPEN,AI task management.
-MCP008,Social Media,Twitter/LinkedIn MCP server,Twitter exists,HIGH,40 hours,HIGH,RESEARCH,Check Twitter MCP capability.
-MCP009,Database,MongoDB/DynamoDB MCP,Postgres exists,MEDIUM,20 hours,MEDIUM,OPEN,NoSQL database AI access.
-MCP010,File Storage,S3/GCS/Azure Blob MCP,Partial S3,MEDIUM,25 hours,LOW,DEPRIORITIZE,Low differentiation.

@@ -1,0 +1,29 @@
+{
+  "name": "chain_built_my_mvp_in_5_hours_and_got_to_10k_",
+  "created": "2026-03-20T13:50:39.583550",
+  "method": "built my MVP in 5 hours and got to $10k MRR in two months",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan HN Show/Ask, Reddit r/SaaS r/indiehackers for unmet pain points with 10+ upvotes and no good existing tool",
+      "output": "mvp_opportunities.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each opportunity: automatable? <5hr build? monetizable? existing competition weak? Filter to top 3",
+      "output": "qualified_mvps.json"
+    },
+    {
+      "agent": "builder",
+      "task": "Generate PRD, scaffold MVP using app factory templates + Claude coding, deploy",
+      "output": "deployed_mvp.json"
+    },
+    {
+      "agent": "validator",
+      "task": "Cold outreach to original complainers, track signups, report week-1 metrics",
+      "output": "validation_report.json"
+    }
+  ],
+  "status": "READY"
+}

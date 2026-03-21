@@ -1,0 +1,37 @@
+{
+  "name": "integration__as_a_saas_founder__what_role_do_you_en",
+  "created": "2026-03-20T18:09:56.855453",
+  "method": " as a saas founder - what role do you enjoy the most? (for me it\u2019s customer support, not dev, here's why) ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_topics",
+      "steps": [
+        "scrape_hn_indiehackers_trending",
+        "scrape_reddit_saas_startups"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_flips",
+      "steps": [
+        "identify_common_assumptions",
+        "generate_contrarian_takes_with_reasons"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_topics"
+    },
+    {
+      "name": "format_and_queue",
+      "steps": [
+        "format_twitter_thread",
+        "format_reddit_post",
+        "format_linkedin_post",
+        "queue_to_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "generate_flips"
+    }
+  ],
+  "status": "READY"
+}

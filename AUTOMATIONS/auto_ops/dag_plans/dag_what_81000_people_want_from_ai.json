@@ -1,0 +1,47 @@
+{
+  "name": "integration_what_81000_people_want_from_ai",
+  "created": "2026-03-20T13:50:39.502505",
+  "method": "What 81,000 people want from AI",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_hn_ai_demand_posts",
+        "scrape_reddit_ai_wishlists",
+        "scrape_survey_results"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "extract_top_20_unmet_needs",
+        "map_needs_to_printmaxx_products",
+        "identify_content_angles"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "create_engagement_posts",
+        "create_thread_breakdown",
+        "create_product_positioning_copy"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "feed_to_engagement_bait_converter"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "chain_the_fastest_path_to_5kmonth_isnt_a_re",
+  "created": "2026-03-20T18:09:56.291004",
+  "method": "the fastest path to $5k/month isn't a revolutionary idea. it's a boring tool that saves someone 4 hours a week. here's how to find one tonight everyone on this sub wants to start. the thing that stops",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan r/SaaS, r/microsaas, r/Entrepreneur, r/smallbusiness, r/sideproject for posts describing repetitive manual tasks with time estimates (4+ hrs/wk)",
+      "output": "boring_tool_raw_hits.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each hit by: hours_wasted_mentioned, complaint_volume, willingness_to_pay_signals, existing_solution_gaps, buildability_with_app_factory",
+      "output": "boring_tool_qualified.json"
+    },
+    {
+      "agent": "builder",
+      "task": "Route top scoring opportunities into app_factory_priority_queue.json with PRD-ready specs",
+      "output": "app_factory_priority_queue.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "integration__this_app_is_making_100k_installs_monthl",
+  "created": "2026-03-20T18:09:57.350646",
+  "method": " this app is making 100k installs monthly and an mrr of $400k!\n\nbut how?\n\n\"fit test\" to understand your level and compare you to others \u2192 builds curiosity and sparks a challenge\n\nright after earning p",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "quiz_gen",
+      "steps": [
+        "generate_fitness_quiz_template",
+        "generate_faith_quiz_template",
+        "generate_productivity_quiz_template",
+        "generate_comparison_leaderboard_component"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "gamification",
+      "steps": [
+        "build_points_system_module",
+        "build_streak_multiplier_logic",
+        "build_achievement_badges"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "paywall_wire",
+      "steps": [
+        "create_soft_paywall_component_with_trial",
+        "wire_paywall_trigger_after_first_points_earned",
+        "add_stripe_checkout_to_premium_tier"
+      ],
+      "parallel": false,
+      "depends_on": "gamification"
+    },
+    {
+      "name": "retrofit_deploy",
+      "steps": [
+        "inject_quiz_into_top_10_apps_by_traffic",
+        "deploy_updated_apps",
+        "set_up_conversion_tracking"
+      ],
+      "parallel": false,
+      "depends_on": "paywall_wire"
+    }
+  ],
+  "status": "READY"
+}

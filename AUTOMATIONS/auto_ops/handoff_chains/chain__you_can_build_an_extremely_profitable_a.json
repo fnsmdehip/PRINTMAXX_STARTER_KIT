@@ -1,0 +1,39 @@
+{
+  "name": "chain__you_can_build_an_extremely_profitable_a",
+  "created": "2026-03-20T18:10:02.558840",
+  "method": " you can build an extremely profitable affiliate business with tiktok decently easily with ai now you can just have 10 accounts pushing authentic looking ugc content similar to this style no one will ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "trend_scraper",
+      "task": "Scrape trending TikTok affiliate products and viral UGC formats daily",
+      "output": "trending_products.json"
+    },
+    {
+      "agent": "script_writer",
+      "task": "Generate 20 unique UGC video scripts per day using Claude, matching authentic creator voice patterns",
+      "output": "ugc_scripts.json"
+    },
+    {
+      "agent": "video_renderer",
+      "task": "Render videos via Remotion with TTS voiceover, b-roll overlays, captions",
+      "output": "rendered_videos/"
+    },
+    {
+      "agent": "quality_gate",
+      "task": "Score each video for authenticity (no AI tells), hook strength, CTA clarity. Reject below 7/10",
+      "output": "approved_videos.json"
+    },
+    {
+      "agent": "poster",
+      "task": "Post to 10 TikTok accounts with staggered timing, unique captions, affiliate links in bio",
+      "output": "posting_log.json"
+    },
+    {
+      "agent": "analytics",
+      "task": "Track views, clicks, conversions per video and account. Flag winners for doubling down",
+      "output": "performance_report.json"
+    }
+  ],
+  "status": "READY"
+}

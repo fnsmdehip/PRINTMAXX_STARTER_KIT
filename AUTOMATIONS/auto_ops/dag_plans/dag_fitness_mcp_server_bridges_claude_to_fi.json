@@ -1,0 +1,48 @@
+{
+  "name": "integration_fitness_mcp_server_bridges_claude_to_fi",
+  "created": "2026-03-20T18:09:51.720035",
+  "method": "Fitness MCP server. Bridges Claude to fitness data. Integration angle: connect to our fitness streak apps for AI-powered workout coaching. Cross-sell with existing fitness app portfolio.",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "discover_and_vet",
+      "steps": [
+        "find_fitness_mcp_repo",
+        "security_6point_audit",
+        "evaluate_api_surface"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_integration",
+      "steps": [
+        "create_mcp_adapter_for_streak_apps",
+        "build_ai_coaching_prompt_library",
+        "add_premium_tier_ui_to_6_fitness_apps"
+      ],
+      "parallel": true,
+      "depends_on": "discover_and_vet"
+    },
+    {
+      "name": "monetize_and_deploy",
+      "steps": [
+        "create_stripe_products_ai_coach_tier",
+        "wire_payment_links_into_apps",
+        "deploy_updated_apps_surge"
+      ],
+      "parallel": false,
+      "depends_on": "build_integration"
+    },
+    {
+      "name": "content_and_distribute",
+      "steps": [
+        "generate_3_tweets_ai_fitness_coach_angle",
+        "create_thread_mcp_fitness_integration",
+        "post_to_fitness_subreddits"
+      ],
+      "parallel": true,
+      "depends_on": "monetize_and_deploy"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "integration_i_made_a_website_for_organizing_projects",
+  "created": "2026-03-20T18:35:52.694131",
+  "method": "I made a website for organizing projects and tracking tasks on a simple kanban board. It runs entirely in your browser. No accounts, no servers, 100% private. Hey everyone!\n\nI built a small personal K",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_reddit_for_heavy_saas_complaints",
+        "identify_top3_local_first_candidates"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_kanban_html_from_app_factory_template",
+        "add_localstorage_persistence",
+        "add_premium_gate_export_sync"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy_surge",
+        "create_landing_variation",
+        "wire_stripe_payment_link"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    }
+  ],
+  "status": "READY"
+}

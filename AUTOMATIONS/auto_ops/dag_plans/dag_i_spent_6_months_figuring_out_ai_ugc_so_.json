@@ -1,0 +1,58 @@
+{
+  "name": "integration_i_spent_6_months_figuring_out_ai_ugc_so_",
+  "created": "2026-03-20T13:50:44.092266",
+  "method": "I spent 6 months figuring out AI UGC so you don't have to.\n\nand thats how we went from 0 \u2192 4M views/week \u2192 $20K MRR with $0 ad spend.\n\nThe tech stack. The prompts. The automation pipeline. The account",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "script_generation",
+      "steps": [
+        "scrape_trending_hooks_from_tiktok",
+        "generate_5_ugc_scripts_via_claude",
+        "select_top3_by_hook_strength"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "asset_production",
+      "steps": [
+        "generate_tts_audio_sadtalker_or_bark",
+        "render_ai_avatar_video_wav2lip",
+        "add_captions_and_broll_ffmpeg"
+      ],
+      "parallel": true,
+      "depends_on": "script_generation"
+    },
+    {
+      "name": "optimization",
+      "steps": [
+        "trim_to_platform_specs",
+        "ab_test_thumbnails",
+        "inject_engagement_hooks_first_2sec"
+      ],
+      "parallel": true,
+      "depends_on": "asset_production"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "post_tiktok_account_cluster",
+        "post_ig_reels",
+        "post_yt_shorts"
+      ],
+      "parallel": true,
+      "depends_on": "optimization"
+    },
+    {
+      "name": "analytics",
+      "steps": [
+        "scrape_view_counts_24h",
+        "calculate_completion_rates",
+        "flag_winners_for_replication"
+      ],
+      "parallel": false,
+      "depends_on": "distribution"
+    }
+  ],
+  "status": "READY"
+}

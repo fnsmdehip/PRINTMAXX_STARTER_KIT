@@ -1,0 +1,34 @@
+{
+  "name": "chain__heres_an_actual_way_to_make_10k_a_mont",
+  "created": "2026-03-20T18:10:02.727892",
+  "method": " heres an actual way to make $10k a month from tiktok + organic affiliate tt slides is probably the best way to make ai content for a few reasons > easy and not time consuming to make > much harder to",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "product_scout",
+      "task": "scan affiliate networks for high-commission products trending on TT (ClickBank, Amazon Associates, Impact)",
+      "output": "trending_products.json"
+    },
+    {
+      "agent": "slide_creator",
+      "task": "generate 5-7 AI images per product using prompts optimized to avoid AI detection, lifestyle/product-in-use aesthetic",
+      "output": "slide_assets/"
+    },
+    {
+      "agent": "copywriter",
+      "task": "write hook caption + slide text overlays + CTA (link in bio language TT allows)",
+      "output": "slide_copy.json"
+    },
+    {
+      "agent": "publisher",
+      "task": "post to TikTok via Playwright automation, warmup-aware scheduling, rotating posting times",
+      "output": "post_log.json"
+    },
+    {
+      "agent": "analyst",
+      "task": "track completion rates + affiliate click-throughs, flag winners for repost/remix, kill underperformers",
+      "output": "performance_report.json"
+    }
+  ],
+  "status": "READY"
+}

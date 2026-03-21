@@ -1,0 +1,48 @@
+{
+  "name": "integration__heres_an_actual_way_to_make_10k_a_mont",
+  "created": "2026-03-20T18:10:02.721295",
+  "method": " heres an actual way to make $10k a month from tiktok + organic affiliate tt slides is probably the best way to make ai content for a few reasons > easy and not time consuming to make > much harder to",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "niche_research",
+      "steps": [
+        "scrape_trending_affiliate_products",
+        "pull_top_performing_tt_slides_competitors",
+        "extract_hook_patterns_from_viral_slides"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_ai_images_per_product_batch",
+        "write_slide_captions_with_cta",
+        "create_slide_sequences_5_7_per_set"
+      ],
+      "parallel": true,
+      "depends_on": "niche_research"
+    },
+    {
+      "name": "assembly",
+      "steps": [
+        "assemble_slides_into_tt_native_format",
+        "embed_affiliate_link_in_bio_template",
+        "add_trending_audio_tag_metadata"
+      ],
+      "parallel": false,
+      "depends_on": "content_generation"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "schedule_posts_warmup_aware",
+        "cross_post_to_ig_reels_as_carousels",
+        "log_to_content_performance_tracker"
+      ],
+      "parallel": true,
+      "depends_on": "assembly"
+    }
+  ],
+  "status": "READY"
+}

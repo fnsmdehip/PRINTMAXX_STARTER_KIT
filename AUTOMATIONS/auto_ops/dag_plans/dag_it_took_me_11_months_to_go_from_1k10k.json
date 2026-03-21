@@ -1,0 +1,35 @@
+{
+  "name": "integration_it_took_me_11_months_to_go_from_1k10k",
+  "created": "2026-03-20T13:50:42.699746",
+  "method": "It took me 11 months to go from $1k-$10k/month consistently\n\nMay: $1,087\nJune: $2,097\nJuly: $2,564\nAugust: $3,615\nSeptember: $4,255\nOctober: $4,867\nNovember: $5,404\nDecember: $6,496\nJanuary: $8,590\nFe",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "data_pull",
+      "steps": [
+        "extract_monthly_revenue_from_kpi",
+        "extract_venture_breakdown"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_progression_graphic_html",
+        "write_hook_caption_3_variants"
+      ],
+      "parallel": true,
+      "depends_on": "data_pull"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "route_to_engagement_bait_converter"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

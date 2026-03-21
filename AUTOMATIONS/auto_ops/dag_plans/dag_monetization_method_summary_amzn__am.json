@@ -1,0 +1,27 @@
+{
+  "name": "integration_monetization_method_summary_amzn__am",
+  "created": "2026-03-20T18:09:56.770966",
+  "method": "monetization method. summary: $amzn - amazon faces longest slump since 2006amazon shares are on track for their longest losing streak in nearly 20 years, down 0.8% friday and nine days in a row. the s",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_contrarian_thread_amzn_2006_vs_2026",
+        "generate_amazon_seller_impact_post",
+        "generate_poll_buy_dip_or_run"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "optimize",
+      "steps": [
+        "run_engagement_bait_converter_on_all_3",
+        "add_to_posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

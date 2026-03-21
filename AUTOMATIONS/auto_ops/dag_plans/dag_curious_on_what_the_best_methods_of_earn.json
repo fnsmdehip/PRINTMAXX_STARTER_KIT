@@ -1,0 +1,38 @@
+{
+  "name": "integration_curious_on_what_the_best_methods_of_earn",
+  "created": "2026-03-20T18:09:51.734153",
+  "method": "Curious on what the best methods of earnings affiliate income is in this day and age from digital products? Hi all,\n\nI really want to take my affiliate income to the next level, and I am curious if an",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_affiliate_programs_free_tier",
+        "audit_existing_pages_for_link_gaps",
+        "pull_top_keywords_from_ASO_KEYWORDS_csv"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_comparison_pages_vs_format",
+        "generate_youtube_description_templates",
+        "generate_email_affiliate_sequences"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "inject_links_into_existing_landing_pages",
+        "add_to_content_posting_queue",
+        "update_AFFILIATE_LINK_SETUP_md"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

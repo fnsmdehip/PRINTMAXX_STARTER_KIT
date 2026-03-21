@@ -1,40 +1,22 @@
 {
-  "last_updated": "2026-03-20T09:11:11.911043",
-  "last_cycle": "asset_deployer_full_check_2026-03-20_0911",
+  "last_updated": "2026-03-20T23:31:25.559043",
+  "last_cycle": "asset_deployer_2026-03-20_23h30",
   "total_surge_deployments": 355,
-  "health_status": "MOSTLY_HEALTHY",
+  "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
     "checked": 14,
     "passed": 14,
     "failed": 0,
     "transient_504s": 0,
-    "last_checked": "2026-03-20T07:07:12.735739",
+    "last_checked": "2026-03-20T23:31:25.559050",
     "sites_verified": [
       "printmaxx.surge.sh",
       "mcp-marketplace.surge.sh",
-      "prayerlock-web.surge.sh",
-      "coldmaxx.surge.sh",
-      "ai-slop-detector.surge.sh",
-      "printmaxx-tools.surge.sh",
-      "stackmaxx.surge.sh",
-      "prayerlock-landing.surge.sh",
-      "focuslock-landing.surge.sh",
-      "sleepmaxx-landing.surge.sh",
-      "hilal-landing.surge.sh",
-      "scripture-streak-landing.surge.sh",
+      "prayerlock.surge.sh",
       "ramadan-tracker.surge.sh",
-      "adhd-streak.surge.sh",
-      "coreday.surge.sh",
-      "printmaxx-website-design.surge.sh",
-      "printmaxx-cold-email.surge.sh",
-      "printmaxx-automation.surge.sh",
-      "erase-the-case-pllc-miami-fl.surge.sh",
-      "spodak-dental-group-miami-fl.surge.sh",
-      "milestone-electric-a-c-plumbing-dallas-tx.surge.sh",
-      "goldsberry-portz-divorce-family-lawyers-pllc-houston-tx.surge.sh",
-      "pdfmaxx.surge.sh",
-      "semrush-vs-ahrefs.surge.sh",
-      "saas-stack-audit-200.surge.sh"
+      "focuslock.surge.sh",
+      "prayerlock-landing.surge.sh",
+      "hilal.surge.sh"
     ]
   },
   "redeployments_this_cycle": [
@@ -44,9 +26,8 @@
   "new_deployments_this_cycle": [],
   "issues_found": {},
   "fixes_applied": {
-    "invoiceforge.surge.sh": "Redeployed - was returning 504, now 200",
-    "klaviyo-alternative.surge.sh": "Redeployed from LANDING/affiliate-pages/ - was returning 404, now 200",
-    "fence-installation-and-repair-in-las-vegas-nv-outstanding-fe-las-vegas-nv.surge.sh": "Deleted - domain name too long for Surge DNS"
+    "invoiceforge.surge.sh": "Redeployed from LANDING/tools/ \u2014 fixed 504 error",
+    "klaviyo-alternative.surge.sh": "Redeployed from LANDING/affiliate-pages/ \u2014 fixed 404 error"
   },
   "cycle_notes": "Asset deployer cycle 2026-03-20 09:11. Checked health of 355 deployments. Deleted 1 broken site (fence-installation...). 0 new deployments this cycle. All other sites HEALTHY.",
   "by_category": {

@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_replaced_the_cofounder_i_couldnt_find",
+  "created": "2026-03-20T18:09:51.763697",
+  "method": "i replaced the cofounder i couldn't find with an ai agent",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "scan r/Entrepreneur r/startups r/cofounder HN for cofounder-seeking posts",
+      "output": "cofounder_pain_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "score leads by urgency and willingness to pay for AI solution",
+      "output": "qualified_cofounder_leads.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "generate case study content from our own 33-agent system as social proof",
+      "output": "ai_cofounder_content.json"
+    },
+    {
+      "agent": "connector",
+      "task": "DM or reply to qualified leads with our AI agent setup offer",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

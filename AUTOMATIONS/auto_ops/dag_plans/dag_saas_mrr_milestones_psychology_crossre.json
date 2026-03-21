@@ -1,0 +1,35 @@
+{
+  "name": "integration_saas_mrr_milestones_psychology_crossre",
+  "created": "2026-03-20T18:35:55.016284",
+  "method": "saas mrr milestones psychology. cross-ref alpha346 for rbf.  ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_milestones",
+      "steps": [
+        "scrape_reddit_saas_milestones",
+        "scrape_indiehackers_milestones"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_patterns",
+      "steps": [
+        "extract_pain_points_per_mrr_band",
+        "cross_ref_alpha346_rbf"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_milestones"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_milestone_psychology_threads",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "analyze_patterns"
+    }
+  ],
+  "status": "READY"
+}

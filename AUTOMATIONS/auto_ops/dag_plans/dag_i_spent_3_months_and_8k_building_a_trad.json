@@ -1,0 +1,37 @@
+{
+  "name": "integration_i_spent_3_months_and_8k_building_a_trad",
+  "created": "2026-03-20T13:50:42.022110",
+  "method": "i spent 3 months and $8K building a trading bot from scratch: it made $900\n\nthen claude code found an anonymous account making $414K with a simpler strategy\n\nso i deleted my bot and started copying th",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_method",
+      "steps": [
+        "parse_original_tweet_thread",
+        "extract_meta_method_copy_proven_strategies",
+        "discount_revenue_to_realistic_80_120k"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_twitter_thread_claude_code_finds_hidden_alpha",
+        "generate_3_standalone_tweets_on_overengineering_vs_simplicity",
+        "generate_engagement_bait_version_deleted_my_8k_bot"
+      ],
+      "parallel": true,
+      "depends_on": "extract_method"
+    },
+    {
+      "name": "queue_and_distribute",
+      "steps": [
+        "add_to_posting_queue",
+        "tag_for_repurposing_reddit_linkedin"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

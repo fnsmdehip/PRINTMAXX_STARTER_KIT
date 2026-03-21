@@ -1,0 +1,48 @@
+{
+  "name": "integration_i_built_an_ai_system_that_creates_thousa",
+  "created": "2026-03-20T18:09:53.899269",
+  "method": "I built an AI system that creates thousands of UGC videos per month \u2014 for a single brand.\n\nNo creators. \nNo briefs. \nNo $500 per video. \nJust output.\n\nHere\u2019s the full pipeline:\n\n\u2192 AI generates a reali",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "persona_gen",
+      "steps": [
+        "generate_persona_profile",
+        "generate_voice_clone_via_tts",
+        "generate_face_reference"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "script_write",
+      "steps": [
+        "claude_write_ugc_script",
+        "extract_hook_variants",
+        "generate_cta_variants"
+      ],
+      "parallel": true,
+      "depends_on": "persona_gen"
+    },
+    {
+      "name": "render",
+      "steps": [
+        "remotion_render_video",
+        "add_captions_srt",
+        "generate_thumbnail"
+      ],
+      "parallel": true,
+      "depends_on": "script_write"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "log_to_ai_video_tracker",
+        "update_content_calendar"
+      ],
+      "parallel": true,
+      "depends_on": "render"
+    }
+  ],
+  "status": "READY"
+}

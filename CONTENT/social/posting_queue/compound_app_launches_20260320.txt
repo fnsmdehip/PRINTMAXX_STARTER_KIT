@@ -1,0 +1,209 @@
+# COMPOUND CONTENT — DeskBreak + Fitness Streak Apps
+# Source: distribution_engine_report + app builds
+# Status: READY_TO_POST
+# Generated: 2026-03-20 09:15
+# Voice: PRINTMAXXER (tech niche), casual fitness voice
+
+---
+
+## TWITTER THREAD — DeskBreak (Behavioral Design)
+
+### 1/5
+
+built a tool that forces you to take breaks from your desk.
+
+not reminders. not notifications. your screen locks.
+
+the insight: friction belongs on the WRONG behavior, not the right one.
+
+every break app reminds you to stand up. you dismiss the notification and keep working.
+
+deskbreak makes it impossible to keep working.
+
+### 2/5
+
+how it works:
+
+- set your work/break intervals (25/5, 50/10, whatever)
+- when break time hits, your screen goes to a break screen
+- you can't dismiss it. you can't minimize it. you can't "5 more minutes" it.
+- when break is over, you're back to work.
+
+pomodoro with enforcement.
+
+### 3/5
+
+why this works when reminders don't:
+
+reminders rely on willpower. you see "take a break" and think "after this one thing."
+
+4 hours later you haven't moved.
+
+deskbreak removes the decision. you don't choose to take a break. the break happens.
+
+same principle as prayerlock (locks phone during prayer). friction on the wrong behavior.
+
+### 4/5
+
+the pattern:
+
+- prayerlock: friction on phone use during prayer
+- deskbreak: friction on desk work during breaks
+- soberstreak: friction on breaking your sober streak
+- fitness streaks: friction on skipping workouts
+
+every habit app gets this backwards. they add friction to STARTING the good habit. that's wrong.
+
+add friction to CONTINUING the bad habit. the good habit becomes the path of least resistance.
+
+### 5/5
+
+deskbreak is free. works in any browser. no install. no account.
+
+deskbreak.surge.sh
+
+your back, your eyes, and your posture will thank you.
+
+if you work from home and "forget" to take breaks, you don't have a discipline problem. you have a friction problem.
+
+---
+
+## TWITTER STANDALONE — Fitness Streak Apps Bundle
+
+shipped 6 fitness streak apps this week:
+
+- hiit streak (high intensity intervals)
+- cycling streak
+- plank streak
+- pushup streak
+- yoga streak
+- sober streak
+
+each one does ONE thing: tracks your daily streak. miss a day and it resets.
+
+no social features. no premium. no accounts.
+
+the streak counter is the entire product. because consistency beats intensity every single time.
+
+all free: [links in reply]
+
+---
+
+## TWITTER STANDALONE — SoberStreak
+
+built soberstreak for anyone in recovery.
+
+one number. how many days sober.
+
+miss a day, it resets. simple as that.
+
+no social sharing. no community features. no "share your journey." that's not what early recovery needs.
+
+it needs one number going up every day.
+
+free. offline. private. soberstreak.surge.sh
+
+---
+
+## TWITTER — Reply bait for fitness niche
+
+which matters more for results:
+
+A) perfect workout plan
+B) showing up every single day with a mediocre plan
+
+wrong answers only.
+
+---
+
+## REDDIT — r/bodyweightfitness
+
+**Title:** Built free streak trackers for pushups, planks, and yoga — no account, works offline
+
+**Body:**
+
+Made three simple streak tracking PWAs for bodyweight exercises:
+
+- **Pushup Streak** — log daily pushups, track streak
+- **Plank Streak** — log daily plank time, track streak
+- **Yoga Streak** — log daily practice, track streak
+
+The concept: your streak resets if you miss a day. That's the entire app. No workout plans, no social features, no premium tier. Just a number that goes up when you show up.
+
+Built these because every fitness app tries to be everything. I wanted something that does one thing: hold me accountable with a visible streak counter.
+
+All free, work offline, no accounts needed. Built as PWAs so they work on any phone browser.
+
+Links: [pushupstreak.surge.sh] [plankstreak.surge.sh] [yogastreak.surge.sh]
+
+Would love feedback on whether streak-only tracking is enough or if people want more features.
+
+---
+
+## REDDIT — r/remotework
+
+**Title:** Built a browser tool that locks your screen during breaks — because break reminders don't work
+
+**Body:**
+
+I've tried every break reminder app. Pomodoro timers. Stretch reminders. Stand-up notifications.
+
+I dismiss every single one of them.
+
+So I built DeskBreak. Instead of reminding you to take a break, it forces one. Your browser goes to a break screen that you can't dismiss. When the break is over, you continue working.
+
+The insight: friction should be on the wrong behavior (sitting too long), not the right behavior (taking breaks).
+
+Reminders add friction to starting a break. DeskBreak adds friction to continuing to sit.
+
+Free, works in any browser: deskbreak.surge.sh
+
+Anyone else find that break reminders are completely useless? Curious if the "forced break" approach works better for others.
+
+---
+
+## REDDIT — r/stopdrinking
+
+**Title:** Built a free, private sobriety day counter — no account, no social features, works offline
+
+**Body:**
+
+Made a simple web app called SoberStreak. It does one thing: counts your days sober.
+
+Miss a day, the streak resets.
+
+That's it. No social sharing. No community. No journal prompts. No premium features.
+
+I built it because I noticed that every sobriety app wants to be a platform. Sometimes you just need a number that goes up every day. Privately. Without an account.
+
+Works offline so you don't need internet. No data leaves your device.
+
+soberstreak.surge.sh
+
+If it helps even one person, worth it. I will not drink with you today.
+
+---
+
+## LINKEDIN POST — "The behavioral design pattern nobody uses"
+
+Every habit app gets friction backwards.
+
+They add friction to STARTING the good habit. "Log your workout." "Track your calories." "Check in daily."
+
+The result: you stop using the app because the overhead makes the habit harder.
+
+The pattern that works: add friction to the BAD behavior.
+
+PrayerLock doesn't remind you to pray. It locks your phone during prayer. The friction is on phone use, not on prayer.
+
+DeskBreak doesn't remind you to take breaks. It locks your screen. The friction is on sitting, not on standing up.
+
+SoberStreak doesn't motivate you with stories. It shows one number. Miss a day and it resets. The friction is on breaking the streak.
+
+In UX design terms: make the right behavior the path of least resistance by making the wrong behavior harder.
+
+I built 6 apps using this pattern this month. Each one does exactly one thing. No social features. No premium tiers. No accounts.
+
+Because the product IS the friction. Not the features around it.
+
+#ProductDesign #BehavioralDesign #UX #BuildInPublic

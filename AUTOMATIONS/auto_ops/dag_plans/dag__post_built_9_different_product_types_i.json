@@ -1,0 +1,35 @@
+{
+  "name": "integration__post_built_9_different_product_types_i",
+  "created": "2026-03-20T18:35:54.945147",
+  "method": " post: built 9 different product types in 2 years. only 2 made real money. here's what actually works for solo builders in 2026. | content: skills include but are not limited toseocroinbound marketing",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_framework",
+      "steps": [
+        "parse_winning_product_types",
+        "build_scoring_rubric_from_skills_list"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_3_engagement_posts",
+        "create_1_thread_solo_builder_product_validation"
+      ],
+      "parallel": true,
+      "depends_on": "extract_framework"
+    },
+    {
+      "name": "apply_to_portfolio",
+      "steps": [
+        "score_app_factory_against_rubric",
+        "flag_kill_or_doubledown"
+      ],
+      "parallel": false,
+      "depends_on": "extract_framework"
+    }
+  ],
+  "status": "READY"
+}

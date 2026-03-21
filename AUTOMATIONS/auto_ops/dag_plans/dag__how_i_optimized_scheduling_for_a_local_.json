@@ -1,0 +1,38 @@
+{
+  "name": "integration__how_i_optimized_scheduling_for_a_local_",
+  "created": "2026-03-20T18:09:58.392033",
+  "method": " how i optimized scheduling for a local service gig. what's up, 21m studying ai. in the world of \"boring\" businesses like landscaping or cleaning, tech can be your secret weapon. i once built a custom",
+  "venture": "LOCAL_BIZ",
+  "phases": [
+    {
+      "name": "scrape_and_qualify",
+      "steps": [
+        "scrape_google_maps_service_businesses",
+        "scrape_yelp_service_businesses",
+        "check_existing_scheduling_tools"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_and_filter",
+      "steps": [
+        "merge_results",
+        "score_by_pain_signal",
+        "filter_phone_only_no_booking"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_and_qualify"
+    },
+    {
+      "name": "personalize_and_outreach",
+      "steps": [
+        "generate_demo_scheduling_page",
+        "find_owner_email",
+        "send_cold_email_with_demo_link"
+      ],
+      "parallel": false,
+      "depends_on": "score_and_filter"
+    }
+  ],
+  "status": "READY"
+}

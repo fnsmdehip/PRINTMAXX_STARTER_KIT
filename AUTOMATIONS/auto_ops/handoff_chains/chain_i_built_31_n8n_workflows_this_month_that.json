@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_built_31_n8n_workflows_this_month_that",
+  "created": "2026-03-20T18:09:53.342652",
+  "method": "i built 31 n8n workflows this month that replace\nthe most overpriced saas tools businesses pay for.\n\n\u2192 $299/mo email marketing platform \u2014 replaced\n\u2192 $199/mo social scheduling tool \u2014 replaced\n\u2192 $149/mo",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "researcher",
+      "task": "scan G2/Capterra for SaaS tools with highest pricing complaints and identify n8n-replaceable features",
+      "output": "saas_replacement_targets.json"
+    },
+    {
+      "agent": "builder",
+      "task": "build n8n workflows via API at localhost:5678 that replicate each target SaaS core features",
+      "output": "n8n_workflow_exports/"
+    },
+    {
+      "agent": "packager",
+      "task": "bundle each workflow with setup guide, screenshots, and listing copy priced at $29-79 each or $149 bundle",
+      "output": "digital_products/n8n_templates/"
+    },
+    {
+      "agent": "distributor",
+      "task": "create content (4 threads, 12 tweets), list products, send cold emails to businesses paying for replaced SaaS",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

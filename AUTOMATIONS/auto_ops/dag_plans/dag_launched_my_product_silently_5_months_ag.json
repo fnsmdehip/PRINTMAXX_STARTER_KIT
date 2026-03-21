@@ -1,0 +1,43 @@
+{
+  "name": "integration_launched_my_product_silently_5_months_ag",
+  "created": "2026-03-20T13:50:41.451199",
+  "method": "Launched my product silently 5 months ago... today I woke up to my first paying customer: a Hollywood movie studio.",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "inventory",
+      "steps": [
+        "read DEPLOYMENT_URLS.md for all live apps",
+        "scrape each app URL for title/description/screenshot"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "directory_research",
+      "steps": [
+        "scrape top micro-SaaS directories for submission requirements",
+        "scrape indie hacker/Product Hunt alternative listing sites"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_listings",
+      "steps": [
+        "generate SEO-optimized title+description+tags per app per directory",
+        "generate screenshots via playwright HTML-to-image"
+      ],
+      "parallel": true,
+      "depends_on": "inventory"
+    },
+    {
+      "name": "submit",
+      "steps": [
+        "auto-submit to free directories via playwright",
+        "log submissions to LEDGER"
+      ],
+      "parallel": false,
+      "depends_on": "generate_listings"
+    }
+  ],
+  "status": "READY"
+}

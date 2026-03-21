@@ -1,0 +1,48 @@
+{
+  "name": "integration_saaspocalypse_300b_saas_value_wiped_d",
+  "created": "2026-03-20T18:09:57.207703",
+  "method": "SaaSpocalypse: $300B SaaS value wiped. Default CRUD+SEO moat dead. Teams shipping fast with AI still winning (Cursor $1B ARR in 24mo). Opportunity: position against incumbent SaaS with cheaper, faster",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scan_incumbents",
+      "steps": [
+        "scrape_g2_low_rated_saas",
+        "scrape_reddit_saas_hate_threads",
+        "scrape_hn_saas_complaints"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_targets",
+      "steps": [
+        "score_vulnerability_index",
+        "estimate_market_size",
+        "check_existing_alternatives"
+      ],
+      "parallel": true,
+      "depends_on": "scan_incumbents"
+    },
+    {
+      "name": "generate_specs",
+      "steps": [
+        "extract_core_features_only",
+        "design_minimal_pricing",
+        "create_app_factory_spec"
+      ],
+      "parallel": false,
+      "depends_on": "qualify_targets"
+    },
+    {
+      "name": "build_and_distribute",
+      "steps": [
+        "queue_app_factory_build",
+        "generate_saaspocalypse_content_thread",
+        "cold_outreach_to_churned_users"
+      ],
+      "parallel": true,
+      "depends_on": "generate_specs"
+    }
+  ],
+  "status": "READY"
+}

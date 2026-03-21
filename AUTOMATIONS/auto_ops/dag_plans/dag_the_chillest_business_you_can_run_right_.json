@@ -1,0 +1,38 @@
+{
+  "name": "integration_the_chillest_business_you_can_run_right_",
+  "created": "2026-03-20T18:09:53.649153",
+  "method": "The chillest business you can run right now is building AI UGC FB / IG pages \n\nyou can just become an affiliate for a brand and get paid $500 - 2k retainers per page you run + affiliate commissions \n\n",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_affiliate_networks_for_ugc_friendly_brands",
+        "extract_commission_rates_and_requirements",
+        "score_brands_by_fit_and_payout"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_ai_ugc_scripts_per_brand",
+        "render_ugc_videos_via_remotion_or_heygen_free",
+        "create_caption_and_hashtag_sets"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue_content_to_posting_pipeline",
+        "apply_to_affiliate_programs",
+        "track_page_metrics"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

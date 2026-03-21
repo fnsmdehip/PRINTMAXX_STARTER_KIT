@@ -1,0 +1,58 @@
+{
+  "name": "integration_zero_printmaxx_android_apps_72_global_",
+  "created": "2026-03-20T18:09:56.050741",
+  "method": "Zero PRINTMAXX Android apps. 72% global market share untapped. Priority: port top 3 iOS apps to React Native / Expo for Play Store.",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan_all_deployed_apps_for_capacitor_config",
+        "classify_html_only_vs_capacitor_vs_native",
+        "rank_by_revenue_potential_and_niche_demand"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "prepare",
+      "steps": [
+        "generate_android_keystore",
+        "create_play_store_dev_account_checklist",
+        "write_aso_listings_for_top3_using_procedural_memory"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "build",
+      "steps": [
+        "capacitor_add_android_for_pwa_apps",
+        "twa_wrap_for_html_only_landing_apps",
+        "configure_adaptive_icons_and_splash"
+      ],
+      "parallel": true,
+      "depends_on": "prepare"
+    },
+    {
+      "name": "test",
+      "steps": [
+        "run_android_emulator_smoke_test",
+        "verify_offline_capability",
+        "check_payment_links_work_in_webview"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "submit",
+      "steps": [
+        "generate_aab_bundles",
+        "upload_to_play_console",
+        "submit_for_review"
+      ],
+      "parallel": false,
+      "depends_on": "test"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration____name_robloxmaxxapi___version",
+  "created": "2026-03-20T23:12:25.526268",
+  "method": "{   \"name\": \"robloxmaxx-api\",   \"version\": \"1.0.0\",   \"lockfileVersion\": 3,   \"requires\": true,   \"packages\": {     \"\": {       \"name\": \"robloxmaxx-api\",       \"version\": \"1.0.0\",       \"dependencies\"",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "Glob robloxmaxx-api/** for all source files",
+        "Read package.json + all .js/.ts files",
+        "Identify: existing routes, missing routes, auth completeness, Claude usage, payment wiring"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "complete",
+      "steps": [
+        "Generate missing route handlers using Claude API (claude-proxy endpoint)",
+        "Wire Stripe payment link into /upgrade route",
+        "Add SQLite schema migration for users + api_keys tables"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "Write Procfile + Railway config or Render.yaml",
+        "Push to GitHub repo (create if missing)",
+        "Update OPS/DEPLOYMENT_URLS.md with live API URL"
+      ],
+      "parallel": false,
+      "depends_on": "complete"
+    }
+  ],
+  "status": "READY"
+}

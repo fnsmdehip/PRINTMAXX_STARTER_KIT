@@ -1,0 +1,47 @@
+{
+  "name": "integration_just_paid_out_one_of_our_organic_ai_crea",
+  "created": "2026-03-20T13:50:42.859704",
+  "method": "Just paid out one of our Organic AI creators $200k for February (and he did $100k in January)  \n\nHe runs some of the Instagram/Facebook pages you see screenshotted by LARPers daily on twitter to sell ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_3_carousels_per_niche",
+        "generate_1_reel_script",
+        "generate_caption_with_cta"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "product_alignment",
+      "steps": [
+        "match_content_to_existing_pdfs",
+        "generate_link_in_bio_page",
+        "create_story_swipe_up_assets"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "posting_queue",
+      "steps": [
+        "format_for_ig_dimensions",
+        "schedule_optimal_times_meta_algo",
+        "add_to_posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "content_generation"
+    },
+    {
+      "name": "tracking",
+      "steps": [
+        "log_posts_published",
+        "track_engagement_metrics",
+        "track_pdf_link_clicks"
+      ],
+      "parallel": true,
+      "depends_on": "posting_queue"
+    }
+  ],
+  "status": "READY"
+}

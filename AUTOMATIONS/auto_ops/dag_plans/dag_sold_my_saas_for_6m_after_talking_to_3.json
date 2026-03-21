@@ -1,0 +1,36 @@
+{
+  "name": "integration_sold_my_saas_for_6m_after_talking_to_3",
+  "created": "2026-03-20T18:35:52.863772",
+  "method": "Sold my SaaS for $6M. After talking to 30 buyers, here's what actually mattered in the sale. Eight months ago I started the process of selling my B2B SaaS. $1.2M ARR, 85% gross margin, 95% net retenti",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_framework",
+      "steps": [
+        "parse_buyer_criteria_into_structured_checklist",
+        "map_criteria_to_printmaxx_saas_portfolio"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_twitter_thread_5_tweets",
+        "generate_linkedin_post",
+        "generate_gumroad_checklist_pdf_listing"
+      ],
+      "parallel": true,
+      "depends_on": "extract_framework"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "add_pdf_to_digital_products_ready_to_sell"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

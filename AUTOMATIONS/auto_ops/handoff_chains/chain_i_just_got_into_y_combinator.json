@@ -1,0 +1,24 @@
+{
+  "name": "chain_i_just_got_into_y_combinator",
+  "created": "2026-03-20T13:50:41.170075",
+  "method": "I just got into Y Combinator",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape ycombinator.com/companies API for current and recent batch companies, extract name/domain/vertical/stage/founder info",
+      "output": "yc_leads_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each company by service-fit: do they need landing pages, cold email, content, dev? Filter to companies <6mo post-funding with no visible marketing infrastructure",
+      "output": "yc_leads_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach referencing their YC batch, specific product, and a concrete offer (landing page audit, cold email setup, etc). Feed into EAS pipeline",
+      "output": "yc_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

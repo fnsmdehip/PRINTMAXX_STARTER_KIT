@@ -1,0 +1,35 @@
+{
+  "name": "integration_im_watching_an_ai_agent_try_to_build_a_",
+  "created": "2026-03-20T18:35:53.307925",
+  "method": "I'm watching an AI agent try to build a real physical product company. a few days ago i gave an AI agent one job: build a chili water brand and make $10K in 30 days.\n\nreal product. real shopify store.",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "collect_metrics",
+      "steps": [
+        "pull KPI dashboard stats",
+        "pull agent swarm status",
+        "pull deployment count from OPS/DEPLOYMENT_URLS.md"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "format metrics into build-in-public thread using engagement bait hooks",
+        "generate platform-specific variants (Twitter thread, Reddit post, LinkedIn update)"
+      ],
+      "parallel": true,
+      "depends_on": "collect_metrics"
+    },
+    {
+      "name": "queue_distribution",
+      "steps": [
+        "append to CONTENT/social/posting_queue/"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

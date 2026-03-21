@@ -1,0 +1,36 @@
+{
+  "name": "integration_wallpaper_app_macos_monetization_laun",
+  "created": "2026-03-20T18:09:51.734724",
+  "method": "Wallpaper app (macOS) monetization: launch v0.1 with 2-3 users, build Discord for feedback, iterate features before adding paywall, organic traffic from Reddit + X, word of mouth. $6-7/wallpaper prici",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "generate",
+      "steps": [
+        "generate_wallpapers_html_to_image",
+        "generate_preview_thumbnails"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "package",
+      "steps": [
+        "bundle_into_themed_zips",
+        "create_stripe_products_and_links"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_landing_page_surge",
+        "post_previews_reddit_queue",
+        "post_previews_x_queue"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    }
+  ],
+  "status": "READY"
+}

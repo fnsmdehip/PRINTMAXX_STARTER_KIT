@@ -1,0 +1,47 @@
+{
+  "name": "integration_facebook_creator_fast_track__content_mo",
+  "created": "2026-03-20T18:09:55.664062",
+  "method": "Facebook Creator Fast Track + Content Monetization. $0 cost. Launch 3 Facebook Pages today in profitable niches (motivation/finance/DIY). Use auto_clip_service.py to generate Reels at volume. Apply to",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_generation",
+      "steps": [
+        "auto_clip_service_motivation_batch",
+        "auto_clip_service_finance_batch",
+        "auto_clip_service_diy_batch"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "quality_filter",
+      "steps": [
+        "filter_completion_rate_hooks",
+        "add_captions_cta_overlays"
+      ],
+      "parallel": false,
+      "depends_on": "content_generation"
+    },
+    {
+      "name": "posting",
+      "steps": [
+        "fb_graph_api_post_motivation",
+        "fb_graph_api_post_finance",
+        "fb_graph_api_post_diy"
+      ],
+      "parallel": true,
+      "depends_on": "quality_filter"
+    },
+    {
+      "name": "analytics",
+      "steps": [
+        "track_views_engagement",
+        "check_monetization_eligibility",
+        "cross_post_top_performers_to_tiktok_ig"
+      ],
+      "parallel": true,
+      "depends_on": "posting"
+    }
+  ],
+  "status": "READY"
+}

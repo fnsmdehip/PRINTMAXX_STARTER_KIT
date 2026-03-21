@@ -1,0 +1,36 @@
+{
+  "name": "integration_lost_15m_in_less_than_2_years",
+  "created": "2026-03-20T13:50:40.688190",
+  "method": "lost $1.5M in less than 2 years",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_loss_stories",
+      "steps": [
+        "scrape_reddit_loss_posts",
+        "scrape_twitter_loss_threads"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_patterns",
+      "steps": [
+        "extract_hook_structures",
+        "extract_engagement_ratios",
+        "identify_dollar_anchors"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_loss_stories"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_printmaxx_loss_hooks",
+        "route_to_posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "extract_patterns"
+    }
+  ],
+  "status": "READY"
+}

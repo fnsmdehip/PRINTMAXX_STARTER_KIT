@@ -1,0 +1,29 @@
+{
+  "name": "chain_how_id_use_openclaw_to_replace_a_15km",
+  "created": "2026-03-20T23:12:24.854011",
+  "method": "How I\u2019d use OpenClaw to replace a $15k/mo ops + marketing stack (real setup, not theory) I\u2019ve been studying a real setup where one OpenClaw system runs 34 cron jobs and 71 scripts, generates X posts t",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "stat_puller",
+      "task": "Pull live system metrics: script count, cron count, agent count, content output volume, estimated monthly ops value replaced. Source: OPS/PRINTMAXX_SYSTEM_MAP.md + OPS/KPI_DASHBOARD.md",
+      "output": "system_stats_snapshot.json"
+    },
+    {
+      "agent": "content_writer",
+      "task": "Write 3 X posts + 1 thread using real stats. Hook: 'I built the exact system this post describes. Here's what actually running 337 scripts + 33 agents looks like...' \u2014 contrast hype vs reality, show real cost ($271/mo claim \u2192 validate or correct with our actual infra cost)",
+      "output": "ops_authority_posts.json"
+    },
+    {
+      "agent": "product_extractor",
+      "task": "Identify 1 packageable product from the system: Claude Code ops config bundle, PRINTMAXX starter kit, or 'autonomous ops audit' consulting offer. Output paste-ready Gumroad listing draft.",
+      "output": "DIGITAL_PRODUCTS/ready_to_sell/LISTING_autonomous_ops_stack.md"
+    },
+    {
+      "agent": "queue_writer",
+      "task": "Write approved posts to CONTENT/social/posting_queue/ for manual or scheduled posting",
+      "output": "CONTENT/social/posting_queue/ops_authority_20260320.txt"
+    }
+  ],
+  "status": "READY"
+}

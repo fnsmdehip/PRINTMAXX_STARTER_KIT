@@ -1,0 +1,37 @@
+{
+  "name": "integration_scaled_my_side_hustle_to_3000month",
+  "created": "2026-03-20T12:04:46.109178",
+  "method": "Scaled My Side Hustle to $3,000/Month",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_r_passive_income_top_posts",
+        "scrape_r_sidehustle_crossref"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "extract_concrete_method_from_post_body",
+        "discount_revenue_claims_50_70pct",
+        "tag_method_type_and_required_tools"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "score_automability_0_10",
+        "route_to_existing_venture_or_reject",
+        "log_to_alpha_staging"
+      ],
+      "parallel": false,
+      "depends_on": "extract"
+    }
+  ],
+  "status": "READY"
+}

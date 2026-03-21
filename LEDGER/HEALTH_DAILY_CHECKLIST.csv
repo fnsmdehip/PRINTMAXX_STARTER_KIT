@@ -1,13 +1,2 @@
 habit_id,habit_name,category,target,time_of_day,today_status,streak,notes
 HD001,Morning Prayer / Meditation,mental,5 min,AM,PENDING,0,5 min silence before phone
-HD002,Cold Shower,physical,2 min,AM,PENDING,0,Cold exposure for HRV and alertness
-HD003,Supplements AM Stack,supplements,full stack,AM,PENDING,0,See HEALTH_STACK.csv for details
-HD004,Sunlight 15min,physical,15 min,AM,PENDING,0,First hour after waking for circadian
-HD005,Walk 10K Steps,physical,10000 steps,ALL_DAY,PENDING,0,Track with phone or watch
-HD006,Hydration 3L,nutrition,3 liters,ALL_DAY,PENDING,0,Track water intake throughout day
-HD007,Protein 150g+,nutrition,150g,ALL_DAY,PENDING,0,Prioritize whole food protein sources
-HD008,No Processed Food,nutrition,0 servings,ALL_DAY,PENDING,0,Whole foods only
-HD009,Supplements PM Stack,supplements,full stack,PM,PENDING,0,See HEALTH_STACK.csv for details
-HD010,Stretching / Mobility,physical,10 min,PM,PENDING,0,Dynamic stretches post-work
-HD011,Journaling,mental,5 min,PM,PENDING,0,Gratitude + wins + tomorrow priority
-HD012,Sleep 7+ Hours,recovery,7 hours,PM,PENDING,0,No screens 1hr before bed

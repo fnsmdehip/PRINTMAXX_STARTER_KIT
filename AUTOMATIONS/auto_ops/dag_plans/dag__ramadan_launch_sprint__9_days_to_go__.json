@@ -1,0 +1,38 @@
+{
+  "name": "integration__ramadan_launch_sprint__9_days_to_go__",
+  "created": "2026-03-20T18:10:01.463627",
+  "method": "# RAMADAN LAUNCH SPRINT - 9 DAYS TO GO  **Date:** Feb 19, 2026 **Ramadan starts:** Feb 28, 2026 (9 days) **App:** Hilal Ramadan Companion PWA **Live URL:** https://ramadan-tracker.surge.sh **Voice:** ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_daily_ramadan_posts_selahmoments_voice",
+        "generate_last_10_nights_urgency_content",
+        "generate_aso_keywords_ramadan_2026"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_to_twitter_iftar_timing",
+        "post_to_reddit_muslim_subs_value_first",
+        "update_hilal_landing_seo_meta"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    },
+    {
+      "name": "track_and_transition",
+      "steps": [
+        "check_engagement_metrics",
+        "generate_eid_prep_content",
+        "update_kpi_dashboard"
+      ],
+      "parallel": false,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

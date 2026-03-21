@@ -1,0 +1,37 @@
+{
+  "name": "integration__mit_repo_scosmancmsaasstarter_2293_s",
+  "created": "2026-03-20T18:09:58.866876",
+  "method": " mit repo: scosman/cmsaasstarter (2293 stars, svelte) ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "discover",
+      "steps": [
+        "scan_github_api_for_saas_starters",
+        "filter_mit_license_500plus_stars"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "evaluate",
+      "steps": [
+        "audit_tech_stack_compatibility",
+        "check_svelte_next_react_support",
+        "score_template_quality"
+      ],
+      "parallel": true,
+      "depends_on": "discover"
+    },
+    {
+      "name": "integrate",
+      "steps": [
+        "clone_to_app_factory_templates",
+        "create_factory_config_json",
+        "update_app_factory_methods_csv"
+      ],
+      "parallel": false,
+      "depends_on": "evaluate"
+    }
+  ],
+  "status": "READY"
+}

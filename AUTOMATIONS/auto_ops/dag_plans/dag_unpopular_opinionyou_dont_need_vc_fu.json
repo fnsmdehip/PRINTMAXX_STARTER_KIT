@@ -1,0 +1,48 @@
+{
+  "name": "integration_unpopular_opinionyou_dont_need_vc_fu",
+  "created": "2026-03-20T18:35:51.855347",
+  "method": "Unpopular opinion:\n\nYou don't need VC funding to build a successful app.\n\nI built PuffCount with $1,000.\n\nNo cofounders.\nNo investors.\n\nI was solving a problem for myself and friends.\n\nScaled to $44k ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_top_smoking_apps_appstore",
+        "extract_review_pain_points",
+        "identify_aso_keywords"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "clone_streak_template_as_puffcount",
+        "customize_ui_smoking_theme",
+        "add_health_milestone_badges"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy_landing_surge",
+        "wire_stripe_payment_link",
+        "add_to_app_factory_tracker"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_3_tweets_launch",
+        "post_to_r_stopsmoking",
+        "add_to_product_hunt_queue"
+      ],
+      "parallel": true,
+      "depends_on": "deploy"
+    }
+  ],
+  "status": "READY"
+}

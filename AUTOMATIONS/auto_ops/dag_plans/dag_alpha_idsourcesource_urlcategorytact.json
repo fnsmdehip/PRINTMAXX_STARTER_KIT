@@ -1,0 +1,35 @@
+{
+  "name": "integration_alpha_idsourcesource_urlcategorytact",
+  "created": "2026-03-20T18:10:02.352081",
+  "method": "alpha_id,source,source_url,category,tactic,roi_potential,priority,status,engagement_authenticity,earnings_verified,reviewer_notes ALPHA804,r/SideProject + IndieHackers,https://www.indiehackers.com/pos",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_and_extract",
+      "steps": [
+        "scrape_full_indiehackers_post",
+        "extract_app_categories_pricing_distribution"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_gaps",
+      "steps": [
+        "diff_their_portfolio_vs_our_app_factory_queue",
+        "identify_missing_app_types_or_pricing_models"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_and_extract"
+    },
+    {
+      "name": "action",
+      "steps": [
+        "inject_new_ideas_into_app_factory_priority_queue",
+        "generate_3_content_pieces_portfolio_validation"
+      ],
+      "parallel": true,
+      "depends_on": "analyze_gaps"
+    }
+  ],
+  "status": "READY"
+}

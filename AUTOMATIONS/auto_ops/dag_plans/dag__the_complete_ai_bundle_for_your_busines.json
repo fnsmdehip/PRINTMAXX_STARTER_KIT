@@ -1,0 +1,38 @@
+{
+  "name": "integration__the_complete_ai_bundle_for_your_busines",
+  "created": "2026-03-20T13:50:42.474360",
+  "method": " The Complete AI Bundle for Your Business Success in 2026:\n\n Learn more: \nhttps://\ngodofprompt.ai/complete-ai-bu\nndle\n\u2026\n\n What\u2019s inside\n Text Prompts Bundle\n Image Prompts Bundle\n n8n Automations Bund",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "inventory",
+      "steps": [
+        "scan DIGITAL_PRODUCTS/ for sellable prompt files",
+        "export n8n workflows to JSON from localhost:5678",
+        "collect Claude Code configs and system prompts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "package",
+      "steps": [
+        "create bundle ZIP with README and install guide",
+        "generate Gumroad listing copy from bundle contents",
+        "build landing page at builds/ai-bundle/index.html"
+      ],
+      "parallel": true,
+      "depends_on": "inventory"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy landing page to surge.sh",
+        "queue 3 tweets + 1 thread about the bundle",
+        "add to PRODUCTS/listings/"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    }
+  ],
+  "status": "READY"
+}

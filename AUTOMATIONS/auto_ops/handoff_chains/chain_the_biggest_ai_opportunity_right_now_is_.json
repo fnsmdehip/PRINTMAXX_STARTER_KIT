@@ -1,0 +1,29 @@
+{
+  "name": "chain_the_biggest_ai_opportunity_right_now_is_",
+  "created": "2026-03-20T13:50:42.840641",
+  "method": "the biggest AI opportunity right now is mid-market companies ($5M-$50M+ revenue):\n\n\u2022 too big for cookie-cutter solutions\n\u2022 too small for enterprise consulting \n\u2022 drowning in manual workflows\n\u2022 have bu",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape job boards + company DBs for mid-market companies posting manual-workflow roles (data entry, reporting, spreadsheet ops)",
+      "output": "midmarket_raw_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each company 0-10 on AI readiness: legacy stack, manual job count, revenue band, no existing AI vendor detected",
+      "output": "midmarket_qualified.json"
+    },
+    {
+      "agent": "proposal_gen",
+      "task": "Generate 1-page AI workflow audit proposal per qualified lead using their specific pain signals from job postings",
+      "output": "midmarket_proposals.json"
+    },
+    {
+      "agent": "outbound",
+      "task": "Send personalized cold email with audit proposal to founder/ops lead. Use objection handling from procedural memory.",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

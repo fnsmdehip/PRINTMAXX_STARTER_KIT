@@ -1,0 +1,29 @@
+{
+  "name": "chain__how_i_optimized_scheduling_for_a_local_",
+  "created": "2026-03-20T18:09:58.405336",
+  "method": " how i optimized scheduling for a local service gig. what's up, 21m studying ai. in the world of \"boring\" businesses like landscaping or cleaning, tech can be your secret weapon. i once built a custom",
+  "venture": "LOCAL_BIZ",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Google Maps + Yelp for landscaping/cleaning/pressure washing businesses in target metros. Extract: name, phone, website, review count, has_online_booking flag",
+      "output": "local_service_businesses_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each business: phone-only booking = HIGH pain, basic website with no scheduling = MED, already uses Jobber/Housecall Pro = SKIP. Filter to HIGH/MED only",
+      "output": "qualified_service_businesses.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Find owner email via website/LinkedIn. Send personalized cold email showing their specific scheduling gap + link to demo page built for their business type",
+      "output": "outreach_log.json"
+    },
+    {
+      "agent": "closer",
+      "task": "Track replies, schedule demos, convert to $99-199/mo scheduling app subscription",
+      "output": "pipeline_status.json"
+    }
+  ],
+  "status": "READY"
+}

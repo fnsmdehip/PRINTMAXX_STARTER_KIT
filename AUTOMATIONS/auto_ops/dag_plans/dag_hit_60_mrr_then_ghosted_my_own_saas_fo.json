@@ -1,0 +1,45 @@
+{
+  "name": "integration_hit_60_mrr_then_ghosted_my_own_saas_fo",
+  "created": "2026-03-20T18:35:54.187340",
+  "method": "Hit $60 MRR, then ghosted my own SaaS for a month. I\u2019ve realized that building the product is only 20% of the work.  \nA few months ago, I launched [mybets.gg](http://mybets.gg), a bet tracker designed",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_top_bet_trackers_app_store",
+        "extract_reddit_pain_points_r_sportsbetting_r_sportsbook"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_bet_tracker_pwa_from_app_factory_template",
+        "create_seo_landing_page_with_stripe_payment_link"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_landing_to_surge",
+        "generate_5_reddit_value_posts_for_sportsbetting_subs",
+        "generate_3_twitter_threads_bankroll_tips"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "optimize",
+      "steps": [
+        "add_aso_keywords_to_listing",
+        "schedule_weekly_content_drip"
+      ],
+      "parallel": true,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

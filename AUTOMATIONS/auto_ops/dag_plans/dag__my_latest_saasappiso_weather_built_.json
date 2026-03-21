@@ -1,0 +1,48 @@
+{
+  "name": "integration__my_latest_saasappiso_weather_built_",
+  "created": "2026-03-20T18:09:58.032096",
+  "method": " my latest saas-app:\u00a0iso weather. built and launched in 3 weeks! ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "niche_scan",
+      "steps": [
+        "scrape_app_store_utility_category",
+        "score_competition_vs_demand",
+        "pick_top_niche"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_pwa_from_utility_template",
+        "create_landing_page",
+        "wire_stripe_payment_link"
+      ],
+      "parallel": true,
+      "depends_on": "niche_scan"
+    },
+    {
+      "name": "launch",
+      "steps": [
+        "deploy_to_surge",
+        "submit_to_product_hunt",
+        "aso_keyword_optimize"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_3_tweets_1_thread",
+        "post_to_relevant_subreddits",
+        "add_to_launch_directories"
+      ],
+      "parallel": true,
+      "depends_on": "launch"
+    }
+  ],
+  "status": "READY"
+}

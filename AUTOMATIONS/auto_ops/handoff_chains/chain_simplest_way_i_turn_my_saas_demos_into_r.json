@@ -1,0 +1,29 @@
+{
+  "name": "chain_simplest_way_i_turn_my_saas_demos_into_r",
+  "created": "2026-03-20T18:35:52.659016",
+  "method": "Simplest Way I Turn My SaaS Demos Into Real Users (Small workflow that started working for me) Simplest Way I Turn My SaaS Demos Into Real Users (Small workflow that started working for me)\n\nIn the mo",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Reddit/IndieHackers/Twitter for threads where people describe the exact pain point each deployed app solves",
+      "output": "pain_point_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads by urgency (asking for solution NOW vs venting), match to our deployed apps, filter out competitors",
+      "output": "qualified_demo_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized demo links with UTM tracking, post helpful replies linking to free tool, log outreach",
+      "output": "demo_outreach_log.json"
+    },
+    {
+      "agent": "tracker",
+      "task": "Check demo engagement analytics, flag high-intent users (3+ visits, feature usage), queue for follow-up",
+      "output": "hot_demo_users.json"
+    }
+  ],
+  "status": "READY"
+}

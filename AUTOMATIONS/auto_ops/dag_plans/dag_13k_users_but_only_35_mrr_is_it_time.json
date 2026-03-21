@@ -1,0 +1,36 @@
+{
+  "name": "integration_13k_users_but_only_35_mrr_is_it_time",
+  "created": "2026-03-20T18:35:53.558624",
+  "method": "1.3k users, but only $35 MRR. Is it time to kill my project? I've been running **RankMyCV** for a few months now. The growth actually surprised me\u2014I just hit **1,356 total users** and I'm getting arou",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_app_metrics",
+      "steps": [
+        "pull_deployment_urls",
+        "check_each_app_for_paywall_type",
+        "classify_freemium_vs_hard_paywall"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "conversion_audit",
+      "steps": [
+        "flag_apps_giving_core_value_free",
+        "recommend_paywall_restructure",
+        "generate_ab_test_variants"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_app_metrics"
+    },
+    {
+      "name": "new_app_spec",
+      "steps": [
+        "spec_cv_analyzer_with_hard_paywall_3_free_then_pay",
+        "add_to_app_factory_priority_queue"
+      ],
+      "parallel": true
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "integration_stripe_machine_payments_protocol_mpp_",
+  "created": "2026-03-20T18:09:51.730866",
+  "method": "Stripe Machine Payments Protocol (MPP) - machines can now autonomously initiate, authorize, and settle payments. API-to-API payment rails for AI agents. 130 HN points.",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_stripe_mpp_docs",
+        "check_api_availability",
+        "audit_existing_apps_for_upgrade_buttons"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "implement",
+      "steps": [
+        "wire_mpp_into_payment_integrator_py",
+        "add_agent_payment_capability_to_swarm",
+        "create_mpp_checkout_for_mcp_marketplace"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "productize",
+      "steps": [
+        "build_ai_agent_payment_kit_digital_product",
+        "create_stripe_mpp_gumroad_listing"
+      ],
+      "parallel": true,
+      "depends_on": "implement"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_hn_response_thread",
+        "generate_twitter_threads_x3",
+        "post_to_indiehackers_devto"
+      ],
+      "parallel": true,
+      "depends_on": "implement"
+    }
+  ],
+  "status": "READY"
+}

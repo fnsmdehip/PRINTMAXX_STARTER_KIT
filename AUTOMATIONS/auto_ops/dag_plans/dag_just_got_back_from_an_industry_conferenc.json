@@ -1,0 +1,36 @@
+{
+  "name": "integration_just_got_back_from_an_industry_conferenc",
+  "created": "2026-03-20T18:09:53.787636",
+  "method": "just got back from an industry conference and genuinely feel like i lit $4k on fire ok so rant incoming lol. we sell B2B software to mid-market retailers and i convinced myself that one of the big ret",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "extract_contrarian_hook_conferences_are_dead",
+        "extract_target_list_20_method"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_twitter_thread_conferences_vs_cold_outbound",
+        "generate_linkedin_post_4k_burned",
+        "generate_reddit_comment_templates_for_conference_threads"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "push_to_posting_queue",
+        "feed_target_list_tactic_to_outbound_chain"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "integration_i_built_a_tiny_opensource_gym_that_nu",
+  "created": "2026-03-20T18:35:51.578445",
+  "method": "I built a tiny open-source \u201cgym\u201d that nudges you to move while Claude Code is running I use Claude Code a lot \u2014 plan mode, multi-agent, long tool streaks \u2014 and I kept catching myself 45 minutes into a",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "extract_method_details",
+        "identify_content_angles",
+        "check_existing_claude_code_product_listings"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_3_tweets_developer_health",
+        "generate_1_thread_claude_code_ecosystem",
+        "draft_product_bundle_addition"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "append_to_posting_queue",
+        "update_digital_product_listing_bonus"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

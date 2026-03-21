@@ -1,0 +1,36 @@
+{
+  "name": "integration_michael_saylorsaylors_strategy_",
+  "created": "2026-03-20T18:35:50.563004",
+  "method": "Michael Saylor(\n@saylor\n)'s \n@Strategy\n bought another 17,994 $BTC($1.28B) at $70,946 last week.\n\nStrategy now holds 738,731 $BTC($50.77B) at an average price of $75,862, and is currently sitting on a",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_signal",
+      "steps": [
+        "fetch_strategy_press_releases",
+        "fetch_lookonchain_whale_data"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_whale_tracker_thread",
+        "create_unrealized_pnl_visual_concept",
+        "create_contrarian_take_post"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_signal"
+    },
+    {
+      "name": "queue_distribution",
+      "steps": [
+        "add_to_posting_queue",
+        "tag_crypto_niche"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

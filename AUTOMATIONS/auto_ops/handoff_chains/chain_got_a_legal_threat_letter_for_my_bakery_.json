@@ -1,0 +1,29 @@
+{
+  "name": "chain_got_a_legal_threat_letter_for_my_bakery_",
+  "created": "2026-03-20T18:09:56.149703",
+  "method": "Got a legal threat letter for my bakery website last month. \nWant to share what I learned in case it helps anyone.",
+  "venture": "LOCAL_BIZ",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan local business websites for legal compliance gaps (ADA, privacy, cookies, TOS)",
+      "output": "compliance_scan_results.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score vulnerability severity, filter sites with 3+ issues, find owner email",
+      "output": "qualified_leads.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Generate per-site compliance report PDF showing exact issues + fix cost",
+      "output": "compliance_reports/"
+    },
+    {
+      "agent": "outreach",
+      "task": "Send cold email with compliance report attached, fear-based subject line",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

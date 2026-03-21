@@ -1,0 +1,37 @@
+{
+  "name": "integration_alpha804rsideproject__indiehackersht",
+  "created": "2026-03-20T18:10:01.335389",
+  "method": "ALPHA804,r/SideProject + IndieHackers,https://www.indiehackers.com/post/tech/from-0-to-62k-mrr-in-three-months-mUPVSYOlJAC2iogGK7d4,APP_FACTORY,\"Portfolio approach: 30+ small apps outperforms single b",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "crawl_all_deployed_urls_for_payment_links",
+        "check_stripe_products_for_app_mappings",
+        "pull_analytics_if_available"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score",
+      "steps": [
+        "score_each_app_monetization_readiness",
+        "identify_top20_by_niche_demand"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "act",
+      "steps": [
+        "generate_stripe_payment_links_for_top20",
+        "update_app_landing_pages_with_ctas",
+        "flag_bottom20_for_kill_review"
+      ],
+      "parallel": false,
+      "depends_on": "score"
+    }
+  ],
+  "status": "READY"
+}

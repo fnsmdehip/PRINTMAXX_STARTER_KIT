@@ -1,0 +1,38 @@
+{
+  "name": "integration_affiliate_review_structure_honesty_conv",
+  "created": "2026-03-20T18:35:54.909752",
+  "method": "affiliate review structure. honesty converts better long-term.  ",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "data_gather",
+      "steps": [
+        "pull_product_data_from_ledger",
+        "scrape_current_pricing_from_product_sites",
+        "pull_existing_affiliate_page_inventory"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "review_generation",
+      "steps": [
+        "generate_honest_review_structure_per_product",
+        "build_comparison_tables",
+        "insert_affiliate_links_with_utm"
+      ],
+      "parallel": true,
+      "depends_on": "data_gather"
+    },
+    {
+      "name": "deploy_and_index",
+      "steps": [
+        "deploy_review_pages_to_surge",
+        "submit_to_google_search_console",
+        "create_internal_links_from_existing_pages"
+      ],
+      "parallel": false,
+      "depends_on": "review_generation"
+    }
+  ],
+  "status": "READY"
+}

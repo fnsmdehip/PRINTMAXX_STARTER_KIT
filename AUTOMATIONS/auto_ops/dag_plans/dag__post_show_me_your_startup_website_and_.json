@@ -1,0 +1,46 @@
+{
+  "name": "integration__post_show_me_your_startup_website_and_",
+  "created": "2026-03-20T18:35:55.053251",
+  "method": " post: show me your startup website and i'll give you actionable feedback | content: inspirational resourcestransparent startupsindie hackers | comment1: built and shipped a seasonal micro-saas in pub",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_reddit_review_posts",
+        "scrape_ih_review_posts",
+        "scrape_twitter_review_posts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "audit",
+      "steps": [
+        "lighthouse_audit",
+        "seo_check",
+        "conversion_analysis"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_feedback_reply",
+        "tag_upsell_opportunity"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_reply_to_thread",
+        "log_lead_to_eas_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

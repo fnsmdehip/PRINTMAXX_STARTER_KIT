@@ -1,0 +1,36 @@
+{
+  "name": "integration_how_id_use_openclaw_to_replace_a_15km",
+  "created": "2026-03-20T18:35:54.466306",
+  "method": "How I\u2019d use OpenClaw to replace a $15k/mo ops + marketing stack (real setup, not theory) I\u2019ve been studying a real setup where one OpenClaw system runs 34 cron jobs and 71 scripts, generates X posts t",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "parse_reddit_post_for_specific_numbers",
+        "cross_reference_with_printmaxx_own_metrics"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_twitter_thread_our_version",
+        "generate_linkedin_authority_post",
+        "generate_reddit_response_with_our_data"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_pipeline",
+        "update_digital_product_case_studies"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

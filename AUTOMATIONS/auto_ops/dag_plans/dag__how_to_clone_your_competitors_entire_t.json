@@ -1,0 +1,46 @@
+{
+  "name": "integration__how_to_clone_your_competitors_entire_t",
+  "created": "2026-03-20T18:09:59.144983",
+  "method": " how to clone your competitor's entire tech stack in 60 secondsbuiltwith .com shows every tool, app, and integration running on any domain. email platform. analytics. payment processor. review app. su",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "collect_domains",
+      "steps": [
+        "pull competitor domains from COMPETITIVE_INTEL.csv and COMPETITOR_FACTORY_MAP.csv",
+        "deduplicate and prioritize by revenue signal"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "scan_stacks",
+      "steps": [
+        "builtwith_free_lookup per domain",
+        "wappalyzer_oss_fallback for missed domains",
+        "parse payment/email/analytics/subscription layers"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "diff competitor stacks vs our TECH_STACK_INTEL.csv",
+        "score tool adoption frequency across competitors",
+        "flag tools we dont use that 3+ competitors do"
+      ],
+      "parallel": false,
+      "depends_on": "scan_stacks"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "update LEDGER/TECH_STACK_INTEL.csv with new findings",
+        "generate content thread: top tools competitors use",
+        "create tool swap recommendations in OPS/"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

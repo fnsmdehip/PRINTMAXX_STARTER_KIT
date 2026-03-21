@@ -1,0 +1,47 @@
+{
+  "name": "integration_package_existing_stack_as_client_service",
+  "created": "2026-03-20T18:09:56.110189",
+  "method": "Package existing stack as client service. Write 1-page deliverables menu. Pull 50 B2B SaaS founders from 17K hot leads. Send cold email campaign. First client at $999/mo = proof. Scale to 5 clients = ",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "prepare",
+      "steps": [
+        "audit_existing_stack_capabilities",
+        "generate_deliverables_menu_md",
+        "filter_50_saas_founders_from_hot_leads"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "personalize",
+      "steps": [
+        "research_each_lead_pain_points",
+        "craft_personalized_cold_emails",
+        "generate_case_study_from_deployed_apps"
+      ],
+      "parallel": true,
+      "depends_on": "prepare"
+    },
+    {
+      "name": "send",
+      "steps": [
+        "send_initial_cold_emails_batch",
+        "log_to_outreach_pipeline_csv"
+      ],
+      "parallel": false,
+      "depends_on": "personalize"
+    },
+    {
+      "name": "followup",
+      "steps": [
+        "check_replies_daily",
+        "send_followup_sequence_day3_day7",
+        "route_warm_replies_to_call_booking"
+      ],
+      "parallel": true,
+      "depends_on": "send"
+    }
+  ],
+  "status": "READY"
+}

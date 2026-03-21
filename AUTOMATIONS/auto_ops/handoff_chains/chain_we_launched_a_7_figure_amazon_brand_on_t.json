@@ -1,0 +1,29 @@
+{
+  "name": "chain_we_launched_a_7_figure_amazon_brand_on_t",
+  "created": "2026-03-20T18:35:52.097544",
+  "method": "We launched a 7 figure Amazon brand on tiktok shop and did $20k with human UGC creators this week\n\nGood team and good systems >\n\nTakeaway:\n\n- launch with human UGC. We use plug and play method to conn",
+  "venture": "BROKERING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape TikTok Shop trending products for brands doing $5K+/week GMV without visible creator programs",
+      "output": "tiktok_shop_brands_raw.json"
+    },
+    {
+      "agent": "scraper",
+      "task": "Scrape TikTok creator marketplace and hashtags for creators with 10K+ followers posting product content, filter by engagement rate >3%",
+      "output": "tiktok_creators_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score brand-creator matches by niche overlap, audience size ratio, engagement, and estimated GMV lift. Output top 20 matches.",
+      "output": "brand_creator_matches.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach for brands (value prop: we bring you tested creators, commission-only risk) and creators (value prop: we connect you to brands, no upfront cost). Queue to outreach pipeline.",
+      "output": "outreach_queue.json"
+    }
+  ],
+  "status": "READY"
+}

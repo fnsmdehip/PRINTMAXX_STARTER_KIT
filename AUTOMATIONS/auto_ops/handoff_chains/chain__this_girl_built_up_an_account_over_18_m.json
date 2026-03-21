@@ -1,0 +1,29 @@
+{
+  "name": "chain__this_girl_built_up_an_account_over_18_m",
+  "created": "2026-03-20T18:09:57.619706",
+  "method": " this girl built up an account over 18 months, which now has millions of views.\n\nthen she made an app and turned it into $70k mrr.\n\nlesson to be learned here:\n\nsocial growth engineering + horizontal s",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_factory",
+      "task": "generate niche-specific social content (3 posts/day/account) tied to existing app themes",
+      "output": "social_content_queue.json"
+    },
+    {
+      "agent": "social_poster",
+      "task": "distribute content across platforms with warmup-aware scheduling",
+      "output": "posting_log.json"
+    },
+    {
+      "agent": "audience_tracker",
+      "task": "scrape metrics daily, compute growth velocity, detect breakout content",
+      "output": "audience_metrics.json"
+    },
+    {
+      "agent": "app_promoter",
+      "task": "when audience threshold hit, execute 7-day app launch sequence with deep-link CTAs",
+      "output": "app_promotion_log.json"
+    }
+  ],
+  "status": "READY"
+}

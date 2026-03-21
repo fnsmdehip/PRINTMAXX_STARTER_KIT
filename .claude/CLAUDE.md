@@ -24,6 +24,9 @@ Read `OPS/PERSISTENT_TASK_TRACKER.md` FIRST every session. Read `AUTOMATIONS/SOU
 | Guardrails | `.claude/rules/guardrails.md` |
 | Security | `.claude/rules/security.md` + `.claude/reference/external-code-security.md` |
 | Alpha review | `.claude/reference/alpha-review.md` (load on demand) |
+| **Auto-integration** | **`.claude/rules/auto-integration.md`** — pipeline must self-feed, no human prompting for integration |
+| Before You | `MONEY_METHODS/BEFORE_YOU/BEFORE_YOU_VENTURE_README.md` |
+| Before You codebase | `/Users/macbookpro/Documents/ancestry-research/before-you/` (generator, template, landing, content) |
 
 ## Core Rules (ALWAYS active)
 1. **SHIP NOW** — Deploy what exists before building new things. $0 revenue at Day 35.

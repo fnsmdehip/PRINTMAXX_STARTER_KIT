@@ -1,0 +1,58 @@
+{
+  "name": "integration_you_said_you_would_start_with_0and_",
+  "created": "2026-03-20T18:35:50.268030",
+  "method": "\"you said you would start with $0\"\n\nand i did\n\n- i sent 500+ dms to different accounts offering to buy ($0 spent)\n\n- i found the best one and negotiated the price down ($0 spent)\n\n- i'm paying $500 ac",
+  "venture": "BROKERING",
+  "phases": [
+    {
+      "name": "discovery",
+      "steps": [
+        "scan_twitter_dormant_niche_accounts",
+        "scan_instagram_undermonetized",
+        "scan_account_marketplaces_fameswap_socialtradia"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "scoring",
+      "steps": [
+        "score_engagement_rate_vs_followers",
+        "estimate_niche_monetization_ceiling",
+        "check_account_age_authenticity_bot_ratio"
+      ],
+      "parallel": true,
+      "depends_on": "discovery"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_personalized_dm_with_account_specific_compliment",
+        "send_dm_batch_rate_limited_50_per_day",
+        "track_responses_and_followups"
+      ],
+      "parallel": false,
+      "depends_on": "scoring"
+    },
+    {
+      "name": "negotiation",
+      "steps": [
+        "counter_offer_generator_anchored_at_60pct_asking",
+        "bnpl_term_calculator_klarna_afterpay_affirm",
+        "deal_closer_with_payment_plan_template"
+      ],
+      "parallel": false,
+      "depends_on": "outreach"
+    },
+    {
+      "name": "monetization",
+      "steps": [
+        "route_to_content_factory_chain",
+        "setup_affiliate_links_in_bio",
+        "schedule_first_week_posts_from_content_queue"
+      ],
+      "parallel": true,
+      "depends_on": "negotiation"
+    }
+  ],
+  "status": "READY"
+}

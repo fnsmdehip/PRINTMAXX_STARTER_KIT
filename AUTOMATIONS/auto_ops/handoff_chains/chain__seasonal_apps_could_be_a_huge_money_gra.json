@@ -1,0 +1,29 @@
+{
+  "name": "chain__seasonal_apps_could_be_a_huge_money_gra",
+  "created": "2026-03-20T18:09:58.439576",
+  "method": " seasonal apps could be a huge money grab\nbut only if done correctly \n\nsome uv index apps make $10k+/mo\n\nspring break and summer are \naround the corner\n\nbuilding this in 3 days then mass distributing ",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "trend_scanner",
+      "task": "Identify seasonal demand spikes 4-6 weeks before peak using Google Trends + App Store seasonal data",
+      "output": "seasonal_opportunities.json"
+    },
+    {
+      "agent": "app_factory",
+      "task": "Build minimal PWA for top seasonal opportunity using existing streak-app template (UV index first, then pollen, sunburn timer)",
+      "output": "built_app_url"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Generate 30 TikTok scripts + 30 Reel scripts showing app in seasonal context with hook-first format",
+      "output": "content_queue.json"
+    },
+    {
+      "agent": "distribution_engine",
+      "task": "Post 4/day across 6 TikTok/IG accounts with seasonal hashtags, track completion rates",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "integration_clari_310user_gong_150user_sales",
+  "created": "2026-03-20T18:35:51.821819",
+  "method": "Clari: $310/user. Gong: $150/user. Salesforce Revenue Intelligence: $395/user.\nStratoForce: $25/user. Same pipeline scoring. Same conversation intelligence. Same forecasting.\nThe difference? We're 100",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract",
+      "steps": [
+        "parse_pricing_data_from_entry",
+        "log_to_competitive_intel_csv"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_3_pricing_comparison_posts_across_niches",
+        "generate_1_thread_on_saas_pricing_disruption"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "update_content_calendar"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

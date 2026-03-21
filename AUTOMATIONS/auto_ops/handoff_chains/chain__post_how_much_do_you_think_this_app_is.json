@@ -1,0 +1,24 @@
+{
+  "name": "chain__post_how_much_do_you_think_this_app_is",
+  "created": "2026-03-20T18:09:56.320249",
+  "method": " post: how much do you think this app is worth? | content: /r/appbusiness is the place for app developers, marketers and entrepreneurs to discuss news and ideas around the business of mobile apps.topi",
+  "venture": "BROKERING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape /r/appbusiness posts tagged valuation/selling/acquisition. Extract: app name, stated revenue, asking price, tech stack, platform (iOS/Android/web)",
+      "output": "app_valuations_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Compute valuation multiple (price/annual_revenue). Flag: undervalued (<2.5x) as BUY opportunities, fairly valued (2.5-4x) as BROKER opportunities, overvalued (>4x) as CONTENT opportunities (write about why overpriced). Score each 1-10 on deal quality.",
+      "output": "app_valuations_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "For BUY opportunities: draft acquisition inquiry DM. For BROKER opportunities: draft valuation consultation offer. For CONTENT: generate thread about app valuation mistakes.",
+      "output": "brokering_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

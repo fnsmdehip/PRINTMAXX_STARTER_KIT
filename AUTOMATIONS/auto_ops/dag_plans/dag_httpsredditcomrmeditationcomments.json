@@ -1,0 +1,37 @@
+{
+  "name": "integration_httpsredditcomrmeditationcomments",
+  "created": "2026-03-20T13:50:39.502752",
+  "method": "https://reddit.com/r/Meditation/comments/1rtlop8/some_pointers_after_12_years_of_meditation/",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_r_meditation_top_posts",
+        "scrape_r_mindfulness_top_posts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "extract_actionable_tips",
+        "extract_hook_structures",
+        "extract_engagement_patterns"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_twitter_threads",
+        "generate_short_posts",
+        "add_meditation_streak_cta"
+      ],
+      "parallel": false,
+      "depends_on": "extract"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "integration_saas_free_tier_shutdowns_trending_rsaa",
+  "created": "2026-03-20T18:09:56.021858",
+  "method": "SaaS free tier shutdowns trending (r/SaaS trending post). Users actively seeking paid alternatives at lower price. Frame our $1.99-2.99 apps as \"free tier killer\" value.",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scan",
+      "steps": [
+        "scrape_r_saas_free_tier_posts",
+        "scrape_hn_shutdown_announcements",
+        "scrape_r_selfhosted_migration_threads"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "detect_and_score",
+      "steps": [
+        "extract_saas_names_and_categories",
+        "match_against_our_app_factory_catalog",
+        "score_opportunity_by_user_volume_and_pain"
+      ],
+      "parallel": false,
+      "depends_on": "scan"
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "create_comparison_landing_page",
+        "generate_3_social_posts_per_event",
+        "generate_reddit_reply_template"
+      ],
+      "parallel": true,
+      "depends_on": "detect_and_score"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_landing_page_to_surge",
+        "queue_social_posts",
+        "log_to_content_performance"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

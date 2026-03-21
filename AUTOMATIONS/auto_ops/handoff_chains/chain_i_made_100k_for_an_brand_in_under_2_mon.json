@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_made_100k_for_an_brand_in_under_2_mon",
+  "created": "2026-03-20T13:50:43.187193",
+  "method": "I made $100K for an brand in under 2 months on TikTok Shop\n\n- no wasted samples\n- no lost time \n- no bs \n- no fluff\n\nI put together a brand new comprehensive playbook I used to scale this brand with U",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape TikTok Shop trending products, top UGC creator profiles, viral hooks with completion rates",
+      "output": "tiktok_shop_intel.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Generate 5 AI UGC scripts per trending product using hook patterns from scrape. Use consequence-first and specific-number hooks from procedural memory",
+      "output": "ugc_scripts.json"
+    },
+    {
+      "agent": "distributor",
+      "task": "Route scripts to CONTENT/social/posting_queue/, cross-repurpose hooks for IG Reels and YouTube Shorts via content_repurposer.py",
+      "output": "distribution_log.json"
+    },
+    {
+      "agent": "product_packager",
+      "task": "Compile weekly findings into sellable TikTok Shop UGC playbook update in DIGITAL_PRODUCTS/",
+      "output": "playbook_update.md"
+    }
+  ],
+  "status": "READY"
+}

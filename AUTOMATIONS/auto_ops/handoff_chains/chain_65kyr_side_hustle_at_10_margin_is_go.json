@@ -1,0 +1,29 @@
+{
+  "name": "chain_65kyr_side_hustle_at_10_margin_is_go",
+  "created": "2026-03-20T11:32:37.472460",
+  "method": "$65K/yr side hustle at 10% margin, is going full-time actually worth it for scal",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan r/ecommerce, r/smallbusiness, r/Entrepreneur for posts mentioning $50K-150K revenue, low margins, scaling decisions, going full-time doubts",
+      "output": "ecom_scaling_leads_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads by: stated revenue range, margin pain severity, business type (physical product vs dropship vs service), recency. Filter to top 20%",
+      "output": "ecom_scaling_leads_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold DM/email using procedural memory cold email framework: mention their specific margin issue, offer 10-min audit, one clear CTA",
+      "output": "ecom_outreach_log.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Convert scaling economics data into 3 tweets + 1 thread on ecommerce margin math ($65K at 10% vs $200K at 30%)",
+      "output": "ecom_content_queue.json"
+    }
+  ],
+  "status": "READY"
+}

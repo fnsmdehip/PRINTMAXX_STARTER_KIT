@@ -1,0 +1,29 @@
+{
+  "name": "chain_source_viral_us_products_from_aliexpress",
+  "created": "2026-03-20T18:09:57.593452",
+  "method": "source viral us products from aliexpress. list on nordic platforms in local language. klarna/vipps/swish payments. ioss for eu vat. phase 1: dropship. phase 2: eu warehouse. nordic ecom arbitrage: us ",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "product_scanner",
+      "task": "scrape trending US products from AliExpress (sorted by orders, 4+ stars, ePacket/free shipping), Amazon Movers & Shakers, viral TikTok products",
+      "output": "trending_products.json"
+    },
+    {
+      "agent": "gap_analyzer",
+      "task": "search each trending product on finn.no, cdon.se, dba.dk, tori.fi \u2014 flag products with <3 competing listings AND >30% margin after shipping+VAT",
+      "output": "supply_gaps.json"
+    },
+    {
+      "agent": "listing_factory",
+      "task": "translate product title+description to local language using Claude, generate platform-specific listing format, calculate IOSS-compliant pricing with Klarna/Vipps markup",
+      "output": "ready_listings/"
+    },
+    {
+      "agent": "price_monitor",
+      "task": "daily check competitor pricing on Nordic platforms, alert if margin drops below 20%, suggest repricing",
+      "output": "price_alerts.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "integration_turkish_mobile_app_studio_printing_900k",
+  "created": "2026-03-20T13:50:43.358683",
+  "method": "Turkish mobile app studio printing $900k/month \n\nwith only 3 simple apps:\n\n\u2192 DeepSearch (AI search assistant)  $700k/mo\n\u2192 Scanner app  $200k/mo\n\u2192 Chatbot AI assistant  $60k/mo\n\nThe DeepSearch one is l",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scan_competitors",
+      "steps": [
+        "scrape_top_ai_apps_appstore",
+        "extract_pricing_subscription_models",
+        "identify_keyword_gaps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "template_generation",
+      "steps": [
+        "create_ai_search_wrapper_template",
+        "create_doc_scanner_template",
+        "create_chatbot_template"
+      ],
+      "parallel": true,
+      "depends_on": "scan_competitors"
+    },
+    {
+      "name": "aso_optimization",
+      "steps": [
+        "generate_localized_descriptions_10_languages",
+        "create_screenshot_sets",
+        "keyword_density_optimization"
+      ],
+      "parallel": true,
+      "depends_on": "template_generation"
+    },
+    {
+      "name": "deploy_and_track",
+      "steps": [
+        "submit_to_app_store",
+        "set_up_revenue_tracking",
+        "schedule_aso_keyword_rotation"
+      ],
+      "parallel": false,
+      "depends_on": "aso_optimization"
+    }
+  ],
+  "status": "READY"
+}

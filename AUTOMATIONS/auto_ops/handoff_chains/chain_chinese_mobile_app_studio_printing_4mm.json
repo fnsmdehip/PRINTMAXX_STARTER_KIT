@@ -1,0 +1,29 @@
+{
+  "name": "chain_chinese_mobile_app_studio_printing_4mm",
+  "created": "2026-03-20T13:50:42.892442",
+  "method": "Chinese mobile app studio printing $4M/month with simple AI app wrappers\n\n\u2192 CoinSnap: Coin Identifier ( $700K/month )\n\u2192 AntiqSnap: Antique Identifier  ( $400K/month)\n\u2192 Calo: AI Food Calorie Counter ( ",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "niche_scanner",
+      "task": "Scrape App Store for '[thing] identifier' and '[thing] scanner' keywords, pull revenue estimates from app intelligence sources, rank by revenue/competition ratio",
+      "output": "identifier_niches_ranked.json"
+    },
+    {
+      "agent": "app_builder",
+      "task": "For each top niche: generate Capacitor app from camera\u2192Claude vision\u2192result template, customize UI/branding/icon, write ASO-optimized metadata",
+      "output": "built_apps_manifest.json"
+    },
+    {
+      "agent": "landing_builder",
+      "task": "Generate conversion-optimized landing page per app with App Store badges, feature screenshots, social proof",
+      "output": "landing_pages_deployed.json"
+    },
+    {
+      "agent": "aso_optimizer",
+      "task": "Weekly keyword rank tracking, screenshot A/B testing, review solicitation automation, cross-app promotion links",
+      "output": "aso_report.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration__curious_on_what_the_best_methods_of_ear",
+  "created": "2026-03-20T18:09:57.813938",
+  "method": " curious on what the best methods of earnings affiliate income is in this day and age from digital products? hi all,\n\ni really want to take my affiliate income to the next level, and i am curious if a",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "scan_programs",
+      "steps": [
+        "scrape_affiliate_networks_for_digital_products",
+        "score_by_commission_rate_and_cookie_duration",
+        "filter_free_signup_programs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_comparison_landing_pages",
+        "generate_review_posts_for_social",
+        "build_email_affiliate_recommendations"
+      ],
+      "parallel": true,
+      "depends_on": "scan_programs"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_pages_to_surge",
+        "queue_social_posts",
+        "wire_into_content_calendar"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "chain_day_200_just_hit_12k_in_revenue_it_st",
+  "created": "2026-03-20T18:35:53.811086",
+  "method": "Day 200. Just hit $12k in revenue. It still feels unreal. About 7 months ago I launched\u00a0[my tool](https://www.tydal.co/). Its a tool that monitors Reddit for people looking for something you offer and",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "run reddit_deep_scraper.py on 41 subreddits, filter posts <24h old with buying-intent keywords (looking for, need, recommend, alternative to, best tool for)",
+      "output": "reddit_intent_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "score each thread 1-10 on purchase intent, match to our products (apps, digital products, services), discard score<5",
+      "output": "reddit_intent_qualified.json"
+    },
+    {
+      "agent": "copywriter",
+      "task": "draft helpful reply for each qualified thread: lead with value/answer, mention relevant PRINTMAXX product naturally, include link only if subreddit allows, no shill tone",
+      "output": "reddit_reply_drafts.json"
+    },
+    {
+      "agent": "poster",
+      "task": "queue approved replies for human posting via CONTENT/social/posting_queue/reddit_replies.txt, track which threads replied to in LEDGER to avoid double-posting",
+      "output": "reddit_reply_log.csv"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "chain_package_existing_stack_as_client_service",
+  "created": "2026-03-20T18:09:56.117893",
+  "method": "Package existing stack as client service. Write 1-page deliverables menu. Pull 50 B2B SaaS founders from 17K hot leads. Send cold email campaign. First client at $999/mo = proof. Scale to 5 clients = ",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "lead_filter",
+      "task": "Filter LEDGER/INBOUND_LEADS.csv for B2B SaaS founders with 10-500 employees, seed-Series A, pain signals matching our stack (automation, content, apps, cold outreach)",
+      "output": "qualified_saas_leads_50.json"
+    },
+    {
+      "agent": "menu_builder",
+      "task": "Audit MONEY_METHODS/, AUTOMATIONS/, deployed apps to create 1-page deliverables menu with 3 tiers: Starter ($499/mo content+distribution), Growth ($999/mo full stack automation), Scale ($2499/mo agency-level)",
+      "output": "PRODUCTS/services/deliverables_menu.md"
+    },
+    {
+      "agent": "email_crafter",
+      "task": "Write 3-email cold sequence per lead using copy-style.md voice, referencing their specific tech stack gaps, linking to deployed proof (47 live apps, 337 scripts)",
+      "output": "cold_email_sequences.json"
+    },
+    {
+      "agent": "sender",
+      "task": "Send emails via custom SMTP scripts (NOT Instantly - $0 budget), log to LEDGER/OUTREACH_PIPELINE.csv",
+      "output": "send_log.json"
+    },
+    {
+      "agent": "closer",
+      "task": "Monitor replies, score buying intent, route hot replies to human for call booking",
+      "output": "warm_leads_for_call.json"
+    }
+  ],
+  "status": "READY"
+}

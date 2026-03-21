@@ -1,0 +1,47 @@
+{
+  "name": "integration__post_how_we_got_700_organic_visitors_i",
+  "created": "2026-03-20T18:09:56.595643",
+  "method": " post: how we got 700 organic visitors in our first quarter | content: skills include but are not limited toseocroinbound marketingsemlinkbuildingemail marketingcodingapi integrations | comment1: how ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "crawl_deployed_sites_for_seo_gaps",
+        "check_existing_backlink_profile",
+        "identify_missing_meta_tags_and_structured_data"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "prospect",
+      "steps": [
+        "scrape_free_directory_lists",
+        "find_niche_forums_accepting_links",
+        "identify_guest_post_opportunities"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "execute",
+      "steps": [
+        "submit_to_free_directories",
+        "generate_link_swap_outreach_emails",
+        "fix_onpage_seo_gaps"
+      ],
+      "parallel": true,
+      "depends_on": "prospect"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "log_submissions_to_ledger",
+        "update_seo_kpi_dashboard"
+      ],
+      "parallel": false,
+      "depends_on": "execute"
+    }
+  ],
+  "status": "READY"
+}

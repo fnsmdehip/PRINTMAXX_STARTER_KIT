@@ -1,0 +1,29 @@
+{
+  "name": "chain__i_am_your_client_amp_sell_me_your_ser",
+  "created": "2026-03-20T18:09:57.921898",
+  "method": " i am your client &amp; sell me your service. what are you building this sunday? ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_generator",
+      "task": "Generate 5 engagement bait prompts (sell me your service, what are you building, roast my landing page, show me your side project, pitch me in 1 tweet) rotated weekly",
+      "output": "engagement_prompts.json"
+    },
+    {
+      "agent": "poster",
+      "task": "Post prompt to X via twitter_warmup_poster.py respecting warmup schedule",
+      "output": "post_id.json"
+    },
+    {
+      "agent": "scraper",
+      "task": "After 24h, scrape all replies using twitter_alpha_scraper.py, extract usernames, bios, and pitches",
+      "output": "reply_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score replies: has product/service? has audience? potential client or partner? Route hot leads to INBOUND_LEADS.csv",
+      "output": "qualified_leads.csv"
+    }
+  ],
+  "status": "READY"
+}

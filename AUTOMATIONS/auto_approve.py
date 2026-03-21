@@ -78,38 +78,72 @@ def auto_approve_alpha():
                         row["reviewer_notes"] = f"AUTO-APPROVED {datetime.now().strftime('%Y-%m-%d')} (high ROI)"
                         approved_count += 1
                     # Auto-approve if from trusted source
-                    elif row.get("source", "") in ("manual_research", "twitter_alpha_scraper", "reddit_alpha_scraper"):
+                    elif row.get("source", "") in (
+                        "manual_research", "twitter_alpha_scraper", "reddit_alpha_scraper",
+                        "SEC_EDGAR", "CRUNCHBASE", "method_discovery_crawler",
+                        "daily_tool_scout", "hn_scraper", "orphan_doc_scanner",
+                        "alpha_backlog_scanner",
+                    ):
                         row["status"] = "APPROVED"
                         row["reviewer_notes"] = f"AUTO-APPROVED {datetime.now().strftime('%Y-%m-%d')} (trusted source)"
                         approved_count += 1
                     else:
-                        # LLM-in-the-loop: claude -p analyzes if genuinely valuable
-                        # Even "engagement bait" patterns can contain real alpha
+                        # LLM-in-the-loop: Opus-level analysis separating real alpha from bait
                         method_text = row.get("extracted_method", row.get("tactic", row.get("content", "")))[:500]
                         source = row.get("source", "unknown")
                         if method_text:
                             try:
                                 import subprocess
                                 prompt = (
-                                    f"You are an alpha reviewer for a revenue system. Analyze this entry.\n"
+                                    f"You are a ruthless alpha reviewer for an autonomous revenue system. "
+                                    f"Think critically. No false positives. Analyze this entry.\n"
                                     f"Source: {source}\n"
                                     f"Content: {method_text}\n\n"
-                                    f"Is there a genuinely actionable revenue method here, even if wrapped in engagement bait?\n"
-                                    f"Consider: could this make money if automated? Is there a real tactic buried in the noise?\n"
-                                    f"Reply with exactly one word first: APPROVE or REJECT\n"
-                                    f"Then one sentence explaining why."
+                                    f"QUALITY TEST (answer each honestly):\n"
+                                    f"1. Does it name a SPECIFIC tool, platform, API, or technique? (not just 'use AI to make money')\n"
+                                    f"2. Does it include numbers that could be verified? (not just '$10K/month easy')\n"
+                                    f"3. Could someone execute this TODAY with the info given? (not vague 'build a SaaS')\n"
+                                    f"4. Is the core claim plausible at the stated scale? (not '6 figures in 30 days')\n"
+                                    f"5. Is this a real method vs recycled Twitter wisdom? ('stop trading time for money')\n\n"
+                                    f"SAAS SHILLING TEST (critical — many tweets plug paid tools when free alternatives exist):\n"
+                                    f"6. Is the METHOD real but the recommended TOOL is just a paid SaaS being shilled?\n"
+                                    f"   If yes: the method is STILL VALID — just note we should swap the paid tool for:\n"
+                                    f"   - Open source equivalent (check GitHub)\n"
+                                    f"   - Self-hosted version (n8n vs Zapier, Supabase vs Firebase paid)\n"
+                                    f"   - Our own automation (we have 400+ scripts, claude -p, MCP servers)\n"
+                                    f"   - A free tier that's sufficient (many SaaS have generous free tiers)\n"
+                                    f"7. Is there a REAL technique buried under affiliate links or tool promotions?\n"
+                                    f"   Many tweets: 'I made $X using [paid tool]' — the actual workflow/strategy is the alpha,\n"
+                                    f"   not the specific tool. Extract the PROCESS, not the product recommendation.\n\n"
+                                    f"CLASSIFICATION (reply with exactly ONE of these on the first line):\n"
+                                    f"APPROVE — genuinely actionable method with specific steps\n"
+                                    f"APPROVE_PARTIAL — real method buried in bait/shilling, extract the technique and swap tools\n"
+                                    f"CONTENT_ONLY — no real method but the engagement STYLE/hook is reusable for our content\n"
+                                    f"REJECT — pure bait, no value even for content repurpose\n\n"
+                                    f"Second line: one sentence with your reasoning.\n"
+                                    f"Third line (if APPROVE_PARTIAL): FREE_ALTERNATIVE: [name the free/OSS tool to use instead]"
                                 )
                                 result = subprocess.run(
                                     ["claude", "-p", prompt],
-                                    capture_output=True, text=True, timeout=30
+                                    capture_output=True, text=True, timeout=45
                                 )
                                 answer = result.stdout.strip()
-                                if answer.upper().startswith("REJECT"):
+                                first_line = answer.split("\n")[0].upper()
+                                today = datetime.now().strftime('%Y-%m-%d')
+                                if first_line.startswith("REJECT"):
                                     row["status"] = "REJECTED"
-                                    row["reviewer_notes"] = f"AI-REJECTED {datetime.now().strftime('%Y-%m-%d')}: {answer[:120]}"
+                                    row["reviewer_notes"] = f"AI-REJECTED {today}: {answer[:120]}"
+                                elif first_line.startswith("CONTENT_ONLY"):
+                                    row["status"] = "ENGAGEMENT_BAIT"
+                                    row["reviewer_notes"] = f"CONTENT_ONLY {today}: {answer[:120]}"
+                                    approved_count += 1  # Still counts — goes to content converter
+                                elif first_line.startswith("APPROVE_PARTIAL"):
+                                    row["status"] = "APPROVED"
+                                    row["reviewer_notes"] = f"PARTIAL-APPROVED {today}: {answer[:120]}"
+                                    approved_count += 1
                                 else:
                                     row["status"] = "APPROVED"
-                                    row["reviewer_notes"] = f"AI-APPROVED {datetime.now().strftime('%Y-%m-%d')}: {answer[:120]}"
+                                    row["reviewer_notes"] = f"AI-APPROVED {today}: {answer[:120]}"
                                     approved_count += 1
                             except Exception:
                                 row["status"] = "APPROVED"

@@ -1,0 +1,36 @@
+{
+  "name": "integration_new_in_claude_code_code_review_a_team_",
+  "created": "2026-03-20T18:35:50.222436",
+  "method": "New in Claude Code: Code Review. A team of agents runs a deep review on every PR.\n\nWe built it for ourselves first. Code output per Anthropic engineer is up 200% this year and reviews were the bottlen",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_hot_take_thread",
+        "generate_tutorial_snippet",
+        "generate_contrarian_angle"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "product_update",
+      "steps": [
+        "update_claude_code_solopreneurs_listing",
+        "update_claude_code_founders_listing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue_posts_to_posting_queue",
+        "queue_devto_crosspost",
+        "queue_reddit_r_claudeai"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

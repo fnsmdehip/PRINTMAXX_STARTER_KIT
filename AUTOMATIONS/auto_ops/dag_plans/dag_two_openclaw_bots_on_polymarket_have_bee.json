@@ -1,0 +1,35 @@
+{
+  "name": "integration_two_openclaw_bots_on_polymarket_have_bee",
+  "created": "2026-03-20T18:09:51.835180",
+  "method": "two openclaw bots on polymarket have been fighting each other 24/7 for weeks\n\nthey've burned $2.1m in fees trading against each other on the same markets\n\ni built a third bot that feeds off both of th",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "scan",
+      "steps": [
+        "fetch_polymarket_clob_orderbook",
+        "fetch_recent_trades_public_api"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "detect_bot_wallet_patterns",
+        "calculate_adversarial_pair_fees_burned"
+      ],
+      "parallel": true,
+      "depends_on": "scan"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "write_findings_to_alpha_staging",
+        "route_to_engagement_bait_converter"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

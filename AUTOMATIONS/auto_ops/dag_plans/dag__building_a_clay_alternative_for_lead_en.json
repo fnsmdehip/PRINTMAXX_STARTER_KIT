@@ -1,0 +1,50 @@
+{
+  "name": "integration__building_a_clay_alternative_for_lead_en",
+  "created": "2026-03-20T18:09:57.876536",
+  "method": " building a clay alternative for lead enrichment, would love feedback from agency owners :) hey everyone,\n\ni\u2019m part of a small team building a lead enrichment and prospecting platform that sits in the",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "ingest",
+      "steps": [
+        "parse_input_csv",
+        "deduplicate_leads",
+        "validate_domains"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "enrich",
+      "steps": [
+        "scrape_company_website",
+        "extract_emails_hunter_free",
+        "scrape_linkedin_google_cache",
+        "check_techstack_builtwith_free",
+        "detect_intent_signals"
+      ],
+      "parallel": true,
+      "depends_on": "ingest"
+    },
+    {
+      "name": "score",
+      "steps": [
+        "calculate_lead_score",
+        "flag_high_intent",
+        "append_enrichment_metadata"
+      ],
+      "parallel": false,
+      "depends_on": "enrich"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "export_enriched_csv",
+        "feed_to_outbound_pipeline",
+        "update_ledger_tracking"
+      ],
+      "parallel": true,
+      "depends_on": "score"
+    }
+  ],
+  "status": "READY"
+}

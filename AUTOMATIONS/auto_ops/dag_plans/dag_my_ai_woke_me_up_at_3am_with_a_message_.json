@@ -1,0 +1,37 @@
+{
+  "name": "integration_my_ai_woke_me_up_at_3am_with_a_message_",
+  "created": "2026-03-20T18:09:51.730474",
+  "method": "my AI woke me up at 3am with a message: \"there's a $50K opportunity expiring in 40 minutes. yes or no?\"\n\ni typed \"yes\" with one eye open\n\n11 seconds later: $50,000 deployed\n\n5:58am: market resolved\n\n+",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research_and_content",
+      "steps": [
+        "scan_free_prediction_market_apis",
+        "generate_engagement_content_3tweets_1thread",
+        "draft_digital_product_listing_scanner_template"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_scanner",
+      "steps": [
+        "build_opportunity_scanner_with_free_apis",
+        "add_notification_system_terminal_notifier"
+      ],
+      "parallel": false,
+      "depends_on": "research_and_content"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "schedule_scanner_cron",
+        "post_content_to_queue",
+        "list_scanner_product_when_gumroad_active"
+      ],
+      "parallel": true,
+      "depends_on": "build_scanner"
+    }
+  ],
+  "status": "READY"
+}

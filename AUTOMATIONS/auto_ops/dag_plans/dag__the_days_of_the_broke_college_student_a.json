@@ -1,0 +1,35 @@
+{
+  "name": "integration__the_days_of_the_broke_college_student_a",
+  "created": "2026-03-20T18:10:02.113498",
+  "method": " the days of the broke college student are going to be gone soon the amount of creative untraditional ways college age kids make money right now clipping , affiliate etc the opportunity to hit $10k mo",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "source_scan",
+      "steps": [
+        "scan_trending_topics_college_niches",
+        "pull_top_performing_clips_from_competitors"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "clip_generation",
+      "steps": [
+        "auto_clip_pipeline_yt_dlp_whisper_claude_ffmpeg",
+        "match_affiliate_offers_to_clip_topic"
+      ],
+      "parallel": true,
+      "depends_on": "source_scan"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "post_clips_with_affiliate_links_in_description",
+        "update_linkinbio_with_matched_affiliate"
+      ],
+      "parallel": true,
+      "depends_on": "clip_generation"
+    }
+  ],
+  "status": "READY"
+}

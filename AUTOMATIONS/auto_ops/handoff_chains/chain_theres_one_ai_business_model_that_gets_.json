@@ -1,0 +1,29 @@
+{
+  "name": "chain_theres_one_ai_business_model_that_gets_",
+  "created": "2026-03-20T13:50:39.503980",
+  "method": "There\u2019s one AI business model that gets stickier the more the technology improve",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape job boards, LinkedIn, and Google Maps for businesses posting manual-process roles (data entry, report generation, email management). Extract company name, domain, tech stack signals, employee count.",
+      "output": "ai_sticky_leads_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads by AI-integration readiness: manual processes visible on site, no existing AI tools, $1M+ revenue signals, 10-200 employees sweet spot. Filter to top 20% by score.",
+      "output": "ai_sticky_leads_qualified.json"
+    },
+    {
+      "agent": "personalizer",
+      "task": "For each qualified lead, identify their specific manual bottleneck, estimate hours saved with AI automation, calculate ROI at $50-150/hr saved. Generate personalized cold email using 6-question framework from procedural memory.",
+      "output": "ai_sticky_outreach_ready.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Send cold emails via custom SMTP script, track opens/replies, auto-followup sequence (3 touches over 10 days), log all interactions.",
+      "output": "ai_sticky_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

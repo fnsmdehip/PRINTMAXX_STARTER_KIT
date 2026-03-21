@@ -1,0 +1,48 @@
+{
+  "name": "integration__this_girl_built_up_an_account_over_18_m",
+  "created": "2026-03-20T18:09:57.612077",
+  "method": " this girl built up an account over 18 months, which now has millions of views.\n\nthen she made an app and turned it into $70k mrr.\n\nlesson to be learned here:\n\nsocial growth engineering + horizontal s",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate 3 posts per niche from content_multiplier.py",
+        "create app-demo short clips from existing builds",
+        "generate engagement-bait hooks via engagement_bait_converter.py"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue posts via twitter_warmup_poster.py",
+        "cross-post to Reddit/TikTok/IG via content_repurposer.py",
+        "reply-engage on 10 relevant threads per platform"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    },
+    {
+      "name": "audience_tracking",
+      "steps": [
+        "scrape follower counts and engagement metrics",
+        "compute growth rate and project milestone dates",
+        "flag accounts crossing 1K/5K/10K thresholds"
+      ],
+      "parallel": false,
+      "depends_on": "distribution"
+    },
+    {
+      "name": "app_promotion_trigger",
+      "steps": [
+        "when account crosses threshold, generate app-launch content burst",
+        "insert app CTA into bio and pinned post",
+        "run 7-day launch sequence: teaser\u2192demo\u2192testimonial\u2192urgency\u2192CTA"
+      ],
+      "parallel": false,
+      "depends_on": "audience_tracking"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration__unpopular_opinionyou_dont_need_vc_f",
+  "created": "2026-03-20T18:09:57.698515",
+  "method": " unpopular opinion:\n\nyou don't need vc funding to build a successful app.\n\ni built puffcount with $1,000.\n\nno cofounders.\nno investors.\n\ni was solving a problem for myself and friends.\n\nscaled to $44k",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "source_pain_points",
+      "steps": [
+        "scrape_reddit_somebodymakethis",
+        "scrape_reddit_appideas",
+        "scrape_twitter_buildinpublic_frustrations"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_and_filter",
+      "steps": [
+        "competition_gap_check_app_store",
+        "monetization_potential_score",
+        "build_complexity_estimate"
+      ],
+      "parallel": true,
+      "depends_on": "source_pain_points"
+    },
+    {
+      "name": "route_winners",
+      "steps": [
+        "feed_top3_to_app_factory_queue",
+        "generate_content_threads",
+        "update_app_ideation_results_csv"
+      ],
+      "parallel": true,
+      "depends_on": "score_and_filter"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "chain_i_set_up_6_ai_agents_that_sell_web_servi",
+  "created": "2026-03-20T18:09:55.821116",
+  "method": "I set up 6 AI agents that sell web services 24/7 (full breakdown) I know \"AI agents\" sounds like tech bro nonsense so let me explain it simply.\n\nai agent is just an ai that does a specific task on its",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "prospector",
+      "task": "Scrape local businesses without websites or with bad websites from Google Maps, Yelp, industry directories. Target: restaurants, contractors, salons, clinics.",
+      "output": "prospects_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each prospect: has website? mobile-friendly? has Google Business? reviews count? Prioritize no-website or terrible-website businesses.",
+      "output": "prospects_qualified.json"
+    },
+    {
+      "agent": "enricher",
+      "task": "Find owner email/phone via Hunter.io free tier, public records, social profiles. Enrich with revenue signals.",
+      "output": "prospects_enriched.json"
+    },
+    {
+      "agent": "outreacher",
+      "task": "Generate personalized cold email using claude -p. Reference their specific business, neighborhood, competitors who have better sites. Send via SMTP rotation.",
+      "output": "outreach_log.json"
+    },
+    {
+      "agent": "followup",
+      "task": "Day 3 bump, Day 7 value-add (free audit screenshot of their Google listing vs competitor). Track opens/replies.",
+      "output": "followup_log.json"
+    },
+    {
+      "agent": "closer",
+      "task": "On reply: auto-generate proposal with 3 tiers ($500/$1500/$3000). Route hot leads to human for final close.",
+      "output": "proposals_sent.json"
+    }
+  ],
+  "status": "READY"
+}

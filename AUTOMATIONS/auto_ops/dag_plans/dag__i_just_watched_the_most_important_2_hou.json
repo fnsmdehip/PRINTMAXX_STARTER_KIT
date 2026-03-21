@@ -1,0 +1,37 @@
+{
+  "name": "integration__i_just_watched_the_most_important_2_hou",
+  "created": "2026-03-20T18:09:57.755835",
+  "method": " i just watched the most important 2 hour ai podcast of 2026.dario amodei (anthropic ceo) sat down & revealed agi timelines, and blockers that will change the future.1. anthropic's revenue growth is a",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_angles",
+      "steps": [
+        "parse_revenue_data_points",
+        "identify_hook_structures",
+        "map_to_printmaxx_stack_validation"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "create_3_tweets_with_anthropic_growth_stats",
+        "create_1_thread_ai_industry_analysis",
+        "create_contrarian_take_on_agi_timelines"
+      ],
+      "parallel": true,
+      "depends_on": "extract_angles"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "tag_for_tech_niche_accounts"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

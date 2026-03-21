@@ -1,0 +1,45 @@
+{
+  "name": "integration_we_launched_a_7_figure_amazon_brand_on_t",
+  "created": "2026-03-20T18:35:52.037304",
+  "method": "We launched a 7 figure Amazon brand on tiktok shop and did $20k with human UGC creators this week\n\nGood team and good systems >\n\nTakeaway:\n\n- launch with human UGC. We use plug and play method to conn",
+  "venture": "BROKERING",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_tiktok_shop_brands_without_ugc",
+        "scrape_high_gmv_creators_open_to_deals"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "match",
+      "steps": [
+        "score_brand_creator_niche_fit",
+        "rank_by_estimated_gmv_potential"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_brand_pitch_templates",
+        "generate_creator_pitch_templates",
+        "queue_cold_outreach"
+      ],
+      "parallel": true,
+      "depends_on": "match"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "log_outreach_to_ledger",
+        "update_brokering_pipeline_csv"
+      ],
+      "parallel": false,
+      "depends_on": "outreach"
+    }
+  ],
+  "status": "READY"
+}

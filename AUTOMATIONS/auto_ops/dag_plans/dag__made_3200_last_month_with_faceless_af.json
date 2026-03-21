@@ -1,0 +1,57 @@
+{
+  "name": "integration__made_3200_last_month_with_faceless_af",
+  "created": "2026-03-20T18:09:58.334364",
+  "method": " made $3,200 last month with faceless affiliate content (6 month breakdown). started doing this about 6 months ago after losing my job. didn't want to be on camera so i focused on faceless content. te",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_top_affiliate_programs_free_tier",
+        "identify_high_commission_products_per_niche",
+        "pull_trending_hooks_from_content_intel_tracker"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_faceless_video_scripts_claude",
+        "generate_carousel_image_copy",
+        "generate_pinterest_pin_descriptions"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "produce",
+      "steps": [
+        "render_videos_remotion_or_image_factory",
+        "embed_affiliate_links_in_captions_and_bios",
+        "create_link_in_bio_pages_per_niche"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "schedule_cross_platform_via_buffer_csvs",
+        "add_to_content_repurposer_1_to_20"
+      ],
+      "parallel": true,
+      "depends_on": "produce"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "log_affiliate_clicks_to_ledger",
+        "compare_niche_performance_weekly"
+      ],
+      "parallel": true,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

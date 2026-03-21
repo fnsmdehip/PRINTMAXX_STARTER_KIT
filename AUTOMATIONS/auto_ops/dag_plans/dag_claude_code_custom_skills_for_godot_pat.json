@@ -1,0 +1,57 @@
+{
+  "name": "integration_claude_code_custom_skills_for_godot_pat",
+  "created": "2026-03-20T18:09:51.738682",
+  "method": "Claude Code custom skills for Godot. Pattern: domain-specific skill packs for Claude Code. We already build skills. Game dev = new app factory vertical.",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_hn_reddit_for_trending_dev_domains",
+        "rank_domains_by_claude_code_user_overlap",
+        "check_existing_skill_packs_competition"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_5_15_skills_per_domain",
+        "create_skill_frontmatter_and_triggers",
+        "write_skill_pack_readme"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "qa",
+      "steps": [
+        "test_each_skill_invocation",
+        "verify_no_conflicts_with_existing_skills"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    },
+    {
+      "name": "package",
+      "steps": [
+        "bundle_as_claude_plugin_zip",
+        "generate_gumroad_listing_copy",
+        "create_landing_page"
+      ],
+      "parallel": true,
+      "depends_on": "qa"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "list_on_gumroad_whop",
+        "post_to_hn_reddit_twitter",
+        "submit_to_claude_community"
+      ],
+      "parallel": true,
+      "depends_on": "package"
+    }
+  ],
+  "status": "READY"
+}

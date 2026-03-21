@@ -1,0 +1,46 @@
+{
+  "name": "integration_2k_users_800_with_a_habit_tracker__i_",
+  "created": "2026-03-20T18:35:52.076353",
+  "method": "2k users, $800 with a Habit Tracker - I can't explain how good this feels App name - [HabitSwipe](http://www.habitswipe.app) \n\nPlatform - Android &amp; iOS\n\nNumber of users  - 2500\n\nTotal Revenue in l",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_habitswipe_app_store_listing",
+        "analyze_pricing_model_and_review_sentiment",
+        "audit_our_streak_apps_for_ux_gaps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "create_swipe_ux_component_for_app_factory_template",
+        "add_minimalist_2screen_variant_to_base_template"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_reddit_launch_posts_with_real_metrics_story_format",
+        "schedule_posts_across_5_subreddits_staggered",
+        "create_engagement_reply_templates"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "measure",
+      "steps": [
+        "track_install_attribution_by_subreddit",
+        "log_review_rate_and_revenue_per_app"
+      ],
+      "parallel": true,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

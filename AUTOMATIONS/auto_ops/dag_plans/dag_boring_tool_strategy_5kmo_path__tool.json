@@ -1,0 +1,47 @@
+{
+  "name": "integration_boring_tool_strategy_5kmo_path__tool",
+  "created": "2026-03-20T18:09:57.670088",
+  "method": "Boring tool strategy: $5K/mo path = tool that saves 4 hours/week. Find pain by scanning r/juststart, r/entrepreneur for \"I spend hours every week on X\". Build in <1 week. Validated: scoring 87/100 in ",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_reddit_pain_points",
+        "scrape_existing_alpha_for_tool_gaps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "extract_time_waste_patterns",
+        "score_frequency_and_willingness_to_pay",
+        "dedupe_against_existing_app_factory_methods"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "rank_by_composite_score",
+        "check_build_feasibility_under_1_week",
+        "estimate_mrr_from_competitor_pricing"
+      ],
+      "parallel": false,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "append_to_APP_FACTORY_METHODS",
+        "update_REDDIT_PAIN_POINTS",
+        "generate_content_from_findings"
+      ],
+      "parallel": true,
+      "depends_on": "qualify"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "chain_i_spent_6_months_figuring_out_ai_ugc_so_",
+  "created": "2026-03-20T13:50:44.101480",
+  "method": "I spent 6 months figuring out AI UGC so you don't have to.\n\nand thats how we went from 0 \u2192 4M views/week \u2192 $20K MRR with $0 ad spend.\n\nThe tech stack. The prompts. The automation pipeline. The account",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "trend_scanner",
+      "task": "Scrape TikTok/IG trending sounds, hooks, formats in our niches (productivity, faith, finance)",
+      "output": "trending_hooks.json"
+    },
+    {
+      "agent": "script_writer",
+      "task": "Generate 5 UGC video scripts using claude -p with trending hooks, consequence-first structure, specific numbers",
+      "output": "ugc_scripts.json"
+    },
+    {
+      "agent": "video_producer",
+      "task": "Render AI avatar videos: TTS (Bark/Coqui) \u2192 face animation (SadTalker/Wav2Lip) \u2192 captions (whisper) \u2192 assembly (ffmpeg)",
+      "output": "rendered_clips/"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post to account cluster with optimal timing, platform-specific aspect ratios, hashtag sets",
+      "output": "post_log.json"
+    },
+    {
+      "agent": "analyst",
+      "task": "24h post-publish: scrape metrics, score by completion rate + shares, identify winner patterns for next cycle",
+      "output": "performance_analysis.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "chain_how_i_added_16_new_customers_in_30_days_",
+  "created": "2026-03-20T18:35:53.243555",
+  "method": "How I Added 16 New Customers in 30 Days (+31% MRR) Hey everybody, hope it\u2019s going well.\n\nI want to share the results of my last 30 days running my SaaS, what worked, what didn\u2019t, and what I\u2019ll improve",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "lead_scraper",
+      "task": "Build prospect lists from LinkedIn Sales Nav free, Apollo free tier, Reddit subreddits matching ICP",
+      "output": "prospects_raw.json"
+    },
+    {
+      "agent": "lead_qualifier",
+      "task": "Score by ICP fit, company size, tech stack signals, recent funding. Prioritize LinkedIn-first (best channel per alpha)",
+      "output": "qualified_leads.json"
+    },
+    {
+      "agent": "outreach_engine",
+      "task": "LinkedIn AI agent personalized messages (36/day limit), cold email sequences (500/day across warmed domains), Reddit value-add comments",
+      "output": "outreach_log.json"
+    },
+    {
+      "agent": "demo_tracker",
+      "task": "Track replies, positive signals, demo bookings. Feed demo prep context to human",
+      "output": "demo_pipeline.json"
+    }
+  ],
+  "status": "READY"
+}

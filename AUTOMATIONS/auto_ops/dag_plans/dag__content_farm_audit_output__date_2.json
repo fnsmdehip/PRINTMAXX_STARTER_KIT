@@ -1,0 +1,58 @@
+{
+  "name": "integration__content_farm_audit_output__date_2",
+  "created": "2026-03-20T18:10:00.634824",
+  "method": "# CONTENT FARM AUDIT OUTPUT  **Date:** 2026-02-06 **Method ID:** MM006 (CONTENT_FARM) + CF001-CF013 (sub-methods) **Status:** Active, Phase 1 **Revenue Target:** $500-$10K/month across all content sub",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan_content_dirs_for_612_drafts",
+        "categorize_by_niche_and_platform",
+        "score_publish_readiness"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "format",
+      "steps": [
+        "format_for_twitter",
+        "format_for_reddit",
+        "format_for_linkedin",
+        "format_for_medium",
+        "format_for_tiktok_captions"
+      ],
+      "parallel": true,
+      "depends_on": "audit"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "populate_posting_queue",
+        "schedule_by_platform_optimal_times",
+        "wire_engagement_bait_converter"
+      ],
+      "parallel": false,
+      "depends_on": "format"
+    },
+    {
+      "name": "publish",
+      "steps": [
+        "batch_publish_20_per_day",
+        "cross_post_top_performers"
+      ],
+      "parallel": false,
+      "depends_on": "queue"
+    },
+    {
+      "name": "track",
+      "steps": [
+        "log_to_content_performance_log",
+        "feed_winners_to_content_multiplier"
+      ],
+      "parallel": false,
+      "depends_on": "publish"
+    }
+  ],
+  "status": "READY"
+}

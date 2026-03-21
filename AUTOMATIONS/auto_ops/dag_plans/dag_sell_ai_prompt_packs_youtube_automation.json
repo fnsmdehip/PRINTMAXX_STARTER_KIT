@@ -1,0 +1,38 @@
+{
+  "name": "integration_sell_ai_prompt_packs_youtube_automation",
+  "created": "2026-03-20T18:35:55.205074",
+  "method": "sell ai prompt packs. youtube automation service. short video editing = low skill high demand. fiverr 2026: ai prompt writing (new hot gig). short video editing (capcut). youtube automation. web desig",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_trending_ai_topics",
+        "scan_fiverr_hot_gigs_2026",
+        "identify_prompt_pack_gaps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "create_prompt_packs_pdf",
+        "create_fiverr_gig_descriptions",
+        "create_youtube_automation_sop"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "list",
+      "steps": [
+        "stage_gumroad_listing",
+        "stage_fiverr_listing_copy",
+        "generate_3_tweets_1_thread"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

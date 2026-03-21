@@ -1,0 +1,48 @@
+{
+  "name": "integration_niche_gpt_wrapper__religious_content__",
+  "created": "2026-03-20T18:09:57.408199",
+  "method": "niche gpt wrapper + religious content + subscription tiers app_monetization ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit_existing",
+      "steps": [
+        "scan all deployed religious apps for current feature set",
+        "check which already have Stripe product IDs",
+        "identify top 5 by traffic for priority upgrade"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_ai_layer",
+      "steps": [
+        "create shared ai-wrapper.js module (Claude API proxy via serverless function or client-side prompt)",
+        "build denomination-specific prompt templates (scripture context, prayer style, theological framework)",
+        "create subscription gate UI component (lock AI features behind paywall)"
+      ],
+      "parallel": true,
+      "depends_on": "audit_existing"
+    },
+    {
+      "name": "wire_payments",
+      "steps": [
+        "create Stripe products + prices for each app (free/basic/premium)",
+        "generate payment links per app",
+        "inject upgrade CTA into each app landing page"
+      ],
+      "parallel": false,
+      "depends_on": "build_ai_layer"
+    },
+    {
+      "name": "deploy_and_distribute",
+      "steps": [
+        "batch deploy upgraded apps to surge.sh",
+        "generate 3 tweets + 1 thread about AI-powered religious apps",
+        "submit to religious app directories and communities"
+      ],
+      "parallel": true,
+      "depends_on": "wire_payments"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "chain_if_had_no_followers_no_email_list_and_",
+  "created": "2026-03-20T13:50:40.593975",
+  "method": "If had no followers, no email list, and no idea what to sell",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "researcher",
+      "task": "Scan r/passive_income, r/sidehustle, r/Entrepreneur for highest-engagement zero-start threads. Extract: what product type, what free channel, what hook got traction.",
+      "output": "zero_start_intel.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Generate 5 value-first Reddit posts per day targeting subreddits where our existing products (streak apps, digital products, MCP marketplace) solve stated problems. No self-promo \u2014 pure value with profile link.",
+      "output": "reddit_value_posts.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score which posts got engagement. Feed winners back to content_factory for replication. Kill formats that get zero traction after 3 attempts.",
+      "output": "post_performance.json"
+    }
+  ],
+  "status": "READY"
+}

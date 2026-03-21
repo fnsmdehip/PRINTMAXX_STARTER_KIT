@@ -1,0 +1,37 @@
+{
+  "name": "integration_my_first_real_week_of_sales_on_my_websit",
+  "created": "2026-03-20T23:12:24.854567",
+  "method": "My first real week of sales on my website",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "reddit_scrape r/Entrepreneur r/SideProject r/startups keywords=['first week sales','first real sale','website sales week 1']",
+        "twitter_scrape hashtags=['firstsale','websitesales'] accounts=['IndieHackers signals']"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "claude -p analyze posts: extract traffic_source, product_type, price_point, conversion_tactic, CRO_move per post",
+        "dedupe against LEDGER/WINNING_CONTENT_STRUCTURES.csv"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "apply",
+      "steps": [
+        "append net-new tactics to LEDGER/WINNING_CONTENT_STRUCTURES.csv",
+        "update product landing pages with top 3 new CRO tactics via content_factory",
+        "generate 3 'first week of sales' format posts for our products via engagement_bait_converter.py",
+        "append posts to CONTENT/social/posting_queue/"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    }
+  ],
+  "status": "READY"
+}

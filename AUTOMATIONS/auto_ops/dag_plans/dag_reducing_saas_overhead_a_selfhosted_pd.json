@@ -1,0 +1,35 @@
+{
+  "name": "integration_reducing_saas_overhead_a_selfhosted_pd",
+  "created": "2026-03-20T13:50:39.493457",
+  "method": "Reducing SaaS overhead: A self-hosted PDF engine to replace expensive API subscriptions Hello everyone,\n\nOne of the most common hidden costs for SaaS companies as they scale is PDF generation. Paying ",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_gopdfsuite_github_features",
+        "scrape_pdf_api_pricing_competitors"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_create",
+      "steps": [
+        "generate_comparison_copy_for_pdfmaxx_landing",
+        "generate_3_tweets_1_thread_pdf_savings"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "update_pdfmaxx_landing_page",
+        "queue_social_posts"
+      ],
+      "parallel": true,
+      "depends_on": "content_create"
+    }
+  ],
+  "status": "READY"
+}

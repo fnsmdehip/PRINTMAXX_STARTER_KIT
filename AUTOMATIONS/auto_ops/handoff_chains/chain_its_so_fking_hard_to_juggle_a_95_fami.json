@@ -1,0 +1,24 @@
+{
+  "name": "chain_its_so_fking_hard_to_juggle_a_95_fami",
+  "created": "2026-03-20T18:35:53.845082",
+  "method": "It's so fking hard to juggle a 9-5, family, and build a SaaS I'm Eusebiu, Dev for 8+ years, a dad, a normal WFH job.\n\nAnd for some reason, I decided to start building my own SaaS.\n\nBecause hey, \"why w",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_analyzer",
+      "task": "Extract hook structure, emotional arc, and engagement triggers from the Reddit post format (raw honesty + specific numbers + named product + self-deprecation)",
+      "output": "content_template.json"
+    },
+    {
+      "agent": "engagement_bait_converter",
+      "task": "Generate 3 PRINTMAXX-voice versions: tech niche (building 337 scripts at $0 revenue), faith niche (building prayer apps as a side project), fitness niche (building streak apps while juggling life)",
+      "output": "posting_queue/founder_struggle_posts.txt"
+    },
+    {
+      "agent": "distribution_engine",
+      "task": "Schedule posts to Reddit (r/SideProject, r/SaaS, r/EntrepreneurRideAlong), Twitter, and LinkedIn",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

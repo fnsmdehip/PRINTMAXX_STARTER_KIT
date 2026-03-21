@@ -1,0 +1,36 @@
+{
+  "name": "integration_stop_playing_founder_and_start_buildin",
+  "created": "2026-03-20T18:09:55.256239",
+  "method": "Stop playing 'Founder' and start building a business. I\u2019m so sick of seeing founders bragging about their $1.8M seed rounds, winning pitch competitions, or being \"Visionaries.\"\n\nCool story, but **wher",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_and_extract",
+      "steps": [
+        "scrape_full_reddit_post_via_json_api",
+        "extract_tactical_steps_from_post_body"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_contrarian_tweets",
+        "generate_bootstrap_thread",
+        "generate_reply_bait_for_founder_culture_posts"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_and_extract"
+    },
+    {
+      "name": "queue_and_cross_ref",
+      "steps": [
+        "add_to_posting_queue",
+        "cross_reference_with_existing_bootstrap_alpha_entries"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

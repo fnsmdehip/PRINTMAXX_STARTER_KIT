@@ -1,0 +1,35 @@
+{
+  "name": "integration_accidentally_made_442_from_a_small_gpt_",
+  "created": "2026-03-20T18:09:51.722101",
+  "method": "Accidentally made $442 from a small GPT thing i built, still not sure how",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "discover",
+      "steps": [
+        "scrape_reddit_gpt_tools",
+        "scrape_ph_ai_tools",
+        "check_aso_keywords"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score",
+      "steps": [
+        "rank_by_search_volume_and_simplicity",
+        "filter_already_built"
+      ],
+      "parallel": false,
+      "depends_on": "discover"
+    },
+    {
+      "name": "build",
+      "steps": [
+        "feed_top3_to_app_factory_autopilot"
+      ],
+      "parallel": false,
+      "depends_on": "score"
+    }
+  ],
+  "status": "READY"
+}

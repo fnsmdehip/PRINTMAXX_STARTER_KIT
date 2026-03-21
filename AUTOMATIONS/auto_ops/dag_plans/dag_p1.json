@@ -1,0 +1,41 @@
+{
+  "name": "integration_p1",
+  "created": "2026-03-20T18:10:02.484846",
+  "method": "P1",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "build",
+      "steps": [
+        "clone streak template",
+        "rebrand to ColdMailStreak / SalesStreak",
+        "add cold-email-specific metrics (emails sent, opens, replies, meetings booked)",
+        "wire Stripe checkout for premium tier"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "deploy_and_content",
+      "steps": [
+        "deploy to surge.sh",
+        "generate landing page with SDR pain-point copy",
+        "generate 3 tweets + 1 thread targeting sales community",
+        "create Reddit posts for r/coldemail r/sales r/Entrepreneur"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "submit to Product Hunt as sales tool",
+        "post in cold email Facebook groups",
+        "add to app factory deployment tracker",
+        "add ASO keywords: cold email tracker, sales streak, SDR daily tracker"
+      ],
+      "parallel": true,
+      "depends_on": "deploy_and_content"
+    }
+  ],
+  "status": "READY"
+}

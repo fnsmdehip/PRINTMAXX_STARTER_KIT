@@ -1,0 +1,37 @@
+{
+  "name": "integration_i_spent_4_months_building_a_micro_saas_n",
+  "created": "2026-03-20T18:09:54.513591",
+  "method": "I spent 4 months building a micro SaaS nobody used. Then I studied what Marc Lou did and rebuilt everything. Month 4 post-launch. Eleven users. Two of them were my friends testing it as a favour. Reve",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_success_patterns",
+      "steps": [
+        "scrape r/micro_saas top posts for revenue-confirmed methods",
+        "scrape Marc Lou shipfast launches for problem categories",
+        "scrape IndieHackers revenue interviews for problem taxonomy"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_problem_taxonomy",
+      "steps": [
+        "LLM-extract problem category + demand signals from scraped data",
+        "build problem-demand scoring matrix"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_success_patterns"
+    },
+    {
+      "name": "score_existing_apps",
+      "steps": [
+        "score all APP_FACTORY_METHODS.csv entries against problem-demand matrix",
+        "flag apps with low demand validation",
+        "re-rank app factory priority queue"
+      ],
+      "parallel": false,
+      "depends_on": "extract_problem_taxonomy"
+    }
+  ],
+  "status": "READY"
+}

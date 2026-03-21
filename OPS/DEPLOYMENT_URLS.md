@@ -72,6 +72,7 @@
 | toolstack-review | https://toolstack-review.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
 | ai-video-tools | https://ai-video-tools.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
 | website-builders-compared | https://website-builders-compared.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
+| best-lead-generation-tools | https://best-lead-generation-tools.surge.sh | LIVE — gap-hunter deploy 2026-03-20 |
 
 ---
 
@@ -112,6 +113,7 @@
 | best-newsletter-platforms | https://best-newsletter-platforms.surge.sh | LIVE (2026-03-18) — needs affiliate IDs | 50% recurring (Beehiiv, Kit) + 30% (Moosend) |
 | best-saas-tools-solopreneurs | https://best-saas-tools-solopreneurs.surge.sh | LIVE (2026-03-19) — HUB PAGE links all 8 comparisons — needs affiliate IDs | All categories |
 | lemlist-vs-instantly | https://lemlist-vs-instantly.surge.sh | LIVE (2026-03-19) — needs affiliate IDs | 20-40% recurring (Instantly) + 20-35% recurring (Lemlist) |
+| best-lead-generation-tools | https://best-lead-generation-tools.surge.sh | LIVE (2026-03-20) — needs affiliate IDs | Mixed: Apollo, Instantly, Smartlead, Clay, Lemlist, Phantombuster |
 
 ---
 

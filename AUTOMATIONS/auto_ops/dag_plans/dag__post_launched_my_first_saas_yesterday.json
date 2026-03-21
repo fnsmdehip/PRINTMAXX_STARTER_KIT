@@ -1,0 +1,34 @@
+{
+  "name": "integration__post_launched_my_first_saas_yesterday",
+  "created": "2026-03-20T18:35:54.840560",
+  "method": " post: launched my first saas yesterday. woke up to 3 paying users and broo i\u2019m actually shaking \ud83d\ude2d \ud83d\ude2d \ud83d\ude2d \ud83d\ude2d | content: aboutdiscussions and useful links for saas owners, online business owners, and more.",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_celebration_posts",
+      "steps": [
+        "scrape r/SaaS + r/startups for 'first paying user' and 'first sale' posts",
+        "extract mentioned launch tactics: pricing, acquisition channel, tech stack, timeline"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate 3 celebration-format posts for PRINTMAXX app launches using extracted patterns",
+        "adapt hook structures for X/LinkedIn/Reddit formats"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_celebration_posts"
+    },
+    {
+      "name": "queue_distribution",
+      "steps": [
+        "add to CONTENT/social/posting_queue/ with platform tags"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "integration_revenuebased_financing_guide_7_provide",
+  "created": "2026-03-20T18:09:57.066129",
+  "method": "revenue-based financing guide. 7 providers compared. rbf unlocks at $15k mrr.  ",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape 7 RBF provider pages for current terms/rates/minimums",
+        "check which providers have referral or affiliate programs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "build comparison guide with real data points (MRR floor, revenue share %, term length, speed to fund)",
+        "generate longtail landing page HTML"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy_distribute",
+      "steps": [
+        "deploy to surge.sh as longtail page",
+        "route to content_repurposer for twitter thread + linkedin post + reddit post in r/startups r/smallbusiness"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

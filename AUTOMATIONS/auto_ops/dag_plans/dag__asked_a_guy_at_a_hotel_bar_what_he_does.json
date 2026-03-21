@@ -1,0 +1,48 @@
+{
+  "name": "integration__asked_a_guy_at_a_hotel_bar_what_he_does",
+  "created": "2026-03-20T18:10:02.255566",
+  "method": " asked a guy at a hotel bar what he does\"i sell the same pdf to the same person every month\"thought it was a scam\"they pay you monthly for one pdf?\"\"i update it. add 3-4 pages. they stay subscribed.\"h",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scan_niche_trends_for_update_topics",
+        "pull_latest_alpha_from_ledger",
+        "identify_3_4_high_value_additions"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "claude_generate_3_4_new_pages",
+        "format_pages_to_match_existing_style",
+        "add_datestamp_and_changelog"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "compile",
+      "steps": [
+        "merge_new_pages_into_master_pdf",
+        "generate_update_summary_email",
+        "version_increment"
+      ],
+      "parallel": true,
+      "depends_on": "generate"
+    },
+    {
+      "name": "deliver",
+      "steps": [
+        "push_updated_pdf_to_stripe_product",
+        "send_update_notification_to_subscribers",
+        "log_cycle_to_kpi_dashboard"
+      ],
+      "parallel": false,
+      "depends_on": "compile"
+    }
+  ],
+  "status": "READY"
+}

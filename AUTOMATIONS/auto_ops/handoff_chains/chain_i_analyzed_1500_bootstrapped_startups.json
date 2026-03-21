@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_analyzed_1500_bootstrapped_startups",
+  "created": "2026-03-20T11:46:08.890780",
+  "method": "I analyzed 1,500 bootstrapped startups",
+  "venture": "RESEARCH",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape startup data from 4 sources (IH revenue pages, PH launches, HN Show, Crunchbase seed-stage)",
+      "output": "raw_startups.jsonl"
+    },
+    {
+      "agent": "data_janitor",
+      "task": "Dedupe, normalize fields (name, niche, revenue_range, tech_stack, growth_channel, months_to_revenue), tag categories",
+      "output": "clean_startups.jsonl"
+    },
+    {
+      "agent": "analyzer",
+      "task": "Run pattern analysis: top niches by revenue, fastest growth channels, common tech stacks, revenue model distribution, time-to-first-dollar clustering",
+      "output": "startup_analysis_report.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Generate 5 Twitter threads (data-backed), 1 long-form post, 1 PDF report for Gumroad ($19-29)",
+      "output": "content_queue/"
+    }
+  ],
+  "status": "READY"
+}

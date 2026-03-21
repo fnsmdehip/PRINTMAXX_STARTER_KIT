@@ -1,0 +1,48 @@
+{
+  "name": "integration__facelessai_youtube_channel_due_dilige",
+  "created": "2026-03-20T18:10:01.403530",
+  "method": "# Faceless/AI YouTube Channel Due Diligence Report  **Date:** 2026-02-06 **Research method:** Multi-source web search, cross-referenced against 20+ independent sources **Verdict:** Method is VIABLE bu",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_high_cpm_niches",
+        "analyze_competitor_channels",
+        "identify_trending_topics"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_creation",
+      "steps": [
+        "generate_script_claude",
+        "generate_voiceover_edge_tts",
+        "source_stock_footage"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "assembly",
+      "steps": [
+        "assemble_video_remotion",
+        "generate_thumbnail",
+        "write_seo_metadata"
+      ],
+      "parallel": false,
+      "depends_on": "content_creation"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "upload_youtube_api",
+        "cross_post_shorts_tiktok",
+        "add_affiliate_links_description"
+      ],
+      "parallel": true,
+      "depends_on": "assembly"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "chain__dude_in_a_telegram_group_said_he_makes_",
+  "created": "2026-03-20T18:10:02.592493",
+  "method": " dude in a telegram group said he makes money \"rating products\"thought he meant like amazon reviews or some scam shitnope$17k last month\"rating products?\"\"i buy digital products in my niche. review th",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape 20-50 products per niche from app stores, PH, Gumroad, G2",
+      "output": "niche_products_raw.json"
+    },
+    {
+      "agent": "analyzer",
+      "task": "Score each product on 8 dimensions (price, features, UX, support, updates, integrations, value, uniqueness) using Claude",
+      "output": "niche_products_scored.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Generate ranked guide with comparison tables, verdict, and affiliate links where available",
+      "output": "ranking_guide.md"
+    },
+    {
+      "agent": "publisher",
+      "task": "Build landing page, deploy, create Stripe product, add to distribution queue",
+      "output": "publish_log.json"
+    }
+  ],
+  "status": "READY"
+}

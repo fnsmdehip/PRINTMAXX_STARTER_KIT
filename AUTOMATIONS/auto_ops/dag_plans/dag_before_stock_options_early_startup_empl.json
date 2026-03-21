@@ -1,0 +1,46 @@
+{
+  "name": "integration_before_stock_options_early_startup_empl",
+  "created": "2026-03-20T13:50:43.408240",
+  "method": "Before stock options, early startup employees built massive value and never owned a piece of it.  \n\nThat same structural flaw exists in the $40B influencer market right now. A creator helps take a bra",
+  "venture": "BROKERING",
+  "phases": [
+    {
+      "name": "intel_gather",
+      "steps": [
+        "scrape_twitter_creator_deal_complaints",
+        "scrape_linkedin_creator_economy_posts",
+        "check_existing_alpha_for_creator_equity"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "score_creator_undervaluation_signals",
+        "extract_brand_names_and_deal_structures"
+      ],
+      "parallel": true,
+      "depends_on": "intel_gather"
+    },
+    {
+      "name": "content_generate",
+      "steps": [
+        "engagement_bait_from_equity_gap_insight",
+        "thread_creator_vs_employee_equity_comparison",
+        "queue_posts_to_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    },
+    {
+      "name": "pipeline_prep",
+      "steps": [
+        "build_creator_prospect_list_for_brokering",
+        "draft_outreach_templates"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "integration_went_from_0_to_1k_mrr_if_i_started_my",
+  "created": "2026-03-20T18:09:53.732639",
+  "method": "Went from $0 to $1k MRR. If I started my SaaS over, here's exactly what I'd do After going from $0 to $1K MRR, I've learned that what you focus on matters, but the order you focus on it matters even m",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "extract_framework",
+      "steps": [
+        "parse 7-step sequence into structured scoring rubric",
+        "identify recurring-painpoint filter as new APP_FACTORY scoring dimension"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "apply_scoring",
+      "steps": [
+        "re-score app factory queue with recurring-usage weight boost (+1.5 for daily/weekly recurrence)",
+        "flag one-time-use apps below kill threshold for review"
+      ],
+      "parallel": false,
+      "depends_on": "extract_framework"
+    },
+    {
+      "name": "content_repurpose",
+      "steps": [
+        "generate 3 tweets from framework using engagement_bait_converter",
+        "generate 1 thread: 'The exact sequence to hit $1K MRR (most founders get the ORDER wrong)'"
+      ],
+      "parallel": true
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "integration_i_pointed_claude_code_at_the_pentagons_",
+  "created": "2026-03-20T13:50:42.977960",
+  "method": "i pointed Claude Code at the pentagon's public budget document and told it to find every contract overpaying by 10x or more\n\nit came back with 340 results worth $4.2B in potential undercuts\n\nand a bus",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "fetch_fpds_api_bulk",
+        "fetch_usaspending_crossref"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "claude_price_anomaly_detection",
+        "market_rate_comparison",
+        "categorize_by_sector"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "generate_viral_thread_content",
+        "generate_contractor_report_pdf",
+        "stage_to_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration__breaking_anthropic_quietly_dropped_a_3",
+  "created": "2026-03-20T18:35:50.253031",
+  "method": " BREAKING: Anthropic quietly dropped a 32-page playbook on building Claude Skills.\n\nSkills let you teach Claude your exact workflow once. It executes it every time after that. Across \nhttp://\nClaude.a",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "fetch_anthropic_skills_playbook_32pg",
+        "inventory_all_printmaxx_skills",
+        "identify_gaps_and_pattern_improvements"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "refine_existing_skills_per_playbook_patterns",
+        "create_3_niche_skill_packs_with_readmes",
+        "generate_gumroad_listings_47_each"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_3_tweets_1_thread_skills_mastery",
+        "create_seo_longtail_claude_skills_pages",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "integration_build_niche_apps_with_vibe_tools_ship_i",
+  "created": "2026-03-20T18:09:56.947150",
+  "method": "build niche apps with vibe tools. ship in hours. $456k-$144k/yr range proven. vibe-coded apps revenue: plinq $456k/yr (lovable). pieter levels flight sim $12k/mo in 3hrs. chatiq $2k mrr. trendfeed $10",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "niche_discovery",
+      "steps": [
+        "scan_app_store_gaps",
+        "scan_product_hunt_launches",
+        "score_by_monetization_proof"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "spec_generation",
+      "steps": [
+        "pick_top_niche",
+        "generate_app_spec_from_template",
+        "select_monetization_model"
+      ],
+      "parallel": false,
+      "depends_on": "niche_discovery"
+    },
+    {
+      "name": "build_deploy",
+      "steps": [
+        "claude_code_build",
+        "stripe_payment_link",
+        "surge_deploy"
+      ],
+      "parallel": false,
+      "depends_on": "spec_generation"
+    },
+    {
+      "name": "launch_distribute",
+      "steps": [
+        "product_hunt_post",
+        "reddit_show_post",
+        "twitter_build_thread",
+        "engagement_bait_converter"
+      ],
+      "parallel": true,
+      "depends_on": "build_deploy"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration_price_niche_streak_apps_at_299_50_be",
+  "created": "2026-03-20T18:09:55.553348",
+  "method": "Price niche streak apps at $2.99 (50% below Streaks $5.99). H&F gap at $1.99-$3.99 confirmed. 53 free apps vs 4 paid = massive whitespace.",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "price_intel",
+      "steps": [
+        "scrape_competitor_prices_app_store",
+        "scrape_competitor_prices_play_store",
+        "pull_current_stripe_prices"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "price_update",
+      "steps": [
+        "update_stripe_products_to_299",
+        "update_all_landing_page_pricing_copy",
+        "update_aso_keywords_price_anchored"
+      ],
+      "parallel": true,
+      "depends_on": "price_intel"
+    },
+    {
+      "name": "deploy_and_track",
+      "steps": [
+        "redeploy_updated_landing_pages",
+        "create_kpi_tracking_entry",
+        "log_price_change_to_ledger"
+      ],
+      "parallel": false,
+      "depends_on": "price_update"
+    }
+  ],
+  "status": "READY"
+}

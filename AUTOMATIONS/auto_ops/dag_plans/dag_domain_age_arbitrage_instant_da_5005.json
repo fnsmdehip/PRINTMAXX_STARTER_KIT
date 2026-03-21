@@ -1,0 +1,38 @@
+{
+  "name": "integration_domain_age_arbitrage_instant_da_5005",
+  "created": "2026-03-20T18:09:56.740141",
+  "method": "domain age arbitrage. instant da. $500-5000 investment.  ",
+  "venture": "BROKERING",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_expireddomains_net",
+        "scrape_dropcatch_lists",
+        "check_archive_org_history"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score",
+      "steps": [
+        "calculate_da_dr_estimate",
+        "check_backlink_spam_ratio",
+        "classify_niche"
+      ],
+      "parallel": true,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "rank_opportunities",
+        "write_to_ledger",
+        "generate_broker_listing_if_high_value"
+      ],
+      "parallel": false,
+      "depends_on": "score"
+    }
+  ],
+  "status": "READY"
+}

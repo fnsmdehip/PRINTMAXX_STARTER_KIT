@@ -1,0 +1,47 @@
+{
+  "name": "integration_i_analyzed_heygen_deel_and_vercels_ex",
+  "created": "2026-03-20T13:50:39.543788",
+  "method": "I analyzed HeyGen, Deel, and Vercel\u2019s exact growth strategies to $10M ARR",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_sources",
+      "steps": [
+        "scrape_reddit_saas_growth",
+        "scrape_indiehackers_milestones",
+        "scrape_twitter_growth_threads"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_tactics",
+      "steps": [
+        "parse_growth_playbooks",
+        "classify_by_stage_and_channel",
+        "dedupe_against_existing_tactics_db"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_sources"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "write_teardown_threads",
+        "write_comparison_posts",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": true,
+      "depends_on": "extract_tactics"
+    },
+    {
+      "name": "self_apply",
+      "steps": [
+        "match_tactics_to_printmaxx_ventures",
+        "update_growth_tactics_json"
+      ],
+      "parallel": false,
+      "depends_on": "extract_tactics"
+    }
+  ],
+  "status": "READY"
+}

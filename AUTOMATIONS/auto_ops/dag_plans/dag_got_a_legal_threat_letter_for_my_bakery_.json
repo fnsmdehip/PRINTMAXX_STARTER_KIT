@@ -1,0 +1,48 @@
+{
+  "name": "integration_got_a_legal_threat_letter_for_my_bakery_",
+  "created": "2026-03-20T18:09:56.140029",
+  "method": "Got a legal threat letter for my bakery website last month. \nWant to share what I learned in case it helps anyone.",
+  "venture": "LOCAL_BIZ",
+  "phases": [
+    {
+      "name": "scan",
+      "steps": [
+        "scrape_google_maps_for_local_biz_websites",
+        "extract_homepage_urls"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "audit",
+      "steps": [
+        "check_ada_accessibility",
+        "check_privacy_policy",
+        "check_cookie_consent",
+        "check_terms_of_service"
+      ],
+      "parallel": true,
+      "depends_on": "scan"
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "score_vulnerability_severity",
+        "filter_high_risk_sites",
+        "lookup_owner_contact"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_compliance_report_pdf",
+        "draft_cold_email_with_specific_issues",
+        "queue_for_sending"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    }
+  ],
+  "status": "READY"
+}

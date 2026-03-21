@@ -1,0 +1,48 @@
+{
+  "name": "integration_48_svg_backgrounds_copypaste_into_land",
+  "created": "2026-03-20T13:50:40.256439",
+  "method": "48 SVG backgrounds. Copy/paste into landing pages and app UIs. Zero cost design upgrade. Applies to all 114 deployed apps and landing pages.",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "curate_svg_library",
+      "steps": [
+        "scrape_svg_sources",
+        "categorize_by_niche",
+        "optimize_file_size",
+        "create_svg_registry_json"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "scan_deployed_pages",
+      "steps": [
+        "parse_deployment_urls_md",
+        "detect_current_backgrounds",
+        "classify_page_niche"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "inject_backgrounds",
+      "steps": [
+        "match_svg_to_page_niche",
+        "inject_inline_svg_css",
+        "validate_rendering"
+      ],
+      "parallel": false,
+      "depends_on": "curate_svg_library,scan_deployed_pages"
+    },
+    {
+      "name": "deploy_and_verify",
+      "steps": [
+        "surge_redeploy_batch",
+        "playwright_screenshot_diff",
+        "log_upgrades"
+      ],
+      "parallel": false,
+      "depends_on": "inject_backgrounds"
+    }
+  ],
+  "status": "READY"
+}

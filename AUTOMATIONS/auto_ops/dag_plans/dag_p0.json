@@ -1,0 +1,47 @@
+{
+  "name": "integration_p0",
+  "created": "2026-03-20T18:10:02.384366",
+  "method": "P0",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "clone_and_customize",
+      "steps": [
+        "clone_sports_streak_template",
+        "customize_tennis_serve_copy",
+        "generate_tennis_icons_og_images"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "build_pwa_with_serve_counter",
+        "build_landing_page_tennis"
+      ],
+      "parallel": true,
+      "depends_on": "clone_and_customize"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy_landing_surge",
+        "deploy_pwa_surge",
+        "create_stripe_payment_link"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "aso_keyword_seeding",
+        "generate_content_3tweets_1thread",
+        "cross_promote_existing_streak_apps"
+      ],
+      "parallel": true,
+      "depends_on": "deploy"
+    }
+  ],
+  "status": "READY"
+}

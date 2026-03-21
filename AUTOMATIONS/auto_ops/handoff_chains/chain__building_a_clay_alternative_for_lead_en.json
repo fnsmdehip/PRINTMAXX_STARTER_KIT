@@ -1,0 +1,29 @@
+{
+  "name": "chain__building_a_clay_alternative_for_lead_en",
+  "created": "2026-03-20T18:09:57.886507",
+  "method": " building a clay alternative for lead enrichment, would love feedback from agency owners :) hey everyone,\n\ni\u2019m part of a small team building a lead enrichment and prospecting platform that sits in the",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Ingest raw lead list (name, company, domain). Scrape company sites for size, industry, tech stack via free APIs and Google cache.",
+      "output": "raw_enrichment.json"
+    },
+    {
+      "agent": "enricher",
+      "task": "Waterfall enrichment: Hunter.io free (50/mo) \u2192 Clearbit free reveal \u2192 Google dorking for emails \u2192 LinkedIn public profile via Google cache. Fill: email, title, LinkedIn URL, company size.",
+      "output": "enriched_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads 1-10 based on: company size fit, tech stack match, hiring signals, funding signals. Flag top 20% as hot.",
+      "output": "qualified_leads.json"
+    },
+    {
+      "agent": "router",
+      "task": "Route hot leads to cold outbound pipeline. Package full enriched CSV for client delivery if gig-based. Update LEDGER tracking.",
+      "output": "routed_output.json"
+    }
+  ],
+  "status": "READY"
+}

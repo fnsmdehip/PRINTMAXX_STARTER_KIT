@@ -1,0 +1,46 @@
+{
+  "name": "integration__most_digital_product_sellers_are_postin",
+  "created": "2026-03-20T18:10:01.997000",
+  "method": " most digital product sellers are posting 6 times a day and making $0meanwhile accounts posting 4 times a week are clearing $8k/monthit's not effort. it's what you're posting. and you have the ratio c",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_accounts",
+      "steps": [
+        "scrape_high_revenue_accounts",
+        "scrape_zero_revenue_accounts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "analyze_patterns",
+      "steps": [
+        "extract_hook_structures",
+        "extract_cta_patterns",
+        "extract_timing_data",
+        "extract_content_types"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_accounts"
+    },
+    {
+      "name": "build_templates",
+      "steps": [
+        "generate_winning_templates",
+        "score_templates_against_patterns"
+      ],
+      "parallel": false,
+      "depends_on": "analyze_patterns"
+    },
+    {
+      "name": "schedule_posts",
+      "steps": [
+        "generate_4_weekly_posts",
+        "queue_to_posting_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "build_templates"
+    }
+  ],
+  "status": "READY"
+}

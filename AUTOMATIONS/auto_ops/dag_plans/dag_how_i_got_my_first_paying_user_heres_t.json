@@ -1,0 +1,38 @@
+{
+  "name": "integration_how_i_got_my_first_paying_user_heres_t",
+  "created": "2026-03-20T18:35:52.755816",
+  "method": "How I got my first paying user. Here's the unfiltered truth. **Project:**\u00a0Email paywall service \u2014Fastpass . email  charge people to contact you  \n**Revenue:**\u00a0\u20ac0 \u2192 \\~$85 in 24h (from 1 user)  \n**Statu",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "build",
+      "steps": [
+        "create HTML landing with pay-to-contact CTA",
+        "create Stripe product + price ($3-5 per email)",
+        "create Stripe payment link"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "wire payment link into landing page",
+        "deploy to surge.sh as paywall-email.surge.sh",
+        "add to DEPLOYMENT_URLS.md"
+      ],
+      "parallel": false,
+      "depends_on": "build"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate 3 tweets about email noise problem + solution",
+        "add to content posting queue",
+        "list concept on Product Hunt upcoming"
+      ],
+      "parallel": true,
+      "depends_on": "deploy"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "integration_built_a_shopify_profit_tracker_because_i",
+  "created": "2026-03-20T13:50:40.149854",
+  "method": "Built a Shopify profit tracker because I kept seeing sellers brag about revenue ",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "build_assets",
+      "steps": [
+        "generate_calculator_html",
+        "generate_spreadsheet_template"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_extract",
+      "steps": [
+        "generate_3_tweets_revenue_vs_profit",
+        "generate_1_thread_shopify_profit_myths"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy_calculator_to_surge",
+        "add_to_deployment_urls"
+      ],
+      "parallel": false,
+      "depends_on": "build_assets"
+    }
+  ],
+  "status": "READY"
+}

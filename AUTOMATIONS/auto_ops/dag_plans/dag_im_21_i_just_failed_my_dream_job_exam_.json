@@ -1,0 +1,35 @@
+{
+  "name": "integration_im_21_i_just_failed_my_dream_job_exam_",
+  "created": "2026-03-20T18:35:54.329642",
+  "method": "I\u2019m 21, I just failed my dream job exam by 15 seconds, and I\u2019ve spent 4 months building an AI to save my family. Please hear me out. \ud83e\udd7a Hi Reddit,\n\u200bI\u2019m a 21-year-old Mathematics graduate from India, an",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_template",
+      "steps": [
+        "parse narrative structure (hook\u2192struggle\u2192pivot\u2192current_state\u2192ask)",
+        "extract engagement triggers (age, failure, family stakes, specific numbers)"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate 3 reddit posts using template with PRINTMAXX real data",
+        "generate 3 twitter threads using condensed version"
+      ],
+      "parallel": true,
+      "depends_on": "extract_template"
+    },
+    {
+      "name": "queue_and_log",
+      "steps": [
+        "write posts to CONTENT/social/posting_queue/",
+        "log platform risk signal to LEDGER/COMPETITIVE_INTEL.csv"
+      ],
+      "parallel": true,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

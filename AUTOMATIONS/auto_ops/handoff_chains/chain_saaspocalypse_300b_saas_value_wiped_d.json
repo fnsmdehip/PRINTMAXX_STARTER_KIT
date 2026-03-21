@@ -1,0 +1,29 @@
+{
+  "name": "chain_saaspocalypse_300b_saas_value_wiped_d",
+  "created": "2026-03-20T18:09:57.215197",
+  "method": "SaaSpocalypse: $300B SaaS value wiped. Default CRUD+SEO moat dead. Teams shipping fast with AI still winning (Cursor $1B ARR in 24mo). Opportunity: position against incumbent SaaS with cheaper, faster",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape G2 1-2 star reviews, Reddit r/SaaS r/smallbusiness r/Entrepreneur complaint threads, HN 'Show HN' competitor failures for SaaS with >$50/mo pricing and recurring complaints about bloat/cost/complexity",
+      "output": "saas_vulnerability_targets.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each target: pricing gap (their price vs what a lean alternative costs), complaint volume, market size estimate, build complexity (can App Factory ship in <48hrs?). Filter to top 5 per week.",
+      "output": "saas_qualified_targets.json"
+    },
+    {
+      "agent": "builder",
+      "task": "Generate App Factory spec: core 3-5 features only (not feature parity), Stripe payment link, landing page copy positioning as 'the simple alternative to X'. Queue into app_factory_command_center.py",
+      "output": "saas_alternative_spec.json"
+    },
+    {
+      "agent": "content_engine",
+      "task": "Generate 3 tweets + 1 thread per build: 'Company X charges $99/mo for what takes 200 lines of code. We built the alternative in 48 hours.' Route to engagement_bait_converter.py",
+      "output": "saas_content_queue.json"
+    }
+  ],
+  "status": "READY"
+}

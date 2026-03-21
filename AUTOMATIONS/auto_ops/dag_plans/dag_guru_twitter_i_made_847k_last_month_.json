@@ -1,0 +1,48 @@
+{
+  "name": "integration_guru_twitter_i_made_847k_last_month_",
+  "created": "2026-03-20T13:50:42.210654",
+  "method": "Guru Twitter: \"I made $847K last month, here's my morning routine.\"\n\nTheir morning routine: Wake up at 4am, meditate, journal, cold plunge, gratitude practice.\n\nThe actual reason they made money: Good",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_guru_claims",
+      "steps": [
+        "scrape_twitter_for_revenue_claim_tweets",
+        "scrape_reddit_for_guru_callout_threads",
+        "pull_from_alpha_staging_content_only_entries"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_real_methods",
+      "steps": [
+        "separate_stated_attribution_from_real_method",
+        "score_contrarian_angle_strength",
+        "match_to_proven_engagement_hooks"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_guru_claims"
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "generate_what_they_say_vs_reality_posts",
+        "generate_thread_with_actual_method_breakdown",
+        "generate_reply_bait_versions"
+      ],
+      "parallel": true,
+      "depends_on": "extract_real_methods"
+    },
+    {
+      "name": "queue_and_distribute",
+      "steps": [
+        "route_to_posting_queue",
+        "tag_with_optimal_posting_time",
+        "feed_engagement_bait_converter_for_cross_platform"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

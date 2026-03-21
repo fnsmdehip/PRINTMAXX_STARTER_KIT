@@ -1,0 +1,38 @@
+{
+  "name": "integration_shopify_really_said_what_if_we_just_cha",
+  "created": "2026-03-20T18:35:54.533341",
+  "method": "shopify really said \u2018what if we just charged more\u2019 huh sooo... yeah... shopify just casually dropped an email saying they\u2019re bumping online card fees in april 2026 and\u2026 bruh. it\u2019s not a \u201csmall adjustm",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_shopify_fee_page",
+        "scrape_competitor_fee_pages",
+        "pull_reddit_merchant_complaints"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "fee_comparison_table",
+        "savings_calculator_math",
+        "generate_5_posts_across_formats"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "queue_to_posting_queue",
+        "queue_reddit_r_shopify_r_smallbusiness",
+        "queue_twitter_thread"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

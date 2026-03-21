@@ -1,0 +1,24 @@
+{
+  "name": "chain_curious_on_what_the_best_methods_of_earn",
+  "created": "2026-03-20T18:09:55.024125",
+  "method": "Curious on what the best methods of earnings affiliate income is in this day and age from digital products? Hi all,\n\nI really want to take my affiliate income to the next level, and I am curious if an",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan affiliate networks (Impact, ShareASale, PartnerStack) for digital product programs with >20% commission and 90+ day cookies",
+      "output": "affiliate_programs_qualified.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "Generate comparison/review/tutorial content for top 10 programs using content_multiplier.py, targeting buyer-intent keywords like 'best X alternative' and 'X vs Y'",
+      "output": "affiliate_content_batch.json"
+    },
+    {
+      "agent": "distributor",
+      "task": "Deploy content to existing landing pages, embed affiliate links in all 47 deployed sites where contextually relevant, add to posting_queue for social distribution",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

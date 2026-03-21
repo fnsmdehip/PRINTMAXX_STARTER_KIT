@@ -1,0 +1,38 @@
+{
+  "name": "integration_case_study_with_real_numbers_analyze_fu",
+  "created": "2026-03-20T18:09:58.150640",
+  "method": "case study with real numbers. analyze full post for replicable method. summary: we added $88k in mrr to a b2b ecommerce saas in 1 month. and productized the system into an ai platform beta_testing ",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_b2b_ecommerce_saas_landscape",
+        "extract_common_growth_bottlenecks",
+        "catalog_repeatable_growth_levers"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "productize",
+      "steps": [
+        "build_growth_audit_template",
+        "create_ai_recommendation_engine_prompt",
+        "package_as_digital_product_listing"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "generate_case_study_threads_with_numbers",
+        "queue_to_content_pipeline",
+        "add_to_cold_outbound_targeting"
+      ],
+      "parallel": true,
+      "depends_on": "productize"
+    }
+  ],
+  "status": "READY"
+}

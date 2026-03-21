@@ -1,0 +1,37 @@
+{
+  "name": "integration__reducing_saas_overhead_a_selfhosted_p",
+  "created": "2026-03-20T18:09:57.786307",
+  "method": " reducing saas overhead: a self-hosted pdf engine to replace expensive api subscriptions hello everyone,\n\none of the most common hidden costs for saas companies as they scale is pdf generation. paying",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_reddit_hn_pdf_complaints",
+        "identify_top_paid_pdf_apis_and_pricing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_creation",
+      "steps": [
+        "generate_comparison_landing_page",
+        "generate_5_seo_longtail_pages",
+        "create_3_twitter_threads_on_pdf_cost_savings"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "deploy_longtail_pages_to_surge",
+        "queue_twitter_threads",
+        "post_to_relevant_subreddits"
+      ],
+      "parallel": true,
+      "depends_on": "content_creation"
+    }
+  ],
+  "status": "READY"
+}

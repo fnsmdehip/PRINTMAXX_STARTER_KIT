@@ -1,0 +1,36 @@
+{
+  "name": "integration_i_lost_2300_on_my_first_amazon_private",
+  "created": "2026-03-20T18:09:51.726987",
+  "method": "I lost $2,300 on my first Amazon Private Label product. Here's the exact mistake that killed it.",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "extract_hooks",
+      "steps": [
+        "parse loss story format into hook template",
+        "extract specific dollar amount and mistake type",
+        "generate 3 niche variants (tech: 'I lost $X on my first SaaS', faith: 'I lost $X on my first faith app', fitness: 'I lost $X on my first supplement brand')"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_content",
+      "steps": [
+        "run engagement_bait_converter.py with consequence-first template",
+        "run content_multiplier.py for cross-platform variants (twitter thread, reddit post, linkedin story)"
+      ],
+      "parallel": true,
+      "depends_on": "extract_hooks"
+    },
+    {
+      "name": "queue_and_track",
+      "steps": [
+        "add to CONTENT/social/posting_queue/",
+        "add hook template to CONTENT/social/WINNING_CONTENT_STRUCTURES.csv"
+      ],
+      "parallel": false,
+      "depends_on": "generate_content"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "integration_i_set_up_6_ai_agents_that_sell_web_servi",
+  "created": "2026-03-20T18:09:55.812522",
+  "method": "I set up 6 AI agents that sell web services 24/7 (full breakdown) I know \"AI agents\" sounds like tech bro nonsense so let me explain it simply.\n\nai agent is just an ai that does a specific task on its",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "prospect_and_qualify",
+      "steps": [
+        "scrape_google_maps_local_biz",
+        "scrape_yelp_no_website",
+        "enrich_with_email_finder"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_and_filter",
+      "steps": [
+        "score_leads_by_web_presence",
+        "filter_revenue_signals",
+        "deduplicate_against_outreach_log"
+      ],
+      "parallel": true,
+      "depends_on": "prospect_and_qualify"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_personalized_cold_email",
+        "send_via_smtp_rotation",
+        "log_to_outreach_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "score_and_filter"
+    },
+    {
+      "name": "followup_and_close",
+      "steps": [
+        "auto_followup_day3_day7",
+        "generate_proposal_on_reply",
+        "route_hot_leads_to_human"
+      ],
+      "parallel": false,
+      "depends_on": "outreach"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "integration_i_just_made_my_first_sale_httpstrus",
+  "created": "2026-03-20T18:09:55.873076",
+  "method": "I just made my first sale! [https://trustmrr.com/startup/envmanager](https://trustmrr.com/startup/envmanager)\u00a0for proof!\n\nSo I built this tool like 8 months ago. I built a tool for myself. I'm working",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_proof_patterns",
+      "steps": [
+        "scrape r/buildinpublic for top 'first sale' posts structure",
+        "extract common proof formats: TrustMRR, Stripe dashboard, revenue screenshots"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate_templates",
+      "steps": [
+        "create 5 build-in-public post templates for PRINTMAXX products",
+        "create proof-page generator script (HTML screenshot of Stripe balance)"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_proof_patterns"
+    },
+    {
+      "name": "schedule_distribution",
+      "steps": [
+        "queue first build-in-public post to posting_queue"
+      ],
+      "parallel": false,
+      "depends_on": "generate_templates"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "integration__tendersinfo_comgovernment_contracts_be",
+  "created": "2026-03-20T18:09:59.950423",
+  "method": " tendersinfo .comgovernment contracts before they close.filter by country, department, budget, deadline.$500b+ in government spending every year. most of it posted publicly. nobody cold emails for it.",
+  "venture": "BROKERING",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_sam_gov_api",
+        "scrape_state_portals",
+        "scrape_usaspending"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "filter_budget_min_50k",
+        "filter_deadline_gt_14d",
+        "filter_category_match",
+        "dedupe_across_sources"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "match",
+      "steps": [
+        "find_businesses_by_naics_code",
+        "enrich_with_contact_info",
+        "score_business_fit"
+      ],
+      "parallel": true,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "generate_personalized_email",
+        "send_cold_email_batch",
+        "log_to_outreach_pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "match"
+    }
+  ],
+  "status": "READY"
+}
