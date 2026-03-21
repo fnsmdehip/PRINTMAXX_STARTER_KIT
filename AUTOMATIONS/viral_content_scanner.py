@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Viral Content Scanner - Monitors meme/viral accounts for particularly viral content
 Detects viral tweets based on engagement thresholds and prepares repurposing queue.

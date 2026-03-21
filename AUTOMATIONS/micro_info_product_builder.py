@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Micro Info Product Builder
 Source: ALPHA_MICRO_INFO_001 - "$29-39 micro info products. 1-2 hour build time.

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Signal Aggregator - Fuse intelligence from ALL scanners into ranked opportunities.
 

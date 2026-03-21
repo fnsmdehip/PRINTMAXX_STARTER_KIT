@@ -1,0 +1,47 @@
+
+=== LAUNCH TWEETS (2026-03-21) ===
+
+TWEET: Claude Code vs OpenCode comparison
+OpenCode hit #1 on HN today.
+
+Quick breakdown for builders:
+
+OpenCode: free, open-source, great for focused coding
+Claude Code: $20/mo, built for autonomous agents + pipelines
+
+If you're just writing code faster → OpenCode works
+If you're building systems that run without you → Claude Code wins
+
+They don't actually compete. Full comparison: claude-code-vs-opencode.surge.sh
+
+---
+
+TWEET: Couples Streak launch
+No one built a streak app for couples.
+
+Couples Habit Tracker:
+- daily conversation prompts
+- appreciation rituals  
+- shared streak (resets if either misses)
+- $4.99/mo per couple
+
+Checked the market: 11M+ people in couples habit communities, zero dedicated apps.
+
+First mover: couples-streak.surge.sh
+
+---
+
+THREAD: Privacy angle on fitness apps
+Fitness app gave away French military carrier location.
+
+Here's why "just for social features" location access is a lie:
+
+1. Apps default to public data
+2. GPS is precise enough to track military vessels
+3. "Social sharing" = surveillance with a UX layer
+
+Our habit apps: we know your streak count. That's the entire database.
+
+No GPS. No location. No data brokers. Just your streak.
+
+This is now a competitive differentiator.

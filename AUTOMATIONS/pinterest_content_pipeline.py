@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Pinterest Content Pipeline — fills C08/N44 gap
 Generates pin content from existing PRINTMAXX assets for compound affiliate traffic.

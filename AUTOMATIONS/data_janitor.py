@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 DATA JANITOR AGENT - Cycle 20260320
 Deduplicates, archives, validates, and reports on all data systems.

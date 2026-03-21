@@ -267,3 +267,36 @@
 [2026-03-20T07:04:59.595901+00:00] Total qualifying rows before dedup: 36
 [2026-03-20T07:04:59.602607+00:00] Wrote 36 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
 [2026-03-20T07:04:59.602935+00:00] === Done ===
+[2026-03-21T09:52:57.760169+00:00] === HN + PH scraper starting ===
+[2026-03-21T09:52:57.839674+00:00] Loaded 13005 existing URLs for dedup.
+[2026-03-21T09:52:57.840171+00:00] Fetching HN top stories (limit=60)...
+[2026-03-21T09:55:41.209063+00:00]   Got 60 top stories.
+[2026-03-21T09:55:41.213663+00:00] Fetching HN Show HN stories (limit=40)...
+[2026-03-21T09:57:30.452637+00:00]   Got 40 Show HN stories.
+[2026-03-21T09:57:30.500459+00:00] Fetching ProductHunt posts...
+[2026-03-21T09:57:33.061956+00:00]   Got 0 PH posts.
+[2026-03-21T09:57:33.062819+00:00] Total qualifying rows before dedup: 55
+[2026-03-21T09:57:33.071638+00:00] Wrote 55 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
+[2026-03-21T09:57:33.072037+00:00] === Done ===
+[2026-03-21T11:59:05.230905+00:00] === HN + PH scraper starting ===
+[2026-03-21T11:59:05.309439+00:00] Loaded 13060 existing URLs for dedup.
+[2026-03-21T11:59:05.309638+00:00] Fetching HN top stories (limit=60)...
+[2026-03-21T12:01:50.475644+00:00]   Got 60 top stories.
+[2026-03-21T12:01:50.476526+00:00] Fetching HN Show HN stories (limit=40)...
+[2026-03-21T12:03:42.132457+00:00]   Got 40 Show HN stories.
+[2026-03-21T12:03:42.133540+00:00] Fetching ProductHunt posts...
+[2026-03-21T12:03:44.666078+00:00]   Got 0 PH posts.
+[2026-03-21T12:03:44.666538+00:00] Total qualifying rows before dedup: 5
+[2026-03-21T12:03:44.669791+00:00] Wrote 5 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
+[2026-03-21T12:03:44.670006+00:00] === Done ===
+[2026-03-21T14:05:22.227851+00:00] === HN + PH scraper starting ===
+[2026-03-21T14:05:22.307999+00:00] Loaded 13066 existing URLs for dedup.
+[2026-03-21T14:05:22.308206+00:00] Fetching HN top stories (limit=60)...
+[2026-03-21T14:08:04.100421+00:00]   Got 60 top stories.
+[2026-03-21T14:08:04.168105+00:00] Fetching HN Show HN stories (limit=40)...
+[2026-03-21T14:09:51.113821+00:00]   Got 40 Show HN stories.
+[2026-03-21T14:09:51.115793+00:00] Fetching ProductHunt posts...
+[2026-03-21T14:09:53.582105+00:00]   Got 0 PH posts.
+[2026-03-21T14:09:53.634337+00:00] Total qualifying rows before dedup: 6
+[2026-03-21T14:09:53.634986+00:00] Wrote 6 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
+[2026-03-21T14:09:53.635111+00:00] === Done ===

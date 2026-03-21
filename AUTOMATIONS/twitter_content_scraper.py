@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Twitter Content Scraper - Download viral/meme content for repurposing
 Scrapes accounts, downloads images + videos, creates repurpose queue.

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gratitude Streak — daily gratitude journal habit tracker</title>
+<meta name="description" content="writing 3 things you're grateful for takes 2 minutes. people who do it daily report 25% higher life satisfaction. streak tracking makes sure you actually do it.">
+<meta property="og:title" content="Gratitude Streak">
+<meta property="og:description" content="writing 3 things you're grateful for takes 2 minutes. people who do it daily report 25% higher life satisfaction. streak tracking makes sure you actually do it.">
+<meta property="og:type" content="website">
+<meta name="keywords" content="gratitude streak app, daily gratitude journal, gratitude habit tracker, thankfulness app, gratitude journal app, daily gratitude practice">
+<meta name="robots" content="index, follow">
+<meta property="og:url" content="https://gratitude-streak.surge.sh/">
+<meta property="og:site_name" content="Gratitude Streak">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%271200%27%20height%3D%27630%27%3E%3Crect%20width%3D%271200%27%20height%3D%27630%27%20fill%3D%27%230f0f11%27/%3E%3Ctext%20x%3D%27600%27%20y%3D%27260%27%20font-family%3D%27system-ui%2Csans-serif%27%20font-size%3D%2772%27%20font-weight%3D%27800%27%20fill%3D%27%23EC4899%27%20text-anchor%3D%27middle%27%3EGratitude%20Streak%3C/text%3E%3Ctext%20x%3D%27600%27%20y%3D%27360%27%20font-family%3D%27system-ui%2Csans-serif%27%20font-size%3D%2736%27%20fill%3D%27%23DB2777%27%20text-anchor%3D%27middle%27%3EFree%20Habit%20Tracker%20App%202026%3C/text%3E%3C/svg%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Gratitude Streak">
+<meta name="twitter:description" content="3 things you're grateful for. 2 minutes a day. streak tracking makes it stick.">
+<meta name="twitter:image" content="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%271200%27%20height%3D%27630%27%3E%3Crect%20width%3D%271200%27%20height%3D%27630%27%20fill%3D%27%230f0f11%27/%3E%3Ctext%20x%3D%27600%27%20y%3D%27260%27%20font-family%3D%27system-ui%2Csans-serif%27%20font-size%3D%2772%27%20font-weight%3D%27800%27%20fill%3D%27%23EC4899%27%20text-anchor%3D%27middle%27%3EGratitude%20Streak%3C/text%3E%3Ctext%20x%3D%27600%27%20y%3D%27360%27%20font-family%3D%27system-ui%2Csans-serif%27%20font-size%3D%2736%27%20fill%3D%27%23DB2777%27%20text-anchor%3D%27middle%27%3EFree%20Habit%20Tracker%20App%202026%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://gratitude-streak.surge.sh/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Gratitude Streak","url":"https://gratitude-streak.surge.sh/","applicationCategory":"LifestyleApplication","operatingSystem":"iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0A1412;--surface:#0F1F1E;--c1:#F59E0B;--c2:#EC4899;--text:#e5e5e5;--muted:#888;--border:#222}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .wrap{max-width:900px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1rem;font-weight:800;letter-spacing:-0.5px;text-transform:uppercase;opacity:0.6}
+
+.hero{padding:80px 0 60px;text-align:center}
+.emoji{font-size:4rem;margin-bottom:20px;display:block}
+.hero h1{font-size:clamp(2rem,6vw,3.5rem);font-weight:800;line-height:1.05;letter-spacing:-2px;background:linear-gradient(135deg,#F59E0B,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:520px;margin:0 auto 40px;line-height:1.7}
+
+.cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#F59E0B,#EC4899);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;transition:opacity 0.2s;display:inline-block}
+.btn-primary:hover{opacity:0.9}
+.btn-secondary{background:var(--surface);color:var(--text);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;border:1px solid var(--border);display:inline-block;transition:border-color 0.2s}
+.btn-secondary:hover{border-color:#444}
+
+.stats{padding:60px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.stat h3{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#F59E0B,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat p{color:var(--muted);font-size:0.9rem;margin-top:4px}
+
+.features{padding:60px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.features h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:32px;text-align:center}
+.features ul{list-style:none;max-width:500px;margin:0 auto;display:grid;gap:12px}
+.features li{display:flex;align-items:flex-start;gap:12px;padding:16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;font-size:0.95rem}
+.features li::before{content:"\2713";color:#F59E0B;font-weight:800;flex-shrink:0;margin-top:2px}
+
+.pricing{padding:60px 0;text-align:center}
+.pricing h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.pricing .sub{color:var(--muted);margin-bottom:40px}
+.price-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:600px;margin:0 auto}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px}
+.price-card.featured{border-color:#F59E0B;background:linear-gradient(135deg,#0A1412,#0F1F1E)}
+.price-card h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--muted)}
+.price-card .amount{font-size:2.5rem;font-weight:800;letter-spacing:-2px;margin-bottom:4px}
+.price-card .period{color:var(--muted);font-size:0.85rem;margin-bottom:20px}
+.price-card .note{font-size:0.85rem;color:var(--muted)}
+.badge{display:inline-block;background:linear-gradient(135deg,#F59E0B,#EC4899);color:#fff;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700;margin-bottom:12px}
+
+.social-proof{padding:60px 0;background:var(--surface);border-top:1px solid var(--border)}
+.social-proof h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:32px;text-align:center}
+.quote{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px}
+.quote p{font-size:0.95rem;line-height:1.6;margin-bottom:12px;color:var(--text)}
+.quote .author{color:var(--muted);font-size:0.85rem}
+
+.final-cta{padding:80px 0;text-align:center}
+.final-cta h2{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px}
+.final-cta p{color:var(--muted);margin-bottom:32px}
+
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center}
+footer p{color:var(--muted);font-size:0.85rem}
+
+@media(max-width:600px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .cta-group{flex-direction:column;align-items:center}
+  .btn-primary,.btn-secondary{width:100%;max-width:300px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="logo">PRINTMAXX apps</span>
+    <a href="https://printmaxx-apps.surge.sh" style="color:var(--muted);font-size:0.85rem">all apps</a>
+  </div>
+</nav>
+
+<section class="hero container">
+  <span class="emoji">✨</span>
+  <h1>Gratitude Streak</h1>
+  <p>writing 3 things you're grateful for takes 2 minutes. people who do it daily report 25% higher life satisfaction. streak tracking makes sure you actually do it.</p>
+  <div class="cta-group">
+    <a href="#" class="btn-primary">download on ios</a>
+    <a href="#" class="btn-secondary">get on android</a>
+  </div>
+</section>
+
+<div class="container">
+  <div class="stats">
+    <div class="stat"><h3>12k+</h3><p>active streaks</p></div>
+    <div class="stat"><h3>$1.99</h3><p>lifetime unlock</p></div>
+    <div class="stat"><h3>4.9★</h3><p>app store rating</p></div>
+  </div>
+</div>
+
+<section class="features">
+  <div class="container">
+    <h2>what you get</h2>
+    <ul><li>daily gratitude entry — write 3 things each day</li>
+<li>streak counter with longest streak tracking</li>
+<li>mood tracking tied to your gratitude entries</li>
+<li>reflection prompts when you're stuck</li>
+<li>weekly highlights reel of your best moments</li>
+<li>reminders at your chosen time</li></ul>
+  </div>
+</section>
+
+<section class="pricing container">
+  <h2>pricing</h2>
+  <p class="sub">try free. upgrade when you're ready.</p>
+  <div class="price-cards">
+    <div class="price-card">
+      <h3>FREE</h3>
+      <div class="amount">$0</div>
+      <div class="period">forever</div>
+      <p class="note">ads supported. full streak tracking. daily entries.</p>
+    </div>
+    <div class="price-card featured">
+      <div class="badge">most popular</div>
+      <h3>LIFETIME</h3>
+      <div class="amount">$1.99</div>
+      <div class="period">one time</div>
+      <p class="note">no ads. all features. no subscription.</p>
+    </div>
+    <div class="price-card">
+      <h3>MONTHLY</h3>
+      <div class="amount">$0.99</div>
+      <div class="period">per month</div>
+      <p class="note">no ads. cancel anytime.</p>
+    </div>
+  </div>
+</section>
+
+<section class="social-proof">
+  <div class="container" style="max-width:700px;margin:0 auto;padding:0 24px">
+    <h2>from users</h2>
+    <div class="quote">
+      <p>"i started this thinking it was corny. 60 days in and i genuinely look forward to my morning entry. my anxiety is noticeably lower."</p>
+      <span class="author">— app store review</span>
+    </div>
+    <div class="quote">
+      <p>"the streak guilt works. i almost skipped one night and opened the app at 11:58 pm just to keep it alive. now i don't even think about skipping."</p>
+      <span class="author">— app store review</span>
+    </div>
+    <div class="quote">
+      <p>"simple. no fluff. write 3 things, done. the weekly highlights are surprisingly nice to scroll back through."</p>
+      <span class="author">— app store review</span>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta container">
+  <h2>start your gratitude streak today.</h2>
+  <p>get early access + launch updates. no spam, just streaks.</p>
+  <form action="https://formsubmit.co/printmaxxstudio@gmail.com" method="POST" style="max-width:400px;margin:0 auto;display:flex;flex-direction:column;gap:10px;">
+    <input type="hidden" name="_subject" value="Gratitude Streak Email Signup">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-apps.surge.sh">
+    <input type="email" name="email" required placeholder="your@email.com" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;color:var(--text);font-family:inherit;font-size:1rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--c1)'" onblur="this.style.borderColor='var(--border)'">
+    <button type="submit" class="btn-primary" style="border:none;cursor:pointer;font-family:inherit;font-size:1rem;">get early access</button>
+  </form>
+  <p style="color:var(--muted);font-size:0.8rem;margin-top:12px;">free forever. we'll email you when the app store version drops.</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 PRINTMAXX &middot; <a href="https://printmaxx-apps.surge.sh" style="color:var(--muted)">all apps</a></p>
+</footer>
+
+</body>
+</html>

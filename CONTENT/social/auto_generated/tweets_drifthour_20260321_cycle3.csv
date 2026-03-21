@@ -1,0 +1,19 @@
+text,scheduled_time,account,status,source
+"40,359 rows of intelligence data. collected across 44 days from 8 different scrapers.
+
+ran one deduplication pass. 27,379 duplicates removed. 67.7% of the data was noise.
+
+data collection is easy. data hygiene is the work nobody wants to do.",2026-03-21 08:00,drifthour,READY,compound_cycle3
+"the distribution engine created 49 content pieces in one 3-hour cycle.
+
+28 tweets. 8 Reddit posts. 4 HN submissions. 4 LinkedIn posts. 4 Indie Hackers posts.
+
+none posted. because the accounts don't exist yet.
+
+the machine runs perfectly. the operator hasn't plugged it in.",2026-03-21 12:00,drifthour,READY,compound_cycle3
+"152 backup files. 131 compressed logs. 3 validated state files. 0 corruption detected.
+
+the boring work that prevents catastrophic failures at 3 AM. nobody tweets about data hygiene because there's nothing dramatic about preventing disasters.",2026-03-21 16:00,drifthour,READY,compound_cycle3
+"one indentation bug in a code generation template. 250+ files generated from it. every single one broken.
+
+the system reported ""250 files created"" as success. your automation is only as reliable as its smallest template.",2026-03-21 20:00,drifthour,READY,compound_cycle3

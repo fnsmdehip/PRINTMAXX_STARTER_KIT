@@ -21,3 +21,5 @@ Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
+Sitemap: https://pdfmaxx.surge.sh/sitemap.xml

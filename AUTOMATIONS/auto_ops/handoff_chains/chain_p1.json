@@ -1,0 +1,34 @@
+{
+  "name": "chain_p1",
+  "created": "2026-03-20T23:36:38.646769",
+  "method": "P1",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "discovery_agent",
+      "task": "Identify morning routine communities: meditation, journaling, exercise, yoga, prayer, reading, coding, language \u2014 verify 100K+ members + zero existing streak apps",
+      "output": "communities.json"
+    },
+    {
+      "agent": "variant_generator",
+      "task": "Generate 8-12 app variants with custom icons, descriptions, keywords. Template: meditation-streak, journal-streak, pushup-streak, yoga-streak, prayer-streak, reading-streak, coding-streak, language-streak",
+      "output": "variants.json"
+    },
+    {
+      "agent": "app_factory",
+      "task": "Build iOS + Android for all variants from base template. Wire RevenueCat (IAP: $0.99-4.99/mo premium) + AdMob. Deploy to stores.",
+      "output": "builds.json"
+    },
+    {
+      "agent": "distribution_agent",
+      "task": "Seed launch: (1) engage in target subreddits daily, (2) Discord bot automation in 10+ servers, (3) Product Hunt coordinated launch, (4) micro-influencer outreach (50-500K followers), (5) press angles",
+      "output": "launch_log.json"
+    },
+    {
+      "agent": "growth_agent",
+      "task": "Monitor installs/DAU/conversion daily. Identify top 3 variants by day 7. Allocate growth budget (FREE\u2192LOW\u2192MID tiers) to winners.",
+      "output": "growth_report.json"
+    }
+  ],
+  "status": "READY"
+}

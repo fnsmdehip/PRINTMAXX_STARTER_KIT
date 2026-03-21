@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Local Business Website Scraper & Analyzer
 Identifies prospects for $500 website redesign service

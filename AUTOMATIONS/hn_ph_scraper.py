@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 HackerNews + ProductHunt alpha scraper for PRINTMAXX.
 Appends PENDING_REVIEW rows to LEDGER/ALPHA_STAGING.csv.

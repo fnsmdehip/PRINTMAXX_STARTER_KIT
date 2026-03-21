@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Cold Email A/B Test System
 Splits leads into A/B groups, generates variant emails, tracks results.

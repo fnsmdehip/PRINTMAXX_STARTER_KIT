@@ -1,0 +1,441 @@
+{
+  "cycle": 93,
+  "timestamp": "2026-03-21T15:47:16.265677+00:00",
+  "strategy": "COOKING + BAKING + NUTRITION + MEAL_PREP",
+  "niches": {
+    "daily_knife_skills_streak": {
+      "reddit_communities": {
+        "chefknives": 95000,
+        "knives": 610000,
+        "culinaryschool": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "Tasty",
+          "rating": 4.8,
+          "rating_count": 1200000,
+          "category": "recipe app not a gamified daily knife skills streak with julienne/chiffonade/brunoise XP, speed and accuracy challenges, and professional chef badge progression"
+        },
+        {
+          "name": "Yummly",
+          "rating": 4.8,
+          "rating_count": 380000,
+          "category": "meal planner not a daily knife skills streak with cutting technique drills and Michelin-level skill gates"
+        },
+        {
+          "name": "Knife Sharpening Angles",
+          "rating": 4.2,
+          "rating_count": 4200,
+          "category": "knife maintenance reference tool not a daily knife skills streak with XP progression"
+        }
+      ],
+      "community_total": 985000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "985K community. No app gamifies the daily knife skills habit (one cutting technique drilled to precision, one mise en place challenge, one speed improvement tracked) with streak XP, brunoise/julienne/chiffonade badge gates, and professional knife station level progression."
+    },
+    "daily_fermentation_streak": {
+      "reddit_communities": {
+        "fermentation": 620000,
+        "kombucha": 400000,
+        "preserving": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "Fermentation Timer",
+          "rating": 3.8,
+          "rating_count": 2800,
+          "category": "batch timer utility not a daily fermentation streak with technique level gates, batch journaling XP, and master fermenter progression"
+        },
+        {
+          "name": "Perfect Fermenter",
+          "rating": 4.1,
+          "rating_count": 1800,
+          "category": "lacto-fermentation brine ratio reference not a daily fermentation habit streak with wild yeast culture XP and flavor progression"
+        },
+        {
+          "name": "Brew Timer",
+          "rating": 4.4,
+          "rating_count": 8400,
+          "category": "homebrewing timer; brewing tool not a daily fermentation streak covering kombucha, kimchi, kefir, miso with unified XP"
+        }
+      ],
+      "community_total": 1300000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.3M community. No gamified daily fermentation streak app. Gap: one technique practiced daily (SCOBY care, brine adjustment, pH check, new batch started) with XP per ferment type, wild culture mastery badges, and fermentation artisan level gates."
+    },
+    "daily_wok_cooking_streak": {
+      "reddit_communities": {
+        "wok": 125000,
+        "chinesecooking": 580000,
+        "asiancooking": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Mala Tang Recipe",
+          "rating": 4.2,
+          "rating_count": 3400,
+          "category": "Sichuan recipe reference not a daily wok technique streak with heat management XP, tossing technique progression, and wok hei mastery badges"
+        },
+        {
+          "name": "Red House Spice",
+          "rating": 4.4,
+          "rating_count": 2100,
+          "category": "Chinese cooking recipe companion not a gamified daily wok cooking streak"
+        },
+        {
+          "name": "Yummly",
+          "rating": 4.8,
+          "rating_count": 380000,
+          "category": "recipe app not a wok skills streak with daily challenge system"
+        }
+      ],
+      "community_total": 885000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "885K community. No app gamifies the daily wok cooking habit (one stir-fry at blast heat, one tossing technique practiced, one seasoning balance calibrated) with streak XP, wok hei mastery badges, and professional Chinese chef level gates."
+    },
+    "daily_dumpling_making_streak": {
+      "reddit_communities": {
+        "dumpling": 45000,
+        "dim_sum": 38000,
+        "asiancooking": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Dim Sum Recipes",
+          "rating": 4.3,
+          "rating_count": 3200,
+          "category": "dim sum recipe collection not a gamified daily dumpling streak with XP for wrapper pleating technique and dim sum chef level gates"
+        },
+        {
+          "name": "Yummly",
+          "rating": 4.8,
+          "rating_count": 380000,
+          "category": "recipe app not a daily dumpling skill streak with pleating XP"
+        },
+        {
+          "name": "Kitchen Stories",
+          "rating": 4.7,
+          "rating_count": 48000,
+          "category": "step-by-step recipe app not a daily dumpling streak with fold technique levels"
+        }
+      ],
+      "community_total": 263000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "263K community. Smaller but zero competition. No app gamifies the daily dumpling habit (one new pleat pattern, one dough type practiced, one filling balanced) with streak XP and dim sum artisan level gates."
+    },
+    "daily_cake_decorating_streak": {
+      "reddit_communities": {
+        "cakedecorating": 450000,
+        "weddingcake": 52000,
+        "sugarcraft": 28000
+      },
+      "itunes_results": [
+        {
+          "name": "Wilton Baking and Decorating",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "tutorial content library not a gamified daily cake decorating streak with XP for piping technique drills, rosette/basketweave/ruffle daily practice, and Pastry Chef level gates"
+        },
+        {
+          "name": "Squires Kitchen",
+          "rating": 4.2,
+          "rating_count": 4200,
+          "category": "sugarcraft tutorial platform not a daily streak app with XP and skill badge progression"
+        },
+        {
+          "name": "Cake Designer 3D",
+          "rating": 3.9,
+          "rating_count": 8500,
+          "category": "3D cake design visualizer not a skill-building streak with daily technique practice XP"
+        }
+      ],
+      "community_total": 530000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "530K community. Tutorial apps like Wilton exist but no app gamifies the daily cake decorating habit (one piping technique drilled, one fondant skill practiced, one new design element mastered) with streak XP, technique badge collection, and professional cake artist level gates."
+    },
+    "daily_pastry_making_streak": {
+      "reddit_communities": {
+        "pastry": 82000,
+        "Croissant": 95000,
+        "Baking": 1200000
+      },
+      "itunes_results": [
+        {
+          "name": "Magnolia Bakery",
+          "rating": 4.3,
+          "rating_count": 6200,
+          "category": "brand loyalty app not a gamified daily pastry technique streak with XP for lamination folds, pate choux consistency, and tart shell drills"
+        },
+        {
+          "name": "Baking with Dorie",
+          "rating": 4.6,
+          "rating_count": 3800,
+          "category": "recipe companion not a daily pastry skill streak with laminated dough XP and Cordon Bleu level gates"
+        },
+        {
+          "name": "King Arthur Baking",
+          "rating": 4.7,
+          "rating_count": 24000,
+          "category": "recipe reference not a daily pastry skill streak with croissant layer count XP and pastry chef badge progression"
+        }
+      ],
+      "community_total": 1377000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.38M community. No app gamifies the daily pastry habit (one lamination fold set, one pate choux piped, one tart shell technique practiced) with streak XP, French pastry skill level gates, and Cordon Bleu-tier achievement badges."
+    },
+    "daily_cookie_decorating_streak": {
+      "reddit_communities": {
+        "cookies": 280000,
+        "cookiedecorating": 95000,
+        "AskBaking": 230000
+      },
+      "itunes_results": [
+        {
+          "name": "Wilton Baking and Decorating",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "tutorial library not a gamified daily cookie decorating streak with XP for flooding consistency and cookie artist level gates"
+        },
+        {
+          "name": "Global Sugar Art",
+          "rating": 4.3,
+          "rating_count": 3400,
+          "category": "sugar art tutorial catalog not a daily practice streak with XP and skill progression"
+        },
+        {
+          "name": "Decorating Den",
+          "rating": 3.9,
+          "rating_count": 1900,
+          "category": "tutorial content not a gamified streak with daily drill system and XP"
+        }
+      ],
+      "community_total": 605000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "605K community. No app gamifies the daily cookie decorating habit (one flooding technique to consistency standard, one detail piping element mastered, one color theory application) with streak XP, royal icing technique badges, and cookie artist level gates."
+    },
+    "daily_chocolate_making_streak": {
+      "reddit_communities": {
+        "chocolate": 380000,
+        "chocolatiers": 28000,
+        "candymaking": 45000
+      },
+      "itunes_results": [
+        {
+          "name": "Chocolate Tempering Calculator",
+          "rating": 4.3,
+          "rating_count": 3800,
+          "category": "tempering temperature reference tool not a daily chocolate streak with XP for tempering consistency and chocolatier level gates"
+        },
+        {
+          "name": "Confectionery Recipes",
+          "rating": 4.0,
+          "rating_count": 2400,
+          "category": "candy and chocolate recipe book not a gamified daily chocolate skill streak"
+        },
+        {
+          "name": "Chocofy",
+          "rating": 3.8,
+          "rating_count": 1200,
+          "category": "chocolate pairing guide reference not a daily streak with skill XP and progression"
+        }
+      ],
+      "community_total": 453000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "453K community. No app gamifies the daily chocolate making habit (one tempering attempt logged with snap/bloom/gloss grade, one ganache flavor created, one molded bonbon completed) with streak XP, couverture mastery badges, and master chocolatier level gates."
+    },
+    "daily_gut_health_streak": {
+      "reddit_communities": {
+        "guthealth": 290000,
+        "microbiome": 95000,
+        "ibs": 162000
+      },
+      "itunes_results": [
+        {
+          "name": "Cara Care IBS",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "IBS symptom tracker not a gamified daily gut health habit streak with probiotic intake XP and microbiome optimization level gates"
+        },
+        {
+          "name": "mySymptoms Food Diary",
+          "rating": 4.6,
+          "rating_count": 8200,
+          "category": "food and symptom correlation diary not a daily gut health streak with XP for fermented food servings and hydration habits"
+        },
+        {
+          "name": "Low FODMAP Diet A to Z",
+          "rating": 4.5,
+          "rating_count": 5800,
+          "category": "FODMAP reference database not a daily gut health improvement streak with positive habit XP"
+        }
+      ],
+      "community_total": 547000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "547K community. Apps are symptom trackers for managing disease, not positive habit streaks. No app gamifies the daily gut health habit (one fermented food consumed, one prebiotic fiber added, one mindful meal) with streak XP, microbiome diversity score, and gut health level gates."
+    },
+    "daily_anti_inflammatory_eating_streak": {
+      "reddit_communities": {
+        "antiinflammatory": 180000,
+        "AutoimmuneProtocol": 67000,
+        "nutrition": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "Anti-Inflammatory Diet Meal Plan",
+          "rating": 4.3,
+          "rating_count": 8400,
+          "category": "meal planner not a gamified daily anti-inflammatory eating streak with XP for omega-3 servings and polyphenol variety"
+        },
+        {
+          "name": "Dr. Greger Daily Dozen",
+          "rating": 4.6,
+          "rating_count": 14000,
+          "category": "simple checkbox checklist not a streak gamification app with anti-inflammatory specific XP and badge progression"
+        },
+        {
+          "name": "Zoe Personalized Nutrition",
+          "rating": 4.4,
+          "rating_count": 22000,
+          "category": "test-gated personalized nutrition platform not an open-access daily anti-inflammatory streak with free habit progression"
+        }
+      ],
+      "community_total": 1347000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.35M community. Daily Dozen is a checklist, not streak gamification. No app gamifies the daily anti-inflammatory habit (one omega-3-rich meal, one refined sugar replacement, one polyphenol food added) with streak XP, inflammation score progression, and functional nutrition badge levels."
+    },
+    "daily_plant_based_cooking_streak": {
+      "reddit_communities": {
+        "PlantBasedDiet": 430000,
+        "veganrecipes": 580000,
+        "wholefoodplantbased": 670000
+      },
+      "itunes_results": [
+        {
+          "name": "Forks Over Knives Meal Planner",
+          "rating": 4.6,
+          "rating_count": 18000,
+          "category": "whole food plant-based meal planner not a daily cooking skill streak with technique XP for aquafaba, cashew cream, and whole grain methods"
+        },
+        {
+          "name": "Dr. Greger Daily Dozen",
+          "rating": 4.6,
+          "rating_count": 14000,
+          "category": "12-checkbox checklist not a cooking skill streak with XP for plant-based technique mastery"
+        },
+        {
+          "name": "PlantNeat Vegan Recipes",
+          "rating": 4.5,
+          "rating_count": 6200,
+          "category": "vegan recipe app not a daily plant-based cooking skill streak with ingredient substitution XP"
+        }
+      ],
+      "community_total": 1680000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.68M community. FOK is a meal planner, Daily Dozen is a checklist. No app gamifies the daily plant-based cooking habit (one whole-food substitution mastered, one legume preparation practiced, one oil-free technique completed) with streak XP, whole food chef badge collection, and plant-based cooking level gates."
+    },
+    "daily_batch_cooking_streak": {
+      "reddit_communities": {
+        "MealPrepSunday": 1900000,
+        "EatCheapAndHealthy": 1100000,
+        "budgetfood": 480000
+      },
+      "itunes_results": [
+        {
+          "name": "Mealime Meal Planner",
+          "rating": 4.8,
+          "rating_count": 95000,
+          "category": "meal planning tool not a gamified daily batch cooking streak with XP for completing full protein-carb-veg batch sessions and kitchen efficiency scoring"
+        },
+        {
+          "name": "Plan to Eat",
+          "rating": 4.7,
+          "rating_count": 14000,
+          "category": "meal planning calendar not a daily batch cooking skill streak with kitchen efficiency XP and weekly prep challenge badges"
+        },
+        {
+          "name": "Prepear Meal Prep Planner",
+          "rating": 4.5,
+          "rating_count": 8200,
+          "category": "family meal planner not a batch cooking streak app with XP progression and prep skill level gates"
+        }
+      ],
+      "community_total": 3480000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.48M community. Highest community total in meal prep scanning. Mealime and Prepear are planning tools, not streak gamification. No app gamifies the daily batch cooking habit (one complete protein batch, one carb prep, one veggie roast, containers portioned) with streak XP, meal prep efficiency scoring, and batch cooking level gates."
+    },
+    "daily_freezer_meal_streak": {
+      "reddit_communities": {
+        "freezermeals": 98000,
+        "slowcooking": 790000,
+        "mealprep": 250000
+      },
+      "itunes_results": [
+        {
+          "name": "Freezer Meals 101",
+          "rating": 4.4,
+          "rating_count": 3200,
+          "category": "freezer meal recipe collection not a gamified daily freezer meal streak with XP for completing family-size batches and storage rotation badges"
+        },
+        {
+          "name": "OurGroceries Shopping List",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "shared grocery list app not a daily freezer meal habit streak"
+        },
+        {
+          "name": "Mealime",
+          "rating": 4.8,
+          "rating_count": 95000,
+          "category": "meal planner not a freezer meal streak with batch prep XP and rotation tracking"
+        }
+      ],
+      "community_total": 1138000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.14M community. No app gamifies the daily freezer meal habit (one batch assembled and frozen, one rotation check, one new freezer-friendly technique practiced) with streak XP, freezer inventory badge system, and freezer meal chef level gates."
+    },
+    "daily_macro_tracking_streak": {
+      "reddit_communities": {
+        "CICO": 280000,
+        "MacroFactor": 95000,
+        "nutrition": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "MyFitnessPal",
+          "rating": 4.7,
+          "rating_count": 1850000,
+          "category": "dominant calorie and macro tracker with 14M+ food database; has consecutive-days streak feature but NOT a gamified macro LEARNING streak with XP for precision targets and nutrition knowledge level gates"
+        },
+        {
+          "name": "MacroFactor",
+          "rating": 4.9,
+          "rating_count": 48000,
+          "category": "adaptive macro coaching algorithm with consecutive weigh-in tracking; not gamified with XP and badge progression"
+        },
+        {
+          "name": "Cronometer",
+          "rating": 4.7,
+          "rating_count": 98000,
+          "category": "precision micronutrient tracker with gold streak feature for consecutive logged days; streak-adjacent but not gamified with XP or macro education level gates"
+        }
+      ],
+      "community_total": 1475000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "1.47M community. MFP, Cronometer, MacroFactor all have streak-adjacent tracking. Gap exists for a gamified MACRO LEARNING streak (daily XP for precision macro splits, nutrition knowledge quizzes, protein completeness badges) distinct from passive tracking. MFP brand dominance makes this harder. SOFT_COMPETITION \u2014 viable if positioned as macro education not tracking."
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-19 05:30:00
+**Last updated:** 2026-03-21 (cycle 092 — competitor stalker agent)
 
 ---
 
@@ -8,6 +8,10 @@
 
 | App | URL | Status |
 |-----|-----|--------|
+| photography-streak | https://photography-streak.surge.sh | LIVE — cycle 092 blue ocean, 5.44M community |
+| beat-making-streak | https://beat-making-streak.surge.sh | LIVE — cycle 092 blue ocean, 2.69M community |
+| music-theory-streak | https://music-theory-streak.surge.sh | LIVE — cycle 092 blue ocean, 2.66M community |
+| outfit-design-streak | https://outfit-design-streak.surge.sh | LIVE — cycle 092 blue ocean, 5M community |
 | ramadan-tracker | https://ramadan-tracker.surge.sh | LIVE |
 | focuslock-web | https://focuslock-web.surge.sh | LIVE |
 | habitforge-web | https://habitforge-web.surge.sh | LIVE |
@@ -95,6 +99,9 @@
 | solopreneur-ai-stack-2026 | https://solopreneur-ai-stack-2026.surge.sh | LIVE — gap-hunter deploy 2026-03-19 | standalone |
 | app-niche-finder | https://app-niche-finder.surge.sh | LIVE — inbound cycle4 2026-03-19 | 2 free / 3 gated |
 | mcp-roi-calculator | https://mcp-roi-calculator.surge.sh | LIVE — inbound cycle4 2026-03-19 | 10 tools free / full guide gated |
+| breathwork-streak | https://breathwork-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-20 | $1.99 lifetime |
+| gratitude-streak | https://gratitude-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-20 | $1.99 lifetime |
+| water-streak | https://water-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-20 | $1.99 lifetime |
 
 ---
 
@@ -114,6 +121,7 @@
 | best-saas-tools-solopreneurs | https://best-saas-tools-solopreneurs.surge.sh | LIVE (2026-03-19) — HUB PAGE links all 8 comparisons — needs affiliate IDs | All categories |
 | lemlist-vs-instantly | https://lemlist-vs-instantly.surge.sh | LIVE (2026-03-19) — needs affiliate IDs | 20-40% recurring (Instantly) + 20-35% recurring (Lemlist) |
 | best-lead-generation-tools | https://best-lead-generation-tools.surge.sh | LIVE (2026-03-20) — needs affiliate IDs | Mixed: Apollo, Instantly, Smartlead, Clay, Lemlist, Phantombuster |
+| n8n-vs-zapier-vs-make | https://n8n-vs-zapier.surge.sh | LIVE (2026-03-21) — gap-hunter deploy — needs affiliate IDs | n8n referral + Zapier/Make affiliate |
 
 ---
 
@@ -319,3 +327,7 @@ Deployed 2026-03-14 by ASSET DEPLOYER.
 **Risk Level:** CRITICAL — 85% search traffic loss possible if skipped
 **Cost of Skipping:** ~$100K+ annual lost organic revenue
 **Time to Complete:** 2-4 hours before deployment
+
+| claude-code-vs-opencode | https://claude-code-vs-opencode.surge.sh | LIVE 2026-03-21 | AI coding comparison — OpenCode HN launch |
+| couples-streak | https://couples-streak.surge.sh | LIVE 2026-03-21 | Couples habit tracker — blue ocean 11.14M community |
+| couples-streak-landing | https://couples-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-21 | couples relationship streak tracker |

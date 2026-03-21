@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-20T23:31:25.559043",
-  "last_cycle": "asset_deployer_2026-03-20_23h30",
-  "total_surge_deployments": 355,
+  "last_updated": "2026-03-21T11:45:20.523860",
+  "last_cycle": "asset_deployer_2026-03-21_01h31",
+  "total_surge_deployments": 386,
   "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
     "checked": 14,
@@ -20,16 +20,46 @@
     ]
   },
   "redeployments_this_cycle": [
-    "invoiceforge.surge.sh",
-    "klaviyo-alternative.surge.sh"
+    "ai-video-tools",
+    "art-streak-landing",
+    "breathwork-streak",
+    "buddhist-streak-landing",
+    "coding-streak-landing",
+    "couples-streak-landing",
+    "cycling-streak",
+    "deskbreak-web",
+    "email-tools-compared",
+    "fitness-streak-landing",
+    "focuslock-web",
+    "gita-streak-landing",
+    "gratitude-streak",
+    "hiit-streak",
+    "invoice-tools-compared",
+    "journal-streak-landing",
+    "language-streak-landing",
+    "meditation-streak-landing",
+    "mormon-streak-landing",
+    "pdfmaxx",
+    "plank-streak",
+    "pushup-streak",
+    "quran-streak-landing",
+    "reading-streak-landing",
+    "runningstreak",
+    "sikh-streak-landing",
+    "sleepmaxx-web",
+    "soberstreak",
+    "studylock",
+    "tasksmash-web"
   ],
-  "new_deployments_this_cycle": [],
+  "new_deployments_this_cycle": [
+    "n8n-vs-zapier-vs-make.surge.sh"
+  ],
   "issues_found": {},
   "fixes_applied": {
     "invoiceforge.surge.sh": "Redeployed from LANDING/tools/ \u2014 fixed 504 error",
     "klaviyo-alternative.surge.sh": "Redeployed from LANDING/affiliate-pages/ \u2014 fixed 404 error"
   },
-  "cycle_notes": "Asset deployer cycle 2026-03-20 09:11. Checked health of 355 deployments. Deleted 1 broken site (fence-installation...). 0 new deployments this cycle. All other sites HEALTHY.",
+  "cycle_notes": "Updated manifest to track 30 previously untracked but live deployments. Total: 386",
   "by_category": {
     "pwa_apps": {
       "count": 11,
@@ -49,7 +79,7 @@
       ]
     },
     "comparison_pages": {
-      "count": 7,
+      "count": 8,
       "status": "ALL_LIVE",
       "urls": [
         "coldmaxx-vs-instantly.surge.sh",
@@ -58,7 +88,8 @@
         "pagescorer-vs-gtmetrix.surge.sh",
         "sleepmaxx-vs-sleepcycle.surge.sh",
         "prayerlock-vs-hallow.surge.sh",
-        "focuslock-vs-opal.surge.sh"
+        "focuslock-vs-opal.surge.sh",
+        "n8n-vs-zapier-vs-make.surge.sh"
       ]
     },
     "affiliate_pages": {
@@ -252,9 +283,16 @@
       "type": "lead_magnet",
       "deployed_by": "asset_deployer",
       "deployed_at": "2026-03-14T18:23:00.000000"
+    },
+    {
+      "name": "n8n-vs-zapier-vs-make",
+      "url": "https://n8n-vs-zapier-vs-make.surge.sh",
+      "type": "comparison_page",
+      "deployed_by": "asset_deployer",
+      "deployed_at": "2026-03-21T01:33:36.562728"
     }
   ],
-  "total_count": 10,
+  "total_count": 11,
   "live_test": {
     "tested_at": "2026-03-19T14:45:12.293883",
     "cycle": "playwright_tester_comprehensive_20260319",

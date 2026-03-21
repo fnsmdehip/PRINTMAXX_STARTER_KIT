@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Daily Browser Scraper — Uses real Chrome cookies for authenticated scraping.
 

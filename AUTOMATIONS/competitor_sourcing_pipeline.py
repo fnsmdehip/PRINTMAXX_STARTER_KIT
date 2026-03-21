@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Competitor Sourcing Pipeline - Factory-Direct Intelligence
 # CRON: 0 5 * * 1  python3 AUTOMATIONS/competitor_sourcing_pipeline.py --scan >> AUTOMATIONS/logs/competitor_sourcing.log 2>&1

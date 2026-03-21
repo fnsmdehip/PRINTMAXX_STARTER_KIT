@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Cron Health Checker
 Reads crontab_printmaxx.txt, validates each script, checks log freshness,

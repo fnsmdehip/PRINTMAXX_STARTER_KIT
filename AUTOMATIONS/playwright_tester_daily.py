@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PLAYWRIGHT TESTER - Daily Health Check (2026-03-20)
 Tests deployed surge.sh sites for:

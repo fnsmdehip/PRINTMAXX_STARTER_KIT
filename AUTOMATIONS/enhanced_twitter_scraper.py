@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 ENHANCED TWITTER SCRAPER - Gets tweets AND top replies for reply funnel analysis.
 Detects self-reply funnels (when top reply is from same user).

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Batch test Surge.sh deployments with Playwright.
 Test 30 high-priority sites across all categories.

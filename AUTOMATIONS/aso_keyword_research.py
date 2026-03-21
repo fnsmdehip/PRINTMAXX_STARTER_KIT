@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 aso_keyword_research.py - App Store Optimization keyword research
 Searches for trending app keywords, tracks keyword positions for our apps.

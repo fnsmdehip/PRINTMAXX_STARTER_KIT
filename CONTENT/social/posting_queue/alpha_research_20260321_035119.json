@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-03-21T03:51:19.205929",
+  "source": "alpha_intelligence_cycle",
+  "signals": [
+    "OpenCode_HN685",
+    "Delve_compliance_HN641",
+    "TS_beats_WASM_HN173"
+  ],
+  "tweets": [
+    {
+      "account": "printmaxxer",
+      "content": "OpenCode just hit #1 on HN with 685 points.\n\nAnother open source AI coding agent enters the ring.\n\nThe AI coding tool space is about to get very crowded, very fast.\n\nThe winners won't be the ones with the best model. They'll be the ones with the best workflow integration.\n\nWatch for: tool-agnostic configs that work across agents.",
+      "type": "hot_take",
+      "platform": "twitter"
+    },
+    {
+      "account": "printmaxxer",
+      "content": "If you're building with Claude Code or Cursor and haven't tried the open source alternatives yet, you're leaving options on the table.\n\nOpenCode, Aider, Continue - they all hit different workflows.\n\nThe move: learn the patterns, not the tool. Patterns transfer. Vendor lock-in doesn't.",
+      "type": "advice",
+      "platform": "twitter"
+    },
+    {
+      "account": "printmaxxer",
+      "content": "AI coding agents in March 2026:\n\n- Claude Code (subscription, best reasoning)\n- Cursor (IDE-native, fast)\n- OpenCode (open source, 685 HN pts today)\n- Aider (git-native, terminal)\n- Continue (VS Code extension)\n\nAll of them are good. None of them matter if you can't ship.\n\nThe bottleneck was never the tool.",
+      "type": "list",
+      "platform": "twitter"
+    },
+    {
+      "account": "printmaxxer",
+      "content": "\"Fake Compliance as a Service\" just got 641 points on HN.\n\nThe fact that this resonates tells you everything about enterprise software.\n\nCompanies spend $50K+ on SOC2 audits that check boxes nobody reads.\n\nThe entire compliance industry is a tax on shipping fast.\n\nSolopreneurs don't have this problem.",
+      "type": "hot_take",
+      "platform": "twitter"
+    },
+    {
+      "account": "voidpilled",
+      "content": "compliance theater is the largest wealth transfer from builders to consultants in tech history\n\n641 people on HN agreed today\n\nthe system runs on paperwork that protects lawyers, not users",
+      "type": "doomer",
+      "platform": "twitter"
+    },
+    {
+      "account": "printmaxxer",
+      "content": "Hot take: SOC2 certification is the new MBA.\n\nExpensive. Takes forever. Mostly proves you can follow instructions.\n\nDoesn't mean your product is actually secure.\n\nThe startups winning right now: ship fast, encrypt everything, pen-test quarterly, skip the $30K audit until Series A forces it.",
+      "type": "hot_take",
+      "platform": "twitter"
+    },
+    {
+      "account": "printmaxxer",
+      "content": "A team rewrote their Rust WASM parser in TypeScript.\n\nIt got faster.\n\n173 HN points because everyone assumed WASM = fast.\n\nThe lesson nobody wants to hear: V8 is insanely optimized for JS/TS. You're competing against 15 years of Google's best engineers.\n\nPick the right tool for the job, not the coolest one.",
+      "type": "hot_take",
+      "platform": "twitter"
+    },
+    {
+      "account": "drifthour",
+      "content": "TypeScript beating Rust WASM in a parser benchmark.\n\nSometimes the boring choice is the fast choice.\n\nV8 has had billions of dollars of optimization poured into it.\n\nYour hand-rolled WASM has had... you.",
+      "type": "insight",
+      "platform": "twitter"
+    },
+    {
+      "account": "repscheme",
+      "content": "Overengineering is the procrastination of smart people.\n\nYou don't need Rust when TypeScript does the job.\nYou don't need Kubernetes when a $5 VPS works.\nYou don't need microservices when a monolith ships.\n\nThe fastest code is the code that's already deployed.",
+      "type": "advice",
+      "platform": "twitter"
+    }
+  ],
+  "threads": [
+    {
+      "account": "printmaxxer",
+      "type": "thread",
+      "platform": "twitter",
+      "posts": [
+        "THREAD: The AI Coding Agent Wars of 2026\n\nOpenCode just hit 685 pts on HN. Another open source agent enters the arena.\n\nHere's the real landscape and what it means for builders:",
+        "1/ THE PLAYERS\n\nClaude Code - Best reasoning, subscription model, works in terminal\nCursor - IDE-native, fast completions, VC-backed\nOpenCode - Open source, community-driven, just launched\nAider - Git-native, terminal-first, solid for PRs\nContinue - VS Code extension, flexible backends",
+        "2/ THE PATTERN\n\nEvery 3-4 months a new AI coding tool goes viral on HN.\n\nBut the tools converge. They all use the same underlying models (Claude, GPT, open source). The differentiation is workflow, not intelligence.",
+        "3/ WHAT ACTUALLY MATTERS\n\nContext management (how much codebase can it see)\nTool use (can it run tests, read docs, deploy)\nWorkflow fit (terminal vs IDE vs browser)\nCost (subscription vs API vs free)\n\nOpenCode winning on cost. Claude Code winning on capability.",
+        "4/ THE OPPORTUNITY\n\nNobody is building the CONFIGURATION layer.\n\nEvery tool has its own config format. Its own rules files. Its own context setup.\n\nThe person who builds a universal agent config that works across all of them will print money.",
+        "5/ MY BET\n\nThe tools will commoditize within 12 months. The workflow knowledge won't.\n\nInvest in learning agent patterns (tool use, context management, state machines) not specific products.\n\nThe best AI coding tool is the one that's already installed.\n\nShip."
+      ]
+    }
+  ],
+  "total_tweets": 9,
+  "total_threads": 1
+}

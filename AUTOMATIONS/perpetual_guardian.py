@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Perpetual Guardian — 24/7 Self-Improving Autonomous Business Watchdog
 ==================================================================================

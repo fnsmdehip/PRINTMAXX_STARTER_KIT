@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 ALPHA QUERY — Pull relevant intelligence for any venture/task.
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """Email Domain Health Checker - Cold outreach readiness scoring.
 
 Checks SPF, DKIM, DMARC, MX, blacklist status, and domain age.

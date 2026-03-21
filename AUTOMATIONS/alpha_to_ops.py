@@ -19,6 +19,8 @@ Usage:
     python3 AUTOMATIONS/alpha_to_ops.py --deploy          # mark ops READY_TO_DEPLOY
 """
 
+from __future__ import annotations
+
 import argparse
 import csv
 import datetime

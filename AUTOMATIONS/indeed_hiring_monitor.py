@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Indeed Hiring Monitor - SDR/BDR Job Posting Scraper
 ====================================================

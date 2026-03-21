@@ -134,3 +134,43 @@ r/ClaudeAI, r/LocalLLaMA, r/ChatGPT, r/solopreneur, r/IMadeThis, Dev.to, Medium
 5. Post agents-fired-themselves Twitter thread — 5 min
 
 Total: ~75 minutes. Highest SEO ROI of any distribution cycle.
+
+---
+
+## CYCLE 20 ADDENDUM (2026-03-20, 23:28 — evening run)
+
+**52 new pieces created. 5 new assets covered. 6 new channels targeted.**
+
+### New Files
+```
+twitter_cycle20_20260320.md       — 3 threads + 5 singles + 3 reply baits + 3 QT = 32
+reddit_cycle20_20260320.md        — 9 posts, 11 target subs (NEW: r/stopdrinking, r/running, r/salesdevelopment, r/leadsgeneration, r/sales)
+hn_posts_cycle20_20260320.md      — 4 posts (3 Show HN + 1 Ask HN)
+linkedin_cycle20_20260320.md      — 4 posts
+indiehackers_cycle20_20260320.md  — 4 posts
+COVERAGE_MAP_CYCLE20.md           — full map + human actions
+```
+
+### New Assets First Covered
+- best-lead-generation-tools.surge.sh (deployed TODAY — all channels)
+- SoberStreak (soberstreak.surge.sh) — r/stopdrinking + HN Show HN
+- RunningStreak (runningstreak.surge.sh) — r/running + HN Show HN
+- lemlist-vs-instantly.surge.sh — Reddit + LinkedIn
+- YC AI-native agency angle (new compound content routed to 4 channels)
+
+### New Compound Content Routed to Channels
+- compound_ai_agency_20260320.txt → Twitter thread 1, r/Entrepreneur, LinkedIn 1, IH 3
+- compound_competitor_teardown_20260320.txt → Twitter thread 2, r/solopreneur, LinkedIn 2
+- compound_new_opportunities_20260320.txt → Twitter single, LinkedIn 4, IH 1
+- paranoia_framework_20260320.txt → Twitter single 3
+- compound_distribution_bottleneck_20260320.txt → Twitter single 4
+
+### P0 Human Actions
+1. POST Ramadan final push — 9 days left, Laylat al-Qadr peaks start tomorrow — 10 min
+2. Post AI-native agency thread (YC timing window is NOW) — 5 min
+3. Post SoberStreak to r/stopdrinking (receptive community) — 5 min
+4. Show HN: SoberStreak (personal story + minimal = HN values) — 5 min
+5. Post faith app teardown thread — 5 min
+
+Total: ~30 minutes for highest-priority items.
+Distribution tracker updated to cycle 20. Total content queued: 937 pieces.

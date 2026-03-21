@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 App Store ASO Optimizer - Keyword optimization, localization, tracking.
 

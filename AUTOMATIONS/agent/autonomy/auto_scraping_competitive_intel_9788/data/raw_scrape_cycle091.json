@@ -1,0 +1,438 @@
+{
+  "cycle": 91,
+  "timestamp": "2026-03-21T11:59:20.834067+00:00",
+  "strategy": "PARENTING + RELATIONSHIPS + COMMUNICATION + CONFLICT_RESOLUTION",
+  "niches": {
+    "daily_positive_parenting_streak": {
+      "reddit_communities": {
+        "Parenting": 5500000,
+        "positiveparenting": 62000,
+        "Mommit": 450000
+      },
+      "itunes_results": [
+        {
+          "name": "Big Life Journal",
+          "rating": 4.7,
+          "rating_count": 8200,
+          "category": "growth mindset journal kit for kids \u2014 printable prompts and reflection pages for building resilience; static printable journal not a gamified daily positive parenting habit streak with XP for practicing encouragement, natural consequences, and connection-before-correction technique"
+        },
+        {
+          "name": "Kinedu - Baby Development App",
+          "rating": 4.8,
+          "rating_count": 36000,
+          "category": "developmental milestone activity tracker \u2014 age-appropriate activities and milestone tracking for infants; milestone tracker not a daily positive discipline streak with XP for mastering time-ins over time-outs, co-regulation technique, and positive reinforcement consistency"
+        },
+        {
+          "name": "Ovia Parenting & Baby Tracker",
+          "rating": 4.8,
+          "rating_count": 52000,
+          "category": "parenting milestone and health tracker \u2014 developmental milestones, health records, and symptom checker; health tracker not a gamified daily positive parenting streak with XP for active listening, emotion coaching, and logical consequence implementation"
+        }
+      ],
+      "community_total": 6012000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "6.01M community across parenting subs. All apps are developmental trackers or journal kits. No app gamifies the daily positive parenting habit (one connection ritual, one emotion-coaching moment, one positive reinforcement logged) with streak XP, parenting technique badges, and discipline style level gates."
+    },
+    "daily_toddler_activity_streak": {
+      "reddit_communities": {
+        "toddlers": 710000,
+        "Montessori": 237000
+      },
+      "itunes_results": [
+        {
+          "name": "Khan Academy Kids",
+          "rating": 4.8,
+          "rating_count": 312000,
+          "category": "educational app for kids 2-8 \u2014 games, books, and videos for reading, math, and social skills; children's education app not a gamified daily parent-child activity streak with XP for sensory play, language development, and fine motor skill activities"
+        },
+        {
+          "name": "Kinedu - Baby Development App",
+          "rating": 4.8,
+          "rating_count": 36000,
+          "category": "developmental milestone activity tracker \u2014 age-appropriate toddler activities and milestone logging; activity suggestion tool not a daily habit streak with XP for parent engagement quality, developmental zone targeting, and consistency badges"
+        },
+        {
+          "name": "Goally: Kids Routine & Tasks",
+          "rating": 4.6,
+          "rating_count": 4800,
+          "category": "kids routine scheduler and task manager \u2014 visual task lists with reward tokens for neurodiverse children; routine timer not a gamified parent daily engagement streak with XP for scaffolded independence, play-based learning, and skill milestone unlocks"
+        }
+      ],
+      "community_total": 947000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "947K focused community. Apps are children's education tools or milestone trackers. No app gamifies the daily parent-led toddler activity habit (one sensory activity, one language-rich interaction, one fine motor challenge) with streak XP, developmental domain badges, and age-appropriate skill level gates."
+    },
+    "daily_bedtime_routine_streak": {
+      "reddit_communities": {
+        "sleeptrain": 127000,
+        "babysleep": 85000,
+        "toddlers": 710000
+      },
+      "itunes_results": [
+        {
+          "name": "Huckleberry - Baby & Child Sleep",
+          "rating": 4.8,
+          "rating_count": 28000,
+          "category": "sleep schedule optimizer and tracking app \u2014 SweetSpot bedtime prediction, nap tracking, and sleep history; sleep data tracker not a gamified daily bedtime routine streak with XP for consistent wind-down execution, sleep hygiene implementation, and bedtime story completion"
+        },
+        {
+          "name": "Baby Connect - Activity Log",
+          "rating": 4.8,
+          "rating_count": 32000,
+          "category": "baby activity and sleep logger \u2014 feeding, diaper, and sleep log with multiple caregiver sync; activity log not a daily bedtime routine habit streak with XP for routine consistency, pre-sleep regulation techniques, and sleep environment optimization"
+        },
+        {
+          "name": "Calm - Sleep, Meditate, Relax",
+          "rating": 4.8,
+          "rating_count": 1900000,
+          "category": "mindfulness and sleep app \u2014 Sleep Stories, breathing exercises, and meditations for adults; adult wellness app not a family bedtime routine streak with XP for parent-child wind-down rituals, story selection, and sleep environment consistency"
+        }
+      ],
+      "community_total": 922000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "922K community across sleep-focused parenting subs. Apps track sleep data or provide adult sleep content. No app gamifies the family bedtime routine habit (one wind-down activity, one consistent sleep-cue completed, one story read) with streak XP for routine consistency, child self-soothing badge milestones, and sleep quality level gates."
+    },
+    "daily_parenting_journal_streak": {
+      "reddit_communities": {
+        "Parenting": 5500000,
+        "daddit": 855000
+      },
+      "itunes_results": [
+        {
+          "name": "Tinybeans - Family Photo Album",
+          "rating": 4.8,
+          "rating_count": 98000,
+          "category": "family memory keeping and photo sharing app \u2014 private family album with milestone tagging and grandparent sharing; memory archive not a gamified daily parenting reflection streak with XP for documenting growth moments, capturing first experiences, and parenting insight accumulation"
+        },
+        {
+          "name": "Day One Journal",
+          "rating": 4.8,
+          "rating_count": 82000,
+          "category": "personal journaling app \u2014 private journal with photos, maps, weather, and templates; general journaling tool not a parenting-specific daily habit streak with XP for consistent reflection, gratitude logging, and parenting challenge processing"
+        },
+        {
+          "name": "Momento - Personal Journal, Diary",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "personal diary and memory keeping app \u2014 journal with social media import and mood tracking; general diary not a gamified daily parenting journal streak with XP for reflection consistency, growth documentation, and milestone memory milestones"
+        }
+      ],
+      "community_total": 6355000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "6.36M community. Apps are general journals or photo memory keepers. No app gamifies the daily parenting reflection habit (one growth moment documented, one challenge processed, one gratitude toward your child logged) with streak XP, memory milestone badges, and parenting insight level progression."
+    },
+    "daily_couples_habit_streak": {
+      "reddit_communities": {
+        "Marriage": 412000,
+        "relationship_advice": 5800000
+      },
+      "itunes_results": [
+        {
+          "name": "Paired: Couples App & Quiz",
+          "rating": 4.8,
+          "rating_count": 82000,
+          "category": "daily couples connection app \u2014 daily questions, quizzes, and habit challenges with streak tracking and partner sync; HAS daily habit streak mechanic with questions and challenges but limited to Q&A format, no XP system for specific relationship skills like communication styles or conflict resolution technique mastery"
+        },
+        {
+          "name": "Lasting - Marriage & Couples",
+          "rating": 4.7,
+          "rating_count": 14000,
+          "category": "science-based marriage enrichment app \u2014 structured sessions based on Gottman research; course-based not a gamified daily habit streak with XP for practicing communication skills, date quality, and connection ritual consistency"
+        },
+        {
+          "name": "Gottman Card Decks",
+          "rating": 4.8,
+          "rating_count": 16000,
+          "category": "digital Gottman conversation starter cards \u2014 six decks of questions for couples to explore; conversation prompt deck not a daily habit streak with XP for building love maps, turning toward bids, and relationship ritual consistency"
+        }
+      ],
+      "community_total": 6212000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "6.21M community. Paired exists with a daily streak mechanic but is limited to Q&A prompts without XP for specific relationship skills. Gap exists for a gamified streak with skill trees for Gottman principles, attachment style practice, and bids-for-connection technique mastery."
+    },
+    "daily_love_language_streak": {
+      "reddit_communities": {
+        "Marriage": 412000,
+        "datingoverthirty": 196000,
+        "dating_advice": 1400000
+      },
+      "itunes_results": [
+        {
+          "name": "Love Nudge - Love Languages",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "love language daily reminder and nudge app \u2014 sends daily prompts to act in your partner's love language; reminder app not a gamified daily love language practice streak with XP for consistent acts of service, quality time execution, and words of affirmation delivery tracking"
+        },
+        {
+          "name": "Couply: Couples Relationship App",
+          "rating": 4.6,
+          "rating_count": 9200,
+          "category": "couples quiz and memory milestone app \u2014 personality quizzes, love language assessment, and shared memory keeping; quiz platform not a daily habit streak with XP for practicing each love language type and measuring partner satisfaction"
+        },
+        {
+          "name": "Agape: Love Languages Quiz",
+          "rating": 4.5,
+          "rating_count": 3400,
+          "category": "love languages assessment and information app \u2014 personality quiz and love language explanation content; assessment tool not a gamified daily love language practice streak with XP for execution consistency, partner feedback collection, and style fluency development"
+        }
+      ],
+      "community_total": 2008000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.01M community. Love Nudge sends reminders but has no streak XP or skill progression. No app gamifies the daily love language practice habit (one intentional act in partner's primary language, one need check-in, one love language attempt logged) with streak XP, language fluency badges, and relationship warmth level gates."
+    },
+    "daily_relationship_check_in_streak": {
+      "reddit_communities": {
+        "LongDistance": 310000,
+        "marriageadvice": 165000,
+        "MarriedLife": 47000
+      },
+      "itunes_results": [
+        {
+          "name": "Between - Couple Relationship App",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "couples private messaging and memory app \u2014 shared private space with calendar, memories, and chat; messaging and memory app not a gamified daily relationship check-in streak with XP for emotional vulnerability, active listening, and appreciation expression"
+        },
+        {
+          "name": "Couple: Relationship App",
+          "rating": 4.4,
+          "rating_count": 8600,
+          "category": "couples communication and shared experiences app \u2014 private timeline, thumbkiss, and shared to-dos; communication utility not a daily habit streak with XP for check-in quality, emotional depth scoring, and relationship health metric tracking"
+        },
+        {
+          "name": "RelateCard: Couples Questions",
+          "rating": 4.5,
+          "rating_count": 2800,
+          "category": "couples conversation starter cards \u2014 question prompts organized by intimacy level; prompt deck not a daily relationship check-in streak with XP for vulnerability practice, appreciations logged, and connection depth level progression"
+        }
+      ],
+      "community_total": 522000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "522K community. Apps are messaging utilities or conversation prompt decks. No app gamifies the daily relationship check-in habit (one appreciations exchange, one feeling share, one need voiced) with streak XP, emotional intimacy badges, and relationship depth level gates."
+    },
+    "daily_public_speaking_streak": {
+      "reddit_communities": {
+        "PublicSpeaking": 213000,
+        "Toastmasters": 12000,
+        "communication": 127000
+      },
+      "itunes_results": [
+        {
+          "name": "Orai - Public Speaking App",
+          "rating": 4.8,
+          "rating_count": 38000,
+          "category": "AI public speaking coach with daily practice sessions \u2014 real-time filler word detection, pacing analysis, and energy scoring with practice streak tracking; HAS daily practice streak but limited to delivery metrics without XP for persuasion structure, storytelling framework, and audience analysis technique mastery"
+        },
+        {
+          "name": "Speeko - Public Speaking App",
+          "rating": 4.7,
+          "rating_count": 12000,
+          "category": "structured public speaking practice app \u2014 progressive lessons with bite-sized exercises for speaking confidence; course-based with exercises but no gamified daily streak with XP for technique mastery, speech type badges, and speaker level progression"
+        },
+        {
+          "name": "VirtualSpeech: Practice Skills",
+          "rating": 4.5,
+          "rating_count": 6200,
+          "category": "VR and AI public speaking practice app \u2014 practice presentations in virtual environments with AI feedback; simulated environment not a daily habit streak with XP for specific skill trees like debate structure, impromptu response, and presentation design"
+        }
+      ],
+      "community_total": 352000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "352K community. Orai has a daily practice streak but focuses on delivery metrics not technique mastery with XP. Gap exists for a full gamified streak with skill trees covering persuasion frameworks, storytelling arcs, impromptu speaking, and speaker level progression."
+    },
+    "daily_storytelling_streak": {
+      "reddit_communities": {
+        "storytelling": 82000,
+        "writing": 2100000
+      },
+      "itunes_results": [
+        {
+          "name": "Wattpad: Where Stories Live",
+          "rating": 4.7,
+          "rating_count": 680000,
+          "category": "reading and writing community platform \u2014 discover and publish serialized stories with reader engagement; social reading/writing platform not a gamified daily storytelling skill streak with XP for narrative structure, hook writing, and character development technique"
+        },
+        {
+          "name": "Storybird: Creative Writing",
+          "rating": 4.5,
+          "rating_count": 14000,
+          "category": "art-inspired creative writing platform \u2014 write stories inspired by curated illustrations; creative writing community not a daily habit streak with XP for mastering the story spine, three-act structure, and scene-setting technique"
+        },
+        {
+          "name": "Story Dice (Rory's Story Cubes)",
+          "rating": 4.6,
+          "rating_count": 8400,
+          "category": "digital storytelling dice game \u2014 roll illustrated dice for story prompt combinations; prompt randomizer game not a daily storytelling skill streak with XP for story architecture mastery, narrative tension technique, and in medias res hooks"
+        }
+      ],
+      "community_total": 2182000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.18M community. Apps are story platforms or randomizer games. No app gamifies the daily storytelling habit (one story spine completed, one hook written, one scene set with sensory detail) with streak XP, narrative technique badges, and storyteller level gates."
+    },
+    "daily_active_listening_streak": {
+      "reddit_communities": {
+        "socialskills": 1100000,
+        "communication": 127000,
+        "emotionalintelligence": 68000
+      },
+      "itunes_results": [
+        {
+          "name": "Headspace: Mindfulness & Sleep",
+          "rating": 4.9,
+          "rating_count": 820000,
+          "category": "mindfulness meditation app \u2014 guided meditations, breathing, and focus exercises for mental wellbeing; general mindfulness not a gamified daily active listening practice streak with XP for paraphrasing accuracy, reflective question quality, and non-verbal mirroring technique"
+        },
+        {
+          "name": "Woebot: Mental Health Support",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "CBT-based mental health chatbot \u2014 cognitive behavioral therapy exercises and mood tracking via conversation; CBT chatbot not a daily active listening skill streak with XP for attention control, clarifying question technique, and empathic reflection mastery"
+        },
+        {
+          "name": "BetterHelp: Therapy & Support",
+          "rating": 4.8,
+          "rating_count": 210000,
+          "category": "online therapy and counseling platform \u2014 licensed therapist matching and video/text sessions; therapy service not a gamified daily active listening habit streak with XP for presence practice, paraphrase technique, and listening comprehension level gates"
+        }
+      ],
+      "community_total": 1295000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.30M community. Apps are mindfulness tools or therapy platforms. No app gamifies the daily active listening practice habit (one conversation with reflective paraphrasing, one open-ended question used, one non-judgmental listening session logged) with streak XP, listening skill badges, and empathy mastery level gates."
+    },
+    "daily_persuasion_practice_streak": {
+      "reddit_communities": {
+        "socialskills": 1100000,
+        "sales": 250000,
+        "negotiation": 34000
+      },
+      "itunes_results": [
+        {
+          "name": "Orai - Public Speaking App",
+          "rating": 4.8,
+          "rating_count": 38000,
+          "category": "AI speaking coach for delivery metrics \u2014 filler word and pacing feedback; delivery coach not a gamified daily persuasion technique streak with XP for logical argument structure, rhetorical device use, and social proof framing mastery"
+        },
+        {
+          "name": "MasterClass: Online Classes",
+          "rating": 4.8,
+          "rating_count": 98000,
+          "category": "expert-taught video course platform \u2014 courses from celebrities and experts across domains; video course library not a daily practice streak with XP for persuasion framework application, objection handling technique, and influence principle mastery"
+        },
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 8200000,
+          "category": "language learning app with gamified streak \u2014 lessons and XP for language acquisition; language app not a persuasion skill streak; cited as best-in-class gamified habit example showing the gap in persuasion skill gamification"
+        }
+      ],
+      "community_total": 1384000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.38M community. Orai covers delivery but not persuasion structure. No app gamifies the daily persuasion practice habit (one argument structured with Toulmin model, one rhetorical device practiced, one reciprocity or social proof trigger applied) with streak XP, influence technique badges, and persuasion master level gates."
+    },
+    "daily_emotional_regulation_streak": {
+      "reddit_communities": {
+        "mentalhealth": 1300000,
+        "DBT": 72000,
+        "emotionalintelligence": 68000
+      },
+      "itunes_results": [
+        {
+          "name": "DBT Coach - Skills Training",
+          "rating": 4.7,
+          "rating_count": 8800,
+          "category": "DBT skills practice app with diary card \u2014 daily diary card check-ins, skill modules for mindfulness, distress tolerance, emotional regulation, and interpersonal effectiveness; HAS daily diary card habit mechanic but clinical focus limits gamification; no XP system, streak rewards, or level progression for regulation skill mastery"
+        },
+        {
+          "name": "Woebot: Mental Health Support",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "CBT-based chatbot for emotional support \u2014 mood tracking and cognitive reframing exercises via conversation; mood check tool not a gamified daily emotional regulation streak with XP for STOP skill execution, opposite action practice, and emotion identification accuracy"
+        },
+        {
+          "name": "Sanvello: Anxiety & Depression",
+          "rating": 4.8,
+          "rating_count": 68000,
+          "category": "anxiety and depression management app \u2014 mood tracking, journaling, and CBT-based coping tools; clinical wellness tool not a gamified daily emotional regulation practice streak with XP for regulation skill application, trigger identification, and emotional window of tolerance expansion"
+        }
+      ],
+      "community_total": 1440000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "1.44M community. DBT Coach has a diary card habit mechanic but is clinical and lacks gamification. Gap exists for a streak app with XP for TIPP skills, radical acceptance practice, opposite action execution, and emotional regulation level progression with non-clinical framing."
+    },
+    "daily_de_escalation_practice_streak": {
+      "reddit_communities": {
+        "Anger": 42000,
+        "emotionalintelligence": 68000,
+        "DBT": 72000,
+        "socialskills": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "Calm - Sleep, Meditate, Relax",
+          "rating": 4.8,
+          "rating_count": 1900000,
+          "category": "mindfulness meditation and sleep app \u2014 guided meditations, breathing exercises, and Sleep Stories; general mindfulness not a gamified daily de-escalation technique streak with XP for STOP skill mastery, physiological reset execution, and conflict scenario practice"
+        },
+        {
+          "name": "MindShift CBT - Anxiety Relief",
+          "rating": 4.8,
+          "rating_count": 68000,
+          "category": "CBT-based anxiety management app \u2014 thought journaling, relaxation techniques, and anxiety tools; anxiety management not a daily de-escalation habit streak with XP for emotional hijack prevention, escalation pattern recognition, and calm-down technique mastery"
+        },
+        {
+          "name": "Insight Timer - Meditation App",
+          "rating": 4.9,
+          "rating_count": 420000,
+          "category": "guided meditation and teacher community app \u2014 thousands of free meditations and courses; meditation library not a gamified daily de-escalation practice streak with XP for window of tolerance expansion, body-scan before response, and verbal de-escalation technique"
+        }
+      ],
+      "community_total": 1282000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.28M community across anger, EQ, and DBT subs. Apps are general mindfulness or anxiety tools. No app gamifies the daily de-escalation habit (one physiological reset practiced, one trigger journaled, one STOP technique applied) with streak XP, escalation pattern badges, and conflict response level gates."
+    },
+    "daily_negotiation_streak": {
+      "reddit_communities": {
+        "negotiation": 34000,
+        "sales": 250000,
+        "socialskills": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "LinkedIn Learning",
+          "rating": 4.8,
+          "rating_count": 82000,
+          "category": "professional video course platform \u2014 on-demand courses for business, tech, and creative skills; video course library not a gamified daily negotiation practice streak with XP for BATNA analysis, anchoring technique, and tactical empathy application"
+        },
+        {
+          "name": "Coursera: Learn Skills & Courses",
+          "rating": 4.8,
+          "rating_count": 280000,
+          "category": "online university course platform \u2014 accredited courses from top universities; academic course platform not a daily negotiation skill streak with XP for mirroring technique, labeling emotions, and calibrated question mastery"
+        },
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 8200000,
+          "category": "gamified language learning app \u2014 daily XP, streak rewards, and level progression for language acquisition; cited as best-in-class gamified daily habit model showing the gap in negotiation skill gamification \u2014 no negotiation skill equivalent of Duolingo exists"
+        }
+      ],
+      "community_total": 1384000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.38M community. No Duolingo-equivalent for negotiation skills exists. No app gamifies the daily negotiation practice habit (one BATNA analyzed, one anchoring exercise, one tactical empathy scenario practiced) with streak XP, negotiation technique badges, and deal-maker level progression."
+    }
+  }
+}

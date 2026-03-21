@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Engagement Bait Content Converter
 Source: ALPHA_GOV_003 - "169 ENGAGEMENT_BAIT alpha entries sitting unused. Each can generate 3+ social posts."

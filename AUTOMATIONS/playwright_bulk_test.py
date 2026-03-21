@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """Bulk HTTP health check for all PRINTMAXX surge.sh deployments."""
 
 import concurrent.futures

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 platform_algo_detection.py - Monitor platform algorithm changes
 Scrapes Reddit + official newsrooms for TikTok, X, Instagram, YouTube algo changes.

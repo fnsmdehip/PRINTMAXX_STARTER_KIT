@@ -3638,3 +3638,27 @@ but only if done c
 **Venture:** OUTBOUND
 **Gap:** Pipeline should auto-detect orphan docs that describe READY-TO-EXECUTE infrastructure with existing scripts/data. The orphan_doc_scanner found this but it should also check if referenced CSV files and scripts actually exist and are functional — add asset validation to orphan_doc_scanner output.
 
+# Integration Gap Report — 2026-03-21 10:03
+
+Methods the pipeline should auto-catch in the future:
+
+## 14 PH launches today - HIGH quality B2B leads. 48h outreach 
+**Venture:** OUTBOUND
+**Gap:** Auto-catch future entries about: time-sensitive B2B lead windows (conference attendees, funding announcements, job postings from scaling startups, AppSumo launches), any method referencing a 24-48h outreach urgency window, or any source producing a fresh list of founders actively shipping product.
+
+# Integration Gap Report — 2026-03-21 10:06
+
+Methods the pipeline should auto-catch in the future:
+
+## 14 PH launches today - HIGH quality B2B leads. 48h outreach 
+**Venture:** OUTBOUND
+**Gap:** Pipeline should also catch: (1) PH 'upcoming' launches 24h pre-launch for even earlier outreach, (2) failed PH launches (<50 upvotes) where founders are desperate and more receptive, (3) repeat PH launchers (high intent signal — they care about traction), (4) PH Ship waitlist signups as pre-launch warm leads
+
+# Integration Gap Report — 2026-03-21 11:42
+
+Methods the pipeline should auto-catch in the future:
+
+## 14 PH launches today - HIGH quality B2B leads. 48h outreach 
+**Venture:** OUTBOUND
+**Gap:** Pipeline should auto-catch any alpha mentioning timed outreach windows on public launch platforms: AppSumo launches, BetaList signups, Hacker News Show HN posts, Indie Hackers milestone posts ('just hit $X MRR'). All share the same pattern: founder is publicly visible + emotionally receptive + 24-72h window. Wire a generic launch_platform_outreach.py that accepts platform config files.
+

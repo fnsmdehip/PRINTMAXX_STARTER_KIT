@@ -1,0 +1,457 @@
+{
+  "cycle": 89,
+  "timestamp": "2026-03-21T09:38:14.425861+00:00",
+  "strategy": "CULINARY_ARTS + OUTDOOR_ADVENTURE + CREATIVE_WRITING + MENTAL_HEALTH",
+  "niches": {
+    "daily_home_cooking_skill_streak": {
+      "reddit_communities": {
+        "Cooking": 3500000,
+        "AskCulinary": 620000
+      },
+      "itunes_results": [
+        {
+          "name": "Tasty: Recipe Videos & Cooking",
+          "rating": 4.7,
+          "rating_count": 680000,
+          "category": "recipe video app \u2014 video recipe library with step-by-step guides; browsing and saving recipes, not a daily technique practice streak with XP for knife skills, sauce mastery, or heat control"
+        },
+        {
+          "name": "Yummly Recipes & Cooking Tools",
+          "rating": 4.8,
+          "rating_count": 380000,
+          "category": "personalized recipe discovery and grocery list app \u2014 AI recipe matching and shopping; recipe library and meal planning, no daily cooking skill streak with XP for technique level-up"
+        },
+        {
+          "name": "Paprika Recipe Manager 3",
+          "rating": 4.9,
+          "rating_count": 62000,
+          "category": "recipe organization and meal planning app \u2014 save, organize, and sync recipes; recipe manager not a gamified daily cooking technique streak with XP for practicing skills"
+        }
+      ],
+      "community_total": 4120000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.1M community. Recipe apps are content libraries. No app gamifies the daily cooking micro-skill (one knife technique, one sauce reduction, one flavor pairing) with XP, skill trees, and streak level-up gates for aspiring home chefs."
+    },
+    "daily_coffee_brewing_streak": {
+      "reddit_communities": {
+        "Coffee": 3440000,
+        "espresso": 370000
+      },
+      "itunes_results": [
+        {
+          "name": "Brew Timer - Coffee Timer",
+          "rating": 4.6,
+          "rating_count": 8200,
+          "category": "pour-over and manual brew timer app \u2014 brew ratio calculator and step-by-step timer; functional timer tool not a gamified daily coffee skill streak with XP for technique progression and flavor profiling"
+        },
+        {
+          "name": "Acaia Coffee",
+          "rating": 4.7,
+          "rating_count": 4100,
+          "category": "Acaia smart scale companion app \u2014 precision brewing with Bluetooth scale integration; hardware companion not a daily coffee education streak with XP for unlocking brewing methods"
+        },
+        {
+          "name": "Coffee Meets Bagel: Dating App",
+          "rating": 4.3,
+          "rating_count": 100000,
+          "category": "dating app \u2014 daily curated match introduction; unrelated to coffee brewing skills"
+        }
+      ],
+      "community_total": 3810000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.8M community. Coffee apps are timers or scale companions. No app gamifies the daily coffee skill streak \u2014 one new brew method practiced, one extraction ratio dialed, one tasting note logged \u2014 with XP, technique badges, and a mastery progression path."
+    },
+    "daily_sourdough_baking_streak": {
+      "reddit_communities": {
+        "Sourdough": 510000,
+        "Breadit": 450000
+      },
+      "itunes_results": [
+        {
+          "name": "Sourdough Companion",
+          "rating": 4.5,
+          "rating_count": 3800,
+          "category": "sourdough hydration calculator and timer app \u2014 dough percentage calculator and bulk fermentation timer; calculation tool not a daily baking streak with XP for mastering scoring, shaping, and fermentation timing"
+        },
+        {
+          "name": "King Arthur Flour's Recipe Box",
+          "rating": 4.6,
+          "rating_count": 9200,
+          "category": "recipe box app from King Arthur Baking \u2014 baking recipes and techniques; recipe library not a gamified daily sourdough skill streak with XP for starter maintenance consistency and technique badges"
+        },
+        {
+          "name": "Bread Baking by HandmadeTV",
+          "rating": 4.4,
+          "rating_count": 2100,
+          "category": "bread baking video tutorial app \u2014 step-by-step video lessons; passive video content not active daily baking streak with XP"
+        }
+      ],
+      "community_total": 960000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "960K community. Sourdough apps are calculators and recipe boxes. No app gamifies the daily sourdough habit (feed starter, log hydration, practice shaping) with streak XP, fermentation mastery badges, and level-up challenges."
+    },
+    "daily_meal_prep_streak": {
+      "reddit_communities": {
+        "MealPrepSunday": 2810000,
+        "EatCheapAndHealthy": 2100000
+      },
+      "itunes_results": [
+        {
+          "name": "Mealime: Meal Planner & Recipes",
+          "rating": 4.8,
+          "rating_count": 190000,
+          "category": "weekly meal planning and grocery list app \u2014 personalized recipe plans by dietary preference; planning tool not a daily habit streak with XP for consistency, batch cooking skill, and prep time optimization"
+        },
+        {
+          "name": "MyFitnessPal: Calorie Counter",
+          "rating": 4.7,
+          "rating_count": 4200000,
+          "category": "calorie and macro tracking app \u2014 food diary with large database; macro tracking not gamified daily meal prep habit streak with XP for cooking skill and prep consistency"
+        },
+        {
+          "name": "Prep: Meal Planner & Recipe",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "meal prep planning and grocery coordination app \u2014 weekly meal plan with shopping list sync; planning tool not streak-gamified daily prep habit with XP for batch cooking mastery"
+        }
+      ],
+      "community_total": 4910000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.9M community. Meal apps plan and track calories. No app gamifies the daily meal prep habit (one batch cook session, one new efficient technique practiced, one macro goal hit) with streak XP, prep speed badges, and mastery level gates."
+    },
+    "daily_hiking_trail_streak": {
+      "reddit_communities": {
+        "hiking": 8200000,
+        "ultralight": 310000
+      },
+      "itunes_results": [
+        {
+          "name": "AllTrails: Hike, Bike & Run",
+          "rating": 4.8,
+          "rating_count": 890000,
+          "category": "trail discovery and navigation app \u2014 400K+ trails with maps, reviews, and offline navigation; AllTrails Plus has basic streak tracking but no XP system, no level-up gates, no skill-based progression for navigation, elevation training, or wilderness skills"
+        },
+        {
+          "name": "Gaia GPS: Hiking & Camping Maps",
+          "rating": 4.7,
+          "rating_count": 62000,
+          "category": "premium offline topo maps and route planning \u2014 USGS and satellite maps for backcountry navigation; navigation tool not a gamified daily hiking skill streak with XP for elevation gain, distance milestones, or wilderness skill badges"
+        },
+        {
+          "name": "Strava: Run, Ride, Swim",
+          "rating": 4.8,
+          "rating_count": 1200000,
+          "category": "activity tracking and social fitness app \u2014 GPS tracking with segment competitions and kudos; performance and social tracking not a hiking-specific skill progression streak with XP for navigation, Leave No Trace, and wilderness skills"
+        }
+      ],
+      "community_total": 8510000,
+      "streak_app_exists": false,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "8.5M community. AllTrails has basic streak elements but no XP system or skill progression. SOFT COMPETITION \u2014 opportunity exists for a gamified hiking streak with skill trees (navigation, wilderness survival, trail identification) and XP level-up."
+    },
+    "daily_rock_climbing_streak": {
+      "reddit_communities": {
+        "climbing": 510000,
+        "bouldering": 210000
+      },
+      "itunes_results": [
+        {
+          "name": "27 Crags: Climbing Logbook",
+          "rating": 4.6,
+          "rating_count": 4200,
+          "category": "climbing route database and logbook \u2014 tick lists and route discovery for gym and outdoor climbing; logging tool not a gamified daily climbing skill streak with XP for finger strength, footwork, and technique milestones"
+        },
+        {
+          "name": "BoardBreaker \u2013 Climbing Trainer",
+          "rating": 4.5,
+          "rating_count": 1800,
+          "category": "hangboard and fingerboard training app \u2014 structured finger strength training plans; specialized strength training tool not a gamified daily climbing habit streak covering technique, strength, and mental game with XP"
+        },
+        {
+          "name": "Crimpd - Rock Climbing Training",
+          "rating": 4.7,
+          "rating_count": 6500,
+          "category": "climbing training plan app \u2014 structured training programs for performance improvement; workout plan delivery not a gamified daily climbing streak with XP for skill-based progression across technique disciplines"
+        }
+      ],
+      "community_total": 720000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "720K community. Climbing apps are logbooks or training plans. No app gamifies the daily climbing streak (one technique drill, one problem session logged, one strength micro-workout) with XP, grade progression tracking, and skill tree badges."
+    },
+    "daily_foraging_streak": {
+      "reddit_communities": {
+        "foraging": 420000,
+        "mycology": 360000
+      },
+      "itunes_results": [
+        {
+          "name": "iNaturalist",
+          "rating": 4.8,
+          "rating_count": 68000,
+          "category": "nature observation and species identification app \u2014 citizen science photo ID with community verification; observation logging tool not a gamified daily foraging skill streak with XP for identifying edible plants, mushrooms, and regional species"
+        },
+        {
+          "name": "Shroomify - Mushroom Identifier",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "AI mushroom identification app \u2014 photo-based mushroom ID with edibility guidance; single-purpose ID tool not a daily foraging education streak with XP for building regional plant and fungi knowledge"
+        },
+        {
+          "name": "Picture This: Plant Identifier",
+          "rating": 4.8,
+          "rating_count": 1900000,
+          "category": "AI plant identification app \u2014 photo-based plant ID and care guides; general plant ID tool not a forage-specific daily habit streak with XP for learning edible species by season and region"
+        }
+      ],
+      "community_total": 780000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "780K community. Apps do plant ID or log observations. No app gamifies daily foraging education (learn one edible species today, one toxic lookalike study, one seasonal calendar check) with streak XP, region-specific species badges, and forager level progression."
+    },
+    "daily_wild_camping_streak": {
+      "reddit_communities": {
+        "WildernessBackpacking": 360000,
+        "CampingandHiking": 620000
+      },
+      "itunes_results": [
+        {
+          "name": "The Dyrt: Camping & RV App",
+          "rating": 4.8,
+          "rating_count": 48000,
+          "category": "campsite discovery and review app \u2014 45K+ campgrounds with photos and reviews; campsite finding tool not a gamified daily outdoor skills streak with XP for shelter building, fire starting, and wilderness navigation"
+        },
+        {
+          "name": "REI Co-op Guide to Camping",
+          "rating": 4.6,
+          "rating_count": 3200,
+          "category": "REI's beginner camping guide app \u2014 curated beginner gear and skills content; informational guide not a daily wilderness skill streak with XP for building practical outdoorsman competencies"
+        },
+        {
+          "name": "Survival Guide - Offline",
+          "rating": 4.4,
+          "rating_count": 2800,
+          "category": "offline wilderness survival reference \u2014 SERE techniques and emergency procedures; static reference guide not a gamified daily outdoor skill streak with XP"
+        }
+      ],
+      "community_total": 980000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "980K community. Apps find campsites or serve as static references. No app gamifies daily wilderness skill building (one fire-starting technique practiced, one shelter knot learned, one Leave No Trace principle applied) with streak XP and outdoorsman mastery progression."
+    },
+    "daily_fiction_writing_streak": {
+      "reddit_communities": {
+        "writing": 2310000,
+        "worldbuilding": 1340000
+      },
+      "itunes_results": [
+        {
+          "name": "Scrivener",
+          "rating": 4.7,
+          "rating_count": 12000,
+          "category": "professional writing and manuscript organization tool \u2014 project management for long-form writers; drafting and organization tool, tracks word count but no gamified daily fiction streak with XP, story structure skills, and character development badges"
+        },
+        {
+          "name": "750 Words",
+          "rating": 4.3,
+          "rating_count": 1200,
+          "category": "private daily writing habit app \u2014 simple 750-word daily prompt with streak tracking; basic streak exists but no XP system, no story craft skill tree, no level-up gates for fiction technique mastery"
+        },
+        {
+          "name": "Reedsy Book Editor",
+          "rating": 4.6,
+          "rating_count": 4800,
+          "category": "professional book writing and formatting tool \u2014 collaborative editor with publisher-quality output; professional manuscript tool not gamified daily fiction skill streak with XP for scene construction, dialogue, and conflict development"
+        }
+      ],
+      "community_total": 3650000,
+      "streak_app_exists": false,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "3.65M community. 750 Words has basic streak tracking but no XP or skill progression. SOFT COMPETITION \u2014 clear gap for a gamified fiction writing streak with craft skill trees (dialogue, scene structure, character arc) and daily prompt challenges with XP."
+    },
+    "daily_poetry_writing_streak": {
+      "reddit_communities": {
+        "poetry": 1820000,
+        "OCPoetry": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Poet Assistant",
+          "rating": 4.4,
+          "rating_count": 3100,
+          "category": "rhyme dictionary and thesaurus for poets \u2014 rhyme, synonym, and stress pattern lookup; reference tool not a gamified daily poetry writing streak with XP for mastering forms, meter, and imagery"
+        },
+        {
+          "name": "Day One: Journal + Diary App",
+          "rating": 4.8,
+          "rating_count": 210000,
+          "category": "private journaling and diary app \u2014 rich text journal with streak tracking; general journaling not poetry-specific gamified streak with XP for form mastery, line craft, and imagery development"
+        },
+        {
+          "name": "Letterspace \u2014 Notes & Markdown",
+          "rating": 4.5,
+          "rating_count": 2400,
+          "category": "minimalist markdown notes app \u2014 clean writing interface for notes; note-taking tool not a daily poetry streak with XP, form challenges, and skill progression"
+        }
+      ],
+      "community_total": 2000000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2M community. Writing tools are reference or general journals. No app gamifies daily poetry practice (one form mastered \u2014 haiku, sonnet, villanelle; one imagery exercise; one line revision drill) with streak XP, form unlock progression, and poet level gates."
+    },
+    "daily_worldbuilding_streak": {
+      "reddit_communities": {
+        "worldbuilding": 1340000,
+        "DnD": 3200000
+      },
+      "itunes_results": [
+        {
+          "name": "World Anvil",
+          "rating": 4.6,
+          "rating_count": 2800,
+          "category": "worldbuilding wiki and RPG campaign tool \u2014 structured world lore, map building, and timeline management; world organization tool not a gamified daily worldbuilding streak with XP for building lore depth, magic systems, and cultural detail"
+        },
+        {
+          "name": "Campfire: Write Your Story",
+          "rating": 4.5,
+          "rating_count": 3200,
+          "category": "fiction and worldbuilding planning app \u2014 character sheets, maps, timeline, and lore notes; organizational planning tool not a daily streak with XP for consistent creative world expansion"
+        },
+        {
+          "name": "DnD Beyond",
+          "rating": 4.7,
+          "rating_count": 86000,
+          "category": "D&D character creation and campaign management \u2014 official Wizards of the Coast companion; game rules tool not a gamified daily worldbuilding creative streak with XP for narrative development"
+        }
+      ],
+      "community_total": 4540000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.54M community. Tools organize lore but none gamify the daily worldbuilding habit (one geography detail added, one culture element built, one magic rule defined) with streak XP, lore depth badges, and worldbuilder mastery levels."
+    },
+    "daily_screenwriting_streak": {
+      "reddit_communities": {
+        "Screenwriting": 320000,
+        "writing": 2310000
+      },
+      "itunes_results": [
+        {
+          "name": "Final Draft Mobile",
+          "rating": 4.5,
+          "rating_count": 8400,
+          "category": "professional screenplay formatting app \u2014 industry-standard script formatting with Final Draft sync; professional tool not a gamified daily screenwriting streak with XP for scene construction, dialogue, and three-act structure mastery"
+        },
+        {
+          "name": "Highland 2",
+          "rating": 4.6,
+          "rating_count": 3600,
+          "category": "screenwriting app with Fountain format support \u2014 clean script editor with industry formatting; drafting tool not a daily screenwriting skill streak with XP for mastering format, scene economy, and character voice"
+        },
+        {
+          "name": "Fade In: Professional Screenwriting",
+          "rating": 4.7,
+          "rating_count": 5200,
+          "category": "industry-standard screenplay writing software \u2014 full-featured script editing with formatting; professional writing environment not gamified daily streak with XP for craft development"
+        }
+      ],
+      "community_total": 2630000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.63M combined community. Screenwriting apps are professional formatting tools. No app gamifies the daily screenwriting habit (one scene written, one page of dialogue polished, one structure beat analyzed) with streak XP, format mastery badges, and craft level-up progression."
+    },
+    "daily_cbt_exercise_streak": {
+      "reddit_communities": {
+        "mentalhealth": 1920000,
+        "Anxiety": 900000
+      },
+      "itunes_results": [
+        {
+          "name": "Woebot: Mental Health Support",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "AI mental health chatbot with CBT techniques \u2014 conversational CBT exercises and mood check-ins; conversational AI therapy tool not a gamified daily CBT exercise streak with XP for completing thought records, behavioral experiments, and cognitive reframes"
+        },
+        {
+          "name": "Sanvello: Anxiety & Depression",
+          "rating": 4.7,
+          "rating_count": 88000,
+          "category": "mood tracking and CBT tools for anxiety and depression \u2014 guided CBT exercises and self-assessments; clinical wellness app not a gamified daily CBT streak with XP for building cognitive restructuring habits"
+        },
+        {
+          "name": "MoodKit: Mood Improvement Tools",
+          "rating": 4.5,
+          "rating_count": 9200,
+          "category": "CBT-based mood improvement app \u2014 200+ mood improvement activities based on CBT principles; activity library not a gamified daily habit streak with XP for completing CBT micro-exercises consistently"
+        }
+      ],
+      "community_total": 2820000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.82M community. Mental health apps are clinical or conversational. No app gamifies the daily CBT micro-habit (one thought record completed, one cognitive distortion identified, one behavioral experiment logged) with streak XP and CBT skill level progression."
+    },
+    "daily_mood_tracking_streak": {
+      "reddit_communities": {
+        "depression": 1310000,
+        "bipolar": 980000
+      },
+      "itunes_results": [
+        {
+          "name": "Daylio: Journal + Mood Tracker",
+          "rating": 4.8,
+          "rating_count": 720000,
+          "category": "micro-journal and mood tracker app \u2014 emoji-based daily mood logging with pattern visualization; closest competitor but no XP system, no reward for consistency, no gamified streak milestones or achievement badges for mental health habit formation"
+        },
+        {
+          "name": "Bearable: Symptoms & Health Log",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "chronic illness and mental health symptom tracker \u2014 detailed symptom, medication, and mood logging for health pattern analysis; clinical tracking tool not a gamified streak with XP for daily mental wellness habit consistency"
+        },
+        {
+          "name": "Reflectly: Journal & AI Diary",
+          "rating": 4.7,
+          "rating_count": 180000,
+          "category": "AI-guided reflective journaling app \u2014 daily mood prompt with guided reflection; journaling focus not a gamified mood tracking streak with XP for consistency and mental health literacy growth"
+        }
+      ],
+      "community_total": 2290000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.29M community. Daylio tracks mood without XP or gamified rewards. No app gamifies the daily mood tracking habit (log mood, identify trigger, one coping micro-action taken) with streak XP, mental wellness level-up, and achievement badges for consistency milestones."
+    },
+    "daily_self_compassion_streak": {
+      "reddit_communities": {
+        "selfimprovement": 2630000,
+        "raisedbynarcissists": 990000
+      },
+      "itunes_results": [
+        {
+          "name": "Insight Timer - Meditation App",
+          "rating": 4.9,
+          "rating_count": 870000,
+          "category": "free meditation library with social features \u2014 100K+ guided meditations including self-compassion tracks; content library not a gamified daily self-compassion streak with XP for completing loving-kindness practice, inner critic challenges, and self-forgiveness exercises"
+        },
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 2100000,
+          "category": "sleep, meditation, and mindfulness app \u2014 guided sessions including self-compassion content; content subscription not a gamified daily self-compassion habit streak with XP and healing progression milestones"
+        },
+        {
+          "name": "Woebot: Mental Health Support",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "AI CBT chatbot \u2014 conversational support with CBT and ACT techniques; chatbot model not a daily self-compassion streak with XP for active self-kindness practice"
+        }
+      ],
+      "community_total": 3620000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.62M community. Apps deliver content not active daily self-compassion habits. No app gamifies the daily self-compassion streak (one loving-kindness exercise, one inner critic reframe, one self-affirmation practice) with XP, inner healing level progression, and compassion mastery badges."
+    }
+  }
+}

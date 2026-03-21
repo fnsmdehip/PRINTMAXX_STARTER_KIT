@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """Client onboarding automation. Converts a qualified lead into a full onboarding package."""
 
 import argparse, csv, os, re, sys

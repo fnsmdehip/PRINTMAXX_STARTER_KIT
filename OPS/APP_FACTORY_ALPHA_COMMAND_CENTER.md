@@ -1,12 +1,12 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-20 12:15:51
+Generated: 2026-03-21 10:07:49
 
 ## Inputs
-- ALPHA_STAGING app candidates: 2808
-- APP_FACTORY_METHODS candidates: 5
+- ALPHA_STAGING app candidates: 2761
+- APP_FACTORY_METHODS candidates: 2
 - Reddit findings consumed: 6
-- Existing app specs detected: 51
+- Existing app specs detected: 50
 
 ## Hard Gates
 - No fake paywalls. Real RevenueCat or real billing path before shipping.
@@ -40,12 +40,12 @@ Generated: 2026-03-20 12:15:51
 |------|-------------|--------|-------|--------|--------------|-----------|
 | 5 | Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard | NEW_BUILD | 118 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 12 | SaaS pricing: $9/mo = ZERO conversions. Raised to $29/mo = paying customers imme | NEW_BUILD | 100 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 14 | Poe creator revenue sharing — only major AI platform currently paying creators p | NEW_BUILD | 100 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 17 | LTD CASE STUDY #3 CANDIDATE: 89 lifetime deals at $199 each = $17,711 launch wee | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 18 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 21 | HTML interactive tools as digital products ($17 price point validated) | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 23 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 27 | [HN 161pts] Cook: CLI for orchestrating Claude Code. Direct competitor/complemen | NEW_BUILD | 90 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 15 | LTD CASE STUDY #3 CANDIDATE: 89 lifetime deals at $199 each = $17,711 launch wee | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 16 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 19 | HTML interactive tools as digital products ($17 price point validated) | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 21 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 24 | Vibe-coded apps revenue: Plinq $456K/yr (Lovable). Pieter Levels flight sim $12K | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 25 | Fiverr boring category arb: Top Fiverr gigs in resume/biz plan/cover letter at $ | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.

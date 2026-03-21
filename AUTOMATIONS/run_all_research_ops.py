@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 run_all_research_ops.py - Master runner for all 5 research ops
 Runs all ops in sequence, tracks success/failure, logs to file.

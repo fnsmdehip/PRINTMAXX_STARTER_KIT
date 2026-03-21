@@ -1,50 +1,54 @@
 # Growth Plan: P2
 
-**Created:** 2026-03-20 18:10
+**Created:** 2026-03-20 23:36
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $100-400/mo
+**Revenue Est:** $0-50/mo first 30d → $100-400/mo by day 90
 
 ---
 
 ## Tactics
 
-1. ASO: target 'swimming streak' 'lap counter' 'swim tracker' — zero competition confirmed
-2. Cross-promote from existing fitness-streak, hiit-streak, cycling-streak apps via in-app banners
-3. Reddit seeding: r/Swimming (318K), r/triathlon (95K), r/openwater, r/masterssswimming — value posts not spam
-4. Swimming forum/Facebook group infiltration with genuine streak challenge posts
-5. Strava integration angle — swimmers use Strava, mention compatibility in copy
+1. subreddit_seeding_r_cats_r_IllegallySmolCats
+2. engagement_bait_in_cat_tikток_subreddits
+3. instagram_hashtag_algorithm_optimization_catcontent
+4. direct_outreach_5_cat_influencers_affiliate_500_reach
+5. reply_value_engineering_community_tip_threads
+6. cross_promotion_existing_app_factory_ventures
 
 ## Budget Tier Strategies
 
 ### FREE
-ASO keyword optimization for zero-competition swimming terms, Reddit value posts in r/Swimming + r/triathlon, cross-promote from existing streak app family, swimming YouTube comment engagement
+Organic seeding in cat communities (Reddit/Instagram), engagement loop optimization, reply bait in trending cat posts, affiliate partnerships (zero upfront)
 
 ### LOW
-$10-30/mo Reddit promoted posts in r/Swimming, micro-influencer swim coaches on IG/TikTok for free app review
+$0-50/mo: Pinterest cat board seeding, targeted Instagram ads on cat content ($20), TikTok Creator Fund optimization
 
 ### MID
-$50-150/mo SwimSwam banner ad or newsletter sponsorship, swimming podcast ad reads, TikTok swim content creator collab
+$50-200/mo: Micro-influencer seeding ($100/post), Facebook group sponsorships ($50), cat subreddit sponsorships
 
 ## Daily Actions
 
-- [ ] 1. Clone fitness-streak or scripture-streak PWA template from APP_FACTORY/builds/
-- [ ] 2. Rebrand: swimming-streak, stroke types (freestyle/backstroke/butterfly/breaststroke), lap counting, pool vs open water modes
-- [ ] 3. Add swimming-specific streak metrics: laps per session, total distance, stroke variety
-- [ ] 4. Generate landing page with swimming-specific copy targeting 318K community keywords
-- [ ] 5. Deploy to swimming-streak.surge.sh
-- [ ] 6. Wire Stripe payment link for premium tier ($2.99/mo or $19.99/yr)
-- [ ] 7. Submit ASO keywords to LEDGER/ASO_KEYWORDS.csv
-- [ ] 8. Generate 3 launch tweets + 1 Reddit value post for r/Swimming
-- [ ] 9. Cross-link from all fitness-category streak apps
-- [ ] 10. Add to APP_FACTORY priority queue and DEPLOYMENT_URLS.md
+- [ ] 1. Create venture: MONEY_METHODS/APP_FACTORY/cat-streak-builder/
+- [ ] 2. Copy template from scripture-streak or yoga-streak
+- [ ] 3. Rebrand UI: cat photos, enrichment tips, treat rewards
+- [ ] 4. Generate 5 social posts (engagement bait style) via content_multiplier
+- [ ] 5. Deploy Capacitor build to Surge.sh + Firebase backend
+- [ ] 6. Configure IAP ($4.99/mo premium) + AdMob (free tier)
+- [ ] 7. Seed r/cats, r/IllegallySmolCats, r/Meow_irl with engagement posts
+- [ ] 8. DM 5 cat TikTok creators with free premium + affiliate code
+- [ ] 9. Schedule daily rotation posts in 3 cat communities (cron 8 AM)
+- [ ] 10. Track KPIs: DAU, retention, MRR via Firebase + OPS/KPI_DASHBOARD.md
 
 ## Tooling
 
 ```json
 {
-  "browser": "playwright_for_deployment_testing",
-  "email": "none",
-  "content": "content_factory_for_launch_tweets_and_reddit_posts"
+  "browser": "none (automated via Playwright MCP)",
+  "email": "none (direct community engagement, no cold email)",
+  "content": "content_multiplier.py + engagement_bait_converter.py",
+  "app_framework": "Capacitor (iOS/Android) or Expo (web-first)",
+  "backend": "Firebase Realtime DB (free tier)",
+  "hosting": "Surge.sh free tier + Vercel fallback"
 }
 ```

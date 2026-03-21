@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Meta Planner — Autonomous Full-Vision Task Generation
 

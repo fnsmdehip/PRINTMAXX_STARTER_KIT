@@ -2861,3 +2861,104 @@ High stress
 
 - Claude builds
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773994599, Score: 24)
+
+**Source:** @steipete (high-signal-accounts) | **URL:** https://x.com/aakashgupta/status/2035003184192630985
+**Added:** 2026-03-20T23:32:23-04:00
+
+Cursor is raising at a $50 billion valuation on the claim that its “in-house models generate more code than almost any other LLMs in the world.” Less than 24 hours after launching Composer 2, a developer found the model ID in the API response: kimi-k2p5-rl-0317-s515-fast.
+
+That’s
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773994882, Score: 40)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2034341448796238300
+**Added:** 2026-03-21T05:30:28-04:00
+
+@skirano CLIs are composable, debuggable, and agents already know how to use them. MCP added a layer of abstraction that most agent builders didn't need. The best production agents I've built just shell out to well-structured CLIs. Simple beats clever every time.
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773994883, Score: 22)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2034359104043712870
+**Added:** 2026-03-21T05:30:28-04:00
+
+@jmdevlabs @skirano Fair point. Auth is one area where MCP's structured approach actually shines. For CLI agents, you handle it at the orchestration layer (env vars, token files, OAuth wrappers). Different trade-off but both solvable.
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773994884, Score: 34)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2034357836919046641
+**Added:** 2026-03-21T05:30:28-04:00
+
+@skirano Been mass replacing MCP servers with CLIs this month. curated a list of product CLIs that already work with agents https://t.co/5x48GRKXJf
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773995138, Score: 20)
+
+**Source:** 2026-03-21 | **URL:** @randfish
+**Added:** 2026-03-21T10:07:48-04:00
+
+97% of visitors to Google perform a search
+56% of visitors to ChatGPT enter a prompt
+And only 35% of visitors to Yahoo perform a search
+
+Using this data (from last week's report), we updated SparkToro to better show which search & AI tools your audience uses 
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773995296, Score: 23)
+
+**Source:** 2026-03-21 | **URL:** @Argona0x
+**Added:** 2026-03-21T10:07:48-04:00
+
+i pointed Claude Code at the pentagon's public budget document and told it to find every contract overpaying by 10x or more
+
+it came back with 340 results worth $4.2B in potential undercuts
+
+and a business plan i didn't ask for
+
+i fed it the 
+http://
+FPDS.gov procurement
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773995331, Score: 26)
+
+**Source:** 2026-03-21 | **URL:** @lookonchain
+**Added:** 2026-03-21T10:07:48-04:00
+
+After holding $TRUMP for 8 months, whale 2sBcbh finally gave up and sold 211,343 $TRUMP($847K) at a $1.29M loss. 
+
+He bought 211,343 $TRUMP($2.13M) at $10 eight months ago.
+
+He also bought 18,787 $SOL($3.29M) at $175 and is now down $1.62M.
+
+
+https://
+intel.arkm.com/explorer/addre
+ss/2sBcbhsfHqiqtuiCpf33BxzkmgPtT4HU2xUuFZuiXn87
+…
+

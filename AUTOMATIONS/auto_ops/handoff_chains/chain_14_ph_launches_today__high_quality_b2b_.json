@@ -1,28 +1,28 @@
 {
   "name": "chain_14_ph_launches_today__high_quality_b2b_",
-  "created": "2026-03-20T18:09:55.990785",
+  "created": "2026-03-21T10:06:44.497912",
   "method": "14 PH launches today - HIGH quality B2B leads. 48h outreach window. Cold email: congrats on launch + offer beta access. File: leads/producthunt_b2b_leads.csv",
   "venture": "OUTBOUND",
   "stages": [
     {
-      "agent": "scraper",
-      "task": "Scrape today's PH launches via API + playwright fallback. Extract: product name, tagline, maker names, maker Twitter/LinkedIn, website URL, upvote count, category tags",
-      "output": "leads/producthunt_b2b_leads_raw.json"
+      "agent": "studio-scraper",
+      "task": "scrape PH today page, extract B2B launches with founder names, product descriptions, upvote counts",
+      "output": "leads/ph_raw_today.json"
     },
     {
-      "agent": "qualifier",
-      "task": "Filter B2B only (reject consumer/game/social). Score by: upvote velocity, team size signals, pricing page presence, SaaS indicators. Extract founder email via website contact page + Hunter.io free tier + GitHub profile mining",
-      "output": "leads/producthunt_b2b_leads_qualified.json"
+      "agent": "prod-analyst",
+      "task": "filter B2B, score by relevance (SaaS/dev tools/productivity = high), enrich with contact data",
+      "output": "leads/producthunt_b2b_leads.csv"
     },
     {
-      "agent": "composer",
-      "task": "Generate personalized cold email per lead using template: congrats on launch + specific product compliment + relevant offer (beta access to our tool OR free audit of their landing page/SEO). Use claude -p for personalization. Subject line A/B variants.",
-      "output": "leads/producthunt_outreach_queue.csv"
+      "agent": "mkt-email",
+      "task": "generate personalized cold emails: congrats on launch + position our EAS/service as complementary beta",
+      "output": "leads/ph_email_queue.json"
     },
     {
-      "agent": "sender",
-      "task": "Queue emails in outreach pipeline. Log to LEDGER/OUTREACH_PIPELINE.csv with send_date, follow_up_date (48h), status. Respect warmup limits from WARMUP_DEVICE_MATRIX.",
-      "output": "leads/producthunt_outreach_log.json"
+      "agent": "eng-backend",
+      "task": "send batch via cold_email_2026.py, log to OUTREACH_PIPELINE.csv, expire stale leads",
+      "output": "LEDGER/OUTREACH_PIPELINE.csv"
     }
   ],
   "status": "READY"

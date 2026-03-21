@@ -1,42 +1,153 @@
 {
-  "last_cycle": "2026-03-19T05:30:00",
-  "apps_built_this_cycle": [
-    "soberstreak",
-    "runningstreak",
-    "yoga-streak",
-    "pushup-streak",
-    "plank-streak",
-    "hiit-streak",
-    "cycling-streak"
-  ],
-  "apps_iterated_this_cycle": [
-    "prayerlock-web"
-  ],
-  "deployed": {
-    "soberstreak": "https://soberstreak.surge.sh",
-    "runningstreak": "https://runningstreak.surge.sh",
-    "prayerlock-web": "https://prayerlock-web.surge.sh",
-    "yoga-streak": "https://yoga-streak.surge.sh",
-    "pushup-streak": "https://pushup-streak.surge.sh",
-    "plank-streak": "https://plank-streak.surge.sh",
-    "hiit-streak": "https://hiit-streak.surge.sh",
-    "cycling-streak": "https://cycling-streak.surge.sh"
+  "ran_at": "2026-03-21 05:29:56",
+  "mode": "LIVE",
+  "config": {
+    "bookmarks_limit": 60,
+    "accounts_limit": 12,
+    "approval_max": 80,
+    "processor_batch": 120,
+    "queue_limit": 40,
+    "skip_bookmarks": false,
+    "skip_accounts": false
   },
-  "content_generated": [
-    "CONTENT/social/posting_queue/soberstreak_launch_20260319.txt",
-    "CONTENT/social/posting_queue/reddit_launch_posts_20260319.txt"
+  "steps": [
+    {
+      "name": "twitter_bookmarks_scraper",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/twitter_bookmarks_scraper.py",
+        "--scrape",
+        "--limit",
+        "60"
+      ],
+      "status": "OK",
+      "returncode": 0,
+      "output_tail": "2026-03-21 05:29:56,296 [INFO] ============================================================\n2026-03-21 05:29:56,296 [INFO] TWITTER BOOKMARKS SCRAPER\n2026-03-21 05:29:56,296 [INFO] ============================================================\n2026-03-21 05:29:56,296 [INFO] Time: 2026-03-21 05:29:56\n2026-03-21 05:29:56,301 [INFO] Extracted auth_token and ct0 from Brave cookies\n2026-03-21 05:29:56,301 [INFO] Previously scraped: 202 bookmark IDs\n2026-03-21 05:29:56,301 [INFO] Fetching bookmarks page 1 (cursor=None)...\n2026-03-21 05:30:01,219 [INFO]   Page 1: got 98 tweets\n2026-03-21 05:30:01,219 [INFO] Reached limit of 60 bookmarks\n2026-03-21 05:30:01,219 [INFO] Total bookmarks fetched: 60\n2026-03-21 05:30:01,230 [INFO] Raw bookmarks saved: 221 total in twitter_bookmarks_raw.json\n2026-03-21 05:30:01,230 [INFO] New bookmarks (not previously scraped): 19 / 60\n2026-03-21 05:30:01,230 [INFO] Actionable bookmarks (len >= 30): 17 / 19\n2026-03-21 05:30:01,303 [INFO] Fresh (not already in ALPHA_STAGING): 17 / 17\n2026-03-21 05:30:01,363 [INFO] Appended 17 entries to ALPHA_STAGING.csv\n2026-03-21 05:30:01,364 [INFO] ============================================================\n2026-03-21 05:30:01,364 [INFO] SCRAPE COMPLETE\n2026-03-21 05:30:01,364 [INFO] ============================================================\n2026-03-21 05:30:01,364 [INFO] Bookmarks fetched: 60\n2026-03-21 05:30:01,364 [INFO] New (not previously seen): 19\n2026-03-21 05:30:01,364 [INFO] Actionable: 17\n2026-03-21 05:30:01,364 [INFO] Added to ALPHA_STAGING: 17\n2026-03-21 05:30:01,364 [INFO] IDs: ALPHA1773994870 - ALPHA1773994886\n2026-03-21 05:30:01,364 [INFO] State file: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/twitter_bookmarks_state.json\n2026-03-21 05:30:01,364 [INFO] Raw bookmarks: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/twitter_bookmarks_raw.json"
+    },
+    {
+      "name": "twitter_alpha_scraper_accounts",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/twitter_alpha_scraper.py",
+        "--accounts",
+        "--limit",
+        "12",
+        "--days",
+        "30"
+      ],
+      "status": "OK",
+      "returncode": 0,
+      "output_tail": "\ud83d\udd11 Extracting Twitter cookies from Brave Browser...\n   Got 19 cookies\n   19/19 cookies injected\n\ud83d\udd0d Checking Twitter login...\n\u2705 Logged into Twitter\n\n\n\ud83d\udce1 Scraping 1/1 high-signal accounts...\n\n[1/1] @levelsio (HIGHEST)...  Found 0 tweets from @levelsio\n\u26a0\ufe0f  No new high-signal-accounts to save\n\n============================================================\nSCRAPE COMPLETE\n============================================================\nTotal entries saved: 0\nCSV: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv\nJSON: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/twitter_scraper_output/scrape_20260321_053027.json\n============================================================"
+    },
+    {
+      "name": "alpha_auto_approver",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/alpha_auto_approver.py",
+        "--tick",
+        "--max",
+        "80"
+      ],
+      "status": "OK",
+      "returncode": 0,
+      "output_tail": "alpha_auto_approver: scanned=12997 approved=0 skipped=12997"
+    },
+    {
+      "name": "alpha_auto_processor",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/alpha_auto_processor.py",
+        "--process-new",
+        "--batch-size",
+        "120"
+      ],
+      "status": "OK",
+      "returncode": 0,
+      "output_tail": "3994874] ARCHIVED (dedup): Duplicate content: Myocarditis was quite rare (27 per million), but: there were...\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994875] ARCHIVED (dedup): Duplicate content: I'm not the only one doing this. \n\n- karpathy\n\nbest thought ...\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994876] ARCHIVED (dedup): Duplicate content: I genuinely don't understand why more people don't get into ...\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994877] ARCHIVE (score=22): Score 22 below routing threshold\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994878] ARCHIVED (dedup): Duplicate content: During the iteration process, we also realized that the mode...\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994879] ARCHIVE (score=22): Score 22 below routing threshold\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994880] ARCHIVED (dedup): Duplicate content: Biology is going to deliver most of the returns in the stock...\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994881] ARCHIVED (dedup): Duplicate content: the smartest aeo/geo companies are using perplexity\u2019s search...\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994882] BOLSTER (score=40): GITHUB_AUTOMATION_TOOLS_CATALOG.md\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994883] BOLSTER (score=22): GITHUB_AUTOMATION_TOOLS_CATALOG.md\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994884] BOLSTER (score=34): GITHUB_AUTOMATION_TOOLS_CATALOG.md\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994885] ARCHIVE (score=34): Score 34 below routing threshold\n[2026-03-21T05:30:28-04:00]   [ALPHA1773994886] ARCHIVE (score=22): Score 22 below routing threshold\n[2026-03-21T05:30:28-04:00] CSV updated and last-run marker saved\n[2026-03-21T05:30:28-04:00] === ALPHA AUTO-PROCESSOR REPORT (LIVE) ===\n\nTotal rows in CSV:  12997\nEntries processed:  55\nEntries scored:     55\n\nRouting breakdown:\n  NEW VENTURE:      1\n  BOLSTER EXISTING: 3\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         51\n    (of which deduped: 9)\n[2026-03-21T05:30:28-04:00] === Alpha Auto-Processor complete ==="
+    },
+    {
+      "name": "alpha_to_ops",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/alpha_to_ops.py",
+        "--process"
+      ],
+      "status": "OK",
+      "returncode": 0,
+      "output_tail": "o_ops/playbooks/PLAYBOOK_ALPHA1773994654.md (priority: LOW)\n  [ALPHA1773994655] SEO_GEO_ASO -> AUTOMATIONS/auto_ops/playbooks/PLAYBOOK_ALPHA1773994655.md (priority: LOW)\n  [ALPHA1773994656] MONETIZATION -> AUTOMATIONS/auto_ops/monetization/PLAN_ALPHA1773994656.md (priority: MEDIUM)\n  [ALPHA1773994657] MONETIZATION -> AUTOMATIONS/auto_ops/monetization/PLAN_ALPHA1773994657.md (priority: LOW)\n  [ALPHA1773994658] MONETIZATION -> AUTOMATIONS/auto_ops/monetization/PLAN_ALPHA1773994658.md (priority: MEDIUM)\n  [ALPHA1773994659] MONETIZATION -> AUTOMATIONS/auto_ops/monetization/PLAN_ALPHA1773994659.md (priority: LOW)\n  [ALPHA1773994660] TOOL_ALPHA -> AUTOMATIONS/auto_ops/tool_evals/TOOL_ALPHA1773994660.md (priority: MEDIUM)\n  [ALPHA1773994661] TOOL_ALPHA -> AUTOMATIONS/auto_ops/tool_evals/TOOL_ALPHA1773994661.md (priority: LOW)\n  [ALPHA1773994662] GENERAL -> AUTOMATIONS/auto_ops/playbooks/PLAYBOOK_ALPHA1773994662.md (priority: LOW)\n  [ALPHA1773994663] GROWTH_HACK -> AUTOMATIONS/auto_ops/playbooks/PLAYBOOK_ALPHA1773994663.md (priority: LOW)\n  [ALPHA1773994664] TOOL_ALPHA -> AUTOMATIONS/auto_ops/tool_evals/TOOL_ALPHA1773994664.md (priority: LOW)\n  [ALPHA1773994665] GENERAL -> AUTOMATIONS/auto_ops/playbooks/PLAYBOOK_ALPHA1773994665.md (priority: LOW)\n  [ALPHA1773994666] GENERAL -> AUTOMATIONS/auto_ops/playbooks/PLAYBOOK_ALPHA1773994666.md (priority: MEDIUM)\n  [ALPHA1773994667] GENERAL -> AUTOMATIONS/auto_ops/playbooks/PLAYBOOK_ALPHA1773994667.md (priority: MEDIUM)\n  [ALPHA1773994668] GENERAL -> AUTOMATIONS/auto_ops/playbooks/PLAYBOOK_ALPHA1773994668.md (priority: LOW)\n  [ALPHA1773994669] TOOL_ALPHA -> AUTOMATIONS/auto_ops/tool_evals/TOOL_ALPHA1773994669.md (priority: LOW)\n\nupdated 32 alpha entries with ops_generated=TRUE\n\n=== SUMMARY ===\ntotal processed: 32\n\nby category:\n  GENERAL: 19\n  MONETIZATION: 5\n  TOOL_ALPHA: 4\n  GROWTH_HACK: 3\n  SEO_GEO_ASO: 1\n\nby priority:\n  MEDIUM: 8\n  LOW: 24\n\nops files written to: AUTOMATIONS/auto_ops/\ntracker updated at: LEDGER/AUTO_OPS_TRACKER.csv"
+    },
+    {
+      "name": "app_factory_command_center",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/app_factory_command_center.py",
+        "--refresh",
+        "--top",
+        "8",
+        "--limit",
+        "40"
+      ],
+      "status": "OK",
+      "returncode": 0,
+      "output_tail": "App factory queue refreshed at 2026-03-21 05:30:29\nCandidates: 2573\nDecisions: {'ITERATE_EXISTING_NOW': 50, 'BUILD_NEW_NOW': 41, 'SPEC_AND_TEST': 86, 'PARK': 2389, 'VALIDATE_FIRST': 7}\nTop priorities:\n   1. Review prompt timing hack: +0.8 stars by delaying review request to value moment | ITERATE_EXISTING_NOW | score=125 | target=PrayerLock / Scripture Streak AI layer\n   2. Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   3. Minimum Viable Day concept: 307 upvotes, viral productivity framework | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   4. NEW BLUE OCEAN: NoFap/sobriety streak tracker. r/NoFap = 1.24M subs, 0 paid dedicated streak apps. Quittr app had privacy scandal (exposed user data) = MASSIVE trust gap. Privacy-first paid app at $1.99-2.99 directly addresses this. | ITERATE_EXISTING_NOW | score=121 | target=Streakr\n   5. Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard paywall k | BUILD_NEW_NOW | score=118 | target=NEW_BUILD\n   6. running_streak: r/running = 4.19M subs. iTunes scan confirms ZERO dedicated paid running-streak app. Only Streaks ($5.99 generic) appears. This is the largest unserved fitness niche found to date. Build dedicated RunningStreak at $1.99 launch. | ITERATE_EXISTING_NOW | score=112 | target=Steplock\n   7. Fitness streak app cluster: yoga (3.31M), hiit (4.72M), pushup (4.72M), plank (4.72M), cycling (1.45M). All 5 niches = 0 dedicated paid apps on iTunes. One template, 5 apps. Sequential builds at $1.99 each. | ITERATE_EXISTING_NOW | score=112 | target=Streakr\n   8. BLUE OCEAN APP: DEEP WORK STREAK \u2014 Daily Deep Work / Focus Block Completion Streak | ITERATE_EXISTING_NOW | score=109 | target=Vault"
+    }
   ],
-  "cluster_notes": {
-    "fitness_cluster": "5 apps from shared template. Each differentiated: yoga=styles+science, pushup=programs+rep tracking, plank=built-in timer+hold tracking, hiit=format library+calorie est, cycling=km/mi toggle+ride types",
-    "plank_differentiator": "PlankStreak has unique built-in timer tab — tap Start, plank, tap Pause, log directly from timer result. Highest conversion feature.",
-    "cycling_differentiator": "km/mi toggle is stored in state — persists across sessions. Stores km internally, converts on display."
-  },
-  "next_priorities": [
-    "Post SoberStreak to r/NoFap — content ready at CONTENT/social/posting_queue/reddit_launch_posts_20260319.txt",
-    "Post RunningStreak to r/running and r/C25K — same file",
-    "Post 3 tweets + thread from soberstreak_launch_20260319.txt",
-    "Next cluster: mindfulness apps (breathwork/meditation/gratitude/journaling/sleep) — 5 apps from same template",
-    "Switch PrayerLock IAP to weekly $0.99 + 3-day trial (score 118)",
-    "Total live apps now: 54 (7 new this cycle)"
+  "top_queue": [
+    {
+      "rank": 1,
+      "score": 125,
+      "decision": "ITERATE_EXISTING_NOW",
+      "target": "PrayerLock / Scripture Streak AI layer",
+      "title": "Review prompt timing hack: +0.8 stars by delaying review request to value moment"
+    },
+    {
+      "rank": 2,
+      "score": 122,
+      "decision": "ITERATE_EXISTING_NOW",
+      "target": "Streakr",
+      "title": "Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months"
+    },
+    {
+      "rank": 3,
+      "score": 122,
+      "decision": "ITERATE_EXISTING_NOW",
+      "target": "Streakr",
+      "title": "Minimum Viable Day concept: 307 upvotes, viral productivity framework"
+    },
+    {
+      "rank": 4,
+      "score": 121,
+      "decision": "ITERATE_EXISTING_NOW",
+      "target": "Streakr",
+      "title": "NEW BLUE OCEAN: NoFap/sobriety streak tracker. r/NoFap = 1.24M subs, 0 paid dedicated streak apps. Quittr app had privacy scandal (exposed user data) = MASSIVE trust gap. Privacy-first paid app at $1.99-2.99 directly addresses this."
+    },
+    {
+      "rank": 5,
+      "score": 118,
+      "decision": "BUILD_NEW_NOW",
+      "target": "NEW_BUILD",
+      "title": "Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard paywall k"
+    },
+    {
+      "rank": 6,
+      "score": 112,
+      "decision": "ITERATE_EXISTING_NOW",
+      "target": "Steplock",
+      "title": "running_streak: r/running = 4.19M subs. iTunes scan confirms ZERO dedicated paid running-streak app. Only Streaks ($5.99 generic) appears. This is the largest unserved fitness niche found to date. Build dedicated RunningStreak at $1.99 launch."
+    },
+    {
+      "rank": 7,
+      "score": 112,
+      "decision": "ITERATE_EXISTING_NOW",
+      "target": "Streakr",
+      "title": "Fitness streak app cluster: yoga (3.31M), hiit (4.72M), pushup (4.72M), plank (4.72M), cycling (1.45M). All 5 niches = 0 dedicated paid apps on iTunes. One template, 5 apps. Sequential builds at $1.99 each."
+    },
+    {
+      "rank": 8,
+      "score": 109,
+      "decision": "ITERATE_EXISTING_NOW",
+      "target": "Vault",
+      "title": "BLUE OCEAN APP: DEEP WORK STREAK \u2014 Daily Deep Work / Focus Block Completion Streak"
+    }
   ]
 }

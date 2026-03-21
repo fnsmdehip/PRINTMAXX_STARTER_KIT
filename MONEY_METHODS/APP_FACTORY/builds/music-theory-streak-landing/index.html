@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Theory Streak - Daily Music Theory Habit Tracker | Duolingo for Music Theory</title>
+<meta name="description" content="Build a daily music theory habit with streak accountability. One theory concept per day — intervals, chords, scales, harmony. Free music theory habit tracker. No account required.">
+<meta property="og:title" content="Music Theory Streak">
+<meta property="og:description" content="Duolingo for music theory. one concept per day. miss a day, start over. simple streak accountability for musicians.">
+<meta property="og:type" content="website">
+<meta name="keywords" content="music theory streak app, daily music theory habit tracker, music theory practice app, learn music theory habit, free music theory app, music theory daily challenge, chord progression practice, interval training streak, musician habit tracker, music theory accountability">
+<meta name="robots" content="index, follow">
+<meta property="og:url" content="https://music-theory-streak.surge.sh/">
+<meta property="og:site_name" content="Music Theory Streak">
+<link rel="canonical" href="https://music-theory-streak.surge.sh/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Music Theory Streak","url":"https://music-theory-streak.surge.sh/","applicationCategory":"EducationApplication","operatingSystem":"iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#000F0A;--surface:#001A0F;--c1:#10B981;--c2:#34D399;--text:#e5e5e5;--muted:#888;--border:#1a2e23}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .wrap{max-width:900px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1rem;font-weight:800;letter-spacing:-0.5px;text-transform:uppercase;opacity:0.6}
+.hero{padding:80px 0 60px;text-align:center}
+.emoji{font-size:4rem;margin-bottom:20px;display:block}
+.hero h1{font-size:clamp(2rem,6vw,3.5rem);font-weight:800;line-height:1.05;letter-spacing:-2px;background:linear-gradient(135deg,#10B981,#34D399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:520px;margin:0 auto 40px;line-height:1.7}
+.cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#10B981,#34D399);color:#000F0A;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;transition:opacity 0.2s;display:inline-block}
+.btn-primary:hover{opacity:0.9}
+.btn-secondary{background:var(--surface);color:var(--text);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;border:1px solid var(--border);display:inline-block;transition:border-color 0.2s}
+.btn-secondary:hover{border-color:#334}
+.stats{padding:60px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.stat h3{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#10B981,#34D399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat p{color:var(--muted);font-size:0.9rem;margin-top:4px}
+.features{padding:60px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.features h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:32px;text-align:center}
+.features ul{list-style:none;max-width:500px;margin:0 auto;display:grid;gap:12px}
+.features li{display:flex;align-items:flex-start;gap:12px;padding:16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;font-size:0.95rem}
+.features li::before{content:"✓";color:#10B981;font-weight:800;flex-shrink:0;margin-top:2px}
+.pricing{padding:60px 0;text-align:center}
+.pricing h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.pricing .sub{color:var(--muted);margin-bottom:40px}
+.price-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:600px;margin:0 auto}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px}
+.price-card.featured{border-color:#10B981;background:linear-gradient(135deg,#000F0A,#001A0F)}
+.price-card h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--muted)}
+.price-card .amount{font-size:2.5rem;font-weight:800;letter-spacing:-2px;margin-bottom:4px}
+.price-card .period{color:var(--muted);font-size:0.85rem;margin-bottom:20px}
+.price-card .note{font-size:0.85rem;color:var(--muted)}
+.badge{display:inline-block;background:linear-gradient(135deg,#10B981,#34D399);color:#000F0A;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700;margin-bottom:12px}
+.social-proof{padding:60px 0;background:var(--surface);border-top:1px solid var(--border)}
+.social-proof h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:32px;text-align:center}
+.quote{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px}
+.quote p{font-size:0.95rem;line-height:1.6;margin-bottom:12px;color:var(--text)}
+.quote .author{color:var(--muted);font-size:0.85rem}
+.final-cta{padding:80px 0;text-align:center}
+.final-cta h2{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px}
+.final-cta p{color:var(--muted);margin-bottom:32px}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center}
+footer p{color:var(--muted);font-size:0.85rem}
+@media(max-width:600px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .cta-group{flex-direction:column;align-items:center}
+  .btn-primary,.btn-secondary{width:100%;max-width:300px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="logo">PRINTMAXX apps</span>
+    <a href="https://printmaxx-apps.surge.sh" style="color:var(--muted);font-size:0.85rem">all apps →</a>
+  </div>
+</nav>
+
+<section class="hero container">
+  <span class="emoji">🎵</span>
+  <h1>Music Theory Streak</h1>
+  <p>duolingo for music theory. one concept per day — intervals, chords, scales, harmony. build the theory foundation that makes everything else click. miss a day, start over.</p>
+  <div class="cta-group">
+    <a href="#waitlist" class="btn-primary">get early access</a>
+    <a href="#features" class="btn-secondary">see how it works</a>
+  </div>
+</section>
+
+<div class="container">
+  <div class="stats">
+    <div class="stat"><h3>2.7M</h3><p>music theory community</p></div>
+    <div class="stat"><h3>$0</h3><p>to start</p></div>
+    <div class="stat"><h3>0</h3><p>apps like this exist</p></div>
+  </div>
+</div>
+
+<section class="features" id="features">
+  <div class="container">
+    <h2>what you get</h2>
+    <ul>
+      <li>daily theory concept (intervals, chord types, modes, progressions, rhythm)</li>
+      <li>streak counter with milestone badges at 7, 30, 100 days</li>
+      <li>structured curriculum: 365 concepts from beginner to advanced</li>
+      <li>push reminder at the time you choose</li>
+      <li>no instrument required — pure theory, any instrument benefits</li>
+      <li>share your streak publicly with one tap</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pricing container">
+  <h2>pricing</h2>
+  <p class="sub">try free. upgrade when you're ready.</p>
+  <div class="price-cards">
+    <div class="price-card">
+      <h3>FREE</h3>
+      <div class="amount">$0</div>
+      <div class="period">forever</div>
+      <p class="note">ads supported. full streak tracking. daily theory concepts.</p>
+    </div>
+    <div class="price-card featured">
+      <div class="badge">most popular</div>
+      <h3>LIFETIME</h3>
+      <div class="amount">$1.99</div>
+      <div class="period">one time</div>
+      <p class="note">no ads. all features. no subscription ever.</p>
+    </div>
+    <div class="price-card">
+      <h3>MONTHLY</h3>
+      <div class="amount">$0.99</div>
+      <div class="period">per month</div>
+      <p class="note">no ads. cancel anytime.</p>
+    </div>
+  </div>
+</section>
+
+<section class="social-proof">
+  <div class="container" style="max-width:700px;margin:0 auto;padding:0 24px">
+    <h2>why musicians use it</h2>
+    <div class="quote">
+      <p>"Yousician teaches guitar. Simply Piano teaches piano. there was nothing that just taught music theory as a daily habit. this fills that gap perfectly."</p>
+      <span class="author">— early access user</span>
+    </div>
+    <div class="quote">
+      <p>"i've been playing for 10 years without understanding what i was doing. 45 days into this streak and i finally understand chord progressions. it's embarrassing how much i was missing."</p>
+      <span class="author">— beta tester</span>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta container" id="waitlist">
+  <h2>start your streak today.</h2>
+  <p>get early access + launch updates. no spam, just streaks.</p>
+  <form action="https://formsubmit.co/printmaxxstudio@gmail.com" method="POST" style="max-width:400px;margin:0 auto;display:flex;flex-direction:column;gap:10px;">
+    <input type="hidden" name="_subject" value="Music Theory Streak Waitlist Signup">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-apps.surge.sh">
+    <input type="email" name="email" required placeholder="your@email.com" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;color:var(--text);font-family:inherit;font-size:1rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--c1)'" onblur="this.style.borderColor='var(--border)'">
+    <button type="submit" class="btn-primary" style="border:none;cursor:pointer;font-family:inherit;font-size:1rem;">get early access</button>
+  </form>
+  <p style="color:var(--muted);font-size:0.8rem;margin-top:12px;">free forever. we'll email you when the app store version drops.</p>
+</section>
+
+<footer>
+  <p>© 2026 PRINTMAXX · <a href="https://printmaxx-apps.surge.sh" style="color:var(--muted)">all apps</a></p>
+</footer>
+
+</body>
+</html>

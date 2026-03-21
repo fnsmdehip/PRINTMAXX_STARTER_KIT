@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Prompt Logger — tracks every user prompt across sessions.
 When conversations compact, agents search old prompts to audit completion.

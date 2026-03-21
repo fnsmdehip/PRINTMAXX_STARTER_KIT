@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Alpha Validator - Live Web Validation for Alpha Screening
 

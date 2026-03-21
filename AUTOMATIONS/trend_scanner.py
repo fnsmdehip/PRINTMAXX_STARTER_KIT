@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Niche Trend Scanner
 Monitors Google Trends, Gumroad discover, and App Store top charts for PrintMaxx niche keywords.

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Clip Automation Pipeline — Download → Transcribe → Detect Viral → Auto-Clip
 

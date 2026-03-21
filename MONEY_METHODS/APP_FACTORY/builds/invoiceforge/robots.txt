@@ -21,3 +21,5 @@ Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
+Sitemap: https://invoiceforge.surge.sh/sitemap.xml

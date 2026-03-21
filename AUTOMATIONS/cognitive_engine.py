@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Cognitive Engine — Hybrid prompt intelligence system.
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Conversation Logger
 Extracts user prompts and assistant responses from Claude Code session transcripts

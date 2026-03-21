@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 nationwide_scraper.py - Mass nationwide local business lead scraper
 

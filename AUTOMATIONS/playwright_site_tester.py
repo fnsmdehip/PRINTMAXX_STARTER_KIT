@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Playwright Site Tester (async/concurrent)
 Tests all deployed surge.sh sites for uptime, content, and errors.

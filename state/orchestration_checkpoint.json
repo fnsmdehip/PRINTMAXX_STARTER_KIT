@@ -1,5 +1,5 @@
 {
-  "ts": "2026-03-20T10:00:07.935+00:00",
+  "ts": "2026-03-21T10:00:05.036+00:00",
   "meta": {
     "mode": "dag",
     "resume": false
@@ -12,7 +12,7 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 148,
+      "duration_ms": 197,
       "result": {
         "status": "failed",
         "output_tail": "ERROR: playwright not installed. Run: pip3 install playwright && python3 -m playwright install chromium\n"
@@ -25,7 +25,7 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 47,
+      "duration_ms": 79,
       "result": {
         "status": "failed",
         "output_tail": "ERROR: requests not installed. Run: pip3 install requests\n"
@@ -38,10 +38,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 49,
+      "duration_ms": 78,
       "result": {
         "status": "failed",
-        "output_tail": "Traceback (most recent call last):\n  File \"/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hn_ph_scraper.py\", line 17, in <module>\n    import requests\nModuleNotFoundError: No module named 'requests'\n"
+        "output_tail": "Traceback (most recent call last):\n  File \"/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hn_ph_scraper.py\", line 19, in <module>\n    import requests\nModuleNotFoundError: No module named 'requests'\n"
       }
     },
     "merge_results": {
@@ -60,7 +60,7 @@
         "twitter": "failed",
         "reddit": "failed",
         "hn": "failed",
-        "merged_at": "2026-03-20T06:00:02.511253",
+        "merged_at": "2026-03-21T06:00:01.144253",
         "scrapers_ok": 0,
         "scrapers_total": 3
       }
@@ -74,10 +74,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 4027,
+      "duration_ms": 2268,
       "result": {
         "status": "ok",
-        "output_tail": "\n\nTotal rows in CSV:  14006\nEntries processed:  100\nEntries scored:     100\n\nRouting breakdown:\n  NEW VENTURE:      1\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         99\n    (of which deduped: 18)\n[2026-03-20T06:00:06-04:00] === Alpha Auto-Processor complete ===\n"
+        "output_tail": "===\n\nTotal rows in CSV:  13078\nEntries processed:  55\nEntries scored:     55\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         55\n    (of which deduped: 0)\n[2026-03-21T06:00:03-04:00] === Alpha Auto-Processor complete ===\n"
       }
     },
     "intelligence_router": {
@@ -89,7 +89,7 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 124,
+      "duration_ms": 121,
       "result": {
         "status": "failed",
         "output_tail": "usage: intelligence_router.py [-h] [--venture VENTURE] [--task TASK] [--json]\n                              [--brief] [--full] [--stats] [--catalog]\n                              [--list-ventures] [--alpha-count ALPHA_COUNT]\nintelligence_router.py: error: unrecognized arguments: --refresh\n"
@@ -104,10 +104,10 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 1042,
+      "duration_ms": 1121,
       "result": {
         "status": "ok",
-        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[06:00:07] [RANKER] [INFO] Wrote 4478 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[06:00:07] [RANKER] [INFO] Full ranking cycle complete\n[06:00:07] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
+        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[06:00:04] [RANKER] [INFO] Wrote 5277 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[06:00:04] [RANKER] [INFO] Full ranking cycle complete\n[06:00:05] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
       }
     }
   }

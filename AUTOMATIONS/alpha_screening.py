@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Alpha Screening System - Institutional Grade
 Rigorous multi-factor scoring with decay modeling and cross-validation

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Reddit Deep Scraper - Quant-level alpha extraction from ALL 41 subreddits
 Uses Reddit's JSON API (no auth, no browser, no anti-bot issues).

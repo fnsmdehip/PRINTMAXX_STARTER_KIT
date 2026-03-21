@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-20 12:15:51",
+  "generated_at": "2026-03-21 10:07:49",
   "sources": {
-    "alpha_staging_candidates": 2808,
-    "app_factory_methods_candidates": 5,
+    "alpha_staging_candidates": 2761,
+    "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 51
+    "existing_specs_detected": 50
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 2772,
+    "total_candidates": 2768,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 61,
-      "BUILD_NEW_NOW": 54,
-      "SPEC_AND_TEST": 137,
-      "PARK": 2512,
-      "VALIDATE_FIRST": 8
+      "ITERATE_EXISTING_NOW": 55,
+      "BUILD_NEW_NOW": 41,
+      "SPEC_AND_TEST": 98,
+      "PARK": 2567,
+      "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
-      "faith": 75,
-      "habits": 130,
-      "ai_utility": 2023,
-      "fitness": 130,
-      "focus": 312,
-      "sleep": 88,
-      "meal": 14
+      "faith": 77,
+      "habits": 175,
+      "ai_utility": 1989,
+      "fitness": 131,
+      "focus": 300,
+      "sleep": 84,
+      "meal": 12
     }
   },
   "queue": [
@@ -834,68 +834,6 @@
       "rank": 13
     },
     {
-      "candidate_id": "ALPHA_OPP056_POE_BOT_REVENUE",
-      "title": "Poe creator revenue sharing \u2014 only major AI platform currently paying creators per-message. Build niche bots: ColdEmailWriter ($0.10/query), PrayerPlanner (free + cross-promo to PrayerLock), StreakCoach, SolopreneurCFO. Use existing PRINTMAXX alpha database + Claude Code skills as bot backend. $0 startup cost. Bots earn passively from Poe user base \u2014 no own audience needed. GPT Store pays $0 to creators; Claude.ai pays $0 \u2014 Poe is unique.",
-      "source": "swarm_opportunity_scanner",
-      "source_url": "https://poe.com/developer",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "IMMEDIATE",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "UNVERIFIED",
-      "applicable_niches": "ALL",
-      "applicable_methods": "DIGITAL_PRODUCTS|APP_FACTORY",
-      "evidence": "Build ColdEmailWriter bot on Poe first (highest WTP). Then PrayerPlanner (cross-promo PrayerLock). 2-3 hours per bot. Poe handles hosting/billing/users. Each bot doubles as lead gen \u2014 links to paid products. Synergy: PrayerPlanner bot -> PrayerLock downloads -> App Store revenue.",
-      "compliance_notes": "Platform terms compliant. Per-message revenue model verified.",
-      "reviewer_notes": "AUTO-APPROVED 2026-03-20 (high ROI)",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA_OPP056_POE_BOT_REVENUE",
-        "source": "swarm_opportunity_scanner",
-        "source_url": "https://poe.com/developer",
-        "category": "MONETIZATION",
-        "tactic": "Poe creator revenue sharing \u2014 only major AI platform currently paying creators per-message. Build niche bots: ColdEmailWriter ($0.10/query), PrayerPlanner (free + cross-promo to PrayerLock), StreakCoach, SolopreneurCFO. Use existing PRINTMAXX alpha database + Claude Code skills as bot backend. $0 startup cost. Bots earn passively from Poe user base \u2014 no own audience needed. GPT Store pays $0 to creators; Claude.ai pays $0 \u2014 Poe is unique.",
-        "roi_potential": "HIGH",
-        "priority": "IMMEDIATE",
-        "status": "APPROVED",
-        "applicable_methods": "DIGITAL_PRODUCTS|APP_FACTORY",
-        "applicable_niches": "ALL",
-        "synergy_score": "75",
-        "cross_sell_products": "PrayerLock app|Cold email product|Streak apps",
-        "implementation_priority": "IMMEDIATE",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "UNVERIFIED",
-        "extracted_method": "Build ColdEmailWriter bot on Poe first (highest WTP). Then PrayerPlanner (cross-promo PrayerLock). 2-3 hours per bot. Poe handles hosting/billing/users. Each bot doubles as lead gen \u2014 links to paid products. Synergy: PrayerPlanner bot -> PrayerLock downloads -> App Store revenue.",
-        "compliance_notes": "Platform terms compliant. Per-message revenue model verified.",
-        "reviewer_notes": "AUTO-APPROVED 2026-03-20 (high ROI)",
-        "created_at": "2026-03-20",
-        "ops_generated": "FALSE",
-        "quality_issues": "",
-        "date_added": "2026-03-20"
-      },
-      "score": 100,
-      "cluster": "ai_utility",
-      "market_room": "HIGH",
-      "existing_app_target": "NEW_BUILD",
-      "execution_lane": "NEW_BUILD",
-      "build_decision": "BUILD_NEW_NOW",
-      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
-      "paywall_variant": "after the first clear output, never before time-to-value",
-      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
-      "primary_monetization": "subscription with fast time-to-value and annual anchor",
-      "secondary_monetization": "paid upfront for privacy-first local tools; avoid ads unless usage is massive",
-      "price_test": "$6.99 to $9.99/mo and $39.99 to $59.99/yr",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 14
-    },
-    {
       "candidate_id": "ALPHA100456",
       "title": "Faith app niche: 23 free competitors, 0 paid tier. Weekly $0.99 + 3-day trial = only paid option in entire category. Blue ocean paywall.",
       "source": "competitive_intel_cycle_041",
@@ -955,69 +893,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 15
-    },
-    {
-      "candidate_id": "ALPHA_HN_107806",
-      "title": "[HN 7pts] Fitness MCP server. MCP connector for fitness data. Relevant to fitness streak apps. Could integrate with WalkToUnlock and fitness app factory builds.",
-      "source": "HackerNews",
-      "source_url": "https://getfast.ai/claude-connector",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "MEDIUM",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "N/A",
-      "applicable_niches": "fitness|mcp|streak_apps",
-      "applicable_methods": "APP_FACTORY",
-      "evidence": "Fitness MCP server. Bridges Claude to fitness data. Integration angle: connect to our fitness streak apps for AI-powered workout coaching. Cross-sell with existing fitness app portfolio.",
-      "compliance_notes": "",
-      "reviewer_notes": "Score 75. Low HN engagement (7pts) but niche-relevant. MCP for fitness = direct integration with our streak apps. Cross-sell opportunity with WalkToUnlock.",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA_HN_107806",
-        "source": "HackerNews",
-        "source_url": "https://getfast.ai/claude-connector",
-        "category": "TOOL_ALPHA",
-        "tactic": "[HN 7pts] Fitness MCP server. MCP connector for fitness data. Relevant to fitness streak apps. Could integrate with WalkToUnlock and fitness app factory builds.",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "APPROVED",
-        "applicable_methods": "APP_FACTORY",
-        "applicable_niches": "fitness|mcp|streak_apps",
-        "synergy_score": "75",
-        "cross_sell_products": "WalkToUnlock|fitness-streak apps",
-        "implementation_priority": "MEDIUM",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "N/A",
-        "extracted_method": "Fitness MCP server. Bridges Claude to fitness data. Integration angle: connect to our fitness streak apps for AI-powered workout coaching. Cross-sell with existing fitness app portfolio.",
-        "compliance_notes": "",
-        "reviewer_notes": "Score 75. Low HN engagement (7pts) but niche-relevant. MCP for fitness = direct integration with our streak apps. Cross-sell opportunity with WalkToUnlock.",
-        "created_at": "2026-03-19T08:48:43",
-        "ops_generated": "FALSE",
-        "quality_issues": "",
-        "date_added": "2026-03-19"
-      },
-      "score": 98,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 16
+      "rank": 14
     },
     {
       "candidate_id": "ALPHA103105",
@@ -1079,7 +955,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 17
+      "rank": 15
     },
     {
       "candidate_id": "ALPHA15286",
@@ -1122,7 +998,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 18
+      "rank": 16
     },
     {
       "candidate_id": "ALPHA544",
@@ -1184,7 +1060,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 19
+      "rank": 17
     },
     {
       "candidate_id": "ALPHA_APPSTORE_PAID_HABIT_GAP",
@@ -1246,7 +1122,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 20
+      "rank": 18
     },
     {
       "candidate_id": "RF_001",
@@ -1315,7 +1191,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 21
+      "rank": 19
     },
     {
       "candidate_id": "ALPHA_CI059_STUDY_STREAK",
@@ -1377,7 +1253,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 20
     },
     {
       "candidate_id": "ALPHA_CI_51_LTD_001",
@@ -1439,69 +1315,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 23
-    },
-    {
-      "candidate_id": "ALPHA_CI85_STREAKS_PRICING",
-      "title": "Price niche streak apps at $2.99 (50% below Streaks $5.99). H&F gap at $1.99-$3.99 confirmed. 53 free apps vs 4 paid = massive whitespace.",
-      "source": "COMPETITIVE_INTEL_cycle_085",
-      "source_url": "https://apps.apple.com/app/streaks",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "NOW",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "N/A",
-      "applicable_niches": "running, yoga, hiit, pushup, cycling, fasting",
-      "applicable_methods": "APP_FACTORY",
-      "evidence": "Price niche streak apps at $2.99 (50% below Streaks $5.99). H&F gap at $1.99-$3.99 confirmed. 53 free apps vs 4 paid = massive whitespace.",
-      "compliance_notes": "",
-      "reviewer_notes": "AUTO-APPROVED 2026-03-20 (high ROI)",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA_CI85_STREAKS_PRICING",
-        "source": "COMPETITIVE_INTEL_cycle_085",
-        "source_url": "https://apps.apple.com/app/streaks",
-        "category": "APP_PRICING_STRATEGY",
-        "tactic": "Price niche streak apps at $2.99 (50% below Streaks $5.99). H&F gap at $1.99-$3.99 confirmed. 53 free apps vs 4 paid = massive whitespace.",
-        "roi_potential": "HIGH",
-        "priority": "NOW",
-        "status": "APPROVED",
-        "applicable_methods": "APP_FACTORY",
-        "applicable_niches": "running, yoga, hiit, pushup, cycling, fasting",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "N/A",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "AUTO-APPROVED 2026-03-20 (high ROI)",
-        "created_at": "2026-03-20T14:23:52.014070+00:00",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 93,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 24
+      "rank": 21
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -1563,7 +1377,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 22
     },
     {
       "candidate_id": "ALPHA25039",
@@ -1625,69 +1439,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 26
-    },
-    {
-      "candidate_id": "ALPHA_HN_107805",
-      "title": "[HN 161pts] Cook: CLI for orchestrating Claude Code. Direct competitor/complement to our Ralph loops. Study for improvements.",
-      "source": "HackerNews (top)",
-      "source_url": "https://rjcorwin.github.io/cook/",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "HIGH",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "N/A",
-      "applicable_niches": "agent_infrastructure|cli_tools",
-      "applicable_methods": "RESEARCH",
-      "evidence": "Cook CLI orchestrates Claude Code sessions. Compare to our Ralph loops. Key features to study: session management, task routing, context handling. Potential improvement source for our autonomous pipeline.",
-      "compliance_notes": "",
-      "reviewer_notes": "Score 78. Direct competitor to Ralph loops. Study their session management and task routing patterns. 161 HN pts = community validated. Extract improvements for our agent infra.",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA_HN_107805",
-        "source": "HackerNews (top)",
-        "source_url": "https://rjcorwin.github.io/cook/",
-        "category": "TOOL_ALPHA",
-        "tactic": "[HN 161pts] Cook: CLI for orchestrating Claude Code. Direct competitor/complement to our Ralph loops. Study for improvements.",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "APPROVED",
-        "applicable_methods": "RESEARCH",
-        "applicable_niches": "agent_infrastructure|cli_tools",
-        "synergy_score": "78",
-        "cross_sell_products": "",
-        "implementation_priority": "HIGH",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "N/A",
-        "extracted_method": "Cook CLI orchestrates Claude Code sessions. Compare to our Ralph loops. Key features to study: session management, task routing, context handling. Potential improvement source for our autonomous pipeline.",
-        "compliance_notes": "",
-        "reviewer_notes": "Score 78. Direct competitor to Ralph loops. Study their session management and task routing patterns. 161 HN pts = community validated. Extract improvements for our agent infra.",
-        "created_at": "2026-03-19T08:48:43",
-        "ops_generated": "FALSE",
-        "quality_issues": "",
-        "date_added": "2026-03-19"
-      },
-      "score": 90,
-      "cluster": "ai_utility",
-      "market_room": "HIGH",
-      "existing_app_target": "NEW_BUILD",
-      "execution_lane": "NEW_BUILD",
-      "build_decision": "BUILD_NEW_NOW",
-      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
-      "paywall_variant": "after the first clear output, never before time-to-value",
-      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
-      "primary_monetization": "subscription with fast time-to-value and annual anchor",
-      "secondary_monetization": "paid upfront for privacy-first local tools; avoid ads unless usage is massive",
-      "price_test": "$6.99 to $9.99/mo and $39.99 to $59.99/yr",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 27
+      "rank": 23
     },
     {
       "candidate_id": "ALPHA538",
@@ -1749,7 +1501,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 24
     },
     {
       "candidate_id": "ALPHA558",
@@ -1811,7 +1563,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA102377",
@@ -1873,7 +1625,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA102378",
@@ -1935,7 +1687,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA103204",
@@ -1997,7 +1749,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA102381",
@@ -2059,7 +1811,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA103206",
@@ -2121,7 +1873,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA102383",
@@ -2183,7 +1935,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA102384",
@@ -2245,7 +1997,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA98946",
@@ -2307,7 +2059,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA229",
@@ -2369,7 +2121,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA555",
@@ -2431,7 +2183,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 39
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA228",
@@ -2485,6 +2237,254 @@
       "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
       "primary_monetization": "subscription with 7-day trial and annual-first pricing",
       "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 36
+    },
+    {
+      "candidate_id": "ALPHA552",
+      "title": "PWA store listing: Google Play accepts via Bubblewrap/PWABuilder. Apple needs native wrapper. PWABuilder packages for both stores.",
+      "source": "Mobiloud / PWABuilder",
+      "source_url": "https://www.mobiloud.com/blog/publishing-pwa-app-store",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "HIGHEST",
+      "status": "ROUTED_TO_VENTURE",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "TRUE",
+      "applicable_niches": "tech",
+      "applicable_methods": "APP_FACTORY",
+      "evidence": "PWABuilder to package PWA for both stores. Google Play = easy. iOS = wrapper needed.",
+      "compliance_notes": "",
+      "reviewer_notes": "[CONTENT_GENERATED: 2026-03-05] Key infra intel. PrayerLock PWA CAN get on app stores. PWABuilder = fastest path. [BOLSTERED: 2026-02-28, VENTURE_ALPHA6603_app_factory.md] [ROUTED: 2026-03-07 to APP_FACTORY by gap_hunter]",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA552.md",
+      "raw": {
+        "alpha_id": "ALPHA552",
+        "source": "Mobiloud / PWABuilder",
+        "source_url": "https://www.mobiloud.com/blog/publishing-pwa-app-store",
+        "category": "APP_FACTORY",
+        "tactic": "PWA store listing: Google Play accepts via Bubblewrap/PWABuilder. Apple needs native wrapper. PWABuilder packages for both stores.",
+        "roi_potential": "HIGHEST",
+        "priority": "PENDING_REVIEW",
+        "status": "ROUTED_TO_VENTURE",
+        "applicable_methods": "APP_FACTORY",
+        "applicable_niches": "tech",
+        "synergy_score": "90",
+        "cross_sell_products": "",
+        "implementation_priority": "HIGHEST",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "TRUE",
+        "extracted_method": "PWABuilder to package PWA for both stores. Google Play = easy. iOS = wrapper needed.",
+        "compliance_notes": "",
+        "reviewer_notes": "[CONTENT_GENERATED: 2026-03-05] Key infra intel. PrayerLock PWA CAN get on app stores. PWABuilder = fastest path. [BOLSTERED: 2026-02-28, VENTURE_ALPHA6603_app_factory.md] [ROUTED: 2026-03-07 to APP_FACTORY by gap_hunter]",
+        "created_at": "2026-02-10T14:00:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 86,
+      "cluster": "faith",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
+      "paywall_variant": "after first devotional value moment, annual-first anchor",
+      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
+      "primary_monetization": "subscription with 7-day trial",
+      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 37
+    },
+    {
+      "candidate_id": "ALPHA102962",
+      "title": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
+      "source": "@StevenCravotta (high-signal-accounts)",
+      "source_url": "https://x.com/StevenCravotta/status/2033543588122902933",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "HIGH",
+      "status": "ROUTED_TO_VENTURE",
+      "engagement_authenticity": "UNCHECKED",
+      "earnings_verified": "N/A",
+      "applicable_niches": "",
+      "applicable_methods": "",
+      "evidence": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
+      "compliance_notes": "",
+      "reviewer_notes": "\ud83d\udc4d59 \ud83d\udd015 \ud83d\udcac12 \ud83d\udc418770 [ROUTED: 2026-03-17 to APP by gap_hunter]",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA102962.md",
+      "raw": {
+        "alpha_id": "ALPHA102962",
+        "source": "@StevenCravotta (high-signal-accounts)",
+        "source_url": "https://x.com/StevenCravotta/status/2033543588122902933",
+        "category": "APP_FACTORY",
+        "tactic": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
+        "roi_potential": "HIGH",
+        "priority": "HIGH",
+        "status": "ROUTED_TO_VENTURE",
+        "applicable_methods": "",
+        "applicable_niches": "",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "UNCHECKED",
+        "earnings_verified": "N/A",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "\ud83d\udc4d59 \ud83d\udd015 \ud83d\udcac12 \ud83d\udc418770 [ROUTED: 2026-03-17 to APP by gap_hunter]",
+        "created_at": "2026-03-16T17:03:39.581735",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 86,
+      "cluster": "fitness",
+      "market_room": "HIGH",
+      "existing_app_target": "Steplock",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
+      "paywall_variant": "after plan preview or first logged action",
+      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
+      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
+      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 38
+    },
+    {
+      "candidate_id": "ALPHA406",
+      "title": "Specific numbers + clear method. High signal. [ROUTED: 2026-03-17 to RESEARCH by gap_hunter]",
+      "source": "r/AppBusiness",
+      "source_url": "https://www.reddit.com/r/AppBusiness/comments/1qy8oh8/built_a_fitness_app_that_converts_videos_into/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "PENDING_REVIEW",
+      "status": "ROUTED_TO_VENTURE",
+      "engagement_authenticity": "",
+      "earnings_verified": "",
+      "applicable_niches": "2026-02-10T10:07:37.453753",
+      "applicable_methods": "N/A",
+      "evidence": "Specific numbers + clear method. High signal. [ROUTED: 2026-03-17 to RESEARCH by gap_hunter]",
+      "compliance_notes": "",
+      "reviewer_notes": "Specific numbers + clear method. High signal. [ROUTED: 2026-03-17 to RESEARCH by gap_hunter]",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA406",
+        "source": "r/AppBusiness",
+        "source_url": "https://www.reddit.com/r/AppBusiness/comments/1qy8oh8/built_a_fitness_app_that_converts_videos_into/",
+        "category": "Built a fitness app that converts videos into workout routines. Made $300 in first month.",
+        "tactic": "APP_MONETIZATION",
+        "roi_potential": "HIGHEST",
+        "priority": "PENDING_REVIEW",
+        "status": "ROUTED_TO_VENTURE",
+        "applicable_methods": "N/A",
+        "applicable_niches": "2026-02-10T10:07:37.453753",
+        "synergy_score": "Score: 135, Comments: 72",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "",
+        "earnings_verified": "",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "Specific numbers + clear method. High signal. [ROUTED: 2026-03-17 to RESEARCH by gap_hunter]",
+        "created_at": "",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 85,
+      "cluster": "fitness",
+      "market_room": "HIGH",
+      "existing_app_target": "Steplock",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
+      "paywall_variant": "after plan preview or first logged action",
+      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
+      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
+      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 39
+    },
+    {
+      "candidate_id": "ALPHA554",
+      "title": "Muslim prayer market: Muslim Pro 170M+. Pillars 1M+ (privacy-focused). Gap: lightweight + privacy + gamified tracking.",
+      "source": "Muslim Pro / Pillars App",
+      "source_url": "https://www.muslimpro.com/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "HIGHEST",
+      "status": "ROUTED_TO_VENTURE",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "TRUE",
+      "applicable_niches": "faith",
+      "applicable_methods": "APP_FACTORY",
+      "evidence": "PrayerLock: privacy-focused + lightweight PWA + gamified streaks + Ramadan launch. 170M TAM.",
+      "compliance_notes": "",
+      "reviewer_notes": "[CONTENT_GENERATED: 2026-03-05] Pillars proves privacy-focused Muslim apps have demand. Muslim Pro bloated. Clear differentiation. [RESEARCHED: 2026-02-28] [BOLSTERED: 2026-02-28, VENTURE_ALPHA6603_app_factory.md] [ROUTED: 2026-03-07 to APP_FACTORY by gap_hunter]",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA554.md",
+      "raw": {
+        "alpha_id": "ALPHA554",
+        "source": "Muslim Pro / Pillars App",
+        "source_url": "https://www.muslimpro.com/",
+        "category": "APP_FACTORY",
+        "tactic": "Muslim prayer market: Muslim Pro 170M+. Pillars 1M+ (privacy-focused). Gap: lightweight + privacy + gamified tracking.",
+        "roi_potential": "HIGHEST",
+        "priority": "PENDING_REVIEW",
+        "status": "ROUTED_TO_VENTURE",
+        "applicable_methods": "APP_FACTORY",
+        "applicable_niches": "faith",
+        "synergy_score": "90",
+        "cross_sell_products": "",
+        "implementation_priority": "HIGHEST",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "TRUE",
+        "extracted_method": "PrayerLock: privacy-focused + lightweight PWA + gamified streaks + Ramadan launch. 170M TAM.",
+        "compliance_notes": "",
+        "reviewer_notes": "[CONTENT_GENERATED: 2026-03-05] Pillars proves privacy-focused Muslim apps have demand. Muslim Pro bloated. Clear differentiation. [RESEARCHED: 2026-02-28] [BOLSTERED: 2026-02-28, VENTURE_ALPHA6603_app_factory.md] [ROUTED: 2026-03-07 to APP_FACTORY by gap_hunter]",
+        "created_at": "2026-02-10T14:00:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 85,
+      "cluster": "faith",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
+      "paywall_variant": "after first devotional value moment, annual-first anchor",
+      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
+      "primary_monetization": "subscription with 7-day trial",
+      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
       "price_test": "$24.99 to $39.99/yr first",
       "experiments": [
         "paywall timing: after first value moment vs after onboarding preview",

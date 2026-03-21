@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 DATA JANITOR CYCLE - PRINTMAXX
 Comprehensive data cleaning, deduplication, and archival.

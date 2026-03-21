@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Batch Surge Deployer — deploys all undeployed apps to surge.sh
 Scans builds/ for apps with index.html, checks DEPLOYMENT_URLS.md, deploys missing ones.

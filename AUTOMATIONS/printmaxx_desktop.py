@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Command Center v3 — Flask Web Dashboard
 SaaS-repurposable web app replacing tkinter.

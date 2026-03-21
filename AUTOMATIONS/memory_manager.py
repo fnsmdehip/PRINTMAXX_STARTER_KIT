@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Memory Manager — OpenClaw 3-Layer Memory Architecture
 ================================================================

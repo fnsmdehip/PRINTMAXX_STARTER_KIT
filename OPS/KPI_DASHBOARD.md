@@ -1631,3 +1631,37 @@ M | Post 1 financial market commentary thread when major commodi | CONTENT | AUT
 | {   "name": "robloxmaxx-api",   "version | Check robloxmaxx-api deploy URL returns 200; count registere | APP | AUTO | DAILY | 2026-03-20 |
 
 | bro created a skill inspired by Karpathy | Track skill quality scores weekly: count skills above 80%, c | PRODUCT | AUTO | DAILY | 2026-03-20 |
+
+| Big Bank Stocks Set To Gain As Capital R | Check if ZeroHedge macro headlines produce engagement-worthy | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Nvidia $NVDA recently posted this:
+
+“IBM | Route 1 big-tech AI announcement per day into 3 content angl | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| At Every, 
+@kplikethebird
+ has been docu | 3 compound-loop or digital-maintenance posts per week in pos | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Oil Rises As Three More Warships, Thousa | 3x/day: check if any geopolitical trigger fired → confirm co | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Traditional 'Safe-Havens' Are Failing: G | 2x/week: pull latest ZeroHedge macro-fear headline, run thro | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Super Micro $SMCI stock is down by almos | Check posting_queue for new stock-mover posts — verify at le | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| securing my Plan B before AI takes over  | Weekly: publish 1 fear-of-AI-displacement hook post per plat | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| 1,600 commits. 140,000 lines of code. Bu | 3x vibe-coding-angle posts per week; track engagement rate v | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Jack Cheng on what AI agents teach you a | Route to engagement_bait_converter.py — generate 3 posts usi | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Every's senior editor 
+@jackcheng
+ set u | Check if 1 thread or 3 posts generated weekly from AI agent  | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+|  
+@AnthropicAI
+ just made Claude Code re | Daily: send 1 remote task via Telegram bot and confirm it ex | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| Fed's Waller: My brain understands the j | 1 Fed/macro uncertainty post generated and queued daily | CONTENT | AUTO | DAILY | 2026-03-20 |
+
+| GeoDuels - I built a 100% free GeoGuessr | Weekly: 3 paid-app clone opportunities scored, 1 routed to a | APP | AUTO | DAILY | 2026-03-20 |

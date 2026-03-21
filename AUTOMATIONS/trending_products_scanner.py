@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Trending Products Scanner
 Finds trending products across Amazon for arbitrage opportunities.

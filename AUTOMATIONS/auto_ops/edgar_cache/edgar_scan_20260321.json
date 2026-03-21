@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-21T05:16:25.324335",
+  "api_calls": 19,
+  "total_filings": 107,
+  "unique_filings": 2,
+  "written_to_alpha": 2,
+  "top_results": [
+    {
+      "company": "Super League Enterprise, Inc.  (SLE)  (CIK 0001621672)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "West Enclave Merger Corp.  (WENC)  (CIK 0002104260)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}

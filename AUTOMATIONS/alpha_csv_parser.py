@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 ALPHA_STAGING.csv Parser v2
 Handles TWO different CSV formats:

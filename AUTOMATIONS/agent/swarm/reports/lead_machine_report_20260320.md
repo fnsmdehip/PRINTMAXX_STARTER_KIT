@@ -1,12 +1,41 @@
 # Lead Machine Report — 2026-03-20
 
-**Cycle:** Morning (08:00)
+**Cycle:** Morning (08:00) + Evening (23:30)
 **Agent:** lead_machine
-**Status:** COMPLETE
+**Status:** COMPLETE (both cycles)
 
 ---
 
-## Summary
+## Evening Cycle Summary (23:30) — 10 NEW LEADS
+
+**New leads appended:** 10 (SL320_11 through SL320_20)
+**Total leads today:** 20
+**New outreach drafts:** 10 → `AUTOMATIONS/leads/outreach_drafts/20260320_evening/`
+
+### Top Leads Evening Cycle
+
+| Score | Lead | Email | Type |
+|-------|------|-------|------|
+| 9.5 | ayeeye AI Camera Platform | ayeeye.careers@gmail.com | HN contract — START APRIL (URGENT) |
+| 9.0 | McDermott Plumbing Malibu CA | mcdermottwork@aol.com | cold_email — AOL = 15yr stale site |
+| 9.0 | Deep Core Technology | jeff@deepcoretech.com | HN contract — Next.js+Supabase match |
+| 8.75 | Law Office of Edward A. Gabel III | edwardgabel@hotmail.com | cold_email — hotmail + no website |
+| 8.75 | Canyon Lake Neck And Back Clinic | dr.savatgy@gmail.com | cold_email — chiro Las Vegas |
+| 8.25 | CiceroAI Legal Tech | founders@ciceroailaw.com | HN contract — legal AI Houston TX |
+| 8.0 | Mahan Animal Clinic | mbandsp98@aol.com | cold_email — AOL 1998 + no site |
+| 8.0 | Five Corners Fitness | 5cornersfitness@gmail.com | cold_email — no website Lynbrook NY |
+| 7.75 | California Oaks Chiropractic | (951) 698-2511 | cold_call — weebly subdomain |
+| 7.5 | Chiropractic First Redding CA | wixsite form | form — wixsite subdomain |
+
+**HUMAN ACTION REQUIRED:**
+- ayeeye (9.5) starts April 2026 — 11 days. Contact TODAY.
+- California Oaks — call (951) 698-2511 during PT business hours.
+- All other emails: paste from draft files and send from warmed personal email.
+
+---
+
+## Morning Cycle Summary (08:00) — 10 LEADS
+
 
 10 fresh qualified leads sourced, scored, enriched, and drafted for outreach. Focus: GoDaddy/Wix subdomain hunters across high-ticket local trades (electricians, roofing, HVAC, landscaping).
 

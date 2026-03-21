@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Cold Email System 2026 - Intent-Based, AI-Personalized
 Sources:

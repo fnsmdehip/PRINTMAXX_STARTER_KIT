@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Venture Deep Scorer - 10-Dimension Portfolio Analysis Engine
 ======================================================================

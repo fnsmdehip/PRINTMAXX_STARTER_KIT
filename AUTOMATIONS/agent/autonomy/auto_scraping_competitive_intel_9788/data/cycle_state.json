@@ -1,35 +1,27 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-20T16:37:33.659436+00:00",
-  "cycle_number": 85,
+  "last_cycle": "2026-03-21T15:47:16.265677+00:00",
+  "cycle_number": 93,
   "cycle_status": "COMPLETE",
   "current_step": "complete",
-  "configured_at": "2026-03-20T16:37:33.659436+00:00",
+  "configured_at": "2026-03-21T15:47:16.265677+00:00",
   "stats": {
-    "niches_scanned": 15,
-    "blue_oceans": 9,
-    "soft_competition": 5,
-    "occupied": 1,
-    "community_total": 14071000
+    "niches_scanned": 14,
+    "blue_oceans": 13,
+    "soft_competition": 1,
+    "occupied": 0,
+    "community_total": 14590000
   },
-  "cumulative_blue_oceans": 185,
+  "cumulative_blue_oceans": 287,
   "p0_alerts": [
-    "NEW_C085 P0 BLUE OCEAN: DAILY_FINANCIAL_LITERACY_STREAK \u2014 4,000,000 community. BUILD NOW.",
-    "NEW_C085 P0 BLUE OCEAN: DAILY_TENNIS_SERVE_STREAK \u2014 1,345,000 community. BUILD NOW.",
-    "NEW_C085 P1 BLUE OCEAN: DAILY_GOLF_PRACTICE_STREAK \u2014 930,000 community. BUILD NOW.",
-    "NEW_C085 P1 BLUE OCEAN: DAILY_BJJ_TECHNIQUES_STREAK \u2014 750,000 community. BUILD NOW.",
-    "NEW_C085 P1 BLUE OCEAN: DAILY_NEGOTIATION_SKILLS_STREAK \u2014 735,000 community. BUILD NOW.",
-    "NEW_C085 P1 BLUE OCEAN: DAILY_KOREAN_HANGUL_STREAK \u2014 690,000 community. BUILD NOW.",
-    "NEW_C085 P1 BLUE OCEAN: DAILY_COLD_EMAIL_SALES_STREAK \u2014 675,000 community. BUILD NOW.",
-    "NEW_C085 P1 BLUE OCEAN: DAILY_ARABIC_SCRIPT_STREAK \u2014 520,000 community. BUILD NOW.",
-    "NEW_C085 P2 BLUE OCEAN: DAILY_SWIMMING_STROKE_STREAK \u2014 318,000 community. BUILD NOW."
+    "!! NEW_C093 P0 BLUE OCEAN: DAILY_BATCH_COOKING_STREAK \u2014 3,480,000 community. BUILD NOW."
   ],
   "previous_cycle_results": {
-    "cycle": 85,
-    "strategy": "SPORTS_PERFORMANCE + LANGUAGE_CULTURE + BUSINESS_SKILLS + WELLNESS_MINDFULNESS",
+    "cycle": 93,
+    "strategy": "COOKING + BAKING + NUTRITION + MEAL_PREP",
     "status": "COMPLETE",
-    "blue_oceans": 9,
-    "soft_competition": 5,
-    "community_total": 14071000
+    "blue_oceans": 13,
+    "soft_competition": 1,
+    "community_total": 14590000
   }
 }

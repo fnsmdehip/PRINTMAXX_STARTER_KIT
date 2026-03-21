@@ -1,0 +1,148 @@
+# Alpha Intelligence Content — 2026-03-21 03:51
+# Signals: OpenCode (HN 685), Delve Compliance (HN 641), TS>WASM (HN 173)
+
+## TWEETS
+
+--- Tweet 1 [printmaxxer] [hot_take] ---
+OpenCode just hit #1 on HN with 685 points.
+
+Another open source AI coding agent enters the ring.
+
+The AI coding tool space is about to get very crowded, very fast.
+
+The winners won't be the ones with the best model. They'll be the ones with the best workflow integration.
+
+Watch for: tool-agnostic configs that work across agents.
+
+--- Tweet 2 [printmaxxer] [advice] ---
+If you're building with Claude Code or Cursor and haven't tried the open source alternatives yet, you're leaving options on the table.
+
+OpenCode, Aider, Continue - they all hit different workflows.
+
+The move: learn the patterns, not the tool. Patterns transfer. Vendor lock-in doesn't.
+
+--- Tweet 3 [printmaxxer] [list] ---
+AI coding agents in March 2026:
+
+- Claude Code (subscription, best reasoning)
+- Cursor (IDE-native, fast)
+- OpenCode (open source, 685 HN pts today)
+- Aider (git-native, terminal)
+- Continue (VS Code extension)
+
+All of them are good. None of them matter if you can't ship.
+
+The bottleneck was never the tool.
+
+--- Tweet 4 [printmaxxer] [hot_take] ---
+"Fake Compliance as a Service" just got 641 points on HN.
+
+The fact that this resonates tells you everything about enterprise software.
+
+Companies spend $50K+ on SOC2 audits that check boxes nobody reads.
+
+The entire compliance industry is a tax on shipping fast.
+
+Solopreneurs don't have this problem.
+
+--- Tweet 5 [voidpilled] [doomer] ---
+compliance theater is the largest wealth transfer from builders to consultants in tech history
+
+641 people on HN agreed today
+
+the system runs on paperwork that protects lawyers, not users
+
+--- Tweet 6 [printmaxxer] [hot_take] ---
+Hot take: SOC2 certification is the new MBA.
+
+Expensive. Takes forever. Mostly proves you can follow instructions.
+
+Doesn't mean your product is actually secure.
+
+The startups winning right now: ship fast, encrypt everything, pen-test quarterly, skip the $30K audit until Series A forces it.
+
+--- Tweet 7 [printmaxxer] [hot_take] ---
+A team rewrote their Rust WASM parser in TypeScript.
+
+It got faster.
+
+173 HN points because everyone assumed WASM = fast.
+
+The lesson nobody wants to hear: V8 is insanely optimized for JS/TS. You're competing against 15 years of Google's best engineers.
+
+Pick the right tool for the job, not the coolest one.
+
+--- Tweet 8 [drifthour] [insight] ---
+TypeScript beating Rust WASM in a parser benchmark.
+
+Sometimes the boring choice is the fast choice.
+
+V8 has had billions of dollars of optimization poured into it.
+
+Your hand-rolled WASM has had... you.
+
+--- Tweet 9 [repscheme] [advice] ---
+Overengineering is the procrastination of smart people.
+
+You don't need Rust when TypeScript does the job.
+You don't need Kubernetes when a $5 VPS works.
+You don't need microservices when a monolith ships.
+
+The fastest code is the code that's already deployed.
+
+
+## THREAD
+
+--- Thread 1/6 [printmaxxer] ---
+THREAD: The AI Coding Agent Wars of 2026
+
+OpenCode just hit 685 pts on HN. Another open source agent enters the arena.
+
+Here's the real landscape and what it means for builders:
+
+--- Thread 2/6 [printmaxxer] ---
+1/ THE PLAYERS
+
+Claude Code - Best reasoning, subscription model, works in terminal
+Cursor - IDE-native, fast completions, VC-backed
+OpenCode - Open source, community-driven, just launched
+Aider - Git-native, terminal-first, solid for PRs
+Continue - VS Code extension, flexible backends
+
+--- Thread 3/6 [printmaxxer] ---
+2/ THE PATTERN
+
+Every 3-4 months a new AI coding tool goes viral on HN.
+
+But the tools converge. They all use the same underlying models (Claude, GPT, open source). The differentiation is workflow, not intelligence.
+
+--- Thread 4/6 [printmaxxer] ---
+3/ WHAT ACTUALLY MATTERS
+
+Context management (how much codebase can it see)
+Tool use (can it run tests, read docs, deploy)
+Workflow fit (terminal vs IDE vs browser)
+Cost (subscription vs API vs free)
+
+OpenCode winning on cost. Claude Code winning on capability.
+
+--- Thread 5/6 [printmaxxer] ---
+4/ THE OPPORTUNITY
+
+Nobody is building the CONFIGURATION layer.
+
+Every tool has its own config format. Its own rules files. Its own context setup.
+
+The person who builds a universal agent config that works across all of them will print money.
+
+--- Thread 6/6 [printmaxxer] ---
+5/ MY BET
+
+The tools will commoditize within 12 months. The workflow knowledge won't.
+
+Invest in learning agent patterns (tool use, context management, state machines) not specific products.
+
+The best AI coding tool is the one that's already installed.
+
+Ship.
+

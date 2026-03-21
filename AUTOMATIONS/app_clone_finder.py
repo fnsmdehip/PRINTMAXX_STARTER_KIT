@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 App Clone Opportunity Finder
 Searches for trending Android apps with $10K+ revenue, extracts data,

@@ -1,0 +1,438 @@
+{
+  "cycle": 90,
+  "timestamp": "2026-03-21T09:52:17.070735+00:00",
+  "strategy": "MUSIC_PRODUCTION + DANCE + PHOTOGRAPHY + FASHION_DESIGN",
+  "niches": {
+    "daily_beat_making_streak": {
+      "reddit_communities": {
+        "WeAreTheMusicMakers": 1340000,
+        "beatscommission": 180000,
+        "makinghiphop": 210000
+      },
+      "itunes_results": [
+        {
+          "name": "GarageBand",
+          "rating": 4.5,
+          "rating_count": 1800000,
+          "category": "full DAW and music creation suite \u2014 multi-track recording, virtual instruments, loops; production environment not a gamified daily beat-making habit streak with XP for rhythm pattern mastery, sampling skill, and arrangement progression"
+        },
+        {
+          "name": "BeatMaker 3",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "professional mobile DAW with step sequencer \u2014 advanced beat production with sample pads and mixer; pro tool not a gamified daily beat-making streak with XP for one new pattern per day, genre technique badges, and production skill trees"
+        },
+        {
+          "name": "Groovepad - Music & Beat Maker",
+          "rating": 4.7,
+          "rating_count": 380000,
+          "category": "casual music loop mixer \u2014 premade beat pads and loops for casual remixing; casual loop toy not a daily production skill streak with XP for learning beat structure, groove pocket, and sound design"
+        }
+      ],
+      "community_total": 1730000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.73M community. Production apps are DAWs or casual loop toys. No app gamifies the daily beat-making habit (one new drum pattern, one sample chop, one arrangement section) with streak XP, genre skill trees, and producer level badges."
+    },
+    "daily_music_theory_streak": {
+      "reddit_communities": {
+        "musictheory": 1820000,
+        "learnmusic": 240000
+      },
+      "itunes_results": [
+        {
+          "name": "Tenuto",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "music theory exercises app \u2014 ear training, scales, chord identification drills; exercise tool not a gamified daily music theory streak with XP for unlocking new concepts, key signature mastery, and functional harmony badges"
+        },
+        {
+          "name": "Perfect Ear - Ear Trainer",
+          "rating": 4.7,
+          "rating_count": 58000,
+          "category": "ear training and music theory app \u2014 interval, chord, rhythm, and sight reading exercises; drill app with progress tracking but no full gamified streak with XP system, theory level gates, and daily unlock challenges"
+        },
+        {
+          "name": "Yousician \u2013 Learn Guitar Piano",
+          "rating": 4.5,
+          "rating_count": 910000,
+          "category": "interactive instrument learning app \u2014 gamified lessons for guitar, piano, bass, ukulele; Yousician is strong on streak gamification for instrument technique but not dedicated to music theory mastery with XP for harmony, counterpoint, and form analysis"
+        }
+      ],
+      "community_total": 2060000,
+      "streak_app_exists": false,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "2.06M community. Yousician has strong streak gamification for instrument technique but music theory (harmony, form, counterpoint) is not the core product. SOFT COMPETITION \u2014 gap for a pure daily music theory streak app with XP for concept unlocks, harmony mastery, and ear training level gates."
+    },
+    "daily_sound_design_streak": {
+      "reddit_communities": {
+        "edmproduction": 680000,
+        "synthesizers": 340000,
+        "sounddesign": 190000
+      },
+      "itunes_results": [
+        {
+          "name": "Moog Model D Synthesizer",
+          "rating": 4.7,
+          "rating_count": 4200,
+          "category": "faithful recreation of the Moog Model D \u2014 analog synthesis with filter, oscillator, and envelope control; hardware emulation not a gamified daily sound design streak with XP for oscillator shapes, filter techniques, and modulation chain mastery"
+        },
+        {
+          "name": "Animoog Z Synthesizer",
+          "rating": 4.8,
+          "rating_count": 3100,
+          "category": "Moog's polyphonic synthesizer app \u2014 orbits, timbres, and motion path sound design; creative instrument not a daily habit streak with XP for sound design vocabulary and synthesis technique progression"
+        },
+        {
+          "name": "Syntorial - Synth Sound Design",
+          "rating": 4.8,
+          "rating_count": 2400,
+          "category": "synth sound design learning app \u2014 video-synchronized programming challenges; step-by-step learning but no daily streak with XP, sound design badge taxonomy, and synthesis level gates"
+        }
+      ],
+      "community_total": 1210000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.21M community. Apps are synth emulators or linear courses. No app gamifies the daily sound design habit (one new patch built, one modulation technique explored, one synthesis concept applied) with streak XP, synthesis technique trees, and sound designer level badges."
+    },
+    "daily_music_production_streak": {
+      "reddit_communities": {
+        "WeAreTheMusicMakers": 1340000,
+        "ableton": 290000,
+        "FL_Studio": 240000
+      },
+      "itunes_results": [
+        {
+          "name": "Ableton Note",
+          "rating": 4.4,
+          "rating_count": 8200,
+          "category": "Ableton's mobile sketch pad \u2014 capture ideas for Ableton Live projects; idea capture tool not a gamified daily music production streak with XP for arrangement skills, mixing techniques, and production discipline"
+        },
+        {
+          "name": "FL Studio Mobile",
+          "rating": 4.6,
+          "rating_count": 210000,
+          "category": "full mobile DAW \u2014 multi-track recording with mixer, synths, and effects; production environment not a daily gamified production streak with XP for consistency, project completion habits, and technique milestones"
+        },
+        {
+          "name": "LANDR: Music & AI Mastering",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "AI mastering and distribution platform \u2014 upload tracks for instant AI mastering and release to streaming; mastering/distribution tool not a daily production habit streak with XP for skills and consistency"
+        }
+      ],
+      "community_total": 1870000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.87M community. Production apps are environments not habit trackers. No app gamifies the daily music production session (one loop completed, one mix decision documented, one technique practiced) with streak XP, genre mastery badges, and producer skill trees."
+    },
+    "daily_dance_practice_streak": {
+      "reddit_communities": {
+        "Dance": 420000,
+        "popping": 48000,
+        "hiphopheads": 4200000
+      },
+      "itunes_results": [
+        {
+          "name": "Just Dance Controller App",
+          "rating": 4.2,
+          "rating_count": 86000,
+          "category": "Ubisoft's Just Dance game controller \u2014 phone as controller for the console game; game controller companion not a standalone daily dance skill streak with XP for footwork, musicality, and freestyle technique"
+        },
+        {
+          "name": "Learn Dance Choreography Pro",
+          "rating": 4.3,
+          "rating_count": 6200,
+          "category": "video-based dance choreography tutorials \u2014 follow-along choreography for multiple styles; tutorial follower not a gamified daily dance habit streak with XP for footwork precision, musicality, and freestyle skill progression"
+        },
+        {
+          "name": "Steezy Studio - Learn To Dance",
+          "rating": 4.8,
+          "rating_count": 28000,
+          "category": "structured video dance lessons platform \u2014 choreography classes for beginners to advanced; Steezy has course progression but no gamified daily streak with XP system, musicality level gates, and freestyle skill badges"
+        }
+      ],
+      "community_total": 4668000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.67M community. Steezy is the strongest competitor but it is a course platform, not a gamified daily streak with XP. No app turns the daily dance habit (one 10-min session, one new footwork pattern, one freestyle log) into a leveling game with skill trees, musicality badges, and streak rewards."
+    },
+    "daily_breakdancing_streak": {
+      "reddit_communities": {
+        "bboy": 64000,
+        "breakdancing": 52000
+      },
+      "itunes_results": [
+        {
+          "name": "Spin Academie - Break Dance",
+          "rating": 4.3,
+          "rating_count": 1800,
+          "category": "breakdancing tutorial video app \u2014 step-by-step videos for bboy moves; passive tutorial content not a gamified daily b-boy streak with XP for freezes, footwork, power moves, and cipher battle readiness"
+        },
+        {
+          "name": "DancePlug - Dance Classes",
+          "rating": 4.4,
+          "rating_count": 3200,
+          "category": "multi-style dance video class platform \u2014 ballet, hip-hop, jazz, contemporary lessons; multi-style video library not a b-boy specific daily streak with XP for foundation moves and power move progression"
+        },
+        {
+          "name": "Dance School - Offline Videos",
+          "rating": 4.2,
+          "rating_count": 2100,
+          "category": "offline downloadable dance lesson videos \u2014 multiple styles for offline viewing; offline video library not a daily breakdancing skill streak with XP for move repertoire, flow, and session logging"
+        }
+      ],
+      "community_total": 116000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "116K focused community. All apps are tutorial video players. No app gamifies the daily b-boy training habit (one foundational move drilled, one power move attempt logged, one footwork session) with streak XP, move unlock trees, and bboy level progression."
+    },
+    "daily_ballroom_dance_streak": {
+      "reddit_communities": {
+        "ballroom": 68000,
+        "latin_dance": 42000,
+        "salsa": 120000
+      },
+      "itunes_results": [
+        {
+          "name": "iDance Ballroom - Salsa Waltz",
+          "rating": 4.4,
+          "rating_count": 3400,
+          "category": "ballroom dance tutorial and lesson app \u2014 step patterns and basic technique for ballroom styles; static tutorial not a gamified daily ballroom streak with XP for frame, timing, and partnership technique"
+        },
+        {
+          "name": "Dance True - Ballroom Dancing",
+          "rating": 4.3,
+          "rating_count": 1200,
+          "category": "ballroom dance learning app \u2014 video lessons for ballroom and Latin styles; video tutorial library not a daily habit streak with XP for style mastery, frame quality, and competition-readiness level gates"
+        },
+        {
+          "name": "Salsa Dancing for Beginners",
+          "rating": 4.2,
+          "rating_count": 2800,
+          "category": "salsa dance tutorial app for beginners \u2014 step-by-step salsa footwork and pattern videos; beginner tutorial not a daily streak with XP for slot, turn patterns, and musicality development"
+        }
+      ],
+      "community_total": 230000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "230K community. All apps are video tutorial libraries. No app gamifies the daily ballroom habit (one technique drill, one pattern practiced, one timing exercise) with streak XP, dance style badges, and partnership skill level gates."
+    },
+    "daily_photography_skill_streak": {
+      "reddit_communities": {
+        "photography": 5100000,
+        "photocritique": 390000,
+        "analog": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "VSCO: Photo & Video Editor",
+          "rating": 4.8,
+          "rating_count": 1400000,
+          "category": "photo editing and creative community app \u2014 film-inspired presets and editing tools with social feed; editing and sharing not a gamified daily photography skill streak with XP for composition, lighting analysis, and camera settings mastery"
+        },
+        {
+          "name": "Lightroom Photo & Video Editor",
+          "rating": 4.8,
+          "rating_count": 1100000,
+          "category": "professional photo and video editing app \u2014 advanced color grading with cloud sync; editing suite not a daily photography habit streak with XP for camera technique, scene reading, and compositional skill badges"
+        },
+        {
+          "name": "Halide Mark II - Pro Camera",
+          "rating": 4.9,
+          "rating_count": 38000,
+          "category": "manual camera app with RAW capture \u2014 histogram, focus peaking, and exposure control; manual capture tool not a gamified daily photography streak with XP for mastering exposure triangle, compositional rules, and genre-specific techniques"
+        }
+      ],
+      "community_total": 5770000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.77M community. Apps edit or capture but none gamifies the daily photography skill habit (one composition challenge, one lighting study, one genre-specific assignment) with streak XP, skill badges for exposure, composition, and lighting mastery, and photographer level gates."
+    },
+    "daily_street_photography_streak": {
+      "reddit_communities": {
+        "streetphotography": 870000,
+        "urbanphotography": 190000
+      },
+      "itunes_results": [
+        {
+          "name": "Obscura 3 - Pro Camera",
+          "rating": 4.8,
+          "rating_count": 8200,
+          "category": "manual camera app with pro controls \u2014 live histogram, focus modes, and manual exposure; camera control app not a gamified daily street photography streak with XP for decisive moment practice, scene framing, and environmental storytelling"
+        },
+        {
+          "name": "ProCamera - Pro Photo & Video",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "professional camera and editing app \u2014 manual controls with RAW support; camera tool not a street photography habit streak with XP for capturing candid moments, reading light, and narrative composition"
+        },
+        {
+          "name": "NeuralCam Night Camera",
+          "rating": 4.5,
+          "rating_count": 21000,
+          "category": "AI low-light camera app \u2014 night mode capture with multi-frame fusion; specialized night capture tool not a daily street photography skill streak with XP"
+        }
+      ],
+      "community_total": 1060000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.06M community. All apps are camera tools or editors. No app gamifies the daily street photography habit (one 30-min shoot with one selected frame, one Cartier-Bresson analysis, one light condition challenge) with streak XP, genre badges, and photographer level unlocks."
+    },
+    "daily_film_photography_streak": {
+      "reddit_communities": {
+        "analog": 280000,
+        "AnalogCommunity": 430000,
+        "filmphotography": 340000
+      },
+      "itunes_results": [
+        {
+          "name": "Filmborn - Analog Film Filters",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "film simulation and preset app \u2014 Kodak, Fuji, and Ilford film stock emulation for digital photos; digital film filter not a daily analog photography habit streak with XP for film stock knowledge, exposure compensation, and darkroom technique"
+        },
+        {
+          "name": "Kodak - Print Photos",
+          "rating": 4.5,
+          "rating_count": 28000,
+          "category": "Kodak photo printing app \u2014 order prints from your phone; printing service not a gamified daily film photography streak with XP for exposure latitude understanding, zone system, and developing technique"
+        },
+        {
+          "name": "Darkroom: Photo & Video Editor",
+          "rating": 4.9,
+          "rating_count": 86000,
+          "category": "professional photo and video editing app \u2014 curves, color grading, and batch editing; digital editing tool not a daily film photography skill streak with XP for analog process mastery"
+        }
+      ],
+      "community_total": 1050000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.05M community. No app gamifies the daily film photography habit (one roll planned, one exposure decision analyzed, one develop/scan session logged) with streak XP for film stock mastery, zone system badges, and darkroom technique level gates."
+    },
+    "daily_fashion_sketching_streak": {
+      "reddit_communities": {
+        "fashiondesign": 180000,
+        "sewing": 820000,
+        "knitting": 610000
+      },
+      "itunes_results": [
+        {
+          "name": "Fashion Design: Sewing & Style",
+          "rating": 4.5,
+          "rating_count": 28000,
+          "category": "fashion game and design dress-up app \u2014 casual fashion creation with virtual wardrobe; casual game not a gamified daily fashion sketching streak with XP for croquis proportions, silhouette mastery, and garment construction technique"
+        },
+        {
+          "name": "Procreate",
+          "rating": 4.9,
+          "rating_count": 1600000,
+          "category": "professional digital illustration app \u2014 brush engine, layers, and full drawing suite; general art tool not a fashion-specific daily sketching streak with XP for fashion figure drawing, drape rendering, and collection cohesion"
+        },
+        {
+          "name": "Adobe Illustrator for iPad",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "professional vector illustration app \u2014 full Illustrator on iPad with Apple Pencil support; general design tool not a daily fashion sketching streak with XP for technical flat drawing, spec sheet mastery, and fashion illustration progression"
+        }
+      ],
+      "community_total": 1610000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.61M community. Apps are general art tools or dress-up games. No app gamifies the daily fashion sketching habit (one croquis sketch, one silhouette challenge, one fabric drape study) with streak XP, illustration technique badges, and fashion designer level gates."
+    },
+    "daily_sewing_skill_streak": {
+      "reddit_communities": {
+        "sewing": 820000,
+        "PatternReview": 160000,
+        "SewingForBeginners": 130000
+      },
+      "itunes_results": [
+        {
+          "name": "iSewing - Sewing Dictionary",
+          "rating": 4.3,
+          "rating_count": 2800,
+          "category": "sewing terminology reference app \u2014 glossary of sewing terms, stitches, and techniques; static reference not a gamified daily sewing skill streak with XP for mastering seam types, garment fitting, and construction technique progression"
+        },
+        {
+          "name": "Pattern Projector: Cut on Cloth",
+          "rating": 4.6,
+          "rating_count": 4200,
+          "category": "sewing pattern projection app \u2014 project digital patterns directly onto fabric for tracing; specialized tool not a daily sewing habit streak with XP for technique mastery"
+        },
+        {
+          "name": "Stitch & Story: Knitting App",
+          "rating": 4.5,
+          "rating_count": 6800,
+          "category": "knitting pattern and project tracking app \u2014 knitting patterns with row counter and project log; knitting-specific tracker not a sewing skill gamification streak with XP for seam finishing, zipper installation, and construction milestone badges"
+        }
+      ],
+      "community_total": 1110000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.11M community. Apps are references or specialized tools. No app gamifies the daily sewing habit (one new stitch type practiced, one seam finished, one fitting adjustment made) with streak XP, technique badges for zipper mastery, button holes, and tailoring skill level gates."
+    },
+    "daily_thrift_fashion_streak": {
+      "reddit_communities": {
+        "ThriftStoreHauls": 1200000,
+        "frugalmalefashion": 1300000,
+        "femalefashionadvice": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "Depop - Buy & Sell Clothing",
+          "rating": 4.8,
+          "rating_count": 240000,
+          "category": "peer-to-peer fashion resale marketplace \u2014 buy and sell secondhand clothing; marketplace not a gamified daily thrift fashion education streak with XP for era identification, fabric quality assessment, and brand authentication"
+        },
+        {
+          "name": "ThredUp: Online Thrift Store",
+          "rating": 4.7,
+          "rating_count": 62000,
+          "category": "curated secondhand fashion marketplace \u2014 buy and sell used clothing with brand name filtering; marketplace not a daily habit streak with XP for styling skill, thrift haul quality scoring, and fashion eye development"
+        },
+        {
+          "name": "Poshmark - Buy & Sell Fashion",
+          "rating": 4.8,
+          "rating_count": 1200000,
+          "category": "social fashion resale marketplace \u2014 buy and sell clothes with community follows and shares; resale marketplace not a daily thrift style skill streak with XP for outfit curation, era identification, and personal style development"
+        }
+      ],
+      "community_total": 3600000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.6M community. All apps are resale marketplaces. No app gamifies the daily thrift fashion habit (one styling challenge, one era identification exercise, one outfit-building practice) with streak XP, style badge unlocks, and fashion curator level progression."
+    },
+    "daily_fashion_styling_streak": {
+      "reddit_communities": {
+        "femalefashionadvice": 1100000,
+        "malefashionadvice": 4500000,
+        "streetwear": 1900000
+      },
+      "itunes_results": [
+        {
+          "name": "Stylebook - Closet Organizer",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "digital closet organization and outfit planning app \u2014 wardrobe catalog with outfit logging; organization tool not a gamified daily styling skill streak with XP for color theory application, proportion mastery, and style vocabulary development"
+        },
+        {
+          "name": "Combyne: Outfit Planner & Style",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "outfit creation and styling community app \u2014 build outfits from wardrobe and discover others' looks; social styling tool not a daily habit streak with XP for learning styling principles, developing a signature style, and fashion critique skills"
+        },
+        {
+          "name": "OOTD Fashion Outfit of the Day",
+          "rating": 4.4,
+          "rating_count": 14000,
+          "category": "daily outfit logging and fashion community \u2014 share daily outfits with rating and inspiration; outfit sharing community not a gamified daily styling skill streak with XP for color coordination mastery, silhouette awareness, and capsule wardrobe curation"
+        }
+      ],
+      "community_total": 7500000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "7.5M community. Apps organize closets or share outfits. No app gamifies the daily fashion styling habit (one outfit challenge using a styling rule, one color palette exercise, one proportion analysis) with streak XP, style principle badges, and stylist level gates."
+    }
+  }
+}

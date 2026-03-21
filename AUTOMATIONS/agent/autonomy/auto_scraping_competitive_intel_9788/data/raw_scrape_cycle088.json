@@ -1,0 +1,469 @@
+{
+  "cycle": 88,
+  "timestamp": "2026-03-21T07:48:19.809110+00:00",
+  "strategy": "PARENTING + RELATIONSHIP_SKILLS + SOCIAL_SKILLS + MINDFULNESS",
+  "niches": {
+    "daily_gentle_parenting_streak": {
+      "reddit_communities": {
+        "Parenting": 5100000,
+        "daddit": 1300000
+      },
+      "itunes_results": [
+        {
+          "name": "Tinyhood Parenting and Baby App",
+          "rating": 4.7,
+          "rating_count": 14000,
+          "category": "on-demand parenting education courses \u2014 video content platform for parenting topics; not a daily gamified gentle parenting habit streak with XP for practicing tone, responsiveness, boundary-setting"
+        },
+        {
+          "name": "Wonder Weeks",
+          "rating": 4.6,
+          "rating_count": 25000,
+          "category": "developmental leap tracker for infants \u2014 milestone calendar and leap predictions; no daily parenting technique streak with XP for practicing gentle responses"
+        },
+        {
+          "name": "Kinedu: Baby Development App",
+          "rating": 4.8,
+          "rating_count": 38000,
+          "category": "baby milestone and activity planner \u2014 developmental activities and tracking; not a streak-based gamified parent habit builder for gentle parenting skills"
+        },
+        {
+          "name": "Moshi Kids: Sleep & Meditation",
+          "rating": 4.7,
+          "rating_count": 22000,
+          "category": "sleep and meditation content for children \u2014 bedtime story app; no parent-side daily habit streak for improving parenting approach with XP"
+        }
+      ],
+      "community_total": 6400000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "6.4M+ parenting community. Apps are content/course platforms. Zero apps gamify daily parent self-improvement habit (one gentle parenting technique practiced per day) with streak XP and progression."
+    },
+    "daily_reading_to_kids_streak": {
+      "reddit_communities": {
+        "Parenting": 5100000,
+        "beyondthebump": 820000
+      },
+      "itunes_results": [
+        {
+          "name": "Epic! Kids' Books & Educational",
+          "rating": 4.8,
+          "rating_count": 310000,
+          "category": "children's ebook library \u2014 digital book reading platform for ages 0-12; no parent-facing daily read-aloud streak tracker with XP, pages-read milestones, and book completion badges"
+        },
+        {
+          "name": "Bookroo",
+          "rating": 4.7,
+          "rating_count": 4200,
+          "category": "children's book subscription box companion \u2014 reading logs and club access; no gamified daily family reading streak with XP for parent consistency"
+        },
+        {
+          "name": "Libby, by OverDrive",
+          "rating": 4.8,
+          "rating_count": 590000,
+          "category": "library ebook and audiobook borrowing \u2014 digital lending platform; not a family reading habit streak with gamified XP for reading aloud daily"
+        }
+      ],
+      "community_total": 5920000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.9M+ community. Reading apps are content libraries not habit streak gamification. No app rewards parents for maintaining a daily read-aloud streak with XP and milestones."
+    },
+    "daily_family_dinner_streak": {
+      "reddit_communities": {
+        "Parenting": 5100000,
+        "Mommit": 510000
+      },
+      "itunes_results": [
+        {
+          "name": "Mealime - Meal Planner & Recipes",
+          "rating": 4.8,
+          "rating_count": 340000,
+          "category": "meal planning and grocery list app \u2014 recipe discovery and shopping list generator; no family dinner streak tracker with XP for consistent nightly dinners"
+        },
+        {
+          "name": "BigOven: Recipes & Meal Planner",
+          "rating": 4.7,
+          "rating_count": 125000,
+          "category": "recipe management and meal planner \u2014 cook book and grocery planner; not a gamified family dinner habit streak with connection prompts"
+        },
+        {
+          "name": "Cozi Family Organizer",
+          "rating": 4.8,
+          "rating_count": 98000,
+          "category": "family calendar and to-do list coordinator \u2014 shared family schedule app; no dinner-specifically gamified streak with XP for family bonding habits"
+        }
+      ],
+      "community_total": 5610000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.6M+ parenting community. Meal apps plan food, not habit. No app gamifies the family dinner habit specifically \u2014 connection prompts, streak XP, conversation starters, consistency rewards."
+    },
+    "daily_toddler_activity_streak": {
+      "reddit_communities": {
+        "toddlers": 640000,
+        "beyondthebump": 820000
+      },
+      "itunes_results": [
+        {
+          "name": "Kinedu: Baby Development App",
+          "rating": 4.8,
+          "rating_count": 38000,
+          "category": "developmental milestone tracker and activity library \u2014 age-appropriate activities for infants/toddlers; no parent-facing daily activity completion streak with XP for consistency"
+        },
+        {
+          "name": "Khan Academy Kids",
+          "rating": 4.8,
+          "rating_count": 82000,
+          "category": "educational games and activities for ages 2-8 \u2014 curriculum-aligned learning content; child-facing app, not a parent habit streak for doing daily toddler activities"
+        },
+        {
+          "name": "Busy Shapes & Colors (Edoki)",
+          "rating": 4.6,
+          "rating_count": 4500,
+          "category": "shape and color learning game for toddlers \u2014 educational game; child-side app, not parent-side daily habit tracker with gamified XP"
+        }
+      ],
+      "community_total": 1460000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.46M community. Toddler apps are child-facing educational tools. No app gamifies the parent's daily habit of doing structured developmental activities with their toddler \u2014 streak, XP, milestone progression."
+    },
+    "daily_couples_habit_streak": {
+      "reddit_communities": {
+        "relationship_advice": 10200000,
+        "Marriage": 940000
+      },
+      "itunes_results": [
+        {
+          "name": "Lasting - Marriage Counseling",
+          "rating": 4.7,
+          "rating_count": 58000,
+          "category": "relationship health app with structured counseling sessions \u2014 guided couples exercises and communication tools; session-based not daily habit streak with XP"
+        },
+        {
+          "name": "Gottman Card Decks",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "relationship conversation prompt cards \u2014 question decks for couples; browsing tool, not a daily habit streak with XP for consistent relationship investment"
+        },
+        {
+          "name": "Paired: Couples App & Quiz",
+          "rating": 4.7,
+          "rating_count": 78000,
+          "category": "daily couples quiz and challenge app \u2014 relationship questions and activities; closest competitor but no XP system, no streak gamification with level-ups"
+        },
+        {
+          "name": "HeyFromMe - Love Notes App",
+          "rating": 4.5,
+          "rating_count": 8500,
+          "category": "couples communication and appreciation app \u2014 notes and check-ins; no gamified daily habit streak with XP across multiple relationship skill categories"
+        }
+      ],
+      "community_total": 11140000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "11.1M community. Paired is closest but lacks XP/level-up streak gamification. No app truly gamifies daily relationship investment (one appreciation, one conversation, one date plan) with XP, streaks, and couple milestones."
+    },
+    "daily_communication_skills_streak": {
+      "reddit_communities": {
+        "relationship_advice": 10200000,
+        "dating_advice": 1440000
+      },
+      "itunes_results": [
+        {
+          "name": "Lasting - Marriage Counseling",
+          "rating": 4.7,
+          "rating_count": 58000,
+          "category": "couples counseling platform \u2014 structured relationship education; not a gamified daily communication micro-skill practice streak with XP"
+        },
+        {
+          "name": "Reflectly: Journal & AI Diary",
+          "rating": 4.7,
+          "rating_count": 180000,
+          "category": "AI journaling and emotional reflection app \u2014 daily mood logging; no communication skill streak specifically with XP for practicing active listening, I-statements, de-escalation"
+        },
+        {
+          "name": "Woebot Health",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "CBT-based mental health chatbot \u2014 therapeutic conversation exercises; not a gamified daily communication skill streak with partner-focused XP"
+        }
+      ],
+      "community_total": 11640000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "11.6M community. Counseling apps are session-based. No app gamifies daily communication micro-skills (one active listening exercise, one I-statement practice, one de-escalation technique) with streak XP."
+    },
+    "daily_active_listening_streak": {
+      "reddit_communities": {
+        "socialskills": 1720000,
+        "relationship_advice": 10200000
+      },
+      "itunes_results": [
+        {
+          "name": "Speeko - Public Speaking Coach",
+          "rating": 4.8,
+          "rating_count": 32000,
+          "category": "public speaking practice app \u2014 structured speech coaching with recordings; focuses on speaking output not listening input; no active listening streak with XP"
+        },
+        {
+          "name": "Headspace: Sleep & Meditation",
+          "rating": 4.9,
+          "rating_count": 1200000,
+          "category": "mindfulness meditation app \u2014 guided meditations and sleep content; no active listening skill-building streak with XP for practicing reflection and paraphrasing"
+        },
+        {
+          "name": "BetterHelp - Therapy",
+          "rating": 4.7,
+          "rating_count": 380000,
+          "category": "online therapy platform \u2014 therapist matching and video sessions; not a self-directed daily active listening habit streak with XP"
+        }
+      ],
+      "community_total": 11920000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "11.9M combined community. No app gamifies the daily practice of active listening as a specific skill \u2014 reflection, paraphrasing, eye contact drills \u2014 with streak XP and real conversation challenge prompts."
+    },
+    "daily_public_speaking_streak": {
+      "reddit_communities": {
+        "PublicSpeaking": 510000,
+        "socialanxiety": 1620000
+      },
+      "itunes_results": [
+        {
+          "name": "Speeko - Public Speaking Coach",
+          "rating": 4.8,
+          "rating_count": 32000,
+          "category": "public speaking coaching with guided sessions \u2014 structured practice and prompts; good app but lacks full XP/streak gamification with level gates and badge progression"
+        },
+        {
+          "name": "Orator Academy",
+          "rating": 4.6,
+          "rating_count": 6800,
+          "category": "speech and presentation training app \u2014 debate and oratory exercises; not fully gamified daily habit streak with XP and unlockable challenge tiers"
+        },
+        {
+          "name": "VirtualSpeech: VR Public Speaking",
+          "rating": 4.5,
+          "rating_count": 3200,
+          "category": "VR public speaking practice environment \u2014 simulated audience presentations; premium VR tool not accessible daily streak habit tracker"
+        }
+      ],
+      "community_total": 2130000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.1M community. Speeko is closest but lacks full streak XP gamification. No app truly gamifies the daily public speaking micro-habit (30s impromptu, one recorded pitch, one vocal warm-up) with XP, streaks, level-up gates."
+    },
+    "daily_networking_habit_streak": {
+      "reddit_communities": {
+        "networking": 420000,
+        "Entrepreneur": 3500000
+      },
+      "itunes_results": [
+        {
+          "name": "LinkedIn",
+          "rating": 4.5,
+          "rating_count": 1900000,
+          "category": "professional networking and job platform \u2014 profile and connection management; no daily networking habit streak with XP for consistently adding value to network"
+        },
+        {
+          "name": "Bumble Bizz",
+          "rating": 4.5,
+          "rating_count": 2100000,
+          "category": "professional networking and connection discovery \u2014 swipe-based bizz meeting tool; not a daily habit streak for building networking skills with XP"
+        },
+        {
+          "name": "Lunchclub - Smarter Networking",
+          "rating": 4.7,
+          "rating_count": 4200,
+          "category": "AI-curated networking meeting scheduler \u2014 automated intro calls; not a daily habit builder with gamified XP for networking consistency"
+        }
+      ],
+      "community_total": 3920000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.9M community. LinkedIn and Bumble are platforms not habit gamification. No app gamifies the daily networking micro-habit (one message sent, one post shared, one new connection made) with streak XP."
+    },
+    "daily_conversation_skills_streak": {
+      "reddit_communities": {
+        "socialskills": 1720000,
+        "socialanxiety": 1620000
+      },
+      "itunes_results": [
+        {
+          "name": "Replika: My AI Friend",
+          "rating": 4.7,
+          "rating_count": 430000,
+          "category": "AI companion chatbot for social practice \u2014 conversational AI; simulated conversation not skill-building streak with XP for real-world social habits"
+        },
+        {
+          "name": "Speeko - Public Speaking Coach",
+          "rating": 4.8,
+          "rating_count": 32000,
+          "category": "public speaking practice \u2014 structured coaching; speaking output focus not social conversation skill streak with XP"
+        },
+        {
+          "name": "Social Anxiety Coach",
+          "rating": 4.4,
+          "rating_count": 2800,
+          "category": "CBT-based social anxiety management \u2014 exposure therapy exercises; therapeutic tool not gamified daily social skill streak with XP"
+        }
+      ],
+      "community_total": 3340000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.34M community. Apps target anxiety or are simulated AI chats. No app gamifies daily real-world social skill building (one new conversation started, one small talk opener practiced, one compliment given) with streak XP."
+    },
+    "daily_social_confidence_streak": {
+      "reddit_communities": {
+        "socialskills": 1720000,
+        "confidence": 380000
+      },
+      "itunes_results": [
+        {
+          "name": "Reflectly: Journal & AI Diary",
+          "rating": 4.7,
+          "rating_count": 180000,
+          "category": "AI journaling for emotional growth \u2014 daily mood and reflection logging; general confidence journaling not social confidence-specific streak with XP"
+        },
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "rating": 4.7,
+          "rating_count": 510000,
+          "category": "science-based habit and routine builder \u2014 morning ritual and daily routine gamification; generic habits app not social confidence-specific streak with social XP"
+        },
+        {
+          "name": "ThinkUp: Positive Affirmations",
+          "rating": 4.6,
+          "rating_count": 68000,
+          "category": "affirmation and self-talk coach \u2014 record and replay positive affirmations; passive affirmation listening not active daily social confidence streak with behavioral XP"
+        }
+      ],
+      "community_total": 2100000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.1M community. Habit apps are generic. No app gamifies daily social confidence-specific micro-habits (eye contact exercises, power pose practice, one fear-facing action) with streak XP and social progression levels."
+    },
+    "daily_breathwork_streak": {
+      "reddit_communities": {
+        "breathwork": 155000,
+        "Mindfulness": 1640000
+      },
+      "itunes_results": [
+        {
+          "name": "Othership: Breathwork & Sauna",
+          "rating": 4.8,
+          "rating_count": 28000,
+          "category": "guided breathwork classes and sauna companion \u2014 breathwork session library; session-based not gamified daily breathwork streak with XP and streak milestones"
+        },
+        {
+          "name": "Oak - Meditation & Breathing",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "free meditation and box breathing app \u2014 simple breathing exercises; minimal gamification, no XP system or streak progression with level gates"
+        },
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 2100000,
+          "category": "sleep, meditation, and mindfulness app \u2014 content library with breathing exercises; session-based not specifically gamified daily breathwork streak with XP"
+        }
+      ],
+      "community_total": 1795000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.8M community. Breathwork apps are content libraries. No app specifically gamifies a daily breathwork streak (one Wim Hof round, one box breathing session, one 4-7-8 practice) with streak XP, breathing badges, technique unlocks."
+    },
+    "daily_gratitude_practice_streak": {
+      "reddit_communities": {
+        "gratitude": 420000,
+        "Mindfulness": 1640000
+      },
+      "itunes_results": [
+        {
+          "name": "Gratitude - Journal & Affirmation",
+          "rating": 4.8,
+          "rating_count": 340000,
+          "category": "gratitude journaling and affirmation app \u2014 daily gratitude entry logging; closest competitor but no XP system, no streak-based level-up progression with achievements"
+        },
+        {
+          "name": "Jour - Guided Journal App",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "guided daily journal for mental wellness \u2014 structured reflection prompts; journaling platform not fully gamified streak with XP, badges, and level-up gates"
+        },
+        {
+          "name": "Five Minute Journal: Self-Care",
+          "rating": 4.8,
+          "rating_count": 62000,
+          "category": "structured gratitude journal based on the Five Minute Journal book \u2014 daily prompt entries; no gamified XP, streak levels, or achievement system"
+        }
+      ],
+      "community_total": 2060000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.06M community. Gratitude apps track entries but lack real gamification. No app gives XP for consistency, unlocks achievement badges, or has a streak level progression for daily gratitude practice."
+    },
+    "daily_mindful_eating_streak": {
+      "reddit_communities": {
+        "intuitiveeating": 480000,
+        "Mindfulness": 1640000
+      },
+      "itunes_results": [
+        {
+          "name": "Noom - Health & Weight",
+          "rating": 4.7,
+          "rating_count": 540000,
+          "category": "weight loss and behavior change app \u2014 calorie tracking and psychology coaching; calorie-focused not mindful eating habit streak with XP for eating pace, hunger cues, and awareness"
+        },
+        {
+          "name": "Rise: Metabolic Health Coach",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "sleep and metabolic health coaching \u2014 energy and performance tracking; not mindful eating daily habit streak with XP for eating awareness practices"
+        },
+        {
+          "name": "Ate Food Journal",
+          "rating": 4.6,
+          "rating_count": 8500,
+          "category": "food photo journal for mindful eating reflection \u2014 photo logging of meals; manual logging tool not gamified daily mindful eating streak with XP for technique practice"
+        }
+      ],
+      "community_total": 2120000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.12M community. Apps track calories or food photos. No app gamifies the daily mindful eating micro-habit (eat without screens, chew 20x per bite, hunger scale check) with streak XP and mindfulness progression."
+    },
+    "daily_body_scan_meditation_streak": {
+      "reddit_communities": {
+        "meditation": 5100000,
+        "Mindfulness": 1640000
+      },
+      "itunes_results": [
+        {
+          "name": "Headspace: Sleep & Meditation",
+          "rating": 4.9,
+          "rating_count": 1200000,
+          "category": "guided meditation and sleep app \u2014 body scan meditations in content library; content-library model not gamified daily body scan habit streak with XP specific to somatic practice"
+        },
+        {
+          "name": "Insight Timer - Meditation App",
+          "rating": 4.9,
+          "rating_count": 870000,
+          "category": "free meditation library with timer \u2014 100K+ guided meditations; library model not body-scan-specific gamified streak with XP and somatic awareness levels"
+        },
+        {
+          "name": "Waking Up: Guided Meditation",
+          "rating": 4.8,
+          "rating_count": 140000,
+          "category": "philosophy and meditation course app \u2014 Sam Harris's structured mindfulness course; course model not gamified daily body scan streak with XP"
+        }
+      ],
+      "community_total": 6740000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "6.74M community. Meditation apps are content libraries. No app specifically gamifies a daily body scan habit \u2014 scanning each body part, tension release journaling, somatic awareness XP \u2014 with streak progression."
+    }
+  }
+}

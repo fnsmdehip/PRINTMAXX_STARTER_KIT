@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Local Business Website Redesign Pipeline
 Master script that chains together: SCRAPE → GENERATE → HOST → OUTREACH

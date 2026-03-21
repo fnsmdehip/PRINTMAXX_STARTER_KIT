@@ -21,3 +21,5 @@ Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
+Sitemap: https://cursor-vs-claudecode.surge.sh/sitemap.xml

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 UNIFIED ALPHA MONITOR - Consolidates ALL scattered monitoring sources from .md files
 into a single daily research automation.

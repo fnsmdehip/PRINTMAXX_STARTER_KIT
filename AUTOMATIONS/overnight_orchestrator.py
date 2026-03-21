@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Overnight Pipeline Orchestrator
 3-phase dependency-aware pipeline. Each phase runs tasks in parallel.

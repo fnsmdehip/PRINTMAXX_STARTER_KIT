@@ -1,0 +1,93 @@
+=== ALPHA RESEARCH CYCLE - CONTENT OUTPUT ===
+Generated: 2026-03-20 23:37
+Source: HN + Reddit + Twitter + ProductHunt scrape
+
+--- TWEET 1 (news commentary) ---
+Astral (uv, ruff) just got acquired by OpenAI.
+
+if you're building dev tools in 2026, you either:
+- get acquired by a foundation model company
+- get crushed by one
+
+the meta-play is building tools that COMPLEMENT AI, not compete with it.
+
+streak apps, niche SaaS, workflow automation > general dev tools
+
+--- TWEET 2 (tactical) ---
+ran my alpha scraper tonight across HN, Reddit, Twitter, ProductHunt.
+
+19 HN signals
+15 Twitter entries  
+4 ProductHunt products
+1 Reddit lead
+
+the interesting finding: 1,849 unprocessed alpha entries sitting in staging.
+
+most people research manually 2hrs/day.
+we process 40K+ entries with zero human time.
+
+--- TWEET 3 (engagement bait with substance) ---
+day 44. $0 revenue. 337 automation scripts. 47 live sites.
+
+everyone says "just launch something"
+
+but nobody talks about the infrastructure that makes launching EVERYTHING trivial:
+- auto-scraper pipeline (4 sources, 2hr cycles)
+- alpha processor (scores + routes findings)
+- decision engine (auto-routes opportunities)
+- content compiler (every finding = content)
+
+the first dollar is the hardest.
+the system that creates the second through millionth is what matters.
+
+--- THREAD (deep dive) ---
+
+THREAD: How I built an autonomous alpha research system that processes 40K+ entries
+
+1/ Most indie hackers spend 2-3hrs/day on "research" - scrolling Twitter, reading HN, browsing Reddit.
+
+That's 60-90hrs/month of human time on pattern recognition that a system can do better.
+
+2/ Here's what our pipeline looks like:
+
+Sources: Twitter bookmarks + high-signal accounts, Reddit (41 subreddits), HN top/new/best, ProductHunt RSS
+
+Cycle: Every 2 hours, automatically.
+
+3/ Each finding gets scored on:
+- Actionability (can we execute TODAY?)
+- ROI estimate (revenue potential vs effort)
+- Bot/bait detection (specific numbers? verifiable? executable?)
+- Deduplication (already seen this pattern?)
+
+4/ Routing is automatic:
+- Score 70+ → NEW VENTURE (create the thing)
+- Score 50-69 → BOLSTER EXISTING (improve what we have)
+- Score 30-49 → RESEARCH (investigate further)
+- Score <30 → ARCHIVE (noise)
+
+5/ Tonight's cycle:
+- 15 Twitter entries (10 bookmarks + 5 from @levelsio)
+- 19 HN signals (Astral/OpenAI acquisition = biggest)
+- 4 ProductHunt products with AI/SaaS signal
+- 1 Reddit entry with side project signal
+
+6/ The real insight: 1,849 entries still pending review.
+
+That's not a backlog problem. That's an opportunity density problem.
+
+Each of those could be a tweet, a product idea, a content angle.
+
+The system that processes them fastest wins.
+
+7/ Stack cost: $0 extra.
+- Python scripts (free)
+- HN/Reddit JSON APIs (free)  
+- Brave cookie injection for Twitter (free)
+- Claude Code subscription (already paying)
+
+Total automation scripts: 337
+Total alpha entries: 40K+
+
+Build the machine. Let the machine build the business.
+

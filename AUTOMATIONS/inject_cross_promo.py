@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 inject_cross_promo.py - Injects a cross-promotion footer into all 8 PRINTMAXX PWAs.
 

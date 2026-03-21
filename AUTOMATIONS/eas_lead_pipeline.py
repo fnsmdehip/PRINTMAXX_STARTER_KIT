@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 EAS Lead Pipeline — filters PRINTMAXX scored leads for Enterprise Automation Solutions fit.
 

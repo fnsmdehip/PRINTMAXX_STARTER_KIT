@@ -4,6 +4,8 @@ PARALLEL TWITTER SCRAPER - Connects to Running Chrome
 Uses Chrome DevTools Protocol to attach to your already-open Chrome
 Runs 10 parallel instances scraping 92 accounts
 """
+from __future__ import annotations
+
 
 import asyncio
 import csv

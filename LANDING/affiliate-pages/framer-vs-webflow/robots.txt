@@ -21,3 +21,5 @@ Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
+Sitemap: https://framer-vs-webflow.surge.sh/sitemap.xml

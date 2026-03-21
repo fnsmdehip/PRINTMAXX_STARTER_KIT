@@ -5,6 +5,8 @@ Health scoring, pipeline funnel, revenue velocity, live clock.
 
 Run: python3 AUTOMATIONS/printmaxx_tui.py
 """
+from __future__ import annotations
+
 
 import csv
 import subprocess

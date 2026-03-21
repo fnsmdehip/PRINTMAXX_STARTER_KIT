@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 TWITTER WARMUP POSTER — Posts from approved queue with warmup-safe limits.
 

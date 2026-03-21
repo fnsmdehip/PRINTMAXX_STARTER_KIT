@@ -21,3 +21,5 @@ Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
+Sitemap: https://journal-streak-landing.surge.sh/sitemap.xml

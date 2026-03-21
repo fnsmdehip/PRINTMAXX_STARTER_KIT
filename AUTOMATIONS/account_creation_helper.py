@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Account Creation Helper
 Generates per-account cheat sheets for Twitter signup.

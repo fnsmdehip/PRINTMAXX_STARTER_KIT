@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Reddit Alpha Scraper - Extract Meta & Alpha from Subreddits
 

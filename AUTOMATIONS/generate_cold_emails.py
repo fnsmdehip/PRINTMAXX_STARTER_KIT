@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Cold Email Generator v2 — connects 2,170 leads to 16 live demo sites.
 

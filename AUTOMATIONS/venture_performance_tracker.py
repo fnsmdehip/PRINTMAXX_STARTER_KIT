@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Venture Performance Tracker - Score methods 0-100, KILL/MAINTAIN/DOUBLE_DOWN.
 

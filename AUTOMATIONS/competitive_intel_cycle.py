@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Competitive Intel Cycle - CLEAN + ANALYZE + STORE + ALERT
 Runs as part of the Competitive Intel autonomy venture (every 2h).

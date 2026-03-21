@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 CROSS-POLLINATION BRIDGE
 Converts JSON scraper outputs → CSV ledger files that cross_pollinator.py reads.

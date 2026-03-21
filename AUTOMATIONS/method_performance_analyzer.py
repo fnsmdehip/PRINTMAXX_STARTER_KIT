@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Method Performance Analyzer - Analyze What's Working
 P1 Priority: DATA-DRIVEN OPTIMIZATION

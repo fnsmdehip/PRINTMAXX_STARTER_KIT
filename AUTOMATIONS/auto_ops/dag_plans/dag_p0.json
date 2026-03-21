@@ -1,46 +1,67 @@
 {
   "name": "integration_p0",
-  "created": "2026-03-20T18:10:02.384366",
+  "created": "2026-03-20T23:36:39.451817",
   "method": "P0",
   "venture": "APP",
   "phases": [
     {
-      "name": "clone_and_customize",
+      "name": "community_validation",
       "steps": [
-        "clone_sports_streak_template",
-        "customize_tennis_serve_copy",
-        "generate_tennis_icons_og_images"
+        "scrape_r_gamedev_top_1000_posts",
+        "analyze_discord_game_dev_servers_size",
+        "identify_pain_points_and_motivations"
       ],
       "parallel": true
     },
     {
-      "name": "build",
+      "name": "competitive_research",
       "steps": [
-        "build_pwa_with_serve_counter",
-        "build_landing_page_tennis"
+        "scan_existing_gamedev_tools",
+        "analyze_our_7_streak_apps_for_reusable_patterns",
+        "identify_unique_positioning"
       ],
       "parallel": true,
-      "depends_on": "clone_and_customize"
+      "depends_on": null
     },
     {
-      "name": "deploy",
+      "name": "app_build",
       "steps": [
-        "deploy_landing_surge",
-        "deploy_pwa_surge",
-        "create_stripe_payment_link"
+        "clone_fitness_streak_template",
+        "customize_game_dev_theme_and_challenges",
+        "add_studio_team_accounts"
       ],
-      "parallel": true,
-      "depends_on": "build"
+      "parallel": false,
+      "depends_on": "community_validation"
     },
     {
-      "name": "distribute",
+      "name": "content_automation",
       "steps": [
-        "aso_keyword_seeding",
-        "generate_content_3tweets_1thread",
-        "cross_promote_existing_streak_apps"
+        "build_daily_challenge_generator",
+        "create_gamedev_specific_achievements",
+        "generate_launch_copy_and_social_assets"
       ],
       "parallel": true,
-      "depends_on": "deploy"
+      "depends_on": "app_build"
+    },
+    {
+      "name": "deployment_and_monetization",
+      "steps": [
+        "deploy_to_surge",
+        "wire_stripe_payment",
+        "setup_analytics_and_kpis"
+      ],
+      "parallel": false,
+      "depends_on": "content_automation"
+    },
+    {
+      "name": "launch_and_organic_growth",
+      "steps": [
+        "post_to_r_gamedev_and_r_IndieGaming",
+        "seed_5_game_dev_discord_servers",
+        "monitor_early_traction"
+      ],
+      "parallel": true,
+      "depends_on": "deployment_and_monetization"
     }
   ],
   "status": "READY"

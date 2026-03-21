@@ -1,36 +1,43 @@
 {
-  "cycle_number": 250,
-  "phase": "complete",
-  "status": "COMPLETE",
-  "timestamp": "2026-03-19T16:14:40.846042Z",
-  "duration_seconds": 3900,
-  "report_generated": true,
-  "report_location": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260319_cycle.md",
-  "summary": {
-    "pending_review_backlog": 2138,
-    "approved_routed": 87,
-    "content_generated": 24,
-    "ventures_updated": 8,
-    "ecom_products_listed": 8,
-    "freelance_hot_leads": 2
+  "last_cycle": "2026-03-21T08:03:00.000000",
+  "last_status": "COMPLETE",
+  "entries_processed": 0,
+  "entries_scored": 44,
+  "entries_routed_to_ventures": 0,
+  "tweets_generated": 350,
+  "tweets_by_account": {
+    "PRINTMAXXER": 30,
+    "drifthour": 83,
+    "repscheme": 75,
+    "selahmoments": 81,
+    "voidpilled": 80
   },
-  "next_cycle_scheduled": "2026-03-19T19:09:17.909740Z",
-  "blockers": [
-    "10 ecom listings need description expansion (< 60 chars)",
-    "2,138 PENDING_REVIEW entries awaiting human triage (optional, accelerates)"
-  ],
-  "metrics": {
-    "entries_processed_today": 0,
-    "entries_routed_today": 87,
-    "high_roi_entries_today": 6,
-    "content_posts_generated": 24,
-    "scraper_health": {
-      "twitter": "complete",
-      "reddit": "complete",
-      "hn_ph_ih": "passive"
+  "high_signal_pending_review": [
+    {
+      "id": "C087_DAILY_SMB_OWNER_STREAK",
+      "score": 99,
+      "signal": "Blue ocean: SMB Owner habit streak, 4K+ community, zero apps",
+      "action": "PENDING_REVIEW"
     },
-    "twitter_entries_captured": 124,
-    "twitter_accounts_scanned": 133
-  },
-  "notes": "Cycle 250 FINAL: Twitter scraper background task completed. Captured 124 new entries (ALPHA108114-ALPHA108237) from 133 accounts. All systems operational. Ready for processing in next cycle."
+    {
+      "id": "C087_DAILY_STOCK_ANALYSIS_STREAK",
+      "score": 92,
+      "signal": "Blue ocean: Stock analysis streak, 3K+ community",
+      "action": "PENDING_REVIEW"
+    },
+    {
+      "id": "C087_DAILY_COLD_OUTREACH_STREAK",
+      "score": 91,
+      "signal": "Blue ocean: Cold outreach habit streak, 3K+ community",
+      "action": "PENDING_REVIEW"
+    },
+    {
+      "id": "ALPHA_CI_086_DAILY_MORNING_ROUTINE_STREAK",
+      "score": 85,
+      "signal": "Blue ocean: Morning routine streak, 580K community, zero streak apps",
+      "action": "CONTENT_GENERATED"
+    }
+  ],
+  "cycle_notes": "Twitter: 0 new (bookmarks depleted, levelsio quiet). Reddit: 10 posts from r/SideProject. HN: fresh entries auto-archived (low individual scores but CLI-replacing-MCP signal valuable). Competitive intel C087-C090: 44 blue ocean streak niches. Freelance: 1 $200 UX gig. Content: 3 tweets + 1 thread generated.",
+  "next_cycle_eta": "2026-03-21T10:03:00.000000"
 }

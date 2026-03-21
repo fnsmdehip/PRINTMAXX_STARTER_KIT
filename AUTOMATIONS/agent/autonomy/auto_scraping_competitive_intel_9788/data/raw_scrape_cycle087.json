@@ -1,0 +1,551 @@
+{
+  "cycle": 87,
+  "timestamp": "2026-03-21T05:44:01.045884+00:00",
+  "strategy": "REAL_ESTATE + INVESTING + ENTREPRENEURSHIP + REMOTE_WORK",
+  "niches": {
+    "daily_real_estate_investing_streak": {
+      "reddit_communities": {
+        "realestateinvesting": 390000,
+        "realestate": 620000
+      },
+      "itunes_results": [
+        {
+          "name": "Zillow Real Estate & Rentals",
+          "rating": 4.8,
+          "rating_count": 750000,
+          "category": "property search and listing platform \u2014 MLS browsing and home value estimates; no daily real estate education streak with XP for learning deal analysis, cap rates, and market fundamentals"
+        },
+        {
+          "name": "BiggerPockets Real Estate",
+          "rating": 4.8,
+          "rating_count": 48000,
+          "category": "REI community platform and podcast companion \u2014 forum access and property calculators; no daily real estate investing habit streak with XP for reading one deal, running one analysis"
+        },
+        {
+          "name": "Roofstock: Real Estate Invest",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "turnkey rental property marketplace \u2014 property purchase platform; not a daily education streak for learning REI fundamentals with gamified XP"
+        },
+        {
+          "name": "LoopNet Commercial Real Estate",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "commercial property listing search \u2014 CRE browsing tool; not a daily REI knowledge streak with XP for mastering deal evaluation"
+        }
+      ],
+      "community_total": 1010000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1M+ REI community. Apps are marketplaces and calculators. Zero apps gamify daily real estate education (one deal analysis per day, one concept studied, one market checked) with streak XP and progression."
+    },
+    "daily_house_hacking_streak": {
+      "reddit_communities": {
+        "HouseHacking": 85000,
+        "financialindependence": 1200000
+      },
+      "itunes_results": [
+        {
+          "name": "Avail Landlord Software",
+          "rating": 4.7,
+          "rating_count": 22000,
+          "category": "landlord property management tool \u2014 rent collection, maintenance requests; not a daily house hacking education streak with XP for tracking rental income milestones"
+        },
+        {
+          "name": "Cozy: Landlord Tools",
+          "rating": 4.5,
+          "rating_count": 8500,
+          "category": "rental management platform \u2014 lease and payment management; not a daily house hacking habit streak gamifying the journey from first rental income to cashflow freedom"
+        },
+        {
+          "name": "Stessa Real Estate Tracker",
+          "rating": 4.7,
+          "rating_count": 15000,
+          "category": "rental property income/expense tracker \u2014 accounting for landlords; no daily house hacking progress streak with XP for each deal step"
+        },
+        {
+          "name": "Rental Property Manager",
+          "rating": 4.4,
+          "rating_count": 9000,
+          "category": "property portfolio tracker \u2014 unit management tool; not a daily house hacking education streak with XP for building rental income"
+        }
+      ],
+      "community_total": 1285000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.3M combined community (house hacking + FIRE). Zero apps gamify the daily house hacking journey (one step per day toward first rental unit, XP for milestones like 'ran first deal analysis', 'called first property manager')."
+    },
+    "daily_wholesaling_streak": {
+      "reddit_communities": {
+        "wholesalingrealestate": 48000,
+        "realestateinvesting": 390000
+      },
+      "itunes_results": [
+        {
+          "name": "DealMachine: Real Estate App",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "driving for dollars lead gen tool \u2014 property lookup and skip tracing for wholesalers; no daily wholesaling habit streak gamifying the lead funnel activities with XP"
+        },
+        {
+          "name": "PropStream Real Estate Data",
+          "rating": 4.6,
+          "rating_count": 14000,
+          "category": "property data and lead list platform \u2014 data exports and owner info; not a daily wholesaling habit streak tracking cold calls made, offers sent, follow-ups completed with XP"
+        },
+        {
+          "name": "REsimpli CRM for Wholesalers",
+          "rating": 4.6,
+          "rating_count": 8000,
+          "category": "wholesaling CRM for lead management \u2014 pipeline management tool; not a daily wholesaling habit streak with gamified activity XP"
+        },
+        {
+          "name": "Batch Leads",
+          "rating": 4.5,
+          "rating_count": 6000,
+          "category": "skip tracing and list stacking for investors \u2014 lead generation data tool; no daily streak gamifying consistent outreach and follow-up activities with XP"
+        }
+      ],
+      "community_total": 438000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "438K wholesaling/REI community. Apps are CRMs and data tools. Zero apps gamify the daily wholesaling habit (make 10 cold calls, send 5 offers, follow up 3 leads) with streak XP and activity tracking."
+    },
+    "daily_stock_analysis_streak": {
+      "reddit_communities": {
+        "investing": 2400000,
+        "stocks": 850000
+      },
+      "itunes_results": [
+        {
+          "name": "Robinhood: Investing for All",
+          "rating": 4.2,
+          "rating_count": 3200000,
+          "category": "commission-free stock trading platform \u2014 brokerage execution tool; not a daily stock analysis education streak with XP for reading one 10-K, analyzing one chart pattern, tracking one macro indicator"
+        },
+        {
+          "name": "Webull: Invest in Stock Market",
+          "rating": 4.7,
+          "rating_count": 450000,
+          "category": "advanced trading platform with charts \u2014 technical charting and order execution; no daily stock analysis habit streak gamifying fundamental + technical study with XP"
+        },
+        {
+          "name": "Public: Invest in Stocks, Crypto",
+          "rating": 4.7,
+          "rating_count": 180000,
+          "category": "social investing platform with commentary \u2014 trade sharing and community; not a daily investing education streak with XP for consistent study discipline"
+        },
+        {
+          "name": "Yahoo Finance: Stock Market App",
+          "rating": 4.8,
+          "rating_count": 1200000,
+          "category": "financial news and portfolio tracker \u2014 news consumption tool; no daily structured investing education streak with XP for completing daily analysis routines"
+        }
+      ],
+      "community_total": 3250000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.25M investing community. All apps are trading platforms or news feeds. Zero apps gamify the daily stock analysis habit (one company analyzed, one chart studied, one thesis written) with streak XP and mastery progression."
+    },
+    "daily_options_trading_streak": {
+      "reddit_communities": {
+        "options": 2100000,
+        "thetagang": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Thinkorswim Mobile",
+          "rating": 4.7,
+          "rating_count": 195000,
+          "category": "TD Ameritrade advanced trading platform \u2014 professional-grade options execution; not a daily options education streak gamifying Greeks study, strategy review, and risk management drills with XP"
+        },
+        {
+          "name": "Tastytrade: Options Trading",
+          "rating": 4.7,
+          "rating_count": 32000,
+          "category": "options-focused brokerage with education \u2014 trade execution with some videos; no daily gamified options study streak tracking mastery of Greeks, strategies, and position sizing with XP"
+        },
+        {
+          "name": "Option Alpha: Options Strategies",
+          "rating": 4.6,
+          "rating_count": 15000,
+          "category": "options education platform with courses \u2014 video lessons and trade alerts; not a daily habit streak with XP for reviewing one strategy, backtesting one trade, mastering one Greek"
+        },
+        {
+          "name": "Market Chameleon Options",
+          "rating": 4.5,
+          "rating_count": 8000,
+          "category": "options data and analytics platform \u2014 IV rank, earnings data; no daily options mastery streak gamifying consistent study of strategy and risk management"
+        }
+      ],
+      "community_total": 2280000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.28M options community. Tastytrade is closest but is a brokerage app. Zero apps gamify the daily options study habit (one strategy reviewed, one backtest run, Greeks quiz) with streak XP and progression levels."
+    },
+    "daily_dividend_investing_streak": {
+      "reddit_communities": {
+        "dividends": 680000,
+        "financialindependence": 1200000
+      },
+      "itunes_results": [
+        {
+          "name": "Dividend Tracker - Stock Yield",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "dividend payment calendar and yield tracker \u2014 income tracking tool; no daily dividend investing habit streak gamifying research (one stock analyzed per day, yield vs payout ratio check) with XP"
+        },
+        {
+          "name": "Simply Safe Dividends",
+          "rating": 4.7,
+          "rating_count": 9500,
+          "category": "dividend safety scoring and portfolio tool \u2014 safety grades and portfolio alerts; not a daily dividend research streak with XP for consistent income investing habit"
+        },
+        {
+          "name": "Seeking Alpha: Stock Market News",
+          "rating": 4.7,
+          "rating_count": 95000,
+          "category": "financial news and analysis with dividend coverage \u2014 article reading and portfolio tracker; no daily structured dividend habit streak with XP for building passive income discipline"
+        },
+        {
+          "name": "M1 Finance: Investing & Banking",
+          "rating": 4.8,
+          "rating_count": 180000,
+          "category": "automated investing with dividend reinvestment \u2014 DRIP automation tool; not a daily dividend research streak with gamified XP for studying one dividend stock per day"
+        }
+      ],
+      "community_total": 1880000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.88M dividend/FIRE community. Apps are trackers and brokerages. Zero apps gamify the daily dividend investing habit (analyze one dividend stock per day, track yield, payout ratio, dividend growth) with streak XP and passive income milestone rewards."
+    },
+    "daily_solopreneur_habit_streak": {
+      "reddit_communities": {
+        "solopreneur": 185000,
+        "Entrepreneur": 2800000
+      },
+      "itunes_results": [
+        {
+          "name": "Notion - Notes & Docs",
+          "rating": 4.7,
+          "rating_count": 285000,
+          "category": "all-in-one workspace and note-taking tool \u2014 wiki, tasks, and database manager; no daily solopreneur habit streak gamifying revenue-generating activities with XP for shipping, outreach, and building"
+        },
+        {
+          "name": "ClickUp: Project Management",
+          "rating": 4.7,
+          "rating_count": 120000,
+          "category": "project management and productivity suite \u2014 task tracking and collaboration; not a daily solopreneur streak gamifying the core daily money-making tasks with XP and progression levels"
+        },
+        {
+          "name": "Basecamp: Project Management",
+          "rating": 4.5,
+          "rating_count": 45000,
+          "category": "team project management platform \u2014 team collaboration tool; not a daily solopreneur-specific habit streak with XP for shipping product, generating leads, and building audience"
+        },
+        {
+          "name": "Indie Hackers Community App",
+          "rating": 4.3,
+          "rating_count": 5000,
+          "category": "indie maker community and forum companion \u2014 discussion platform; not a daily solopreneur habit streak app with XP gamification for business-building activities"
+        }
+      ],
+      "community_total": 2985000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3M entrepreneur community. Apps are PM tools and forums. Zero apps gamify the daily solopreneur habit (ship one thing, reach one person, build one feature) with streak XP and milestone revenue badges."
+    },
+    "daily_cold_outreach_streak": {
+      "reddit_communities": {
+        "coldemail": 65000,
+        "sales": 340000,
+        "Entrepreneur": 2800000
+      },
+      "itunes_results": [
+        {
+          "name": "Instantly.ai (no mobile app)",
+          "rating": 0,
+          "rating_count": 0,
+          "category": "web-only cold email automation platform \u2014 no iOS app exists; no daily cold outreach habit streak for solopreneurs tracking emails sent, replies received, follow-ups done with XP"
+        },
+        {
+          "name": "Smartlead.ai (no mobile app)",
+          "rating": 0,
+          "rating_count": 0,
+          "category": "web-only cold email platform \u2014 no iOS app; not a daily outreach habit streak gamifying consistent prospecting and follow-up activities with XP"
+        },
+        {
+          "name": "Pipedrive CRM",
+          "rating": 4.5,
+          "rating_count": 38000,
+          "category": "sales CRM and pipeline management \u2014 deal tracking tool; not a daily cold outreach habit streak gamifying the prospecting habit with XP for each touchpoint"
+        },
+        {
+          "name": "HubSpot CRM: Grow Better",
+          "rating": 4.7,
+          "rating_count": 95000,
+          "category": "all-in-one CRM and marketing platform \u2014 pipeline and contact management; no daily cold outreach habit streak with XP for prospecting consistency"
+        }
+      ],
+      "community_total": 3205000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.2M sales/entrepreneur community. CRMs exist for pipeline management. Zero iOS apps gamify the daily cold outreach habit (10 emails sent, 3 follow-ups, 1 reply handled) with streak XP and response rate progression tracking."
+    },
+    "daily_freelancing_streak": {
+      "reddit_communities": {
+        "freelance": 430000,
+        "digitalnomad": 420000
+      },
+      "itunes_results": [
+        {
+          "name": "Upwork for Freelancers",
+          "rating": 4.6,
+          "rating_count": 95000,
+          "category": "freelance marketplace job bidding platform \u2014 proposal submission and contract management; no daily freelancing habit streak gamifying consistent proposal activity with XP for bids sent, profiles optimized, client calls booked"
+        },
+        {
+          "name": "Fiverr Business & Freelancing",
+          "rating": 4.7,
+          "rating_count": 380000,
+          "category": "gig marketplace for selling services \u2014 order management and seller dashboard; not a daily freelancing habit streak with XP for consistent portfolio building and proposal activities"
+        },
+        {
+          "name": "Toggl Track: Hours & Time Log",
+          "rating": 4.7,
+          "rating_count": 48000,
+          "category": "time tracking and billing tool for freelancers \u2014 time log for invoicing; not a daily freelancing activity streak with XP for outreach, delivery, and client acquisition milestones"
+        },
+        {
+          "name": "Invoice Ninja - Invoicing App",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "invoicing and expense tracking for freelancers \u2014 billing tool; not a daily freelancing habit streak gamifying the client acquisition habit with XP"
+        }
+      ],
+      "community_total": 850000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "850K freelance/nomad community. Upwork/Fiverr are marketplaces, Toggl is time-tracking. Zero apps gamify the daily freelancing growth habit (send 3 proposals, update portfolio once a week, follow up one cold lead) with streak XP."
+    },
+    "daily_digital_nomad_streak": {
+      "reddit_communities": {
+        "digitalnomad": 420000,
+        "remotework": 380000,
+        "solotravel": 820000
+      },
+      "itunes_results": [
+        {
+          "name": "Nomad List (web app only)",
+          "rating": 0,
+          "rating_count": 0,
+          "category": "city comparison and remote work community \u2014 location data and cost info; no daily digital nomad habit streak with XP for building location-independent income milestones"
+        },
+        {
+          "name": "Remote.co (no app)",
+          "rating": 0,
+          "rating_count": 0,
+          "category": "remote job board \u2014 job listings; not a daily digital nomad habit streak gamifying the journey toward location independence with XP"
+        },
+        {
+          "name": "TripIt: Travel Organizer",
+          "rating": 4.7,
+          "rating_count": 72000,
+          "category": "travel itinerary organizer and trip planner \u2014 logistics tool for trips; not a daily digital nomad income-building streak with XP for remote work milestones"
+        },
+        {
+          "name": "Trail Wallet: Budget & Finance",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "travel budget tracker for slow travelers \u2014 expense tracking; not a daily nomad habit streak gamifying the remote income journey with XP"
+        }
+      ],
+      "community_total": 1620000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.62M nomad/remote community. Nomad List is web-only, others are travel tools. Zero iOS apps gamify the daily digital nomad journey (one skill practiced, one pitch sent, one remote milestone hit) with streak XP and location-unlock rewards."
+    },
+    "daily_passive_income_streak": {
+      "reddit_communities": {
+        "passive_income": 550000,
+        "financialindependence": 1200000,
+        "Fire": 320000
+      },
+      "itunes_results": [
+        {
+          "name": "Acorns: Invest Spare Change",
+          "rating": 4.7,
+          "rating_count": 680000,
+          "category": "micro-investing and round-up savings app \u2014 passive investing automation; no daily passive income building streak with XP for each income stream milestone created"
+        },
+        {
+          "name": "Personal Capital: Wealth Mgmt",
+          "rating": 4.7,
+          "rating_count": 130000,
+          "category": "net worth and investment tracking dashboard \u2014 wealth monitoring tool; not a daily passive income building streak gamifying income stream creation with XP"
+        },
+        {
+          "name": "Mint: Budget & Financial Planner",
+          "rating": 4.7,
+          "rating_count": 290000,
+          "category": "personal budgeting and expense tracking \u2014 budget management tool; no daily passive income habit streak gamifying the journey from $0 to first $100/month passive with XP"
+        },
+        {
+          "name": "Stocard - Rewards Cards Wallet",
+          "rating": 4.6,
+          "rating_count": 95000,
+          "category": "loyalty card and rewards wallet \u2014 points tracking; not a passive income streak app"
+        }
+      ],
+      "community_total": 2070000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.07M FIRE/passive income community. Apps are budgeting or micro-investing tools. Zero apps gamify the daily passive income building habit (research one stream, take one action per day, track $0\u2192$1K milestones) with streak XP and income badge rewards."
+    },
+    "daily_side_hustle_streak": {
+      "reddit_communities": {
+        "sidehustle": 360000,
+        "beermoney": 480000,
+        "Entrepreneur": 2800000
+      },
+      "itunes_results": [
+        {
+          "name": "Taskrabbit: Handyman & Mover",
+          "rating": 4.7,
+          "rating_count": 155000,
+          "category": "task marketplace for local services \u2014 gig booking platform; not a daily side hustle habit streak gamifying income-building consistency with XP for each earning milestone"
+        },
+        {
+          "name": "Rover - Dog Sitter & Dog Walker",
+          "rating": 4.9,
+          "rating_count": 255000,
+          "category": "pet care service marketplace \u2014 booking platform for pet services; not a general side hustle habit streak with XP for daily earning and skill-building activities"
+        },
+        {
+          "name": "Wonolo: On-Demand Staffing",
+          "rating": 4.5,
+          "rating_count": 38000,
+          "category": "gig staffing marketplace for hourly work \u2014 shift booking; not a daily side hustle habit streak tracking overall income growth with XP"
+        },
+        {
+          "name": "Steady: Income Tracker",
+          "rating": 4.6,
+          "rating_count": 42000,
+          "category": "gig income tracker and job finder \u2014 income aggregator for gig workers; not a daily side hustle growth streak gamifying skill-building and income milestone progression with XP"
+        }
+      ],
+      "community_total": 3640000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.64M side hustle community. Apps are marketplaces or income trackers. Zero apps gamify the daily side hustle building habit (one skill session, one listing optimized, one customer contacted) with streak XP and earnings-milestone unlocks."
+    },
+    "daily_dropshipping_streak": {
+      "reddit_communities": {
+        "dropship": 185000,
+        "shopify": 290000
+      },
+      "itunes_results": [
+        {
+          "name": "Shopify - Your Ecommerce Store",
+          "rating": 4.7,
+          "rating_count": 395000,
+          "category": "ecommerce store builder and management \u2014 full store operations platform; no daily dropshipping habit streak gamifying product research, supplier outreach, and ad testing with XP"
+        },
+        {
+          "name": "DSers-AliExpress Dropshipping",
+          "rating": 4.5,
+          "rating_count": 28000,
+          "category": "AliExpress order fulfillment automation \u2014 order routing tool; not a daily dropshipping habit streak tracking product research consistency with XP"
+        },
+        {
+          "name": "AutoDS: Dropshipping & POD",
+          "rating": 4.4,
+          "rating_count": 12000,
+          "category": "automated dropshipping management tool \u2014 price monitoring and auto-ordering; no daily dropshipping education streak gamifying the fundamentals (one winning product found, one ad tested, one supplier contacted) with XP"
+        },
+        {
+          "name": "Zendrop \u2011 Dropshipping & POD",
+          "rating": 4.6,
+          "rating_count": 9000,
+          "category": "US-based dropshipping fulfillment platform \u2014 supplier and fulfillment network; not a daily dropshipping habit streak with XP for product research, ad creative review, and supplier vetting"
+        }
+      ],
+      "community_total": 475000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "475K dropshipping community. All apps are store builders or fulfillment tools. Zero apps gamify the daily dropshipping research habit (find one winning product, vet one supplier, analyze one ad) with streak XP and store revenue milestone badges."
+    },
+    "daily_smb_owner_streak": {
+      "reddit_communities": {
+        "smallbusiness": 1300000,
+        "Entrepreneur": 2800000
+      },
+      "itunes_results": [
+        {
+          "name": "QuickBooks Self-Employed",
+          "rating": 4.7,
+          "rating_count": 195000,
+          "category": "accounting and tax tracking for freelancers \u2014 expense categorization and mileage; no daily small business owner habit streak gamifying consistent business-building tasks with XP"
+        },
+        {
+          "name": "Wave: Small Business Software",
+          "rating": 4.6,
+          "rating_count": 65000,
+          "category": "free invoicing and accounting for small biz \u2014 financial management tool; not a daily business owner habit streak with XP for consistent revenue-generating activities"
+        },
+        {
+          "name": "Alignable: Business Networking",
+          "rating": 4.5,
+          "rating_count": 22000,
+          "category": "local business networking community \u2014 connection building platform; no daily SMB growth streak gamifying consistent referral-seeking, marketing, and customer retention with XP"
+        },
+        {
+          "name": "Loom: Video Messages & Screen",
+          "rating": 4.8,
+          "rating_count": 85000,
+          "category": "async video messaging tool \u2014 communication utility; not a daily business owner growth streak app"
+        }
+      ],
+      "community_total": 4100000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.1M small business community. QuickBooks/Wave are accounting tools. Zero apps gamify the daily SMB owner habit (one customer touchpoint, one review requested, one marketing action taken) with streak XP and revenue milestone progression."
+    },
+    "daily_saas_founder_streak": {
+      "reddit_communities": {
+        "SaaS": 180000,
+        "indiehackers": 45000
+      },
+      "itunes_results": [
+        {
+          "name": "Baremetrics (web only)",
+          "rating": 0,
+          "rating_count": 0,
+          "category": "SaaS revenue analytics dashboard \u2014 MRR/churn tracking tool; no daily SaaS founder habit streak gamifying consistent product and growth tasks with XP"
+        },
+        {
+          "name": "ChartMogul SaaS Analytics",
+          "rating": 4.5,
+          "rating_count": 4500,
+          "category": "subscription analytics and MRR tracking \u2014 revenue reporting tool; not a daily SaaS building habit streak with XP for shipping features, doing customer calls, improving retention"
+        },
+        {
+          "name": "Linear (project management)",
+          "rating": 4.7,
+          "rating_count": 15000,
+          "category": "engineering issue tracker for SaaS teams \u2014 engineering sprint management; not a daily SaaS founder habit streak gamifying the founder growth actions with XP"
+        },
+        {
+          "name": "ProductHunt (no mobile app)",
+          "rating": 0,
+          "rating_count": 0,
+          "category": "product launch and discovery community \u2014 web platform; not a daily SaaS founder streak gamifying consistent building, shipping, and marketing activities"
+        }
+      ],
+      "community_total": 225000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "225K SaaS/indie community. Analytics tools exist but none gamify the daily SaaS founder discipline (ship one feature, call one customer, fix one churn risk, post one update) with streak XP and MRR milestone unlocks."
+    }
+  }
+}

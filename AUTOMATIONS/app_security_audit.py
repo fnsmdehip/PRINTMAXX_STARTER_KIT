@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Vibe Coder Security Audit Script
 Automated security checks for web apps and APIs.

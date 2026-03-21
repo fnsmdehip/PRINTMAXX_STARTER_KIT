@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Performance Optimizer — System Health + Bottleneck Detector + Funnel Analysis
 ========================================================================================

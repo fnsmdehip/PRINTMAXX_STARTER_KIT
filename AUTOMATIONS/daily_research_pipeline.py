@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 DAILY RESEARCH PIPELINE — Master orchestrator for daily alpha extraction
 =========================================================================

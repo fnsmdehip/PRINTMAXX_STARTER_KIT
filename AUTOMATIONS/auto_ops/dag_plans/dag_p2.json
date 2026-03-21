@@ -1,46 +1,47 @@
 {
   "name": "integration_p2",
-  "created": "2026-03-20T18:10:02.221478",
+  "created": "2026-03-20T23:36:38.566210",
   "method": "P2",
   "venture": "APP",
   "phases": [
     {
-      "name": "clone_and_brand",
+      "name": "scaffold_and_build",
       "steps": [
-        "clone_fitness_streak_template",
-        "rebrand_to_swimming_stroke_streak",
-        "add_swimming_specific_features_laps_strokes_distance"
+        "generate_capacitor_config_from_template",
+        "generate_social_content_for_3_niches",
+        "generate_engagement_bait_posts_for_seeding"
       ],
       "parallel": true
     },
     {
-      "name": "content_and_aso",
+      "name": "deploy_and_track",
       "steps": [
-        "generate_aso_keywords_swimming_lap_swim_pool_streak",
-        "generate_landing_page_copy",
-        "generate_3_launch_tweets"
-      ],
-      "parallel": true
-    },
-    {
-      "name": "deploy",
-      "steps": [
-        "build_landing_page",
-        "deploy_surge_sh",
-        "wire_stripe_payment_link"
-      ],
-      "parallel": false,
-      "depends_on": "clone_and_brand"
-    },
-    {
-      "name": "distribute",
-      "steps": [
-        "post_to_r_swimming_r_triathlon_r_openwater",
-        "submit_to_product_hunt",
-        "cross_link_from_fitness_streak_family"
+        "deploy_to_surge_sh",
+        "initialize_firebase_analytics",
+        "seed_playwriter_test_suite"
       ],
       "parallel": true,
-      "depends_on": "deploy"
+      "depends_on": "scaffold_and_build"
+    },
+    {
+      "name": "growth_seeding",
+      "steps": [
+        "post_to_r_cats_r_IllegallySmolCats_r_Meow_irl",
+        "dm_5_cat_tik\u0442\u043e\u043a_creators_with_affiliate_proposal",
+        "seed_instagram_engagement_loop_on_catcontent_hashtag"
+      ],
+      "parallel": true,
+      "depends_on": "deploy_and_track"
+    },
+    {
+      "name": "daily_operations",
+      "steps": [
+        "rotate_daily_engagement_posts_3_communities",
+        "track_signups_retention_revenue",
+        "auto_reply_top_comments_with_app_link"
+      ],
+      "parallel": true,
+      "depends_on": "growth_seeding"
     }
   ],
   "status": "READY"

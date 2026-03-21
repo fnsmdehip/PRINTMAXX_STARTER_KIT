@@ -1,0 +1,441 @@
+{
+  "cycle": 92,
+  "timestamp": "2026-03-21T14:04:15.280777+00:00",
+  "strategy": "MUSIC_PRODUCTION + DANCE + PHOTOGRAPHY + FASHION_DESIGN",
+  "niches": {
+    "daily_beat_making_streak": {
+      "reddit_communities": {
+        "WeAreTheMusicMakers": 1900000,
+        "beatmakers": 210000,
+        "edmproduction": 580000
+      },
+      "itunes_results": [
+        {
+          "name": "GarageBand",
+          "rating": 4.5,
+          "rating_count": 320000,
+          "category": "full DAW \u2014 multi-track recording, loops, virtual instruments; professional DAW not a gamified daily beat-making habit streak with XP for completing one 8-bar loop, one drum pattern variation, one sample chop daily"
+        },
+        {
+          "name": "Koala Sampler",
+          "rating": 4.7,
+          "rating_count": 14000,
+          "category": "sampler and beat making tool \u2014 chop samples, record beats; tool not a streak app with XP, beat-maker level progression, or daily challenge system"
+        },
+        {
+          "name": "BandLab",
+          "rating": 4.7,
+          "rating_count": 85000,
+          "category": "social music creation platform \u2014 record, mix, collaborate; social DAW not a daily beat-making streak with XP, skill badges, and producer level gates"
+        }
+      ],
+      "community_total": 2690000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.69M community across WeAreTheMusicMakers, beatmakers, edmproduction subs. All apps are DAWs or social music platforms. No app gamifies the daily beat-making habit (one new drum pattern, one melodic loop, one sample integration logged daily) with streak XP, producer technique badges, and beatmaker level progression."
+    },
+    "daily_music_theory_streak": {
+      "reddit_communities": {
+        "musictheory": 2200000,
+        "learnmusictheory": 74000,
+        "guitarlessons": 390000
+      },
+      "itunes_results": [
+        {
+          "name": "Tenuto",
+          "rating": 4.5,
+          "rating_count": 4200,
+          "category": "music theory exercises \u2014 ear training, note identification, interval exercises; quiz tool not a gamified streak with XP for daily chord construction, scale mode practice, and harmonic analysis"
+        },
+        {
+          "name": "Teoria",
+          "rating": 4.2,
+          "rating_count": 1800,
+          "category": "music theory tutorial app \u2014 concepts and exercises; reference tool not a streak app with progression badges or daily challenge system"
+        },
+        {
+          "name": "Simply Piano",
+          "rating": 4.8,
+          "rating_count": 210000,
+          "category": "piano learning app \u2014 guided lessons, real-time feedback via microphone; instrument-specific teacher app not a Duolingo-style daily music theory streak covering all instruments"
+        }
+      ],
+      "community_total": 2664000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.66M community. Yousician/Simply Piano teach instrument skills. No app is a Duolingo equivalent for pure music theory \u2014 daily streak covering intervals, modes, chord progressions, rhythm reading, and ear training with XP, theory-level badges, and musician tier gates."
+    },
+    "daily_mixing_mastering_streak": {
+      "reddit_communities": {
+        "WeAreTheMusicMakers": 1900000,
+        "mixingmastering": 110000,
+        "audioengineering": 290000
+      },
+      "itunes_results": [
+        {
+          "name": "Neutron 4",
+          "rating": 4.4,
+          "rating_count": 2800,
+          "category": "AI-powered mixing plugin \u2014 intelligent EQ, compression, and mastering suggestions; mixing plugin not a daily mixing practice streak"
+        },
+        {
+          "name": "iZotope Ozone",
+          "rating": 4.3,
+          "rating_count": 1200,
+          "category": "mastering plugin \u2014 spectrum analysis, loudness metering, master assistant; mastering tool not a streak app with daily mixing challenges"
+        },
+        {
+          "name": "Voloco",
+          "rating": 4.5,
+          "rating_count": 28000,
+          "category": "auto-tune and vocal effects app \u2014 real-time pitch correction and harmonization; vocal processor not a mixing/mastering skill streak"
+        }
+      ],
+      "community_total": 2300000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.30M community. All apps are tools, not habit trainers. No app gamifies the daily mixing/mastering practice habit (one EQ decision justified, one compression ratio applied and documented, one reference track A/B comparison logged) with streak XP, engineer rank badges, and mix engineer level gates."
+    },
+    "daily_songwriting_streak": {
+      "reddit_communities": {
+        "songwriting": 580000,
+        "lyrics": 185000,
+        "WeAreTheMusicMakers": 1900000
+      },
+      "itunes_results": [
+        {
+          "name": "Notion - Take Notes, Sync",
+          "rating": 4.8,
+          "rating_count": 290000,
+          "category": "note-taking app \u2014 flexible workspace for notes, docs, databases; generic notes not a gamified daily songwriting streak with XP for completing verse/chorus structure, writing one hook, developing one bridge daily"
+        },
+        {
+          "name": "Chord! (Guitar Chord Finder)",
+          "rating": 4.7,
+          "rating_count": 12000,
+          "category": "chord library and transposer \u2014 find and display guitar chords; chord reference tool not a songwriting habit streak with XP and progression"
+        },
+        {
+          "name": "Co-Writer",
+          "rating": 4.1,
+          "rating_count": 3200,
+          "category": "AI songwriting assistant \u2014 generate lyrics and chord progressions; AI generator not a daily songwriting skill-building streak with technique badges"
+        }
+      ],
+      "community_total": 2665000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.67M community. Apps are tools (chord finders, AI generators). No app gamifies the daily songwriting craft habit (one hook written, one verse completed to a chord progression, one song structure mapped) with streak XP, songwriter level gates, and craft technique badges."
+    },
+    "daily_hip_hop_dance_streak": {
+      "reddit_communities": {
+        "hiphop": 1800000,
+        "dance": 280000,
+        "breakdancing": 42000
+      },
+      "itunes_results": [
+        {
+          "name": "STEEZY Studio",
+          "rating": 4.8,
+          "rating_count": 62000,
+          "category": "online dance studio \u2014 structured hip-hop, popping, locking classes with professional teachers; class subscription not a daily freestyle streak with XP for completing one combo, one footwork sequence, one freestyle session logged"
+        },
+        {
+          "name": "Just Dance Now",
+          "rating": 4.4,
+          "rating_count": 88000,
+          "category": "rhythm game \u2014 follow on-screen dancer with phone motion sensors; party game not a technical dance skill streak with technique badges"
+        },
+        {
+          "name": "Triller",
+          "rating": 4.2,
+          "rating_count": 142000,
+          "category": "music video creation app \u2014 lip sync and dance video maker; video sharing app not a daily dance practice streak with skill progression"
+        }
+      ],
+      "community_total": 2122000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.12M community. STEEZY is a class platform (paid subscription). No app is a free daily hip-hop dance streak with XP for daily drills \u2014 one isolation exercise, one combo practice, one freestyle session \u2014 with technique level gates and dancer rank badges."
+    },
+    "daily_salsa_dance_streak": {
+      "reddit_communities": {
+        "salsa": 62000,
+        "latin_dance": 18000,
+        "bachata": 24000
+      },
+      "itunes_results": [
+        {
+          "name": "Salsa Rhythm",
+          "rating": 4.3,
+          "rating_count": 1800,
+          "category": "salsa timing trainer \u2014 metronome and rhythm counter for salsa music; timing tool not a daily salsa dance practice streak with XP"
+        },
+        {
+          "name": "DancePlug",
+          "rating": 4.1,
+          "rating_count": 2400,
+          "category": "dance video platform \u2014 instructional dance videos for multiple styles; video library not a gamified streak with progression badges"
+        },
+        {
+          "name": "iDance",
+          "rating": 3.9,
+          "rating_count": 890,
+          "category": "dance instruction app \u2014 basic ballroom and latin steps; basic tutorial not a daily salsa streak with partner technique XP and level gates"
+        }
+      ],
+      "community_total": 104000,
+      "streak_app_exists": false,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "104K community \u2014 smaller than typical P0 threshold. Apps are minimal quality. A daily salsa streak could capture the niche but community is limited. Mark SOFT_COMP pending community verification."
+    },
+    "daily_contemporary_dance_streak": {
+      "reddit_communities": {
+        "contemporary_dance": 28000,
+        "moderndance": 35000,
+        "dance": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "STEEZY Studio",
+          "rating": 4.8,
+          "rating_count": 62000,
+          "category": "dance class platform \u2014 contemporary, jazz, hip-hop classes; class subscription not a daily practice streak"
+        },
+        {
+          "name": "Pocket Yoga",
+          "rating": 4.7,
+          "rating_count": 16000,
+          "category": "yoga class app \u2014 guided yoga sessions with pose library; yoga app not a dance skill streak"
+        },
+        {
+          "name": "Daily Burn",
+          "rating": 4.5,
+          "rating_count": 14000,
+          "category": "fitness streaming \u2014 video workout library including dance cardio; fitness subscription not a dance technique streak"
+        }
+      ],
+      "community_total": 343000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "343K community. STEEZY has classes but no streak system. No app gamifies the daily contemporary dance habit (one isolation drill, one floorwork combo, one improvisation phrase) with streak XP, movement quality badges, and dancer level gates."
+    },
+    "daily_breakdancing_streak": {
+      "reddit_communities": {
+        "breakdancing": 42000,
+        "bboy": 18000,
+        "streetdance": 31000
+      },
+      "itunes_results": [
+        {
+          "name": "Red Bull BC One",
+          "rating": 4.2,
+          "rating_count": 3400,
+          "category": "breakdance competition coverage app \u2014 event updates, battle footage, news; media app not a daily b-boy practice streak"
+        },
+        {
+          "name": "STEEZY Studio",
+          "rating": 4.8,
+          "rating_count": 62000,
+          "category": "dance class platform \u2014 some breaking content; class subscription not a daily breaking skill streak with XP for toprock, downrock, freezes, power moves"
+        },
+        {
+          "name": "YouTube",
+          "rating": 4.5,
+          "rating_count": 8200000,
+          "category": "video platform \u2014 unstructured b-boy tutorials scattered across creators; video discovery not a gamified breaking streak"
+        }
+      ],
+      "community_total": 91000,
+      "streak_app_exists": false,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "91K community \u2014 niche but dedicated. No dedicated streak app for breaking. Mark SOFT_COMP \u2014 Olympic-level attention since Paris 2024 could mean growing community worth targeting."
+    },
+    "daily_photography_streak": {
+      "reddit_communities": {
+        "photography": 4700000,
+        "photocritique": 290000,
+        "analog": 450000
+      },
+      "itunes_results": [
+        {
+          "name": "Adobe Lightroom",
+          "rating": 4.7,
+          "rating_count": 890000,
+          "category": "photo editing suite \u2014 RAW processing, color grading, library management; editing tool not a daily photography practice streak with XP for one composition studied, one lighting condition practiced, one editing technique applied"
+        },
+        {
+          "name": "Halide Mark II",
+          "rating": 4.8,
+          "rating_count": 28000,
+          "category": "pro camera app \u2014 manual controls, RAW capture, histogram; camera tool not a streak app with skill progression"
+        },
+        {
+          "name": "Obscura 3",
+          "rating": 4.8,
+          "rating_count": 12000,
+          "category": "advanced camera app \u2014 manual controls, filters, live histogram; camera app not a daily photography skill streak"
+        }
+      ],
+      "community_total": 5440000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.44M community. Apps are editing tools and camera apps. No app gamifies the daily photography practice habit (one composition rule applied, one lighting study completed, one editing technique practiced) with streak XP, photographer level gates, and technique mastery badges. 365-photo-challenge apps exist as basic galleries, not gamified skill progressions."
+    },
+    "daily_portrait_photography_streak": {
+      "reddit_communities": {
+        "portraits": 890000,
+        "portraitphotography": 320000,
+        "postprocessing": 185000
+      },
+      "itunes_results": [
+        {
+          "name": "FaceApp",
+          "rating": 4.6,
+          "rating_count": 620000,
+          "category": "AI face transformation tool \u2014 age progression, filters, beauty edits; AI filter not a daily portrait photography skill streak"
+        },
+        {
+          "name": "Facetune",
+          "rating": 4.7,
+          "rating_count": 340000,
+          "category": "portrait retouching app \u2014 skin smoothing, teeth whitening, reshaping tools; retouch tool not a photography skill streak with XP"
+        },
+        {
+          "name": "Lightroom",
+          "rating": 4.7,
+          "rating_count": 890000,
+          "category": "photo editing suite; editing tool not a portrait photography practice streak"
+        }
+      ],
+      "community_total": 1395000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.40M community. Apps are retouching tools, not skill trainers. No app gamifies the daily portrait photography habit (one lighting setup studied, one posing direction practiced, one retouching technique applied) with streak XP, portrait skill badges, and photographer level progression."
+    },
+    "daily_street_photography_streak": {
+      "reddit_communities": {
+        "streetphotography": 1200000,
+        "urbanphotography": 280000,
+        "blackandwhitephotography": 390000
+      },
+      "itunes_results": [
+        {
+          "name": "VSCO",
+          "rating": 4.5,
+          "rating_count": 480000,
+          "category": "photo editing and community \u2014 film-like presets, editing tools, social sharing; editing/social app not a daily street photography skill streak"
+        },
+        {
+          "name": "Darkroom",
+          "rating": 4.8,
+          "rating_count": 28000,
+          "category": "photo editing app \u2014 batch edits, RAW processing, curve adjustments; editing tool not a streak app"
+        },
+        {
+          "name": "Halide Mark II",
+          "rating": 4.8,
+          "rating_count": 28000,
+          "category": "pro camera app; camera tool not a street photography skill streak with XP and technique badges"
+        }
+      ],
+      "community_total": 1870000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.87M community. VSCO has editing and social but no gamified daily street photography streak. No app gamifies the daily street photography habit (one decisive moment captured, one compositional rule applied deliberately, one image edited with a signature style) with streak XP, Magnum-level badges, and street photographer tier gates."
+    },
+    "daily_fashion_sketching_streak": {
+      "reddit_communities": {
+        "fashiondesign": 280000,
+        "fashionadvice": 1400000,
+        "femalefashionadvice": 2200000
+      },
+      "itunes_results": [
+        {
+          "name": "Procreate",
+          "rating": 4.8,
+          "rating_count": 880000,
+          "category": "professional illustration app \u2014 full drawing and painting toolkit; general illustration not a fashion sketching streak with croquis practice, drape studies, and garment construction XP"
+        },
+        {
+          "name": "Adobe Fresco",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "drawing and painting app \u2014 live brushes, vector tools; drawing tool not a fashion design skill streak"
+        },
+        {
+          "name": "Fashion Design Flat Sketch",
+          "rating": 4.2,
+          "rating_count": 8200,
+          "category": "fashion flat sketch maker \u2014 pre-made garment templates and export; template tool not a daily fashion sketching streak with croquis XP, technique badges, and designer level gates"
+        }
+      ],
+      "community_total": 3880000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.88M community. Procreate is a general illustration tool. No app gamifies the daily fashion sketching habit (one croquis figure completed, one garment draped on figure, one fabric rendering technique practiced) with streak XP, design school milestone badges, and fashion designer level gates."
+    },
+    "daily_outfit_design_streak": {
+      "reddit_communities": {
+        "femalefashionadvice": 2200000,
+        "malefashionadvice": 1700000,
+        "streetwear": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "Stylebook",
+          "rating": 4.5,
+          "rating_count": 24000,
+          "category": "wardrobe organizer \u2014 catalog clothes, plan outfits, track cost-per-wear; closet management not a gamified daily outfit design streak with XP for styling challenges"
+        },
+        {
+          "name": "Smart Closet - Outfit Planner",
+          "rating": 4.4,
+          "rating_count": 18000,
+          "category": "outfit planner and wardrobe organizer \u2014 catalog and combine; organization tool not a daily outfit design streak with style challenge XP"
+        },
+        {
+          "name": "Whering",
+          "rating": 4.6,
+          "rating_count": 6200,
+          "category": "AI wardrobe stylist \u2014 outfit recommendations from your own wardrobe; recommendation engine not a daily design skill streak"
+        }
+      ],
+      "community_total": 5000000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.00M community. Apps are wardrobe organizers and recommendation engines. No app gamifies the daily outfit design habit (one outfit built around a style constraint, one color theory principle applied, one styling challenge completed) with streak XP, style level progression, and fashion icon tier gates."
+    },
+    "daily_sewing_streak": {
+      "reddit_communities": {
+        "sewing": 980000,
+        "weddingsewing": 28000,
+        "sewforever": 42000
+      },
+      "itunes_results": [
+        {
+          "name": "Sewist",
+          "rating": 4.3,
+          "rating_count": 3200,
+          "category": "sewing pattern organizer \u2014 catalog patterns, track fabric stash, manage projects; project tracker not a gamified daily sewing streak with XP for technique practice"
+        },
+        {
+          "name": "BurdaStyle Sewing",
+          "rating": 4.1,
+          "rating_count": 1800,
+          "category": "pattern and sewing tutorial platform \u2014 download patterns, instructional videos; pattern shop not a daily sewing skill streak"
+        },
+        {
+          "name": "Notion",
+          "rating": 4.8,
+          "rating_count": 290000,
+          "category": "general notes app used for sewing project tracking; generic tool not a sewing skill streak with badge progression"
+        }
+      ],
+      "community_total": 1050000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.05M community. Apps are pattern organizers and pattern shops. No app gamifies the daily sewing habit (one seam type practiced, one fitting adjustment made, one technique tutorial completed and logged) with streak XP, sewing level gates, and couture skill badges."
+    }
+  }
+}

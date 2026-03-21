@@ -1,50 +1,54 @@
 # Growth Plan: P1
 
-**Created:** 2026-03-20 18:10
+**Created:** 2026-03-20 23:36
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $200-800/mo
+**Revenue Est:** $300-800/mo first 3 months (8 apps × $30-100/mo avg) → $1.5-3K/mo by month 6 after growth scaling. Conservative baseline assumes 1-3% conversion of downloads to premium + AdMob $0.50-2/mo per DAU
 
 ---
 
 ## Tactics
 
-1. Reply to sales influencers (Alex Berman, Kyle Coleman, Jason Bay) with genuine value + subtle app mention
-2. Post daily cold email tips thread on Twitter with CTA to streak app
-3. Cross-pollinate with existing scripture-streak users who also do B2B sales
-4. SEO longtail pages: 'cold email tracker app', 'daily sales activity tracker', 'SDR streak counter'
-5. Reddit value-bomb posts in r/coldemail with screenshots of streak UI
+1. subreddit_daily_engagement_5_communities
+2. discord_bot_automated_seeding_15_servers
+3. product_hunt_coordinated_launch_day1
+4. micro_influencer_dm_seeding_100_creators
+5. cross_promotion_existing_streak_apps
+6. reddit_community_post_hacks
+7. review_exchange_network_acceleration
+8. app_store_keyword_optimization
+9. engagement_bait_twitter_threads
+10. tiktok_creator_partnership_pipeline
 
 ## Budget Tier Strategies
 
 ### FREE
-Reddit value posts in r/coldemail r/sales r/Entrepreneur, Twitter reply engagement on sales influencer threads, Product Hunt launch, cross-promote from existing 47 deployed apps
+Reddit/Discord organic posts (discipline, streak psychology, morning routine hacks), cross-promote existing apps, Product Hunt launch day, micro-creator DMs, review exchanges, daily engagement in communities, educational threads ('why 66 days matters')
 
 ### LOW
-$20-30/mo boosted Twitter posts targeting SDR/BDR job titles, micro-influencer cold email coaches ($25 for shoutout)
+$20-50/mo: Reddit ads targeting r/meditation, r/fitness, r/journaling, r/Stoicism (5 communities × $0.50-1/day). Discord bot premium features for community server seeding.
 
 ### MID
-$100-150/mo LinkedIn Ads targeting Sales Development Rep title, sponsor 1 cold email newsletter (Woodpecker, lemlist community)
+$50-150/mo: TikTok creator partnerships (5-10 micro creators, revenue share), Reddit sponsorships in top 3 communities, Facebook group ads targeting morning people, in-app ASO (app store featuring budget)
 
 ## Daily Actions
 
-- [ ] Clone existing streak app template (scripture-streak or fitness-streak base)
-- [ ] Rebrand: ColdMailStreak — Daily Sales Activity Tracker
-- [ ] Replace devotional metrics with cold email KPIs: emails sent, opens tracked, replies received, meetings booked, deals closed
-- [ ] Add streak gamification: 7-day fire, 30-day diamond, leaderboard
-- [ ] Wire Stripe payment link for premium ($4.99/mo: analytics dashboard, team streaks, CRM export)
-- [ ] Deploy to cold-email-streak.surge.sh
-- [ ] Generate landing page with SDR-specific copy: 'The app that turns cold outreach into a daily habit'
-- [ ] Create 3 tweets + 1 thread for printmaxxer account targeting sales community
-- [ ] Post in r/coldemail r/sales with value-first approach + app link
-- [ ] Add to APP_FACTORY_METHODS.csv and DEPLOYMENT_URLS.md
+- [ ] 1. morning_routine_streak_factory.py: Scrape Reddit (r/meditation, r/fitness, r/journaling, r/getdisciplined, r/productivity) + Discord communities. Output: top 10 communities with size + engagement
+- [ ] 2. Run variant_generator: Create meditation-streak, journal-streak, pushup-streak, yoga-streak, prayer-streak, reading-streak, coding-streak, language-streak. Auto-generate icons, copy, keywords
+- [ ] 3. Trigger app_factory_command_center.py --batch with 8 variant configs. Monitor builds for 2-3 hours
+- [ ] 4. Deploy builds to App Store + Google Play. Wire RevenueCat + AdMob. Verify in-app purchases work.
+- [ ] 5. Launch seeding: (a) Day 1: Post in 5 target subreddits (staggered), (b) Day 1-2: Discord bot seeding in 15 servers, (c) Day 2: Product Hunt submission, (d) Day 3-7: Daily engagement + influencer DMs
+- [ ] 6. Wire KPI dashboard: daily installs, DAU, retention, conversion. Identify winners by day 7
+- [ ] 7. Day 14: Allocate LOW tier budget ($20-50) to top 2-3 variants. Scale with paid ads
+- [ ] 8. Day 30: Measure portfolio revenue. Decide if scaling to MID tier ($100+/mo) or pivoting to new niche
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
-  "email": "none",
-  "content": "content_factory + engagement_bait_converter"
+  "app_factory": "Existing base template (streaming, customizable), RevenueCat IAP integration (iOS/Android), AdMob network",
+  "community_automation": "n8n workflow: Discord bot messaging + Reddit scheduled posts + email warmup for influencers",
+  "vector_memory": "Pinecone to detect similar successful apps + community demand patterns",
+  "browser_automation": "Playwright for Product Hunt launch coordination + subreddit engagement tracking"
 }
 ```

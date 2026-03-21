@@ -1,0 +1,47 @@
+TWEET 1 (react to Strava/military story):
+France's aircraft carrier got doxed because a fitness app tracked its sailors' jogging routes.
+
+Our streak apps:
+- No GPS tracking
+- No location data
+- No activity monitoring
+- Just your streak count
+
+Build habits. Not a surveillance profile.
+
+---
+
+TWEET 2 (standalone product positioning):
+Most fitness apps know:
+- Where you run
+- When you sleep
+- Your heart rate patterns
+- Your daily schedule
+
+Our habit streak apps know:
+- You did the thing today ✓
+- Your current streak: 14 days
+
+That's it. That's the whole database.
+
+---
+
+TWEET 3 (engagement bait):
+Hot take: fitness apps that track your location for "social" features are surveillance products with a UX veneer.
+
+The French navy found this out the hard way.
+
+A streak app should know one thing: did you do it today.
+
+---
+
+THREAD OPENER (for HN discussion):
+The Strava data leak that exposed French warship movements is a masterclass in privacy anti-patterns:
+
+1. Default to public activity data
+2. GPS precision baked in
+3. Social features that "encourage sharing"
+
+It's not a bug. It's how the product works.
+
+Habit apps don't need your location. They never did.

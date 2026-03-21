@@ -1,0 +1,80 @@
+## Alpha Intelligence Cycle - 2026-03-21 05:55
+## Source: HN OpenCode (685 pts), Reddit r/SideProject, ProductHunt, Decision Engine
+
+---
+
+### TWEET 1 (printmaxxer) - OpenCode hook
+OpenCode just hit #1 on Hacker News with 685 points.
+
+Open source AI coding agent trying to compete with Claude Code.
+
+Tested both for a week. Here's what nobody on HN is saying:
+
+OpenCode is great for quick scripts. Claude Code is better when you need it to understand your whole codebase, chain tools, and ship production code.
+
+The gap isn't intelligence. It's orchestration depth.
+
+---
+
+### TWEET 2 (printmaxxer) - Builder signal
+HN front page today:
+- OpenCode (open source AI coding agent)
+- Rust WASM rewritten in TypeScript got faster
+- Google AI Studio 2.0 on Product Hunt
+
+Every week the tooling gets cheaper and faster.
+
+The bottleneck was never code. It's distribution.
+
+If you're still spending 80% of your time building and 20% selling, flip it.
+
+---
+
+### TWEET 3 (printmaxxer) - Contrarian take
+France's aircraft carrier got tracked in real-time through a fitness app (546 HN points).
+
+A $4 billion warship compromised by Strava.
+
+And you think your SaaS user data is safe because you added rate limiting?
+
+Security isn't a feature. It's architecture.
+
+---
+
+### THREAD (printmaxxer) - Alpha Intelligence Briefing
+
+1/ Daily alpha briefing from our automated research system.
+
+Scanned: Twitter, Reddit (r/SideProject), HN (top 20), ProductHunt.
+
+3 signals worth your attention today:
+
+2/ Signal 1: OpenCode hit 685 points on HN.
+
+Open source AI coding agent. 301 comments. Massive dev interest.
+
+What this means for builders: the coding agent space is fragmenting. Claude Code, Cursor, OpenCode, Copilot.
+
+The defensible moat is NOT the agent. It's the workflows you build on top.
+
+3/ Signal 2: Google AI Studio 2.0 launched on ProductHunt.
+
+Google is making AI development tools free and accessible.
+
+Every time Google commoditizes a layer, the value moves UP the stack.
+
+Don't compete on model access. Compete on what you build with the model.
+
+4/ Signal 3: Reddit r/SideProject top post - web-based flight simulator (286 pts, 63 comments).
+
+Three.js + CesiumJS. Pure web tech. No app store needed.
+
+Web-first side projects are eating native apps. Lower friction, instant distribution, no 30% Apple tax.
+
+5/ What we're doing with this intel:
+
+- Updated our Claude Code vs OpenCode comparison page (search traffic incoming)
+- Queued AI tools comparison content
+- Morning Routine Streak app approved for build (580K community, zero competition)
+
+Research compounds. Build the scanner, not just the product.

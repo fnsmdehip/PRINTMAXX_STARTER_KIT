@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Content Multiplier Engine - 1 Piece to 20+ Variants
 Source: ALPHA271 - "1-to-20 repurposing hub-and-spoke model with AI automation"

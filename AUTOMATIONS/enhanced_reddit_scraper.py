@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 ENHANCED REDDIT SCRAPER - Gets posts AND top comments for deeper insight.
 Runs headless in background.

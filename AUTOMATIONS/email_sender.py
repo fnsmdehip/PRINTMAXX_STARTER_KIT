@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Cold Email Sender
 Sends personalized emails to leads from CSV files via Gmail SMTP or Resend API.

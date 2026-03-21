@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 AUTONOMOUS MONEY PRINTER v2 — 24/7 Master Orchestration Layer
 ═══════════════════════════════════════════════════════════════

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Couples Streak - Daily Habit Tracker for Couples | Relationship Goals App</title>
+<meta name="description" content="Build relationship habits together. Daily couples habit tracker — conversation prompts, appreciation rituals, shared goals. No ads, no location tracking. Just your streak.">
+<meta property="og:title" content="Couples Streak">
+<meta property="og:description" content="the hardest part of a relationship is the daily investment. couples streak tracks the small habits that actually matter.">
+<meta property="og:type" content="website">
+<meta name="keywords" content="couples habit tracker, relationship goals app, daily couples challenge, relationship streak app, couples accountability app, love language habits, couples routine tracker, daily relationship habits">
+<meta name="robots" content="index, follow">
+<meta property="og:url" content="https://couples-streak.surge.sh/">
+<meta property="og:site_name" content="Couples Streak">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Couples Streak — build relationship habits together">
+<meta name="twitter:description" content="daily habit tracking for couples. conversation prompts. appreciation rituals. shared streaks.">
+<link rel="canonical" href="https://couples-streak.surge.sh/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Couples Streak","url":"https://couples-streak.surge.sh/","applicationCategory":"LifestyleApplication","operatingSystem":"iOS, Android","offers":{"@type":"Offer","price":"4.99","priceCurrency":"USD","billingIncrement":"P1M"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#120A14;--surface:#1A0D1E;--c1:#e879f9;--c2:#f43f5e;--text:#e5e5e5;--muted:#888;--border:#2a1530}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .wrap{max-width:900px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1rem;font-weight:800;letter-spacing:-0.5px;text-transform:uppercase;opacity:0.6}
+.nav-badge{font-size:0.75rem;color:var(--muted);background:var(--surface);padding:4px 12px;border-radius:12px;border:1px solid var(--border)}
+
+.hero{padding:80px 0 60px;text-align:center}
+.emoji{font-size:4rem;margin-bottom:20px;display:block}
+.hero h1{font-size:clamp(2rem,6vw,3.5rem);font-weight:800;line-height:1.05;letter-spacing:-2px;background:linear-gradient(135deg,#e879f9,#f43f5e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:520px;margin:0 auto 40px;line-height:1.7}
+
+.cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.btn-primary{background:linear-gradient(135deg,#e879f9,#f43f5e);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;transition:opacity 0.2s;display:inline-block}
+.btn-primary:hover{opacity:0.9}
+.btn-secondary{background:var(--surface);color:var(--text);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;border:1px solid var(--border);display:inline-block;transition:border-color 0.2s}
+.btn-secondary:hover{border-color:#666}
+
+.hero-note{font-size:0.78rem;color:var(--muted);margin-bottom:16px}
+
+.privacy-badge{display:inline-flex;gap:16px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:8px 20px;font-size:0.78rem;color:var(--muted);margin-bottom:48px}
+
+.stats{padding:60px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.stat h3{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#e879f9,#f43f5e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat p{color:var(--muted);font-size:0.9rem;margin-top:4px}
+@media(max-width:600px){.stats{grid-template-columns:1fr;gap:16px}}
+
+.section{padding:60px 0}
+.section h2{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;letter-spacing:-1.5px;margin-bottom:8px;background:linear-gradient(135deg,#e879f9,#f43f5e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section .sub{color:var(--muted);font-size:0.95rem;margin-bottom:36px;max-width:600px}
+
+.habits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:40px}
+@media(max-width:600px){.habits-grid{grid-template-columns:1fr}}
+.habit-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.habit-card .habit-emoji{font-size:1.8rem;margin-bottom:10px;display:block}
+.habit-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.habit-card p{font-size:0.85rem;color:var(--muted);line-height:1.6}
+
+.prompt-list{display:grid;gap:12px;margin-bottom:40px}
+.prompt{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;gap:16px;align-items:flex-start}
+.prompt-day{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);min-width:50px;padding-top:2px}
+.prompt-text{font-size:0.9rem;line-height:1.6}
+.prompt-text strong{color:var(--text)}
+.prompt-text span{color:var(--muted)}
+
+.streak-preview{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;text-align:center;margin-bottom:40px}
+.streak-number{font-size:5rem;font-weight:800;background:linear-gradient(135deg,#e879f9,#f43f5e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-4px;line-height:1}
+.streak-label{color:var(--muted);font-size:0.9rem;margin-top:8px;margin-bottom:24px}
+.streak-dots{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.dot{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#e879f9,#f43f5e);opacity:0.8;display:flex;align-items:center;justify-content:center;font-size:0.65rem}
+.dot.empty{background:var(--border);opacity:0.5}
+
+.pricing{background:var(--surface);border:1px solid rgba(232,121,249,0.3);border-radius:16px;padding:40px;text-align:center;margin-bottom:40px}
+.pricing h2{font-size:1.5rem;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.pricing-amount{font-size:3.5rem;font-weight:800;background:linear-gradient(135deg,#e879f9,#f43f5e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-3px;margin:16px 0 4px}
+.pricing-note{color:var(--muted);font-size:0.85rem;margin-bottom:24px}
+.pricing-features{list-style:none;text-align:left;max-width:320px;margin:0 auto 28px;display:grid;gap:10px}
+.pricing-features li{display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--muted)}
+.pricing-features li:before{content:"✓";color:#e879f9;font-weight:700;flex-shrink:0}
+
+.comparison{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:40px}
+.comparison-row{display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-bottom:1px solid var(--border);font-size:0.9rem;align-items:center}
+.comparison-row:last-child{border-bottom:none}
+.comparison-row.header{background:var(--surface);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);font-weight:600}
+.yes{color:#22c55e;font-weight:700;text-align:center}
+.no{color:#ef4444;text-align:center}
+.us{color:#e879f9;font-weight:700;text-align:center}
+
+.testimonials{display:grid;gap:16px;margin-bottom:40px}
+.testimonial{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px}
+.testimonial p{font-size:0.92rem;color:var(--muted);line-height:1.7;margin-bottom:10px;font-style:italic}
+.testimonial .author{font-size:0.8rem;color:var(--text);font-weight:600}
+
+.final-cta{text-align:center;padding:60px 0}
+.final-cta h2{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:-2px;margin-bottom:16px;background:linear-gradient(135deg,#e879f9,#f43f5e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.final-cta p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 32px}
+
+footer{border-top:1px solid var(--border);padding:32px 0;text-align:center;color:var(--muted);font-size:0.8rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Couples Streak</div>
+    <div class="nav-badge">Privacy-first</div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="container">
+    <span class="emoji">💑</span>
+    <h1>Build Relationship Habits Together</h1>
+    <p>Daily habit tracking for couples. Conversation prompts, appreciation rituals, shared goals. The small daily investments that actually matter.</p>
+    <div class="cta-group">
+      <a href="#pricing" class="btn-primary">Get Started — $4.99/month</a>
+      <a href="#habits" class="btn-secondary">See Example Habits</a>
+    </div>
+    <p class="hero-note">No location tracking. No ads. No data selling.</p>
+    <div class="privacy-badge">
+      <span>No GPS</span>
+      <span>No Location</span>
+      <span>No Data Brokers</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat">
+      <h3>11M+</h3>
+      <p>people searching for relationship habit tools</p>
+    </div>
+    <div class="stat">
+      <h3>0</h3>
+      <p>dedicated couples streak apps before this</p>
+    </div>
+    <div class="stat">
+      <h3>$4.99</h3>
+      <p>per couple per month — less than one coffee</p>
+    </div>
+  </div>
+
+  <div class="section" id="habits">
+    <h2>What You Track Together</h2>
+    <div class="sub">Small daily habits with outsized relationship impact</div>
+
+    <div class="habits-grid">
+      <div class="habit-card">
+        <span class="habit-emoji">💬</span>
+        <h3>Active Listening Practice</h3>
+        <p>One technique per day. Reflect back. Ask follow-up questions. Put the phone down. Track the streak together.</p>
+      </div>
+      <div class="habit-card">
+        <span class="habit-emoji">🙏</span>
+        <h3>Daily Appreciation</h3>
+        <p>One specific thing you appreciated about your partner today. Not "you're great" — something they actually did.</p>
+      </div>
+      <div class="habit-card">
+        <span class="habit-emoji">📱</span>
+        <h3>Phone-Free Time</h3>
+        <p>Track daily minutes of undivided attention. No phones, no TV. Just present with each other. Streak resets if you miss.</p>
+      </div>
+      <div class="habit-card">
+        <span class="habit-emoji">🎯</span>
+        <h3>Shared Goal Progress</h3>
+        <p>One shared goal — vacation fund, fitness challenge, learning something together. Daily check-in keeps both accountable.</p>
+      </div>
+      <div class="habit-card">
+        <span class="habit-emoji">❓</span>
+        <h3>Daily Question</h3>
+        <p>One conversation-starting question per day. Not "how was your day" — questions that actually reveal something new.</p>
+      </div>
+      <div class="habit-card">
+        <span class="habit-emoji">🫂</span>
+        <h3>Connection Ritual</h3>
+        <p>Morning hug, evening walk, 5-minute check-in. Whatever works for you. Streak tracking makes skipping feel wrong.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Today's Prompts</h2>
+    <div class="sub">Real examples from the daily prompt system</div>
+
+    <div class="prompt-list">
+      <div class="prompt">
+        <div class="prompt-day">Active Listening</div>
+        <div class="prompt-text"><strong>Today's technique:</strong> <span>Before responding, summarize what your partner just said in your own words. "What I'm hearing is..." Wait for them to confirm before sharing your view.</span></div>
+      </div>
+      <div class="prompt">
+        <div class="prompt-day">Appreciation</div>
+        <div class="prompt-text"><strong>Complete this sentence:</strong> <span>"Today I noticed you _______ and it made me feel _______." Be specific. "You made coffee without being asked and it made me feel cared for."</span></div>
+      </div>
+      <div class="prompt">
+        <div class="prompt-day">Question</div>
+        <div class="prompt-text"><strong>Ask your partner:</strong> <span>"What's something you've wanted to tell me but haven't found the right moment?" Listen without defending. This one's for them.</span></div>
+      </div>
+      <div class="prompt">
+        <div class="prompt-day">Connection</div>
+        <div class="prompt-text"><strong>15-minute ritual:</strong> <span>No phones, no TV. Ask about one thing that happened today that you haven't mentioned yet. Share one thing from yours. That's it.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Your Shared Streak</h2>
+    <div class="sub">Both partners log in. Both keep the streak alive.</div>
+
+    <div class="streak-preview">
+      <div class="streak-number">14</div>
+      <div class="streak-label">day streak — you and your partner</div>
+      <div class="streak-dots">
+        <div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div>
+        <div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div>
+        <div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div><div class="dot">✓</div>
+        <div class="dot empty"></div><div class="dot empty"></div><div class="dot empty"></div>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:0.9rem">The streak resets if either partner misses a day. That's the accountability mechanic.</p>
+  </div>
+
+  <div class="section">
+    <h2>Why No One Else Does This</h2>
+    <div class="sub">Headspace, Calm, Hallow — all individual apps</div>
+
+    <div class="comparison">
+      <div class="comparison-row header">
+        <div>Feature</div>
+        <div style="text-align:center">Others</div>
+        <div style="text-align:center">Couples Streak</div>
+      </div>
+      <div class="comparison-row">
+        <div>Couples-specific habits</div>
+        <div class="no">No</div>
+        <div class="us">Yes</div>
+      </div>
+      <div class="comparison-row">
+        <div>Shared streak between partners</div>
+        <div class="no">No</div>
+        <div class="us">Yes</div>
+      </div>
+      <div class="comparison-row">
+        <div>Daily conversation prompts</div>
+        <div class="no">No</div>
+        <div class="us">Yes</div>
+      </div>
+      <div class="comparison-row">
+        <div>No location tracking</div>
+        <div class="no">Often not</div>
+        <div class="us">Never</div>
+      </div>
+      <div class="comparison-row">
+        <div>No data selling</div>
+        <div class="no">Varies</div>
+        <div class="us">Never</div>
+      </div>
+      <div class="comparison-row">
+        <div>Price per couple</div>
+        <div style="color:var(--muted);text-align:center">$10-70/month</div>
+        <div class="us">$4.99/month</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="pricing">
+    <div class="pricing">
+      <h2>Start Building Habits Together</h2>
+      <div class="pricing-amount">$4.99</div>
+      <div class="pricing-note">per month for both partners — less than one coffee</div>
+      <ul class="pricing-features">
+        <li>Shared streak tracker for 2 partners</li>
+        <li>Daily habit prompts (6 categories)</li>
+        <li>Conversation question library (365+)</li>
+        <li>Appreciation log with history</li>
+        <li>Shared goal tracking</li>
+        <li>Streak protection (1 freeze/month)</li>
+        <li>No ads. No location data. No data brokers.</li>
+      </ul>
+      <a href="#" class="btn-primary" style="font-size:1.1rem;padding:16px 40px">Start 7-Day Free Trial</a>
+      <p style="color:var(--muted);font-size:0.78rem;margin-top:12px">Cancel anytime. No contracts. Available on iOS and Android.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="final-cta">
+  <div class="container">
+    <h2>The Daily Investment Matters</h2>
+    <p>Most relationship advice is about the big moments. But it's the small daily habits — the conversation you actually had, the appreciation you said out loud — that compound over time.</p>
+    <a href="#pricing" class="btn-primary" style="font-size:1.1rem;padding:16px 40px">Try Free for 7 Days</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>Couples Streak — Privacy-first relationship habit tracking</p>
+    <p style="margin-top:8px">No location data. No activity tracking. No data brokers. Just your streak.</p>
+  </div>
+</footer>
+
+</body>
+</html>

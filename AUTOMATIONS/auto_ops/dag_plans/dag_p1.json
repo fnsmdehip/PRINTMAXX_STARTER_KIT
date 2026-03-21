@@ -1,40 +1,59 @@
 {
   "name": "integration_p1",
-  "created": "2026-03-20T18:10:02.484846",
+  "created": "2026-03-20T23:36:38.579604",
   "method": "P1",
   "venture": "APP",
   "phases": [
     {
-      "name": "build",
+      "name": "community_discovery",
       "steps": [
-        "clone streak template",
-        "rebrand to ColdMailStreak / SalesStreak",
-        "add cold-email-specific metrics (emails sent, opens, replies, meetings booked)",
-        "wire Stripe checkout for premium tier"
+        "scrape_reddit_communities",
+        "scan_discord_servers",
+        "verify_zero_competitors",
+        "measure_engagement_velocity"
       ],
-      "parallel": false
+      "parallel": true
     },
     {
-      "name": "deploy_and_content",
+      "name": "variant_generation",
       "steps": [
-        "deploy to surge.sh",
-        "generate landing page with SDR pain-point copy",
-        "generate 3 tweets + 1 thread targeting sales community",
-        "create Reddit posts for r/coldemail r/sales r/Entrepreneur"
+        "generate_10_app_variants",
+        "create_icon_packs",
+        "write_store_copy"
       ],
       "parallel": true,
-      "depends_on": "build"
+      "depends_on": "community_discovery"
     },
     {
-      "name": "distribute",
+      "name": "build_pipeline",
       "steps": [
-        "submit to Product Hunt as sales tool",
-        "post in cold email Facebook groups",
-        "add to app factory deployment tracker",
-        "add ASO keywords: cold email tracker, sales streak, SDR daily tracker"
+        "build_ios_batch",
+        "build_android_batch",
+        "deploy_to_stores"
       ],
       "parallel": true,
-      "depends_on": "deploy_and_content"
+      "depends_on": "variant_generation"
+    },
+    {
+      "name": "seeding_phase",
+      "steps": [
+        "seed_reddit_communities",
+        "discord_bot_engagement",
+        "product_hunt_launch",
+        "micro_influencer_outreach"
+      ],
+      "parallel": true,
+      "depends_on": "build_pipeline"
+    },
+    {
+      "name": "growth_optimization",
+      "steps": [
+        "monitor_app_store_rank",
+        "execute_paid_tactics",
+        "analyze_winner_patterns"
+      ],
+      "parallel": true,
+      "depends_on": "seeding_phase"
     }
   ],
   "status": "READY"

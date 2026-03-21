@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 OpenClaw Local Business Pipeline — 24/7 autonomous lead-to-client engine.
 Finds businesses without websites, auto-builds a preview, deploys to surge.sh, queues outreach.

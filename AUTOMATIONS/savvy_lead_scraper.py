@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 savvy_lead_scraper.py - Quant-level local business lead scoring
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Website Signal Scorer
 Scores local business websites on redesign opportunity (0-100).

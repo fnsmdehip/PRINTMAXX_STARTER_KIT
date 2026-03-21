@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Live Agent Progress Monitor - Jane Street Style
 Real-time dashboard for all running agents and tasks

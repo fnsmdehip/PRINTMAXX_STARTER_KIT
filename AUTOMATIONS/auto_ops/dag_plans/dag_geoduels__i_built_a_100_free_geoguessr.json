@@ -1,0 +1,48 @@
+{
+  "name": "integration_geoduels__i_built_a_100_free_geoguessr",
+  "created": "2026-03-20T23:36:38.573110",
+  "method": "GeoDuels - I built a 100% free GeoGuessr clone in my mom's basement",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "discover",
+      "steps": [
+        "scrape_app_store_top_paid_games_and_tools",
+        "scrape_reddit_free_alternative_requests",
+        "scan_alternativeto_net_gaps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score",
+      "steps": [
+        "check_search_volume_free_X_alternative",
+        "estimate_ad_revenue_at_traffic_scale",
+        "assess_build_complexity_against_app_factory_templates"
+      ],
+      "parallel": true,
+      "depends_on": "discover"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "rank_top3_by_score",
+        "push_to_app_factory_priority_queue",
+        "generate_seo_targeting_brief"
+      ],
+      "parallel": false,
+      "depends_on": "score"
+    },
+    {
+      "name": "content",
+      "steps": [
+        "generate_i_built_free_X_reddit_post",
+        "generate_hn_show_post",
+        "queue_in_content_social_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "route"
+    }
+  ],
+  "status": "READY"
+}

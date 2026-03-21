@@ -7,13 +7,14 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="SoberStreak">
-<meta name="description" content="Privacy-first sobriety streak tracker. No account. No data collection. 100% on your device.">
-<meta property="og:title" content="SoberStreak - Private Sobriety Tracker">
-<meta property="og:description" content="Zero data leaves your device. Track NoFap, alcohol, smoking, or any habit privately.">
+<meta name="description" content="NoFap & sobriety streak tracker. 100% private — no account, no servers, zero data collection. Unlike Quittr: nothing leaves your device.">
+<meta property="og:title" content="SoberStreak - Private NoFap & Sobriety Tracker">
+<meta property="og:description" content="Privacy-first streak tracker for NoFap, alcohol, weed, and more. Zero data. Zero servers. Unlike Quittr.">
+<meta name="keywords" content="nofap tracker app, sobriety streak counter, nofap app no data, private sobriety tracker, nofap streak counter offline, sobriety app no account">
 <meta property="og:type" content="website">
 <link rel="manifest" href="manifest.json">
 <link rel="canonical" href="https://soberstreak.surge.sh/">
-<title>SoberStreak - Private Sobriety Tracker</title>
+<title>SoberStreak - Private NoFap & Sobriety Tracker</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -39,7 +40,7 @@ body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; b
   <div class="flex items-center justify-between px-5 pt-12 pb-4">
     <div>
       <h1 class="text-xl font-bold text-white">SoberStreak</h1>
-      <p class="text-xs text-purple-400 mt-0.5">🔒 100% private — zero data leaves your device</p>
+      <p class="text-xs text-purple-400 mt-0.5">🔒 Unlike Quittr — zero data, zero servers</p>
     </div>
     <button id="settings-btn" class="w-9 h-9 rounded-full glass flex items-center justify-center text-gray-400">
       <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
@@ -207,8 +208,12 @@ body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; b
         </div>
         <div class="rounded-xl p-4" style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2)">
           <p class="text-xs text-purple-400 font-medium mb-1">🔒 Privacy Guarantee</p>
-          <p class="text-xs text-gray-400">SoberStreak stores zero data on any server. Everything lives in your browser's localStorage. No account. No tracking. No ads. Uninstall anytime — data gone instantly.</p>
+          <p class="text-xs text-gray-400">SoberStreak stores zero data on any server. Unlike Quittr, everything lives in your browser's localStorage. No account. No tracking. No ads.</p>
         </div>
+        <button id="open-premium-btn" class="w-full rounded-xl p-4 text-left" style="background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(124,58,237,.15));border:1px solid rgba(124,58,237,.4)">
+          <p class="text-sm font-bold text-purple-300 mb-0.5">🔓 Upgrade to Pro</p>
+          <p class="text-xs text-gray-400">Track 5 habits, export data, custom milestones — $2.99/mo or $19.99/yr</p>
+        </button>
       </div>
       <button id="save-settings-btn" class="w-full py-3.5 rounded-2xl font-bold text-white mb-3" style="background:linear-gradient(135deg,#6d28d9,#7c3aed)">Save Settings</button>
       <button id="close-settings-btn" class="w-full py-3 text-gray-500 text-sm">Cancel</button>
@@ -249,6 +254,71 @@ body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; b
   </div>
 </div>
 
+<!-- REVIEW PROMPT MODAL (fires after 7-day milestone, not on onboarding) -->
+<div id="review-modal" class="fixed inset-0 z-[150] hidden" style="background:rgba(0,0,0,.88);backdrop-filter:blur(8px)">
+  <div class="max-w-md mx-auto h-full flex items-center justify-center px-6">
+    <div class="w-full rounded-3xl p-6" style="background:#1a1a2e;border:1px solid rgba(124,58,237,.3)">
+      <div class="text-center mb-6">
+        <div class="text-5xl mb-3">💎</div>
+        <h2 class="text-xl font-bold text-white mb-2">7 days. That is real.</h2>
+        <p class="text-gray-400 text-sm leading-relaxed">Your brain chemistry is shifting. If SoberStreak helped you get here, a quick rating keeps this free for everyone.</p>
+      </div>
+      <div class="space-y-3">
+        <button id="review-yes-btn" class="w-full py-3.5 rounded-2xl font-bold text-white" style="background:linear-gradient(135deg,#6d28d9,#7c3aed)">Rate SoberStreak ⭐⭐⭐⭐⭐</button>
+        <button id="review-later-btn" class="w-full py-3 text-gray-500 text-sm">Maybe later</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PREMIUM UPGRADE MODAL -->
+<div id="premium-modal" class="fixed inset-0 z-[150] hidden" style="background:rgba(0,0,0,.88);backdrop-filter:blur(8px)">
+  <div class="max-w-md mx-auto h-full flex items-center justify-center px-6">
+    <div class="w-full rounded-3xl p-6" style="background:#1a1a2e;border:1px solid rgba(124,58,237,.3)">
+      <button id="close-premium-btn" class="absolute top-4 right-4 text-gray-500 text-xl" style="position:absolute">✕</button>
+      <div class="text-center mb-5">
+        <div class="text-4xl mb-2">🔓</div>
+        <h2 class="text-xl font-bold text-white mb-1">SoberStreak Pro</h2>
+        <p class="text-gray-400 text-sm">Track multiple habits. Export your data. No banners.</p>
+      </div>
+      <div class="glass rounded-2xl p-4 mb-4">
+        <div class="flex justify-between items-center mb-2">
+          <div>
+            <div class="text-white font-bold">Annual Plan</div>
+            <div class="text-gray-500 text-xs">Best value — save 44%</div>
+          </div>
+          <div class="text-right">
+            <div class="text-purple-400 font-black text-xl">$19.99</div>
+            <div class="text-gray-500 text-xs">per year</div>
+          </div>
+        </div>
+        <div class="inline-block bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">BEST VALUE</div>
+      </div>
+      <div class="glass rounded-2xl p-4 mb-5">
+        <div class="flex justify-between items-center">
+          <div>
+            <div class="text-white font-bold">Monthly Plan</div>
+            <div class="text-gray-500 text-xs">Cancel anytime</div>
+          </div>
+          <div class="text-right">
+            <div class="text-gray-300 font-bold text-lg">$2.99</div>
+            <div class="text-gray-500 text-xs">per month</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-xs text-gray-600 mb-4 space-y-1">
+        <div>✓ Track up to 5 habits simultaneously</div>
+        <div>✓ Data export (CSV)</div>
+        <div>✓ Custom milestone messages</div>
+        <div>✓ Extended heatmap (6 months)</div>
+        <div>✓ No upgrade prompts</div>
+      </div>
+      <a id="premium-annual-btn" href="https://buy.stripe.com/soberstreak-annual" target="_blank" class="block w-full py-3.5 rounded-2xl font-bold text-white text-center mb-3" style="background:linear-gradient(135deg,#6d28d9,#7c3aed)">Start Free 7-Day Trial</a>
+      <p class="text-center text-gray-600 text-xs">Cancel anytime. Data stays on your device.</p>
+    </div>
+  </div>
+</div>
+
 <!-- TOAST -->
 <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-[200] pointer-events-none hidden">
   <div id="toast-msg" class="px-5 py-3 rounded-2xl text-sm font-medium text-white" style="background:rgba(124,58,237,.9);backdrop-filter:blur(12px)"></div>
@@ -273,8 +343,32 @@ const STORE_KEY = 'soberstreak_v2';
 let state = {
   habit: 'nofap', customHabit: '', startDate: null,
   lastCheckin: null, streak: 0, bestStreak: 0,
-  totalDays: 0, resets: 0, checkedDays: [], journal: []
+  totalDays: 0, resets: 0, checkedDays: [], journal: [],
+  lastReviewPrompt: null, isPremium: false
 };
+
+// ============================
+// REVIEW PROMPT (fires after 7-day milestone, max once per 90 days)
+// ============================
+function maybeShowReviewPrompt(streakDays) {
+  const REVIEW_THRESHOLD = 7;
+  const REVIEW_COOLDOWN_DAYS = 90;
+  if (streakDays < REVIEW_THRESHOLD) return;
+  if (state.lastReviewPrompt) {
+    const daysSince = Math.floor((Date.now() - state.lastReviewPrompt) / 86400000);
+    if (daysSince < REVIEW_COOLDOWN_DAYS) return;
+  }
+  // Only fire on exact milestone hits, not every day after
+  const exactMilestone = [7, 30, 90, 180, 365].includes(streakDays);
+  if (!exactMilestone) return;
+  setTimeout(() => document.getElementById('review-modal').classList.remove('hidden'), 1200);
+}
+
+// ============================
+// PREMIUM
+// ============================
+function openPremium() { document.getElementById('premium-modal').classList.remove('hidden'); }
+function closePremium() { document.getElementById('premium-modal').classList.add('hidden'); }
 
 const MILESTONES = [
   { days: 1,   emoji: '🌱', title: '1 Day',    msg: 'You started. That is everything.' },
@@ -347,6 +441,7 @@ function doCheckin() {
   renderHome();
   const m = MILESTONES.find(x => x.days === s);
   setTimeout(() => showToast(m ? m.emoji + ' ' + m.title + ' unlocked! ' + m.msg : 'Day ' + s + ' checked in. Keep going.'), 200);
+  maybeShowReviewPrompt(s);
 }
 
 function updateCheckinBtn() {
@@ -665,6 +760,20 @@ function bindEvents() {
   document.getElementById('save-journal-btn').onclick = saveJournalEntry;
   document.getElementById('close-journal-btn').onclick = () => document.getElementById('journal-modal').classList.add('hidden');
   document.getElementById('stop-breathing-btn').onclick = stopBreathing;
+  document.getElementById('review-yes-btn').onclick = () => {
+    state.lastReviewPrompt = Date.now();
+    saveState();
+    document.getElementById('review-modal').classList.add('hidden');
+    window.open('https://soberstreak.surge.sh/#rate', '_blank');
+  };
+  document.getElementById('review-later-btn').onclick = () => {
+    state.lastReviewPrompt = Date.now() - (85 * 86400000); // retry in 5 days
+    saveState();
+    document.getElementById('review-modal').classList.add('hidden');
+  };
+  document.getElementById('open-premium-btn').onclick = openPremium;
+  document.getElementById('close-premium-btn').onclick = closePremium;
+  document.getElementById('premium-modal').onclick = (e) => { if (e.target === document.getElementById('premium-modal')) closePremium(); };
   document.getElementById('nav-home').onclick = () => switchTab('home');
   document.getElementById('nav-milestones').onclick = () => switchTab('milestones');
   document.getElementById('nav-journal').onclick = () => switchTab('journal');

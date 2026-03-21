@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Auto-List Products on Marketplaces
 Reads ready-to-list product data from PRODUCTS/ and automates listing via Playwright.

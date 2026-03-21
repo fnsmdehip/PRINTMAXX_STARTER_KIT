@@ -1,48 +1,48 @@
 # Growth Plan: 14 PH launches today - HIGH quality B2B leads. 48h outreach 
 
-**Created:** 2026-03-20 18:09
+**Created:** 2026-03-21 11:41
 **Venture:** OUTBOUND
 **Budget Tier:** FREE
-**Revenue Est:** $200-800/mo
+**Revenue Est:** $300-900/mo
 
 ---
 
 ## Tactics
 
-1. Reply to PH launch threads with genuine congrats + subtle mention before emailing (warms the cold touch)
-2. Cross-reference PH makers with Twitter — follow + engage before outreach
-3. Offer free landing page audit as lead magnet (we can auto-generate via existing scripts)
-4. Track which PH categories yield highest reply rates and double down
-5. Use PH maker mutual connections as social proof in email
+1. Personalize email body with the product's specific tagline and one concrete use case for our offer — generic congrats get ignored on launch day
+2. Send within first 6 hours of launch detection (highest founder energy window)
+3. Follow-up sequence: day 3 (light check-in), day 7 (different angle — user research ask, not sales)
+4. Cross-reference PH maker profile with Twitter/LinkedIn for multi-channel touch
+5. For top-voted launches (500+ votes), manually craft email — worth 10 minutes
+6. Track which B2B categories convert best and tighten filter over 30 days
 
 ## Budget Tier Strategies
 
 ### FREE
-PH API scraping + custom email composer via claude -p + manual Gmail sending. Reply to PH threads for warm touches. Cross-pollinate with Twitter engagement.
+PH public API scrape daily, claude -p personalization, self-hosted cold email via cold_email_2026.py, manual follow-up for top 5 leads/day
 
 ### LOW
-$0-50/mo: Hunter.io paid tier for better email enrichment (150 requests/mo free may suffice). Instantly free tier for sending automation.
+$0-50/mo — Hunter.io free tier for email enrichment (25/mo free), Instantly warm-up pool to improve deliverability
 
 ### MID
-$50-200/mo: Instantly paid for volume sending + auto follow-ups. Apollo.io for deeper founder enrichment. A/B test subject lines at scale.
+$50-200/mo — Instantly paid ($37/mo) for full send queue management + analytics, add LinkedIn DM via PhantomBuster for dual-channel outreach on top 3 leads/day
 
 ## Daily Actions
 
-- [ ] 1. Build ph_launch_outreach_pipeline.py that scrapes PH daily launches (extend existing ph_scrape_latest.csv flow)
-- [ ] 2. Add B2B qualifier: filter by category tags (SaaS, developer tools, productivity, B2B), presence of pricing page, team indicators
-- [ ] 3. Add founder email extraction: scrape maker profiles for Twitter/LinkedIn/website, check website contact pages, use Hunter.io free tier
-- [ ] 4. Build email composer using claude -p: congrats template + product-specific compliment + value offer (landing page audit / beta access / growth tips)
-- [ ] 5. Wire into LEDGER/OUTREACH_PIPELINE.csv with status tracking and 48h follow-up scheduling
-- [ ] 6. Add cron at 7 AM daily (PH launches midnight PT, gives 7h for processing before business hours)
-- [ ] 7. Warm touch: auto-comment on PH launch thread before sending email (uses existing engagement patterns)
-- [ ] 8. Track reply rates by PH category to optimize targeting over time
+- [ ] Verify producthunt_scraper.py exists and PH API endpoint is functional — curl test
+- [ ] Add B2B category filter + founder email extraction to producthunt_scraper.py
+- [ ] Wire output CSV to cold_email_2026.py --input flag with 48h timestamp guard
+- [ ] Add LEDGER/PH_OUTREACH_LOG.csv dedup check before send
+- [ ] Install cron: 30 6 * * * python3 AUTOMATIONS/producthunt_b2b_outreach.py
+- [ ] Add KPI row to OPS/KPI_DASHBOARD.md: PH outreach sent/replied/converted daily
+- [ ] Run once manually, verify 5+ emails generated with personalized content before scheduling
 
 ## Tooling
 
 ```json
 {
-  "browser": "playwright for PH scraping",
-  "email": "custom cold email scripts + Gmail SMTP",
-  "content": "claude -p for email personalization"
+  "browser": "playwright (email enrichment fallback only)",
+  "email": "cold_email_2026.py (self-hosted)",
+  "content": "claude -p for personalization"
 }
 ```

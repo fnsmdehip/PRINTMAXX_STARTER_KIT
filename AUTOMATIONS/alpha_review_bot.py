@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Alpha Review Bot — Automated PENDING_REVIEW Processor
 =====================================================

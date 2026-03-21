@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Facebook Ads Library Product Research Scanner
 Source: ALPHA018 - "Search FB Ads Library for product keywords. If paying for ads = making money."

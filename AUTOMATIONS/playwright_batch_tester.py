@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """Playwright Batch Site Tester for PRINTMAXX deployed surge.sh sites."""
 
 import json

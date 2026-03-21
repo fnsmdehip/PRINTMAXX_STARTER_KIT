@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Telegram Community Monitor — Signal Extraction from Public Channels
 ==============================================================================

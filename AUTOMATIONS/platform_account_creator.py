@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Platform Account Creator - Automated account setup checklists and tab opener.
 

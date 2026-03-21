@@ -1,0 +1,40 @@
+{
+  "name": "integration_14_ph_launches_today__high_quality_b2b_",
+  "created": "2026-03-21T11:41:05.187490",
+  "method": "14 PH launches today - HIGH quality B2B leads. 48h outreach window. Cold email: congrats on launch + offer beta access. File: leads/producthunt_b2b_leads.csv",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "scrape_ph",
+      "steps": [
+        "hit PH public API /posts?day=today&per_page=50",
+        "filter by category: SaaS, B2B, Productivity, Dev Tools, Marketing",
+        "extract: name, tagline, maker_email or PH profile, website, vote_count"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "qualify_b2b",
+      "steps": [
+        "score each launch: B2B signal keywords, pricing page detected, target_market=business",
+        "dedupe against LEDGER/PH_OUTREACH_LOG.csv",
+        "enrich with website scrape for founder email if missing",
+        "rank by vote_count desc, cap at top 14 per day"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_ph"
+    },
+    {
+      "name": "generate_and_send",
+      "steps": [
+        "generate personalized email per lead using claude -p (congrats + specific product detail + beta offer)",
+        "inject into cold_email_2026.py send queue",
+        "log to LEDGER/PH_OUTREACH_LOG.csv with timestamp",
+        "append to LEDGER/ALPHA_STAGING.csv follow-up tasks"
+      ],
+      "parallel": true,
+      "depends_on": "qualify_b2b"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 hashtag_audio_tracking.py - Track trending hashtags and audio across platforms
 Scrapes TikTok Creative Center, Reddit, and web search for trending content.

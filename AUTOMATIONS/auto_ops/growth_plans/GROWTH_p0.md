@@ -1,51 +1,53 @@
 # Growth Plan: P0
 
-**Created:** 2026-03-20 18:10
+**Created:** 2026-03-20 23:36
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $100-400/mo
+**Revenue Est:** $300-1,200/mo (0.1-0.3% penetration of 3.2M market, $0.30-0.50 ARPPU from AdMob + premium tier)
 
 ---
 
 ## Tactics
 
-1. Cross-promote from 47 existing deployed streak apps via in-app banners
-2. Reddit r/tennis (1M+ subs) — value posts about serve improvement with app mention
-3. Reddit r/10s — active tennis discussion community
-4. Tennis Twitter/X — serve tip threads with app CTA
-5. TikTok tennis content — serve form videos with streak overlay
-6. ASO long-tail: 'tennis serve counter', 'daily serve practice', 'tennis habit tracker'
-7. Engagement bait: 'I tracked my tennis serve for 30 days — here's what happened'
+1. organic_esports_reddit_seeding
+2. discord_community_engagement
+3. twitter_esports_accounts_follow
+4. sponsored_posts_in_game_subreddits
+5. twitch_streamer_partnerships
+6. esports_betting_affiliate_links
+7. niche_content_repurposing_to_tiktok
 
 ## Budget Tier Strategies
 
 ### FREE
-Cross-promote from existing 47 streak apps, Reddit r/tennis + r/10s value posts, tennis Twitter threads, ASO long-tail keywords, engagement_bait_converter.py for tennis content
+Daily Reddit/Discord seeding (5 communities), organic Twitter engagement with esports accounts, niche hashtag farming, content repurposing to TikTok, cross-promotion with other streak apps (scripture, yoga, fitness)
 
 ### LOW
-$0-50/mo: Micro-influencer tennis coaches on TikTok/IG for shoutouts, boosted Reddit posts
+$20-50/mo: micro-budget Reddit ads targeting r/esports + r/competitivegaming, sponsored posts in 3-5 esports Discord communities, Twitter promoted tweets targeting esports keywords
 
 ### MID
-$50-200/mo: Tennis YouTuber sponsorship (serve tutorial channels), targeted Meta ads to tennis interest audiences
+$100-200/mo: Twitch streamer partnerships (micro-influencers 10K-100K followers), esports YouTuber shoutouts, paid Discord sponsorships, affiliate commissions from gaming equipment partners
 
 ## Daily Actions
 
-- [ ] 1. Clone pushup-streak or fitness-streak template as base (closest sports UX)
-- [ ] 2. Customize: serve counter (tap per serve), daily goal setter, streak calendar, serve speed optional input
-- [ ] 3. Landing page with tennis-specific copy targeting '1.3M tennis community, zero streak apps' angle
-- [ ] 4. Deploy landing + PWA to surge (tennis-serve-streak.surge.sh)
-- [ ] 5. Create Stripe payment link for premium tier ($2.99/mo: advanced analytics, serve speed tracking, leaderboard)
-- [ ] 6. ASO seed: submit to directories with tennis-specific keywords
-- [ ] 7. Generate 3 tweets + 1 thread about tennis practice habits for printmaxxer account
-- [ ] 8. Cross-promote via existing streak app network (in-app 'More Apps' section)
-- [ ] 9. Post value content to r/tennis and r/10s with genuine serve improvement tips
+- [ ] 1. Query app_factory_command_center to get latest streak template repo
+- [ ] 2. Clone template, customize for esports: theme colors (team colors), icons (game logos), content schema (match analysis)
+- [ ] 3. Create esports_streak_content_generator.py: fetch pro match schedules (esports-data APIs or scrape liquipedia), generate 500-word daily analysis using Claude Max (cost: ~$0.01/day), store in markdown
+- [ ] 4. Deploy app to surge.sh with AdMob SDK + RevenueCat (IAP for premium tier)
+- [ ] 5. Create esports_community_seeder.py: identify 50+ esports subreddits (r/esports, r/valorant, r/leagueoflegends, etc.), schedule weekly low-volume posts (not spam) via praw library
+- [ ] 6. Schedule cron 6:30 AM daily: run content generator → post to Twitter/Discord communities → update app feed
+- [ ] 7. Wire into master_ops_bridge.py for KPI tracking (DAU, revenue, retention)
+- [ ] 8. Set up ralph_loop for 30-day refinement: analyze engagement by content type, optimize posting times, test premium pricing
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
-  "email": "none",
-  "content": "content_factory + engagement_bait_converter"
+  "browser": "playwright",
+  "email": "cold_outreach_script",
+  "content": "claude_max_daily_generation",
+  "app_deploy": "surge_free_tier",
+  "analytics": "admob_builtin",
+  "community_discovery": "scraper_reddit_discord_twitter"
 }
 ```

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 Competitor Price & Page Monitor (Visualping Alternative)
 Source: @pipelineabuser tweet - "I monitor 200+ websites and get alerts when anything changes"

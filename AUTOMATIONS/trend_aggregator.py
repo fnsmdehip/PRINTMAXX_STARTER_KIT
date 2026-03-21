@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Trend Aggregator - Multi-Source Viral Trend Detection
 

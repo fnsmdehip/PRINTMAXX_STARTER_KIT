@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 iOS Release Pipeline - Automated PWA-to-App-Store submission
 Wraps PWAs with Capacitor, generates metadata, builds, validates, uploads.

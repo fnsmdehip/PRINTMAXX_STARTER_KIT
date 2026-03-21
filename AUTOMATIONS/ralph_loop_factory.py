@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+from __future__ import annotations
 """
 PRINTMAXX Ralph Loop Factory - Create and manage Ralph Wiggum loops for any op.
 
