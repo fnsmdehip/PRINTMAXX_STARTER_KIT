@@ -1,35 +1,47 @@
 {
   "name": "integration_13k_users_but_only_35_mrr_is_it_time",
-  "created": "2026-03-20T18:35:53.558624",
+  "created": "2026-03-21T12:40:53.787463",
   "method": "1.3k users, but only $35 MRR. Is it time to kill my project? I've been running **RankMyCV** for a few months now. The growth actually surprised me\u2014I just hit **1,356 total users** and I'm getting arou",
-  "venture": "APP",
+  "venture": "MONETIZE",
   "phases": [
     {
-      "name": "scrape_app_metrics",
+      "name": "inventory",
       "steps": [
-        "pull_deployment_urls",
-        "check_each_app_for_paywall_type",
-        "classify_freemium_vs_hard_paywall"
+        "list all 47 live apps from OPS/DEPLOYMENT_URLS.md",
+        "check payment_integrator.py --status for each",
+        "pull user engagement signals from firebase if available"
       ],
       "parallel": true
     },
     {
-      "name": "conversion_audit",
+      "name": "diagnosis",
       "steps": [
-        "flag_apps_giving_core_value_free",
-        "recommend_paywall_restructure",
-        "generate_ab_test_variants"
+        "score each app on: paywall exists (0/1), upgrade CTA present (0/1), free tier too generous (heuristic), pro features clearly differentiated (heuristic)",
+        "classify: NO_PAYWALL | SOFT_GATE | HARD_GATE | PROPERLY_MONETIZED",
+        "rank by traffic \u00d7 leakage score = conversion opportunity"
+      ],
+      "parallel": false,
+      "depends_on": "inventory"
+    },
+    {
+      "name": "patch_generation",
+      "steps": [
+        "for NO_PAYWALL apps: generate Stripe Payment Link + inject checkout snippet via payment_integrator.py --wire-app",
+        "for SOFT_GATE apps: generate harder paywall patch (limit free to 1 use, require email, add trial timer)",
+        "for all apps: generate upgrade CTA HTML block with data-upgrade attribute"
       ],
       "parallel": true,
-      "depends_on": "scrape_app_metrics"
+      "depends_on": "diagnosis"
     },
     {
-      "name": "new_app_spec",
+      "name": "report",
       "steps": [
-        "spec_cv_analyzer_with_hard_paywall_3_free_then_pay",
-        "add_to_app_factory_priority_queue"
+        "write LEDGER/FREEMIUM_AUDIT_{date}.md with per-app scores + patches applied",
+        "update OPS/STRIPE_PRODUCTS.md with new payment links",
+        "append to OPS/KPI_DASHBOARD.md: monetized app count delta"
       ],
-      "parallel": true
+      "parallel": false,
+      "depends_on": "patch_generation"
     }
   ],
   "status": "READY"

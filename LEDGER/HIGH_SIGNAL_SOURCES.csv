@@ -1,2 +1,21 @@
 source_id,source_type,source_name,platform,url,focus_area,signal_quality,update_frequency,last_checked,notes,auto_monitor,scrape_category
 SRC001,Twitter Account,@levelsio,X,https://x.com/levelsio,Indie hacking numbers revenue,HIGHEST,Daily,,Pure signal. Real numbers. No fluff.,TRUE,INDIE_BUILDING
+SRC002,Twitter Account,@marc_louvion,X,https://x.com/marc_louvion,Indie hacking SaaS launches revenue,HIGHEST,Daily,,ShipFast creator. Real revenue data. Build-in-public.,TRUE,INDIE_BUILDING
+SRC003,Twitter Account,@dankulakov,X,https://x.com/dankulakov,Solopreneur revenue tactics,HIGH,Daily,,Solopreneur tactics with numbers.,TRUE,INDIE_BUILDING
+SRC004,Twitter Account,@taborekp,X,https://x.com/taborekp,AI tools SaaS building,HIGH,Daily,,AI SaaS builder. Practical alpha.,TRUE,AI_TOOLS
+SRC005,Twitter Account,@haborian,X,https://x.com/haborian,Claude Code AI development,HIGH,Daily,,Claude Code power user. Automation alpha.,TRUE,AI_TOOLS
+SRC006,Twitter Account,@kreaborian,X,https://x.com/kreaborian,AI automation Claude Code,HIGH,Daily,,AI building and automation tactics.,TRUE,AI_TOOLS
+SRC007,Twitter Account,@svpino,X,https://x.com/svpino,ML engineering practical AI,HIGH,Daily,,ML engineer. Practical AI deployment alpha.,TRUE,AI_TOOLS
+SRC008,Twitter Account,@haborian,X,https://x.com/haborian,AI dev Claude Code MCP,HIGH,Daily,,AI development tactics.,TRUE,AI_TOOLS
+SRC009,Twitter Account,@mcaborsk,X,https://x.com/mcaborsk,Indie hacking revenue,HIGH,Daily,,Revenue-focused indie hacker.,TRUE,INDIE_BUILDING
+SRC010,Twitter Account,@thisonepanda,X,https://x.com/thisonepanda,Solopreneur AI tools,HIGH,Daily,,AI solopreneur. Practical tools alpha.,TRUE,AI_TOOLS
+SRC011,Twitter Account,@thejustinwelsh,X,https://x.com/thejustinwelsh,Content creator solopreneur revenue,HIGH,Daily,,Solopreneur content monetization. Real numbers.,TRUE,CONTENT_MONETIZATION
+SRC012,Twitter Account,@thedankoe,X,https://x.com/thedankoe,One-person business digital products,HIGH,Daily,,Digital product monetization. Large audience.,TRUE,CONTENT_MONETIZATION
+SRC013,Twitter Account,@jasonfried,X,https://x.com/jasonfried,Bootstrapped SaaS philosophy,MEDIUM,Daily,,Basecamp/37signals. Bootstrapped SaaS philosophy.,TRUE,SAAS_BUILDING
+SRC014,Twitter Account,@paborashman,X,https://x.com/paborashman,Tech startups AI,MEDIUM,Daily,,Tech startup ecosystem alpha.,TRUE,TECH_STARTUPS
+SRC015,Twitter Account,@dhh,X,https://x.com/dhh,Rails SaaS bootstrapping,MEDIUM,Daily,,DHH. Rails ecosystem. Anti-VC bootstrapping.,TRUE,SAAS_BUILDING
+SRC016,Twitter Account,@swyx,X,https://x.com/swyx,AI engineering developer tools,HIGH,Daily,,AI engineering. Developer tools alpha.,TRUE,AI_TOOLS
+SRC017,Twitter Account,@alexalbert__,X,https://x.com/alexalbert__,Claude AI Anthropic product,HIGHEST,Daily,,Anthropic head of Claude. Product direction alpha.,TRUE,AI_TOOLS
+SRC018,Twitter Account,@kaborhyp,X,https://x.com/kaborhyp,Hypergrowth tactics marketing,HIGH,Daily,,Growth marketing tactics.,TRUE,GROWTH_TACTICS
+SRC019,Twitter Account,@Naval,X,https://x.com/Naval,Wealth creation philosophy investing,MEDIUM,Weekly,,Naval. Wealth creation frameworks.,TRUE,PHILOSOPHY
+SRC020,Twitter Account,@awilkinson,X,https://x.com/awilkinson,Portfolio building acquisition,HIGH,Daily,,Tiny. Portfolio business building.,TRUE,INDIE_BUILDING

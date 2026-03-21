@@ -1,0 +1,29 @@
+{
+  "name": "chain_getting_hit_by_a_return_scammer_and_don",
+  "created": "2026-03-21T12:40:50.489584",
+  "method": "Getting hit by a return scammer and don\u2019t know what to do",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Find threads about return fraud/scams in reselling subreddits",
+      "output": "return_fraud_threads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for recent (<48h), active threads with emotional distress signals",
+      "output": "qualified_threads.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Generate empathetic reply with free checklist lead magnet + guide upsell link",
+      "output": "comment_queue.json"
+    },
+    {
+      "agent": "poster",
+      "task": "Post comments via Playwright with Brave cookies, rate-limited",
+      "output": "engagement_log.json"
+    }
+  ],
+  "status": "READY"
+}

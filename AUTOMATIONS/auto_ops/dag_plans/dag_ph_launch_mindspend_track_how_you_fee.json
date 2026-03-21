@@ -1,0 +1,38 @@
+{
+  "name": "integration_ph_launch_mindspend_track_how_you_fee",
+  "created": "2026-03-21T12:40:56.082975",
+  "method": "[PH LAUNCH] Mindspend: Track how you feel about spending, not just the numbers",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "market_intel",
+      "steps": [
+        "scrape_ph_comments_mindspend",
+        "scrape_appstore_emotional_finance_reviews",
+        "extract_feature_gaps_and_complaints"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "app_build",
+      "steps": [
+        "fork_journal_streak_template",
+        "add_emoji_scale_emotional_annotation",
+        "build_landing_page_mindful_spending_angle"
+      ],
+      "parallel": false,
+      "depends_on": "market_intel"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "deploy_to_surge",
+        "generate_3_tweets_1_thread_via_engagement_bait_converter",
+        "draft_ph_listing"
+      ],
+      "parallel": true,
+      "depends_on": "app_build"
+    }
+  ],
+  "status": "READY"
+}

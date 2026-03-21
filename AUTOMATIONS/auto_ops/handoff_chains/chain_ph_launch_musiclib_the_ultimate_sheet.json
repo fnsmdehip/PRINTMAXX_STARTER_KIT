@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_musiclib_the_ultimate_sheet",
+  "created": "2026-03-21T12:40:56.943821",
+  "method": "[PH LAUNCH] MusicLib: The Ultimate Sheet Music Library Solution",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH top 20 daily launches \u2014 extract product name, category, founder name, Twitter/LinkedIn handle, website URL, upvote count, and tagline",
+      "output": "ph_daily_launches.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for B2B tools, prosumer apps, and solo-founder projects scoring 7+ on lead quality (small team, fresh launch, growth-stage signals in tagline). Exclude enterprise/VC-backed.",
+      "output": "ph_qualified_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Find founder email via website contact page or Hunter.io free tier. Generate personalized cold email referencing their specific launch: product name, pain point from tagline, one concrete growth lever we can deliver. Log to outreach pipeline with 48h follow-up flag.",
+      "output": "ph_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

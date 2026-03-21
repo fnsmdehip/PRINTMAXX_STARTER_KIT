@@ -2,37 +2,39 @@
 
 ChatGPT proce
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct, supports existing SEO pipeline worth $50-200/mo by validating strategy
+**Revenue Est:** $0 direct — supports SEO/content pipeline worth $50-200/mo via organic traffic + positions for GEO consulting angle at $500-2K/project
 
 ---
 
 ## Tactics
 
-1. contrarian_hot_take_engagement
-2. data_backed_threads_get_bookmarks
-3. quote_tweet_ai_hype_accounts_with_actual_numbers
+1. Post contrarian thread: 'AI isn't killing Google SEO — here's the data' with 190x referral stat as hook
+2. Repurpose into LinkedIn carousel showing ChatGPT query volume vs referral traffic gap
+3. Write GEO explainer blog post targeting 'generative engine optimization' keyword (low competition, rising)
+4. Quote-tweet Hiten Shah's thread with our own data point or tool angle
+5. Publish comparison page: AI search traffic vs Google referral traffic by niche — organic SEO bait
 
 ## Budget Tier Strategies
 
 ### FREE
-Post contrarian data threads on X/LinkedIn. QT AI-hype influencers with the 190x traffic stat. Seed in r/SEO and r/startups where SEO-is-dead narrative is active.
+Publish 3-part Twitter thread using 190x stat as hook. Cross-post to LinkedIn. Submit GEO explainer to HN Show HN. Route through engagement_bait_converter.py for 5+ post variants.
 
 ### LOW
-$0-20/mo boost top-performing contrarian thread on X
+$10-20 boost on best-performing thread variant. Seed to 2-3 indie hacker subreddits (r/SEO, r/juststart, r/digital_marketing).
 
 ### MID
-$50-100/mo targeted LinkedIn ads to founders abandoning SEO prematurely
+Commission data visualization of AI query vs referral traffic trend. Use as lead magnet for email list. Pitch to SEO newsletters (Detailed, SE Roundtable) as guest data piece.
 
 ## Daily Actions
 
-- [ ] Extract key data points: ChatGPT=12% Google volume, 190x less referral traffic, Perplexity 340% growth but from tiny base
-- [ ] Generate 3 contrarian content pieces: thread (Google is NOT dying, here are the numbers), single post (190x stat as hook), engagement bait (poll: are you abandoning SEO for GEO?)
-- [ ] Route to CONTENT/social/posting_queue/ via engagement_bait_converter.py
-- [ ] Update SEO strategy: double down on programmatic SEO pages while competitors flee - less competition = easier rankings
-- [ ] Weekly cron: check Google Search Console impressions trend to validate thesis
+- [ ] Run engagement_bait_converter.py on this entry: extract '190x less referral traffic' stat as primary hook
+- [ ] Generate 3 Twitter variants (contrarian take, data thread, hot take) + 1 LinkedIn carousel outline
+- [ ] Write 800-word SEO blog post: 'Why AI Search Won't Kill Google Referral Traffic (Yet)' targeting 'GEO optimization' + 'AI vs Google SEO' keywords
+- [ ] Add to CONTENT/social/posting_queue/ for next batch posting
+- [ ] Add 'geo_content_generator.py' to weekly Monday cron — refreshes AI query volume stats from public sources for evergreen data angle
 
 ## Tooling
 

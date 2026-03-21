@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_visdiff_stop_bridging_the_d",
+  "created": "2026-03-21T12:40:57.151146",
+  "method": "[PH LAUNCH] Visdiff: Stop bridging the design-to-code gap, close it",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Pull PH daily launches via playwright, filter design/dev tools, extract product URL + maker profiles",
+      "output": "ph_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score by upvotes (>50), comments (>10), category match (design/dev/no-code), find founder Twitter/email via LinkedIn scrape",
+      "output": "ph_launches_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Route qualified founders to cold_email_pipeline.py with template: 'saw your PH launch, we help [pain point] \u2014 here is one specific thing'",
+      "output": "ph_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

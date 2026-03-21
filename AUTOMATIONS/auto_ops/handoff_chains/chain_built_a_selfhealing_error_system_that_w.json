@@ -1,0 +1,29 @@
+{
+  "name": "chain_built_a_selfhealing_error_system_that_w",
+  "created": "2026-03-21T12:40:53.749539",
+  "method": "Built a self-healing error system that watches my prod logs, launches Claude to fix bugs, and I approve fixes from Telegram I run a couple of Node.js services and got really tired of constantly checki",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "log_watcher",
+      "task": "Tail app logs for all surge/vercel deploys. Fingerprint each error: sha256(message + ''.join(stack[:3])). Deduplicate \u2014 only surface each unique fingerprint once per hour. Write new errors to error_queue.json.",
+      "output": "error_queue.json"
+    },
+    {
+      "agent": "fix_generator",
+      "task": "For each error in queue: read relevant source file, call claude -p with error context + code snippet, request unified diff patch. Store proposed fix with confidence score.",
+      "output": "proposed_fixes.json"
+    },
+    {
+      "agent": "approval_router",
+      "task": "Severity < 2 (non-breaking): auto-approve. Severity >= 2: send Telegram message with error summary + proposed diff. Wait up to 30 min for APPROVE/REJECT reply. Timeout = auto-reject.",
+      "output": "approved_fixes.json"
+    },
+    {
+      "agent": "fix_applier",
+      "task": "Apply approved patch via git apply. Redeploy via surge CLI or vercel CLI. Smoke-test the URL (HTTP 200 check). Log result to fix_log.jsonl. If deploy fails, rollback and alert.",
+      "output": "fix_log.jsonl"
+    }
+  ],
+  "status": "READY"
+}

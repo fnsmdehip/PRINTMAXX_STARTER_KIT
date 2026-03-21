@@ -1,0 +1,38 @@
+{
+  "name": "integration_mit_repo_brufdevmanynotes_928_stars",
+  "created": "2026-03-21T12:40:54.924499",
+  "method": "MIT repo: brufdev/many-notes (928 stars, PHP)",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "Clone brufdev/many-notes and audit feature set (PHP version, DB requirements, multi-user support)",
+        "Scrape GitHub issues for top user complaints \u2014 these become landing page pain points",
+        "Check competitors: Standard Notes pricing, Joplin pricing, Notesnook pricing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "Fork repo, rename to 'NoteVault' or 'QuickNotes Pro', update branding in config",
+        "Add Stripe payment link guard at login \u2014 free 7-day trial, then $9/mo",
+        "Generate Railway/Render deploy config (railway.json + Procfile)"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "Deploy landing page to surge.sh targeting self-hosted notes longtails",
+        "Submit to alternativeto.net as Notion/Obsidian alternative",
+        "Queue 3 tweets: pain-point hook \u2192 feature walkthrough \u2192 price anchoring"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    }
+  ],
+  "status": "READY"
+}

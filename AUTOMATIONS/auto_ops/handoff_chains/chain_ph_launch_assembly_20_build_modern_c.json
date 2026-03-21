@@ -1,0 +1,29 @@
+{
+  "name": "chain_ph_launch_assembly_20_build_modern_c",
+  "created": "2026-03-21T12:40:56.857892",
+  "method": "[PH LAUNCH] Assembly 2.0: Build modern client portals for service businesses",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape LinkedIn/Reddit/Upwork for agencies, consultants, freelancers with no client portal (look for Notion links, Google Drive shares, email attachments as delivery signals)",
+      "output": "service_biz_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads: active in last 30d, apparent revenue >$2K/mo, no existing portal tool (Notion/ClickUp is not a portal \u2014 that's a qualifier)",
+      "output": "qualified_portal_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Send cold email: 'Built a client portal for [niche] businesses in 24h \u2014 [screenshot]. Want one?' \u2014 uses our existing cold_email scripts",
+      "output": "portal_outreach_log.json"
+    },
+    {
+      "agent": "closer",
+      "task": "On reply, deliver portal template (app factory build) customized with their branding. Charge $297-497 one-time or $97/mo hosted.",
+      "output": "delivery_log.json"
+    }
+  ],
+  "status": "READY"
+}

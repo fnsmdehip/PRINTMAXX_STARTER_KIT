@@ -2,7 +2,7 @@
 
 MRR is actually
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
 **Revenue Est:** $0-25/mo
@@ -11,28 +11,26 @@ MRR is actually
 
 ## Tactics
 
-1. engagement_farming_saas_stagnation_is_universal_pain
-2. reply_to_indie_hacker_threads_about_churn_with_diagnostic_angle
-3. cross_post_to_r_saas_and_r_indiehackers
+1. Post the diagnostic story framing in r/indiehackers and r/SaaS — 'used Claude Code + Stripe to diagnose my MRR drop' is highly relatable and drives comments
+2. QT the original tweet with our own spin: what WE would investigate if we had $900 MRR stagnating
+3. Use as reply bait under SaaS founder posts about churn/stagnation — 'have you tried connecting Claude Code to your Stripe data?'
 
 ## Budget Tier Strategies
 
 ### FREE
-Post stagnation-diagnostic content in indie hacker communities, reply to MRR milestone/complaint threads with diagnostic angle, cross-promote Claude Code diagnostic capability
+Convert to 3 tweets + 1 Reddit post via engagement_bait_converter.py. Target: r/indiehackers, r/SaaS, Claude Code community on X. Hook angle: 'I spent 3 days letting Claude Code investigate my MRR drop — here is what it found'
 
 ### LOW
-$0-20/mo boost top-performing diagnostic thread on X
+$0-50/mo — boost top-performing post variation with $10-20 X promotion to SaaS founder audience
 
 ### MID
-$50-100/mo run targeted ads to SaaS founders experiencing churn
+$50-200/mo — N/A at current phase
 
 ## Daily Actions
 
-- [ ] Extract content hooks: SaaS stagnation narrative, Claude Code as diagnostic tool, PostHog+Stripe+chat integration
-- [ ] Generate 3 tweets (hook: 'Your MRR is stalling and you don't know why. Here's how I connected Claude Code to PostHog+Stripe to find out in 3 days')
-- [ ] Generate 1 thread: step-by-step connecting Claude Code to analytics stack for churn diagnosis
-- [ ] Route to posting_queue via engagement_bait_converter
-- [ ] Tag for cross-posting to Reddit indie hacker subs
+- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --method 'Claude Code + Stripe + Posthog MRR diagnosis' --audience 'SaaS founders' --hook 'stagnating MRR diagnosis stack'
+- [ ] Output 3 post variations to CONTENT/social/posting_queue/
+- [ ] Tag best variation for r/indiehackers + X posting
 
 ## Tooling
 
@@ -40,6 +38,6 @@ $50-100/mo run targeted ads to SaaS founders experiencing churn
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter + content_repurposer"
+  "content": "engagement_bait_converter.py"
 }
 ```

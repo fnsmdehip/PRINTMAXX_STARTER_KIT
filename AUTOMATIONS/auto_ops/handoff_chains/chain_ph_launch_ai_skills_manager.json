@@ -1,0 +1,34 @@
+{
+  "name": "chain_ph_launch_ai_skills_manager",
+  "created": "2026-03-21T12:40:59.710231",
+  "method": "[PH Launch] AI Skills Manager",
+  "venture": "OUTBOUND (primary), CONTENT (secondary)",
+  "stages": [
+    {
+      "agent": "ph_scraper",
+      "task": "Extract ProductHunt launch: founder name, email pattern, product URL, description, category, upvotes, top comments",
+      "output": "ph_launch_raw.json"
+    },
+    {
+      "agent": "founder_enrich",
+      "task": "Reverse lookup: LinkedIn search, email permutation testing, company domain, Twitter handle",
+      "output": "founder_contact_enriched.json"
+    },
+    {
+      "agent": "cold_email_generator",
+      "task": "Generate 3 email variants: (1) founder/CEO intro, (2) partnership opportunity, (3) feature request/integration angle. Include personalization hooks from PH comments.",
+      "output": "cold_emails_variants.json"
+    },
+    {
+      "agent": "outreach_queue",
+      "task": "Wire into Instantly or custom cold email script. Queue with 2-day stagger between variants. Tag as PH_LAUNCH_2026_MAR.",
+      "output": "outreach_campaign_queued.json"
+    },
+    {
+      "agent": "content_repurpose",
+      "task": "Route to engagement_bait_converter.py. Generate posts: launch announcement, feature breakdown, comparison to existing tools (if any), early-bird angle, founder story angle.",
+      "output": "engagement_posts_queued.json"
+    }
+  ],
+  "status": "READY"
+}

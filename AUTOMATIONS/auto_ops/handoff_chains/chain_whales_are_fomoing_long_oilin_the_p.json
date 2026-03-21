@@ -1,0 +1,24 @@
+{
+  "name": "chain_whales_are_fomoing_long_oilin_the_p",
+  "created": "2026-03-21T12:40:52.828036",
+  "method": "Whales are FOMO-ing long #oil!\n\nIn the past 30 minutes:\n\n0xf4b8 opened a 20x long on 125,169 xyz:CL($13.1M) \u2014 liquidation price: $96.64.\n\n0x4ff9 opened a 2x long on 62,180 xyz:CL($6.5M) \u2014 liquidation ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Poll hypurrscan.io /perps endpoint + Hyperliquid public API for positions opened in last 30 min with notional > $2M or leverage > 10x",
+      "output": "whale_signals_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter duplicates, score by notional size + leverage multiplier + liquidation proximity. Only pass top 1-2 per cycle.",
+      "output": "whale_signals_qualified.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "claude -p: write lookonchain-style alert (2-3 lines, wallet short address, position size, leverage, liquidation price, asset). Append affiliate CTA in reply.",
+      "output": "CONTENT/social/posting_queue/whale_alert_YYYYMMDD_HHMM.txt"
+    }
+  ],
+  "status": "READY"
+}

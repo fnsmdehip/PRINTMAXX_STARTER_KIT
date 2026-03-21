@@ -1,0 +1,34 @@
+{
+  "name": "chain_geoduels__i_built_a_100_free_geoguessr",
+  "created": "2026-03-21T12:40:49.177107",
+  "method": "GeoDuels - I built a 100% free GeoGuessr clone in my mom's basement",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "scrape r/SideProject + HN for existing geo-game posts, extract engagement metrics and which niches get most upvotes",
+      "output": "geo_game_niche_research.json"
+    },
+    {
+      "agent": "builder",
+      "task": "generate 10 niche variant HTML bundles from base template using niche_configs.json",
+      "output": "geo_game_variants/[niche].html x10"
+    },
+    {
+      "agent": "deployer",
+      "task": "surge deploy each variant, capture live URLs, smoke test with Playwright",
+      "output": "geo_game_deployment_log.json"
+    },
+    {
+      "agent": "seo_optimizer",
+      "task": "generate longtail SEO landing pages + submit to GSC + add internal linking between variants",
+      "output": "seo_submission_log.json"
+    },
+    {
+      "agent": "content_distributor",
+      "task": "post dev story to r/SideProject + route 3 tweets + 1 IH post through content pipeline",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

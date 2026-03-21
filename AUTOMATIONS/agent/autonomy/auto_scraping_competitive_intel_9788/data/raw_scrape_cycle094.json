@@ -1,0 +1,208 @@
+{
+  "cycle": 94,
+  "strategy": "OUTDOOR_SKILLS + SURVIVAL + GARDENING + HOMESTEADING",
+  "timestamp": "2026-03-21T12:05:00.000000+00:00",
+  "niches_scanned": 15,
+  "results": [
+    {
+      "name": "Daily Gardening Skill Streak",
+      "community": 6130000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/gardening (5.6M)",
+        "r/vegetablegardening (530K)"
+      ],
+      "existing_apps": "Gardenize/Planta track plant care but are reminders, not skill gamification",
+      "gap": "No app gamifies gardening knowledge with XP: soil reading, seed starting, companion planting, pest ID, composting ratios. Zero streak apps in a 5.6M community.",
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Hiking Training Streak",
+      "community": 4220000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/hiking (3.8M)",
+        "r/Ultralight (420K)"
+      ],
+      "existing_apps": "AllTrails is route discovery/logging. None gamify fitness prep, navigation, Leave No Trace knowledge, or gear decision-making with XP.",
+      "gap": "No app gamifies hiking skill building with streak XP: elevation gain training, blister prevention, map reading, bear canister packing. AllTrails is logbook not skill game.",
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Houseplant Mastery Streak",
+      "community": 3810000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/houseplants (3.4M)",
+        "r/plantclinic (410K)"
+      ],
+      "existing_apps": "Planta and Greg track watering schedules. Neither gamifies the skill: reading root health, diagnosing deficiencies, propagation technique, repotting timing with XP.",
+      "gap": "No app gamifies houseplant mastery with streak XP: one propagation attempt, one deficiency diagnosed, one pest treated. 3.4M community, zero skill-gamification apps.",
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Wilderness Camping Streak",
+      "community": 3380000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/camping (2.4M)",
+        "r/WildernessBackpacking (580K)",
+        "r/bushcraft (400K)"
+      ],
+      "existing_apps": "iOverlander/Campspot are site finders. None gamify wilderness skills: fire craft, shelter building, water sourcing, navigation, LNT principles with streak XP.",
+      "gap": "No app gamifies wilderness skill acquisition with streak XP. 3.38M community doing it passively. Fire starting to advanced navigation \u2014 zero skill-gamification layer exists.",
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Fishing Skills Streak",
+      "community": 2120000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/fishing (1.72M)",
+        "r/flyfishing (400K)"
+      ],
+      "existing_apps": "Fishbrain and Anglr are catch logbooks and social. Neither gamifies technique: knot tying, reading water, fly selection, rod casting technique, insect identification with XP.",
+      "gap": "No app gamifies fishing skill building with streak XP. 2.12M community. Fishbrain has streak for catches not for skill. Fly fishing technique school in gamified daily format is wide open.",
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Prepper Skills Streak",
+      "community": 1980000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/preppers (1.75M)",
+        "r/survivalprep (230K)"
+      ],
+      "existing_apps": "Preppers apps are gear checklists and supply trackers. None gamify daily skill acquisition: fire starting, water purification, first aid, food storage rotation, radio operation with XP.",
+      "gap": "No app gamifies prepper skill building with streak XP. 1.98M community. Pure gear apps exist. Zero apps turn daily skill practice into an XP-gated progression system.",
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Homesteading Streak",
+      "community": 1530000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/homesteading (780K)",
+        "r/BackyardChickens (750K)"
+      ],
+      "existing_apps": "No apps target homesteading skill building. Chicken-keeping apps are trackers. None gamify daily homestead skills: canning, fermentation, animal care, soil building with streak XP.",
+      "gap": "No app gamifies homesteading as a daily skill system with XP. 1.53M community. Chicken hatching calculators exist but zero apps gamify the full homestead skill tree with level gates.",
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Rock Climbing Training Streak",
+      "community": 940000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/climbing (540K)",
+        "r/bouldering (200K)",
+        "r/climbharder (200K)"
+      ],
+      "existing_apps": "27 Crags and Mountain Project are logbooks. Lattice Training is coaching subscription. None gamify daily skill drill practice with streak XP, technique badges, and grade progression gates.",
+      "gap": "No app gamifies climbing training drills with streak XP. 940K community. Apps log sends; none turn daily hangboard/technique/footwork drills into an XP progression game.",
+      "priority": "P1"
+    },
+    {
+      "name": "Daily Bird Watching Streak",
+      "community": 930000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/birdwatching (430K)",
+        "r/birding (390K)",
+        "r/whatsthisbird (110K)"
+      ],
+      "existing_apps": "Merlin does ID. eBird logs sightings. Neither gamifies the skill layer: calls/songs recognition, habitat knowledge, migration pattern study, optics technique with streak XP.",
+      "gap": "No app gamifies birding skill building with streak XP. 930K community. Merlin is a reference tool. Daily calls practice, habitat study, and species knowledge tree as XP game is fully open.",
+      "priority": "P1"
+    },
+    {
+      "name": "Daily Sourdough Baking Streak",
+      "community": 930000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/sourdough (500K)",
+        "r/Breadit (430K)"
+      ],
+      "existing_apps": "Sourdough Calculator and Tartine apps exist for hydration math. None gamify the craft: starter management, fermentation timing, shaping technique, scoring patterns with streak XP.",
+      "gap": "No app gamifies the sourdough craft as a daily streak with XP. 930K community. Calculator apps solve one problem. Turning starter health, bulk ferment timing, and shaping into an XP game is open.",
+      "priority": "P1"
+    },
+    {
+      "name": "Daily Bushcraft Skills Streak",
+      "community": 770000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/bushcraft (400K)",
+        "r/Survivalist (370K)"
+      ],
+      "existing_apps": "Wilderness survival apps are reference databases (knot guides, plant ID). None gamify daily skill practice: knife work, fire by friction, natural shelter, tracking with streak XP.",
+      "gap": "No app gamifies bushcraft skill building with streak XP and skill tree progression. 770K community. Reference apps exist; the gamification layer converting daily practice to XP is open.",
+      "priority": "P1"
+    },
+    {
+      "name": "Daily Fermentation Streak",
+      "community": 760000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/fermentation (400K)",
+        "r/canning (165K)",
+        "r/mead (195K)"
+      ],
+      "existing_apps": "Fermentation timer apps exist. None gamify the craft knowledge: pH monitoring, salt percentages, wild yeast capture, lacto vs alcohol fermentation, troubleshooting with streak XP.",
+      "gap": "No app gamifies fermentation mastery with streak XP. 760K community across 3 fermentation subs. Daily brine ratio practice, airlock monitoring, and flavor development as XP game is open.",
+      "priority": "P1"
+    },
+    {
+      "name": "Daily Foraging Practice Streak",
+      "community": 610000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/foraging (510K)",
+        "r/wildcrafting (100K)"
+      ],
+      "existing_apps": "iNaturalist and Seek do plant/mushroom ID. None gamify foraging skill building: lookalike danger knowledge, seasonal availability, safe preparation, habitat reading with streak XP.",
+      "gap": "No app gamifies foraging skill building with streak XP. 610K passionate safety-conscious community. ID apps exist; turning daily identification practice and safety knowledge into an XP game is open.",
+      "priority": "P1"
+    },
+    {
+      "name": "Daily Composting Streak",
+      "community": 390000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/composting (220K)",
+        "r/organic_gardening (170K)"
+      ],
+      "existing_apps": "Garden journaling apps exist but none specifically gamify compost mastery: ratio management, moisture monitoring, temperature tracking, turning schedule, troubleshooting odors with XP.",
+      "gap": "No app gamifies composting as a daily streak with XP. 390K community. Turning carbon/nitrogen ratio management and temperature monitoring into a skill progression game is fully open.",
+      "priority": "P2"
+    },
+    {
+      "name": "Daily Herbal Medicine Streak",
+      "community": 620000,
+      "classification": "BLUE_OCEAN",
+      "has_competition": false,
+      "subreddits": [
+        "r/herbalism (210K)",
+        "r/herbgarden (90K)",
+        "r/naturalremedies (320K)"
+      ],
+      "existing_apps": "Plant ID apps exist. Zero apps gamify herbalist skill building: herb identification, medicine making (tinctures, teas, salves), dosage knowledge, contraindications with streak XP.",
+      "gap": "No app gamifies herbalism mastery with streak XP. 620K community. Safety-critical knowledge domain with passionate audience and zero gamified learning layer.",
+      "priority": "P1"
+    }
+  ]
+}

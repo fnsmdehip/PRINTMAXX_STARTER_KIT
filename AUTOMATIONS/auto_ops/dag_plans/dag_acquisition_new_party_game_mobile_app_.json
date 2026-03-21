@@ -1,0 +1,38 @@
+{
+  "name": "integration_acquisition_new_party_game_mobile_app_",
+  "created": "2026-03-21T12:40:57.848010",
+  "method": "[ACQUISITION] NEW PARTY GAME MOBILE APP : WHO PICKED WHO",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_top50_party_games_app_store",
+        "extract_mechanic_patterns",
+        "identify_audience_gaps"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_question_bank_per_variant",
+        "wire_revenuecat_iap",
+        "wire_admob_interstitials",
+        "fork_base_template"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "surge_deploy_landing_pages",
+        "submit_app_store_variants"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    }
+  ],
+  "status": "READY"
+}

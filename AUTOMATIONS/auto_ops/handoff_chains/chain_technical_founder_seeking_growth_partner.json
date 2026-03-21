@@ -1,0 +1,24 @@
+{
+  "name": "chain_technical_founder_seeking_growth_partner",
+  "created": "2026-03-21T12:40:51.103616",
+  "method": "Technical founder seeking growth partner for near complete trading platform",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan r/growthhacking + r/startups + r/entrepreneur daily for posts: 'seeking growth', 'need marketing co-founder', 'have product need distribution', 'near complete looking for partner'",
+      "output": "partner_seeker_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads: product exists (not idea-stage)? Technical domain (automatable)? Poster active in last 30 days? Filter out regulated (crypto/securities trading) \u2014 flag but do not pursue those",
+      "output": "qualified_partner_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Route qualified leads to eas_lead_pipeline.py for cold outreach. Subject: 'saw your post \u2014 have a growth system that runs itself'. Regulated leads (trading/fintech) routed to engagement_bait_converter.py only",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

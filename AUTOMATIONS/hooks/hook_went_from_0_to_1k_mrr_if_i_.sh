@@ -1,7 +1,7 @@
 #!/bin/bash
 # Auto-generated hook by autonomous_integrator V2
-# Purpose: Add 'recurring painpoint' scoring filter to app_factory_command_center.py and capital_genesis_ranker.py. When scoring new app ideas, boost score +1.5 for apps solving weekly/monthly recurring problems (habit trackers, subscription tools, recurring workflow automation) and penalize -1.0 for one-time-use apps (converters, generators, one-off calculators). This is a selection filter improvement, not a new revenue lane.
-# Created: 2026-03-20T18:35:51.406987
+# Purpose: Enhance app_factory_priority_queue scoring to weight 'recurring pain point' signal higher. Apps solving one-time problems get penalized; apps with weekly/daily recurrence (streaks, tracking, reminders) get boosted. Wire as a scoring modifier in app_factory_command_center.py --refresh pipeline.
+# Created: 2026-03-21T12:40:53.526649
 # Hook type: PreToolUse
 #
 # To wire into settings.json, add to hooks.PreToolUse:

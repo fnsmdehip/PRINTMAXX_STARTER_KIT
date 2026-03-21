@@ -1,9 +1,9 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-21 10:07:49
+Generated: 2026-03-21 12:17:48
 
 ## Inputs
-- ALPHA_STAGING app candidates: 2761
+- ALPHA_STAGING app candidates: 2814
 - APP_FACTORY_METHODS candidates: 2
 - Reddit findings consumed: 6
 - Existing app specs detected: 50
@@ -43,9 +43,9 @@ Generated: 2026-03-21 10:07:49
 | 15 | LTD CASE STUDY #3 CANDIDATE: 89 lifetime deals at $199 each = $17,711 launch wee | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 16 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 19 | HTML interactive tools as digital products ($17 price point validated) | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 21 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 24 | Vibe-coded apps revenue: Plinq $456K/yr (Lovable). Pieter Levels flight sim $12K | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 25 | Fiverr boring category arb: Top Fiverr gigs in resume/biz plan/cover letter at $ | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 22 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 25 | Vibe-coded apps revenue: Plinq $456K/yr (Lovable). Pieter Levels flight sim $12K | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 26 | Fiverr boring category arb: Top Fiverr gigs in resume/biz plan/cover letter at $ | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.

@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_cursor_glass_unified_agent_",
+  "created": "2026-03-21T12:40:56.234121",
+  "method": "[PH LAUNCH] Cursor Glass: Unified agent workspace with seamless cloud handoff power",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Hit PH API daily, filter launches tagged 'developer-tools', 'productivity', 'ai-assistant', 'agents'. Extract maker profiles, Twitter/X handles, product URLs.",
+      "output": "ph_agent_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each launch: vote count >50 = hot, 10-49 = warm, <10 = cold. Filter for solo founders or small teams (more likely to need services). Enrich with founder LinkedIn if available.",
+      "output": "ph_qualified_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach referencing their specific PH launch. Angle: 'Saw Cursor Glass launch \u2014 we built similar agent orchestration infra. Want to see our stack?' Send via custom cold email script within 48h.",
+      "output": "ph_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

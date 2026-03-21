@@ -1,38 +1,37 @@
 # Growth Plan: We said no to $2.5m vc money and I'm still kinda shocked we 
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $100-400/mo
+**Revenue Est:** $0-50/mo
 
 ---
 
 ## Tactics
 
-1. LinkedIn carousel posts showing bootstrapped SaaS metrics (real PRINTMAXX numbers)
-2. SEO long-tail pages targeting 'best tools for small agencies' and 'SMB automation tools'
-3. Comment engagement on LinkedIn SaaS founder posts to build network
-4. Cross-post LinkedIn content to Twitter and r/SaaS, r/Entrepreneur
+1. Post bootstrapper case study content on r/SaaS and r/startups with real numbers (engagement bait that drives tool signups)
+2. LinkedIn carousel posts showing 'how we built X with no funding' — high engagement format for B2B SaaS audience
+3. Reply-chain engagement on Indie Hackers and HN Show threads about bootstrapping
+4. SEO longtail targeting 'no-code tools for agencies' and 'affordable SaaS for SMBs'
 
 ## Budget Tier Strategies
 
 ### FREE
-Organic LinkedIn posts 3x/week, SEO blog posts targeting agency keywords, Reddit distribution in r/SaaS r/smallbusiness r/Entrepreneur, Twitter cross-posts
+LinkedIn organic posts 3x/week with bootstrapper narrative, Reddit case study posts, SEO longtail pages on surge.sh, Indie Hackers community engagement
 
 ### LOW
-$20-30/mo LinkedIn post boosting on highest-engagement posts to agency audiences
+$10-30/mo — boost top-performing LinkedIn posts, targeted Reddit ads on r/smallbusiness
 
 ### MID
-$100/mo LinkedIn Ads targeting 'marketing agency owner' + 'SMB founder' job titles with lead magnet
+$50-150/mo — LinkedIn Sales Navigator for agency lead targeting, sponsored Indie Hackers newsletter placement
 
 ## Daily Actions
 
-- [ ] Extract method: organic LinkedIn + SEO drove 1200 B2B customers in 6 months without paid ads
-- [ ] Generate 12 LinkedIn post templates using bootstrapper/anti-VC angle for PRINTMAXX products
-- [ ] Identify 20 agency/SMB long-tail keywords and create SEO landing pages for existing apps
-- [ ] Queue posts to CONTENT/social/posting_queue/ with LinkedIn-first distribution
-- [ ] Add 3x/week LinkedIn posting cadence to content calendar
-- [ ] Track LinkedIn impressions and landing page organic traffic weekly in KPI dashboard
+- [ ] Route to engagement_bait_converter.py to generate bootstrapper-narrative content from this case study
+- [ ] Generate 3 tweets + 1 thread about bootstrapping SaaS without VC (content seed, not direct revenue)
+- [ ] Create 2 SEO longtail pages targeting 'tools for small agencies' keywords via generate-longtail pipeline
+- [ ] Add LinkedIn post templates to CONTENT/social/posting_queue/ for MWF distribution
+- [ ] Wire content to existing content_factory chain for cross-platform repurposing
 
 ## Tooling
 
@@ -40,6 +39,6 @@ $100/mo LinkedIn Ads targeting 'marketing agency owner' + 'SMB founder' job titl
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory + engagement_bait_converter"
+  "content": "engagement_bait_converter.py + content_repurposer.py"
 }
 ```

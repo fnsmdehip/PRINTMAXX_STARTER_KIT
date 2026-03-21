@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_context_overflow_knowledge_",
+  "created": "2026-03-21T12:40:57.193214",
+  "method": "[PH LAUNCH] Context Overflow: Knowledge Sharing for AI Agents",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH daily launches filtered to AI/agent/LLM/memory categories. Extract: product name, maker email/Twitter, description, upvote count, launch time.",
+      "output": "ph_ai_launches_daily.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for founders of agent tooling (memory, context, RAG, orchestration, knowledge base products). Score by upvote velocity (>50 in 6h = HOT). Flag 48h window countdown.",
+      "output": "ph_qualified_founders.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Route to existing chain_14_ph_launches_today outbound chain. Personalized angle: reference their specific PH launch, offer relevant PRINTMAXX agent services or EAS positioning.",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

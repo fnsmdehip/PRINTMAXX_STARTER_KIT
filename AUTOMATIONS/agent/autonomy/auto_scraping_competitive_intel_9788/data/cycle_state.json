@@ -1,27 +1,33 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-21T15:47:16.265677+00:00",
-  "cycle_number": 93,
+  "last_cycle": "2026-03-21T12:05:00.000000+00:00",
+  "cycle_number": 94,
   "cycle_status": "COMPLETE",
   "current_step": "complete",
-  "configured_at": "2026-03-21T15:47:16.265677+00:00",
+  "configured_at": "2026-03-21T12:05:00.000000+00:00",
   "stats": {
-    "niches_scanned": 14,
-    "blue_oceans": 13,
-    "soft_competition": 1,
+    "niches_scanned": 15,
+    "blue_oceans": 15,
+    "soft_competition": 0,
     "occupied": 0,
-    "community_total": 14590000
+    "community_total": 29120000
   },
-  "cumulative_blue_oceans": 287,
+  "cumulative_blue_oceans": 302,
   "p0_alerts": [
-    "!! NEW_C093 P0 BLUE OCEAN: DAILY_BATCH_COOKING_STREAK \u2014 3,480,000 community. BUILD NOW."
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_GARDENING_SKILL_STREAK \u2014 6,130,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HIKING_TRAINING_STREAK \u2014 4,220,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HOUSEPLANT_MASTERY_STREAK \u2014 3,810,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_WILDERNESS_CAMPING_STREAK \u2014 3,380,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_FISHING_SKILLS_STREAK \u2014 2,120,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_PREPPER_SKILLS_STREAK \u2014 1,980,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HOMESTEADING_STREAK \u2014 1,530,000 community. BUILD NOW."
   ],
   "previous_cycle_results": {
-    "cycle": 93,
-    "strategy": "COOKING + BAKING + NUTRITION + MEAL_PREP",
+    "cycle": 94,
+    "strategy": "OUTDOOR_SKILLS + SURVIVAL + GARDENING + HOMESTEADING",
     "status": "COMPLETE",
-    "blue_oceans": 13,
-    "soft_competition": 1,
-    "community_total": 14590000
+    "blue_oceans": 15,
+    "soft_competition": 0,
+    "community_total": 29120000
   }
 }

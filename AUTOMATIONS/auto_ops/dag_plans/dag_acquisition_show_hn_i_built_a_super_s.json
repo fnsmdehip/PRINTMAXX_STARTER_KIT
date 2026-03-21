@@ -1,0 +1,47 @@
+{
+  "name": "integration_acquisition_show_hn_i_built_a_super_s",
+  "created": "2026-03-21T12:40:58.861832",
+  "method": "[ACQUISITION] Show HN: I built a super simple email reminder inspired by the RemindMe! bot",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "discovery",
+      "steps": [
+        "scrape_hn_show_hn_posts_50plus_upvotes",
+        "extract_github_links",
+        "check_tool_category"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "scoring",
+      "steps": [
+        "score_buildability_complexity",
+        "score_market_demand_serp",
+        "dedup_vs_existing_app_factory"
+      ],
+      "parallel": true,
+      "depends_on": "discovery"
+    },
+    {
+      "name": "queueing",
+      "steps": [
+        "rank_top3_weekly",
+        "generate_clone_spec_json",
+        "append_to_app_factory_priority_queue"
+      ],
+      "parallel": false,
+      "depends_on": "scoring"
+    },
+    {
+      "name": "content",
+      "steps": [
+        "generate_show_hn_style_post",
+        "generate_seo_landing_page_brief"
+      ],
+      "parallel": true,
+      "depends_on": "queueing"
+    }
+  ],
+  "status": "READY"
+}

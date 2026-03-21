@@ -1,0 +1,39 @@
+{
+  "name": "integration_mit_repo_kingstinctreactnativehealth",
+  "created": "2026-03-21T12:40:54.806077",
+  "method": "MIT repo: kingstinct/react-native-healthkit (636 stars, TypeScript)",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "audit",
+      "steps": [
+        "scan app factory builds for React Native streak apps",
+        "identify which already have manual logging (fitness, running, pushup, plank, yoga, water, breathwork)",
+        "check if agencyenterprise/react-native-health already wired (prior integration)"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "template_injection",
+      "steps": [
+        "add @kingstinct/react-native-healthkit to base-template package.json",
+        "create src/lib/healthkit.ts hook (useHealthKitData) with graceful fallback to manual input",
+        "add NSHealthShareUsageDescription + NSHealthUpdateUsageDescription to Info.plist template",
+        "wire HKQuantityTypeIdentifierStepCount, HKWorkoutType, HKQuantityTypeIdentifierActiveEnergyBurned to streak logic"
+      ],
+      "parallel": false,
+      "depends_on": "audit"
+    },
+    {
+      "name": "aso_update",
+      "steps": [
+        "add 'Apple Health' + 'HealthKit sync' + 'auto-tracking' to App Store keyword bank",
+        "update screenshots brief: show Health app badge + auto-synced streak",
+        "update app descriptions in app factory builds to mention auto-tracking"
+      ],
+      "parallel": true,
+      "depends_on": "template_injection"
+    }
+  ],
+  "status": "READY"
+}

@@ -4,39 +4,33 @@
 @OpenClaw
  age
 
-**Created:** 2026-03-20 23:36
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct — authority/inbound play. Feeds Sovrun open source credibility and PRINTMAXX agent service positioning.
+**Revenue Est:** $0 direct — inbound authority signal if PRINTMAXX agent reliability content hits
 
 ---
 
 ## Tactics
 
-1. Write 'I tested AI household agents so you don't have to' thread citing Jack Cheng's Pip failure — name the pain points verbatim
-2. Quote-tweet the original @jackcheng post with 'this is why we build with durable memory' angle — drives reply engagement
-3. Post to r/MachineLearning and r/LocalLLaMA: 'OpenClaw memory wipe problem — here's what actually persists' comparison post
-4. Turn failure anatomy into a Sovrun open source pitch: 'durable.py prevents this' — IH post + GitHub README update
-5. Monitor @every account for follow-up coverage — be first to reply with solution framing
+1. Quote-tweet the @jackcheng thread with a hot take on OpenClaw memory architecture failures
+2. Post 'AI agents that lose memory mid-task' as engagement bait — hits indie hacker + Claude Code communities hard
+3. Position PRINTMAXX's ralph filesystem-memory pattern as the antidote (memory = files, not volatile agent state)
 
 ## Budget Tier Strategies
 
 ### FREE
-Thread + reply chain on Twitter citing the failure. Cross-post to IH forums. Update Sovrun README with 'memory persistence' as a solved problem. Pin the comparison post.
+engagement_bait_converter.py generates 3 posts from this pain point: (1) cautionary take on OpenClaw memory loss, (2) 'household AI agent' market signal thread, (3) hot take contrasting ephemeral agent memory vs filesystem-persistent ralph loops. Post via twitter_warmup_poster.py.
 
 ### LOW
-$0-50/mo — boost the comparison thread if it hits 50+ likes organically. Seed to 3-5 indie hacker Discord servers.
+N/A — content-only entry, no paid distribution warranted at this quality score
 
 ### MID
-$50-200/mo — sponsor a newsletter slot in an AI agent newsletter with the 'OpenClaw vs reliable agents' comparison
+N/A
 
 ## Daily Actions
 
-- [ ] Run engagement_bait_converter.py on this entry to generate 3 tweets + 1 thread about AI agent memory failure patterns
-- [ ] Add to CONTENT/social/posting_queue/ with tag: competitive_positioning/openclaw
-- [ ] Update chain_openclaw__arcads__550_videos_per_day to include failure-narrative content angle
-- [ ] Add @every and @jackcheng to twitter_alpha_scraper.py watch list for follow-up failure content
-- [ ] Add 1 line to Sovrun README: durable.py solves the memory wipe problem described in @every's Pip agent failure
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --method 'OpenClaw Pip memory failure — AI household agent reliability pain point' --angles cautionary,market_signal,positioning
 
 ## Tooling
 
@@ -44,6 +38,6 @@ $50-200/mo — sponsor a newsletter slot in an AI agent newsletter with the 'Ope
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "engagement_bait_converter.py"
 }
 ```

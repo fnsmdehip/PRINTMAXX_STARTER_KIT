@@ -85,6 +85,9 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── autonomous_integrator.py      #   L1 engine. V2 full-toolkit alpha integration: ventures, ralph, n8n, DAGs, handoffs, hooks, subagents, MCP, procedural memory. Cron 10:15 PM.
 │   ├── orphan_doc_scanner.py         #   L6 maintenance. Weekly scan for unreferenced docs. Stages actionable orphans as alpha. Cron Sunday 4 AM.
 │   ├── alpha_backlog_scanner.py      #   L4 collection. Weekly sweep of ALL 15K+ alpha for unintegrated opportunities. 5 categories. Cron Monday 3 AM.
+│   ├── perpetual_tool_researcher.py  #   L4 collection. Perpetual AI tool tracker. ALL categories (video, edit, voice, scheduling, etc). Scores tools, generates comparisons, feeds Capital Genesis. Cron 8 AM + 8 PM digest.
+│   ├── ai_video_content_pipeline.py  #   L3 execution. Video script generation for AI tools (Seedance, Kling, Pika). Affiliate integration. Cron 6 AM.
+│   ├── viral_content_scanner.py      #   L4 collection. Monitors viral accounts, detects engagement patterns, queues repurposing.
 │   ├── memory_manager.py             #   L6 maintenance. Filesystem-based memory management.
 │   ├── wire_missed_intelligence.py   #   L6 maintenance. Parses scan results → updates intelligence catalog.
 │   ├── build_codebase_grammar.py     #   L6 maintenance. AST-based 118x compression for LLM context.
@@ -208,6 +211,11 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 ├── 08_PRODUCTS/                      # Product specs
 ├── 09_LEGAL/                         # Privacy policies, terms, FTC compliance
 ├── 10_RESEARCH/                      # Market research
+│   └── VIDEO_RESEARCH/               #   Video tool hub: comparisons/, templates/, pipeline/, tools_tracker/
+│       ├── tools_tracker/ALL_TOOLS_TRACKER.csv  # 17+ tools, 19 categories, scored by value/quality
+│       ├── comparisons/               #   Auto-generated per-category comparisons (6 files)
+│       ├── templates/VIRAL_FORMATS.md #   Viral video format templates + hook structures
+│       └── pipeline/                  #   VIDEO_AUTOPILOT_SPEC.md + CLAUDE_DISPATCH_CAPCUT.md
 ├── SECRETS/CREDENTIALS.env           # API keys, tokens (gitignored)
 ├── .claude/CLAUDE.md                 # 490-line master rules file (14 rules + infrastructure docs)
 └── pyrightconfig.json                # Type checking config (basic mode, AUTOMATIONS only)
@@ -451,7 +459,7 @@ MORNING CHAIN (sequential):
   5:45  codebase grammar           6:00  twitter scraper + alpha review
   6:15  reddit scraper             6:30  alpha auto-processor
   6:45  daily digest               7:00  engagement planner
-  7:15  tactical engine
+  7:15  tactical engine            8:00  perpetual_tool_researcher --cycle
 
 CONTINUOUS CYCLES:
   */15min  guardian pulse + agent daemon keepalive
@@ -464,6 +472,7 @@ CONTINUOUS CYCLES:
 DAILY:
   1 AM   ship engine layer1        2 AM   overnight master runner
   3 AM   closed-loop pipeline      4 AM   lead enrichment + log rotation
+  8 PM   perpetual_tool_researcher --digest
   9 PM   autonomous factory        11 PM  guardian improve
   Midnight  warmup poster advance
 

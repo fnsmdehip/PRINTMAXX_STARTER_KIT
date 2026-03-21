@@ -1,35 +1,33 @@
 # Growth Plan: Fed's Waller: My brain understands the jobs math, but my gut
 
-**Created:** 2026-03-20 23:36
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-20/mo RPM direct, higher if attached to finance newsletter or affiliate funnel
+**Revenue Est:** $0-20/mo
 
 ---
 
 ## Tactics
 
-1. Quote-tweet Fed officials with contrarian 'translation' — engagement bait for finance Twitter
-2. Frame gut-vs-data tension as universal founder/trader experience — broad relatability hook
-3. Use as reply bait in finance threads — 'even Waller admits the data feels wrong'
+1. Use Fed uncertainty quote as hook for finance commentary thread on printmaxxer Twitter
+2. Pair with macro-to-business angle: 'Fed is scared = soft landing narrative dying = X opportunity'
 
 ## Budget Tier Strategies
 
 ### FREE
-Post Fed uncertainty commentary as organic content on finance-adjacent accounts. Use quote structure: [official quote] → [plain english translation] → [what this means for X]. High shareability in finance Twitter circles.
+Convert Fed quote to engagement bait via engagement_bait_converter.py. One post. Finance commentary hooks perform well organically when tied to a business angle.
 
 ### LOW
-Boost top-performing macro commentary posts at $5-10/post to finance audience segments on Twitter/X
+N/A — content-only signal, paid amplification not warranted at Phase 0
 
 ### MID
-Build dedicated macro-uncertainty content series, run retargeting to finance newsletter signup
+N/A
 
 ## Daily Actions
 
-- [ ] Wire @financialjuice into existing twitter_alpha_scraper.py account list if not already there
-- [ ] Filter scraped tweets for Fed official quotes with sentiment/gut language patterns
-- [ ] Pass matches to engagement_bait_converter.py with finance commentary template
-- [ ] Queue generated posts to CONTENT/social/posting_queue/ for warmup-aware posting
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input "Fed's Waller: My brain understands the jobs math, but my gut can't say it's ok" --angle finance_uncertainty --platform twitter
+- [ ] Review output and add to CONTENT/social/posting_queue/ if hook lands
+- [ ] No cron, no venture, no DAG — single conversion call
 
 ## Tooling
 
@@ -37,6 +35,6 @@ Build dedicated macro-uncertainty content series, run retargeting to finance new
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "engagement_bait_converter.py"
 }
 ```

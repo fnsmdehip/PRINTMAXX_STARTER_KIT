@@ -1,43 +1,43 @@
 {
   "name": "integration_how_we_automated_linkedin_lead_gen_using",
-  "created": "2026-03-20T18:09:54.203653",
+  "created": "2026-03-21T12:40:53.975236",
   "method": "How we automated LinkedIn lead gen using keyword triggers (without getting banned) Cold LinkedIn DMs are dying. In 2026, the average reply rate is under 2%, and the spam filters are more aggressive th",
   "venture": "OUTBOUND",
   "phases": [
     {
-      "name": "scan",
+      "name": "keyword_scrape",
       "steps": [
-        "scrape_linkedin_search_for_keywords",
-        "scrape_linkedin_groups_for_signals"
+        "scrape_linkedin_tool_recommendation_posts",
+        "scrape_vendor_question_posts",
+        "scrape_saas_recommendation_requests"
       ],
       "parallel": true
     },
     {
       "name": "qualify",
       "steps": [
-        "score_leads_by_profile_fit",
-        "dedupe_against_existing_leads"
+        "score_post_relevance_and_recency",
+        "filter_competitors_and_low_intent"
       ],
-      "parallel": true,
-      "depends_on": "scan"
+      "parallel": false,
+      "depends_on": "keyword_scrape"
     },
     {
-      "name": "engage",
+      "name": "comment_gen",
       "steps": [
-        "draft_contextual_comments_via_claude",
-        "queue_comments_for_posting"
+        "generate_3_comment_variants_per_post_via_claude"
       ],
       "parallel": false,
       "depends_on": "qualify"
     },
     {
-      "name": "track",
+      "name": "post",
       "steps": [
-        "log_engagement_metrics",
-        "flag_warm_leads_for_dm_followup"
+        "rate_limited_comment_posting_max_15_per_day",
+        "log_outreach_to_ledger_outreach_pipeline_csv"
       ],
-      "parallel": true,
-      "depends_on": "engage"
+      "parallel": false,
+      "depends_on": "comment_gen"
     }
   ],
   "status": "READY"

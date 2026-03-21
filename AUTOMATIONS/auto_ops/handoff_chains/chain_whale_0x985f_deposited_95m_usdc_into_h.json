@@ -1,0 +1,24 @@
+{
+  "name": "chain_whale_0x985f_deposited_95m_usdc_into_h",
+  "created": "2026-03-21T12:40:52.236040",
+  "method": "Whale 0x985f deposited 9.5M $USDC into HyperLiquid in the past 5 hours to short #oil with 20x leverage.\n\nPositions:\n94,512 xyz:CL($8.17M)\n68,974 xyz:BRENTOIL($6.15M)\n\nHe also shorted multiple tokens, ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Query hypurrscan.io public API for positions >$1M notional, detect new entries since last run, store delta",
+      "output": "whale_positions_delta.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Pass delta to engagement_bait_converter.py \u2014 generate 3 Twitter posts per whale event (hook + data + CTA)",
+      "output": "CONTENT/social/posting_queue/whale_alerts_YYYYMMDD.txt"
+    },
+    {
+      "agent": "router",
+      "task": "Append to posting queue, tag #crypto #trading #hyperliquid for max reach",
+      "output": "posting_queue append"
+    }
+  ],
+  "status": "READY"
+}

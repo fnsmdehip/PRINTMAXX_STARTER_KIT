@@ -1,0 +1,34 @@
+{
+  "name": "integration_acquisition_launch_hn_voltair_yc_w26",
+  "created": "2026-03-21T12:40:58.901285",
+  "method": "[ACQUISITION] Launch HN: Voltair (YC W26) \u2013 Drone and charging network for power utilities",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "fetch HN Algolia API search.hacker-news.com/v1/search?query=Launch+HN+YC&tags=story",
+        "filter for current YC batch (W26), extract company name, URL, sector, HN post ID"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "enrich",
+      "steps": [
+        "classify sector from title+text (drone/energy/infra/SaaS/fintech)",
+        "extract founder domain and signals from YC directory page"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "pipe sector + method to engagement_bait_converter.py for 2-3 content angles",
+        "append to LEDGER/COMPETITIVE_INTEL.csv",
+        "append founder domain to AUTOMATIONS/leads/yc_batch_leads.csv"
+      ],
+      "parallel": true
+    }
+  ],
+  "status": "READY"
+}

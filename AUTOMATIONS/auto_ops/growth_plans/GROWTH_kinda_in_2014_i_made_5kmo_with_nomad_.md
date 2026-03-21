@@ -1,41 +1,40 @@
 # Growth Plan: Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/
 
-**Created:** 2026-03-20 13:50
-**Venture:** APP
+**Created:** 2026-03-21 12:40
+**Venture:** MONETIZE
 **Budget Tier:** FREE
-**Revenue Est:** $100-800/mo per directory (featured listings + affiliate), portfolio of 5+ directories targets $500-4000/mo aggregate
+**Revenue Est:** $200-800/mo incremental lift from cross-promotion on existing 47 live apps — no new build required
 
 ---
 
 ## Tactics
 
-1. Pre-seed every directory with 50+ scraped listings so it looks populated on launch
-2. Cross-link all PRINTMAXX directories and apps for SEO juice across portfolio
-3. Build-in-public revenue progression tweets (levelsio style: specific $X/mo numbers)
-4. Launch each directory on Product Hunt + relevant subreddits for initial traffic spike
-5. Engagement bait: revenue timeline format (2003: $500 → 2014: $5K → now: $XK) for own projects
+1. Inject 'Also by us' footer section on ALL deployed surge/vercel apps pointing to other apps in portfolio
+2. AdSense blog → YouTube → directory stacking: each tier feeds the next with SEO content
+3. Niche directory cross-links: streak apps link to each other, tool comparisons link to our tools
+4. Build simple AdSense-eligible blog content auto-generated from existing app landing pages (repurpose copy)
+5. Add 'built by same team as X' trust signal to newer apps using established app's brand equity
+6. Auto-generate 'Tools we use' pages on each app that link other portfolio apps as recommended tools
 
 ## Budget Tier Strategies
 
 ### FREE
-SEO cross-linking across portfolio, Reddit/HN launches, build-in-public Twitter content using engagement_bait_converter, seed listings from existing scrapers
+Auto-inject cross-promotion HTML snippets across all 47 live sites via script. Zero ad spend. SEO compounding from internal links. Each new app launch triggers automated backlink injection on all existing properties.
 
 ### LOW
-$10-30/mo custom domain for highest-traction directory
+$10-30/mo: One AdSense blog as content funnel feeding all apps. Auto-generated posts from existing app copy via claude -p. Blog feeds organic traffic → app portfolio.
 
 ### MID
-$50-150/mo Product Hunt promoted launches, targeted subreddit ads for niche directories
+$50-150/mo: Paid retargeting — pixel visitors to app A, retarget them with app B ads. Cross-audience arbitrage across portfolio.
 
 ## Daily Actions
 
-- [ ] Add niche directory/job board as APP_FACTORY template type alongside streak apps
-- [ ] Scan existing PRINTMAXX niches (AI tools, remote work, prayer apps, productivity) for directory gaps where no good aggregator exists
-- [ ] Build reusable directory template: listing cards, search/filter, submit listing form, featured placement tier ($5-20/listing/mo)
-- [ ] Deploy first directory in highest-scored niche from capital_genesis_ranker
-- [ ] Seed with 50+ listings scraped from Reddit/Twitter/existing data in LEDGER
-- [ ] Generate levelsio-style build-in-public content for @printmaxxer Twitter (revenue timeline format hooks)
-- [ ] Add directory deploy cadence to APP_FACTORY priority queue - 1 new directory per week
-- [ ] Wire featured listing payments to Stripe when account created (BLOCKER: human)
+- [ ] Scan MONEY_METHODS/APP_FACTORY/builds/ for all live index.html files
+- [ ] Generate 'Also by us' HTML snippet with links to top 5 other apps by category (streak apps cross-link streaks, tools cross-link tools)
+- [ ] Inject snippet before </body> in each index.html using portfolio_cross_promotion_injector.py
+- [ ] Deploy updated files via surge CLI (all 47 sites)
+- [ ] Wire weekly cron to re-run injection when new apps are added
+- [ ] Route to chain_boring_tool_strategy_5kmo_path__tool for long-term niche directory expansion
 
 ## Tooling
 
@@ -43,6 +42,6 @@ $50-150/mo Product Hunt promoted launches, targeted subreddit ads for niche dire
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory + engagement_bait_converter for levelsio-style revenue timeline posts"
+  "content": "engagement_bait_converter.py"
 }
 ```

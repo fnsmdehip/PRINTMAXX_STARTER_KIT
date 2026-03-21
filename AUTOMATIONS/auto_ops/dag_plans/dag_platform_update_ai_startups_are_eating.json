@@ -1,0 +1,36 @@
+{
+  "name": "integration_platform_update_ai_startups_are_eating",
+  "created": "2026-03-21T12:40:55.510086",
+  "method": "[PLATFORM UPDATE] AI startups are eating the venture industry and the returns, so far, are good",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_vc_news",
+      "steps": [
+        "fetch TechCrunch AI tag via requests JSON API",
+        "fetch Crunchbase recent AI rounds (free tier)",
+        "deduplicate against COMPETITIVE_INTEL_MASTER.csv"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "dual_output",
+      "steps": [
+        "extract company names + founders + emails \u2192 append to LEDGER/INBOUND_LEADS.csv as AI_STARTUP_VC_FUNDED tag",
+        "extract key stats (return multiples, fund sizes, sector trends) \u2192 pass to engagement_bait_converter.py with angle: solopreneur capitalizing on AI wave"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_vc_news"
+    },
+    {
+      "name": "route_outputs",
+      "steps": [
+        "qualified leads \u2192 cold email queue via existing chain_cold_outbound",
+        "generated posts \u2192 CONTENT/social/posting_queue/"
+      ],
+      "parallel": true,
+      "depends_on": "dual_output"
+    }
+  ],
+  "status": "READY"
+}

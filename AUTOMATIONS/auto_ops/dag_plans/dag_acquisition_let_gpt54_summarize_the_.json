@@ -1,0 +1,37 @@
+{
+  "name": "integration_acquisition_let_gpt54_summarize_the_",
+  "created": "2026-03-21T12:40:58.188253",
+  "method": "[ACQUISITION] Let GPT-5.4 summarize the world for you every 60 mins. It's a side project. It's pretty smart at this stuff. FYI for new",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "fetch",
+      "steps": [
+        "scrape_rss_bbc_reuters",
+        "scrape_hn_top30",
+        "scrape_reddit_worldnews_json"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "summarize",
+      "steps": [
+        "claude_haiku_batch_summarize"
+      ],
+      "parallel": false,
+      "depends_on": "fetch"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "format_digest_html",
+        "push_to_web_endpoint",
+        "queue_email_blast",
+        "route_to_engagement_bait_converter"
+      ],
+      "parallel": true,
+      "depends_on": "summarize"
+    }
+  ],
+  "status": "READY"
+}

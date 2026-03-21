@@ -1,7 +1,7 @@
 # Growth Plan: Super Micro $SMCI stock is down by almost 30% so far today 
 
 
-**Created:** 2026-03-20 23:36
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
 **Revenue Est:** $0-30/mo
@@ -10,30 +10,28 @@
 
 ## Tactics
 
-1. Post stock mover content during market hours (9:30 AM - 4 PM ET) for peak engagement
-2. Use ticker cashtags ($SMCI, $QQQ) — these get 3-5x more reach on X than regular posts
-3. Reply to verified financial accounts' posts about the same stock within 10 min of their post
-4. Stitch dramatic chart screenshots (Playwright screenshot of Yahoo Finance chart) into posts for visual hook
-5. Cross-post to r/wallstreetbets, r/stocks with 'today's biggest loser' framing when moves >20%
+1. Post during market hours (9:30am-4pm EST) — finance content engagement peaks at open and 2pm
+2. Use $TICKER cashtag on every post for algorithmic discovery on X
+3. Quote-tweet original news source for credibility signal boost
+4. Thread format on big drops: breaking move → why it happened → what to watch next → engagement CTA
 
 ## Budget Tier Strategies
 
 ### FREE
-Monitor Yahoo Finance free API for top 10 daily movers. Auto-generate 3-5 posts per market session. Reply-bait to verified accounts posting about same tickers. Use cashtag targeting.
+Poll yfinance API (free, no key) for any stock with >10% single-day move; pass ticker + % change to engagement_bait_converter.py; post 2x/day via twitter_warmup_poster.py with $CASHTAG; no new accounts needed
 
 ### LOW
-$0-50/mo: Polygon.io free tier (5 API calls/min) for real-time quotes. Schedule posts via Buffer free tier. Target 10+ daily posts across financial content accounts.
+$0-50/mo: Insert affiliate links to Robinhood/Webull/Tastytrade with FTC disclaimer appended automatically; boost highest-engagement finance posts $10-20 on volatile days
 
 ### MID
-$50-200/mo: Benzinga Pro RSS feed for pre-market movers. Alpaca API for after-hours data. Paid scheduling tool for multi-account posting.
+$50-200/mo: Seed Beehiiv/Substack finance newsletter from best-performing daily posts; grow email list from finance audience for future product drops
 
 ## Daily Actions
 
-- [ ] Pull top 10 daily movers via yfinance (pip install yfinance — already available)
-- [ ] Filter: >10% move AND market cap >$1B (institutional names = more engagement)
-- [ ] Generate 3 post variants per ticker: hook-only, hook+chart_description, hook+CTA_thread
-- [ ] Stage to CONTENT/social/posting_queue/ with platform tags (X, Reddit)
-- [ ] Cron at 10 AM, 1 PM, 4 PM ET on weekdays — catches pre-market gap, midday reversal, close
+- [ ] Add yfinance movers function to existing financial_intelligence.py — pull top 5 stocks with >10% daily move at 10am and 2pm EST weekdays
+- [ ] Pipe mover data (ticker, % change, sector, context) to engagement_bait_converter.py with finance niche flag
+- [ ] Auto-queue 2-3 posts per alert cycle to CONTENT/social/posting_queue/ — format: cashtag + hot take + CTA
+- [ ] Cron 0 10,14 * * 1-5 — market-hours only, no weekend noise
 
 ## Tooling
 
@@ -41,7 +39,6 @@ $50-200/mo: Benzinga Pro RSS feed for pre-market movers. Alpaca API for after-ho
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory + engagement_bait_converter.py",
-  "data": "yfinance (free) or Yahoo Finance JSON API"
+  "content": "engagement_bait_converter.py + twitter_warmup_poster.py + financial_intelligence.py"
 }
 ```

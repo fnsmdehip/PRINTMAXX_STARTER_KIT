@@ -1,46 +1,45 @@
 # Growth Plan: I analyzed 963k iOS apps + 471k reviews I've built too many 
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $200-800/mo indirect via better-targeted app factory builds with validated demand signals, plus $100-300/mo if gap reports sold as digital product
+**Revenue Est:** $200-800/mo indirect — better-targeted app factory builds with validated trapped-demand signal = higher conversion and faster traction per app
 
 ---
 
 ## Tactics
 
-1. Use gap analysis output as content: 'I analyzed X apps and found Y gaps' threads on Twitter/Reddit
-2. Cross-post findings to r/SideProject r/indiehackers as social proof for our app factory
-3. Validated demand data becomes a digital product itself (sell the research as a Gumroad PDF)
+1. Target competitor frustrated review keywords verbatim in our ASO — users searching fixes land on us
+2. Use negative review quotes from trapped apps as social proof hooks: 'Tired of [competitor] crashing? We fixed that.'
+3. Post teardown thread on X/Reddit r/SaaS showing gap-finding methodology — attracts indie dev audience
+4. Cross-pollinate: package the scanner output as a $29 Gumroad report (iOS App Gaps 2026) when Gumroad account exists
 
 ## Budget Tier Strategies
 
 ### FREE
-Post gap analysis findings as Twitter threads + Reddit posts in r/SaaS r/indiehackers. Use data as authority-building content. Each scan cycle = 1 thread minimum.
+Organic ASO targeting competitor frustrated keywords. Teardown threads in r/SaaS, r/indiedev, r/iOSProgramming. Build 1 trapped-demand competitor app per week from scanner output. Apple Search Ads basic keyword targeting on gap categories.
 
 ### LOW
-$0-50/mo: Buy App Store Connect API access for faster data. Boost best-performing gap analysis threads.
+$0-50/mo — AppFollow free tier for delta tracking (catch when competitor score drops). $5/day Apple Search Ads on validated trapped-demand categories.
 
 ### MID
-$50-200/mo: Package monthly gap reports as paid newsletter or Gumroad product ($19-29/mo). Use findings to run targeted ASO campaigns on identified gaps.
+$50-200/mo — Sensor Tower standard plan for real revenue data validation. Scale Apple Search Ads on winners. Micro-influencer app review seeding in niche communities.
 
 ## Daily Actions
 
-- [ ] Build app_store_demand_validator.py using iTunes Search API (free, no auth) to pull top apps by category with ratings < 3.5 stars
-- [ ] Add review scraper layer using iTunes RSS review feeds (free, 50 reviews per app) for sentiment extraction
-- [ ] Wire claude -p sentiment analysis to classify reviews into pain point categories (UX, missing features, bugs, pricing)
-- [ ] Score each gap: (review_count * frustration_ratio * avg_price) / competitor_count = opportunity_score
-- [ ] Output to LEDGER/APP_CLONE_OPPORTUNITIES.csv with columns: app_name, category, rating, review_count, top_pain_points, opportunity_score, suggested_clone_approach
-- [ ] Feed top opportunities into app_factory_command_center.py priority queue automatically
-- [ ] Cron weekly (Monday 4 AM) to refresh data and surface new gaps
-- [ ] Each scan cycle generates 1 Twitter thread via content_factory (Rule 9 compliance)
+- [ ] Create AUTOMATIONS/ios_trapped_demand_scanner.py using iTunes Search API (free, no API key) across 25 hardcoded categories
+- [ ] Implement trapped-demand composite score: frustrated_ratio from keyword matching in review text + revenue_proxy from rating_count/avg_rating heuristic
+- [ ] Write top-25 to LEDGER/APP_FACTORY_OPPORTUNITIES.csv: app_name, category, score, frustrated_sample_quotes, revenue_proxy, build_recommendation
+- [ ] Wire output into app_factory_command_center.py via --inject flag so scanner output becomes live build queue
+- [ ] Add weekly Monday 5AM cron entry: 0 5 * * 1 python3 AUTOMATIONS/ios_trapped_demand_scanner.py
+- [ ] Run engagement_bait_converter.py on top-5 findings to generate teardown content for posting queue
 
 ## Tooling
 
 ```json
 {
-  "browser": "none \u2014 use iTunes Search API + RSS feeds for free App Store data, Playwright fallback for review scraping",
+  "browser": "none",
   "email": "none",
-  "content": "content_factory for turning gap reports into threads"
+  "content": "engagement_bait_converter.py"
 }
 ```

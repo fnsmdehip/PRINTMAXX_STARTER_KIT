@@ -1,0 +1,38 @@
+{
+  "name": "integration_ph_launch_ai_skills_manager",
+  "created": "2026-03-21T12:40:59.702260",
+  "method": "[PH Launch] AI Skills Manager",
+  "venture": "OUTBOUND (primary), CONTENT (secondary)",
+  "phases": [
+    {
+      "name": "scrape_and_enrich",
+      "steps": [
+        "ph_scraper \u2192 extract launch data (founder, product, category, description)",
+        "founder_enrichment \u2192 LinkedIn/email lookup via osint",
+        "competitive_analysis \u2192 check if AI Skills Manager overlaps existing builds"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "outreach_generation",
+      "steps": [
+        "email_template_gen \u2192 3 cold email variants (founder intro, partnership, feature request)",
+        "queue_for_instantly \u2192 add to OUTBOUND campaign with founder contact",
+        "log_outreach \u2192 track in LEDGER/OUTREACH_LOG.csv"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_and_enrich"
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "engagement_bait_converter \u2192 turn PH launch into 3-5 engagement posts (\"This new AI tool just launched\", features breakdown, comparison angle)",
+        "queue_social_posting \u2192 add to CONTENT/social/posting_queue/",
+        "auto_repost_reminders \u2192 schedule reposts at 48h + 7d intervals"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_and_enrich"
+    }
+  ],
+  "status": "READY"
+}

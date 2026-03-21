@@ -1,0 +1,24 @@
+{
+  "name": "chain_acquisition_show_hn_added_api_key_sup",
+  "created": "2026-03-21T12:40:58.784601",
+  "method": "[ACQUISITION] Show HN: Added API key support to my AI writing assistant extension",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape HN Show HN (last 90d) + Chrome Web Store category AI writing \u2014 extract extension names, install counts, pricing, whether BYOK supported",
+      "output": "extension_intel.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score gaps: rank niches by (search volume proxy - existing extensions). Flag BYOK-missing and niche-missing combos. Output top 3 buildable gaps.",
+      "output": "extension_gaps.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Generate Show HN post copy, 3 subreddit posts, and 3 tweets from the top gap finding. Route to CONTENT/social/posting_queue/.",
+      "output": "extension_launch_content.json"
+    }
+  ],
+  "status": "READY"
+}

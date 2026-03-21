@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_kickfolder_turn_your_macs_",
+  "created": "2026-03-21T12:40:56.899644",
+  "method": "[PH LAUNCH] Kickfolder: Turn your Mac's top edge into a hidden command center",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Extract Kickfolder maker profiles from PH via Playwright: name, twitter, linkedin, upvote count, comments",
+      "output": "ph_makers_kickfolder.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score maker: solo vs team, prior launches, tech stack, B2B relevance \u2014 solo indie devs score highest for reply rate",
+      "output": "qualified_makers.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Queue 48h post-launch outreach: personalized hook referencing Kickfolder + offer relevant service (dev/design/growth) \u2014 no pitch spam",
+      "output": "outreach_queue.json"
+    }
+  ],
+  "status": "READY"
+}

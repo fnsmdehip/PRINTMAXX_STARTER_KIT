@@ -1,36 +1,35 @@
 # Growth Plan: i ran my bot's trade history against the actual outcomes of 
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-50/mo content RPM, $200-500/mo if packaged as paid bot-pattern analysis guide when capital available
+**Revenue Est:** $0-50/mo content RPM, $0 direct (requires trading capital we don't have)
 
 ---
 
 ## Tactics
 
-1. contrarian-take thread format for high engagement
-2. tag prediction market accounts for quote-tweet visibility
-3. cross-post bot-trading angle to r/algotrading and r/polymarket
+1. QT the original tweet with 'here is what he actually did (thread)' breakdown — algorithm rewards QTs with added value
+2. Post in indie hacker / algo trading communities as 'meta-bot analysis' educational content
+3. Reframe as 'game theory for prediction markets' for LinkedIn/HN audience crossover
 
 ## Budget Tier Strategies
 
 ### FREE
-Organic threads on bot-vs-bot dynamics, reply to Polymarket and algo trading discussions, cross-post to Reddit algotrading
+Engagement bait converter → 3 tweets + 1 thread from this entry. Hook: 'your bot isn't predicting markets, it's predicting OTHER BOTS.' Reply bait in algo trading and Polymarket communities. Cross-post condensed version to r/algotrading, r/polymarket.
 
 ### LOW
-$0-20/mo boost best-performing thread if engagement exceeds 5%
+$0-20/mo: Boost top-performing thread variant via X Premium subscriber reach. A/B test hook phrasing.
 
 ### MID
-$50-100/mo targeted ads to quant/trading audience if content hits
+$50-100/mo: Package 'meta-bot pattern analysis' as $29 Gumroad PDF (requires account — HUMAN BLOCKER). Promote via cold DM to crypto/quant accounts.
 
 ## Daily Actions
 
-- [ ] Extract core method: meta-trading (predicting bot behavior, not outcomes) into structured concept doc
-- [ ] Run through engagement_bait_converter.py for 3+ platform-ready posts
-- [ ] Queue posts in CONTENT/social/posting_queue/ with contrarian-take framing
-- [ ] Link to existing chain_my_bot_scanned_400000_wallets for cross-reference
-- [ ] Add to RESEARCH backlog: when trading capital >$1K available, revisit for actual Polymarket bot build
+- [ ] Route to engagement_bait_converter.py with hook 'reading machines not markets'
+- [ ] Generate 3 tweet variants + 1 breakdown thread for posting_queue
+- [ ] Tag existing chain chain_i_ran_my_bots_trade_history_against_the as CONTENT_ONLY (not directly executable at $0 budget)
+- [ ] Add to CONTENT/social/posting_queue/ for next content batch
 
 ## Tooling
 
@@ -38,6 +37,6 @@ $50-100/mo targeted ads to quant/trading audience if content hits
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter + content_repurposer"
+  "content": "engagement_bait_converter.py"
 }
 ```

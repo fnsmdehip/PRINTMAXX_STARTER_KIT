@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_cacheless_aipowered_mac_sy",
+  "created": "2026-03-21T12:40:56.429371",
+  "method": "[PH LAUNCH] Cacheless: AI-Powered Mac System Data Cleaner",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH daily launches via requests+JSON API, extract app name, category, upvote count, founder Twitter/website/email",
+      "output": "ph_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for Mac/utility/productivity apps with 50+ upvotes. Score by founder contactability (has Twitter or email). Flag Mac utility apps for APP_FACTORY catalog separately.",
+      "output": "ph_qualified_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach referencing specific PH launch and category. Offer: growth audit, ASO optimization, content marketing setup. Append to LEDGER/ph_outreach_queue.csv.",
+      "output": "ph_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "integration_mit_repo_lissy93dashy_24290_stars_vu",
+  "created": "2026-03-21T12:40:54.965725",
+  "method": "MIT repo: Lissy93/dashy (24290 stars, Vue)",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "fork_and_configure",
+      "steps": [
+        "clone lissy93/dashy into MONEY_METHODS/APP_FACTORY/builds/dashy-command-center/",
+        "generate 5 niche YAML configs via claude -p with PRINTMAXX branding and curated widget sets"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "deploy_and_screenshot",
+      "steps": [
+        "npm build with indie-hacker config as showcase default",
+        "deploy to dashy-demo.surge.sh",
+        "playwright screenshot each config variant for listing assets"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "list_and_distribute",
+      "steps": [
+        "create Gumroad listing markdown at DIGITAL_PRODUCTS/ready_to_sell/dashy-config-pack/",
+        "generate Product Hunt launch copy",
+        "post to r/selfhosted r/homelab with before/after screenshots",
+        "generate SEO landing page at builds/dashy-command-center/index.html"
+      ],
+      "parallel": true
+    }
+  ],
+  "status": "READY"
+}

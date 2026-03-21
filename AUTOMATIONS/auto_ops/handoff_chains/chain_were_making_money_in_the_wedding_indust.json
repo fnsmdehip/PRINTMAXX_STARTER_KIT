@@ -1,0 +1,24 @@
+{
+  "name": "chain_were_making_money_in_the_wedding_indust",
+  "created": "2026-03-21T12:40:49.369719",
+  "method": "We're making money in the wedding industry and here's what nobody told us before",
+  "venture": "LOCAL_BIZ",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape wedding vendor listings from The Knot, WeddingWire, Google Maps for target metro areas. Extract: business name, phone, website URL, review count, rating, category (photographer/DJ/florist/planner/venue)",
+      "output": "wedding_vendors_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score vendors by gap signal: high reviews + no website or bad website = hot lead. Filter for vendors with 10+ reviews and no modern web presence. Dedupe against existing LOCAL_BIZ leads",
+      "output": "wedding_vendors_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach using vendor name, category, review count. Pitch: website/booking page/SEO service. Use templates from existing cold outbound infrastructure. Wedding vendors have seasonal urgency (peak booking Jan-Mar for summer weddings)",
+      "output": "wedding_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

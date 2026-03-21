@@ -1,0 +1,29 @@
+{
+  "name": "chain_rented_out_my_dormant_linkedin_account_f",
+  "created": "2026-03-21T12:40:51.029045",
+  "method": "Rented out my dormant LinkedIn account for B2B outreach ($40/mo)",
+  "venture": "BROKERING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan r/SideHustle, r/Entrepreneur, relevant Discord servers for 'LinkedIn account rent/sell' listings weekly",
+      "output": "linkedin_account_supply.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for accounts with 500+ connections, active history, niche match (B2B/SaaS/agency). Score 0-10 on rental value.",
+      "output": "qualified_accounts.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Match qualified accounts against existing hot leads (17,413 in pipeline) seeking LinkedIn outreach. Auto-draft broker intro email proposing 3-month rental at $40-80/mo, broker takes 25%.",
+      "output": "broker_outreach_log.json"
+    },
+    {
+      "agent": "tracker",
+      "task": "Log active rentals, collect broker fee via Stripe Payment Link, update KPI dashboard",
+      "output": "brokerage_revenue.csv"
+    }
+  ],
+  "status": "READY"
+}

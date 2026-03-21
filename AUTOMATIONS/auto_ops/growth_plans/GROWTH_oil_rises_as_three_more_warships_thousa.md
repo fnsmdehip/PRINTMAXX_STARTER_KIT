@@ -1,38 +1,32 @@
 # Growth Plan: Oil Rises As Three More Warships, Thousands Of Marines Dispa
 
-**Created:** 2026-03-20 23:36
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $50-200/mo
+**Revenue Est:** $0/mo direct — engagement signal only, no revenue path
 
 ---
 
 ## Tactics
 
-1. Post geopolitical commentary within 15 min of breaking macro news — algo rewards timeliness
-2. Reply to ZeroHedge tweets with 'what this means' takes — hijack their distribution
-3. Tag oil/defense/macro finance accounts in threads to trigger reply chains
-4. Use verified numbers (barrel price, % move) in first line — stops the scroll
+1. Extract hook structure: 'When [geopolitical event] happens, [commodity/asset] follows. Here is the play' — reusable template for finance content
+2. Timely macro event commentary on X targets finance/trading audience with zero effort: screenshot headline + one-line take
 
 ## Budget Tier Strategies
 
 ### FREE
-RSS feed polling ZeroHedge + Reuters energy desk → claude -p generates 3 takes per event → routes to content_multiplier.py → posting_queue/
+Run engagement_bait_converter.py with geopolitical escalation hook. Generate 2-3 finance-angle posts for X. Template: 'Warships deployed → oil spikes → here is who profits.' Queue to CONTENT/social/posting_queue/.
 
 ### LOW
-$0-20/mo: boost high-engagement geopolitical posts on X to finance audiences (CPM cheap in finance niche outside US hours)
+
 
 ### MID
-$50-100/mo: sponsored placement in finance newsletters + ZeroHedge comment seeding with link to our commentary thread
+
 
 ## Daily Actions
 
-- [ ] Add ZeroHedge RSS + Reuters energy RSS to geopolitical_signal_content_router.py
-- [ ] Define trigger keywords: ['warships', 'military deployment', 'oil embargo', 'marines', 'Middle East escalation', 'sanctions oil']
-- [ ] On trigger: extract event summary → pass to claude -p with finance commentary prompt → output 3 posts (thread opener, standalone take, reply bait)
-- [ ] Route posts to CONTENT/social/posting_queue/ with tag #macro
-- [ ] Wire cron at 7AM/1PM/7PM for feed polling
-- [ ] Feed high-engagement posts back to content_repurposer.py for newsletter inclusion
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --entry 'Warship deployment to Mideast = oil price spike signal. Trump NATO comments = market uncertainty.' --niche finance --posts 3
+- [ ] Review output in CONTENT/social/posting_queue/ and merge best hook into posting rotation
 
 ## Tooling
 
@@ -40,6 +34,6 @@ $50-100/mo: sponsored placement in finance newsletters + ZeroHedge comment seedi
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory + engagement_bait_converter.py"
+  "content": "engagement_bait_converter.py"
 }
 ```

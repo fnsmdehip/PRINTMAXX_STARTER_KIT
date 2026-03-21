@@ -1,39 +1,38 @@
 # Growth Plan: The real AI gold rush isn’t in building. It’s in babysitting
 
-**Created:** 2026-03-20 18:35
-**Venture:** OUTBOUND
+**Created:** 2026-03-21 12:40
+**Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $800-2500/mo
+**Revenue Est:** $1500-4000/mo
 
 ---
 
 ## Tactics
 
-1. Reply to Reddit threads about broken vibe-coded apps with genuine help + soft CTA
-2. Post 'AI babysitter' thread on Twitter with real case study data from our builds
-3. Create content showing common vibe-code failure modes (engagement bait that doubles as lead gen)
-4. Monitor r/SaaS r/startups r/webdev for 'my AI-built app broke' posts
+1. Quote-tweet shut-down founders with 'this is why babysitting > building' angle — high engagement, zero cost
+2. Post 'what Claude can build in 2h that killed your SaaS' with specific examples — controversy drives shares
+3. Target r/Entrepreneur, r/SaaS, r/IndieHackers with 'the pivot nobody is talking about' framing
+4. Cold DM founders who posted about shutting down AI startups — offer AI systems management retainer ($2-5K/mo)
+5. Repurpose into engagement_bait_converter.py with 3 hook variants: fear (your SaaS is dead), opportunity (pivot now), contrarian (build is dead, babysit is king)
 
 ## Budget Tier Strategies
 
 ### FREE
-Reddit reply strategy on r/SaaS r/startups r/webdev targeting broken-vibe-code posts. Twitter threads showing AI maintenance value. Cross-post to IndieHackers.
+Post 1 thread/day using this narrative. QT any news about AI replacing SaaS. DM 10 shut-down founders/week offering AI ops retainer. Cross-post to HN as 'Ask HN: Is AI babysitting the new SaaS?'
 
 ### LOW
-$20-40/mo on targeted X ads to founders who follow Cursor/Replit/v0 accounts
+$20-30/mo: Boost 1 high-performing post per week on X. Run Reddit promoted post on r/Entrepreneur targeting founders. Estimated: 50-200 new followers/week.
 
 ### MID
-$100-150/mo on LinkedIn InMail to non-technical founders who recently launched AI-built products
+$100-150/mo: Sponsor a small indie hacker newsletter with this angle. Retarget visitors from landing page with 'AI ops consultant' offer.
 
 ## Daily Actions
 
-- [ ] Add subreddit keywords ('vibe code broke', 'AI built app issues', 'Claude code maintenance') to reddit_deep_scraper filter list
-- [ ] Create DAG script scraping 3 sources in parallel for founders needing AI tool maintenance
-- [ ] Score leads by: mentions specific broken tool (high), asks for help (high), just venting (low)
-- [ ] Generate cold email template: 'I maintain AI-built tools so founders can focus on growth' positioning
-- [ ] Wire qualified leads into existing cold outbound pipeline (chain_vibecoded_services)
-- [ ] Add to content queue: 3 tweets on AI babysitting angle + 1 thread with real data
-- [ ] Cron at 7:30 AM daily to refresh lead pipeline
+- [ ] Route to engagement_bait_converter.py with method text — generate 3 hook variants (fear/opportunity/contrarian)
+- [ ] Add best hook to CONTENT/social/posting_queue/ for next daily post slot
+- [ ] Wire into existing chain_theres_one_ai_business_model_that_gets_ — add 'AI babysitting' as a parallel narrative branch
+- [ ] Extract founder outreach angle: scrape r/Entrepreneur and r/startups for 'shut down' + 'AI replaced' keywords weekly via background_reddit_scraper.py
+- [ ] Add qualified shut-down founders to cold outreach queue with 'AI ops retainer' pitch template
 
 ## Tooling
 
@@ -41,6 +40,6 @@ $100-150/mo on LinkedIn InMail to non-technical founders who recently launched A
 {
   "browser": "none",
   "email": "custom cold email scripts",
-  "content": "content_factory + engagement_bait_converter"
+  "content": "engagement_bait_converter.py"
 }
 ```

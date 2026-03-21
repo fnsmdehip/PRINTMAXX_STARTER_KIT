@@ -1,33 +1,35 @@
 # Growth Plan: BREAKING: Sweden's Central Bank is recommending that every a
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0/mo direct — follower growth and engagement signal only
 
 ---
 
 ## Tactics
 
-1. Post as contrarian hot-take on X for engagement farming
-2. Cross-post to finance/prepper subreddits for inbound
+1. Post as a contrarian take: 'Sweden's central bank just told you digital payments will fail. Are you ready?'
+2. Quote-tweet unusual_whales with a financial independence angle for indie hacker / solopreneur audience
+3. Thread format: '5 things this Sweden announcement tells us about the future of digital money'
+4. Tie to existing PrayerLock/SoberStreak audience with 'peace of mind' framing
 
 ## Budget Tier Strategies
 
 ### FREE
-Single tweet + thread via engagement_bait_converter. Quote-tweet the original unusual_whales post with a PRINTMAXX-voice take on digital payment fragility.
+3 posts repurposed from this hook: Twitter thread, LinkedIn take, Reddit comment in r/personalfinance or r/financialindependence
 
 ### LOW
-N/A — content-only, no paid amplification warranted for news reshare
+Boost highest-performing post at $5-10 for engagement signals
 
 ### MID
-N/A
+N/A — not worth paid spend on a news-cycle topic with no product tie-in
 
 ## Daily Actions
 
-- [ ] Route headline to engagement_bait_converter.py as CONTENT_ONLY
-- [ ] Generate 1 contrarian tweet (angle: digital payment systems are a single point of failure, build income streams that work offline too)
-- [ ] Add to CONTENT/social/posting_queue/ for next posting cycle
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'Sweden Central Bank cash reserve advisory — digital payment failure risk' --niche finance --platforms twitter,linkedin,reddit
+- [ ] Review generated hooks in CONTENT/social/posting_queue/
+- [ ] Schedule top 2 posts via posting queue
 
 ## Tooling
 
@@ -35,6 +37,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter"
+  "content": "engagement_bait_converter.py"
 }
 ```

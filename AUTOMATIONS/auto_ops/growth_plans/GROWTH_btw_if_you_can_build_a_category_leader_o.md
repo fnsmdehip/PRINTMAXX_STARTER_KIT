@@ -1,34 +1,39 @@
 # Growth Plan: btw if you can build a category leader open source project i
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** PRODUCT
 **Budget Tier:** FREE
-**Revenue Est:** $0-500/mo (GitHub Sponsors + consulting inbound). Acqui-hire path $2-5K/mo equivalent but 12-24mo horizon.
+**Revenue Est:** $0-500/mo short-term via GitHub Sponsors and consulting inbound. Acqui-hire path ($2-5K/mo equivalent) is 12-24mo horizon. NOT Phase 0 priority — existing sovrun project is the vehicle, no new build needed.
 
 ---
 
 ## Tactics
 
-1. Post agent-soul updates to HN/Reddit/Twitter when shipping features
-2. Cross-pollinate with PRINTMAXX content farm — OSS builds = content
+1. Post sovrun releases to HN Show, r/LocalLLaMA, r/MachineLearning
+2. Cross-promote from printmaxxer Twitter with build-in-public threads
+3. Submit to AI tool directories (There's An AI For That, FutureTools)
+4. GitHub README optimization with badges, demo GIFs, quick-start
+5. Engage in AI engineering Discord communities with genuine help + link
 
 ## Budget Tier Strategies
 
 ### FREE
-Post agent-soul releases to HN Show, r/LocalLLaMA, r/artificial, Twitter AI community. Star-for-star exchanges with other OSS maintainers.
+HN posts, Reddit submissions, Twitter build-in-public, GitHub SEO, Discord engagement, Product Hunt launch
 
 ### LOW
-$0-20/mo: Sponsor related OSS repos for backlink + visibility
+$0-50/mo: GitHub Sponsors tier setup, small dev newsletter sponsorships
 
 ### MID
-$50-100/mo: Dev.to/Medium paid promotion of technical deep-dives on sovrun architecture
+$50-200/mo: Dev influencer outreach for reviews, conference lightning talk submissions
 
 ## Daily Actions
 
-- [ ] SKIP — duplicate alpha, already integrated via agent-soul/sovrun
-- [ ] Existing sovrun-sync rule handles OSS↔PRINTMAXX integration automatically
-- [ ] KPI: track stars/forks weekly, inbound leads monthly
-- [ ] Content: auto-generate tweets from agent-soul commits (already in content pipeline)
+- [ ] SKIP new venture creation — agent-soul/sovrun IS the existing open source project
+- [ ] Create oss_category_tracker.py to monitor GitHub stars and competitor repos weekly
+- [ ] Add weekly cron (Monday 7 AM) for category position tracking
+- [ ] Route growth content through engagement_bait_converter for build-in-public posts
+- [ ] Queue HN Show submission when sovrun hits next feature milestone
+- [ ] DEPRIORITIZE vs P0 revenue methods — this is Phase 2+ strategy
 
 ## Tooling
 
@@ -36,6 +41,6 @@ $50-100/mo: Dev.to/Medium paid promotion of technical deep-dives on sovrun archi
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory for OSS release posts"
+  "content": "engagement_bait_converter for build-in-public posts"
 }
 ```

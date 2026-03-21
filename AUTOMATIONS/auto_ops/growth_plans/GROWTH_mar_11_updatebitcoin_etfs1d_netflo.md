@@ -3,7 +3,7 @@
 #Bitcoin ETFs:
 1D NetFlow: +3,392 $BTC(+$238
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
 **Revenue Est:** $0-20/mo
@@ -12,32 +12,34 @@
 
 ## Tactics
 
-1. Quote-tweet original Lookonchain post with contrarian take for engagement
-2. Tag crypto influencers in reply threads to borrow audience
+1. Post ETF flow data daily at 7 AM — lookonchain followers are 600K+, this is a known engagement pattern
+2. Frame as signal not data: 'Smart money moved X BTC today — here is what that means' beats raw numbers
+3. Cross-post to crypto subreddits (r/Bitcoin, r/ethfinance) with analysis framing
 
 ## Budget Tier Strategies
 
 ### FREE
-Repost ETF flow data with added narrative spin (BTC inflows vs ETH/SOL outflows = rotation thesis). QT Lookonchain for discovery. Post during US market hours 9-10am EST for max finance Twitter reach.
+Pull data from @lookonchain X posts via existing twitter_alpha_scraper.py, reframe with Claude, queue to posting_queue daily
 
 ### LOW
-$0-20/mo boosting best-performing flow update tweets
+$0-50/mo — boost highest-engagement ETF post 1x/week to crypto audience on X
 
 ### MID
-N/A - content type doesn't justify paid scaling
+$50-200/mo — sponsor crypto newsletter slot when account hits 1K followers
 
 ## Daily Actions
 
-- [ ] Add ETF flow update format to CONTENT/social/posting_queue/ as weekly recurring thread template
-- [ ] Use engagement_bait_converter to generate 2-3 tweet variants per weekly update (bullish take, bearish take, neutral data dump)
-- [ ] Add KPI task to track impressions and engagement rate on crypto flow content vs other content types
+- [ ] Check if existing ETF flow scraper from March 9/11 integrations already covers BTC — if yes, add ETH and SOL as config params only
+- [ ] Run engagement_bait_converter.py on this raw data to generate 3 posts
+- [ ] Drop into CONTENT/social/posting_queue/ with crypto tag
+- [ ] Cron at 7 AM daily to auto-pull next day's flows from lookonchain X account
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
+  "browser": "none \u2014 X JSON API or existing twitter_alpha_scraper.py",
   "email": "none",
-  "content": "content_factory + engagement_bait_converter"
+  "content": "engagement_bait_converter.py"
 }
 ```

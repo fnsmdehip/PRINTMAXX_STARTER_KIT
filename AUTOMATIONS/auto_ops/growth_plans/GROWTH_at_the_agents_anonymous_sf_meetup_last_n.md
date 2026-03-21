@@ -1,40 +1,38 @@
 # Growth Plan: At the Agents Anonymous SF meetup last night we did another 
 
-**Created:** 2026-03-20 13:50
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct, but validates Claude Code digital products ($47-97 each, 3 listed) and MCP Marketplace positioning. Content ROI: 5K-50K impressions if hooks land.
+**Revenue Est:** $0 direct — validates Claude Code digital products ($47-97 each) as having clear market demand; content authority play feeding inbound
 
 ---
 
 ## Tactics
 
-1. Quote-tweet the original survey post with our contrarian take (free engagement from their audience)
-2. Tag Claude Code official account to get RT signal
-3. Post survey data as image card (higher engagement than text-only)
-4. Reply to Cursor/Codex accounts with the data (controversy drives engagement)
-5. Cross-post to r/ClaudeAI r/LocalLLaMA r/ChatGPTPro with different angles per sub
+1. Post the raw stat as a standalone tweet — developer stats get high organic RT from tool builders
+2. Quote-tweet the original @jshchnz post with a take: '90% Claude Code at SF AI meetup. If you're not building Claude Code workflows yet you're behind'
+3. Thread angle: '80% of AI developers are prompting from mobile — here's what that means for tooling in 2026'
+4. Reply-bait: Post in Claude Code community / indie hacker circles asking 'which tools are YOU using?' using this stat as social proof anchor
+5. Use stat to position Claude Code digital product (guide/agent bible/config pack) — '90% of SF AI devs use Claude Code. Here's the exact config they're running'
 
 ## Budget Tier Strategies
 
 ### FREE
-QT original tweet with hot take, post to 5 subreddits, thread on printmaxxer account, reply-bait under AI tool comparison tweets, cross-post survey image to LinkedIn
+3 tweets from this stat today via posting_queue — standalone stat, QT with take, thread on mobile dev workflow gap. Tag @jshchnz for RT potential. Drop in Claude Code community Discord/Slack as conversation starter.
 
 ### LOW
-$10-20 boost best-performing tweet variant after 24h organic test
+$0-50/mo — boost the best-performing stat tweet with $10-20 Twitter ads targeting developers + Claude Code followers to seed authority before digital product launch
 
 ### MID
-$50-100 run survey data as Twitter ad targeting AI/dev audience, A/B test hook variants
+$50-200/mo — sponsor an AI developer newsletter with '90% of AI devs use Claude Code — our guide shows the exact workflow' as ad copy
 
 ## Daily Actions
 
-- [ ] Run engagement_bait_converter.py with survey data as input — generate 5 tweet variants using specific-number hook pattern (90% Claude Code, 80% mobile, Cursor only 30%)
-- [ ] Generate 1 thread: 'I was at Agents Anonymous SF. Here are the real numbers nobody's publishing.' — consequence-first hook from procedural memory
-- [ ] Generate 1 contrarian post: 'Cursor raised $900M but only 30% of power users actually use it. Claude Code at 90%. The market has already decided.'
-- [ ] Generate 1 mobile-angle post: '80% of devs have prompted a coding agent from their phone. Mobile-first coding isn't coming — it's here.'
-- [ ] Queue all to CONTENT/social/posting_queue/ with 1-per-day stagger
-- [ ] Update DIGITAL_PRODUCTS positioning: add '90% of SF AI meetup devs use Claude Code' as social proof line in Claude Code product listings
-- [ ] Cross-post best variant to r/ClaudeAI, r/LocalLLaMA, LinkedIn, Dev.to within 48h via content_repurposer.py
+- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --input 'SF AI meetup: 90% Claude Code, 60% Codex, 30% Cursor. 80% prompt from mobile.' --niche developer --count 3
+- [ ] Review 3 generated posts in CONTENT/social/posting_queue/ — pick top 2
+- [ ] Add QT of original tweet (https://x.com/jshchnz/status/2034706934088274279) with take: '90% Claude Code dominance at SF AI meetups. If you're building for developers, this is your market signal.'
+- [ ] Queue all 3 posts in Buffer/posting queue for next 3 days — space them out
+- [ ] Tag this stat in LEDGER/ALPHA_STAGING.csv against Claude Code digital product entries as market validation evidence
 
 ## Tooling
 
@@ -42,6 +40,6 @@ $50-100 run survey data as Twitter ad targeting AI/dev audience, A/B test hook v
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "engagement_bait_converter.py \u2192 CONTENT/social/posting_queue/"
 }
 ```

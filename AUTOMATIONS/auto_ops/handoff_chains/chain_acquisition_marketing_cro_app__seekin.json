@@ -1,0 +1,24 @@
+{
+  "name": "chain_acquisition_marketing_cro_app__seekin",
+  "created": "2026-03-21T12:40:57.804929",
+  "method": "[ACQUISITION] Marketing CRO App - Seeking Honest Feedback",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape r/SideProject weekly for posts tagged [ACQUISITION] or containing 'CRO', 'conversion', 'landing page', 'A/B test', 'seeking feedback'",
+      "output": "sideproject_cro_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each post: acquisition target (has price/valuation), feedback mine (has user complaints = feature gaps for pagescorer), distribution op (upvoted post we can reply to with pagescorer link)",
+      "output": "sideproject_cro_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Route: acquisition targets \u2192 LEDGER/APP_CLONE_OPPORTUNITIES.csv | feedback mines \u2192 pagescorer backlog | distribution ops \u2192 CONTENT/social/posting_queue/ as reply drafts",
+      "output": "sideproject_cro_routed.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,45 +1,45 @@
 # Growth Plan: Building SaaS in 2026? My best advice * Offer Google login. 
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0-100/mo
+**Revenue Est:** $0 direct — operational multiplier: increases conversion on existing 69 apps by reducing signup friction
 
 ---
 
 ## Tactics
 
-1. Add Google OAuth to all apps to reduce signup friction (stated: most users won't bother without it)
-2. Implement streak-based retention loops in all streak apps (retention 25x cheaper than acquisition)
-3. Add share/referral buttons to all apps for organic viral loops
-4. 80/20 rule: dedicate 4x more time to marketing existing apps vs building new ones
+1. Add Google OAuth to all 69+ deployed apps — frictionless auth = higher conversion, lower bounce
+2. Before building next app: require one paying user (even $1) before writing >50 lines of product code
+3. Post-launch content sprint: 80% of session time goes to distribution, not features — enforce via hook
+4. Add D7/D30 retention KPI to every app in KPI_DASHBOARD.md — measure before adding features
+5. Route this entry's frameworks (retention > acquisition, market shamelessly) to engagement_bait_converter.py for 3 posts
 
 ## Budget Tier Strategies
 
 ### FREE
-Google OAuth via Firebase Auth (already have Firebase MCP), share buttons, OG meta tags, streak push notifications, referral program with vanity URLs
+Audit all apps for Google OAuth via saas_launch_gate.py --audit. Add oauth_required: true to app_factory base template. Wire engagement posts about SaaS validation to posting_queue.
 
 ### LOW
-$0-50/mo: targeted Reddit/Twitter posts about each app weekly, ProductHunt launches for top 5 apps
+$0-50/mo: Use Google OAuth free tier (no cost under 100 MAU per app). No additional spend needed.
 
 ### MID
-$50-200/mo: retargeting ads for users who visited but didn't sign up, email re-engagement drip sequences
+N/A — this is an operational improvement, not a paid growth channel
 
 ## Daily Actions
 
-- [ ] Build dag_runner script that crawls OPS/DEPLOYMENT_URLS.md for all live app URLs
-- [ ] For each app: fetch HTML, check for Google sign-in button, Stripe/payment link, retention elements (notifications, streak UI, email capture), marketing elements (OG tags, share buttons, referral link)
-- [ ] Generate compliance scorecard CSV in LEDGER/APP_SAAS_COMPLIANCE.csv
-- [ ] Route top-priority fixes (missing payment links first, then OAuth, then retention) to app_factory_autopilot queue
-- [ ] Schedule weekly Monday 7 AM cron to re-audit and track improvement over time
-- [ ] Generate 3 tweets from audit findings (Rule 9): 'audited 47 apps against SaaS best practices, here is what I found'
+- [ ] Run `python3 AUTOMATIONS/saas_launch_gate.py --audit` to scan all builds in MONEY_METHODS/APP_FACTORY/builds/ for Google OAuth presence
+- [ ] Flag any app missing Google login — add to app_factory base template and backfill top 5 highest-traffic apps first
+- [ ] Add hook entry to settings.json: PostToolUse on app build completion → saas_launch_gate.py --check $APP_DIR
+- [ ] Wire D7/D30 retention placeholders into KPI_DASHBOARD.md for all active apps
+- [ ] Run `python3 AUTOMATIONS/engagement_bait_converter.py --method 'retention > acquisition 25x cheaper' --method 'post-launch 80% marketing'` → pushes 3 posts to posting_queue
 
 ## Tooling
 
 ```json
 {
-  "browser": "playwright_mcp for app auditing",
+  "browser": "none",
   "email": "none",
-  "content": "content_factory for marketing posts per app"
+  "content": "engagement_bait_converter.py"
 }
 ```

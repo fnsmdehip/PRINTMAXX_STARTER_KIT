@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_gaze_guard_instant_privacy_",
+  "created": "2026-03-21T12:40:56.388750",
+  "method": "[PH LAUNCH] Gaze Guard: Instant Privacy &amp; Screen Blur",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH daily for privacy/security/productivity/remote-work app launches, extract founder profiles, emails, LinkedIn, maker pages",
+      "output": "ph_founders_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score founders: solo/micro team (<10), launched within 48h, has extractable email or LinkedIn, product is SaaS/app/tool (not hardware)",
+      "output": "ph_founders_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Cold email with 'saw your PH launch on [product]' personalized hook, offer relevant service (app acceleration, growth, SEO)",
+      "output": "ph_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

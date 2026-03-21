@@ -1,59 +1,64 @@
 {
   "name": "integration_p1",
-  "created": "2026-03-20T23:36:38.579604",
+  "created": "2026-03-21T12:40:49.903655",
   "method": "P1",
   "venture": "APP",
   "phases": [
     {
-      "name": "community_discovery",
+      "name": "build_mvp",
       "steps": [
-        "scrape_reddit_communities",
-        "scan_discord_servers",
-        "verify_zero_competitors",
-        "measure_engagement_velocity"
+        "scaffold_react_native",
+        "build_streak_ui_timer_checklist",
+        "wire_revenuecat_iap",
+        "integrate_admob",
+        "test_ios_android_simulator",
+        "submit_testflight_internal_testing"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "community_acquisition_intel",
+      "steps": [
+        "scrape_reddit_morning_routine_15_subreddits",
+        "scrape_twitter_morning_routine_influencers",
+        "scrape_youtube_comments_top_100_videos",
+        "extract_pinecone_embeddings_for_targeting"
       ],
       "parallel": true
     },
     {
-      "name": "variant_generation",
+      "name": "content_and_positioning",
       "steps": [
-        "generate_10_app_variants",
-        "create_icon_packs",
-        "write_store_copy"
+        "generate_5_twitter_threads_morning_hacks",
+        "generate_3_linkedin_posts_habit_stacking",
+        "generate_2_reddit_app_mentions_organic",
+        "generate_engagement_bait_before_after_memes"
       ],
       "parallel": true,
-      "depends_on": "community_discovery"
+      "depends_on": "community_acquisition_intel"
     },
     {
-      "name": "build_pipeline",
+      "name": "influencer_outreach",
       "steps": [
-        "build_ios_batch",
-        "build_android_batch",
-        "deploy_to_stores"
+        "qualify_targets_5k_100k_followers",
+        "segment_fitness_productivity_wellness_spirituality",
+        "cold_email_personalized_20_per_day",
+        "track_reply_rate_and_install_attribution"
       ],
-      "parallel": true,
-      "depends_on": "variant_generation"
+      "parallel": false,
+      "depends_on": "community_acquisition_intel"
     },
     {
-      "name": "seeding_phase",
+      "name": "deploy_and_growth",
       "steps": [
-        "seed_reddit_communities",
-        "discord_bot_engagement",
-        "product_hunt_launch",
-        "micro_influencer_outreach"
+        "submit_app_store_google_play",
+        "seed_10_subreddits_organic_value_first",
+        "launch_producthunt_20_day1_upvotes",
+        "track_day1_day7_day30_retention",
+        "ab_test_iap_pricing_1_99_vs_4_99"
       ],
-      "parallel": true,
-      "depends_on": "build_pipeline"
-    },
-    {
-      "name": "growth_optimization",
-      "steps": [
-        "monitor_app_store_rank",
-        "execute_paid_tactics",
-        "analyze_winner_patterns"
-      ],
-      "parallel": true,
-      "depends_on": "seeding_phase"
+      "parallel": false,
+      "depends_on": "content_and_positioning,influencer_outreach"
     }
   ],
   "status": "READY"

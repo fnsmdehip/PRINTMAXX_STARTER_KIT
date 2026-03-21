@@ -1,47 +1,48 @@
 # Growth Plan: Day 200. Just hit $12k in revenue. It still feels unreal. Ab
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** OUTBOUND
 **Budget Tier:** FREE
-**Revenue Est:** $200-800/mo
+**Revenue Est:** $500-2000/mo
 
 ---
 
 ## Tactics
 
-1. Monitor competitor mentions (tydal.co, somiibo, phantombuster) to intercept their leads
-2. Track pain-point keywords across r/SaaS, r/microsaas, r/Entrepreneur, r/smallbusiness, r/startups
-3. Build karma on 2-3 Reddit accounts via genuine helpful replies before any product mentions
-4. Cross-post Reddit insights as Twitter threads (Rule 9 content generation)
-5. Use Reddit thread topics as SEO longtail keyword signals for landing pages
+1. Target subreddits where our apps already have traction: r/sobriety, r/productivity, r/islam, r/GetMotivated, r/Accounting
+2. Focus replies on posts <6h old (highest visibility window before thread dies)
+3. Warm Reddit account first — 30 days karma farming on unrelated posts before product mentions
+4. Use different accounts per niche to avoid cross-contamination / ban radius
+5. Track which subreddits convert — double post frequency there, exit the rest
+6. Reply to comments ON viral posts (not just top-level posts) — less competition, same traffic
 
 ## Budget Tier Strategies
 
 ### FREE
-Organic Reddit monitoring via existing scraper, manual posting from personal account, karma building through genuine value-first replies, cross-pollinate Reddit insights into Twitter content
+Use existing reddit_deep_scraper.py output as signal source. claude -p for reply generation. Manual posting from warmed account. Target 5-10 replies/day across top-converting subreddits.
 
 ### LOW
-$0-50/mo: Reddit Ads targeting high-intent subreddits with $2-5/day budget, boost top-performing reply threads
+$20-50/mo for aged Reddit account with karma (buy from r/redditbay or similar) — skip 30-day warmup. Faster deployment, lower ban risk on first product mention.
 
 ### MID
-$50-200/mo: Multiple Reddit accounts with aged history, proxy rotation for monitoring at scale, Reddit Ads retargeting site visitors
+$50-200/mo: Multiple aged accounts per niche. Rotate posting. Use SOAX residential proxies ($99/mo) to prevent IP-based ban clustering across accounts.
 
 ## Daily Actions
 
-- [ ] Extend reddit_deep_scraper.py with intent-keyword filter layer (20 buying-signal phrases)
-- [ ] Add intent scoring function: weight by subreddit size, post recency, comment count, keyword density
-- [ ] Create reply template library per product type (streak apps, digital products, services)
-- [ ] Wire output to CONTENT/social/posting_queue/reddit_replies.txt for human posting
-- [ ] Add dedup tracking in LEDGER/REDDIT_REPLY_LOG.csv to prevent double-posting
-- [ ] Schedule 3x daily cron (7am, 1pm, 7pm) to catch fresh threads within golden reply window
-- [ ] Track clicks via UTM params on all posted links, feed back to qualifier for model improvement
+- [ ] 1. Wire reddit_intent_monitor.py to consume existing AUTOMATIONS/reddit_scraper_output/ files — no new scraping needed
+- [ ] 2. Add intent keyword filter layer + product-niche matching dict (focuslock→productivity, soberstreak→sobriety, prayerlock→islam/christian, invoiceforge→freelancers)
+- [ ] 3. Use claude -p to generate reply drafts: prompt includes subreddit context, original post, our app's value prop
+- [ ] 4. Write output to CONTENT/social/posting_queue/reddit_replies_queue.json with post URL, reply draft, match score
+- [ ] 5. Add cron: 0 */4 * * * — runs 6x daily on fresh scraper output
+- [ ] 6. Human reviews queue daily, posts top 5-10 replies from warmed account
+- [ ] 7. Track reply URLs in LEDGER — follow up weekly to see upvote/comment signal
 
 ## Tooling
 
 ```json
 {
-  "browser": "none \u2014 reddit_deep_scraper uses requests JSON API",
+  "browser": "none \u2014 Reddit JSON API via requests, no browser needed",
   "email": "none",
-  "content": "claude -p for reply drafting"
+  "content": "claude -p for reply generation, existing reddit_deep_scraper.py for signal ingestion"
 }
 ```

@@ -1,28 +1,28 @@
 {
   "name": "chain_the_chillest_business_you_can_run_right_",
-  "created": "2026-03-20T18:35:50.662589",
+  "created": "2026-03-21T12:40:53.093359",
   "method": "The chillest business you can run right now is building AI UGC FB / IG pages \n\nyou can just become an affiliate for a brand and get paid $500 - 2k retainers per page you run + affiliate commissions \n\n",
   "venture": "CONTENT",
   "stages": [
     {
-      "agent": "brand_scanner",
-      "task": "Scan affiliate networks for brands accepting FB/IG page affiliates in our niches (faith, fitness, tech)",
-      "output": "affiliate_brands_matched.json"
-    },
-    {
       "agent": "content_generator",
-      "task": "Generate AI UGC content batch (5-10 posts) per niche page using existing content_factory + image_factory",
-      "output": "ugc_content_batch/"
+      "task": "Generate 30 AI UGC scripts/visuals per niche using claude -p with UGC hook templates",
+      "output": "ugc_content_batch.json"
     },
     {
-      "agent": "outreach_drafter",
-      "task": "Draft affiliate application emails to matched brands using existing cold outreach templates",
-      "output": "affiliate_outreach_queue.json"
+      "agent": "affiliate_mapper",
+      "task": "Cross-reference content topics against LEDGER/CREATOR_PROGRAMS.csv, inject highest-commission affiliate links",
+      "output": "content_with_affiliate_links.json"
     },
     {
-      "agent": "performance_tracker",
-      "task": "Track page metrics (followers, engagement, affiliate clicks) weekly",
-      "output": "ugc_page_performance.csv"
+      "agent": "scheduler",
+      "task": "Post via FB/IG Graph API at optimal engagement windows (8AM, 12PM, 7PM local)",
+      "output": "posting_log.json"
+    },
+    {
+      "agent": "retainer_hunter",
+      "task": "When page hits 1K+ engagements/week, trigger cold_email_template to brand's marketing team offering managed page retainer",
+      "output": "retainer_outreach_log.json"
     }
   ],
   "status": "READY"

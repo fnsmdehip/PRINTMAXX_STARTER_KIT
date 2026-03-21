@@ -1,0 +1,48 @@
+{
+  "name": "integration_show_hn_i_fixed_ffmpegs_subtitle_conve",
+  "created": "2026-03-21T12:41:00.265997",
+  "method": "Show HN: I fixed FFmpeg's subtitle conversion (the bug from 2014). FFmpeg converts everything except subtitles across format boundaries. SRT to Blu-ray PGS? &quot;Subtitle encoding currently only poss",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "clone_and_analyze_github_repo_for_supported_formats",
+        "keyword_research_subtitle_conversion_pairs",
+        "scrape_competitor_tools_and_pricing"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build",
+      "steps": [
+        "generate_subtitle_converter_webapp_from_app_factory_template",
+        "wire_stripe_freemium_free10files_per_day_pro9mo"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "seo_and_content",
+      "steps": [
+        "generate_30_landing_pages_per_format_pair_with_longtail_keywords",
+        "write_hn_story_claude_code_fixed_12yr_ffmpeg_bug",
+        "write_indie_hacker_post_boring_tool_milestone",
+        "generate_3_tweets_1_thread_for_content_queue"
+      ],
+      "parallel": true,
+      "depends_on": "build"
+    },
+    {
+      "name": "deploy_and_distribute",
+      "steps": [
+        "surge_deploy_subtitleconverter",
+        "submit_sitemap_to_search_console",
+        "post_plex_jellyfin_discord_and_reddit"
+      ],
+      "parallel": false,
+      "depends_on": "seo_and_content"
+    }
+  ],
+  "status": "READY"
+}

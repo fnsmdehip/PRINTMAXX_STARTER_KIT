@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_productbridge_agent_that_co",
+  "created": "2026-03-21T12:40:56.632809",
+  "method": "[PH LAUNCH] ProductBridge: Agent that collects feedback across multiple platforms",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH top 20 daily launches via Playwright MCP (public, no login). Extract: product name, tagline, category, upvote count, comment count, founder Twitter handle, founder website. Also scrape PH Ship feed for pre-launch founders.",
+      "output": "ph_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each launch: has founder Twitter/email (+3), cross-platform or multi-channel product (+2), agent/AI/feedback/analytics category (+2), <48h old (+3), >50 upvotes (+1). Keep total >=6. Flag ProductBridge-style products (feedback aggregation, multi-platform monitoring) as tier-1.",
+      "output": "ph_launches_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach via claude -p referencing their specific launch and pain point. Three offer variants: (1) feedback aggregation pipeline build (EAS), (2) app clone with cross-platform monitoring, (3) 'we built something similar, want a free audit?'. Queue to AUTOMATIONS/leads/ outreach pipeline and CONTENT/social/posting_queue/ for Twitter roundup.",
+      "output": "ph_outreach_queued.json"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "integration_acquisition_i_analyzed_600_verified_s",
+  "created": "2026-03-21T12:40:58.070293",
+  "method": "[ACQUISITION] I analyzed 600+ verified SaaS revenue reports. Here are the \"boring\" ideas quietly making $10K-$900K per month that nobo [rev: $$10]",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_sources",
+      "steps": [
+        "scrape_microsaas_subreddit",
+        "scrape_indiehackers_revenue",
+        "scrape_saas_directories"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extract_and_score",
+      "steps": [
+        "extract_revenue_figures",
+        "categorize_boring_vs_hype",
+        "score_build_complexity"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_sources"
+    },
+    {
+      "name": "route_to_factory",
+      "steps": [
+        "feed_top5_to_app_factory_queue",
+        "update_app_factory_priority_queue"
+      ],
+      "parallel": false,
+      "depends_on": "extract_and_score"
+    }
+  ],
+  "status": "READY"
+}

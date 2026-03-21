@@ -1,44 +1,45 @@
 # Growth Plan: 1.3k users, but only $35 MRR. Is it time to kill my project?
 
-**Created:** 2026-03-20 18:35
-**Venture:** APP
+**Created:** 2026-03-21 12:40
+**Venture:** MONETIZE
 **Budget Tier:** FREE
-**Revenue Est:** $50-300/mo from CV tool, $200-1000/mo from paywall audit applied across portfolio
+**Revenue Est:** $200-800/mo
 
 ---
 
 ## Tactics
 
-1. Gate core value behind paywall from day 1 — free tier = preview/teaser only, never full analysis
-2. Reddit r/resumes r/jobs r/careerguidance organic posting with free limited tool link
-3. SEO longtail: 'free resume score' 'CV analysis tool' — high intent keywords
-4. Apply conversion lesson to ALL existing 47 apps — single audit could 10x revenue across portfolio
+1. Post the RankMyCV diagnosis as engagement bait: 'Our app had 1K users and $0 revenue — here is the exact paywall fix that changed it' (route to engagement_bait_converter.py)
+2. Cold outreach to founders in same situation (r/AppBusiness, r/SaaS, r/IndieHackers) offering free paywall audit as lead gen for EAS/consulting
+3. Build public-facing 'SaaS Monetization Audit' tool (free) that captures leads and upsells to full implementation
 
 ## Budget Tier Strategies
 
 ### FREE
-Reddit organic posts in resume/career subs, SEO longtail pages, cross-promote from existing apps, apply paywall audit to all 47 live apps
+Post conversion audit results as content on Twitter/Reddit. Use our own 47 apps as case studies. Submit to IH Show HN with before/after MRR. Route all related alpha through engagement_bait_converter.py.
 
 ### LOW
-$10-30/mo on Google Ads for 'resume analyzer' keywords (high commercial intent), A/B test paywall copy
+$0-50/mo — Boost top-performing post showing the paywall fix. Run Reddit promoted post in r/SaaS or r/EntrepreneurRideAlong targeting 'low MRR' searchers.
 
 ### MID
-$50-100/mo retargeting free users who bounced at paywall, LinkedIn sponsored content targeting job seekers
+$50-200/mo — Sponsor IH newsletter with 'Free SaaS Paywall Audit' offer. Target founders at 100-5K users with zero revenue via cold email (chain_cold_outbound).
 
 ## Daily Actions
 
-- [ ] Run paywall audit on all 47 deployed PRINTMAXX apps — classify each as freemium-leaking or properly-gated
-- [ ] For any app giving core value free: generate hard paywall variant (3 free uses then $2.99/mo or $4.99 one-time)
-- [ ] Add CV/resume analyzer to app factory queue with spec: upload PDF → AI scores it → show 2/10 categories free → paywall remaining 8
-- [ ] Generate 3 tweets from this case study: 'your free tool is a charity' angle, conversion rate benchmarks, paywall psychology
-- [ ] Schedule weekly conversion audit cron to catch new apps falling into freemium trap
+- [ ] 1. Run: python3 AUTOMATIONS/payment_integrator.py --status > /tmp/payment_audit.txt to get current monetization gaps
+- [ ] 2. Write freemium_conversion_auditor.py using DAG above — inventory → diagnose → patch → report
+- [ ] 3. Run auditor immediately: python3 AUTOMATIONS/freemium_conversion_auditor.py --run
+- [ ] 4. Apply top 5 paywall patches to highest-traffic apps (use payment_integrator.py --wire-app)
+- [ ] 5. Add cron: 0 7 * * 1 python3 AUTOMATIONS/freemium_conversion_auditor.py --report
+- [ ] 6. Route this post through engagement_bait_converter.py for 3 tweets + 1 thread on the 'users but no revenue' pattern
+- [ ] 7. Update OPS/PERSISTENT_TASK_TRACKER.md: freemium audit live, cron installed
 
 ## Tooling
 
 ```json
 {
   "browser": "none",
-  "email": "none",
-  "content": "content_factory for resume/career niche posts"
+  "email": "custom cold email scripts (chain_cold_outbound)",
+  "content": "engagement_bait_converter.py"
 }
 ```

@@ -1,0 +1,48 @@
+{
+  "name": "integration_small_success_story_with_amazon_kdp_book",
+  "created": "2026-03-21T12:40:50.400376",
+  "method": "Small success story with Amazon KDP book (Non-fiction)",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "niche_research",
+      "steps": [
+        "scrape_amazon_bsr_top100_20_categories",
+        "mine_competitor_reviews",
+        "score_niche_opportunity_matrix"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_planning",
+      "steps": [
+        "select_top3_niches",
+        "generate_book_outline",
+        "create_chapter_structure"
+      ],
+      "parallel": false,
+      "depends_on": "niche_research"
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_chapters_parallel_4workers",
+        "generate_cover_brief",
+        "generate_kdp_metadata"
+      ],
+      "parallel": true,
+      "depends_on": "content_planning"
+    },
+    {
+      "name": "packaging",
+      "steps": [
+        "format_manuscript_docx_kdp_spec",
+        "compile_upload_package",
+        "write_to_product_queue"
+      ],
+      "parallel": false,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,46 @@
+{
+  "cycle": 94,
+  "strategy": "OUTDOOR_SKILLS + SURVIVAL + GARDENING + HOMESTEADING",
+  "timestamp": "2026-03-21T12:05:00.000000+00:00",
+  "blue_oceans": 15,
+  "soft_competition": 0,
+  "occupied": 0,
+  "p0_count": 7,
+  "community_total": 29120000,
+  "top_opportunities": [
+    {
+      "name": "Daily Gardening Skill Streak",
+      "community": 6130000,
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Hiking Training Streak",
+      "community": 4220000,
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Houseplant Mastery Streak",
+      "community": 3810000,
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Wilderness Camping Streak",
+      "community": 3380000,
+      "priority": "P0"
+    },
+    {
+      "name": "Daily Fishing Skills Streak",
+      "community": 2120000,
+      "priority": "P0"
+    }
+  ],
+  "alerts": [
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_GARDENING_SKILL_STREAK \u2014 6,130,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HIKING_TRAINING_STREAK \u2014 4,220,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HOUSEPLANT_MASTERY_STREAK \u2014 3,810,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_WILDERNESS_CAMPING_STREAK \u2014 3,380,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_FISHING_SKILLS_STREAK \u2014 2,120,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_PREPPER_SKILLS_STREAK \u2014 1,980,000 community. BUILD NOW.",
+    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HOMESTEADING_STREAK \u2014 1,530,000 community. BUILD NOW."
+  ]
+}

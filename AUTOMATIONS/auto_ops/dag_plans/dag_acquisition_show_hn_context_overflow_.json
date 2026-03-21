@@ -1,0 +1,45 @@
+{
+  "name": "integration_acquisition_show_hn_context_overflow_",
+  "created": "2026-03-21T12:40:58.657912",
+  "method": "[ACQUISITION] Show HN: Context Overflow \u2013 a Stack Overflow for AI Agents",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "discovery",
+      "steps": [
+        "scrape_new_questions",
+        "scrape_trending_topics"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "scoring",
+      "steps": [
+        "classify_relevance_to_printmaxx",
+        "score_traffic_potential"
+      ],
+      "parallel": false,
+      "depends_on": "discovery"
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "draft_answer_via_claude_p",
+        "inject_soft_cta_printmaxx_tools"
+      ],
+      "parallel": false,
+      "depends_on": "scoring"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "append_to_posting_queue",
+        "generate_twitter_thread_version",
+        "flag_high_value_for_manual_review"
+      ],
+      "parallel": true,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

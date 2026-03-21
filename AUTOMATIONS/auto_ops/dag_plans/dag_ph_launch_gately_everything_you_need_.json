@@ -1,0 +1,37 @@
+{
+  "name": "integration_ph_launch_gately_everything_you_need_",
+  "created": "2026-03-21T12:40:56.809513",
+  "method": "[PH LAUNCH] Gately: Everything you need to build your own membership",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "scrape_ph_launches",
+      "steps": [
+        "scrape PH /topics/memberships + /topics/community daily via Playwright MCP",
+        "extract: tool name, upvotes, pricing, pain points from comments, maker Twitter"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "analyze_and_route",
+      "steps": [
+        "score each launch: upvotes > 200 = outbound target, upvotes 50-200 = content seed",
+        "extract affiliate program existence (check homepage for /affiliates or /partners)",
+        "classify positioning gap vs existing PRINTMAXX tools"
+      ],
+      "parallel": true,
+      "depends_on": "scrape_ph_launches"
+    },
+    {
+      "name": "generate_output",
+      "steps": [
+        "pipe to engagement_bait_converter.py for content angles",
+        "append high-upvote maker emails to EAS lead pipeline if founder email found",
+        "queue affiliate comparison post to CONTENT/social/posting_queue/"
+      ],
+      "parallel": true,
+      "depends_on": "analyze_and_route"
+    }
+  ],
+  "status": "READY"
+}

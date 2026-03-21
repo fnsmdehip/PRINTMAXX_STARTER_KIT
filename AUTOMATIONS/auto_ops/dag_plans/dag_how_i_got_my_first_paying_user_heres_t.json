@@ -1,37 +1,36 @@
 {
   "name": "integration_how_i_got_my_first_paying_user_heres_t",
-  "created": "2026-03-20T18:35:52.755816",
+  "created": "2026-03-21T12:40:54.463725",
   "method": "How I got my first paying user. Here's the unfiltered truth. **Project:**\u00a0Email paywall service \u2014Fastpass . email  charge people to contact you  \n**Revenue:**\u00a0\u20ac0 \u2192 \\~$85 in 24h (from 1 user)  \n**Statu",
   "venture": "APP",
   "phases": [
     {
       "name": "build",
       "steps": [
-        "create HTML landing with pay-to-contact CTA",
-        "create Stripe product + price ($3-5 per email)",
-        "create Stripe payment link"
+        "generate landing page HTML (pay $X to get my email, Stripe Payment Link gate)",
+        "wire STRIPE_PUBLISHABLE_KEY into payment button",
+        "add success page that reveals contact email post-payment"
       ],
-      "parallel": true
+      "parallel": false
     },
     {
-      "name": "deploy",
+      "name": "deploy_and_content",
       "steps": [
-        "wire payment link into landing page",
-        "deploy to surge.sh as paywall-email.surge.sh",
-        "add to DEPLOYMENT_URLS.md"
+        "surge deploy to emailmaxx.surge.sh or similar",
+        "generate 3 build-in-public tweets + 1 Reddit post from launch story angle"
       ],
-      "parallel": false,
+      "parallel": true,
       "depends_on": "build"
     },
     {
       "name": "distribute",
       "steps": [
-        "generate 3 tweets about email noise problem + solution",
-        "add to content posting queue",
-        "list concept on Product Hunt upcoming"
+        "add posts to CONTENT/social/posting_queue/",
+        "add to OPS/DEPLOYMENT_URLS.md",
+        "add Stripe product to OPS/STRIPE_PRODUCTS.md"
       ],
-      "parallel": true,
-      "depends_on": "deploy"
+      "parallel": false,
+      "depends_on": "deploy_and_content"
     }
   ],
   "status": "READY"

@@ -2,34 +2,35 @@
 
 → pareto principle
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0/mo direct — content engagement asset only
 
 ---
 
 ## Tactics
 
-1. Replicate save-this hook format across all 3 niches
-2. Use listicle + Pareto framing for engagement farming
+1. Apply Feynman technique as a content format: 'explain [our product] in one sentence — if you can't, you don't understand it' — works as reply bait and authority signal
+2. Pareto angle as recurring series: 'the 20% of [tool/skill] that gives 80% of results' — high engagement format, easy to templatize across all 3 niches
+3. Use this as a Feynman test for our own app copy — run every app landing page through a 'explain in simple English' audit to tighten conversion copy
 
 ## Budget Tier Strategies
 
 ### FREE
-Copy the 'FASTEST way to learn X (save this)' hook template into engagement_bait_converter. Generate 3 niche variants (faith/fitness/tech) for posting queue.
+Generate 5 variants using engagement_bait_converter.py targeting tech/AI niche — post 1/day from @printmaxxer. Use Pareto+Feynman as a repeatable content template, not a one-off post.
 
 ### LOW
-N/A — content-only entry, no paid scaling warranted
+Boost best-performing variant ($5-10 Twitter/X promotion). Seed in IndieHackers and r/entrepreneur as value-add comments when AI learning threads appear.
 
 ### MID
-N/A
+Not warranted for content seed — reallocate budget to P0 CONTENT_FARM methods (TikTok completion rate, IG DM shares) which score 8.64 vs this entry's 5.0
 
 ## Daily Actions
 
-- [ ] Extract hook structure: 'the FASTEST way to [X] (save this)' + bullet list with arrows
-- [ ] Feed to engagement_bait_converter.py as CONTENT_ONLY template
-- [ ] Generate 3 niche variants for posting queue
+- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --method 'pareto-feynman-ai-learning' --niches tech,ai --count 5
+- [ ] Review output in CONTENT/social/posting_queue/ — approve best 3 variants
+- [ ] Apply Feynman test to top 3 app landing pages (soberstreak, prayerlock, focuslock) — flag any copy that fails the 'explain in one sentence' test for rewrite
 
 ## Tooling
 

@@ -1,49 +1,47 @@
 # Growth Plan: client paid me $1800 for a project. my tool cost was $0.53. 
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** EAS
 **Budget Tier:** FREE
-**Revenue Est:** $3000-6000/mo
+**Revenue Est:** $3000-8000/mo
 
 ---
 
 ## Tactics
 
-1. Post before/after case studies on r/webdev, r/Entrepreneur, r/forhire with real timelines (25min build time is shocking social proof)
-2. Reply to every 'I need a landing page' post on Reddit/HN/Twitter within 2 hours (speed = close rate)
-3. Build 5 niche-specific template showcases (restaurant, SaaS, coach, realtor, dentist) as free portfolio bait
-4. Cold DM local businesses with ugly websites — screenshot their site + mockup replacement
-5. Stack Upwork with $500-800 fixed-price gigs to build review velocity, then raise to $1500-2000
+1. Post case study on Reddit r/Entrepreneur r/Solopreneur with real numbers ($1800, 25 min) — hooks on effective hourly rate
+2. Repurpose as Twitter thread: before/after tool stack (Webflow $42 + Typeform → $0.53/project)
+3. Cold outreach to local businesses with Yelp 3-star-or-below reviews — frame as revenue-fix
+4. Offer first project at $500 as portfolio anchor, then raise to $1500+ with social proof
+5. Build Gumroad product: 'The $1800 Landing Page SOPs + Prompt Pack' — meta-sell the method
 
 ## Budget Tier Strategies
 
 ### FREE
-Reddit r/forhire posts, Upwork proposals (free connects refresh monthly), Twitter portfolio showcase, cold DM local biz with website mockups, HN Show HN portfolio
+Post case studies on Reddit/HN/IH with real numbers. DM 10 local biz owners/day via existing cold outbound scripts. Create thread content from project screenshots for Twitter.
 
 ### LOW
-Upwork Connects boost ($15/mo), Fiverr Seller Plus ($29/mo) for priority placement, targeted Reddit ads to r/smallbusiness ($5/day)
+$20-30/mo LinkedIn Sales Nav trial to find SMB owners actively posting about needing web help. Boost best-performing Reddit post via targeted Reddit ads.
 
 ### MID
-Google Ads on 'hire web developer' longtails ($100/mo), Upwork Boosted Proposals ($50/mo), LinkedIn Sales Navigator for B2B outreach ($99/mo)
+$50-100/mo on Google Ads targeting 'small business landing page [city]' — high-intent, low volume, $500+ LTV makes CPA math easy.
 
 ## Daily Actions
 
-- [ ] 1. Build 5 niche landing page templates (restaurant, SaaS, coach, realtor, dentist) using Claude Code — deploy as portfolio showcases
-- [ ] 2. Create proposal template library with 3 tiers: Basic LP ($800), LP+Form ($1200), LP+Form+Chatbot ($1800)
-- [ ] 3. Wire lead scraper to monitor Upwork 'landing page' and 'website redesign' gigs daily at 7:30 AM
-- [ ] 4. Wire Reddit monitor for r/forhire, r/slavelabour, r/Entrepreneur web dev requests
-- [ ] 5. Auto-generate personalized proposals from lead data using Claude — include relevant portfolio piece
-- [ ] 6. On project close: Claude Code generates full deliverable from client brief in <45min
-- [ ] 7. Deploy client site to Vercel (free tier), hand off with Loom walkthrough
-- [ ] 8. Auto-generate case study + 3 tweets from every delivered project (Rule 9)
-- [ ] 9. Upsell maintenance retainer ($200/mo) and referral incentive ($100 credit per referral)
+- [ ] Route to existing chain_client_paid_me_1800_for_a_project_my_t — already wired
+- [ ] Add eas_landing_chatbot_proposal_gen.py: input=business URL, output=personalized proposal + price anchored at $1800
+- [ ] Plug into local_biz_website_scraper.py (top SaaS candidate, score 95) to auto-source targets
+- [ ] Wire Stripe Payment Link generation on proposal acceptance
+- [ ] Cron: 9 AM weekdays — pull 5 fresh targets from scraper, generate proposals, add to cold outbound queue
+- [ ] Subagent: generate 3 tweet variants + 1 Reddit post from this case study TODAY (Rule 9)
 
 ## Tooling
 
 ```json
 {
-  "browser": "playwright",
-  "email": "custom cold email scripts",
-  "content": "claude -p for proposals + landing page generation"
+  "browser": "playwright for local biz scraping",
+  "email": "existing cold outbound scripts (AUTOMATIONS/cold_email_pipeline.py)",
+  "content": "engagement_bait_converter.py for case study posts",
+  "delivery": "Claude Code for page gen, Stripe Payment Link for invoicing"
 }
 ```

@@ -1,40 +1,42 @@
 # Growth Plan: Built a self-healing error system that watches my prod logs,
 
-**Created:** 2026-03-20 18:35
-**Venture:** APP
+**Created:** 2026-03-21 12:40
+**Venture:** PRODUCT
 **Budget Tier:** FREE
-**Revenue Est:** $0-50/mo direct savings + $100-300/mo if productized as digital product
+**Revenue Est:** $200-500/mo
 
 ---
 
 ## Tactics
 
-1. Post build thread on r/SideProject and r/selfhosted showing our version
-2. Open source the core watcher as sovrun module (drives GitHub stars + credibility)
-3. Create YouTube short showing error detected → fix generated → approved in 30 seconds
-4. Cross-post to IndieHackers and Dev.to as 'how I built a self-healing server'
+1. Dog-food internally on 47 live apps first — real error/fix examples become demo content
+2. Post r/SideProject show-off mirroring original post format (already proven engagement)
+3. Twitter thread: 'I built an AI that fixes its own bugs while I sleep' — show real error→patch→deploy in 90s
+4. GitHub repo with demo GIF in README — star bait drives Gumroad traffic
+5. Package as $29-47 Gumroad digital product: self-contained code template + 10-min setup guide
+6. Cross-post to r/node, r/selfhosted, r/devops, r/ClaudeAI — all high-signal for this method
 
 ## Budget Tier Strategies
 
 ### FREE
-Open source core on GitHub, post build threads on Reddit/HN/Dev.to, tweet build process with screenshots
+r/SideProject + r/node posts. Twitter thread with Loom demo. GitHub repo star campaign via indie hacker communities. Indie Hackers product showcase. OpenClaw + Claude Code community posts.
 
 ### LOW
-$0-50/mo: Boost best-performing Reddit/Twitter post, sponsor a DevOps newsletter mention
+$20 Reddit promoted post targeting r/node + r/devops. $10 X promo on the thread. Total $30/mo max.
 
 ### MID
-$50-200/mo: ProductHunt launch with video demo, targeted Reddit ads to r/devops and r/selfhosted
+Product Hunt launch for the OSS version. Dev newsletter placements in Bytes.dev or TLDR ($50-150/ea). Indie Hackers featured story pitch.
 
 ## Daily Actions
 
-- [ ] 1. Build self_healing_error_watcher.py: scan cron logs, agent logs, scraper stderr for Python tracebacks and error patterns
-- [ ] 2. Implement error fingerprinting: hash(error_type + message + top_3_stack_frames) for dedup, store in LEDGER/ERROR_FINGERPRINTS.csv
-- [ ] 3. On new unique error: invoke claude -p with error context + relevant source file to generate fix patch
-- [ ] 4. Queue fix in OPS/AUTO_FIX_QUEUE.md with diff preview, severity, and affected script
-- [ ] 5. Add PostToolUse hook: when any cron script exits non-zero, trigger the watcher on that log
-- [ ] 6. Wire into existing system_health_monitor.py as new health dimension
-- [ ] 7. Cron: run every 30 min scanning /tmp/printmaxx_logs/ and AUTOMATIONS/logs/
-- [ ] 8. Package productized version as digital product listing for Gumroad (Node.js indie dev version)
+- [ ] 1. Build self_healing_error_watcher.py: log tailer + sha256 fingerprinting + dedup queue (error_queue.json)
+- [ ] 2. Wire claude -p fix_generator: pass error + relevant source file, request unified diff, parse confidence score
+- [ ] 3. Add Telegram approval gate via python-telegram-bot: APPROVE/REJECT commands, 30min timeout = auto-reject
+- [ ] 4. Wire fix_applier: git apply + surge/vercel redeploy + HTTP 200 smoke test + rollback on failure
+- [ ] 5. Point watcher at our 47 live surge/vercel apps as first consumer — internal dog-fooding
+- [ ] 6. Add cron: */5 * * * * to keep error_queue fresh
+- [ ] 7. Package code as digital product: scrub internal paths, add README with demo GIF, create $29-47 Gumroad listing
+- [ ] 8. Run engagement_bait_converter.py on this method to generate 3 tweets + 1 thread (Rule 9)
 
 ## Tooling
 
@@ -42,6 +44,8 @@ $50-200/mo: ProductHunt launch with video demo, targeted Reddit ads to r/devops 
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory for build threads"
+  "content": "engagement_bait_converter.py",
+  "telegram": "python-telegram-bot (free, self-hosted)",
+  "deploy": "surge CLI + vercel CLI (already installed)"
 }
 ```

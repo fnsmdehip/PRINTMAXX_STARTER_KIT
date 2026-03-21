@@ -1,0 +1,38 @@
+{
+  "name": "integration_acquisition_ios5999__499__ban",
+  "created": "2026-03-21T12:40:58.306421",
+  "method": "[ACQUISITION] [iOS][$59.99 \u2192 $4.99 ] Ban It - Quit Bad Habits &amp; Compete With Friends [rev: $$59.99]",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scrape_marketplaces",
+      "steps": [
+        "scrape Acquire.com listings filtered: mobile, iOS, habit/wellness/streak",
+        "scrape Flippa listings filtered: iOS app, price < $1000, revenue > $0",
+        "scrape AppBusinessBrokers RSS for habit/tracker/streak keywords"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "score_and_filter",
+      "steps": [
+        "filter: price <= $500, has_source_code=true, app_store_live=true",
+        "score ROI: (monthly_revenue * 24) / asking_price \u2014 threshold 0.8x",
+        "niche_overlap check: habit, streak, quit, compete, friends, social accountability"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_marketplaces"
+    },
+    {
+      "name": "generate_output",
+      "steps": [
+        "write acquisition_leads.csv with ranked opportunities",
+        "generate cold inquiry email per top-3 listings using existing cold_email templates",
+        "append to LEDGER/APP_CLONE_OPPORTUNITIES.csv"
+      ],
+      "parallel": false,
+      "depends_on": "score_and_filter"
+    }
+  ],
+  "status": "READY"
+}

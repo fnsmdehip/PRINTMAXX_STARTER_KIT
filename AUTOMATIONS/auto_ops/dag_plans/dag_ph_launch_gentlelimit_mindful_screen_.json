@@ -1,0 +1,36 @@
+{
+  "name": "integration_ph_launch_gentlelimit_mindful_screen_",
+  "created": "2026-03-21T12:40:56.467414",
+  "method": "[PH LAUNCH] GentleLimit: Mindful screen time for macOS without blocking apps",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "intel_gather",
+      "steps": [
+        "playwright scrape GentleLimit PH page: upvote count, comments, maker profile, pricing",
+        "extract commenter profiles: HN/Twitter handles, job titles, pain points from comments"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "asset_build",
+      "steps": [
+        "app_factory_autopilot.py --build mindful-screentime-web (PWA, no-block approach)",
+        "engagement_bait_converter.py: 3 tweets on mindful vs blocking screen time debate"
+      ],
+      "parallel": true,
+      "depends_on": "intel_gather"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "stage qualified PH commenters into OUTBOUND cold email pipeline",
+        "post PH comment on GentleLimit page (helpful, no spam) linking to our app",
+        "deploy landing page to surge"
+      ],
+      "parallel": false,
+      "depends_on": "asset_build"
+    }
+  ],
+  "status": "READY"
+}

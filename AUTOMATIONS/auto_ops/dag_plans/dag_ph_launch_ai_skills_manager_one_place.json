@@ -1,0 +1,35 @@
+{
+  "name": "integration_ph_launch_ai_skills_manager_one_place",
+  "created": "2026-03-21T12:40:56.593081",
+  "method": "[PH LAUNCH] AI Skills Manager: One place for all your AI skills",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape PH /ai category top 20 today",
+        "extract: name, tagline, upvotes, features, maker Twitter"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "analyze",
+      "steps": [
+        "gap_analysis vs MCP Marketplace features",
+        "extract hook structures for content"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "output",
+      "steps": [
+        "append to LEDGER/COMPETITIVE_INTEL.csv",
+        "route hooks to engagement_bait_converter.py",
+        "update OPS/MCP_MARKETPLACE_POSITIONING.md"
+      ],
+      "parallel": true,
+      "depends_on": "analyze"
+    }
+  ],
+  "status": "READY"
+}

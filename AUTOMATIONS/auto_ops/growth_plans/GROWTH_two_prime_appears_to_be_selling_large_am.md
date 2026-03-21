@@ -1,35 +1,36 @@
 # Growth Plan: Two Prime appears to be selling large amounts of $BTC — 3,94
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-50/mo indirect via crypto audience growth
+**Revenue Est:** $0-200/mo indirect via crypto audience growth
 
 ---
 
 ## Tactics
 
-1. Whale alert threads get high engagement on CT — quote-tweet with hot take
-2. Tag Lookonchain/Arkham for amplification
-3. Reply under original whale alert tweets with our analysis angle
+1. Post whale movement alerts with $BTC/$ETH cashtags for algo amplification
+2. Reply to @lookonchain @WatcherGuru @whale_alert posts to piggyback their reach
+3. Timestamp posts within minutes of Arkham alerts — speed = credibility in crypto
+4. Use 'JUST IN:' hook format — proven engagement trigger in crypto Twitter
 
 ## Budget Tier Strategies
 
 ### FREE
-Quote-tweet whale alerts with contrarian take (bullish vs bearish framing), reply under Lookonchain posts, cross-post to Reddit r/cryptocurrency
+Auto-post whale alerts via posting queue. Reply to existing viral crypto threads. Use cashtags and whale alert hashtags for organic reach.
 
 ### LOW
-$0-20/mo boost top-performing whale alert threads on X
+$0-50/mo: Boost highest-engagement whale posts. Follow/engage top crypto accounts to seed algorithmic distribution.
 
 ### MID
-N/A — not worth paid scaling at this stage
+$50-200/mo: Paid promotion on breakout whale posts. Sponsor crypto newsletter drops with whale intel snippets.
 
 ## Daily Actions
 
-- [ ] 1. Add Two Prime $274M BTC sell to CONTENT/social/posting_queue/ as whale alert post
-- [ ] 2. Format as engagement thread: data point + hot take (institutional selling = bearish signal?)
-- [ ] 3. Existing content cron picks it up for scheduling
-- [ ] 4. No new scripts — this is a duplicate pattern already handled by whale content pipeline
+- [ ] Call engagement_bait_converter.py with this entry — generate 3 posts with JUST IN hook, specific dollar amounts, and cashtags
+- [ ] Append generated posts to CONTENT/social/posting_queue/
+- [ ] Wire whale_movement_content_generator.py to poll Arkham public data every 4h for movements >$50M BTC
+- [ ] Add cron entry: 0 */4 * * * python3 AUTOMATIONS/whale_movement_content_generator.py
 
 ## Tooling
 
@@ -37,6 +38,6 @@ N/A — not worth paid scaling at this stage
 {
   "browser": "none",
   "email": "none",
-  "content": "content_trend_pipeline.py + engagement_bait_converter.py"
+  "content": "engagement_bait_converter.py"
 }
 ```

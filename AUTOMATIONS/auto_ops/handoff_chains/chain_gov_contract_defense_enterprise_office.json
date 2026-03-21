@@ -1,0 +1,24 @@
+{
+  "name": "chain_gov_contract_defense_enterprise_office",
+  "created": "2026-03-21T12:40:57.560453",
+  "method": "[GOV CONTRACT] DEFENSE ENTERPRISE OFFICE SOLUTIONS (DEOS) (deadline: 2026-09-04)",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Query SAM.gov API (api.sam.gov/opportunities) for DEOS-related contracts, subcontracting opportunities, and awarded primes. Filter by NAICS 541511, 541512, 541519, 518210. Write to LEDGER/GOV_OPPORTUNITIES.csv",
+      "output": "LEDGER/GOV_OPPORTUNITIES.csv"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each opportunity: Is PRINTMAXX a realistic subcontractor? (AI automation, web tools, content pipelines). Flag opportunities with set-aside codes (8a, HUBZone, WOSB) as lower competition. Extract prime contractor company names + SAM.gov registered POCs",
+      "output": "LEDGER/GOV_QUALIFIED_LEADS.csv"
+    },
+    {
+      "agent": "connector",
+      "task": "Cold email qualified prime contractors offering AI automation subcontracting \u2014 pitch: reduce delivery cost on DEOS office productivity modernization using Claude-powered automation. Use existing cold_email scripts. Route through MM007_COLD_OUTBOUND chain.",
+      "output": "AUTOMATIONS/leads/gov_outreach_log.jsonl"
+    }
+  ],
+  "status": "READY"
+}

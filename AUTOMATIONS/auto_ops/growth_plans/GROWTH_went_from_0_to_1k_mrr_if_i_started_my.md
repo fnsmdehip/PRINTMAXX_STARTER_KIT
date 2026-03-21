@@ -1,34 +1,35 @@
 # Growth Plan: Went from $0 to $1k MRR. If I started my SaaS over, here's e
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct (selection filter improves app factory hit rate by ~15-20%, compounding across all future app launches)
+**Revenue Est:** $0 direct — selection filter improves app factory hit rate ~15-20% by killing low-retention ideas earlier
 
 ---
 
 ## Tactics
 
-1. Validate recurring painpoint via Reddit/Twitter complaint frequency before building
-2. Use app store review mining to confirm users mention the problem recurring weekly/monthly
+1. Ship app factory apps that solve weekly recurring loops (habit tracking, prayer, finance, health) — these already dominate our portfolio
+2. In app store listings, explicitly call out the recurring use case in the subtitle (e.g. 'Daily streak tracker' not 'track your goals')
+3. Use recurrence frequency as a proxy for retention — filter app ideas by 'how often does the user come back?'
 
 ## Budget Tier Strategies
 
 ### FREE
-Mine Reddit threads and app store reviews for recurring complaint patterns. Cross-reference with existing REDDIT_PAIN_POINTS.csv to flag apps solving recurring problems.
+Audit existing 69 deployed apps against recurrence test — flag any that solve one-time problems for kill/pivot. Takes 1 hour.
 
 ### LOW
-$0-20/mo on targeted Reddit ads testing painpoint messaging before building
+Add 'recurrence score' dimension to capital_genesis_ranker.py — weight daily-use apps 1.3x in composite score.
 
 ### MID
-$50-100/mo on Google Ads keyword tests measuring search volume for recurring problem queries
+N/A — this is a selection filter, not a paid channel
 
 ## Daily Actions
 
-- [ ] Add recurring_painpoint_score field to APP_FACTORY_METHODS.csv scoring rubric
-- [ ] Update app_factory_command_center.py --refresh to weight recurring problems +1.5 in composite score
-- [ ] Tag existing 8 built apps as recurring vs one-time to validate the filter retroactively
-- [ ] Add to alpha_auto_processor routing: any method mentioning 'recurring revenue' or 'subscription' auto-routes to APP venture
+- [ ] Add recurrence_score field to app_factory_priority_queue.json scoring rubric (0=one-time, 5=daily, 10=multiple/day)
+- [ ] Patch app_factory_command_center.py --refresh to apply recurrence multiplier before ranking
+- [ ] Retroactively flag existing 69 live apps: streaks/prayer/habit = HIGH, one-time tools = LOW
+- [ ] Wire into existing chain_4day_saas_validation_vibe_coding_gemi as step 0 gate
 
 ## Tooling
 

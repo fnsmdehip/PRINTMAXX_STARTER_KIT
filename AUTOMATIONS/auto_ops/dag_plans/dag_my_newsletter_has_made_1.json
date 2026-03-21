@@ -1,0 +1,37 @@
+{
+  "name": "integration_my_newsletter_has_made_1",
+  "created": "2026-03-21T12:40:49.207075",
+  "method": "My newsletter has made $1",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "source_collection",
+      "steps": [
+        "pull_top5_alpha_from_staging",
+        "pull_trending_reddit_passive_income",
+        "pull_twitter_alpha_bookmarks"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_800w_digest_claude_p",
+        "inject_affiliate_links_from_tracker"
+      ],
+      "parallel": true,
+      "depends_on": "source_collection"
+    },
+    {
+      "name": "distribution_prep",
+      "steps": [
+        "output_html_to_newsletters_queue",
+        "route_teaser_to_engagement_bait_converter",
+        "embed_cta_check_on_live_sites"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

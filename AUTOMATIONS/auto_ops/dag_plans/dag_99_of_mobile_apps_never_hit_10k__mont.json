@@ -1,37 +1,34 @@
 {
   "name": "integration_99_of_mobile_apps_never_hit_10k__mont",
-  "created": "2026-03-20T18:35:50.259641",
+  "created": "2026-03-21T12:40:51.678694",
   "method": "99% of mobile apps never hit $10k / month.\n\nMy last app hit $44k/month, and my current app is at $90k/month.\n\nHere\u2019s how to take your app to $10k/month in 2025:\n\n",
   "venture": "APP",
   "phases": [
     {
-      "name": "scrape_tactics",
+      "name": "data_gather",
       "steps": [
-        "fetch_thread_via_twitter_scraper",
-        "extract_numbered_tactics_list",
-        "classify_each_tactic_by_type"
+        "playwright_fetch_cravotta_thread \u2014 extract full tactic list from tweet thread",
+        "load_app_portfolio \u2014 read OPS/DEPLOYMENT_URLS.md, MONEY_METHODS/APP_FACTORY/builds/"
       ],
       "parallel": true
     },
     {
-      "name": "score_against_portfolio",
+      "name": "synthesis",
       "steps": [
-        "load_47_live_app_urls",
-        "score_each_app_against_each_tactic",
-        "rank_by_effort_vs_revenue_lift"
-      ],
-      "parallel": true,
-      "depends_on": "scrape_tactics"
-    },
-    {
-      "name": "generate_actions",
-      "steps": [
-        "create_prioritized_optimization_queue",
-        "update_app_factory_methods_csv",
-        "update_aso_keywords_csv"
+        "build_growth_checklist \u2014 convert thread tactics into structured JSON checklist with weights",
+        "audit_each_app \u2014 score all 47 live apps against checklist, flag ASO gaps, missing paywalls, no review prompts, no push notifications, no cross-promo"
       ],
       "parallel": false,
-      "depends_on": "score_against_portfolio"
+      "depends_on": "data_gather"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "generate_optimization_queue \u2014 ranked list of (app, tactic, estimated_lift) written to OPS/APP_OPTIMIZATION_QUEUE.md",
+        "generate_content \u2014 3 tweets + 1 thread from the framework using engagement_bait_converter.py"
+      ],
+      "parallel": true,
+      "depends_on": "synthesis"
     }
   ],
   "status": "READY"

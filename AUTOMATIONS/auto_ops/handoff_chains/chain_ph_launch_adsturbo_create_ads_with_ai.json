@@ -1,0 +1,29 @@
+{
+  "name": "chain_ph_launch_adsturbo_create_ads_with_ai",
+  "created": "2026-03-21T12:40:56.509224",
+  "method": "[PH LAUNCH] AdsTurbo: Create ads with AI actors that look truly human",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scout",
+      "task": "detect new AI ad tools from PH daily scrape (tags: video ads, AI actors, UGC, creative automation)",
+      "output": "new_adtools.json"
+    },
+    {
+      "agent": "evaluator",
+      "task": "score tool vs existing stack (ArcAds, AdsTurbo); flag if free tier exists",
+      "output": "tool_scores.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "generate comparison post + SEO article via engagement_bait_converter.py (AdsTurbo vs ArcAds angle)",
+      "output": "comparison_content.md"
+    },
+    {
+      "agent": "ad_creator",
+      "task": "use top-scored free-tier tool to generate 3 video ads for highest-traffic apps",
+      "output": "ad_assets/"
+    }
+  ],
+  "status": "READY"
+}

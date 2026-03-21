@@ -2,36 +2,33 @@
 
 “IBM and NVIDIA are rein
 
-**Created:** 2026-03-20 23:36
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-10/mo
+**Revenue Est:** $0/mo
 
 ---
 
 ## Tactics
 
-1. Piggyback on $NVDA trending moments — post within 30min of major announcements
-2. Use 'IBM + NVIDIA' as hook, pivot to solopreneur angle (AI tools YOU can use now)
-3. Quote-tweet corporate PR with contrarian take to farm engagement
+1. Clone the 'X and Y are reinventing Z for the era of AI' hook structure for our own content — high-engagement format on fintwit and tech Twitter
+2. Post AI/enterprise angle content during NVDA earnings weeks for algorithm-boosted reach
 
 ## Budget Tier Strategies
 
 ### FREE
-Route through engagement_bait_converter.py — generate 3 takes per big-tech AI announcement, post to Twitter/LinkedIn, use trending ticker symbols as reach amplifiers
+Run engagement_bait_converter.py on this entry to extract 2-3 posts using the corporate-PR-as-hype hook structure. Schedule via twitter_warmup_poster.py.
 
 ### LOW
-Boost best-performing take with $5-10 Twitter promote
+Not applicable — content seed only, no paid amplification warranted
 
 ### MID
-Not warranted at this signal level
+Not applicable
 
 ## Daily Actions
 
-- [ ] Pass announcement text to engagement_bait_converter.py with niche=tech
-- [ ] Generate 3 angles: (1) 'Big tech signals AI infra shift — indie builders act now', (2) contrarian 'IBM is dying, this is PR', (3) actionable 'tools you can use TODAY while IBM and NVIDIA partner'
-- [ ] Append best angle to CONTENT/social/posting_queue/ with priority=LOW
-- [ ] Skip venture creation — pure content fodder, no revenue lane
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'IBM and NVIDIA are reinventing data processing for the era of AI' --venture CONTENT
+- [ ] Review output in CONTENT/social/posting_queue/ and add to weekly schedule
 
 ## Tooling
 
@@ -39,6 +36,6 @@ Not warranted at this signal level
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "engagement_bait_converter.py"
 }
 ```

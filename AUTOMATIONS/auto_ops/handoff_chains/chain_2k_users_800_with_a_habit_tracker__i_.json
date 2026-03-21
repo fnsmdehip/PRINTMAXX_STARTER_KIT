@@ -1,0 +1,24 @@
+{
+  "name": "chain_2k_users_800_with_a_habit_tracker__i_",
+  "created": "2026-03-21T12:40:53.674297",
+  "method": "2k users, $800 with a Habit Tracker - I can't explain how good this feels App name - [HabitSwipe](http://www.habitswipe.app) \n\nPlatform - Android &amp; iOS\n\nNumber of users  - 2500\n\nTotal Revenue in l",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "app_selector",
+      "task": "Scan MONEY_METHODS/APP_FACTORY/builds/ for apps with no Reddit post logged yet, rank by polish score (has screenshots, working live URL, clear niche). Output top 5.",
+      "output": "app_queue.json"
+    },
+    {
+      "agent": "post_generator",
+      "task": "Write authentic personal-story Reddit posts for each queued app \u2014 'built for myself, sharing because it helped me' framing, specific milestones, NO hype or marketing language, 3-4 paragraphs max, include app URL at end only.",
+      "output": "reddit_posts_draft.json"
+    },
+    {
+      "agent": "subreddit_mapper",
+      "task": "Map each app to primary + 2 secondary subreddits by niche: habit -> r/getdisciplined + r/selfimprovement, prayer -> r/islam + r/MuslimLounge, sober -> r/stopdrinking + r/sobriety, fitness -> r/bodyweightfitness, general -> r/SideProject + r/passive_income",
+      "output": "posting_schedule.json"
+    }
+  ],
+  "status": "READY"
+}

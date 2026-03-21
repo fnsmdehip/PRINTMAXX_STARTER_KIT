@@ -1665,3 +1665,392 @@ M | Post 1 financial market commentary thread when major commodi | CONTENT | AUT
 | Fed's Waller: My brain understands the j | 1 Fed/macro uncertainty post generated and queued daily | CONTENT | AUTO | DAILY | 2026-03-20 |
 
 | GeoDuels - I built a 100% free GeoGuessr | Weekly: 3 paid-app clone opportunities scored, 1 routed to a | APP | AUTO | DAILY | 2026-03-20 |
+
+|            A dormant address containing  | Check CONTENT/social/posting_queue/ for new whale-alert post | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| SPX Dealer Premiums - Volland
+
+Dealer Pr | 1 fintwit post per market day using public CBOE SPX data — t | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Trump Admin announces partnership with S | Track engagement on AI infrastructure content posts (likes/s | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| ECB said to ask banks how the Iran war i | Weekly: check if @financialjuice regulatory alerts produced  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Fed's Waller: I would advocate cuts agai | None — CONTENT_ONLY entry. One call to engagement_bait_conve | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Fed's Waller: I also now expect labor fo | Check if finance macro content generates engagement above ba | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Canadian Core Retail Sales MoM Actual 0. | Weekly: count economic event posts published, track engageme | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Canadian Retail Sales MoM Actual 1.1% (F | Check if 1+ financial data post generated and queued daily | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Gooor $GOOGL CEO Sundar Pichai just post | Track engagement on AI-infrastructure-cost content. If >3% e | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| If you found this useful, a like or RT g | Check % of queued posts that contain engagement CTA — target | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Residents exiting Massachusetts took a n | Weekly: check IRS SOI migration data page + Bloomberg tax he | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| In 1893, a printer pinned a style guide  | List AI style guide template on Gumroad. Track downloads/sal | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| I've been waxing rhapsodic about the val | One-time: 5 AI style guide PDFs built and queued for Gumroad | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| we just published the definitive guide t | Weekly: 1 Twitter thread on AI writing quality published. Tr | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| My newsletter has made $1 | Track weekly: subscriber count delta, affiliate link CTR in  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Wise closed my account and is holding $4 | Count fintech freeze incidents scraped + posts queued + affi | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Literally building in public | 3 build-in-public posts queued daily with real metrics; trac | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Real examples of what sweaty startups ha | Weekly: count new deal records added to database; count cont | RESEARCH | AUTO | DAILY | 2026-03-21 |
+
+| We're making money in the wedding indust | Track wedding vendor leads scraped, outreach sent, and reply | LOCAL_BIZ | AUTO | DAILY | 2026-03-21 |
+
+| I just hit $3830 in total revenue with m | Daily: count new r/MicroSaas milestone posts scraped, count  | APP | AUTO | DAILY | 2026-03-21 |
+
+| What makes customer engagement actually  | Weekly: check if engagement-principle posts hit >3% engageme | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| I built 100% autonomous video tool from  | Videos auto-published daily across TikTok/YT Shorts/IG Reels | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| I spent 12 years building outbound sales | Track if outbound authority content posts drive DMs or repli | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| 40% recurring commission — AI Girlfriend | Weekly: affiliate clicks, conversion rate, active recurring  | MONETIZE | AUTO | DAILY | 2026-03-21 |
+
+| Built an exam platform universities actu | Run engagement_bait_converter.py on this entry — produces 3  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Lovable Is Everything | Weekly: count Lovable affiliate clicks from injected links + | APP | AUTO | DAILY | 2026-03-21 |
+
+| Spent some time looking at cold email ag | Weekly: monitor r/EntrepreneurRideAlong for cold email agenc | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| What Works and What Doesn’t in Generativ | Weekly: verify 1 target page appears in Perplexity answer fo | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| What's the best way to turn 2-3 daily ho | Weekly: check if '2-3 hours side income' content posts are q | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Launched an Ad Free YouTube Transcript T | Weekly: check surge analytics for /youtube-transcript-tool — | APP | AUTO | DAILY | 2026-03-21 |
+
+| Hired my first full-time marketer after  | Check engagement on solopreneur-milestone content posts week | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| I built webhook infrastructure for SaaS  | Route to engagement_bait_converter.py as CONTENT_ONLY — 1 de | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| I screen deal flow for an early-stage sy | Count deal memos generated this week; count content pieces p | RESEARCH | AUTO | DAILY | 2026-03-21 |
+
+| Made my first $50 guyssss | Track engagement rate on first-milestone style posts vs othe | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Elevate Your SaaS with a Stunning Websit | Weekly: check if SaaS website critique content posts generat | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Nobody told me that credibility in an ea | Track engagement rate on startup credibility content posts v | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| How can I increase traffic on my Gumroad | Weekly: verify 3 Gumroad-traffic posts drafted and queued; c | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| Small success story with Amazon KDP book | Track weekly: books published (target 1/week), average BSR p | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| Built something that turns websites, por | Weekly: check Fiverr gig impressions + Gumroad sales for web | APP | AUTO | DAILY | 2026-03-21 |
+
+| Getting hit by a return scammer and don’ | Count new return-fraud threads scraped daily + guide downloa | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| How we run cold outreach at our B2B outb | Check cold_outbound chain reply rate weekly — target 2%+ bef | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| Looking for feedback - Tool to help mana | Weekly: scan r/EntrepreneurRideAlong + r/SaaS for 'pricing t | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Anyone else write a business book to dri | Weekly: 1 new ultimate guide PDF generated per app niche; tr | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Literally building in Public - woke up t | Track weekly: trial signups from BIP posts, reply engagement | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| was spending $300/mo on ads with a 0 | Weekly: verify 1 content piece generated from ad-waste-pivot | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| What problem does your SaaS actually sol | Weekly: verify 3+ engagement posts queued from mined SaaS pr | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| How Did You Get The First 100 Users For  | Convert 1 SaaS-acquisition tactic from this thread into a tw | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| any suggestion for saas demo video tool | Weekly: check affiliate click-through on saas-demo-video-too | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| (i will not promote) PSA: Delve (YC W24  | Check compliance fraud monitor output daily — 1 incident = 1 | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Rented out my dormant LinkedIn account f | Count LinkedIn account rental listings found this week + bro | BROKERING | AUTO | DAILY | 2026-03-21 |
+
+| Asking for Advice - New to Affiliate Mar | Weekly: count beginner pain points scraped → content pieces  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Technical founder seeking growth partner | Check CONTENT/social/posting_queue/ for engagement_bait post | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| Bitcoin Price on Eid 
+
+2010: $0.06
+2011: | Post 1 'BTC on [holiday]' series tweet daily during Ramadan  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Submit a memecoin idea. Get paid.
+
+Have  | Count submitted ideas this week; track if any launched via P | MONETIZE | AUTO | DAILY | 2026-03-21 |
+
+| This trader is taking a huge risk on #oi | whale alert posts in posting queue per day (target: 3+) | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [RamadanTracker] Reddit opportunity: DN  | Daily: check r/digitalnomad for Ramadan/Africa threads, post | APP | AUTO | DAILY | 2026-03-21 |
+
+| [RamadanTracker] Reddit opportunity: out | Check r/islam, r/Muslim, r/Ramadan post engagement daily. Tr | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PrayerLock] Reddit opportunity: Where d | Daily: script flags top 5 threads, human posts 1-2 PrayerLoc | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: Snouzy/workout-cool (7131 star | Count live fitness streak variants with payment links active | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: sorenlouv/fb-sleep-stats (1689 | Track: contacts profiled this week, outreach timing accuracy | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: agencyenterprise/react-native- | Check RevenueCat dashboard weekly: HealthKit premium convers | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: kingstinct/react-native-health | Weekly: check App Store Connect for retention D1/D7/D30 on H | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: rolandsz/Mi-Fit-and-Zepp-worko | Weekly: check Gumroad sales count + surge.sh traffic for mi- | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: matinzd/react-native-health-co | Weekly: count health apps live with Health Connect badge, An | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: brufdev/many-notes (928 stars, | Weekly: check Railway deploy status, count trial signups, tr | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: Lissy93/dashy (24290 stars, Vu | Weekly: check Gumroad sales for Dashy config packs; count r/ | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: ixartz/SaaS-Boilerplate (6929  | Apps scaffolded from SaaS-Boilerplate this week — target 2/w | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: kriasoft/react-starter-kit (23 | Count new apps scaffolded from react-starter-kit base this w | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: dunky11/react-saas-template (1 | Weekly: check if any new APP_FACTORY build started without u | APP | AUTO | DAILY | 2026-03-21 |
+
+| MIT repo: nextify-limited/saasfly (2866  | Weekly: check saasfly GitHub for new commits — pull updates  | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] How fusion power works | Check CONTENT/social/posting_queue/ for fusion posts — post  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] New court filing revea | Daily: verify gov_ai_contract_monitor.py generated >=1 post  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] Elon Musk misled Twitt | 1 tech-controversy post queued daily — track reply/RT vs bas | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] Microsoft rolls back s | Check if Microsoft Copilot rollback posts drive any clicks t | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] What happened at Nvidi | Verify tech_conference_content_monitor.py queued posts for a | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] US accuses Iran&#8217; | Generate 3 commentary posts on cybersecurity/geopolitical ne | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] A French Navy officer  | Track engagement rate on privacy/OPSEC content posted this w | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] Trump&#8217;s AI frame | Check engagement on AI-policy posts within 48h. If >200 impr | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] WordPress.com now lets | Check WordPress.com post count published today vs target (10 | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] AI startups are eating | Weekly: count AI startup leads scraped from funding news + c | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] Amazon working on new  | Weekly: check Amazon affiliate clicks on Alexa/Echo pages; t | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] The best AI investment | Weekly: verify engagement_bait_converter produced 3+ posts f | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] These AI notetaking de | Check affiliate click-through on ai-notetakers-compared page | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] Jeff Bezos reportedly  | Check if AI+manufacturing posts in posting_queue got >avg en | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] Amazon acquires Rivr,  | Track # of tech M&A signals converted to affiliate-linked co | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PLATFORM UPDATE] The gen AI Kool-Aid ta | Post 1 nuanced AI-criticism-rebuttal or agree-with-nuance ta | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Design Agent by Lokuma: The  | Daily: check CONTENT/social/posting_queue/ for AI-tooling po | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] optimo: effortless media opt | Count PH founders contacted today via 48h launch window; tra | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Everest AI: Building the wor | Weekly: scan PH for AI hardware/infrastructure launches, ext | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] murmur: practice tough phone | Daily: check app signups + cold email reply rate for AI call | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Novi Notes: Local-first AI n | Daily: check ph_mcp_app_trend_extractor.py output for new lo | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Caplo: Real-time AI captions | Count new iOS dev leads scraped from PH Caplo upvoters; trac | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Sanota: Stories, beautifully | Daily: confirm PH storytelling/creative app launches fed int | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Contral: The agentic IDE whi | Check PH daily launches, identify agentic/dev-tool makers, a | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Mindspend: Track how you fee | Check Mindspend PH upvote velocity weekly; track App Store ' | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Replit Agent 4: Build design | Daily: check ph_ai_tool_monitor output — any new AI build to | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Claude Cowork Projects: Task | Daily: count PH AI launches scraped + outreach emails queued | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Fractal: The fastest way to  | Weekly: scan PH for ChatGPT/AI app launch tools, route to co | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Cursor Glass: Unified agent  | Count PH AI-workspace launches scraped + outreach emails sen | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Educato App: Personalized ex | Daily: count PH edtech launches scraped + outreach emails qu | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Vite+: The Unified Toolchain | Count PH founders scraped and added to outreach queue daily. | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] GitAgent by Lyzr: Your repos | Check PH daily launches for dev tool / AI agent products — e | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Gaze Guard: Instant Privacy  | 5+ PH founder emails scraped and queued for outreach daily w | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Cacheless: AI-Powered Mac Sy | Check LEDGER/ph_outreach_queue.csv daily — target 5 new PH f | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] GentleLimit: Mindful screen  | Check PH GentleLimit comment count daily — reply with value  | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] AdsTurbo: Create ads with AI | Weekly: generate 1 AI actor video ad for top-performing app  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Chat: turn your backend into | Daily: verify PH dev-tool launches scraped, confirm 3+ outre | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] AI Skills Manager: One place | Weekly: check if MCP Marketplace has captured keywords from  | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] ProductBridge: Agent that co | Check ph_launches_qualified.json daily: count agent/tool fou | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Room Service: The Mac cleane | Weekly: check app_factory_priority_queue.json for new PH_DEV | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Google AI Studio 2.0: Full-s | Count apps scaffolded this week via AI Studio pipeline. Targ | APP | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Composer 2 by Cursor: Fast,  | Daily: PH top 10 dev tools check via ph_b2b_outreach_pipelin | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Gately: Everything you need  | Daily: check ph_membership_monitor output for new launches > | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Assembly 2.0: Build modern c | Count cold emails sent to service businesses this week targe | EAS | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Kickfolder: Turn your Mac's  | PH outreach reply rate >5% weekly — log conversions in LEDGE | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] MusicLib: The Ultimate Sheet | Check ph_daily_launches.json for new entries; confirm 48h ou | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Telea: Speak like you always | Check ph_launch_outbound_monitor.py output daily — verify N  | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Looq: Preview Files: A bette | Check ph_launch_outreach_queuer output: count new PH founder | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Joy for Gmail: A Gmail with  | Daily: confirm PH scrape ran, outreach queue has 5-10 leads, | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Fig Prompt: Build Figma plug | Weekly: check top 10 Figma plugin search keywords, post 1 th | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Visdiff: Stop bridging the d | Check ph_launch_leads.csv daily: did outreach go to 3+ found | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Context Overflow: Knowledge  | Daily: check PH AI/agent launches scraped, outreach emails q | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Claude Code Channels: Push e | Check Telegram bot received agent event notifications today; | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] Built for Devs: See how deve | Count dev tool PH launches scraped weekly; track cold outrea | EAS | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] OctoClaw: Hire AI specialist | Count PH launches scraped daily + cold emails sent within 48 | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH LAUNCH] InfrOS: Predict and validate | Daily: PH devops launches scraped + leads qualified + outrea | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [GOV CONTRACT] THIS TIME AND MATERIALS ( | Daily: count of new qualifying contracts found. Weekly: numb | EAS | AUTO | DAILY | 2026-03-21 |
+
+| [GOV CONTRACT] CONTACT CENTER TIER 1 (CC | Weekly: new SAM.gov contact center opportunities scraped, pr | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [GOV CONTRACT] BJA PEER REVIEW SUPPORT S | Daily: confirm gov_contract_monitor.py ran + check LEDGER/GO | EAS | AUTO | DAILY | 2026-03-21 |
+
+| [GOV CONTRACT] ICAM TO FROM 09/08/2022 - | Weekly: count new ICAM/IT contracts found, contractor outrea | BROKERING | AUTO | DAILY | 2026-03-21 |
+
+| [GOV CONTRACT] DEFENSE ENTERPRISE OFFICE | Weekly: verify SAM.gov scanner ran, check GOV_OPPORTUNITIES. | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [GOV CONTRACT] THE CONTRACTOR SHALL PROV | Daily: check sam_gov_contracts.csv for new opportunities; we | EAS | AUTO | DAILY | 2026-03-21 |
+
+| [GOV CONTRACT] VA GENERAL MENTAL HEALTH  | Weekly: confirm scanner ran, count new VA health contracts f | BROKERING | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] I built a group trip plann | Weekly: post 1 new retro-aesthetic app screenshot to r/SideP | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] I'm 17 and built a screens | Weekly: check mac_only_gap_scanner.py output for new Windows | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] I built a forced break too | 2x weekly: check Reddit engagement on break-app posts + app  | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Marketing CRO App - Seekin | Post pagescorer to r/SideProject weekly for feedback. Track  | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] NEW PARTY GAME MOBILE APP  | Weekly: check App Store rankings for party game variants, tr | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Unacknowledged young found | Count r/SideProject posts flagged as undervalued acquisition | BROKERING | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Working on an AI tool for  | Weekly: post 1 n8n-vs-Make.com comparison piece; track r/Sid | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] why 90% of indie clothing  | Weekly: 1 thread + 3 posts generated on startup failure patt | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] I analyzed 600+ verified S | Weekly: count new boring SaaS niches identified with >$2K/mo | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Launched my first SaaS at  | Check longtail page traffic for 'CASA verification' keywords | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Let GPT-5.4 summarize the  | Track hourly digest delivery success rate + landing page sub | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Data for go-to-market is s | Weekly: check lead enrichment API usage, track companies req | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] You think creating fullsta | Track apps built per week via AI-assisted fullstack sprints; | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] [iOS][$59.99 → $4.99 ] Ban | Weekly: check ios_app_acquisition_scanner.py output for list | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Honestly, tell me how a no | 2x/week: check engagement on non-coder AI SaaS content posts | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] MicroSaaS idea: email deli | Daily: check tool uptime + count free-tier signups + track c | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] I screen deal flow for an  | 2x weekly: post one founder-targeted rejection-criteria thre | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Dealing with users who cre | Weekly: verify detection script runs clean against a sample  | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] solo founders are winning  | Track engagement rate on solo founder trend posts weekly; co | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] 18, no funding, we shipped | Post 1 authentic milestone update to r/indiehackers or HN pe | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Launch HN: Sitefire (YC W2 | Daily: 10 GEO audits run via Perplexity API → 5 cold outreac | EAS | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Ask HN: Is anyone else exp | Check posting_queue for AI-fatigue-angle posts: 3 per day mi | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Show HN: Context Overflow  | Track weekly: questions answered, profile view count, inboun | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/entrepreneur] I built a mobile IV the | Track engagement on repurposed founder-journey posts (likes, | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Show HN: Three new Kitten  | Count voiceovers generated daily vs API cost saved (target:  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Show HN: Added API key sup | Daily: check hn_extension_gap_scanner.py output for new comp | APP | AUTO | DAILY | 2026-03-21 |
+
+| [r/entrepreneur] Customer data for tailo | Check notification open rate in Firebase Console daily — tar | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Show HN: I built a super s | Check hn_show_hn_opportunity_scanner.py output: tools queued | APP | AUTO | DAILY | 2026-03-21 |
+
+| [ACQUISITION] Launch HN: Voltair (YC W26 | Daily: verify hn_yc_launch_tracker.py ran, check posting_que | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] I wasted $3,400 and 9 weeks bui | Weekly: check if SaaS validation failure content posts gener | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] my saas just crossed 680 paying | Before each new app build: run saas_30day_launch_validator.p | APP | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] What did you completely misjudg | Weekly: confirm 3+ engagement-bait posts generated from r/Sa | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] I’ve been talking to SaaS found | Weekly: 1 'founder insight' post published to Twitter/Linked | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/entrepreneur] Cold email agencies all | Count personalized first-lines generated today vs generic. T | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] What problem does your SaaS act | Count new r/SaaS founder leads routed to EAS pipeline daily. | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] How do you get paying users to  | Weekly: mine top 5 upvoted r/SaaS user-acquisition threads → | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] I built 4 products in 18 months | Use 'built N things, got 0 customers, so I built X' narrativ | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/indiehackers] Looking for builders wh | Weekly: post 1 critique-hook engagement post on Twitter + r/ | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/entrepreneur] How much time do you al | Weekly: check engagement_bait_converter output for content c | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] Everest AI | none | EXISTING:OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] Design Agent by Lokuma | Daily: check PH launches, scrape founder emails, queue in 48 | OUTBOUND | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] Cacheless | none | CONTENT (enhancement of existing chain_14_ph_launches) | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] GentleLimit | none | EXISTING:CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] Gately | n/a | REJECT | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] Chat | N/A | EXISTING:CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] AI Skills Manager | Daily: check PH launches for HIGH quality B2B, extract found | OUTBOUND (primary), CONTENT (secondary) | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] MusicLib | Evaluate 3-5 PH launches daily; flag tools with: (a) music/a | RESEARCH | AUTO | DAILY | 2026-03-21 |
+
+| [PH Launch] Fig Prompt | none | REJECT | AUTO | DAILY | 2026-03-21 |
+
+| [r/SaaS] If you're trying to market your | Weekly: check if Reddit-marketing-mistake post hooks in post | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/entrepreneur] What makes customer eng | Weekly: verify engagement_bait_converter processed ≥3 r/entr | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/entrepreneur] I think some business d | Check that 3 posts were added to CONTENT/social/posting_queu | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/entrepreneur] Anyone put a number to  | Weekly: confirm scraper ran, check if any stories routed to  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| [r/indiehackers] Build TrunkTransfer, an | Check GSC impressions for 'wetransfer alternative' cluster w | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Mayor of Paris removed parking spaces, " | Track engagement on urban mobility posts for 7 days; if >2%  | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Show HN: Deterministic security solution | Weekly: check HN/Reddit for new 'AI agent security' threads  | PRODUCT | AUTO | DAILY | 2026-03-21 |
+
+| Show HN: Clearview Cam Lite: Real-time C | Weekly: count organic impressions on 'defogging' content pag | CONTENT | AUTO | DAILY | 2026-03-21 |
+
+| Meta's Omnilingual MT for 1,600 Language | Track weekly organic impressions per language market in Goog | APP | AUTO | DAILY | 2026-03-21 |
+
+| Show HN: I fixed FFmpeg's subtitle conve | Weekly: check organic impressions for 'convert SRT to PGS' a | APP | AUTO | DAILY | 2026-03-21 |

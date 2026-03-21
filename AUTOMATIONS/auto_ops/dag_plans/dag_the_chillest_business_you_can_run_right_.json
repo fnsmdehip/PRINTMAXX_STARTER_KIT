@@ -1,37 +1,44 @@
 {
   "name": "integration_the_chillest_business_you_can_run_right_",
-  "created": "2026-03-20T18:09:53.649153",
+  "created": "2026-03-21T12:40:53.086148",
   "method": "The chillest business you can run right now is building AI UGC FB / IG pages \n\nyou can just become an affiliate for a brand and get paid $500 - 2k retainers per page you run + affiliate commissions \n\n",
   "venture": "CONTENT",
   "phases": [
     {
-      "name": "research",
+      "name": "content_gen",
       "steps": [
-        "scrape_affiliate_networks_for_ugc_friendly_brands",
-        "extract_commission_rates_and_requirements",
-        "score_brands_by_fit_and_payout"
+        "generate_ugc_scripts_niche1",
+        "generate_ugc_scripts_niche2",
+        "generate_ugc_scripts_niche3"
       ],
       "parallel": true
     },
     {
-      "name": "content_gen",
+      "name": "affiliate_injection",
       "steps": [
-        "generate_ai_ugc_scripts_per_brand",
-        "render_ugc_videos_via_remotion_or_heygen_free",
-        "create_caption_and_hashtag_sets"
+        "map_affiliate_links",
+        "inject_ctas_into_scripts"
       ],
-      "parallel": true,
-      "depends_on": "research"
+      "parallel": false,
+      "depends_on": "content_gen"
     },
     {
-      "name": "distribution",
+      "name": "schedule_and_post",
       "steps": [
-        "queue_content_to_posting_pipeline",
-        "apply_to_affiliate_programs",
-        "track_page_metrics"
+        "queue_to_fb_graph_api",
+        "queue_to_ig_graph_api"
       ],
       "parallel": true,
-      "depends_on": "content_gen"
+      "depends_on": "affiliate_injection"
+    },
+    {
+      "name": "retainer_trigger",
+      "steps": [
+        "check_engagement_thresholds",
+        "fire_brand_outreach_if_threshold_met"
+      ],
+      "parallel": false,
+      "depends_on": "schedule_and_post"
     }
   ],
   "status": "READY"

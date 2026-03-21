@@ -1,0 +1,29 @@
+{
+  "name": "chain_ph_launch_gentlelimit_mindful_screen_",
+  "created": "2026-03-21T12:40:56.474784",
+  "method": "[PH LAUNCH] GentleLimit: Mindful screen time for macOS without blocking apps",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "playwright scrape producthunt.com/posts/gentlelimit \u2014 extract: upvoter count, top comments with user handles, maker Twitter, pricing tier, app description",
+      "output": "ph_gentlelimit_intel.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "classify commenters: MAKER (competitor), USER (our customer), INVESTOR (ignore). Extract pain points: 'too restrictive', 'just want awareness', 'macOS only'. Score each for outbound fit.",
+      "output": "ph_gentlelimit_qualified.json"
+    },
+    {
+      "agent": "builder",
+      "task": "spin up screen-time-awareness PWA using app_factory_autopilot.py \u2014 differentiate on: cross-platform (web), free tier, no download required, gentle nudges not blocks",
+      "output": "mindful-screentime-web/index.html"
+    },
+    {
+      "agent": "outreach",
+      "task": "route USER-classified leads to cold email pipeline. Message angle: 'saw you liked GentleLimit \u2014 built a web version that works on any device without install'",
+      "output": "outreach_log_gentlelimit.json"
+    }
+  ],
+  "status": "READY"
+}

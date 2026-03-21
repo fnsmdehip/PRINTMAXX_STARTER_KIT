@@ -1,48 +1,46 @@
 # Growth Plan: How I Added 16 New Customers in 30 Days (+31% MRR) Hey every
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** OUTBOUND
 **Budget Tier:** FREE
-**Revenue Est:** $500-2000/mo
+**Revenue Est:** $500-1500/mo
 
 ---
 
 ## Tactics
 
-1. LinkedIn AI agent outbound beats raw cold email volume — prioritize LinkedIn 3:1 over email
-2. Warm email domains with 20/day ramp over 14 days before hitting 500/day
-3. Reddit value comments in r/SaaS r/startups r/Entrepreneur for inbound — 10 genuine comments/day
-4. Demo show rate optimization: send calendar link + 3-min Loom in booking confirmation
-5. Multi-touch sequence: LinkedIn connect → email follow-up → Reddit engage (same prospect, 3 channels)
+1. LinkedIn AI Agent sequences targeting SaaS founders at 35-50/day (stay under 100/day limit)
+2. Cold email at 490/day via existing infrastructure — use as volume funnel to LinkedIn precision layer
+3. Reddit r/SaaS + r/indiehackers: 3 posts/week minimum — entry admits Reddit was lazy at 20K impressions, extractable upside
+4. Demo call conversion: 34 demos → 16 customers = 47% close rate. Document the demo script and replicate for client services
+5. Repurpose this exact case study as content — '16 customers in 30 days' hook + real numbers drives engagement
 
 ## Budget Tier Strategies
 
 ### FREE
-LinkedIn free tier (100 connections/week), custom cold email via Python SMTP + warmed domains, Reddit manual comments, Claude for personalization
+LinkedIn manual AI-assisted sequences via claude -p message gen + existing cold_email_pipeline.py. Reddit organic posting. n8n self-hosted for workflow automation.
 
 ### LOW
-$0-50/mo: Apollo free tier for lead enrichment, Smartlead $39/mo for email warmup and sending infrastructure
+$0-50/mo: Phantombuster free tier for LinkedIn scraping (500 leads/mo). Apollo.io free (50 credits/mo) for email enrichment.
 
 ### MID
-$50-200/mo: LinkedIn Sales Navigator ($99/mo) for advanced search + InMail, dedicated email warmup service
+$50-200/mo: Instantly.ai at $37/mo for warmed sending infra. LinkedIn Sales Navigator at $99/mo for precise ICP targeting.
 
 ## Daily Actions
 
-- [ ] Enhance existing chain_how_i_added_16_new_customers_in_30_days_ with LinkedIn-first prioritization
-- [ ] Build ICP-matched prospect scraper using Apollo free tier + LinkedIn public profiles
-- [ ] Create LinkedIn AI agent message templates (personalized via Claude, 36/day volume cap)
-- [ ] Set up cold email infrastructure: warm 3 domains over 14 days, ramp to 500/day
-- [ ] Create Reddit value-comment templates for r/SaaS, r/startups — genuine help with soft CTA
-- [ ] Build demo booking tracker with Calendly free tier integration
-- [ ] Wire DAG to run weekdays 6:30 AM: prospect→qualify→outreach→track
-- [ ] Add KPI tracking: messages sent, reply rates, demos booked, close rate by channel
+- [ ] Route to existing chain chain__cold_outbound_audit_output_mm007__ — do NOT create new chain
+- [ ] Enhance eas_lead_pipeline.py: add LinkedIn AI agent message generation via claude -p with ICP persona targeting
+- [ ] Wire Playwright MCP to scrape LinkedIn leads matching ICP (founder + SaaS + <50 employees)
+- [ ] Set cron 8 AM weekdays: generate 40 LinkedIn messages + 490 cold emails, log to LEDGER/OUTREACH_PIPELINE.csv
+- [ ] Add demo call booking link to all outreach (Calendly embed or plain URL)
+- [ ] Run engagement_bait_converter.py on this case study → post 3 tweets + 1 thread to posting_queue
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
-  "email": "custom Python SMTP + warmed domains",
-  "content": "claude -p for personalized outreach copy"
+  "browser": "Playwright MCP for LinkedIn profile scraping",
+  "email": "Existing cold_email_pipeline.py (MM007)",
+  "content": "engagement_bait_converter.py \u2014 convert this case study into 3 posts"
 }
 ```

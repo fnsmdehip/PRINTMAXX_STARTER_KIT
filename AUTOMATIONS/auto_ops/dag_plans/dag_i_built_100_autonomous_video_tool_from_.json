@@ -1,0 +1,39 @@
+{
+  "name": "integration_i_built_100_autonomous_video_tool_from_",
+  "created": "2026-03-21T12:40:49.497539",
+  "method": "I built 100% autonomous video tool from idea to publishing on major platforms",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "ideation",
+      "steps": [
+        "content_trend_pipeline_inject",
+        "claude_generate_concept",
+        "claude_write_script",
+        "engagement_bait_hook_optimize"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "production",
+      "steps": [
+        "tts_voiceover_free",
+        "ffmpeg_text_on_video_assembly",
+        "pillow_thumbnail_gen"
+      ],
+      "parallel": true,
+      "depends_on": "ideation"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "playwright_post_tiktok",
+        "playwright_post_yt_shorts",
+        "playwright_post_ig_reels"
+      ],
+      "parallel": true,
+      "depends_on": "production"
+    }
+  ],
+  "status": "READY"
+}

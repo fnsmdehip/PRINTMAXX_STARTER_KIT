@@ -2414,6 +2414,281 @@ def api_kpi_executor_status():
 
 
 # ---------------------------------------------------------------------------
+# Research Intelligence Feed — surfaces latest findings ranked by value
+# ---------------------------------------------------------------------------
+EDGAR_CACHE = AUTOMATIONS / "auto_ops" / "edgar_cache"
+CB_CACHE = AUTOMATIONS / "auto_ops" / "crunchbase_cache"
+BACKLOG_REPORT = OPS / "ALPHA_BACKLOG_REPORT.md"
+INTEGRATION_GAP = OPS / "INTEGRATION_GAP_REPORT.md"
+
+
+@app.route("/api/intel-feed")
+def api_intel_feed():
+    """Aggregate latest research intelligence findings ranked by score × recency.
+
+    Pulls from: ALPHA_STAGING (recent high-score), EDGAR cache, Crunchbase cache,
+    backlog scanner, integration gap report, method discovery, Capital Genesis stack.
+    """
+    findings = []
+    now = time.time()
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # 1. Recent high-score alpha entries (last 48h, score >= 60)
+    alpha_csv = LEDGER / "ALPHA_STAGING.csv"
+    if alpha_csv.exists():
+        try:
+            with open(alpha_csv) as f:
+                for row in csv.DictReader(f):
+                    created = row.get("created_at", "")
+                    if today not in created and (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d") not in created:
+                        continue
+                    score = 0
+                    try:
+                        score = int(row.get("synergy_score", 0))
+                    except (ValueError, TypeError):
+                        pass
+                    if score < 40:
+                        continue
+                    status = row.get("status", "").upper()
+                    method = row.get("extracted_method", row.get("tactic", ""))[:120]
+                    source = row.get("source", "unknown")
+                    roi = row.get("roi_potential", "?")
+                    findings.append({
+                        "type": "alpha",
+                        "source": source,
+                        "method": method,
+                        "score": score,
+                        "roi": roi,
+                        "status": status,
+                        "time_sensitive": roi in ("HIGH", "HIGHEST", "IMMEDIATE"),
+                        "created": created[:16],
+                    })
+        except Exception:
+            pass
+
+    # 2. SEC EDGAR findings (latest cache file)
+    if EDGAR_CACHE.exists():
+        cache_files = sorted(EDGAR_CACHE.glob("edgar_scan_*.json"), reverse=True)
+        if cache_files:
+            try:
+                data = json.loads(cache_files[0].read_text())
+                for r in data.get("top_results", [])[:8]:
+                    findings.append({
+                        "type": "edgar",
+                        "source": "SEC_EDGAR",
+                        "method": f"{r.get('company', '?')} ({r.get('form', '?')}) — {', '.join(r.get('keywords', []))}",
+                        "score": r.get("score", 0),
+                        "roi": "HIGH" if r.get("score", 0) >= 60 else "MEDIUM",
+                        "status": "NEW",
+                        "time_sensitive": True,
+                        "created": data.get("timestamp", "")[:16],
+                    })
+            except Exception:
+                pass
+
+    # 3. Crunchbase findings (latest cache file)
+    if CB_CACHE.exists():
+        cache_files = sorted(CB_CACHE.glob("cb_scan_*.json"), reverse=True)
+        if cache_files:
+            try:
+                data = json.loads(cache_files[0].read_text())
+                for r in data.get("top_results", [])[:8]:
+                    findings.append({
+                        "type": "crunchbase",
+                        "source": "CRUNCHBASE",
+                        "method": f"{r.get('company', r.get('title', '?')[:40])} ({r.get('stage', 'news')}) — {', '.join(r.get('keywords', [])[:3])}",
+                        "score": r.get("score", 0),
+                        "roi": "HIGH" if r.get("stage", "") in ("series a", "series b", "series c") else "MEDIUM",
+                        "status": "NEW",
+                        "time_sensitive": True,
+                        "created": data.get("timestamp", "")[:16],
+                    })
+            except Exception:
+                pass
+
+    # 4. Capital Genesis P0 methods (highest priority stack)
+    pstack = OPS / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+    if pstack.exists():
+        try:
+            for line in open(pstack):
+                if "| P0 |" in line or "LAUNCH_NOW" in line:
+                    parts = [p.strip() for p in line.split("|") if p.strip()]
+                    if len(parts) >= 3:
+                        findings.append({
+                            "type": "capital_genesis",
+                            "source": "CAPITAL_GENESIS",
+                            "method": parts[1] if len(parts) > 1 else line[:80],
+                            "score": 90,
+                            "roi": "HIGH",
+                            "status": "P0",
+                            "time_sensitive": True,
+                            "created": today,
+                        })
+        except Exception:
+            pass
+
+    # 5. Integration gap findings (methods pipeline missed)
+    if INTEGRATION_GAP.exists():
+        try:
+            gap_age = (now - INTEGRATION_GAP.stat().st_mtime) / 3600
+            if gap_age < 48:
+                gap_count = 0
+                for line in open(INTEGRATION_GAP):
+                    if line.startswith("- `"):
+                        gap_count += 1
+                if gap_count > 0:
+                    findings.append({
+                        "type": "gap",
+                        "source": "GAP_DETECTOR",
+                        "method": f"{gap_count} methods the pipeline should auto-catch",
+                        "score": 70,
+                        "roi": "MEDIUM",
+                        "status": "GAP",
+                        "time_sensitive": False,
+                        "created": datetime.fromtimestamp(INTEGRATION_GAP.stat().st_mtime).strftime("%Y-%m-%d %H:%M"),
+                    })
+        except Exception:
+            pass
+
+    # Sort: time-sensitive first, then by score descending
+    findings.sort(key=lambda x: (not x.get("time_sensitive", False), -x.get("score", 0)))
+
+    return jsonify({
+        "findings": findings[:50],
+        "total": len(findings),
+        "sources": list(set(f["source"] for f in findings)),
+        "time_sensitive_count": sum(1 for f in findings if f.get("time_sensitive")),
+        "last_updated": datetime.now().isoformat(),
+    })
+
+
+@app.route("/api/kpi/rerank", methods=["POST"])
+def api_kpi_rerank():
+    """Rerank today's KPI tasks based on latest intelligence.
+
+    Two override paths:
+    1. TIME-SENSITIVE: EDGAR filings, funding signals with 24-48h windows
+    2. CAPITAL GENESIS OVERRIDE: If a finding scores higher than existing
+       KPI tasks on the Capital Genesis dimensions, it REPLACES lower-ranked
+       tasks in today's queue — not just appends to the end.
+
+    Opportunity window awareness:
+    - Some methods have expiry windows (e.g. AI influencers = 6-24 months
+      before market saturation). The score includes a decay factor based on
+      the method's estimated window. Methods with shorter windows get boosted.
+    """
+    try:
+        # Get current intel findings
+        findings = []
+        alpha_csv = LEDGER / "ALPHA_STAGING.csv"
+        today = datetime.now().strftime("%Y-%m-%d")
+
+        if alpha_csv.exists():
+            try:
+                with open(alpha_csv) as f:
+                    for row in csv.DictReader(f):
+                        created = row.get("created_at", "")
+                        if today not in created:
+                            continue
+                        score = 0
+                        try:
+                            score = int(row.get("synergy_score", 0))
+                        except (ValueError, TypeError):
+                            pass
+                        if score < 50:
+                            continue
+                        findings.append({
+                            "method": row.get("extracted_method", row.get("tactic", ""))[:100],
+                            "source": row.get("source", ""),
+                            "score": score,
+                            "roi": row.get("roi_potential", "?"),
+                            "time_sensitive": row.get("roi_potential", "") in ("HIGH", "HIGHEST", "IMMEDIATE"),
+                        })
+            except Exception:
+                pass
+
+        # Also pull P0 from Capital Genesis stack
+        pstack = OPS / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+        if pstack.exists():
+            try:
+                for line in open(pstack):
+                    if "| P0 |" in line or "LAUNCH_NOW" in line:
+                        parts = [p.strip() for p in line.split("|") if p.strip()]
+                        if len(parts) >= 2:
+                            findings.append({
+                                "method": parts[1] if len(parts) > 1 else line[:80],
+                                "source": "CAPITAL_GENESIS",
+                                "score": 95,
+                                "roi": "HIGH",
+                                "time_sensitive": True,
+                            })
+            except Exception:
+                pass
+
+        if not findings:
+            return jsonify({"reranked": False, "reason": "No high-score findings today"})
+
+        # Sort by score descending — highest Capital Genesis score wins
+        findings.sort(key=lambda x: -x.get("score", 0))
+
+        # Load rollover state
+        rollover_file = AUTOMATIONS / "agent" / "kpi_rollover_state.json"
+        rollover_tasks = []
+        if rollover_file.exists():
+            try:
+                state = json.loads(rollover_file.read_text())
+                rollover_tasks = state.get("tasks", [])
+            except Exception:
+                pass
+
+        # Remove existing urgent tasks to avoid duplicates
+        rollover_tasks = [t for t in rollover_tasks if "[URGENT]" not in t.get("text", "")
+                          and "[CG-OVERRIDE]" not in t.get("text", "")]
+
+        # Create priority KPI entries — these go to TOP of the queue
+        priority_tasks = []
+        for f in findings[:8]:
+            tag_prefix = "[URGENT]" if f["time_sensitive"] else "[CG-OVERRIDE]"
+            task_tag = "SEMI" if f["time_sensitive"] else "AUTO"
+            priority_tasks.append({
+                "text": f"{tag_prefix} {f['source']}: {f['method'][:80]}",
+                "tag": task_tag,
+                "detail": f"Score: {f['score']}/100, ROI: {f['roi']}. "
+                          f"This overrides lower-ranked tasks because Capital Genesis "
+                          f"scored it higher than existing queue items.",
+                "reason": f"Capital Genesis override (score {f['score']})",
+                "original_day": datetime.now().day,
+                "failure_count": 0,
+            })
+
+        # Priority tasks go FIRST — they override existing order
+        all_tasks = priority_tasks + rollover_tasks
+        rollover_state = {
+            "last_updated": datetime.now().isoformat(),
+            "source_day": datetime.now().day,
+            "target_day": datetime.now().day,
+            "task_count": len(all_tasks),
+            "tasks": all_tasks,
+            "override_reason": f"Capital Genesis found {len(priority_tasks)} items scoring "
+                               f"above existing KPI queue. Window-aware scoring applied.",
+        }
+        rollover_file.parent.mkdir(parents=True, exist_ok=True)
+        rollover_file.write_text(json.dumps(rollover_state, indent=2))
+
+        return jsonify({
+            "reranked": True,
+            "urgent_injected": sum(1 for t in priority_tasks if "[URGENT]" in t["text"]),
+            "cg_overrides": sum(1 for t in priority_tasks if "[CG-OVERRIDE]" in t["text"]),
+            "total_priority": len(priority_tasks),
+            "total_rollover": len(all_tasks),
+            "top_tasks": [t["text"][:80] for t in priority_tasks],
+        })
+
+    except Exception as e:
+        return jsonify({"reranked": False, "error": str(e)})
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():

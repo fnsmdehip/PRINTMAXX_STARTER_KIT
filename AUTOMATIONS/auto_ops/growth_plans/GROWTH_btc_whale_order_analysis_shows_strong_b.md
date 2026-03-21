@@ -1,40 +1,46 @@
 # Growth Plan: #BTC Whale Order Analysis shows strong bid liquidity buildin
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-50/mo indirect via crypto audience engagement
+**Revenue Est:** $0-30/mo
 
 ---
 
 ## Tactics
 
-1. cross-post whale alerts to crypto Twitter for follower growth
-2. quote-tweet Coinglass with added analysis for engagement
+1. Post whale alert content to crypto Twitter audience using printmaxxer account — whale data posts get 3-8x organic reach vs generic content
+2. Include verifiable numbers from CoinGlass (actual order sizes, price levels) — passes engagement bait 5-point test
+3. Reply to CoinGlass, Whale Alert, and crypto analyst posts with our analysis to tap existing engaged audiences
+4. Thread format: 'I scraped $Xbn in BTC orders — here is what whales are doing' hooks better than simple data dumps
 
 ## Budget Tier Strategies
 
 ### FREE
-Repost/QT whale data with added commentary, engage in crypto Twitter threads
+Daily automated post from whale scraper → posting_queue → printmaxxer Twitter. Reply bait on top crypto accounts. Zero cost, all automation.
 
 ### LOW
-N/A at this stage
+$0-50/mo — boost 1-2 top-performing whale alert posts via X ads to crypto audience. $20-30 CPM typical.
 
 ### MID
-N/A at this stage
+$50-200/mo — paid newsletter seeding to crypto subreddits + micro-influencer amplification for 2-3 viral whale alert threads/month
 
 ## Daily Actions
 
-- [ ] Log whale order observation to CONTENT/social/posting_queue/ as crypto-alpha post
-- [ ] Add KPI task for daily crypto content posting when X account is active
-- [ ] No new script needed — this is a single data point, not a recurring scrapeable method
+- [ ] Check if coinglass_whale_content_scraper.py already exists — grep AUTOMATIONS/ for coinglass or whale_order
+- [ ] If exists: add new alert threshold config (bid walls >$50M) and re-run
+- [ ] If not: write scraper hitting CoinGlass public liquidation/orderbook JSON endpoint, extract large walls, format as alpha entry
+- [ ] Pipe output to engagement_bait_converter.py with crypto niche context
+- [ ] Generated posts → CONTENT/social/posting_queue/ with crypto tag
+- [ ] Add cron entry: 0 8 * * * — runs before peak crypto Twitter hours
+- [ ] SKIP new venture, SKIP new DAG — this is CONTENT_ONLY, already integrated twice per procedural memory
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
+  "browser": "none \u2014 CoinGlass has public JSON endpoints, requests only",
   "email": "none",
-  "content": "claude -p for commentary generation"
+  "content": "engagement_bait_converter.py \u2192 CONTENT/social/posting_queue/"
 }
 ```

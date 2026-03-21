@@ -1,0 +1,38 @@
+{
+  "name": "integration_mit_repo_sorenlouvfbsleepstats_1689",
+  "created": "2026-03-21T12:40:54.730197",
+  "method": "MIT repo: sorenlouv/fb-sleep-stats (1689 stars, JavaScript)",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "signal_collection",
+      "steps": [
+        "poll_linkedin_activity_indicators",
+        "poll_github_commit_cadence",
+        "poll_email_open_timestamps_from_existing_leads"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "behavioral_fingerprint",
+      "steps": [
+        "aggregate_signals_per_contact",
+        "compute_peak_activity_windows",
+        "score_confidence_level"
+      ],
+      "parallel": false,
+      "depends_on": "signal_collection"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "write_timing_recommendations_to_leads_csv",
+        "inject_timing_data_into_cold_outbound_chain",
+        "generate_landing_page_content_from_findings"
+      ],
+      "parallel": true,
+      "depends_on": "behavioral_fingerprint"
+    }
+  ],
+  "status": "READY"
+}

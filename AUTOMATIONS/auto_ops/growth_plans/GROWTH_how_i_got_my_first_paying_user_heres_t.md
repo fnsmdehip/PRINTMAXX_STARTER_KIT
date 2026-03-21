@@ -1,39 +1,38 @@
 # Growth Plan: How I got my first paying user. Here's the unfiltered truth.
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $50-300/mo
+**Revenue Est:** $100-400/mo
 
 ---
 
 ## Tactics
 
-1. post build-in-public thread on X/Twitter showing $85 first-user story
-2. cross-post to r/SideProject and r/buildinpublic
-3. cold DM creators with large followings who complain about inbox noise
-4. SEO longtail: 'how to stop spam emails' 'charge people to email me'
+1. post build-in-public thread on r/buildinpublic, r/SaaS, r/indiehackers — mirror the original Reddit angle of 'everyone said it would fail'
+2. DM creators/founders who tweet about inbox overload — offer free setup
+3. add to Product Hunt as a micro-tool once account created
+4. position as anti-spam tool not monetization tool — reframe to reduce objection
 
 ## Budget Tier Strategies
 
 ### FREE
-Build-in-public tweets, Reddit posts in r/SideProject r/buildinpublic r/Entrepreneur, HN Show HN post, engagement in creator communities about inbox overload
+Post launch story to r/buildinpublic + r/SaaS. Tweet thread: 'built email paywall in X hours, first sale in 24h.' Cross-post to HN Show HN. DM 10 indie hackers who complain about email spam.
 
 ### LOW
-$10-20 boosted tweet showing the concept, target creator/influencer audiences
+$20-30 boosted tweet. Submit to Indie Hackers newsletter. Post in relevant Slack/Discord groups (IndieHackers, MakerPad).
 
 ### MID
-$50-100 on micro-influencer shoutouts from productivity/creator accounts
+Sponsor a creator newsletter segment ($50-100). Cold email 50 solopreneurs/consultants who would pay to filter inbound. Run small Twitter ad to 'inbox zero' audience.
 
 ## Daily Actions
 
-- [ ] Build single-page HTML landing: headline about inbox noise, CTA to pay $3-5 to send a message
-- [ ] Create Stripe product 'Email Access' with $3 and $5 price tiers via MCP or payment_integrator.py
-- [ ] Wire Stripe payment link into landing page button
-- [ ] On successful payment, redirect to simple contact form that forwards to owner email (Firebase function or Formspree free tier)
-- [ ] Deploy to surge.sh
-- [ ] Generate 3 build-in-public tweets + 1 thread about the concept for posting queue
-- [ ] Add weekly KPI check cron to monitor Stripe balance for this product
+- [ ] 1. Run app factory to generate email-paywall landing page: single HTML file, Stripe payment button, post-payment email reveal
+- [ ] 2. Deploy: surge deploy MONEY_METHODS/APP_FACTORY/builds/emailgate/ emailgate.surge.sh
+- [ ] 3. Create Stripe product 'Email Access Pass' $5-15 one-time via MCP or Payment Links dashboard
+- [ ] 4. Run engagement_bait_converter.py on launch story — output 3 tweets + 1 Reddit post
+- [ ] 5. Queue content to CONTENT/social/posting_queue/
+- [ ] 6. Add URL + Stripe product ID to OPS/STRIPE_PRODUCTS.md and OPS/DEPLOYMENT_URLS.md
 
 ## Tooling
 
@@ -41,6 +40,7 @@ $50-100 on micro-influencer shoutouts from productivity/creator accounts
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory"
+  "content": "engagement_bait_converter.py",
+  "payment": "Stripe Payment Link (STRIPE_PUBLISHABLE_KEY already live)"
 }
 ```

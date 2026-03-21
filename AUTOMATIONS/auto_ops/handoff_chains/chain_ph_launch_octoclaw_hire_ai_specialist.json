@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_octoclaw_hire_ai_specialist",
+  "created": "2026-03-21T12:40:57.321877",
+  "method": "[PH LAUNCH] OctoClaw: Hire AI specialists for marketing, sales, support, and more",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH front page + /launches/today for AI/SaaS tools. Extract: company name, website, founder Twitter/LinkedIn, upvote count, tagline. Filter for tools targeting marketing/sales/support (OctoClaw category).",
+      "output": "ph_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each launch: upvotes >50 = warm, >200 = hot. Check if founder email findable via Hunter.io free tier or apollo free credits. Discard no-contact leads.",
+      "output": "ph_launches_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold email referencing their PH launch day. Angle: we build AI agent systems that complement their stack. Route into existing cold_outbound pipeline (chain_cold_outbound). Send within 48h of launch.",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

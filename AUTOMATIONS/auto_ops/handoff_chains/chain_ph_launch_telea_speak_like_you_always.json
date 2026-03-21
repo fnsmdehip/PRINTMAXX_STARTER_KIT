@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_telea_speak_like_you_always",
+  "created": "2026-03-21T12:40:56.985487",
+  "method": "[PH LAUNCH] Telea: Speak like you always know what to say",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH daily launches \u2014 extract: product name, tagline, maker name, maker Twitter/LinkedIn, upvote count, category, launch date",
+      "output": "ph_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each launch: B2B=+3, AI/SaaS=+2, <200 upvotes=+2 (less saturated), founder has Twitter=+1. Filter score >= 5. These are cold outreach targets.",
+      "output": "ph_qualified_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold email per founder referencing their specific PH launch. Offer EAS/cold email infrastructure or content services. Queue in 48h window.",
+      "output": "ph_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

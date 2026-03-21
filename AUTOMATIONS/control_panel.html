@@ -1669,6 +1669,12 @@ body {
       <div id="daily-feed" style="max-height:400px; overflow-y:auto;">Loading...</div>
     </div>
 
+    <!-- Research Intelligence Feed -->
+    <div class="glass-card" style="margin-bottom:16px; border:1px solid var(--border);">
+      <div class="card-title"><i class="ti ti-brain" style="color:var(--accent);"></i> research intel <span id="intel-count" style="font-size:0.7em; color:var(--text-dim); font-weight:400;"></span> <button onclick="reranKpi()" style="float:right; background:var(--accent); color:#000; border:none; padding:2px 10px; border-radius:4px; cursor:pointer; font-size:0.7em;">PUSH TO KPI</button></div>
+      <div id="intel-feed" style="max-height:350px; overflow-y:auto;">Loading...</div>
+    </div>
+
     <!-- Real-time chart -->
     <div class="glass-card dash-grid-full" style="margin-bottom:16px">
       <div class="card-title"><i class="ti ti-chart-area-line"></i>Agent Activity (24h)</div>
@@ -2019,7 +2025,7 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     tab.classList.add('active');
     var target = document.getElementById('tab-' + tab.dataset.tab);
     if (target) target.classList.add('active');
-    if (tab.dataset.tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyFeed(); }
+    if (tab.dataset.tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyFeed(); loadIntelFeed(); }
     if (tab.dataset.tab === 'agents') loadStatus();
     if (tab.dataset.tab === 'tree') loadSystemTree();
     if (tab.dataset.tab === 'actions') loadActions();
@@ -3248,6 +3254,53 @@ async function loadDailyFeed() {
   } catch(e) { console.error('feed failed:', e); }
 }
 
+async function loadIntelFeed() {
+  try {
+    var r = await fetch(API + '/api/intel-feed');
+    var d = await r.json();
+    var el = document.getElementById('intel-feed');
+    var countEl = document.getElementById('intel-count');
+    var ts = d.time_sensitive_count || 0;
+    if (countEl) countEl.textContent = '(' + d.total + ' findings, ' + ts + ' time-sensitive)';
+    if (!el) return;
+    if (!d.findings || d.findings.length === 0) {
+      el.textContent = 'No research findings yet. Scanners run at 5-6 AM.';
+      return;
+    }
+    var container = document.createElement('div');
+    d.findings.forEach(function(f) {
+      var row = document.createElement('div');
+      row.style.cssText = 'padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);';
+      var color = f.time_sensitive ? 'var(--danger)' : (f.score >= 70 ? 'var(--accent)' : 'var(--text-dim)');
+      var urgentTag = f.time_sensitive ? ' [URGENT]' : '';
+      var methodText = document.createElement('div');
+      methodText.style.cssText = 'font-size:0.85em;color:var(--text);';
+      methodText.textContent = f.method + urgentTag + ' [' + f.score + '/100]';
+      var metaText = document.createElement('div');
+      metaText.style.cssText = 'font-size:0.65em;color:var(--text-dim);margin-top:2px;';
+      metaText.textContent = f.source + ' | ' + f.roi + ' ROI | ' + f.status + ' | ' + (f.created||'');
+      if (f.time_sensitive) methodText.style.color = color;
+      row.appendChild(methodText);
+      row.appendChild(metaText);
+      container.appendChild(row);
+    });
+    el.replaceChildren(container);
+  } catch(e) { console.error('intel feed failed:', e); }
+}
+
+async function reranKpi() {
+  try {
+    var r = await fetch(API + '/api/kpi/rerank', {method:'POST'});
+    var d = await r.json();
+    if (d.reranked) {
+      showToast(d.urgent_injected + ' urgent tasks pushed to KPI');
+      loadDashKPI();
+    } else {
+      showToast('No time-sensitive findings to push');
+    }
+  } catch(e) { showToast('Rerank failed'); }
+}
+
 var currentKPIMode = 'standard';
 function setKPIMode(mode) {
   currentKPIMode = mode;
@@ -3543,12 +3596,12 @@ async function completeBlocker(el, text) {
 // ---------- AUTO REFRESH ----------
 loadDashboard();
 loadDashKPI();
-loadDailyFeed();
+loadDailyFeed(); loadIntelFeed();
 setInterval(function() {
   var activeTab = document.querySelector('.tab.active');
   if (!activeTab) return;
   var tab = activeTab.dataset.tab;
-  if (tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyFeed(); }
+  if (tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyFeed(); loadIntelFeed(); }
   else if (tab === 'agents') loadStatus();
   else if (tab === 'kpi') loadKPI();
 }, 30000);

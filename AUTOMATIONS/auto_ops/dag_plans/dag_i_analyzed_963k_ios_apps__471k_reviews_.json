@@ -1,37 +1,36 @@
 {
   "name": "integration_i_analyzed_963k_ios_apps__471k_reviews_",
-  "created": "2026-03-20T18:35:52.586093",
+  "created": "2026-03-21T12:40:54.125509",
   "method": "I analyzed 963k iOS apps + 471k reviews I've built too many apps that people downloaded and then... never paid for. Not a cent. So i did what any sane person would do and went full spreadsheet goblin ",
   "venture": "APP",
   "phases": [
     {
-      "name": "scrape",
+      "name": "fetch",
       "steps": [
-        "scrape_app_store_top_charts_by_category",
-        "scrape_reviews_for_low_rated_paid_apps",
-        "pull_competitor_pricing_tiers"
+        "iTunes Search API: top 100 apps per category (25 categories = 2500 apps)",
+        "App Store review endpoint: pull 50 most recent reviews per app (no key needed)"
       ],
       "parallel": true
     },
     {
-      "name": "analyze",
-      "steps": [
-        "sentiment_classify_reviews_via_claude",
-        "extract_specific_pain_points",
-        "map_frustration_to_feature_gaps"
-      ],
-      "parallel": true,
-      "depends_on": "scrape"
-    },
-    {
       "name": "score",
       "steps": [
-        "score_gaps_by_revenue_potential_and_buildability",
-        "cross_reference_with_existing_app_factory_builds",
-        "output_ranked_opportunities_to_APP_FACTORY_METHODS_csv"
+        "Sentiment score reviews \u2014 extract frustrated keywords (hate, crashes, broken, misleading, subscription trap)",
+        "Revenue proxy heuristic: log10(rating_count) * (5 - avg_rating) \u2014 high ratings volume + low score = captive demand",
+        "Composite trapped-demand score: (frustrated_ratio * 0.4) + (revenue_proxy_normalized * 0.35) + (category_competition_gap * 0.25)"
+      ],
+      "parallel": true,
+      "depends_on": "fetch"
+    },
+    {
+      "name": "output",
+      "steps": [
+        "Rank top-25 trapped-demand apps, write LEDGER/APP_FACTORY_OPPORTUNITIES.csv",
+        "Inject top picks into app_factory_command_center.py --inject flag as pre-validated queue",
+        "Run engagement_bait_converter.py on findings \u2014 generate teardown thread for posting queue"
       ],
       "parallel": false,
-      "depends_on": "analyze"
+      "depends_on": "score"
     }
   ],
   "status": "READY"

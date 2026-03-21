@@ -1,0 +1,29 @@
+{
+  "name": "chain_acquisition_launch_hn_sitefire_yc_w2",
+  "created": "2026-03-21T12:40:58.579946",
+  "method": "[ACQUISITION] Launch HN: Sitefire (YC W26) \u2013 Automating actions to improve AI visibility",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Pull Perplexity + DuckDuckGo AI answers for 20 target business-category queries using requests (free, no API key needed)",
+      "output": "ai_citations_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each business on AI citation gap \u2014 how often does their site appear vs competitors? High gap = high-value prospect",
+      "output": "geo_gap_qualified.json"
+    },
+    {
+      "agent": "report_gen",
+      "task": "Generate 1-page GEO audit PDF/HTML per prospect using claude -p (free, Claude Max) \u2014 shows missed citations, competitor dominance, fix recommendations",
+      "output": "geo_audit_reports/"
+    },
+    {
+      "agent": "connector",
+      "task": "Cold email each qualified prospect with audit report attached. Hook: 'Your brand is invisible to AI \u2014 here's proof' \u2192 book call \u2192 EAS service upsell",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

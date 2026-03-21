@@ -1,48 +1,48 @@
 # Growth Plan: 2k users, $800 with a Habit Tracker - I can't explain how go
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $100-400/mo
+**Revenue Est:** $200-800/mo
 
 ---
 
 ## Tactics
 
-1. Reddit story-format posts (personal journey + real numbers = high engagement, 120 reviews from 2500 users proves this)
-2. Cross-post to r/passive_income, r/SideProject, r/androidapps, r/iOSProgramming, r/entrepeneur with 3-day stagger
-3. Reply engagement in habit/productivity subreddits mentioning app naturally
-4. App Store keyword optimization for 'habit tracker minimalist' longtail
-5. Product Hunt launch for each streak app variant (free, batch 5 at a time)
+1. Post 'I built this for myself' authentic stories NOT product launches — community love beats marketing tone
+2. Warm up Reddit account: comment on 5 niche threads before posting own app each week
+3. Reply to every comment in first 6h — engagement velocity signals boost Reddit algo ranking
+4. Cross-post to r/SideProject and r/IndieHackers 48h after niche subreddit post performs well (50+ upvotes threshold)
+5. Screenshot Reddit comment sections + install spikes → repost on Twitter as social proof loop
+6. Stagger posts: 1 app per week, never same subreddit twice in 2 weeks from same account
 
 ## Budget Tier Strategies
 
 ### FREE
-Reddit story posts with real metrics (this is the core method — $0 CAC), cross-post to 5+ subreddits staggered, reply engagement in habit/productivity threads, ASO keyword optimization, Product Hunt launches
+3 Reddit posts/week across rotating apps. Personal account with 100+ karma. Niche subreddits per app category. Reply to comments within 6h. Cross-post winners.
 
 ### LOW
-$10-30/mo Reddit ads targeting habit/productivity subreddits, boost top-performing posts
+$10-30 Reddit promoted posts on organic posts that hit 70+ upvotes. Test 1 app at $10 budget, measure install delta, scale winners only.
 
 ### MID
-$50-100/mo targeted Google UAC campaigns for habit tracker keywords, micro-influencer seeding in productivity YouTube/TikTok
+$50-100/mo Reddit ads targeting subreddits of competitor apps (r/habitica, r/streaksapp users). Lookalike by subreddit interest targeting.
 
 ## Daily Actions
 
-- [ ] 1. Scrape HabitSwipe App Store/Play Store listing — extract pricing model, feature set, review themes
-- [ ] 2. Audit our 20+ existing streak apps — identify which ones can retrofit a minimalist swipe-to-complete UX
-- [ ] 3. Create a 2-screen swipe variant in app factory base template (habit list + swipe-to-complete)
-- [ ] 4. Generate 5 Reddit launch posts in story format (personal journey + real install/revenue numbers from our apps)
-- [ ] 5. Schedule staggered posts across r/passive_income, r/SideProject, r/androidapps, r/getdisciplined, r/productivity
-- [ ] 6. Create reply engagement templates for habit/productivity threads that naturally mention our apps
-- [ ] 7. Track install attribution by subreddit to find highest-converting channels
-- [ ] 8. Weekly cron: check app metrics, generate new Reddit content for top performers
+- [ ] 1. Audit MONEY_METHODS/APP_FACTORY/builds/ — extract app name, niche, live URL, polish score for all 47+ apps
+- [ ] 2. Run handoff chain: app_selector → post_generator → subreddit_mapper to produce posting_schedule.json
+- [ ] 3. Create reddit_app_launch_poster.py: reads posting_schedule.json, submits to Reddit via Playwright MCP, logs post URLs to LEDGER/APP_REDDIT_INSTALLS.csv
+- [ ] 4. Wire cron: every Monday 10am, auto-post next queued app to primary subreddit
+- [ ] 5. After each post: monitor install delta in App Store Connect — log before/after 72h counts
+- [ ] 6. After 5 posts: identify best-performing subreddit-niche pair → prioritize in future scheduling
+- [ ] 7. Screenshot top-performing posts → route to engagement_bait_converter.py for Twitter content
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
+  "browser": "Playwright MCP for Reddit post submission",
   "email": "none",
-  "content": "content_factory for Reddit post generation"
+  "content": "claude -p for personal-voice post generation"
 }
 ```

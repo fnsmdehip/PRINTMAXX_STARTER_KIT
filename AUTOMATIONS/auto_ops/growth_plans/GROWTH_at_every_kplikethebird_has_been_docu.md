@@ -2,38 +2,35 @@
 @kplikethebird
  has been documenting OpenClaw wor
 
-**Created:** 2026-03-20 23:36
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct (authority/inbound play — estimated $200-800/mo indirect via inbound leads from content over 60-90 days)
+**Revenue Est:** $0 direct / $200-600/mo indirect (inbound authority play — content that demonstrates real compound automation output builds audience for digital products and EAS clients)
 
 ---
 
 ## Tactics
 
-1. Document PRINTMAXX automation builds as 'compound loop' threads — show iterative AI builds step by step, not just the finished product
-2. Repurpose 'Digital Mending Circle' framing: post relatable 'digital debt' content (broken crons, stale CSVs, zombie scripts) — high engagement in indie hacker audience
-3. Tag @kplikethebird / @kieranklaassen in relevant OpenClaw content for reply bait from their audiences
-4. Build in public: weekly 'loop recap' post showing what the 33 agents produced that week — social proof + credibility
+1. Document PRINTMAXX automation sessions publicly — 1 thread/week showing what the compound loops actually produced (real numbers, real output)
+2. Use 'Digital Mending Circle' framing: position our daily decision_engine cycle as a group accountability format — builds community angle for future paid product
+3. Reply to @kplikethebird and @kieranklaassen threads with our own workflow variations — piggyback on their audience
 
 ## Budget Tier Strategies
 
 ### FREE
-Weekly compound-loop recap threads + OpenClaw workflow screenshots routed through content_repurposer.py across Twitter/LinkedIn. Reply to @every newsletter community posts with workflow examples.
+Convert existing session outputs (ralph loops, swarm reports, overnight runs) into workflow documentation threads. Post 1 compound-loop thread/week showing session → output → next session chain. Zero new infrastructure needed.
 
 ### LOW
-$0-50/mo: Boost top-performing compound loop tweet. Cross-post to IH community (producthunt.com/discussions, reddit r/SideProject). Seed in OpenClaw Discord if accessible.
+$0-50/mo: Boost 1 workflow thread/week targeting 'indie hacker', 'Claude Code', 'AI automation' audiences via X promoted posts
 
 ### MID
-$50-200/mo: Sponsor one indie hacker newsletter issue with 'compound loop automation' angle once revenue exists
+$50-200/mo: Sponsor a small AI workflow newsletter slot with a 'here is our actual compound loop output this week' format — authority + inbound
 
 ## Daily Actions
 
-- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py with angle='compound engineering loops + digital maintenance as a community play'
-- [ ] Generate 3 tweets + 1 thread using our actual compound loop examples (33 agents, 651 scripts, 191K leads analyzed)
-- [ ] Route output to CONTENT/social/posting_queue/ for warmup-aware posting
-- [ ] Wire existing chain_openclaw__arcads__550_videos_per_day — cross-reference any new OpenClaw workflow content for compounding
-- [ ] Add weekly cron (Monday 7 AM) to generate compound-loop recap content from agent_swarm.py --status output
+- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --method 'compound-loop-documentation' --angles 'workflow-transparency,accountability-circle,compound-output'
+- [ ] Extract 3 post drafts: (1) 'We run compound engineering loops — here is what our session produced today' format, (2) 'Digital mending circle for AI builders — what we fixed this week', (3) 'Documenting our OpenClaw/Claude Code workflows publicly — thread'
+- [ ] Add best draft to CONTENT/social/posting_queue/ for next scheduled post
 
 ## Tooling
 

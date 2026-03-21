@@ -1,6 +1,6 @@
 # Growth Plan: Oil’s extreme intraday moves are challenging conventional bu
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
 **Revenue Est:** $0/mo
@@ -13,16 +13,17 @@
 ## Budget Tier Strategies
 
 ### FREE
-n/a - no method to grow
+Single engagement bait post via engagement_bait_converter.py — contrarian finance take. No distribution infra warranted.
 
 ### LOW
-n/a
+N/A
 
 ### MID
-n/a
+N/A
 
 ## Daily Actions
 
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'Oil dropped 20%+ from peak yet nobody calling it a bear market — contrarian take on commodity labels' --niche finance
 
 ## Tooling
 
@@ -30,6 +31,6 @@ n/a
 {
   "browser": "none",
   "email": "none",
-  "content": "none"
+  "content": "engagement_bait_converter.py"
 }
 ```

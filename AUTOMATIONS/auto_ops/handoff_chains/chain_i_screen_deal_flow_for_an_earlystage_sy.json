@@ -1,0 +1,29 @@
+{
+  "name": "chain_i_screen_deal_flow_for_an_earlystage_sy",
+  "created": "2026-03-21T12:40:50.151114",
+  "method": "I screen deal flow for an early-stage syndicate",
+  "venture": "RESEARCH",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Pull today's startups from HN Show HN + PH + r/startups + r/SideProject",
+      "output": "raw_deals.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each on: traction signals, team credibility, market size keywords, revenue mentioned. Filter top 10%.",
+      "output": "scored_deals.json"
+    },
+    {
+      "agent": "memo_writer",
+      "task": "Generate 1-page deal memo per qualified startup using claude -p. Format: problem/solution/traction/red flags/verdict.",
+      "output": "deal_memos/"
+    },
+    {
+      "agent": "content_router",
+      "task": "Convert top 3 memos into Twitter threads and LinkedIn posts about startup trends. Route to posting queue.",
+      "output": "CONTENT/social/posting_queue/startups_*.md"
+    }
+  ],
+  "status": "READY"
+}

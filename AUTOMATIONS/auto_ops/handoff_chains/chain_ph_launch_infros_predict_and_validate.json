@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_infros_predict_and_validate",
+  "created": "2026-03-21T12:40:57.360702",
+  "method": "[PH LAUNCH] InfrOS: Predict and validate cloud architectures before launch",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH daily filtering for categories: developer-tools, infrastructure, cloud, devops, kubernetes, serverless. Extract maker profiles, upvoter list, company URLs. Use playwright MCP.",
+      "output": "ph_devops_leads_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for founders/CTOs/DevOps leads at companies with signals of cloud spend (AWS/GCP/Azure in stack, funded, >5 employees). Score 0-10. Drop students and solo hobbyists.",
+      "output": "ph_devops_leads_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach referencing their specific PH launch + cloud architecture pain point. Route to cold_email_scripts.py within 48h of launch while momentum is live.",
+      "output": "ph_devops_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

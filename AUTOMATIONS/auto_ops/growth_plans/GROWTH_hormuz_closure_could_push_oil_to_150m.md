@@ -2,7 +2,7 @@
 
 Macquarie warns that 
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
 **Revenue Est:** $0/mo
@@ -11,25 +11,25 @@ Macquarie warns that
 
 ## Tactics
 
-1. Quote-tweet financial news accounts with contrarian take
-2. Tag commodity/macro finance accounts for engagement
+1. Post as timely market commentary — 'Macquarie says $150 oil if Hormuz stays closed. What does that do to [affiliate product niche]?' format
+2. Tag financial accounts for QT bait (FinTwit community)
 
 ## Budget Tier Strategies
 
 ### FREE
-Post commodity spike commentary as thread on printmaxxer account, QT major finance accounts for reach
+Single engagement-bait tweet via engagement_bait_converter.py routing. Finance niche hook, no promotional intent.
 
 ### LOW
-N/A
+N/A — not worth paid spend on pure news commentary
 
 ### MID
 N/A
 
 ## Daily Actions
 
-- [ ] Route to CONTENT/social/posting_queue as financial commentary thread
-- [ ] Use engagement_bait_converter to format as contrarian take thread
-- [ ] Post when X account is active
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'Hormuz closure could push Brent to $150+ per Macquarie. Brent already up 10% to $102.' --niche finance --count 1
+- [ ] Review output in CONTENT/social/posting_queue/ — post if hook is strong
+- [ ] No further integration — this is market intelligence, not a revenue method
 
 ## Tooling
 

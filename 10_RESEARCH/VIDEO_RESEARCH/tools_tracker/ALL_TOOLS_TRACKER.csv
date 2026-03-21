@@ -1,0 +1,26 @@
+tool_name,category,maker,quality_score,free_tier,price_from,price_unit,max_length,max_res,api_available,api_cost_per_sec,best_for,last_checked,status,notes
+Kling 3.0,video_gen,Kuaishou,9.5,66 credits/day (720p watermarked),6.99,/mo (Standard),15s,4K native,yes,0.07 (intro) / 0.10 (normal),best value + quality king,2026-03-21,ACTIVE,UPGRADED Feb 5. Native 4K. Pro $29.99/mo. Omni variant $0.126/sec. Best value.
+Veo 3.1,video_gen,Google,9.5,100 credits/mo,19.99,/mo (Pro),8s,4K native,yes,0.15 (Fast) / 0.75 (Quality),cinematic realism,2026-03-21,ACTIVE,Jan 2026 update: true 4K + native 9:16 vertical. Veo 3 Fast = $0.15/sec. Student discount.
+Seedance 2.0,video_gen,ByteDance,9.0,free on Xiao Yunque,9.60,/mo (Jimeng),15s,2K upscaled,DELAYED,~0.01 (proxy),multimodal reference,2026-03-21,ACTIVE,API DELAYED past Feb 24 (copyright/safety). China-only. Third-party proxy APIs ~$0.05/5sec. Quality exceptional.
+Sora 2,video_gen,OpenAI,8.0,none,20.00,/mo (Plus),15s (Plus) / 25s (Pro),1080p,yes,0.10-0.50,storytelling/dialogue,2026-03-21,DECLINING,Sora 1 KILLED March 13. Sora 2 unreliable. Plus = ~25sec of 1080p/month (40 credits/sec burn). Pro $200/mo.
+Runway Gen-4.5,video_gen,Runway,8.5,limited 720p watermarked,12.00,/mo,1min (multi-shot),1080p,yes,0.05,creative + platform play,2026-03-21,ACTIVE,Now a PLATFORM hosting Kling 3.0 + Sora 2 + WAN 2.2 + others. Native audio. 1-min multi-shot.
+Pika 2.5,video_gen,Pika Labs,8.0,80 credits/mo (480p watermarked),28.00,/mo (Pro),10s,1080p (paid),yes (via Fal.ai),TBD,physics-aware + persistent characters,2026-03-21,ACTIVE,Pro $28. Fancy $76. AI Selves (persistent chars). Pikaformance real-time expressions. Sound design.
+Hailuo 2.3,video_gen,MiniMax,8.0,20-30 clips watermarked,9.99,/mo,10s,1080p,yes,0.01-0.03,budget volume + Media Agent,2026-03-21,ACTIVE,UPGRADED to 2.3. Media Agent = one-click auto-gen (auto-selects models). New cost-effectiveness record.
+Luma Ray 3.14,video_gen,Luma Labs,7.5,30 credits/mo,29.99,/mo (Plus),5-10s,1080p native,yes,API available,speed + cost,2026-03-21,ACTIVE,Plus $29.99. Unlimited $94.99. 4x faster + 3x cheaper than Ray 3. Speed play.
+Wan 2.6,video_gen,Alibaba,9.0,free (open-source self-host),0,free,varies,1080p+,yes (self-host),0 (self-host),open-source video gen,2026-03-21,NEW,Top open-source model. Free self-host. Excellent quality. Hosted on Runway platform too.
+Meta Movie Gen,video_gen,Meta,7.0,free inside IG/FB,0,free (platform-locked),varies,1080p,no,n/a,social-native video,2026-03-21,NEW,Free inside Instagram/Facebook ONLY. No API. Platform-locked. Can't export.
+CapCut,video_edit,ByteDance,8.5,yes full,7.99,/mo (Pro),unlimited,4K,no (MCP workaround),n/a,auto captions/transitions,2026-03-21,ACTIVE,NO official API confirmed. CapCut MCP servers let Claude control it programmatically.
+Descript,video_edit,Descript,8.0,limited,24.00,/mo,unlimited,4K,partial,n/a,text-based editing,2026-03-21,ACTIVE,
+Opus Clip,video_edit,Opus,8.0,limited,19.00,/mo,unlimited,1080p,yes,TBD,auto short clips from long,2026-03-21,ACTIVE,auto-detects viral moments
+json2video,video_edit,json2video,7.5,limited,25.00,/mo,unlimited,1080p,yes (REST),per render,fully programmatic video,2026-03-21,NEW,JSON-to-video API. Fully programmable. Templates + dynamic data. Good for automated pipelines.
+Shotstack,video_edit,Shotstack,7.5,free tier,25.00,/mo,unlimited,1080p,yes (REST),per render,programmatic video API,2026-03-21,NEW,Cloud video editing API. JSON timeline > rendered video. Good for automation at scale.
+Buffer,scheduling,Buffer,7.5,3 channels free,6.00,/mo per channel,n/a,n/a,yes,free,multi-platform scheduling,2026-03-21,ACTIVE,
+Publer,scheduling,Publer,8.0,5 accounts free,5.00,/mo,n/a,n/a,yes,included,scheduling + auto-posting,2026-03-21,ACTIVE,PRICE DROP to $5/mo. Best budget option.
+OneUp,scheduling,OneUp,8.0,none,12.00,/mo,n/a,n/a,yes,included,multi-platform auto-posting,2026-03-21,NEW,Strong multi-platform. $12/mo. Good for video auto-posting.
+Later,scheduling,Later,7.0,1 profile free,25.00,/mo,n/a,n/a,yes,included,visual planning,2026-03-21,ACTIVE,instagram focused
+ElevenLabs,voice,ElevenLabs,9.5,10min/mo free,5.00,/mo,unlimited,n/a,yes,per char,voice cloning/TTS,2026-03-21,ACTIVE,best voice quality
+HeyGen,avatar,HeyGen,8.5,limited,24.00,/mo,5min,1080p,yes,per min,talking head videos,2026-03-21,ACTIVE,lip sync + avatar
+Remotion,video_edit,Remotion,8.5,free (open-source),0,free (self-host),unlimited,4K,yes (React API),0 (self-host),template-based programmatic video,2026-03-21,ACTIVE,ALREADY DEPLOYED at MEDIA/remotion/. 40+ videos generated. React-based. Perfect for branded templates + recurring series. Claude generates React code > Remotion renders.
+Submagic,video_edit,Submagic,7.5,limited,19.00,/mo,unlimited,1080p,no,n/a,dynamic captions for shorts,2026-03-21,NEW,Dynamic animated captions + seamless edits. Specifically for short-form content.
+Metricool,scheduling,Metricool,7.5,1 brand free,22.00,/mo,n/a,n/a,yes,included,analytics-focused scheduling,2026-03-21,NEW,Best analytics. Free tier for 1 brand. Supports Twitch.
+Canva,design,Canva,8.0,limited,12.99,/mo,unlimited,4K,yes,included,thumbnails/graphics,2026-03-21,ACTIVE,video editing improving

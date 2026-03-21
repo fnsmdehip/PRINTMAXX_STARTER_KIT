@@ -123,7 +123,7 @@ INTELLIGENCE_CATALOG = OPS / "INTELLIGENCE_CATALOG.json"
 FAILED_INTEGRATIONS = LEDGER / "failed_integrations.jsonl"
 GAP_REPORT = OPS / "INTEGRATION_GAP_REPORT.md"
 
-MAX_NEW_AUTOMATIONS_PER_RUN = 25
+MAX_NEW_AUTOMATIONS_PER_RUN = 9999  # No cap
 MAX_ENTRIES_PER_RUN = 9999  # No cap — process everything
 CLAUDE_TIMEOUT = 300  # 5 min: script generation is complex (was 180, timing out)
 MIN_QUALITY_SCORE = 3  # 0-10, only reject truly empty/platitude entries
@@ -231,7 +231,8 @@ def run_cmd(cmd: list[str], timeout: int = 120, cwd: str | None = None) -> tuple
     try:
         r = subprocess.run(
             cmd, capture_output=True, text=True,
-            timeout=timeout, cwd=cwd or str(PROJECT),
+            timeout=timeout if timeout > 0 else None,
+            cwd=cwd or str(PROJECT),
             stdin=subprocess.DEVNULL,
         )
         return r.stdout.strip(), r.returncode == 0
@@ -830,7 +831,7 @@ def create_automation_script(analysis: dict, automations_created: int,
         Output ONLY the Python code. No markdown fences.
     """)
 
-    output, ok = claude_p(prompt, timeout=300, model="sonnet", bare=True)
+    output, ok = claude_p(prompt, timeout=0, model="sonnet", bare=True)
     if not ok:
         log(f"Step 7: Script generation failed: {output[:200]}", "ERROR")
         return False, automations_created

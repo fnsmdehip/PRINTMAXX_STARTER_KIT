@@ -1,0 +1,36 @@
+{
+  "name": "integration_acquisition_show_hn_added_api_key_sup",
+  "created": "2026-03-21T12:40:58.778207",
+  "method": "[ACQUISITION] Show HN: Added API key support to my AI writing assistant extension",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "intelligence",
+      "steps": [
+        "scrape_hn_show_hn_extensions_30d",
+        "scrape_chrome_web_store_ai_writing_top50"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "gap_analysis",
+      "steps": [
+        "score_niche_gaps",
+        "identify_missing_byok_verticals"
+      ],
+      "parallel": false,
+      "depends_on": "intelligence"
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "generate_hn_post_draft",
+        "generate_reddit_posts_3x",
+        "queue_to_posting_queue"
+      ],
+      "parallel": true,
+      "depends_on": "gap_analysis"
+    }
+  ],
+  "status": "READY"
+}

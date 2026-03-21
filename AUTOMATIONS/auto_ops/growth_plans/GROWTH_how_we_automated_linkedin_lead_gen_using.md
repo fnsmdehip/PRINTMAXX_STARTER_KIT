@@ -1,50 +1,48 @@
 # Growth Plan: How we automated LinkedIn lead gen using keyword triggers (w
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** OUTBOUND
 **Budget Tier:** FREE
-**Revenue Est:** $300-1500/mo
+**Revenue Est:** $300-1200/mo
 
 ---
 
 ## Tactics
 
-1. Comment warming: engage genuinely on 5 posts before any outreach comments daily to build profile credibility
-2. Profile optimization: headline as value prop not job title, featured section with case studies
-3. Multi-account rotation: separate account per niche (tech/faith/fitness) to avoid pattern detection
-4. Reply bait: post own polls/questions in same groups to attract inbound signals
-5. Cross-platform signal stacking: same keyword monitoring on Reddit/Twitter to identify people also active on LinkedIn
+1. Monitor 10 buying-signal keyword sets daily: 'tool recommendation', 'best SaaS for', 'looking for a solution', 'anyone used X', 'replacing Y with'
+2. Engage in comments BEFORE the post author responds to capture top-comment visibility
+3. Use native LinkedIn comment (not DM) — avoids spam classifier entirely
+4. Rotate keyword sets weekly to avoid LinkedIn pattern detection
+5. Build comment template library: problem-aware / solution-proof / social-proof variants
+6. Cross-post best-performing comment formats as standalone LinkedIn posts for organic reach amplification
 
 ## Budget Tier Strategies
 
 ### FREE
-Manual keyword searches via LinkedIn search URL scraping, Playwright automation with existing Brave login, Claude-generated comments, organic profile building through daily engagement
+Playwright MCP monitors 5 keyword sets on existing LinkedIn session, Claude generates comment responses, manual review queue for posting. Zero recurring cost.
 
 ### LOW
-$0-50/mo: LinkedIn Sales Navigator basic ($0 trial), residential proxy for multi-account stability, GoLogin for browser fingerprint separation
+$0-50/mo — residential proxies ($29/mo SOAX) for scraping at scale without session risk; LinkedIn Sales Navigator free trial for advanced keyword filters
 
 ### MID
-$50-200/mo: LinkedIn Sales Navigator Core ($99/mo), SOAX proxies for reliable scraping, Phantombuster credits for backup automation
+$50-200/mo — dedicated LinkedIn account warmup sequence, retarget commenters with sponsored posts, promote best comment threads as native ads
 
 ## Daily Actions
 
-- [ ] 1. Build buying-signal keyword list per niche (20+ trigger phrases per vertical)
-- [ ] 2. Create linkedin_keyword_trigger_outreach.py with Playwright + Brave cookie auth
-- [ ] 3. Implement LinkedIn search scraper for keyword monitoring (search URL pattern: linkedin.com/search/results/content/?keywords=...)
-- [ ] 4. Build qualifier scoring: direct ask=10, pain=8, competitor complaint=7, filter >= 6
-- [ ] 5. Wire Claude comment generator with tone-matching and soft CTA templates
-- [ ] 6. Add rate limiting: max 10 comments/day, 5min gaps, weekday-only schedule
-- [ ] 7. Build engagement tracker: check replies 24h after comment, generate warm DM drafts
-- [ ] 8. Add to cron: 3x daily (7am, noon, 5pm) on weekdays
-- [ ] 9. Wire into existing chain_how_we_automated_linkedin_lead_gen_using
-- [ ] 10. Add KPI tracking: signals found, comments posted, reply rate, DMs sent, meetings booked
+- [ ] Check chain_how_we_automated_linkedin_lead_gen_using — enhance with keyword-trigger DAG logic rather than creating duplicate
+- [ ] Build linkedin_keyword_trigger_commenter.py: Playwright MCP scrapes LinkedIn search for buying-signal queries
+- [ ] Score posts by relevance: keyword match strength, poster seniority (manager+), post recency (<48h), comment count (<10 preferred for visibility)
+- [ ] Generate 3 comment variants per qualified post via claude -p: problem-aware, solution-focused, social-proof-backed
+- [ ] Post at max 15 comments/day to stay under LinkedIn soft rate limit — random 8-45 min gaps between posts
+- [ ] Log all outreach with post URL, comment text, timestamp to LEDGER/OUTREACH_PIPELINE.csv
+- [ ] Add cron: 30 7 * * 1-5 (weekday mornings, catches overnight buying-signal posts)
 
 ## Tooling
 
 ```json
 {
-  "browser": "Playwright with Brave cookie injection",
-  "email": "none \u2014 comment-first strategy bypasses email",
-  "content": "claude -p for comment generation"
+  "browser": "Playwright MCP (existing LinkedIn session via Brave cookies)",
+  "email": "none",
+  "content": "claude -p for comment generation (3 variants per post)"
 }
 ```

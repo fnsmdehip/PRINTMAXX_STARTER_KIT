@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-03-21T08:54:26.434029",
-  "last_cycle": "distribution_engine_2026-03-21_08h49",
-  "cycle_number": 23,
+  "last_updated": "2026-03-21T12:00:52.534851",
+  "last_cycle": "distribution_engine_2026-03-21_12h00",
+  "cycle_number": 24,
   "coverage": {
     "twitter": {
-      "threads": 8,
-      "singles": 15,
-      "reply_baits": 8,
-      "qt_captions": 6,
-      "total_pieces": 52,
-      "last_cycle": 23
+      "threads": 10,
+      "singles": 19,
+      "reply_baits": 10,
+      "qt_captions": 8,
+      "total_pieces": 62,
+      "last_cycle": 24
     },
     "reddit": {
-      "posts_ready": 24,
+      "posts_ready": 33,
       "subreddits": [
         "r/nocode",
         "r/automation",
@@ -26,17 +26,23 @@
         "r/emailmarketing",
         "r/islam",
         "r/hinduism",
-        "r/Sikh"
+        "r/Sikh",
+        "r/Meditation",
+        "r/books",
+        "r/Journaling",
+        "r/learnprogramming",
+        "r/languagelearning",
+        "r/relationships"
       ],
-      "last_cycle": 23
+      "last_cycle": 24
     },
     "hacker_news": {
-      "posts_ready": 12,
-      "last_cycle": 23
+      "posts_ready": 16,
+      "last_cycle": 24
     },
     "linkedin": {
-      "posts_ready": 12,
-      "last_cycle": 23
+      "posts_ready": 16,
+      "last_cycle": 24
     },
     "indie_hackers": {
       "posts_ready": 12,
@@ -324,6 +330,85 @@
       "channels": [
         "twitter",
         "reddit"
+      ]
+    },
+    "meditation-streak": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hn",
+        "linkedin"
+      ]
+    },
+    "reading-streak": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hn",
+        "linkedin"
+      ]
+    },
+    "journal-streak": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit"
+      ]
+    },
+    "art-streak": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "hn"
+      ]
+    },
+    "coding-streak": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit",
+        "linkedin"
+      ]
+    },
+    "language-streak": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit"
+      ]
+    },
+    "prospectmaxx": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hn",
+        "linkedin"
+      ]
+    },
+    "stackmaxx": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hn",
+        "linkedin"
+      ]
+    },
+    "couples-streak": {
+      "cycle": 24,
+      "channels": [
+        "twitter",
+        "reddit",
+        "linkedin"
+      ]
+    },
+    "vibe-coding-profit-calculator": {
+      "cycle": 24,
+      "channels": [
+        "twitter"
       ]
     }
   },

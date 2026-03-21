@@ -1,44 +1,43 @@
 # Growth Plan: just got back from an industry conference and genuinely feel
 
-**Created:** 2026-03-20 18:35
-**Venture:** OUTBOUND
+**Created:** 2026-03-21 12:40
+**Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-200/mo
+**Revenue Est:** $0-50/mo direct (content engagement). Indirect: conference-trigger cold outbound sequence could unlock $500-2K/mo if chain_cold_outbound is active.
 
 ---
 
 ## Tactics
 
-1. Scrape conference hashtags on Twitter/LinkedIn for attendee self-identification
-2. Monitor Eventbrite/Luma for new industry events and auto-scrape registrant-visible data
-3. Cross-reference scraped names with LinkedIn Sales Navigator free tier for email enrichment
-4. Content play: repurpose conference-waste narrative as contrarian thread (conferences are dead, cold email beats $4K flights)
+1. Use the $4k-wasted story as a hook for content targeting B2B founders — high relatability, high share rate
+2. Reply to any conference announcement tweets with the 400x efficiency stat to seed cold outbound conversations
+3. Add conference season (Jan/May/Sep) as a trigger event in chain_cold_outbound — companies that just burned budget at conferences are primed to buy cheaper alternatives
+4. Create 'conference alternative' cold email template: 'you probably just got back from [conference] — here is how we get the same meetings for $0'
 
 ## Budget Tier Strategies
 
 ### FREE
-Scrape public conference sites (speakers, sponsors, exhibitors). Use conference hashtags on Twitter to find attendees. Cold email via existing outbound infra. Post contrarian content about conference ROI waste.
+Post 3 tweets from engagement_bait_converter output. Thread: 'I spent $4k at a Vegas conference. Here is what I learned about B2B sales.' Include the 400x ROI contrast. Reply-bait B2B founders in conference hashtags.
 
 ### LOW
-$0-50/mo: Add Hunter.io free tier (50 lookups/mo) for email verification on scraped contacts
+$0-50/mo: Boost top-performing post. Target B2B SaaS founders who tweet about attending conferences.
 
 ### MID
-$50-200/mo: Apollo.io basic for bulk enrichment of conference attendee lists
+$50-200/mo: Sponsored LinkedIn post targeting SMB/mid-market sales leaders with the conference ROI calculator angle
 
 ## Daily Actions
 
-- [ ] Build conference_attendee_scraper.py that takes conference URL and extracts speaker/sponsor/exhibitor lists
-- [ ] Add to chain_cold_outbound as a new lead source type (conference_leads)
-- [ ] Schedule weekly Monday 5AM cron to check 3 industry event aggregator pages for new conferences
-- [ ] Feed scraped contacts into existing EAS lead pipeline for qualification
-- [ ] Generate 1 contrarian content piece (conferences are $4K lead gen theater) for posting queue
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'spent $4k at industry conference, $200/contact vs $0.50 cold email, 400x efficiency gap' --angles 3
+- [ ] Add output to CONTENT/social/posting_queue/
+- [ ] Add 'conference_season' as trigger event in chain_cold_outbound config — fire extra outbound sequences in Jan/May/Sep when conference circuit peaks
+- [ ] Create cold email template variant: 'just got back from [conference name]?' opener — add to AUTOMATIONS/leads/templates/
 
 ## Tooling
 
 ```json
 {
-  "browser": "playwright for conference site scraping",
-  "email": "existing cold outbound scripts",
-  "content": "engagement_bait_converter.py for conference-waste narrative thread"
+  "browser": "none",
+  "email": "cold email template added to existing outbound chain",
+  "content": "engagement_bait_converter.py"
 }
 ```

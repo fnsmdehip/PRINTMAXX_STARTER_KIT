@@ -1,0 +1,38 @@
+{
+  "name": "integration_acquisition_im_17_and_built_a_screens",
+  "created": "2026-03-21T12:40:57.726567",
+  "method": "[ACQUISITION] I'm 17 and built a screenshot beautifier for Windows - there's no CleanShot X for Windows, so I'm making one",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "gap_discovery",
+      "steps": [
+        "scrape Setapp catalog for Mac-only tools with 4+ star ratings",
+        "scrape Product Hunt Mac category top 500 sorted by votes",
+        "search Reddit r/Windows r/MacApps r/SideProject for 'no Windows version' + 'wish this was on Windows' patterns"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "opportunity_scoring",
+      "steps": [
+        "cross-reference each Mac tool against Microsoft Store and web app landscape for existing Windows alternatives",
+        "score by: demand_signals * price_point / implementation_complexity",
+        "rank top 10 unmet Windows gaps, output to LEDGER/MAC_WINDOWS_GAPS.csv"
+      ],
+      "parallel": false,
+      "depends_on": "gap_discovery"
+    },
+    {
+      "name": "build_and_distribute",
+      "steps": [
+        "route top opportunity to app_factory_command_center.py build queue",
+        "generate SEO landing page targeting '[mac_tool_name] windows alternative'",
+        "generate launch posts via engagement_bait_converter.py for Reddit + Twitter"
+      ],
+      "parallel": true,
+      "depends_on": "opportunity_scoring"
+    }
+  ],
+  "status": "READY"
+}

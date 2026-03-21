@@ -1,0 +1,29 @@
+{
+  "name": "chain_small_success_story_with_amazon_kdp_book",
+  "created": "2026-03-21T12:40:50.409790",
+  "method": "Small success story with Amazon KDP book (Non-fiction)",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "niche_scanner",
+      "task": "Playwright-scrape Amazon BSR top 100 in 20 non-fiction categories. Score each by: avg review count <200 (beatable), search volume >1K/mo, price $4.99-9.99 (70% royalty range). Output top 5 opportunities.",
+      "output": "niche_opportunities.json"
+    },
+    {
+      "agent": "content_planner",
+      "task": "Select top niche. Generate 10-chapter outline (30-40K words target), chapter summaries, key points per chapter. Include review gap analysis \u2014 what competitors miss.",
+      "output": "book_outline.json"
+    },
+    {
+      "agent": "content_writer",
+      "task": "Generate full manuscript in parallel: 4x claude -p workers each handling 2-3 chapters. Compile, add intro/outro, format to KDP .docx spec (1-inch margins, 11pt Garamond).",
+      "output": "manuscript_draft.md"
+    },
+    {
+      "agent": "metadata_optimizer",
+      "task": "Generate: 75-char title, 150-char subtitle, 4000-char description (keyword density 1.5-2%), 7 backend keywords, BISAC category selection, cover image brief (Midjourney prompt).",
+      "output": "kdp_package.json"
+    }
+  ],
+  "status": "READY"
+}

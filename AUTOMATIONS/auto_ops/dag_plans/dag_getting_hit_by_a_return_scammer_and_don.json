@@ -1,0 +1,37 @@
+{
+  "name": "integration_getting_hit_by_a_return_scammer_and_don",
+  "created": "2026-03-21T12:40:50.481088",
+  "method": "Getting hit by a return scammer and don\u2019t know what to do",
+  "venture": "PRODUCT",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "scrape_r_flipping",
+        "scrape_r_ebay",
+        "scrape_r_mercari",
+        "scrape_r_amazonseller"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "filter_return_fraud_threads",
+        "score_by_recency_and_upvotes"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "engage",
+      "steps": [
+        "generate_helpful_comment_with_lead_magnet",
+        "queue_for_posting"
+      ],
+      "parallel": false,
+      "depends_on": "qualify"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,47 +1,57 @@
 {
   "name": "integration_geoduels__i_built_a_100_free_geoguessr",
-  "created": "2026-03-20T23:36:38.573110",
+  "created": "2026-03-21T12:40:49.168141",
   "method": "GeoDuels - I built a 100% free GeoGuessr clone in my mom's basement",
   "venture": "APP",
   "phases": [
     {
-      "name": "discover",
+      "name": "research",
       "steps": [
-        "scrape_app_store_top_paid_games_and_tools",
-        "scrape_reddit_free_alternative_requests",
-        "scan_alternativeto_net_gaps"
+        "scrape top 'free geoguessr' search results for gap analysis",
+        "identify 10 niche variants with search demand but no free clone",
+        "audit existing surge.sh slots (47/65 live \u2014 check capacity)"
       ],
       "parallel": true
     },
     {
-      "name": "score",
+      "name": "build_base",
       "steps": [
-        "check_search_volume_free_X_alternative",
-        "estimate_ad_revenue_at_traffic_scale",
-        "assess_build_complexity_against_app_factory_templates"
-      ],
-      "parallel": true,
-      "depends_on": "discover"
-    },
-    {
-      "name": "route",
-      "steps": [
-        "rank_top3_by_score",
-        "push_to_app_factory_priority_queue",
-        "generate_seo_targeting_brief"
+        "build HTML/JS geo-game template using OpenStreetMap (free, no API key)",
+        "wire AdSense placeholder (ca-app-pub-5277873663568466)",
+        "add freemium gate: 5 rounds free, premium unlocks unlimited ($2.99/mo RevenueCat web)"
       ],
       "parallel": false,
-      "depends_on": "score"
+      "depends_on": "research"
     },
     {
-      "name": "content",
+      "name": "generate_variants",
       "steps": [
-        "generate_i_built_free_X_reddit_post",
-        "generate_hn_show_post",
-        "queue_in_content_social_posting_queue"
+        "parameterize base template across 10 niche configs",
+        "generate SEO landing page per variant (longtail: 'free [niche] geography game')",
+        "generate dev story content post for each (r/SideProject format)"
       ],
       "parallel": true,
-      "depends_on": "route"
+      "depends_on": "build_base"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "surge deploy all variants to [niche]-geo-game.surge.sh",
+        "verify Playwright smoke test: game loads, rounds work, AdSense fires",
+        "submit all URLs to Google Search Console"
+      ],
+      "parallel": true,
+      "depends_on": "generate_variants"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post dev story to r/SideProject (highest ROI \u2014 GeoDuels proof)",
+        "route content through engagement_bait_converter.py for Twitter/IH/HN",
+        "add all URLs to OPS/DEPLOYMENT_URLS.md"
+      ],
+      "parallel": false,
+      "depends_on": "deploy"
     }
   ],
   "status": "READY"

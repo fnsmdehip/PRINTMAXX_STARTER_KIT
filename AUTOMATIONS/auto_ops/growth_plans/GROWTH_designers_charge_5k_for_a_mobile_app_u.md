@@ -2,49 +2,45 @@
 
 I built mine in 
 
-**Created:** 2026-03-20 18:35
-**Venture:** APP
+**Created:** 2026-03-21 12:40
+**Venture:** PRODUCT
 **Budget Tier:** FREE
-**Revenue Est:** $200-800/mo
+**Revenue Est:** $100-400/mo
 
 ---
 
 ## Tactics
 
-1. Post before/after UI transformations on Twitter/X — high engagement format
-2. Reply to indie hacker UI complaint threads with our results
-3. Cross-post to r/SideProject r/webdev r/indiehackers showing AI vs designer comparison
-4. Package top 20 UI prompts as free lead magnet → email list
-5. Quote-tweet designers posting their rates with our AI alternative
+1. Post before/after UI screenshots (2010-era vs AI-generated) — pure engagement bait, zero cost
+2. Reply to designer pricing threads on Twitter/X with '3 prompts did this'
+3. Post in r/webdev, r/UI_Design, r/ChatGPT — 'Show me your app UI' threads
+4. Bundle with existing Gumroad drafts as an upsell on Claude Code Agent Bible listing
 
 ## Budget Tier Strategies
 
 ### FREE
-Before/after threads on X, reply to UI complaint posts, post in indie hacker communities, open source a few prompts to build credibility
+Twitter thread showing the 3 prompts with before/after screenshots. Reply to any tweet complaining about design costs. Cross-post to LinkedIn. Route through engagement_bait_converter.py.
 
 ### LOW
-$0-50/mo: Boost best-performing before/after tweet, pin to profile, cross-post to LinkedIn
+$10-20 Pinterest promoted pin targeting 'app UI design' keywords. Add to Product Hunt as a free tool.
 
 ### MID
-$50-200/mo: Run targeted ads showing before/after to indie dev audiences on X and Reddit
+Sponsor one indie hacker newsletter mention ($50-150). Target solopreneur/vibe-coder audience.
 
 ## Daily Actions
 
-- [ ] 1. Screenshot all 47 deployed apps using Playwright MCP
-- [ ] 2. Score each UI 1-10 on modern design principles (color, spacing, typography, CTA clarity)
-- [ ] 3. Generate improved UI via Claude prompts targeting worst-scoring apps first
-- [ ] 4. Apply CSS/HTML updates to app factory builds, redeploy via surge
-- [ ] 5. Generate before/after comparison images for content pipeline
-- [ ] 6. Create 3 tweets + 1 thread showing the transformation process
-- [ ] 7. Package top 20 UI design prompts into a Gumroad digital product ($19)
-- [ ] 8. Wire into existing vibe-coded services chain as a UI refresh upsell
+- [ ] Route to engagement_bait_converter.py — generate 3 tweets + 1 thread from this angle
+- [ ] Add to DIGITAL_PRODUCTS/ready_to_sell/ as 'Mobile UI Prompt Pack' ($17-27 price point)
+- [ ] Wire into existing Gumroad draft pipeline (16 drafts already exist)
+- [ ] Add before/after UI screenshot generation task to app_factory_autopilot.py for any new app builds
+- [ ] Bundle as upsell on Claude Code Agent Bible Gumroad listing
 
 ## Tooling
 
 ```json
 {
-  "browser": "playwright for screenshots",
+  "browser": "none",
   "email": "none",
-  "content": "content_factory for before/after posts"
+  "content": "engagement_bait_converter.py + content_repurposer.py"
 }
 ```

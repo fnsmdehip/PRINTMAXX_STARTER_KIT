@@ -1,0 +1,50 @@
+{
+  "name": "integration_mit_repo_snouzyworkoutcool_7131_star",
+  "created": "2026-03-21T12:40:54.693924",
+  "method": "MIT repo: Snouzy/workout-cool (7131 stars, TypeScript)",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "recon",
+      "steps": [
+        "clone_workout_cool_repo",
+        "analyze_star_fork_issue_signals",
+        "map_appstore_fitness_tracker_competitors"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "extraction",
+      "steps": [
+        "extract_workout_database_schema",
+        "extract_streak_tracking_logic",
+        "extract_ui_component_library"
+      ],
+      "parallel": true,
+      "depends_on": "recon"
+    },
+    {
+      "name": "adaptation",
+      "steps": [
+        "generate_6_variant_configs",
+        "swap_branding_content_per_niche",
+        "wire_revenuecat_iap",
+        "wire_admob_banner"
+      ],
+      "parallel": false,
+      "depends_on": "extraction"
+    },
+    {
+      "name": "deployment",
+      "steps": [
+        "deploy_web_versions_to_surge",
+        "create_stripe_payment_links",
+        "update_deployment_urls_md",
+        "generate_seo_longtail_pages"
+      ],
+      "parallel": true,
+      "depends_on": "adaptation"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "integration_mit_repo_matinzdreactnativehealthco",
+  "created": "2026-03-21T12:40:54.883020",
+  "method": "MIT repo: matinzd/react-native-health-connect (385 stars, Kotlin)",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "scan",
+      "steps": [
+        "enumerate_health_apps_in_app_factory",
+        "check_existing_rn_deps_in_each_app",
+        "fetch_library_docs_via_context7_mcp"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "generate_health_connect_base_module_ts",
+        "generate_per_app_integration_snippets",
+        "update_package_json_templates_with_dependency"
+      ],
+      "parallel": true,
+      "depends_on": "scan"
+    },
+    {
+      "name": "wire",
+      "steps": [
+        "update_app_factory_base_template_with_health_connect_default",
+        "update_play_store_aso_copy_with_health_connect_keywords",
+        "write_integration_summary_to_ops_app_factory_alpha_command_center"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

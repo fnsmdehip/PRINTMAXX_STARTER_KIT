@@ -1,0 +1,45 @@
+{
+  "name": "integration_acquisition_i_built_a_forced_break_too",
+  "created": "2026-03-21T12:40:57.765956",
+  "method": "[ACQUISITION] I built a forced break tool for my own Tech Neck/Burnout. Is a screen lock-out too aggressive for you?",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape r/SideProject + r/productivity for 'break tool' + 'Tech Neck' + 'screen lock' threads (Playwright MCP)",
+        "extract top pain phrases and hook structures from high-upvote comments"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "asset_audit",
+      "steps": [
+        "confirm live URLs for deskbreak-web + walktounlock-web + focuslock-web from OPS/DEPLOYMENT_URLS.md",
+        "check if any of the 3 apps has Stripe payment link wired (payment_integrator.py --status)"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate 5 Reddit posts (r/SideProject, r/productivity, r/workfromhome) using extracted pain language + our app URLs",
+        "generate 3 tweets + 1 thread about forced-break UX debate ('too aggressive?') anchored to our apps",
+        "generate 2 SEO longtail pages: 'forced screen break app mac' + 'tech neck relief software' pointing to deskbreak-web"
+      ],
+      "parallel": true,
+      "depends_on": "asset_audit"
+    },
+    {
+      "name": "queue",
+      "steps": [
+        "append all generated posts to CONTENT/social/posting_queue/break_apps_cycle.txt",
+        "append longtail pages to content-generator backlog"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

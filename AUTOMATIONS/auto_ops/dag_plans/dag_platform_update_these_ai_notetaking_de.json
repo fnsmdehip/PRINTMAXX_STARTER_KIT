@@ -1,0 +1,37 @@
+{
+  "name": "integration_platform_update_these_ai_notetaking_de",
+  "created": "2026-03-21T12:40:55.624586",
+  "method": "[PLATFORM UPDATE] These AI notetaking devices can help you record and transcribe your meetings",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "playwright scrape Plaud Note, Friend AI, Otter AI hardware, Limitless Pendant product pages for specs/price/affiliate programs",
+        "extract pricing tiers, transcription accuracy claims, battery life, integrations"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "claude -p generate comparison table HTML following MONEY_METHODS/APP_FACTORY/builds/email-tools-compared pattern",
+        "generate 5 longtail FAQ sections targeting: 'best AI notetaker for meetings', 'plaud note vs otter', 'AI meeting recorder hardware 2026'",
+        "insert Amazon Associates affiliate links + direct brand affiliate links with FTC disclosure"
+      ],
+      "parallel": false,
+      "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "write to MONEY_METHODS/APP_FACTORY/builds/ai-notetakers-compared/index.html",
+        "generate sitemap.xml",
+        "surge deploy to ai-notetakers-compared.surge.sh"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

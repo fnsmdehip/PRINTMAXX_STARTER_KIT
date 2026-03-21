@@ -2,34 +2,35 @@
 
 Rystad Energy warns
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0/mo direct — engagement signal only
 
 ---
 
 ## Tactics
 
-1. Use contrarian take format: 'Everyone panicking about $135 oil — here's what actually happens'
-2. QT the original @DeItaone tweet with a data-backed take for engagement farming
+1. Post the two-scenario frame as a Twitter poll: '$110 or $135? Which Brent scenario do YOU think plays out?' — polls get 3x the impressions of statements
+2. Thread format: Scenario A vs Scenario B with clear price targets and dates. Verifiable numbers = shares from finance accounts
+3. Reply to @DeItaone original tweet with the scenario breakdown as a value-add comment — hijack existing engagement
 
 ## Budget Tier Strategies
 
 ### FREE
-QT commodity alerts with contrarian takes on printmaxxer Twitter, post to relevant subreddits (r/wallstreetbets, r/economy)
+Post 2-scenario thread on Twitter with poll. Reply to oil/energy macro accounts. Cross-post to r/investing, r/wallstreetbets as discussion prompt. No original research needed — cite Rystad Energy directly.
 
 ### LOW
-Boost highest-engagement commodity take ($5-10 Twitter ads)
+$0-50/mo — boost top-performing finance thread with $5-10 Twitter ad spend targeting investing/trading audiences.
 
 ### MID
-N/A — not worth mid-budget spend on news commentary
+$50-200/mo — sponsor a finance newsletter slot when oil story is hot. CPM is lowest during macro events when everyone wants context.
 
 ## Daily Actions
 
-- [ ] Feed oil alert as topic to engagement_bait_converter.py for 3 tweet variants
-- [ ] Queue best variant in CONTENT/social/posting_queue/ for printmaxxer account
-- [ ] Tag as market-commentary content for weekly financial takes thread
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'Brent crude $135 Rystad 4-month Middle East disruption scenario' --niche finance --format poll,thread
+- [ ] Review output in CONTENT/social/posting_queue/ — approve best hook
+- [ ] Post via twitter_warmup_poster.py if account is warmed up
 
 ## Tooling
 
@@ -37,6 +38,6 @@ N/A — not worth mid-budget spend on news commentary
 {
   "browser": "none",
   "email": "none",
-  "content": "content_trend_pipeline.py + engagement_bait_converter.py"
+  "content": "engagement_bait_converter.py \u2192 CONTENT/social/posting_queue/"
 }
 ```

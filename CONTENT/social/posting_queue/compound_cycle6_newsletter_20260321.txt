@@ -1,0 +1,88 @@
+# COMPOUND CYCLE 6 -- NEWSLETTER / LONG-FORM
+# Status: READY_TO_POST
+# Generated: 2026-03-21 12:05
+# Target: Beehiiv newsletter, blog post, Substack cross-post
+
+---
+
+## Newsletter: "274 Niches Nobody's Building For"
+
+**Subject line options:**
+1. I found 274 communities with zero apps. Here's the data.
+2. 5.44M photographers. Zero habit apps. Why?
+3. Day 45: 167 apps, $0 revenue, 274 empty niches
+
+**Body:**
+
+Last week I set 33 AI agents loose on Reddit, App Store, and Product Hunt.
+
+Their job: find communities with 300,000+ people where nobody has built a streak or habit app.
+
+They found 274.
+
+Not 274 "maybe" niches. 274 communities where I can count the members, verify the activity, and confirm zero competition in the App Store.
+
+Here are 12 from today alone:
+
+| Niche | Community Size | Existing Streak App |
+|-------|---------------|-------------------|
+| Photography | 5,440,000 | None |
+| Outfit Design | 5,000,000 | None |
+| Fashion Sketching | 3,880,000 | None |
+| Beat Making | 2,690,000 | None |
+| Songwriting | 2,665,000 | None |
+| Music Theory | 2,664,000 | None |
+| Mixing/Mastering | 2,300,000 | None |
+| Hip Hop Dance | 2,122,000 | None |
+| Street Photography | 1,870,000 | None |
+| Portrait Photography | 1,395,000 | None |
+| Sewing | 1,050,000 | None |
+| Contemporary Dance | 343,000 | None |
+
+**Why nobody's building here:**
+
+Most indie hackers pick niches from Twitter conversations. They build what other builders talk about — AI tools, developer utilities, productivity apps.
+
+These niches don't come up in those conversations. You only find them by scraping community data at scale.
+
+**The template factory model:**
+
+Here's the dirty secret: every streak app is the same app.
+
+- Streak counter
+- Daily prompt/challenge
+- Offline PWA (<60KB)
+- Color scheme swap
+- Content JSON swap
+
+Time to deploy a new niche: 40 minutes.
+
+We've deployed 167 so far. Today we added 4 more (photography, outfit design, beat making, music theory).
+
+**The bottleneck isn't code. It's intelligence.**
+
+The code is identical. The competitive advantage is knowing WHICH 274 niches to build for. That takes:
+
+- Daily Reddit scraping (40+ subreddits)
+- App Store keyword monitoring
+- Product Hunt launch tracking
+- Community size verification
+
+We automated all of that. 33 agents run every day. They produce reports I compound into new apps and content.
+
+**The honest numbers (Day 45):**
+
+- Apps deployed: 167
+- Blue ocean niches: 274
+- Content pieces queued: 1,162
+- Leads scraped: 1,366
+- Digital products drafted: 16
+- Revenue: $0
+
+Why $0? Haven't created a Stripe or Gumroad account yet. The builder's trap is real.
+
+**What's next:**
+
+Payment integration this week. 16 digital products go live on Gumroad. Affiliate links get real IDs instead of placeholders. The machine starts generating revenue or we have a very expensive hobby.
+
+Reply with any niche you'd want a streak app for. If the community checks out (100K+ people, no competition), we'll build it this week.

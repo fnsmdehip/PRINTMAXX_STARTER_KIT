@@ -1,0 +1,34 @@
+{
+  "name": "chain_gov_contract_this_time_and_materials_",
+  "created": "2026-03-21T12:40:57.410380",
+  "method": "[GOV CONTRACT] THIS TIME AND MATERIALS (T&M) TASK ORDER IS ISSUED FOR \"EDITORIAL AND PUBLICATION SUPPORT SERVICES\" IN ACCORDANCE WITH THE ATTACHED PERFORMA (deadline: 2026-09-30)",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Hit SAM.gov /opportunities/v2/search API daily. Filter: T&M type, active, keywords editorial/publication/writing/communications/content. Also check GSA eBuy.",
+      "output": "AUTOMATIONS/gov_contracts/raw_opportunities.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each opp: deadline proximity (>14d), ceiling ($50K+), NAICS match, set-aside eligibility (small biz preferred). Score 1-10, keep 6+.",
+      "output": "AUTOMATIONS/gov_contracts/qualified_opportunities.json"
+    },
+    {
+      "agent": "researcher",
+      "task": "For each qualified opp: find the agency's past awards, identify prime contractors already holding similar IDIQs. Extract company names + BD contact emails from SAM.gov entity search.",
+      "output": "AUTOMATIONS/gov_contracts/prime_contacts.json"
+    },
+    {
+      "agent": "proposal_writer",
+      "task": "Use claude -p to generate: (1) tailored capability statement, (2) 1-page proposal outline referencing their SOW language, (3) subcontractor pitch email. All in 90 seconds.",
+      "output": "AUTOMATIONS/gov_contracts/proposals/{contract_id}/"
+    },
+    {
+      "agent": "outreach",
+      "task": "Send subcontractor pitch emails to prime BD contacts. CC to any posted POC. Track in GOV_OPPORTUNITIES.csv with sent date, response status.",
+      "output": "LEDGER/GOV_OPPORTUNITIES.csv"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "integration_gov_contract_this_time_and_materials_",
+  "created": "2026-03-21T12:40:57.401549",
+  "method": "[GOV CONTRACT] THIS TIME AND MATERIALS (T&M) TASK ORDER IS ISSUED FOR \"EDITORIAL AND PUBLICATION SUPPORT SERVICES\" IN ACCORDANCE WITH THE ATTACHED PERFORMA (deadline: 2026-09-30)",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "scrape_and_research",
+      "steps": [
+        "sam_gov_api_query(keywords=['editorial','publication','writing','content support'], type='T&M', status='active')",
+        "usaspending_lookup(agency='all', naics=['519130','541830','711510'])"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "filter_by_deadline(min_days=14, max_days=120)",
+        "filter_by_ceiling(min=50000)",
+        "score_fit(our_capabilities=['editorial','publication','content','comms'])"
+      ],
+      "parallel": false,
+      "depends_on": "scrape_and_research"
+    },
+    {
+      "name": "generate_assets",
+      "steps": [
+        "generate_capability_statement(template='gov_editorial_cap_statement.md')",
+        "generate_proposal_outline(contract_scope='{solicitation_text}')",
+        "find_prime_contractor_contacts(award_history=True)"
+      ],
+      "parallel": true,
+      "depends_on": "qualify"
+    },
+    {
+      "name": "outreach",
+      "steps": [
+        "send_subcontractor_pitch(to='prime_contacts', attach='cap_statement')",
+        "log_to_ledger(file='LEDGER/GOV_OPPORTUNITIES.csv')"
+      ],
+      "parallel": false,
+      "depends_on": "generate_assets"
+    }
+  ],
+  "status": "READY"
+}

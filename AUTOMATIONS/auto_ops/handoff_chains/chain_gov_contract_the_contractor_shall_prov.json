@@ -1,0 +1,24 @@
+{
+  "name": "chain_gov_contract_the_contractor_shall_prov",
+  "created": "2026-03-21T12:40:57.609879",
+  "method": "[GOV CONTRACT] THE CONTRACTOR SHALL PROVIDE ON-SITE AND OFF-SITE FUNCTIONAL RESOURCES TO SUPPORT THE PRINTING AND GRAPHIC DESIGN SERVICES. (deadline: 2027-02-14)",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "daily SAM.gov scan NAICS 323111/541430 + keyword: printing graphic design",
+      "output": "sam_raw_contracts.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "filter by: budget >$25K, active/pre-solicitation, small-biz set-aside preferred, deadline >30 days",
+      "output": "sam_qualified_contracts.json"
+    },
+    {
+      "agent": "connector",
+      "task": "generate capability statement + cold outreach to awarded prime contractors for subcontract opportunities",
+      "output": "sam_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

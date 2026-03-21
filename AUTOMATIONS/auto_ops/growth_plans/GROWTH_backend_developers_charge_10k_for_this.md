@@ -2,44 +2,46 @@
 
 I built it in 2 h
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** EAS
 **Budget Tier:** FREE
-**Revenue Est:** $800-2500/mo
+**Revenue Est:** $1500-4000/mo
 
 ---
 
 ## Tactics
 
-1. Post build-in-public threads showing 2hr backend builds on X/Twitter
-2. Reply to founders asking for technical cofounders with service offer
-3. Seed in r/SaaS r/indiehackers with case studies of rapid builds
+1. Reply to 'I need a developer' and 'dev costs too much' tweets with '2hr build' proof post
+2. Post weekly demo: pick a common SaaS request, build live, show before/after time
+3. Seed r/SaaS, r/entrepreneur with 'I stopped hiring devs, here's what I use instead' post
+4. List boilerplate template on Gumroad as $97 product: 'Full SaaS in a box'
 
 ## Budget Tier Strategies
 
 ### FREE
-Content from actual builds (screen recordings, before/after, cost comparison threads). Reply engagement on tech cofounder posts. Cross-post to Dev.to and LinkedIn.
+Reply-bait on dev cost complaints. Post 2hr build demos. Cross-promote with APP factory builds as proof-of-concept. Submit to indie hacker Show HN.
 
 ### LOW
-$20-50/mo boosting best-performing build threads on X
+$0-50/mo — Boost top-performing demo post. Target 'hire developer' and 'build SaaS' keyword audiences on X. $10 promoted tweet with video demo.
 
 ### MID
-$100-200/mo targeted LinkedIn ads to non-technical founders searching for CTOs/agencies
+$50-200/mo — Paid cold outreach to non-technical founders in email lists. Retarget visitors to EAS landing page with 'built in 2hrs' case study ad.
 
 ## Daily Actions
 
-- [ ] 1. Route to existing EAS venture — no new infra needed
-- [ ] 2. Add 'backend build' as high-priority keyword in EAS lead scoring
-- [ ] 3. Create template scope-of-work for OAuth+Stripe+DB+AI package ($1500-3000 fixed price)
-- [ ] 4. Generate 3 content pieces from this alpha for posting queue (cost comparison thread, build walkthrough, FAQ objection handler)
-- [ ] 5. Update EAS service menu to prominently feature rapid backend builds
+- [ ] Wire into chain_vibecoded_services_300800build_mic — no new chain needed
+- [ ] Create eas_saas_boilerplate_generator.py: scaffolds OAuth+Stripe+customer portal+AI+DB from config JSON, deploys to Firebase or Vercel via CLI
+- [ ] Add to APP factory base template so every app build auto-inherits this stack
+- [ ] Generate 3 Twitter posts using 2hr-build hook format via engagement_bait_converter.py
+- [ ] Add KPI entry: weekly cold DM to non-technical founders complaining about dev costs
+- [ ] Create $97 Gumroad listing: 'Full SaaS Boilerplate — Google OAuth + Stripe + AI + DB, deploy in 2hrs' (pre-build, list when account exists)
 
 ## Tooling
 
 ```json
 {
   "browser": "none",
-  "email": "custom cold email via eas_lead_pipeline.py",
-  "content": "content_factory for build case study threads"
+  "email": "custom cold email scripts",
+  "content": "engagement_bait_converter.py \u2014 feed this exact tweet format as template"
 }
 ```

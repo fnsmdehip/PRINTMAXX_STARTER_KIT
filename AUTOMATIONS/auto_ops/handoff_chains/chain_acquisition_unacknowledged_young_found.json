@@ -1,0 +1,29 @@
+{
+  "name": "chain_acquisition_unacknowledged_young_found",
+  "created": "2026-03-21T12:40:57.888054",
+  "method": "[ACQUISITION] Unacknowledged young founder",
+  "venture": "BROKERING",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape r/SideProject, r/Entrepreneur, r/IndieBiz for posts: 'gave up', 'shutting down', 'not worth it', 'anyone want to take over', 'built but no users'. Filter: poster age <25 or self-identified young founder.",
+      "output": "young_founder_targets.json"
+    },
+    {
+      "agent": "valuation_scorer",
+      "task": "For each target: estimate asset value (traffic, code quality signals, niche). Flag gap where stated frustration > actual asset value. Score undervaluation 1-10.",
+      "output": "undervalued_targets.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Generate 3 content pieces per batch: (1) Twitter thread 'I found 7 abandoned apps worth $X each \u2014 here is how to spot them', (2) engagement post calling out the gap, (3) outreach template to the founder.",
+      "output": "CONTENT/social/posting_queue/acquisition_content_{date}.txt"
+    },
+    {
+      "agent": "outreach_connector",
+      "task": "For score >= 7: draft cold DM to founder offering to connect them with a buyer or acquire directly. Log to LEDGER/BROKERING_PIPELINE.csv.",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

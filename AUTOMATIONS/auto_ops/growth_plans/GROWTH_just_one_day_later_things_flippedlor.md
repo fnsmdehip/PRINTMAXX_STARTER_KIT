@@ -3,34 +3,33 @@
 loracle.hl(
 @loraclexyz
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0/mo direct — content engagement value only
 
 ---
 
 ## Tactics
 
-1. Whale movement posts get high engagement on crypto Twitter — repost with commentary
-2. Tag original analysts for engagement bait
+1. Reuse the 'one day later things flipped' before/after reversal hook structure in crypto/finance content
+2. Post screenshot-style content showing P&L reversals — high share rate in finance/crypto niches
+3. Pair with PrayerLock or SoberStreak angles: 'discipline > YOLO trades' narrative
 
 ## Budget Tier Strategies
 
 ### FREE
-Repost whale movement data with PRINTMAXX commentary, ride lookonchain engagement waves
+Pass hook structure to engagement_bait_converter.py — extract the reversal narrative template for reuse across finance content posts
 
 ### LOW
-N/A at this tier
+N/A — not worth paid amplification at Phase 0
 
 ### MID
-N/A at this tier
+N/A
 
 ## Daily Actions
 
-- [ ] Route to engagement_bait_converter.py as CONTENT_ONLY (style reusable, no new method)
-- [ ] Generate 1-2 whale-tracking engagement posts for posting queue
-- [ ] No new scripts or ventures — duplicate of already-integrated whale tracking pattern
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'oil short flip: loraclexyz +$588K, RuneKek -$591K overnight' --hook-type reversal --niche finance
 
 ## Tooling
 

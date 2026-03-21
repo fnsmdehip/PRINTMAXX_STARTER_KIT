@@ -1,0 +1,29 @@
+{
+  "name": "chain_ph_launch_google_ai_studio_20_fulls",
+  "created": "2026-03-21T12:40:56.731775",
+  "method": "[PH LAUNCH] Google AI Studio 2.0: Full-stack vibe coding powered by Antigravity + Firebase",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "niche_selector",
+      "task": "Pick top unbuilt niche from app_factory_priority_queue.json",
+      "output": "niche_brief.json"
+    },
+    {
+      "agent": "ai_studio_scaffolder",
+      "task": "Call Gemini 2.0 Flash via AI Studio API to generate HTML/JS/CSS scaffold + Firestore rules",
+      "output": "scaffold_output/"
+    },
+    {
+      "agent": "firebase_provisioner",
+      "task": "Create Firebase project, enable Firestore, get SDK config via firebase MCP",
+      "output": "firebase_config.json"
+    },
+    {
+      "agent": "deployer",
+      "task": "Inject firebase_config into scaffold, surge deploy, update DEPLOYMENT_URLS.md",
+      "output": "deploy_receipt.json"
+    }
+  ],
+  "status": "READY"
+}

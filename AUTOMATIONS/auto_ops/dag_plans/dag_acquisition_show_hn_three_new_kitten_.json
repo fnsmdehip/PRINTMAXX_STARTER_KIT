@@ -1,0 +1,37 @@
+{
+  "name": "integration_acquisition_show_hn_three_new_kitten_",
+  "created": "2026-03-21T12:40:58.738727",
+  "method": "[ACQUISITION] Show HN: Three new Kitten TTS models \u2013 smallest less than 25MB",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "model_load",
+      "steps": [
+        "load_kitten_model_from_cache",
+        "verify_model_integrity"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "batch_generate",
+      "steps": [
+        "read_scripts_from_posting_queue",
+        "chunk_scripts_by_sentence",
+        "generate_audio_parallel"
+      ],
+      "parallel": true,
+      "depends_on": "model_load"
+    },
+    {
+      "name": "merge_and_queue",
+      "steps": [
+        "concatenate_audio_chunks",
+        "write_to_CONTENT_social_audio_queue",
+        "update_posting_queue_with_audio_paths"
+      ],
+      "parallel": false,
+      "depends_on": "batch_generate"
+    }
+  ],
+  "status": "READY"
+}

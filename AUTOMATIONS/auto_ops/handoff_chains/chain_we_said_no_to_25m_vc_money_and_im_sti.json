@@ -1,0 +1,24 @@
+{
+  "name": "chain_we_said_no_to_25m_vc_money_and_im_sti",
+  "created": "2026-03-21T12:40:54.049133",
+  "method": "We said no to $2.5m vc money and I'm still kinda shocked we did it lol Three founders here, plus one assistant who deserves a raise, no full-time hires yet, and the saas is already covering our bills ",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "content_extractor",
+      "task": "Extract specific tactics from bootstrapped SaaS case studies: LinkedIn post formats that convert, SEO keyword patterns for SMB tools, pricing signals ($X/mo sweet spot for agencies)",
+      "output": "saas_content_tactics.json"
+    },
+    {
+      "agent": "engagement_bait_converter",
+      "task": "Convert bootstrapper narrative into 3 tweets + 1 thread + 2 LinkedIn posts positioning PRINTMAXX tools as agency solutions",
+      "output": "posting_queue_batch.json"
+    },
+    {
+      "agent": "seo_content_gen",
+      "task": "Generate 2 longtail pages: 'best tools for small agencies 2026', 'bootstrap saas no vc funding guide'",
+      "output": "longtail_pages/"
+    }
+  ],
+  "status": "READY"
+}

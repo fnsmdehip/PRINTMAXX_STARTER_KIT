@@ -1,41 +1,39 @@
 # Growth Plan: this is one of those stories that sounds fake but is inspira
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $300-1500/mo
+**Revenue Est:** $200-800/mo
 
 ---
 
 ## Tactics
 
-1. Viral short-form transformation content: before (confused about calories) → after (instant AI scan) — highest engagement format on TikTok/Reels
-2. Comment seeding on competitor app review videos with subtle app mention
-3. Reddit pain point replies in r/loseit r/CICO r/caloriecount with app as solution
-4. ASO keyword targeting: calorie AI, food scanner, photo calorie counter
-5. UGC-style screen recordings (no face needed) showing app scanning real meals
+1. Frame every app as underdog story: 'frustrated with [X], built [Y] in [Z] days using AI'
+2. Use Cal AI narrative arc: problem hook (3s) → failed existing tools → AI build twist → result reveal
+3. Never post product demos — post the story behind the product
+4. Cross-post to TikTok, Reels, YouTube Shorts same script
+5. Comment with founder angle on top fitness/habit/productivity app posts
+6. Pin best-performing story content to each app's profile
 
 ## Budget Tier Strategies
 
 ### FREE
-Screen recording viral clips (3/week), Reddit pain point replies, ASO optimization on existing fitness-streak app, cross-post to all platforms from single recording
+Generate 3 founder-story video scripts per app per week via engagement_bait_converter.py. Target completion-rate hooks (Cal AI format): problem statement → unexpected build reveal → download CTA. Organic TikTok/Reels only. Prioritize soberstreak + focuslock (highest story potential).
 
 ### LOW
-$20-50/mo for TikTok Spark Ads boosting top-performing organic clips to 50K+ views
+$20-30/mo: boost top 2 organic story posts per app. Target lookalike audiences of calorie tracking / habit tracker / sobriety app users on Meta.
 
 ### MID
-$100-200/mo for micro-influencer seeding — send free premium to 10 fitness micro-creators (1K-10K followers) for honest review clips
+$75-150/mo: seed 2-3 micro-influencers (50K-200K) in health/productivity to post 'found this indie app built by one person' style content for soberstreak + prayerlock.
 
 ## Daily Actions
 
-- [ ] 1. Scrape top 10 calorie tracker apps for 1-star pain points (slow, inaccurate, expensive subscriptions)
-- [ ] 2. Add AI food scan feature to existing fitness-streak PWA using free Claude vision API (user photos meal → returns calorie estimate)
-- [ ] 3. Gate the AI scan behind freemium wall (3 free scans/day, unlimited at $2.99/week via Stripe)
-- [ ] 4. Create 15 viral short-form video scripts using transformation format: hook (you wont believe how easy this is) → demo (scan real meal in 2 seconds) → CTA (link in bio)
-- [ ] 5. Record screen demos of app scanning meals — no face needed, just hands + phone + food
-- [ ] 6. Post 3x/week across TikTok, Reels, Shorts — queue via posting_queue/
-- [ ] 7. Seed Reddit replies in r/loseit, r/CICO, r/caloriecount when users ask about calorie tracking tools
-- [ ] 8. Apply this viral content playbook template to ALL other app factory apps (streak apps, PrayerLock, etc)
+- [ ] Run engagement_bait_converter.py with Cal AI story as seed template to extract 5 founder-story hooks
+- [ ] Apply 'frustrated-user → AI build → growth' arc to: soberstreak, focuslock, prayerlock, invoiceforge
+- [ ] Write founder_story_content_generator.py: reads app list, generates 3 story-format scripts per app per run, appends to CONTENT/social/posting_queue/
+- [ ] Wire cron: Mon/Wed/Fri 9AM to generate fresh story hooks per app
+- [ ] Track which format (speed-build vs underdog vs problem-focused) drives app store clicks via UTM params
 
 ## Tooling
 
@@ -43,6 +41,6 @@ $100-200/mo for micro-influencer seeding — send free premium to 10 fitness mic
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory + screen_recording_templates + engagement_bait_converter"
+  "content": "engagement_bait_converter.py + content_trend_pipeline.py"
 }
 ```

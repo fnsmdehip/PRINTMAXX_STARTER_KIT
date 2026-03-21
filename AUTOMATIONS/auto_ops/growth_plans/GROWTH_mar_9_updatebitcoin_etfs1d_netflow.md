@@ -3,34 +3,36 @@
 #Bitcoin ETFs:
 1D NetFlow: -5,409 $BTC(-$372.
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-10/mo
+**Revenue Est:** $0-20/mo
 
 ---
 
 ## Tactics
 
-1. Quote-tweet Lookonchain with contrarian take on flows
-2. Thread ETF data with simple bull/bear interpretation for engagement
+1. Post ETF flow summaries with directional commentary (bullish/bearish framing drives shares)
+2. Tag @lookonchain + $BTC $ETH $SOL for algorithmic reach on X
+3. Cross-post to crypto subreddits (r/Bitcoin, r/CryptoCurrency) as market analysis
+4. Thread format: Day-over-day flow change as hook, weekly trend as body, directional take as CTA
 
 ## Budget Tier Strategies
 
 ### FREE
-Repost Lookonchain data with added analysis as engagement bait on crypto Twitter accounts
+Repurpose lookonchain data into 3 posts/week: raw flow numbers + directional take + comparison to prior week. Schedule via posting_queue. Tag relevant accounts for organic reach.
 
 ### LOW
-N/A at this stage
+$0-50/mo — boost top-performing ETF flow posts at $5-10/post to crypto audiences on X
 
 ### MID
-N/A at this stage
+$50-200/mo — sponsor crypto newsletter inclusion with ETF flow data digest as lead magnet
 
 ## Daily Actions
 
-- [ ] Log Lookonchain as recurring high-signal crypto content source in LEDGER/HIGH_SIGNAL_SOURCES.csv
-- [ ] Route this specific data point to CONTENT/social/posting_queue/ as a crypto engagement post
-- [ ] Track weekly ETF flow trends for thread content
+- [ ] Pass ETF netflow data to engagement_bait_converter.py with topic=crypto_etf_flows
+- [ ] Generate 3 post variants: raw data tweet, directional take thread, weekly comparison
+- [ ] Append to CONTENT/social/posting_queue/ for scheduled distribution
 
 ## Tooling
 
@@ -38,6 +40,6 @@ N/A at this stage
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory"
+  "content": "engagement_bait_converter.py"
 }
 ```

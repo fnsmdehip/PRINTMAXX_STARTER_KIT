@@ -1,0 +1,43 @@
+{
+  "name": "integration_gov_contract_the_contractor_shall_prov",
+  "created": "2026-03-21T12:40:57.602557",
+  "method": "[GOV CONTRACT] THE CONTRACTOR SHALL PROVIDE ON-SITE AND OFF-SITE FUNCTIONAL RESOURCES TO SUPPORT THE PRINTING AND GRAPHIC DESIGN SERVICES. (deadline: 2027-02-14)",
+  "venture": "EAS",
+  "phases": [
+    {
+      "name": "scan",
+      "steps": [
+        "scrape beta.sam.gov for NAICS 323111/541430/541820",
+        "parse solicitation PDFs for requirements + deadlines + set-asides"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "qualify",
+      "steps": [
+        "score by contract size",
+        "flag small-biz set-asides",
+        "identify prime contractors on awarded similar contracts"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "generate",
+      "steps": [
+        "auto-generate capability statement template from contract scope",
+        "draft subcontractor outreach email to identified primes"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "route",
+      "steps": [
+        "append to LEDGER/GOV_OPPORTUNITIES.csv",
+        "queue outreach in cold_email pipeline"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
+    }
+  ],
+  "status": "READY"
+}

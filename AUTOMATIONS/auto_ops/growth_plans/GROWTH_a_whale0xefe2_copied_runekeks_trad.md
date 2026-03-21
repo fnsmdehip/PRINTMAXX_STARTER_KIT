@@ -2,36 +2,34 @@
 @RuneKek
 's trades and went long on 
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-25/mo
+**Revenue Est:** $0/mo
 
 ---
 
 ## Tactics
 
-1. whale alert engagement bait format
-2. quote-tweet Lookonchain posts with analysis overlay
-3. reply to whale trackers with our own data
+1. Extract hook structure: 'X copied Y's trade and is already up $Z' — reusable format for ANY portfolio/performance content
+2. Reframe around our actual ventures: 'I copied the top indie hacker's distribution strategy and grew 3x'
 
 ## Budget Tier Strategies
 
 ### FREE
-Post whale copy-trade signals as engagement bait on crypto Twitter, QT Lookonchain/whale tracker accounts, use numbers-heavy format that drives saves/bookmarks
+Pass entry through engagement_bait_converter.py to extract 1-2 posts using the hook format (specific actor + specific numbers + verifiable outcome). Do not build whale tracking infra.
 
 ### LOW
-$0-20/mo boost top-performing whale signal tweets
+N/A — not worth spending budget on crypto signal content for Phase 0
 
 ### MID
-$50-100/mo run whale alert Telegram channel with premium tier
+N/A
 
 ## Daily Actions
 
-- [ ] Create dag_runner script that logs this whale copy-trade oil signal to CONTENT/social/posting_queue/
-- [ ] Format as 2-3 engagement tweets: whale address, position size, PnL if copied early
-- [ ] Route through engagement_bait_converter.py for platform-optimized versions
-- [ ] Queue for posting when crypto niche account is active
+- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --entry 'whale copied trades, $7.7M position, up $1.5M' --extract-hook-only
+- [ ] Output: 1 tweet using 'X copied Y, already up $Z' hook structure applied to our niche
+- [ ] Append to CONTENT/social/posting_queue/
 
 ## Tooling
 
@@ -39,6 +37,6 @@ $50-100/mo run whale alert Telegram channel with premium tier
 {
   "browser": "none",
   "email": "none",
-  "content": "content_factory + engagement_bait_converter"
+  "content": "engagement_bait_converter.py"
 }
 ```

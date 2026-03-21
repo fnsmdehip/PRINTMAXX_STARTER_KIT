@@ -1,0 +1,29 @@
+{
+  "name": "chain_acquisition_i_built_a_group_trip_plann",
+  "created": "2026-03-21T12:40:57.684661",
+  "method": "[ACQUISITION] I built a group trip planner with a Game Boy aesthetic",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "aesthetic_builder",
+      "task": "Apply retro CSS theme (Game Boy, Win95, terminal, or Y2K) to target APP_FACTORY build \u2014 pure CSS overlay, no logic changes",
+      "output": "themed_build/index.html"
+    },
+    {
+      "agent": "screenshot_bot",
+      "task": "Use Playwright to capture styled screenshots at desktop + mobile viewports, produce 3 hero images for posting",
+      "output": "screenshots/aesthetic_*.png"
+    },
+    {
+      "agent": "copy_gen",
+      "task": "Generate r/SideProject post copy emphasizing aesthetic + use case using claude -p, no AI vocabulary, include 'what it does' + 'why retro UI' angle",
+      "output": "reddit_post.md"
+    },
+    {
+      "agent": "distributor",
+      "task": "Post to r/SideProject + r/webdev + r/InternetIsBeautiful + Twitter screenshot thread via Playwright MCP",
+      "output": "distribution_log.json"
+    }
+  ],
+  "status": "READY"
+}

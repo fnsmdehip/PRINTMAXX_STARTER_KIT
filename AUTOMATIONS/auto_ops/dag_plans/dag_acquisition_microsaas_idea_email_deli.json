@@ -1,0 +1,40 @@
+{
+  "name": "integration_acquisition_microsaas_idea_email_deli",
+  "created": "2026-03-21T12:40:58.387740",
+  "method": "[ACQUISITION] MicroSaaS idea: email deliverability checker. Thoughts?",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "build_core",
+      "steps": [
+        "DNS checker: SPF/DKIM/DMARC via dnspython",
+        "RBL blacklist scanner: check 50+ lists via dns.resolver",
+        "SMTP validation: MX record + connection test",
+        "Deliverability score 0-100 aggregator"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "build_product",
+      "steps": [
+        "Static HTML frontend with fetch() calls to Python backend",
+        "Stripe freemium gate (10 checks/day free, $9/mo unlimited)",
+        "Wire into cold outbound pipeline as pre-send hook"
+      ],
+      "parallel": true,
+      "depends_on": "build_core"
+    },
+    {
+      "name": "deploy_distribute",
+      "steps": [
+        "Deploy to surge.sh (existing infra)",
+        "Add to email-tools-compared landing page as featured tool",
+        "Submit to IndieHackers + r/microsaas + ProductHunt (when account created)",
+        "Add cron: nightly self-check on our own cold outbound domains"
+      ],
+      "parallel": false,
+      "depends_on": "build_product"
+    }
+  ],
+  "status": "READY"
+}

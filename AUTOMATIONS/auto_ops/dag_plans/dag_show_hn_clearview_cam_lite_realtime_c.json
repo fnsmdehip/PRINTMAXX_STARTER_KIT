@@ -1,0 +1,38 @@
+{
+  "name": "integration_show_hn_clearview_cam_lite_realtime_c",
+  "created": "2026-03-21T12:41:00.179945",
+  "method": "Show HN: Clearview Cam Lite: Real-time Cam Engine to see through fog-rain-snow",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape HN thread for top comments / use-cases / competitor mentions",
+        "run keyword research subagent for defogging / adverse-weather-camera queries",
+        "check Amazon Associates / B&H for camera affiliate programs"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate SEO article: 'Best AI Camera Defogging Tools 2026 (Free + Paid)'",
+        "generate 3 Twitter threads: (1) how defogging works ELI5, (2) dashcam buyers guide, (3) open-source vs paid",
+        "generate landing page copy for simple web demo tool"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "publish",
+      "steps": [
+        "push article to surge / Netlify site",
+        "add posts to CONTENT/social/posting_queue/",
+        "wire affiliate links into article"
+      ],
+      "parallel": false,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

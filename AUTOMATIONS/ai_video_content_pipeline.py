@@ -38,6 +38,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_ROOT / "LEDGER"
 AUTOMATIONS_DIR = PROJECT_ROOT / "AUTOMATIONS"
 SCRIPTS_DIR = AUTOMATIONS_DIR / "auto_ops" / "video_scripts"
+TOOL_TRACKER_CSV = PROJECT_ROOT / "10_RESEARCH" / "VIDEO_RESEARCH" / "tools_tracker" / "ALL_TOOLS_TRACKER.csv"
 LOGS_DIR = AUTOMATIONS_DIR / "logs"
 LOCK_FILE = AUTOMATIONS_DIR / ".video_pipeline.lock"
 
@@ -49,6 +50,134 @@ TRACKER_HEADERS = [
     "video_status", "posted_at", "views", "clicks", "conversions",
     "revenue", "notes"
 ]
+
+# ============================================================
+# AUTO TOOL SELECTION (Capital Genesis logic)
+# ============================================================
+# Reads ALL_TOOLS_TRACKER.csv and picks the best video gen tools
+# based on quality score, value score, free tier, and API availability.
+# Phase-aware: at $0 revenue, prioritize free tiers and value.
+# This replaces all hardcoded tool recommendations.
+
+# Content type → tool selection criteria
+CONTENT_TYPE_CRITERIA = {
+    "hero": {"min_quality": 9.0, "prefer": "quality"},       # ads, landing page
+    "volume": {"min_quality": 7.0, "prefer": "value"},       # daily social shorts
+    "product_demo": {"min_quality": 8.0, "prefer": "multimodal"},  # product showcase
+    "artistic": {"min_quality": 7.0, "prefer": "creative"},  # stylized content
+    "long_form": {"min_quality": 8.0, "prefer": "length"},   # faceless youtube
+    "default": {"min_quality": 7.0, "prefer": "value"},      # fallback
+}
+
+
+def load_video_tools() -> list:
+    """Load video generation tools from the perpetual tracker, sorted by value."""
+    if not TOOL_TRACKER_CSV.exists():
+        return []
+    tools = []
+    try:
+        with open(TOOL_TRACKER_CSV, "r") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row.get("category") == "video_gen" and row.get("status") != "DECLINING":
+                    tools.append(row)
+    except Exception:
+        return []
+    # Sort by quality_score descending
+    tools.sort(key=lambda t: float(t.get("quality_score", 0)), reverse=True)
+    return tools
+
+
+def select_tools_for_content(content_type: str = "default", max_tools: int = 3) -> list:
+    """Auto-select best video tools based on Capital Genesis logic.
+
+    Phase 0 ($0 revenue): prioritize free tier tools, then cheapest paid.
+    Returns list of dicts with tool_name, quality, prompt_hint, and reason.
+    """
+    tools = load_video_tools()
+    if not tools:
+        # Fallback if tracker unavailable
+        return [
+            {"tool_name": "Kling 3.0", "quality": 9.5, "prompt_hint": "vertical format, engaging, scroll-stopping", "reason": "fallback (tracker unavailable)"},
+            {"tool_name": "Seedance 2.0", "quality": 9.0, "prompt_hint": "9:16 aspect ratio for social media", "reason": "fallback"},
+        ]
+
+    criteria = CONTENT_TYPE_CRITERIA.get(content_type, CONTENT_TYPE_CRITERIA["default"])
+    min_q = criteria["min_quality"]
+
+    # Filter by minimum quality
+    qualified = [t for t in tools if float(t.get("quality_score", 0)) >= min_q]
+    if not qualified:
+        qualified = tools[:5]  # take top 5 if none meet threshold
+
+    # Score each tool for this content type (Capital Genesis Phase 0 logic)
+    scored = []
+    for t in qualified:
+        quality = float(t.get("quality_score", 5))
+        has_free = "free" in str(t.get("free_tier", "")).lower() or "yes" in str(t.get("free_tier", "")).lower() or "credit" in str(t.get("free_tier", "")).lower()
+        has_api = t.get("api_available", "").lower() in ("yes", "true", "yes (self-host)")
+
+        # Phase 0 scoring: free tier is king, then quality, then API
+        score = quality * 0.35
+        if has_free:
+            score += 3.0  # massive bonus for free tier at Phase 0
+        if has_api:
+            score += 1.5  # bonus for automation potential
+
+        # Content-type-specific boosts
+        if criteria["prefer"] == "quality":
+            score += quality * 0.15  # extra quality weight for hero content
+        elif criteria["prefer"] == "value":
+            if has_free:
+                score += 1.0  # extra free tier bonus for volume
+        elif criteria["prefer"] == "multimodal":
+            if "multimodal" in t.get("best_for", "").lower() or "reference" in t.get("best_for", "").lower():
+                score += 2.0
+        elif criteria["prefer"] == "length":
+            max_len = t.get("max_length", "")
+            if "min" in max_len or "2min" in max_len:
+                score += 2.0
+
+        scored.append((t, round(score, 2)))
+
+    scored.sort(key=lambda x: x[1], reverse=True)
+
+    # Build result
+    result = []
+    for t, score in scored[:max_tools]:
+        result.append({
+            "tool_name": t["tool_name"],
+            "quality": t.get("quality_score", "?"),
+            "free_tier": t.get("free_tier", "none"),
+            "api_cost": t.get("api_cost_per_sec", "n/a"),
+            "prompt_hint": f"{t.get('best_for', '')}. {t.get('notes', '')[:80]}",
+            "reason": f"score={score}, quality={t.get('quality_score')}, free={t.get('free_tier', 'no')[:30]}",
+        })
+    return result
+
+
+def get_recommended_tools_string(content_type: str = "default") -> str:
+    """Get a formatted string of recommended tools for script output."""
+    tools = select_tools_for_content(content_type)
+    parts = []
+    for t in tools:
+        free_note = f" ({t['free_tier']})" if t.get("free_tier") and t["free_tier"] != "none" else ""
+        parts.append(f"{t['tool_name']}{free_note}")
+    return ", ".join(parts)
+
+
+def get_tool_prompts(content_type: str, topic: str, style: str, tone: str, duration: int) -> str:
+    """Generate tool-specific prompts for the top-ranked tools."""
+    tools = select_tools_for_content(content_type)
+    prompts = []
+    for t in tools:
+        name = t["tool_name"]
+        prompts.append(
+            f'**{name} Prompt:**\n'
+            f'"{topic}. Style: {style}. Mood: {tone}. '
+            f'{duration} seconds, 9:16 vertical, scroll-stopping."'
+        )
+    return "\n\n".join(prompts)
 
 # ============================================================
 # NICHE PRESETS
@@ -393,7 +522,7 @@ def generate_script(niche: str, topic: str, config: dict) -> dict:
         "video_style": config.get("video_style", ""),
         "hashtags": config.get("hashtags", ""),
         "aspect_ratio": "9:16",
-        "recommended_tools": "Seedance 2.0 (free), Kling 2.6 (free tier), Pika 2.5",
+        "recommended_tools": get_recommended_tools_string("volume"),
         "platforms": "TikTok, Instagram Reels, YouTube Shorts, Facebook Reels",
         "generated_at": datetime.now().isoformat(),
     }
@@ -593,11 +722,7 @@ def generate_batch(niche: str, count: int) -> list:
 
 **Visual Style:** {script['video_style']}
 
-**Seedance 2.0 Prompt:**
-"Create a {script['est_duration_seconds']}-second vertical video about {script['topic']}. Style: {script['video_style']}. Mood: {config['tone']}. 9:16 aspect ratio for social media."
-
-**Kling 2.6 Prompt:**
-"{script['topic']}. {config['video_style']}. vertical format, engaging, scroll-stopping."
+{get_tool_prompts('volume', script['topic'], script['video_style'], config['tone'], script['est_duration_seconds'])}
 
 **Hashtags:** {script['hashtags']}
 """
@@ -837,8 +962,10 @@ Examples:
                 print(f"  CTA: {sample['cta']}")
                 print(f"\n  Full scripts in: {sample.get('script_file', SCRIPTS_DIR)}")
                 print(f"\nNext steps:")
-                print(f"  1. Open script file and copy the Seedance/Kling prompt")
-                print(f"  2. Generate video on Xiao Yunque (free) or Kling (66 free credits/day)")
+                top_tools = select_tools_for_content("volume", max_tools=2)
+                tool_names = " or ".join(t["tool_name"] for t in top_tools)
+                print(f"  1. Open script file and copy the AI video tool prompt")
+                print(f"  2. Generate video on {tool_names} (auto-selected by Capital Genesis ranking)")
                 print(f"  3. Add captions in CapCut")
                 print(f"  4. Upload to TikTok, Reels, Shorts")
                 print(f"  5. Set affiliate link in bio")

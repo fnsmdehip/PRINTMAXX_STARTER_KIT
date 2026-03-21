@@ -1,0 +1,36 @@
+{
+  "name": "integration_real_examples_of_what_sweaty_startups_ha",
+  "created": "2026-03-21T12:40:49.324222",
+  "method": "Real examples of what sweaty startups have sold for (pulled from real deals)",
+  "venture": "RESEARCH",
+  "phases": [
+    {
+      "name": "scrape",
+      "steps": [
+        "reddit_json_api: scrape r/sweatystartup posts with keywords: sold, selling, exit, acquired, bought, offer, asking",
+        "filter: posts containing dollar amounts + business sale language"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "extract",
+      "steps": [
+        "llm_parse: extract structured fields (business_type, annual_revenue, sale_price, multiple, seller_context)",
+        "dedup_check: skip if deal already in LEDGER/sweaty_deals.csv"
+      ],
+      "parallel": false,
+      "depends_on": "scrape"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "content_factory: generate 3 viral posts per deal ('real example: [business type] sold for [X]x revenue')",
+        "product_updater: append to digital product deal database CSV",
+        "engagement_bait_converter: route best deals to posting queue"
+      ],
+      "parallel": true,
+      "depends_on": "extract"
+    }
+  ],
+  "status": "READY"
+}

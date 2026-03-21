@@ -1,45 +1,47 @@
 # Growth Plan: The chillest business you can run right now is building AI U
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $200-800/mo
+**Revenue Est:** $300-900/mo (2-3 pages at $150-300/page realistic, discounted 60% from stated $500-2k)
 
 ---
 
 ## Tactics
 
-1. cross-promote between faith/fitness/tech pages
-2. engagement warming on new pages before monetizing
-3. repost viral UGC formats from competitor pages with AI-generated variants
-4. comment engagement on brand posts to build relationship before pitching affiliate
+1. Start 3 pages simultaneously across different niches to find winner faster
+2. Use engagement warming on new pages (comment pods via existing accounts)
+3. Cross-promote pages from each other to bootstrap follower transfer
+4. Stagger posting times to avoid algorithmic suppression of same-account patterns
+5. Repost top-performing UGC from organic creators (with credit) to seed algorithmic trust
+6. Reply to all comments within first 30 min of posting to boost early engagement signal
 
 ## Budget Tier Strategies
 
 ### FREE
-Organic posting 2-3x/day per page, engagement warming (like/comment on 20 posts/day), cross-promote between owned pages, repurpose top performers across platforms
+3 pages, claude -p UGC scripts, FB/IG Graph API scheduling (free tier), affiliate links from programs already in LEDGER/CREATOR_PROGRAMS.csv, cross-promote between pages, manual brand outreach once threshold hit
 
 ### LOW
-$10-30/mo boosting top-performing posts to build initial follower base faster
+$0-50/mo: $20-30 boost on top-performing posts to hit retainer-ready engagement thresholds faster, sign up 2-3 higher-commission affiliate programs (ConvertKit, SEMrush)
 
 ### MID
-$50-150/mo targeted ads to grow pages to 5K+ followers threshold where brands take you seriously for retainers
+$50-200/mo: paid micro-influencer shoutouts ($50-100 each) to seed 5 pages simultaneously, GoLogin for multi-account management, SOAX proxies for account isolation
 
 ## Daily Actions
 
-- [ ] 1. BLOCKER: Human must create FB/IG pages for each niche (faith, fitness, tech) — add to ACCOUNT_CREATION_NOW.md
-- [ ] 2. Wire existing content_factory to generate AI UGC content batches (images + short captions) for FB/IG format
-- [ ] 3. Build ai_ugc_affiliate_brand_matcher.py — scrapes affiliate directories for brands with FB/IG affiliate programs in our niches
-- [ ] 4. Run engagement warming protocol on new pages (20 days minimum before monetization pitches)
-- [ ] 5. Apply to matched affiliate programs once pages hit 1K followers
-- [ ] 6. Track per-page revenue in LEDGER/REVENUE_STREAMS_TRACKER.csv
+- [ ] Route to existing chain_the_chillest_business_you_can_run_right_ — wire new DAG into it
+- [ ] Create ai_ugc_affiliate_page_manager.py with FB/IG Graph API posting + claude -p content gen
+- [ ] Pull affiliate programs from LEDGER/CREATOR_PROGRAMS.csv for link injection
+- [ ] Set engagement threshold trigger: 1K engagements/week → auto-fire brand retainer outreach
+- [ ] Cron at 7AM daily: generate 30 scripts across 3 niches, schedule 6 posts/page/day
+- [ ] Track in KPI_DASHBOARD.md: pages active, avg engagement, retainer pipeline
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
-  "email": "custom cold email scripts for affiliate outreach",
-  "content": "content_factory + image_factory + video_factory (existing)"
+  "browser": "playwright (FB/IG Graph API preferred, browser fallback for setup only)",
+  "email": "existing cold_email scripts for brand outreach",
+  "content": "claude -p for UGC script generation + engagement_bait_converter.py for repurposing winners"
 }
 ```

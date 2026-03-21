@@ -1,0 +1,24 @@
+{
+  "name": "chain_acquisition_i_analyzed_600_verified_s",
+  "created": "2026-03-21T12:40:58.150013",
+  "method": "[ACQUISITION] I analyzed 600+ verified SaaS revenue reports. Here are the \"boring\" ideas quietly making $10K-$900K per month that nobo [rev: $$10]",
+  "venture": "RESEARCH",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape r/microsaas, r/SaaS, r/indiehackers for posts containing revenue figures ($X MRR, $X/mo, $X ARR). Use Reddit JSON API (no browser). Extract: title, stated revenue, SaaS category, tech stack mentions, solo vs team, niche keyword.",
+      "output": "microsaas_revenue_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each SaaS idea on: (1) boring factor (low hype = good), (2) stated MRR reliability (verified flair, screenshots, consistent post history = higher), (3) competition density (grep COMPETITIVE_INTEL_MASTER.csv), (4) vibe-codeable in <48h, (5) fits our stack (web app, PWA, or landing+Stripe). Discount stated revenue 60%. Filter to ideas with discounted MRR >$2K and competition <5 known players.",
+      "output": "microsaas_qualified.json"
+    },
+    {
+      "agent": "router",
+      "task": "Route qualified ideas: (a) if app_factory_priority_queue already has similar \u2192 update priority score with revenue validation, (b) if novel niche \u2192 add to ALPHA_STAGING as APP-type alpha, (c) generate 2 tweets per top-3 ideas (engagement bait: 'boring SaaS making $X/mo that nobody talks about')",
+      "output": "microsaas_routed.json"
+    }
+  ],
+  "status": "READY"
+}

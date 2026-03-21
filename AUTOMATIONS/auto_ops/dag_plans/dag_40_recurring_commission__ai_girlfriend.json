@@ -1,0 +1,40 @@
+{
+  "name": "integration_40_recurring_commission__ai_girlfriend",
+  "created": "2026-03-21T12:40:49.659429",
+  "method": "40% recurring commission \u2014 AI Girlfriend SaaS affiliate program (starting from $",
+  "venture": "MONETIZE",
+  "phases": [
+    {
+      "name": "program_research",
+      "steps": [
+        "scrape r/Affiliatemarketing for AI companion affiliate threads",
+        "identify top 5 programs with 40%+ recurring (Replika, DreamGF, EVA AI, Candy.ai, Character.ai alternatives)",
+        "extract: commission rate, cookie window, payment terms, signup URL"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate 5 comparison landing pages: 'Top AI Girlfriend Apps Ranked'",
+        "generate 10 longtail review pages per program",
+        "generate 3 email sequences for AI tools niche"
+      ],
+      "parallel": true,
+      "depends_on": "program_research"
+    },
+    {
+      "name": "deploy_and_distribute",
+      "steps": [
+        "inject affiliate links with FTC disclosure into all pages",
+        "deploy to surge.sh",
+        "add to sitemap + ping Google",
+        "run engagement_bait_converter.py on top 3 pages \u2192 Twitter threads + Reddit posts",
+        "add KPI tracking row to KPI_DASHBOARD.md"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

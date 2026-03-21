@@ -2,38 +2,39 @@
 
 In the past 3 d
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-100/mo indirect via crypto audience → followers → sponsorship/affiliate
+**Revenue Est:** $50-300/mo indirect (exchange affiliate CPAs + sponsor DMs once 5K+ crypto followers)
 
 ---
 
 ## Tactics
 
-1. Quote-tweet Lookonchain/WhaleAlert posts with our own analysis angle within 15 min of their post (speed = reach)
-2. Reply to whale alert accounts with additional context (wallet history, pattern) to siphon their audience
-3. Cross-post whale alerts to r/cryptocurrency, r/solana, r/memecoin for Reddit traffic
-4. Tag relevant token communities in whale alerts to trigger their engagement armies
+1. Post whale alert threads with Arkham explorer link — get QTs from crypto influencers
+2. Engage reply to lookonchain, onchain_lens, whale_alert accounts to leech their reach
+3. Stack exchange affiliate links (Bybit, OKX) in whale alert bio + pinned tweet
+4. Cross-post to crypto subreddits (r/CryptoCurrency, r/solana) on big moves
 
 ## Budget Tier Strategies
 
 ### FREE
-Scrape free on-chain data, auto-generate whale alert posts, reply-chain under Lookonchain/WhaleAlert/ZachXBT posts with faster analysis, cross-post to Reddit crypto subs, use engagement bait converter for hook optimization
+Monitor lookonchain Twitter via RSS feed scraper. Auto-post whale move threads to crypto account. Reply to top whale alert posts to drive followers.
 
 ### LOW
-$10-20/mo for Birdeye or Dexscreener pro API for faster data, boosted tweets on highest-engagement whale alerts
+$0-50/mo — Arkham Intel API basic tier for direct on-chain data. Slightly faster signal than scraping lookonchain.
 
 ### MID
-$50-100/mo for Arkham Intel subscription + paid tweet promotion on breakout whale alerts that hit 10K+ organic impressions
+$50-200/mo — Add Nansen smart money feed. Run exchange affiliate links (Bybit = $30-50 CPA per deposit). Promote via crypto micro-influencer QTs at $20-50/post.
 
 ## Daily Actions
 
-- [ ] Create whale_alert_content_generator.py that scrapes free Solscan/Birdeye APIs for large wallet movements (>$500K)
-- [ ] Format whale movements into engagement-optimized tweet templates: emoji-heavy, dollar amounts prominent, wallet links, speculation hooks
-- [ ] Route generated posts to CONTENT/social/posting_queue/ for twitter_warmup_poster.py to pick up
-- [ ] Add cron every 4 hours to catch whale movements in near-real-time
-- [ ] Add KPI task: track crypto content engagement rate vs other niches, kill if <1% engagement after 30 days
+- [ ] Check if whale_alert_content_generator.py already exists — if yes, add this wallet address as a tracked address config, do NOT create duplicate
+- [ ] If script does not exist: build hourly scraper that hits lookonchain Twitter RSS or Arkham public explorer for wallet 24BLFjSAcUPPWs8F7nhwthfRPvh5mopNYfu5WXTkLChr
+- [ ] On new move detected (>$500K swap): call engagement_bait_converter.py to generate crypto thread template with specific numbers and Arkham link
+- [ ] Append generated post to CONTENT/social/posting_queue/ for manual review before posting
+- [ ] Add cron entry: 0 * * * * hourly whale check
+- [ ] Wire exchange affiliate links (Bybit, OKX) into content template footer
 
 ## Tooling
 
@@ -41,6 +42,6 @@ $50-100/mo for Arkham Intel subscription + paid tweet promotion on breakout whal
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "engagement_bait_converter.py + content posting queue"
 }
 ```

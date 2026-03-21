@@ -4,43 +4,46 @@ loracle.hl (
 @loraclexyz
 ) is short
 
-**Created:** 2026-03-20 18:35
-**Venture:** RESEARCH
+**Created:** 2026-03-21 12:40
+**Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-25/mo
+**Revenue Est:** $0-15/mo
 
 ---
 
 ## Tactics
 
-1. Crypto Twitter QTs on whale moves with chart screenshots
-2. Tag original signal accounts for engagement farming
+1. Post whale position updates as reaction content — 'loracle down $1.24M on oil short' format drives engagement in crypto Twitter
+2. Add hypurrscan wallet addresses to watchlist for recurring content on same whales
+3. Tie oil price macro moves (CPI, Fed, OPEC) to on-chain perp positioning for compound hooks
+4. Quote-tweet lookonchain.com and hypurrscan directly — borrows existing audience trust
 
 ## Budget Tier Strategies
 
 ### FREE
-QT lookonchain-style whale alerts with PRINTMAXX branding, post to crypto subreddits
+Scrape hypurrscan.io whale position pages via Playwright, parse PnL changes, pipe into engagement_bait_converter.py — 3 posts per major position move. Zero cost.
 
 ### LOW
-$0-20/mo for proxy rotation if hypurrscan rate-limits
+$0-50/mo — boost top-performing whale content posts with $5-10 Twitter ads targeting crypto traders
 
 ### MID
-N/A - not worth paid scaling until crypto niche validated
+$50-200/mo — integrate Hyperliquid public API for real-time alerts, autopost within minutes of large position changes
 
 ## Daily Actions
 
-- [ ] Build hyperliquid_whale_scraper.py using requests against hypurrscan.io public API
-- [ ] Track wallets with >$1M positions on commodity perps (CL, etc.)
-- [ ] Log to LEDGER/WHALE_SIGNALS.csv with columns: timestamp, wallet, asset, direction, size_usd, pnl_usd
-- [ ] Route notable P&L swings (>$500K) to CONTENT/social/posting_queue/ as signal threads
-- [ ] Cron at 7:30 AM daily
+- [ ] Check if existing oil/crypto whale scraper already exists in AUTOMATIONS/ before creating new script (dedup gate)
+- [ ] If none exists: write hyperliquid_whale_content_generator.py — fetch hypurrscan.io top perp positions via Playwright, parse wallet PnL changes >$500K
+- [ ] For each large position event, call engagement_bait_converter.py with the whale data as input
+- [ ] Append generated posts to CONTENT/social/posting_queue/
+- [ ] Schedule cron 8 AM daily — morning crypto audience peak
+- [ ] Add KPI entry: daily check for new whale-content posts in queue
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
+  "browser": "Playwright MCP (scrape hypurrscan.io)",
   "email": "none",
-  "content": "content_factory for signal threads"
+  "content": "engagement_bait_converter.py"
 }
 ```

@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_optimo_effortless_media_opt",
+  "created": "2026-03-21T12:40:55.814798",
+  "method": "[PH LAUNCH] optimo: effortless media optimizer for the web",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH daily launches \u2014 extract product name, founder Twitter/email, category, upvote count, tagline",
+      "output": "ph_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter: upvotes >= 50 OR category in [developer-tools, productivity, saas, design-tools, marketing]. Score founder reachability (Twitter DM open, email in bio, maker page)",
+      "output": "ph_qualified_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold outreach referencing their specific launch + offer EAS/content/SEO angle. Route to cold_email_pipeline.py or twitter_dm_outreach.py",
+      "output": "ph_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

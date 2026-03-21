@@ -1,2 +1,21 @@
 subreddit_id,subreddit_name,reddit_url,category,focus_area,signal_quality,research_frequency,launch_friendly,self_promotion_allowed,member_count,last_checked,notes,auto_monitor
 SUB001,r/SideProject,https://reddit.com/r/SideProject,PRODUCT_LAUNCH,Side project launches validation,HIGHEST,Daily,TRUE,TRUE,430K,,Perfect for app launches. Real feedback from builders.,TRUE
+SUB002,r/SaaS,https://reddit.com/r/SaaS,SAAS,SaaS building revenue tactics,HIGHEST,Daily,TRUE,TRUE,120K,,SaaS revenue tactics. Real founder discussions.,TRUE
+SUB003,r/Entrepreneur,https://reddit.com/r/Entrepreneur,BUSINESS,Business ideas revenue tactics,HIGH,Daily,FALSE,FALSE,3.5M,,Large community. Mixed signal but volume compensates.,TRUE
+SUB004,r/indiehackers,https://reddit.com/r/indiehackers,INDIE,Indie hacking building revenue,HIGHEST,Daily,TRUE,TRUE,85K,,Core indie hacker community. High signal.,TRUE
+SUB005,r/juststart,https://reddit.com/r/juststart,CONTENT,Content sites SEO affiliate,HIGH,Daily,FALSE,FALSE,75K,,SEO and content monetization. Realistic revenue data.,TRUE
+SUB006,r/microsaas,https://reddit.com/r/microsaas,SAAS,Micro SaaS solo founder,HIGHEST,Daily,TRUE,TRUE,45K,,Micro SaaS builders. Perfect for our scale.,TRUE
+SUB007,r/artificial,https://reddit.com/r/artificial,AI,AI tools and developments,MEDIUM,Daily,FALSE,FALSE,1.2M,,AI news and tools. Filter for practical alpha.,TRUE
+SUB008,r/ChatGPT,https://reddit.com/r/ChatGPT,AI,ChatGPT prompting automation,HIGH,Daily,FALSE,FALSE,5M,,Prompt engineering. AI workflow automation.,TRUE
+SUB009,r/ClaudeAI,https://reddit.com/r/ClaudeAI,AI,Claude AI development MCP,HIGHEST,Daily,FALSE,FALSE,200K,,Claude ecosystem. MCP tools. Direct competitor intel.,TRUE
+SUB010,r/webdev,https://reddit.com/r/webdev,DEV,Web development tools frameworks,MEDIUM,Daily,FALSE,FALSE,2.1M,,Web dev trends. Tool discovery.,TRUE
+SUB011,r/digital_marketing,https://reddit.com/r/digital_marketing,MARKETING,Digital marketing tactics,HIGH,Daily,FALSE,FALSE,250K,,Marketing tactics. Growth alpha.,TRUE
+SUB012,r/Affiliatemarketing,https://reddit.com/r/Affiliatemarketing,AFFILIATE,Affiliate marketing programs commissions,HIGH,Daily,FALSE,FALSE,180K,,Affiliate program intel. Commission rates. Real numbers.,TRUE
+SUB013,r/passive_income,https://reddit.com/r/passive_income,INCOME,Passive income methods real,MEDIUM,Daily,FALSE,FALSE,600K,,Passive income methods. Filter aggressively for real alpha.,TRUE
+SUB014,r/beermoney,https://reddit.com/r/beermoney,INCOME,Side income micro earning methods,MEDIUM,Daily,FALSE,FALSE,900K,,Micro earning methods. Some hidden gems in volume.,TRUE
+SUB015,r/slavelabour,https://reddit.com/r/slavelabour,FREELANCE,Freelance micro jobs demand signals,HIGH,Daily,FALSE,FALSE,350K,,Real demand signals. What people pay for RIGHT NOW.,TRUE
+SUB016,r/startups,https://reddit.com/r/startups,STARTUP,Startup building tactics revenue,HIGH,Daily,FALSE,FALSE,1.5M,,Startup tactics. Funding intel. Market signals.,TRUE
+SUB017,r/AppBusiness,https://reddit.com/r/AppBusiness,APP,App monetization ASO downloads,HIGHEST,Daily,TRUE,TRUE,25K,,App business tactics. ASO. Revenue. Our exact niche.,TRUE
+SUB018,r/flippinng,https://reddit.com/r/Flipping,ECOM,Flipping resale arbitrage,MEDIUM,Daily,FALSE,FALSE,400K,,Arbitrage and resale alpha.,TRUE
+SUB019,r/WorkOnline,https://reddit.com/r/WorkOnline,REMOTE,Remote work online income,MEDIUM,Daily,FALSE,FALSE,750K,,Online income methods. Filter for automated methods.,TRUE
+SUB020,r/LocalLLaMA,https://reddit.com/r/LocalLLaMA,AI,Local AI models deployment,HIGH,Daily,FALSE,FALSE,350K,,Local AI deployment. Cost reduction alpha.,TRUE

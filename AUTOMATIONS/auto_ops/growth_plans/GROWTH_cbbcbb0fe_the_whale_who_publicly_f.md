@@ -2,36 +2,36 @@
 @Cbb0fe
 ), the whale who publicly formed a team to hunt
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-25/mo
+**Revenue Est:** $0/mo direct. Engagement value only.
 
 ---
 
 ## Tactics
 
-1. Post whale loss/gain threads during peak crypto Twitter hours (7AM, 7PM EST)
-2. Quote-tweet Lookonchain with added analysis for engagement farming
-3. Use loss porn framing for virality — large losses get more engagement than wins
+1. Post whale rekt content during peak crypto hours (8-10am EST / 8-10pm EST)
+2. Use #CL #oil #crypto #whale #perps hashtags for discovery
+3. Frame as 'market drama' not financial advice to avoid regulatory flags
+4. Quote-tweet original lookonchain post with added commentary angle
 
 ## Budget Tier Strategies
 
 ### FREE
-Repost whale data with added commentary on printmaxxer Twitter, use engagement bait converter for hook optimization, cross-post to Reddit r/cryptocurrency
+One engagement_bait_converter.py call with whale drama template: 'Team formed to hunt a whale just got hunted instead — $3.81M down on oil shorts. Liquidation at $120.76. Drama thread.' — route output to posting_queue/. No new files.
 
 ### LOW
-$0-20/mo for Twitter Blue checkmark to boost reply visibility on Lookonchain threads
+N/A — not worth paid distribution for $0 direct revenue method
 
 ### MID
-$50-100/mo for scheduling tool + multi-account cross-promotion of whale threads
+N/A
 
 ## Daily Actions
 
-- [ ] Route to existing whale tracking content chain
-- [ ] Add Hypurrscan as scrape source alongside existing on-chain data sources
-- [ ] Generate 1-2 whale position threads daily using engagement bait converter
-- [ ] Post during peak crypto hours via twitter_warmup_poster.py
+- [ ] Call: python3 AUTOMATIONS/engagement_bait_converter.py --input 'CBB whale shorted $13.78M oil, down $3.81M, liq at $120.76' --template whale_drama --output CONTENT/social/posting_queue/
+- [ ] Review generated post in posting_queue/ before publishing
+- [ ] Do NOT create new venture, DAG, chain, or script — this pattern is already covered
 
 ## Tooling
 
@@ -39,6 +39,6 @@ $50-100/mo for scheduling tool + multi-account cross-promotion of whale threads
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "engagement_bait_converter.py"
 }
 ```

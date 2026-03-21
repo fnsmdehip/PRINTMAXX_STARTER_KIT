@@ -100,6 +100,7 @@ ALPHA_CSV = LEDGER / "ALPHA_STAGING.csv"
 METHOD_DISCOVERY_CSV = LEDGER / "METHOD_DISCOVERY_LOG.csv"
 LANE_STATUS_CSV = LEDGER / "CAPITAL_GENESIS_LANE_STATUS.csv"
 MASTER_OPS_CACHE = AUTOMATIONS / "master_ops_cache.json"
+TOOL_TRACKER_CSV = PROJECT / "10_RESEARCH" / "VIDEO_RESEARCH" / "tools_tracker" / "ALL_TOOLS_TRACKER.csv"
 
 OUTPUT_MD = OPS / "CAPITAL_GENESIS_PRIORITY_STACK.md"
 OUTPUT_CSV = LEDGER / "CAPITAL_GENESIS_RANKINGS.csv"
@@ -109,26 +110,28 @@ OUTPUT_CSV = LEDGER / "CAPITAL_GENESIS_RANKINGS.csv"
 # ---------------------------------------------------------------------------
 
 WEIGHTS = {
-    "revenue_potential": 0.25,
-    "speed_to_revenue": 0.20,
-    "downside_risk": 0.15,
-    "automation_potential": 0.15,
+    "revenue_potential": 0.22,
+    "speed_to_revenue": 0.18,
+    "downside_risk": 0.12,
+    "automation_potential": 0.13,
     "synergy_score": 0.10,
     "upfront_cost": 0.10,
     "liability_risk": 0.05,
+    "opportunity_window": 0.10,  # Time-decay: short window = higher urgency boost
 }
 
 # Phase-aware weight overrides: at $0 revenue, speed and low cost matter most.
 # At scale, risk management and synergy matter more.
 PHASE_WEIGHTS = {
-    0: {  # $0 revenue -- speed sprint
-        "revenue_potential": 0.20,
-        "speed_to_revenue": 0.30,
-        "downside_risk": 0.10,
+    0: {  # $0 revenue -- speed sprint + window urgency
+        "revenue_potential": 0.15,
+        "speed_to_revenue": 0.25,
+        "downside_risk": 0.08,
         "automation_potential": 0.10,
         "synergy_score": 0.05,
-        "upfront_cost": 0.20,
+        "upfront_cost": 0.17,
         "liability_risk": 0.05,
+        "opportunity_window": 0.15,  # Windows matter MORE at $0 — can't afford to miss
     },
     1: WEIGHTS,  # $1-1k/mo -- balanced (default)
     3: {  # $1k-5k/mo -- favor automation and synergy
@@ -716,8 +719,59 @@ def score_synergy(method: dict) -> tuple[float, list[str]]:
     return max(1.0, min(10.0, base)), fed_ventures
 
 
+def _get_cheapest_tool_cost(category_keywords: list[str]) -> float:
+    """Read ALL_TOOLS_TRACKER.csv and return the cheapest tool cost for a category.
+
+    Used to dynamically adjust venture cost estimates based on actual tool pricing.
+    If free tools exist for the category, returns 0.
+    """
+    if not TOOL_TRACKER_CSV.exists():
+        return -1  # signal: tracker unavailable, use defaults
+    try:
+        with open(TOOL_TRACKER_CSV, "r") as f:
+            reader = csv.DictReader(f)
+            min_cost = 999.0
+            for row in reader:
+                tool_cat = row.get("category", "").lower()
+                status = row.get("status", "").upper()
+                if status == "DECLINING":
+                    continue
+                if not any(kw in tool_cat for kw in category_keywords):
+                    continue
+                # Check free tier
+                free = str(row.get("free_tier", "")).lower()
+                if "free" in free or "yes" in free or "credit" in free:
+                    return 0.0
+                # Parse price
+                price_str = str(row.get("price_from", "0"))
+                price_num = re.sub(r"[^\d.]", "", price_str)
+                if price_num:
+                    try:
+                        cost = float(price_num)
+                        min_cost = min(min_cost, cost)
+                    except ValueError:
+                        pass
+            return min_cost if min_cost < 999 else -1
+    except Exception:
+        return -1
+
+
+# Venture categories that use specific tool types
+_VENTURE_TOOL_MAP = {
+    "CONTENT_FARM": ["video_gen", "video_edit", "scheduling"],
+    "CONTENT_FORMAT": ["video_gen", "video_edit", "scheduling"],
+    "AI_INFLUENCER": ["video_gen", "avatar", "voice"],
+    "AFFILIATE": ["video_gen", "video_edit", "scheduling"],
+    "POD_TIKTOK_ARBITRAGE": ["video_gen", "video_edit"],
+}
+
+
 def score_upfront_cost(method: dict) -> tuple[float, float]:
-    """Score 1-10 (inverted: $0=10, $1000+=1). Returns (score, estimated_cost)."""
+    """Score 1-10 (inverted: $0=10, $1000+=1). Returns (score, estimated_cost).
+
+    Now reads actual tool costs from ALL_TOOLS_TRACKER.csv for content/video ventures.
+    If free tools exist, content ventures score $0 upfront cost automatically.
+    """
     tactic = str(method.get("tactic", "")).lower()
     category = str(method.get("category", "")).upper()
 
@@ -733,6 +787,15 @@ def score_upfront_cost(method: dict) -> tuple[float, float]:
             estimated_cost = min(costs)
         except (ValueError, TypeError):
             pass
+
+    # Dynamic tool cost lookup: check if this venture type uses tools we track
+    if estimated_cost == 0.0 and category in _VENTURE_TOOL_MAP:
+        tool_keywords = _VENTURE_TOOL_MAP[category]
+        tool_cost = _get_cheapest_tool_cost(tool_keywords)
+        if tool_cost >= 0:
+            estimated_cost = tool_cost  # Use actual cheapest tool cost (may be 0 if free tiers exist)
+            if tool_cost == 0:
+                return 10.0, 0.0  # Free tools available → maximum cost score
 
     # Category-based cost defaults if no explicit cost found
     if estimated_cost == 0.0:
@@ -807,6 +870,57 @@ def score_liability_risk(method: dict) -> float:
     greens = sum(1 for s in green_flags if s in tactic)
 
     return max(1.0, min(10.0, base - reds * 0.5 + greens * 0.3))
+
+
+def score_opportunity_window(method: dict) -> float:
+    """Score 1-10 based on how time-sensitive the opportunity is.
+
+    Higher score = shorter window = more urgent.
+    10 = expires in days (EDGAR 8-K filing, funding announcement)
+    8 = expires in weeks (trending tool, viral method)
+    6 = expires in 1-6 months (AI influencer early mover advantage)
+    4 = expires in 6-24 months (market trend, saturation approaching)
+    2 = evergreen (SEO, content marketing, SaaS fundamentals)
+    """
+    tactic = str(method.get("tactic", "")).lower()
+    source = str(method.get("source", "")).lower()
+    category = str(method.get("category", "")).upper()
+
+    # Source-based urgency — SEC filings and funding signals expire fast
+    if "sec_edgar" in source or "8-k" in tactic:
+        return 9.5  # Days — companies in transition move fast
+    if "crunchbase" in source or "funding" in tactic or "raised" in tactic:
+        return 8.5  # Days to weeks — outreach while news is fresh
+    if "product_hunt" in source or "ph launch" in tactic.lower():
+        return 9.0  # 48h outreach window
+
+    # Category-based window
+    window_map = {
+        "AI_INFLUENCER": 6.5,   # 6-24 months before saturation
+        "GROWTH_HACK": 6.0,     # Methods get copied fast
+        "ECOM_ARB": 7.0,        # Arbitrage windows close
+        "BROKERING": 5.0,       # Moderate window
+        "TOOL_ALPHA": 7.5,      # First mover on new tools
+        "CONTENT_FARM": 4.0,    # Longer window
+        "NEWSLETTER": 3.0,      # Evergreen
+        "SAAS": 3.0,            # Evergreen
+        "SEO_GEO_ASO": 3.5,    # Slow burn
+        "DIGITAL_PRODUCTS": 3.0, # Evergreen
+    }
+    base = window_map.get(category, 5.0)
+
+    # Keyword-based urgency boosts
+    urgent_kw = ["just raised", "just launched", "breaking", "today",
+                 "this week", "24h", "48h", "limited", "closing",
+                 "deadline", "before it", "window", "early mover",
+                 "first mover", "trending", "viral", "blowing up"]
+    evergreen_kw = ["fundamentals", "long-term", "compound", "passive",
+                    "recurring", "subscription", "monthly", "years"]
+
+    urgent_hits = sum(1 for kw in urgent_kw if kw in tactic)
+    evergreen_hits = sum(1 for kw in evergreen_kw if kw in tactic)
+
+    return max(1.0, min(10.0, base + urgent_hits * 0.8 - evergreen_hits * 0.5))
 
 
 def _detect_current_phase() -> int:

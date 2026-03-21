@@ -1,3 +1,38 @@
+# DISTRIBUTION ENGINE REPORT — 2026-03-21 (Cycle 24 Update)
+**Cycle:** 24
+**Agent:** DISTRIBUTION ENGINE
+**Status:** COMPLETE — Updated 2026-03-21 12:00
+
+---
+
+## Cycle 24 Summary (2026-03-21)
+
+**Assets Covered:** 10 new assets distributed across Twitter, Reddit, HN, LinkedIn
+**Content Created:** 27 new pieces (2 threads, 3 standalones, 2 reply baits, 2 QT captions, 9 Reddit posts, 4 HN posts, 4 LinkedIn posts)
+**Cumulative coverage:** 43 assets total (up from 33 in Cycle 23)
+
+### New Files Created
+- CONTENT/social/distribution/twitter_cycle24_20260321.md
+- CONTENT/social/distribution/reddit_cycle24_20260321.md
+- CONTENT/social/distribution/hn_linkedin_cycle24_20260321.md
+- CONTENT/social/distribution/COVERAGE_MAP_CYCLE24.md
+
+### Assets Newly Covered
+meditation-streak, reading-streak, journal-streak, art-streak, coding-streak, language-streak, prospectmaxx, stackmaxx, couples-streak, vibe-coding-profit-calculator
+
+### New Subreddits Unlocked
+r/Meditation (900K), r/books (23M), r/Journaling (500K), r/learnprogramming (5.3M), r/languagelearning (2.2M), r/relationships (4.1M)
+
+### Remaining Gaps → Cycle 25
+sleepmaxx, focuslock, walktounlock (productivity PWAs), plank/pushup/soberstreak (fitness/recovery), cursor-vs-claude-code (dev comparison)
+
+### Blocker
+All 27 pieces PENDING_REVIEW — require manual posting (Twitter + Reddit accounts not yet connected)
+
+---
+
+## Previous Cycle 19 Report (archived below)
+
 # DISTRIBUTION ENGINE REPORT — 2026-03-20
 **Cycle:** 19 (updated from cycle 18 run earlier today)
 **Agent:** DISTRIBUTION ENGINE

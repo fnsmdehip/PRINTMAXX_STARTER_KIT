@@ -2,7 +2,7 @@
 @RuneKek
 )'s seven-fig
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
 **Revenue Est:** $0-25/mo
@@ -11,35 +11,38 @@
 
 ## Tactics
 
-1. whale alert threads get high CT engagement
-2. tag whale addresses for quote-tweet engagement bait
-3. cross-post to r/CryptoCurrency and r/defi
+1. Post whale-move content 3x/day timed to US market open (9:30 AM ET), crypto peak (2 PM ET), evening recap (8 PM ET)
+2. Quote-tweet original lookonchain posts with added commentary to ride existing viral threads
+3. Tag $ticker symbols and use #Hyperliquid #crypto #whales to get discovery traffic from relevant searches
+4. Reframe each position as a question hook: 'Would you hold a losing $2M oil long? This whale just doubled down...'
+5. Cross-post to Reddit r/WallStreetBets, r/CryptoMarkets with chart screenshot for extra distribution
 
 ## Budget Tier Strategies
 
 ### FREE
-Post whale alerts as Twitter threads with hypurrscan links for credibility, reply under whale-related trending tweets
+Scrape hypurrscan.io + lookonchain Twitter via Playwright (Brave cookies). Generate 3 content pieces per scrape cycle via engagement_bait_converter.py. Post to printmaxxer account. No paid tools needed.
 
 ### LOW
-$0-20/mo boost top-performing whale alert tweets
+$0-50/mo — Buy Nansen or DeBank pro tier ($9-29/mo) for better whale wallet filtering. Improves signal quality and reduces noise.
 
 ### MID
-$50-100/mo crypto newsletter sponsorship with whale alert content
+$50-200/mo — Sponsor a DeFi newsletter or pay a crypto influencer $100-200 for a shoutout to a whale-tracking signal Telegram channel.
 
 ## Daily Actions
 
-- [ ] Build scraper for hypurrscan.io public API to monitor 10-20 known whale addresses on Hyperliquid
-- [ ] Detect significant position changes (>$500K adds, new positions, liquidations)
-- [ ] Auto-generate Twitter-ready whale alert content using Claude -p
-- [ ] Append to CONTENT/social/posting_queue/ for manual posting
-- [ ] Cron every 4 hours to catch moves during trading sessions
+- [ ] 1. Add hypurrscan_whale_content_scraper.py — Playwright scrapes /address/ pages for positions with PnL > $500K or size > $1M, extracts position changes
+- [ ] 2. Filter for 'add to losing position' or 'liquidation approaching' signals (highest engagement)
+- [ ] 3. Pipe each signal to engagement_bait_converter.py with template: 'Whale [action] on [asset] — [context hook]'
+- [ ] 4. Write output to CONTENT/social/posting_queue/whale_signals_YYYYMMDD.txt
+- [ ] 5. Cron 3x/day (8 AM, 2 PM, 8 PM) — aligns with lookonchain posting rhythm
+- [ ] 6. Wire into existing chain_my_bot_scanned_400000_wallets_to_find_t as a data source param, not a new chain
 
 ## Tooling
 
 ```json
 {
-  "browser": "none",
+  "browser": "Playwright (Brave cookies for hypurrscan)",
   "email": "none",
-  "content": "content_factory"
+  "content": "engagement_bait_converter.py"
 }
 ```

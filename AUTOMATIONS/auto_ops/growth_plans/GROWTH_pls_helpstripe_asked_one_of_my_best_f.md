@@ -2,40 +2,36 @@
 
 Stripe asked one of my best friends (bootstrapped
 
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-21 12:40
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-50/mo indirect (content engagement + follower growth + establish authority on platform risk topic)
+**Revenue Est:** $0-50/mo indirect (content engagement + follower growth + establish credibility on platform risk topic)
 
 ---
 
 ## Tactics
 
-1. Quote-tweet the original viral post with PRINTMAXX angle (platform risk awareness)
-2. Reply to indie hacker threads about Apple IAP with this cautionary data point
-3. Cross-post horror story to r/startups r/SaaS r/indiehackers for organic reach
-4. Tag @stripe in engagement bait asking if this is policy — drives algorithmic amplification
+1. Quote-tweet the original with hot take on platform dependency risk
+2. Cross-post to r/SaaS r/startups r/indiehackers as cautionary tale
+3. Thread format: 5 lessons from watching a $12M ARR app get nuked by Apple
 
 ## Budget Tier Strategies
 
 ### FREE
-QT original tweet, reply under trending Apple/Stripe threads, post thread to Reddit indie communities, add to newsletter if active
+Engagement bait posts across 3 niches (tech/indie hacker/app dev). Reply to original tweet with our take. Reddit posts in startup subs. LinkedIn thought leadership angle on platform risk.
 
 ### LOW
-$0-20/mo boost highest-performing platform-risk post on X
+$0-20/mo boosting highest-performing post variant
 
 ### MID
-$50-100/mo retarget engaged audience with app factory landing pages
+N/A — content seed, not worth paid scaling
 
 ## Daily Actions
 
-- [ ] Extract key facts: $12M ARR bootstrapped consumer co, Stripe encouraged IAP circumvention, Apple terminated app, Stripe ghosted
-- [ ] Generate Twitter thread (5-7 tweets): hook=platform risk horror story, body=timeline of events, CTA=how to protect yourself
-- [ ] Generate LinkedIn post: professional angle on vendor dependency risk
-- [ ] Generate carousel: 5 slides — What happened, Why it matters, How to protect your apps, Apple IAP rules summary, NEVER trust a payment processor to override platform owner
-- [ ] Update APP_FACTORY compliance doc: add rule NEVER circumvent Apple IAP even if third-party processor encourages it
-- [ ] Queue all content to CONTENT/social/posting_queue/
-- [ ] Run engagement_bait_converter.py on the raw story for additional format variants
+- [ ] Route to engagement_bait_converter.py with angles: platform risk, Apple payment policy, Stripe reliability, indie dev survival guide
+- [ ] File intelligence note in APP venture: Apple WILL terminate apps circumventing IAP even if Stripe facilitates the migration — never bypass Apple payment rails on iOS apps
+- [ ] Generate 3 tweet variants + 1 Reddit post + 1 LinkedIn post from the drama angle
+- [ ] Queue posts to CONTENT/social/posting_queue/ for next distribution cycle
 
 ## Tooling
 
@@ -43,6 +39,6 @@ $50-100/mo retarget engaged audience with app factory landing pages
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "engagement_bait_converter.py"
 }
 ```
