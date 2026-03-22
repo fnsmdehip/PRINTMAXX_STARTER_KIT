@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-15T05:11:09.863732",
+  "generated": "2026-03-15T05:15:12.532287",
   "prompt_count_analyzed": 516,
   "total_entries_scanned": 13333,
   "sources": {
@@ -18,31 +18,31 @@
     "short_prompt_ratio": 0.39
   },
   "preferred_terms": [
-    "like this",
-    "per",
+    "tool",
     "month",
-    "dont",
-    "don't",
-    "wtf",
-    "use ur best judgement",
-    "nah",
-    "dog walking",
-    "automate",
-    "content",
-    "minimize shit",
-    "affiliate",
-    "shit",
-    "youtube",
-    "basic bitch",
-    "i want",
-    "script",
-    "yo",
-    "just do it",
-    "email",
+    "scripts",
     "cold",
+    "dog walking",
+    "save",
+    "shit",
+    "script",
+    "i said",
+    "i want",
+    "dont",
+    "minimize shit",
+    "yo",
+    "hook",
+    "nah",
+    "per",
+    "use ur best judgement",
+    "dog walk",
+    "affiliate",
+    "email",
+    "automate",
     "bruh",
-    "recurring",
-    "dog walk"
+    "wtf",
+    "i mean",
+    "just do it"
   ],
   "banned_patterns": [
     "I hope this helps",
@@ -98,21 +98,21 @@
     }
   ],
   "recurring_instructions": [
-    "minimize shit i need to remember. if you recommend something periodic, automate it immediately",
-    "**cta (45-60s):**",
-    "also make sure you're using the high effort, not the medium effort version of opus",
     "i scraped 200 local service businesses — plumbers, roofers, landscapers — using apollo",
-    "\"here's the breakdown",
-    "if u fuck up stop asking me what to do and use ur best judgement",
-    "**target:** 45-60 seconds per script",
+    "\"i sent 200 cold emails last week",
     "dont just do basic bitch work go above beyond quant level",
-    "# c01 tiktok video scripts — 30 scripts",
-    "**voice:** @pipelineabuser weighted — consequence-first, exact numbers, no ai slop",
-    "you are upgrading content for the printmaxx system",
-    "when i prompt to do stuff 'like this' i mean do that stuff but also do stuff equally detailed and fleshed out if not moreso throughout entire excel enhanced ops and ventures tools",
+    "### script 1: cold email roi",
     "bake simplify and security review and any other value add shit into the way we operate by default",
+    "\"here's the breakdown",
+    "**cta (45-60s):**",
+    "you are upgrading content for the printmaxx system",
+    "**format:** hook (0-3s) → body (3-45s) → cta (45-60s)",
+    "# c01 tiktok video scripts — 30 scripts",
     "not just full spectrum of printmaxx but also proactively improves and adds",
-    "don't just scan but you scan, turn stuff into stuff, and then turn that stuff into even better stuff and so on and so forth"
+    "there should just be like a common sense loop double check thing at the end that you do as like a meta analysis of everything you're doing and making sure you're not overlooking something that is obvious",
+    "**voice:** @pipelineabuser weighted — consequence-first, exact numbers, no ai slop",
+    "if u fuck up stop asking me what to do and use ur best judgement",
+    "**target:** 45-60 seconds per script"
   ],
   "escalation_triggers": [
     "bruh = mild frustration",
@@ -123,5 +123,5 @@
     "i already told = moderate frustration",
     "wtf = strong frustration"
   ],
-  "style_summary": "Direct, command-oriented, abbreviation-heavy, action-oriented. Hates being asked questions. Wants execution not deliberation. Uses 'like this', 'per', 'month', 'dont', 'don't'. Never hedge, never summarize what was just done. No AI slop vocabulary."
+  "style_summary": "Direct, command-oriented, abbreviation-heavy, action-oriented. Hates being asked questions. Wants execution not deliberation. Uses 'tool', 'month', 'scripts', 'cold', 'dog walking'. Never hedge, never summarize what was just done. No AI slop vocabulary."
 }

@@ -2539,3 +2539,37 @@ food costs dropped from $35,171 to about $2,000
 
 you can just do things 
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773996169, Score: 37)
+
+**Source:** @thejustinwelsh (high-signal-accounts) | **URL:** https://x.com/thejustinwelsh/status/1926972099526119500
+**Added:** 2026-03-22T14:29:38-04:00
+
+Today, my little one-person business crossed $10M in total revenue.
+
+It took 2,119 days, I ran zero ads & I operate at a ~89% margin.
+
+Here are the 23 steps of my wild & strange journey:
+
+Hope they are helpful to someone ↓
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773996209, Score: 28)
+
+**Source:** @awilkinson (high-signal-accounts) | **URL:** https://x.com/james406/status/2033226961275773180
+**Added:** 2026-03-22T14:29:38-04:00
+
+a friend had OpenClaw plan his whole wedding and "bring the costs down"
+
+OpenClaw canceled the catering contracts and ordered 300 lbs of raw ground beef to the venue
+
+food costs dropped from $35,171 to about $2,000
+
+you can just do things 
+

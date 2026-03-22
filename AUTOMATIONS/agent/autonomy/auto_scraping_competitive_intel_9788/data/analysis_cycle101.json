@@ -1,146 +1,126 @@
 {
   "cycle": 101,
   "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-  "timestamp": "2026-03-22T17:07:05.651376+00:00",
+  "timestamp": "2026-03-22T17:56:49.310968+00:00",
   "blue_oceans": [
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Behavioral Finance Streak",
-      "community_total": 28500000,
+      "niche": "Daily Budgeting Habit Streak",
+      "community_total": 24720000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "28.5M community (r/personalfinance 19M, r/investing 2.9M, r/stocks 5.2M filtered, r/wallstreetbets behavioral overlap). Loss aversion, FOMO, recency bias, sunk cost fallacy, overconfidence, anchoring, mental accounting \u2014 these biases destroy retail portfolio returns by 1.5-2% annually (DALBAR). Gap: one behavioral finance science concept per day (loss aversion: why losses feel 2.5x worse than equivalent gains, how FOMO drives buy-high-sell-low, why disposition effect makes investors sell winners and hold losers, hot-hand fallacy in market context, mental accounting in consumption) with streak XP, bias-immunity mastery badges (Loss Aversion Immunized, FOMO-Proof Investor, Sunk Cost Cutter), progression from emotionally-reactive to rational long-term investor. Duolingo for investor psychology. Nothing like this exists."
+      "notes": "24.7M community. YNAB/Mint/Copilot are all passive aggregators or full systems. None gamify the daily budgeting HABIT with one micro-action (log one transaction, categorize one purchase, check one balance) and streak XP. Gap: daily finance habit with behavioral science education (loss aversion, present bias, mental accounting, hedonic adaptation) + streak/XP system that builds the automatic money management reflex. ICP: 24.7M people wanting financial control but bouncing off YNAB's complexity.",
+      "priority": "P0"
     },
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
-      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Compound Interest and Wealth Math Streak",
-      "community_total": 22000000,
-      "verdict": "BLUE_OCEAN",
-      "streak_app_exists": false,
-      "notes": "22M community (r/personalfinance 19M core, r/financialindependence 1.7M, r/Bogleheads 640K). Rule of 72, compound interest science, inflation as wealth destruction, tax-drag and fee-drag calculations (0.8% fee over 30 years destroys 22% of terminal wealth). Gap: one wealth math concept per day (Rule of 72 and choosing between 6% vs 7% returns, how 1% management fee costs $150K on a $100K investment over 30 years, inflation-adjusted vs nominal returns, sequence-of-returns risk in early retirement, dollar-cost averaging effect on cost basis). Badges: Compound Interest Master, Fee-Destroyer, Inflation-Beater. The Psychology of Money 4M copies at $18 proves the ICP."
-    },
-    {
-      "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
-      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Budgeting Science Streak",
-      "community_total": 19500000,
-      "verdict": "BLUE_OCEAN",
-      "streak_app_exists": false,
-      "notes": "19.5M community (r/personalfinance 19M, r/povertyfinance 2.1M filtered, r/ynab 330K). YNAB 500K subscribers at $99/yr = $49.5M ARR proves massive willingness to pay for budgeting methodology. YNAB teaches system via tools, not daily science micro-lessons. Gap: zero-based budgeting science, savings rate formula (income gap not income level), envelope budgeting psychological mechanism (pain of paying), Parkinson's Law in spending, wealth gap between high-income low-savers vs. moderate-income high-savers. Badges: Zero-Based Budgeter, Savings Rate Optimizer, Envelope Master, Anti-Parkinson Practitioner. 19.5M is the largest single-audience niche this scraper has found in 101 cycles."
-    },
-    {
-      "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
-      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Stock Market Fundamentals Streak",
-      "community_total": 8700000,
-      "verdict": "BLUE_OCEAN",
-      "streak_app_exists": false,
-      "notes": "8.7M community (r/investing 2.9M, r/stocks 5.2M filtered educational, r/ValueInvesting 420K, r/SecurityAnalysis 220K). P/E vs. PEG, EBITDA mechanics, earnings manipulation spotting, free cash flow yield vs. earnings yield. Gap: daily stock market science (P/E ratio and why high P/E is not automatically bad, reading cash flow statement vs. income statement, ROIC as Buffett's primary metric, intrinsic value via DCF, why EPS is manipulable but FCF is not). Badges: Financial Statement Reader, DCF Calculator, Moat Identifier, Margin of Safety Expert. Investopedia is static reference; nothing is gamified daily mobile streak."
-    },
-    {
-      "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
-      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Crypto and Blockchain Science Streak",
-      "community_total": 8500000,
-      "verdict": "BLUE_OCEAN",
-      "streak_app_exists": false,
-      "notes": "8.5M community (r/CryptoCurrency 6.8M, r/ethereum 1.9M filtered technical, r/Bitcoin technical 12% of 6.9M). Proof-of-stake vs proof-of-work (99.95% energy difference), smart contracts and EVM, tokenomics and vesting schedules, AMMs and impermanent loss, L1/L2/sidechain security tradeoffs. Binance Academy is static reference. CoinMarketCap is price tracker. Zero gamified daily blockchain science streak. Badges: Consensus Expert, DeFi Navigator, Tokenomics Analyst, On-Chain Analyst. Massive community, massive education gap."
-    },
-    {
-      "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
-      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Wealth Psychology Streak",
-      "community_total": 5200000,
-      "verdict": "BLUE_OCEAN",
-      "streak_app_exists": false,
-      "notes": "5.2M community (r/personalfinance psychology-focused 27% = 5.1M, r/financialindependence 1.7M psychology overlap). The Psychology of Money sold 4M copies at $18 = $72M \u2014 proves the ICP wants wealth psychology content daily. APA: 72% of Americans report money stress. Gap: money scripts and childhood money messages, lifestyle inflation and hedonic adaptation, loss aversion in consumption decisions, productive vs. destructive mental accounting, net worth comparison trap. Badges: Money Script Auditor, Lifestyle Inflation Immunizer, Hedonic Adaptation Master, Delayed Gratifier. Zero daily mobile streak app for wealth psychology science."
-    },
-    {
-      "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
       "niche": "Daily Tax Optimization Streak",
-      "community_total": 4800000,
+      "community_total": 24550000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "4.8M community (r/tax 385K, r/personalfinance 25% tax-focused = 4.75M, investing tax-loss harvesting). Average American overpays taxes $1,000+/year from not knowing tax-advantaged accounts. Gap: deduction vs. credit science, 401(k) vs. Roth decision framework, tax-loss harvesting without wash-sale violations, HSA triple-tax-advantage mechanics, backdoor Roth IRA mechanics. Badges: 401k Maxer, Tax-Loss Harvest Expert, HSA Optimizer, Roth Converter. TurboTax/TaxAct are filing tools not education. ICP collectively loses $200B+ annually to unnecessary taxes."
+      "notes": "24.5M tax-interested community. TurboTax/H&R Block are annual events that actively discourage year-round tax learning (they profit from complexity). Zero apps gamify daily tax education: one concept per day (how the qualified business income deduction works for freelancers, why maxing HSA is a triple tax advantage, how to calculate break-even for S-Corp election, what tax-loss harvesting is and how to do it legally, how depreciation creates paper losses on rental properties) with streak XP, tax strategy mastery badges (Deduction Hunter, Roth Optimizer, Depreciation Expert), and progression from W-2 wage-slave to sophisticated tax optimizer. ICP: 24.5M people who overpay taxes annually because they get guidance only at tax season.",
+      "priority": "P0"
     },
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Economic Indicators Streak",
-      "community_total": 3400000,
+      "niche": "Daily Debt Payoff Streak",
+      "community_total": 22500000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "3.4M community (r/economics 1.05M, r/MacroEconomics 220K, r/finance 1.3M, investing macro overlap 830K). Yield curve inversion predicting every US recession since 1955, CPI vs. PCE and why Fed targets PCE, ISM PMI leading vs. lagging indicator, real federal funds rate and equity valuations via discount rate, M2 money supply 12-18 month inflation lag. Gap: daily macro science for retail investors who want to understand Fed policy context for their portfolio. Badges: Yield Curve Reader, Fed Watcher, Leading Indicator Analyst, Macro-Cycle Aware Investor. Bloomberg/WSJ are news; FRED is raw data; nothing gamified."
+      "notes": "22.5M debt-focused community. Debt Payoff Planner is a calculator, not a habit. Zero apps gamify the daily debt payoff journey: one daily action (make one extra payment, cut one subscription, learn one debt strategy) with streak XP, debt freedom mastery badges (Snowball Champion, Interest Rate Negotiator, Credit Utilization Optimizer), and behavioral science education (how minimum payments are mathematically designed to maximize bank profit, why the debt snowball beats avalanche psychologically despite worse math, how to negotiate lower interest rates). ICP: 22.5M people crushed by debt who need daily motivation + small wins.",
+      "priority": "P0"
     },
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily FIRE Math Streak",
-      "community_total": 2300000,
+      "niche": "Daily Options Trading Education Streak",
+      "community_total": 17900000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "2.3M community (r/financialindependence 1.7M, r/leanfire 240K, r/fatFIRE 340K, r/ChubbyFIRE 120K). 4% safe withdrawal rate and Trinity Study, savings rate as primary FIRE determinant, coast FIRE vs barista FIRE vs lean FIRE vs fat FIRE math, sequence-of-returns risk in first 5 years of retirement, 25x rule as most powerful personal finance formula. cFIREsim and FIREcalc are calculators not mobile apps. Zero daily FIRE math science streak. Badges: Savings Rate Optimizer, Coast FIRE Achiever, SWR Calibrated, FI Number Locked. ICP: 25-45yo professionals who discovered FIRE and want deep math daily."
+      "notes": "17.9M options/WSB community. All apps are trading platforms \u2014 platforms profit from trading, not education. Zero apps gamify daily options education: one concept per day (what delta means and how it predicts option price movement, how theta decay accelerates in the final 30 days, what IV percentile tells you about option pricing, how a covered call generates income on existing stock, why iron condors profit from low volatility) with streak XP, derivatives mastery badges (Options Greeks Master, Theta Gang Member, IV Crush Survivor), and progression from 'puts are free money' to systematic options strategy. ICP: 17.9M people losing money on options who need structured daily education.",
+      "priority": "P0"
     },
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Index Fund Science Streak",
-      "community_total": 2200000,
+      "niche": "Daily Crypto Education Streak",
+      "community_total": 16020000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "2.2M community (r/Bogleheads 640K, r/Vanguard 560K, r/personalfinance three-fund focused 1M filtered). 90% of active managers underperform 15+ year benchmark, survivorship bias in fund selection, TER math (1.0% vs 0.03% compounded), three-fund portfolio global allocation, annual vs threshold-based rebalancing science, market-cap weighted indexes self-cleaning mechanism, factor tilts. Bogleheads.org is a forum not mobile. Zero daily gamified index fund science streak. Badges: Survivorship Bias Immune, Low-Cost Optimizer, Three-Fund Architect, Evidence-Based Investor."
+      "notes": "16M crypto community. All major apps are exchanges or wallets \u2014 none teach. Zero apps gamify daily crypto/blockchain education: one concept per day (what proof of stake means vs proof of work, how the lightning network enables instant Bitcoin payments, what impermanent loss is in liquidity pools, how zero-knowledge proofs enable private transactions, what MEV is and why it matters) with streak XP, blockchain mastery badges, and progression from price speculator to protocol analyst. Massive underserved: 16M people holding crypto who don't understand what they own.",
+      "priority": "P0"
     },
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
+      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
+      "niche": "Daily Stock Market Learning Streak",
+      "community_total": 10520000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "10.5M investing community. Robinhood enables trading but actively avoids education (gamification without knowledge = dangerous). Finimize is news, not skill-building. Zero apps teach daily: one investing concept (what price-to-book means, why FCF matters more than earnings, how to read a 10-K in 10 minutes, what economic moats are, how to calculate intrinsic value with DCF) with streak XP, investor mastery badges (Graham Disciple, Buffett Practitioner, Munger Mental Model Master), progression from price-watcher to value investor. 10.5M people want to invest intelligently but have no guided daily practice.",
+      "priority": "P0"
+    },
+    {
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
+      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
+      "niche": "Daily Frugality Challenge Streak",
+      "community_total": 4605000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "4.6M frugality community. Digit and Acorns automate saving but don't build the HABIT. Zero apps gamify the daily frugality challenge: no-spend day streaks, one money-saving insight per day, weekly challenge completion (meal prep Monday, no Starbucks week, library instead of Amazon), with streak XP, frugality mastery badges, and Stoic/FIRE philosophy education. Gap: daily conscious spending habit app with psychological backing (Baumeister willpower research, Stanford marshmallow test follow-ups, implementation intentions for saving). ICP: 4.6M people who know they spend too much and want daily accountability without harsh budgeting.",
+      "priority": "P2"
+    },
+    {
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
       "niche": "Daily Real Estate Investing Streak",
-      "community_total": 1800000,
+      "community_total": 4605000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "1.8M community (r/realestateinvesting 600K, r/landlord 310K, r/airbnb 280K, r/REBubble 390K filtered investors, r/BRRRR 220K). Cap rate mechanics, cash-on-cash return vs. cap rate difference, DSCR and lender approval thresholds, 1% rule as screening not decision tool, 1031 exchange capital gains deferral mechanics, BRRRR method. BiggerPockets is forum/podcast not daily streak. Roofstock is marketplace. Zero daily real estate science streak. Badges: Cap Rate Calculator, Cash Flow Analyst, 1031 Executor, BRRRR Operator. High-value ICP (aspiring landlords) willing to pay premium."
+      "notes": "4.6M RE community. Zillow/Redfin are property browsers, not education. DealCheck is professional but has 18K reviews vs Zillow's 2.3M \u2014 discovery problem. Zero apps gamify daily RE investing education: one concept per day (what cap rate tells you vs cash-on-cash, how house hacking eliminates housing costs, why the BRRRR method builds infinite ROI, how to analyze a syndication PPM, what debt service coverage ratio lenders care about) with streak XP, RE investor mastery badges (Rental Calculator, 1031 Exchange Expert, Passive Income Architect), and progression from curious to confident RE investor. ICP: 4.6M people watching BiggerPockets YouTube who want daily structured learning.",
+      "priority": "P2"
     },
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Options Education Streak",
-      "community_total": 1500000,
+      "niche": "Daily Dividend Investing Streak",
+      "community_total": 3700000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "1.5M community (r/options 1.1M, r/thetagang 280K, r/Optionsmillionaires 110K). Delta misunderstanding (0.30 delta not 30% ITM probability), theta decay acceleration in final 21 days, IV rank vs. percentile for options pricing, gamma risk near expiration, iron condor mechanics and market conditions. tastytrade is YouTube/platform not mobile streak. Option Strat is visualization tool not education. Zero daily gamified options science streak. Badges: Greeks Fluent, IV Rank Master, Theta Harvester, Risk-Defined Trader. r/thetagang 280K people actively learning this \u2014 high-intent ICP."
+      "notes": "3.7M dividend community. M1 Finance automates investing; Simply Safe Dividends is research for pros. Zero apps gamify daily dividend education: one concept per day (what payout ratio indicates sustainability, why ex-dividend date matters for DRIP, how to calculate forward dividend yield correctly, what a dividend trap looks like, why dividend growth rate matters more than current yield for long-term investors) with streak XP, income investing mastery badges (Dividend Aristocrat Analyst, DRIP Optimizer, Payout Ratio Expert), and progression from yield-chaser to dividend portfolio architect. ICP: 3.7M income investors who want passive income but lack systematic daily education.",
+      "priority": "P2"
     },
     {
       "cycle": 101,
-      "timestamp": "2026-03-22T17:07:05.651376+00:00",
+      "timestamp": "2026-03-22T17:56:49.310968+00:00",
       "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
-      "niche": "Daily Dividend Growth Investing Streak",
-      "community_total": 900000,
+      "niche": "Daily Fire Movement Streak",
+      "community_total": 3210000,
       "verdict": "BLUE_OCEAN",
       "streak_app_exists": false,
-      "notes": "900K community (r/dividends 530K, r/dividendinvesting 180K, r/passiveincome dividend-focused 190K). Yield on cost compounding over 20 years, free cash flow payout ratio vs earnings payout ratio, dividend growth rate science, dividend aristocrats qualification criteria, sector rotation and dividend safety in recessions. Simply Safe Dividends is a data tool not education. Seeking Alpha is analysis content. Zero daily gamified dividend science streak. Badges: Yield-on-Cost Tracker, Payout Analyst, Aristocrat Screener, Income Architect."
+      "notes": "3.2M FIRE community. Personal Capital tracks net worth passively; Projection Lab is for advanced planners. Zero apps gamify the daily FIRE journey: one concept per day (what savings rate matters more than income, how the 4% rule was derived from Trinity Study data, why sequence of returns risk is the biggest retirement threat, how Roth conversion ladders work, what Coast FIRE means and how to calculate your Coast number) with streak XP, FI mastery badges (Savings Rate Optimizer, SWR Expert, FI Date Calculator), and progression from FIRE-curious to financially independent. ICP: 3.2M people obsessed with early retirement who want daily structured learning rather than Reddit scrolling.",
+      "priority": "P2"
     }
   ],
   "soft_competition": [],
   "occupied": [],
-  "stats": {
-    "niches_scanned": 13,
-    "blue_oceans": 13,
+  "summary": {
+    "niches_scanned": 10,
+    "blue_oceans": 10,
     "soft_competition": 0,
     "occupied": 0,
-    "community_total": 109300000
+    "community_total": 132330000
   }
 }
