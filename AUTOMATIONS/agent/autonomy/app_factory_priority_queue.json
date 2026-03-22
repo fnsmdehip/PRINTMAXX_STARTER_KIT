@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-21 12:17:48",
+  "generated_at": "2026-03-22 13:45:44",
   "sources": {
-    "alpha_staging_candidates": 2814,
+    "alpha_staging_candidates": 2845,
     "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 50
+    "existing_specs_detected": 105
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 2806,
+    "total_candidates": 2837,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 57,
-      "BUILD_NEW_NOW": 44,
-      "SPEC_AND_TEST": 116,
-      "PARK": 2582,
+      "ITERATE_EXISTING_NOW": 59,
+      "BUILD_NEW_NOW": 45,
+      "SPEC_AND_TEST": 123,
+      "PARK": 2603,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
       "faith": 77,
-      "habits": 176,
-      "ai_utility": 2027,
+      "habits": 177,
+      "ai_utility": 2050,
       "fitness": 130,
-      "focus": 299,
+      "focus": 305,
       "sleep": 85,
-      "meal": 12
+      "meal": 13
     }
   },
   "queue": [
@@ -1442,6 +1442,68 @@
       "rank": 23
     },
     {
+      "candidate_id": "ALPHA1773995990",
+      "title": "[r/entrepreneur] I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down, and started completely over. 3 months in 2026 and",
+      "source": "r/entrepreneur",
+      "source_url": "https://reddit.com/r/Entrepreneur/comments/1rzgsug/i_built_a_mobile_iv_therapy_company_from_0_to_2m/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "BACKLOG",
+      "status": "APPROVED",
+      "engagement_authenticity": "",
+      "earnings_verified": "",
+      "applicable_niches": "",
+      "applicable_methods": "",
+      "evidence": "[r/entrepreneur] I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down, and started completely over. 3 months in 2026 and",
+      "compliance_notes": "",
+      "reviewer_notes": "Reddit r/entrepreneur. 306 upvotes, 71 comments. Score: 61/100. Preview: Everyday I see more and more people talking about Mobile IV Therapy and Med Spas on here. This industry has done absolute wonders for my family and me, and I just wanted to sit down, actually talk abo",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA1773995990.md",
+      "raw": {
+        "alpha_id": "ALPHA1773995990",
+        "source": "r/entrepreneur",
+        "source_url": "https://reddit.com/r/Entrepreneur/comments/1rzgsug/i_built_a_mobile_iv_therapy_company_from_0_to_2m/",
+        "category": "APP_FACTORY",
+        "tactic": "[r/entrepreneur] I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down, and started completely over. 3 months in 2026 and",
+        "roi_potential": "HIGH",
+        "priority": "BACKLOG",
+        "status": "APPROVED",
+        "applicable_methods": "",
+        "applicable_niches": "",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "",
+        "earnings_verified": "",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "Reddit r/entrepreneur. 306 upvotes, 71 comments. Score: 61/100. Preview: Everyday I see more and more people talking about Mobile IV Therapy and Med Spas on here. This industry has done absolute wonders for my family and me, and I just wanted to sit down, actually talk abo",
+        "created_at": "2026-03-21",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 91,
+      "cluster": "fitness",
+      "market_room": "HIGH",
+      "existing_app_target": "Steplock",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
+      "paywall_variant": "after plan preview or first logged action",
+      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
+      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
+      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 24
+    },
+    {
       "candidate_id": "ALPHA25039",
       "title": "SaaS pricing experiment: $9/mo = 0 conversions. Raised to $29/mo = people started paying. Lower price anchors KILL perceived value in SaaS/apps.",
       "source": "reddit_search",
@@ -1501,7 +1563,69 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 25
+    },
+    {
+      "candidate_id": "ALPHA1773995827",
+      "title": "2k users, $800 with a Habit Tracker - I can't explain how good this feels App name - [HabitSwipe](http://www.habitswipe.app) Platform - Android &amp; iOS Number of users - 2500 Total Revenue in last 2 months - $799 Total Reviews - 120 **Story** I've crossed 2k installs. It might sound a small number but the journey from to idea to \\~2500 users is just incredible. I built this app for my personal use, a very minimalist 2 screen app, but the reddit community has showed soo much love to",
+      "source": "2026-03-21",
+      "source_url": "r/passive_income",
+      "source_type": "alpha_staging",
+      "roi_potential": "https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/",
+      "priority": "MEDIUM",
+      "status": "APPROVED",
+      "engagement_authenticity": "",
+      "earnings_verified": "",
+      "applicable_niches": "reddit",
+      "applicable_methods": "45",
+      "evidence": "2k users, $800 with a Habit Tracker - I can't explain how good this feels App name - [HabitSwipe](http://www.habitswipe.app) Platform - Android &amp; iOS Number of users - 2500 Total Revenue in last 2 months - $799 Total Reviews - 120 **Story** I've crossed 2k installs. It might sound a small number but the journey from to idea to \\~2500 users is just incredible. I built this app for my personal use, a very minimalist 2 screen app, but the reddit community has showed soo much love to",
+      "compliance_notes": "",
+      "reviewer_notes": "AUTO-APPROVED 2026-03-21 (empty content)",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA1773995827.md",
+      "raw": {
+        "alpha_id": "ALPHA1773995827",
+        "source": "2026-03-21",
+        "source_url": "r/passive_income",
+        "category": "APP_FACTORY",
+        "tactic": "2k users, $800 with a Habit Tracker - I can't explain how good this feels App name - [HabitSwipe](http://www.habitswipe.app) Platform - Android &amp; iOS Number of users - 2500 Total Revenue in last 2 months - $799 Total Reviews - 120 **Story** I've crossed 2k installs. It might sound a small number but the journey from to idea to \\~2500 users is just incredible. I built this app for my personal use, a very minimalist 2 screen app, but the reddit community has showed soo much love to",
+        "roi_potential": "https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/",
+        "priority": "MEDIUM",
+        "status": "APPROVED",
+        "applicable_methods": "45",
+        "applicable_niches": "reddit",
+        "synergy_score": "76",
+        "cross_sell_products": "Auto-extracted from reddit scrape. Score: 45/100.",
+        "implementation_priority": "",
+        "engagement_authenticity": "",
+        "earnings_verified": "",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "AUTO-APPROVED 2026-03-21 (empty content)",
+        "created_at": "",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 90,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA538",
@@ -1563,7 +1687,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA558",
@@ -1625,7 +1749,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA102377",
@@ -1687,7 +1811,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA102378",
@@ -1749,7 +1873,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA103204",
@@ -1811,7 +1935,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA102381",
@@ -1873,7 +1997,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA103206",
@@ -1935,7 +2059,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA102383",
@@ -1997,7 +2121,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA102384",
@@ -2059,7 +2183,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA98946",
@@ -2121,7 +2245,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA229",
@@ -2183,7 +2307,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA555",
@@ -2245,69 +2369,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 36
-    },
-    {
-      "candidate_id": "ALPHA1773995990",
-      "title": "[r/entrepreneur] I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down, and started completely over. 3 months in 2026 and",
-      "source": "r/entrepreneur",
-      "source_url": "https://reddit.com/r/Entrepreneur/comments/1rzgsug/i_built_a_mobile_iv_therapy_company_from_0_to_2m/",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "BACKLOG",
-      "status": "APPROVED",
-      "engagement_authenticity": "",
-      "earnings_verified": "",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "[r/entrepreneur] I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down, and started completely over. 3 months in 2026 and",
-      "compliance_notes": "",
-      "reviewer_notes": "Reddit r/entrepreneur. 306 upvotes, 71 comments. Score: 61/100. Preview: Everyday I see more and more people talking about Mobile IV Therapy and Med Spas on here. This industry has done absolute wonders for my family and me, and I just wanted to sit down, actually talk abo",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA1773995990",
-        "source": "r/entrepreneur",
-        "source_url": "https://reddit.com/r/Entrepreneur/comments/1rzgsug/i_built_a_mobile_iv_therapy_company_from_0_to_2m/",
-        "category": "APP_FACTORY",
-        "tactic": "[r/entrepreneur] I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down, and started completely over. 3 months in 2026 and",
-        "roi_potential": "HIGH",
-        "priority": "BACKLOG",
-        "status": "APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "",
-        "earnings_verified": "",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "Reddit r/entrepreneur. 306 upvotes, 71 comments. Score: 61/100. Preview: Everyday I see more and more people talking about Mobile IV Therapy and Med Spas on here. This industry has done absolute wonders for my family and me, and I just wanted to sit down, actually talk abo",
-        "created_at": "2026-03-21",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 87,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 37
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA228",
@@ -2369,7 +2431,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA552",
@@ -2423,68 +2485,6 @@
       "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
       "primary_monetization": "subscription with 7-day trial",
       "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA102962",
-      "title": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
-      "source": "@StevenCravotta (high-signal-accounts)",
-      "source_url": "https://x.com/StevenCravotta/status/2033543588122902933",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "HIGH",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "UNCHECKED",
-      "earnings_verified": "N/A",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
-      "compliance_notes": "",
-      "reviewer_notes": "\ud83d\udc4d59 \ud83d\udd015 \ud83d\udcac12 \ud83d\udc418770 [ROUTED: 2026-03-17 to APP by gap_hunter]",
-      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA102962.md",
-      "raw": {
-        "alpha_id": "ALPHA102962",
-        "source": "@StevenCravotta (high-signal-accounts)",
-        "source_url": "https://x.com/StevenCravotta/status/2033543588122902933",
-        "category": "APP_FACTORY",
-        "tactic": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "UNCHECKED",
-        "earnings_verified": "N/A",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "\ud83d\udc4d59 \ud83d\udd015 \ud83d\udcac12 \ud83d\udc418770 [ROUTED: 2026-03-17 to APP by gap_hunter]",
-        "created_at": "2026-03-16T17:03:39.581735",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 86,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
       "price_test": "$24.99 to $39.99/yr first",
       "experiments": [
         "paywall timing: after first value moment vs after onboarding preview",
