@@ -1,0 +1,182 @@
+{
+  "scan_date": "2026-03-22",
+  "scan_time": "10:07:00",
+  "source": "HackerNews API (topstories + showstories)",
+  "items_scanned": 60,
+  "items_returned": 19,
+  "score_threshold": 50,
+  "below_threshold_bonus": 4,
+  "results": [
+    {
+      "id": 47476422,
+      "title": "Some things just take time",
+      "url": "https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time/",
+      "score": 763,
+      "comments": 244,
+      "category": "INDIE_HACK",
+      "relevance_note": "Top HN post on patience in building. High engagement signals audience resonance with long-game indie building narrative. Content repurposing opportunity: thread on 'why your 35-day-old project having $0 revenue is normal' plays well with this audience."
+    },
+    {
+      "id": 47476954,
+      "title": "Show HN: Three new Kitten TTS models - smallest less than 25MB",
+      "url": "https://github.com/KittenML/KittenTTS",
+      "score": 550,
+      "comments": 178,
+      "category": "AI_TOOL",
+      "relevance_note": "Tiny TTS models (<25MB) enable local text-to-speech in apps without API costs. Massive for adding voice features to streak apps, content narration, video voiceovers at zero marginal cost. Open source, self-hostable."
+    },
+    {
+      "id": 47475686,
+      "title": "Tinybox - A powerful computer for deep learning",
+      "url": "https://tinygrad.org/#tinybox",
+      "score": 531,
+      "comments": 304,
+      "category": "AI_TOOL",
+      "relevance_note": "tinygrad's hardware play for local AI inference. Signals the trend toward self-hosted AI infrastructure, reducing API costs. If price-competitive, could run local LLMs for content generation, coding assistants, or AI-powered SaaS without per-token costs."
+    },
+    {
+      "id": 47477090,
+      "title": "The three pillars of JavaScript bloat",
+      "url": "https://43081j.com/2026/03/three-pillars-of-javascript-bloat",
+      "score": 381,
+      "comments": 221,
+      "category": "APP_DEV",
+      "relevance_note": "High-signal dev content on JS performance. Applicable to our 114 deployed landing pages and web apps. Lighter pages = better Core Web Vitals = better SEO = more organic traffic. Actionable optimization intel."
+    },
+    {
+      "id": 47476821,
+      "title": "Professional video editing, right in the browser with WebGPU and WASM",
+      "url": "https://tooscut.app/",
+      "score": 308,
+      "comments": 111,
+      "category": "AI_TOOL",
+      "relevance_note": "Browser-based video editor using WebGPU/WASM. Direct competitor intel for video content creation tools. Could replace desktop editors for quick social content. Also a SaaS model to study: browser-based tool with freemium monetization."
+    },
+    {
+      "id": 47442841,
+      "title": "Show HN: Duplicate 3 layers in a 24B LLM, logical deduction .22 to .76. No training",
+      "url": "https://github.com/alainnothere/llm-circuit-finder",
+      "score": 261,
+      "comments": 81,
+      "category": "AI_TOOL",
+      "relevance_note": "LLM layer duplication technique massively improves logical reasoning without retraining. If applicable to smaller models, could create competitive advantage in local AI tools. Research-to-product pipeline opportunity."
+    },
+    {
+      "id": 47476562,
+      "title": "Floci - A free, open-source local AWS emulator",
+      "url": "https://github.com/hectorvent/floci",
+      "score": 230,
+      "comments": 66,
+      "category": "AI_TOOL",
+      "relevance_note": "Free local AWS emulator for testing cloud services without AWS costs. Useful for developing and testing SaaS backends locally before deploying. Reduces development costs for solopreneurs building AWS-dependent products."
+    },
+    {
+      "id": 47476888,
+      "title": "Show HN: Sonar - A tiny CLI to see and kill whatever's running on localhost",
+      "url": "https://github.com/RasKrebs/sonar",
+      "score": 188,
+      "comments": 78,
+      "category": "APP_DEV",
+      "relevance_note": "Developer utility tool with strong HN traction. Shows demand for simple, focused CLI tools. Dev tools are proven SaaS/freemium model. Study the launch strategy: simple value prop, GitHub-first, Show HN for distribution."
+    },
+    {
+      "id": 47476776,
+      "title": "Boomloom: Think with your hands",
+      "url": "https://www.theboomloom.com",
+      "score": 146,
+      "comments": 15,
+      "category": "SAAS",
+      "relevance_note": "Visual thinking/brainstorming tool. Shows market appetite for creative productivity tools. Low comment count but high score suggests strong product-market fit signal. Study their landing page conversion and pricing model."
+    },
+    {
+      "id": 47435783,
+      "title": "Flash-Moe: Running a 397B Parameter Model on a Mac with 48GB RAM",
+      "url": "https://github.com/danveloper/flash-moe",
+      "score": 116,
+      "comments": 38,
+      "category": "AI_TOOL",
+      "relevance_note": "Running massive LLMs locally on Mac hardware. Enables building AI-powered products with zero API costs. Direct application: local AI coding assistants, content generators, or AI SaaS that runs on user hardware instead of cloud."
+    },
+    {
+      "id": 47461321,
+      "title": "Show HN: Atomic - Self-hosted, semantically-connected personal knowledge base",
+      "url": "https://github.com/kenforthewin/atomic",
+      "score": 114,
+      "comments": 17,
+      "category": "SAAS",
+      "relevance_note": "Self-hosted knowledge base with semantic connections. Market validation for PKM (personal knowledge management) tools. Could inspire a productized version with monetization, or integrate concepts into our agent memory systems."
+    },
+    {
+      "id": 47471601,
+      "title": "25 Years of Eggs",
+      "url": "https://www.john-rush.com/posts/eggs-25-years-20260219.html",
+      "score": 112,
+      "comments": 38,
+      "category": "INDIE_HACK",
+      "relevance_note": "john-rush is a known indie hacker / serial micro-SaaS builder. His content consistently performs on HN. Study his personal brand strategy and content-to-product pipeline. Cross-reference with his micro-SaaS portfolio."
+    },
+    {
+      "id": 47476060,
+      "title": "HopTab - free, open source macOS app switcher and tiler that replaces Cmd+Tab",
+      "url": "https://www.royalbhati.com/hoptab",
+      "score": 62,
+      "comments": 18,
+      "category": "APP_DEV",
+      "relevance_note": "macOS utility app with free/open-source model. Shows the indie dev pattern: build a free tool, get distribution, then monetize with pro features or adjacent products. Study their landing page and distribution strategy."
+    },
+    {
+      "id": 47476763,
+      "title": "Show HN: Baltic shadow fleet tracker - live AIS, cable proximity alerts",
+      "url": "https://github.com/FormerLab/shadow-fleet-tracker-light",
+      "score": 55,
+      "comments": 18,
+      "category": "OTHER",
+      "relevance_note": "Niche data visualization tool with real-time tracking. Shows that data+maps+alerts tools get HN traction. Pattern applicable to any real-time monitoring niche (crypto, social media, competitor tracking)."
+    },
+    {
+      "id": 47452515,
+      "title": "Show HN: Joonote - A note-taking app on your lock screen and notification panel",
+      "url": "https://joonote.com/",
+      "score": 52,
+      "comments": 41,
+      "category": "APP_DEV",
+      "relevance_note": "Mobile app with unique lock screen widget angle. High comment-to-score ratio suggests engaged audience. Shows that mobile apps with a simple, novel UX hook still get traction. Study their App Store listing and monetization (likely freemium/IAP)."
+    },
+    {
+      "id": 47469949,
+      "title": "Show HN: AI SDLC Scaffold, repo template for AI-assisted software development",
+      "url": "https://github.com/pangon/ai-sdlc-scaffold/",
+      "score": 25,
+      "comments": 8,
+      "category": "AI_TOOL",
+      "relevance_note": "[BELOW 50 THRESHOLD - included for high relevance] AI-assisted development workflow template. Low score but highly relevant to our Claude Code workflow. Could integrate useful patterns into our own dev pipeline. Also validates market interest in AI dev tooling products."
+    },
+    {
+      "id": 47466513,
+      "title": "Show HN: Oku - One tab to filter out noise from feeds and content sources",
+      "url": "https://oku.io",
+      "score": 13,
+      "comments": 4,
+      "category": "SAAS",
+      "relevance_note": "[BELOW 50 THRESHOLD - included for high relevance] Content curation/filtering SaaS. Below threshold but validates demand for signal-vs-noise filtering tools. Our alpha processing pipeline does this internally; could be productized."
+    },
+    {
+      "id": 47470433,
+      "title": "Show HN: EchoLive - Read-it-later app that reads to you with 600 AI voices",
+      "url": "https://echolive.co/",
+      "score": 9,
+      "comments": 0,
+      "category": "AI_TOOL",
+      "relevance_note": "[BELOW 50 THRESHOLD - included for high relevance] AI voice read-it-later app. Below threshold but combines two trends: AI TTS + read-it-later. With KittenTTS (tiny local models), this concept could be built at zero API cost. Potential app factory candidate."
+    },
+    {
+      "id": 47475150,
+      "title": "Show HN: I built a pricing tool for home bakers that reads recipe photos",
+      "url": "https://butterwell.io",
+      "score": 3,
+      "comments": 0,
+      "category": "SAAS",
+      "relevance_note": "[BELOW 50 THRESHOLD - included for high relevance] Niche SaaS for home bakers. Below threshold but exemplifies the micro-niche SaaS pattern: take a specific pain point (recipe costing), add AI (photo reading), build a focused tool. Strong model for solopreneur SaaS."
+    }
+  ]
+}

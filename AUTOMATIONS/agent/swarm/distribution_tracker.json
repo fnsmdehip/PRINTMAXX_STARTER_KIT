@@ -1,18 +1,27 @@
 {
-  "last_updated": "2026-03-21T12:00:52.534851",
-  "last_cycle": "distribution_engine_2026-03-21_12h00",
-  "cycle_number": 24,
+  "last_updated": "2026-03-22T13:35:15.325564",
+  "last_cycle": "distribution_engine_2026-03-22_13h30",
+  "cycle_number": 28,
   "coverage": {
     "twitter": {
-      "threads": 10,
-      "singles": 19,
-      "reply_baits": 10,
-      "qt_captions": 8,
-      "total_pieces": 62,
-      "last_cycle": 24
+      "threads": 11,
+      "singles": 29,
+      "reply_baits": 13,
+      "qt_captions": 10,
+      "total_pieces": 80,
+      "last_cycle": 28,
+      "new_this_cycle": [
+        "photography_streak_singles",
+        "beat_making_streak_singles",
+        "music_theory_streak_thread_4parts",
+        "outfit_design_streak_singles",
+        "best_lead_generation_tools_singles",
+        "creative_cluster_community_bait",
+        "reply_baits_x3"
+      ]
     },
     "reddit": {
-      "posts_ready": 33,
+      "posts_ready": 43,
       "subreddits": [
         "r/nocode",
         "r/automation",
@@ -32,21 +41,49 @@
         "r/Journaling",
         "r/learnprogramming",
         "r/languagelearning",
-        "r/relationships"
+        "r/relationships",
+        "r/photography",
+        "r/analog",
+        "r/WeAreTheMusicMakers",
+        "r/edmproduction",
+        "r/musictheory",
+        "r/Guitar",
+        "r/femalefashionadvice",
+        "r/streetwear"
       ],
-      "last_cycle": 24
+      "last_cycle": 28,
+      "new_this_cycle": [
+        "photography_streak_r_photography",
+        "photography_streak_r_analog",
+        "beat_making_r_WeAreTheMusicMakers",
+        "beat_making_r_edmproduction",
+        "music_theory_r_musictheory",
+        "music_theory_r_Guitar",
+        "outfit_design_r_femalefashionadvice",
+        "outfit_design_r_streetwear",
+        "lead_gen_r_Entrepreneur",
+        "lead_gen_r_sales"
+      ]
     },
     "hacker_news": {
-      "posts_ready": 16,
-      "last_cycle": 24
+      "posts_ready": 18,
+      "last_cycle": 28,
+      "new_this_cycle": [
+        "show_hn_creative_trackers_cluster",
+        "show_hn_mcp_marketplace"
+      ]
     },
     "linkedin": {
       "posts_ready": 16,
       "last_cycle": 24
     },
     "indie_hackers": {
-      "posts_ready": 12,
-      "last_cycle": 23
+      "posts_ready": 14,
+      "last_cycle": 28,
+      "new_this_cycle": [
+        "day_45_update_creative_cluster",
+        "171_sites_meta_post"
+      ]
     }
   },
   "assets_covered": {
@@ -160,13 +197,12 @@
       ]
     },
     "best-lead-generation-tools": {
-      "cycle": 20,
+      "first_covered": "2026-03-22",
+      "cycle": 28,
       "channels": [
         "twitter",
         "reddit",
-        "hn",
-        "linkedin",
-        "ih"
+        "hacker_news"
       ]
     },
     "pushup-streak": {
@@ -409,6 +445,51 @@
       "cycle": 24,
       "channels": [
         "twitter"
+      ]
+    },
+    "photography-streak": {
+      "first_covered": "2026-03-22",
+      "cycle": 28,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hacker_news"
+      ]
+    },
+    "beat-making-streak": {
+      "first_covered": "2026-03-22",
+      "cycle": 28,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hacker_news"
+      ]
+    },
+    "music-theory-streak": {
+      "first_covered": "2026-03-22",
+      "cycle": 28,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hacker_news"
+      ]
+    },
+    "outfit-design-streak": {
+      "first_covered": "2026-03-22",
+      "cycle": 28,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hacker_news"
+      ]
+    },
+    "mcp-marketplace": {
+      "first_covered": "2026-03-22",
+      "cycle": 28,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hacker_news"
       ]
     }
   },

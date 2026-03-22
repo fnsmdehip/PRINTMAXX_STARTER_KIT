@@ -1,0 +1,472 @@
+{
+  "cycle": 95,
+  "timestamp": "2026-03-21T18:27:34.472096+00:00",
+  "strategy": "ARTS + CRAFTS + DIY + MAKER",
+  "niches": {
+    "daily_drawing_streak": {
+      "reddit_communities": {
+        "drawing": 5800000,
+        "learnart": 410000,
+        "ArtFundamentals": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Procreate",
+          "rating": 4.9,
+          "rating_count": 880000,
+          "category": "professional illustration suite \u2014 full brush engine, layer system, animation; general illustration tool not a gamified daily drawing habit streak with XP for one gesture study, one value study, one anatomy drill per day"
+        },
+        {
+          "name": "Adobe Fresco",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "drawing and painting app \u2014 live brushes, vector tools, Photoshop integration; professional tool not a streak app with skill-level progression, daily challenge system, or XP for completing one study"
+        },
+        {
+          "name": "Sketchbook",
+          "rating": 4.8,
+          "rating_count": 38000,
+          "category": "professional sketching app \u2014 natural media brushes, symmetry tools, perspective guides; blank canvas tool not a gamified daily drawing streak with technique badges and artist tier gates"
+        }
+      ],
+      "community_total": 6390000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "6.39M community across r/drawing (5.8M), r/learnart (410K), r/ArtFundamentals (180K). All apps are professional illustration tools \u2014 blank canvases without habit formation. No app gamifies the daily drawing practice habit (one gesture drawing, one value study, one anatomy drill) with streak XP, technique mastery badges, and artist level progression. DrawingTutorials101 and Drawabox are static web resources, not mobile streak apps."
+    },
+    "daily_watercolor_streak": {
+      "reddit_communities": {
+        "Watercolor": 580000,
+        "painting": 480000,
+        "learnart": 410000
+      },
+      "itunes_results": [
+        {
+          "name": "Procreate",
+          "rating": 4.9,
+          "rating_count": 880000,
+          "category": "digital illustration tool with watercolor brushes; digital painting tool not a traditional watercolor skill streak with physical media technique XP"
+        },
+        {
+          "name": "iColorama S",
+          "rating": 4.7,
+          "rating_count": 12000,
+          "category": "photo art transformation app \u2014 watercolor and painting effects on photos; filter app not a daily watercolor technique streak"
+        },
+        {
+          "name": "Adobe Fresco",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "drawing with live watercolor brushes; digital tool not a physical watercolor skill-building streak with wet-on-wet, wet-on-dry, glazing technique XP"
+        }
+      ],
+      "community_total": 1470000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.47M community. Apps are digital illustration tools \u2014 none address traditional watercolor skill building. No app gamifies the daily watercolor habit (one wet-on-wet technique practiced, one color mixing study completed, one composition painted) with streak XP, technique badges (wet-on-wet, granulation, lifting, blooms), and painter level gates."
+    },
+    "daily_digital_art_streak": {
+      "reddit_communities": {
+        "digitalart": 4200000,
+        "DigitalPainting": 420000,
+        "learnart": 410000
+      },
+      "itunes_results": [
+        {
+          "name": "Procreate",
+          "rating": 4.9,
+          "rating_count": 880000,
+          "category": "professional digital illustration suite; industry-standard canvas tool not a gamified daily digital art streak with XP for one color study, one value sketch, one character concept daily"
+        },
+        {
+          "name": "Clip Studio Paint",
+          "rating": 4.7,
+          "rating_count": 58000,
+          "category": "professional manga/comic/illustration tool \u2014 panel layout, tone sheets, 3D models; professional tool not a streak app with daily challenges and skill badges"
+        },
+        {
+          "name": "Infinite Painter",
+          "rating": 4.6,
+          "rating_count": 8200,
+          "category": "digital painting app \u2014 natural brushes and color mixing; blank canvas tool not a gamified daily digital art streak"
+        }
+      ],
+      "community_total": 5030000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.03M community across r/digitalart (4.2M), r/DigitalPainting (420K), r/learnart (410K). Procreate and Clip Studio are professional tools. No app gamifies the daily digital art practice habit (one color theory study, one anatomy sketch, one lighting study) with streak XP, digital artist level progression, and technique mastery badges."
+    },
+    "daily_knitting_streak": {
+      "reddit_communities": {
+        "knitting": 1100000,
+        "knittinghelp": 200000,
+        "YarnAddicts": 85000
+      },
+      "itunes_results": [
+        {
+          "name": "Knit Companion",
+          "rating": 4.8,
+          "rating_count": 9200,
+          "category": "knitting pattern companion \u2014 follows PDF patterns, row counter, project notes; pattern reader not a gamified daily knitting streak with XP for one swatch completed, one new stitch practiced, one pattern row logged"
+        },
+        {
+          "name": "Row Counter",
+          "rating": 4.6,
+          "rating_count": 14000,
+          "category": "knitting/crochet counter app \u2014 track rows, rounds, repeats; simple counter tool not a streak app with skill progression"
+        },
+        {
+          "name": "Ravelry",
+          "rating": 4.2,
+          "rating_count": 6800,
+          "category": "knitting and crochet community \u2014 pattern library, project tracker, yarn stash; social community/pattern shop not a daily knitting skill streak with technique XP and knitter level gates"
+        }
+      ],
+      "community_total": 1385000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.39M community. Apps are pattern readers and row counters. No app gamifies the daily knitting habit (one new stitch practiced, one pattern row completed, one technique like short rows or cables drilled) with streak XP, technique badges, and knitter level gates. Ravelry is a social platform/marketplace, not a habit-building streak app."
+    },
+    "daily_crochet_streak": {
+      "reddit_communities": {
+        "crochet": 1800000,
+        "BeginnerCrochet": 280000,
+        "crochetpatterns": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Row Counter",
+          "rating": 4.6,
+          "rating_count": 14000,
+          "category": "row/round counter; simple counter tool not a gamified streak"
+        },
+        {
+          "name": "Ravelry",
+          "rating": 4.2,
+          "rating_count": 6800,
+          "category": "crochet pattern community \u2014 pattern library, project logs; social/marketplace not a daily crochet skill streak"
+        },
+        {
+          "name": "Crochet Genius",
+          "rating": 4.1,
+          "rating_count": 2100,
+          "category": "crochet pattern and tutorial app \u2014 step-by-step guides; tutorial app not a gamified daily crochet streak with XP for granny squares, amigurumi techniques, and stitch practice"
+        }
+      ],
+      "community_total": 2260000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.26M community across r/crochet (1.8M), r/BeginnerCrochet (280K), r/crochetpatterns (180K). No app gamifies the daily crochet habit (one stitch type practiced, one motif completed, one pattern row logged) with streak XP, technique mastery badges (granny square, amigurumi, Tunisian), and crocheter level progression."
+    },
+    "daily_embroidery_streak": {
+      "reddit_communities": {
+        "Embroidery": 930000,
+        "CrossStitch": 680000,
+        "needlepoint": 58000
+      },
+      "itunes_results": [
+        {
+          "name": "Embroidery i",
+          "rating": 4.3,
+          "rating_count": 2800,
+          "category": "embroidery design viewer and organizer \u2014 store and view machine embroidery designs; design file manager not a hand embroidery skill streak"
+        },
+        {
+          "name": "iStitch",
+          "rating": 4.4,
+          "rating_count": 3600,
+          "category": "cross stitch pattern reader \u2014 import patterns and follow on screen; pattern reader not a daily embroidery streak with stitch technique XP"
+        },
+        {
+          "name": "DMC Palette",
+          "rating": 4.5,
+          "rating_count": 4200,
+          "category": "DMC floss color organizer \u2014 build and save color palettes; color tool not a daily embroidery skill streak with technique badges"
+        }
+      ],
+      "community_total": 1668000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.67M community. Apps are design viewers and color organizers. No app gamifies the daily embroidery habit (one stitch type practiced \u2014 satin, French knot, chain \u2014 one design element completed, one pattern section logged) with streak XP, technique badges, and embroiderer level gates."
+    },
+    "daily_woodworking_streak": {
+      "reddit_communities": {
+        "woodworking": 4200000,
+        "BeginnerWoodWorking": 280000,
+        "handtools": 380000
+      },
+      "itunes_results": [
+        {
+          "name": "Woodworking Plans & Projects",
+          "rating": 4.2,
+          "rating_count": 3800,
+          "category": "woodworking plan library \u2014 browse and save project blueprints; plan browser not a gamified daily woodworking skill streak with XP for one joinery practice, one hand tool drill, one measurement technique"
+        },
+        {
+          "name": "iWood - Woodworking Calculator",
+          "rating": 4.4,
+          "rating_count": 2200,
+          "category": "woodworking measurement calculator \u2014 board feet, dowel spacing, dovetail angles; calculator tool not a daily woodworking streak with technique badges"
+        },
+        {
+          "name": "SketchUp Viewer",
+          "rating": 4.3,
+          "rating_count": 18000,
+          "category": "3D model viewer \u2014 view and orbit woodworking CAD designs; design viewer not a daily woodworking skill streak"
+        }
+      ],
+      "community_total": 4860000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.86M community across r/woodworking (4.2M), r/BeginnerWoodWorking (280K), r/handtools (380K). Apps are plan libraries and calculators. No app gamifies the daily woodworking habit (one joinery technique practiced, one hand tool drill completed, one project milestone logged) with streak XP, woodworking technique badges (dovetail, mortise-and-tenon, hand plane), and craftsman level gates."
+    },
+    "daily_home_diy_streak": {
+      "reddit_communities": {
+        "DIY": 5800000,
+        "HomeImprovement": 2100000,
+        "fixit": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "TaskRabbit",
+          "rating": 4.7,
+          "rating_count": 82000,
+          "category": "home service marketplace \u2014 hire local professionals for repairs and installations; hiring platform not a skill-building daily DIY streak"
+        },
+        {
+          "name": "Thumbtack",
+          "rating": 4.6,
+          "rating_count": 24000,
+          "category": "home services marketplace \u2014 find local pros for projects; service hiring tool not a DIY skill streak"
+        },
+        {
+          "name": "Home Depot",
+          "rating": 4.8,
+          "rating_count": 168000,
+          "category": "retail shopping app \u2014 browse products, check inventory, access guides; shopping app not a daily DIY skill-building streak with technique XP"
+        }
+      ],
+      "community_total": 8180000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "8.18M community across r/DIY (5.8M), r/HomeImprovement (2.1M), r/fixit (280K). Apps are marketplaces for hiring pros or shopping. No app gamifies the daily home DIY skill habit (one repair technique practiced, one tool skill drilled, one home improvement micro-task completed with logging) with streak XP, skill badges (plumbing, electrical, drywall, tiling), and homeowner level gates."
+    },
+    "daily_3d_printing_streak": {
+      "reddit_communities": {
+        "3Dprinting": 2100000,
+        "functionalprint": 420000,
+        "PrintedMinis": 380000
+      },
+      "itunes_results": [
+        {
+          "name": "Creality Hy",
+          "rating": 4.3,
+          "rating_count": 8200,
+          "category": "3D printer remote control app \u2014 monitor prints remotely, adjust settings; printer control not a daily 3D printing skill streak"
+        },
+        {
+          "name": "Bambu Handy",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "Bambu Lab printer companion \u2014 start prints, monitor status, multi-color management; printer OEM app not a daily skill streak with XP for slicer optimization, print troubleshooting, and design challenges"
+        },
+        {
+          "name": "Printables",
+          "rating": 4.5,
+          "rating_count": 6800,
+          "category": "3D model download community \u2014 browse and download print files; model library/community not a daily 3D printing skill streak with technique mastery badges"
+        }
+      ],
+      "community_total": 2900000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.90M community across r/3Dprinting (2.1M), r/functionalprint (420K), r/PrintedMinis (380K). Apps are printer control tools and model libraries. No app gamifies the daily 3D printing skill habit (one slicer setting optimized and logged, one print failure diagnosed, one design skill practiced in CAD) with streak XP, maker level gates, and technique badges (bed adhesion, support optimization, tolerance testing)."
+    },
+    "daily_electronics_maker_streak": {
+      "reddit_communities": {
+        "electronics": 2900000,
+        "arduino": 580000,
+        "raspberry_pi": 1200000
+      },
+      "itunes_results": [
+        {
+          "name": "Arduino Science Journal",
+          "rating": 4.2,
+          "rating_count": 4200,
+          "category": "sensor data logger \u2014 records data from phone sensors and Arduino-connected devices; data logger not a daily electronics skill streak with XP for circuit design, component identification, and project builds"
+        },
+        {
+          "name": "Fritzing",
+          "rating": 4.1,
+          "rating_count": 2800,
+          "category": "circuit diagram and PCB design tool \u2014 schematic editor and PCB layout; design tool not a daily electronics learning streak with skill level progression"
+        },
+        {
+          "name": "EveryCircuit",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "interactive circuit simulator \u2014 build and simulate circuits in real-time; simulation tool not a gamified daily electronics streak with XP for component mastery and project badges"
+        }
+      ],
+      "community_total": 4680000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.68M community across r/electronics (2.9M), r/arduino (580K), r/raspberry_pi (1.2M). Apps are simulation tools and loggers. No app gamifies the daily electronics maker habit (one component studied, one circuit built on breadboard, one Arduino sketch written and tested) with streak XP, maker skill badges (resistors, transistors, microcontrollers, sensors), and engineer level progression."
+    },
+    "daily_leathercraft_streak": {
+      "reddit_communities": {
+        "leathercraft": 380000,
+        "Leatherworking": 290000,
+        "crafts": 510000
+      },
+      "itunes_results": [
+        {
+          "name": "YouTube",
+          "rating": 4.5,
+          "rating_count": 8200000,
+          "category": "video platform \u2014 unstructured leatherworking tutorials scattered across creators; video discovery not a gamified daily leathercraft skill streak"
+        },
+        {
+          "name": "Leather Working & Crafting",
+          "rating": 3.8,
+          "rating_count": 420,
+          "category": "basic leatherworking tutorial app \u2014 low-quality instruction slides; low-quality tutorial not a daily streak with XP and progression"
+        },
+        {
+          "name": "Etsy",
+          "rating": 4.8,
+          "rating_count": 290000,
+          "category": "handmade marketplace \u2014 buy and sell leather goods; commerce platform not a daily leathercraft skill streak"
+        }
+      ],
+      "community_total": 1180000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.18M community. No dedicated quality app exists for daily leathercraft skill building. No app gamifies the daily leathercraft habit (one cut technique practiced, one stitch type drilled \u2014 saddle stitch, cross stitch \u2014 one hardware application completed) with streak XP, leather technique badges, and craftsman level gates."
+    },
+    "daily_calligraphy_streak": {
+      "reddit_communities": {
+        "Calligraphy": 410000,
+        "moderncalligraphy": 82000,
+        "PenmanshipPorn": 490000
+      },
+      "itunes_results": [
+        {
+          "name": "iCalligraphy",
+          "rating": 4.3,
+          "rating_count": 8200,
+          "category": "calligraphy letter tracing app \u2014 trace letterforms on screen; tracing tool not a gamified daily calligraphy streak with ink technique XP and script mastery badges"
+        },
+        {
+          "name": "Calligraphy by Apalon",
+          "rating": 4.2,
+          "rating_count": 6800,
+          "category": "digital calligraphy drawing app \u2014 stylus drawing with calligraphic brushes; drawing toy not a daily traditional calligraphy skill streak with pointed pen XP"
+        },
+        {
+          "name": "Canva",
+          "rating": 4.8,
+          "rating_count": 880000,
+          "category": "graphic design tool \u2014 calligraphic fonts available; design tool not a hand lettering skill streak"
+        }
+      ],
+      "community_total": 982000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "982K community. Apps are basic tracing tools or digital drawing toys. No app gamifies the daily calligraphy habit (one letterform drilled at 20x, one word composed, one script style studied \u2014 Copperplate, Spencerian, modern brush) with streak XP, script mastery badges, and penmanship level gates."
+    },
+    "daily_pottery_ceramics_streak": {
+      "reddit_communities": {
+        "Pottery": 520000,
+        "Ceramics": 310000,
+        "WheelThrowing": 48000
+      },
+      "itunes_results": [
+        {
+          "name": "Ceramic Arts Network",
+          "rating": 4.1,
+          "rating_count": 1800,
+          "category": "ceramics education resource \u2014 articles, videos, community content; content platform not a daily pottery skill streak"
+        },
+        {
+          "name": "YouTube",
+          "rating": 4.5,
+          "rating_count": 8200000,
+          "category": "video platform \u2014 pottery tutorials from creators like Simon Leach; unstructured video not a gamified daily pottery streak with XP"
+        },
+        {
+          "name": "Notes",
+          "rating": 4.5,
+          "rating_count": 1200000,
+          "category": "generic notes app used for pottery project logging; generic tool not a daily ceramics skill streak with centering, pulling, trimming technique XP"
+        }
+      ],
+      "community_total": 878000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "878K community. No dedicated pottery streak app exists. No app gamifies the daily pottery habit (one centering drill, one cylinder pulled, one glaze technique tested) with streak XP, throwing technique badges (centering, pulling, trimming, glazing), and potter level gates."
+    },
+    "daily_candle_making_streak": {
+      "reddit_communities": {
+        "candlemaking": 190000,
+        "DIYfragrance": 42000,
+        "crafts": 510000
+      },
+      "itunes_results": [
+        {
+          "name": "Notes",
+          "rating": 4.5,
+          "rating_count": 1200000,
+          "category": "generic notes app used for candle recipe logging; generic tool not a gamified daily candle making streak"
+        },
+        {
+          "name": "Calculator Plus",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "general calculator used for fragrance load calculations; calculator not a candle making skill streak with XP"
+        },
+        {
+          "name": "YouTube",
+          "rating": 4.5,
+          "rating_count": 8200000,
+          "category": "video tutorials \u2014 unstructured candle making content; video platform not a gamified skill streak"
+        }
+      ],
+      "community_total": 742000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "742K community. No dedicated candle making app or streak tool exists. No app gamifies the daily candle making habit (one fragrance blend tested, one pour temperature varied and logged, one wick size tested) with streak XP, technique badges (fragrance load, cure time, wick selection), and chandler level gates."
+    },
+    "daily_resin_art_streak": {
+      "reddit_communities": {
+        "resin": 310000,
+        "ResinCasting": 120000,
+        "crafts": 510000
+      },
+      "itunes_results": [
+        {
+          "name": "YouTube",
+          "rating": 4.5,
+          "rating_count": 8200000,
+          "category": "video tutorials \u2014 resin art and casting content; video platform not a gamified streak"
+        },
+        {
+          "name": "Pinterest",
+          "rating": 4.8,
+          "rating_count": 480000,
+          "category": "visual discovery \u2014 resin art inspiration boards; inspiration tool not a daily resin skill streak with technique XP"
+        },
+        {
+          "name": "Notes",
+          "rating": 4.5,
+          "rating_count": 1200000,
+          "category": "generic notes app for resin recipe logging; generic tool not a gamified resin art streak with mold technique, pigment mixing, and demolding XP"
+        }
+      ],
+      "community_total": 940000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "940K community. No dedicated resin art streak app exists. No app gamifies the daily resin art habit (one pigment mixing experiment, one mold fill completed, one technique variation tested \u2014 cells, alcohol ink, metallic pour) with streak XP, resin technique badges, and resin artist level gates."
+    }
+  }
+}

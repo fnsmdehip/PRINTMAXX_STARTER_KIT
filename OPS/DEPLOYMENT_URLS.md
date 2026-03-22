@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-21 (cycle 092 — competitor stalker agent)
+**Last updated:** 2026-03-22 (gap-hunter cycle)
 
 ---
 
@@ -8,10 +8,17 @@
 
 | App | URL | Status |
 |-----|-----|--------|
+| beat-making-streak-landing | https://beat-making-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
+| music-theory-streak-landing | https://music-theory-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
+| outfit-design-streak-landing | https://outfit-design-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
+| photography-streak-landing | https://photography-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
 | photography-streak | https://photography-streak.surge.sh | LIVE — cycle 092 blue ocean, 5.44M community |
 | beat-making-streak | https://beat-making-streak.surge.sh | LIVE — cycle 092 blue ocean, 2.69M community |
 | music-theory-streak | https://music-theory-streak.surge.sh | LIVE — cycle 092 blue ocean, 2.66M community |
 | outfit-design-streak | https://outfit-design-streak.surge.sh | LIVE — cycle 092 blue ocean, 5M community |
+| cultural-etiquette-streak | https://cultural-etiquette-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-21 |
+| geography-mastery-streak | https://geography-mastery-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-21 |
+| world-history-streak | https://world-history-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-21 |
 | ramadan-tracker | https://ramadan-tracker.surge.sh | LIVE |
 | focuslock-web | https://focuslock-web.surge.sh | LIVE |
 | habitforge-web | https://habitforge-web.surge.sh | LIVE |
@@ -331,3 +338,4 @@ Deployed 2026-03-14 by ASSET DEPLOYER.
 | claude-code-vs-opencode | https://claude-code-vs-opencode.surge.sh | LIVE 2026-03-21 | AI coding comparison — OpenCode HN launch |
 | couples-streak | https://couples-streak.surge.sh | LIVE 2026-03-21 | Couples habit tracker — blue ocean 11.14M community |
 | couples-streak-landing | https://couples-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-21 | couples relationship streak tracker |
+| mcphub-mirror | https://mcphub-mirror.surge.sh | LIVE - gap-hunter deploy 2026-03-21 |

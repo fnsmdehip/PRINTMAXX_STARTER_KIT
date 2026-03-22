@@ -1,0 +1,472 @@
+{
+  "cycle": 96,
+  "timestamp": "2026-03-21T20:36:12.090759+00:00",
+  "strategy": "COOKING + BAKING + NUTRITION + MEAL_PREP",
+  "niches": {
+    "daily_cooking_streak": {
+      "reddit_communities": {
+        "Cooking": 3500000,
+        "AskCulinary": 420000,
+        "recipes": 490000
+      },
+      "itunes_results": [
+        {
+          "name": "Kitchen Stories",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "recipe discovery and video tutorials \u2014 professional chef walkthrough videos, step-by-step photography, 1,000+ recipes; recipe browser and video library not a gamified daily cooking skill streak with XP for knife cuts practiced, sauces mastered, and culinary technique badges"
+        },
+        {
+          "name": "Yummly",
+          "rating": 4.7,
+          "rating_count": 102000,
+          "category": "AI-powered recipe recommendation engine \u2014 Allrecipes parent, personalized meal discovery, Instant Pot integration; passive recipe consumption not a daily cooking habit streak with active skill progression (knife work, heat control, flavour layering) and streak XP"
+        },
+        {
+          "name": "Allrecipes Dinner Spinner",
+          "rating": 4.8,
+          "rating_count": 185000,
+          "category": "recipe database with 60,000+ community recipes, meal planning, grocery lists; recipe consumption and meal planning not a gamified daily culinary skill building streak with chef-level gates and technique mastery badges"
+        }
+      ],
+      "community_total": 4410000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.41M community across r/Cooking (3.5M), r/AskCulinary (420K), r/recipes (490K). All top apps are recipe browsers and video libraries \u2014 passive content consumption. No app gamifies the daily culinary skill habit (one knife cut technique drilled, one sauce built from scratch, one heat-control lesson practiced) with streak XP, technique badges (brunoise, hollandaise, maillard mastery), and chef level progression from home cook to line cook to chef de partie."
+    },
+    "daily_knife_skills_streak": {
+      "reddit_communities": {
+        "chefknives": 320000,
+        "KitchenConfidential": 710000,
+        "culinaryschool": 105000
+      },
+      "itunes_results": [
+        {
+          "name": "How to Sharpen Knives",
+          "rating": 4.2,
+          "rating_count": 890,
+          "category": "knife sharpening angle guide utility \u2014 grit calculator, angle library; tool utility not a daily knife skills gamification streak with chopping speed badges, dice uniformity XP, and julienne/chiffonade technique mastery"
+        },
+        {
+          "name": "Chef School",
+          "rating": 4.1,
+          "rating_count": 1200,
+          "category": "basic cooking class video app \u2014 12 beginner lessons, static content; static video course not a streak app with daily progressive knife drills, accuracy timers, and skill-level unlocks"
+        },
+        {
+          "name": "Gordon Ramsay: Chef & Cook",
+          "rating": 4.6,
+          "rating_count": 8700,
+          "category": "cooking masterclass subscription app \u2014 Ramsay video tutorials, recipe access; masterclass passive video consumption not a gamified daily knife drill streak with XP, speed challenges, and technique-specific badges"
+        }
+      ],
+      "community_total": 1135000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.14M community across r/chefknives (320K), r/KitchenConfidential (710K), r/culinaryschool (105K). Apps are sharpening angle utilities and passive video courses. No app gamifies the daily knife skills habit (one brunoise timed drill, one julienne accuracy challenge, one chiffonade session logged) with streak XP, precision badges, and skill-level progression from rough chop to mise en place mastery."
+    },
+    "daily_grilling_bbq_streak": {
+      "reddit_communities": {
+        "BBQ": 2100000,
+        "smoking": 1500000,
+        "grilling": 840000
+      },
+      "itunes_results": [
+        {
+          "name": "BBQ Guru",
+          "rating": 4.5,
+          "rating_count": 2100,
+          "category": "temperature controller companion app \u2014 pitmaster fan controller, pit temperature monitoring; hardware companion app not a gamified daily grilling skill streak with XP for smoke ring technique, bark development, and wood selection mastery"
+        },
+        {
+          "name": "Meat Temperature & Timer",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "food thermometer reference app \u2014 safe internal temperatures for 30+ meats; simple reference utility not a daily grilling habit streak with cook logging, technique badges, and pitmaster level progression"
+        },
+        {
+          "name": "Barbecue! Bible",
+          "rating": 4.4,
+          "rating_count": 3400,
+          "category": "Steven Raichlen recipe app \u2014 200 grilling recipes, technique videos; recipe and content library not a streak app gamifying daily practice of fire management, smoke control, and rub development"
+        }
+      ],
+      "community_total": 4440000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.44M community across r/BBQ (2.1M), r/smoking (1.5M), r/grilling (840K). Apps are thermometer utilities, hardware companions, and recipe browsers. No app gamifies the daily grilling habit (one fire management session, one smoke wood experiment logged, one brisket flat technique practiced) with streak XP, smoke master badges, and pitmaster level gates from backyard griller to competition smoker."
+    },
+    "daily_coffee_brewing_streak": {
+      "reddit_communities": {
+        "Coffee": 4000000,
+        "espresso": 380000,
+        "barista": 225000
+      },
+      "itunes_results": [
+        {
+          "name": "Acaia Coffee",
+          "rating": 4.7,
+          "rating_count": 4200,
+          "category": "smart coffee scale companion app \u2014 shot timer, brew ratio calculator, flow rate monitoring; hardware companion for Acaia scales not a gamified daily coffee brewing habit streak with XP for dialing espresso, pour-over ratio mastery, and extraction technique badges"
+        },
+        {
+          "name": "Barista Coffee Recipes & Guide",
+          "rating": 4.5,
+          "rating_count": 7800,
+          "category": "coffee recipe reference with ratio guides and brew method instructions; static recipe and ratio reference not a daily coffee skill streak with dose/yield/time logging, extraction score tracking, and barista level progression"
+        },
+        {
+          "name": "Fellow",
+          "rating": 4.8,
+          "rating_count": 3100,
+          "category": "kettle temperature controller companion \u2014 precise gooseneck kettle control, recipe memory; hardware companion for Fellow kettle, not a streak app gamifying daily pour technique, bloom timing, and grind-size calibration"
+        }
+      ],
+      "community_total": 4605000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "4.61M community across r/Coffee (4M), r/espresso (380K), r/barista (225K). Apps are hardware companions (Acaia scale, Fellow kettle) and static recipe references. No app gamifies the daily coffee brewing habit (one extraction dialed, one ratio logged, one brew method practiced) with streak XP, barista level progression from home brewer to SCA certified, and technique mastery badges (bloom control, WDT distribution, channeling prevention)."
+    },
+    "daily_baking_streak": {
+      "reddit_communities": {
+        "Baking": 2300000,
+        "Breadit": 830000,
+        "cakedecorating": 310000
+      },
+      "itunes_results": [
+        {
+          "name": "King Arthur Baking",
+          "rating": 4.9,
+          "rating_count": 12000,
+          "category": "recipe library with baking conversion tools, ingredient substitutions, high-altitude adjustments; recipe database and reference utility not a gamified daily baking habit streak with XP for proofing technique, gluten development mastery, and baker level progression"
+        },
+        {
+          "name": "Yummly",
+          "rating": 4.7,
+          "rating_count": 102000,
+          "category": "recipe recommendation with baking recipes and step-by-step videos; passive recipe consumption app not a daily baking streak gamifying the daily practice of lamination, proofing windows, and oven spring technique"
+        },
+        {
+          "name": "Baking & Pastry Arts",
+          "rating": 4.3,
+          "rating_count": 2100,
+          "category": "baking reference for ratios, temperatures, and pastry techniques; static reference guide not a streak app with daily baking challenges, technique XP, and pastry chef level gates"
+        }
+      ],
+      "community_total": 3440000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.44M community across r/Baking (2.3M), r/Breadit (830K), r/cakedecorating (310K). Apps are recipe databases and static reference guides. No app gamifies the daily baking habit (one proofing window practiced, one lamination fold logged, one pastry technique drilled) with streak XP, technique badges (windowpane test, lamination layers, meringue stages), and baker level progression from beginner to pastry chef."
+    },
+    "daily_sourdough_streak": {
+      "reddit_communities": {
+        "Sourdough": 560000,
+        "Breadit": 830000,
+        "Homebrewing": 610000
+      },
+      "itunes_results": [
+        {
+          "name": "Sourdough Companion",
+          "rating": 4.6,
+          "rating_count": 3800,
+          "category": "sourdough timer and hydration calculator \u2014 proofing reminders, baker's percentages, temperature compensation; scheduling utility not a gamified daily sourdough streak with starter health XP, crumb structure badges, and baker progression from starter beginner to open crumb master"
+        },
+        {
+          "name": "Breadtopia",
+          "rating": 4.2,
+          "rating_count": 890,
+          "category": "sourdough recipe app with video tutorials; recipe and video library not a streak app rewarding daily starter feeding logs, bulk fermentation monitoring, and scoring technique practice with XP"
+        },
+        {
+          "name": "King Arthur Baking",
+          "rating": 4.9,
+          "rating_count": 12000,
+          "category": "baking recipe database including sourdough section; recipe library not a gamified daily sourdough skill streak"
+        }
+      ],
+      "community_total": 1390000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.39M community across r/Sourdough (560K), r/Breadit (830K). Sourdough Companion is a timer/calculator utility, not a streak app. No app gamifies the daily sourdough habit (starter feeding logged, bulk fermentation window tracked, scoring pattern practiced) with streak XP, crumb structure badges (open crumb, ear development, bloom), and sourdough baker progression from starter keeper to master baker."
+    },
+    "daily_pastry_decorating_streak": {
+      "reddit_communities": {
+        "cakedecorating": 310000,
+        "Baking": 2300000,
+        "foodporn": 22000000
+      },
+      "itunes_results": [
+        {
+          "name": "Wilton Cake Decorating",
+          "rating": 4.7,
+          "rating_count": 6200,
+          "category": "Wilton brand app with decorating techniques, color mixing guides, and project ideas; brand recipe and technique browser not a gamified daily decorating habit streak with piping XP, fondant technique badges, and decorator level progression"
+        },
+        {
+          "name": "Cake Decorating - Baking Games",
+          "rating": 4.3,
+          "rating_count": 42000,
+          "category": "casual mobile game simulating cake decoration \u2014 touch-tap decorating game for entertainment; casual gaming experience not a real-world skill-building streak for piping roses, fondant draping, or sugar work"
+        },
+        {
+          "name": "Domestika",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "online creative course platform with pastry and baking courses; passive video course platform not a daily practice streak rewarding hands-on skill development with XP and badges"
+        }
+      ],
+      "community_total": 2610000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.61M community (using r/cakedecorating 310K + r/Baking 2.3M, excluding broad r/foodporn). Wilton app is a recipe/technique browser, cake game is casual entertainment, Domestika is a passive course platform. No app gamifies the daily pastry decorating habit (one piping technique practiced, one fondant drape logged, one sugar flower completed) with streak XP, decorator level gates, and technique mastery badges (rosette, basket weave, isomalt work)."
+    },
+    "daily_nutrition_education_streak": {
+      "reddit_communities": {
+        "nutrition": 1500000,
+        "EatCheapAndHealthy": 3200000,
+        "HealthyFood": 680000
+      },
+      "itunes_results": [
+        {
+          "name": "MyFitnessPal",
+          "rating": 4.7,
+          "rating_count": 1200000,
+          "category": "calorie and macro tracking log \u2014 barcode scanner, food database of 14M entries, net calorie calculation; passive food logging and calorie accounting not a daily nutrition education streak teaching micronutrient roles, macronutrient timing, and metabolic health concepts with XP and knowledge badges"
+        },
+        {
+          "name": "Cronometer",
+          "rating": 4.8,
+          "rating_count": 58000,
+          "category": "precision micronutrient tracker \u2014 detailed vitamin/mineral breakdown, RDA percentages; detailed macro/micro logging utility not a gamified daily nutrition knowledge-building streak with concept mastery (glycemic index, protein synthesis, omega-3 roles) and nutritionist level progression"
+        },
+        {
+          "name": "Noom",
+          "rating": 4.7,
+          "rating_count": 285000,
+          "category": "behavioral psychology weight-loss coaching with food logging and daily lessons; subscription weight-loss coaching program not a pure nutrition education streak app with open-ended micronutrient mastery, biochemistry concepts, and dietitian level progression"
+        }
+      ],
+      "community_total": 5380000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.38M community across r/nutrition (1.5M), r/EatCheapAndHealthy (3.2M), r/HealthyFood (680K). MyFitnessPal and Cronometer are food loggers (passive tracking, not education). Noom is a weight-loss coaching subscription. No app gamifies the daily nutrition education habit (one micronutrient studied, one food-as-medicine concept mastered, one macronutrient timing principle drilled) with streak XP, dietitian level progression, and knowledge badges (glycemic load, bioavailability, anti-inflammatory compounds)."
+    },
+    "daily_meal_prep_streak": {
+      "reddit_communities": {
+        "MealPrepSunday": 3000000,
+        "mealprep": 420000,
+        "EatCheapAndHealthy": 3200000
+      },
+      "itunes_results": [
+        {
+          "name": "Mealime",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "personalized meal plan generator \u2014 dietary preference matching, grocery list auto-generation, recipe scaling; meal planning and grocery automation tool not a gamified daily meal prep skill streak with prep efficiency XP, batch cooking badges, and meal prepper level gates"
+        },
+        {
+          "name": "Plan to Eat",
+          "rating": 4.7,
+          "rating_count": 8200,
+          "category": "drag-and-drop meal planner with recipe import, pantry tracking, shopping list generation; calendar-based meal planning organizer not a daily habit streak gamifying prep speed, portion accuracy, and fridge organization skills"
+        },
+        {
+          "name": "Prepear",
+          "rating": 4.6,
+          "rating_count": 6800,
+          "category": "family meal planning app with recipe library, grocery sync, and nutritional breakdown; passive planning and shopping tool not a streak app rewarding daily prepper efficiency, cook-once-eat-five technique, and batch cooking XP"
+        }
+      ],
+      "community_total": 3420000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.42M community across r/MealPrepSunday (3M), r/mealprep (420K). Mealime, Plan to Eat, and Prepear are all planning/grocery apps \u2014 passive organization not active habit streaks. No app gamifies the daily meal prep habit (one batch cooking session logged, one container portioning technique practiced, one protein prep method drilled) with streak XP, prep-efficiency badges, and meal prepper level progression from novice to batch cooking pro."
+    },
+    "daily_vegan_cooking_streak": {
+      "reddit_communities": {
+        "vegan": 1500000,
+        "veganrecipes": 420000,
+        "PlantBasedDiet": 165000
+      },
+      "itunes_results": [
+        {
+          "name": "HappyCow",
+          "rating": 4.8,
+          "rating_count": 35000,
+          "category": "vegan and vegetarian restaurant finder \u2014 GPS-based discovery, 250,000+ listings in 180 countries; venue discovery and restaurant rating app not a daily vegan cooking skill streak with plant protein mastery XP, whole-food technique badges, and vegan chef level progression"
+        },
+        {
+          "name": "Forks Over Knives",
+          "rating": 4.7,
+          "rating_count": 8400,
+          "category": "whole-food plant-based recipe app \u2014 meal planning, 500+ WFPB recipes, nutritional tracking; recipe browser and meal planner not a gamified daily plant-based cooking habit streak with XP for aquafaba technique, cashew cream mastery, and nutritional yeast application"
+        },
+        {
+          "name": "VeganEats",
+          "rating": 4.3,
+          "rating_count": 2100,
+          "category": "vegan recipe database with barcode scanner for vegan product verification; recipe browser and product scanner not a daily vegan cooking streak gamifying skill building and technique mastery"
+        }
+      ],
+      "community_total": 2085000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.09M community across r/vegan (1.5M), r/veganrecipes (420K), r/PlantBasedDiet (165K). HappyCow is a restaurant finder, Forks Over Knives is a WFPB recipe browser, VeganEats is a product scanner. No app gamifies the daily vegan cooking habit (one plant protein technique mastered, one whole-food sauce built, one nutritional completeness check practiced) with streak XP, technique badges (aquafaba, cashew cream, tempeh fermentation), and plant-based chef level gates."
+    },
+    "daily_fermentation_streak": {
+      "reddit_communities": {
+        "fermentation": 510000,
+        "Kombucha": 210000,
+        "mead": 220000
+      },
+      "itunes_results": [
+        {
+          "name": "Fermentation Creation",
+          "rating": 4.2,
+          "rating_count": 780,
+          "category": "fermentation journal and timer app \u2014 batch logging, pH tracking, fermentation duration reminders; passive batch logging utility not a gamified daily fermentation habit streak with microorganism concept XP, culture technique badges, and fermenter level progression"
+        },
+        {
+          "name": "Meadmaking - Mead Calculator",
+          "rating": 4.4,
+          "rating_count": 1200,
+          "category": "mead brewing calculator \u2014 nutrient additions, starting gravity, ABV estimation; calculation utility not a daily fermentation skill streak with yeast health XP, TOSNA nutrient timing badges, and meadmaker level gates"
+        },
+        {
+          "name": "Brewtoad",
+          "rating": 4.0,
+          "rating_count": 2100,
+          "category": "homebrew recipe builder and sharing platform; recipe planning tool not a daily fermentation habit streak gamifying culture maintenance, pH management, and flavor development"
+        }
+      ],
+      "community_total": 940000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "940K community across r/fermentation (510K), r/Kombucha (210K), r/mead (220K). Apps are batch loggers and calculators, not streak apps. No app gamifies the daily fermentation habit (one culture check logged, one pH reading practiced, one brine ratio calculated) with streak XP, fermenter level progression, and technique mastery badges (SCOBY health, lacto-fermentation timing, kahm yeast management)."
+    },
+    "daily_cocktail_making_streak": {
+      "reddit_communities": {
+        "cocktails": 630000,
+        "bartenders": 380000,
+        "CocktailsAndBarSupplies": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Cocktail Flow",
+          "rating": 4.6,
+          "rating_count": 18000,
+          "category": "cocktail recipe database \u2014 500+ recipes, ingredient substitutions, bar tools guide; recipe browser with cocktail discovery not a gamified daily mixology habit streak with XP for shaking technique, stirring dilution mastery, and balance badges"
+        },
+        {
+          "name": "Bartender Handbook",
+          "rating": 4.5,
+          "rating_count": 9200,
+          "category": "bartending reference with 200+ cocktail recipes, pouring measurements, garnish guides; static reference guide not a daily cocktail skill streak with free-pour accuracy XP, flavor balance technique badges, and bartender level progression"
+        },
+        {
+          "name": "Drinks & Cocktails",
+          "rating": 4.4,
+          "rating_count": 14000,
+          "category": "recipe and party planning app \u2014 8,000+ drink recipes, occasion filter; recipe database app not a gamified daily mixology technique streak with balance practice, stirring dilution logging, and bartender level gates"
+        }
+      ],
+      "community_total": 1190000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.19M community across r/cocktails (630K), r/bartenders (380K), r/CocktailsAndBarSupplies (180K). All apps are recipe browsers and static references. No app gamifies the daily cocktail making habit (one shaking technique practiced, one stirring dilution logged, one flavor balance built) with streak XP, mixology mastery badges (free-pour accuracy, clarification technique, fat-washing), and bartender level progression from home hobbyist to competition-level mixologist."
+    },
+    "daily_tea_brewing_streak": {
+      "reddit_communities": {
+        "tea": 820000,
+        "chinesefood": 110000,
+        "TeaCulture": 45000
+      },
+      "itunes_results": [
+        {
+          "name": "Teaset: Tea Timer & Journal",
+          "rating": 4.6,
+          "rating_count": 3200,
+          "category": "tea steeping timer with steep time presets and session notes; brewing timer utility not a gamified daily tea mastery streak with water temperature XP, origin study badges, and tea ceremony level progression"
+        },
+        {
+          "name": "Tea Hermit",
+          "rating": 4.3,
+          "rating_count": 1800,
+          "category": "tea encyclopaedia and brewing guide \u2014 300+ tea profiles, temperature and steep time reference; static reference and learning content not a daily tea habit streak gamifying gong fu brewing sessions, water chemistry study, and terroir identification"
+        },
+        {
+          "name": "Steepster",
+          "rating": 4.1,
+          "rating_count": 2400,
+          "category": "tea rating and discovery platform \u2014 social tasting notes, tea journal, discovery by region; passive logging and social sharing not a daily brewing skill streak with gong fu technique XP and origin mastery badges"
+        }
+      ],
+      "community_total": 975000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "975K community across r/tea (820K), r/TeaCulture (45K). Teaset is a timer, Tea Hermit is a static encyclopaedia, Steepster is a rating app. No app gamifies the daily tea brewing habit (one gong fu session logged, one water temperature experiment practiced, one origin studied) with streak XP, tea master level progression, and technique mastery badges (gaiwan control, leaf-to-water ratio, rinse-and-steep cycles)."
+    },
+    "daily_wine_education_streak": {
+      "reddit_communities": {
+        "wine": 500000,
+        "winemaking": 200000,
+        "food": 22000000
+      },
+      "itunes_results": [
+        {
+          "name": "Vivino",
+          "rating": 4.8,
+          "rating_count": 285000,
+          "category": "wine scanning, rating, and purchasing app \u2014 57M wines rated, label scanner, wine recommendations, price comparison; community wine rating and shopping platform not a daily wine education streak gamifying tasting note technique, varietal identification, and sommelier concept mastery"
+        },
+        {
+          "name": "Wine-Searcher",
+          "rating": 4.6,
+          "rating_count": 18000,
+          "category": "wine pricing and availability search \u2014 14M wines, merchant comparison, cellar value tracking; price comparison and availability search not a daily learning streak with XP for terroir identification, decanting technique, and flavor wheel mastery"
+        },
+        {
+          "name": "Delectable Wine",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "wine label scanner with sommelier tasting notes \u2014 label recognition, community reviews, purchase tracking; label scanning with expert note overlay not a gamified daily sommelier skill-building streak with palate training XP and WSET concept badges"
+        }
+      ],
+      "community_total": 700000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "700K targeted community (r/wine 500K + r/winemaking 200K; excluding broad r/food). Vivino dominates wine scanning and community rating but is a discovery/shopping platform, not a daily education streak. No app gamifies the daily wine education habit (one varietal blind-tasted, one terroir concept studied, one food pairing principle practiced) with streak XP, sommelier level progression from WSET Level 1 to Master Sommelier concepts, and technique mastery badges (blind tasting, decanting, cellar management)."
+    },
+    "daily_food_photography_streak": {
+      "reddit_communities": {
+        "foodphotography": 310000,
+        "FoodPorn": 22000000,
+        "mealprep": 420000
+      },
+      "itunes_results": [
+        {
+          "name": "VSCO",
+          "rating": 4.8,
+          "rating_count": 485000,
+          "category": "photo editing and filter app \u2014 preset library, HSL adjustment, film emulation; professional mobile editing suite not a gamified daily food photography habit streak with XP for natural light positioning, hero shot composition, and prop styling technique"
+        },
+        {
+          "name": "Lightroom Photo & Video Editor",
+          "rating": 4.8,
+          "rating_count": 1200000,
+          "category": "Adobe professional photo editing \u2014 RAW support, masking, healing brush, cloud sync; professional editing tool not a daily food photography skill streak gamifying styling sessions, lighting experiments, and composition technique with learning badges"
+        },
+        {
+          "name": "Foodie - For Foodies",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "food photography filter app \u2014 30+ food-specific color filters, composition grid; color grading and filter tool not a gamified daily food photography streak rewarding active skill development (window light positioning, angle experimentation, prop selection) with XP and photographer level progression"
+        }
+      ],
+      "community_total": 730000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "730K targeted community (r/foodphotography 310K + r/mealprep 420K for overlap; excluding broad r/FoodPorn 22M general viewers). VSCO and Lightroom are professional editing suites, Foodie is a color filter app. No app gamifies the daily food photography habit (one natural light setup practiced, one hero shot composition attempted, one prop styling session logged) with streak XP, photographer level gates, and technique mastery badges (catch lights, Fresnel diffusion, overhead flat-lay mastery)."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+Text,Score,Type,Source
+"found a CPA firm handling people's tax returns.
+
+their website: summitfinancial.netlify.app
+
+netlify.app is for weekend hackathon projects. not for someone handling your W-2s.
+
+scraped 10 more like this. accountants on vercel.app. lawyers on github.io. financial advisors on replit.dev.
+
+high-trust professions on free hosting subdomains.
+
+the pitch writes itself.",9.7,standalone,cycle12_credibility_trap
+"april 15 is 24 days away.
+
+right now there are tax preparers who:
+- have no google presence
+- run websites on free subdomains
+- can't be found by anyone searching ""tax preparer near me""
+
+their busiest 3 weeks of the year. invisible online.
+
+cold email ROI on seasonal urgency is insane.",9.5,standalone,cycle12_seasonal_urgency
+"my content pipeline has generated 81 social media posts.
+
+most of them are about how i have zero social media presence.
+
+so i have 81 pieces of content about not having content.
+
+sitting in a queue that nobody reads.
+
+the irony is the content.",9.6,standalone,cycle12_irony
+"new cold outreach angle:
+
+find businesses where their email is info@theirbrand.com but their website is theirbrand.wixsite.com
+
+they BOUGHT the domain. they just never built a real site on it.
+
+they already know they need one. they already paid for step 1.
+
+they're the warmest cold leads you'll ever find.",9.5,standalone,cycle12_warm_leads
+"go google your accountant's website right now.
+
+if it ends in .netlify.app, .vercel.app, .wixsite.com, or .github.io
+
+that person handles your taxes on a website that costs $0.
+
+would you trust a doctor whose office was a folding table at starbucks?",9.7,reply_bait,cycle12_credibility_check
+"which is scarier:
+
+building a system from scratch
+
+or
+
+clicking ""create account"" on stripe.com
+
+(day 45 of answering this question incorrectly)",9.6,reply_bait,cycle11_build_vs_activate
+"i have:
+- 81 generated posts about having zero audience
+- 1,376 scraped leads with zero emails sent
+- 7 digital products with zero storefronts
+- 386 websites with zero payment processors
+
+the system that tracks all this: fully operational.
+the human who needs to press 3 buttons: paralyzed.
+
+what's YOUR version of this?",9.5,reply_bait,cycle12_queue_paradox
+"built a free ramadan tracker.
+
+- suhoor and iftar times for any city
+- daily quran reading tracker
+- charity (zakat) goal tracking
+- works offline (PWA)
+- no account needed
+- no ads
+
+22 days of ramadan left. share with your family.
+
+ramadan-tracker.surge.sh",9.5,launch,ramadan_tracker
+"built a free app for couples who want to build habits together.
+
+- shared streak tracking
+- no accounts needed
+- works on any phone
+- syncs between partners via shared link
+- completely free, no ads
+
+couples-streak.surge.sh
+
+because accountability is easier when someone else is counting on you.",9.6,launch,couples_streak
+"every habit tracker is designed for solo use.
+
+but the data on habit formation is clear: shared accountability increases completion rate by 65%.
+
+built couples-streak to test this.
+
+two people. one streak. shared link. no signup.
+
+couples-streak.surge.sh",9.4,insight,couples_streak_data

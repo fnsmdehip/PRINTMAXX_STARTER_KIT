@@ -1,0 +1,73 @@
+# Alpha Research Cycle - 2026-03-22 12:17
+# Source: Reddit scrape cycle + decision engine
+# Status: READY_TO_POST
+
+## TWEET 1 (contrarian hot take - AI tools)
+Anthropic just dropped research showing AI coding tools might be making developers WORSE at coding.
+
+Meanwhile I have 114 deployed apps built with Claude Code.
+
+The difference: I don't use AI as a crutch. I use it as a multiplier.
+
+Most devs: "write this function for me"
+Power users: "help me architect this system"
+
+The tool isn't the problem. Your relationship with it is.
+
+## TWEET 2 (Cursor drama engagement bait)
+Cursor vs Claude Code drama is heating up again.
+
+Moonshot claims Cursor Composer was "authorized" but the community isn't buying it.
+
+Meanwhile Claude Code users are shipping apps in hours not days.
+
+The best IDE war is the one you're not fighting because you're too busy shipping.
+
+## TWEET 3 (indie hacker community bait)
+r/microsaas poster just celebrated getting their first 6 users.
+
+Everyone's congratulating them.
+
+What nobody's saying: 6 users means product-market fit exists. Now the real work starts.
+
+Here's what I'd do next:
+- Talk to all 6. Find the pain point that made them sign up
+- Build ONLY what they ask for
+- Charge before you scale
+
+6 users > 6,000 tire-kickers
+
+## THREAD (Why are you making an app?)
+THREAD: "Why are you making an app?" went viral on r/AppBusiness (144 comments)
+
+Here's what the replies revealed about 2026 app builders:
+
+1/ Most people build apps to solve their OWN problem first.
+Not market research. Not TAM analysis. They had an itch and scratched it.
+
+This is actually the highest-conviction signal you can find. If YOU need it, others probably do too.
+
+2/ The second biggest reason: "I saw a terrible app making money and thought I could do better."
+
+This is the app factory model. Find apps with bad UX + good revenue. Clone with modern stack. Undercut on price.
+
+We have 114 apps deployed using exactly this strategy.
+
+3/ The pattern nobody talks about: most successful indie apps started as side projects with ZERO intention of monetizing.
+
+The monetization came after users showed up organically.
+
+This is backwards from how most people think about building products.
+
+4/ What the thread REALLY reveals: the barrier to building apps has collapsed.
+
+Claude Code + Capacitor + Surge.sh = you can go from idea to deployed app in 4 hours.
+
+The new competitive advantage isn't technical skill. It's taste and distribution.
+
+5/ My framework for deciding what to build:
+- Can I ship an MVP in <8 hours? If no, scope down
+- Does it solve a problem I personally have? If yes, conviction is 10x
+- Can I charge for it on day 1? If no, add a premium tier
+
+Speed > perfection. Ship > plan. Revenue > downloads.

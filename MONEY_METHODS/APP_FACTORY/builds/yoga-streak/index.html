@@ -23,7 +23,14 @@
 <meta name="twitter:title" content="YogaStreak - Free Daily Yoga Habit Tracker">
 <meta name="twitter:description" content="Track your daily yoga streak. No account, no ads, all data on your device.">
 <link rel="manifest" href="manifest.json">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"YogaStreak","description":"Build a daily yoga habit with streak accountability. Track sessions, log minutes, earn badges. Free yoga habit tracker with no account required.","url":"https://yoga-streak.surge.sh/","applicationCategory":"HealthAndFitnessApplication","operatingSystem":"Web, iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX","url":"https://printmaxx-apps.surge.sh/"},"keywords":"yoga streak app, daily yoga tracker, yoga habit tracker, free yoga app, yoga practice tracker"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"YogaStreak","description":"Build a daily yoga habit with streak accountability. Track sessions, log minutes, earn badges. Free yoga habit tracker — no account required.","url":"https://yoga-streak.surge.sh/","applicationCategory":"HealthAndFitness","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"},"featureList":["Daily yoga streak tracking","Session duration logging","Style tracking (Hatha, Vinyasa, Yin, Ashtanga)","Milestone badges","Streak calendar heatmap","No account required"]}</script>
+<script>
+function maybeShowReviewPrompt(days) {
+  if (![7, 14, 21, 30, 90, 365].includes(days)) return;
+  if (state.lastReviewPrompt && (Date.now() - state.lastReviewPrompt) < (90 * 86400000)) return;
+  setTimeout(() => { document.getElementById('review-modal').style.display = 'flex'; }, 1400);
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is YogaStreak free?","acceptedAnswer":{"@type":"Answer","text":"Yes, YogaStreak is completely free. No account, no subscription, no ads. All data stays on your device."}},{"@type":"Question","name":"Does YogaStreak work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. YogaStreak is a Progressive Web App (PWA) that works fully offline. Your data never leaves your device."}},{"@type":"Question","name":"How does the yoga streak work?","acceptedAnswer":{"@type":"Answer","text":"Log a yoga session each day to maintain your streak. Miss a day and your streak resets. Streak accountability is the most effective way to build a consistent yoga habit."}},{"@type":"Question","name":"Can I track different yoga styles?","acceptedAnswer":{"@type":"Answer","text":"Yes. YogaStreak lets you log any style — Hatha, Vinyasa, Yin, Ashtanga, Restorative — along with duration and notes."}}]}</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -216,6 +223,7 @@ let state = {
   currentStreak: 0,
   longestStreak: 0,
   sessions: [],
+  lastReviewPrompt: null,
 };
 let currentTab = 'today';
 
@@ -468,6 +476,7 @@ function saveSession() {
   closeLogModal();
   render();
   toast('Practice logged');
+  maybeShowReviewPrompt(calcStreak().current);
 }
 
 function confirmReset() { document.getElementById('reset-modal').classList.remove('hidden'); }
@@ -490,5 +499,18 @@ loadState();
 render();
 switchTab('today');
 </script>
+<!-- Review Prompt Modal -->
+<div id="review-modal" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);align-items:center;justify-content:center;">
+  <div style="width:100%;max-width:380px;margin:0 20px;background:#1a1a2e;border:1px solid rgba(124,58,237,.3);border-radius:24px;padding:28px 24px;">
+    <div style="text-align:center;margin-bottom:20px;">
+      <div style="font-size:3.5rem;margin-bottom:12px;">🌸</div>
+      <h2 style="font-size:1.3rem;font-weight:800;color:#fff;margin:0 0 8px">Enjoying YogaStreak?</h2>
+      <p style="font-size:.9rem;color:#94a3b8;margin:0;">You have hit a real milestone. A 5-star review takes 10 seconds and helps others find this app.</p>
+    </div>
+    <button id="review-yes-btn" onclick="state.lastReviewPrompt=Date.now();saveState();document.getElementById('review-modal').style.display='none';window.open('https://apps.apple.com/app/id0','_blank');" style="width:100%;padding:14px;border-radius:16px;border:none;cursor:pointer;font-weight:700;font-size:1rem;color:#fff;background:linear-gradient(135deg,#7c3aed,#7c3aed);margin-bottom:10px;">Rate YogaStreak ⭐⭐⭐⭐⭐</button>
+    <button onclick="state.lastReviewPrompt=Date.now()-82*86400000;saveState();document.getElementById('review-modal').style.display='none';" style="width:100%;padding:12px;background:none;border:none;cursor:pointer;color:#64748b;font-size:.85rem;">Maybe later</button>
+  </div>
+</div>
+
 </body>
 </html>

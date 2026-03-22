@@ -24,9 +24,82 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SoberStreak","applicationCategory":"HealthApplication","operatingSystem":"Web","url":"https://soberstreak.surge.sh/","description":"100% private NoFap and sobriety streak tracker. No account, no servers, zero data collection. Works offline.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"},"featureList":["NoFap streak tracking","Sobriety counter for alcohol, weed, and more","100% offline — nothing leaves your device","No account required","Emergency craving support","Milestone rewards at 7, 30, 90, 365 days"]}
 </script>
+<script>
+// ============================
+// SWIPE-TO-CHECKIN
+// ============================
+(function initSwipe() {
+  let startY = 0, startX = 0;
+  const circle = document.getElementById('streak-circle');
+  if (!circle) return;
+  circle.addEventListener('touchstart', e => { startY = e.touches[0].clientY; startX = e.touches[0].clientX; }, {passive: true});
+  circle.addEventListener('touchend', e => {
+    const dy = startY - e.changedTouches[0].clientY;
+    const dx = Math.abs(startX - e.changedTouches[0].clientX);
+    if (dy > 45 && dx < 40) {
+      if (navigator.vibrate) navigator.vibrate(30);
+      doCheckin();
+    }
+  }, {passive: true});
+})();
+
+// ============================
+// MINIMUM VIABLE DAY (MVD)
+// ============================
+function renderMVD() {
+  const section = document.getElementById('mvd-section');
+  const hint = document.getElementById('swipe-hint');
+  if (!state.mvdEnabled) { section.style.display = 'none'; return; }
+  section.style.display = '';
+  const list = document.getElementById('mvd-goals-list');
+  const today = getToday();
+  const completed = state.mvdCompleted[today] || [];
+  list.innerHTML = '';
+  state.mvdGoals.forEach((goal, i) => {
+    if (!goal) return;
+    const done = completed.includes(i);
+    const row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:' + (done ? 'rgba(124,58,237,.15)' : 'rgba(255,255,255,.04)') + ';border:1px solid ' + (done ? 'rgba(124,58,237,.3)' : 'rgba(255,255,255,.07)') + ';cursor:pointer;transition:all .15s;';
+    row.innerHTML = '<div style="width:22px;height:22px;border-radius:50%;border:2px solid ' + (done ? '#7c3aed' : '#4b5563') + ';background:' + (done ? '#7c3aed' : 'transparent') + ';display:flex;align-items:center;justify-content:center;flex-shrink:0;">' + (done ? '<span style="color:#fff;font-size:.65rem;">✓</span>' : '') + '</div><span style="font-size:.85rem;color:' + (done ? '#a78bfa' : '#d1d5db') + ';flex:1;">' + goal + '</span>';
+    row.onclick = () => {
+      if (!state.mvdCompleted[today]) state.mvdCompleted[today] = [];
+      const idx = state.mvdCompleted[today].indexOf(i);
+      if (idx >= 0) state.mvdCompleted[today].splice(idx, 1);
+      else state.mvdCompleted[today].push(i);
+      if (navigator.vibrate) navigator.vibrate(15);
+      saveState();
+      renderMVD();
+      checkMVDWin(today);
+    };
+    list.appendChild(row);
+  });
+  const badge = document.getElementById('mvd-complete-badge');
+  const allDone = state.mvdGoals.filter(g=>g).every((_,i)=>(completed.includes(i)));
+  badge.classList.toggle('hidden', !allDone);
+}
+
+function checkMVDWin(today) {
+  const goals = state.mvdGoals.filter(g => g);
+  if (!goals.length) return;
+  const done = state.mvdCompleted[today] || [];
+  if (goals.every((_, i) => done.includes(i))) {
+    showToast('Minimum Viable Day complete. Win counted.');
+  }
+}
+
+function toggleMVD() {
+  state.mvdEnabled = !state.mvdEnabled;
+  if (state.mvdEnabled && state.mvdGoals.every(g => !g)) {
+    state.mvdGoals = ['Daily check-in', '', ''];
+  }
+  saveState();
+  renderMVD();
+}
+
+</script>
 <link rel="manifest" href="manifest.json">
 <link rel="canonical" href="https://soberstreak.surge.sh/">
-<title>SoberStreak - Private NoFap & Sobriety Tracker</title>
+<title>SoberStreak - NoFap & Sobriety Streak Tracker | 100% Private App</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -65,7 +138,7 @@ body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; b
     <!-- HOME TAB -->
     <div id="tab-home" class="tab-content">
       <div class="flex flex-col items-center py-6">
-        <div class="pulse-glow w-48 h-48 rounded-full flex items-center justify-center mb-4" style="background:radial-gradient(circle,rgba(124,58,237,.15) 0%,rgba(15,15,26,0) 70%);border:2px solid rgba(124,58,237,.3)">
+        <div id="streak-circle" class="pulse-glow w-48 h-48 rounded-full flex items-center justify-center mb-4" style="background:radial-gradient(circle,rgba(124,58,237,.15) 0%,rgba(15,15,26,0) 70%);border:2px solid rgba(124,58,237,.3);touch-action:pan-x;">
           <div class="text-center">
             <div id="streak-days" class="text-6xl font-black text-white leading-none">0</div>
             <div class="text-purple-400 text-sm font-medium mt-1">days clean</div>
@@ -73,6 +146,7 @@ body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; b
         </div>
         <div id="streak-label" class="text-lg font-semibold text-white mb-1">Start your journey</div>
         <div id="start-date-label" class="text-xs text-gray-500">Tap check-in to begin</div>
+        <div id="swipe-hint" class="text-xs text-purple-400/60 mt-2" style="font-size:.7rem;letter-spacing:.03em;">↑ swipe up on circle to check in</div>
       </div>
 
       <div class="glass rounded-2xl p-4 mb-4">
@@ -88,7 +162,17 @@ body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; b
         ✓ Check In Today
       </button>
 
-      <button id="craving-btn" class="w-full py-3 rounded-2xl font-semibold text-red-400 text-sm mb-6 glass border border-red-500/20">
+      <!-- MINIMUM VIABLE DAY (MVD) MODE -->
+      <div id="mvd-section" class="glass rounded-2xl p-4 mb-4" style="display:none;">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-sm font-semibold text-white">Minimum Viable Day</span>
+          <span id="mvd-complete-badge" class="text-xs text-purple-400 font-medium hidden">✓ Win achieved</span>
+        </div>
+        <div id="mvd-goals-list" class="space-y-2 mb-2"></div>
+        <p class="text-xs text-gray-600 mt-2">Set 3 non-negotiables. All 3 done = today wins.</p>
+      </div>
+
+            <button id="craving-btn" class="w-full py-3 rounded-2xl font-semibold text-red-400 text-sm mb-6 glass border border-red-500/20">
         ⚡ Craving? Tap for emergency support
       </button>
 
@@ -356,7 +440,8 @@ let state = {
   habit: 'nofap', customHabit: '', startDate: null,
   lastCheckin: null, streak: 0, bestStreak: 0,
   totalDays: 0, resets: 0, checkedDays: [], journal: [],
-  lastReviewPrompt: null, isPremium: false
+  lastReviewPrompt: null, isPremium: false,
+  mvdEnabled: false, mvdGoals: ['', '', ''], mvdCompleted: {}
 };
 
 // ============================
@@ -463,6 +548,7 @@ function updateCheckinBtn() {
     btn.style.border = '1px solid rgba(124,58,237,.3)';
     btn.textContent = '✓ Checked in today';
     btn.style.color = '#a78bfa';
+    const h = document.getElementById('swipe-hint'); if(h) h.style.display='none';
   } else {
     btn.style.background = 'linear-gradient(135deg,#6d28d9,#7c3aed)';
     btn.style.border = 'none';
@@ -809,6 +895,7 @@ renderHome();
 renderHabitChips();
 renderHeatmap();
 buildCravingTools();
+renderMVD();
 </script>
 </body>
 </html>

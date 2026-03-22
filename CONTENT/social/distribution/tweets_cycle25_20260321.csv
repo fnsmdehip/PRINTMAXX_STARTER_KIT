@@ -1,0 +1,109 @@
+account,type,priority,score,text,status
+@PRINTMAXXER,standalone,P0,9.4,"25 days left of Ramadan.
+
+we built a free tracker: prayer times, fasting log, Quran reading streak, daily duas.
+
+no account needed. works offline. no tracking.
+
+ramadan-tracker.surge.sh
+
+if this helps even one person stay consistent, it was worth building.
+
+(pass it to someone who needs it)",READY_TO_POST
+@PRINTMAXXER,standalone,P1,9.6,"we built apps for niches nobody is targeting.
+
+photography habit tracker: 5.44M community. zero competition.
+beat-making streak app: 2.69M community. zero competition.
+music theory practice tracker: 2.66M community. zero competition.
+outfit design habit app: 5M community. zero competition.
+couples habit tracker: 11.14M community. zero competition.
+
+these weren't random guesses. an agent scanned 274 communities for:
+- active engagement (comments per day)
+- zero existing native apps
+- habit/streak behavior already present
+
+we launched all 5 this week. no marketing budget. surge.sh deploy.
+
+if you're building apps, you're probably targeting the wrong niches.",READY_TO_POST
+@PRINTMAXXER,standalone,P1,9.3,"OpenCode just hit 685 points on HN.
+
+i wrote a full breakdown comparing it to Claude Code for real usage:
+- context handling
+- multi-file edits
+- autonomous agent mode
+- cost per 1000 lines
+
+claude-code-vs-opencode.surge.sh
+
+tldr: they're optimizing for different things. OpenCode is for speed. Claude Code is for systems.
+
+neither is ""better."" depends what you're building.",READY_TO_POST
+@PRINTMAXXER,standalone,P2,9.1,"built a directory for MCP servers.
+
+there are 300+ MCP servers now. nobody has indexed them properly.
+
+mcp-marketplace.surge.sh
+
+filters: free/paid, category, complexity, official/community.
+
+if you use Claude Code or any MCP-compatible client, this saves you 2 hours of digging through READMEs.",READY_TO_POST
+@PRINTMAXXER,thread_1of7,P1,9.8,"how we found 274 blue ocean niches with zero competition.
+
+thread:",READY_TO_POST
+@PRINTMAXXER,thread_2of7,P1,9.8,"step 1: define ""blue ocean"" strictly.
+
+not ""low competition"" (that's subjective).
+not ""less searched"" (that's just small).
+
+blue ocean = active community (comments per day > 50) + habit behavior already present + zero native app exists.
+
+all three must be true.",READY_TO_POST
+@PRINTMAXXER,thread_3of7,P1,9.8,"step 2: scan communities at scale.
+
+we used an agent to analyze Reddit, Facebook groups, Discord servers, and app store categories simultaneously.
+
+not manually. not with a list of obvious niches. automated scan across everything.
+
+274 matched all three criteria.",READY_TO_POST
+@PRINTMAXXER,thread_4of7,P1,9.8,"step 3: filter for habit loops.
+
+not every niche needs an app. you need niches where:
+- people are already doing a daily activity
+- they're already tracking it (even badly, in notes apps)
+- they'd benefit from streaks and reminders
+
+this eliminates 70% of the 274.",READY_TO_POST
+@PRINTMAXXER,thread_5of7,P1,9.8,"step 4: verify with community language.
+
+before building, read 50 posts from the target subreddit.
+
+look for phrases like:
+- ""trying to stay consistent""
+- ""day X of...""
+- ""anyone else struggling with...""
+- ""habit tracker for...""
+
+if you see these, the demand is real and proven.",READY_TO_POST
+@PRINTMAXXER,thread_6of7,P1,9.8,"step 5: ship fast and test.
+
+we deployed 5 new apps this week:
+- photography-streak.surge.sh
+- beat-making-streak.surge.sh
+- music-theory-streak.surge.sh
+- outfit-design-streak.surge.sh
+- couples-streak.surge.sh
+
+none took more than 3 hours to build and deploy using our base template.",READY_TO_POST
+@PRINTMAXXER,thread_7of7,P1,9.8,"the framework:
+
+active community (>50 comments/day)
++ daily habit behavior already present
++ zero native app exists
++ community language shows tracking desire
+
+= ship it.
+
+we have 274 queued. currently running through them 5 at a time.
+
+want the full list of which niches we're targeting next? reply ""list"" and i'll share the next 10.",READY_TO_POST

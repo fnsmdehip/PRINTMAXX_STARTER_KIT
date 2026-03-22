@@ -1,0 +1,93 @@
+type,asset,text,hook_score,notes
+single,photography-streak,"built a photography streak tracker for the 5.4M people in photography communities who talk about 'practicing every day' but have no accountability
+
+you get a calendar. every day you shoot, you tap. streak keeps going.
+
+that's it. no gear reviews. no algorithm. just your streak.
+
+photography-streak.surge.sh",9,r/photography angle — massive community
+single,photography-streak,"the best camera is the one you actually use every day
+
+except nobody tracks whether they're actually using it every day
+
+built the tool to fix that: photography-streak.surge.sh",8,short punchy
+single,beat-making-streak,"made a streak tracker for beat producers
+
+not features. not FL Studio tutorials. just:
+- today you made a beat: yes or no
+- how long is your streak
+
+beat-making-streak.surge.sh",9,r/WeAreTheMusicMakers angle
+single,beat-making-streak,"kanye made beats every day for years before anyone cared
+
+the people who become producers aren't necessarily the most talented. they're the ones who showed up every day.
+
+built the tool to track your daily production streak: beat-making-streak.surge.sh",8.5,narrative hook
+single,music-theory-streak,"learning music theory is easy to 'start' and almost impossible to keep doing consistently
+
+made a streak tracker for exactly this. study once a day, tap, streak keeps going. miss a day, streak resets.
+
+no courses. no lessons. just accountability: music-theory-streak.surge.sh",8,pain point angle
+thread_part1,music-theory-streak,"music theory is one of those things where if you practice daily you'll make real progress, but if you do it 3x a week when you feel like it, you'll restart the same beginner concepts forever
+
+1/4",9,open loop thread
+thread_part2,music-theory-streak,"the problem isn't the material. youtube has free music theory content that would take years to exhaust.
+
+the problem is the gap between 'i want to learn this' and 'i practice this daily'
+
+2/4",8,
+thread_part3,music-theory-streak,"people who become musicians aren't smarter. they just have a system that keeps them showing up.
+
+a 30-day streak on music theory is worth more than 3 months of inconsistent attempts.
+
+3/4",8,
+thread_part4,music-theory-streak,"built music-theory-streak.surge.sh to track exactly this.
+
+tap when you study. your streak stays alive. miss a day, it resets.
+
+no premium tier. no email required. just the streak.
+
+4/4",9,CTA
+single,outfit-design-streak,"built a streak tracker for outfit design / fashion drawing
+
+the 5M people in fashion communities who want to 'design more' but never build the daily habit
+
+one button. did you design today? yes/no. streak goes up.
+
+outfit-design-streak.surge.sh",8.5,r/femalefashionadvice + r/streetwear angle
+single,outfit-design-streak,"fashion school teaches you nothing about consistency
+
+the designers who break through aren't the most talented art school grads. they're the ones who sketched something every single day.
+
+tracker for building that habit: outfit-design-streak.surge.sh",8,aspirational hook
+single,best-lead-generation-tools,"put together a comparison of the best lead generation tools in 2026
+
+not a sponsored post. just: what actually works, what the pricing looks like, what the tradeoffs are.
+
+best-lead-generation-tools.surge.sh",7.5,B2B growth angle
+single,best-lead-generation-tools,"lead gen tools are confusing on purpose
+
+every one claims to be 'the all-in-one solution' and buries the pricing 3 pages deep
+
+wrote an honest comparison: best-lead-generation-tools.surge.sh",8,anti-marketing angle
+reply_bait,photography-streak,"what's your current photography streak? (days in a row you've shot something)
+
+be honest",9,reply bait
+reply_bait,beat-making-streak,"producers: what's the longest beat-making streak you've ever had?
+
+most people i ask say '3 days' or 'i don't track it'",9,reply bait
+reply_bait,music-theory-streak,"learning music theory question: do you practice daily or only when you feel like it?
+
+there's a big difference in outcomes and most people don't realize it until 2 years in",8.5,reply bait
+qt_caption,photography-streak,"this is why habit trackers for creative work exist — photography-streak.surge.sh","",quote tweet on any 'practice makes perfect' photography post
+qt_caption,beat-making-streak,"built the daily beat practice tracker for exactly this: beat-making-streak.surge.sh","",quote tweet on producer 'consistency' posts
+community_bait,general,"what's a skill you practice daily that most people only do 'when they feel like it'?
+
+asking because i've been building habit trackers for niche communities and the pattern is the same everywhere — consistency matters more than talent, and nobody has a system to track it",9,indie hacker / builder angle
+community_bait,general,"shipped 4 new streak trackers this week for creative communities
+
+photography / beat-making / music theory / outfit design
+
+each one took <1 day to build. all sitting at $0 revenue. the pattern is interesting: massive communities (2-5M), massive expressed interest in 'daily practice,' zero existing tools
+
+next step: figuring out which community actually converts to paid",9.5,builder transparency — genuine insight

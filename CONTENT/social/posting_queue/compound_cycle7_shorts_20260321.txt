@@ -1,0 +1,78 @@
+# COMPOUND CYCLE 7 -- SHORT-FORM VIDEO SCRIPTS
+# Format: 30-60 second talking head or screen recording
+# Status: READY_TO_RECORD
+
+---
+
+## Short 1 -- "Your deployed sites have bugs you don't know about" [9.4/10]
+
+HOOK (0-3s): "Your live sites have bugs and nobody's telling you."
+
+BODY (3-45s):
+"I have 167 apps deployed. Today an autonomous agent crawled all of them and found three critical bugs.
+
+Bug one: a JSON-LD script tag was nested inside another script tag. Google rejected the entire page's structured data. Zero rich results.
+
+Bug two: a canonical URL pointing to prayerlock.surge.sh instead of prayerlock-web.surge.sh. Google was sending all the PageRank to a domain that doesn't exist.
+
+Bug three: eight sites had their Twitter card set to 'summary' instead of 'summary_large_image.' Every social share looked like a tiny thumbnail.
+
+None of these crash your app. None throw errors. They silently kill your traffic."
+
+CTA (45-60s): "If you have more than 5 deployed sites, audit them. The bugs you can't see are the ones that hurt."
+
+---
+
+## Short 2 -- "Reddit is 46.7% of Perplexity" [9.2/10]
+
+HOOK (0-3s): "The new SEO nobody's talking about."
+
+BODY (3-40s):
+"Reddit accounts for 46.7% of all Perplexity AI citations.
+
+That means the biggest lever for appearing in AI search results isn't schema markup. It's not meta tags. It's not even backlinks.
+
+It's posting genuinely helpful content on relevant subreddits.
+
+Perplexity crawls Reddit. Cites Reddit comments. Links to whatever Reddit mentions.
+
+The old game: rank on Google.
+The new game: get cited by Perplexity, ChatGPT, Claude."
+
+CTA (40-50s): "Post about your product where your users already hang out. That thread will get cited by AI more than your optimized landing page."
+
+---
+
+## Short 3 -- "67.7% of our database was duplicates" [8.9/10]
+
+HOOK (0-3s): "We cleaned our database and 67% of it was garbage."
+
+BODY (3-40s):
+"40,359 entries in our intelligence pipeline. After running one dedup script: 12,980.
+
+27,379 entries were duplicates. When you're scraping 40 sources daily and just appending everything, bloat compounds faster than value.
+
+The cleanup improved read speed, query accuracy, and memory usage more than any code optimization we did this quarter."
+
+CTA (40-50s): "Before you optimize your code, optimize your data. One cleanup script did more than a month of refactoring."
+
+---
+
+## Short 4 -- "The 60-minute bottleneck" [9.5/10]
+
+HOOK (0-3s): "167 apps. 33 AI agents. Revenue: zero dollars."
+
+BODY (3-45s):
+"33 agents running 24/7. 363 scripts automated. 119 cron jobs active. 1,044 content pieces queued. 1,366 leads scraped. 16 digital products drafted.
+
+All of this runs autonomously.
+
+The bottleneck: 60 minutes of account creation.
+
+Stripe: 10 minutes. Gumroad: 10 minutes. X login: 5 minutes. Surge upgrade: 5 minutes. Email tool: 30 minutes.
+
+The entire revenue pipeline is blocked by 60 minutes of clicking 'Sign Up.'
+
+Day 45."
+
+CTA (45-55s): "Sometimes the bottleneck isn't technical. It's the thing you keep putting off."

@@ -23,7 +23,14 @@
 <meta name="twitter:title" content="PushupStreak - Free Daily Pushup Tracker">
 <meta name="twitter:description" content="Track your daily pushup streak and reps. No account, no ads, all data on your device.">
 <link rel="manifest" href="manifest.json">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"PushupStreak","description":"Track your daily pushup streak, total reps, and personal records. Free pushup tracker with streak accountability — no account required.","url":"https://pushup-streak.surge.sh/","applicationCategory":"HealthAndFitnessApplication","operatingSystem":"Web, iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX","url":"https://printmaxx-apps.surge.sh/"},"keywords":"pushup tracker app, daily pushup challenge, pushup rep counter, free pushup app, pushup streak tracker"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PushupStreak","description":"Track your daily pushup streak, total reps, and personal records. Free pushup tracker with streak accountability — no account required.","url":"https://pushup-streak.surge.sh/","applicationCategory":"HealthAndFitness","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"},"featureList":["Daily pushup streak tracking","Rep counter and lifetime total","Personal best tracking","30-day challenge support","Milestone rewards","No account required"]}</script>
+<script>
+function maybeShowReviewPrompt(days) {
+  if (![7, 21, 30, 90, 365].includes(days)) return;
+  if (state.lastReviewPrompt && (Date.now() - state.lastReviewPrompt) < (90 * 86400000)) return;
+  setTimeout(() => { document.getElementById('review-modal').style.display = 'flex'; }, 1400);
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is PushupStreak free?","acceptedAnswer":{"@type":"Answer","text":"Yes, PushupStreak is completely free. No account, no subscription, no ads. All data stays on your device."}},{"@type":"Question","name":"Does PushupStreak track total reps?","acceptedAnswer":{"@type":"Answer","text":"Yes. PushupStreak tracks your daily reps, cumulative total, and personal best. Watch your lifetime rep count grow as you build the habit."}},{"@type":"Question","name":"Can I use PushupStreak for a 30-day challenge?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. PushupStreak is perfect for 30-day pushup challenges. Log each day, maintain your streak, and track your improvement over the full 30 days."}},{"@type":"Question","name":"What happens if I miss a day?","acceptedAnswer":{"@type":"Answer","text":"Your streak resets to zero. This is intentional — the reset is what makes streaks motivating. Your total rep count is preserved."}}]}</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -169,7 +176,7 @@ const PROGRAMS = [
   {name:'Grease the Groove',desc:'Do 50% of your max reps every hour throughout the day. Pavel Tsatsouline protocol. Fastest strength gains.',schedule:'Find max reps → set timer every 1-2 hours → do 50% max → never go to failure'},
   {name:'Fighter Pushup Program',desc:'4x per week. Builds explosive power and muscle endurance simultaneously.',schedule:'Mon: 5x20 | Wed: 4x25 | Fri: 3x30 | Sun: 1x max effort'},
 ];
-let state = { sessions: [] };
+let state = { sessions: [] , lastReviewPrompt: null};
 function loadState() { try { const r = localStorage.getItem(STORE_KEY); if (r) state = JSON.parse(r); } catch(e) {} }
 function saveState() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 function today() { return new Date().toISOString().split('T')[0]; }
@@ -254,6 +261,7 @@ function saveSession() {
   const entry={date:today(),reps,best:best||null,note:note||null};
   if(idx>=0) state.sessions[idx]=entry; else state.sessions.push(entry);
   saveState(); closeLogModal(); render(); toast('Logged '+reps+' reps');
+  maybeShowReviewPrompt(calcStreak().current);
 }
 function confirmReset(){document.getElementById('reset-modal').classList.remove('hidden');}
 function closeResetModal(){document.getElementById('reset-modal').classList.add('hidden');}
@@ -261,5 +269,18 @@ function doReset(){state.currentStreak=0;saveState();closeResetModal();render();
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 loadState(); render(); switchTab('today');
 </script>
+<!-- Review Prompt Modal -->
+<div id="review-modal" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);align-items:center;justify-content:center;">
+  <div style="width:100%;max-width:380px;margin:0 20px;background:#001a08;border:1px solid rgba(22,163,74,.3);border-radius:24px;padding:28px 24px;">
+    <div style="text-align:center;margin-bottom:20px;">
+      <div style="font-size:3.5rem;margin-bottom:12px;">💪</div>
+      <h2 style="font-size:1.3rem;font-weight:800;color:#fff;margin:0 0 8px">Enjoying PushupStreak?</h2>
+      <p style="font-size:.9rem;color:#94a3b8;margin:0;">You have hit a real milestone. A 5-star review takes 10 seconds and helps others find this app.</p>
+    </div>
+    <button id="review-yes-btn" onclick="state.lastReviewPrompt=Date.now();saveState();document.getElementById('review-modal').style.display='none';window.open('https://apps.apple.com/app/id0','_blank');" style="width:100%;padding:14px;border-radius:16px;border:none;cursor:pointer;font-weight:700;font-size:1rem;color:#fff;background:linear-gradient(135deg,#16a34a,#16a34a);margin-bottom:10px;">Rate PushupStreak ⭐⭐⭐⭐⭐</button>
+    <button onclick="state.lastReviewPrompt=Date.now()-82*86400000;saveState();document.getElementById('review-modal').style.display='none';" style="width:100%;padding:12px;background:none;border:none;cursor:pointer;color:#64748b;font-size:.85rem;">Maybe later</button>
+  </div>
+</div>
+
 </body>
 </html>

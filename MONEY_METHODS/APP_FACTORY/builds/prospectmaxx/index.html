@@ -337,6 +337,13 @@ function renderResults(industry,city,listSize,service,minScore){
   cta.appendChild(ce('h3','','want real leads with verified emails?'));
   var ctaP = ce('p','','upgrade to ProspectMaxx Pro for real Google Maps scraping, email verification, and automated outreach sequences.');
   cta.appendChild(ctaP);
+  var proLink = document.createElement('a');
+  proLink.href='https://buy.stripe.com/28E6oI4DC2tneBX1Ar3F60m';
+  proLink.target='_blank';
+  proLink.className='btn';
+  proLink.style.cssText='display:inline-block;text-decoration:none;margin-bottom:14px;max-width:300px;';
+  proLink.textContent='Get Pro — $9.99';
+  cta.appendChild(proLink);
   var emailRow = ce('div','email-row');
   var emailInput = document.createElement('input');
   emailInput.type='email';emailInput.placeholder='you@email.com';

@@ -1,0 +1,11 @@
+date,repo_name,repo_url,stars_today,total_stars,license,language,description,clone_opportunity,category,status,notes
+2026-02-04,OpenHands,https://github.com/OpenHands/OpenHands,500,65000,MIT,Python,Autonomous AI software engineer,YES - build niche AI agents,TOOL_ALPHA,PENDING_REVIEW,Formerly OpenDevin. Can modify code run commands browse web.
+2026-02-04,n8n,https://github.com/n8n-io/n8n,300,150000,Fair-code,TypeScript,Workflow automation with AI,NO - fair-code license,TOOL_ALPHA,ACTIVE,400+ integrations. Self-host or cloud. Saves $51/mo vs Zapier.
+2026-02-04,Langflow,https://github.com/langflow-ai/langflow,200,140000,MIT,Python,Visual AI agent orchestration,YES - industry templates,TOOL_ALPHA,PENDING_REVIEW,Multi-agent conversations. Deploy as APIs.
+2026-02-04,Dify,https://github.com/langgenius/dify,400,106000,Apache-2.0,Python,Agentic AI application platform,YES - vertical builders,TOOL_ALPHA,PENDING_REVIEW,No-code workflow design. RAG pipeline builder.
+2026-02-04,Cline,https://github.com/cline/cline,150,25000,Apache-2.0,TypeScript,Autonomous coding agent VS Code,INTEGRATE - 10x dev speed,TOOL_ALPHA,ACTIVE,4M+ developers. MCP integration. Terminal-first.
+2026-02-04,Continue,https://github.com/continuedev/continue,100,20000,Apache-2.0,TypeScript,Model-agnostic AI coding assistant,INTEGRATE - privacy option,TOOL_ALPHA,PENDING_REVIEW,Connect any LLM. Self-host ready.
+2026-02-04,SaaS-Boilerplate,https://github.com/ixartz/SaaS-Boilerplate,50,5000,MIT,TypeScript,Next.js SaaS starter,YES - use for new apps,APP_FACTORY,ACTIVE,Clerk auth. Multi-tenancy. i18n.
+2026-02-04,saasfly,https://github.com/saasfly/saasfly,30,3000,MIT,TypeScript,Enterprise Next.js boilerplate,YES - rapid MVP,APP_FACTORY,PENDING_REVIEW,One command: bun create saasfly
+2026-02-04,open-saas,https://github.com/wasp-lang/open-saas,40,4000,MIT,TypeScript,Full-stack SaaS template,YES - quick deploy,APP_FACTORY,PENDING_REVIEW,One-command deploy to Railway/Fly.io
+2026-02-04,github-mcp-server,https://github.com/github/github-mcp-server,200,2000,MIT,TypeScript,Official GitHub MCP server,INTEGRATE - GitHub context,MCP_PRODUCTS,ACTIVE,VS Code 1.101+ Claude Desktop Cursor Windsurf

@@ -1,0 +1,43 @@
+channel_id,channel_name,platform,channel_type,audience_size,engagement_rate,cac,ltv,roi_potential,automation_level,priority,status,notes
+CH001,Twitter/X Organic,Twitter,Organic Social,0,2-5%,$0,TBD,HIGH,Medium,HIGH,ACTIVE,Primary distribution channel
+CH002,Cold Email - Engagement Depth (ALPHA274),Email,Outbound,N/A,3.43% reply rate,$0.01-0.10/email,TBD,HIGHEST,High,HIGHEST,READY,"2026 shift: engagement depth > open rates. First email = 58% of replies (ALPHA278)"
+CH003,Cold Email - Intent Timing (ALPHA275),Email,Outbound,N/A,2-4x reply rate,$0.01-0.10/email,TBD,HIGHEST,High,HIGHEST,READY,"Intent-based timing doubles reply rate. Target active researchers (ALPHA288 Clay enrichment)"
+CH004,Cold Email - Anti-Tracking (ALPHA276),Email,Outbound,N/A,Improved delivery,$0,TBD,HIGH,Low,HIGH,READY,"Gmail warns on tracking pixels. Disable completely. Counterintuitive but necessary."
+CH005,Cold Email - Casual Tone (ALPHA281),Email,Outbound,N/A,Higher than polished,$0,TBD,HIGH,Low,HIGH,READY,"Over-polished = AI detection flag. Casual beats perfect. Aligns with copy-style.md."
+CH006,Cold Email - Business Context (ALPHA280),Email,Outbound,N/A,Higher than name tokens,$0,TBD,HIGH,Medium,HIGH,READY,"First name tokens = spam flag. Business context personalization wins."
+CH007,Cold Email - 4-6 Lines (ALPHA286),Email,Outbound,N/A,Optimal length,$0,TBD,HIGH,Low,HIGH,READY,"4-6 lines sweet spot. Brevity = respect."
+CH008,Cold Email - Volume Consistency (ALPHA284),Email,Outbound,N/A,Better delivery,$0,TBD,HIGH,Medium,HIGH,READY,"Consistent daily volume > sporadic blasts. Sending pattern = deliverability signal."
+CH009,Cold Email - Subdomain Isolation (ALPHA285),Email,Outbound,N/A,Protects main domain,$10-50/yr,TBD,HIGHEST,Low,HIGHEST,READY,"Subdomain mandatory for cold email. Protects main domain reputation. Non-negotiable."
+CH010,Cold Email - AI 80/20 Split (ALPHA279),Email,Outbound,N/A,N/A,$0,TBD,HIGH,High,HIGH,READY,"AI for research + personalization at scale. Human for strategy + relationship."
+CH011,Email Warmup - Pre-Warmed (ALPHA336),Email,Infrastructure,N/A,N/A,$49/inbox/mo,TBD,HIGH,High,HIGH,BLOCKED,"DeliverOn pre-warmed inboxes. Skip 21-day warmup. Requires account creation."
+CH012,Email Warmup - Budget (ALPHA337),Email,Infrastructure,N/A,N/A,$3/inbox,TBD,MEDIUM,High,MEDIUM,BLOCKED,"MailForge bulk warmup. 21-day wait. Good for planned growth. Requires account."
+CH013,Email Warmup - 14-21 Days (ALPHA282),Email,Infrastructure,N/A,N/A,Varies,TBD,HIGH,Medium,HIGH,BLOCKED,"Warmup timeline extended to 14-21 days in 2026. Plan accordingly."
+CH014,Email Warmup - Network Size (ALPHA283),Email,Infrastructure,N/A,N/A,Varies,TBD,MEDIUM,Medium,MEDIUM,BLOCKED,"500+ peer warmup network size matters. Evaluate tools by network not price."
+CH015,Visualping Competitor Intel (ALPHA319),Web,Monitoring,200+ pages,$5-50/mo,N/A,HIGHEST,High,HIGHEST,BLOCKED,"Monitor competitor pricing/changes. 30-second alerts. Requires account setup."
+CH016,Sorority BDR Hack (ALPHA322),Human,Outbound,N/A,N/A,Cheaper than FT hire,TBD,HIGH,Low,MEDIUM,BLOCKED,"College student BDRs. Natural relationship skills. Part-time flexibility."
+CH017,Self-Reply Funnel (ALPHA334),Twitter,Growth Hack,N/A,3-5x CTR,$0,TBD,HIGHEST,Low,HIGHEST,ACTIVE,"Self-reply > bio link. Algorithm shows OP reply first. Apply to ALL tweets."
+CH018,GEO Content Optimization (ALPHA297-300),AI Search,SEO/GEO,N/A,30-40% visibility boost,$0,TBD,HIGHEST,Medium,HIGHEST,READY,"Tables + citations + stats = AI preference. 680M citation analysis. Reddit = Perplexity gold."
+CH019,ASO Custom Product Pages (ALPHA301),App Store,ASO,N/A,2x keyword targeting,$99/yr dev fee,TBD,HIGHEST,Medium,HIGHEST,READY,"70 custom product pages. Creative testing > keyword tweaks. Battery optimization = ranking factor."
+CH020,Aged Domain Arbitrage (ALPHA340),Web,SEO,N/A,Instant DA,$500-5000,TBD,HIGH,Low,HIGH,BLOCKED,"Buy aged domains for instant DA. SEO shortcut. Check domain history carefully."
+"ALPHA15338","MICRO_SAAS","$14K/mo invoice reminder app for plumbers. Reddit comment mining > niche B2B SaaS. Boring trade verticals.","2026-03-07 00:27"
+"ALPHA15341","DIGITAL_PRODUCTS","$250 PDF > $2,300/mo. Niche PDF guide creation + Gumroad/SEO distribution. Repeatable.","2026-03-07 00:27"
+"ALPHA15378","ECOM","$20K > $191K MRR supplement brand. Retention + scaling playbook.","2026-03-07 00:27"
+"ALPHA16094","MICRO_SAAS","$7K/mo second SaaS. Distribution-first approach: SEO + cold outreach.","2026-03-07 00:27"
+"ALPHA16099","SEO_MICRO_SAAS","$1K MRR pure SEO. Programmatic SEO + content marketing. 1yr timeline.","2026-03-07 00:27"
+"ALPHA16043","ANTI_PATTERN","SaaS failure: 1yr, <$300. No validation, no distribution, feature creep.","2026-03-07 00:27"
+"ALPHA16332","EMAIL_COMPLIANCE","CAN-SPAM: "Last Chance" emails can trigger $1,500 penalties.","2026-03-07 00:27"
+"ALPHA16333","EMAIL_TOOLS","beehiiv vs Substack vs ConvertKit first-hand comparison.","2026-03-07 00:27"
+"ALPHA16326","SEO_ANALYTICS","Google Analytics off by 99%. Alternative tracking needed.","2026-03-07 00:27"
+"IH_BATCH_20260307","PROMPT_PACKS","Digital prompt packs by vertical: EstatePromptAI $1.8K/mo selling 100 prompts + Canva templates to real estate agents. Every vertical replicable.","2026-03-07 00:41"
+"IH_BATCH_20260307","AI_VOICE_RECEPTIONIST","AI voice receptionist for local services: CallFrame $10K/mo. Plumbers/salons cant hire 24/7. High WTP.","2026-03-07 00:41"
+CH021,Email Automation - Brevo+Supabase (ALPHA16761),Email,Automated,322 users tested,18% CTR personalized vs 2.5% generic,$0 (free tier),TBD,HIGHEST,High,HIGHEST,READY,8 email automations. Brevo free tier + Supabase sync (39 contact attributes every 4h). 7.2x CTR lift with personalization. Solo founder validated.
+CH022,Channel ROI Tracking (ALPHA16768),Multi,Analytics,N/A,28%/8%/6% conversion,$39 product,TBD,HIGH,Low,HIGH,READY,"Channel ROI for $39 digital product. Email 28%, Twitter 8%, Reddit 6% conversion. Most channels send traffic not buyers. Track channel ROI not traffic."
+CH023,OpenClaw Stack Replacement (ALPHA16321),Web,Infrastructure,N/A,N/A,Replaces $15k/mo stack,TBD,HIGHEST,High,HIGH,READY,OpenClaw replaces $15k/mo ops + marketing stack. Real setup from r/growthhacking. Directly relevant to our infrastructure.
+COLD_EMAIL_MICRO_COMMITMENTS,ALPHA18442,cold_email,HIGH,"One pain point per sequence. Micro-commitment CTA (reply yes/no) instead of direct-ask CTA (book a call). 8/10 actionability. Apply to all outbound sequences.",2026-03-08,ACTIVE
+
+ALPHA1136,LinkedIn High-Intent Targeting,OUTBOUND,"LinkedIn for B2B lead gen instead of cold email. Higher intent signals. $15k MRR claimed (UNVERIFIED). Method: target high-intent LinkedIn users with content + DM sequences. Less saturated than cold email.",HIGHEST,2026-03-08 21:33
+
+ALPHA1138,Community-Led Growth Zero CAC,GROWTH,"$149M ARR with near-zero CAC (SKEPTICAL - likely inflated). Core method: community-led or content flywheel growth. Build community first then monetize. Works for SaaS and info products.",HIGH,2026-03-08 21:33
+CH020,Facebook Groups (Boomer Male 55-70),Facebook,Organic Social,2B+ (55-70 demo heavy),3-8%,$0,TBD,HIGHEST,Medium,HIGHEST,READY,"Men 55-70 spend 5hrs/day on Facebook. Groups for golf/fishing/tools/health = free targeted distribution. Zero competition from content creators. Faceless pages with value-first affiliate content."
+CH021,YouTube Long-Form (Boomer Male 55-70),YouTube,Organic Video,2B+ (55-70 demo growing),4-10%,$0,TBD,HIGHEST,Medium,HIGHEST,READY,"10-20 min educational/review videos for health/golf/fishing/tools. Calm authoritative tone. Faceless with voiceover. CPMs cheapest demo. 70% educational 30% product review. Affiliate links in description."
+CH_COLDEMAIL_SCALE_100K,Cold Email 100K/mo Method (Cody Schneider),Email,OUTBOUND,100000,1%,$1000/mo,Variable,HIGHEST,HIGH,P0,RESEARCH,"Stack: hypertide.io inboxes + instantly.ai warming + apollo.io/leadmagic/salesql lead sourcing + cascade enrichment waterfall. 1% customer conversion. Remarket non-converters with VSL across all channels. Source: @codyschneiderxx. ALPHA107840. Requires: Instantly account, Apollo API, domain warmup 2-4 weeks."

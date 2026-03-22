@@ -1,0 +1,472 @@
+{
+  "cycle": 97,
+  "timestamp": "2026-03-21T22:03:47.734381+00:00",
+  "strategy": "TRAVEL + LANGUAGE + CULTURE + GEOGRAPHY",
+  "niches": {
+    "daily_world_history_streak": {
+      "reddit_communities": {
+        "history": 16000000,
+        "AskHistorians": 1700000,
+        "worldhistory": 800000
+      },
+      "itunes_results": [
+        {
+          "name": "Brilliant",
+          "rating": 4.8,
+          "rating_count": 51000,
+          "category": "STEM learning platform (math, data, programming) \u2014 course-based passive lessons, no world history streak gamification; broad educational platform not a daily world history habit with timeline XP, era mastery badges, and historian-level progression from ancient civ to modern geopolitics"
+        },
+        {
+          "name": "Trivia Crack",
+          "rating": 4.6,
+          "rating_count": 680000,
+          "category": "general trivia game with history category \u2014 competitive PvP quiz format, not a systematic daily world history habit builder with chronological skill-tree, primary source analysis drills, and historical thinking skill badges (causation, continuity, perspective)"
+        },
+        {
+          "name": "History Channel",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "passive video content from History Channel brand \u2014 documentary streaming, no gamified daily historical knowledge habit with streak XP, civilization mastery tiers, and cause-effect analytical skill progression"
+        },
+        {
+          "name": "Timeline World History",
+          "rating": 4.2,
+          "rating_count": 4200,
+          "category": "static visual timeline reference \u2014 browse historical events chronologically; no streak, no gamification, no daily habit loop with XP and skill-level progression"
+        }
+      ],
+      "community_total": 4500000,
+      "streak_app_exists": false,
+      "notes": "4.5M relevant community (r/history 16M total but focused subset; r/AskHistorians 1.7M, r/worldhistory 800K). All top apps are passive content consumption or general trivia games. No app gamifies the daily world history habit \u2014 one primary source analyzed, one timeline event placed, one cause-effect chain traced \u2014 with streak XP, era mastery badges (Ancient World, Classical Period, Industrial Revolution, Modern Era), and historian-level progression from timeline browser to analytical historian. Massive underserved habit market."
+    },
+    "daily_cultural_etiquette_streak": {
+      "reddit_communities": {
+        "travel": 11000000,
+        "digitalnomad": 2100000,
+        "solotravel": 650000,
+        "expats": 520000
+      },
+      "itunes_results": [
+        {
+          "name": "TripAdvisor",
+          "rating": 4.8,
+          "rating_count": 1450000,
+          "category": "travel booking and review platform \u2014 hotel, restaurant, attraction reviews and booking; travel logistics tool not a daily cultural etiquette and local customs habit builder with streak XP, country mastery badges, and faux-pas prevention skill progression"
+        },
+        {
+          "name": "Lonely Planet Guides",
+          "rating": 4.7,
+          "rating_count": 33000,
+          "category": "travel guidebook app \u2014 static destination guides, offline maps, points of interest; reference tool not a gamified daily cultural intelligence habit with streak XP, country-specific etiquette badges (tipping customs, greeting protocols, dining norms, dress codes), and global citizen level progression"
+        },
+        {
+          "name": "Culture Shock",
+          "rating": 3.8,
+          "rating_count": 850,
+          "category": "basic cultural tips reference app \u2014 shallow country-by-country etiquette notes, no gamification, no streak, no daily habit loop with XP and progression; small user base confirms market not served"
+        }
+      ],
+      "community_total": 3500000,
+      "streak_app_exists": false,
+      "notes": "3.5M filtered community from r/travel (11M), r/digitalnomad (2.1M), r/solotravel (650K), r/expats (520K). All apps are booking platforms or static reference guides. No app gamifies daily cultural intelligence \u2014 one country etiquette module (tipping norms, greeting protocols, dining customs, religious observances, dress codes, gift-giving rules) \u2014 with streak XP, country mastery badges, and global citizen progression from culture-unaware tourist to cross-cultural intelligence expert. Perfect pre-trip preparation habit app."
+    },
+    "daily_geography_mastery_streak": {
+      "reddit_communities": {
+        "MapPorn": 4000000,
+        "geography": 255000,
+        "worldnews": 0
+      },
+      "itunes_results": [
+        {
+          "name": "GeoGuessr",
+          "rating": 4.7,
+          "rating_count": 94000,
+          "category": "geography guessing game using Street View \u2014 competitive game mechanic, not a systematic daily geography mastery habit; random guessing not structured progressive skill-building (capitals, flags, currencies, borders, physical geography) with streak XP and continent mastery badges"
+        },
+        {
+          "name": "Stack the Countries",
+          "rating": 4.5,
+          "rating_count": 38000,
+          "category": "casual educational game for country placement \u2014 children's game format, no streak, no adult-level depth on political geography, economic zones, demographic data, climate patterns; toy-level engagement not systematic daily mastery"
+        },
+        {
+          "name": "Seterra",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "geography quiz tool \u2014 select country/capital/flag on map; raw quiz tool with no streak gamification, no XP, no skill-tree, no progression system, no daily habit loop; functional but unengaging"
+        }
+      ],
+      "community_total": 2800000,
+      "streak_app_exists": false,
+      "notes": "2.8M community (r/MapPorn 4M filtered to engaged learners ~2.5M, r/geography 255K). GeoGuessr is a guessing game, not a mastery tool. No app gamifies systematic daily geography mastery \u2014 one region studied (capitals, borders, currencies, flags, climate zones, major rivers, economic profiles) \u2014 with streak XP, continent mastery badges (Africa Unlocked, Asia Expert), and world expert progression. Strong overlap with history streak market \u2014 same user archetype."
+    },
+    "daily_sign_language_streak": {
+      "reddit_communities": {
+        "learnASL": 185000,
+        "asl": 88000,
+        "Deaf": 115000,
+        "DeafCommunity": 47000
+      },
+      "itunes_results": [
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 6200000,
+          "category": "language learning platform \u2014 ASL course is extremely shallow (50 signs, no fingerspelling progression, no classifier system), primary focus is spoken languages; not a dedicated ASL/BSL streak app with handshape drills, facial grammar, classifier categories, and Deaf culture education modules"
+        },
+        {
+          "name": "Handspeak",
+          "rating": 3.9,
+          "rating_count": 2200,
+          "category": "ASL dictionary and reference \u2014 static sign lookup tool, no streak, no gamification, no daily habit loop; reference not a practice system"
+        },
+        {
+          "name": "ASL Coach",
+          "rating": 4.1,
+          "rating_count": 890,
+          "category": "basic ASL video lessons \u2014 passive video watching, no streak XP, no handshape drills with camera-based feedback, no fingerspelling speed progression; minimal user base confirms deep gap"
+        }
+      ],
+      "community_total": 435000,
+      "streak_app_exists": false,
+      "notes": "435K dedicated community (r/learnASL 185K, r/asl 88K, r/Deaf 115K, r/DeafCommunity 47K). Duolingo's ASL course is a token gesture \u2014 50 signs with no real system. No app gamifies the daily sign language habit \u2014 one handshape category drilled, one classifier set practiced, one fingerspelling speed test, one Deaf culture lesson \u2014 with streak XP, handshape mastery badges (B-handshape set, 5-handshape set), and signer-level progression from basic signs to fluent ASL grammar. Inclusion angle is powerful for social sharing and PR."
+    },
+    "daily_language_exchange_streak": {
+      "reddit_communities": {
+        "languagelearning": 860000,
+        "language": 310000,
+        "linguistics": 355000
+      },
+      "itunes_results": [
+        {
+          "name": "HelloTalk",
+          "rating": 4.5,
+          "rating_count": 79000,
+          "category": "language exchange social network \u2014 text/voice/video chat with native speakers; social connection tool with shallow streak features (daily login badge, not skill-progression streak); not a structured daily speaking practice habit with conversation topic drills, pronunciation XP, and fluency-level progression"
+        },
+        {
+          "name": "Tandem",
+          "rating": 4.6,
+          "rating_count": 52000,
+          "category": "language exchange app \u2014 connect with native speakers for conversation practice; community matchmaking tool not a daily speaking habit streak with structured conversation challenges, pronunciation scoring, grammar correction tracking, and speaking-confidence level progression"
+        },
+        {
+          "name": "Speaky",
+          "rating": 4.2,
+          "rating_count": 8400,
+          "category": "language exchange community \u2014 casual chat platform for language learners; social app not a structured daily speaking habit with conversation framework, vocabulary recall drills, and fluency XP"
+        }
+      ],
+      "community_total": 1100000,
+      "streak_app_exists": false,
+      "notes": "1.1M community (r/languagelearning 860K, r/language 310K, r/linguistics 355K). HelloTalk and Tandem are social matchmaking platforms \u2014 they connect you to a speaker but don't structure the daily habit. No app gamifies the daily conversation practice habit \u2014 one structured conversation scenario (job interview practice, travel scenario, restaurant ordering, debate topic) with vocabulary tracking, pronunciation XP, grammar error log, and speaking-confidence level progression from tourist-level to conversational to near-native. Complements Duolingo's reading-only approach."
+    },
+    "daily_dialect_accent_streak": {
+      "reddit_communities": {
+        "linguistics": 355000,
+        "languagelearning": 860000,
+        "actingadvice": 85000,
+        "SpeechPathology": 42000
+      },
+      "itunes_results": [
+        {
+          "name": "ELSA Speak",
+          "rating": 4.7,
+          "rating_count": 315000,
+          "category": "English pronunciation AI coach \u2014 accent reduction for non-native English speakers; single language (English) pronunciation only, not a multi-dialect/accent training streak for actors, travellers, linguists, and professionals needing regional accent authenticity; narrow use case covers pronunciation basics not dialect immersion"
+        },
+        {
+          "name": "Speechling",
+          "rating": 4.3,
+          "rating_count": 8200,
+          "category": "pronunciation feedback service \u2014 record yourself, get coach feedback; coach-dependent model not a self-directed daily accent-training streak with phoneme drills, minimal pairs, intonation pattern XP, and dialect authenticity badges"
+        },
+        {
+          "name": "Accent Hero",
+          "rating": 4.1,
+          "rating_count": 3100,
+          "category": "American English accent training \u2014 single accent (American General), passive lessons and listen-repeat; narrow scope and no streak gamification with XP, phoneme mastery badges, and regional dialect variant progression"
+        }
+      ],
+      "community_total": 480000,
+      "streak_app_exists": false,
+      "notes": "480K community (r/linguistics 355K, r/actingadvice 85K, r/SpeechPathology 42K). ELSA is English pronunciation only \u2014 accent reduction for ESL learners. No app gamifies the daily dialect and accent training habit for the broader market (actors preparing roles, expats acquiring regional authenticity, travelers fitting in locally, speech therapists practicing) \u2014 one dialect feature drilled (vowel shifts, consonant patterns, intonation contours, rhythm and stress), with XP, phoneme mastery badges, and dialect authenticity progression from foreign accent to regional near-native. Actor and linguist angle creates a premium B2B pathway."
+    },
+    "daily_travel_journaling_streak": {
+      "reddit_communities": {
+        "solotravel": 650000,
+        "travel": 11000000,
+        "backpacking": 1050000,
+        "digitalnomad": 2100000
+      },
+      "itunes_results": [
+        {
+          "name": "Polarsteps",
+          "rating": 4.8,
+          "rating_count": 35000,
+          "category": "automatic travel tracking and journaling app \u2014 GPS route tracking, photo geotagging, travel stats; trip documentation tool during active travel, no daily journaling streak habit with reflection prompts, gratitude XP, cultural observation badges, and travel writer progression from first entry to published travel writer"
+        },
+        {
+          "name": "Day One",
+          "rating": 4.8,
+          "rating_count": 112000,
+          "category": "general journaling app \u2014 rich text journal with photos, location, weather; broad-purpose journal not a travel-specific daily habit streak with travel-context prompts (cultural observations, surprise encounters, local food logs, budget reflections), streak XP, and travel writer skill progression"
+        },
+        {
+          "name": "Travelbook",
+          "rating": 4.1,
+          "rating_count": 5200,
+          "category": "travel journal and scrapbook app \u2014 photo collages, map stamps, trip memories; scrapbook format not a daily journaling habit streak with prompted reflection, cultural intelligence XP, and travel storytelling skill progression"
+        }
+      ],
+      "community_total": 2200000,
+      "streak_app_exists": false,
+      "notes": "2.2M filtered community (r/solotravel 650K, r/backpacking 1.05M, r/digitalnomad 2.1M \u2014 filtered to journaling-relevant users). Polarsteps auto-tracks routes but doesn't build the daily reflection habit. Day One is a general journal. No app gamifies the daily travel journaling habit \u2014 one prompted reflection per day (cultural observation, language win, budget insight, gratitude note, local encounter) \u2014 with streak XP, cultural intelligence badges, and travel storyteller progression from scattered notes to curated travel memoir. Pairs naturally with cultural etiquette streak."
+    },
+    "daily_travel_bucket_list_streak": {
+      "reddit_communities": {
+        "travel": 11000000,
+        "solotravel": 650000,
+        "bucketlist": 95000
+      },
+      "itunes_results": [
+        {
+          "name": "Wanderlog",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "trip planning app \u2014 collaborative itinerary builder, map-based planning, budget tracking; logistics planning tool not a daily bucket list progress streak with destination research habits, savings milestone XP, and bucket list level progression from first dream to first international trip completed"
+        },
+        {
+          "name": "Visited Countries",
+          "rating": 4.5,
+          "rating_count": 28000,
+          "category": "countries visited tracker \u2014 color-coded world map, travel stats (% of world visited); passive achievement display not a daily habit streak driving active bucket list progress with daily research tasks, savings XP, and dreamer-to-traveler progression arc"
+        },
+        {
+          "name": "Bucket List",
+          "rating": 4.3,
+          "rating_count": 16000,
+          "category": "generic goal-tracking list app applied to travel \u2014 simple checklist format, no streak gamification, no daily habit loop, no destination intelligence integration, no savings-milestone tracking; static goal list not a daily progress habit"
+        }
+      ],
+      "community_total": 1800000,
+      "streak_app_exists": false,
+      "notes": "1.8M community (r/travel 11M filtered, r/solotravel 650K, r/bucketlist 95K). Visited Countries is a vanity map, not a habit builder. No app gamifies the daily bucket list progress habit \u2014 one daily action toward a dream destination (5-min research, $10 savings logged, one cultural fact learned, one visa requirement checked) \u2014 with streak XP, destination unlock milestones, and dreamer-to-traveler progression from first pin dropped to first trip booked. The micro-action model (5 min/day) makes this sticky and low-friction."
+    },
+    "daily_local_discovery_streak": {
+      "reddit_communities": {
+        "travel": 11000000,
+        "AskLocalAmericans": 180000,
+        "HiddenGems": 125000,
+        "local": 42000
+      },
+      "itunes_results": [
+        {
+          "name": "Google Maps",
+          "rating": 4.7,
+          "rating_count": 4200000,
+          "category": "navigation and local discovery platform \u2014 directions, business reviews, street view; logistics tool not a daily local curiosity habit streak with neighborhood exploration XP, hidden gem badges, and local expert progression from tourist to local authority"
+        },
+        {
+          "name": "Yelp",
+          "rating": 4.8,
+          "rating_count": 1650000,
+          "category": "restaurant and business review platform \u2014 ratings, photos, reservations; review aggregation tool not a daily local discovery habit with streak XP, neighborhood mastery badges (Arts District expert, historic quarter authority), and local guide progression"
+        },
+        {
+          "name": "Atlas Obscura",
+          "rating": 4.6,
+          "rating_count": 9800,
+          "category": "weird and wonderful places guide \u2014 curated database of unusual places globally; static reference guide not a daily local discovery habit streak with exploration XP, discovery badges (hidden staircase found, secret garden visited, mural hunt completed), and local explorer progression from tourist to area curator"
+        }
+      ],
+      "community_total": 1200000,
+      "streak_app_exists": false,
+      "notes": "1.2M relevant community (r/travel filtered, r/HiddenGems 125K, r/AskLocalAmericans 180K). Atlas Obscura is a static guide. Google Maps is logistics. No app gamifies the daily local discovery habit \u2014 one new spot per day (hidden staircase, local art installation, corner bakery, historic marker, secret viewpoint) \u2014 with streak XP, neighborhood mastery badges, and local expert progression from tourist to area authority to community curator. Works both for travelers and locals discovering their own city."
+    },
+    "daily_vexillology_streak": {
+      "reddit_communities": {
+        "vexillology": 575000,
+        "flags": 88000,
+        "geography": 255000
+      },
+      "itunes_results": [
+        {
+          "name": "GeoGuessr",
+          "rating": 4.7,
+          "rating_count": 94000,
+          "category": "geography guessing game using Street View \u2014 random location guessing not systematic daily flag knowledge with progressive flag mastery tiers (continents \u2192 subcontinents \u2192 specific countries \u2192 historical flags), symbolism education (heraldic elements, color meanings, design history), and vexillologist progression"
+        },
+        {
+          "name": "Flag Quiz",
+          "rating": 4.3,
+          "rating_count": 22000,
+          "category": "basic flag multiple-choice quiz app \u2014 random quiz format, no streak gamification, no progressive skill tree (beginner flags to obscure territory flags), no flag design history, no symbolism education, no daily habit loop with XP and mastery tiers; raw quiz without habit layer"
+        },
+        {
+          "name": "Countries of the World Quiz",
+          "rating": 4.5,
+          "rating_count": 31000,
+          "category": "geography quiz app covering capitals, flags, and maps \u2014 quiz format but no dedicated daily streak for flag mastery specifically, no vexillology depth (symbolism, heraldry, design principles, historical flag evolution), no XP progression"
+        }
+      ],
+      "community_total": 680000,
+      "streak_app_exists": false,
+      "notes": "680K community (r/vexillology 575K, r/flags 88K, r/geography 255K). Flag Quiz exists but is a raw quiz tool with no gamification or habit layer. No app gamifies the daily flag mastery habit \u2014 one continent's flags drilled, one flag's symbolism studied (heraldic elements, color history, design evolution), one historical flag variant analyzed \u2014 with streak XP, regional mastery badges (Africa Complete, Caribbean Expert), and vexillologist progression from random flag guesser to certified flag historian. High niche passion score \u2014 vexillology communities are obsessive and active."
+    },
+    "daily_world_capitals_streak": {
+      "reddit_communities": {
+        "geography": 255000,
+        "MapPorn": 4000000,
+        "worldnews": 0
+      },
+      "itunes_results": [
+        {
+          "name": "Seterra",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "geography quiz tool \u2014 click capitals and countries on a map; raw quiz with no streak system, no XP, no skill-tree progression from easy regions to obscure territories, no daily habit loop with mastery badges; functional tool without habit layer"
+        },
+        {
+          "name": "Stack the Countries",
+          "rating": 4.5,
+          "rating_count": 38000,
+          "category": "children's geography game with capital quiz element \u2014 casual game mechanic for kids, not an adult systematic mastery app with progressive difficulty (G7 capitals \u2192 all UN members \u2192 disputed territories \u2192 historical capitals), XP, and streak gamification"
+        },
+        {
+          "name": "World Geography Quiz",
+          "rating": 4.2,
+          "rating_count": 8700,
+          "category": "basic geography quiz app \u2014 random questions on capitals, flags, populations; no streak gamification, no progressive skill tree, no daily habit design with XP and mastery milestones; static quiz without engagement layer"
+        }
+      ],
+      "community_total": 1400000,
+      "streak_app_exists": false,
+      "notes": "1.4M community (r/MapPorn 4M filtered, r/geography 255K). Seterra is a raw quiz tool. Stack the Countries is for children. No adult streak app gamifies systematic world capitals mastery \u2014 one region drilled per day with progressive difficulty (well-known G20 capitals \u2192 all 195 UN members \u2192 dependent territories \u2192 historical capitals that changed) \u2014 with streak XP, regional mastery badges (Europe Expert, Africa Master), and geographer-level progression. Natural bundle with daily_vexillology_streak and daily_geography_mastery_streak \u2014 three-app suite play."
+    },
+    "daily_world_religions_streak": {
+      "reddit_communities": {
+        "religion": 110000,
+        "worldreligions": 85000,
+        "atheism": 2600000,
+        "philosophy": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 1320000,
+          "category": "mindfulness and meditation app \u2014 secular meditation, sleep stories, breathing exercises; mental wellness tool not a daily world religions education streak with comparative theology XP, tradition mastery badges (Abrahamic religions, Dharmic faiths, Indigenous traditions), and religious literacy progression from curious agnostic to global spiritual intelligence"
+        },
+        {
+          "name": "Bible in a Year",
+          "rating": 4.9,
+          "rating_count": 285000,
+          "category": "single-religion reading plan \u2014 Catholic/Christian Bible reading with Father Mike Schmitz; single-faith tool not a comparative world religions streak covering all major traditions (Christianity, Islam, Judaism, Hinduism, Buddhism, Sikhism, Taoism, Indigenous faiths) with tradition mastery badges and interfaith literacy XP"
+        },
+        {
+          "name": "YouVersion Bible",
+          "rating": 4.9,
+          "rating_count": 1250000,
+          "category": "Bible reading and devotional app \u2014 daily plans, verse of the day, reading streaks (single-faith, Christian); single religion streak not a comparative world religions mastery app covering all faith traditions"
+        }
+      ],
+      "community_total": 1200000,
+      "streak_app_exists": false,
+      "notes": "1.2M curious/comparative audience (r/religion 110K, r/worldreligions 85K, r/philosophy 1.1M \u2014 overlap with cultural curiosity users). Single-faith apps dominate (Bible in a Year, YouVersion) but no app gamifies the daily comparative world religions habit \u2014 one tradition studied per day (core beliefs, sacred texts, ritual practices, historical origins, contemporary practice) \u2014 with streak XP, tradition mastery badges, and religious literacy progression from faith-curious learner to global spiritual intelligence. Strong travel angle (understanding local religious customs is key pre-trip prep)."
+    },
+    "daily_currency_literacy_streak": {
+      "reddit_communities": {
+        "travel": 11000000,
+        "solotravel": 650000,
+        "PersonalFinanceCanada": 590000,
+        "forex": 450000
+      },
+      "itunes_results": [
+        {
+          "name": "XE Currency",
+          "rating": 4.8,
+          "rating_count": 380000,
+          "category": "currency converter \u2014 live exchange rates, historical charts; passive rate-checking utility not a daily currency and economic literacy habit streak with exchange rate psychology XP, currency history badges (hyperinflation case studies, Bretton Woods, reserve currency evolution), and economic literacy progression from rate-checkers to monetary system understanders"
+        },
+        {
+          "name": "Wise",
+          "rating": 4.8,
+          "rating_count": 290000,
+          "category": "international money transfer platform \u2014 send money abroad, multi-currency account; financial service tool not a daily currency knowledge habit with streak XP, economic event badges (devaluation patterns, purchasing power parity, interest rate effects), and economic literacy mastery"
+        },
+        {
+          "name": "Currency Converter",
+          "rating": 4.6,
+          "rating_count": 45000,
+          "category": "basic exchange rate calculator \u2014 offline capable currency converter; math utility not a daily currency education habit with streak XP and economic literacy progression"
+        }
+      ],
+      "community_total": 1500000,
+      "streak_app_exists": false,
+      "notes": "1.5M community (r/travel filtered 800K relevant, r/solotravel 650K, r/forex 450K). XE Currency is a utility, not a learning habit. No app gamifies the daily currency literacy habit \u2014 one currency studied (history, current strength, PPP, major economic drivers, travel exchange tips, common scam warnings) \u2014 with streak XP, currency history badges (reserve currency status, devaluation events, Bretton Woods), and economic traveler progression from exchange-rate confusion to monetary system fluency. Travel angle makes every daily lesson immediately applicable."
+    },
+    "daily_world_music_streak": {
+      "reddit_communities": {
+        "worldmusic": 85000,
+        "Music": 1500000,
+        "listentoThis": 760000,
+        "LetsTalkMusic": 35000
+      },
+      "itunes_results": [
+        {
+          "name": "Spotify",
+          "rating": 4.8,
+          "rating_count": 5100000,
+          "category": "music streaming platform \u2014 passive listening, curated playlists, podcast discovery; entertainment consumption platform not a daily world music education habit with cultural context XP, tradition mastery badges (West African percussion, Andean folk, Carnatic classical, Flamenco), and world music literacy progression from pop listener to global music curator"
+        },
+        {
+          "name": "Shazam",
+          "rating": 4.8,
+          "rating_count": 2100000,
+          "category": "music identification app \u2014 recognize songs by listening; discovery utility not a daily world music habit streak with instrument recognition, traditional music theory, cultural context badges, and world music literacy progression"
+        },
+        {
+          "name": "Apple Music",
+          "rating": 4.8,
+          "rating_count": 760000,
+          "category": "music streaming platform \u2014 passive music consumption, curated playlists; entertainment not a systematic daily world music education habit with cultural context, tradition depth, and musician-level progression"
+        }
+      ],
+      "community_total": 900000,
+      "streak_app_exists": false,
+      "notes": "900K relevant community (r/worldmusic 85K, r/Music filtered 500K, r/listentoThis 760K overlap). Spotify provides passive listening but no structured cultural education. No app gamifies the daily world music habit \u2014 one tradition studied per day (Afrobeats rhythmic structures, Gamelan tuning systems, Irish trad session etiquette, Flamenco palos, Carnatic raga theory) \u2014 with streak XP, tradition mastery badges, and world music literacy progression from pop listener to global music curator. Natural cross-sell with cultural etiquette streak."
+    },
+    "daily_immigration_prep_streak": {
+      "reddit_communities": {
+        "immigration": 340000,
+        "digitalnomad": 2100000,
+        "expats": 520000,
+        "ImmigrationCanada": 310000
+      },
+      "itunes_results": [
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 6200000,
+          "category": "language learning \u2014 language acquisition for immigration purposes but no daily immigration knowledge habit (legal systems, cultural norms, civic rights, visa categories, naturalization process) with streak XP and immigration readiness level progression"
+        },
+        {
+          "name": "Citizenship Test",
+          "rating": 4.5,
+          "rating_count": 22000,
+          "category": "single-country citizenship exam prep app \u2014 US civics test or Canadian citizenship test question bank; single-country exam prep not a daily immigration intelligence streak covering multiple destination countries' civic systems, rights, cultural integration, and naturalization pathways with streak XP and global citizen progression"
+        },
+        {
+          "name": "USCIS",
+          "rating": 3.8,
+          "rating_count": 5200,
+          "category": "official US immigration forms app \u2014 form finder and completion guide; government utility not a daily immigration readiness habit with streak XP, visa category mastery badges, and immigration journey progression from application novice to naturalized citizen"
+        }
+      ],
+      "community_total": 1200000,
+      "streak_app_exists": false,
+      "notes": "1.2M community (r/immigration 340K, r/digitalnomad 2.1M filtered, r/expats 520K, r/ImmigrationCanada 310K). Citizenship Test app is single-country exam prep only. No app gamifies the daily immigration preparation habit \u2014 one daily module on destination country (visa categories, work permit pathways, civic rights, cultural integration, healthcare system, banking setup, housing norms) \u2014 with streak XP, country readiness badges, and immigration journey progression from visa applicant to fully integrated resident. High-stakes use case means high willingness to pay for premium content."
+    }
+  }
+}

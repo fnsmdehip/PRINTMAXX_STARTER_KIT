@@ -1,0 +1,63 @@
+# Alpha Research Cycle - 2026-03-22 10:00 AM
+# Source: Reddit scrape + Twitter scrape + HN/PH scan
+# Status: READY_TO_POST
+
+## TWEET 1 — Hook (engagement bait from $500 MRR finding)
+
+someone on r/AppBusiness just shared how they went from "building for my girlfriend" to $500 MRR in 6 weeks
+
+$0 ad spend
+
+the distribution strategy is something 99% of indie hackers skip
+
+here's what they did differently:
+
+## TWEET 2 — Claude intelligence signal
+
+anthropic quietly added 3 instructions to their docs that cut Claude hallucinations by a massive amount
+
+most developers are still prompting the old way
+
+if you use Claude for code or content, you need to update your system prompts today
+
+## TWEET 3 — Freelance signal + automation angle
+
+saw someone on r/slavelabour paying $5/clip for viral video finding
+
+they want someone to manually search for clips
+
+that's literally a python script + 20 lines of code
+
+automate the boring stuff, keep the revenue. the gap between "gig" and "product" is one script.
+
+## THREAD — Research Digest (4 parts)
+
+1/ just finished my morning alpha scan
+
+scraped Reddit, Twitter, HN, ProductHunt
+
+14 new findings scored. 2 HIGHEST priority. 3 HIGH.
+
+here's what the solopreneur internet is talking about today (and what actually matters):
+
+2/ HIGHEST SIGNAL: app dev built for his girlfriend, hit $500 MRR in 6 weeks with zero ad spend
+
+the pattern: build for ONE person you know → iterate with real feedback → organic distribution through word of mouth
+
+most people launch to nobody. he launched to somebody.
+
+3/ INTELLIGENCE: Claude's hallucination problem has a fix most devs don't know about
+
+3 specific instructions from Anthropic's own docs
+
+if you're building AI-powered automations (like I am with 47 deployed apps), prompt quality = output quality = revenue quality
+
+4/ THE META-LESSON: the best alpha isn't in courses or paid communities
+
+it's in:
+- r/AppBusiness breakdowns
+- r/ClaudeAI technique sharing
+- r/slavelabour gig patterns (tells you what people pay for)
+- HN Show threads (tells you what's getting built)
+
+scan daily. score ruthlessly. build what scores highest.

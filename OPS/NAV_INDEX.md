@@ -253,6 +253,19 @@
 | **NSFW status audit** | `MONEY_METHODS/AI_INFLUENCER/NSFW_STATUS_AUDIT.md` (21KB, 5000 lines docs / 0 execution) |
 | **iOS submission process (6-phase)** | `MONEY_METHODS/APP_FACTORY/IOS_SUBMISSION_PROCESS.md` (48KB, real Apple guidelines, pre-build→post-accept) |
 | **AI video tools comparison** | `MONEY_METHODS/AI_INFLUENCER/AI_VIDEO_TOOLS_COMPARISON.md` (15KB, 8 tools, Seedance 2.0 deep dive) |
+| **VIDEO PIPELINE (Mar 2026)** | |
+| Video editor (FFmpeg) | `AUTOMATIONS/claude_video_editor.py` — captions, hooks, CTA, resize, music, Remotion |
+| Video script generator | `AUTOMATIONS/ai_video_content_pipeline.py` — auto tool selection from tracker |
+| Video posting queue | `LEDGER/VIDEO_POSTING_QUEUE.csv` — edited videos ready for posting |
+| Post videos CLI | `AUTOMATIONS/auto_content_poster.py --post-video` — reads queue, uploads to Twitter |
+| Viral template extractor | `AUTOMATIONS/viral_content_scanner.py --extract-templates` — mines viral patterns |
+| Tool researcher | `AUTOMATIONS/perpetual_tool_researcher.py` — ALL tool categories, Capital Genesis feed |
+| Tool tracker CSV | `10_RESEARCH/VIDEO_RESEARCH/tools_tracker/ALL_TOOLS_TRACKER.csv` — 25 tools, 6 categories |
+| Video research hub | `10_RESEARCH/VIDEO_RESEARCH/README.md` — master comparison, pipeline spec, templates |
+| Viral formats library | `10_RESEARCH/VIDEO_RESEARCH/templates/VIRAL_FORMATS.md` — 8 hook types, 7 formats |
+| Master video comparison | `10_RESEARCH/VIDEO_RESEARCH/comparisons/MASTER_VIDEO_TOOLS_2026.md` — canonical Mar 2026 |
+| Pipeline spec | `10_RESEARCH/VIDEO_RESEARCH/pipeline/VIDEO_AUTOPILOT_SPEC.md` — full autopilot design |
+| n8n workflow spec | `10_RESEARCH/VIDEO_RESEARCH/pipeline/N8N_VIDEO_WORKFLOW.md` — subscription-only |
 | **App discovery engine** | `MONEY_METHODS/APP_FACTORY/APP_DISCOVERY_ENGINE.md` (41KB, CloneChart + Appkittie + 7-phase process) |
 | **Real screenshot audit (15 apps)** | `MONEY_METHODS/APP_FACTORY/REAL_SCREENSHOT_AUDIT.md` (35KB, verified revenue, onboarding steps, color palettes) |
 | **Aggregate design system v2** | `MONEY_METHODS/APP_FACTORY/AGGREGATE_DESIGN_SYSTEM_V2.md` (25KB, supersedes v1, real data from top apps) |
@@ -522,7 +535,12 @@
 | Discover new apps to build | `MONEY_METHODS/APP_FACTORY/APP_DISCOVERY_ENGINE.md` (CloneChart + Appkittie + revenue intel + weekly cadence) |
 | Submit app to iOS | `MONEY_METHODS/APP_FACTORY/IOS_SUBMISSION_PROCESS.md` (6-phase, real Apple guidelines, checklists) |
 | Audit app quality (code-level) | `MONEY_METHODS/APP_FACTORY/APP_QUALITY_AUDIT_REAL.md` (portfolio benchmarks, deficiency list) |
-| Research AI video tools | `MONEY_METHODS/AI_INFLUENCER/AI_VIDEO_TOOLS_COMPARISON.md` (Seedance, Veo, Sora, Kling, Runway, Pika) |
+| Research AI video tools | `10_RESEARCH/VIDEO_RESEARCH/comparisons/MASTER_VIDEO_TOOLS_2026.md` (canonical Mar 2026, supersedes Feb) |
+| Edit AI videos (FFmpeg) | `python3 AUTOMATIONS/claude_video_editor.py --edit INPUT.mp4 --platform tiktok` |
+| Post edited videos | `python3 AUTOMATIONS/auto_content_poster.py --post-video` (reads VIDEO_POSTING_QUEUE.csv) |
+| Extract viral templates | `python3 AUTOMATIONS/viral_content_scanner.py --extract-templates` → VIRAL_FORMATS.md |
+| Check video queue | `python3 AUTOMATIONS/claude_video_editor.py --queue` or `auto_content_poster.py --video-queue` |
+| Rank all AI tools | `python3 AUTOMATIONS/perpetual_tool_researcher.py --rank` |
 | Audit rigor of built assets | `OPS/RIGOR_AUDIT_FEB12.md` (scoring rubric for websites, emails, products, scrapers) |
 | Find ANY app factory file | `MONEY_METHODS/APP_FACTORY/APP_FACTORY_CENTRAL_INDEX.md` (single source for all app docs) |
 | Find ANY product listing | `PRODUCTS/PRODUCTS_CENTRAL_INDEX.md` (all platforms, duplicates flagged, priority order) |

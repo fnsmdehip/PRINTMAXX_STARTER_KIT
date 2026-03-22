@@ -1,0 +1,455 @@
+{
+  "cycle": 99,
+  "timestamp": "2026-03-22T13:45:50.822048+00:00",
+  "strategy": "HEALTH + WELLNESS + MENTAL HEALTH + FITNESS SCIENCE",
+  "niches": {
+    "daily_mental_health_streak": {
+      "reddit_communities": {
+        "mentalhealth": 1600000,
+        "anxiety": 1500000,
+        "depression": 1200000,
+        "mindfulness": 900000
+      },
+      "itunes_results": [
+        {
+          "name": "BetterHelp",
+          "rating": 4.5,
+          "rating_count": 180000,
+          "category": "online therapy marketplace \u2014 connects users to licensed therapists via text/video; reactive clinical service not a proactive daily mental health habit builder with streak XP, coping skill badges (Anxiety Toolkit, Mood Regulation, Resilience Building), and progression from crisis management to thriving mental wellness"
+        },
+        {
+          "name": "Woebot",
+          "rating": 4.7,
+          "rating_count": 14000,
+          "category": "CBT chatbot \u2014 conversational AI delivering cognitive behavioral therapy techniques; clinical intervention tool not a gamified daily mental health habit with streak XP, skill category mastery (CBT Practitioner, Mindfulness Master, Emotional Intelligence Builder), and wellness progression from struggling to consistently mentally healthy"
+        },
+        {
+          "name": "Wysa",
+          "rating": 4.8,
+          "rating_count": 31000,
+          "category": "AI mental health companion \u2014 mood check-ins and therapeutic conversations; check-in tool not a daily mental health skill-building habit with streak XP, mental health competency badges (Thought Challenger, Emotion Labeler, Stress Responder), and progression from reactive to proactive mental wellness"
+        },
+        {
+          "name": "MindDoc",
+          "rating": 4.6,
+          "rating_count": 22000,
+          "category": "mood tracking and mental health monitoring \u2014 symptom assessment and insights; passive monitoring not active daily mental health skill practice with streak XP, technique mastery badges, and mental fitness progression"
+        }
+      ],
+      "community_total": 5200000,
+      "streak_app_exists": false,
+      "notes": "5.2M community across core mental health subreddits. BetterHelp/Woebot are clinical tools \u2014 they treat, they don't train. No app gamifies the daily mental health habit \u2014 one evidence-based technique per day (cognitive reframing, worry scheduling, behavioral activation, gratitude journaling, progressive muscle relaxation) with streak XP, coping skill badges (Thought Challenger, Emotion Regulator, Resilience Builder), and mental wellness progression from struggling to consistently thriving. Critical distinction: building mental fitness as a DAILY PRACTICE not as a crisis response. Highest retention potential \u2014 mental health habits, once formed, are extremely sticky.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_anxiety_management_streak": {
+      "reddit_communities": {
+        "anxiety": 1500000,
+        "socialanxiety": 700000,
+        "OCD": 400000,
+        "panicattack": 200000
+      },
+      "itunes_results": [
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 1900000,
+          "category": "meditation and sleep app \u2014 guided meditations, sleep stories, breathwork; passive content consumption not active daily anxiety skill practice with streak XP, anxiety management technique mastery (Grounding Expert, Breathing Toolkit, Worry Exposure Practitioner), and progression from anxious to confidently calm in real-world situations"
+        },
+        {
+          "name": "Headspace",
+          "rating": 4.9,
+          "rating_count": 880000,
+          "category": "meditation platform \u2014 themed meditation courses, sleep tools, focus music; passive meditation content not interactive daily anxiety technique practice with streak XP, anxiety tool mastery badges (5-4-3-2-1 Grounding, Box Breathing, Cognitive Defusion), and measurable progression from avoidance to anxiety mastery"
+        },
+        {
+          "name": "Finch",
+          "rating": 4.8,
+          "rating_count": 460000,
+          "category": "self-care pet app \u2014 virtual bird that grows as you complete self-care goals; general wellness gamification not targeted daily anxiety technique mastery with specific CBT/DBT skill badges, anxiety disorder progression levels, and evidence-based technique library (exposure hierarchy builder, safety behavior tracker, thought record practice)"
+        }
+      ],
+      "community_total": 2800000,
+      "streak_app_exists": false,
+      "notes": "2.8M dedicated anxiety community. Calm/Headspace offer passive meditation \u2014 they soothe, they don't train. Finch gamifies self-care generically without targeted anxiety skill acquisition. Gap: daily anxiety management skill practice \u2014 one technique per day (box breathing drill, cognitive restructuring exercise, exposure hierarchy step, safety behavior challenge, grounding technique) with streak XP, anxiety toolbox mastery badges, and progression from avoidance to confident real-world functioning. Key insight: anxiety disorders affect 40M US adults and CBT/DBT skills have 80%+ evidence base \u2014 nobody has gamified the daily skill practice.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_sleep_optimization_streak": {
+      "reddit_communities": {
+        "sleep": 800000,
+        "insomnia": 600000,
+        "polyphasic": 120000,
+        "sleephackers": 80000
+      },
+      "itunes_results": [
+        {
+          "name": "Sleep Cycle",
+          "rating": 4.7,
+          "rating_count": 690000,
+          "category": "sleep tracker \u2014 alarm clock that wakes you in lightest sleep phase; passive monitoring tool not a daily sleep optimization habit builder with streak XP, sleep hygiene practice badges (Consistent Bedtime, No-Screen Hour, Sleep Environment Optimizer), and progression from chronic poor sleeper to sleep-optimized high performer"
+        },
+        {
+          "name": "Pillow",
+          "rating": 4.8,
+          "rating_count": 310000,
+          "category": "sleep tracker using Apple Watch \u2014 sleep stages analysis and heart rate monitoring; passive data collection not active daily sleep habit formation with streak XP, sleep quality improvement badges (REM Optimizer, Deep Sleep Builder, Circadian Rhythm Locker), and sleep science curriculum from basics to elite sleep performance"
+        },
+        {
+          "name": "Sleepio",
+          "rating": 4.6,
+          "rating_count": 8000,
+          "category": "CBT-I digital sleep program \u2014 structured 6-week cognitive behavioral therapy for insomnia; one-time course not an ongoing daily sleep habit streak with XP, sleep hygiene practice mastery, and continuous optimization beyond the initial program"
+        }
+      ],
+      "community_total": 1600000,
+      "streak_app_exists": false,
+      "notes": "1.6M sleep-focused community plus massive overlap with fitness, biohacking, and wellness communities. Sleep Cycle/Pillow track sleep passively. Sleepio does CBT-I as a one-time course. No app gamifies the daily sleep habit \u2014 one sleep hygiene practice per day (consistent wake time, 20-min wind-down ritual, bedroom temperature set, caffeine cutoff enforced, morning light exposure) with streak XP, sleep habit mastery badges (Circadian Anchor, Sleep Sanctuary Builder, Recovery Optimizer), and sleep quality progression from chronic fatigue to waking refreshed. Matthew Walker 'Why We Sleep' audience has no active daily practice tool.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_nutrition_science_streak": {
+      "reddit_communities": {
+        "nutrition": 1400000,
+        "HealthyFood": 2000000,
+        "EatCheapAndHealthy": 4500000,
+        "PlantBasedDiet": 600000
+      },
+      "itunes_results": [
+        {
+          "name": "Cronometer",
+          "rating": 4.7,
+          "rating_count": 86000,
+          "category": "micronutrient tracking app \u2014 logs all 40+ essential nutrients per food; data-entry nutrition diary not a daily nutrition science education habit with streak XP, macronutrient mastery badges (Protein Optimizer, Micronutrient Expert, Anti-Inflammatory Eater), and dietary pattern progression from standard western diet to evidence-based optimal nutrition"
+        },
+        {
+          "name": "MyFitnessPal",
+          "rating": 4.7,
+          "rating_count": 1900000,
+          "category": "calorie and macro tracking app \u2014 food diary with largest barcode database; passive calorie logging tool not a daily nutrition education habit with streak XP, food science literacy badges (Glycemic Index Expert, Omega-3 Optimizer, Phytonutrient Awareness), and progression from calorie counter to evidence-based nutrition practitioner"
+        },
+        {
+          "name": "Noom",
+          "rating": 4.7,
+          "rating_count": 440000,
+          "category": "behavioral weight loss program \u2014 psychology-based coaching with calorie tracking; subscription coaching service not a gamified daily nutrition science habit with standalone streak XP, nutrition literacy mastery badges, and open-ended ongoing learning progression"
+        }
+      ],
+      "community_total": 8500000,
+      "streak_app_exists": false,
+      "notes": "8.5M nutrition-focused community. MyFitnessPal/Cronometer log food but don't teach nutrition science. Noom teaches psychology of eating, not nutrition literacy. Gap: daily nutrition science concept \u2014 one lesson per day (what leucine threshold means for muscle protein synthesis, how seed oils affect inflammation, why fiber diversity matters for gut microbiome, how to read nutrition labels for hidden sugars, what nutrient timing actually does) with streak XP, nutrition science mastery badges (Macro Expert, Micronutrient Master, Anti-Inflammatory Practitioner), and progression from calorie counter to evidence-based nutrition scientist. Massive ICP overlap with fitness community.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_intermittent_fasting_streak": {
+      "reddit_communities": {
+        "intermittentfasting": 1100000,
+        "fasting": 500000,
+        "omad": 300000,
+        "keto": 3300000
+      },
+      "itunes_results": [
+        {
+          "name": "Zero Fasting",
+          "rating": 4.8,
+          "rating_count": 210000,
+          "category": "fasting timer app \u2014 tracks fasting windows, logging, and historical data; passive timer not a daily fasting science education habit with streak XP, fasting protocol mastery badges (16:8 Practitioner, 24h Veteran, Autophagy Explorer), and progression from beginner faster to metabolically optimized practitioner"
+        },
+        {
+          "name": "Fastic",
+          "rating": 4.7,
+          "rating_count": 330000,
+          "category": "intermittent fasting tracker \u2014 fasting timer with community and tips; timer app with passive tips not gamified daily fasting education with streak XP, metabolic adaptation badges, and evidence-based progression through fasting protocols (16:8 \u2192 OMAD \u2192 extended fast \u2192 metabolic flexibility)"
+        },
+        {
+          "name": "BodyFast",
+          "rating": 4.7,
+          "rating_count": 190000,
+          "category": "IF coaching app \u2014 personalized fasting schedules and coaching; schedule optimization tool not a daily fasting science habit with streak XP, metabolic science mastery badges (Insulin Sensitivity Expert, Autophagy Activator, Metabolic Flexibility Builder), and fasting depth progression from time-restricted eating to therapeutic fasting"
+        }
+      ],
+      "community_total": 5200000,
+      "streak_app_exists": false,
+      "notes": "5.2M fasting community (deliberately excluding r/keto size distortion, counted separately). Zero/Fastic/BodyFast are all timers \u2014 they track when you fast but don't teach the science. Gap: daily IF science concept \u2014 one lesson per day (what happens at 12h/16h/24h/72h fast, how insulin sensitivity improves, what mTOR/autophagy means, how to break a fast optimally, electrolyte management during fasting) with streak XP, fasting protocol mastery badges (16:8 Certified, Autophagy Activator, Extended Fast Veteran), and progression from timer user to fasting scientist who understands the mechanisms. High premium tier potential \u2014 fasting community is already paying for Zero ($70/yr) and BodyFast ($96/yr).",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_strength_science_streak": {
+      "reddit_communities": {
+        "strength_training": 400000,
+        "weightlifting": 600000,
+        "powerlifting": 900000,
+        "naturalbodybuilding": 600000
+      },
+      "itunes_results": [
+        {
+          "name": "Strong",
+          "rating": 4.9,
+          "rating_count": 89000,
+          "category": "workout logging app \u2014 tracks sets, reps, weights with progression graphs; lifting log not a daily strength science education habit with streak XP, periodization theory mastery badges (Progressive Overload Expert, Periodization Designer, Recovery Optimizer), and progression from beginner who follows programs to coach-level training scientist"
+        },
+        {
+          "name": "JEFIT",
+          "rating": 4.7,
+          "rating_count": 120000,
+          "category": "workout planner and tracker \u2014 exercise library, routine builder, community; workout execution tool not a daily strength training science habit with streak XP, biomechanics mastery badges (Motor Pattern Expert, Muscle Fiber Type Specialist, CNS Fatigue Manager), and training science progression from novice to advanced periodization practitioner"
+        },
+        {
+          "name": "Boostcamp",
+          "rating": 4.9,
+          "rating_count": 46000,
+          "category": "evidence-based program app \u2014 hosts science-based programs (GZCLP, nSuns, etc.); program delivery tool not a daily strength science education habit with standalone streak XP, exercise science concept mastery, and open-ended training theory progression beyond specific programs"
+        }
+      ],
+      "community_total": 2500000,
+      "streak_app_exists": false,
+      "notes": "2.5M strength-focused community. Strong/JEFIT log workouts. Boostcamp delivers programs. None teach the underlying science daily. Gap: one strength science concept per day (how motor unit recruitment works, what RIR means and why it matters, how to program deload weeks, why compound-before-isolation sequencing, what satellite cells do in hypertrophy, how creatine phosphate system works) with streak XP, exercise science mastery badges (Biomechanics Expert, Periodization Designer, Physiology Practitioner), and progression from gym-goer following programs to training scientist who designs optimal programming. High-premium ICP: serious lifters who want to train smarter, not just harder.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_flexibility_mobility_streak": {
+      "reddit_communities": {
+        "flexibility": 500000,
+        "yoga": 1400000,
+        "bodyweightfitness": 2000000,
+        "hypermobility": 200000
+      },
+      "itunes_results": [
+        {
+          "name": "StretchIt",
+          "rating": 4.8,
+          "rating_count": 32000,
+          "category": "stretching program app \u2014 guided flexibility routines for splits, backbends, shoulders; video-guided routine delivery not a daily mobility science education habit with streak XP, mobility system mastery badges (Hip Flexor Expert, Thoracic Spine Opener, Neural Tension Specialist), and progression from stiff desk worker to full-range-of-motion athlete"
+        },
+        {
+          "name": "GOWOD",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "mobility assessment app \u2014 daily personalized mobility routine based on WOD; routine delivery tool not a daily mobility science concept education with streak XP, joint health mastery badges (Ankle Mobility Expert, Hip Capsule Specialist, Shoulder Overhead Stability), and movement quality progression from restricted to full athletic range"
+        },
+        {
+          "name": "Pliability (formerly ROMWOD)",
+          "rating": 4.8,
+          "rating_count": 14000,
+          "category": "flexibility streaming service \u2014 yoga-inspired daily mobility flows; passive guided video not active daily mobility science habit with streak XP, tissue type mastery (fascia, capsular, neural), joint-by-joint progression, and mobility science literacy from basic stretching to advanced tissue remodeling"
+        }
+      ],
+      "community_total": 4100000,
+      "streak_app_exists": false,
+      "notes": "4.1M community. StretchIt/GOWOD/Pliability all deliver routines \u2014 follow along, done. None teach the science of WHY. Gap: one mobility science concept per day (what neural tension means and why stretching doesn't always work, how fascia responds to load vs. stretch, why joint capsule restrictions need different treatment than muscle tightness, how to diagnose your own movement restrictions, when static vs. dynamic stretching is appropriate) with streak XP, mobility science mastery badges (Fascial Systems Expert, Neural Mobility Specialist, Joint Capsule Practitioner), and progression from routine follower to movement scientist. Massive desk-worker ICP: 100M+ people with chronic mobility restrictions.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_recovery_science_streak": {
+      "reddit_communities": {
+        "fitness": 13000000,
+        "weightlifting": 600000,
+        "physicaltherapy": 500000,
+        "sportsscience": 120000
+      },
+      "itunes_results": [
+        {
+          "name": "Whoop",
+          "rating": 4.7,
+          "rating_count": 120000,
+          "category": "wearable recovery tracker \u2014 HRV, sleep, strain monitoring; passive data monitoring not a daily recovery science education habit with streak XP, recovery optimization mastery badges (HRV Expert, Sleep Debt Manager, Parasympathetic Activator), and progression from data-blind trainee to recovery-optimized athlete"
+        },
+        {
+          "name": "HRV4Training",
+          "rating": 4.6,
+          "rating_count": 8000,
+          "category": "HRV measurement and readiness scoring \u2014 morning finger camera HRV; data collection tool not daily recovery science education with streak XP, recovery modality mastery badges (Cold Exposure Practitioner, Active Recovery Designer, Nutrition Recovery Expert), and evidence-based recovery curriculum"
+        },
+        {
+          "name": "RecoverAI",
+          "rating": 4.5,
+          "rating_count": 3000,
+          "category": "AI recovery recommendations \u2014 personalized recovery advice; recommendation engine not a daily recovery science habit builder with streak XP, physiological adaptation mastery, and structured progression through recovery science from basics to elite periodization"
+        }
+      ],
+      "community_total": 14220000,
+      "streak_app_exists": false,
+      "notes": "14.2M community (r/fitness alone is 13M). Whoop monitors recovery. HRV4Training measures it. Nobody teaches the daily science of WHY recovery works. Gap: one recovery science concept per day (what HRV measures and how to interpret it, how cold exposure accelerates recovery vs. blunts adaptation, what the lymphatic system does during sleep, how protein timing affects muscle repair, why parasympathetic activation matters post-training) with streak XP, recovery science mastery badges (HRV Expert, Adaptation Optimizer, Sleep Architecture Master), and progression from training hard to training smart. Massive ICP: fitness community that wears Whoop/Garmin/Oura but doesn't understand what the numbers mean.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_cold_exposure_streak": {
+      "reddit_communities": {
+        "coldshowers": 500000,
+        "Wim_Hof": 350000,
+        "icebath": 120000,
+        "biohacking": 400000
+      },
+      "itunes_results": [
+        {
+          "name": "Wim Hof Method",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "Wim Hof breathing and cold exposure app \u2014 guided breathing exercises and cold shower timers; Wim Hof branded content not a general daily cold exposure science habit with streak XP, cold exposure protocol mastery badges (Cold Shower Veteran, Ice Bath Practitioner, Brown Adipose Activator), and progression from cold beginner to cold-adapted practitioner with scientific understanding"
+        },
+        {
+          "name": "IceBarrel Timer",
+          "rating": 4.3,
+          "rating_count": 2000,
+          "category": "cold plunge timer \u2014 simple timer for ice bath sessions; single-function utility not a daily cold exposure habit builder with streak XP, physiological adaptation mastery badges, and cold science curriculum"
+        }
+      ],
+      "community_total": 1370000,
+      "streak_app_exists": false,
+      "notes": "1.37M cold exposure community with massive growth since Huberman/Attia mainstreamed cold plunge science. Wim Hof app exists but is branded/method-specific, not a general scientific daily habit builder. Gap: daily cold exposure science concept \u2014 one lesson per day (what norepinephrine spike from cold means, how cold shock proteins work, why timing matters for adaptation vs. recovery, how brown adipose tissue activation compounds, the dopamine reset from cold) with streak XP, cold adaptation mastery badges (Vasoconstriction Expert, Norepinephrine Activator, Cold-Adapted Athlete), and progression from reluctant cold shower to ice bath scientist. Huberman audience is the exact ICP \u2014 well-educated, science-curious, willing to pay for quality.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_breathwork_streak": {
+      "reddit_communities": {
+        "breathwork": 310000,
+        "Wim_Hof": 350000,
+        "pranayama": 60000,
+        "holotropicbreathwork": 20000
+      },
+      "itunes_results": [
+        {
+          "name": "Othership",
+          "rating": 4.9,
+          "rating_count": 28000,
+          "category": "guided breathwork app \u2014 instructor-led breathing sessions for relaxation, energy, focus; passive content consumption not daily breathwork science education with streak XP, technique mastery badges (Box Breathing Expert, Holotropic Practitioner, CO2 Tolerance Builder), and physiological mechanism understanding from O2/CO2 balance to HRV to nervous system regulation"
+        },
+        {
+          "name": "Prana Breath",
+          "rating": 4.6,
+          "rating_count": 32000,
+          "category": "breathing training app \u2014 customizable breathing exercises with visual guides and statistics; exercise delivery not a daily breathwork science habit with streak XP, respiratory system mastery badges (Diaphragmatic Practitioner, Nasal Breathing Expert, CO2 Tolerance Builder), and progression from shallow breather to optimized respiratory athlete"
+        },
+        {
+          "name": "Breathwrk",
+          "rating": 4.8,
+          "rating_count": 19000,
+          "category": "breathing exercise library \u2014 science-backed breathing patterns for different states; on-demand exercise tool not a progressive daily habit with streak XP, nervous system regulation mastery, and structured progression through respiratory physiology from beginner to advanced practitioner"
+        }
+      ],
+      "community_total": 740000,
+      "streak_app_exists": false,
+      "notes": "740K dedicated breathwork community \u2014 small but extremely high-intent. Othership/Breathwrk deliver guided sessions but don't teach the science. Gap: one breathwork science concept per day (how the Bohr effect explains why overbreathing reduces O2 delivery, what CO2 tolerance means and how to build it, why nasal vs. mouth breathing matters for sleep, how the vagus nerve mediates heart rate from breathing rhythm, what cyclic sighing does to CO2 levels) with streak XP, respiratory science mastery badges (CO2 Tolerance Expert, Vagal Tone Builder, Nasal Breathing Specialist), and progression from technique follower to respiratory scientist. Premium ICP overlap with biohackers, athletes, meditators.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_stress_management_streak": {
+      "reddit_communities": {
+        "stress": 210000,
+        "workstress": 90000,
+        "burnout": 130000,
+        "Meditation": 1800000
+      },
+      "itunes_results": [
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 1900000,
+          "category": "meditation and stress relief app \u2014 guided meditations and relaxation content; passive content not active daily stress management skill development with streak XP, stress response system mastery badges (Cortisol Regulator, HPA Axis Expert, Allostatic Load Manager), and progression from chronic stress reactivity to trained stress response regulation"
+        },
+        {
+          "name": "Ten Percent Happier",
+          "rating": 4.9,
+          "rating_count": 77000,
+          "category": "meditation and mindfulness app \u2014 secular meditation instruction and talks; meditation practice app not a daily stress physiology education habit with streak XP, stress biology mastery badges (Amygdala Regulation Practitioner, Prefrontal Cortex Strengthener, Chronic Stress Reversal Expert), and science-based progression from stress-reactive to stress-resilient"
+        },
+        {
+          "name": "Insight Timer",
+          "rating": 4.9,
+          "rating_count": 360000,
+          "category": "meditation timer and content platform \u2014 150K+ free guided meditations; meditation content library not a systematic daily stress skill-building program with streak XP, specific stress management technique mastery, and structured progression through stress physiology and management science"
+        }
+      ],
+      "community_total": 2230000,
+      "streak_app_exists": false,
+      "notes": "2.23M core stress community plus massive overlap with anxiety (2.8M), fitness (13M), and mental health communities. Calm/Headspace/Insight Timer all deliver meditation content \u2014 passive consumption. None teach the science of stress physiology or build active daily stress regulation skills. Gap: one stress science concept per day (what cortisol does to memory consolidation, how chronic sympathetic dominance affects immunity, what the polyvagal theory predicts about social engagement, how HPA axis dysregulation creates burnout, what GABA does vs. norepinephrine in stress response) with streak XP, stress biology mastery badges (HPA Axis Expert, Cortisol Optimizer, Nervous System Regulator), and progression from stress-reactive to stress-resilient with measurable HRV improvement. Science-educated ICP: Huberman/Attia/Walker audience who wants mechanisms, not just meditation guidance.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_gut_health_streak": {
+      "reddit_communities": {
+        "GutHealth": 420000,
+        "probiotics": 210000,
+        "IBS": 260000,
+        "microbiome": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Cara Care",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "gut health tracking app \u2014 food diary with symptom correlation for IBS/IBD; passive symptom logger not a daily gut science education habit with streak XP, gut biology mastery badges (Microbiome Cultivator, Gut-Brain Axis Expert, Fiber Diversity Optimizer), and progression from symptom tracker to gut health scientist who understands mechanisms"
+        },
+        {
+          "name": "Nerva",
+          "rating": 4.7,
+          "rating_count": 9000,
+          "category": "gut-directed hypnotherapy app \u2014 IBS treatment via gut-brain axis hypnosis program; clinical intervention not a daily gut health science education habit with streak XP, gut ecosystem mastery badges, and general wellness progression beyond IBS treatment"
+        },
+        {
+          "name": "ZOE",
+          "rating": 4.5,
+          "rating_count": 8000,
+          "category": "personalized nutrition app \u2014 blood sugar/gut microbiome testing with food recommendations; testing-based personalization service not a daily gut science education habit with streak XP, microbiome literacy badges, and gut health progression from uninformed to optimally feeding your unique microbiome"
+        }
+      ],
+      "community_total": 1070000,
+      "streak_app_exists": false,
+      "notes": "1.07M dedicated gut health community \u2014 rapidly growing since Sonnenburg/Huberman microbiome research went mainstream. No app teaches daily gut science. Gap: one gut health concept per day (what short-chain fatty acids are and how fiber produces them, how the gut-brain axis works via the vagus nerve, what butyrate does to intestinal lining integrity, how antibiotic courses reset the microbiome, why fiber diversity beats fiber quantity) with streak XP, gut biology mastery badges (Microbiome Cultivator, Butyrate Producer, Gut-Brain Specialist), and progression from confusion to evidence-based gut optimization. Extremely engaged ICP \u2014 gut health sufferers are desperately seeking education that explains their conditions mechanistically.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_sports_nutrition_streak": {
+      "reddit_communities": {
+        "sportsnutrition": 200000,
+        "Fitness": 13000000,
+        "naturalbodybuilding": 600000,
+        "weightroom": 400000
+      },
+      "itunes_results": [
+        {
+          "name": "MacroFactor",
+          "rating": 4.9,
+          "rating_count": 31000,
+          "category": "adaptive macro tracking app \u2014 dynamically adjusts calorie targets based on weight trend; advanced diet management tool not a daily sports nutrition science education habit with streak XP, performance nutrition mastery badges (Pre-Workout Optimizer, Protein Synthesis Expert, Carb Periodization Practitioner), and progression from macro counter to performance nutrition scientist"
+        },
+        {
+          "name": "Gainful",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "personalized protein supplement subscription \u2014 quiz-based custom protein blend; supplement product not a daily sports nutrition science habit with streak XP, supplement science mastery badges (Creatine Pharmacology Expert, Essential Amino Acid Practitioner, Ergogenic Aid Evaluator), and evidence-based progression through performance nutrition from beginner to elite athlete fueling"
+        },
+        {
+          "name": "Renaissance Periodization",
+          "rating": 4.8,
+          "rating_count": 8000,
+          "category": "RP Diet app \u2014 evidence-based meal timing and macro targets for performance; diet tool not a daily sports nutrition science habit with streak XP, sports nutrition research mastery badges, and progression from following a plan to understanding and designing performance nutrition"
+        }
+      ],
+      "community_total": 14200000,
+      "streak_app_exists": false,
+      "notes": "14.2M fitness community with strong sports nutrition interest. MacroFactor/RP Diet are excellent tools \u2014 they optimize, they don't educate. Gap: one sports nutrition concept per day (what leucine threshold means for muscle protein synthesis, why carbohydrate timing matters for glycogen replenishment, how creatine monohydrate works at the cellular level, what caffeine does to adenosine receptors during training, how beta-alanine buffers lactic acid) with streak XP, sports nutrition science mastery badges (Substrate Utilization Expert, Ergogenic Aid Specialist, Nutrient Timing Master), and progression from supplement buyer to sports nutrition scientist. High premium ICP: serious athletes already paying for Whoop + MacroFactor + RP Diet who want to understand the mechanisms.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_posture_biomechanics_streak": {
+      "reddit_communities": {
+        "Posture": 310000,
+        "backpain": 420000,
+        "neckpain": 180000,
+        "DeskJob": 260000
+      },
+      "itunes_results": [
+        {
+          "name": "PostureScreen Mobile",
+          "rating": 4.3,
+          "rating_count": 3000,
+          "category": "posture assessment app \u2014 photo-based postural deviation scoring; clinical assessment tool not a daily posture science education habit with streak XP, biomechanics mastery badges (Spinal Alignment Expert, Muscle Imbalance Corrector, Ergonomic Environment Designer), and progression from pain-reactive to proactively optimized posture"
+        },
+        {
+          "name": "Upright GO",
+          "rating": 3.9,
+          "rating_count": 12000,
+          "category": "posture training wearable app \u2014 vibration feedback when slouching; passive external reminder not active daily postural science education with streak XP, postural system mastery badges (Core Foundation Builder, Thoracic Mobility Specialist, Head-Forward Posture Corrector), and evidence-based progression through the biomechanical causes and corrections of poor posture"
+        },
+        {
+          "name": "Nekoze",
+          "rating": 3.8,
+          "rating_count": 4000,
+          "category": "Mac/iPhone posture monitor \u2014 camera detects slouching and sends alerts; passive reminder tool not a daily biomechanics education habit with streak XP, postural chain mastery, and progression from sloucher to optimally-stacked biomechanical athlete"
+        }
+      ],
+      "community_total": 1170000,
+      "streak_app_exists": false,
+      "notes": "1.17M dedicated community plus massive overlap with r/fitness (13M) and desk worker population (100M+ with postural issues). PostureScreen and Upright GO react to bad posture \u2014 none teach WHY posture degrades or the biomechanical science of correction. Gap: one posture/biomechanics concept per day (what forward head posture does to cervical spine load, why upper crossed syndrome develops from desk work, how hip flexor tightness creates anterior pelvic tilt, what reciprocal inhibition means for muscle balance, why breathing pattern disorders drive upper trap tightness) with streak XP, biomechanics mastery badges (Spinal Load Expert, Muscle Imbalance Analyst, Postural Chain Optimizer), and progression from reactive pain management to proactive biomechanical optimization. 100M+ desk workers is one of the largest underserved ICPs in the app factory.",
+      "verdict": "BLUE_OCEAN"
+    }
+  }
+}

@@ -23,7 +23,14 @@
 <meta name="twitter:title" content="PlankStreak - Free Plank Timer & Core Tracker">
 <meta name="twitter:description" content="Built-in plank timer + daily streak. Track hold times, beat PRs. No account needed.">
 <link rel="manifest" href="manifest.json">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"PlankStreak","description":"Built-in plank timer with daily streak tracking. Track your hold time, beat personal records, and build core strength. Free plank tracker — no account required.","url":"https://plank-streak.surge.sh/","applicationCategory":"HealthAndFitnessApplication","operatingSystem":"Web, iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX","url":"https://printmaxx-apps.surge.sh/"},"keywords":"plank tracker app, plank timer app, daily plank challenge, free plank app, core workout tracker"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PlankStreak","description":"Built-in plank timer with daily streak tracking. Track your hold time, beat personal records, and build core strength. Free plank tracker — no account required.","url":"https://plank-streak.surge.sh/","applicationCategory":"HealthAndFitness","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"},"featureList":["Built-in plank timer","Personal record tracking","Daily streak calendar","30-day plank challenge support","Hold time history","No account required"]}</script>
+<script>
+function maybeShowReviewPrompt(days) {
+  if (![7, 21, 30, 90, 365].includes(days)) return;
+  if (state.lastReviewPrompt && (Date.now() - state.lastReviewPrompt) < (90 * 86400000)) return;
+  setTimeout(() => { document.getElementById('review-modal').style.display = 'flex'; }, 1400);
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does PlankStreak have a built-in timer?","acceptedAnswer":{"@type":"Answer","text":"Yes. PlankStreak includes a built-in plank timer. Start your plank, the timer runs, and your hold time is logged automatically when you stop."}},{"@type":"Question","name":"Is PlankStreak free?","acceptedAnswer":{"@type":"Answer","text":"Yes, PlankStreak is completely free. No account, no subscription, no ads. All data stays on your device."}},{"@type":"Question","name":"Can I use PlankStreak for a 30-day plank challenge?","acceptedAnswer":{"@type":"Answer","text":"Yes. PlankStreak is ideal for 30-day plank challenges. Log each daily session, track your improving hold times, and maintain your streak."}},{"@type":"Question","name":"Does PlankStreak track personal records?","acceptedAnswer":{"@type":"Answer","text":"Yes. PlankStreak automatically saves your longest plank hold as your personal record and shows it on your dashboard."}}]}</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -187,7 +194,7 @@ const MILESTONES = [
   {days:60,emoji:'🔱',label:'Two Months'},{days:90,emoji:'🥇',label:'90 Days'},
   {days:180,emoji:'🏆',label:'Half Year'},{days:365,emoji:'👑',label:'Full Year'}
 ];
-let state = {sessions:[]};
+let state = {sessions:[],lastReviewPrompt:null};
 let timerInterval = null;
 let timerRunning = false;
 let timerSeconds = 0;
@@ -265,6 +272,7 @@ function logFromTimer(){
   const entry={date:today(),seconds:secs,note:null};
   if(idx>=0)state.sessions[idx]=entry;else state.sessions.push(entry);
   saveState();timerReset();render();toast('Planked '+fmtTime(secs));
+  maybeShowReviewPrompt(calcStreak().current);
 }
 function openLogModal(){document.getElementById('log-modal').classList.remove('hidden');document.getElementById('log-seconds').value='';document.getElementById('log-note').value='';}
 function closeLogModal(){document.getElementById('log-modal').classList.add('hidden');}
@@ -277,6 +285,7 @@ function saveSession(){
   const entry={date:today(),seconds:secs,note:note||null};
   if(idx>=0)state.sessions[idx]=entry;else state.sessions.push(entry);
   saveState();closeLogModal();render();toast('Planked '+fmtTime(secs));
+  maybeShowReviewPrompt(calcStreak().current);
 }
 function confirmReset(){document.getElementById('reset-modal').classList.remove('hidden');}
 function closeResetModal(){document.getElementById('reset-modal').classList.add('hidden');}
@@ -284,5 +293,18 @@ function doReset(){state.currentStreak=0;saveState();closeResetModal();render();
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 loadState();render();switchTab('today');
 </script>
+<!-- Review Prompt Modal -->
+<div id="review-modal" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);align-items:center;justify-content:center;">
+  <div style="width:100%;max-width:380px;margin:0 20px;background:#00101a;border:1px solid rgba(2,132,199,.3);border-radius:24px;padding:28px 24px;">
+    <div style="text-align:center;margin-bottom:20px;">
+      <div style="font-size:3.5rem;margin-bottom:12px;">🧱</div>
+      <h2 style="font-size:1.3rem;font-weight:800;color:#fff;margin:0 0 8px">Enjoying PlankStreak?</h2>
+      <p style="font-size:.9rem;color:#94a3b8;margin:0;">You have hit a real milestone. A 5-star review takes 10 seconds and helps others find this app.</p>
+    </div>
+    <button id="review-yes-btn" onclick="state.lastReviewPrompt=Date.now();saveState();document.getElementById('review-modal').style.display='none';window.open('https://apps.apple.com/app/id0','_blank');" style="width:100%;padding:14px;border-radius:16px;border:none;cursor:pointer;font-weight:700;font-size:1rem;color:#fff;background:linear-gradient(135deg,#0284c7,#0284c7);margin-bottom:10px;">Rate PlankStreak ⭐⭐⭐⭐⭐</button>
+    <button onclick="state.lastReviewPrompt=Date.now()-82*86400000;saveState();document.getElementById('review-modal').style.display='none';" style="width:100%;padding:12px;background:none;border:none;cursor:pointer;color:#64748b;font-size:.85rem;">Maybe later</button>
+  </div>
+</div>
+
 </body>
 </html>

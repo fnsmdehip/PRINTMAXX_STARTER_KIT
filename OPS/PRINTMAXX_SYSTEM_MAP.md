@@ -81,13 +81,15 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── method_discovery_crawler.py   #   L4 collection. Daily crawls 18 subreddits + HN + Twitter for new revenue methods. Capital Genesis scoring. Cron 5 AM.
 │   ├── sec_edgar_scanner.py          #   L4 collection. Daily SEC EDGAR filing scan (8-K, S-1). EAS targets, freelance signals. Cron 5:15 AM.
 │   ├── crunchbase_scanner.py         #   L4 collection. Daily Crunchbase/TechCrunch RSS funding scan. EAS targets, hiring signals. Cron 5:20 AM.
-│   ├── capital_genesis_ranker.py     #   L2 intelligence. Scores ALL methods on 7 weighted dimensions, phase-aware. Daily priority stack. Cron 5:30 AM.
-│   ├── autonomous_integrator.py      #   L1 engine. V2 full-toolkit alpha integration: ventures, ralph, n8n, DAGs, handoffs, hooks, subagents, MCP, procedural memory. Cron 10:15 PM.
+│   ├── capital_genesis_ranker.py     #   L2 intelligence. Scores ALL methods on 8 weighted dimensions (incl opportunity window), phase-aware. Daily priority stack. Cron 5:30 AM.
+│   ├── autonomous_integrator.py      #   L1 engine. V2 full-toolkit alpha integration: ventures, ralph, n8n, DAGs, handoffs, hooks, subagents, MCP, procedural memory, smart model routing. Cron 10:15 PM.
+│   ├── venture_pipeline.py           #   L3 execution. Unified DAG executor for ALL ventures. Parameterized --venture flag. 334 DAGs, 3,230 steps. Cron 8 AM daily.
 │   ├── orphan_doc_scanner.py         #   L6 maintenance. Weekly scan for unreferenced docs. Stages actionable orphans as alpha. Cron Sunday 4 AM.
 │   ├── alpha_backlog_scanner.py      #   L4 collection. Weekly sweep of ALL 15K+ alpha for unintegrated opportunities. 5 categories. Cron Monday 3 AM.
 │   ├── perpetual_tool_researcher.py  #   L4 collection. Perpetual AI tool tracker. ALL categories (video, edit, voice, scheduling, etc). Scores tools, generates comparisons, feeds Capital Genesis. Cron 8 AM + 8 PM digest.
 │   ├── ai_video_content_pipeline.py  #   L3 execution. Video script generation for AI tools (Seedance, Kling, Pika). Affiliate integration. Cron 6 AM.
-│   ├── viral_content_scanner.py      #   L4 collection. Monitors viral accounts, detects engagement patterns, queues repurposing.
+│   ├── viral_content_scanner.py      #   L4 collection. Monitors viral accounts, detects engagement patterns, queues repurposing. --extract-templates feeds VIRAL_FORMATS.md.
+│   ├── claude_video_editor.py        #   L3 execution. FFmpeg auto-edit pipeline: whisper captions, hook/CTA overlays, platform resize, music mix. Outputs to VIDEO_POSTING_QUEUE.csv. Remotion integration.
 │   ├── memory_manager.py             #   L6 maintenance. Filesystem-based memory management.
 │   ├── wire_missed_intelligence.py   #   L6 maintenance. Parses scan results → updates intelligence catalog.
 │   ├── build_codebase_grammar.py     #   L6 maintenance. AST-based 118x compression for LLM context.
@@ -413,6 +415,25 @@ intelligence_router.py ◄── alpha_query + docs + CSVs + swarm reports
          └──→ growth_strategist (venture strategies)
 
 DECISIONS ──→ decision_engine ──→ DECISIONS.csv
+
+VIDEO PIPELINE:
+perpetual_tool_researcher ──→ ALL_TOOLS_TRACKER.csv ──→ ai_video_content_pipeline (auto tool selection)
+                                                       │
+viral_content_scanner ──→ scan_history/*.json ──→ --extract-templates ──→ VIRAL_FORMATS.md
+                     └──→ repurpose_queue.csv ──→ content for video generation
+                                                       │
+ai_video_content_pipeline ──→ video_scripts/ ──→ AI video tools (Kling/Seedance/Wan)
+                                                       │
+                                              raw video ──→ claude_video_editor (FFmpeg pipeline)
+                                                       │    ├── whisper → SRT captions
+                                                       │    ├── hook/CTA overlays
+                                                       │    ├── platform resize (9:16, 16:9, 1:1)
+                                                       │    └── Remotion for branded templates
+                                                       │
+                                              VIDEO_POSTING_QUEUE.csv ──→ auto_content_poster --post-video
+                                                       │
+                                              CONTENT_PERFORMANCE.csv ◄── engagement tracking
+                                                       └──→ Capital Genesis feedback loop
                     │
          loop_closer ──→ executes decisions, tracks feedback, advances pipeline
                     │
@@ -506,6 +527,7 @@ printmaxx_gates.db      Blocking gate states + task graph (SQLite, survives rest
 MODEL_ROUTING_CONFIG.json  Cross-model routing (writer != reviewer)
 INBOUND_LEADS.csv       Observer agent lead captures (score, platform, engagement)
 OUTREACH_QUEUE.csv      Quinn agent warm outreach queue
+VIDEO_POSTING_QUEUE.csv  Edited videos ready for posting (claude_video_editor → auto_content_poster)
 DECISION_REVIEWS.jsonl  Challenger agent review logs
 PENDING_HUMAN_APPROVAL.jsonl  Items needing human action
 worktree_state.json     Active git worktrees for parallel agents

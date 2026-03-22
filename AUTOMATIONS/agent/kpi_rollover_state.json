@@ -1,0 +1,73 @@
+{
+  "last_updated": "2026-03-21T17:27:23.767636",
+  "source_day": 21,
+  "target_day": 21,
+  "task_count": 8,
+  "tasks": [
+    {
+      "text": "[URGENT] CRUNCHBASE: AI startups are (news) \u2014 AI startups\u00a0accounted for 41% of the $128 billion in ve",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    },
+    {
+      "text": "[URGENT] CRUNCHBASE: Funding: Candex Extends (series c) \u2014 New York-based Candex, a startup that helps",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    },
+    {
+      "text": "[URGENT] CRUNCHBASE: Funding: Bluesky (series b) \u2014 The additional funds have been used to scale Blues",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    },
+    {
+      "text": "[URGENT] CRUNCHBASE: Zipline charts drone (news) \u2014 That geographic expansion in the United States has",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    },
+    {
+      "text": "[URGENT] CRUNCHBASE: Substack (news) \u2014 The New York Times reports that the funding brings Substack's ",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    },
+    {
+      "text": "[URGENT] CRUNCHBASE: Funding: Consumer-focused privacy company Cloaked (growth) \u2014 Cloaked's latest ro",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    },
+    {
+      "text": "[URGENT] CRUNCHBASE: Funding: Stripe Alum (series a) \u2014 Co-founded by Stripes alum Sam Gerstenzang, on",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    },
+    {
+      "text": "[URGENT] CRUNCHBASE: Elon Musk\u2019s AI (news) \u2014 Elon Musk&#8217;s AI company, xAI, is said to be in talk",
+      "tag": "SEMI",
+      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
+      "reason": "Capital Genesis override (score 100)",
+      "original_day": 21,
+      "failure_count": 0
+    }
+  ],
+  "override_reason": "Capital Genesis found 8 items scoring above existing KPI queue. Window-aware scoring applied."
+}
