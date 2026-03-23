@@ -1,2 +1,4 @@
 product_name,source,source_price,selling_platform,estimated_sell_price,fees,shipping,net_profit,margin_pct,product_url,category,note
 Example Wireless Earbuds,Walmart,15.0,facebook,30.0,1.5,5.0,8.5,28.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
+Example Wireless Earbuds,Walmart,15.0,mercari,30.0,3.0,5.0,7.0,23.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
+Example Wireless Earbuds,Walmart,15.0,ebay,30.0,3.98,5.0,6.02,20.08,https://walmart.com/clearance/electronics,electronics,API integration required for live data

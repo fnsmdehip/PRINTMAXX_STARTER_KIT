@@ -876,3 +876,14 @@ We will raise the price for the directory submission service next week, as a way
 
 It seems that if your prices are too low people don't value your product 
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997230, Score: 24)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47475859
+**Added:** 2026-03-22T19:44:14-04:00
+
+[ACQUISITION] Ask HN: AI productivity gains – do you fire devs or build better products?
+

@@ -1,27 +1,26 @@
 {
-  "last_updated": "2026-03-22T13:35:15.325564",
-  "last_cycle": "distribution_engine_2026-03-22_13h30",
-  "cycle_number": 28,
+  "last_updated": "2026-03-22T19:53:33.423989",
+  "last_cycle": "distribution_engine_2026-03-22_19h49",
+  "cycle_number": 30,
   "coverage": {
     "twitter": {
-      "threads": 11,
-      "singles": 29,
-      "reply_baits": 13,
-      "qt_captions": 10,
-      "total_pieces": 80,
-      "last_cycle": 28,
+      "threads": 12,
+      "singles": 58,
+      "reply_baits": 19,
+      "qt_captions": 12,
+      "total_pieces": 114,
+      "last_cycle": 30,
       "new_this_cycle": [
-        "photography_streak_singles",
-        "beat_making_streak_singles",
-        "music_theory_streak_thread_4parts",
-        "outfit_design_streak_singles",
-        "best_lead_generation_tools_singles",
-        "creative_cluster_community_bait",
-        "reply_baits_x3"
+        "photography_streak_singles_x2_reply_bait",
+        "beat_making_streak_singles_x2_qt",
+        "music_theory_streak_single_reply_bait",
+        "outfit_design_streak_singles_x2",
+        "prayerlock_ramadan_singles_x3_URGENT",
+        "vibe_coding_controversial_reply_bait"
       ]
     },
     "reddit": {
-      "posts_ready": 43,
+      "posts_ready": 65,
       "subreddits": [
         "r/nocode",
         "r/automation",
@@ -49,40 +48,65 @@
         "r/musictheory",
         "r/Guitar",
         "r/femalefashionadvice",
-        "r/streetwear"
+        "r/streetwear",
+        "r/learnhistory",
+        "r/MapPorn",
+        "r/hydrohomies",
+        "r/cycling",
+        "r/relationship_advice",
+        "r/geography",
+        "r/history",
+        "r/Muslim",
+        "r/MuslimLounge"
       ],
-      "last_cycle": 28,
+      "last_cycle": 29,
       "new_this_cycle": [
-        "photography_streak_r_photography",
-        "photography_streak_r_analog",
-        "beat_making_r_WeAreTheMusicMakers",
-        "beat_making_r_edmproduction",
-        "music_theory_r_musictheory",
-        "music_theory_r_Guitar",
-        "outfit_design_r_femalefashionadvice",
-        "outfit_design_r_streetwear",
-        "lead_gen_r_Entrepreneur",
-        "lead_gen_r_sales"
+        "cultural_etiquette_r_travel",
+        "cultural_etiquette_r_languagelearning",
+        "geography_mastery_r_MapPorn",
+        "geography_mastery_r_geography",
+        "world_history_r_history",
+        "world_history_r_learnhistory",
+        "vibe_coding_calc_r_SideProject",
+        "vibe_coding_calc_r_webdev",
+        "cycling_streak_r_cycling",
+        "gratitude_streak_r_selfimprovement",
+        "water_streak_r_hydrohomies",
+        "couples_streak_r_relationship_advice",
+        "mcphub_mirror_r_ClaudeAI"
       ]
     },
     "hacker_news": {
-      "posts_ready": 18,
-      "last_cycle": 28,
+      "posts_ready": 28,
+      "last_cycle": 30,
       "new_this_cycle": [
-        "show_hn_creative_trackers_cluster",
-        "show_hn_mcp_marketplace"
+        "gratitude_streak_show_hn",
+        "photography_streak_show_hn",
+        "beat_making_streak_show_hn"
       ]
     },
     "linkedin": {
-      "posts_ready": 16,
-      "last_cycle": 24
+      "posts_ready": 25,
+      "last_cycle": 30,
+      "new_this_cycle": [
+        "cultural_etiquette_thought_leadership",
+        "geography_professional",
+        "world_history_business",
+        "gratitude_founder",
+        "cycling_founder",
+        "water_knowledge_worker",
+        "photography_creative",
+        "beat_making_discipline",
+        "day44_building_in_public"
+      ]
     },
     "indie_hackers": {
-      "posts_ready": 14,
-      "last_cycle": 28,
+      "posts_ready": 17,
+      "last_cycle": 29,
       "new_this_cycle": [
-        "day_45_update_creative_cluster",
-        "171_sites_meta_post"
+        "day_44_building_in_public_update",
+        "vibe_coding_calculator_product_launch",
+        "comparison_tools_cluster_seo"
       ]
     }
   },
@@ -92,10 +116,11 @@
       "channels": [
         "twitter",
         "reddit",
-        "hn",
+        "hacker_news",
         "linkedin",
-        "ih"
-      ]
+        "indie_hackers"
+      ],
+      "last_updated_cycle": 29
     },
     "best-cold-email-tools": {
       "cycle": 21,
@@ -128,15 +153,18 @@
     "gratitude-streak": {
       "cycle": 21,
       "channels": [
+        "twitter",
         "reddit"
-      ]
+      ],
+      "last_updated_cycle": 29
     },
     "water-streak": {
       "cycle": 21,
       "channels": [
         "twitter",
         "reddit"
-      ]
+      ],
+      "last_updated_cycle": 29
     },
     "soberstreak": {
       "cycle": 20,
@@ -159,9 +187,11 @@
     "lemlist-vs-instantly": {
       "cycle": 20,
       "channels": [
+        "twitter",
         "reddit",
         "linkedin"
-      ]
+      ],
+      "last_updated_cycle": 29
     },
     "prayerlock": {
       "cycle": 19,
@@ -235,7 +265,8 @@
       "channels": [
         "twitter",
         "reddit"
-      ]
+      ],
+      "last_updated_cycle": 29
     },
     "hiit-streak": {
       "cycle": 22,
@@ -269,26 +300,32 @@
       "channels": [
         "twitter",
         "reddit",
-        "linkedin"
-      ]
+        "hacker_news",
+        "linkedin",
+        "indie_hackers"
+      ],
+      "last_updated_cycle": 29
     },
     "framer-vs-webflow": {
       "cycle": 22,
       "channels": [
         "twitter",
         "reddit",
-        "linkedin"
-      ]
+        "hacker_news",
+        "linkedin",
+        "indie_hackers"
+      ],
+      "last_updated_cycle": 29
     },
     "claude-code-vs-opencode": {
       "cycle": 22,
       "channels": [
         "twitter",
         "reddit",
-        "hn",
-        "linkedin",
-        "ih"
-      ]
+        "hacker_news",
+        "indie_hackers"
+      ],
+      "last_updated_cycle": 29
     },
     "semrush-vs-ahrefs": {
       "cycle": 23,
@@ -438,14 +475,21 @@
       "channels": [
         "twitter",
         "reddit",
-        "linkedin"
-      ]
+        "hacker_news",
+        "linkedin",
+        "indie_hackers"
+      ],
+      "last_updated_cycle": 29
     },
     "vibe-coding-profit-calculator": {
       "cycle": 24,
       "channels": [
-        "twitter"
-      ]
+        "twitter",
+        "reddit",
+        "hacker_news",
+        "indie_hackers"
+      ],
+      "last_updated_cycle": 29
     },
     "photography-streak": {
       "first_covered": "2026-03-22",
@@ -491,6 +535,33 @@
         "reddit",
         "hacker_news"
       ]
+    },
+    "cultural-etiquette-streak": {
+      "cycle": 29,
+      "channels": [
+        "twitter",
+        "reddit"
+      ]
+    },
+    "geography-mastery-streak": {
+      "cycle": 29,
+      "channels": [
+        "twitter",
+        "reddit"
+      ]
+    },
+    "world-history-streak": {
+      "cycle": 29,
+      "channels": [
+        "twitter",
+        "reddit"
+      ]
+    },
+    "mcphub-mirror": {
+      "cycle": 29,
+      "channels": [
+        "reddit"
+      ]
     }
   },
   "queue_next_cycle": [
@@ -517,5 +588,17 @@
     "cycle_21": 49,
     "estimated_total_all_cycles": 899,
     "cycle_22": 49
-  }
+  },
+  "urgent_actions": {
+    "ramadan_window_closing": true,
+    "eid_date": "2026-03-29",
+    "days_remaining": 7,
+    "posts_to_publish_today": [
+      "ramadan_push_20260322.txt \u2192 r/islam",
+      "ramadan_push_20260322.txt \u2192 r/Muslim",
+      "tweets_cycle30_20260322.md \u2192 Prayerlock Single 1",
+      "tweets_cycle30_20260322.md \u2192 Hilal tracker tweet"
+    ]
+  },
+  "total_content_pieces": 249
 }

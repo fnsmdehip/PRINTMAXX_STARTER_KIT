@@ -128,7 +128,7 @@
 | best-saas-tools-solopreneurs | https://best-saas-tools-solopreneurs.surge.sh | LIVE (2026-03-19) — HUB PAGE links all 8 comparisons — needs affiliate IDs | All categories |
 | lemlist-vs-instantly | https://lemlist-vs-instantly.surge.sh | LIVE (2026-03-19) — needs affiliate IDs | 20-40% recurring (Instantly) + 20-35% recurring (Lemlist) |
 | best-lead-generation-tools | https://best-lead-generation-tools.surge.sh | LIVE (2026-03-20) — needs affiliate IDs | Mixed: Apollo, Instantly, Smartlead, Clay, Lemlist, Phantombuster |
-| n8n-vs-zapier-vs-make | https://n8n-vs-zapier.surge.sh | LIVE (2026-03-21) — gap-hunter deploy — needs affiliate IDs | n8n referral + Zapier/Make affiliate |
+| n8n-vs-zapier-vs-make | https://n8n-vs-zapier-vs-make.surge.sh | LIVE (2026-03-22) — gap-hunter redeploy with full slug | n8n referral + Zapier/Make affiliate |
 
 ---
 

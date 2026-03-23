@@ -2573,3 +2573,33 @@ food costs dropped from $35,171 to about $2,000
 
 you can just do things 
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773996253, Score: 42)
+
+**Source:** @thejustinwelsh (daily scraper) | **URL:** https://x.com/thejustinwelsh/status/1589606689262780417
+**Added:** 2026-03-22T16:42:06-04:00
+
+Today, my little one-person business crossed $3M in revenue.
+
+It took 1,187 days, I ran zero ads & operate at a 94% margin.
+
+Here are the 20 steps of my wild & strange journey:
+
+Hope it's helpful to someone.
+
+[ thread]
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997215, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1s0xdff/built_something_after_watching_my_friend_waste/
+**Added:** 2026-03-22T19:00:20-04:00
+
+[ACQUISITION] Built something after watching my friend waste half her day just to get one revenue number
+

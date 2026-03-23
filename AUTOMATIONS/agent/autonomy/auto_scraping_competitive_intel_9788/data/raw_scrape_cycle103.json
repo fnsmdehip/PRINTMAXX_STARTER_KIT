@@ -1,0 +1,327 @@
+{
+  "cycle": 103,
+  "timestamp": "2026-03-22T22:14:28.084240+00:00",
+  "strategy": "ENTREPRENEURSHIP + BUSINESS + STARTUPS",
+  "niches": {
+    "daily_startup_science_streak": {
+      "reddit_communities": {
+        "startups": 1200000,
+        "Entrepreneur": 3200000,
+        "SideProject": 250000,
+        "indiehackers": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Y Combinator Startup School",
+          "rating": 4.6,
+          "rating_count": 3200,
+          "category": "lecture video app \u2014 replays of YC batch talks and founder interviews; passive video consumption not a daily startup science habit with streak XP, founder mastery badges (Unit Economics Architect, Product-Market Fit Detective, Fundraising Strategist), and progressive curriculum from problem validation to Series A mechanics"
+        },
+        {
+          "name": "Blinkist",
+          "rating": 4.7,
+          "rating_count": 175000,
+          "category": "book summary app \u2014 15-min compressed summaries of business books; passive reading not a daily startup science education habit with streak XP, entrepreneur mastery badges (Lean Startup Practitioner, Zero-to-One Thinker, Crossing-the-Chasm Strategist), and evidence-based curriculum from the psychology of founder decisions to the economics of venture-scale growth"
+        },
+        {
+          "name": "MasterClass",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "celebrity instructor video platform \u2014 Sara Blakely on entrepreneurship, Anna Wintour on creativity; premium production passive consumption not a daily startup science habit with streak XP, business fundamentals mastery badges, and progressive difficulty from first principles to advanced founder decision-making under uncertainty"
+        }
+      ],
+      "community_total": 4830000,
+      "streak_app_exists": false,
+      "notes": "4.83M entrepreneurship community. YC Startup School and MasterClass offer passive consumption; no app teaches the science of startup mechanics as a daily habit. Gap: one startup science concept per day (what the Lean Startup Build-Measure-Learn loop is and how Dropbox used a fake MVP to validate before building, how product-market fit is measured using Sean Ellis's 40% rule vs. NPS vs. cohort retention curves, what unit economics means \u2014 LTV/CAC ratio thresholds that signal scalability vs. death spiral, how the Power Law in venture portfolios explains why VCs need a fund returner and most investments are expected to fail, what the difference between ARPU and ARPA is and why SaaS founders confuse them causing pricing mistakes) with streak XP, founder mastery badges (Lean Thinker, PMF Detective, Unit Economics Architect, Venture Power Law Analyst). Paul Graham essays have 50M+ reads \u2014 massive appetite for the 'why' behind startup mechanics. Zero dedicated daily habit app exists.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_negotiation_science_streak": {
+      "reddit_communities": {
+        "negotiation": 125000,
+        "sales": 320000,
+        "Entrepreneur": 3200000,
+        "smallbusiness": 680000
+      },
+      "itunes_results": [
+        {
+          "name": "Chris Voss MasterClass",
+          "rating": 4.8,
+          "rating_count": 9800,
+          "category": "celebrity video course \u2014 former FBI hostage negotiator teaching negotiation tactics; 10-hour passive video consumption not a daily negotiation science habit with streak XP, deal-making mastery badges (Tactical Empathy Expert, Black Swan Identifier, Mirroring Maestro), and progressive curriculum from the neuroscience of why people say yes to advanced salary and acquisition negotiation"
+        },
+        {
+          "name": "LinkedIn Learning",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "professional learning platform \u2014 negotiation courses among thousands of others; generic catalog platform not a specialized daily negotiation science habit with streak XP, negotiation mastery progression badges, and evidence-based curriculum from BATNA theory to anchoring psychology to silence as a negotiation weapon"
+        },
+        {
+          "name": "Coursera",
+          "rating": 4.7,
+          "rating_count": 85000,
+          "category": "university course platform \u2014 Yale and Northwestern offer negotiation courses; semester-length passive lecture format not a daily negotiation science habit with streak XP, tactical negotiation mastery badges, and daily concepts from prospect theory to the psychology of concessions to the neuroscience of reciprocity"
+        }
+      ],
+      "community_total": 4325000,
+      "streak_app_exists": false,
+      "notes": "4.3M negotiation/sales community. Never Split the Difference (Chris Voss) sold 3M+ copies \u2014 proven massive appetite for negotiation science. No app gamifies daily negotiation science learning. Gap: one negotiation science concept per day (what tactical empathy is and why mirroring 'is that right?' produces more disclosure than questions, how the FBI discovered that 'no' is safer to pursue than 'yes' in high-stakes negotiation, what BATNA means and how to calculate your walkaway point in any deal, how anchoring psychology explains why the first number in a negotiation sets the psychological range, what Black Swans are in negotiation \u2014 unknown unknowns the other side values \u2014 and how to find them) with streak XP, deal-making mastery badges (Tactical Empathy Expert, BATNA Architect, Black Swan Hunter, Anchor Setter, Silence Weaponizer), and progression from passive Voss reader to systematic negotiation practitioner.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_business_finance_streak": {
+      "reddit_communities": {
+        "financialindependence": 2300000,
+        "personalfinance": 18000000,
+        "smallbusiness": 680000,
+        "Entrepreneur": 3200000
+      },
+      "itunes_results": [
+        {
+          "name": "Khan Academy",
+          "rating": 4.8,
+          "rating_count": 243000,
+          "category": "educational platform \u2014 covers accounting and economics in its curriculum; general education platform not a daily business finance science habit with streak XP, financial literacy mastery badges (P&L Reader, Cash Flow Architect, DCF Valuation Expert), and progressive curriculum from basic income statements to EBITDA normalization to venture-scale financial modeling"
+        },
+        {
+          "name": "Wall Street Prep",
+          "rating": 4.5,
+          "rating_count": 1800,
+          "category": "finance training app \u2014 Excel-based financial modeling courses for investment banking; technical training not a daily business finance habit with streak XP, founder financial mastery badges (Revenue Recognition Scholar, Working Capital Optimizer, SaaS Metrics Expert), and science-backed curriculum from the time value of money to WACC to three-statement model construction"
+        },
+        {
+          "name": "Robinhood",
+          "rating": 4.2,
+          "rating_count": 895000,
+          "category": "stock trading app \u2014 portfolio management and fractional share trading; investment execution platform not a daily business finance science education habit with streak XP, financial modeling mastery badges, and evidence-based curriculum from how to read a 10-K to the difference between GAAP and non-GAAP earnings and why it matters"
+        }
+      ],
+      "community_total": 24180000,
+      "streak_app_exists": false,
+      "notes": "24M+ personal finance / business finance community. Khan Academy covers the basics but passive. No app teaches the daily science of business finance for founders and aspiring entrepreneurs. Gap: one business finance concept per day (what gross margin vs. contribution margin is and why SaaS companies optimize both differently, how to read a cash flow statement and why profitable companies go bankrupt \u2014 the cash conversion cycle, what burn rate and runway mean and how to calculate months to zero, how discounted cash flow (DCF) valuation works and why terminal value is 80% of most DCF outputs, what EBITDA normalization means in M&A due diligence and why it inflates seller prices) with streak XP, financial literacy mastery badges (Cash Flow Detective, DCF Builder, Burn Rate Sentinel, M&A Due Diligence Analyst). ICP: founders, MBA students, aspiring entrepreneurs \u2014 enormous underserved market wanting 'business finance explained simply daily'.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_marketing_science_streak": {
+      "reddit_communities": {
+        "marketing": 1600000,
+        "digital_marketing": 450000,
+        "socialmedia": 500000,
+        "GrowthHacking": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "HubSpot Academy",
+          "rating": 4.5,
+          "rating_count": 2100,
+          "category": "marketing certification platform \u2014 inbound marketing and CRM certifications; course catalog not a daily marketing science habit with streak XP, growth mastery badges (Positioning Architect, Jobs-to-be-Done Thinker, Demand Generation Engineer), and evidence-based curriculum from the psychology of buyer behavior to acquisition economics to brand positioning frameworks"
+        },
+        {
+          "name": "Semrush - SEO & Marketing Tools",
+          "rating": 4.4,
+          "rating_count": 12000,
+          "category": "SEO and competitive research tool \u2014 keyword tracking and backlink analysis; professional tool not a daily marketing science education habit with streak XP, marketing mastery badges (Market Research Expert, Competitive Moat Analyzer, Distribution Channel Strategist), and progressive curriculum from why positioning matters before tactics to the economics of paid acquisition channels"
+        },
+        {
+          "name": "Google Ads",
+          "rating": 3.8,
+          "rating_count": 35000,
+          "category": "paid advertising management app \u2014 campaign creation and bid management; execution tool not a daily marketing science education habit with streak XP, growth science mastery badges, and curriculum from prospect theory to the psychology of ad copy to attribution model differences that change budget allocation decisions"
+        }
+      ],
+      "community_total": 2730000,
+      "streak_app_exists": false,
+      "notes": "2.73M marketing community. 'Obviously Awesome' (April Dunford) and 'Traction' (Gabriel Weinberg) are perennial bestsellers \u2014 proven hunger for the science of marketing. No app gamifies daily marketing science learning. Gap: one marketing science concept per day (what Jobs-to-be-Done theory is and why Milkshake research revealed why customers really hire products, how positioning differs from messaging and why getting positioning wrong makes all downstream marketing fail, what the difference between product-led and sales-led growth is and when to use each, how the Bass Diffusion Model predicts how innovations spread through a market, what the hierarchy of buyer beliefs is and why addressing them in reverse order loses sales) with streak XP, growth science mastery badges (Jobs-to-be-Done Analyst, Positioning Architect, Distribution Strategist, Growth Loop Engineer). ICP: marketers, founders, product managers, growth hackers craving the 'why' behind tactics.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_leadership_science_streak": {
+      "reddit_communities": {
+        "leadership": 390000,
+        "management": 240000,
+        "Entrepreneur": 3200000,
+        "business": 2800000
+      },
+      "itunes_results": [
+        {
+          "name": "MasterClass",
+          "rating": 4.8,
+          "rating_count": 42000,
+          "category": "celebrity instructor video platform \u2014 Bob Iger on leadership, Howard Schultz on building Starbucks; passive video consumption not a daily leadership science habit with streak XP, management mastery badges (First Principles Thinker, Organizational Design Architect, Psychological Safety Builder), and evidence-based curriculum from situational leadership theory to the neuroscience of trust to servant leadership science"
+        },
+        {
+          "name": "Blinkist",
+          "rating": 4.7,
+          "rating_count": 175000,
+          "category": "book summary app \u2014 compresses leadership books into 15-minute summaries; passive reading not a daily leadership science education habit with streak XP, management mastery badges, and progressive curriculum from the difference between management and leadership to the science of high-performing team dynamics to the psychology of difficult conversations"
+        },
+        {
+          "name": "Headspace for Work",
+          "rating": 4.8,
+          "rating_count": 178000,
+          "category": "workplace mindfulness app \u2014 meditation sessions focused on stress reduction and focus; wellness app not a daily leadership science education habit with streak XP, organizational psychology mastery badges, and structured curriculum from psychological safety to equity theory to what the Hawthorne Effect means for how leaders observe their teams"
+        }
+      ],
+      "community_total": 6630000,
+      "streak_app_exists": false,
+      "notes": "6.6M leadership/business community. 'Leaders Eat Last' (Simon Sinek), 'The Five Dysfunctions of a Team' (Lencioni), 'Radical Candor' (Kim Scott) are massive sellers \u2014 proven appetite for leadership science. No app teaches daily leadership science as a streak habit. Gap: one leadership science concept per day (what psychological safety is per Amy Edmondson's research and how Google's Project Aristotle confirmed it as the #1 predictor of team performance, how situational leadership theory works \u2014 directive vs. coaching vs. supporting vs. delegating based on follower development level, what the Overjustification Effect is and why rewarding people for what they love kills intrinsic motivation, how Elliot Aronson's Pratfall Effect explains why admitting mistakes makes leaders more trusted, what equity theory predicts about why people quit \u2014 perceived contribution-to-reward ratio vs. their reference group) with streak XP, leadership science mastery badges (Psychological Safety Architect, Situational Leader, Motivation Scientist, Trust Builder). ICP: managers, aspiring leaders, MBAs, team leads.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_productivity_science_streak": {
+      "reddit_communities": {
+        "productivity": 1800000,
+        "getdisciplined": 1200000,
+        "nosurf": 320000,
+        "Entrepreneur": 3200000
+      },
+      "itunes_results": [
+        {
+          "name": "Todoist: To-Do List & Planner",
+          "rating": 4.8,
+          "rating_count": 285000,
+          "category": "task management app \u2014 GTD-compatible task and project manager; task execution tool not a daily productivity science education habit with streak XP, performance optimization mastery badges (Deep Work Engineer, Attention Residue Eliminator, Cognitive Load Manager), and evidence-based curriculum from the neuroscience of procrastination to the psychology of habit stacking to the performance economics of deep work"
+        },
+        {
+          "name": "Forest: Focus for Productivity",
+          "rating": 4.8,
+          "rating_count": 387000,
+          "category": "focus timer app \u2014 gamified Pomodoro with tree-growing mechanic; engagement mechanic not a daily productivity science education habit with streak XP, cognitive performance mastery badges, and progressive curriculum from what attention residue is and why task-switching costs 20 minutes of cognitive warm-up to the science of ultradian rhythms and how to time deep work to your biological peak performance window"
+        },
+        {
+          "name": "Notion",
+          "rating": 4.7,
+          "rating_count": 132000,
+          "category": "all-in-one workspace \u2014 databases, wikis, tasks, and notes; knowledge management tool not a daily productivity science education habit with streak XP, cognitive performance mastery badges (GTD Master, Second Brain Architect, Temporal Discounting Optimizer), and structured curriculum from the evidence on multitasking impossibility to implementation intentions to how to engineer your environment to make procrastination harder"
+        }
+      ],
+      "community_total": 6520000,
+      "streak_app_exists": false,
+      "notes": "6.5M productivity community. 'Deep Work' (Cal Newport) sold 1M+ copies, 'Atomic Habits' (James Clear) sold 15M+ copies \u2014 the single largest proven appetite for productivity science in any category. All existing apps are TOOLS (Todoist, Notion, Forest). None teach the SCIENCE of why productivity methods work. Gap: one productivity science concept per day (what attention residue is \u2014 Roy Baumeister and Gloria Mark proved task-switching leaves a cognitive residue lasting 20+ minutes reducing performance on the new task, how ultradian rhythms create biological 90-minute performance peaks and why forcing focus during troughs produces 30% worse output, what implementation intentions are \u2014 Peter Gollwitzer's research shows 'when X happens I will do Y' doubles follow-through vs. pure intention, why the Zeigarnik Effect makes incomplete tasks hijack working memory and how to use it strategically, what ego depletion research means for decision scheduling \u2014 why Obama wore the same suit every day) with streak XP, cognitive performance mastery badges (Attention Residue Scientist, Ultradian Rhythm Master, Implementation Intention Architect). Massive gap \u2014 this niche produces the most passionate learners of any category.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_sales_science_streak": {
+      "reddit_communities": {
+        "sales": 320000,
+        "salestechniques": 45000,
+        "Entrepreneur": 3200000,
+        "smallbusiness": 680000
+      },
+      "itunes_results": [
+        {
+          "name": "Gong.io",
+          "rating": 4.5,
+          "rating_count": 890,
+          "category": "revenue intelligence platform \u2014 call recording and AI analysis for sales teams; enterprise analytics tool not a daily sales science education habit with streak XP, persuasion mastery badges (Social Proof Engineer, Scarcity Framer, Reciprocity Architect), and evidence-based curriculum from the neuroscience of why people buy to the psychology of price anchoring to the behavioral economics of buying decisions"
+        },
+        {
+          "name": "Salesforce",
+          "rating": 3.9,
+          "rating_count": 18000,
+          "category": "CRM platform \u2014 contact management and sales pipeline tracking; operational database not a daily sales science education habit with streak XP, influence science mastery badges, and progressive curriculum from Cialdini's six principles and why they work neurologically to the 16 objection types and the cognitive reframe for each"
+        },
+        {
+          "name": "LinkedIn",
+          "rating": 4.4,
+          "rating_count": 1200000,
+          "category": "professional network app \u2014 job searching, posting, and professional content consumption; network platform not a daily sales science education habit with streak XP, consultative selling mastery badges (Discovery Question Expert, Pain Point Amplifier, Value Proposition Architect), and structured curriculum from the psychology of trust-building in sales to challenger sale methodology to why 57% of the buying decision is made before first contact"
+        }
+      ],
+      "community_total": 4245000,
+      "streak_app_exists": false,
+      "notes": "4.2M sales community. 'The Challenger Sale', 'SPIN Selling', 'To Sell Is Human' are perennial bestsellers \u2014 massive appetite for the science of sales. No app teaches daily sales science as a gamified habit. Gap: one sales science concept per day (what the Challenger Sale research found \u2014 57% of top performers challenge customer thinking vs. 17% of relationship builders, how SPIN Selling works \u2014 the four question types (Situation/Problem/Implication/Need-Payoff) and why Implication questions 10x close rates, what social proof mechanisms trigger buying \u2014 Cialdini's research on why 'customers like you' outperforms product specs, how loss aversion works in sales \u2014 framing what the prospect loses by NOT buying increases urgency 2.5x vs. gain framing, what the science of objection handling is \u2014 objections are information requests, not rejections) with streak XP, persuasion science mastery badges (SPIN Master, Challenger Certified, Cialdini Expert, Loss Aversion Architect). ICP: SDRs, AEs, founders selling, consultants, freelancers \u2014 anyone whose income depends on persuading others.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_strategy_science_streak": {
+      "reddit_communities": {
+        "strategy": 95000,
+        "business": 2800000,
+        "Entrepreneur": 3200000,
+        "consulting": 215000
+      },
+      "itunes_results": [
+        {
+          "name": "Audible",
+          "rating": 4.8,
+          "rating_count": 2800000,
+          "category": "audiobook platform \u2014 'Good Strategy Bad Strategy', 'Playing to Win', 'The Art of War'; passive audio consumption not a daily strategy science education habit with streak XP, strategic thinking mastery badges (Porter's Five Forces Analyst, JTBD Strategist, Competitive Moat Architect), and progressive curriculum from what makes a strategy coherent \u2014 kernel of diagnosis, guiding policy, and coherent actions \u2014 to VRIO framework to why 90% of 'strategies' are actually goals"
+        },
+        {
+          "name": "Harvard Business Review",
+          "rating": 4.5,
+          "rating_count": 48000,
+          "category": "business content platform \u2014 articles and case studies on strategy and management; passive reading not a daily strategy science habit with streak XP, framework mastery badges, and structured curriculum from Michael Porter's value chain analysis to Roger Martin's 'where to play and how to win' to the Blue Ocean Strategy canvas tools"
+        },
+        {
+          "name": "Economist",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "news platform \u2014 global economic and political analysis; news consumption not a daily business strategy science education habit with streak XP, competitive strategy mastery badges (Industry Structure Analyst, Sustainable Competitive Advantage Builder, Disruption Pattern Recognizer), and evidence-based curriculum from the five forces model to platform economics to the innovator's dilemma"
+        }
+      ],
+      "community_total": 6310000,
+      "streak_app_exists": false,
+      "notes": "6.3M strategy/business community. 'Good Strategy Bad Strategy' (Rumelt), 'Playing to Win' (Lafley/Martin), 'The Innovator's Dilemma' (Christensen) \u2014 proven massive appetite for strategic thinking frameworks. No app teaches daily business strategy science as a gamified habit. Gap: one strategy science concept per day (what Richard Rumelt's strategy kernel is and why 90% of 'strategies' are actually goals with no diagnosis or policy, how Porter's Five Forces identifies industry attractiveness vs. competition and why the MOST competitive industries have the lowest returns, what the VRIO framework tests \u2014 Value, Rarity, Imitability, Organization \u2014 and why competitive advantage evaporates when any element fails, how the Innovator's Dilemma works \u2014 why disruptors attack the low end first and incumbents rationally ignore them until it's too late, what a Blue Ocean Strategy canvas does and how to identify value curve differences vs. competitors) with streak XP, strategic thinking mastery badges (Rumelt Kernel Builder, Five Forces Analyst, VRIO Assessor, Blue Ocean Cartographer). ICP: MBAs, consultants, founders, executives, strategy students.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_behavioral_economics_streak": {
+      "reddit_communities": {
+        "behavioral_economics": 95000,
+        "psychology": 2400000,
+        "Entrepreneur": 3200000,
+        "economics": 750000
+      },
+      "itunes_results": [
+        {
+          "name": "Masterclass - Dan Ariely",
+          "rating": 4.8,
+          "rating_count": 1200,
+          "category": "celebrity course \u2014 Duke behavioral economist on irrationality; passive video watching not a daily behavioral economics science habit with streak XP, decision science mastery badges (Prospect Theory Expert, Anchoring Detector, Availability Heuristic Auditor), and progressive curriculum from Kahneman's System 1 vs. System 2 to the endowment effect to why loss aversion changes optimal pricing strategy"
+        },
+        {
+          "name": "Brilliant",
+          "rating": 4.7,
+          "rating_count": 35000,
+          "category": "interactive learning platform \u2014 covers statistics and logic; STEM-focused not a daily behavioral economics science education habit with streak XP, cognitive bias mastery badges, and evidence-based curriculum from the 188 documented cognitive biases and their mechanisms to how businesses exploit them to how to architect decision environments using nudge theory"
+        },
+        {
+          "name": "Khan Academy",
+          "rating": 4.8,
+          "rating_count": 243000,
+          "category": "educational platform \u2014 standard economics courses; classical economics not behavioral; passive not a daily behavioral economics science habit with streak XP, behavioral finance mastery badges (Mental Accounting Expert, Sunk Cost Fallacy Detector, Hyperbolic Discounting Analyst), and structured curriculum from the psychology of why people are irrational in predictably patterned ways to how companies like Amazon use behavioral economics at scale"
+        }
+      ],
+      "community_total": 6445000,
+      "streak_app_exists": false,
+      "notes": "6.4M psychology/economics community. 'Thinking Fast and Slow' (Kahneman) sold 10M+ copies \u2014 the single most validated appetite for behavioral economics science. No app gamifies daily behavioral economics learning as a streak habit. Gap: one behavioral economics concept per day (what Kahneman's System 1 vs. System 2 means and why intuition fails in statistically dense environments, how prospect theory explains why a $10 loss hurts 2.5x more than a $10 gain feels good \u2014 and what this means for pricing strategy, what the anchoring effect is and why doctors, lawyers, and real estate agents all use the first number they state as a psychological anchor, how the availability heuristic makes rare-but-memorable events (plane crashes) feel more likely than common-but-boring ones (car crashes) and how it shapes risk decisions, what mental accounting is \u2014 the psychological buckets people use for money that violate fungibility, and how subscription businesses exploit them) with streak XP, decision science mastery badges (Kahneman Scholar, Prospect Theory Analyst, Cognitive Bias Auditor, Nudge Architect). ICP: founders, marketers, product managers, economists, consultants \u2014 the business world's highest-leverage meta-skill.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_innovation_science_streak": {
+      "reddit_communities": {
+        "ProductManagement": 750000,
+        "UXDesign": 540000,
+        "startups": 1200000,
+        "design": 680000
+      },
+      "itunes_results": [
+        {
+          "name": "IDEO Design Thinking App",
+          "rating": 4.3,
+          "rating_count": 580,
+          "category": "design thinking resources \u2014 IDEO field guides and design thinking tools; reference library not a daily innovation science habit with streak XP, product design mastery badges (JTBD Interviewer, Insight Synthesizer, Prototype Speed Champion), and evidence-based curriculum from the science of how empathy interviews generate breakthrough insights to why rapid prototyping outperforms planning"
+        },
+        {
+          "name": "Product Hunt",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "product discovery platform \u2014 daily curated new product launches; consumption platform not a daily innovation science education habit with streak XP, product design mastery badges (Problem Space Analyst, Jobs-to-be-Done Theorist, Innovation S-Curve Reader), and structured curriculum from why most innovations fail at diffusion vs. invention to the technology adoption lifecycle to how to find early majority beachheads"
+        },
+        {
+          "name": "Figma",
+          "rating": 4.5,
+          "rating_count": 65000,
+          "category": "collaborative design tool \u2014 UI/UX design, prototyping, and handoff; execution tool not a daily innovation science education habit with streak XP, design thinking mastery badges, and progressive curriculum from mental models in product design to the cognitive load theory that explains why simpler interfaces outperform feature-rich ones"
+        }
+      ],
+      "community_total": 3170000,
+      "streak_app_exists": false,
+      "notes": "3.17M product/innovation community. 'Inspired' (Marty Cagan), 'The Mom Test' (Rob Fitzpatrick), 'Sprint' (Jake Knapp, Google Ventures) are perennial bestsellers \u2014 proven appetite for innovation science. No app teaches daily product innovation science as a streak habit. Gap: one innovation science concept per day (what the Innovator's Dilemma S-curve means and why incumbents rationally miss disruptions by focusing on profitable customers, how Jobs-to-be-Done interviews work \u2014 the 5 questions that reveal the emotional and social dimensions of why people REALLY buy products, what design sprints are and why compressing a month of meetings into 5 days consistently produces better validated insights, how the Technology Adoption Lifecycle explains why crossing the chasm between early adopters and early majority requires a different value proposition, what minimum viable experiments are and why Zappos founder Nick Swinmurn validated demand before building any inventory) with streak XP, innovation mastery badges (JTBD Interviewer, Chasm Crosser, Sprint Facilitator, Disruption Pattern Reader). ICP: product managers, UX designers, startup founders, innovation consultants.",
+      "verdict": "BLUE_OCEAN"
+    }
+  }
+}

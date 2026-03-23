@@ -70,3 +70,15 @@ the biggest AI opportunity right now is mid-market companies ($5M-$50M+ revenue)
 
 they’re stuck with serious cash
 
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA106767 — 2026-03-22
+**Source:** 2026-03-18
+**Category:** MONETIZATION
+**Insight:** shopify really said ‘what if we just charged more’ huh sooo... yeah... shopify just casually dropped an email saying they’re bumping online card fees in april 2026 and… bruh. it’s not a “small adjustment,” it’s a “did you think we wouldn’t notice?” moment. online cards are going to **2.9% + $0.30**, *plus* extra fees for premium cards (+0.6%) and international cards (+1%). love that for us. truly. feels like shopify looked at their payments revenue and said “what if… more?” and i’m not seeing
+**Potential:** ROI: https://reddit.com/r/smallbusiness/comments/1rmw3kb/shopify_really_said_what_if_we_just_charged_more/ | Synergy: 90
+

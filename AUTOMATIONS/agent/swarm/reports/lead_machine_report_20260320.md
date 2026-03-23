@@ -1,318 +1,97 @@
-# Lead Machine Report — 2026-03-20 / 2026-03-21
-
-**Cycle:** Morning (08:00) + Evening (23:30) [Mar 20] + Cycle 4 (12:08) [Mar 21]
-**Agent:** lead_machine
-**Status:** COMPLETE (all cycles)
+# Lead Machine Report — Cycle 10
+**Date:** 2026-03-22 | **Agent:** lead_machine | **Run type:** Full cycle
 
 ---
 
-## Evening Cycle Summary (23:30) — 10 NEW LEADS
+## Summary
 
-**New leads appended:** 10 (SL320_11 through SL320_20)
-**Total leads today:** 20
-**New outreach drafts:** 10 → `AUTOMATIONS/leads/outreach_drafts/20260320_evening/`
-
-### Top Leads Evening Cycle
-
-| Score | Lead | Email | Type |
-|-------|------|-------|------|
-| 9.5 | ayeeye AI Camera Platform | ayeeye.careers@gmail.com | HN contract — START APRIL (URGENT) |
-| 9.0 | McDermott Plumbing Malibu CA | mcdermottwork@aol.com | cold_email — AOL = 15yr stale site |
-| 9.0 | Deep Core Technology | jeff@deepcoretech.com | HN contract — Next.js+Supabase match |
-| 8.75 | Law Office of Edward A. Gabel III | edwardgabel@hotmail.com | cold_email — hotmail + no website |
-| 8.75 | Canyon Lake Neck And Back Clinic | dr.savatgy@gmail.com | cold_email — chiro Las Vegas |
-| 8.25 | CiceroAI Legal Tech | founders@ciceroailaw.com | HN contract — legal AI Houston TX |
-| 8.0 | Mahan Animal Clinic | mbandsp98@aol.com | cold_email — AOL 1998 + no site |
-| 8.0 | Five Corners Fitness | 5cornersfitness@gmail.com | cold_email — no website Lynbrook NY |
-| 7.75 | California Oaks Chiropractic | (951) 698-2511 | cold_call — weebly subdomain |
-| 7.5 | Chiropractic First Redding CA | wixsite form | form — wixsite subdomain |
-
-**HUMAN ACTION REQUIRED:**
-- ayeeye (9.5) starts April 2026 — 11 days. Contact TODAY.
-- California Oaks — call (951) 698-2511 during PT business hours.
-- All other emails: paste from draft files and send from warmed personal email.
+| Metric | Count |
+|--------|-------|
+| New leads sourced (cycle10) | 10 |
+| Leads scored 8.0+ | 7 |
+| Leads scored 7.0-7.9 | 3 |
+| Outreach drafts written (cycle10) | 10 |
+| Missing cycle9 drafts completed | 3 (08, 09, 10) |
+| Total DRAFT_READY leads (today) | 23 |
+| Calls to make (direct phone) | 3 |
+| Forms to submit | 4 |
+| Upwork proposals to apply | 1 |
+| Contract pitches (AI/tech) | 2 |
 
 ---
 
-## Morning Cycle Summary (08:00) — 10 LEADS
+## Top Leads — Cycle 10 (Prioritized Send Order)
 
+### 1. Upwork — Agentic AI Support Platform (8.75)
+- **Action:** Apply NOW at Upwork URL in draft 09
+- **Why first:** Posted March 15 — 7 days fresh, still getting proposals. First-mover + strong proposal wins Upwork jobs.
+- **Revenue potential:** $500 immediate + contract-to-hire ongoing
 
-10 fresh qualified leads sourced, scored, enriched, and drafted for outreach. Focus: GoDaddy/Wix subdomain hunters across high-ticket local trades (electricians, roofing, HVAC, landscaping).
+### 2. Sweet Caroline's Cleaning (9.0)
+- **Action:** Call (716) 361-2940 or (716) 957-9065
+- **Why:** Highest composite score. Direct owner phone. Spring peak is RIGHT NOW.
+- **Revenue potential:** $800-1,500 website build
 
-**Prospecting method:** Web search targeting `godaddysites.com` + `wixsite.com` across trades with high average job values. Cross-referenced with BBB, ZoomInfo, Yelp, and Facebook for owner details and direct contact.
+### 3. KC's Cleaning Services DFW (8.5)
+- **Action:** Call (682) 800-3143
+- **Why:** Direct phone, B2B channel angle is strong differentiation. Spring construction boom = timing.
+- **Revenue potential:** $800-1,500 website build
 
----
+### 4. ROI Construction MD/DC (8.25)
+- **Action:** Submit form at roiconstruction.godaddysites.com
+- **Why:** Premium roofing market, storm season window is real. 6 weeks before DC/MD hail peaks.
+- **Revenue potential:** $1,500-3,000 website + SEO package
 
-## Leads Generated (sorted by score)
-
-| # | Business | Category | City/State | Contact | Score | Channel |
-|---|----------|----------|------------|---------|-------|---------|
-| 1 | Scotchman Electric LLC | Electrician | Garrettsville, OH | sec@scotchmanelectric.com | **9.25** | Email |
-| 2 | Fletcher Electric Service Inc | Electrician | Lake Wales, FL | (863) 676-1113 | **8.5** | Phone |
-| 3 | Hensley Electric | Electrician | Galveston, TX | Facebook DM | **8.25** | FB DM |
-| 4 | P.G.T.&V Lawn Care & Landscaping | Landscaping | Converse, TX | (210) 877-4099 | **8.25** | SMS |
-| 5 | Florida Roofing Pros | Roofing | Fort Lauderdale, FL | Contact form | **8.0** | Form |
-| 6 | HVAC Company Services WPB | HVAC | West Palm Beach, FL | (833) 338-7471 | **8.0** | Phone |
-| 7 | Bioscape Complete Land Care | Landscaping | Goodyear, AZ | Contact form | **7.75** | Form |
-| 8 | Texas Lawn Pros | Landscaping | Texas | Contact form | **7.25** | Form |
-| 9 | Scotti Electric LLC | Electrician | Danvers, MA | (978) 767-0293 | **7.75** | Phone |
-| 10 | Ambient Roofing Co | Roofing | Mayfield, KY | Contact form | **7.5** | Form |
-
----
-
-## Top 3 Leads — Action Now
-
-### #1 — Scotchman Electric LLC (Score: 9.25)
-- **Email:** sec@scotchmanelectric.com (owner-direct)
-- **Pitch hook:** Licensed LLC, 57+ years, still on godaddysites.com. Spring renovation season in Ohio.
-- **Draft:** `outreach_drafts/20260320/01_scotchman_electric_oh.md`
-- **Action:** SEND NOW
-
-### #2 — Fletcher Electric Service Inc (Score: 8.5)
-- **Phone:** (863) 676-1113
-- **Pitch hook:** Business since 1969, BBB accredited, GoDaddy subdomain. 57-year reputation with zero digital presence.
-- **Draft:** `outreach_drafts/20260320/02_fletcher_electric_fl.md`
-- **Action:** CALL TODAY
-
-### #3 — P.G.T.&V Lawn Care (Score: 8.25)
-- **SMS:** (210) 877-4099 (Antonio Panelli, owner)
-- **Pitch hook:** 81 Yelp photos, husband-wife op, GoDaddy site. Spring landscaping = peak demand.
-- **Draft:** `outreach_drafts/20260320/04_pgtv_landscaping_tx.md`
-- **Action:** TEXT TODAY
+### 5. Korva Health AI Contract (8.25)
+- **Action:** Find email in HN post, send contract pitch
+- **Why:** Funded startup + AI automation need = our best contract angle
+- **Revenue potential:** $2,000-10,000 contract engagement
 
 ---
 
-## Seasonal Angles Active Right Now
+## Sources Used
 
-| Angle | Leads Affected |
-|-------|----------------|
-| Spring renovation season | Scotchman Electric (OH), Scotti Electric (MA), Fletcher Electric (FL) |
-| Hurricane season prep (June 1) | Florida Roofing Pros, HVAC West Palm Beach |
-| Spring landscaping demand | P.G.T.&V Landscaping, Texas Lawn Pros, Bioscape AZ |
-| Veteran-owned pride angle | Hensley Electric (Galveston TX) |
-| Sustained disaster rebuild | Ambient Roofing (Mayfield KY) |
+- GoDaddy subdomain search (cleaning, roofing, landscaping, electrical)
+- HN Who Is Hiring? March 2026 thread
+- Upwork March 2026 AI automation listings
 
 ---
 
-## Lead Pool Status
+## Cycle 9 Completion Status
 
-| File | Leads | Status |
-|------|-------|--------|
-| `swarm_leads_20260320.csv` | 10 | DRAFT_READY |
-| `swarm_leads_20260319_cycle4.csv` | 10 | DRAFT_READY (yesterday, not yet sent) |
-| `MASTER_LEADS.csv` | 1,365 | Bulk pool (local biz) |
-| `HOT_LEADS.csv` | 21 | Awaiting account (Gumroad) |
+Completed 3 missing drafts:
+- `08_safe_haven_childcare.md` — LinkedIn DM to Felicia Dupay
+- `09_ciceroai_contract_pitch.md` — Email to founders@ciceroailaw.com
+- `10_steptoe_veterinary.md` — Cold call script
 
-**Total ready-to-send drafts across all cycles:** 50+
+All 10 cycle9 leads now have DRAFT_READY outreach files in `outreach_drafts/20260322_c9/`.
+
+---
+
+## Lead Inventory (as of 2026-03-22)
+
+| File | Leads |
+|------|-------|
+| swarm_leads_20260322_cycle10.csv | 10 new |
+| swarm_leads_20260322_cycle9.csv | 10 (drafts complete) |
+| swarm_leads_20260322_cycle8.csv | 10 |
+| swarm_leads_20260322.csv | varies |
+| HOT_LEADS.csv | 191,700 scraped total |
+| MASTER_LEADS.csv | bulk |
 
 ---
 
 ## Blockers
 
-- **Email sending:** Requires email account setup. Drafts are ready — human needs to send or configure SMTP.
-- **SMS:** Requires phone or SMS tool. Text-ready drafts for Antonio Panelli (210-877-4099).
-- **Phone calls:** Human action required. Scripts ready in drafts.
+- None for outreach drafts
+- **HUMAN ACTION REQUIRED:** Send the outreach. Drafts are in `outreach_drafts/20260322_c10/` and `outreach_drafts/20260322_c9/`
+- Priority send order: Upwork 09 first (time-sensitive), then phone calls to Sweet Caroline's + KC's
 
 ---
 
-## Next Cycle Recommendations
+## Next Cycle Targets (3h from now)
 
-1. **New niche:** Auto repair shops on GoDaddy (high-ticket, emotional angle — "your shop looks worse than your competitors online")
-2. **New geo:** Midwest electricians (Indiana, Missouri) — less digital competition than FL/TX
-3. **New angle:** Accountants in tax season (March/April urgency spike) — revisit RS Accounting PA and Queen of Taxes from yesterday
-
----
-
-**Files created this cycle:**
-- `AUTOMATIONS/leads/swarm_leads_20260320.csv`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/01_scotchman_electric_oh.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/02_fletcher_electric_fl.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/03_hensley_electric_tx.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/04_pgtv_landscaping_tx.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/05_florida_roofing_pros.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/06_hvac_west_palm_beach_fl.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/07_bioscape_az.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/08_texas_lawn_pros.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/09_scotti_electric_ma.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320/10_ambient_roofing_ky.md`
-
-**Cycle duration:** ~15 min
-**Next cycle:** ~11:00 AM
-
----
-
----
-
-# Cycle 2 — Midday (11:13)
-
-**Cycle:** Midday
-**Status:** COMPLETE
-**Niches:** Chiropractors (Wixsite), Electricians (Wixsite), Accountants (Wixsite, tax season)
-
-## Strategy Shift from Cycle 1
-
-Morning cycle owned GoDaddy/trades. Midday diversified into:
-- **Chiropractors** — trust-critical niche, patients research heavily before booking
-- **Tax season accounting firms** — peak urgency, March = 6 weeks to deadline
-- **MA/NH electricians** — underserved, lower digital competition than FL/TX
-
----
-
-## Leads Generated — Cycle 2 (sorted by composite score)
-
-| # | Business | Category | City/State | Contact | Score | Channel |
-|---|----------|----------|------------|---------|-------|---------|
-| 1 | CA Electric Inc | Electrician | Medford, MA | caelectric75@gmail.com | **8.75** | Email |
-| 2 | Manitowoc Chiropractic | Chiropractor | Manitowoc, WI | mantychiro@gmail.com | **8.5** | Email |
-| 3 | LG Consulting Accounting | Accounting | Baltimore area, MD | lgconsulting@yahoo.com | **8.5** | Email |
-| 4 | Royal Rooter & Plumbing | Plumber | La Puente, CA | Drod669@gmail.com | **8.5** | Email |
-| 5 | PKRK Accounting Solutions | Accounting | Huxley, IA | LinkedIn (Pamela Kluender) | **8.0** | LinkedIn |
-| 6 | Saber Chiropractic | Chiropractor | Pismo Beach, CA | (805) 473-0900 | **8.0** | Phone |
-| 7 | Anderson Family Chiropractic | Chiropractor | Grand Rapids, MI | LinkedIn (Dr. Michael Anderson Jr) | **7.75** | LinkedIn |
-| 8 | Anderson Chiropractic Center | Chiropractor | Spanish Fork, UT | (801) 798-6558 | **7.75** | Phone |
-| 9 | Tattersall Electric Company LLC | Electrician | Keene, NH | (603) 357-0248 | **7.5** | Phone |
-| 10 | Dabney Tax and Accounting | Accounting | Houston, TX | info@dabneydta.com | **7.5** | Email |
-
----
-
-## Top 3 Leads — Action Now
-
-### #1 — CA Electric Inc / Claudio Arruda (Score: 8.75)
-- **Email:** caelectric75@gmail.com (owner-direct Gmail)
-- **Hook:** Master electrician since 2003, Wixsite subdomain, Boston market. "Your license is legit, your website isn't."
-- **Draft:** `outreach_drafts/20260320_midday/01_ca_electric_ma.md`
-- **Action:** SEND NOW
-
-### #2 — LG Consulting Accounting (Score: 8.5)
-- **Email:** lgconsulting@yahoo.com (owner-direct Yahoo)
-- **Hook:** TAX SEASON — March, peak demand, 6 weeks to deadline, Wixsite financial firm = credibility gap now.
-- **Draft:** `outreach_drafts/20260320_midday/03_lg_consulting_md.md`
-- **Action:** SEND NOW (time-critical — window closes April 15)
-
-### #3 — Manitowoc Chiropractic / Dr. David Portmann (Score: 8.5)
-- **Email:** mantychiro@gmail.com (owner-direct Gmail)
-- **Hook:** "71% of patients research their chiropractor before calling. mantychiro.wixsite.com isn't what they should find."
-- **Draft:** `outreach_drafts/20260320_midday/02_manitowoc_chiro_wi.md`
-- **Action:** SEND NOW
-
----
-
-## Seasonal Angles Active — Cycle 2
-
-| Angle | Leads |
-|-------|-------|
-| Tax season peak (closes April 15) | LG Consulting, PKRK Accounting, Dabney Tax |
-| Trust-critical research window | All 4 chiropractors |
-| Boston spring construction season | CA Electric Inc |
-| Provo Corridor population boom | Anderson Chiropractic Center (Spanish Fork UT) |
-| LA market plumbing demand | Royal Rooter & Plumbing |
-
----
-
-## 24-Hour Lead Pool Total
-
-| File | Leads | Status |
-|------|-------|--------|
-| `swarm_leads_20260320.csv` | 10 | DRAFT_READY (trades, GoDaddy) |
-| `swarm_leads_20260320_cycle2.csv` | 10 | DRAFT_READY (chiro/accounting/elec, Wixsite) |
-| `swarm_leads_20260319_cycle4.csv` | 10 | DRAFT_READY (yesterday, unsent) |
-| `MASTER_LEADS.csv` | 1,365 | Bulk local biz pool |
-
-**Total DRAFT_READY today: 20 new leads, 30+ drafts**
-**Total email-ready today: 8 with direct personal email addresses**
-
----
-
-## Email-Ready Leads (send immediately, no account needed beyond basic email)
-
-| Lead | Email | Score | Hook |
-|------|-------|-------|------|
-| CA Electric / Claudio Arruda | caelectric75@gmail.com | 8.75 | License legit, website isn't |
-| Manitowoc Chiropractic / Dr. Portmann | mantychiro@gmail.com | 8.5 | 71% research before calling |
-| LG Consulting Accounting | lgconsulting@yahoo.com | 8.5 | Tax season NOW |
-| Royal Rooter / David Rodriguez | Drod669@gmail.com | 8.5 | Yelp reviews stronger than website |
-| Dabney Tax / Charles Dabney | info@dabneydta.com | 7.5 | Expertise real, digital presence isn't |
-| Scotchman Electric (cycle 1) | sec@scotchmanelectric.com | 9.25 | GoDaddy LLC, spring season |
-| Beyond Tax Service (cycle 4 yesterday) | beyondtaxsvcs@gmail.com | 9.25 | Tax season NOW |
-| Hungry Plumber (cycle 4 yesterday) | hungryplumber7@gmail.com | 8.75 | Google Business site = zero SEO |
-
----
-
-## Blockers
-
-- **Email sending account:** All drafts ready. Need SMTP configured or Gmail/Outlook to send from.
-- **LinkedIn DMs:** Need LinkedIn account. Targets: Dr. Michael Anderson Jr (Grand Rapids), Pamela Kluender (Huxley IA).
-- **Phone calls:** Human action. Scripts ready for Saber Chiro, Anderson Chiro UT, Tattersall Electric.
-
----
-
-## Files Created — Cycle 2
-
-- `AUTOMATIONS/leads/swarm_leads_20260320_cycle2.csv`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/01_ca_electric_ma.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/02_manitowoc_chiro_wi.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/03_lg_consulting_md.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/04_royal_rooter_ca.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/05_pkrk_accounting_ia.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/06_saber_chiro_ca.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/07_anderson_chiro_mi.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/08_anderson_chiro_ut.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/09_tattersall_electric_nh.md`
-- `AUTOMATIONS/leads/outreach_drafts/20260320_midday/10_dabney_tax_tx.md`
-
-**Cycle duration:** ~18 min
-**Next cycle:** ~14:00 (evening — target: auto repair shops, dental offices, veterinarians on Squarespace free subdomains)
-
----
-
-## Cycle 4 — 2026-03-21 12:08 — 10 NEW LEADS (Fresh Verticals)
-
-**New leads generated:** 10 (SL321C4_01 through SL321C4_10)
-**CSV:** `AUTOMATIONS/leads/swarm_leads_20260321_cycle4.csv`
-**Outreach drafts:** `AUTOMATIONS/leads/outreach_drafts/20260321_cycle4/` (10 files)
-
-### Vertical Strategy
-Previous cycles (1-3) hit: electricians, plumbers, auto repair.
-Cycle 4 targets: HVAC, roofing, landscaping, bookkeeping, chiropractic, pest control, gutters, auto detail, law firms, dentists.
-Spring timing used as urgency hook across all outreach.
-
-### Top Leads — Cycle 4
-
-| Rank | Score | Lead | Email | Vertical | Urgency Angle |
-|------|-------|------|-------|---------|---------------|
-| 1 | 9.5 | Polar Bear HVAC & Cooling — Phoenix AZ | polarbearac@gmail.com | HVAC | Phoenix summer starts April — AC tune-up rush NOW |
-| 2 | 9.0 | AccuBooks Bookkeeping — Atlanta GA | accubooks.atl@gmail.com | Bookkeeping | Q1 tax season = peak demand RIGHT NOW |
-| 3 | 9.0 | Summit Roofing & Restoration — Denver CO | summitroofingco@gmail.com | Roofing | Denver hail season starts March |
-| 4 | 8.75 | Green Thumb Landscaping — Austin TX | greenthumbaustin@gmail.com | Landscaping | Spring booking season = missing entire year |
-| 5 | 8.5 | Peak Performance Chiropractic — Nashville TN | peakperfchiro@gmail.com | Chiropractic | No online booking = losing 40% of patients |
-| 6 | 8.5 | Blueline Pest Solutions — Houston TX | bluelinepestcontrol@gmail.com | Pest Control | Termite swarm season 4-6 weeks out |
-| 7 | 8.25 | Steadfast Gutters & Exteriors — Charlotte NC | steadfastgutters@gmail.com | Gutters | Spring storm season = gutter demand spike |
-| 8 | 8.0 | Desert Valley Auto Detail — Scottsdale AZ | desertvalleydetail@gmail.com | Auto Detail | Spring lake prep season, no gallery = no conversions |
-| 9 | 7.75 | Brightside Dental Care — Columbus OH | brightsidedental@gmail.com | Dentist | No online scheduling = losing to Aspen Dental |
-| 10 | 7.5 | Legacy Law Group PLLC — Tampa FL | info@legacylawgroupfl.com | Law Firm | 2021 copyright, no intake form, Wixsite |
-
-### Common Pain Points (Cycle 4 Pattern)
-- 9/10 leads on Wixsite subdomains (zero Google ranking)
-- 8/10 have no online booking or inquiry form (hard to contact outside business hours)
-- 6/10 contacted directly via Gmail (owner-operator, no gatekeeper)
-- Spring timing is maximum urgency lever for: HVAC, roofing, landscaping, pest control, gutters
-
-### Pipeline Status (All Cycles — 2026-03-21)
-- Total leads generated today (cycles 1-4): 40 leads
-- Total outreach drafts ready: 40 emails/call scripts
-- CSVs: swarm_leads_20260321.csv (8), swarm_leads_20260321_cycle2.csv (8), swarm_leads_20260321_cycle3.csv (6), swarm_leads_20260321_cycle4.csv (10)
-
-### HUMAN ACTION REQUIRED
-Send these emails — all 10 are draft-ready:
-1. polarbearac@gmail.com — HIGHEST PRIORITY (Phoenix HVAC, spring urgency)
-2. accubooks.atl@gmail.com — HIGHEST PRIORITY (Q1 tax season NOW)
-3. summitroofingco@gmail.com — URGENT (Denver hail season)
-4. greenthumbaustin@gmail.com — URGENT (spring landscaping rush)
-5. peakperfchiro@gmail.com — HIGH (Nashville chiro, no booking)
-6. bluelinepestcontrol@gmail.com — HIGH (Houston pest, spring)
-7. steadfastgutters@gmail.com — HIGH (Charlotte spring storms)
-8. desertvalleydetail@gmail.com — MEDIUM-HIGH (Scottsdale luxury)
-9. brightsidedental@gmail.com — MEDIUM (Columbus dental)
-10. info@legacylawgroupfl.com — MEDIUM (Tampa law firm)
-
-Full drafts at: `AUTOMATIONS/leads/outreach_drafts/20260321_cycle4/`
+Prospecting focus:
+- HVAC/AC tune-up season hitting Sun Belt states (AZ, TX, FL, NV) — search godaddysites.com + "AC tune-up" or "AC service"
+- Accounting/bookkeeping firms on GoDaddy — Q1 tax season ending = need for SEO before Q2
+- Wedding photographers on Instagram only (no indexed website) — spring/summer wedding season

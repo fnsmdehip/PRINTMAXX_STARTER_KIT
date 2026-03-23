@@ -1,33 +1,32 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-21T12:05:00.000000+00:00",
-  "cycle_number": 94,
+  "last_cycle": "2026-03-22T22:14:28.084240+00:00",
+  "cycle_number": 103,
   "cycle_status": "COMPLETE",
   "current_step": "complete",
-  "configured_at": "2026-03-21T12:05:00.000000+00:00",
+  "configured_at": "2026-03-22T22:14:28.084240+00:00",
   "stats": {
-    "niches_scanned": 15,
-    "blue_oceans": 15,
+    "niches_scanned": 10,
+    "blue_oceans": 10,
     "soft_competition": 0,
     "occupied": 0,
-    "community_total": 29120000
+    "community_total": 69385000
   },
-  "cumulative_blue_oceans": 302,
+  "cumulative_blue_oceans": 417,
   "p0_alerts": [
-    "!! NEW_C094 P0 BLUE OCEAN: DAILY_GARDENING_SKILL_STREAK \u2014 6,130,000 community. BUILD NOW.",
-    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HIKING_TRAINING_STREAK \u2014 4,220,000 community. BUILD NOW.",
-    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HOUSEPLANT_MASTERY_STREAK \u2014 3,810,000 community. BUILD NOW.",
-    "!! NEW_C094 P0 BLUE OCEAN: DAILY_WILDERNESS_CAMPING_STREAK \u2014 3,380,000 community. BUILD NOW.",
-    "!! NEW_C094 P0 BLUE OCEAN: DAILY_FISHING_SKILLS_STREAK \u2014 2,120,000 community. BUILD NOW.",
-    "!! NEW_C094 P0 BLUE OCEAN: DAILY_PREPPER_SKILLS_STREAK \u2014 1,980,000 community. BUILD NOW.",
-    "!! NEW_C094 P0 BLUE OCEAN: DAILY_HOMESTEADING_STREAK \u2014 1,530,000 community. BUILD NOW."
+    "Daily Negotiation Science Streak",
+    "Daily Business Finance Streak",
+    "Daily Leadership Science Streak",
+    "Daily Productivity Science Streak",
+    "Daily Strategy Science Streak",
+    "Daily Behavioral Economics Streak"
   ],
   "previous_cycle_results": {
-    "cycle": 94,
-    "strategy": "OUTDOOR_SKILLS + SURVIVAL + GARDENING + HOMESTEADING",
+    "cycle": 103,
+    "strategy": "ENTREPRENEURSHIP + BUSINESS + STARTUPS",
     "status": "COMPLETE",
-    "blue_oceans": 15,
+    "blue_oceans": 10,
     "soft_competition": 0,
-    "community_total": 29120000
+    "community_total": 69385000
   }
 }

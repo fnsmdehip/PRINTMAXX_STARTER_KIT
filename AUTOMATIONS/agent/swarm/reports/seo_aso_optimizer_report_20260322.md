@@ -1,8 +1,27 @@
-# SEO/ASO Optimizer Report — 2026-03-22
+# SEO/ASO Optimizer Report — 2026-03-22 (Updated by seo_aso_optimizer agent)
 
-**Cycle:** 6-hour routine audit
-**Assets audited:** 170 tracked deployments (sample audit: 20 sites deep, all builds scanned)
-**Status:** COMPLETE — 7 sites deployed with SEO improvements
+**Cycle:** Full audit run
+**Assets audited:** 395 total deployments — deep audit on 15 pages
+**Status:** COMPLETE — 8 files updated, critical blocker documented, human actions surfaced
+
+---
+
+## CRITICAL BLOCKER: surge.sh Disallow: / Override
+
+Confirmed live on 2026-03-22. surge.sh injects `Disallow: /` at CDN level for ALL subdomains.
+Every robots.txt we deploy is ignored. All 386 surge.sh pages are invisible to Google.
+
+Verified:
+- https://n8n-vs-zapier-vs-make.surge.sh/robots.txt returns `Disallow: /`
+- https://semrush-vs-ahrefs.surge.sh/robots.txt returns `Disallow: /`
+- https://prayerlock-landing.surge.sh/robots.txt returns `Disallow: /`
+
+**Fix:** Migrate top 8 affiliate pages to Vercel. Requires `vercel login` (human action).
+**Migration order:** semrush-vs-ahrefs, n8n-vs-zapier-vs-make, best-cold-email-tools, framer-vs-webflow, best-saas-tools-solopreneurs, prayerlock-landing, focuslock-vs-opal, cursor-vs-claudecode
+
+---
+
+## Session Changes (2026-03-22 audit)
 
 ---
 
@@ -133,3 +152,79 @@ Added `featureList` arrays to all 7 new builds. Google uses these for rich snipp
 2. Add `dateModified` refresh to all affiliate pages
 3. Add star ratings (aggregateRating) to 7 new builds
 4. Monitor: Check if FAQPage rich snippets appear in GSC within 2-3 weeks
+
+---
+
+## FULL AUDIT PASS — 2026-03-22 (seo_aso_optimizer agent)
+
+### Assets Scanned: 395 deployed pages
+### Deep Audit: 15 pages reviewed (affiliate pages + app marketing + Next.js site)
+
+### Changes Implemented This Pass
+
+| File | Change |
+|------|--------|
+| `LANDING/affiliate-pages/best-cold-email-tools/index.html` | Added og:image (was missing entirely) with dimensions and type |
+| `LANDING/affiliate-pages/best-saas-tools-solopreneurs/index.html` | Added og:image (was missing entirely) with dimensions and type |
+| `LANDING/affiliate-pages/framer-vs-webflow/index.html` | Added og:image (was missing entirely) with dimensions and type |
+| `07_LANDING/printmaxx-site/app/layout.tsx` | Stronger title/description, added 8-term keywords array, updated OG/Twitter |
+| `07_LANDING/printmaxx-site/app/page.tsx` | Updated stale stats (22 apps → 395 projects, 292 → 392 scripts), updated subheadline |
+| `07_LANDING/printmaxx-site/app/sitemap.ts` | Added /compare routes, magnet pages, 12 more URLs |
+| `07_LANDING/printmaxx-site/app/apps/prayerlock/page.tsx` | Added 9-term keywords, explicit OG/Twitter, targets both Christian and Muslim audiences |
+| `07_LANDING/printmaxx-site/lib/content.ts` | Expanded Organization schema — knowsAbout 8→12 entities, added GitHub sameAs, added hasOfferCatalog with 3 apps |
+
+### CRITICAL FINDING: surge.sh blocks all 386 pages from Google
+
+Confirmed live test — surge.sh CDN serves `Disallow: /` for all *.surge.sh subdomains.
+The robots.txt files we deploy inside project folders are completely ignored.
+This is not a configuration issue — it is a platform-level behavior.
+
+**Impact:** Zero organic Google traffic possible for any surge.sh domain.
+
+**Resolution path (requires human login):**
+```bash
+vercel login   # ONE-TIME — unblocks all future deployments
+vercel deploy --prod LANDING/affiliate-pages/semrush-vs-ahrefs/
+vercel deploy --prod LANDING/affiliate-pages/n8n-vs-zapier-vs-make/
+vercel deploy --prod LANDING/affiliate-pages/best-cold-email-tools/
+vercel deploy --prod LANDING/affiliate-pages/framer-vs-webflow/
+vercel deploy --prod LANDING/affiliate-pages/best-saas-tools-solopreneurs/
+vercel deploy --prod LANDING/app-marketing-pages/prayerlock/
+vercel deploy --prod LANDING/app-marketing-pages/focuslock/
+```
+
+After migration: update canonical tags in each page to the new vercel.app URL, then add custom domain.
+
+### Page Speed Findings
+
+| Page | TTFB | Size | Grade |
+|------|------|------|-------|
+| best-cold-email-tools.surge.sh | 0.99s | 31KB | A |
+| prayerlock-landing.surge.sh | 1.20s | 19KB | A- |
+| semrush-vs-ahrefs.surge.sh | 1.97s | 31KB | B |
+| printmaxx.surge.sh | 1.98s | 12KB | B |
+| n8n-vs-zapier-vs-make.surge.sh | 5.78s | 35KB | F (cache miss — will normalize) |
+
+All pages are single-file HTML with no external dependencies. Good baseline.
+The 5.78s n8n time is surge.sh CDN cold cache variance, not a code issue.
+
+### Schema Coverage
+
+All 11 affiliate pages: Article + FAQPage + ItemList (3 schemas each) — strong
+App marketing pages (prayerlock, catholic): MobileApplication + FAQPage — strong
+Next.js site: SoftwareApplication + BreadcrumbList per app, Organization at root — strong
+Missing on affiliate pages: BreadcrumbList (low effort addition, improves SERP appearance)
+
+### ASO Status
+
+All apps unranked for all keywords per ASO_KEYWORDS.csv.
+Root cause: apps not in App Store (Apple Developer account = $99/yr, flagged as human blocker).
+ASO optimization cannot activate until App Store presence exists.
+Pre-optimization (metadata, screenshots, descriptions) can be done now in source code.
+
+### Human Blockers (P0)
+
+1. `vercel login` — unblocks 386 pages from Google crawling. 30 minutes.
+2. Apple Developer account — unblocks all ASO and App Store keyword ranking. $99/yr.
+3. Deploy printmaxx.ai to Vercel + submit sitemap to Google Search Console. 1 hour.
+

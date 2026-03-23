@@ -12,6 +12,7 @@ After completing the step:
 3. Log to AUTOMATIONS/logs/venture_auto_product_digital_products_9788.log
 4. Exit cleanly so the next loop iteration gets fresh context
 
+
 Type: PRODUCT
 Interval: 24h
 Working dir: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt

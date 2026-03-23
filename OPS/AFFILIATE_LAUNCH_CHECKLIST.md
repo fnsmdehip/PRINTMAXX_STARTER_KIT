@@ -1069,3 +1069,14 @@ All are on whether the coin Backpack FDV will be above $200M one day after launc
 
 Will there be a listing? What do
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997211, Score: 47)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1s0yuap/im_17_and_got_a_1k_offer_to_buy_my_saas_20_days/
+**Added:** 2026-03-22T19:00:20-04:00
+
+[ACQUISITION] I’m 17 and got a $1k offer to buy my SaaS 20 days after launch… what would you do? [rev: $$1]
+

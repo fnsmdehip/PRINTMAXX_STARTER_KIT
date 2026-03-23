@@ -1,5 +1,5 @@
 {
-  "cycle_id": "cycle_40_20260320_0705",
+  "cycle_id": "cycle_40_20260322_1819",
   "cycle_number": 40,
   "last_completed_phase": 15,
   "phase_results": {
@@ -21,7 +21,7 @@
       "reason": "odd_cycle"
     },
     "8": {
-      "twitter_scraper": "failed",
+      "twitter_scraper": "ok",
       "reddit_scraper": "ok",
       "alpha_processor": "ok"
     },
@@ -39,13 +39,13 @@
     },
     "14": {
       "discover": "ok",
-      "city": "Denver CO",
-      "niche": "lawyer",
+      "city": "Seattle WA",
+      "niche": "dentist",
       "build": "ok",
       "outreach": "ok"
     },
     "15": "synced"
   },
-  "started_at": "2026-03-20T07:05:15.136188",
-  "updated_at": "2026-03-20T08:01:41.464505"
+  "started_at": "2026-03-22T18:19:25.286559",
+  "updated_at": "2026-03-22T18:55:28.475359"
 }
