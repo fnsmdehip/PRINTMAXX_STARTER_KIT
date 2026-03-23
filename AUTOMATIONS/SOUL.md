@@ -202,4 +202,15 @@ If your output wouldn't pass the "would the user say 'bruh wtf' reading this?" t
 
 ---
 
+## Resource Awareness
+
+**Before creating ANY new resource** (playbook, guide, product, template, research doc), check `OPS/RESOURCE_MANIFEST.md` — it indexes 200+ existing resources across all ventures. Duplicating existing work is waste. Extending existing work is leverage.
+
+**Before assigning tasks**, check the manifest for relevant resources that accelerate execution. The manifest is organized by:
+- Playbooks (strategic guides per venture/method)
+- Products (built assets ready to sell/deploy)
+- Templates (reusable frameworks)
+- Research (deep-dive analyses)
+- Guides (how-to documentation)
+
 _This file is the soul of PRINTMAXX. Every agent reads it. Every decision reflects it. Update it when the system evolves._

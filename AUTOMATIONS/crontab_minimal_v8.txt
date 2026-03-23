@@ -1,0 +1,81 @@
+# PRINTMAXX Minimal Cron v8 — TRUE MINIMAL MODE
+# Created: 2026-03-23 by swarm_brain Cycle 25
+# Backup of v7: AUTOMATIONS/crontab_backup_pre_cycle25.txt
+#
+# RATIONALE: $0 revenue at Day 44. Zero accounts. Zero distribution channels.
+# Production agents produce output into dead queues. Only infrastructure stays.
+# Restore v7 when: human creates Gumroad/Stripe/X accounts.
+#
+# KEPT: Infrastructure monitoring, health, backups, digest, guardian
+# REMOVED: All production agents (content, leads, ventures, CEo, apps, SEO, etc.)
+
+SHELL=/bin/bash
+PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/macbookpro/.local/bin
+BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+
+# =============================================================================
+# INFRASTRUCTURE ONLY — These keep the system alive without burning tokens
+# =============================================================================
+
+# Every 4h - Perpetual guardian (git safety commits, self-healing watchdog)
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/perpetual_guardian.py --full >> AUTOMATIONS/logs/perpetual_guardian.log 2>&1
+
+# Every 1h - System health monitor (disk, processes, basic checks)
+5 * * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
+
+# 5:00 AM - Health check all systems (daily deep check)
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/health_check_all.py --check >> AUTOMATIONS/logs/health_check_all.log 2>&1
+
+# 4:08 AM - Log rotation (prevent disk bloat)
+8 4 * * * cd $BASE && $PYTHON AUTOMATIONS/log_rotator.py --rotate >> AUTOMATIONS/logs/log_rotator.log 2>&1
+
+# 9:15 PM - Incremental backup
+15 21 * * * cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --incremental >> AUTOMATIONS/logs/backup.log 2>&1
+
+# Every 6h - Cron health checker
+33 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/cron_health_checker.py >> AUTOMATIONS/logs/cron_health.log 2>&1
+
+# Every 4h - Session briefing generator
+23 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/session_briefing.py >> AUTOMATIONS/logs/session_briefing.log 2>&1
+
+# 7:00 AM - Daily digest (morning report)
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_digest.py >> AUTOMATIONS/logs/daily_digest.log 2>&1
+
+# 3:30 AM - SQLite alpha index rebuild
+30 3 * * * cd $BASE && $PYTHON AUTOMATIONS/sqlite_alpha_index.py --rebuild --stats >> AUTOMATIONS/logs/alpha_index.log 2>&1
+
+# 4:30 AM Sunday - Security audit (weekly)
+30 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/security_audit.py --quick >> AUTOMATIONS/logs/security_audit.log 2>&1
+
+# Sunday 4:15 AM - MEGA_SHEET rebuild (weekly)
+15 4 * * 0 cd $BASE && $PYTHON LEDGER/MEGA_SHEET/build_mega_sheet.py >> LEDGER/MEGA_SHEET/build.log 2>&1
+
+# =============================================================================
+# HIBERNATED — DO NOT UNCOMMENT UNTIL HUMAN CREATES ACCOUNTS
+# Restore with: crontab AUTOMATIONS/crontab_backup_pre_cycle25.txt
+# =============================================================================
+
+# --- PRODUCTION AGENTS (all hibernated) ---
+# ceo_agent, venture_autonomy, loop_closer, quality_gate
+# distribution_engine, cross_pollinator, content_queue
+# shakespeare_agent, app_factory_autopilot, observer_agent, quinn_agent
+# challenger_agents, growth_strategist, competitive_intelligence_engine
+# offpeak_builder (all variants), weekend blitz entries
+# openclaw entries, lead pipeline entries, EAS pipeline
+# pinterest, producthunt, batch_deployer, compliance_scanner
+# ecom_arb_engine, freelance_demand_scanner, trend_aggregator
+# sam_gov_monitor, alpha_screening, wire_missed_intelligence
+# decision_engine, closed_loop_pipeline, research_orchestrator
+# overnight_master_runner, opportunity_radar, twitter/reddit scrapers
+# inbound_lead_tracker, master_ops_bridge, app_factory_command_center
+# all offpeak/weekend entries
+# cognitive_engine, competitive_cognition_audit, conversation_logger
+# user_voice_model, system_visualizer, freshness_auditor
+# build_codebase_grammar, daily_tactical_engine, actionable_aggregator
+# auto_scheduler, financial_intelligence, platform_algo_detection
+# hashtag_audio_tracking, daily_nocost_rbi_scanner, prompt_meta_review
+# auto_resume_monitor, jitter_run wrappers, gates, task_graph
+# platform_rpm_tracking, creator_program_monitoring, aso_keyword_research
+# gov_tenders_scraper, ecom_arb_scanner, trending_products_scanner
+# engagement_optimizer, offpeak_maximizer revert

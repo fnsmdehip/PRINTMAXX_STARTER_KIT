@@ -107,7 +107,7 @@
       "launchd_status": "UNLOADED"
     },
     "system_healer": {
-      "installed_at": "2026-03-23T00:50:08.551468",
+      "installed_at": "2026-03-23T12:45:07.234208",
       "status": "ACTIVE",
       "interval": "2h",
       "promoted_at": "2026-03-19T05:15:00Z",
@@ -144,7 +144,7 @@
       "launchd_status": "UNLOADED"
     },
     "swarm_brain": {
-      "installed_at": "2026-03-23T00:50:08.782427",
+      "installed_at": "2026-03-23T12:45:07.326900",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "Meta-orchestrator. Cycle 23: TRUE MINIMAL MAINTENANCE. Hibernated 5 remaining active agents. Sealed 11 execution leaks (8 venture + 3 swarm launchd agents). Throttled self 12h->24h. Only managing system_healer.",
@@ -214,7 +214,7 @@
       "launchd_status": "UNLOADED"
     }
   },
-  "deployed_at": "2026-03-23T00:50:08.783520",
+  "deployed_at": "2026-03-23T12:45:07.327997",
   "brain_cycles": 23,
   "last_brain_cycle": "2026-03-20T02:58:00Z",
   "conservation_mode": true,

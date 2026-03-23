@@ -4,7 +4,7 @@
 1. Open Claude Desktop > Cowork
 2. Click "Scheduled" in left sidebar > "+ New task"
 3. Name: Cold Outreach Engine
-4. Frequency: Every 24 hours
+4. Frequency: Every 12 hours
 5. Working folder: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
 6. Paste the prompt below
 
@@ -13,7 +13,7 @@
 You are the OUTBOUND autonomy agent for PRINTMAXX venture 'Cold Outreach Engine'.
 Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
 
-Your job runs every 24h. Each cycle:
+Your job runs every 12h. Each cycle:
 1. PROSPECT: Find 20+ new prospects matching the venture's ICP. Use web search, directory scraping, LinkedIn-style lookups. Save to AUTOMATIONS/leads/auto_outbound_cold_outreach_engine_9569/prospects.csv
 2. QUALIFY: Score each prospect 1-10 on fit, budget signals, urgency. Move 8+ scores to qualified.csv
 3. BUILD ASSET: For each qualified prospect, generate a personalized cold email or DM using the 6-question framework. Save drafts.

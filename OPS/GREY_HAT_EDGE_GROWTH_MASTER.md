@@ -8096,3 +8096,80 @@ That's exactly why I built AI MVP Builders.
 
 [r/intermittentfasting] How do I get the best reuslts?
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773998545, Score: 28)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/honestly
+**Added:** 2026-03-23T12:00:08-04:00
+
+[PH LAUNCH] Honestly: Real reviews from Reddit &amp; YouTube when shopping online
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998546, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/pause-do-don-t-outsource-your-thinking
+**Added:** 2026-03-23T12:00:08-04:00
+
+[PH LAUNCH] Pause.do: Interrupt scrolling, tab overload, and AI autopilot
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998547, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/textmine-extract-data-from-text
+**Added:** 2026-03-23T12:00:08-04:00
+
+[PH LAUNCH] DataSieve 2.0: Extract structured data from text, files and archives.
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998551, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/weixinclawbot
+**Added:** 2026-03-23T12:00:08-04:00
+
+[PH LAUNCH] WeixinClawBot: The official WeChat pipeline for OpenClaw
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998552, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/alphaclaw-apex
+**Added:** 2026-03-23T12:00:08-04:00
+
+[PH LAUNCH] AlphaClaw Apex: OpenClaw harness and fleet manager for Mac
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998554, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/iris-e28eb72c-ccff-4a5a-a7e8-6cf066ee9d41
+**Added:** 2026-03-23T12:00:08-04:00
+
+[PH LAUNCH] Iris: Send work beautifully, pinned feedback, see what they viewed
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998555, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/tobira-ai
+**Added:** 2026-03-23T12:00:08-04:00
+
+[PH LAUNCH] Tobira.ai: A network where AI agents find deals for their humans
+

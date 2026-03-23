@@ -1,20 +1,28 @@
 {
-  "last_run": "2026-03-22T23:15:00",
-  "cycle_number": 1,
+  "last_run": "2026-03-23T12:05:08.938872",
+  "cycle_number": 2,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
-    "Spokane WA"
-  ],
-  "total_leads_all_cycles": 23,
-  "total_previews_deployed": 15,
-  "total_emails_queued": 15,
-  "next_cities": [
+    "Spokane WA",
     "Nashville TN",
     "Charlotte NC",
     "Louisville KY",
     "Tampa FL",
     "Phoenix AZ"
+  ],
+  "total_leads_all_cycles": 967,
+  "total_previews_deployed": 288,
+  "total_emails_queued": 327,
+  "next_cities": [
+    "Detroit MI",
+    "Minneapolis MN",
+    "Sacramento CA",
+    "Kansas City MO",
+    "New Orleans LA",
+    "Tucson AZ",
+    "Memphis TN",
+    "Raleigh NC"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -34,9 +42,14 @@
     "kyana-nail-spa-albuquerque-nm.surge.sh"
   ],
   "blockers": [
-    "No outbound email domain configured",
-    "No email addresses found for leads (OSM doesn't include email)",
-    "OSM Overpass rate-limits after ~5 queries \u2014 need 3s delay between calls"
+    "Surge.sh Student plan: ~6 new domains per cycle before rate-limit resets. FIX: Upgrade to Surge Plus ($13/mo) or wait ~1h between runs.",
+    "No outbound email domain configured \u2014 327 emails queued, 0 sent.",
+    "Only 307/967 leads have email addresses (32%). Need enrichment tool."
   ],
-  "status": "CYCLE_COMPLETE"
+  "status": "CYCLE_COMPLETE",
+  "fixes_this_cycle": [
+    "Fixed broken playwright (removed Python 3.13 build from .pip_libs that shadowed system Python 3.12 playwright)",
+    "Fixed surge deploy detection: HTTP verification fallback when Student plan outputs do-not-have-permission",
+    "Synced 28 file:// preview_urls to https:// surge URLs in leads CSV"
+  ]
 }

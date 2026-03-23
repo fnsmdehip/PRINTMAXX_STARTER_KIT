@@ -1238,6 +1238,65 @@ def _enrich_with_master_ops(venture_type: str, brief: dict) -> dict:
         return brief
 
 
+def _enrich_with_resource_manifest(venture_type: str, brief: dict) -> dict:
+    """Enrich brief with relevant resources from OPS/RESOURCE_MANIFEST.md.
+
+    Scans the manifest for playbooks, products, guides, and templates
+    relevant to the given venture type. Agents get pre-loaded context
+    about what IP already exists before creating anything new.
+    """
+    manifest_path = PROJECT_ROOT / "OPS" / "RESOURCE_MANIFEST.md"
+    if not manifest_path.exists():
+        return brief
+
+    try:
+        content = manifest_path.read_text()
+        venture_lower = venture_type.lower()
+
+        # Keywords to match for each venture type
+        venture_keywords = {
+            "content": ["content", "social", "youtube", "newsletter", "engagement", "video", "post"],
+            "outbound": ["outbound", "cold email", "lead", "outreach", "dm", "prospect"],
+            "app_factory": ["app", "mobile", "react native", "expo", "saas"],
+            "local_biz": ["local", "business", "plumber", "dental", "restaurant"],
+            "monetization": ["monetize", "gumroad", "stripe", "payment", "product"],
+            "product": ["product", "digital", "ebook", "template", "course"],
+            "research": ["research", "analysis", "report", "study"],
+            "scraping": ["scrape", "scraping", "data", "crawler", "spider"],
+            "growth": ["growth", "seo", "viral", "acquisition", "funnel"],
+        }
+        keywords = venture_keywords.get(venture_lower, [venture_lower])
+
+        # Find matching lines in manifest
+        relevant_lines = []
+        for line in content.split("\n"):
+            line_lower = line.lower()
+            if any(kw in line_lower for kw in keywords) and ("|" in line or "- " in line.lstrip()):
+                relevant_lines.append(line.strip())
+
+        if relevant_lines:
+            brief.setdefault("resource_manifest", {})
+            brief["resource_manifest"]["relevant_count"] = len(relevant_lines)
+            brief["resource_manifest"]["samples"] = relevant_lines[:10]
+            brief["resource_manifest"]["note"] = (
+                f"Found {len(relevant_lines)} existing resources for {venture_type}. "
+                "Check OPS/RESOURCE_MANIFEST.md before creating new IP."
+            )
+
+            # Add to text brief
+            for key in ["text", "brief", "content", "summary"]:
+                if key in brief and isinstance(brief[key], str):
+                    brief[key] += f"\n\n## EXISTING RESOURCES ({len(relevant_lines)} found)\n"
+                    brief[key] += "Check OPS/RESOURCE_MANIFEST.md — relevant playbooks/products exist.\n"
+                    for rl in relevant_lines[:5]:
+                        brief[key] += f"  {rl}\n"
+                    break
+
+        return brief
+    except Exception:
+        return brief
+
+
 # ── Main Intelligence Gatherer ─────────────────────────────────────────
 
 def get_intelligence(venture_type: str, task_type: Optional[str] = None, include_summaries: bool = False,
@@ -1377,6 +1436,9 @@ def get_intelligence(venture_type: str, task_type: Optional[str] = None, include
 
     # Enrich with Master Ops xlsx data (if bridge module is available)
     result = _enrich_with_master_ops(venture_type, result)
+
+    # Enrich with Resource Manifest (existing playbooks, products, guides)
+    result = _enrich_with_resource_manifest(venture_type, result)
 
     # Inject SOUL.md behavioral directives (lightweight primer for all agents)
     soul_path = PROJECT / "AUTOMATIONS" / "SOUL.md"
