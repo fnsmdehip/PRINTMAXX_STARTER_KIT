@@ -789,8 +789,20 @@ def deploy_surge(site_dir, domain_slug):
             success = result.returncode == 0 and "Success" in stdout
             if success:
                 return f"https://{domain}", True
-            # If domain is owned by another account, retry with next slug
+            # Student plan quirk: surge deploys but prints "you do not have permission"
+            # Verify actual deployment by HTTP check
             if "do not have permission" in combined:
+                import urllib.request as _ur, ssl as _ssl
+                try:
+                    _ctx = _ssl.create_default_context()
+                    _ctx.check_hostname = False
+                    _ctx.verify_mode = _ssl.CERT_NONE
+                    _resp = _ur.urlopen(f"https://{domain}", timeout=8, context=_ctx)
+                    if _resp.status == 200:
+                        log(f"  Deployed (Student plan): https://{domain}")
+                        return f"https://{domain}", True
+                except Exception:
+                    pass
                 log(f"  domain conflict on {domain}, trying next slug...")
                 continue
             # Non-conflict failure — log and give up
