@@ -1,6 +1,6 @@
 # Growth Playbook: ALPHA1773995703
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031010562390532232
 
 ## tactic summary
@@ -9,10 +9,7 @@ Michael Saylor(
 )'s 
 @Strategy
  bought another 17,994 $BTC($1.28B) at $70,946 last week.
-
 Strategy now holds 738,731 $BTC($50.77B) at an average price of $75,862, and is currently sitting on an unrealized loss of $5.3B (-9.4%).
-
-
 https://
 strategy.com/press/strategy
 -acquires-17994-btc-and-now-holds-738731-btc_03-09-2026

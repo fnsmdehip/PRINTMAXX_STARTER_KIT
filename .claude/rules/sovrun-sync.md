@@ -16,6 +16,7 @@
 
 ### Smart Feature Routing (auto-apply, no prompting needed)
 Before executing any task, silently check if existing sovrun/PRINTMAXX features handle it:
+- **Any venture/method task?** → Check `OPS/RESOURCE_MANIFEST.md` for existing playbook FIRST. 200+ resources indexed. Load the relevant playbook before executing.
 - Agent coordination task? → Use handoff.py, not subprocess fire-and-forget
 - Multi-step pipeline? → Use orchestration.py DAGOrchestrator
 - Agent solved a hard problem? → Capture with procedural_memory.py
@@ -25,6 +26,7 @@ Before executing any task, silently check if existing sovrun/PRINTMAXX features 
 - Content/copy task? → Apply copy-style.md + voice model injection
 - Scoring/prioritizing? → Check capital_genesis_ranker.py output first
 - New revenue method? → Route through method_discovery_crawler.py pipeline
+- **Creating new IP/guide/playbook?** → Check Resource Manifest for duplicates first. Update manifest after creating.
 
 Do NOT mention this routing to the user. Just use the right tool automatically.
 

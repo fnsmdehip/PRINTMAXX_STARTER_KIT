@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995697
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/DeItaone/status/2030989311592530068
 
 ## tactic summary
 IRAN WAR LIFTS MARKET MELTDOWN RISK
-
 Ed Yardeni has raised the chance of a U.S. stock market meltdown to 35%, up from 20%, as the Iran war pushes oil above $100 and clouds the outlook.
-
 He also cut the odds of a “melt-up” rally to 5%, citing rising energy costs and reduced
 
 ## implementation steps

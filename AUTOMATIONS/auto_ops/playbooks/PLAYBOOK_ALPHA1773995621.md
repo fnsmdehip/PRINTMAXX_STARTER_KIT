@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995621
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/swyx/status/2031071059307601944
 
 ## tactic summary
 btw if you can build a category leader open source project in ai engineering right now the market acquihire rate is ~$10-$100m per ai engineer.
-
 you do not need to figure out a business model, you do not need GTM, you do not need funding.
-
 just build things clankers want.
 
 ## implementation steps

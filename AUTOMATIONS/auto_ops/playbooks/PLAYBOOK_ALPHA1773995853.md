@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995853
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/GrowthHacking/comments/1rn286d/we_said_no_to_25m_vc_money_and_im_still_kinda/
 
 ## tactic summary
 We said no to $2.5m vc money and I'm still kinda shocked we did it lol Three founders here, plus one assistant who deserves a raise, no full-time hires yet, and the saas is already covering our bills nicely. It feels surreal most days.
-
 We launched our sass six months back. Almost no paid ads at the start just built something useful and watched LinkedIn and seo take off.
-
 Stats right now that still freak us out a bit: 1200+ paying customers (small agencies and smbs mostly, they keep sending grat
 
 ## implementation steps

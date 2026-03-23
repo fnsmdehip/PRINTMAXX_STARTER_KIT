@@ -1,22 +1,17 @@
 # Growth Playbook: ALPHA1773995647
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/alexcooldev/status/2031147128354124211
 
 ## tactic summary
 Same
-
 Tech bros in :
-
 Entry Level: $400 . $700
 Mid Level: $1,000 . $1,500
 Senior Level: $2,000 . $3,000
 Team Lead: $3,500 . $5,000
-
 Tech bros in :
-
 Junior Level: $6,000 . $10,000
-
 Honestly, this isn’t the life we should be living in this part of the world.
 
 ## implementation steps

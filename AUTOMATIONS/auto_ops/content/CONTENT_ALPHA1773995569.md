@@ -1,23 +1,19 @@
 # Content Pack: ALPHA1773995569
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/knoxtwts/status/2031794023413715438
 
 ## core insight
 i've been telling people faceless content accounts are a real business and they look at me like i'm crazy. 
-
 this guy spent $2M on them and made $15M+ back. 
-
 imo that should end the debate. paid creators $1-2 CPM when tiktok pays $0.05, 40x more than the platform, and at those
 
 ---
 
 ## tweet 1: the hook
 i've been telling people faceless content accounts are a real business and they look at me like i'm crazy. 
-
 this guy spent $2M on them and made $15M+ back. 
-
-imo that should end the debate. paid creators $1-2 CPM when tiktok pays $0.05,...
+imo that should end the debate. paid creators $1-2 CPM when tiktok pays $0.05, 4...
 
 this changes how you think about content distribution.
 
@@ -40,10 +36,8 @@ took me 30 minutes to set up. saves hours every week.
 ## thread: full breakdown (5-7 tweets)
 
 1/ i've been telling people faceless content accounts are a real business and they look at me like i'm crazy. 
-
 this guy spent $2M on them and made $15M+ back. 
-
-imo that should end the debate. paid c...
+imo that should end the debate. paid cre...
 
 here's the full breakdown of what's working right now.
 

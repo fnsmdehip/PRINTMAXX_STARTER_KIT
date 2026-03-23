@@ -1,6 +1,6 @@
 # Listing Spec: ALPHA1773995903
 ## source: TechCrunch (https://techcrunch.com/2026/03/19/jeff-bezos-reportedly-wants-100-billion-to-buy-and-transform-old-manufacturing-firms-with-ai/)
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:01
 ## roi_potential: MEDIUM
 
 ## product insight

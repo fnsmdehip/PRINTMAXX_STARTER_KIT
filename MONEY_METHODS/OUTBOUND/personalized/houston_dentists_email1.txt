@@ -1,0 +1,37 @@
+TO: mike.warwick@pdq.net
+CONTACT: Mike Warwick
+COMPANY: Dentists of Houston
+WEBSITE: dentistsofhouston.com
+CITY: Houston, TX
+SCORE: 17 (high issue count) | TYPE: cold_email
+SEQUENCE: dentist_sequence.md
+SEND: Tuesday or Wednesday morning
+
+---
+SUBJECT: dentistsofhouston.com — 5 issues costing you patients
+
+BODY:
+
+hi Mike,
+
+ran a quick audit on dentistsofhouston.com. here's what's happening:
+
+1. no SSL — Chrome shows "Not Secure" before a patient sees anything
+2. not mobile-optimized — 70% of dental searches happen on phones
+3. no social proof on the landing page
+4. no contact form (phone-only)
+5. copyright year says 1999 — that's 27 years out of date in a patient's eyes
+
+each one of those is a reason a patient closes the tab and calls the next dentist on the list.
+
+built a demo of a modern Houston dental site:
+https://printmaxx-demos.vercel.app/dental
+
+it's fast, mobile-first, has SSL, has a booking form, and shows reviews above the fold.
+
+$750 flat, have it live in 2 weeks.
+
+[Your First Name]
+[YOUR_PHONE]
+
+P.S. the SSL alone will recover patients you're currently losing to the "Not Secure" warning. that's the cheapest fix on the list.

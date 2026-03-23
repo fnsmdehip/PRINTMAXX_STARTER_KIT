@@ -1,6 +1,6 @@
 # Content Pack: ALPHA1773995895
 ## source: TechCrunch (https://techcrunch.com/2026/03/20/wordpress-com-now-lets-ai-agents-write-and-publish-posts-and-more/)
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:01
 ## roi_potential: MEDIUM
 
 ## core insight

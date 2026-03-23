@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code for Content Creators - Automate the Machine, Keep the Voice</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--card:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--muted:#8888a0;--accent:#6366f1;--accent2:#818cf8;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--cyan:#06b6d4}
+body{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.hero{background:linear-gradient(135deg,#0f0f1a 0%,#1a1030 50%,#0f0f1a 100%);border-bottom:1px solid var(--border);padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2rem;background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.5rem}
+.hero .sub{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem}
+.hero .stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:1.8rem;font-weight:700;color:var(--green)}
+.hero .stat .label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* Nav */
+.nav{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;padding:1rem 2rem;border-bottom:1px solid var(--border);background:var(--surface)}
+.nav button{padding:0.4rem 0.9rem;background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--muted);font-family:inherit;font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+.nav button:hover,.nav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Content */
+.container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.section{margin-bottom:3rem;display:none}
+.section.visible{display:block}
+.section h2{font-size:1.4rem;color:var(--accent2);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+.section h3{font-size:1.1rem;color:var(--cyan);margin:1.5rem 0 0.5rem}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem;transition:border-color 0.2s}
+.card:hover{border-color:var(--accent)}
+.card .title{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
+.card .desc{color:var(--muted);font-size:0.85rem;margin-bottom:0.8rem}
+.card .tag{display:inline-block;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.7rem;margin-right:0.3rem;margin-bottom:0.3rem}
+.tag-rule{background:#4f46e520;color:var(--accent2);border:1px solid #4f46e540}
+.tag-auto{background:#22c55e20;color:var(--green);border:1px solid #22c55e40}
+.tag-human{background:#f59e0b20;color:var(--orange);border:1px solid #f59e0b40}
+.tag-free{background:#06b6d420;color:var(--cyan);border:1px solid #06b6d440}
+
+/* Code blocks */
+pre{background:#0d0d15;border:1px solid var(--border);border-radius:8px;padding:1rem;overflow-x:auto;font-size:0.82rem;line-height:1.6;margin:0.8rem 0}
+code{color:var(--green);font-size:0.85rem}
+.inline-code{background:#1a1a2a;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.82rem}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.85rem}
+th{background:var(--surface);padding:0.6rem 0.8rem;text-align:left;border-bottom:2px solid var(--border);color:var(--accent2);font-weight:600}
+td{padding:0.5rem 0.8rem;border-bottom:1px solid var(--border)}
+tr:hover td{background:var(--card)}
+
+/* Callout */
+.callout{background:var(--surface);border-left:3px solid var(--accent);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1rem 0;font-size:0.9rem}
+.callout.warning{border-left-color:var(--orange)}
+.callout.success{border-left-color:var(--green)}
+.callout.danger{border-left-color:var(--red)}
+
+/* Before/after */
+.ba-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+@media(max-width:600px){.ba-wrap{grid-template-columns:1fr}}
+.ba-before{background:#1a0f0f;border:1px solid #3a2020;border-radius:8px;padding:1rem}
+.ba-after{background:#0f1a10;border:1px solid #203a22;border-radius:8px;padding:1rem}
+.ba-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem}
+.ba-before .ba-label{color:var(--red)}
+.ba-after .ba-label{color:var(--green)}
+.ba-text{font-size:0.85rem;color:var(--text)}
+
+/* Checklist */
+.checklist{list-style:none;margin:0.5rem 0 1rem}
+.checklist li{padding:0.3rem 0;font-size:0.88rem;display:flex;gap:0.6rem;align-items:flex-start}
+.checklist li::before{content:"";color:var(--green);flex-shrink:0;margin-top:0.1rem}
+
+/* Stage pipeline */
+.pipeline{display:flex;flex-wrap:wrap;gap:0;margin:1rem 0}
+.stage{background:var(--card);border:1px solid var(--border);padding:0.8rem 1rem;flex:1;min-width:140px;position:relative}
+.stage:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;transform:translateY(-50%);border-left:12px solid var(--border);border-top:10px solid transparent;border-bottom:10px solid transparent;z-index:1}
+.stage .stage-num{font-size:0.7rem;color:var(--muted);margin-bottom:0.2rem}
+.stage .stage-name{font-size:0.85rem;font-weight:600;color:var(--accent2)}
+.stage .stage-badge{font-size:0.7rem;margin-top:0.3rem}
+.badge-auto{color:var(--green)}
+.badge-human{color:var(--orange)}
+
+/* Responsive */
+@media(max-width:600px){
+  .hero h1{font-size:1.4rem}
+  .hero .stats{gap:1rem}
+  .hero .stat .num{font-size:1.3rem}
+  .container{padding:1rem}
+  pre{font-size:0.75rem}
+  .pipeline{flex-direction:column}
+  .stage:not(:last-child)::after{display:none}
+}
+
+/* Print */
+@media print{
+  .nav{display:none}
+  .section{display:block!important}
+  body{background:#fff;color:#111}
+  .card{border:1px solid #ddd}
+}
+
+mark{background:var(--accent);color:#fff;padding:0 0.2rem;border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Claude Code for Content Creators</h1>
+  <p class="sub">Automate the Machine, Keep the Voice &mdash; $39</p>
+  <div class="stats">
+    <div class="stat"><div class="num">90+</div><div class="label">Pieces Per Month</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">Tweets Per Session</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">Platforms Covered</div></div>
+    <div class="stat"><div class="num">0</div><div class="label">VAs Needed</div></div>
+  </div>
+</div>
+
+<nav class="nav" id="nav">
+  <button class="active" data-section="overview">Overview</button>
+  <button data-section="tweet-rule">3-Tweet Rule</button>
+  <button data-section="pipeline">Content Pipeline</button>
+  <button data-section="slop">Anti-Slop Filter</button>
+  <button data-section="algorithm">Algorithm</button>
+  <button data-section="repurposing">Repurposing</button>
+  <button data-section="scheduling">Scheduling</button>
+</nav>
+
+<div class="container" id="content">
+
+<!-- SECTION: Overview -->
+<div class="section visible" id="sec-overview">
+<h2>Overview</h2>
+<p style="margin-bottom:1rem">90 pieces of content per month from one person. Not AI slop. Not templated garbage. Actual content with voice, with data, with takes.</p>
+<p style="margin-bottom:1rem">The machine handles the volume. You handle the voice.</p>
+
+<div class="callout success">
+<strong>What you get:</strong> The 3-tweet rule with exact prompt templates. A 4-stage content pipeline from raw material to published post. An anti-slop filter that catches AI tells before they go live. A Twitter algorithm breakdown for 2026. A repurposing matrix that turns 1 finding into 5 pieces. A scheduling system that runs on $0/month.
+</div>
+
+<h3>System Stats</h3>
+<table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Content pieces per month</td><td>90+ (from 30 min/day human input)</td></tr>
+<tr><td>Platforms covered</td><td>6 (Twitter/X, LinkedIn, Newsletter, YouTube Shorts, Reddit, community)</td></tr>
+<tr><td>VAs required</td><td>0</td></tr>
+<tr><td>Human time per day</td><td>~2 hours (30 min input, 90 min editing and engagement)</td></tr>
+<tr><td>Tools required</td><td>Claude Code, Python, a Twitter developer account</td></tr>
+<tr><td>Monthly cost</td><td>Claude Code subscription + $0 scheduler (local cron)</td></tr>
+</table>
+
+<h3>The Core Insight</h3>
+<p style="margin-bottom:1rem">Every piece of work you do already generates content. You build something: process tweet. You research a topic: data tweet. You launch a product: proof tweet. You fail publicly: honest take that gets 10x the engagement of anything polished.</p>
+<p style="margin-bottom:1rem">The problem is not "not enough to say." The problem is conversion. Raw experience sits in your head and never makes it to a draft. This system handles the conversion automatically. You do the work. The machine writes the first draft from what you did. You edit for 5 minutes. It posts.</p>
+
+<div class="callout">
+<strong>The no-blank-page principle:</strong> You never start from nothing. The prompt always starts with what you actually did. "You just [did this]. Write 3 tweets about it." The blank page problem is a prompt design problem, not a creativity problem.
+</div>
+
+<h3>What This Is Not</h3>
+<div class="card">
+<div class="title">Not a "post more" guide</div>
+<div class="desc">Posting more bad content faster produces more bad content. This is about converting real work into real signal. Volume is a byproduct of the system, not the goal.</div>
+<span class="tag tag-rule">QUALITY FIRST</span>
+</div>
+<div class="card">
+<div class="title">Not a generic AI writing tool breakdown</div>
+<div class="desc">This is a specific system with specific prompts, a specific pipeline, and a specific filter stack. The prompts are copy-paste ready. The pipeline is described step by step. The filter is a checklist you run before posting.</div>
+<span class="tag tag-auto">SPECIFIC</span>
+</div>
+<div class="card">
+<div class="title">Not theory</div>
+<div class="desc">This system runs 90+ pieces of content per month across a real account. The 3-tweet rule is a standing rule in the codebase. The anti-slop filter is a real Claude prompt that runs before every post. The scheduling queue is a real CSV file with a real Python cron job reading it.</div>
+<span class="tag tag-human">BATTLE-TESTED</span>
+</div>
+</div>
+
+<!-- SECTION: 3-Tweet Rule -->
+<div class="section" id="sec-tweet-rule">
+<h2>The 3-Tweet Rule</h2>
+<p style="margin-bottom:1rem">Every build session, research sprint, product launch, or client meeting generates 3 tweets and 1 thread minimum. Non-negotiable. This is Rule 9 in the operating system.</p>
+
+<div class="callout warning">
+<strong>The rule in plain language:</strong> You do not finish a work session without 3 drafted tweets in the queue. Not ideas. Not "I should post about this." Drafted, filtered, queued.
+</div>
+
+<h3>The Exact Prompt Template</h3>
+<pre>You just [DESCRIBE WHAT YOU DID]. Write 3 tweets about this for a solopreneur audience.
+Rules: No AI vocabulary. No em dashes. No "game-changing." No "dive into."
+Each tweet: specific, consequence-first, no more than 3 sentences.
+One tweet per line. No preamble.</pre>
+
+<div class="callout">
+<strong>Why consequence-first?</strong> Twitter readers decide in 0.3 seconds whether to keep reading. The consequence of what you learned or built is more interesting than the explanation of it. Start with the result, then explain how.
+</div>
+
+<h3>Example: Prompt to Output</h3>
+<p style="margin-bottom:0.5rem"><strong>Input to Claude:</strong></p>
+<pre>You just ran 14,000 cold emails over 6 weeks and tracked open rates, reply rates,
+and meeting booked rates by subject line format, send time, and lead source.
+Write 3 tweets about this for a solopreneur audience.
+Rules: No AI vocabulary. No em dashes. No "game-changing." No "dive into."
+Each tweet: specific, consequence-first, no more than 3 sentences.
+One tweet per line. No preamble.</pre>
+
+<p style="margin-bottom:0.5rem" style="margin-top:1rem"><strong>Output (3 tweets, ready to queue):</strong></p>
+<div class="card">
+<div class="desc" style="color:var(--text)">14,000 cold emails, 6 weeks. The subject line "quick question" outperformed every other format by 31%. Nobody opens "following up on my last email."</div>
+</div>
+<div class="card">
+<div class="desc" style="color:var(--text)">Tuesday 8 AM beats Friday 11 AM by 2.4x on reply rate. Not because people are more receptive. Because your email isn't competing with 40 others from the weekend.</div>
+</div>
+<div class="card">
+<div class="desc" style="color:var(--text)">Inbound leads from content replied at 6.8%. Cold scrape leads replied at 1.2%. The gap is trust. Build the audience first, cold email second.</div>
+</div>
+
+<h3>The Thread Formula</h3>
+<p style="margin-bottom:0.5rem">For longer content (research, multi-step processes, results), use the thread structure:</p>
+<table>
+<tr><th>Tweet</th><th>Purpose</th><th>Formula</th></tr>
+<tr><td>1 (Hook)</td><td>Stop the scroll</td><td>[Specific number] [specific claim]. [Proof or tension].</td></tr>
+<tr><td>2-9 (Body)</td><td>Deliver the value</td><td>One point per tweet. Number, then insight. Never two ideas in one tweet.</td></tr>
+<tr><td>10 (CTA)</td><td>Convert the reader</td><td>Single action. Follow for more on [topic]. Or link to product.</td></tr>
+</table>
+
+<div class="callout success">
+<strong>Time math:</strong> 20 minutes of writing (describing what you did) generates the full prompt input. Claude generates 10 tweet drafts in 15 seconds. You edit for 5 minutes. 25 minutes total, 10 pieces of content, one thread that could get 200K impressions if the hook lands.
+</div>
+
+<h3>Content Types by Work Type</h3>
+<table>
+<tr><th>What You Did</th><th>Content Type</th><th>Format</th></tr>
+<tr><td>Built something new</td><td>Process tweet</td><td>"Here's how I built [X] in [time]. Step by step:"</td></tr>
+<tr><td>Found data or research</td><td>Data tweet</td><td>"[Stat] from [source]. Here's what it actually means:"</td></tr>
+<tr><td>Launched a product</td><td>Proof tweet</td><td>"Day 1 results: [numbers]. What worked, what didn't:"</td></tr>
+<tr><td>Failed at something</td><td>Honest take</td><td>"I [did X]. It didn't work. Here's exactly why:"</td></tr>
+<tr><td>Had a client meeting</td><td>Insight tweet</td><td>"Client said [thing]. That's actually the most common [problem]."</td></tr>
+<tr><td>Read something interesting</td><td>Curation tweet</td><td>"Most people missed this [study/finding/quote]. Here's why it matters:"</td></tr>
+</table>
+
+<h3>Where Drafts Live</h3>
+<p style="margin-bottom:0.5rem">All drafted tweets go to one file: <span class="inline-code">CONTENT/social/posting_queue/queue.csv</span>. Format:</p>
+<pre>platform,content,post_time,status
+twitter,"14,000 cold emails, 6 weeks...",2026-03-25 08:00,PENDING
+twitter,"Tuesday 8 AM beats Friday...",2026-03-26 08:00,PENDING</pre>
+<p style="margin-top:0.5rem">The scheduler reads this file and posts automatically. You draft once. It posts on schedule. See the Scheduling section for the full cron setup.</p>
+</div>
+
+<!-- SECTION: Content Pipeline -->
+<div class="section" id="sec-pipeline">
+<h2>Content Pipeline</h2>
+<p style="margin-bottom:1rem">Four stages from raw material to published post. Two are automated. One is 5 minutes of human time. One is automated again.</p>
+
+<div class="pipeline">
+  <div class="stage">
+    <div class="stage-num">Stage 1</div>
+    <div class="stage-name">Raw Material</div>
+    <div class="stage-badge badge-auto">Automated</div>
+  </div>
+  <div class="stage">
+    <div class="stage-num">Stage 2</div>
+    <div class="stage-name">Draft Generation</div>
+    <div class="stage-badge badge-auto">Automated</div>
+  </div>
+  <div class="stage">
+    <div class="stage-num">Stage 3</div>
+    <div class="stage-name">Voice Editing</div>
+    <div class="stage-badge badge-human">5 min human</div>
+  </div>
+  <div class="stage">
+    <div class="stage-num">Stage 4</div>
+    <div class="stage-name">Distribution</div>
+    <div class="stage-badge badge-auto">Automated</div>
+  </div>
+</div>
+
+<h3>Stage 1: Raw Material Collection</h3>
+<p style="margin-bottom:0.5rem">Sources that feed the pipeline automatically:</p>
+<div class="card">
+<div class="title">Build sessions</div>
+<div class="desc">Every coding session, design sprint, or product build. What you made, how long it took, what broke, what worked. Captured via session notes or git commit messages.</div>
+<span class="tag tag-auto">AUTO-SCRAPED</span>
+</div>
+<div class="card">
+<div class="title">Reddit and Twitter scraping</div>
+<div class="desc">Scrapers run every 4-6 hours. They pull high-signal posts from your niche: what people are asking, complaining about, and paying for. Raw findings go into a staging file.</div>
+<span class="tag tag-auto">AUTO-SCRAPED</span>
+</div>
+<div class="card">
+<div class="title">Competitor monitoring</div>
+<div class="desc">Top accounts in your niche, tracked weekly. What's getting traction. What angles nobody has covered yet. Which hooks are working right now.</div>
+<span class="tag tag-auto">AUTO-SCRAPED</span>
+</div>
+<div class="card">
+<div class="title">Alpha research findings</div>
+<div class="desc">Any research you do: pricing analysis, user interviews, product comparisons, test results. Numbers and observations get flagged as content seeds automatically.</div>
+<span class="tag tag-human">HUMAN INPUT</span>
+</div>
+
+<h3>Stage 2: Draft Generation</h3>
+<p style="margin-bottom:0.5rem">The engagement bait converter prompt. Takes any raw finding and returns 3+ formatted posts:</p>
+<pre>Raw finding: [PASTE THE FINDING OR OBSERVATION]
+
+Convert this into 3 Twitter posts for a [NICHE] audience.
+Rules:
+- No AI vocabulary (no "delve," "dive into," "seamlessly," "leverage," "game-changing")
+- No em dashes
+- Consequence first, explanation second
+- Specific numbers over vague claims
+- Max 3 sentences per tweet
+- No hashtags
+- No preamble, just the tweets
+
+Format: one tweet per line, blank line between each.</pre>
+
+<div class="callout">
+<strong>The engagement bait classifier:</strong> Before generating content from any finding, run it through this 5-point test. Specific tool or platform named? Verifiable numbers? Executable today with info given? Plausible at stated scale? Real method or recycled wisdom? If 3+ are yes: full content piece. If 1-2: extract the specific kernel first, then write from that.
+</div>
+
+<h3>Stage 3: Voice Editing</h3>
+<p style="margin-bottom:0.5rem">This is the only stage that requires you. It takes 5 minutes per batch of 10 drafts. You are looking for:</p>
+<ul class="checklist">
+<li>AI tells (em dashes, banned words, passive voice) that the anti-slop filter missed</li>
+<li>Claims without numbers you can add</li>
+<li>Hedging you can remove ("it might be worth considering" becomes "do this")</li>
+<li>The first word of the tweet. If it's "I," rewrite the opening.</li>
+<li>Anything that sounds like it was written by a tool, not a person with skin in the game</li>
+</ul>
+<p style="margin-bottom:0.5rem">See the Anti-Slop Filter section for the full checklist.</p>
+
+<h3>Stage 4: Distribution</h3>
+<p style="margin-bottom:0.5rem">The queue script. Reads the CSV, finds the oldest PENDING post whose scheduled time has passed, posts it via API, marks it POSTED:</p>
+<pre># posting_queue_runner.py (simplified)
+import csv
+import tweepy
+from datetime import datetime
+
+def post_pending():
+    rows = []
+    with open('CONTENT/social/posting_queue/queue.csv', 'r') as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
+    for row in rows:
+        if row['status'] != 'PENDING':
+            continue
+        post_time = datetime.fromisoformat(row['post_time'])
+        if post_time > datetime.now():
+            continue
+        # post to Twitter API v2
+        client = tweepy.Client(bearer_token=BEARER, ...)
+        try:
+            client.create_tweet(text=row['content'])
+            row['status'] = 'POSTED'
+        except Exception as e:
+            row['status'] = 'FAILED'
+        break  # one post per cron run
+
+    # write updated statuses back
+    with open('CONTENT/social/posting_queue/queue.csv', 'w') as f:
+        writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+        writer.writeheader()
+        writer.writerows(rows)</pre>
+
+<h3>Time Investment</h3>
+<table>
+<tr><th>Activity</th><th>Time</th><th>Who</th></tr>
+<tr><td>Describe what you did (prompt input)</td><td>15-20 min/day</td><td>Human</td></tr>
+<tr><td>Voice editing of drafts</td><td>5-10 min/batch</td><td>Human</td></tr>
+<tr><td>Engagement (replies to your posts)</td><td>20-30 min/day</td><td>Human</td></tr>
+<tr><td>Reply farming (10 replies to large accounts)</td><td>15-20 min/day</td><td>Human</td></tr>
+<tr><td>Scraping, draft generation, scheduling, posting</td><td>0 min</td><td>Automated</td></tr>
+</table>
+<div class="callout success">
+<strong>Total human time:</strong> 55-80 minutes per day produces 3+ posts + engagement activity. The rest runs without you.
+</div>
+</div>
+
+<!-- SECTION: Anti-Slop Filter -->
+<div class="section" id="sec-slop">
+<h2>Anti-Slop Filter</h2>
+<p style="margin-bottom:1rem">AI-generated content has fingerprints. Readers who use AI themselves spot them in 2 seconds. The anti-slop filter removes those fingerprints before anything goes live.</p>
+
+<h3>The 6 Words That Flag AI Content Instantly</h3>
+<table>
+<tr><th>Word / Phrase</th><th>Why It Signals AI</th><th>Replace With</th></tr>
+<tr><td>dive into</td><td>Overused Claude/GPT opener</td><td>Just start with the thing. "Here's how:"</td></tr>
+<tr><td>delve</td><td>Nobody says this in speech. Ever.</td><td>Look at, examine, check</td></tr>
+<tr><td>game-changing</td><td>Vague superlative with no data</td><td>Specific improvement with numbers</td></tr>
+<tr><td>leverage (as a verb)</td><td>Corporate consultant speak, AI default</td><td>Use, run, apply</td></tr>
+<tr><td>seamlessly</td><td>Means nothing. Nothing is seamless.</td><td>Delete it. If true, show it with a number.</td></tr>
+<tr><td>cutting-edge</td><td>Every AI calls its output cutting-edge</td><td>State what's actually new or different</td></tr>
+</table>
+
+<h3>The No Em Dash Rule</h3>
+<div class="callout danger">
+<strong>Em dashes (like this one) are the single most reliable AI signal in 2026.</strong> Claude and GPT use them at roughly 3-4x the rate of human writers. Any reader who has used AI in the last 12 months will clock them immediately. The rule is simple: never use em dashes in content. Use a period. Or a comma. Or end the sentence and start a new one.
+</div>
+
+<h3>Sentence Structures That Kill Engagement</h3>
+<div class="card">
+<div class="title">Passive voice</div>
+<div class="desc">Before: "Content was generated by the system and distributed across platforms." After: "The system generates and distributes content automatically." Active is shorter, stronger, and sounds like a human wrote it.</div>
+<span class="tag tag-rule">FIX: ACTIVE VOICE</span>
+</div>
+<div class="card">
+<div class="title">Hedged claims</div>
+<div class="desc">Before: "It might be worth considering whether this approach could potentially improve your results." After: "This will improve your reply rate. Run it for 14 days and measure." Hedging signals either the writer doesn't believe what they're saying, or they're an AI trying to be safe.</div>
+<span class="tag tag-rule">FIX: COMMIT</span>
+</div>
+<div class="card">
+<div class="title">Jargon stacking</div>
+<div class="desc">Before: "Leverage this comprehensive framework to seamlessly optimize your holistic content strategy." This sentence means nothing. After: "Post 3 times per day. Reply to 10 large accounts. Do this for 90 days." Numbers and actions beat noun phrases every time.</div>
+<span class="tag tag-rule">FIX: SPECIFICS</span>
+</div>
+
+<h3>The 5-Question Voice Check</h3>
+<p style="margin-bottom:0.5rem">Run every draft through these before queuing:</p>
+<ol style="margin-left:1.5rem;margin-bottom:1rem;font-size:0.88rem">
+<li style="margin-bottom:0.4rem">Would a real person say this out loud without cringing?</li>
+<li style="margin-bottom:0.4rem">Is there a specific number I could add to make this more concrete?</li>
+<li style="margin-bottom:0.4rem">Is there hedging I can remove (might, could, potentially, perhaps)?</li>
+<li style="margin-bottom:0.4rem">Does it lead with the consequence, not the explanation?</li>
+<li style="margin-bottom:0.4rem">Is there any word I would never use in a text message to a friend?</li>
+</ol>
+<p style="margin-bottom:0.5rem">If any question surfaces a problem, fix it before moving on. The voice check takes 60 seconds per tweet when you are fast at it.</p>
+
+<h3>Before and After</h3>
+<div class="ba-wrap">
+  <div class="ba-before">
+    <div class="ba-label">Before (AI slop)</div>
+    <div class="ba-text">This comprehensive guide dives into the leveraging of AI tools to seamlessly optimize your content creation workflow — helping you produce game-changing output at scale.</div>
+  </div>
+  <div class="ba-after">
+    <div class="ba-label">After (human voice)</div>
+    <div class="ba-text">This shows you the exact system I use to produce 90 content pieces per month without a VA. 30 minutes of input per day. The rest is automated.</div>
+  </div>
+</div>
+
+<h3>Voice Model Injection</h3>
+<p style="margin-bottom:0.5rem">The most reliable way to make Claude write like you: give it 5 examples of content you've already written that you're proud of. Then prepend this to every content prompt:</p>
+<pre>Write in the voice of these examples. Same directness. Same sentence length.
+Same specificity level. Same willingness to state things without hedging.
+
+Example 1: [your tweet]
+Example 2: [your tweet]
+Example 3: [your tweet]
+Example 4: [your tweet]
+Example 5: [your tweet]
+
+Now write [the new content].</pre>
+
+<div class="callout">
+<strong>The voice model is a living document.</strong> Keep a file called <span class="inline-code">CONTENT/voice_model.txt</span> with your 10-20 best pieces. Update it monthly. Add new examples when you write something that performs above average. Remove old examples that no longer represent how you write. Inject from this file automatically in the draft generation prompt.
+</div>
+</div>
+
+<!-- SECTION: Algorithm -->
+<div class="section" id="sec-algorithm">
+<h2>Twitter Algorithm 2026</h2>
+<p style="margin-bottom:1rem">What it rewards, what it punishes, and the non-obvious tactics that compound over 90 days.</p>
+
+<h3>What the Algorithm Rewards</h3>
+<table>
+<tr><th>Signal</th><th>Why It Matters</th><th>How to Optimize</th></tr>
+<tr><td>Dwell time</td><td>Reading = signal of quality. Scrolling past = no signal.</td><td>First line must create a question the reader needs answered. Never front-load the answer.</td></tr>
+<tr><td>Saves / Bookmarks</td><td>Highest-quality signal. Means the reader values it enough to return.</td><td>Reference content (lists, frameworks, resources) saves at 3-5x the rate of takes.</td></tr>
+<tr><td>Replies from large accounts</td><td>When a 50K account replies, their audience sees your post.</td><td>Reply to large accounts first. Make them want to respond. Ask specific questions.</td></tr>
+<tr><td>Engagement velocity (first 30 min)</td><td>The algorithm decides how far to push the tweet based on early performance.</td><td>Post when you can be online for 30 minutes after. Reply to every comment in that window.</td></tr>
+</table>
+
+<h3>What It Punishes</h3>
+<div class="card">
+<div class="title">External links in the tweet body</div>
+<div class="desc">Twitter's algorithm suppresses tweets with outbound links. The standard workaround: post the link in a reply to your own tweet. Or post link-free content and put the URL in the first comment immediately after posting.</div>
+<span class="tag tag-rule">CRITICAL</span>
+</div>
+<div class="card">
+<div class="title">Low-ratio accounts</div>
+<div class="desc">If you follow 2,000 accounts and have 400 followers, your reach is suppressed. The ratio signals low-value account to the algorithm. Fix: unfollow aggressively, or build followers faster through the reply strategy below.</div>
+<span class="tag tag-rule">WATCH</span>
+</div>
+<div class="card">
+<div class="title">Posting at wrong times</div>
+<div class="desc">Dead-hour posts get no engagement in the first 30 minutes. No early engagement means no algorithmic push. The post is effectively invisible. See the timing table below.</div>
+<span class="tag tag-rule">WATCH</span>
+</div>
+
+<h3>Best Posting Times</h3>
+<table>
+<tr><th>Platform</th><th>Best Time</th><th>Why</th></tr>
+<tr><td>Twitter/X</td><td>7-9 AM EST</td><td>Morning scroll before work, high intent, less noise than midday</td></tr>
+<tr><td>Twitter/X</td><td>12-1 PM EST</td><td>Lunch scroll, high engagement window for threads</td></tr>
+<tr><td>Twitter/X</td><td>6-8 PM EST</td><td>Evening wind-down, high personal finance and productivity reach</td></tr>
+<tr><td>LinkedIn</td><td>Tue-Thu 8-10 AM</td><td>B2B audience, midweek professional mindset</td></tr>
+<tr><td>Newsletter</td><td>Tuesday 7 AM</td><td>Not Monday (inbox overwhelm), not Friday (pre-weekend check-out)</td></tr>
+<tr><td>Reddit</td><td>9 AM-12 PM EST</td><td>US morning traffic, best upvote velocity</td></tr>
+</table>
+
+<h3>The Reply Strategy</h3>
+<p style="margin-bottom:1rem">10 quality replies per day to large accounts in your niche grows your account faster than 3 original tweets. This is not opinion. It is how the algorithm works. Your reply is shown to the large account's followers. If the reply is good, they check your profile.</p>
+
+<div class="callout success">
+<strong>The compound effect:</strong> 10 replies/day for 90 days = 900 high-visibility touchpoints in your niche. Each one is a tiny ad that costs $0 and targets exactly the audience you want. The accounts you reply to are already doing the targeting work for you.
+</div>
+
+<p style="margin-bottom:0.5rem">What a good reply looks like:</p>
+<ul class="checklist">
+<li>Adds information the original post didn't include</li>
+<li>Disagrees with a specific point (politely) using data</li>
+<li>Shares a directly relevant result from your own experience</li>
+<li>Asks a specific question that invites the original poster to engage back</li>
+</ul>
+<p style="margin-bottom:0.5rem">What a bad reply looks like: "Great post!" "This." "Agreed." "Love this perspective." These replies hurt you because they signal low-value account.</p>
+
+<h3>The Hook Formula</h3>
+<p style="margin-bottom:0.5rem">The thread hook format that consistently outperforms all others:</p>
+<pre>[Specific number] [Specific claim]. [Proof or tension].</pre>
+<div class="card">
+<div class="title">Working examples</div>
+<div class="desc">
+  "I ran 14,000 cold emails. Here's what worked:"<br>
+  "Day 44. $0 revenue. Here's what I'm doing differently:"<br>
+  "3 tools replaced my $2,400/month VA stack:"<br>
+  "I analyzed 200 viral threads from 2025. They all share 1 structure:"
+</div>
+<span class="tag tag-rule">COPY THESE</span>
+</div>
+
+<h3>The Controversy Play</h3>
+<p style="margin-bottom:0.5rem">The highest-engagement format: a claim most people disagree with, backed by specific numbers, with an invitation for pushback. The algorithm rewards replies. Controversy generates replies. The math is simple.</p>
+<div class="callout warning">
+<strong>Use carefully:</strong> The controversy must be genuine. You must actually believe it and have data for it. Manufactured controversy where you don't believe the take damages trust faster than it builds reach. The goal is "provocative but defensible," not "wrong for clicks."
+</div>
+</div>
+
+<!-- SECTION: Repurposing -->
+<div class="section" id="sec-repurposing">
+<h2>Repurposing Matrix</h2>
+<p style="margin-bottom:1rem">One research finding becomes 5 content pieces across 5 platforms. Each is a different angle, not a copy. The same finding told 5 ways to 5 different audiences.</p>
+
+<h3>The 1-to-5 Matrix</h3>
+<table>
+<tr><th>Format</th><th>Platform</th><th>Angle</th><th>Length</th></tr>
+<tr><td>Twitter thread</td><td>Twitter/X</td><td>"Here's what I learned" (numbered, hook-driven)</td><td>10 tweets</td></tr>
+<tr><td>LinkedIn post</td><td>LinkedIn</td><td>"Here's the business implication" (measured, professional)</td><td>300-500 words</td></tr>
+<tr><td>Newsletter section</td><td>Email</td><td>"Here's the full context" (nuanced, reader assumes more time)</td><td>300-400 words</td></tr>
+<tr><td>Short video script</td><td>YouTube Shorts / TikTok</td><td>"Here's the visual proof" (fast, hook in second 1)</td><td>60 seconds</td></tr>
+<tr><td>Community post</td><td>Reddit / Discord / Slack</td><td>"What do you think?" (question format, invite discussion)</td><td>100-150 words</td></tr>
+</table>
+
+<h3>The 5 Prompts</h3>
+
+<div class="card">
+<div class="title">Twitter Thread Prompt</div>
+<pre style="margin-top:0.5rem">Turn this finding into a 10-tweet thread. Hook tweet first. 8 numbered points.
+CTA tweet last. Each tweet: one idea, specific number if possible, max 3 sentences.
+No em dashes. No AI vocabulary. No "leverage" or "seamlessly."
+Finding: [PASTE FINDING]</pre>
+</div>
+
+<div class="card">
+<div class="title">LinkedIn Post Prompt</div>
+<pre style="margin-top:0.5rem">Write a LinkedIn post about this finding. Audience: B2B professionals and founders.
+Tone: direct, data-backed, slightly more measured than Twitter. 300-400 words.
+Focus on the business implication, not just the tactic.
+No bullet points. Prose paragraphs. End with 1 question to the reader.
+Finding: [PASTE FINDING]</pre>
+</div>
+
+<div class="card">
+<div class="title">Newsletter Section Prompt</div>
+<pre style="margin-top:0.5rem">Write a newsletter section about this finding. 300-400 words.
+The reader has 3 minutes. Give them the full context: what you found,
+why it matters, and what they should do about it. More nuanced than Twitter.
+Readers expect the backstory. Include it.
+Finding: [PASTE FINDING]</pre>
+</div>
+
+<div class="card">
+<div class="title">Short Video Script Prompt</div>
+<pre style="margin-top:0.5rem">Write a 60-second video script about this finding. Hook in the first 3 seconds
+(a specific claim or visual cue). Body: 3 points, 15 seconds each. CTA: 5 seconds.
+Format: [HOOK] [POINT 1] [POINT 2] [POINT 3] [CTA]
+Write it as spoken words, not prose. Short sentences. Natural speech rhythm.
+Finding: [PASTE FINDING]</pre>
+</div>
+
+<div class="card">
+<div class="title">Community Post Prompt</div>
+<pre style="margin-top:0.5rem">Write a community post about this finding for a [NICHE] forum or Discord.
+100-150 words. Open with the finding directly. No "I wanted to share" preamble.
+End with a genuine question that invites people to share their own experience.
+No self-promotion. Pure value + question.
+Finding: [PASTE FINDING]</pre>
+</div>
+
+<h3>The Weekly Repurposing Schedule</h3>
+<table>
+<tr><th>Day</th><th>Action</th><th>Source</th></tr>
+<tr><td>Monday</td><td>Original research or build session. Write Twitter thread.</td><td>Your work</td></tr>
+<tr><td>Tuesday</td><td>LinkedIn repurpose of Monday's finding</td><td>Monday thread</td></tr>
+<tr><td>Wednesday</td><td>Newsletter section (expand Monday's thread with more context)</td><td>Monday thread</td></tr>
+<tr><td>Thursday</td><td>Short video script from Monday's hook tweet</td><td>Monday thread hook</td></tr>
+<tr><td>Friday</td><td>Community post (question version of Monday's finding)</td><td>Monday finding</td></tr>
+</table>
+
+<div class="callout success">
+<strong>Time math:</strong> 1 Monday research session (2 hours). 4 days of 10-minute repurposing (prompt, quick edit, queue). 1 week of content across 5 platforms from one source.
+</div>
+
+<div class="callout">
+<strong>The angles must differ.</strong> The Twitter thread is "here's what I learned." The LinkedIn post is "here's what this means for your business." The newsletter is "here's the full story with context." The video is "watch me show you." The community post is "what's your take?" Same finding. Five different conversations. None of them feels like a copy to a reader who sees all five.
+</div>
+</div>
+
+<!-- SECTION: Scheduling -->
+<div class="section" id="sec-scheduling">
+<h2>Scheduling System</h2>
+<p style="margin-bottom:1rem">The queue format, the free tools, the CSV import method, and the local Python scheduler that runs for $0/month.</p>
+
+<h3>The Posting Queue Format</h3>
+<p style="margin-bottom:0.5rem">A single CSV file that every part of the system reads and writes:</p>
+<pre>platform,content,post_time,status
+twitter,"14,000 cold emails over 6 weeks. The subject line...",2026-03-25 08:00,PENDING
+linkedin,"The business implication of running 14,000 cold...",2026-03-26 09:00,PENDING
+twitter,"Tuesday 8 AM beats Friday 11 AM by 2.4x on reply...",2026-03-27 08:00,PENDING
+newsletter,"This week I ran 14,000 cold emails and tracked...",2026-03-27 07:00,PENDING</pre>
+
+<h3>Free Scheduling Options</h3>
+<table>
+<tr><th>Tool</th><th>Free Tier</th><th>Best For</th><th>Catch</th></tr>
+<tr><td>Buffer</td><td>10 scheduled posts</td><td>Multi-platform, easy UI</td><td>10 post limit per account</td></tr>
+<tr><td>Publer</td><td>Limited posts</td><td>Visual calendar view</td><td>Caps kick in at volume</td></tr>
+<tr><td>TweetDeck</td><td>Free (X subscription required)</td><td>Twitter only, powerful</td><td>Requires X Blue</td></tr>
+<tr><td>Local Python cron</td><td>$0 forever</td><td>High volume, full control</td><td>Your machine must be on</td></tr>
+</table>
+
+<div class="callout">
+<strong>Recommendation:</strong> For low volume (under 30 posts/month), Buffer free tier is enough. For 90+ pieces/month, the local Python cron is the only option that doesn't hit caps or cost money. The script is 50 lines and runs on a Mac with launchd or Linux with crontab.
+</div>
+
+<h3>The CSV Import Method (30-Day Content Batch)</h3>
+<p style="margin-bottom:0.5rem">Write 30 days of content in one 2-3 hour session. Save as CSV. Import to Buffer or Hootsuite. Done for the month. The prompt:</p>
+<pre>I need 30 Twitter posts for the month of [MONTH] on the topic of [NICHE].
+Rules:
+- No em dashes. No AI vocabulary (delve, dive into, seamlessly, leverage, game-changing).
+- Each tweet: consequence first, specific numbers, max 3 sentences.
+- Mix: 10 process tweets (how I do X), 10 data tweets (here's what I found),
+  5 honest takes (what didn't work), 5 controversial claims (backed by data).
+- Output as CSV: date,platform,content,status
+  Start dates from [START DATE], one tweet per day at 8 AM EST.
+
+Voice examples:
+[PASTE 5 EXAMPLES OF YOUR BEST TWEETS]</pre>
+
+<h3>The Local API Poster</h3>
+<p style="margin-bottom:0.5rem">Posts directly via Twitter API v2. No third-party tool. No monthly cost. Runs on cron every hour, checks the queue, posts anything due:</p>
+<pre># crontab entry (runs every hour)
+0 * * * * /usr/bin/python3 /path/to/posting_queue_runner.py >> /path/to/logs/poster.log 2>&1</pre>
+
+<pre># posting_queue_runner.py (full version)
+import csv, os, sys
+from datetime import datetime
+import tweepy
+
+QUEUE_PATH = 'CONTENT/social/posting_queue/queue.csv'
+LOG_PATH   = 'CONTENT/social/posting_queue/post_log.txt'
+
+def get_client():
+    return tweepy.Client(
+        consumer_key=os.environ['TWITTER_API_KEY'],
+        consumer_secret=os.environ['TWITTER_API_SECRET'],
+        access_token=os.environ['TWITTER_ACCESS_TOKEN'],
+        access_token_secret=os.environ['TWITTER_ACCESS_SECRET']
+    )
+
+def run():
+    with open(QUEUE_PATH, 'r') as f:
+        rows = list(csv.DictReader(f))
+
+    now = datetime.now()
+    posted = False
+
+    for row in rows:
+        if row['status'] != 'PENDING':
+            continue
+        if row['platform'] != 'twitter':
+            continue
+        scheduled = datetime.fromisoformat(row['post_time'])
+        if scheduled > now:
+            continue
+
+        try:
+            client = get_client()
+            client.create_tweet(text=row['content'])
+            row['status'] = 'POSTED'
+            with open(LOG_PATH, 'a') as log:
+                log.write(f"{now.isoformat()} POSTED: {row['content'][:60]}\n")
+            posted = True
+        except Exception as e:
+            row['status'] = 'FAILED'
+            with open(LOG_PATH, 'a') as log:
+                log.write(f"{now.isoformat()} FAILED: {e}\n")
+        break  # one post per cron run
+
+    if posted or any(r['status'] in ('POSTED','FAILED') for r in rows):
+        with open(QUEUE_PATH, 'w', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+            writer.writeheader()
+            writer.writerows(rows)
+
+if __name__ == '__main__':
+    run()</pre>
+
+<h3>What to Manually Approve Before Scheduling</h3>
+<div class="card">
+<div class="title">Posts about specific people</div>
+<div class="desc">Any tweet that names a specific person, company, or account. The 5-minute human review is worth it to avoid a public mistake that's permanent on the internet.</div>
+<span class="tag tag-human">MANUAL REVIEW</span>
+</div>
+<div class="card">
+<div class="title">Posts with statistics you haven't verified</div>
+<div class="desc">If Claude generated a number and you didn't check the source, don't schedule it. Specific wrong numbers get ratio'd. Vague correct numbers don't. Check every stat before it goes live.</div>
+<span class="tag tag-human">MANUAL REVIEW</span>
+</div>
+<div class="card">
+<div class="title">Strong takes on active controversies</div>
+<div class="desc">Anything that references a live news event, public dispute, or rapidly evolving situation. Your opinion from Tuesday can look badly-informed by Thursday. If it has a short shelf life, post it manually when you're online to handle the response.</div>
+<span class="tag tag-human">MANUAL REVIEW</span>
+</div>
+
+<div class="callout success">
+<strong>The final system in one paragraph:</strong> You do work. You describe it in a prompt. Claude drafts 3 tweets and a thread in 15 seconds. You spend 5 minutes editing for voice using the anti-slop filter. The posts go into a CSV. A Python cron job reads the CSV every hour and posts whatever is due. You check the queue once per week to add more content. The engagement (replies, reply farming) you handle live, 30 minutes per day. That is the entire system. 90+ pieces per month. $0/month beyond Claude Code.
+</div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  var sections = document.querySelectorAll('.section');
+
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName !== 'BUTTON') return;
+    var target = e.target.getAttribute('data-section');
+
+    // update buttons
+    nav.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+    e.target.classList.add('active');
+
+    // show correct section
+    sections.forEach(function(s){
+      s.classList.remove('visible');
+    });
+    var match = document.getElementById('sec-' + target);
+    if(match) match.classList.add('visible');
+  });
+})();
+</script>
+</body>
+</html>

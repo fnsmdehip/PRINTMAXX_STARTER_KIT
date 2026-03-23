@@ -1,14 +1,11 @@
 # Growth Playbook: ALPHA1773995538
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031758933912948818
 
 ## tactic summary
 Two Prime appears to be selling large amounts of $BTC . 3,946 $BTC($274M) in the past week!
-
 Over the past week, Two Prime deposited 3,946 $BTC($274M) to #Ceffu and withdrew $173M from #Ceffu.
-
-
 https://
 intel.arkm.com/explorer/entit
 y/two-prime

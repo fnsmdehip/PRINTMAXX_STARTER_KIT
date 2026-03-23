@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ancestry Workbook — Trace Your Roots Across 5 Generations</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #1a1209;
+    --sepia: #8b6914;
+    --sepia-light: #c9a84c;
+    --cream: #faf6ee;
+    --cream-dark: #f0e8d4;
+    --rust: #9b3a22;
+    --forest: #2d4a2d;
+    --gold: #c9a84c;
+    --border: #d4c4a0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  /* PAGE STRUCTURE */
+  .page {
+    width: 850px;
+    min-height: 1100px;
+    margin: 0 auto 40px;
+    background: var(--cream);
+    position: relative;
+    padding: 60px 70px;
+    border: 1px solid var(--border);
+    page-break-after: always;
+  }
+
+  .page-inner {
+    border: 2px solid var(--border);
+    padding: 40px 50px;
+    min-height: 980px;
+    position: relative;
+  }
+
+  /* CORNER ORNAMENTS */
+  .page-inner::before, .page-inner::after {
+    content: '◆';
+    position: absolute;
+    color: var(--gold);
+    font-size: 12px;
+  }
+  .page-inner::before { top: 8px; left: 8px; }
+  .page-inner::after { bottom: 8px; right: 8px; }
+
+  /* TYPOGRAPHY */
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--rust);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sepia);
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #3a2e1e;
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+
+  .small {
+    font-size: 11px;
+    color: var(--sepia);
+  }
+
+  /* DIVIDERS */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .divider-ornament {
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  /* COVER PAGE */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 900px;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  }
+
+  .cover-badge {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    border: 1px solid var(--sepia-light);
+    padding: 6px 18px;
+    margin-bottom: 28px;
+    display: inline-block;
+  }
+
+  .cover h1 {
+    font-size: 52px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .cover-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--sepia);
+    margin-bottom: 36px;
+  }
+
+  .cover-image-placeholder {
+    width: 220px;
+    height: 220px;
+    border: 1px solid var(--border);
+    margin: 28px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream-dark);
+    position: relative;
+  }
+
+  .cover-image-placeholder::before {
+    content: '🌳';
+    font-size: 80px;
+  }
+
+  .cover-tagline {
+    font-size: 15px;
+    color: #5a4a2e;
+    max-width: 420px;
+    line-height: 1.6;
+    margin: 20px auto 36px;
+  }
+
+  .cover-meta {
+    font-size: 11px;
+    color: var(--sepia);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* INPUT FIELDS */
+  .field-block {
+    margin-bottom: 20px;
+  }
+
+  .field-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .field-line {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    padding: 8px 0;
+    background: transparent;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--ink);
+    display: block;
+  }
+
+  .field-line.short { width: 50%; }
+  .field-line.medium { width: 70%; }
+
+  .field-multiline {
+    border: 1px solid var(--border);
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    background: rgba(255,255,255,0.5);
+    margin-top: 6px;
+  }
+
+  /* COLUMNS */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* BOXES */
+  .info-box {
+    background: rgba(201, 168, 76, 0.08);
+    border-left: 3px solid var(--gold);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .info-box p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .section-box {
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.4);
+  }
+
+  /* FAMILY TREE GRID */
+  .family-tree {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .tree-node {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    min-height: 80px;
+    background: rgba(255,255,255,0.5);
+    position: relative;
+  }
+
+  .tree-node .node-role {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin-bottom: 6px;
+  }
+
+  .tree-node .node-line {
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .tree-center {
+    grid-column: 1 / -1;
+    text-align: center;
+    border: 2px solid var(--gold);
+    padding: 14px;
+    background: var(--cream-dark);
+  }
+
+  .tree-center .node-role {
+    color: var(--rust);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .timeline-item::before {
+    content: '◆';
+    position: absolute;
+    left: -22px;
+    top: 2px;
+    color: var(--gold);
+    font-size: 10px;
+  }
+
+  .timeline-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--rust);
+    margin-bottom: 4px;
+  }
+
+  .timeline-event {
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 4px;
+    font-size: 13px;
+    color: #5a4a2e;
+    min-height: 30px;
+  }
+
+  /* CHECKLIST */
+  .checklist {
+    list-style: none;
+  }
+
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(212, 196, 160, 0.4);
+    font-size: 13px;
+  }
+
+  .checklist li:last-child {
+    border-bottom: none;
+  }
+
+  .check-box {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--sepia-light);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* INTERVIEW CARDS */
+  .interview-question {
+    border: 1px solid var(--border);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    background: rgba(255,255,255,0.4);
+  }
+
+  .question-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--forest);
+    margin-bottom: 10px;
+  }
+
+  .answer-space {
+    border-bottom: 1px solid var(--border);
+    min-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  /* HERITAGE MAP */
+  .heritage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .heritage-card {
+    border: 1px solid var(--border);
+    padding: 14px;
+    text-align: center;
+  }
+
+  .heritage-flag {
+    font-size: 28px;
+    margin-bottom: 6px;
+  }
+
+  .heritage-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .heritage-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--rust);
+    font-weight: 700;
+  }
+
+  .heritage-pct-line {
+    border-bottom: 1px dashed var(--border);
+    min-height: 28px;
+  }
+
+  /* DNA SECTION */
+  .dna-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .dna-card {
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+  }
+
+  .dna-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin-bottom: 8px;
+  }
+
+  /* STORY PROMPTS */
+  .prompt-card {
+    background: rgba(45, 74, 45, 0.04);
+    border: 1px solid rgba(45, 74, 45, 0.2);
+    padding: 18px 20px;
+    margin-bottom: 16px;
+  }
+
+  .prompt-number {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+
+  .prompt-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .writing-lines .line {
+    border-bottom: 1px solid var(--border);
+    min-height: 24px;
+    margin-bottom: 2px;
+  }
+
+  /* ANCESTOR PROFILE */
+  .ancestor-profile {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .photo-placeholder {
+    width: 100px;
+    height: 120px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream-dark);
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .photo-placeholder .icon { font-size: 24px; }
+  .photo-placeholder .label { font-size: 9px; color: var(--sepia); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* RESEARCH LOG */
+  .log-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  .log-table th {
+    background: var(--cream-dark);
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    border: 1px solid var(--border);
+  }
+
+  .log-table td {
+    border: 1px solid var(--border);
+    padding: 10px;
+    vertical-align: top;
+    min-height: 32px;
+  }
+
+  .log-table tr:nth-child(even) td {
+    background: rgba(255,255,255,0.4);
+  }
+
+  /* PAGE NUMBERS */
+  .page-number {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--sepia);
+    letter-spacing: 1px;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-header-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sepia);
+  }
+
+  .page-header-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--sepia);
+    font-style: italic;
+  }
+
+  /* SECTION INTRO */
+  .section-intro {
+    border-left: 3px solid var(--gold);
+    padding: 12px 20px;
+    margin-bottom: 28px;
+    background: rgba(201, 168, 76, 0.06);
+  }
+
+  .section-intro p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #5a4a2e;
+    margin: 0;
+  }
+
+  /* BEFORE YOU CTA */
+  .cta-box {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 28px 32px;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .cta-box h3 {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .cta-box p {
+    color: #c8b896;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .cta-url {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; }
+    .page { margin: 0; border: none; page-break-after: always; }
+    .page-inner { border: 1px solid #d4c4a0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE 1: COVER ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="cover">
+      <span class="cover-badge">Before You — Heritage Collection</span>
+      <h1>The Ancestry<br>Workbook</h1>
+      <p class="cover-subtitle">Trace Your Roots Across Five Generations</p>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <span class="divider-ornament">❧</span>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="cover-image-placeholder"></div>
+
+      <p class="cover-tagline">A complete guided workbook for documenting your family history — from your grandparents' stories to the ancient lands your ancestors walked.</p>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <span class="divider-ornament">◆</span>
+        <div class="divider-line"></div>
+      </div>
+
+      <p class="cover-meta">This Workbook Belongs To</p>
+      <div style="border-bottom: 1px solid var(--border); width: 300px; height: 36px; margin: 8px auto;"></div>
+      <p class="small" style="margin-top: 20px;">20 Pages · 5 Generations · Unlimited Stories</p>
+    </div>
+    <div class="page-number">— 1 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 2: HOW TO USE THIS WORKBOOK ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Introduction</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>How To Use This Workbook</h2>
+
+    <div class="section-intro">
+      <p>"Every family is a story waiting to be told. This workbook is the vessel that holds it — from the stories your grandparents almost forgot to tell, to the ancient lands your DNA remembers."</p>
+    </div>
+
+    <p>This workbook moves in five phases. You don't have to complete them in order, and you won't finish it in one sitting. That's by design. The best family histories are built over years, one conversation at a time.</p>
+
+    <div class="section-box">
+      <h4>The Five Phases</h4>
+      <div class="checklist-style">
+        <div style="display: grid; grid-template-columns: 32px 1fr; gap: 10px; margin-bottom: 14px; align-items: start;">
+          <div style="background: var(--rust); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 14px; flex-shrink: 0;">1</div>
+          <div>
+            <div style="font-weight: 600; font-size: 13px; margin-bottom: 2px;">The Living Map</div>
+            <div style="font-size: 12px; color: #5a4a2e;">Your 5-generation family tree — names, dates, places. Start here. This is the skeleton everything else hangs on.</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 32px 1fr; gap: 10px; margin-bottom: 14px; align-items: start;">
+          <div style="background: var(--sepia); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 14px; flex-shrink: 0;">2</div>
+          <div>
+            <div style="font-weight: 600; font-size: 13px; margin-bottom: 2px;">Ancestor Profiles</div>
+            <div style="font-size: 12px; color: #5a4a2e;">Four dedicated pages for key ancestors — their lives, occupations, stories, and the world they lived in.</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 32px 1fr; gap: 10px; margin-bottom: 14px; align-items: start;">
+          <div style="background: var(--forest); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 14px; flex-shrink: 0;">3</div>
+          <div>
+            <div style="font-weight: 600; font-size: 13px; margin-bottom: 2px;">The Interview Guide</div>
+            <div style="font-size: 12px; color: #5a4a2e;">40 questions to ask elderly relatives while you still can. The most time-sensitive section in this book.</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 32px 1fr; gap: 10px; margin-bottom: 14px; align-items: start;">
+          <div style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 14px; flex-shrink: 0;">4</div>
+          <div>
+            <div style="font-weight: 600; font-size: 13px; margin-bottom: 2px;">Heritage Discovery</div>
+            <div style="font-size: 12px; color: #5a4a2e;">Map your DNA ethnicities, document regional heritage, and understand what your ancestral lands were like.</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 32px 1fr; gap: 10px; align-items: start;">
+          <div style="background: var(--ink); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 14px; flex-shrink: 0;">5</div>
+          <div>
+            <div style="font-weight: 600; font-size: 13px; margin-bottom: 2px;">Story &amp; Legacy</div>
+            <div style="font-size: 12px; color: #5a4a2e;">Writing prompts, a family timeline, and space to write the narrative that will outlast you.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h4 style="margin-bottom: 6px;">A Note on Sources</h4>
+      <p>The most valuable information in this workbook won't come from the internet — it will come from conversations. Birth certificates, old letters, and photographs unlock what databases can't. Use the Research Log (p. 18) to track every source you find.</p>
+    </div>
+
+    <div class="page-number">— 2 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 3: 5-GENERATION FAMILY TREE ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 1 — The Living Map</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Your Five-Generation Family Tree</h2>
+    <p class="small" style="margin-bottom: 16px;">Fill in as much as you know. Leave blanks — they're invitations to keep researching.</p>
+
+    <!-- YOU -->
+    <div style="text-align: center; margin-bottom: 16px;">
+      <div class="tree-node tree-center" style="display: inline-block; width: 300px; margin: 0 auto;">
+        <div class="node-role">You</div>
+        <div class="node-line">Full Name: _________________________</div>
+        <div class="node-line" style="margin-top: 8px;">Born: ______________ in ______________</div>
+      </div>
+    </div>
+
+    <!-- PARENTS (Generation 2) -->
+    <h4 style="margin-bottom: 10px;">Generation 2 — Your Parents</h4>
+    <div class="two-col">
+      <div class="tree-node">
+        <div class="node-role">Father</div>
+        <div class="node-line">Name: _______________________</div>
+        <div class="node-line" style="margin-top: 8px;">Born: ______________________</div>
+        <div class="node-line" style="margin-top: 8px;">Birthplace: _________________</div>
+        <div class="node-line" style="margin-top: 8px;">Heritage: __________________</div>
+      </div>
+      <div class="tree-node">
+        <div class="node-role">Mother</div>
+        <div class="node-line">Name: _______________________</div>
+        <div class="node-line" style="margin-top: 8px;">Born: ______________________</div>
+        <div class="node-line" style="margin-top: 8px;">Birthplace: _________________</div>
+        <div class="node-line" style="margin-top: 8px;">Heritage: __________________</div>
+      </div>
+    </div>
+
+    <!-- GRANDPARENTS (Generation 3) -->
+    <h4 style="margin: 16px 0 10px;">Generation 3 — Your Grandparents</h4>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
+      <div class="tree-node">
+        <div class="node-role">Pat. Grandfather</div>
+        <div class="node-line">Name:</div>
+        <div class="node-line" style="margin-top: 6px;">Born:</div>
+        <div class="node-line" style="margin-top: 6px;">Place:</div>
+      </div>
+      <div class="tree-node">
+        <div class="node-role">Pat. Grandmother</div>
+        <div class="node-line">Name:</div>
+        <div class="node-line" style="margin-top: 6px;">Born:</div>
+        <div class="node-line" style="margin-top: 6px;">Place:</div>
+      </div>
+      <div class="tree-node">
+        <div class="node-role">Mat. Grandfather</div>
+        <div class="node-line">Name:</div>
+        <div class="node-line" style="margin-top: 6px;">Born:</div>
+        <div class="node-line" style="margin-top: 6px;">Place:</div>
+      </div>
+      <div class="tree-node">
+        <div class="node-role">Mat. Grandmother</div>
+        <div class="node-line">Name:</div>
+        <div class="node-line" style="margin-top: 6px;">Born:</div>
+        <div class="node-line" style="margin-top: 6px;">Place:</div>
+      </div>
+    </div>
+
+    <!-- GREAT-GRANDPARENTS (Generation 4) -->
+    <h4 style="margin: 14px 0 8px;">Generation 4 — Great-Grandparents (fill what you know)</h4>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Father (Pat)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Mother (Pat)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Father (Mat)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Mother (Mat)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Father (Pat-M)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Mother (Pat-M)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Father (Mat-F)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+      <div class="tree-node" style="padding: 8px 10px; min-height: 60px;">
+        <div class="node-role" style="font-size: 8px;">GG-Mother (Mat-F)</div>
+        <div style="border-bottom: 1px solid var(--border); margin-bottom: 4px; font-size: 12px; padding-bottom: 2px;"></div>
+        <div style="font-size: 10px; color: var(--sepia);">b. _______________</div>
+      </div>
+    </div>
+
+    <div class="page-number">— 3 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 4: ANCESTOR PROFILE 1 ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 2 — Ancestor Profiles</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Ancestor Profile</h2>
+    <p class="small" style="margin-bottom: 20px;">Use this page for a grandparent, great-grandparent, or any ancestor whose story matters most to you.</p>
+
+    <div class="ancestor-profile">
+      <div class="photo-placeholder">
+        <span class="icon">📷</span>
+        <span class="label">Photo</span>
+      </div>
+      <div>
+        <div class="field-block">
+          <span class="field-label">Full Name</span>
+          <div class="field-line" style="font-size: 20px; padding-bottom: 6px;"></div>
+        </div>
+        <div class="two-col">
+          <div class="field-block">
+            <span class="field-label">Born</span>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-block">
+            <span class="field-label">Died</span>
+            <div class="field-line"></div>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field-block">
+            <span class="field-label">Birthplace</span>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-block">
+            <span class="field-label">Occupation</span>
+            <div class="field-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h4>Immediate Family</h4>
+        <div class="field-block">
+          <span class="field-label">Spouse / Partner</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Children</span>
+          <div class="field-multiline"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Siblings</span>
+          <div class="field-multiline"></div>
+        </div>
+      </div>
+      <div>
+        <h4>Life Details</h4>
+        <div class="field-block">
+          <span class="field-label">Religion / Faith</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Education</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Military Service</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Immigration / Migration</span>
+          <div class="field-multiline" style="min-height: 50px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <h4 style="margin: 16px 0 8px;">Their Story (write what you know or what you were told)</h4>
+    <div class="field-multiline" style="min-height: 100px; background: rgba(255,255,255,0.5);"></div>
+
+    <div class="info-box" style="margin-top: 14px;">
+      <h4 style="margin-bottom: 4px;">Sources Used</h4>
+      <div class="field-line" style="margin-top: 0;"></div>
+    </div>
+
+    <div class="page-number">— 4 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 5: ANCESTOR PROFILE 2 (blank copy) ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 2 — Ancestor Profiles</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Ancestor Profile</h2>
+    <p class="small" style="margin-bottom: 20px;">Complete this page for another key ancestor in your family tree.</p>
+
+    <div class="ancestor-profile">
+      <div class="photo-placeholder">
+        <span class="icon">📷</span>
+        <span class="label">Photo</span>
+      </div>
+      <div>
+        <div class="field-block">
+          <span class="field-label">Full Name</span>
+          <div class="field-line" style="font-size: 20px; padding-bottom: 6px;"></div>
+        </div>
+        <div class="two-col">
+          <div class="field-block">
+            <span class="field-label">Born</span>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-block">
+            <span class="field-label">Died</span>
+            <div class="field-line"></div>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field-block">
+            <span class="field-label">Birthplace</span>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-block">
+            <span class="field-label">Occupation</span>
+            <div class="field-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h4>Immediate Family</h4>
+        <div class="field-block">
+          <span class="field-label">Spouse / Partner</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Children</span>
+          <div class="field-multiline"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Siblings</span>
+          <div class="field-multiline"></div>
+        </div>
+      </div>
+      <div>
+        <h4>Life Details</h4>
+        <div class="field-block">
+          <span class="field-label">Religion / Faith</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Education</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Military Service</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Immigration / Migration</span>
+          <div class="field-multiline" style="min-height: 50px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <h4 style="margin: 16px 0 8px;">Their Story</h4>
+    <div class="field-multiline" style="min-height: 100px; background: rgba(255,255,255,0.5);"></div>
+
+    <div class="info-box" style="margin-top: 14px;">
+      <h4 style="margin-bottom: 4px;">Sources Used</h4>
+      <div class="field-line" style="margin-top: 0;"></div>
+    </div>
+
+    <div class="page-number">— 5 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 6: INTERVIEW GUIDE INTRO ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 3 — The Interview Guide</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Questions to Ask Before It's Too Late</h2>
+
+    <div class="section-intro">
+      <p>"The stories that die with the last person who knew them are not lost through tragedy — they are lost through silence. These questions end the silence."</p>
+    </div>
+
+    <p>Set aside two hours with the oldest relatives you can reach. Record the conversation on your phone — you can transcribe later. The goal isn't perfect answers, it's capturing their voice, their hesitations, their laughter.</p>
+
+    <div class="section-box">
+      <h4>Before You Begin</h4>
+      <ul class="checklist">
+        <li><div class="check-box"></div>Phone charged and set to record audio</li>
+        <li><div class="check-box"></div>Quiet room, no interruptions</li>
+        <li><div class="check-box"></div>Old photos on the table as memory triggers</li>
+        <li><div class="check-box"></div>Water and snacks (long conversations need fuel)</li>
+        <li><div class="check-box"></div>This workbook open and ready</li>
+        <li><div class="check-box"></div>Permission granted to share their stories</li>
+      </ul>
+    </div>
+
+    <h4 style="margin-bottom: 12px;">Interview Session Record</h4>
+    <div class="two-col">
+      <div class="field-block">
+        <span class="field-label">Person Interviewed</span>
+        <div class="field-line"></div>
+      </div>
+      <div class="field-block">
+        <span class="field-label">Relationship to You</span>
+        <div class="field-line"></div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="field-block">
+        <span class="field-label">Date of Interview</span>
+        <div class="field-line"></div>
+      </div>
+      <div class="field-block">
+        <span class="field-label">Location</span>
+        <div class="field-line"></div>
+      </div>
+    </div>
+    <div class="field-block">
+      <span class="field-label">Recording Filename / Location</span>
+      <div class="field-line"></div>
+    </div>
+
+    <div class="info-box" style="margin-top: 16px;">
+      <p><strong>Tip:</strong> Start with easy, non-threatening questions (childhood, food, school). Build trust before asking about hard topics (wars, losses, family conflicts). The best stories often come after 45 minutes, once they've settled in.</p>
+    </div>
+
+    <div class="page-number">— 6 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 7: INTERVIEW QUESTIONS — EARLY LIFE ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 3 — Interview Questions: Early Life</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h3>Childhood &amp; Early Life</h3>
+
+    <div class="interview-question">
+      <div class="question-text">"Where were you born, and what do you remember about that place?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"Describe the house you grew up in. What did it smell like? What sounds do you remember?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"What did your family eat? Was there a dish that meant home to you?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"What did your parents do for work? What do you remember about their daily lives?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"What was the hardest thing about growing up in your family?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"What was the funniest or strangest thing that ever happened to your family?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="page-number">— 7 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 8: INTERVIEW QUESTIONS — HERITAGE & HISTORY ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 3 — Interview Questions: Heritage &amp; History</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h3>Heritage, History &amp; Migration</h3>
+
+    <div class="interview-question">
+      <div class="question-text">"Where did our family originally come from? What country or region? How far back do you know?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"Do you know why your ancestors left their home country? What were they running from or moving toward?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"Were any of our relatives affected by major historical events — wars, famines, immigration quotas, political upheaval?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"Are there any family stories about the 'old country' — traditions, foods, or customs that got passed down?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"What languages did our ancestors speak? Are there any words or phrases you remember from them?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"Is there a family secret or a story nobody talks about? (You don't have to answer — but if you're willing...)"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="page-number">— 8 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 9: INTERVIEW QUESTIONS — LEGACY ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 3 — Interview Questions: Legacy</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h3>Values, Wisdom &amp; Legacy</h3>
+
+    <div class="interview-question">
+      <div class="question-text">"What is the most important thing your parents or grandparents taught you?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"What do you most want the younger generations of our family to know or remember?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"What have you changed your mind about over your lifetime?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"Is there a decision you made that changed the entire course of your life?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"If you could send a letter back to your 20-year-old self, what would you say?"</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="interview-question">
+      <div class="question-text">"Is there a family heirloom, object, or photograph that holds a story? Tell me about it."</div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+
+    <div class="section-box" style="margin-top: 16px;">
+      <h4>Additional Notes from This Interview</h4>
+      <div style="min-height: 60px; border-bottom: 1px solid var(--border);"></div>
+    </div>
+
+    <div class="page-number">— 9 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 10: HERITAGE DISCOVERY ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 4 — Heritage Discovery</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Your Heritage Map</h2>
+
+    <div class="section-intro">
+      <p>"You are not one country. You are the sum of every migration your ancestors survived — every border crossed, every ocean traversed, every home left behind."</p>
+    </div>
+
+    <h4 style="margin-bottom: 12px;">Ethnicity Breakdown (from family knowledge or DNA test)</h4>
+    <div class="heritage-grid">
+      <div class="heritage-card">
+        <div class="heritage-flag">🌍</div>
+        <div class="heritage-name">Region / Country</div>
+        <div class="field-line" style="font-size: 13px; text-align: center; margin-bottom: 8px;"></div>
+        <div class="heritage-pct-line"></div>
+        <div style="font-size: 10px; color: var(--sepia); margin-top: 4px;">% of heritage</div>
+      </div>
+      <div class="heritage-card">
+        <div class="heritage-flag">🌍</div>
+        <div class="heritage-name">Region / Country</div>
+        <div class="field-line" style="font-size: 13px; text-align: center; margin-bottom: 8px;"></div>
+        <div class="heritage-pct-line"></div>
+        <div style="font-size: 10px; color: var(--sepia); margin-top: 4px;">% of heritage</div>
+      </div>
+      <div class="heritage-card">
+        <div class="heritage-flag">🌍</div>
+        <div class="heritage-name">Region / Country</div>
+        <div class="field-line" style="font-size: 13px; text-align: center; margin-bottom: 8px;"></div>
+        <div class="heritage-pct-line"></div>
+        <div style="font-size: 10px; color: var(--sepia); margin-top: 4px;">% of heritage</div>
+      </div>
+      <div class="heritage-card">
+        <div class="heritage-flag">🌍</div>
+        <div class="heritage-name">Region / Country</div>
+        <div class="field-line" style="font-size: 13px; text-align: center; margin-bottom: 8px;"></div>
+        <div class="heritage-pct-line"></div>
+        <div style="font-size: 10px; color: var(--sepia); margin-top: 4px;">% of heritage</div>
+      </div>
+      <div class="heritage-card">
+        <div class="heritage-flag">🌍</div>
+        <div class="heritage-name">Region / Country</div>
+        <div class="field-line" style="font-size: 13px; text-align: center; margin-bottom: 8px;"></div>
+        <div class="heritage-pct-line"></div>
+        <div style="font-size: 10px; color: var(--sepia); margin-top: 4px;">% of heritage</div>
+      </div>
+      <div class="heritage-card">
+        <div class="heritage-flag">🌍</div>
+        <div class="heritage-name">Region / Country</div>
+        <div class="field-line" style="font-size: 13px; text-align: center; margin-bottom: 8px;"></div>
+        <div class="heritage-pct-line"></div>
+        <div style="font-size: 10px; color: var(--sepia); margin-top: 4px;">% of heritage</div>
+      </div>
+    </div>
+
+    <h4 style="margin: 20px 0 10px;">DNA Test Results (if taken)</h4>
+    <div class="dna-grid">
+      <div class="dna-card">
+        <div class="dna-label">Provider (23andMe / AncestryDNA / etc.)</div>
+        <div class="field-line"></div>
+      </div>
+      <div class="dna-card">
+        <div class="dna-label">Date Tested</div>
+        <div class="field-line"></div>
+      </div>
+      <div class="dna-card">
+        <div class="dna-label">Haplogroup (maternal mtDNA)</div>
+        <div class="field-line"></div>
+      </div>
+      <div class="dna-card">
+        <div class="dna-label">Haplogroup (paternal Y-DNA, males only)</div>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="field-block" style="margin-top: 16px;">
+      <span class="field-label">Notable DNA Matches or Surprises</span>
+      <div class="field-multiline" style="min-height: 60px;"></div>
+    </div>
+
+    <div class="page-number">— 10 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 11: MIGRATION TIMELINE ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 4 — Migration &amp; Timeline</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Family Migration Timeline</h2>
+    <p style="margin-bottom: 20px;">Map the key movements of your family across time and geography — from the earliest known ancestors to your current location.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">Before 1800</div>
+        <div class="timeline-event">Earliest known family location / country of origin:</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1800s — First Half</div>
+        <div class="timeline-event"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1850s – 1900 (Great Migration Era)</div>
+        <div class="timeline-event"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1900 – 1940 (Immigration Wave)</div>
+        <div class="timeline-event"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1940 – 1960 (Post-War Era)</div>
+        <div class="timeline-event"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1960 – 1980</div>
+        <div class="timeline-event"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1980 – 2000</div>
+        <div class="timeline-event"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2000 – Present</div>
+        <div class="timeline-event">Your current location / where your family lives now:</div>
+      </div>
+    </div>
+
+    <div class="section-box" style="margin-top: 20px;">
+      <h4>Key Locations to Research</h4>
+      <div class="two-col">
+        <div class="field-block">
+          <span class="field-label">Ancestral village / town 1</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Ancestral village / town 2</span>
+          <div class="field-line"></div>
+        </div>
+      </div>
+      <div class="field-block">
+        <span class="field-label">Archives or records that might exist there</span>
+        <div class="field-multiline" style="min-height: 50px;"></div>
+      </div>
+    </div>
+
+    <div class="page-number">— 11 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 12: STORY PROMPTS ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 5 — Story &amp; Legacy</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Writing Your Family's Story</h2>
+
+    <div class="section-intro">
+      <p>"You don't need to be a writer. You need to be honest. The story of your family is already extraordinary — you just have to let it out."</p>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-number">Prompt 01</div>
+      <div class="prompt-text">"Describe the moment you first realized your family had a history longer than you could see."</div>
+      <div class="writing-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-number">Prompt 02</div>
+      <div class="prompt-text">"Write about an ancestor you wish you could have met. What would you ask them?"</div>
+      <div class="writing-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-number">Prompt 03</div>
+      <div class="prompt-text">"What trait or characteristic do you see in yourself that you know came from your family line?"</div>
+      <div class="writing-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="page-number">— 12 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 13: MORE STORY PROMPTS ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Phase 5 — Story Prompts (continued)</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-number">Prompt 04</div>
+      <div class="prompt-text">"Write the opening paragraph of your family's story, as if it were the first page of a novel."</div>
+      <div class="writing-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-number">Prompt 05</div>
+      <div class="prompt-text">"What is the bravest thing an ancestor of yours ever did? (Based on what you know or were told.)"</div>
+      <div class="writing-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-number">Prompt 06</div>
+      <div class="prompt-text">"If your family had a motto — something that captures how they lived — what would it be and why?"</div>
+      <div class="writing-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-number">Prompt 07</div>
+      <div class="prompt-text">"Write a letter to your great-great-grandchildren. Tell them what they should know about who your family was."</div>
+      <div class="writing-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="page-number">— 13 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 14: RESEARCH CHECKLIST ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Research Tools &amp; Checklist</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Genealogy Research Checklist</h2>
+    <p style="margin-bottom: 20px;">Work through these sources systematically. Each one unlocks a different layer of your family's history.</p>
+
+    <div class="two-col">
+      <div>
+        <h3 style="font-size: 15px; margin-bottom: 12px;">Documents to Locate</h3>
+        <ul class="checklist">
+          <li><div class="check-box"></div>Birth certificates (your parents, grandparents)</li>
+          <li><div class="check-box"></div>Marriage certificates</li>
+          <li><div class="check-box"></div>Death certificates</li>
+          <li><div class="check-box"></div>Immigration / naturalization papers</li>
+          <li><div class="check-box"></div>Passport records</li>
+          <li><div class="check-box"></div>Census records (1900, 1910, 1920, 1930)</li>
+          <li><div class="check-box"></div>Military service records</li>
+          <li><div class="check-box"></div>Land deeds / property records</li>
+          <li><div class="check-box"></div>Church baptism / marriage records</li>
+          <li><div class="check-box"></div>Old family photographs (labeled)</li>
+          <li><div class="check-box"></div>Letters / diaries / journals</li>
+          <li><div class="check-box"></div>School yearbooks</li>
+          <li><div class="check-box"></div>Newspaper clippings</li>
+          <li><div class="check-box"></div>Social Security applications (SSDI)</li>
+          <li><div class="check-box"></div>Wills and estate records</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size: 15px; margin-bottom: 12px;">Online Resources</h3>
+        <ul class="checklist">
+          <li><div class="check-box"></div>Ancestry.com — censuses, vitals, immigration</li>
+          <li><div class="check-box"></div>FamilySearch.org — free, global records</li>
+          <li><div class="check-box"></div>FindAGrave.com — gravestone photos</li>
+          <li><div class="check-box"></div>Fold3.com — military records</li>
+          <li><div class="check-box"></div>Newspapers.com — historic newspapers</li>
+          <li><div class="check-box"></div>MyHeritage.com — European records</li>
+          <li><div class="check-box"></div>Ellis Island Foundation records</li>
+          <li><div class="check-box"></div>National Archives (archives.gov)</li>
+          <li><div class="check-box"></div>Google Books — old local histories</li>
+          <li><div class="check-box"></div>Local library microfilm collections</li>
+          <li><div class="check-box"></div>Country-specific archives (Ireland: irishgenealogy.ie)</li>
+          <li><div class="check-box"></div>DNA match communication (AncestryDNA)</li>
+          <li><div class="check-box"></div>GEDmatch.com — cross-platform DNA</li>
+          <li><div class="check-box"></div>Reddit r/genealogy — community help</li>
+          <li><div class="check-box"></div>Regional genealogical societies</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-number">— 14 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 15: RESEARCH LOG ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Research Log</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Research Log</h2>
+    <p style="margin-bottom: 16px;">Track every source you consult, whether it helps or not. Dead ends are data too.</p>
+
+    <table class="log-table">
+      <thead>
+        <tr>
+          <th style="width: 12%;">Date</th>
+          <th style="width: 20%;">Ancestor / Person</th>
+          <th style="width: 22%;">Source / Database</th>
+          <th style="width: 28%;">What You Found</th>
+          <th style="width: 18%;">Next Step</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td style="height: 36px;"></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <div class="page-number">— 15 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 16: HEIRLOOMS & KEEPSAKES ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Heirlooms &amp; Keepsakes</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Family Heirlooms &amp; Keepsakes</h2>
+    <p style="margin-bottom: 20px;">Objects carry stories. Document the physical things your family has kept — and why they kept them.</p>
+
+    <div class="section-box">
+      <div style="display: grid; grid-template-columns: 120px 1fr; gap: 20px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
+        <div class="photo-placeholder" style="height: 110px;">
+          <span class="icon" style="font-size: 20px;">📦</span>
+          <span class="label">Object</span>
+        </div>
+        <div>
+          <div class="field-block">
+            <span class="field-label">Name / Description of Object</span>
+            <div class="field-line"></div>
+          </div>
+          <div class="two-col">
+            <div class="field-block">
+              <span class="field-label">Estimated Age / Era</span>
+              <div class="field-line"></div>
+            </div>
+            <div class="field-block">
+              <span class="field-label">Who Owned It Originally</span>
+              <div class="field-line"></div>
+            </div>
+          </div>
+          <div class="field-block">
+            <span class="field-label">Its Story</span>
+            <div class="field-multiline" style="min-height: 50px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 120px 1fr; gap: 20px;">
+        <div class="photo-placeholder" style="height: 110px;">
+          <span class="icon" style="font-size: 20px;">📦</span>
+          <span class="label">Object</span>
+        </div>
+        <div>
+          <div class="field-block">
+            <span class="field-label">Name / Description of Object</span>
+            <div class="field-line"></div>
+          </div>
+          <div class="two-col">
+            <div class="field-block">
+              <span class="field-label">Estimated Age / Era</span>
+              <div class="field-line"></div>
+            </div>
+            <div class="field-block">
+              <span class="field-label">Who Owned It Originally</span>
+              <div class="field-line"></div>
+            </div>
+          </div>
+          <div class="field-block">
+            <span class="field-label">Its Story</span>
+            <div class="field-multiline" style="min-height: 50px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-block">
+      <span class="field-label">Other heirlooms to document (list)</span>
+      <div class="field-multiline" style="min-height: 60px;"></div>
+    </div>
+
+    <div class="page-number">— 16 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 17: FAMILY RECIPES ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Heritage Recipes</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Family Recipes</h2>
+
+    <div class="section-intro">
+      <p>"Food is the most direct link to ancestral memory. The dishes your grandmother made are older than any document you'll find in an archive."</p>
+    </div>
+
+    <div class="section-box" style="margin-bottom: 20px;">
+      <div class="two-col" style="margin-bottom: 12px;">
+        <div class="field-block">
+          <span class="field-label">Recipe Name</span>
+          <div class="field-line" style="font-size: 18px; font-family: 'Playfair Display', serif;"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Who Passed It Down</span>
+          <div class="field-line"></div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="field-block">
+          <span class="field-label">Region / Country of Origin</span>
+          <div class="field-line"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Occasion / Season</span>
+          <div class="field-line"></div>
+        </div>
+      </div>
+      <h4 style="margin: 12px 0 8px;">Ingredients</h4>
+      <div class="field-multiline" style="min-height: 80px;"></div>
+      <h4 style="margin: 12px 0 8px;">Method &amp; Notes (the parts not written down)</h4>
+      <div class="field-multiline" style="min-height: 80px;"></div>
+    </div>
+
+    <div class="section-box">
+      <div class="two-col" style="margin-bottom: 12px;">
+        <div class="field-block">
+          <span class="field-label">Recipe Name</span>
+          <div class="field-line" style="font-size: 18px; font-family: 'Playfair Display', serif;"></div>
+        </div>
+        <div class="field-block">
+          <span class="field-label">Who Passed It Down</span>
+          <div class="field-line"></div>
+        </div>
+      </div>
+      <h4 style="margin: 12px 0 8px;">Ingredients &amp; Method</h4>
+      <div class="field-multiline" style="min-height: 80px;"></div>
+    </div>
+
+    <div class="page-number">— 17 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 18: NEXT STEPS ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">What Comes Next</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Your Next Steps</h2>
+    <p style="margin-bottom: 20px;">This workbook is the start, not the end. Here's how to go deeper — and how to turn everything you've gathered into a story your family will keep forever.</p>
+
+    <h3 style="margin-bottom: 14px;">Immediate Actions (This Week)</h3>
+    <ul class="checklist" style="margin-bottom: 24px;">
+      <li><div class="check-box"></div>Call the oldest living relative and set an interview date</li>
+      <li><div class="check-box"></div>Search your family's surname on FamilySearch.org (it's free)</li>
+      <li><div class="check-box"></div>Scan or photograph any physical documents you have at home</li>
+      <li><div class="check-box"></div>Ask a parent or sibling what they remember about grandparents</li>
+      <li><div class="check-box"></div>Order a DNA kit if you haven't yet (AncestryDNA runs sales often)</li>
+    </ul>
+
+    <h3 style="margin-bottom: 14px;">Longer-Term Research</h3>
+    <ul class="checklist" style="margin-bottom: 24px;">
+      <li><div class="check-box"></div>Visit your ancestral region (even virtually via Google Street View)</li>
+      <li><div class="check-box"></div>Contact a local genealogical society in your ancestral country</li>
+      <li><div class="check-box"></div>Hire a professional genealogist for brick walls (2-3 hours is often enough)</li>
+      <li><div class="check-box"></div>Reach out to DNA matches who share more than 50cM</li>
+      <li><div class="check-box"></div>Order original documents from the National Archives</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Turn This Into a Beautiful Story</h3>
+      <p>Once you've filled in your tree and gathered your stories, Before You transforms your family's history into a stunning, scroll-driven narrative website — tracing your ancestry across thousands of years.</p>
+      <p style="font-size: 12px; color: #8a7a5a; margin-bottom: 6px;">Your personalized ancestry website, generated in minutes.</p>
+      <div class="cta-url">before-you-landing.surge.sh</div>
+    </div>
+
+    <div class="page-number">— 18 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 19: NOTES ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="page-header">
+      <span class="page-header-title">Notes</span>
+      <span class="page-header-logo">Before You</span>
+    </div>
+
+    <h2>Notes &amp; Additional Research</h2>
+    <p class="small" style="margin-bottom: 20px;">Use this space freely — for brainstorming, sketching family connections, capturing half-remembered stories.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <!-- 28 ruled lines -->
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+      <div style="border-bottom: 1px solid rgba(212, 196, 160, 0.5); min-height: 30px;"></div>
+    </div>
+
+    <div class="page-number">— 19 —</div>
+  </div>
+</div>
+
+<!-- ====== PAGE 20: BACK COVER ====== -->
+<div class="page">
+  <div class="page-inner">
+    <div class="cover" style="background: var(--ink); color: var(--cream); padding: 60px 40px; min-height: 900px;">
+      <div style="text-align: center; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+        <div style="font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 32px;">Before You</div>
+
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--cream); font-weight: 400; margin-bottom: 16px; max-width: 380px; line-height: 1.3;">
+          "Every family is a civilization.<br>
+          <em style="color: var(--gold);">Yours is no different.</em>"
+        </h2>
+
+        <div class="divider" style="width: 300px; margin: 28px auto;">
+          <div class="divider-line" style="background: rgba(201, 168, 76, 0.3);"></div>
+          <span style="color: var(--gold);">❧</span>
+          <div class="divider-line" style="background: rgba(201, 168, 76, 0.3);"></div>
+        </div>
+
+        <p style="color: #c8b896; font-size: 14px; max-width: 360px; line-height: 1.7; margin-bottom: 36px;">
+          You've started something that most families never do. The stories you capture here — the names, the dates, the half-remembered tales from relatives — will outlast every living memory.
+        </p>
+
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(201, 168, 76, 0.3); padding: 24px 32px; margin-bottom: 36px; max-width: 380px;">
+          <div style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;">Ready for the next step?</div>
+          <p style="color: #c8b896; font-size: 13px; margin-bottom: 14px;">Transform everything in this workbook into a beautiful, scroll-driven ancestry website — personalized to your exact family history.</p>
+          <div style="font-family: 'Playfair Display', serif; font-size: 16px; color: var(--gold);">before-you-landing.surge.sh</div>
+        </div>
+
+        <div style="font-size: 11px; color: #6a5a42; letter-spacing: 1px; text-transform: uppercase;">
+          The Ancestry Workbook &nbsp;·&nbsp; Before You Heritage Collection &nbsp;·&nbsp; 2026
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

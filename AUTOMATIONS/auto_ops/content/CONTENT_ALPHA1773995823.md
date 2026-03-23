@@ -1,15 +1,12 @@
 # Content Pack: ALPHA1773995823
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/startups/comments/1rkxawc/20k_mrr_to_191k_mrr_for_supplement_brand_i_will/
 
 ## core insight
 $20k MRR to $191K MRR for supplement brand (I will not promote) heres every step of how we took a wellness brand from $20K MRR to $191K MRR in 7 months. It wasn’t all sunshine and rainbows but right now with AI you can get serious productivity gains. Hope this helps.
-
 Tbh smaller DTC brands have an insane advantage compared to legacy companies now and it’s not even close.
-
 My advice: take this and run with it before every competitor is doing the same thing
-
 step 1) Run meta &amp; TikTok ads to q
 
 ---

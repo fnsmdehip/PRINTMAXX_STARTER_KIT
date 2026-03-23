@@ -1,18 +1,14 @@
 # Growth Playbook: ALPHA1773995676
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031053305196195925
 
 ## tactic summary
 Oil prices are going down, and Rune (
 @RuneKek
 )'s seven-figure profit from his oil long has vanished.
-
 But he didn't close the position. 
-
 Instead, he added to his long, placing limit long orders worth $2M, which are being filled now.
-
-
 https://
 hypurrscan.io/address/0x30D3
 ca3bed41c08E98fBDF671418421a76eE019A#orders

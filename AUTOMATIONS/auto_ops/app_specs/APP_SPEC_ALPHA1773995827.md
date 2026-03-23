@@ -1,23 +1,16 @@
 # App Spec: ALPHA1773995827
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/
 
 ## core insight
 2k users, $800 with a Habit Tracker - I can't explain how good this feels App name - [HabitSwipe](http://www.habitswipe.app) 
-
 Platform - Android &amp; iOS
-
 Number of users - 2500
-
 Total Revenue in last 2 months - $799
-
 Total Reviews - 120 
-
 **Story**
-
 I've crossed 2k installs. It might sound a small number but the journey from to idea to \~2500 users is just incredible. 
-
 I built this app for my personal use, a very minimalist 2 screen app, but the reddit community has showed soo much love to
 
 ## execution route

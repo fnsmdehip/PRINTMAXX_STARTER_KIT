@@ -1,0 +1,20 @@
+TO: acmechiropractic@att.net
+SUBJECT: acmechiro.com — HTTPS is broken right now
+
+hi,
+
+quick audit on acmechiro.com. the most urgent issue: the SSL certificate is returning a 501 error.
+
+what this means: when anyone clicks a link to your website, or when Chrome automatically adds "https://" (which it does for every user), they get an error page. they never reach your site.
+
+this is fixable in about an hour — your hosting provider can generate a new SSL certificate.
+
+while i was looking, a few other things stood out:
+- the site uses a masonry jquery layout from around 2012. this often breaks on modern mobile browsers.
+- the att.net email raises trust flags for patients. a @acmechiro.com email looks significantly more professional.
+
+acmechiro.com is a solid domain. it's worth making the site match it.
+
+reply "interested" and i'll send a short video audit.
+
+reply "remove" to unsubscribe

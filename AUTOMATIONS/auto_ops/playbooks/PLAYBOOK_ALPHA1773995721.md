@@ -1,6 +1,6 @@
 # Growth Playbook: ALPHA1773995721
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2030817006107369727
 
 ## tactic summary
@@ -9,12 +9,8 @@ CBB(
 ), the whale who publicly formed a team to hunt 
 @qwatio
 , has suffered heavy losses in #oil!
-
 CBB shorted 127,175 xyz:CL($13.78M) at an entry price of $78.37 and is now down $3.81M.
-
 Liquidation price: $120.76.
-
-
 https://
 hypurrscan.io/address/0xEFd3
 Ab65915E35105cAA462442C9ecc1346728DF#perps

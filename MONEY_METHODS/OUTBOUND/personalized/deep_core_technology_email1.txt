@@ -1,0 +1,27 @@
+TO: jeff@deepcoretech.com
+CONTACT: Jeff (co-founder)
+COMPANY: Deep Core Technology
+CITY: Remote (Canada/US)
+SCORE: HIGH | TYPE: cold_email — HN hiring, first hire
+SEQUENCE: saas_startup_contract_sequence.md
+SEND: Tuesday or Wednesday
+
+---
+SUBJECT: Deep Core — contract-to-hire, TypeScript/Next.js/Supabase
+
+BODY:
+
+hey Jeff,
+
+saw Deep Core's post on HN — first full-stack hire, TypeScript/Next.js/Vercel/Supabase/CesiumJS.
+
+that's exactly my stack. built 3 Next.js + Supabase apps in the last 90 days. CesiumJS 3D mapping i've used for a geospatial project.
+
+for a 2-person founding team, contract-to-hire often makes more sense than full-time to start — you see the output before committing to salary and benefits. for geological SaaS specifically, the early prototypes matter more than the hire timeline.
+
+what i'd tackle first: the core data visualization layer. if you're working with subsurface geological data, getting the CesiumJS rendering pipeline right early saves months of refactors later.
+
+what does your current data model look like for the geological features? that'll tell me how much of the heavy lifting is already done.
+
+[Your First Name]
+[YOUR_PHONE]

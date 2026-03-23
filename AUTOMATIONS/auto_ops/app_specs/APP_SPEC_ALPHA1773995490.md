@@ -1,17 +1,13 @@
 # App Spec: ALPHA1773995490
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/PrajwalTomar_/status/2032463607662100722
 
 ## core insight
 Designers charge $5k+ for a mobile app UI.
-
 I built mine in 3 prompts.
-
 If your app still looks like it's from 2010, the problem isn't AI.
-
 It's your prompts.
-
 Watch how I did it
 
 ## execution route

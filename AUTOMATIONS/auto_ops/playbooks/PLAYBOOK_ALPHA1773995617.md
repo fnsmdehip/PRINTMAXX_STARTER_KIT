@@ -1,14 +1,11 @@
 # Growth Playbook: ALPHA1773995617
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031233264388812977
 
 ## tactic summary
 Whale 24BLFj is selling $BTC to buy $PUMP. 
-
 In the past 3 days, he sold 75 $WBTC($5.08M) through Wintermute and has already bought 2.07B $PUMP($4.04M) from Wintermute.
-
-
 https://
 intel.arkm.com/explorer/addre
 ss/24BLFjSAcUPPWs8F7nhwthfRPvh5mopNYfu5WXTkLChr

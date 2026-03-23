@@ -1,15 +1,12 @@
 # Growth Playbook: ALPHA1773995713
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2030860475475624047
 
 ## tactic summary
 Trader pension-usdt.eth opened another 3x long on 1,000 $BTC($67.26M) 2 hours ago, and is now up $970K.
-
 Since March 1, pension-usdt.eth has had 10 winning trades in a row . no losses.
-
 His total profit is now $27.22M, with a win rate of 85%.
-
 What a smart trader!
 
 ## implementation steps

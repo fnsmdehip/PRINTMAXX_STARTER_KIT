@@ -1,15 +1,12 @@
 # Growth Playbook: ALPHA1773995145
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/levelsio/status/2033717610844459108
 
 ## tactic summary
 Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/mo with Remote OK added
-
 Before that 2008-2013, I was making anywhere from $2K to $8K/mo with my YouTube channel
-
 And then before 2008 I was making maybe $500 - $1K/mo with my AdSense blogs
-
 And then around 2003 I was
 
 ## implementation steps

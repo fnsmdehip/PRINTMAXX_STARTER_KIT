@@ -1,19 +1,15 @@
 # Growth Playbook: ALPHA1773995614
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031300704003035240
 
 ## tactic summary
 Whale 0x15a4 opened 20x longs on 600 $BTC($42.5M) and 20,000 $ETH($41.2M) on #Hyperliquid. 
-
 He also spent 21M $USDC to buy 10,158 $ETH at $2,067 about an hour ago.
-
-
 https://
 hypurrscan.io/address/0x15a4
 F009BB324A3fb9E36137136B201E3Fe0DFDb#perps
 …
-
 https://
 intel.arkm.com/explorer/addre
 ss/0x15a4F009BB324A3fb9E36137136B201E3Fe0DFDb

@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995708
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/coinglass_com/status/2030911353352028288
 
 ## tactic summary
 #BTC Whale Order Analysis shows strong bid liquidity building below price.
-
 Over $100M in buy orders are stacked around $65K. $65.15K, forming a notable support zone.
-
 Sell pressure is visible near $68K.
 
 ## implementation steps

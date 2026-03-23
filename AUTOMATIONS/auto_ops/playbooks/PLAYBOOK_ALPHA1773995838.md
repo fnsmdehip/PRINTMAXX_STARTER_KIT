@@ -1,19 +1,15 @@
 # Growth Playbook: ALPHA1773995838
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/AppBusiness/comments/1rnc7g1/13k_users_but_only_35_mrr_is_it_time_to_kill_my/
 
 ## tactic summary
 1.3k users, but only $35 MRR. Is it time to kill my project? I've been running **RankMyCV** for a few months now. The growth actually surprised me. I just hit **1,356 total users** and I'm getting around 400-500 new signups per month.
-
 However, the revenue is... depressing.
-
 * Total users: 1,356
 * CVs analyzed: 813 (only 28 were paid)
 * **MRR: $35** (3 active subs)
-
 It seems people love the free tool, but nobody wants to pay. I’m wondering if:
-
 1. My "Pro" features just aren't valuable enough.
 2.
 

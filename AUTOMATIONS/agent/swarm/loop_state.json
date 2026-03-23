@@ -1,17 +1,17 @@
 {
-  "last_decision_cycle": "2026-03-18T22:30:00.415633",
-  "last_feedback_cycle": "2026-03-18T22:30:00.663550",
-  "last_pipeline_cycle": "2026-03-18T22:30:00.665058",
+  "last_decision_cycle": "2026-03-22T22:30:01.136412",
+  "last_feedback_cycle": "2026-03-22T22:30:01.187861",
+  "last_pipeline_cycle": "2026-03-22T22:30:01.188767",
   "decisions_executed": 25,
-  "feedback_updates": 3694,
+  "feedback_updates": 3719,
   "pipeline_advances": 0,
   "agent_scores": {
     "gap_hunter": {
-      "total_runs": 150,
-      "produced_output": 150,
+      "total_runs": 151,
+      "produced_output": 151,
       "led_to_action": 423,
       "led_to_revenue": 0,
-      "effectiveness": 209.2
+      "effectiveness": 208.1
     },
     "opportunity_scanner": {
       "total_runs": 79,
@@ -21,39 +21,39 @@
       "effectiveness": 134.2
     },
     "competitor_stalker": {
-      "total_runs": 64,
-      "produced_output": 64,
-      "led_to_action": 332,
+      "total_runs": 65,
+      "produced_output": 65,
+      "led_to_action": 335,
       "led_to_revenue": 0,
-      "effectiveness": 351.2
+      "effectiveness": 349.2
     },
     "asset_deployer": {
-      "total_runs": 119,
-      "produced_output": 118,
-      "led_to_action": 282,
+      "total_runs": 120,
+      "produced_output": 119,
+      "led_to_action": 284,
       "led_to_revenue": 0,
-      "effectiveness": 183.1
+      "effectiveness": 182.9
     },
     "content_compounder": {
-      "total_runs": 98,
-      "produced_output": 98,
+      "total_runs": 99,
+      "produced_output": 99,
       "led_to_action": 191,
       "led_to_revenue": 0,
-      "effectiveness": 156.9
+      "effectiveness": 155.8
     },
     "lead_machine": {
-      "total_runs": 150,
-      "produced_output": 150,
-      "led_to_action": 288,
+      "total_runs": 151,
+      "produced_output": 151,
+      "led_to_action": 289,
       "led_to_revenue": 0,
-      "effectiveness": 155.2
+      "effectiveness": 154.8
     },
     "seo_aso_optimizer": {
-      "total_runs": 46,
-      "produced_output": 46,
-      "led_to_action": 211,
+      "total_runs": 47,
+      "produced_output": 47,
+      "led_to_action": 213,
       "led_to_revenue": 0,
-      "effectiveness": 315.2
+      "effectiveness": 311.9
     },
     "conversion_optimizer": {
       "total_runs": 30,
@@ -63,18 +63,18 @@
       "effectiveness": 360.0
     },
     "quality_enforcer": {
-      "total_runs": 82,
-      "produced_output": 82,
+      "total_runs": 83,
+      "produced_output": 83,
       "led_to_action": 98,
       "led_to_revenue": 0,
-      "effectiveness": 111.7
+      "effectiveness": 110.8
     },
     "trend_synthesizer": {
-      "total_runs": 35,
-      "produced_output": 35,
+      "total_runs": 36,
+      "produced_output": 36,
       "led_to_action": 199,
       "led_to_revenue": 0,
-      "effectiveness": 381.1
+      "effectiveness": 371.7
     },
     "cross_pollinator": {
       "total_runs": 144,
@@ -91,25 +91,25 @@
       "effectiveness": 286.1
     },
     "system_healer": {
-      "total_runs": 151,
-      "produced_output": 151,
+      "total_runs": 152,
+      "produced_output": 152,
       "led_to_action": 323,
       "led_to_revenue": 0,
-      "effectiveness": 168.3
+      "effectiveness": 167.5
     },
     "data_janitor": {
-      "total_runs": 22,
-      "produced_output": 22,
-      "led_to_action": 132,
+      "total_runs": 23,
+      "produced_output": 23,
+      "led_to_action": 133,
       "led_to_revenue": 0,
-      "effectiveness": 400.0
+      "effectiveness": 387.0
     },
     "distribution_engine": {
-      "total_runs": 98,
-      "produced_output": 98,
-      "led_to_action": 142,
+      "total_runs": 99,
+      "produced_output": 99,
+      "led_to_action": 143,
       "led_to_revenue": 0,
-      "effectiveness": 126.9
+      "effectiveness": 126.7
     },
     "inbound_maximizer": {
       "total_runs": 133,
@@ -182,7 +182,7 @@
       "effectiveness": 0.0
     }
   },
-  "last_drift_check": "2026-03-18T22:30:00.715496",
+  "last_drift_check": "2026-03-22T22:30:01.195475",
   "last_drift_score": 9.6,
   "cross_pollinator_last_run": "2026-03-19T01:09",
   "cross_pollinator_bridges": {

@@ -1,19 +1,14 @@
 # Growth Playbook: ALPHA1773995513
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/alexxgrowth/status/2032528008750170468
 
 ## tactic summary
 "you said you would start with $0"
-
 and i did
-
 - i sent 500+ dms to different accounts offering to buy ($0 spent)
-
 - i found the best one and negotiated the price down ($0 spent)
-
 - i'm paying $500 across 12 months w/ Klarna. that's ~$40/mo
-
 and the first payment isn't due for 7
 
 ## implementation steps

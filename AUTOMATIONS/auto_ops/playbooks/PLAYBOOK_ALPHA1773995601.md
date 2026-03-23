@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995601
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/purpdevvv/status/2011196344740839866
 
 ## tactic summary
 $SPSC is the true organic meme of USD1
-
 i know this as i made the $1 coin art and deployed it on pump which later got ripped, hence why I sized into the can
-
 both will perform well but the facts are the facts, spsc is the true organic meme
 
 ## implementation steps

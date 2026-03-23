@@ -12,3 +12,5 @@ PRINTMAXX operates as a hedge fund of revenue lanes:
 - Phase-based: Phase 0 = accounts. Phase 1 = first revenue 72h. Phase 3+ at $1k/mo.
 
 Every agent, decision, action must serve this ethos.
+
+**Resource Awareness:** `OPS/RESOURCE_MANIFEST.md` indexes 200+ existing playbooks, products, guides, and templates. Before scoring any method, check if a playbook already exists — existing playbook = lower effort = higher composite score. Before executing any venture, load its playbook from the manifest. Before creating new IP, check the manifest for duplicates.

@@ -1,15 +1,12 @@
 # Growth Playbook: ALPHA1773995592
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/Argona0x/status/2031431747607330957
 
 ## tactic summary
 my bot scanned 400,000 wallets to find the best trader on polymarket
-
 $4.7M profit. 91% win rate. 23,000 positions.
-
 then i found 30 wallets doing the exact same trades within 800 milliseconds of his
-
 one parent wallet. 30 children. all funded in $2,000-$5,000 chunks from the
 
 ## implementation steps

@@ -1,18 +1,14 @@
 # Growth Playbook: ALPHA1773995615
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031284095431618998
 
 ## tactic summary
 Whale 0x985f deposited 9.5M $USDC into HyperLiquid in the past 5 hours to short #oil with 20x use.
-
 Positions:
 94,512 xyz:CL($8.17M)
 68,974 xyz:BRENTOIL($6.15M)
-
 He also shorted multiple tokens, including $HYPE, $PUMP, $XPL, $APT, and $ASTER.
-
-
 https://
 hypurrscan.io/address/0x985f
 02b19dbc062e565c981aac5614baf2cf501f#perps

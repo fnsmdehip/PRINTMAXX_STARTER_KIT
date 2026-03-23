@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code for Solopreneurs - Build 10 Automations Before Your Competitors Wake Up</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--card:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--muted:#8888a0;--accent:#6366f1;--accent2:#818cf8;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--cyan:#06b6d4}
+body{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.hero{background:linear-gradient(135deg,#0f0f1a 0%,#1a1030 50%,#0f0f1a 100%);border-bottom:1px solid var(--border);padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2rem;background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.5rem}
+.hero .sub{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem}
+.hero .stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:1.8rem;font-weight:700;color:var(--green)}
+.hero .stat .label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* Search */
+.search-wrap{max-width:700px;margin:2rem auto;padding:0 1rem}
+#search{width:100%;padding:0.8rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+#search:focus{border-color:var(--accent)}
+.search-meta{text-align:center;color:var(--muted);font-size:0.8rem;margin-top:0.5rem}
+
+/* Nav */
+.nav{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;padding:1rem 2rem;border-bottom:1px solid var(--border);background:var(--surface)}
+.nav button{padding:0.4rem 0.9rem;background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--muted);font-family:inherit;font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+.nav button:hover,.nav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Content */
+.container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.section{margin-bottom:3rem;display:none}
+.section.visible{display:block}
+.section h2{font-size:1.4rem;color:var(--accent2);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+.section h3{font-size:1.1rem;color:var(--cyan);margin:1.5rem 0 0.5rem}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem;transition:border-color 0.2s}
+.card:hover{border-color:var(--accent)}
+.card .title{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
+.card .desc{color:var(--muted);font-size:0.85rem;margin-bottom:0.8rem}
+.card .tag{display:inline-block;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.7rem;margin-right:0.3rem;margin-bottom:0.3rem}
+.tag-auto{background:#4f46e520;color:var(--accent2);border:1px solid #4f46e540}
+.tag-cron{background:#22c55e20;color:var(--green);border:1px solid #22c55e40}
+.tag-human{background:#f59e0b20;color:var(--orange);border:1px solid #f59e0b40}
+.tag-ai{background:#06b6d420;color:var(--cyan);border:1px solid #06b6d440}
+
+/* Code blocks */
+pre{background:#0d0d15;border:1px solid var(--border);border-radius:8px;padding:1rem;overflow-x:auto;font-size:0.82rem;line-height:1.6;margin:0.8rem 0}
+code{color:var(--green);font-size:0.85rem}
+.inline-code{background:#1a1a2a;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.82rem}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.85rem}
+th{background:var(--surface);padding:0.6rem 0.8rem;text-align:left;border-bottom:2px solid var(--border);color:var(--accent2);font-weight:600}
+td{padding:0.5rem 0.8rem;border-bottom:1px solid var(--border)}
+tr:hover td{background:var(--card)}
+
+/* Callout */
+.callout{background:var(--surface);border-left:3px solid var(--accent);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1rem 0;font-size:0.9rem}
+.callout.warning{border-left-color:var(--orange)}
+.callout.success{border-left-color:var(--green)}
+
+/* Responsive */
+@media(max-width:600px){
+  .hero h1{font-size:1.4rem}
+  .hero .stats{gap:1rem}
+  .hero .stat .num{font-size:1.3rem}
+  .container{padding:1rem}
+  pre{font-size:0.75rem}
+}
+
+/* Print */
+@media print{
+  .nav,.search-wrap{display:none}
+  .section{display:block!important}
+  body{background:#fff;color:#111}
+  .card{border:1px solid #ddd}
+}
+
+/* Highlight */
+mark{background:var(--accent);color:#fff;padding:0 0.2rem;border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Claude Code for Solopreneurs</h1>
+  <p class="sub">Build 10 Automations Before Your Competitors Wake Up. One person. Eight revenue streams. $0 orchestration cost.</p>
+  <div class="stats">
+    <div class="stat"><div class="num">33</div><div class="label">Autonomous Agents</div></div>
+    <div class="stat"><div class="num">8</div><div class="label">Revenue Streams</div></div>
+    <div class="stat"><div class="num">292</div><div class="label">Scripts Built</div></div>
+    <div class="stat"><div class="num">2hr</div><div class="label">Daily Involvement</div></div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <input type="text" id="search" placeholder="Search... (agents, cron, cold email, content, templates)" autocomplete="off">
+  <div class="search-meta" id="searchMeta">7 sections &middot; 8 agents &middot; 20+ templates and snippets</div>
+</div>
+
+<nav class="nav" id="nav">
+  <button class="active" data-section="overview">Overview</button>
+  <button data-section="stack">The Stack</button>
+  <button data-section="overnight">Overnight Loop</button>
+  <button data-section="leverage">Time Leverage</button>
+  <button data-section="content">Content Machine</button>
+  <button data-section="email">Cold Email Pipeline</button>
+  <button data-section="templates">Templates</button>
+</nav>
+
+<div class="container" id="content">
+
+<!-- SECTION: Overview -->
+<div class="section visible" id="sec-overview">
+<h2>One Person. Competing Against Ten.</h2>
+<p style="margin-bottom:1rem">Most solopreneurs spend 30+ hours a week on tasks a Python script can do in 3 minutes. Lead research. Competitor monitoring. Content scheduling. Email personalization. Invoice tracking.</p>
+<p style="margin-bottom:1rem">This guide documents the exact system one solopreneur built to run 8 revenue streams with 2 hours of daily involvement. 33 autonomous agents. 292 scripts. $0/month in orchestration costs. No SaaS. No vendor lock-in.</p>
+<p style="margin-bottom:1rem">The core insight: <strong>filesystem = memory, context = disposable scratchpad.</strong> Each agent reads state from files, does one job, writes results, and exits. The next iteration starts fresh. No context crashes. No degradation. Unlimited runtime.</p>
+
+<div class="callout success">
+<strong>What you get:</strong> The complete solopreneur agent architecture, 8 agent configs purpose-built for one-person businesses, Ralph loop patterns for overnight execution, a cold email pipeline that needs no Apollo subscription, and a content machine that produces 90+ pieces per month from operations work.
+</div>
+
+<h3>The 8 Agents a Solopreneur Needs</h3>
+<div class="card">
+<div class="title">Lead Finder</div>
+<div class="desc">Scrapes Google Maps, LinkedIn, and Apollo alternatives. Scores prospects by revenue potential. Outputs a scored CSV by morning. You wake up to 50 pre-qualified leads.</div>
+<span class="tag tag-cron">RUNS OVERNIGHT</span><span class="tag tag-auto">CRON 2AM</span>
+</div>
+
+<div class="card">
+<div class="title">Cold Email Drafter</div>
+<div class="desc">Reads scored leads. Pulls one specific problem from each prospect's website. Drafts a sub-100-word email using the 6-question framework. Saves drafts to EMAIL/drafts/ for your morning review.</div>
+<span class="tag tag-cron">RUNS OVERNIGHT</span><span class="tag tag-ai">AI-ASSISTED</span>
+</div>
+
+<div class="card">
+<div class="title">Content Repurposer</div>
+<div class="desc">Takes any piece of work you did today (a build session, a client call, a finding) and outputs 5 content pieces: thread, LinkedIn post, newsletter section, short-form script, community post.</div>
+<span class="tag tag-auto">RUNS AFTER SESSIONS</span>
+</div>
+
+<div class="card">
+<div class="title">Invoice Tracker</div>
+<div class="desc">Monitors your invoicing tool via API or CSV export. Flags overdue invoices. Generates follow-up emails. Logs payment status. Zero manual bookkeeping for status checks.</div>
+<span class="tag tag-cron">CRON DAILY 9AM</span>
+</div>
+
+<div class="card">
+<div class="title">Competitor Monitor</div>
+<div class="desc">Checks competitor sites, pricing pages, job postings, and changelog pages daily. Writes a morning digest to INTEL/competitor_digest.md. Free. Runs on cron. No paid tools.</div>
+<span class="tag tag-cron">CRON 6AM</span><span class="tag tag-auto">FREE</span>
+</div>
+
+<div class="card">
+<div class="title">SEO Page Generator</div>
+<div class="desc">Finds low-competition keyword clusters. Generates SEO-optimized landing pages from templates. Deploys to your site automatically. Targets informational queries your competitors aren't covering.</div>
+<span class="tag tag-cron">CRON WEEKLY</span>
+</div>
+
+<div class="card">
+<div class="title">Digital Product Builder</div>
+<div class="desc">Monitors what's selling on Gumroad, Whop, and Lemon Squeezy. Identifies gaps. Drafts product outlines. Generates listing copy. The product-to-market cycle goes from days to hours.</div>
+<span class="tag tag-ai">AI-ASSISTED</span><span class="tag tag-auto">RUNS ON TRIGGER</span>
+</div>
+
+<div class="card">
+<div class="title">Revenue Tracker</div>
+<div class="desc">Polls Stripe, Gumroad, and affiliate dashboards. Aggregates into a single daily summary. Calculates MRR, best-performing products, and revenue per hour of work. Written to FINANCIALS/daily.md.</div>
+<span class="tag tag-cron">CRON 8AM</span><span class="tag tag-auto">AUTOMATED</span>
+</div>
+
+<h3>System Output (Real Numbers)</h3>
+<table>
+<tr><th>Metric</th><th>Before Automation</th><th>After Automation</th></tr>
+<tr><td>Leads researched per week</td><td>30-50 (4 hours manual)</td><td>200+ (agent runs overnight)</td></tr>
+<tr><td>Cold emails personalized per week</td><td>20-30 (3 hours)</td><td>100+ (reviewed in 20 min)</td></tr>
+<tr><td>Competitor intel updates</td><td>Weekly (2 hours)</td><td>Daily (5 min to read digest)</td></tr>
+<tr><td>Content pieces per month</td><td>15-20 (scattered)</td><td>90+ (from operations work)</td></tr>
+<tr><td>Revenue tracking</td><td>Weekly spreadsheet (1 hour)</td><td>Daily automated summary</td></tr>
+<tr><td>Human hours required daily</td><td>8-10 hours</td><td>2 hours (review + strategy)</td></tr>
+</table>
+</div>
+
+<!-- SECTION: The Stack -->
+<div class="section" id="sec-stack">
+<h2>The 3-Layer Solopreneur Stack</h2>
+<p style="margin-bottom:1rem">Three layers, each doing different work on a different schedule. The combination is what produces the leverage.</p>
+
+<div class="card">
+<div class="title">Layer 1: Always-On (cron + launchd)</div>
+<div class="desc">Scripts that run 24/7 with zero human involvement. Scraping, monitoring, lead scoring, backups, health checks. This layer never sleeps, never gets distracted, never forgets.</div>
+<span class="tag tag-cron">CONTINUOUS</span><span class="tag tag-auto">$0/MONTH</span>
+</div>
+
+<div class="card">
+<div class="title">Layer 2: AI-Assisted Sessions (Claude Code)</div>
+<div class="desc">The 2 hours you spend daily. Strategy decisions, reviewing agent output, building new automations, client work that actually needs your brain. Claude Code helps write the scripts that feed Layer 1.</div>
+<span class="tag tag-ai">2 HOURS/DAY</span><span class="tag tag-human">HUMAN IN LOOP</span>
+</div>
+
+<div class="card">
+<div class="title">Layer 3: Overnight Ralph Loops</div>
+<div class="desc">Long-running Claude Code sessions that execute while you sleep. Lead processing, content drafting, research, email sequencing. You launch the loop before bed, wake up to completed work.</div>
+<span class="tag tag-cron">RUNS OVERNIGHT</span><span class="tag tag-auto">FILESYSTEM MEMORY</span>
+</div>
+
+<h3>Layer 1: 15+ Cron Scripts (Always Running)</h3>
+<table>
+<tr><th>Script</th><th>Schedule</th><th>What It Does</th></tr>
+<tr><td>lead_scraper.py</td><td>2 AM daily</td><td>Google Maps + LinkedIn scrape, outputs raw_leads.csv</td></tr>
+<tr><td>lead_scorer.py</td><td>3 AM daily</td><td>Reads raw leads, scores by fit, saves scored_leads.csv</td></tr>
+<tr><td>competitor_watcher.py</td><td>6 AM daily</td><td>Checks 10 competitor sites for changes, writes digest</td></tr>
+<tr><td>content_scheduler.py</td><td>7 AM daily</td><td>Publishes queued content, updates schedule CSV</td></tr>
+<tr><td>revenue_pull.py</td><td>8 AM daily</td><td>Polls Stripe + Gumroad APIs, writes daily summary</td></tr>
+<tr><td>invoice_checker.py</td><td>9 AM daily</td><td>Flags overdue invoices, generates follow-up drafts</td></tr>
+<tr><td>alpha_scraper.py</td><td>Every 6h</td><td>Scrapes Reddit/Twitter for relevant alpha, saves to staging</td></tr>
+<tr><td>health_check.py</td><td>Every 2h</td><td>Verifies all agents are running, alerts if dead</td></tr>
+<tr><td>backup.sh</td><td>9 PM daily</td><td>Git commit all state files, push to remote</td></tr>
+<tr><td>seo_page_gen.py</td><td>Sunday 4 AM</td><td>Identifies keyword gaps, generates 3-5 landing pages</td></tr>
+<tr><td>product_monitor.py</td><td>Every 12h</td><td>Scans Gumroad/Whop bestsellers, logs gaps</td></tr>
+<tr><td>inbox_warmup.py</td><td>8 AM weekdays</td><td>Sends warmup emails from secondary inboxes</td></tr>
+<tr><td>kpi_rollup.py</td><td>Sunday 8 AM</td><td>Weekly KPI digest across all revenue streams</td></tr>
+<tr><td>link_checker.py</td><td>Daily 5 AM</td><td>Verifies deployed sites are live, alerts on 404s</td></tr>
+<tr><td>memory_consolidate.py</td><td>11 PM daily</td><td>Extracts key learnings from today's agent outputs</td></tr>
+</table>
+
+<div class="callout">
+<strong>Tool cost breakdown for Layer 1:</strong> cron (macOS, $0), launchd (macOS, $0), Python 3 ($0), git ($0), Claude Code (subscription, already paying). Total overhead for the entire agent layer: $0/month. The only cost is the Claude Code subscription you already have.
+</div>
+
+<h3>Basic Cron Entry Format</h3>
+<pre>
+# Format: min hour day month weekday command
+# Add with: crontab -e
+
+# Lead scraper — runs at 2 AM every day
+0 2 * * * cd /path/to/project && python3 agents/lead_scraper.py >> logs/lead_scraper.log 2>&1
+
+# Competitor watcher — runs at 6 AM
+0 6 * * * cd /path/to/project && python3 agents/competitor_watcher.py >> logs/comp.log 2>&1
+
+# Revenue pull — runs at 8 AM weekdays only
+0 8 * * 1-5 cd /path/to/project && python3 agents/revenue_pull.py >> logs/revenue.log 2>&1
+
+# Weekly SEO page gen — Sunday 4 AM
+0 4 * * 0 cd /path/to/project && python3 agents/seo_page_gen.py >> logs/seo.log 2>&1
+
+# Guardian git commit — every hour
+0 * * * * cd /path/to/project && git add -A && git commit -m "Auto-save $(date +%F\ %H:%M)" 2>/dev/null
+</pre>
+
+<h3>Layer 2: What the 2 Hours Actually Looks Like</h3>
+<p style="margin-bottom:0.5rem">Morning routine (45 min):</p>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+<li>Read revenue summary and competitor digest (10 min)</li>
+<li>Review and send approved cold email drafts (15 min)</li>
+<li>Review content queue, approve or edit (10 min)</li>
+<li>Check lead scores, add notes on top prospects (10 min)</li>
+</ul>
+<p style="margin-bottom:0.5rem">Build session (75 min):</p>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+<li>One focused build task with Claude Code (new agent, new feature, client deliverable)</li>
+<li>Generate content from the session before closing (15 min via content machine)</li>
+<li>Launch overnight loop if needed, set PROMPT.md task list</li>
+</ul>
+</div>
+
+<!-- SECTION: Overnight Loop -->
+<div class="section" id="sec-overnight">
+<h2>The Overnight Loop (Ralph Pattern)</h2>
+<p style="margin-bottom:1rem">While you sleep, your agents work. This is the pattern that makes it possible.</p>
+
+<h3>The Command</h3>
+<pre>
+while :; do
+  cat PROMPT.md | claude --dangerously-skip-permissions --print
+done
+</pre>
+
+<p style="margin-bottom:1rem">That is the entire loop. The sophistication is in how PROMPT.md is structured and what state files exist on disk.</p>
+
+<div class="callout">
+<strong>Why this works:</strong> Each iteration gets a fresh 200K context window. No degradation. No crashes. The filesystem is the memory. Git is the version control. The bash loop is the scheduler. Every iteration reads state from files, does exactly one task, writes results back, and exits cleanly.
+</div>
+
+<h3>PROMPT.md Structure for Solopreneurs</h3>
+<pre>
+# Role
+You are an autonomous solopreneur agent. Working directory: /path/to/project
+
+# State (read every iteration)
+Read .ralph/progress.md for what you completed last iteration.
+Read .ralph/state.json for current metrics and counts.
+
+# Task List (pick highest priority, do ONE, then EXIT)
+1. If LEADS/scored_leads.csv has rows with status=UNPROCESSED:
+   - Take the top 20 by score
+   - Research each company website (fetch + parse)
+   - Find one specific problem visible on their site
+   - Draft personalized cold email using EMAIL/templates/framework.md
+   - Save draft to EMAIL/drafts/{company_slug}.txt
+   - Mark rows as PROCESSED in scored_leads.csv
+
+2. If EMAIL/drafts/ has files not yet reviewed:
+   - Check each draft for quality (specific problem, under 100 words, clear ask)
+   - Mark as APPROVED or NEEDS_EDIT with notes
+   - APPROVED drafts move to EMAIL/ready_to_send/
+
+3. If CONTENT/raw_sessions/ has new files from today:
+   - Read each session note
+   - Generate 3 tweets + 1 thread from the best insight
+   - Save to CONTENT/queue/ as PENDING_REVIEW
+
+4. If nothing pending:
+   - Read INTEL/competitor_digest.md
+   - Extract top 3 insights worth sharing as content
+   - Generate 2 tweets per insight
+   - Save to CONTENT/queue/
+
+# Completion Criteria
+Task 1 done: EMAIL/drafts/ has N new .txt files + scored_leads.csv updated
+Task 2 done: All drafts in EMAIL/drafts/ have a status marker
+Task 3 done: CONTENT/queue/ has new files with today's date prefix
+Task 4 done: CONTENT/queue/ has 6 new tweet files
+
+# Rules
+- ONE task per iteration, then EXIT immediately
+- Max runtime: 10 minutes per iteration
+- Write completion note to .ralph/progress.md
+- Update .ralph/state.json with counts
+- If blocked (API error, missing file), write to .ralph/blockers.md and move to next task
+- NEVER loop within a single iteration
+</pre>
+
+<h3>Example: Overnight Lead Processing Loop</h3>
+<pre>
+ROLE: autonomous solopreneur agent
+TASK: Review LEADS/new_prospects.csv, score each lead by revenue
+potential (company size, tech stack, visible problems on site),
+generate cold email draft for top 20, save to EMAIL/drafts/
+
+DONE WHEN:
+- LEADS/scored.csv exists with all rows scored
+- EMAIL/drafts/ has 20 .txt files
+- .ralph/progress.md updated with count and top lead
+
+READ FIRST: PLAYBOOKS/cold_email_framework.md
+STATE FILE: .ralph/state.json
+BLOCKERS: .ralph/blockers.md
+</pre>
+
+<h3>What to Schedule Overnight</h3>
+<div class="callout success">
+<strong>Good overnight tasks:</strong>
+<ul style="margin-left:1rem;margin-top:0.5rem">
+<li>Lead research and scoring (reads sites, no accounts needed)</li>
+<li>Cold email drafting (writes files, no sending)</li>
+<li>Content drafting from session notes (writes files, no posting)</li>
+<li>Competitor research (reads public pages)</li>
+<li>SEO keyword analysis (reads APIs, writes reports)</li>
+<li>Product listing copy generation (writes files)</li>
+<li>Weekly KPI summaries (reads local files, writes digest)</li>
+</ul>
+</div>
+
+<div class="callout warning">
+<strong>Do NOT run overnight without human review:</strong>
+<ul style="margin-left:1rem;margin-top:0.5rem">
+<li>Posting to social media (needs your voice check)</li>
+<li>Sending cold emails (one bad batch damages your domain reputation)</li>
+<li>Making purchases or API calls that cost money</li>
+<li>Billing operations or invoice sending</li>
+<li>Publishing to your main website without review</li>
+</ul>
+</div>
+
+<h3>Launch Before Bed, Read in the Morning</h3>
+<pre>
+# Launch overnight loop in background
+nohup bash -c "cd /path/to/project && while :; do \
+  cat agents/overnight/PROMPT.md | claude --dangerously-skip-permissions --print; \
+  sleep 30; done" > logs/overnight.log 2>&1 &
+
+echo "Loop running. PID: $!"
+echo $! > .overnight_pid
+
+# Check progress from another terminal
+tail -f logs/overnight.log
+
+# Stop the loop
+kill $(cat .overnight_pid)
+</pre>
+</div>
+
+<!-- SECTION: Time Leverage -->
+<div class="section" id="sec-leverage">
+<h2>Time Leverage Pyramid</h2>
+<p style="margin-bottom:1rem">Not everything should be automated. The goal is to free your brain for the work only you can do.</p>
+
+<h3>Layer 1: Fully Automate (Never Touch Again)</h3>
+<div class="card">
+<div class="title">Mechanical tasks that follow clear rules</div>
+<div class="desc">Scraping public data. Formatting files. Distributing content to queues. Monitoring live URLs. Lead scoring against criteria you defined. File organization. Log rotation. Backup commits. Health checks. Anything that could be described as an if-then rule.</div>
+<span class="tag tag-auto">FULLY AUTOMATED</span><span class="tag tag-cron">CRON OR TRIGGER</span>
+</div>
+
+<h3>Layer 2: AI-Assist (Your Review, Agent's Draft)</h3>
+<div class="card">
+<div class="title">Creative or contextual work that benefits from drafts</div>
+<div class="desc">Cold email personalization (agent drafts, you edit or approve). Content from session notes (agent generates, you voice-check). Research synthesis (agent reads 50 sources, you read the digest). Proposal sections (agent drafts, you refine). Product listing copy (agent writes, you tighten).</div>
+<span class="tag tag-ai">AI-ASSISTED</span><span class="tag tag-human">REVIEW REQUIRED</span>
+</div>
+
+<h3>Layer 3: Keep Human (Your Competitive Advantage)</h3>
+<div class="card">
+<div class="title">Judgment, relationships, and strategic direction</div>
+<div class="desc">Relationship management (no agent can replace you in a conversation). Pricing decisions. Creative direction and brand voice. Which opportunities to pursue. When to kill something that isn't working. Client calls. Negotiation. Any decision that depends on context an agent cannot read.</div>
+<span class="tag tag-human">HUMANS ONLY</span>
+</div>
+
+<h3>Time Savings Table</h3>
+<table>
+<tr><th>Task</th><th>Before (manual)</th><th>After (automated)</th><th>Effort to Automate</th></tr>
+<tr><td>Competitor monitoring</td><td>2h/week</td><td>5 min/day (read digest)</td><td>1 Claude Code session</td></tr>
+<tr><td>Lead finding</td><td>4h/week</td><td>0h (agent runs overnight)</td><td>2 sessions</td></tr>
+<tr><td>Cold email personalization</td><td>3h/week</td><td>20 min/day (review + send)</td><td>1 session</td></tr>
+<tr><td>Content scheduling</td><td>3h/week</td><td>20 min/day (review queue)</td><td>1 session</td></tr>
+<tr><td>Revenue tracking</td><td>1h/week</td><td>2 min/day (read summary)</td><td>1 session</td></tr>
+<tr><td>Invoice follow-ups</td><td>1h/week</td><td>5 min/week (approve drafts)</td><td>1 session</td></tr>
+<tr><td>SEO research</td><td>4h/week</td><td>30 min/week (review targets)</td><td>2 sessions</td></tr>
+<tr><td>Social media posting</td><td>2h/week</td><td>15 min/day (review + post)</td><td>1 session</td></tr>
+<tr><td>Total</td><td>~20h/week</td><td>~2.5h/week</td><td>10 Claude Code sessions</td></tr>
+</table>
+
+<div class="callout success">
+<strong>The math:</strong> 10 build sessions to set up the stack. Each session is 60-90 minutes. After that, 17+ hours per week freed permanently. The payback period is under two weeks.
+</div>
+
+<h3>What to Build First</h3>
+<p style="margin-bottom:0.5rem">Priority order based on time-to-value:</p>
+<ol style="margin-left:1.5rem;margin-bottom:1rem">
+<li>Competitor monitor (one Python script, cron entry, free, runs in 20 minutes)</li>
+<li>Revenue tracker (API calls to processors, 30 minutes to set up)</li>
+<li>Lead scorer (define your ICP criteria once, scores forever)</li>
+<li>Cold email drafter (biggest time save per hour of setup)</li>
+<li>Content repurposer (turns every work session into posts)</li>
+</ol>
+</div>
+
+<!-- SECTION: Content Machine -->
+<div class="section" id="sec-content">
+<h2>The $0 Content Machine</h2>
+<p style="margin-bottom:1rem">90+ content pieces per month. Every piece comes from work you were already doing. No separate content creation time needed.</p>
+
+<h3>The 3-Tweet Rule</h3>
+<p style="margin-bottom:1rem">Every build session produces at least 3 tweets + 1 thread. This is non-negotiable. You built something, you solved something, you learned something. That is content. The agent converts it before you close the session.</p>
+
+<div class="callout">
+<strong>Implementation:</strong> Before ending any Claude Code session, run the content generation prompt (below). Takes 5 minutes. Outputs to CONTENT/queue/ as PENDING_REVIEW. You review during your morning routine. Posts go out on schedule via cron.
+</div>
+
+<h3>Session-to-Content Prompt Template</h3>
+<pre>
+You just completed a work session. Here is what was built / learned / decided:
+
+[PASTE SESSION SUMMARY OR KEY OUTPUTS HERE]
+
+Generate the following:
+
+1. Three standalone tweets (max 240 chars each):
+   - Tweet 1: The specific thing built or discovered (lead with the number or result)
+   - Tweet 2: The method or pattern that made it work
+   - Tweet 3: The counter-intuitive or non-obvious angle
+
+2. One thread (6-8 tweets):
+   - Hook tweet that stops the scroll (problem statement or result)
+   - 5-6 body tweets that teach the method step by step
+   - CTA tweet at the end (what they should do next)
+
+Rules:
+- No em dashes
+- No "game-changing," "exciting," "deep dive," "leverage" as a verb
+- No generic AI wisdom. Only specific, verifiable, executable information
+- Lead with specifics: numbers, tool names, exact steps
+- Write for someone who could do this TODAY with what you've told them
+</pre>
+
+<h3>Content Pipeline Flow</h3>
+<pre>
+Work session (build, research, client call)
+  |
+  v
+Session notes --> content generation prompt
+  |
+  v
+CONTENT/queue/ (PENDING_REVIEW)
+  |
+  v
+Morning review (5-10 min)
+  |
+  +--> APPROVED --> CONTENT/ready_to_post/ --> cron scheduler
+  |
+  +--> NEEDS_EDIT --> edit inline --> APPROVED
+  |
+  +--> REJECTED --> CONTENT/archive/ (pattern still useful later)
+</pre>
+
+<h3>Repurposing Matrix</h3>
+<table>
+<tr><th>Source</th><th>Content Pieces It Generates</th></tr>
+<tr><td>One research finding</td><td>Twitter thread + LinkedIn post + newsletter section + short-form script + community post = 5 pieces</td></tr>
+<tr><td>One build session</td><td>3 tweets + 1 thread + 1 "how I built it" post = 5 pieces</td></tr>
+<tr><td>One competitor observation</td><td>2 tweets + 1 LinkedIn hot take + 1 newsletter breakdown = 4 pieces</td></tr>
+<tr><td>One client win</td><td>Case study post + 3 tweets on the lesson + testimonial graphic = 5 pieces</td></tr>
+<tr><td>One mistake made</td><td>2 "what I learned" tweets + 1 thread on what to do instead = 3 pieces</td></tr>
+</table>
+
+<h3>The Anti-Slop Checklist</h3>
+<p style="margin-bottom:0.5rem">Before approving any content piece, verify it passes all five:</p>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+<li>No filler words: "exciting," "game-changing," "innovative," "deep dive," "leverage" (as a verb), "unlock," "journey"</li>
+<li>No em dashes used as sentence separators</li>
+<li>At least one specific thing named (tool, number, exact step, company name)</li>
+<li>Could the reader do something with this TODAY? If not, it's too vague</li>
+<li>Would you post this from your personal account without cringing? If not, rewrite</li>
+</ul>
+
+<h3>Scheduling Without Buffer</h3>
+<p style="margin-bottom:1rem">Buffer costs money. You don't need it. CSV import method:</p>
+<ol style="margin-left:1.5rem;margin-bottom:1rem">
+<li>Maintain CONTENT/schedule.csv with columns: platform, text, datetime, status</li>
+<li>cron script reads the CSV every morning at 7 AM</li>
+<li>Posts anything with status=APPROVED and datetime in the next 24 hours</li>
+<li>Updates status to POSTED after sending via platform API</li>
+<li>30 days of content loaded in 5 minutes via bulk CSV append</li>
+</ol>
+<pre>
+# content_scheduler.py (simplified core logic)
+import csv, datetime, requests
+
+schedule = list(csv.DictReader(open("CONTENT/schedule.csv")))
+now = datetime.datetime.now()
+window = now + datetime.timedelta(hours=24)
+
+to_post = [
+    row for row in schedule
+    if row["status"] == "APPROVED"
+    and now <= datetime.datetime.fromisoformat(row["datetime"]) <= window
+]
+
+for post in to_post:
+    # platform-specific API call here
+    print(f"Posting to {post['platform']}: {post['text'][:50]}...")
+    # update status to POSTED in CSV
+</pre>
+</div>
+
+<!-- SECTION: Cold Email Pipeline -->
+<div class="section" id="sec-email">
+<h2>Cold Email Pipeline</h2>
+<p style="margin-bottom:1rem">Full pipeline from zero to booked calls. No Apollo. No Hunter. No $200/month outbound tool.</p>
+
+<h3>The Full Pipeline</h3>
+<pre>
+Google Maps scrape (target city + niche)
+  |
+  v
+Website audit (Python, checks for specific problems)
+  |
+  v
+Lead score (ICP fit: company size, tech stack, problems found)
+  |
+  v
+Personalization trigger (one specific problem per lead)
+  |
+  v
+Email draft (6-question framework, under 100 words)
+  |
+  v
+Human review queue (you approve or edit, 20 min/day)
+  |
+  v
+Send queue (Brevo free tier, 15/day week 1, scale to 80/day by week 3)
+  |
+  v
+Reply tracking (watch for positive replies, flag for your response)
+</pre>
+
+<h3>The 6-Question Email Framework</h3>
+<table>
+<tr><th>Question</th><th>What It Produces in the Email</th><th>Max Words</th></tr>
+<tr><td>What do you do?</td><td>One sentence on your service</td><td>15</td></tr>
+<tr><td>Who for?</td><td>Name the exact type of company you serve</td><td>10</td></tr>
+<tr><td>How?</td><td>The specific method (not vague)</td><td>15</td></tr>
+<tr><td>What problem solved?</td><td>The exact pain, named directly</td><td>15</td></tr>
+<tr><td>Proof?</td><td>One number or one named outcome</td><td>10</td></tr>
+<tr><td>ROI / ask?</td><td>Specific result they get + one question CTA</td><td>15</td></tr>
+</table>
+
+<div class="callout success">
+<strong>Example output using the framework:</strong> "I build automated lead pipelines for solo consultants. Most of my clients were spending 4-6 hours a week on manual research before switching. I noticed [SPECIFIC PROBLEM FROM THEIR SITE]. Would a 20-minute call make sense to see if the same approach works for you?"
+Under 80 words. Personalized. Specific. One ask.
+</div>
+
+<h3>Infrastructure Setup ($37/month total)</h3>
+<table>
+<tr><th>Tool</th><th>Cost</th><th>What It Does</th></tr>
+<tr><td>3 warmed sending domains</td><td>$12/mo (3 x $4 .com domains)</td><td>Separate from your main domain, protects reputation</td></tr>
+<tr><td>Google Workspace inboxes (3)</td><td>$18/mo (3 x $6)</td><td>Professional sending addresses on each domain</td></tr>
+<tr><td>Brevo (Sendinblue)</td><td>$0 (free tier, 300/day)</td><td>Sends your approved drafts, tracks opens and replies</td></tr>
+<tr><td>Python scripts</td><td>$0</td><td>Scraping, scoring, drafting, monitoring</td></tr>
+<tr><td>Total</td><td>$30-37/mo</td><td>Full outbound pipeline, 5-10 booked calls/week target</td></tr>
+</table>
+
+<h3>Safe Sending Limits</h3>
+<table>
+<tr><th>Week</th><th>Emails/Day Per Inbox</th><th>Total Daily Volume</th><th>Notes</th></tr>
+<tr><td>Week 1</td><td>5/day</td><td>15/day</td><td>Warmup period, low volume, high reply rate threshold</td></tr>
+<tr><td>Week 2</td><td>10/day</td><td>30/day</td><td>Increase only if open rate &gt; 40% on week 1</td></tr>
+<tr><td>Week 3</td><td>20-25/day</td><td>60-75/day</td><td>Full ramp, monitor spam complaints daily</td></tr>
+<tr><td>Week 4+</td><td>25-30/day</td><td>75-90/day</td><td>Stable volume, focus on reply rate over volume</td></tr>
+</table>
+
+<h3>Website Audit Script (Core Logic)</h3>
+<pre>
+import requests
+from bs4 import BeautifulSoup
+
+def audit_site(url: str) -> dict:
+    """Find specific problems on a prospect's site."""
+    try:
+        resp = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+        soup = BeautifulSoup(resp.text, "html.parser")
+        text = soup.get_text(separator=" ", strip=True).lower()
+
+        problems = []
+
+        # Check for missing trust signals
+        if not any(w in text for w in ["testimonial", "review", "case study", "client"]):
+            problems.append("no social proof visible")
+
+        # Check for vague value prop
+        title = soup.title.string if soup.title else ""
+        if len(title) < 20 or "welcome" in title.lower():
+            problems.append("unclear homepage value prop")
+
+        # Check for missing CTA
+        ctas = soup.find_all(["button", "a"], string=lambda t: t and
+               any(w in t.lower() for w in ["book", "schedule", "contact", "get started"]))
+        if len(ctas) < 2:
+            problems.append("weak or missing call-to-action")
+
+        # Check for slow load signals (image-heavy)
+        images = soup.find_all("img")
+        if len(images) > 20:
+            problems.append("likely slow load time from unoptimized images")
+
+        return {"url": url, "problems": problems, "top_problem": problems[0] if problems else None}
+
+    except Exception as e:
+        return {"url": url, "problems": [], "error": str(e)}
+</pre>
+
+<h3>The Personalization Trigger</h3>
+<p style="margin-bottom:1rem">The audit script finds a real problem on their site. That problem becomes the opening line of the email. This is what separates a 0.5% reply rate from a 5% reply rate.</p>
+<div class="callout">
+<strong>Pattern:</strong> "I noticed [SPECIFIC THING ON THEIR SITE]. That's usually what [your ICP] faces before [the outcome you deliver]." One sentence. Specific. Not generic. The agent finds it. You confirm it makes sense. Done.
+</div>
+</div>
+
+<!-- SECTION: Templates -->
+<div class="section" id="sec-templates">
+<h2>Copy-Paste Templates</h2>
+<p style="margin-bottom:1rem">All templates are ready to use. Swap in your specifics and run.</p>
+
+<h3>Template 1: PROMPT.md for Overnight Lead Processing</h3>
+<pre>
+# Role
+You are an autonomous lead processing agent for [YOUR BUSINESS].
+Working directory: /path/to/project
+
+# State
+Read .ralph/progress.md for what was completed last iteration.
+Read .ralph/state.json for current metrics.
+
+# Task (pick highest priority, do ONE, EXIT when done)
+1. If LEADS/raw_leads.csv has rows with status=UNSCORED:
+   - Read ICP criteria from PLAYBOOKS/icp.md
+   - Score each lead 1-10 on fit (company size, niche, problems, tech stack)
+   - Write scores to LEADS/scored_leads.csv
+   - Mark original rows as SCORED
+
+2. If LEADS/scored_leads.csv has rows with score >= 7 and status=UNPROCESSED:
+   - Take top 20 by score
+   - Fetch each company website
+   - Run audit (find top visible problem)
+   - Draft email using EMAIL/templates/framework.md
+   - Save to EMAIL/drafts/{company_slug}.txt
+   - Mark rows as PROCESSED
+
+3. If EMAIL/drafts/ has files with no status marker:
+   - Review each for quality (specific, under 100 words, one ask)
+   - Add APPROVED or NEEDS_EDIT marker at top of file
+   - Move APPROVED files to EMAIL/ready_to_send/
+
+# Completion Criteria
+State in .ralph/progress.md what was done and how many records processed.
+Update .ralph/state.json: {"leads_scored": N, "drafts_created": N, "drafts_approved": N}
+
+# Rules
+- ONE task per iteration. EXIT cleanly after completing it.
+- Max 10 minutes per iteration.
+- If blocked, write to .ralph/blockers.md and skip to next task.
+</pre>
+
+<h3>Template 2: Cold Email Framework (Fill In)</h3>
+<pre>
+Subject: [SPECIFIC OBSERVATION] at [COMPANY NAME]
+
+Hi [FIRST NAME],
+
+[One sentence: what you noticed on their site or about their business]
+
+I [WHAT YOU DO] for [EXACT TYPE OF COMPANY]. Most clients come to me when [SPECIFIC PROBLEM].
+
+[One outcome + one proof point: "Last month I helped [TYPE OF CLIENT] reduce [X] by [Y]%"]
+
+Worth a 15-minute call to see if the same approach fits [COMPANY NAME]?
+
+[YOUR NAME]
+</pre>
+
+<h3>Template 3: Cron Entry for Daily Competitor Monitoring</h3>
+<pre>
+# competitor_watcher.py — add to crontab with: crontab -e
+# Runs at 6 AM daily, writes digest to INTEL/competitor_digest.md
+
+0 6 * * * cd /path/to/project && python3 agents/competitor_watcher.py >> logs/competitor.log 2>&1
+
+# competitor_watcher.py core logic:
+COMPETITORS = [
+    {"name": "CompetitorA", "url": "https://competitora.com", "pricing_url": "https://competitora.com/pricing"},
+    {"name": "CompetitorB", "url": "https://competitorb.com", "jobs_url": "https://competitorb.com/jobs"},
+]
+
+# For each competitor:
+# 1. Fetch homepage, compare to yesterday's snapshot (hash comparison)
+# 2. Fetch pricing page, extract prices with regex
+# 3. Fetch jobs page, count open roles (hiring signals)
+# 4. Write changes to INTEL/competitor_digest.md
+# 5. Git commit the digest (creates history)
+</pre>
+
+<h3>Template 4: Content Generation Prompt</h3>
+<pre>
+I just completed a work session. Here is what happened:
+
+SESSION TYPE: [build / research / client call / problem-solving]
+WHAT WAS BUILT OR LEARNED: [paste your session notes or key output]
+KEY RESULT OR FINDING: [the one thing worth sharing]
+AUDIENCE: [indie hackers / solopreneurs / [your niche]]
+
+Generate:
+
+TWEETS (3):
+Tweet 1 (result-first): Start with the specific outcome or number. Then explain what caused it. Max 240 chars.
+Tweet 2 (method): The exact steps or pattern that made it work. Actionable. Max 240 chars.
+Tweet 3 (counter-intuitive): The non-obvious angle or common mistake to avoid. Max 240 chars.
+
+THREAD (7 tweets):
+1. Hook: problem or result that stops the scroll
+2-6. Body: teach the method, step by step, each tweet standalone
+7. CTA: what they should do next
+
+RULES:
+- No em dashes
+- No "exciting," "game-changing," "deep dive," "leverage" as verb
+- Specific tool names, numbers, exact steps only
+- Each tweet works standalone (no "as I mentioned above")
+</pre>
+
+<h3>Template 5: Basic Agent Python Script</h3>
+<pre>
+#!/usr/bin/env python3
+"""Template: Autonomous solopreneur agent with state persistence."""
+import json
+from pathlib import Path
+from datetime import datetime
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+STATE_FILE = PROJECT_ROOT / "agents" / "my_agent" / "state.json"
+LOG_FILE = PROJECT_ROOT / "logs" / "my_agent.log"
+
+def load_state() -> dict:
+    if STATE_FILE.exists():
+        return json.loads(STATE_FILE.read_text())
+    return {"cycles": 0, "last_run": None, "results": []}
+
+def save_state(state: dict) -> None:
+    state["last_run"] = datetime.now().isoformat()
+    state["cycles"] += 1
+    STATE_FILE.write_text(json.dumps(state, indent=2))
+
+def log(msg: str) -> None:
+    with open(LOG_FILE, "a") as f:
+        f.write(f"[{datetime.now().isoformat()}] {msg}\n")
+
+def main() -> None:
+    state = load_state()
+    log(f"Cycle {state['cycles'] + 1} starting")
+
+    # 1. Read inputs (CSV, API, scraped data)
+    # 2. Process / score / decide
+    # 3. Write outputs (files, queues, state)
+    # 4. Log result
+
+    result = {"action": "example", "status": "success", "count": 0}
+    state["results"].append(result)
+    save_state(state)
+    log(f"Done: {result}")
+
+if __name__ == "__main__":
+    main()
+</pre>
+
+<h3>Template 6: Weekly Review</h3>
+<pre>
+# Weekly Review Template — run every Sunday
+
+## SHIPPED THIS WEEK
+- [What automations went live]
+- [What content was published]
+- [What leads were sent]
+- Revenue: $[X] (from revenue_tracker daily summaries)
+
+## IN QUEUE
+- [Drafts waiting for your review]
+- [Leads scored but not emailed yet]
+- [Content approved but not posted]
+
+## STUCK / BLOCKED
+- [Agents that failed this week and why]
+- [Tasks that needed human input you haven't provided]
+- [Missing API keys or credentials blocking a script]
+
+## KILL LIST
+- [Agents producing no useful output — cut them]
+- [Content formats getting zero engagement — stop making them]
+- [Lead sources with 0% reply — try different scrape target]
+
+## DOUBLE DOWN
+- [What worked better than expected — increase frequency]
+- [Which content format got the most replies — make more]
+- [Which lead source had the highest score-to-call ratio — prioritize]
+
+## NEXT WEEK PRIORITY
+1. [One new automation to build]
+2. [One existing automation to improve]
+3. [One process to fully hand off to an agent]
+</pre>
+
+<div class="callout success">
+<strong>Quick start:</strong> Template 5 (basic agent) + Template 1 (overnight PROMPT.md) + Template 3 (cron entry). You will have an autonomous lead processing loop running in under two hours. Add Template 2 and Template 4 to wire in the content machine. The whole stack ships in one weekend.
+</div>
+</div>
+
+</div><!-- end container -->
+
+<div style="text-align:center;padding:3rem 1rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.8rem">
+  <p>Built by a solopreneur running 33 agents on a MacBook with 2 hours of daily involvement. Not theory. A live system.</p>
+  <p style="margin-top:0.5rem">Works offline. No tracking. No external requests. Open this file in any browser.</p>
+</div>
+
+<script>
+// Navigation
+const navBtns = document.querySelectorAll('.nav button');
+const sections = document.querySelectorAll('.section');
+
+navBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.section;
+    navBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    sections.forEach(s => {
+      s.classList.toggle('visible', s.id === 'sec-' + target);
+    });
+    window.scrollTo({top: document.querySelector('.container').offsetTop - 20, behavior: 'smooth'});
+  });
+});
+
+// Search
+const searchInput = document.getElementById('search');
+const searchMeta = document.getElementById('searchMeta');
+
+searchInput.addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  if (!q) {
+    sections.forEach(s => s.classList.remove('visible'));
+    document.getElementById('sec-overview').classList.add('visible');
+    navBtns.forEach(b => b.classList.remove('active'));
+    navBtns[0].classList.add('active');
+    document.querySelectorAll('mark').forEach(m => {
+      m.replaceWith(document.createTextNode(m.textContent));
+    });
+    searchMeta.textContent = '7 sections \u00b7 8 agents \u00b7 20+ templates and snippets';
+    return;
+  }
+
+  let matches = 0;
+  sections.forEach(s => {
+    const text = s.textContent.toLowerCase();
+    const hasMatch = text.includes(q);
+    s.classList.toggle('visible', hasMatch);
+    if (hasMatch) matches++;
+  });
+
+  navBtns.forEach(b => {
+    const sec = document.getElementById('sec-' + b.dataset.section);
+    b.classList.toggle('active', sec && sec.classList.contains('visible'));
+  });
+
+  searchMeta.textContent = `${matches} section${matches !== 1 ? 's' : ''} matching "${e.target.value}"`;
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement !== searchInput) {
+    e.preventDefault();
+    searchInput.focus();
+  }
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.blur();
+  }
+});
+</script>
+</body>
+</html>

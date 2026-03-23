@@ -1,0 +1,42 @@
+{
+  "last_run": "2026-03-22T23:15:00",
+  "cycle_number": 1,
+  "cities_covered": [
+    "Lexington KY",
+    "Albuquerque NM",
+    "Spokane WA"
+  ],
+  "total_leads_all_cycles": 23,
+  "total_previews_deployed": 15,
+  "total_emails_queued": 15,
+  "next_cities": [
+    "Nashville TN",
+    "Charlotte NC",
+    "Louisville KY",
+    "Tampa FL",
+    "Phoenix AZ"
+  ],
+  "surge_domains_used": [
+    "auto-excel-lexington-ky.surge.sh",
+    "abe-s-auto-repair-new-location-lexington-ky.surge.sh",
+    "fathom-salon-spa-spokane-wa.surge.sh",
+    "famous-nails-spokane-wa.surge.sh",
+    "quick-s-barbershop-spokane-wa.surge.sh",
+    "extra-beauty-spokane-wa.surge.sh",
+    "top-nails-spokane-wa.surge.sh",
+    "jack-jill-hair-design-spokane-wa.surge.sh",
+    "jim-s-automotive-albuquerque-nm.surge.sh",
+    "foreign-aide-albuquerque-nm.surge.sh",
+    "ferrari-custom-auto-tint-albuquerque-nm.surge.sh",
+    "laru-ni-hati-albuquerque-nm.surge.sh",
+    "ampm-salon-albuquerque-nm.surge.sh",
+    "new-york-hair-nails-albuquerque-nm.surge.sh",
+    "kyana-nail-spa-albuquerque-nm.surge.sh"
+  ],
+  "blockers": [
+    "No outbound email domain configured",
+    "No email addresses found for leads (OSM doesn't include email)",
+    "OSM Overpass rate-limits after ~5 queries \u2014 need 3s delay between calls"
+  ],
+  "status": "CYCLE_COMPLETE"
+}

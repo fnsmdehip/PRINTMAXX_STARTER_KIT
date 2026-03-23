@@ -1,5 +1,5 @@
 # GUMROAD UPLOAD QUEUE
-*Revenue-ordered. Top = upload first. Updated: 2026-03-15*
+*Revenue-ordered. Top = upload first. Updated: 2026-03-22*
 
 ---
 
@@ -249,13 +249,141 @@ BUNDLES: Cold Outreach Stack ($47) | Full Automation Bundle ($97) | Everything B
 
 ---
 
+## TIER 1B: NEW HIGH-VALUE PRODUCTS (Claude Code series)
+
+These were not in the original queue. HTML files building now (2026-03-22).
+
+### 19. Claude Code for Solopreneurs — $47
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/15_CLAUDE_CODE_FOR_SOLOPRENEURS.html`
+**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_for_solopreneurs.md`
+**Status:** `NEEDS_COVER` (946-line HTML file ready — upload direct)
+**Revenue potential:** $1,175–4,700/mo at 25–100 sales
+**Why:** Solopreneur automation is the hottest niche in the Claude Code community. Overnight loop angle is unique.
+**Upsell:** Claude Code Agent Bible ($47) or Everything Bundle ($197)
+**Tags:** Claude Code, solopreneur, AI automation, indie hacker, autonomous agents, overnight loop
+
+---
+
+### 20. Claude Code for Non-Technical Founders — $39
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/16_CLAUDE_CODE_FOR_NONTECHNICAL_FOUNDERS.html`
+**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_for_nontechnical_founders.md`
+**Status:** `NEEDS_COVER` (837-line HTML file ready — upload direct)
+**Revenue potential:** $975–3,900/mo at 25–100 sales
+**Why:** "Ship without engineers" is a pain point every bootstrapped founder has. Broad TAM.
+**Upsell:** Claude Code Mastery ($47)
+**Tags:** Claude Code, non-technical founder, no-code, startup, product building, ship without engineers
+
+---
+
+### 21. Claude Code for Content Creators — $39
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/17_CLAUDE_CODE_FOR_CONTENT_CREATORS.html`
+**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_for_content_creators.md`
+**Status:** `NEEDS_COVER` (HTML file ready — upload direct)
+**Revenue potential:** $975–3,900/mo at 25–100 sales
+**Why:** Content creator automation is an underserved niche. Anti-slop filter angle is differentiated.
+**Upsell:** AI Content Farm Blueprint ($47)
+**Tags:** Claude Code, content creation, content automation, social media, anti-slop, 3-tweet rule
+
+---
+
+### 22. Claude Code Mastery (5 Modules) — $47
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/claude_code_mastery/` → combine 5 modules → PDF
+**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/claude_code_mastery/GUMROAD_LISTING.md`
+**Status:** `NEEDS_PDF` (5 module .md files exist: module_1_setup through module_5_portfolio)
+**Revenue potential:** $1,175–4,700/mo at 25–100 sales
+**Combine:** `cat module_1_setup.md module_2_first_app.md module_3_deployment.md module_4_monetization.md module_5_portfolio.md > claude_code_mastery_full.md && pandoc claude_code_mastery_full.md -o claude_code_mastery.pdf`
+**Upsell:** Claude Code Agent Bible ($47) or Claude Code for Solopreneurs ($47)
+**Tags:** Claude Code, ship apps, PWA, indie hacker, app development, 48 hours
+
+---
+
+## TIER 2B: ADDITIONAL MID-RANGE (discovered 2026-03-22)
+
+### 23. The Prompt Vault (200 Prompts) — $27
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/prompt_engineering_vault/` → combine 5 sections → PDF
+**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/prompt_engineering_vault/GUMROAD_LISTING.md`
+**Status:** `NEEDS_PDF` (5 section files exist)
+**Revenue potential:** $675–2,700/mo at 25–100 sales
+**Combine:** `cat section_1_content.md section_2_outreach.md section_3_code.md section_4_research.md section_5_business.md > prompt_vault_full.md`
+**Upsell:** AI Automation Toolkit ($47)
+**Tags:** AI prompts, prompt engineering, ChatGPT prompts, Claude prompts, solopreneur, content
+
+---
+
+### 24. The $0 Cold Email System (5 Chapters) — $37
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/cold_email_system/` → combine 5 chapters → PDF
+**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/cold_email_system/GUMROAD_LISTING.md`
+**Status:** `NEEDS_PDF` (5 chapter files exist)
+**Revenue potential:** $740–3,700/mo at 20–100 sales
+**Combine:** `cat chapter_1_infrastructure.md chapter_2_prospecting.md chapter_3_personalization.md chapter_4_sequences.md chapter_5_closing.md > cold_email_system_full.md`
+**Upsell:** Local Biz Client Machine ($97)
+**Tags:** cold email, free tools, $0 infrastructure, B2B, lead generation, DNS, cold outreach
+
+---
+
+### 25. Cold Email SaaS Edition — $29
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/07_COLD_EMAIL_SAAS_EDITION.md` → PDF
+**Listing:** `DIGITAL_PRODUCTS/listings/LISTING_cold_email_saas_edition.md`
+**Status:** `NEEDS_PDF` (content complete)
+**Revenue potential:** $580–2,900/mo at 20–100 sales
+**Why:** SaaS-specific cold email is a niche within cold email. Less competition, more committed buyers.
+**Upsell:** The $0 Cold Email System ($37)
+**Tags:** cold email, SaaS outreach, B2B cold email, SaaS founder, first customers, ICP, sequences
+
+---
+
+### 26. Solo Launch Checklist Pack — $9
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/06_SOLO_LAUNCH_CHECKLIST_PACK.md` → PDF
+**Listing:** `DIGITAL_PRODUCTS/listings/LISTING_solo_launch_checklist_pack.md`
+**Status:** `NEEDS_PDF` (content complete)
+**Revenue potential:** $180–900/mo at 20–100 sales (volume play)
+**Why:** $9 removes all friction. Converts browsers to buyers. 135 checklist items = clear deliverable.
+**Upsell:** Claude Code Mastery ($47)
+**Tags:** product launch, indie hacker, solo developer, SEO checklist, Product Hunt, launch checklist
+
+---
+
+## TIER 3B: NOTION TEMPLATES (NEEDS_WORK — missing actual Notion template)
+
+These have complete listing copy + specs. Missing: real Notion template link to deliver to buyers.
+**To ship:** Build each in Notion → Duplicate to shareable link → add link as Gumroad product delivery.
+
+### 27. SoloOS — Complete Solopreneur Operating System — $27
+**Spec:** `DIGITAL_PRODUCTS/notion_templates/solopreneur_os/TEMPLATE_SPEC.md`
+**Listing:** `DIGITAL_PRODUCTS/notion_templates/solopreneur_os/LISTING.md`
+**Status:** `NEEDS_WORK` (no Notion template link)
+**Revenue potential:** $540–2,700/mo (if shipped)
+
+### 28. App Factory Tracker — $22
+**Spec:** `DIGITAL_PRODUCTS/notion_templates/app_factory_tracker/TEMPLATE_SPEC.md`
+**Listing:** `DIGITAL_PRODUCTS/notion_templates/app_factory_tracker/LISTING.md`
+**Status:** `NEEDS_WORK` (no Notion template link)
+**Revenue potential:** $440–2,200/mo (if shipped)
+
+### 29. Content Machine 90-Day Pipeline — $19
+**Spec:** `DIGITAL_PRODUCTS/notion_templates/content_machine/TEMPLATE_SPEC.md`
+**Listing:** `DIGITAL_PRODUCTS/notion_templates/content_machine/LISTING.md`
+**Status:** `NEEDS_WORK` (no Notion template link)
+
+### 30. Cold Outreach CRM — $17
+**Spec:** `DIGITAL_PRODUCTS/notion_templates/cold_outreach_crm/TEMPLATE_SPEC.md`
+**Listing:** `DIGITAL_PRODUCTS/notion_templates/cold_outreach_crm/LISTING.md`
+**Status:** `NEEDS_WORK` (no Notion template link)
+
+### 31. Freelance Command Center — $15
+**Spec:** `DIGITAL_PRODUCTS/notion_templates/freelance_command_center/TEMPLATE_SPEC.md`
+**Listing:** `DIGITAL_PRODUCTS/notion_templates/freelance_command_center/LISTING.md`
+**Status:** `NEEDS_WORK` (no Notion template link)
+
+---
+
 ## TOTAL REVENUE POTENTIAL
 
 | Scenario | Monthly Revenue | Assumption |
 |----------|----------------|------------|
-| Conservative | $1,200–1,800/mo | 1–2 sales/product/mo at bottom quartile prices |
-| Moderate | $5,000–8,000/mo | 10–25 sales/product on top 5 products |
-| Strong | $14,000–22,000/mo | 25–100 sales across all 18 products |
+| Conservative (18 products) | $1,200–1,800/mo | 1–2 sales/product/mo |
+| Moderate (18 products) | $5,000–8,000/mo | 10–25 sales on top 5 |
+| **Full catalog (31 products)** | **$8,000–28,000/mo** | 10–50 sales across all products |
 | **Blocker** | **$0 until Gumroad account created** | Account = 10 minutes |
 
 ---
@@ -314,18 +442,37 @@ wkhtmltopdf pdfs/ai_automation_starter_kit.html pdfs/ai_automation_starter_kit.p
 
 ---
 
-## NEXT ACTION (45 minutes total)
+## NEXT ACTION (60 minutes total)
 
 1. **Create Gumroad account** (10 min) — free at gumroad.com
-2. **Upload free lead magnet first** (5 min) — builds email list before spending time on paid listings
-3. **Upload Local Biz Client Machine** (5 min) — highest price, upload it next
-4. **Upload Cold Email Playbook** (5 min) — entry product into $97 upsell
-5. **Post about both on Twitter** (5 min) — "just listed two things, here's what they are"
-6. **Connect Stripe** (10 min) — required to receive payments
-7. **Set up upsell on each thank-you page** (5 min) — follow the ladder above
+2. **Connect Stripe** (10 min) — required to receive payments
+3. **Upload free lead magnet first** (5 min) — builds email list before spending time on paid listings
+4. **Upload Local Biz Client Machine** (5 min) — highest price, upload next
+5. **Upload Claude Code Agent Bible** (5 min) — HTML file, upload direct, zero conversion needed
+6. **Upload Cold Email Playbook** (5 min) — entry product into $97 upsell
+7. **Post about first 3 products on Twitter** (5 min) — "just listed, here's what they are"
+8. **Set up upsell on each thank-you page** (5 min) — follow the ladder above
+9. **Bulk convert remaining .md files to PDF** (10 min) — `brew install pandoc && pandoc input.md -o output.pdf`
 
 Revenue unlocks the moment Gumroad account exists. Everything else is already built.
 
 ---
 
-*Last updated: 2026-03-15 | Products tracked: 18 paid + 1 free | HTML products: 5 (uploadable now) | PDF products: 13 (uploadable now) | Cover images: 0/18 (add post-listing) | Bundles: 5 planned*
+## QUICK-UPLOAD CHECKLIST (products uploadable RIGHT NOW, no conversion)
+
+| # | Product | File | Format |
+|---|---------|------|--------|
+| ✅ | Claude Code Agent Bible | `14_CLAUDE_CODE_AGENT_BIBLE.html` | HTML — direct upload |
+| ✅ | Solopreneur Financial Dashboard | `financial-dashboard/financial_dashboard.html` | HTML — direct upload |
+| ✅ | 73 Cold Email Subject Lines | `ready_to_sell/pdfs/01_73_COLD_EMAIL_SUBJECT_LINES.pdf` | PDF — direct upload |
+| ✅ | Funnel Teardown Pack | `ready_to_sell/pdfs/02_FUNNEL_TEARDOWN_PACK.pdf` | PDF — direct upload |
+| ✅ | AI Automation Blueprint | `ready_to_sell/pdfs/03_AI_AUTOMATION_BLUEPRINT.pdf` | PDF — direct upload |
+| ✅ | Solopreneur Ops System | `ready_to_sell/pdfs/04_SOLOPRENEUR_OPS_SYSTEM.pdf` | PDF — direct upload |
+| ✅ | Cold Email Playbook | `ready_to_sell/pdfs/05_COLD_EMAIL_PLAYBOOK.pdf` | PDF — direct upload |
+| ✅ | Claude Code for Solopreneurs | `15_CLAUDE_CODE_FOR_SOLOPRENEURS.html` | HTML — direct upload |
+| ✅ | Claude Code for Founders | `16_CLAUDE_CODE_FOR_NONTECHNICAL_FOUNDERS.html` | HTML — direct upload |
+| ✅ | Claude Code for Creators | `17_CLAUDE_CODE_FOR_CONTENT_CREATORS.html` | HTML — direct upload |
+
+---
+
+*Last updated: 2026-03-22 | Products tracked: 31 paid + 1 free | DIRECT UPLOAD NOW: 11 | NEEDS_PDF: 9 | NEEDS_WORK (Notion): 5 | Cover images: 0 (add post-listing) | Bundles: 6 planned*

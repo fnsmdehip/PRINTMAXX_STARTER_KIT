@@ -1,17 +1,14 @@
 # Growth Playbook: ALPHA1773995712
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2030863206781219024
 
 ## tactic summary
 A whale(0xefe2) copied 
 @RuneKek
 's trades and went long on #oil! 
-
 He opened longs on 35,314 xyz:CL($4.06M) and 31,832 xyz:BRENTOIL($3.67M).
-
 If he copied the trade when we shared the post, he would already be up $1.5M.
-
 https://
 hypurrscan.io/address/0xefe2
 63da9c803d449a572e8d126cbdab306cc147#perps

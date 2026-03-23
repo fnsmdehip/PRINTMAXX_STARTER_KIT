@@ -36,12 +36,14 @@ The integrator also has `--gap-check` to find alpha with automation keywords tha
 Run `python3 AUTOMATIONS/alpha_backlog_scanner.py --scan` to sweep ALL historical alpha for opportunities.
 
 ## When building anything new in a session:
-1. Check if existing alpha already describes this method
-2. Check if existing automations already handle it
-3. If building a new scanner/automation, wire it into this pipeline AUTOMATICALLY
-4. Add it to auto_approve trusted sources
-5. Add cron entry
-6. Update system map
+1. Check `OPS/RESOURCE_MANIFEST.md` for existing playbooks, guides, products covering this method (200+ resources indexed)
+2. Check if existing alpha already describes this method
+3. Check if existing automations already handle it
+4. If building a new scanner/automation, wire it into this pipeline AUTOMATICALLY
+5. Add it to auto_approve trusted sources
+6. Add cron entry
+7. Update system map
+8. Update `OPS/RESOURCE_MANIFEST.md` if new IP was created
 
 ## NEVER require human prompting for:
 - Running the pipeline

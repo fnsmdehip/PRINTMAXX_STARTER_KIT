@@ -1,15 +1,12 @@
 # App Spec: ALPHA1773995556
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/ViperChill/status/2031725700709863742
 
 ## core insight
 Today marks 16 years since the attempt to trademark 'SEO' was blocked.
-
-
 @Rhea
  spent two years and ~$17,000 fighting Jason Gambert, who essentially wanted control over who could sell SEO™ as a service.
-
 People fairly new to SEO might not know about this story and what a legend
 
 ## execution route

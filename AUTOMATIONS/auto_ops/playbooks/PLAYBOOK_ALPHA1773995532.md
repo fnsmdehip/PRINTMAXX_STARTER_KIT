@@ -1,16 +1,12 @@
 # Growth Playbook: ALPHA1773995532
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2032009746178265197
 
 ## tactic summary
 Whales are buying $ETH!
-
 Someone created a new wallet (0xfDe8) and has withdrawn 11,629 $ETH($23.71M) from #Binance in the past 2 days.
-
 Earlier, we also reported that whale 0x8E34 withdrew 63,324 $ETH($131.2M) from #Kraken in the past 2 days.
-
-
 https://
 intel.arkm.com/explorer/addre
 ss/0xfDe8509412fD1D37DBFA3B24855940E2c139cB7C

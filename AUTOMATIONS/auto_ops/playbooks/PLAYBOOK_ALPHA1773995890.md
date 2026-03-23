@@ -1,6 +1,6 @@
 # Growth Playbook: ALPHA1773995890
 ## source: TechCrunch (https://techcrunch.com/2026/03/20/new-court-filing-reveals-pentagon-told-anthropic-the-two-sides-were-nearly-aligned-a-week-after-trump-declared-the-relationship-kaput/)
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:01
 ## roi_potential: MEDIUM
 
 ## tactic summary

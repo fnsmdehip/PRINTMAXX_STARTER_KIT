@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995710
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2030921764172452050
 
 ## tactic summary
 Has #gold already topped? 
-
 We noticed two whales have taken profits and sold about $40M worth of #gold in the past 2 days.
-
 0x8C08 and 0xdfcA (belonging to the same whale) sold 5,250 $XAUT($26.91M) at $5,125 and 560 $PAXG ($2.9M) at $5,173 in the past 2 days, making a profit of
 
 ## implementation steps

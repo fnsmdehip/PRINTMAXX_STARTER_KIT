@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995822
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/startups/comments/1rn45nz/i_spent_60kmonth_on_pr_agencies_at_a_startup_that/
 
 ## tactic summary
 I spent &gt; $60K/month on PR agencies at a startup that raised $680M. Here's what I learned about getting press as an early-stage operator - i will not promote I was the first marketing employee (head of growht etc) at a startup that then raised a $680M Series B. Part of my job was managing PR across 6 countries at the same time.
-
 At our peak we had 5+ agencies running in parallel. US at $30K/month. UK at £15K/month. Plus France, Germany, Spain, Italy. Total bill: over $60K/month just on PR.
-
 I
 
 ## implementation steps

@@ -954,3 +954,14 @@ just got back from an industry conference and genuinely feel like i lit $4k on f
   
 i went in wit
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997492, Score: 24)
+
+**Source:** r/sidehustle | **URL:** https://reddit.com/r/sidehustle/comments/1rys5n7/rented_out_my_dormant_linkedin_account_for_b2b/
+**Added:** 2026-03-22T22:15:01-04:00
+
+[r/sidehustle] Rented out my dormant LinkedIn account for B2B outreach ($40/mo). Has anyone else done this?
+

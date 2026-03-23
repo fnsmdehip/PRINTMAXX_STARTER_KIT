@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995545
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/ItzSuds/status/2031771028427506015
 
 ## tactic summary
 PLS HELP!
-
 Stripe asked one of my best friends (bootstrapped consumer company, $12m ARR in 9 mos) to move his in app billing from Apple & helped him with the whole migration.
-
 Apple terminated his app for circumventing payment rails. STRIPE GHOSTED HIM. Can anyone at Apple help?
 
 ## implementation steps

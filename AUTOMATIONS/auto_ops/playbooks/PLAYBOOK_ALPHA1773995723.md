@@ -1,25 +1,20 @@
 # Growth Playbook: ALPHA1773995723
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2030808448108273750
 
 ## tactic summary
 Oil prices are surging.
-
 loracle.hl (
 @loraclexyz
 ) is short 75,598 xyz:CL($8.23M) and is now down over $1.24M.
-
 Meanwhile, Rune(
 @RuneKek
 ) is long 75,091 xyz:CL ($8.17M) and is up $1.22M.
-
-
 https://
 hypurrscan.io/address/0x30D3
 ca3bed41c08E98fBDF671418421a76eE019A#perps
 …
-
 https://
 hypurrscan.io/address/0x8def
 9f50456c6c4e37fa5d3d57f108ed23992dae#perps

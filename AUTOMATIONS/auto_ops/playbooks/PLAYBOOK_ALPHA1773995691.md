@@ -1,13 +1,11 @@
 # Growth Playbook: ALPHA1773995691
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/DeItaone/status/2031007455539351736
 
 ## tactic summary
 HORMUZ CLOSURE COULD PUSH OIL TO $150
-
 Macquarie warns that if the Strait of Hormuz stays closed for weeks, Brent crude could surge to $150+ due to production shut-ins and limited transit.
-
 In afternoon trading, Brent rose 10% to $102.21 and WTI gained 8.9% to $89.50.
 
 ## implementation steps

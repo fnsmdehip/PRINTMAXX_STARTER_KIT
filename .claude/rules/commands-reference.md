@@ -12,6 +12,7 @@ Stack: Python | LLM: Claude Code (subscription, model-agnostic in theory) | Brow
 - Unified CLI: `python3 AUTOMATIONS/printmaxx.py status`
 
 ## Intelligence
+- **Resource manifest: `cat OPS/RESOURCE_MANIFEST.md`** — 200+ playbooks, products, guides, templates. CHECK BEFORE creating anything new.
 - Router: `python3 AUTOMATIONS/intelligence_router.py --venture TYPE --task TASK --brief`
 - Alpha: `python3 AUTOMATIONS/alpha_query.py --venture APP_FACTORY --json`
 - Master Ops: `python3 AUTOMATIONS/master_ops_bridge.py --brief VENTURE_TYPE`

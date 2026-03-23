@@ -1,6 +1,6 @@
 # Growth Playbook: ALPHA1773995896
 ## source: TechCrunch (https://techcrunch.com/2026/03/20/u-s-accuses-irans-government-of-operating-hacktivist-group-that-hacked-stryker/)
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:01
 ## roi_potential: MEDIUM
 
 ## tactic summary

@@ -1,13 +1,11 @@
 # App Spec: ALPHA1773995506
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/StevenCravotta/status/1955705493285990851
 
 ## core insight
 99% of mobile apps never hit $10k / month.
-
 My last app hit $44k/month, and my current app is at $90k/month.
-
 Here’s how to take your app to $10k/month in 2025:
 
 ## execution route

@@ -1,19 +1,17 @@
 # Content Pack: ALPHA1773995809
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/gregisenberg/status/2028491519271780665
 
 ## core insight
 this is one of those stories that sounds fake but is inspirational 
-
 teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead of fundraising, grow to ~15m downloads and $30m+ in revenue, and sell to
 
 ---
 
 ## tweet 1: the hook
 this is one of those stories that sounds fake but is inspirational 
-
-teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead of fundraising, grow to ~15m downloa...
+teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead of fundraising, grow to ~15m download...
 
 this changes how you think about content distribution.
 
@@ -36,8 +34,7 @@ took me 30 minutes to set up. saves hours every week.
 ## thread: full breakdown (5-7 tweets)
 
 1/ this is one of those stories that sounds fake but is inspirational 
-
-teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content inst...
+teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content inste...
 
 here's the full breakdown of what's working right now.
 

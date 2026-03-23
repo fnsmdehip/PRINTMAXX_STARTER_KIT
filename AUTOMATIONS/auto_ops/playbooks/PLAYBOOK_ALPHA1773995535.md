@@ -1,14 +1,11 @@
 # Growth Playbook: ALPHA1773995535
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031926557045113054
 
 ## tactic summary
 Oil bear 0x985f deposited another 4M $USDC into Hyperliquid 45 minutes ago to keep shorting #oil.
-
 He now holds ~$35M in xyz:CL and xyz:BRENTOIL short positions, and is currently down $1.87M. 
-
-
 https://
 hypurrscan.io/address/0x985f
 02b19dbC062E565c981Aac5614baF2Cf501f#perps

@@ -532,6 +532,106 @@ def score_revenue_potential(method: dict) -> float:
     return float(REVENUE_MAP.get(raw, 5))
 
 
+# ---------------------------------------------------------------------------
+# Resource-Awareness: boost scores for methods that have existing assets
+# ---------------------------------------------------------------------------
+
+# Build a lookup of existing resources by category keyword (lazy-loaded)
+_RESOURCE_LOOKUP: dict | None = None
+
+
+def _build_resource_lookup() -> dict:
+    """Scan MONEY_METHODS, PRODUCTS, AUTOMATIONS for existing assets.
+
+    Returns dict mapping lowercase keywords to what exists:
+      {"content_farm": {"playbook": True, "script": True, "product": False}, ...}
+    """
+    lookup: dict[str, dict[str, bool]] = {}
+
+    mm_dir = PROJECT_ROOT / "MONEY_METHODS"
+    products_dir = PROJECT_ROOT / "PRODUCTS" / "GUMROAD_INSTANT_UPLOAD"
+    auto_dir = PROJECT_ROOT / "AUTOMATIONS"
+    playbooks_dir = PROJECT_ROOT / "03_PLAYBOOKS"
+
+    # Check MONEY_METHODS for playbooks
+    if mm_dir.exists():
+        for d in mm_dir.iterdir():
+            if d.is_dir():
+                key = d.name.lower().replace("-", "_")
+                has_playbook = any(d.rglob("*PLAYBOOK*")) or any(d.rglob("*playbook*"))
+                has_md = any(f for f in d.rglob("*.md") if f.stat().st_size > 3000)
+                lookup[key] = lookup.get(key, {})
+                lookup[key]["playbook"] = has_playbook or has_md
+
+    # Check 03_PLAYBOOKS
+    if playbooks_dir.exists():
+        for d in playbooks_dir.iterdir():
+            if d.is_dir():
+                key = d.name.lower().replace("-", "_")
+                lookup[key] = lookup.get(key, {})
+                lookup[key]["playbook"] = True
+
+    # Check for automation scripts
+    if auto_dir.exists():
+        script_names = [f.stem.lower() for f in auto_dir.glob("*.py")]
+        for key in lookup:
+            short = key.replace("_", "")
+            lookup[key]["script"] = any(short in s or key in s for s in script_names)
+
+    # Check for sellable digital products
+    if products_dir.exists():
+        product_names = [f.stem.lower() for f in products_dir.rglob("*.md")]
+        for key in lookup:
+            short = key.replace("_", " ")
+            lookup[key]["product"] = any(short in p or key.replace("_", "") in p for p in product_names)
+
+    return lookup
+
+
+def _resource_awareness_boost(method: dict) -> dict:
+    """Return score boosts based on existing playbooks, scripts, and products.
+
+    Having a playbook = faster to execute (speed boost)
+    Having an automation script = more automatable (auto boost)
+    Having compliance/legal docs = lower risk (risk boost)
+    """
+    global _RESOURCE_LOOKUP
+    if _RESOURCE_LOOKUP is None:
+        try:
+            _RESOURCE_LOOKUP = _build_resource_lookup()
+        except Exception:
+            _RESOURCE_LOOKUP = {}
+
+    category = str(method.get("category", "")).lower().replace("-", "_")
+    tactic = str(method.get("tactic", method.get("method_name", ""))).lower()
+
+    boosts = {"speed_boost": 0.0, "auto_boost": 0.0, "risk_boost": 0.0}
+
+    # Check direct category match
+    resources = _RESOURCE_LOOKUP.get(category, {})
+
+    # Also fuzzy match — check if any resource key appears in the tactic text
+    if not resources:
+        for key, res in _RESOURCE_LOOKUP.items():
+            if key in tactic or key.replace("_", " ") in tactic:
+                resources = res
+                break
+
+    if resources.get("playbook"):
+        boosts["speed_boost"] = 1.0  # Playbook exists = faster execution
+    if resources.get("script"):
+        boosts["auto_boost"] = 0.8  # Script exists = more automatable
+    if resources.get("product"):
+        boosts["speed_boost"] += 0.5  # Product ready = even faster to revenue
+
+    # Check if legal templates exist (applies to all methods)
+    legal_dir = PROJECT_ROOT / "09_LEGAL"
+    if legal_dir.exists() and any(legal_dir.rglob("*.md")):
+        boosts["risk_boost"] = 0.3  # Legal templates reduce risk across the board
+
+    return boosts
+
+
 def score_speed_to_revenue(method: dict) -> float:
     """Score 1-10 for how fast this method can generate revenue.
 
@@ -1045,6 +1145,13 @@ def rank_all(methods: Optional[list[dict]] = None, only_new: bool = False,
         syn_score, fed_ventures = score_synergy(method)
         cost_score, est_cost = score_upfront_cost(method)
         liab_score = score_liability_risk(method)
+
+        # Resource-awareness boost: methods with existing playbooks,
+        # automation scripts, or digital products score higher
+        resource_boost = _resource_awareness_boost(method)
+        speed_score = min(10.0, speed_score + resource_boost.get("speed_boost", 0))
+        auto_score = min(10.0, auto_score + resource_boost.get("auto_boost", 0))
+        risk_score = min(10.0, risk_score + resource_boost.get("risk_boost", 0))
 
         scores = {
             "revenue_potential": rev_score,

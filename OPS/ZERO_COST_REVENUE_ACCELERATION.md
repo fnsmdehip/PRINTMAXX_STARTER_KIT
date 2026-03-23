@@ -2603,3 +2603,14 @@ Hope it's helpful to someone.
 
 [ACQUISITION] Built something after watching my friend waste half her day just to get one revenue number
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997278, Score: 41)
+
+**Source:** r/SaaS | **URL:** https://reddit.com/r/SaaS/comments/1s0cp3b/12_lessons_after_scaling_my_saas_to_700_paid/
+**Added:** 2026-03-22T22:15:01-04:00
+
+[r/SaaS] 12 lessons after scaling my saas to 700 paid users and $9k/month in revenue
+

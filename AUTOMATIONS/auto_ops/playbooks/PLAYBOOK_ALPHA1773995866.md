@@ -1,15 +1,12 @@
 # Growth Playbook: ALPHA1773995866
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/buildinpublic/comments/1rnfk2y/my_first_app_just_got_its_first_paying_user/
 
 ## tactic summary
 My first app just got its first paying user 🥳 Hey everyone,
-
 Small milestone but I’m pretty hyped: I just got my first paying user on my app **Habitum**, a gamified habit tracker.
-
 It’s my first app, first side project, and first time building in public. Seeing a stranger actually pay for something I coded is a good dopamine shot.
-
 **The Pitch:** The idea is simple: Turn your life into a video game. You track habits, gain XP, build streaks, and level up in 4 life areas (Body, Mind, Heart, Will).
 
 ## implementation steps

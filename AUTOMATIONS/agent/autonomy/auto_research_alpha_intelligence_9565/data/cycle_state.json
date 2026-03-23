@@ -1,0 +1,20 @@
+{
+  "venture": "Alpha Intelligence",
+  "type": "RESEARCH",
+  "cycle": 1,
+  "step": "score",
+  "status": "COMPLETED",
+  "batch_results": {
+    "batch_processed": 100,
+    "scored": 100,
+    "routed_high_priority": 8,
+    "priority_distribution": {
+      "LATER": 27,
+      "BACKLOG": 65,
+      "IMMEDIATE": 4,
+      "SOON": 4
+    },
+    "timestamp": "2026-03-22T22:23:20.759653"
+  },
+  "timestamp": "2026-03-22T22:23:20.860275"
+}

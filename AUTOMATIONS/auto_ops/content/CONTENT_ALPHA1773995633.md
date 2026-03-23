@@ -1,20 +1,15 @@
 # Content Pack: ALPHA1773995633
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/affprinter/status/2031227498197885056
 
 ## core insight
 I made $2460 Today from a viral tiktok slideshow
 which literally took me 2 mins to make
-
 I swear to god this is the easiest business model ever
-
 Kids are LITERALLY making thousands a day
-
 want the breakdown?
-
 Deleting in 24 hours....
-
 Retweet & Comment “Slideshow” and I’ll dm you
 
 ---
@@ -22,16 +17,11 @@ Retweet & Comment “Slideshow” and I’ll dm you
 ## tweet 1: the hook
 I made $2460 Today from a viral tiktok slideshow
 which literally took me 2 mins to make
-
 I swear to god this is the easiest business model ever
-
 Kids are LITERALLY making thousands a day
-
 want the breakdown?
-
 Deleting in 24 hours....
-
-Re...
+Retweet...
 
 this changes how you think about content distribution.
 
@@ -55,12 +45,9 @@ took me 30 minutes to set up. saves hours every week.
 
 1/ I made $2460 Today from a viral tiktok slideshow
 which literally took me 2 mins to make
-
 I swear to god this is the easiest business model ever
-
 Kids are LITERALLY making thousands a day
-
-want the ...
+want the bre...
 
 here's the full breakdown of what's working right now.
 

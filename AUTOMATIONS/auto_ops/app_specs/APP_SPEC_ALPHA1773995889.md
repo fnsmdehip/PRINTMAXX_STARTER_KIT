@@ -1,6 +1,6 @@
 # App Spec: ALPHA1773995889
 ## source: TechCrunch (https://techcrunch.com/2026/03/21/how-fusion-power-works-and-the-startups-pursuing-it/)
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: MEDIUM
 
 ## core insight

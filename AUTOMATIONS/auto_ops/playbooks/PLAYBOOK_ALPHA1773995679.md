@@ -1,19 +1,16 @@
 # Growth Playbook: ALPHA1773995679
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031036965303558169
 
 ## tactic summary
 Mar 9 Update:
-
 #Bitcoin ETFs:
 1D NetFlow: -5,409 $BTC(-$372.46M)
 7D NetFlow: +8,154 $BTC(+$561.46M)
-
 #Ethereum ETFs:
 1D NetFlow: -36,599 $ETH(-$74M)
 7D NetFlow: +8,749 $ETH(+$17.69M)
-
 #Solana ETFs:
 1D NetFlow: -68,933 $SOL(-$5.86M)
 7D NetFlow: +266,247 $SOL(+$22.63M)

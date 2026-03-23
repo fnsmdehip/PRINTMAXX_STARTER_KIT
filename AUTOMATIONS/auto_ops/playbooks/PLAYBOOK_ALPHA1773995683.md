@@ -1,11 +1,10 @@
 # Growth Playbook: ALPHA1773995683
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/gregisenberg/status/2031006858807300267
 
 ## tactic summary
 ai is going to massively increase the number of one person companies within the next ~10 years
-
 - 1 one person $10b company
 - 10 one person $1b companies
 - 100 one person $100m companies

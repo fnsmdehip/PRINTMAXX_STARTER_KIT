@@ -29,6 +29,12 @@ Root: `AUTOMATIONS/agent/` — orchestration, state, inter-agent communication.
 - Autonomy state: `AUTOMATIONS/agent/autonomy/autonomy_state.json`
 - Swarm state: `AUTOMATIONS/agent/swarm/swarm_state.json`
 
+## Resource Manifest (ALL agents MUST know this exists)
+- `OPS/RESOURCE_MANIFEST.md` — 200+ indexed resources: playbooks, products, guides, templates, research
+- Before ANY venture execution: load the relevant playbook from the manifest
+- Before creating ANY new guide/playbook: check manifest for duplicates
+- Intelligence Router should include manifest resources in briefs
+
 ## Quality Pipeline
 - quality_gate (Opus, 2h) — HARD gate, blocks slop
 - playwright_tester — auto-tests deployed sites

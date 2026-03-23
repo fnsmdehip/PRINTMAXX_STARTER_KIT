@@ -1,15 +1,13 @@
 # Growth Playbook: ALPHA1773995639
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031179246379610210
 
 ## tactic summary
 Just one day later, things flipped.
-
 loracle.hl(
 @loraclexyz
 ), who shorted #oil, has turned a loss into a profit and is now up $588K.
-
 Meanwhile, Rune(
 @RuneKek
 ), who is long on #oil, has gone from profit to loss and is now down $591K.

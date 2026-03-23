@@ -1,6 +1,6 @@
 # App Spec: ALPHA1773994823
 ## source: reddit/r/digitalnomad
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: HIGHEST
 
 ## core insight

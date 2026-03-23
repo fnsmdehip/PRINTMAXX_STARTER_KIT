@@ -1,17 +1,13 @@
 # App Spec: ALPHA1773995689
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/DeItaone/status/2031004930580873630
 
 ## core insight
 OIL ALERT: COULD BRENT CRUDE HIT $135?
-
 Rystad Energy warns that if Middle East disruptions last four months, Brent crude could spike to $135/bbl by May. 
-
  Two Scenarios for 2026:
-
  2-Month Crisis: Prices jump to $110 in April, then cool to $70 by year-end.
-
  4-Month
 
 ## execution route

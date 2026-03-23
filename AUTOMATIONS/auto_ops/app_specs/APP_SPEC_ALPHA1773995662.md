@@ -1,15 +1,12 @@
 # App Spec: ALPHA1773995662
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/financialjuice/status/2031075676330070131
 
 ## core insight
 NYMEX WTI Crude April futures settle at $94.77 a barrel, up $3.87, 4.26%.
-
 NYMEX Natural Gas April futures settle at $3.1200/MMBtu.
-
 NYMEX Gasoline April futures settle at $2.8084 a gallon.
-
 NYMEX Diesel April futures settle at $3.5866 a gallon.
 
 ## execution route

@@ -3049,3 +3049,25 @@ Hope it's helpful to someone.
 
 [ thread]
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997301, Score: 24)
+
+**Source:** r/AppBusiness | **URL:** https://reddit.com/r/AppBusiness/comments/1s0mgjz/my_first_200_in_revenue_my_full_cli_workflow/
+**Added:** 2026-03-22T22:15:01-04:00
+
+[r/AppBusiness] My First $200 in Revenue. My Full CLI workflow
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997307, Score: 24)
+
+**Source:** r/SaaS | **URL:** https://reddit.com/r/SaaS/comments/1s0r2e5/revenue_40kmonth_take_home_6kmonth/
+**Added:** 2026-03-22T22:15:01-04:00
+
+[r/SaaS] Revenue: $40K/month. Take home: $6K/month.
+

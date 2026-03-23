@@ -1,17 +1,13 @@
 # Growth Playbook: ALPHA1773995542
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/Argona0x/status/2031805160565936424
 
 ## tactic summary
 i ran my bot's trade history against the actual outcomes of 14,000 events
-
 it wasn't predicting the future
-
 it was predicting when other bots would panic-sell
-
 $187K profit in 6 weeks. not from reading markets. from reading machines.
-
 i built a standard polymarket bot last year.
 
 ## implementation steps

@@ -1,23 +1,17 @@
 # Growth Playbook: ALPHA1773995711
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2030892292014559446
 
 ## tactic summary
 Whales are FOMO-ing long #oil!
-
 In the past 30 minutes:
-
 0xf4b8 opened a 20x long on 125,169 xyz:CL($13.1M) . liquidation price: $96.64.
-
 0x4ff9 opened a 2x long on 62,180 xyz:CL($6.5M) . liquidation price: $52.06.
-
-
 https://
 hypurrscan.io/address/0xf4b8
 cdaf7e698c96b99da5c286551da8a129f3ee#perps
 …
-
 https://
 hypurrscan.io/address/0x4ff9
 b58ed112bf3df108d1d62bd95e7352ef38d3#perps

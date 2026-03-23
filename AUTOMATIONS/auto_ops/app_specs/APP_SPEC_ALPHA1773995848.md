@@ -1,11 +1,10 @@
 # App Spec: ALPHA1773995848
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/SaaS/comments/1rnjguw/i_analyzed_963k_ios_apps_471k_reviews/
 
 ## core insight
 I analyzed 963k iOS apps + 471k reviews I've built too many apps that people downloaded and then... never paid for. Not a cent. So i did what any sane person would do and went full spreadsheet goblin on the iOS App Store. 963k apps. 471k reviews. All of it scored for one thing: validated demand.
-
 And by validated demand i mean apps where people are genuinely frustrated but still handing over money because there's nothing better. Not "oh that'd be neat" demand. More like "i hate this app but i li
 
 ## execution route

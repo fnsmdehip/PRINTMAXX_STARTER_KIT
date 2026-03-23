@@ -16,11 +16,13 @@
 3. **ALPHA** goes to `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Format: `.claude/rules/alpha-review.md`. Approve: `/review-alpha`
 4. **CONTENT** follows `.claude/rules/copy-style.md` (non-negotiable @pipelineabuser voice check)
 5. **HUMAN APPROVALS** go to `ralph/loops/mega/checkpoints/` (PENDING_PURCHASES/PUBLISH/ACCOUNTS/HIGH_RISK). Flag and continue.
+6. **RESOURCES** — Before creating ANY new playbook/guide/product, check `OPS/RESOURCE_MANIFEST.md` (200+ indexed resources). DEDUP before creating.
 
 ### "Where is...?" (complete reference)
 
 | "Where is..." | Location |
 |---------------|----------|
+| **ALL resources/IP/playbooks** | **`OPS/RESOURCE_MANIFEST.md`** — 200+ playbooks, products, guides, templates, research |
 | **Latest handoff** | `OPS/SESSION_HANDOFF_FEB10_2026.md` |
 | **Current status** | `OPS/SESSION_HANDOFF.md` |
 | **Mega loop status** | `ralph/loops/mega/.ralph/progress.md` |

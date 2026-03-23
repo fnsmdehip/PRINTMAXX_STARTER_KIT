@@ -1,27 +1,18 @@
 # Growth Playbook: ALPHA1773995833
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/SideProject/comments/1rnuo5c/cli_progress_bar/
 
 ## tactic summary
 CLI Progress Bar Most terminal progress bars look like this:
-
 downloading... 60%
-
 So I built one that looks like this:
-
 Uploading \[████████████████████░░░░░░░░░░\] 60%
-
 Uploading \[===============>--------------\] 60%
-
 Uploading \[••••••••••••••••••············\] 60%
-
 Uploading \[★★★★★★★★★★★★★★★☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆\] 60%
-
 I built progressimo, an npm library with:
-
 \- 6 built-in themes (retro, minimal, dots, blocks, arrows)
-
 \- 3 colorblind-friendly palettes (because accessibility matters even in ter
 
 ## implementation steps

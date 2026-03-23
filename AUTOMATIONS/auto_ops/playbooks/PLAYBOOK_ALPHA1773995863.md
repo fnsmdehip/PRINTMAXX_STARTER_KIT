@@ -1,19 +1,14 @@
 # Growth Playbook: ALPHA1773995863
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/smallbusiness/comments/1rnhpnh/taught_how_to_fish_and_he_stole_my_pond/
 
 ## tactic summary
 Taught how to fish and he stole my pond I honestly dont know if im angry, dissapointed or just feeling stupid for trusting him that much. maybe all three.
-
 About 2 years ago my family asked me to help my uncle’s son. He was educated but life wasnt really working out for him. He was doing food deliver restaurant shifts, random jobs like that just to survive.
-
 My parents kept saying
-
 you are doing good online… teach him as well
-
 So I said ok. I thought helping family is the right thing to do.
-
 For
 
 ## implementation steps

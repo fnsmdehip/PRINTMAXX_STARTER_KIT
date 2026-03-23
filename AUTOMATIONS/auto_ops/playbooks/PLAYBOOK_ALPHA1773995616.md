@@ -1,14 +1,11 @@
 # Growth Playbook: ALPHA1773995616
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031236176166924459
 
 ## tactic summary
 Trader 0x8A21, who sold 499 $ETH($2.21M) at a high price of 4,434 six months ago, bought 1,004 $ETH($2.08M) back at a low price of $2,070 two hours ago.
-
 A perfect sell high, buy low!
-
-
 https://
 intel.arkm.com/explorer/addre
 ss/0x8A21480e58C149A313539d6488b657278C1B12F0

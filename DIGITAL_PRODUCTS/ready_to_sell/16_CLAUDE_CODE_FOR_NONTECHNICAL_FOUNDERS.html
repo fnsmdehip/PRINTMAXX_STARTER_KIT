@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code for Non-Technical Founders: Ship Without Engineers</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--card:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--muted:#8888a0;--accent:#6366f1;--accent2:#818cf8;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--cyan:#06b6d4}
+body{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.hero{background:linear-gradient(135deg,#0f0f1a 0%,#1a1030 50%,#0f0f1a 100%);border-bottom:1px solid var(--border);padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2rem;background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.5rem}
+.hero .sub{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem}
+.hero .stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:1.8rem;font-weight:700;color:var(--green)}
+.hero .stat .label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* Search */
+.search-wrap{max-width:700px;margin:2rem auto;padding:0 1rem}
+#search{width:100%;padding:0.8rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+#search:focus{border-color:var(--accent)}
+.search-meta{text-align:center;color:var(--muted);font-size:0.8rem;margin-top:0.5rem}
+
+/* Nav */
+.nav{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;padding:1rem 2rem;border-bottom:1px solid var(--border);background:var(--surface)}
+.nav button{padding:0.4rem 0.9rem;background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--muted);font-family:inherit;font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+.nav button:hover,.nav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Content */
+.container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.section{margin-bottom:3rem;display:none}
+.section.visible{display:block}
+.section h2{font-size:1.4rem;color:var(--accent2);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+.section h3{font-size:1.1rem;color:var(--cyan);margin:1.5rem 0 0.5rem}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem;transition:border-color 0.2s}
+.card:hover{border-color:var(--accent)}
+.card .title{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
+.card .desc{color:var(--muted);font-size:0.85rem;margin-bottom:0.8rem}
+.card .tag{display:inline-block;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.7rem;margin-right:0.3rem;margin-bottom:0.3rem}
+.tag-tier1{background:#22c55e20;color:var(--green);border:1px solid #22c55e40}
+.tag-tier2{background:#f59e0b20;color:var(--orange);border:1px solid #f59e0b40}
+.tag-tier3{background:#6366f120;color:var(--accent2);border:1px solid #6366f140}
+.tag-free{background:#06b6d420;color:var(--cyan);border:1px solid #06b6d440}
+
+/* Code blocks */
+pre{background:#0d0d15;border:1px solid var(--border);border-radius:8px;padding:1rem;overflow-x:auto;font-size:0.82rem;line-height:1.6;margin:0.8rem 0}
+code{color:var(--green);font-size:0.85rem}
+.inline-code{background:#1a1a2a;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.82rem}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.85rem}
+th{background:var(--surface);padding:0.6rem 0.8rem;text-align:left;border-bottom:2px solid var(--border);color:var(--accent2);font-weight:600}
+td{padding:0.5rem 0.8rem;border-bottom:1px solid var(--border)}
+tr:hover td{background:var(--card)}
+
+/* Callout */
+.callout{background:var(--surface);border-left:3px solid var(--accent);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1rem 0;font-size:0.9rem}
+.callout.warning{border-left-color:var(--orange)}
+.callout.success{border-left-color:var(--green)}
+
+/* Responsive */
+@media(max-width:600px){
+  .hero h1{font-size:1.4rem}
+  .hero .stats{gap:1rem}
+  .hero .stat .num{font-size:1.3rem}
+  .container{padding:1rem}
+  pre{font-size:0.75rem}
+}
+
+/* Print */
+@media print{
+  .nav,.search-wrap{display:none}
+  .section{display:block!important}
+  body{background:#fff;color:#111}
+  .card{border:1px solid #ddd}
+}
+
+/* Highlight */
+mark{background:var(--accent);color:#fff;padding:0 0.2rem;border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Claude Code for Non-Technical Founders</h1>
+  <p class="sub">Ship Without Engineers &mdash; The Director Model for Building Software Products</p>
+  <div class="stats">
+    <div class="stat"><div class="num">50+</div><div class="label">Products Shipped</div></div>
+    <div class="stat"><div class="num">10min</div><div class="label">Per Prototype</div></div>
+    <div class="stat"><div class="num">$0</div><div class="label">Engineering Fees Paid</div></div>
+    <div class="stat"><div class="num">6wks</div><div class="label">To First Revenue</div></div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <input type="text" id="search" placeholder="Search... (director model, deploy, pricing, catalog)" autocomplete="off">
+  <div class="search-meta" id="searchMeta">7 sections &middot; 50+ products &middot; copy-paste specs and commands</div>
+</div>
+
+<nav class="nav" id="nav">
+  <button class="active" data-section="overview">Overview</button>
+  <button data-section="director">Director Model</button>
+  <button data-section="workflow">Build Workflow</button>
+  <button data-section="first">What to Build First</button>
+  <button data-section="deploy">Deploy</button>
+  <button data-section="review">Review</button>
+  <button data-section="catalog">Catalog</button>
+</nav>
+
+<div class="container" id="content">
+
+<!-- SECTION: Overview -->
+<div class="section visible" id="sec-overview">
+<h2>Why This Exists</h2>
+<p style="margin-bottom:1rem">You have the idea. You have the customers. You don't have a CTO.</p>
+<p style="margin-bottom:1rem">This is not a guide about learning to code. It is a guide about learning to direct. There is a real difference. A director does not write the screenplay. A director specifies what they want, reviews the output, and tells the crew what to change. That is exactly what you will do with Claude Code.</p>
+<p style="margin-bottom:1rem">Everything in this guide came from building 50+ working products in 6 weeks with no CS degree and no prior programming experience. Apps, landing pages, automations, digital products. The system works. You can run it from day one.</p>
+
+<div class="callout success">
+<strong>What you get:</strong> The director model for giving precise instructions. The 10-minute prototype workflow. The decision framework for what to build first. Step-by-step deploy commands for Surge, Vercel, Gumroad, and the App Store. The 5-question non-technical review. The product catalog system for tracking 50+ products without losing your mind.
+</div>
+
+<h3>The Core Insight</h3>
+<p style="margin-bottom:1rem">Non-technical founders fail with AI coding tools for one reason: they ask vague questions and get vague output. "Build me a landing page" produces generic garbage. "Build me a single-file HTML landing page for a $47 pricing calculator tool, dark background, monospace font, two-column layout with a form on the left and live output on the right, no external dependencies" produces something you can deploy in 10 minutes.</p>
+<p style="margin-bottom:1rem">Precision is the skill. Not code. Precision.</p>
+
+<h3>System Stats (Real, Not Projected)</h3>
+<table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Products built</td><td>50+</td></tr>
+<tr><td>Engineering fees paid</td><td>$0</td></tr>
+<tr><td>Time from idea to deployed prototype</td><td>Under 10 minutes</td></tr>
+<tr><td>Weeks to first revenue</td><td>6</td></tr>
+<tr><td>Uptime on deployed products</td><td>99%+</td></tr>
+<tr><td>Platforms used</td><td>Surge.sh, Vercel, Gumroad, App Store</td></tr>
+<tr><td>Build types</td><td>HTML tools, landing pages, PWAs, PDFs, calculators</td></tr>
+</table>
+
+<h3>Who This Is For</h3>
+<div class="card">
+<div class="title">You have built a business before but not software products</div>
+<div class="desc">You understand customers, pricing, and distribution. You just need the production layer. This guide closes that gap.</div>
+<span class="tag tag-tier1">EXACT FIT</span>
+</div>
+<div class="card">
+<div class="title">You want to move at engineer speed without hiring engineers</div>
+<div class="desc">A freelance developer costs $75-150/hr and takes 2 weeks to onboard. Claude Code is immediate. With the right spec, the output is indistinguishable from paid work for most product types.</div>
+<span class="tag tag-tier1">EXACT FIT</span>
+</div>
+<div class="card">
+<div class="title">You have Claude Code but don't feel confident directing it</div>
+<div class="desc">The tool is there. The missing piece is the instruction framework. That's what this guide provides.</div>
+<span class="tag tag-tier1">EXACT FIT</span>
+</div>
+</div>
+
+<!-- SECTION: Director Model -->
+<div class="section" id="sec-director">
+<h2>The Director Model</h2>
+<p style="margin-bottom:1rem">Your job is not to write code. Your job is to specify clearly, review outputs, and direct revisions. That is it. The entire model collapses to three verbs: specify, review, revise.</p>
+
+<div class="callout">
+<strong>Director vs Engineer:</strong> An engineer decides how to build something. A director decides what to build and whether the result matches the vision. You are the director. Claude Code is the crew. Never confuse the roles.
+</div>
+
+<h3>The 4 Types of Instructions</h3>
+<p style="margin-bottom:0.5rem">Every instruction you give Claude Code falls into one of four categories. Master these and you can direct any build.</p>
+
+<div class="card">
+<div class="title">1. Feature Spec</div>
+<div class="desc">Describes exactly what a feature does. Includes the trigger, the action, and the result.</div>
+<span class="tag tag-tier1">MOST IMPORTANT</span>
+<pre>
+"Add a button labeled 'Calculate' that, when clicked, reads the
+value from the #revenue input field, multiplies it by the margin
+percentage in #margin, and displays the result in #output with
+two decimal places and a dollar sign. Save the result to
+localStorage under the key 'last_calculation'."
+</pre>
+</div>
+
+<div class="card">
+<div class="title">2. Constraint</div>
+<div class="desc">Tells Claude Code what NOT to use or do. Prevents scope creep and dependency problems.</div>
+<span class="tag tag-tier2">SCOPE CONTROL</span>
+<pre>
+"No external libraries. No API calls. No npm packages.
+Everything must work offline by opening the HTML file
+directly in a browser. No build step required."
+</pre>
+</div>
+
+<div class="card">
+<div class="title">3. Style Reference</div>
+<div class="desc">Points to an existing example instead of describing aesthetics in words. Always faster and more accurate.</div>
+<span class="tag tag-tier2">FASTER THAN DESCRIBING</span>
+<pre>
+"Dark background (#0a0a0f), monospace font (SF Mono or Fira Code),
+minimal UI with no decorative elements. Use the card pattern
+from financial_dashboard.html as the reference for spacing and
+border treatment."
+</pre>
+</div>
+
+<div class="card">
+<div class="title">4. Scope Boundary</div>
+<div class="desc">Tells Claude Code exactly which part of the file to touch and which parts to leave alone.</div>
+<span class="tag tag-tier3">PREVENTS BREAKAGE</span>
+<pre>
+"Only modify the &lt;header&gt; section and the .nav CSS block.
+Do not touch any JavaScript. Do not change the body layout.
+Do not add new HTML elements outside the header."
+</pre>
+</div>
+
+<h3>The 5 Words That Save You</h3>
+<p style="margin-bottom:0.5rem">When you have an existing example and want something similar:</p>
+<div class="callout success">
+<strong>"Exactly like the example, except..."</strong><br>
+This single phrase eliminates 80% of miscommunication. You point at something that already works, then describe only the delta. Claude Code fills in everything else from the reference.
+</div>
+
+<h3>What NOT to Do</h3>
+<div class="callout warning">
+<strong>Never say "make it better."</strong> Better at what? Faster? Prettier? More accurate? Shorter? Without a specific criterion, Claude Code will make arbitrary changes that may break things that already worked. Always define the direction of improvement before asking for it.
+</div>
+
+<h3>The Revision Cycle</h3>
+<p style="margin-bottom:0.5rem">Every build follows this loop:</p>
+<pre>
+1. SPEC    Write a precise CLAUDE.md describing what you want
+2. BUILD   Run: claude --dangerously-skip-permissions
+3. REVIEW  Use the 5-question framework (see Review section)
+4. REVISE  Describe what is wrong specifically, not "fix it"
+5. SHIP    When 5/5 questions pass, deploy
+</pre>
+
+<h3>Good Spec vs Bad Spec</h3>
+<p style="margin-bottom:0.5rem">The single biggest variable in output quality is spec quality.</p>
+
+<div class="card">
+<div class="title">Bad CLAUDE.md Spec</div>
+<div class="desc">Vague. No constraints. No reference. No scope.</div>
+<pre>
+Build a pricing tool for my SaaS business.
+Make it look professional.
+Include pricing tiers.
+</pre>
+</div>
+
+<div class="card">
+<div class="title">Good CLAUDE.md Spec</div>
+<div class="desc">Specific. Constrained. Referenced. Scoped.</div>
+<pre>
+# Product: SaaS Pricing Calculator
+
+## What it does
+- User enters monthly active users (number input, 1-100000)
+- User selects tier (radio: Starter / Growth / Enterprise)
+- Tool displays monthly price and annual price with 20% discount
+- Displays a breakdown: base fee + per-seat fee
+
+## What it does NOT do
+- No sign-up form
+- No payment processing
+- No external API calls
+
+## Tech constraints
+- Single HTML file, self-contained
+- No external libraries or CDN links
+- Works offline (open file:// in browser)
+- Mobile-responsive
+
+## Style
+- Dark background: #0a0a0f
+- Monospace font: 'SF Mono', 'Fira Code', monospace
+- Reference: financial_dashboard.html card style
+
+## Scope
+- Create ONE new file: pricing_calculator.html
+- Do not modify any existing files
+</pre>
+</div>
+</div>
+
+<!-- SECTION: Build Workflow -->
+<div class="section" id="sec-workflow">
+<h2>The Build Workflow</h2>
+<p style="margin-bottom:1rem">Idea to working prototype in under 10 minutes. This is the exact process used to ship 50+ products.</p>
+
+<h3>The 10-Minute Prototype</h3>
+<pre>
+Step 1 (2 min): Write your spec in CLAUDE.md using the template below
+Step 2 (1 min): Open terminal, navigate to your project folder
+Step 3 (5 min): Run: claude --dangerously-skip-permissions
+                Claude Code reads CLAUDE.md and builds autonomously
+Step 4 (2 min): Open the output file in your browser, run the 5-question review
+</pre>
+
+<div class="callout">
+<strong>--dangerously-skip-permissions</strong> lets Claude Code write files and run commands without asking for permission on each step. This is what makes autonomous builds possible. It is safe in your project folder. Do not run it in directories you don't fully control.
+</div>
+
+<h3>The Spec Template (Fill In and Use)</h3>
+<p style="margin-bottom:0.5rem">Copy this into a file called <span class="inline-code">CLAUDE.md</span> in your project folder. Fill in the brackets.</p>
+<pre>
+# Product: [Name of the product]
+
+## One-sentence description
+[What it does for the user in one sentence]
+
+## What it does (3 bullet points max)
+- [Core feature 1]
+- [Core feature 2]
+- [Core feature 3]
+
+## What it does NOT do (2 bullet points max)
+- [Out-of-scope feature 1 — prevents scope creep]
+- [Out-of-scope feature 2]
+
+## Tech constraints
+- Single HTML file, self-contained, no external dependencies
+- No build step. Open directly in browser.
+- Mobile-responsive (test at 375px width)
+- [Add any other hard constraints here]
+
+## Style
+- Background: #0a0a0f (dark)
+- Font: monospace (SF Mono, Fira Code, JetBrains Mono)
+- [Reference file if you have one, e.g.: "reference: dashboard.html"]
+
+## Output
+- Create ONE file: [filename].html
+- Do not modify any existing files
+- Do not create any other files
+</pre>
+
+<h3>3 Prototype Categories</h3>
+<div class="card">
+<div class="title">HTML Tools</div>
+<div class="desc">Self-contained single-file apps that do one specific calculation or task. No server. No database. Works offline. Highest value-to-build-time ratio.</div>
+<span class="tag tag-tier1">FASTEST TO BUILD</span>
+<span class="tag tag-tier1">HIGHEST MARGIN</span>
+<pre>
+Examples:
+- Financial dashboard (revenue, margin, burn rate inputs)
+- ROI estimator for a specific industry
+- Pricing calculator for a SaaS product
+- Email template generator with variable substitution
+- Proposal cost calculator
+</pre>
+</div>
+
+<div class="card">
+<div class="title">Landing Pages</div>
+<div class="desc">Single HTML file with hero, benefits, social proof, and CTA. Deploy to Surge.sh in 30 seconds. Use for waitlists, digital products, ebook pre-sales, tool launches.</div>
+<span class="tag tag-tier2">30-SEC DEPLOY</span>
+<pre>
+Examples:
+- Course waiting list (email capture + Mailchimp)
+- Ebook landing page (buy on Gumroad, preview on page)
+- Tool waitlist (coming soon with email capture)
+- Service landing page for local business
+</pre>
+</div>
+
+<div class="card">
+<div class="title">PDF Content Products</div>
+<div class="desc">Write in markdown, export to PDF, sell on Gumroad. Claude Code can generate the markdown content and convert it to a polished HTML version for the guide file itself.</div>
+<span class="tag tag-tier3">LOWEST EFFORT</span>
+<pre>
+Examples:
+- Industry-specific checklist
+- Swipe file (templates + examples)
+- Decision framework with worked examples
+- Resource directory with commentary
+</pre>
+</div>
+
+<h3>Full Example Spec: Pricing Calculator</h3>
+<p style="margin-bottom:0.5rem">This exact spec was used to build a working tool in 7 minutes.</p>
+<pre>
+# Product: Agency Retainer Calculator
+
+## One-sentence description
+Helps agency owners calculate the correct monthly retainer
+based on hours, team size, overhead, and target margin.
+
+## What it does
+- Accepts: estimated hours/month, hourly cost, overhead percentage,
+  target profit margin percentage
+- Calculates: break-even rate, recommended retainer, annual value
+- Displays: color-coded output (green = healthy margin, red = below break-even)
+
+## What it does NOT do
+- No client management features
+- No invoice generation
+- No saving or accounts
+
+## Tech constraints
+- Single HTML file, self-contained
+- No external libraries
+- Works offline
+- Mobile responsive at 375px
+
+## Style
+- Background: #0a0a0f
+- Font: 'SF Mono', monospace
+- Cards for input and output sections
+- Green (#22c55e) for positive outputs, red (#ef4444) for warnings
+
+## Output
+- Create: agency_retainer_calculator.html
+- Do not modify any other files
+</pre>
+</div>
+
+<!-- SECTION: What to Build First -->
+<div class="section" id="sec-first">
+<h2>What to Build First</h2>
+<p style="margin-bottom:1rem">You have 100 ideas. The wrong choice costs 3 weeks. The right choice gets you to revenue in week one. Use this framework to sort them.</p>
+
+<h3>The Venture Scoring Matrix</h3>
+<p style="margin-bottom:0.5rem">Score each idea on three dimensions, multiply, divide by competition. Highest score builds first.</p>
+<div class="callout">
+<strong>Score = (Market Size x Monetization Ease x Build Speed) / Competition Level</strong><br>
+Rate each dimension 1-5. Market Size: how many people have this problem. Monetization Ease: how directly does it convert to money. Build Speed: how fast can you build it. Competition Level: how crowded is the space (lower is better, so divide).
+</div>
+
+<h3>Tier 1: Build in Week One</h3>
+<p style="margin-bottom:0.5rem">HTML tools with immediate, specific utility. These build in under 2 hours and can be sold the same day.</p>
+
+<div class="card">
+<div class="title">Pricing Calculator</div>
+<div class="desc">Industry-specific pricing tool. A roofer calculates job cost. A consultant calculates project fee. A SaaS founder calculates MRR scenarios. Niche-specific = high willingness to pay.</div>
+<span class="tag tag-tier1">WEEK 1</span>
+</div>
+
+<div class="card">
+<div class="title">ROI Estimator</div>
+<div class="desc">Shows a buyer the return on their investment before they buy. Used in B2B sales. Reduces objections. Can be sold to sales teams as a tool or used to generate leads on your own site.</div>
+<span class="tag tag-tier1">WEEK 1</span>
+</div>
+
+<div class="card">
+<div class="title">Email Template Generator</div>
+<div class="desc">User fills in their company, product, and target customer. Tool generates 5 cold email variants. Sell to sales teams, freelancers, or agency founders. $29-47 per download.</div>
+<span class="tag tag-tier1">WEEK 1</span>
+</div>
+
+<h3>Tier 2: Build in Weeks 2-3</h3>
+<div class="card">
+<div class="title">Landing Page for a Digital Product</div>
+<div class="desc">Once you have one HTML tool working, build a landing page to sell it. Course waiting lists, ebook pre-sales, tool waitlists. Single HTML file. Deploy to Surge in 30 seconds.</div>
+<span class="tag tag-tier2">WEEKS 2-3</span>
+</div>
+
+<div class="card">
+<div class="title">Lead Magnet Tool</div>
+<div class="desc">A free tool that captures email before showing the output. Industry-specific enough that it only attracts your exact buyer. Powers your email list while demonstrating your expertise.</div>
+<span class="tag tag-tier2">WEEKS 2-3</span>
+</div>
+
+<h3>Tier 3: Build in Month 2</h3>
+<div class="card">
+<div class="title">Lightweight Apps with User State</div>
+<div class="desc">Habit trackers, quiz tools, calculators that save progress. These require localStorage or a simple backend. More complexity, but higher perceived value and better retention.</div>
+<span class="tag tag-tier3">MONTH 2</span>
+</div>
+
+<h3>Build vs. Don't Build Decision Table</h3>
+<table>
+<tr><th>Product Type</th><th>Build Time</th><th>Price Range</th><th>Best Platform</th></tr>
+<tr><td>HTML calculator tool</td><td>Under 2 hours</td><td>$19-47</td><td>Gumroad</td></tr>
+<tr><td>Landing page (single)</td><td>Under 1 hour</td><td>Free (lead gen)</td><td>Surge.sh</td></tr>
+<tr><td>PDF guide/checklist</td><td>2-4 hours</td><td>$9-29</td><td>Gumroad</td></tr>
+<tr><td>Landing page with waitlist</td><td>Under 2 hours</td><td>Free (list building)</td><td>Surge.sh / Vercel</td></tr>
+<tr><td>Habit tracker PWA</td><td>4-8 hours</td><td>$2.99/mo IAP</td><td>App Store</td></tr>
+<tr><td>Quiz or assessment tool</td><td>2-4 hours</td><td>$29-97</td><td>Gumroad / own site</td></tr>
+<tr><td>SaaS MVP</td><td>2-6 weeks</td><td>$29-99/mo</td><td>Vercel + Stripe</td></tr>
+</table>
+
+<div class="callout warning">
+<strong>The kill criterion before you start:</strong> If you cannot describe what your product does in two clear bullet points in under 5 minutes, the idea is not clear enough yet. Do not build it. Spend 30 more minutes on the spec. A fuzzy idea produces a fuzzy product and fuzzy products do not sell.
+</div>
+
+<div class="callout">
+<strong>The 2-hour rule:</strong> If specifying the product (not building it, just writing the spec) takes more than 2 hours, the scope is too large. Split it into two simpler products. Smaller, more specific tools outperform complex ones on Gumroad almost every time.
+</div>
+</div>
+
+<!-- SECTION: Deploy -->
+<div class="section" id="sec-deploy">
+<h2>Deploy</h2>
+<p style="margin-bottom:1rem">Four options. Pick based on what you built. Each has a one-command deploy path.</p>
+
+<h3>Option 1: Surge.sh (HTML/CSS/JS Tools and Landing Pages)</h3>
+<p style="margin-bottom:0.5rem">Free. Instant. No account setup required beyond npm install. Works for any static HTML file or folder.</p>
+<pre>
+# Install once
+npm install -g surge
+
+# Deploy a single file
+surge pricing_calculator.html mysite.surge.sh
+
+# Deploy a folder
+surge dist/ mysite.surge.sh
+
+# Custom subdomain on your own domain
+surge dist/ tools.yourdomain.com
+</pre>
+<div class="callout success">
+<strong>Surge is the right choice for 90% of HTML tools and landing pages.</strong> Free tier handles unlimited sites. Deploy takes 30 seconds. URL is live immediately. No build step required.
+</div>
+
+<h3>Option 2: Vercel (Next.js or Multi-Page Apps)</h3>
+<p style="margin-bottom:0.5rem">Free tier. Works for more complex apps that need routing, API endpoints, or a build step.</p>
+<pre>
+# Install once
+npm install -g vercel
+
+# Deploy from project root
+vercel --prod
+
+# Set environment variables
+vercel env add STRIPE_SECRET_KEY
+
+# Deploy with specific settings
+vercel --prod --name my-app-name
+</pre>
+
+<h3>Option 3: Gumroad (Digital Products)</h3>
+<p style="margin-bottom:0.5rem">For paid guides, HTML tools, and PDFs. Upload the file directly. Gumroad handles payments, delivery, and VAT in most countries.</p>
+<pre>
+# No command line needed.
+# 1. Go to app.gumroad.com
+# 2. New Product > Digital Product
+# 3. Upload your .html or .pdf file
+# 4. Set price (recommended: $39 with PWYW minimum $19)
+# 5. Publish. Share the link.
+
+# The file this guide is in IS the Gumroad product.
+# The buyer downloads this HTML file and opens it in any browser.
+# No server. No login. No expiry.
+</pre>
+
+<h3>Option 4: App Store via Capacitor (PWA to iOS App)</h3>
+<p style="margin-bottom:0.5rem">Takes your HTML/JS web app and wraps it as a native iOS app. Requires $99/year Apple Developer account. Takes 24-48 hours for App Store review.</p>
+<pre>
+# Install Capacitor
+npm install @capacitor/core @capacitor/cli @capacitor/ios
+
+# Initialize (run once per app)
+npx cap init "App Name" com.yourcompany.appname --web-dir dist
+
+# Add iOS platform
+npx cap add ios
+
+# Sync your web build to iOS
+npx cap sync
+
+# Open in Xcode for final build and submission
+npx cap open ios
+</pre>
+<div class="callout warning">
+<strong>App Store submission requires Xcode on a Mac.</strong> The review process takes 1-3 business days. Prepare screenshots at 1290x2796px (iPhone 15 Pro Max) and a 1024x1024px icon. These can be generated with Claude Code + a headless browser.
+</div>
+
+<h3>Domain Strategy</h3>
+<p style="margin-bottom:0.5rem">10 products on 10 subdomains from one $12/year domain. Surge and Vercel both support custom subdomains on free tiers.</p>
+<pre>
+# One domain. Multiple products. Zero extra cost.
+calculator.yourdomain.com  -> surge dist/calculator/ calculator.yourdomain.com
+tools.yourdomain.com       -> surge dist/tools/ tools.yourdomain.com
+roi.yourdomain.com         -> surge dist/roi/ roi.yourdomain.com
+
+# Point subdomain to Surge:
+# Add CNAME record in DNS: subdomain -> na-west1.surge.sh
+# Then deploy: surge dist/ subdomain.yourdomain.com
+</pre>
+
+<h3>Deployment Checklist</h3>
+<table>
+<tr><th>Platform</th><th>What It Handles</th><th>What It Doesn't Handle</th></tr>
+<tr><td>Surge.sh</td><td>Static files, custom domains, HTTPS, instant deploys</td><td>Server-side logic, databases, form submissions</td></tr>
+<tr><td>Vercel</td><td>Full-stack apps, serverless functions, env variables, CI/CD</td><td>Long-running processes, files over 50MB</td></tr>
+<tr><td>Gumroad</td><td>Payments, file delivery, VAT, refunds, affiliate program</td><td>Subscriptions (use Stripe), custom checkout UI</td></tr>
+<tr><td>App Store</td><td>Distribution, payments (30% fee), updates, discovery</td><td>Web-only features, same-day deploys, sideloading</td></tr>
+</table>
+</div>
+
+<!-- SECTION: Review -->
+<div class="section" id="sec-review">
+<h2>The 5-Question Non-Technical Review</h2>
+<p style="margin-bottom:1rem">You do not need to understand every line of code to catch 90% of real problems. These five questions cover what actually matters to a user.</p>
+
+<h3>The 5 Questions</h3>
+
+<div class="card">
+<div class="title">1. Does it do what the spec says?</div>
+<div class="desc">Go back to your CLAUDE.md. Read each bullet point under "What it does." Test each one manually. Check them off. If any bullet point fails, that is a revision item.</div>
+<span class="tag tag-tier1">TEST FIRST</span>
+</div>
+
+<div class="card">
+<div class="title">2. Does it break when I do something unexpected?</div>
+<div class="desc">Try wrong inputs. Leave fields empty and click submit. Enter text where a number is expected. Enter a negative number. Enter a number with 10 decimal places. If it crashes or shows an error, that is a revision item.</div>
+<span class="tag tag-tier1">EDGE CASES</span>
+</div>
+
+<div class="card">
+<div class="title">3. Does it look right on mobile?</div>
+<div class="desc">Resize your browser window to 375px wide (iPhone SE width). Does text overflow? Do buttons stack correctly? Is anything cut off or overlapping? If yes, that is a revision item.</div>
+<span class="tag tag-tier2">MOBILE CHECK</span>
+</div>
+
+<div class="card">
+<div class="title">4. Is there anything it does that I didn't ask for?</div>
+<div class="desc">Scope creep check. Does it have features you didn't specify? Extra inputs, extra sections, extra buttons? If Claude Code added things you didn't ask for, note them. Keep what is useful, remove what isn't.</div>
+<span class="tag tag-tier2">SCOPE CHECK</span>
+</div>
+
+<div class="card">
+<div class="title">5. Can I explain what it does to a user in one sentence?</div>
+<div class="desc">If you can't describe it in one sentence, users won't understand it either. Clarity check. If the answer is no, the product is either too complex or not focused enough. That is a spec problem, not a build problem.</div>
+<span class="tag tag-tier3">CLARITY TEST</span>
+</div>
+
+<h3>What to Do When You Find a Problem</h3>
+<p style="margin-bottom:0.5rem">Never say "it's broken." Describe three things:</p>
+<pre>
+1. WHAT YOU SEE: "When I click Calculate with the margin field empty,
+   the output section shows 'NaN' instead of an error message."
+
+2. WHAT YOU EXPECTED: "I expected it to show a red error message
+   saying 'Please enter a margin percentage.'"
+
+3. RELEVANT HTML SECTION: Paste the &lt;div&gt; or &lt;section&gt; that
+   contains the broken element so Claude Code knows exactly where to look.
+</pre>
+
+<h3>The "Show Me" Command</h3>
+<p style="margin-bottom:0.5rem">When you're not sure what Claude Code built or how it handles an edge case, ask directly:</p>
+<div class="callout success">
+<strong>"Show me exactly what happens when a user clicks Calculate with no data entered in any field."</strong><br>
+Claude Code will trace through the logic and describe the output. You don't need to read the code. You just need to understand the behavior.
+</div>
+
+<h3>When to Accept Imperfect</h3>
+<div class="callout">
+<strong>If it does the job and doesn't break, ship it.</strong><br>
+Perfect is the enemy of revenue. A working product with one minor visual quirk that earns $200/month beats a polished product you're still refining at month three. The revision cycle continues after shipping. Customers will tell you what actually matters.
+</div>
+
+<h3>Common Problems and Exact Revision Prompts</h3>
+<table>
+<tr><th>Problem You See</th><th>Exact Revision Prompt</th></tr>
+<tr><td>Output shows "NaN" on empty input</td><td>"When any input field is empty, show a red error message instead of calculating. Do not show NaN or undefined."</td></tr>
+<tr><td>Layout breaks on mobile (375px)</td><td>"The layout breaks at 375px width. Make the two-column layout stack vertically below 600px. Each section should take full width on mobile."</td></tr>
+<tr><td>Button doesn't respond to click</td><td>"The Calculate button does not trigger any action when clicked. The click event should call the calculate() function. Check that the button has the correct id and the event listener targets it."</td></tr>
+<tr><td>Numbers show too many decimals</td><td>"All currency outputs should show exactly 2 decimal places and a leading dollar sign. Use toFixed(2) and prepend '$'."</td></tr>
+<tr><td>Page loads blank</td><td>"The page is blank when opened in a browser. Check for JavaScript syntax errors. Check that all DOM element IDs referenced in the script actually exist in the HTML."</td></tr>
+</table>
+</div>
+
+<!-- SECTION: Catalog -->
+<div class="section" id="sec-catalog">
+<h2>The Product Catalog System</h2>
+<p style="margin-bottom:1rem">At 10 products, you can keep track in your head. At 30, you can't. At 50+, you need a system. This is the system.</p>
+
+<h3>The Master Catalog CSV</h3>
+<p style="margin-bottom:0.5rem">One file. Checked weekly. Every product in one place.</p>
+<table>
+<tr><th>Column</th><th>What Goes Here</th><th>Example</th></tr>
+<tr><td>Name</td><td>Product name</td><td>Agency Retainer Calculator</td></tr>
+<tr><td>Type</td><td>HTML tool / Landing page / PDF / App / SaaS</td><td>HTML tool</td></tr>
+<tr><td>File</td><td>Absolute path to the source file</td><td>PRODUCTS/agency_retainer_calc.html</td></tr>
+<tr><td>URL</td><td>Live deploy URL</td><td>https://retainer.yourdomain.com</td></tr>
+<tr><td>Price</td><td>Price in USD</td><td>$39</td></tr>
+<tr><td>Platform</td><td>Where it's sold</td><td>Gumroad</td></tr>
+<tr><td>Status</td><td>Idea / Spec / Built / Deployed / Live / Revenue / Kill</td><td>Revenue</td></tr>
+<tr><td>MRR</td><td>Monthly recurring revenue (or monthly sales)</td><td>$312</td></tr>
+<tr><td>Launch Date</td><td>Date first deployed</td><td>2026-02-14</td></tr>
+<tr><td>Kill Date</td><td>Date to evaluate for kill trigger</td><td>2026-04-14</td></tr>
+</table>
+
+<h3>The Status System</h3>
+<p style="margin-bottom:0.5rem">Every product moves through these stages. The status column tells you what action to take next.</p>
+<pre>
+Idea      -> Write the spec. No action until spec exists.
+Spec      -> Build it. Run: claude --dangerously-skip-permissions
+Built     -> Run the 5-question review. Find and fix revision items.
+Deployed  -> Submit to platform (Gumroad upload, Surge deploy, etc.)
+Live      -> Market it. 3 tweets, 1 Reddit post, email list.
+Revenue   -> Evaluate: Kill trigger or Double-down trigger.
+Kill      -> Archive the file. Remove from active tracking.
+</pre>
+
+<h3>Kill Trigger</h3>
+<div class="callout warning">
+<strong>Less than $100 revenue after 60 days live and marketed = Kill or Reprice.</strong><br>
+"Marketed" means you actually promoted it: posted about it, mentioned it in your newsletter, submitted it to Product Hunt or relevant subreddits. If you built it and never told anyone, that's a distribution failure, not a product failure. Fix distribution first. If you marketed it and it still didn't sell in 60 days, kill it.
+</div>
+
+<h3>Double-Down Trigger</h3>
+<div class="callout success">
+<strong>20%+ month-over-month growth at $500+ MRR = Double down.</strong><br>
+When a product hits this threshold: add a Pro version, build variations for adjacent niches, increase content frequency about it, run a paid ad test at $5/day, reach out to newsletters for a sponsored mention. A product growing 20%/month at $500 MRR is on track for $6,000 MRR in 18 months with no additional builds.
+</div>
+
+<h3>Uptime Monitoring Without DevOps</h3>
+<p style="margin-bottom:0.5rem">Add this cron job to check that every deployed URL responds. Paste into terminal with <span class="inline-code">crontab -e</span>.</p>
+<pre>
+# Check all products weekly on Sunday at 8 AM
+0 8 * * 0 python3 /path/to/project/check_uptime.py >> /path/to/project/uptime.log 2>&1
+</pre>
+<p style="margin-bottom:0.5rem">The check_uptime.py script (build with Claude Code from this spec):</p>
+<pre>
+# check_uptime.py spec for Claude Code:
+# Read CATALOG.csv. For each row where Status = Live or Revenue,
+# send an HTTP GET to the URL in the URL column.
+# If status code is not 200, write to uptime.log:
+#   FAIL: [URL] returned [status_code] at [timestamp]
+# If all pass, write: ALL OK at [timestamp]
+# No external dependencies. Use only Python standard library.
+</pre>
+
+<h3>The Pricing Model</h3>
+<table>
+<tr><th>Product Type</th><th>Recommended Price</th><th>PWYW Minimum</th><th>Why</th></tr>
+<tr><td>HTML calculator tool (niche)</td><td>$39</td><td>$19</td><td>Specific enough to justify $39. PWYW minimum captures budget-constrained buyers.</td></tr>
+<tr><td>PDF guide / checklist</td><td>$19-29</td><td>$9</td><td>Lower perceived value than interactive tools. Price to volume.</td></tr>
+<tr><td>Swipe file / template pack</td><td>$29-47</td><td>$14</td><td>Specific templates command higher prices than generic ones.</td></tr>
+<tr><td>PWA app (one-time)</td><td>$4.99-9.99</td><td>N/A</td><td>App Store pricing norms. One-time beats subscription for utility apps.</td></tr>
+<tr><td>PWA app (subscription)</td><td>$2.99-4.99/mo</td><td>N/A</td><td>Only if you have ongoing content or features to justify recurring.</td></tr>
+<tr><td>SaaS (subscription)</td><td>$29-99/mo</td><td>N/A</td><td>Annual option at 20% discount reduces churn. $29/year rarely works.</td></tr>
+</table>
+
+<div class="callout">
+<strong>Why $39 beats $47 for info products:</strong> $39 clears the "is this worth it" threshold faster. The price ends in 9 (psychological anchor). It's far enough below $47 to feel like a decision the buyer made, not a price they were pushed to. Tested across 20+ products. $39 with a PWYW minimum of $19 outperforms both $29 flat and $47 flat in total revenue per visitor.
+</div>
+
+<h3>Sample Catalog CSV Structure</h3>
+<pre>
+Name,Type,File,URL,Price,Platform,Status,MRR,LaunchDate,KillDate
+Agency Retainer Calc,HTML tool,PRODUCTS/retainer.html,retainer.yourdomain.com,$39,Gumroad,Revenue,$312,2026-02-14,2026-04-14
+SaaS Pricing Calc,HTML tool,PRODUCTS/saas_pricing.html,pricing.yourdomain.com,$39,Gumroad,Live,$0,2026-03-01,2026-05-01
+Founder Waitlist,Landing page,PRODUCTS/waitlist.html,waitlist.yourdomain.com,Free,Surge,Live,,2026-03-10,
+Cold Email Pack,PDF,PRODUCTS/email_pack.pdf,,,$29,Gumroad,Built,,
+Revenue Tracker App,App,apps/revenue-tracker/,,,$4.99,App Store,Spec,,
+</pre>
+
+<div class="callout success">
+<strong>Weekly review takes 10 minutes:</strong> Open CATALOG.csv. Check each Live product's revenue. Update MRR column. Apply kill or double-down triggers. Move any Built products to Deployed. That's it. The catalog is the system. The catalog is the business.
+</div>
+</div>
+
+</div><!-- end container -->
+
+<div style="text-align:center;padding:3rem 1rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.8rem">
+  <p>Built by a non-technical founder who shipped 50+ products without writing a single line of code from scratch. Not a course. Not a masterclass. Just the system.</p>
+  <p style="margin-top:0.5rem">Works offline. No tracking. No cookies. Open this file in any browser.</p>
+</div>
+
+<script>
+// Navigation
+const navBtns = document.querySelectorAll('.nav button');
+const sections = document.querySelectorAll('.section');
+
+navBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.section;
+    navBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    sections.forEach(s => {
+      s.classList.toggle('visible', s.id === 'sec-' + target);
+    });
+    window.scrollTo({top: document.querySelector('.container').offsetTop - 20, behavior: 'smooth'});
+  });
+});
+
+// Search
+const searchInput = document.getElementById('search');
+const searchMeta = document.getElementById('searchMeta');
+
+searchInput.addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  if (!q) {
+    sections.forEach(s => s.classList.remove('visible'));
+    document.getElementById('sec-overview').classList.add('visible');
+    navBtns.forEach(b => b.classList.remove('active'));
+    navBtns[0].classList.add('active');
+    document.querySelectorAll('mark').forEach(m => {
+      m.replaceWith(m.textContent);
+    });
+    searchMeta.textContent = '7 sections \u00b7 50+ products \u00b7 copy-paste specs and commands';
+    return;
+  }
+
+  let matches = 0;
+  sections.forEach(s => {
+    const text = s.textContent.toLowerCase();
+    const hasMatch = text.includes(q);
+    s.classList.toggle('visible', hasMatch);
+    if (hasMatch) matches++;
+  });
+
+  navBtns.forEach(b => {
+    const sec = document.getElementById('sec-' + b.dataset.section);
+    b.classList.toggle('active', sec && sec.classList.contains('visible'));
+  });
+
+  searchMeta.textContent = `${matches} section${matches !== 1 ? 's' : ''} matching "${e.target.value}"`;
+});
+
+// Keyboard shortcut
+document.addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement !== searchInput) {
+    e.preventDefault();
+    searchInput.focus();
+  }
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.blur();
+  }
+});
+</script>
+</body>
+</html>

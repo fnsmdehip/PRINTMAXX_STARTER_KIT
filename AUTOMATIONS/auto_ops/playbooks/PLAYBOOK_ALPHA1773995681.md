@@ -1,16 +1,12 @@
 # Growth Playbook: ALPHA1773995681
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031013535594271149
 
 ## tactic summary
 This trader is taking a huge risk on #oil!
-
 He just opened a 20x long on 31,960 xyz:CL($3.2M) with an entry price of $101.79.
-
 Liquidation price: $98.87
-
-
 https://
 hypurrscan.io/address/0xd388
 09cc442fe4f10937c5988d2b723a15a89e5b#perps

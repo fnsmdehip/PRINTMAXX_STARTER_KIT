@@ -1,16 +1,12 @@
 # Growth Playbook: ALPHA1773995576
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/lookonchain/status/2031561355757850874
 
 ## tactic summary
 Whale 0x17c3 keeps adding to his short on #oil. 
-
 He now holds 292,980 xyz:CL($24.6M) in short positions, making him the largest #oil short on-chain.
-
 Liquidation price: $110.01.
-
-
 https://
 hypurrscan.io/address/0x17c3
 C8FdBcB7D1B240CE08965E09B1fC91CBa868#perps

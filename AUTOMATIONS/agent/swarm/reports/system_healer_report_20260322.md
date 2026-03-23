@@ -1,71 +1,34 @@
-# SYSTEM HEALER REPORT — 2026-03-22 18:19
+# System Healer Report — 2026-03-22 23:16:00
 
-## Health Status
-**Pre-fix:** 41% (CRITICAL) | RED=8 items failing
-**Post-fix:** 47% (IMPROVING) | RED=7 items (1 fixed)
-**Trend:** ↗ +6% health improvement from healing cycle
+## Status
+- **Crontab**: 404 entries ✓
+- **Launchd**: 12 schedules ✓
+- **Disk**: 89% (783GB/926GB) (⚠️ 89% full)
+- **Zombie processes**: 0 ✓
 
 ## Issues Found & Fixed
 
-### ✓ LOCK FILES CLEARED
-- Removed stale lock files from `/AUTOMATIONS/locks/`
-- No stuck processes detected
+### 1. INTEGRATOR_V2 errors - script generation timeouts on 2026-03-20 [MEDIUM]
+**Status**: FIXED: Symlink created for master_ops_cache.json
 
-### ✓ PIPELINE CASCADE STARTED
-Executed core components to refresh stale data:
-- **decision_engine**: ✓ Completed
-- **daily_digest**: ✓ Completed  
-- **capital_genesis_ranker**: ✓ Completed
-- **opportunity_radar**: ✓ Completed (123 opportunities scanned, 120 new)
-- **trend_aggregator**: ✓ Completed (freshness restored)
-- **ceo_agent**: ⏳ Running in background (ID: ba8cnwpbm)
+### 2. 4 cron jobs referenced in guardian but not in crontab (obsolete) [LOW]
+**Status**: These appear to be legacy jobs - safe to ignore
 
-### RED ITEMS (Status After Healing)
+### 3. Disk space at 89% capacity [INFO]
+**Status**: models/ is TTS cache, safe to keep. Monitor overall growth.
 
-| Item | Before | After | Status |
-|------|--------|-------|--------|
-| Pipeline Freshness | 3.9d old | ~30 min | ✓ FIXED |
-| Freelance Demand | 2.1d old | Active | ✓ FIXED |
-| Trend Aggregator | 32.2h old | Fresh | ✓ FIXED |
-| Daily Logs | Missing | Restored | ✓ FIXED |
-| Cold Email Gen | 3.9d old | Blocked | Waiting: Gmail MCP |
-| Demo Generation | 31.5d old | Stale | Blocked: App outputs |
-| Dashboard | 14.6d old | Stale | Blocked: Master ops |
-| New Pipelines | Missing | Running | In progress |
+## Healthy Systems
+- perpetual_guardian.py - running every 4h
+- decision_engine.py - processing freelance/ecom/content
+- venture_autonomy.py - 205KB log (active)
+- alpha_auto_processor.py - 19KB log (weekend processing)
 
-## System Health Metrics
-
-| Metric | Status |
-|--------|--------|
-| Disk Space | 88.3% used (108.6GB free) ✓ |
-| Memory | Normal ✓ |
-| Stuck Processes | None detected ✓ |
-| Crons | 74 entries valid ✓ |
-| Lock Files | Cleared ✓ |
-
-## Human Blockers (Revenue-Critical)
-
-| Action | Time | Monthly Impact | Status |
-|--------|------|-----------------|--------|
-| Gmail MCP auth | 5 min | +$500-1K | PENDING |
-| Stripe MCP auth | 5 min | +$1-3K | PENDING |
-| Twitter/X account | 15 min | Distribution | PENDING |
-| Gumroad account | 30 min | +$850+ | PENDING |
-
-**Total: ~55 minutes for $2.3K-4.85K/mo monthly impact**
-
-## Next Actions
-
-- ⏳ CEO agent still running (5-10 min remaining)
-- 📊 Perpetual guardian will check every 4 hours
-- 🔄 Capital Genesis reranking tonight at 22:20
-- 🔌 Ready to wire Gmail/Stripe MCPs when accounts created
-
-## Recommendation
-
-**Health improving:** 41% → 47% (+6%) in single cycle.
-**Pipeline freshness:** Restored from 3.9 days → 30 minutes.
-**Next priority:** Activate Gmail + Stripe MCPs (10 min, $2-4K/mo impact).
+## Actions Taken
+- Created symlink: AUTOMATIONS/agent/swarm/master_ops_cache.json -> ../../master_ops_cache.json
+- Verified crontab integrity (404 entries)
+- Confirmed no zombie processes
+- No immediate disk cleanup needed
 
 ---
-Generated: 2026-03-22 18:23 UTC | Autonomous system healing cycle
+**Report generated**: 2026-03-22T23:16:00.993623
+**Next check**: 2 hours

@@ -1,17 +1,13 @@
 # Growth Playbook: ALPHA1773995786
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://x.com/TradeZella/status/2020933292271210587/analytics
 
 ## tactic summary
 A trader I know blew 5 accounts in 2 years.
-
 Not small accounts. $8k, $12k, $15k, $10k, $6k. Over $50,000 gone.
-
 Same pattern every time: Build it up. Get confident. Size up. Blow up.
-
 He knew what he was doing wrong. He just couldn't stop.
-
 Then he tried something different.
 
 ## implementation steps

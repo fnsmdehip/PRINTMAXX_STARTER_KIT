@@ -1,11 +1,10 @@
 # Content Pack: ALPHA1773995846
 ## source: 2026-03-21
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:00
 ## roi_potential: https://reddit.com/r/SaaS/comments/1rnfzxw/i_analyses_200_posts_and_17946_comments_from/
 
 ## core insight
 I Analyses 200 posts and 17,946 comments from r/SaaS and r/Entrepreneur. Here's the deep-dive on lead generation . The #1 pain point nobody's actually solved. I scraped 200 posts and 17,946 comments from r/SaaS and r/Entrepreneur. Here's the deep-dive on lead generation, the #1 pain point nobody's actually solved.
-
 A few days ago I posted an analysis of 100 posts and 10,169 comments from r/SaaS. Lead generation was the #1 pain point. 43 out of 100 threads were about it. Several of you asked for
 
 ---

@@ -1,0 +1,1080 @@
+{
+  "generated_at": "2026-03-23T03:14:00+00:00",
+  "total_cycles_processed": 57,
+  "total_unique_blue_oceans": 280,
+  "total_unique_occupied": 23,
+  "top_blue_oceans": [
+    {
+      "niche": "daily_science_curiosity_streak",
+      "community_total": 36010000,
+      "verdict": "BLUE_OCEAN",
+      "notes": "36M science community (r/science alone has 32.7M). Zero dedicated daily science curiosity/learning streak apps. Khan Academy covers it broadly. Massive underserved opportunity for a science habit tracker with daily experiments/facts/challenges.",
+      "cycle": 81,
+      "timestamp": "2026-03-19T13:46:15.460366+00:00"
+    },
+    {
+      "niche": "daily_financial_education_streak",
+      "community_total": 26290000,
+      "verdict": "BLUE_OCEAN",
+      "notes": "26.3M FIRE/finance community. Massive underserved market for daily financial education habit with streak/XP.",
+      "cycle": 80,
+      "timestamp": "2026-03-19T11:38:44.677137+00:00"
+    },
+    {
+      "niche": "daily_reading_science_streak",
+      "community_total": 25000000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "25M+ reading community (r/books alone is 23M). Blinkist summarizes; Readwise resurfaces. Nobody teaches the science of reading itself. Gap: one reading science concept per day (what the difference between passive and active reading is neurologically, how SQ3R dramatically improves comprehension, why Adler's 4 levels of reading produce different depth of understanding, how annotation transforms comprehension from 40% to 80% retention, what syntopical reading is and how to build cross-book insight",
+      "cycle": 100,
+      "timestamp": "2026-03-22T15:50:41.708986+00:00"
+    },
+    {
+      "niche": "daily_budgeting_habit_streak",
+      "community_total": 24720000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "24.7M community. YNAB/Mint/Copilot are all passive aggregators or full systems. None gamify the daily budgeting HABIT with one micro-action (log one transaction, categorize one purchase, check one balance) and streak XP. Gap: daily finance habit with behavioral science education (loss aversion, present bias, mental accounting, hedonic adaptation) + streak/XP system that builds the automatic money management reflex. ICP: 24.7M people wanting financial control but bouncing off YNAB's complexity.",
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:25.306895+00:00"
+    },
+    {
+      "niche": "daily_tax_optimization_streak",
+      "community_total": 24550000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "24.5M tax-interested community. TurboTax/H&R Block are annual events that actively discourage year-round tax learning (they profit from complexity). Zero apps gamify daily tax education: one concept per day (how the qualified business income deduction works for freelancers, why maxing HSA is a triple tax advantage, how to calculate break-even for S-Corp election, what tax-loss harvesting is and how to do it legally, how depreciation creates paper losses on rental properties) with streak XP, tax ",
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:25.306895+00:00"
+    },
+    {
+      "niche": "daily_investing_habit_streak",
+      "community_total": 24220000,
+      "verdict": "BLUE_OCEAN",
+      "notes": "24.2M personal finance community. ZERO apps gamify daily investing/saving habits with streak mechanics. Enormous opportunity.",
+      "cycle": 80,
+      "timestamp": "2026-03-19T11:38:44.677137+00:00"
+    },
+    {
+      "niche": "daily_business_finance_streak",
+      "community_total": 24180000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "24M+ personal finance / business finance community. Khan Academy covers the basics but passive. No app teaches the daily science of business finance for founders and aspiring entrepreneurs. Gap: one business finance concept per day (what gross margin vs. contribution margin is and why SaaS companies optimize both differently, how to read a cash flow statement and why profitable companies go bankrupt \u2014 the cash conversion cycle, what burn rate and runway mean and how to calculate months to zero, ",
+      "cycle": 103,
+      "timestamp": "2026-03-22T22:14:28.084240+00:00"
+    },
+    {
+      "niche": "daily_budget_tracking_habit_streak",
+      "community_total": 23130000,
+      "verdict": "BLUE_OCEAN",
+      "notes": "23.1M frugal/budgeting community. All apps are utility trackers. No app gamifies the daily habit of reviewing budget with streak/XP mechanics.",
+      "cycle": 80,
+      "timestamp": "2026-03-19T11:38:44.677137+00:00"
+    },
+    {
+      "niche": "daily_debt_payoff_streak",
+      "community_total": 22500000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "22.5M debt-focused community. Debt Payoff Planner is a calculator, not a habit. Zero apps gamify the daily debt payoff journey: one daily action (make one extra payment, cut one subscription, learn one debt strategy) with streak XP, debt freedom mastery badges (Snowball Champion, Interest Rate Negotiator, Credit Utilization Optimizer), and behavioral science education (how minimum payments are mathematically designed to maximize bank profit, why the debt snowball beats avalanche psychologically ",
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:25.306895+00:00"
+    },
+    {
+      "niche": "daily_personal_finance_streak",
+      "community_total": 19000000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "19M community \u2014 r/personalfinance alone is 19M+. ALL apps are tools (trackers, brokerages, auto-investors) not daily habit builders. No app gamifies the daily personal finance education habit \u2014 one concept per day (compound interest, debt avalanche vs snowball, emergency fund sizing, tax-advantaged accounts, net worth calculation) \u2014 with streak XP, money milestone badges (First $1K Saved, Debt-Free, First Investment), and financial independence progression from broke to $1M net worth. Biggest un",
+      "cycle": 98,
+      "timestamp": "2026-03-21T22:42:27.902630+00:00"
+    },
+    {
+      "niche": "daily_options_trading_education_streak",
+      "community_total": 17900000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "17.9M options/WSB community. All apps are trading platforms \u2014 platforms profit from trading, not education. Zero apps gamify daily options education: one concept per day (what delta means and how it predicts option price movement, how theta decay accelerates in the final 30 days, what IV percentile tells you about option pricing, how a covered call generates income on existing stock, why iron condors profit from low volatility) with streak XP, derivatives mastery badges (Options Greeks Master, T",
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:25.306895+00:00"
+    },
+    {
+      "niche": "daily_exercise_science_streak",
+      "community_total": 16370000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "16.37M fitness community. 'Bigger Leaner Stronger' (Mike Matthews) sold 1.5M+ copies \u2014 proven demand for science-backed fitness education beyond workout delivery. Andy Galpin's Stanford sleep and exercise research gets 8M+ views per lecture clip on YouTube \u2014 the appetite for exercise science is enormous and entirely unserved by streak-format daily habits. Gap: one exercise science concept per day (what the three mechanisms of hypertrophy are \u2014 mechanical tension, metabolic stress, muscle damage ",
+      "cycle": 104,
+      "timestamp": "2026-03-23T01:15:55.118613+00:00"
+    },
+    {
+      "niche": "daily_crypto_education_streak",
+      "community_total": 16020000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "16M crypto community. All major apps are exchanges or wallets \u2014 none teach. Zero apps gamify daily crypto/blockchain education: one concept per day (what proof of stake means vs proof of work, how the lightning network enables instant Bitcoin payments, what impermanent loss is in liquidity pools, how zero-knowledge proofs enable private transactions, what MEV is and why it matters) with streak XP, blockchain mastery badges, and progression from price speculator to protocol analyst. Massive under",
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:25.306895+00:00"
+    },
+    {
+      "niche": "daily_recovery_science_streak",
+      "community_total": 14220000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "14.2M community (r/fitness alone is 13M). Whoop monitors recovery. HRV4Training measures it. Nobody teaches the daily science of WHY recovery works. Gap: one recovery science concept per day (what HRV measures and how to interpret it, how cold exposure accelerates recovery vs. blunts adaptation, what the lymphatic system does during sleep, how protein timing affects muscle repair, why parasympathetic activation matters post-training) with streak XP, recovery science mastery badges (HRV Expert, A",
+      "cycle": 99,
+      "timestamp": "2026-03-22T13:45:50.822048+00:00"
+    },
+    {
+      "niche": "daily_sports_nutrition_streak",
+      "community_total": 14200000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "14.2M fitness community with strong sports nutrition interest. MacroFactor/RP Diet are excellent tools \u2014 they optimize, they don't educate. Gap: one sports nutrition concept per day (what leucine threshold means for muscle protein synthesis, why carbohydrate timing matters for glycogen replenishment, how creatine monohydrate works at the cellular level, what caffeine does to adenosine receptors during training, how beta-alanine buffers lactic acid) with streak XP, sports nutrition science master",
+      "cycle": 99,
+      "timestamp": "2026-03-22T13:45:50.822048+00:00"
+    },
+    {
+      "niche": "daily_active_listening_streak",
+      "community_total": 11920000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "11.9M combined community. No app gamifies the daily practice of active listening as a specific skill \u2014 reflection, paraphrasing, eye contact drills \u2014 with streak XP and real conversation challenge prompts.",
+      "cycle": 88,
+      "timestamp": "2026-03-21T07:48:19.809110+00:00"
+    },
+    {
+      "niche": "daily_communication_skills_streak",
+      "community_total": 11640000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "11.6M community. Counseling apps are session-based. No app gamifies daily communication micro-skills (one active listening exercise, one I-statement practice, one de-escalation technique) with streak XP.",
+      "cycle": 88,
+      "timestamp": "2026-03-21T07:48:19.809110+00:00"
+    },
+    {
+      "niche": "daily_couples_habit_streak",
+      "community_total": 11140000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "11.1M community. Paired is closest but lacks XP/level-up streak gamification. No app truly gamifies daily relationship investment (one appreciation, one conversation, one date plan) with XP, streaks, and couple milestones.",
+      "cycle": 88,
+      "timestamp": "2026-03-21T07:48:19.809110+00:00"
+    },
+    {
+      "niche": "daily_stock_market_learning_streak",
+      "community_total": 10520000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "10.5M investing community. Robinhood enables trading but actively avoids education (gamification without knowledge = dangerous). Finimize is news, not skill-building. Zero apps teach daily: one investing concept (what price-to-book means, why FCF matters more than earnings, how to read a 10-K in 10 minutes, what economic moats are, how to calculate intrinsic value with DCF) with streak XP, investor mastery badges (Graham Disciple, Buffett Practitioner, Munger Mental Model Master), progression fr",
+      "cycle": 101,
+      "timestamp": "2026-03-22T17:56:25.306895+00:00"
+    },
+    {
+      "niche": "daily_business_skills_streak",
+      "community_total": 10400000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "10.4M community across core entrepreneur/business subreddits. LinkedIn Learning and Coursera are heavyweight passive course platforms \u2014 not daily 5-minute habit apps. Gap: one business concept per day (how to calculate LTV:CAC, what makes a good value proposition, how to structure a sales call, what gross margin means, how to write a job posting that attracts A-players) with streak XP, domain mastery badges (Finance Literate, Sales Expert, Marketing Strategist, Operations Leader), and entreprene",
+      "cycle": 98,
+      "timestamp": "2026-03-21T22:42:27.902630+00:00"
+    },
+    {
+      "niche": "daily_nutrition_science_streak",
+      "community_total": 9610000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "9.6M nutrition community. Andrew Huberman's nutrition episodes average 5M+ plays each \u2014 the single most validated proof of appetite for nutrition science without the food logging friction. MyFitnessPal has 200M users who track without understanding why. Gap: one nutrition science concept per day (what the thermic effect of food is and why protein at 25-30% TEF is 5x more metabolically costly than fat at 5-8% \u2014 meaning 100g protein yields 70-75g net calories, how insulin works at the cellular lev",
+      "cycle": 104,
+      "timestamp": "2026-03-23T01:15:55.118613+00:00"
+    },
+    {
+      "niche": "daily_hiking_trail_streak",
+      "community_total": 8510000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "8.5M community. AllTrails has basic streak elements but no XP system or skill progression. SOFT COMPETITION \u2014 opportunity exists for a gamified hiking streak with skill trees (navigation, wilderness survival, trail identification) and XP level-up.",
+      "cycle": 89,
+      "timestamp": "2026-03-21T09:38:14.425861+00:00"
+    },
+    {
+      "niche": "daily_home_diy_streak",
+      "community_total": 8180000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "8.18M community across r/DIY (5.8M), r/HomeImprovement (2.1M), r/fixit (280K). Apps are marketplaces for hiring pros or shopping. No app gamifies the daily home DIY skill habit (one repair technique practiced, one tool skill drilled, one home improvement micro-task completed with logging) with streak XP, skill badges (plumbing, electrical, drywall, tiling), and homeowner level gates.",
+      "cycle": 95,
+      "timestamp": "2026-03-21T18:27:34.472096+00:00"
+    },
+    {
+      "niche": "daily_conscious_parenting_streak",
+      "community_total": 7850000,
+      "verdict": "BLUE_OCEAN",
+      "notes": "7.85M parenting community. All apps track milestones or share photos. Zero apps gamify the daily HABIT of conscious parenting practices (reading together, limit screens, one-on-one time) with streak/XP.",
+      "cycle": 81,
+      "timestamp": "2026-03-19T13:46:15.460366+00:00"
+    },
+    {
+      "niche": "daily_fashion_styling_streak",
+      "community_total": 7500000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "7.5M community. Apps organize closets or share outfits. No app gamifies the daily fashion styling habit (one outfit challenge using a styling rule, one color palette exercise, one proportion analysis) with streak XP, style principle badges, and stylist level gates.",
+      "cycle": 90,
+      "timestamp": "2026-03-21T09:52:17.070735+00:00"
+    },
+    {
+      "niche": "daily_learning_science_streak",
+      "community_total": 7400000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "7.4M student/learner community. Anki does SRS. Duolingo gamifies language. Nobody teaches the science of learning itself. Gap: one learning science concept per day (why active recall outperforms re-reading 3-5x, how spaced repetition intervals should actually be calculated, what interleaved practice is and why blocked practice feels easier but produces less retention, why elaborative interrogation improves encoding by 200%, how sleep consolidates explicit memory during slow-wave sleep) with stre",
+      "cycle": 100,
+      "timestamp": "2026-03-22T15:50:41.708986+00:00"
+    },
+    {
+      "niche": "daily_adhd_parenting_science_streak",
+      "community_total": 7160000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "7.2M ADHD/parenting community. 'The ADHD Advantage' sold 300K+ copies. 'Driven to Distraction' (Hallowell & Ratey) has sold 1M+ copies over 30 years. Russell Barkley's YouTube channel has 800K subscribers \u2014 his 30-year research summary lectures consistently get 2M+ views. The ADHD parenting space has zero daily education streak apps despite being one of the most-searched parenting topics. Gap: one...",
+      "cycle": 105,
+      "timestamp": "2026-03-23T03:11:06.657174+00:00"
+    },
+    {
+      "niche": "daily_body_scan_meditation_streak",
+      "community_total": 6740000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.74M community. Meditation apps are content libraries. No app specifically gamifies a daily body scan habit \u2014 scanning each body part, tension release journaling, somatic awareness XP \u2014 with streak progression.",
+      "cycle": 88,
+      "timestamp": "2026-03-21T07:48:19.809110+00:00"
+    },
+    {
+      "niche": "daily_leadership_science_streak",
+      "community_total": 6630000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.6M leadership/business community. 'Leaders Eat Last' (Simon Sinek), 'The Five Dysfunctions of a Team' (Lencioni), 'Radical Candor' (Kim Scott) are massive sellers \u2014 proven appetite for leadership science. No app teaches daily leadership science as a streak habit. Gap: one leadership science concept per day (what psychological safety is per Amy Edmondson's research and how Google's Project Aristotle confirmed it as the #1 predictor of team performance, how situational leadership theory works \u2014 ",
+      "cycle": 103,
+      "timestamp": "2026-03-22T22:14:28.084240+00:00"
+    },
+    {
+      "niche": "daily_flow_state_streak",
+      "community_total": 6585000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.58M community across productivity/self-improvement. Flow state is a $1B+ market concept (Steven Kotler, Csikszentmihalyi) with zero daily education app. Gap: one flow state science concept per day (what the challenge-skill ratio is and how to engineer it, how norepinephrine + dopamine + anandamide create the flow state neurochemically, why clear goals are a prerequisite for flow, how pattern recognition speed increases 490% in flow, what the 4 stages of flow are and how to navigate them) with ",
+      "cycle": 100,
+      "timestamp": "2026-03-22T15:50:41.708986+00:00"
+    },
+    {
+      "niche": "daily_productivity_science_streak",
+      "community_total": 6520000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.5M productivity community. 'Deep Work' (Cal Newport) sold 1M+ copies, 'Atomic Habits' (James Clear) sold 15M+ copies \u2014 the single largest proven appetite for productivity science in any category. All existing apps are TOOLS (Todoist, Notion, Forest). None teach the SCIENCE of why productivity methods work. Gap: one productivity science concept per day (what attention residue is \u2014 Roy Baumeister and Gloria Mark proved task-switching leaves a cognitive residue lasting 20+ minutes reducing perfor",
+      "cycle": 103,
+      "timestamp": "2026-03-22T22:14:28.084240+00:00"
+    },
+    {
+      "niche": "daily_behavioral_economics_streak",
+      "community_total": 6445000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.4M psychology/economics community. 'Thinking Fast and Slow' (Kahneman) sold 10M+ copies \u2014 the single most validated appetite for behavioral economics science. No app gamifies daily behavioral economics learning as a streak habit. Gap: one behavioral economics concept per day (what Kahneman's System 1 vs. System 2 means and why intuition fails in statistically dense environments, how prospect theory explains why a $10 loss hurts 2.5x more than a $10 gain feels good \u2014 and what this means for pri",
+      "cycle": 103,
+      "timestamp": "2026-03-22T22:14:28.084240+00:00"
+    },
+    {
+      "niche": "daily_gentle_parenting_streak",
+      "community_total": 6400000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.4M+ parenting community. Apps are content/course platforms. Zero apps gamify daily parent self-improvement habit (one gentle parenting technique practiced per day) with streak XP and progression.",
+      "cycle": 88,
+      "timestamp": "2026-03-21T07:48:19.809110+00:00"
+    },
+    {
+      "niche": "daily_drawing_streak",
+      "community_total": 6390000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.39M community across r/drawing (5.8M), r/learnart (410K), r/ArtFundamentals (180K). All apps are professional illustration tools \u2014 blank canvases without habit formation. No app gamifies the daily drawing practice habit (one gesture drawing, one value study, one anatomy drill) with streak XP, technique mastery badges, and artist level progression. DrawingTutorials101 and Drawabox are static web resources, not mobile streak apps.",
+      "cycle": 95,
+      "timestamp": "2026-03-21T18:27:34.472096+00:00"
+    },
+    {
+      "niche": "daily_parenting_journal_streak",
+      "community_total": 6355000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.36M community. Apps are general journals or photo memory keepers. No app gamifies the daily parenting reflection habit (one growth moment documented, one challenge processed, one gratitude toward your child logged) with streak XP, memory milestone badges, and parenting insight level progression.",
+      "cycle": 91,
+      "timestamp": "2026-03-21T11:59:20.834067+00:00"
+    },
+    {
+      "niche": "daily_strategy_science_streak",
+      "community_total": 6310000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.3M strategy/business community. 'Good Strategy Bad Strategy' (Rumelt), 'Playing to Win' (Lafley/Martin), 'The Innovator's Dilemma' (Christensen) \u2014 proven massive appetite for strategic thinking frameworks. No app teaches daily business strategy science as a gamified habit. Gap: one strategy science concept per day (what Richard Rumelt's strategy kernel is and why 90% of 'strategies' are actually goals with no diagnosis or policy, how Porter's Five Forces identifies industry attractiveness vs. ",
+      "cycle": 103,
+      "timestamp": "2026-03-22T22:14:28.084240+00:00"
+    },
+    {
+      "niche": "daily_distraction_management_streak",
+      "community_total": 6300000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.3M community. All existing apps block distractions \u2014 none explain the science. Gap: one distraction science concept per day (how the salience network hijacks attention involuntarily, what attentional capture is and why motion/color/sound trigger it, how environmental design reduces reliance on willpower (the weakest anti-distraction tool), what stimulus control means in behavioral psychology and how to use it, why working with distractions present burns 25% more glucose than clean focus enviro",
+      "cycle": 100,
+      "timestamp": "2026-03-22T15:50:41.708986+00:00"
+    },
+    {
+      "niche": "daily_gardening_skill_streak",
+      "name": "Daily Gardening Skill Streak",
+      "community_total": 6130000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "No app gamifies gardening knowledge with XP: soil reading, seed starting, companion planting, pest ID, composting ratios. Zero streak apps in a 5.6M community.",
+      "cycle": 94,
+      "timestamp": "2026-03-21T12:05:00.000000+00:00"
+    },
+    {
+      "niche": "daily_child_nutrition_science_streak",
+      "community_total": 6130000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.1M parenting community where food/feeding is a top-5 concern. 'French Kids Eat Everything' sold 400K+ copies creating a cultural conversation about feeding culture. The solid starts Instagram has 2M+ followers. 'It's Not About the Broccoli' and 'Helping Your Child with Extreme Picky Eating' each sold 200K+ copies. Gap: one child nutrition science concept per day (what the critical window for foo...",
+      "cycle": 105,
+      "timestamp": "2026-03-23T03:11:06.657174+00:00"
+    },
+    {
+      "niche": "daily_child_development_science_streak",
+      "community_total": 6100000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.1M parenting community. 'The Whole-Brain Child' (Siegel & Bryson) sold 2M+ copies and created an entire parenting genre around brain science. 'Brain Rules for Baby' (Medina) and 'NurtureShock' (Bronson & Merryman) both sold 500K+ copies \u2014 proven massive appetite for the neuroscience behind child development. Gap: one child development science concept per day (what serve-and-return interaction is...",
+      "cycle": 105,
+      "timestamp": "2026-03-23T03:11:06.657174+00:00"
+    },
+    {
+      "niche": "daily_positive_parenting_streak",
+      "community_total": 6012000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6.01M community across parenting subs. All apps are developmental trackers or journal kits. No app gamifies the daily positive parenting habit (one connection ritual, one emotion-coaching moment, one positive reinforcement logged) with streak XP, parenting technique badges, and discipline style level gates.",
+      "cycle": 91,
+      "timestamp": "2026-03-21T11:59:20.834067+00:00"
+    },
+    {
+      "niche": "daily_real_estate_investing_streak",
+      "community_total": 6000000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "6M community across real estate investing subreddits. BiggerPockets is a content platform not a streak app \u2014 no gamification. Gap: daily real estate concept (cap rate analysis, how to evaluate a rental property, BRRRR method breakdown, house hacking strategy, commercial vs residential) with streak XP, deal analysis skill badges, and investor progression from zero to first property. Specific enough to retain engaged learners who are actively trying to get into real estate.",
+      "cycle": 98,
+      "timestamp": "2026-03-21T22:42:27.902630+00:00"
+    },
+    {
+      "niche": "daily_reading_to_kids_streak",
+      "community_total": 5920000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "5.9M+ community. Reading apps are content libraries not habit streak gamification. No app rewards parents for maintaining a daily read-aloud streak with XP and milestones.",
+      "cycle": 88,
+      "timestamp": "2026-03-21T07:48:19.809110+00:00"
+    },
+    {
+      "niche": "daily_digital_parenting_streak",
+      "community_total": 5805000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "5.8M digital parenting community. 'iGen' (Jean Twenge) sold 400K+ copies launching the cultural conversation about smartphones and teen mental health. 'The Anxious Generation' (Jonathan Haidt, 2024) became an immediate bestseller reaching #1 in multiple categories with 1M+ copies sold in its first year \u2014 the largest cultural moment in parenting since 'The Coddling of the American Mind'. Haidt's wo...",
+      "cycle": 105,
+      "timestamp": "2026-03-23T03:11:06.657174+00:00"
+    },
+    {
+      "niche": "daily_photography_skill_streak",
+      "community_total": 5770000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "5.77M community. Apps edit or capture but none gamifies the daily photography skill habit (one composition challenge, one lighting study, one genre-specific assignment) with streak XP, skill badges for exposure, composition, and lighting mastery, and photographer level gates.",
+      "cycle": 90,
+      "timestamp": "2026-03-21T09:52:17.070735+00:00"
+    },
+    {
+      "niche": "daily_child_psychology_streak",
+      "community_total": 5740000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "5.7M parenting/psychology community. 'The Body Keeps the Score' (van der Kolk) spent 200+ weeks on the NYT bestseller list with 3M+ copies sold \u2014 the single largest validated appetite for trauma and child psychology science in publishing history. 'Parenting from the Inside Out' (Siegel & Hartzell) sold 500K+ copies. The ACE study has been downloaded 1M+ times from the CDC website. Gap: one child p...",
+      "cycle": 105,
+      "timestamp": "2026-03-23T03:11:06.657174+00:00"
+    },
+    {
+      "niche": "daily_toddler_learning_streak",
+      "community_total": 5630000,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.6M toddler/early childhood community. All apps are child-facing learning platforms. No app tracks and gamifies the PARENT's daily habit of doing learning activities with their toddler.",
+      "cycle": 81,
+      "timestamp": "2026-03-19T13:46:15.460366+00:00"
+    },
+    {
+      "niche": "daily_family_dinner_streak",
+      "community_total": 5610000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "5.6M+ parenting community. Meal apps plan food, not habit. No app gamifies the family dinner habit specifically \u2014 connection prompts, streak XP, conversation starters, consistency rewards.",
+      "cycle": 88,
+      "timestamp": "2026-03-21T07:48:19.809110+00:00"
+    },
+    {
+      "niche": "daily_photography_streak",
+      "community_total": 5440000,
+      "verdict": "BLUE_OCEAN",
+      "streak_app_exists": false,
+      "notes": "5.44M community. Apps are editing tools and camera apps. No app gamifies the daily photography practice habit (one composition rule applied, one lighting study completed, one editing technique practiced) with streak XP, photographer level gates, and technique mastery badges. 365-photo-challenge apps exist as basic galleries, not gamified skill progressions.",
+      "cycle": 92,
+      "timestamp": "2026-03-21T14:04:15.280777+00:00"
+    },
+    {
+      "niche": "daily_dnd_dm_skills_streak",
+      "community_total": 5380000,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.38M DnD community. D&D Beyond manages characters, DM Screen runs sessions. No app gamifies the daily DM skill practice habit (prep one encounter, study one monster, write one scene hook) with streak/XP \u2014 huge underserved audience of aspiring DMs.",
+      "cycle": 83,
+      "timestamp": "2026-03-19T15:57:23.109045+00:00"
+    }
+  ],
+  "all_occupied": [
+    {
+      "niche": "cold_shower_streak",
+      "label": "Cold Shower Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 2517911,
+      "subreddit_counts": {
+        "coldshowers": 42328,
+        "Wim_Hof": 0,
+        "selfimprovement": 2517911
+      },
+      "itunes_terms_scanned": [
+        "cold shower streak habit paid",
+        "cold shower challenge app paid"
+      ],
+      "reason": "OCCUPIED | community=2,517,911 | paid_apps=1 | cycle=59"
+    },
+    {
+      "niche": "drawing_streak",
+      "label": "Drawing/Sketch Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 3067923,
+      "subreddit_counts": {
+        "learnart": 1671475,
+        "learntodraw": 3067923,
+        "ArtFundamentals": 264804
+      },
+      "itunes_terms_scanned": [
+        "drawing streak habit daily paid",
+        "sketch daily habit tracker paid"
+      ],
+      "reason": "OCCUPIED | community=3,067,923 | paid_apps=1 | cycle=59"
+    },
+    {
+      "niche": "vitamin_habit",
+      "label": "Vitamin/Supplement Habit",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 525201,
+      "subreddit_counts": {
+        "Supplements": 525201,
+        "vitamins": 9944,
+        "nootropics": 438426
+      },
+      "itunes_terms_scanned": [
+        "vitamin supplement habit tracker paid",
+        "daily vitamin streak habit paid"
+      ],
+      "reason": "OCCUPIED | community=525,201 | paid_apps=1 | cycle=59"
+    },
+    {
+      "niche": "music_practice_streak",
+      "label": "Music Practice Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 2,
+      "top_apps": [
+        {
+          "name": "Anytune Pro+: Studio Tools\u00a0",
+          "price": 14.99,
+          "rating": 4.87635
+        },
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 3301023,
+      "subreddit_counts": {
+        "Guitar": 3301023,
+        "piano": 1260467,
+        "learnmusictheory": 1208
+      },
+      "itunes_terms_scanned": [
+        "music practice streak habit paid",
+        "guitar practice habit daily paid"
+      ],
+      "reason": "OCCUPIED | community=3,301,023 | paid_apps=2 | cycle=59"
+    },
+    {
+      "niche": "swimming_streak",
+      "label": "Swimming Habit Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 600023,
+      "subreddit_counts": {
+        "Swimming": 600023,
+        "openwater": 61,
+        "triathlon": 265836
+      },
+      "itunes_terms_scanned": [
+        "swimming streak habit paid",
+        "swim daily habit tracker paid"
+      ],
+      "reason": "OCCUPIED | community=600,023 | paid_apps=1 | cycle=59"
+    },
+    {
+      "niche": "daily_vocabulary_building_streak",
+      "community_total": 3300000,
+      "verdict": "OCCUPIED",
+      "notes": "Duolingo/Memrise/Babbel all have strong streak mechanics. Skip.",
+      "cycle": 80,
+      "timestamp": "2026-03-19T11:38:44.677137+00:00"
+    },
+    {
+      "niche": "daily_gratitude_social_practice_streak",
+      "community_total": 5070000,
+      "verdict": "OCCUPIED",
+      "notes": "Gratitude apps well-covered. Five Minute Journal, Gratitude app, Reflectly all have strong streaks. Skip.",
+      "cycle": 80,
+      "timestamp": "2026-03-19T11:38:44.677137+00:00"
+    },
+    {
+      "niche": "daily_coding_challenges_streak",
+      "community_total": 5020000,
+      "verdict": "OCCUPIED",
+      "notes": "5M programming community. LeetCode, Codecademy, Swift Playgrounds all have strong daily streak mechanics. Well-served market \u2014 skip.",
+      "cycle": 81,
+      "timestamp": "2026-03-19T13:46:15.460366+00:00"
+    },
+    {
+      "niche": "daily_arabic_streak",
+      "community_total": 380000,
+      "verdict": "OCCUPIED",
+      "notes": "380K Arabic learning community. Duolingo has Arabic with full streak system at 5.6M users. Rosetta Stone, Pimsleur, Mango all cover Arabic with streaks. Fully occupied \u2014 skip.",
+      "cycle": 82,
+      "timestamp": "2026-03-19T15:27:26.876538+00:00"
+    },
+    {
+      "niche": "daily_chess_tactics_streak",
+      "community_total": 5790000,
+      "verdict": "OCCUPIED",
+      "notes": "5.79M chess community. Chess.com has the definitive daily puzzle streak system with 1.9M app ratings. Lichess offers free alternative. Magnus Trainer is purpose-built for habits. Fully occupied \u2014 skip.",
+      "cycle": 83,
+      "timestamp": "2026-03-19T15:57:23.109045+00:00"
+    },
+    {
+      "niche": "daily_sign_language_streak",
+      "community_total": 255000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "255K community. Lingvano (4.7, 15K reviews) has daily streak feature and ASL/BSL. Not purely dominated \u2014 Lingvano is freemium and not laser-focused on micro-niche streak gamification \u2014 but competition exists.",
+      "cycle": 85,
+      "timestamp": "2026-03-20T16:37:33.659436+00:00"
+    },
+    {
+      "niche": "daily_mandarin_tones_streak",
+      "community_total": 685000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "685K community. HelloChinese (4.7, 185K reviews) covers Mandarin with some streak features. Pleco is the power-user gold standard. Gap: no micro-niche app specifically gamifying daily TONE mastery (4 tones + neutral) with XP.",
+      "cycle": 85,
+      "timestamp": "2026-03-20T16:37:33.659436+00:00"
+    },
+    {
+      "niche": "daily_public_speaking_streak",
+      "community_total": 352000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "352K community. Orai has a daily practice streak but focuses on delivery metrics not technique mastery with XP. Gap exists for a full gamified streak with skill trees covering persuasion frameworks, storytelling arcs, impromptu speaking, and speaker level progression.",
+      "cycle": 91,
+      "timestamp": "2026-03-21T11:59:20.834067+00:00"
+    },
+    {
+      "niche": "daily_breathwork_streak",
+      "community_total": 720000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "720K community. Breathwrk, Oak, Wim Hof Method all have streak features. Space is real but competitive. Multiple paid apps with streaks exist \u2014 SOFT_COMPETITION not blue ocean.",
+      "cycle": 85,
+      "timestamp": "2026-03-20T16:37:33.659436+00:00"
+    },
+    {
+      "niche": "daily_cold_therapy_streak",
+      "community_total": 1120000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "1.12M community. Wim Hof has streak. IceMan and Cold Turkey are dedicated cold shower streak apps. Space is genuinely competitive with multiple streak-specific apps.",
+      "cycle": 85,
+      "timestamp": "2026-03-20T16:37:33.659436+00:00"
+    },
+    {
+      "niche": "daily_gratitude_journaling_streak",
+      "community_total": 1100000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "1.1M journaling community. Gratitude (4.9, 95K), Five Minute Journal (4.8, 112K), Reflectly (4.7, 78K) all have dedicated streak systems. OCCUPIED \u2014 multiple paid apps with strong ratings and large review counts.",
+      "cycle": 85,
+      "timestamp": "2026-03-20T16:37:33.659436+00:00"
+    },
+    {
+      "niche": "daily_dog_training_streak",
+      "community_total": 1440000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "1.44M dog training community. Dogo has full gamified streak system. Woofz also has streaks. Multiple paid streak apps exist \u2014 SOFT_COMPETITION. Still viable but crowded at the streak mechanic level.",
+      "cycle": 86,
+      "timestamp": "2026-03-21T03:33:19.766950+00:00"
+    },
+    {
+      "niche": "daily_biology_streak",
+      "community_total": 1285000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "1.28M biology community. Quizlet has daily study streaks (covers biology). Complete Anatomy has progress tracking. Space is adjacent \u2014 SOFT_COMPETITION. A biology-specific streak app would differentiate.",
+      "cycle": 86,
+      "timestamp": "2026-03-21T03:33:19.766950+00:00"
+    },
+    {
+      "niche": "daily_statistics_streak",
+      "community_total": 2320000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "2.32M statistics community. Brilliant (4.8, 245K) has a dedicated daily streak for statistics/probability with XP and course progression. OCCUPIED \u2014 strong paid competitor with exact mechanic.",
+      "cycle": 86,
+      "timestamp": "2026-03-21T03:33:19.766950+00:00"
+    },
+    {
+      "niche": "daily_fps_aim_training_streak",
+      "community_total": 500000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "500K FPS aim training community. AimLab has mobile app with daily tracking. Aiming Pro and FPS Training both have partial streak features. SOFT_COMPETITION \u2014 niche has mobile presence with streak-adjacent mechanics.",
+      "cycle": 86,
+      "timestamp": "2026-03-21T03:33:19.766950+00:00"
+    },
+    {
+      "niche": "daily_couples_habit_streak",
+      "community_total": 6212000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "6.21M community. Paired exists with a daily streak mechanic but is limited to Q&A prompts without XP for specific relationship skills. Gap exists for a gamified streak with skill trees for Gottman principles, attachment style practice, and bids-for-connection technique mastery.",
+      "cycle": 91,
+      "timestamp": "2026-03-21T11:59:20.834067+00:00"
+    },
+    {
+      "niche": "daily_emotional_regulation_streak",
+      "community_total": 1440000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "1.44M community. DBT Coach has a diary card habit mechanic but is clinical and lacks gamification. Gap exists for a streak app with XP for TIPP skills, radical acceptance practice, opposite action execution, and emotional regulation level progression with non-clinical framing.",
+      "cycle": 91,
+      "timestamp": "2026-03-21T11:59:20.834067+00:00"
+    },
+    {
+      "niche": "daily_macro_tracking_streak",
+      "community_total": 1475000,
+      "verdict": "OCCUPIED",
+      "streak_app_exists": true,
+      "notes": "1.47M community. MFP, Cronometer, MacroFactor all have streak-adjacent tracking. Gap exists for a gamified MACRO LEARNING streak (daily XP for precision macro splits, nutrition knowledge quizzes, protein completeness badges) distinct from passive tracking. MFP brand dominance makes this harder. SOFT_COMPETITION \u2014 viable if positioned as macro education not tracking.",
+      "cycle": 93,
+      "timestamp": "2026-03-21T15:47:16.265677+00:00"
+    }
+  ],
+  "cycle_summary": [
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 5,
+      "occupied": 5
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 0,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 48,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 49,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 51,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 53,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 54,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 55,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 56,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 57,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 58,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 69,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 70,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 72,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 73,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 74,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 75,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 76,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 77,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 78,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 79,
+      "strategy": "",
+      "blue_oceans": 0,
+      "occupied": 0
+    },
+    {
+      "cycle": 80,
+      "strategy": "MUSIC_ADJACENT + LANGUAGE_ADVANCED + FINANCIAL_BEHAVIOR + SOCIAL_SKILLS",
+      "blue_oceans": 11,
+      "occupied": 2
+    },
+    {
+      "cycle": 81,
+      "strategy": "PARENTING_ADJACENT + RELATIONSHIP_SKILLS + CREATIVE_WRITING + STEM_SKILLS",
+      "blue_oceans": 9,
+      "occupied": 1
+    },
+    {
+      "cycle": 82,
+      "strategy": "WELLNESS_ADJACENT + SPORTS_SPECIFIC + PROFESSIONAL_SKILLS + LANGUAGE_NICHE",
+      "blue_oceans": 9,
+      "occupied": 1
+    },
+    {
+      "cycle": 83,
+      "strategy": "HOBBY_NICHE + FINANCIAL_SKILLS + SPIRITUAL_ADJACENT + GAMING_ADJACENT",
+      "blue_oceans": 9,
+      "occupied": 1
+    },
+    {
+      "cycle": 84,
+      "strategy": "CREATIVE_ARTS + OUTDOOR_ADVENTURE + TECH_SKILLS + CULINARY_ARTS",
+      "blue_oceans": 10,
+      "occupied": 0
+    },
+    {
+      "cycle": 85,
+      "strategy": "SPORTS_PERFORMANCE + LANGUAGE_CULTURE + BUSINESS_SKILLS + WELLNESS_MINDFULNESS",
+      "blue_oceans": 9,
+      "occupied": 6
+    },
+    {
+      "cycle": 86,
+      "strategy": "PERSONAL_DEVELOPMENT + ANIMAL_CARE + STEM_EDUCATION + GAMING_ESPORTS",
+      "blue_oceans": 10,
+      "occupied": 5
+    },
+    {
+      "cycle": 87,
+      "strategy": "REAL_ESTATE + INVESTING + ENTREPRENEURSHIP + REMOTE_WORK",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 88,
+      "strategy": "PARENTING + RELATIONSHIP_SKILLS + SOCIAL_SKILLS + MINDFULNESS",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 89,
+      "strategy": "CULINARY_ARTS + OUTDOOR_ADVENTURE + CREATIVE_WRITING + MENTAL_HEALTH",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 90,
+      "strategy": "MUSIC_PRODUCTION + DANCE + PHOTOGRAPHY + FASHION_DESIGN",
+      "blue_oceans": 14,
+      "occupied": 0
+    },
+    {
+      "cycle": 91,
+      "strategy": "PARENTING + RELATIONSHIPS + COMMUNICATION + CONFLICT_RESOLUTION",
+      "blue_oceans": 11,
+      "occupied": 3
+    },
+    {
+      "cycle": 92,
+      "strategy": "MUSIC_PRODUCTION + DANCE + PHOTOGRAPHY + FASHION_DESIGN",
+      "blue_oceans": 14,
+      "occupied": 0
+    },
+    {
+      "cycle": 93,
+      "strategy": "COOKING + BAKING + NUTRITION + MEAL_PREP",
+      "blue_oceans": 13,
+      "occupied": 1
+    },
+    {
+      "cycle": 94,
+      "strategy": "OUTDOOR_SKILLS + SURVIVAL + GARDENING + HOMESTEADING",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 95,
+      "strategy": "ARTS + CRAFTS + DIY + MAKER",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 96,
+      "strategy": "COOKING + BAKING + NUTRITION + MEAL_PREP",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 97,
+      "strategy": "TRAVEL + LANGUAGE + CULTURE + GEOGRAPHY",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 98,
+      "strategy": "FINANCE + INVESTING + MONEY + BUSINESS SKILLS",
+      "blue_oceans": 15,
+      "occupied": 0
+    },
+    {
+      "cycle": 99,
+      "strategy": "HEALTH + WELLNESS + MENTAL HEALTH + FITNESS SCIENCE",
+      "blue_oceans": 14,
+      "occupied": 0
+    },
+    {
+      "cycle": 100,
+      "strategy": "PRODUCTIVITY + FOCUS + TIME MANAGEMENT + DEEP WORK",
+      "blue_oceans": 13,
+      "occupied": 0
+    },
+    {
+      "cycle": 101,
+      "strategy": "PERSONAL FINANCE + INVESTING + WEALTH BUILDING",
+      "blue_oceans": 10,
+      "occupied": 0
+    },
+    {
+      "cycle": 102,
+      "strategy": "LANGUAGE LEARNING + LINGUISTICS + COMMUNICATION",
+      "blue_oceans": 10,
+      "occupied": 0
+    },
+    {
+      "cycle": 103,
+      "strategy": "ENTREPRENEURSHIP + BUSINESS + STARTUPS",
+      "blue_oceans": 10,
+      "occupied": 0
+    },
+    {
+      "cycle": 104,
+      "strategy": "HEALTH + WELLNESS + BIOHACKING",
+      "blue_oceans": 10,
+      "occupied": 0
+    },
+    {
+      "cycle": 105,
+      "strategy": "PARENTING + CHILD DEVELOPMENT + EDUCATION",
+      "blue_oceans": 10,
+      "occupied": 0
+    }
+  ]
+}

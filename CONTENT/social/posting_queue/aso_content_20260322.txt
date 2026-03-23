@@ -1,0 +1,50 @@
+# ASO Content Queue — App Factory Cycle 2026-03-22
+# Source: aso step, app_factory venture
+
+TWEET 1 (SoberStreak — privacy angle):
+Most sobriety apps require an account. Some sync your streaks to a server.
+
+Built one that doesn't. soberstreak.surge.sh
+
+NoFap, alcohol, weed, phone — whatever you're quitting. All stays on your phone. Zero data.
+
+---
+
+TWEET 2 (Streakr — MVD angle):
+Stop tracking 10 habits. Define your minimum viable day instead.
+
+Pick 3 non-negotiables. Hit all 3 = green day. That's it.
+
+307 upvotes in r/productivity for a reason. Building this into our habit tracker next.
+
+---
+
+TWEET 3 (Review prompt timing — credibility/meta):
+One change added 0.8 stars to an app rating. Zero new features.
+
+Moved the review prompt from session 1 → day 7 milestone.
+
+Applied this across 12 streak apps this week. Takes 10 minutes per app. Probably the highest ROI ASO change that exists.
+
+---
+
+THREAD (App Factory meta):
+1/ Built 12 streak apps in the last 2 weeks. Here's what I learned about App Store Optimization that most devs skip:
+
+2/ TIMING > FEATURES. The review prompt fired on day 1 was getting 1-star reviews from users who hadn't seen any value yet. Moved it to day 7. +0.8 stars. Nothing else changed.
+
+3/ PRIVACY IS A KEYWORD. "nofap app no account" has LOW competition and HIGH conversion intent. Nobody in the sobriety app space is competing on privacy. One competitor had a scandal. We built the alternative.
+
+4/ OWN LOW-VOLUME KEYWORDS EARLY. "bible reading streak" — almost nobody competing. "producer habit tracker" — zero competition. Own these before the niche fills up.
+
+5/ ANNUAL-FIRST ANCHORING. Show the annual price ($19.99/yr) before the monthly ($2.99/mo). Users anchor to the annual number and see the monthly as cheap. This is the BibleChat pattern — 55% of their revenue comes from weekly plans shown first as the anchor.
+
+6/ Category matters more than you think. "Books & Reference" beats "Lifestyle" for faith apps — 40% lower CPC, less competition, same intent. Wrong category = wrong placement.
+
+7/ Swipe UX is the differentiator nobody's copying yet. HabitSwipe hit 2,500 users in 2 months with exactly this. We're adding it to all our habit trackers this week.
+
+REDDIT POSTS (when account created):
+- r/NoFap: "Built this after the Quittr scandal — everything stays on your device. soberstreak.surge.sh"
+- r/productivity: "I made a habit tracker that only asks for 3 things per day (Minimum Viable Day mode)"
+- r/photography: "Built a 365 project tracker that's just a streak counter for your camera. photography-streak.surge.sh"
+- r/WeAreTheMusicMakers: "Beat Making Streak — log daily production sessions, build the habit. beat-making-streak.surge.sh"

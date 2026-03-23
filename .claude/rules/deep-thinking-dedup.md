@@ -8,6 +8,7 @@ The autonomous_integrator V2 processed 294 alpha entries and created 294 DAG con
 ### 1. DEDUP CHECK (mandatory, no exceptions)
 Before creating a new automation artifact, answer these three questions:
 - **Does an existing Python script already do this?** Check the 601 real scripts in AUTOMATIONS/ first. Scraping? We have 37 scrapers. Content? 16 generators. Leads? 27 outreach scripts. If yes, WIRE INTO THE EXISTING SCRIPT instead of creating a new config file.
+- **Does an existing playbook/guide/resource already cover this?** Check `OPS/RESOURCE_MANIFEST.md` FIRST — it indexes 200+ playbooks, products, guides, templates, and research docs. If a playbook exists, LOAD IT and use it rather than creating a new strategy from scratch.
 - **Does an existing DAG/chain already cover this pattern?** The system has 294 DAGs. If the new method is "scrape X, score Y, generate content, post it" — that pattern exists 100+ times. Don't create #295. Find the closest existing one and ENHANCE it.
 - **Will this actually execute?** If the output is a JSON config + a stub runner that prints "DAG execution complete" — it's not integration, it's a plan file. Plans are Level 1 (PLANNED). Don't count them as done.
 

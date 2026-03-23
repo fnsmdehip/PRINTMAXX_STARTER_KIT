@@ -1,6 +1,6 @@
 # App Spec: ALPHA_HN_47466968
 ## source: HackerNews (showhn)
-## generated: 2026-03-21 17:56:06
+## generated: 2026-03-22 22:53:01
 ## roi_potential: HIGHEST
 
 ## core insight

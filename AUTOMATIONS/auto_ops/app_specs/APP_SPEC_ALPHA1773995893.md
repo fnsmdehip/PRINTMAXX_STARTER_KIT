@@ -1,6 +1,6 @@
 # App Spec: ALPHA1773995893
 ## source: TechCrunch (https://techcrunch.com/video/what-happened-at-nvidia-gtc-nemoclaw-robot-olaf-and-a-1-trillion-bet/)
-## generated: 2026-03-21 17:56:05
+## generated: 2026-03-22 22:53:01
 ## roi_potential: MEDIUM
 
 ## core insight
