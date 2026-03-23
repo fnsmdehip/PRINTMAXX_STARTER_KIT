@@ -830,3 +830,22 @@ See `OPS/SUPPORT/support_metrics.md` for full details.
 ---
 
 Last updated: 2026-01-25
+
+
+---
+
+## Pending Enhancement (ALPHA1773997606, Score: 32)
+
+**Source:** 2026-03-23 | **URL:** @levelsio
+**Added:** 2026-03-23T00:15:01-04:00
+
+I wonder how to fix the last part of customer support I still get and can't automate:
+
+Customer buys 5,000 credits for $350
+
+Then messages me: "I signed up for $99/mo but it charged me $99 and then $350"
+
+Yes because you bought 5,000 credits for $350
+
+% of people either just lie
+

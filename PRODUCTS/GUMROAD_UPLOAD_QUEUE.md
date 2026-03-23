@@ -1,5 +1,6 @@
 # GUMROAD UPLOAD QUEUE
-*Revenue-ordered. Top = upload first. Updated: 2026-03-22*
+*Revenue-ordered. Top = upload first. Updated: 2026-03-23*
+**NEW 2026-03-23:** Cover HTML files generated for products 01, 02, 03, 04, 14. LISTING.md files created in GUMROAD_INSTANT_UPLOAD for products 14–22 (Claude Code series, Reddit Money Machine, Prompt Vault, Cold Email System, Before You Workbook). All new products now have standardized GUMROAD_INSTANT_UPLOAD folder entries.
 
 ---
 
@@ -38,7 +39,8 @@ BUNDLES: Cold Outreach Stack ($47) | Full Automation Bundle ($97) | Everything B
 ### 1. Local Biz Client Machine — $97
 **File:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/01_local_biz_client_system.pdf`
 **Listing:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/01-local-biz-client-system/LISTING.md`
-**Status:** `NEEDS_COVER` (PDF exists, cover brief written)
+**Cover:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/01-local-biz-client-system/cover.png` ✓ (1280x720, ready to upload)
+**Status:** `READY` — PDF + listing + cover.png all exist. Upload now.
 **Revenue potential:** $2,425–9,700/mo at 25–100 sales
 **Why first:** Highest price. Clear ROI story. 33M SMB target market. Entire product ladder feeds back here.
 **Upsell:** Cold Email Playbook ($27)
@@ -48,8 +50,9 @@ BUNDLES: Cold Outreach Stack ($47) | Full Automation Bundle ($97) | Everything B
 
 ### 2. Claude Code Agent Bible — $47
 **File:** `DIGITAL_PRODUCTS/ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html`
-**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_agent_bible.md`
-**Status:** `NEEDS_COVER` (HTML file ready)
+**Listing:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/14-claude-code-agent-bible/LISTING.md` ✓ (also: `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_agent_bible.md`)
+**Cover:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/14-claude-code-agent-bible/cover.png` ✓ (1280x720, ready to upload)
+**Status:** `READY` — HTML + listing + cover.png all exist. Upload now.
 **Revenue potential:** $1,175–4,700/mo at 25–100 sales
 **Why second:** Zero direct competitors. Technical buyers pay full price. Claude Code community is hungry.
 **Upsell:** AI Automation Toolkit ($47)
@@ -60,7 +63,8 @@ BUNDLES: Cold Outreach Stack ($47) | Full Automation Bundle ($97) | Everything B
 ### 3. AI Automation Toolkit — $47
 **File:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/02_ai_automation_toolkit.pdf`
 **Listing:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/02-ai-automation-toolkit/LISTING.md`
-**Status:** `NEEDS_COVER` (PDF exists)
+**Cover:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/02-ai-automation-toolkit/cover.png` ✓ (1280x720, ready to upload)
+**Status:** `READY` — PDF + listing + cover.png all exist. Upload now.
 **Revenue potential:** $1,175–4,700/mo at 25–100 sales
 **Why third:** 20 working workflows is a concrete deliverable. "30–40h/week saved" is credible math.
 **Upsell:** AI Automation Starter Kit ($47) or Full Automation Bundle ($97)
@@ -82,7 +86,8 @@ BUNDLES: Cold Outreach Stack ($47) | Full Automation Bundle ($97) | Everything B
 ### 5. AI Content Farm Blueprint — $47
 **File:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/04_ai_content_farm_blueprint.pdf`
 **Listing:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/04-ai-content-farm-blueprint/LISTING.md`
-**Status:** `NEEDS_COVER` (PDF exists)
+**Cover:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/04-ai-content-farm-blueprint/cover.png` ✓ (1280x720, ready to upload)
+**Status:** `READY` — PDF + listing + cover.png all exist. Upload now.
 **Revenue potential:** $1,175–4,700/mo at 25–100 sales
 **Why fifth:** Portfolio mindset resonates with burned-out single-account builders. $5,500–8,000/mo math is concrete.
 **Upsell:** Everything Bundle ($197)
@@ -93,7 +98,8 @@ BUNDLES: Cold Outreach Stack ($47) | Full Automation Bundle ($97) | Everything B
 ### 6. Vibe Coding Playbook — $47
 **File:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/03_vibe_coding_playbook.pdf`
 **Listing:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/03-vibe-coding-playbook/LISTING.md`
-**Status:** `NEEDS_COVER` (PDF exists)
+**Cover:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/03-vibe-coding-playbook/cover.png` ✓ (1280x720, ready to upload)
+**Status:** `READY` — PDF + listing + cover.png all exist. Upload now.
 **Revenue potential:** $1,175–4,700/mo at 25–100 sales
 **Why sixth:** Hot niche, TAM is every non-technical person who wants to ship. Evergreen demand.
 **Upsell:** Everything Bundle ($197)
@@ -475,4 +481,4 @@ Revenue unlocks the moment Gumroad account exists. Everything else is already bu
 
 ---
 
-*Last updated: 2026-03-22 | Products tracked: 31 paid + 1 free | DIRECT UPLOAD NOW: 11 | NEEDS_PDF: 9 | NEEDS_WORK (Notion): 5 | Cover images: 0 (add post-listing) | Bundles: 6 planned*
+*Last updated: 2026-03-23 | Products tracked: 31 paid + 1 free | FULLY READY (cover + PDF + listing): 5 | DIRECT UPLOAD NOW (HTML ready): 6 additional | NEEDS_PDF: 9 | NEEDS_WORK (Notion): 5 | Cover PNGs generated: 5 | Bundles: 6 planned*

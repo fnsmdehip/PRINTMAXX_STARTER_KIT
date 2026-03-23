@@ -1,9 +1,9 @@
 {
-  "total_generated": 28,
-  "total_twitter": 14,
-  "total_linkedin": 14,
+  "total_generated": 32,
+  "total_twitter": 16,
+  "total_linkedin": 16,
   "total_threads": 0,
-  "last_generate_date": "2026-03-22",
+  "last_generate_date": "2026-03-23",
   "last_thread_date": null,
   "topic_history": [
     "autonomous_business_os",
@@ -19,7 +19,9 @@
     "ai_agent_roi",
     "33_agents_200_mo",
     "implementation_gap",
-    "implementation_gap"
+    "implementation_gap",
+    "autonomous_business_os",
+    "ai_agent_roi"
   ],
   "rejected_count": 0
 }

@@ -1,28 +1,31 @@
 {
-  "last_updated": "2026-03-22T23:05:26.063742",
-  "last_cycle": "distribution_engine_2026-03-22_23h05",
-  "cycle_number": 31,
+  "last_updated": "2026-03-23T02:10:37.650961",
+  "last_cycle": "distribution_engine_2026-03-23_02h10",
+  "cycle_number": 32,
   "coverage": {
     "twitter": {
-      "threads": 13,
-      "singles": 63,
-      "reply_baits": 21,
-      "qt_captions": 13,
-      "total_pieces": 123,
-      "last_cycle": 31,
+      "threads": 14,
+      "singles": 69,
+      "reply_baits": 23,
+      "qt_captions": 15,
+      "total_pieces": 134,
+      "last_cycle": 32,
       "new_this_cycle": [
-        "fitness_cluster_launch_singles_x5",
-        "ramadan_urgency_single",
-        "promptvault_launch_single",
-        "claude_code_ebooks_controversial_single",
-        "mcp_marketplace_safety_single",
-        "app_factory_build_thread_9_tweets",
-        "qt_caption_contrarian",
-        "reply_bait_honest_build_public"
+        "music_maker_cluster_single",
+        "couples_streak_single",
+        "photography_streak_single",
+        "claude_code_ebook_series_single",
+        "deskbreak_single",
+        "world_history_single",
+        "build_in_public_honest_thread_6_tweets",
+        "reply_bait_levelsio_threads",
+        "reply_bait_claude_code_threads",
+        "qt_caption_first_revenue",
+        "qt_caption_consistency"
       ]
     },
     "reddit": {
-      "posts_ready": 85,
+      "posts_ready": 97,
       "subreddits": [
         "r/nocode",
         "r/automation",
@@ -75,7 +78,7 @@
         "r/solopreneur",
         "r/content_marketing"
       ],
-      "last_cycle": 31,
+      "last_cycle": 32,
       "new_this_cycle": [
         "cultural_etiquette_r_travel",
         "cultural_etiquette_r_languagelearning",
@@ -102,8 +105,8 @@
       ]
     },
     "linkedin": {
-      "posts_ready": 25,
-      "last_cycle": 30,
+      "posts_ready": 29,
+      "last_cycle": 32,
       "new_this_cycle": [
         "cultural_etiquette_thought_leadership",
         "geography_professional",
@@ -126,13 +129,13 @@
       ]
     },
     "hackernews": {
-      "posts_ready": 3,
+      "posts_ready": 6,
       "show_posts": 2,
-      "last_cycle": 31
+      "last_cycle": 32
     },
     "indiehackers": {
-      "posts_ready": 2,
-      "last_cycle": 31
+      "posts_ready": 4,
+      "last_cycle": 32
     }
   },
   "assets_covered": {

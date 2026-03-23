@@ -2614,3 +2614,74 @@ Hope it's helpful to someone.
 
 [r/SaaS] 12 lessons after scaling my saas to 700 paid users and $9k/month in revenue
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997598, Score: 41)
+
+**Source:** 2026-03-23 | **URL:** @thejustinwelsh
+**Added:** 2026-03-23T00:15:01-04:00
+
+Today, my little one-person business crossed $10M in total revenue.
+
+It took 2,119 days, I ran zero ads & I operate at a ~89% margin.
+
+Here are the 23 steps of my wild & strange journey:
+
+Hope they are helpful to someone ↓
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997668, Score: 37)
+
+**Source:** 2026-03-23 | **URL:** @financialjuice
+**Added:** 2026-03-23T00:15:01-04:00
+
+$FDX FedEx Q3 Earnings
+
+Adjusted EPS $5.25, est. $4.17
+Revenue $24.0B, est. $23.49B
+Adjusted Operating Income $1.62B, est. $1.37B
+Adjusted Operating Margin 6.7%, est. 6.02%
+Federal Express Revenue $21.15B, est. $20.58B
+FedEx Freight Revenue $1.99B, est. $2.03B
+Sees FY adj EPS
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997859, Score: 26)
+
+**Source:** 2026-03-23 | **URL:** @damianplayer
+**Added:** 2026-03-23T00:15:01-04:00
+
+the biggest AI opportunity right now is mid-market companies ($5M-$50M+ revenue):
+
+• too big for cookie-cutter solutions
+• too small for enterprise consulting 
+• drowning in manual workflows
+• have budget but zero AI expertise (most companies)
+
+they’re stuck with serious cash
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998132, Score: 32)
+
+**Source:** 2026-03-23 | **URL:** @lookonchain
+**Added:** 2026-03-23T00:15:01-04:00
+
+Tron ranked #1 in revenue, far ahead of other blockchains.
+
+In the past 24 hours, 7 days, and 30 days, its revenue reached $947K, $5.42M, and $24.96M.
+
+
+https://
+defillama.com/revenue/chains
+

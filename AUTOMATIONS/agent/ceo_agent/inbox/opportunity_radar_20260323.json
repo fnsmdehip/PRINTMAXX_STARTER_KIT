@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-03-23T00:30:01.180311",
+  "source": "OPPORTUNITY_RADAR.csv",
+  "total_available": 130,
+  "top_opportunities": [
+    {
+      "title": "ylytdeng/wechat-decrypt",
+      "source": "GitHub",
+      "description": "[Python] WeChat 4.0 database decryptor - extract keys from memory, decrypt SQLCipher 4 databases, real-time message monitor (1472 stars, unknown)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/ylytdeng/wechat-decrypt",
+      "synergy_ops": "",
+      "timestamp": "2026-03-05T05:43:11.635101"
+    },
+    {
+      "title": "I built a sub-500ms latency voice agent from scratch",
+      "source": "HackerNews",
+      "description": "Show HN: 563 points, 152 comments",
+      "relevance_score": "100",
+      "category": "design",
+      "url": "https://www.ntik.me/posts/voice-agent",
+      "synergy_ops": "",
+      "timestamp": "2026-03-05T05:43:28.166776"
+    },
+    {
+      "title": "Share your ***Not-AI*** projects",
+      "source": "Reddit/r/SideProject",
+      "description": "I miss seeing original ideas that aren\u2019t just another AI wrapper.  If you\u2019re building something in 2025 that\u2019s **not AI-related** here\u2019s your space to",
+      "relevance_score": "100",
+      "category": "ai_tools",
+      "url": "https://reddit.com/r/SideProject/comments/1oaq2kx/share_your_notai_projects/",
+      "synergy_ops": "A01|A02",
+      "timestamp": "2026-03-05T05:43:31.105056"
+    },
+    {
+      "title": "NEW RULES for the IndieHackers subreddit. - Getting the quality back.",
+      "source": "Reddit/r/indiehackers",
+      "description": "Howdy.  We had some internal talks, and after looking at the current state of subreddits in the software and SaaS space, we decided to implement an au",
+      "relevance_score": "100",
+      "category": "saas",
+      "url": "https://reddit.com/r/indiehackers/comments/1pj44es/new_rules_for_the_indiehackers_subreddit_getting/",
+      "synergy_ops": "A02|A09|D09",
+      "timestamp": "2026-03-05T05:43:34.504155"
+    },
+    {
+      "title": "I'm 3 years old and just sold my SaaS for $1.2B (here's what I learned)",
+      "source": "Reddit/r/microsaas",
+      "description": "Hey everyone. Tommy here. I'm 3.  Four days ago I was watching cocomelon on my iPad when YouTube autoplay threw on a Dan Martell video. Something abou",
+      "relevance_score": "100",
+      "category": "saas",
+      "url": "https://reddit.com/r/microsaas/comments/1rkv0w4/im_3_years_old_and_just_sold_my_saas_for_12b/",
+      "synergy_ops": "C01|C05|C07|A02|A09|D09",
+      "timestamp": "2026-03-05T05:43:37.731519"
+    },
+    {
+      "title": "I stopped promising results in my copy and started explaining why things fail response rate doubled",
+      "source": "Reddit/r/Entrepreneur",
+      "description": "For like 8 months I was writing copy the way everyone teaches it. Lead with the benefit. Make the promise big. \"Make $10K/month.\" \"Lose 10 pounds in 3",
+      "relevance_score": "100",
+      "category": "ai_tools",
+      "url": "https://reddit.com/r/Entrepreneur/comments/1rkgv0h/i_stopped_promising_results_in_my_copy_and/",
+      "synergy_ops": "",
+      "timestamp": "2026-03-05T05:43:40.738025"
+    },
+    {
+      "title": "I weigh 82 kg. My wife weighs 54 kg. We finally understood why sharing a mattress was destroying both our sleep.",
+      "source": "Reddit/r/SaaS",
+      "description": "We spent 4 years blaming each other for bad sleep before figuring out the actual problem.\n She said I moved too much at night and woke her up. I said ",
+      "relevance_score": "100",
+      "category": "ai_tools",
+      "url": "https://reddit.com/r/SaaS/comments/1rl9ybf/i_weigh_82_kg_my_wife_weighs_54_kg_we_finally/",
+      "synergy_ops": "",
+      "timestamp": "2026-03-05T05:43:43.766589"
+    },
+    {
+      "title": "HKUDS/ClawTeam",
+      "source": "GitHub",
+      "description": "[Python] ClawTeam: Agent Swarm Intelligence (One Command \u2192 Full Automation) (2777 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/HKUDS/ClawTeam",
+      "synergy_ops": "S04|G05",
+      "timestamp": "2026-03-22T18:21:38.134732"
+    },
+    {
+      "title": "math-inc/OpenGauss",
+      "source": "GitHub",
+      "description": "[Python]  (1015 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/math-inc/OpenGauss",
+      "synergy_ops": "",
+      "timestamp": "2026-03-22T18:21:38.134751"
+    },
+    {
+      "title": "lxf746/any-auto-register",
+      "source": "GitHub",
+      "description": "[Python]  (972 stars, unknown)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/lxf746/any-auto-register",
+      "synergy_ops": "",
+      "timestamp": "2026-03-22T18:21:38.134761"
+    },
+    {
+      "title": "wangziqi06/724-office",
+      "source": "GitHub",
+      "description": "[Python] 7/24 Office \u2014 Self-evolving AI Agent system. 26 tools, 3500 lines pure Python, MCP/Skill plugins, three-layer memory, self-repair, 24/7 production. (602 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/wangziqi06/724-office",
+      "synergy_ops": "OP_MCP|D12|OP_AGENT_CONSULT|S04",
+      "timestamp": "2026-03-22T18:21:38.134823"
+    },
+    {
+      "title": "sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
+      "source": "GitHub",
+      "description": "[Python] Netryx is a powerful, locally-hosted geolocation tool that uses state-of-the-art computer vision to identify the exact coordinates of a street-level image. It replicates the core pipeline of ",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/sparkyniner/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
+      "synergy_ops": "A02|A09|D09",
+      "timestamp": "2026-03-22T18:21:38.134896"
+    },
+    {
+      "title": "lcoutodemos/clui-cc",
+      "source": "GitHub",
+      "description": "[TypeScript] Clui CC \u2014 Command Line User Interface for Claude Code (1005 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/lcoutodemos/clui-cc",
+      "synergy_ops": "OP_VIBE_PRODUCTS",
+      "timestamp": "2026-03-22T18:21:43.259426"
+    },
+    {
+      "title": "louislva/claude-peers-mcp",
+      "source": "GitHub",
+      "description": "[TypeScript] Allow all your Claude Codes to message each other ad-hoc! (538 stars, unknown)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/louislva/claude-peers-mcp",
+      "synergy_ops": "OP_MCP|D12|OP_VIBE_PRODUCTS",
+      "timestamp": "2026-03-22T18:21:43.259505"
+    },
+    {
+      "title": "VoltAgent/awesome-codex-subagents",
+      "source": "GitHub",
+      "description": "[None] A collection of 130+ specialized Codex subagents covering a wide range of development use cases. (2055 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "synergy_ops": "",
+      "timestamp": "2026-03-22T18:21:45.951485"
+    },
+    {
+      "title": "MiniMax-AI/skills",
+      "source": "GitHub",
+      "description": "[C#]  (1618 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/MiniMax-AI/skills",
+      "synergy_ops": "",
+      "timestamp": "2026-03-22T18:21:45.951542"
+    },
+    {
+      "title": "danveloper/flash-moe",
+      "source": "GitHub",
+      "description": "[Objective-C] Running a big model on a small laptop (1115 stars, unknown)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/danveloper/flash-moe",
+      "synergy_ops": "",
+      "timestamp": "2026-03-22T18:21:45.951563"
+    },
+    {
+      "title": "mattprusak/autoresearch-genealogy",
+      "source": "GitHub",
+      "description": "[None] Structured prompts, vault templates, and archive guides for AI-assisted genealogy research. Built for Claude Code. (875 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/mattprusak/autoresearch-genealogy",
+      "synergy_ops": "OP_VIBE_PRODUCTS|D01|N02",
+      "timestamp": "2026-03-22T18:21:45.951594"
+    },
+    {
+      "title": "dontbesilent2025/dbskill",
+      "source": "GitHub",
+      "description": "[None] dontbesilent \u7684\u5546\u4e1a\u8bca\u65ad Skills for Claude Code (873 stars, other)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/dontbesilent2025/dbskill",
+      "synergy_ops": "OP_VIBE_PRODUCTS",
+      "timestamp": "2026-03-22T18:21:45.951625"
+    },
+    {
+      "title": "truongduy2611/app-store-preflight-skills",
+      "source": "GitHub",
+      "description": "[None] AI agent skill to scan iOS/macOS projects for App Store rejection patterns before submission (822 stars, mit)",
+      "relevance_score": "100",
+      "category": "open_source",
+      "url": "https://github.com/truongduy2611/app-store-preflight-skills",
+      "synergy_ops": "OP_AGENT_CONSULT|S04|A01|A02",
+      "timestamp": "2026-03-22T18:21:45.951650"
+    }
+  ]
+}

@@ -3442,3 +3442,111 @@ As long as they moderately trust who they’re
 
 [r/passive_income] 6 months building a faceless content library: $847/mo, completely passive after month 3
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997587, Score: 20)
+
+**Source:** 2026-03-23 | **URL:** @Mike_Scully_
+**Added:** 2026-03-23T00:15:01-04:00
+
+One of the most underrated ways to make $20k/month right now:
+
+Charge SMBs $5k/month to be their fractional C-suite using $200/mo worth of AI tools.
+
+People in our community are already doing it.
+Here's how it works:
+
+Claude = CEO Strategy, content, proposals, competitor
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997928, Score: 20)
+
+**Source:** 2026-03-23 | **URL:** @affprinter
+**Added:** 2026-03-23T00:15:01-04:00
+
+I made $3424 Today from a viral tiktok slideshow
+which i made with nano banana pro
+
+I swear to god this is the easiest business model ever
+
+Kids are LITERALLY making thousands a day
+
+want the breakdown?
+
+Deleting in 24 hours....
+
+Retweet & Comment “Slideshow” and I’ll dm you a
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998003, Score: 30)
+
+**Source:** 2026-03-23 | **URL:** @maverickecom
+**Added:** 2026-03-23T00:15:01-04:00
+
+I made $100K for an brand in under 2 months on TikTok Shop
+
+- no wasted samples
+- no lost time 
+- no bs 
+- no fluff
+
+I put together a brand new comprehensive playbook I used to scale this brand with UGC and AI creators. 
+
+It covers: 
+
+- how to find good creators
+- making content
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998053, Score: 54)
+
+**Source:** 2026-03-23 | **URL:** @zoomyzoomm
+**Added:** 2026-03-23T00:15:01-04:00
+
+How to make $1 million on X
+
+1) Visit every large creator (>100k)
+2) Click on Filter Posts
+3) Switch to Most Liked
+4) Steal the top 10 posts
+5) Change the caption slightly
+6) Tweet it
+7) Reply to the first 10 comments
+8) Wait
+9) ...
+10) Go Viral
+11)  $50k/month in Creator Payouts
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998351, Score: 20)
+
+**Source:** 2026-03-23 | **URL:** @affprinter
+**Added:** 2026-03-23T00:25:51-04:00
+
+I made $2460 Today from a viral tiktok slideshow
+which literally took me 2 mins to make
+
+I swear to god this is the easiest business model ever
+
+Kids are LITERALLY making thousands a day
+
+want the breakdown?
+
+Deleting in 24 hours....
+
+Retweet & Comment “Slideshow” and I’ll dm you
+

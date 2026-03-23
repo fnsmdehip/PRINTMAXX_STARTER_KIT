@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: #080c10;
+  font-family: 'Inter', -apple-system, sans-serif;
+  position: relative;
+}
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(16,185,129,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(16,185,129,0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.layout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  gap: 72px;
+}
+.left { flex: 1; }
+.badge {
+  display: inline-block;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.35);
+  color: #10b981;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+h1 {
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+h1 em { color: #10b981; font-style: normal; }
+.sub {
+  color: #9ca3af;
+  font-size: 17px;
+  line-height: 1.55;
+  margin-bottom: 28px;
+  max-width: 440px;
+}
+.pipeline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.step {
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.25);
+  color: #d1fae5;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.arrow { color: #10b981; font-size: 14px; font-weight: 700; }
+.price-row { display: flex; align-items: center; gap: 16px; }
+.price {
+  background: #10b981;
+  color: #000;
+  font-size: 28px;
+  font-weight: 800;
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+.guar { color: #6b7280; font-size: 12px; }
+.output-panel {
+  width: 380px;
+  flex-shrink: 0;
+}
+.panel-title {
+  color: #4b5563;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.platform-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+.platform-name { color: #e5e7eb; font-size: 13px; font-weight: 600; flex: 1; }
+.count {
+  color: #10b981;
+  font-size: 12px;
+  font-weight: 700;
+}
+.total {
+  text-align: right;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(16,185,129,0.2);
+}
+.total-val { color: #10b981; font-size: 20px; font-weight: 800; }
+.total-label { color: #6b7280; font-size: 11px; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="layout">
+  <div class="left">
+    <div class="badge">Content System</div>
+    <h1>AI Content Farm<br><em>Blueprint</em></h1>
+    <p class="sub">90 pieces per month from one person. Scrapers find the raw material. Agents draft it. You approve it.</p>
+    <div class="pipeline">
+      <div class="step">Scrape</div>
+      <div class="arrow">→</div>
+      <div class="step">Draft</div>
+      <div class="arrow">→</div>
+      <div class="step">Format</div>
+      <div class="arrow">→</div>
+      <div class="step">Schedule</div>
+      <div class="arrow">→</div>
+      <div class="step">Distribute</div>
+    </div>
+    <div class="price-row">
+      <div class="price">$47</div>
+      <span class="guar">30-day money-back guarantee</span>
+    </div>
+  </div>
+  <div class="output-panel">
+    <div class="panel-title">Monthly output — 1 person</div>
+    <div class="platform-row">
+      <span class="platform-name">Twitter / X</span>
+      <span class="count">30 posts · 4 threads</span>
+    </div>
+    <div class="platform-row">
+      <span class="platform-name">Reddit</span>
+      <span class="count">12 authority posts</span>
+    </div>
+    <div class="platform-row">
+      <span class="platform-name">LinkedIn</span>
+      <span class="count">16 posts</span>
+    </div>
+    <div class="platform-row">
+      <span class="platform-name">Newsletter</span>
+      <span class="count">4 issues</span>
+    </div>
+    <div class="platform-row">
+      <span class="platform-name">SEO pages</span>
+      <span class="count">8 longtail pages</span>
+    </div>
+    <div class="total">
+      <div class="total-val">90+ pieces</div>
+      <div class="total-label">per month · zero extra headcount</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

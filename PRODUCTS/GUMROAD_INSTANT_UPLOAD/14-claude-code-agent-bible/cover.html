@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: #0a0a0f;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+.scan {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(99,102,241,0.015) 0px,
+    rgba(99,102,241,0.015) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+.layout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  gap: 64px;
+}
+.left { flex: 1; }
+.tag-line {
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+h1 {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+h1 em {
+  color: #6366f1;
+  font-style: normal;
+}
+.stats-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(99,102,241,0.2);
+  border-bottom: 1px solid rgba(99,102,241,0.2);
+}
+.stat { text-align: center; }
+.stat-n {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+}
+.stat-l { font-size: 11px; color: #6366f1; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+.sub {
+  font-family: 'Inter', sans-serif;
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+.price-row { display: flex; align-items: center; gap: 16px; }
+.price {
+  font-family: 'Inter', sans-serif;
+  background: #6366f1;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+.guar {
+  font-family: 'Inter', sans-serif;
+  color: #6b7280;
+  font-size: 12px;
+}
+.agent-list {
+  background: rgba(99,102,241,0.04);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 8px;
+  padding: 24px;
+  width: 380px;
+  flex-shrink: 0;
+}
+.al-header {
+  color: #6366f1;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(99,102,241,0.2);
+  padding-bottom: 10px;
+}
+.agent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.agent:last-child { border: none; }
+.agent-name { color: #e6edf3; font-size: 12px; }
+.agent-model {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.m-opus { background: rgba(239,68,68,0.15); color: #f87171; }
+.m-sonnet { background: rgba(99,102,241,0.15); color: #818cf8; }
+.m-haiku { background: rgba(34,197,94,0.15); color: #4ade80; }
+.more { color: #4b5563; font-size: 11px; text-align: center; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="scan"></div>
+<div class="layout">
+  <div class="left">
+    <div class="tag-line">// autonomous systems</div>
+    <h1>The Claude Code<br><em>Agent Bible</em></h1>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-n">33</div>
+        <div class="stat-l">Agents</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">24/7</div>
+        <div class="stat-l">Runtime</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">$0</div>
+        <div class="stat-l">Cloud Cost</div>
+      </div>
+    </div>
+    <p class="sub">The exact architecture behind 33 autonomous agents running on one Mac. Every pattern. Every failure mode. Complete documentation.</p>
+    <div class="price-row">
+      <div class="price">$47</div>
+      <span class="guar">Instant download · No subscription</span>
+    </div>
+  </div>
+  <div class="agent-list">
+    <div class="al-header">agent catalog — 25 of 33</div>
+    <div class="agent"><span class="agent-name">swarm_brain</span><span class="agent-model m-opus">Opus</span></div>
+    <div class="agent"><span class="agent-name">gap_hunter</span><span class="agent-model m-opus">Opus</span></div>
+    <div class="agent"><span class="agent-name">competitor_stalker</span><span class="agent-model m-sonnet">Sonnet</span></div>
+    <div class="agent"><span class="agent-name">lead_machine</span><span class="agent-model m-sonnet">Sonnet</span></div>
+    <div class="agent"><span class="agent-name">cross_pollinator</span><span class="agent-model m-sonnet">Sonnet</span></div>
+    <div class="agent"><span class="agent-name">revenue_tracker</span><span class="agent-model m-sonnet">Sonnet</span></div>
+    <div class="agent"><span class="agent-name">shakespeare_agent</span><span class="agent-model m-sonnet">Sonnet</span></div>
+    <div class="agent"><span class="agent-name">system_healer</span><span class="agent-model m-haiku">Haiku</span></div>
+    <div class="agent"><span class="agent-name">data_janitor</span><span class="agent-model m-haiku">Haiku</span></div>
+    <div class="agent"><span class="agent-name">playwright_tester</span><span class="agent-model m-haiku">Haiku</span></div>
+    <div class="more">+ 23 more agents documented</div>
+  </div>
+</div>
+</body>
+</html>

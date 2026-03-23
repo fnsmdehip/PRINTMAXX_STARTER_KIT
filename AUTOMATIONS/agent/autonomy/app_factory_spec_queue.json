@@ -8,7 +8,10 @@
     "monetization": "Freemium: free checklist, $1.99 one-time for household plan + offline mode. Affiliate: emergency supply links (Amazon), generator links, insurance comparison. Annual seasonal pattern = repeat downloads each spring.",
     "source": "lead_machine_20260320_hurricane_angle",
     "market_signal": "Lead Machine found 3 roofing/HVAC businesses targeting hurricane prep market. Demand spike documented: April-May pre-season search surge. No dominant streak/checklist app for hurricane prep on App Store.",
-    "target_stores": ["App Store", "PWA web app for instant deploy"],
+    "target_stores": [
+      "App Store",
+      "PWA web app for instant deploy"
+    ],
     "build_time_estimate": "2-3 days (reuse scripture-streak base template)",
     "urgency": "Ship by April 15 to catch May pre-season search spike",
     "added_at": "2026-03-20T09:05",
@@ -1704,5 +1707,404 @@
     "community_size": 2390000,
     "verdict": "BLUE_OCEAN",
     "added_at": "2026-03-19T11:58"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994823.md",
+    "title": "App Spec: ALPHA1773994823",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004445"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995848.md",
+    "title": "App Spec: ALPHA1773995848",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004486"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994846.md",
+    "title": "App Spec: ALPHA1773994846",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004525"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994856.md",
+    "title": "App Spec: ALPHA1773994856",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004561"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995918.md",
+    "title": "App Spec: ALPHA1773995918",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004597"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994827.md",
+    "title": "App Spec: ALPHA1773994827",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004633"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995689.md",
+    "title": "App Spec: ALPHA1773995689",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004668"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994852.md",
+    "title": "App Spec: ALPHA1773994852",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004702"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994867.md",
+    "title": "App Spec: ALPHA1773994867",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004737"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994853.md",
+    "title": "App Spec: ALPHA1773994853",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004773"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994857.md",
+    "title": "App Spec: ALPHA1773994857",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004809"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA_HN_47415044.md",
+    "title": "App Spec: ALPHA_HN_47415044",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004843"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995506.md",
+    "title": "App Spec: ALPHA1773995506",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004881"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994829.md",
+    "title": "App Spec: ALPHA1773994829",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004914"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995827.md",
+    "title": "App Spec: ALPHA1773995827",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004948"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995876.md",
+    "title": "App Spec: ALPHA1773995876",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.004982"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996015.md",
+    "title": "App Spec: ALPHA1773996015",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005016"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995912.md",
+    "title": "App Spec: ALPHA1773995912",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005050"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995926.md",
+    "title": "App Spec: ALPHA1773995926",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005084"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995990.md",
+    "title": "App Spec: ALPHA1773995990",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005118"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996011.md",
+    "title": "App Spec: ALPHA1773996011",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005154"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996035.md",
+    "title": "App Spec: ALPHA1773996035",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005187"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995916.md",
+    "title": "App Spec: ALPHA1773995916",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005221"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995991.md",
+    "title": "App Spec: ALPHA1773995991",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005255"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995873.md",
+    "title": "App Spec: ALPHA1773995873",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005288"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996024.md",
+    "title": "App Spec: ALPHA1773996024",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005321"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995556.md",
+    "title": "App Spec: ALPHA1773995556",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005357"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996014.md",
+    "title": "App Spec: ALPHA1773996014",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005391"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995490.md",
+    "title": "App Spec: ALPHA1773995490",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005430"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994838.md",
+    "title": "App Spec: ALPHA1773994838",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005466"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994869.md",
+    "title": "App Spec: ALPHA1773994869",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005499"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995662.md",
+    "title": "App Spec: ALPHA1773995662",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005533"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996013.md",
+    "title": "App Spec: ALPHA1773996013",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005567"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996037.md",
+    "title": "App Spec: ALPHA1773996037",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005600"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995893.md",
+    "title": "App Spec: ALPHA1773995893",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005637"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995874.md",
+    "title": "App Spec: ALPHA1773995874",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005671"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA_HN_47466968.md",
+    "title": "App Spec: ALPHA_HN_47466968",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005706"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995924.md",
+    "title": "App Spec: ALPHA1773995924",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005738"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995875.md",
+    "title": "App Spec: ALPHA1773995875",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005771"
+  },
+  {
+    "source_file": "APP_SPEC_STREAKR_V2_20260322.md",
+    "title": "App Spec: STREAKR V2 \u2014 Swipe Habits + Minimum Viable Day",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005814"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995911.md",
+    "title": "App Spec: ALPHA1773995911",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005848"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996012.md",
+    "title": "App Spec: ALPHA1773996012",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005884"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995892.md",
+    "title": "App Spec: ALPHA1773995892",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005918"
+  },
+  {
+    "source_file": "APP_SPEC_SOBERSTREAK_UPGRADE_20260321.md",
+    "title": "SoberStreak \u2014 Upgrade Spec (2026-03-21)",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005954"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994840.md",
+    "title": "App Spec: ALPHA1773994840",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.005988"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995889.md",
+    "title": "App Spec: ALPHA1773995889",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006022"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994835.md",
+    "title": "App Spec: ALPHA1773994835",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006056"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995899.md",
+    "title": "App Spec: ALPHA1773995899",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006089"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994850.md",
+    "title": "App Spec: ALPHA1773994850",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006121"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996009.md",
+    "title": "App Spec: ALPHA1773996009",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006154"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994860.md",
+    "title": "App Spec: ALPHA1773994860",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006189"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996039.md",
+    "title": "App Spec: ALPHA1773996039",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006221"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994845.md",
+    "title": "App Spec: ALPHA1773994845",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006254"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773995498.md",
+    "title": "App Spec: ALPHA1773995498",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006287"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996038.md",
+    "title": "App Spec: ALPHA1773996038",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006320"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773994851.md",
+    "title": "App Spec: ALPHA1773994851",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006355"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA1773996008.md",
+    "title": "App Spec: ALPHA1773996008",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-23T00:30:01.006388"
   }
 ]

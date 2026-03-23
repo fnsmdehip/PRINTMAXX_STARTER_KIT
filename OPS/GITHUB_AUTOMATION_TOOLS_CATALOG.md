@@ -3071,3 +3071,259 @@ Hope it's helpful to someone.
 
 [r/SaaS] Revenue: $40K/month. Take home: $6K/month.
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997661, Score: 32)
+
+**Source:** 2026-03-23 | **URL:** @PrajwalTomar_
+**Added:** 2026-03-23T00:15:01-04:00
+
+Cursor just dropped Composer 2 and it's honestly insane.
+
+Their own coding model. 61.7% on Terminal-Bench 2.0, which beats Claude Opus 4.6 sitting at 58.0%.
+
+But here's what actually matters:
+
+$0.50 per million tokens vs Opus at $5.00. That's 10x cheaper.
+
+Sure, GPT-5.4 still
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997726, Score: 24)
+
+**Source:** 2026-03-23 | **URL:** @Argona0x
+**Added:** 2026-03-23T00:15:01-04:00
+
+i spent 3 months and $8K building a trading bot from scratch: it made $900
+
+then claude code found an anonymous account making $414K with a simpler strategy
+
+so i deleted my bot and started copying theirs
+
+let me explain.
+
+i wrote custom API integrations, built failover systems,
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997856, Score: 20)
+
+**Source:** 2026-03-23 | **URL:** @randfish
+**Added:** 2026-03-23T00:15:01-04:00
+
+97% of visitors to Google perform a search
+56% of visitors to ChatGPT enter a prompt
+And only 35% of visitors to Yahoo perform a search
+
+Using this data (from last week's report), we updated SparkToro to better show which search & AI tools your audience uses 
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997882, Score: 26)
+
+**Source:** 2026-03-23 | **URL:** @lookonchain
+**Added:** 2026-03-23T00:15:01-04:00
+
+Abraxas Capital is shorting #oil.
+
+In the past 13 hours, they opened a 10x short on 146,601 xyz:CL($13.98M).
+
+Their wallet 0x5b5d on Hyperliquid has a total profit of $165.94M.
+
+
+https://
+hypurrscan.io/address/0x5b5d
+51203a0f9079f8aeb098a6523a13f298c060#perps
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773997912, Score: 32)
+
+**Source:** 2026-03-23 | **URL:** @tatealax
+**Added:** 2026-03-23T00:15:01-04:00
+
+I spent 6 months figuring out AI UGC so you don't have to.
+
+and thats how we went from 0 → 4M views/week → $20K MRR with $0 ad spend.
+
+The tech stack. The prompts. The automation pipeline. The account structure.
+
+Here's what I wish someone told me on day 1:
+
+Your first 20 AI
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998014, Score: 23)
+
+**Source:** 2026-03-23 | **URL:** @Argona0x
+**Added:** 2026-03-23T00:15:01-04:00
+
+i pointed Claude Code at the pentagon's public budget document and told it to find every contract overpaying by 10x or more
+
+it came back with 340 results worth $4.2B in potential undercuts
+
+and a business plan i didn't ask for
+
+i fed it the 
+http://
+FPDS.gov procurement
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998049, Score: 26)
+
+**Source:** 2026-03-23 | **URL:** @lookonchain
+**Added:** 2026-03-23T00:15:01-04:00
+
+After holding $TRUMP for 8 months, whale 2sBcbh finally gave up and sold 211,343 $TRUMP($847K) at a $1.29M loss. 
+
+He bought 211,343 $TRUMP($2.13M) at $10 eight months ago.
+
+He also bought 18,787 $SOL($3.29M) at $175 and is now down $1.62M.
+
+
+https://
+intel.arkm.com/explorer/addre
+ss/2sBcbhsfHqiqtuiCpf33BxzkmgPtT4HU2xUuFZuiXn87
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998123, Score: 20)
+
+**Source:** 2026-03-23 | **URL:** @lookonchain
+**Added:** 2026-03-23T00:15:01-04:00
+
+Whale Selling $AAVE?
+
+Blockchain Capital deposited their remaining 216,292 $AAVE($24.8M) into Coinbase Prime.
+
+Meanwhile, whale 0xFF5D withdrew 10,008 $AAVE($1.15M) from Aave and deposited it to #Binance.
+
+
+https://
+intel.arkm.com/explorer/entit
+y/blockchain-capital
+…
+
+https://
+intel.arkm.com/explorer/addre
+ss/0xFF5D8D4e19017f411f81Ef3A682e242A3278C9Ad
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998159, Score: 24)
+
+**Source:** 2026-03-23 | **URL:** @thomasbcn
+**Added:** 2026-03-23T00:15:01-04:00
+
+Salary in NY
+
+Plastic Surgeon $4m
+Vulture Capitalist $3.5m
+Head of Eng. (AI)  $2.45m
+Dentist $1.2m
+Sex Worker $284k - $1.2m
+
+...
+
+Uber Driver $100k
+Dog Walker $92k
+Subway Conductor $83k
+Doorman $75k
+Delivery turk $75k
+Pilates $68k
+Pastor $67k
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998201, Score: 20)
+
+**Source:** 2026-03-23 | **URL:** @alexcooldev
+**Added:** 2026-03-23T00:25:50-04:00
+
+2010: You needed $20,000 to build a small MVP.  
+
+2026: You just need $60 for: 
+- Rork AI → Build your mobile app
+- Lovable → Build your web app or landing page
+- Cursor AI, Claude Code→ Build your backend
+- $0 → marketing on X + TikTok  
+
+Building a startup is basically free
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998286, Score: 26)
+
+**Source:** 2026-03-23 | **URL:** @levelsio
+**Added:** 2026-03-23T00:25:51-04:00
+
+have been stagnating like crazy since then 
+
+MRR is actually lower now, back under $900 (less if I only count Adkit) 
+
+I spent 3 days investigating trying to figure out what's happening using Claude code connected to Posthog, Stripe and Heyo Chat to investigate (more on that
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998317, Score: 20)
+
+**Source:** 2026-03-23 | **URL:** @purpdevvv
+**Added:** 2026-03-23T00:25:51-04:00
+
+Submit a memecoin idea. Get paid.
+
+Have a coin/narrative idea but lack capital or platform to launch?
+
+Share your idea. If it get's launched you'll receive 50% of 
+@Pumpfun
+ creator fees directly to your wallet.
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773998320, Score: 24)
+
+**Source:** 2026-03-23 | **URL:** @maverickecom
+**Added:** 2026-03-23T00:25:51-04:00
+
+OpenClaw + Arcads = 550 videos per day
+
+Fully-realistic UGC ads — cinematic lighting, human motion, perfect pacing — powered by AI agents.
+
+UGC cost: $5
+Production time: minutes
+Scale: instant
+
+One AI engine that creates, tests, and scales short-form ads automatically — nonstop.
+

@@ -568,3 +568,16 @@ Join free here:
 
 [ACQUISITION] How I got 14,000 newsletter subscribers with exactly 1 post (and no domain name)
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773997772, Score: 42)
+
+**Source:** 2026-03-23 | **URL:** @nicolascole77
+**Added:** 2026-03-23T00:15:01-04:00
+
+We've built our paid newsletter Write With AI to $400k in annual subscription revenue and $800k+ in digital product sales.
+
+This is the exact roadmap to follow if you want to launch your own newsletter:
+

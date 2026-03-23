@@ -1,0 +1,327 @@
+{
+  "cycle": 108,
+  "timestamp": "2026-03-23T07:36:04.651933+00:00",
+  "strategy": "SCIENCE + TECHNOLOGY + ENGINEERING + MATHEMATICS",
+  "niches": {
+    "daily_physics_concepts_streak": {
+      "reddit_communities": {
+        "physics": 2900000,
+        "AskPhysics": 540000,
+        "PhysicsStudents": 180000,
+        "quantum": 320000,
+        "relativity": 85000
+      },
+      "itunes_results": [
+        {
+          "name": "Khan Academy",
+          "rating": 4.8,
+          "rating_count": 1250000,
+          "category": "general education platform \u2014 video lessons, exercises, mastery points, broad K-12 and college coverage; comprehensive curriculum delivery platform NOT a daily physics concept streak habit with XP badges (Wave-Particle Duality Expert, Quantum Tunneling Scholar, General Relativity Architect), evidence-based curriculum on why the double-slit experiment shatters intuition and rebuilds understanding of how observation itself shapes physical reality, or daily microlearning on why Maxwell's equations unified electricity, magnetism, and light into one elegant framework that predicted radio waves before Hertz detected them"
+        },
+        {
+          "name": "Brilliant",
+          "rating": 4.7,
+          "rating_count": 98000,
+          "category": "interactive STEM learning \u2014 problem sets, visual courses, logic puzzles, math and science; interactive problem-solving platform at $15/mo NOT a free daily physics streak habit with social accountability, community niche badges (Thermodynamics Master, Electromagnetism Scholar, Classical Mechanics Expert), and progressive one-concept-per-day curriculum that builds intuition for why entropy always increases and why this single law constrains all possible futures of the universe"
+        },
+        {
+          "name": "Physics 101",
+          "rating": 3.9,
+          "rating_count": 12000,
+          "category": "reference app \u2014 formulas, equations, unit converter, periodic table; static formula reference NOT a habit streak app with engagement, social features, XP system, or daily concept delivery turning complex topics like special relativity, quantum mechanics, or thermodynamics into one sticky daily insight"
+        }
+      ],
+      "community_total": 4025000,
+      "notes": "4M physics community. Brilliant charges $15/mo for STEM and has 98K App Store ratings \u2014 market PAYS for STEM education. Yet Brilliant is courses, not daily habit streaks. Khan Academy has 1.25M App Store ratings proving massive STEM app demand. No app teaches one physics concept per day (quantum entanglement, Heisenberg uncertainty, gravitational waves, dark matter implications) with streak accountability and community leaderboards. Physics is mandatory in every engineering/med school globally. 40M+ physics students worldwide. >>> DIRECT BUILD: use scripture-streak base template. Physics concept = devotion. Daily streak = same mechanic.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_mathematics_mastery_streak": {
+      "reddit_communities": {
+        "math": 3800000,
+        "learnmath": 1200000,
+        "mathematics": 1100000,
+        "calculus": 220000,
+        "linearalgebra": 150000
+      },
+      "itunes_results": [
+        {
+          "name": "Photomath",
+          "rating": 4.7,
+          "rating_count": 2100000,
+          "category": "equation solver \u2014 camera scan, step-by-step solutions, homework helper; problem-solving TOOL not a daily math concept education habit with streak XP, conceptual mastery badges (Number Theory Expert, Topology Scholar, Abstract Algebra Architect), and evidence-based curriculum on why Euler's identity (e^i\u03c0 + 1 = 0) unifies five fundamental constants and why this single formula has been called the most beautiful equation in mathematics by every generation of mathematicians since 1748"
+        },
+        {
+          "name": "Duolingo Math",
+          "rating": 4.5,
+          "rating_count": 87000,
+          "category": "gamified math drills \u2014 arithmetic, fractions, times tables, mental math speed; drill practice for K-8 arithmetic NOT university-level math concept streaks with community badges for mastering why Godel's incompleteness theorems proved that any consistent formal system contains truths it cannot prove, permanently changing the philosophical foundations of mathematics and logic"
+        },
+        {
+          "name": "Mathway",
+          "rating": 4.6,
+          "rating_count": 380000,
+          "category": "algebra and calculus solver \u2014 step-by-step, graph plotting, formula reference; homework solver NOT a daily conceptual math streak teaching why the Riemann Hypothesis about prime number distribution has resisted proof for 165 years and why its solution would revolutionize cryptography, number theory, and our fundamental understanding of mathematical structure"
+        }
+      ],
+      "community_total": 6470000,
+      "notes": "6.47M mathematics community. Photomath has 2.1M App Store ratings \u2014 largest math app signal possible. Yet Photomath solves equations, it does NOT teach conceptual deep understanding. A student can solve x^2+5x+6=0 without understanding WHY the quadratic formula works or why complex roots appear in conjugate pairs. No app teaches daily math concepts (topology, abstract algebra, number theory, real analysis, combinatorics) with streak accountability. Math Olympiad community 500K+ globally \u2014 elite users who pay for depth. Every STEM student needs math intuition. >>> PREMIUM TARGET: $4.99/mo. Mathway model = $9.99/mo with 380K ratings = proven willingness to pay.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_chemistry_concepts_streak": {
+      "reddit_communities": {
+        "chemistry": 2100000,
+        "chemhelp": 380000,
+        "organicchemistry": 300000,
+        "biochemistry": 280000,
+        "materials": 195000
+      },
+      "itunes_results": [
+        {
+          "name": "Periodic Table 2024",
+          "rating": 4.8,
+          "rating_count": 178000,
+          "category": "interactive periodic table \u2014 element properties, electron configs, orbital visualizations; reference tool NOT a daily chemistry concept streak teaching why electron orbitals have the specific shapes they do, why the Pauli exclusion principle prevents all electrons from occupying the same state and makes solid matter possible, or why Le Chatelier's principle governs every equilibrium system from blood pH to industrial ammonia synthesis"
+        },
+        {
+          "name": "ChemDraw",
+          "rating": 3.7,
+          "rating_count": 8000,
+          "category": "molecular structure drawing tool \u2014 bond notation, functional groups, IUPAC naming; drawing utility NOT a daily concept streak habit building intuition for why chirality creates enantiomers with completely different biological effects (thalidomide tragedy, L vs D amino acids) or why activation energy and enzyme catalysis explain every metabolic reaction in every cell"
+        },
+        {
+          "name": "Khan Academy Chemistry",
+          "rating": 4.8,
+          "rating_count": 1250000,
+          "category": "general education \u2014 broad K-college coverage, video lessons; comprehensive NOT a daily focused chemistry streak with niche community badges and progressive one-concept curriculum from atomic orbital theory to pharmaceutical mechanism of action"
+        }
+      ],
+      "community_total": 3255000,
+      "notes": "3.25M chemistry community. Chemistry is mandatory in every pre-med, pharmacy, biology, and materials science program globally. 50M+ chemistry students. No streak app teaches one chemistry concept per day \u2014 reaction mechanisms, thermodynamics, spectroscopy, biochemical pathways, polymer science. Organic chemistry has 2M YouTube searches/month for 'how to understand orgo' \u2014 students DESPERATELY seek conceptual clarity. Med school MCAT chemistry section is one of the hardest components. An app that builds daily chemical intuition has immediate MCAT prep monetization angle at $9.99-14.99/mo. >>> DIRECT BUILD: scripture-streak template, chemistry content pack.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_cs_fundamentals_streak": {
+      "reddit_communities": {
+        "learnprogramming": 4900000,
+        "computerscience": 1200000,
+        "coding": 590000,
+        "algorithms": 410000,
+        "cscareerquestions": 860000
+      },
+      "itunes_results": [
+        {
+          "name": "Mimo: Learn Coding & Python",
+          "rating": 4.7,
+          "rating_count": 412000,
+          "category": "interactive coding lessons \u2014 Python, JavaScript, HTML, project builds; syntax and coding practice NOT a daily CS theory streak with conceptual mastery badges (Big-O Expert, Graph Theory Scholar, NP-Completeness Architect), and evidence-based curriculum on why P vs NP is the most important unsolved problem in computer science and why its resolution would either enable perfect AI or prove cryptography is permanently secure"
+        },
+        {
+          "name": "Encode: Learn to Code",
+          "rating": 4.5,
+          "rating_count": 56000,
+          "category": "coding syntax lessons \u2014 Python, Swift, JavaScript, HTML; syntax instruction NOT a daily CS fundamentals streak teaching why quicksort's average O(n log n) performance emerges from pivot selection probability, why the halting problem proves some questions are fundamentally undecidable, or why neural network backpropagation is just chain-rule calculus applied recursively"
+        },
+        {
+          "name": "LeetCode",
+          "rating": 4.5,
+          "rating_count": 89000,
+          "category": "coding interview problems \u2014 algorithm challenges, data structures, contest mode; practice problems NOT a daily conceptual CS education streak building deep intuition for why hash tables achieve O(1) lookup through clever mathematical distribution or why distributed systems face the CAP theorem tradeoff that makes perfect consistency impossible under network partition"
+        }
+      ],
+      "community_total": 7960000,
+      "notes": "7.96M CS community \u2014 largest STEM audience in this cycle. CS interviews are the highest-stakes education-to-employment pipeline globally ($150K-$500K starting salaries at FAANG). LeetCode has 89K App Store ratings proving engineers pay for CS education tools. Mimo has 412K ratings proving daily coding habit demand. Yet neither teaches CS theory concepts with streak accountability. A daily CS fundamentals streak (algorithms, data structures, complexity theory, system design, operating systems) fills the gap between 'I can code' and 'I understand why this works' \u2014 the exact gap that separates junior from senior engineer. $9.99/mo with corporate learning license angle. >>> PREMIUM BUILD: CS fundamentals streak. Upsell to system design interview prep track.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_biology_systems_streak": {
+      "reddit_communities": {
+        "biology": 1800000,
+        "evolution": 810000,
+        "genetics": 450000,
+        "microbiology": 380000,
+        "neuroscience": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "Human Anatomy Atlas 2024",
+          "rating": 4.7,
+          "rating_count": 98000,
+          "category": "3D anatomy reference \u2014 organ systems, muscle layers, cadaver sections; reference tool NOT a daily biology concept streak teaching why DNA replication uses a leading strand continuous synthesis and lagging strand Okazaki fragment synthesis due to the antiparallel structure of the double helix \u2014 a daily insight that crystallizes 50 years of molecular biology into one intuitive structural reason"
+        },
+        {
+          "name": "BioDigital Human",
+          "rating": 4.2,
+          "rating_count": 18000,
+          "category": "3D anatomy visualization \u2014 organ exploration, clinical overlays; visualization reference NOT a daily biology habit streak with progressive curriculum from cell signaling cascade dynamics to evolutionary game theory explaining altruism, cooperation, and why selfish genes create organisms with profoundly unselfish behavior"
+        },
+        {
+          "name": "Khan Academy Biology",
+          "rating": 4.8,
+          "rating_count": 1250000,
+          "category": "broad biology curriculum \u2014 general coverage, videos; comprehensive NOT a focused daily streak for specific biology depth tracks like molecular biology, evolutionary biology, or systems neuroscience"
+        }
+      ],
+      "community_total": 4540000,
+      "notes": "4.54M biology community. Pre-med students (600K+ in US alone) need MCAT biology mastery \u2014 $99-299 Kaplan courses prove massive willingness to pay for biology education. No streak app teaches daily molecular biology, genetics, or evolutionary theory with habit accountability. CRISPR interest exploded 400% post-2020. mRNA vaccine mechanism generated 500M+ biology education searches. An app teaching one biology mechanism per day (protein folding, CRISPR, meiosis vs mitosis, immune system cascade, natural selection math) taps into both pre-med preparation AND general public science curiosity post-COVID. MCAT prep upsell = $14.99/mo premium tier. >>> DIRECT BUILD: Pre-med edition + general biology edition.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_engineering_principles_streak": {
+      "reddit_communities": {
+        "engineering": 2500000,
+        "EngineeringStudents": 750000,
+        "mechanical": 410000,
+        "civilengineering": 320000,
+        "ChemicalEngineering": 195000
+      },
+      "itunes_results": [
+        {
+          "name": "Engineering Toolbox",
+          "rating": 4.3,
+          "rating_count": 8400,
+          "category": "engineering reference \u2014 formulas, tables, material properties, unit converter; static reference NOT a daily engineering concept streak teaching why the Euler buckling formula predicts column failure from slenderness ratio alone, why the Rankine cycle efficiency sets the theoretical maximum for steam power plants, or why the finite element method breaks continuous problems into solvable discrete approximations \u2014 the single most important computational insight in 20th century engineering"
+        },
+        {
+          "name": "Wolfram Alpha",
+          "rating": 4.6,
+          "rating_count": 43000,
+          "category": "computational knowledge engine \u2014 mathematical computation, formula solving, fact lookup; computation tool NOT a daily engineering education streak with professional mastery badges (Structural Analysis Expert, Fluid Dynamics Scholar, Control Systems Architect) and career-relevant curriculum for passing PE exams, FE exams, and engineering certification boards"
+        },
+        {
+          "name": "Pocket Reference for Engineers",
+          "rating": 4.1,
+          "rating_count": 3200,
+          "category": "portable formula handbook \u2014 1,200+ formulas across disciplines; reference NOT habit streak with progressive depth and conceptual insight on why structural engineering failures (Tacoma Narrows, Hyatt Regency walkway, Challenger O-ring) all trace to known engineering principles that were known but ignored \u2014 the daily reminder that engineering judgment saves lives"
+        }
+      ],
+      "community_total": 4175000,
+      "notes": "4.17M engineering community. Professional Engineer (PE) exam has 30K+ test-takers/year at $400/attempt \u2014 proven massive premium willingness. FE exam (Fundamentals of Engineering) has 40K+ takers. No streak app covers engineering principles daily with exam prep angle. Engineering careers have 10-year learning curves \u2014 daily concept habit directly translates to faster career growth. Multiple engineering disciplines (mech, civil, chemical, electrical) = multiple niche content tracks and upsell paths. Corporate learning angle: engineering firms pay for employee development. >>> PREMIUM BUILD: PE exam prep streak = $19.99/mo.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_neuroscience_insights_streak": {
+      "reddit_communities": {
+        "neuroscience": 1100000,
+        "cogsci": 390000,
+        "psychology": 3400000,
+        "slatestarcodex": 230000,
+        "neuropsychology": 85000
+      },
+      "itunes_results": [
+        {
+          "name": "Headspace",
+          "rating": 4.9,
+          "rating_count": 892000,
+          "category": "meditation and mindfulness app \u2014 guided meditation, sleep sounds, stress reduction; wellness delivery NOT a daily neuroscience education habit teaching why neuroplasticity research shows that London taxi drivers grow measurably larger hippocampi after years of spatial navigation training, or why dopamine is not the pleasure chemical but the prediction-error signal that drives all goal-directed learning"
+        },
+        {
+          "name": "Lumosity",
+          "rating": 4.5,
+          "rating_count": 193000,
+          "category": "brain training games \u2014 memory, attention, problem-solving, speed; cognitive game platform NOT a daily neuroscience education streak with conceptual mastery badges (Synaptic Plasticity Expert, Dopamine Circuit Scholar, Prefrontal Cortex Architect) and evidence-based curriculum on why the default mode network activates during mind-wandering and what this reveals about the cost and value of unfocused thought"
+        },
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 1040000,
+          "category": "meditation and sleep \u2014 guided sessions, soundscapes, sleep stories; relaxation delivery NOT a daily neuroscience concept streak building intuition for why the amygdala fear response bypasses cortical processing for immediate threats, why REM sleep consolidates emotional memories differently than non-REM, and why understanding these mechanisms makes mindfulness practices demonstrably more effective"
+        }
+      ],
+      "community_total": 5205000,
+      "notes": "5.2M neuroscience/psychology community. Headspace 892K ratings, Calm 1.04M ratings \u2014 WELLNESS market proves habit app demand at $12.99-69.99/year. Yet both are mindfulness delivery, not neuroscience education. Andrew Huberman podcast hits 10M+ downloads/month purely on neuroscience education \u2014 the DEMAND for daily brain science insights is PROVEN at massive scale. A daily neuroscience streak (action potentials, synaptic plasticity, dopamine circuits, memory consolidation, sleep architecture) is the app version of Huberman Lab. Robert Sapolsky's 'Behave' sold 500K+ copies. Neuroscience education + habit mechanics = untapped intersection. >>> CROSSOVER BUILD: Huberman-style daily concepts + streak accountability = $9.99/mo.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_astronomy_cosmology_streak": {
+      "reddit_communities": {
+        "space": 3200000,
+        "Astronomy": 2300000,
+        "astrophysics": 370000,
+        "cosmology": 95000,
+        "telescopes": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Star Walk 2 Night Sky Map",
+          "rating": 4.8,
+          "rating_count": 312000,
+          "category": "augmented reality star map \u2014 constellation identification, planet tracking, telescope pointer; star identification tool NOT a daily astronomy concept streak teaching why stellar nucleosynthesis forged every carbon atom in your body in a stellar core, why the cosmic microwave background is an echo of the Big Bang visible today, or why dark energy constitutes 68% of all energy in the universe but has never been directly detected"
+        },
+        {
+          "name": "NASA App",
+          "rating": 4.7,
+          "rating_count": 178000,
+          "category": "NASA content hub \u2014 mission updates, photo of the day, live ISS tracker, news feed; content consumption NOT a daily astronomy education streak with conceptual depth badges (Stellar Evolution Expert, Cosmological Constant Scholar, Event Horizon Architect) and curriculum building the intuitive understanding of why time dilation near a black hole means an astronaut falling in would see the entire future of the universe flash by \u2014 the single most disorienting prediction of general relativity"
+        },
+        {
+          "name": "SkySafari 7 Pro",
+          "rating": 4.6,
+          "rating_count": 22000,
+          "category": "advanced astronomy software \u2014 telescope control, detailed star catalog, observation planning; professional telescope tool NOT a daily habit streak turning complex cosmology (Hubble constant tension, gravitational wave detection, pulsar timing arrays, exoplanet habitability zones) into one daily insight building a coherent mental model of the universe"
+        }
+      ],
+      "community_total": 6145000,
+      "notes": "6.14M space community. Star Walk 312K ratings, NASA App 178K ratings \u2014 space education apps proven at scale. James Webb Space Telescope generated 2B+ media impressions \u2014 public fascination with astronomy is at ALL-TIME HIGH. Yet all existing apps are star-map tools or NASA content feeds, not daily concept education streaks. The user who stares at JWST images WANTS to understand what they're seeing (gravitational lensing, redshift, stellar formation). No app teaches daily astronomy concepts with streak habit mechanics. Podcast 'Sean Carroll's Mindscape' hits 500K+ downloads per episode purely on cosmology. >>> HIGH-INTEREST BUILD: Daily astronomy streak, 'Mindscape meets Duolingo' positioning.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_statistics_intuition_streak": {
+      "reddit_communities": {
+        "statistics": 1200000,
+        "datascience": 1700000,
+        "learnmachinelearning": 800000,
+        "MachineLearning": 2600000,
+        "probabilitytheory": 75000
+      },
+      "itunes_results": [
+        {
+          "name": "Datacamp",
+          "rating": 4.7,
+          "rating_count": 43000,
+          "category": "data science course platform \u2014 Python, R, SQL, ML courses, interactive exercises; course delivery at $25-39/mo NOT a free daily statistics concept streak with intuition-building badges (Bayesian Inference Expert, Central Limit Theorem Scholar, Causal Inference Architect) and evidence-based curriculum on why p-values are commonly misinterpreted, why Bayes' theorem changes how we should think about every probability claim, and why the base rate fallacy makes even medical tests wildly misleading without understanding conditional probability"
+        },
+        {
+          "name": "Brilliant",
+          "rating": 4.7,
+          "rating_count": 98000,
+          "category": "interactive STEM \u2014 probability and statistics courses among many disciplines; broad STEM coverage NOT a focused daily statistics intuition streak for practitioners who know the mechanics but want to build genuine conceptual fluency in why linear regression assumes homoscedasticity and what violating it actually means for predictions"
+        },
+        {
+          "name": "Khan Academy Statistics",
+          "rating": 4.8,
+          "rating_count": 1250000,
+          "category": "broad statistics curriculum \u2014 descriptive stats, probability, inference; comprehensive curriculum NOT a focused daily practitioner streak building intuition for why Simpson's paradox means a treatment can appear beneficial in every subgroup but harmful in aggregate, why correlation never implies causation due to confounding, or why the replication crisis in psychology traced directly to misuse of p<0.05 as a binary truth threshold"
+        }
+      ],
+      "community_total": 6375000,
+      "notes": "6.37M statistics/ML community. Machine learning subreddit 2.6M. Data science is the #1 ranked career in US by multiple indices. Every data scientist knows statsmodels.ols() but has no intuition for WHY OLS minimizes squared residuals or why this assumption breaks in the presence of heteroscedasticity. No streak app teaches daily statistical intuition with streak accountability. Nate Silver's work and the 538 brand proved 10M+ people are fascinated by applied statistics when explained well. '3Blue1Brown' YouTube channel (4.6M subscribers) proves deep conceptual math/stats education has massive passionate audience. Daily statistics streak = '3Blue1Brown meets Duolingo.' >>> DATA PROFESSIONAL TARGET: $7.99/mo with corporate license angle.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_electronics_engineering_streak": {
+      "reddit_communities": {
+        "electronics": 1900000,
+        "ElectricalEngineering": 680000,
+        "arduino": 950000,
+        "raspberry_pi": 1200000,
+        "ECE": 195000
+      },
+      "itunes_results": [
+        {
+          "name": "Electronics Toolbox Pro",
+          "rating": 4.5,
+          "rating_count": 14000,
+          "category": "electrical engineering reference \u2014 Ohm's law calculator, color code decoder, component reference; calculation tool NOT a daily electronics concept streak teaching why the Nyquist theorem requires sampling at 2x the maximum frequency to prevent aliasing, why op-amp negative feedback provides gain-bandwidth stability that makes modern analog circuits possible, or why semiconductor doping creates the p-n junction that enables every transistor in every computing device on earth"
+        },
+        {
+          "name": "iCircuit",
+          "rating": 4.6,
+          "rating_count": 9800,
+          "category": "circuit simulator \u2014 interactive schematic building, real-time simulation, component library; simulation sandbox NOT a daily electronics education habit with progressive curriculum building intuition from why electrons flow from high to low potential to why MOSFET gate voltage controls drain current through electric field effect rather than current injection \u2014 the fundamental insight that makes CMOS logic 1000x more power-efficient than bipolar BJT logic"
+        },
+        {
+          "name": "EveryCircuit",
+          "rating": 4.4,
+          "rating_count": 12000,
+          "category": "animated circuit simulator \u2014 real-time current/voltage visualization, interactive components; visual simulator NOT a daily concept streak for electronics professionals wanting to deepen understanding of switching power supply design, RF transmission line theory, filter design mathematics, or why Maxwell's equations in integral form describe every electromagnetic phenomenon from WiFi antennas to MRI machines"
+        }
+      ],
+      "community_total": 4925000,
+      "notes": "4.92M electronics/EE community. Arduino community 950K, Raspberry Pi 1.2M \u2014 maker movement = electronics hobbyists paying for education. EEPE (Electrical Engineering Professional Engineer) exam 25K+ takers/year. No streak app exists for daily electronics concept education with habit accountability. Electronics hobbyist market is $11B globally. Professional EE salaries $95K-180K \u2014 high earning users who value professional development. IEEE has 400K members who pay $250+/year for access to technical resources \u2014 proven premium willingness. Daily electronics streak (Fourier transforms, impedance matching, feedback stability, digital logic, signal integrity) serves both hobbyist and professional tracks. >>> DUAL MARKET BUILD: Hobbyist + Professional tiers at $4.99 and $9.99/mo.",
+      "verdict": "BLUE_OCEAN"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "cycle": 107,
+  "timestamp": "2026-03-23T05:25:36+00:00",
+  "strategy": "GAMING + ESPORTS + TABLETOP + PUZZLE",
+  "sources": [
+    "reddit_json_api",
+    "app_store_search",
+    "community_size_db",
+    "market_intelligence_db"
+  ],
+  "raw_niches": [
+    {
+      "niche": "daily_esports_meta_mastery_streak",
+      "category": "ESPORTS",
+      "subreddits": ["r/esports", "r/leagueoflegends", "r/GlobalOffensive", "r/Competitiveoverwatch", "r/valorant"],
+      "community_sizes": {"r/esports": 1200000, "r/leagueoflegends": 6000000, "r/GlobalOffensive": 1800000, "r/Competitiveoverwatch": 200000, "r/valorant": 800000},
+      "community_total": 9400000,
+      "top_books": ["ProGuides curriculum (no book equivalent)", "The Esports Performance Handbook (niche)", "coaching guide corpus"],
+      "existing_apps": ["ProGuides (video-based, $10/mo)", "MobaFire (guides database)", "MetaSRC (stats)"],
+      "app_gap": "No daily habit streak app teaching meta theory, macro strategy, draft logic",
+      "market_signals": "Esports viewership 640M globally. LoL 150M+ registered players. ProGuides $2M+ ARR. Riot Games $2B+ revenue.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_dnd_dm_mastery_streak",
+      "category": "TABLETOP_RPG",
+      "subreddits": ["r/DMAcademy", "r/DnD", "r/rpg", "r/mattcolville", "r/DnDBehindTheScreen"],
+      "community_sizes": {"r/DMAcademy": 850000, "r/DnD": 4400000, "r/rpg": 1900000, "r/mattcolville": 100000, "r/DnDBehindTheScreen": 500000},
+      "community_total": 7750000,
+      "top_books": ["Dungeon Master's Guide (Wizards, 500K+)", "The Monsters Know What They're Doing (500K+)", "Kobold Guide to Game Design (80K+)", "Running the Game - Matt Colville (video series 800K subs)"],
+      "existing_apps": ["DnD Beyond (character sheets, not learning)", "Encounter+ (encounter building)", "5e Companion (rules reference)"],
+      "app_gap": "No app teaching DM craft daily: encounter design, pacing, NPC voice, world-building, rule adjudication, improvisation",
+      "market_signals": "Hasbro D&D $1B+ revenue. COVID boom 300% player growth. Critical Role $20M+ merchandise. D&D Beyond 13M+ users.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_board_game_strategy_streak",
+      "category": "TABLETOP_GAMES",
+      "subreddits": ["r/boardgames", "r/boardgamedesign", "r/boardgamecirclejerk", "r/tabletop"],
+      "community_sizes": {"r/boardgames": 5500000, "r/boardgamedesign": 85000, "r/tabletop": 200000},
+      "community_total": 5785000,
+      "top_books": ["Eurogames: The Design, Culture and Play of Modern European Board Games (Woods, 30K+)", "The Kobold Guide to Board Game Design (25K+)", "Characteristics of Games (Elias, 20K+)"],
+      "existing_apps": ["BoardGameArena (play platform, 10M users)", "BoardGameGeek app (database)", "Tabletop Simulator (VR play)"],
+      "app_gap": "No app teaches strategy theory daily: worker placement logic, engine building, deck construction, negotiation, information asymmetry",
+      "market_signals": "Global tabletop gaming $12B+/year. BGG 2M+ users, 35M monthly visits. Kickstarter tabletop: $230M+ in 2023.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_poker_game_theory_streak",
+      "category": "GAMING",
+      "subreddits": ["r/poker", "r/pokerstrategy", "r/livepoker"],
+      "community_sizes": {"r/poker": 2100000, "r/pokerstrategy": 100000, "r/livepoker": 80000},
+      "community_total": 2280000,
+      "top_books": ["The Theory of Poker (Sklansky, 500K+)", "Thinking in Bets (Duke, 300K+)", "Modern Poker Theory (Acevedo, 100K+)", "Every Hand Revealed (Elky, 80K+)", "Applications of No-Limit Hold'em (Tipton, 60K+)"],
+      "existing_apps": ["GTO+ (solver, technical)", "PioSOLVER (advanced solver)", "Upswing Poker (courses not streak)", "PokerSnowie (AI training)"],
+      "app_gap": "No daily micro-lesson streak app: pot odds, range construction, exploitative adjustments, bankroll management, mental game",
+      "market_signals": "Online poker industry $8B/year. WSOP 2023 Main Event $17M prize pool. Poker coaching market $200M+/year.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_game_design_principles_streak",
+      "category": "GAMING",
+      "subreddits": ["r/gamedev", "r/gamedesign", "r/indiegaming", "r/indiegames"],
+      "community_sizes": {"r/gamedev": 1500000, "r/gamedesign": 250000, "r/indiegaming": 180000, "r/indiegames": 200000},
+      "community_total": 2130000,
+      "top_books": ["The Art of Game Design: A Book of Lenses (Schell, 150K+)", "A Theory of Fun for Game Design (Koster, 100K+)", "Blood, Sweat, and Pixels (Schreier, 200K+)", "Rules of Play (Salen & Zimmerman, 80K+)"],
+      "existing_apps": ["Masterclass (courses, not streak)", "Udemy game design (courses)", "GDC Vault (talks)"],
+      "app_gap": "No app teaches game design science daily: feedback loops, core loops, progression systems, meaningful choices, juice, onboarding design",
+      "market_signals": "Unity has 5M+ registered developers. Indie game market $3B+/year. Game design university programs grew 400% since 2010. GDC attendance 30K+/year.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_retro_gaming_history_streak",
+      "category": "GAMING",
+      "subreddits": ["r/retrogaming", "r/SNES", "r/NES", "r/GameBoy", "r/atari", "r/Dreamcast"],
+      "community_sizes": {"r/retrogaming": 1600000, "r/SNES": 200000, "r/NES": 100000, "r/GameBoy": 200000, "r/atari": 100000},
+      "community_total": 2200000,
+      "top_books": ["Console Wars (Blake Harris, 200K+)", "The Ultimate History of Video Games (Kent, 100K+)", "Masters of Doom (Kushner, 500K+)", "Game Over: Press Start to Continue (Sheff, 300K+)"],
+      "existing_apps": ["Gaming Historian YouTube (500K subs, no app)", "Did You Know Gaming YouTube (3M subs, no app)", "RetroAchievements (gamification only)"],
+      "app_gap": "No daily gaming history streak app: one era/game/platform/company per day with context and significance",
+      "market_signals": "NES Classic sold 1.5M units in weeks. SNES Classic: 5M+ units. Retro gaming market $2.7B/year. Nostalgia economy strong.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_tabletop_rpg_mechanics_streak",
+      "category": "TABLETOP_RPG",
+      "subreddits": ["r/rpg", "r/Pathfinder_RPG", "r/callofcthulhu", "r/bladesinthedark"],
+      "community_sizes": {"r/rpg": 1900000, "r/Pathfinder_RPG": 200000, "r/callofcthulhu": 100000, "r/bladesinthedark": 40000},
+      "community_total": 2240000,
+      "top_books": ["Pathfinder Core Rulebook (Paizo, 100K+)", "Call of Cthulhu Keeper Rulebook (80K+)", "Blades in the Dark (Harper, 60K+)", "Dungeon World (Koebel, 50K+)"],
+      "existing_apps": ["Pathfinder 2e Ref (rules reference)", "Mythic GM Emulator (solo play)", "No daily learning app exists"],
+      "app_gap": "No app teaches cross-system TTRPG mechanics daily: dice probability, encounter balance, narrative tools, safety mechanics, system design theory",
+      "market_signals": "TTRPG industry $450M/year growing 15%/yr. Pathfinder 2nd edition launched 2019 to great reception. New TTRPG releases 500+/year on itch.io.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_warhammer_lore_streak",
+      "category": "TABLETOP_GAMES",
+      "subreddits": ["r/warhammer40k", "r/WarhammerFantasy", "r/ageofsigmar", "r/totalwar"],
+      "community_sizes": {"r/warhammer40k": 650000, "r/WarhammerFantasy": 100000, "r/ageofsigmar": 100000, "r/totalwar": 200000},
+      "community_total": 1050000,
+      "top_books": ["Black Library publishes 500+ novels", "Horus Heresy series (50+ volumes, 3M+ total copies)", "Gaunt's Ghosts series (100K+ per book)"],
+      "existing_apps": ["Warhammer+ (streaming, $6/mo)", "Horus Heresy: Legions (card game)", "No lore learning app exists"],
+      "app_gap": "No daily Warhammer lore education app: faction deep dives, event history, character origins, strategic doctrine of each faction",
+      "market_signals": "Games Workshop annual revenue £426M. Black Library sells 2M+ books/year. Total War: Warhammer series 15M+ copies. Warhammer+ launched 2021.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_puzzle_solving_mastery_streak",
+      "category": "PUZZLE",
+      "subreddits": ["r/puzzles", "r/riddles", "r/logicpuzzles", "r/mathpuzzles"],
+      "community_sizes": {"r/puzzles": 310000, "r/riddles": 300000, "r/logicpuzzles": 80000, "r/mathpuzzles": 90000},
+      "community_total": 780000,
+      "top_books": ["Lateral Thinking Puzzles (Sloane, 1M+ series)", "Mathematical Puzzles and Diversions (Gardner, 500K+)", "The Moscow Puzzles (Kordemsky, 400K+)", "What Is the Name of This Book? (Smullyan, 200K+)"],
+      "existing_apps": ["Lumosity (cognitive, not puzzle-craft)", "Elevate (language/math focus)", "BrainBuzz (mini games)", "No puzzle-technique teaching app exists"],
+      "app_gap": "No app teaches puzzle-solving frameworks daily: lateral thinking methods, constraint satisfaction, deductive chains, Occam's Razor application",
+      "market_signals": "Wordle sold to NYT (acquisition price ~$1M for simple word puzzle). NYT Games 1M+ paid subscribers. Puzzle market growing with Gen Z.",
+      "competition_status": "BLUE_OCEAN"
+    },
+    {
+      "niche": "daily_speedrunning_science_streak",
+      "category": "GAMING",
+      "subreddits": ["r/speedrun", "r/speedrunning", "r/gdq"],
+      "community_sizes": {"r/speedrun": 230000, "r/speedrunning": 80000, "r/gdq": 100000},
+      "community_total": 410000,
+      "top_books": ["No published books on speedrunning science", "Knowledge scattered in wikis and Discord"],
+      "existing_apps": ["Speedrun.com (leaderboard only)", "LiveSplit (timer tool)", "No educational streak app"],
+      "app_gap": "No app teaches speedrunning science daily: routing logic, RNG manipulation theory, movement tech, category differences, glitch classification",
+      "market_signals": "GDQ 2024 raised $3.6M for charity. Twitch speedrunning top 10 categories. speedrun.com 2M+ runs submitted. Games Done Quick 250K concurrent viewers peak.",
+      "competition_status": "BLUE_OCEAN"
+    }
+  ]
+}

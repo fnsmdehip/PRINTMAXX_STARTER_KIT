@@ -14,5 +14,5 @@ After completing the step:
 
 
 Type: OUTBOUND
-Interval: 3h
+Interval: 24h
 Working dir: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt

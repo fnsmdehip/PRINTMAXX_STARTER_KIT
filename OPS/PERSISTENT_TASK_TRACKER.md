@@ -1235,3 +1235,13 @@ Human action required to unlock $850-5300/mo revenue:
 **Agent:** asset_deployer
 **Cycle:** 095
 **Next run:** 2026-03-22 15:25 (2 hours)
+
+### DEVPRINT + RESOURCE MANIFEST + CAPITAL GENESIS REPROCESS — 2026-03-22/23
+- **Status:** COMPLETE
+- **DEVPRINT deployed:** devprint-portfolio.surge.sh (158 projects, 165 GitHub repos)
+- **Resource Manifest:** `OPS/RESOURCE_MANIFEST.md` — 200+ resources indexed, wired into 9 core files
+- **New rules:** Rule 15 (RESOURCE-AWARE), Rule 16 (REPROCESS ON DISCOVERY), `.claude/rules/reprocess-on-discovery.md`
+- **Capital Genesis patched:** `_resource_awareness_boost()` checks disk for playbooks/scripts/products. 6 methods → P0, 282 → P1
+- **KPI refresh:** Executor, tracker, weekly checkin, actionable queue all regenerated
+- **GitHub:** 165 repos on github.com/fnsmdehip (was ~10 before session)
+- **TODO:** Export ChatGPT data for AI memory archaeology, run refine.md cycles on portfolio writeups, run ralph loop for further refinement
