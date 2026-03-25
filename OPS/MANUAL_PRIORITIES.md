@@ -8,3 +8,10 @@ Human-promoted items from the GUI.
 - **Score:** 0
 - **Item:** Test priority from edge test
 - **Status:** PENDING
+
+## [2026-03-25 12:08:10] P0 — OPPORTUNITY PROMOTED
+- **Priority:** P0
+- **Source:** TEST_002
+- **Score:** 9.0
+- **Item:** Test promote
+- **Status:** PENDING

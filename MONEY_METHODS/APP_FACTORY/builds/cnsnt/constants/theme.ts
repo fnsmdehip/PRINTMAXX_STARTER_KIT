@@ -193,12 +193,13 @@ export const Animations = {
   spring: { damping: 15, stiffness: 150 },
 } as const;
 
-export const AUTO_LOCK_TIMEOUT_MS = 5 * 60 * 1000; // 5 minutes
+export const AUTO_LOCK_TIMEOUT_MS = 2 * 60 * 1000; // 2 minutes
 
 export const FREE_TIER_LIMIT = 5;
 
-export const PRO_MONTHLY_PRICE = '$4.99';
+export const PRO_MONTHLY_PRICE = '$7.99';
 export const PRO_YEARLY_PRICE = '$29.99';
+export const PRO_RESCUE_YEARLY_PRICE = '$19.99';
 
 // Custom asset references
 export const Assets = {

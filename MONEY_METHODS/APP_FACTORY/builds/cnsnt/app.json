@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "ConsentVault",
-    "slug": "consentvault",
-    "scheme": "consentvault",
+    "name": "cnsnt",
+    "slug": "cnsnt",
+    "scheme": "cnsnt",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/app_icon.png",
@@ -18,9 +18,9 @@
       "bundleIdentifier": "com.printmaxx.cnsnt",
       "buildNumber": "1",
       "infoPlist": {
-        "NSCameraUsageDescription": "ConsentVault needs camera access to capture photos as part of consent record documentation.",
-        "NSMicrophoneUsageDescription": "ConsentVault needs microphone access to record audio consent sessions.",
-        "NSFaceIDUsageDescription": "ConsentVault uses Face ID to protect your sensitive consent records from unauthorized access",
+        "NSCameraUsageDescription": "cnsnt needs camera access to capture photos as part of consent record documentation.",
+        "NSMicrophoneUsageDescription": "cnsnt needs microphone access to record audio consent sessions.",
+        "NSFaceIDUsageDescription": "cnsnt uses Face ID to protect your sensitive consent records from unauthorized access",
         "ITSAppUsesNonExemptEncryption": false
       },
       "config": {
@@ -55,22 +55,22 @@
       [
         "expo-local-authentication",
         {
-          "faceIDPermission": "ConsentVault uses Face ID to protect your sensitive consent records from unauthorized access."
+          "faceIDPermission": "cnsnt uses Face ID to protect your sensitive consent records from unauthorized access."
         }
       ]
     ],
     "extra": {
-      "description": "Secure consent and agreement management. Create, sign, and store digital consent records, contracts, NDAs, waivers, and GDPR compliance documents with tamper-proof SHA-256 verification.",
-      "appStoreSubtitle": "Smart Consent Record Keeper",
+      "description": "cnsnt is the all-in-one liability protection app for modern life. Record consent agreements, sign NDAs, create liability waivers, manage contracts, and protect yourself with bank-grade encryption and biometric security. Whether you need intimate consent documentation, house guest waivers, event liability protection, freelancer service agreements, roommate contracts, vehicle lending agreements, pet sitting waivers, photo and video releases, property access agreements, or digital content licenses — cnsnt keeps every agreement timestamped, GPS-tagged, SHA-256 verified, and legally organized. Used by professionals in legal, healthcare, real estate, photography, fitness, events, and consulting. Consent app, contract app, NDA app, waiver app, liability protection, digital signature, agreement tracker, legal document manager, GDPR compliance, false accusation protection, personal legal vault.",
+      "appStoreSubtitle": "Consent. Contracts. Protection.",
       "eas": {
         "projectId": "c1633f0a-6228-4fa1-ab65-b8d65e0ec428"
       },
       "appStoreCategory": "public.app-category.productivity",
       "appStoreSecondaryCategory": "public.app-category.utilities",
-      "privacyPolicyUrl": "https://printmaxx.com/privacy",
-      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "privacyPolicyUrl": "https://printmaxx-privacy.surge.sh",
+      "termsOfServiceUrl": "https://printmaxx-tos.surge.sh",
       "supportUrl": "https://printmaxx.com/cnsnt/support",
-      "appReviewNotes": "Consent record management app with encryption, biometric lock, and SHA-256 integrity verification. Users create, sign, and export consent documents as verified PDFs. This is a record management tool, not a legal services app. Stripe Payment Links handles subscriptions.",
+      "appReviewNotes": "cnsnt is a consent record management and liability protection app with AES-256 encryption, biometric lock, and SHA-256 integrity verification. Users create, sign, and export consent documents and agreements as verified PDFs. Includes 11 professional templates covering consent agreements, NDAs, waivers, service contracts, and more. This is a record management tool, not a legal services app. Stripe Payment Links handles subscriptions via external web checkout.",
       "supportEmail": "support@printmaxx.com"
     }
   }

@@ -122,11 +122,23 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
       // Auth mode
       setLoading(true);
       try {
-        const success = await authService.authenticateWithPin(fullPin);
-        if (success) {
+        const result = await authService.authenticateWithPin(fullPin);
+        if (result.success) {
           onUnlock();
+        } else if (result.lockout?.isLockedOut) {
+          const remainingMin = Math.ceil((result.lockout.remainingMs || 0) / 60000);
+          setError(`Too many attempts. Locked for ${remainingMin} min.`);
+          shake();
+          setPin('');
+        } else if (result.lockout?.shouldOfferWipe) {
+          setError('Too many failed attempts. Consider resetting your vault in Settings.');
+          shake();
+          setPin('');
         } else {
-          setError('Incorrect PIN');
+          const remaining = result.lockout
+            ? `(${5 - (result.lockout.failedAttempts || 0)} attempts left)`
+            : '';
+          setError(`Incorrect PIN ${remaining}`);
           shake();
           setPin('');
         }
@@ -193,7 +205,7 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
             style={styles.loadingShield}
             resizeMode="contain"
           />
-          <Text style={styles.appNameLoading}>ConsentVault</Text>
+          <Text style={styles.appNameLoading}>cnsnt</Text>
           <ActivityIndicator size="small" color={Colors.primary} style={{ marginTop: 16 }} />
         </View>
       </SafeAreaView>
@@ -210,7 +222,7 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
             style={styles.headerShield}
             resizeMode="contain"
           />
-          <Text style={styles.appName}>ConsentVault</Text>
+          <Text style={styles.appName}>cnsnt</Text>
           <Text style={styles.subtitle}>{getSubtitle()}</Text>
         </View>
 

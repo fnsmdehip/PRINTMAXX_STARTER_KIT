@@ -1,15 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { TabNavigator } from './src/navigation/TabNavigator';
 import { SplashScreen } from './src/screens/SplashScreen';
-import { OnboardingScreen } from './src/screens/OnboardingScreen';
-import { PaywallScreen } from './src/screens/PaywallScreen';
+import { OnboardingFlow, isOnboardingComplete } from './src/screens/OnboardingFlow';
 import { StorageService } from './src/services/storage';
-import { initPurchases, checkEntitlements } from './src/services/purchases';
-import { Colors } from './src/constants/theme';
+import { initPurchases } from './src/services/purchases';
 import type { AppScreen } from './src/types';
 
 export default function App() {
@@ -17,46 +14,37 @@ export default function App() {
   const [isReady, setIsReady] = useState(false);
 
   const checkOnboardingState = useCallback(async () => {
-    const onboarding = await StorageService.getOnboardingState();
-    if (onboarding.completed) {
+    // Check the new v2 onboarding flag first, then fall back to legacy
+    const v2Done = await isOnboardingComplete();
+    if (v2Done) {
       setCurrentScreen('main');
     } else {
-      setCurrentScreen('onboarding');
+      const legacyOnboarding = await StorageService.getOnboardingState();
+      if (legacyOnboarding.completed) {
+        setCurrentScreen('main');
+      } else {
+        setCurrentScreen('onboarding');
+      }
     }
     setIsReady(true);
   }, []);
 
   const handleSplashFinish = useCallback(() => {
     if (isReady) {
-      // State already loaded, show the right screen
       return;
     }
-    // If still loading, transition after check
     checkOnboardingState();
   }, [isReady, checkOnboardingState]);
 
   useEffect(() => {
-    // Start loading state immediately
     checkOnboardingState();
   }, [checkOnboardingState]);
-
-  const handleOnboardingComplete = useCallback(() => {
-    setCurrentScreen('paywall');
-  }, []);
-
-  const handlePaywallContinueFree = useCallback(() => {
-    setCurrentScreen('main');
-  }, []);
 
   useEffect(() => {
     initPurchases().catch(() => {});
   }, []);
 
-  const handlePaywallSubscribe = useCallback(async () => {
-    // Actual purchase is handled inside PaywallScreen via RevenueCat.
-    // This callback is invoked after a successful purchase.
-    const settings = await StorageService.getUserSettings();
-    await StorageService.saveUserSettings({ ...settings, isPremium: true });
+  const handleOnboardingComplete = useCallback(() => {
     setCurrentScreen('main');
   }, []);
 
@@ -73,24 +61,12 @@ export default function App() {
     return (
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <OnboardingScreen onComplete={handleOnboardingComplete} />
+        <OnboardingFlow onComplete={handleOnboardingComplete} />
       </SafeAreaProvider>
     );
   }
 
-  if (currentScreen === 'paywall') {
-    return (
-      <SafeAreaProvider>
-        <StatusBar style="light" />
-        <PaywallScreen
-          onContinueFree={handlePaywallContinueFree}
-          onSubscribe={handlePaywallSubscribe}
-        />
-      </SafeAreaProvider>
-    );
-  }
-
-  // Main app
+  // Main app (covers both 'main' and legacy 'paywall' states)
   return (
     <SafeAreaProvider>
       <NavigationContainer>

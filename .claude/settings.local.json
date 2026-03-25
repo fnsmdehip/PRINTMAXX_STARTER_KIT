@@ -261,7 +261,15 @@
       "WebFetch(domain:adapty.io)",
       "WebFetch(domain:www.airbridge.io)",
       "WebFetch(domain:www.revenuecat.com)",
-      "WebFetch(domain:superwall.com)"
+      "WebFetch(domain:superwall.com)",
+      "Bash(BUILDS=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/MONEY_METHODS/APP_FACTORY/builds __NEW_LINE_42ce753450929566__ echo '=== ConsentVault templates ===' ls -1 $BUILDS/cnsnt/assets/templates/*.md)",
+      "Bash(find /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/MEDIA -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
+      "Bash(find /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/PRODUCTS -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
+      "Bash(find /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
+      "Bash(find /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LANDING -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
+      "Bash(find /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/DIGITAL_PRODUCTS -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
+      "Bash(find '/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/app factory' -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
+      "Bash(find ~/Documents/cnsnt/mobile -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.svg -o -name *.webp -o -name *.gif \\\\\\))"
     ]
   }
 }

@@ -1,0 +1,143 @@
+{
+  "version": "1.0.0",
+  "totalTemplates": 11,
+  "templates": [
+    {
+      "id": "intimate_consent",
+      "name": "Mutual Intimate Consent Agreement",
+      "description": "Contemporaneous record of mutual, voluntary, and informed consent between two adults. Includes sobriety affirmation, capacity verification, right-to-withdraw clause, and biometric authentication.",
+      "category": "intimate",
+      "isPremium": true,
+      "filename": "intimate_consent_agreement.md",
+      "icon": "heart-outline",
+      "tags": ["consent", "intimate", "mutual", "adults", "sobriety", "capacity"]
+    },
+    {
+      "id": "house_guest_waiver",
+      "name": "House Guest Liability Waiver",
+      "description": "Liability waiver for homeowners hosting guests. Covers slip-and-fall, pool and hot tub use, property damage, pet interactions, and emergency medical authorization.",
+      "category": "property",
+      "isPremium": false,
+      "filename": "house_guest_liability_waiver.md",
+      "icon": "home-outline",
+      "tags": ["guest", "liability", "property", "waiver", "homeowner", "pool"]
+    },
+    {
+      "id": "personal_nda",
+      "name": "Personal Non-Disclosure Agreement",
+      "description": "Confidentiality agreement for personal and dating contexts. Covers photos, conversations, personal information, social media restrictions, and deletion obligations.",
+      "category": "personal",
+      "isPremium": true,
+      "filename": "personal_nda.md",
+      "icon": "lock-closed-outline",
+      "tags": ["nda", "confidentiality", "privacy", "photos", "personal", "dating"]
+    },
+    {
+      "id": "event_host_waiver",
+      "name": "Event Host Liability Waiver",
+      "description": "Waiver for hosting parties, gatherings, and events. Includes alcohol assumption of risk, injury waiver, photo/video consent options, and guest conduct rules.",
+      "category": "personal",
+      "isPremium": false,
+      "filename": "event_host_waiver.md",
+      "icon": "people-outline",
+      "tags": ["event", "party", "gathering", "alcohol", "waiver", "host"]
+    },
+    {
+      "id": "freelancer_agreement",
+      "name": "Freelancer Service Agreement",
+      "description": "Complete freelance engagement contract. Covers scope of work, milestones, payment terms, IP ownership options, revision limits, and termination procedures.",
+      "category": "business",
+      "isPremium": true,
+      "filename": "freelancer_service_agreement.md",
+      "icon": "briefcase-outline",
+      "tags": ["freelance", "service", "contract", "payment", "IP", "gig"]
+    },
+    {
+      "id": "roommate_agreement",
+      "name": "Roommate Agreement",
+      "description": "Shared living arrangement terms covering rent split, utilities, guest policy, quiet hours, cleaning schedules, move-out procedures, and dispute resolution.",
+      "category": "property",
+      "isPremium": false,
+      "filename": "roommate_agreement.md",
+      "icon": "bed-outline",
+      "tags": ["roommate", "rent", "housing", "shared", "living", "lease"]
+    },
+    {
+      "id": "vehicle_lending",
+      "name": "Vehicle Lending Agreement",
+      "description": "Agreement for lending your car to someone. Covers insurance responsibility, permitted use, geographic restrictions, damage liability, and pre-lending condition inspection.",
+      "category": "property",
+      "isPremium": false,
+      "filename": "vehicle_lending_agreement.md",
+      "icon": "car-outline",
+      "tags": ["vehicle", "car", "lending", "insurance", "damage", "driving"]
+    },
+    {
+      "id": "pet_sitting",
+      "name": "Pet Sitting Agreement",
+      "description": "Pet care liability agreement with feeding schedules, medication instructions, emergency vet authorization, spending limits, and property access terms.",
+      "category": "personal",
+      "isPremium": false,
+      "filename": "pet_sitting_agreement.md",
+      "icon": "paw-outline",
+      "tags": ["pet", "sitting", "care", "veterinary", "emergency", "animal"]
+    },
+    {
+      "id": "photo_video_release",
+      "name": "Photo & Video Release",
+      "description": "Consent to use someone's likeness in photos and video. Configurable for commercial or personal use, social media posting, editing rights, and revocation terms.",
+      "category": "creative",
+      "isPremium": false,
+      "filename": "photo_video_release.md",
+      "icon": "camera-outline",
+      "tags": ["photo", "video", "release", "likeness", "media", "consent"]
+    },
+    {
+      "id": "property_access",
+      "name": "Property Access Agreement",
+      "description": "Authorization for someone to access your home or space. Covers key/code sharing, permitted areas, restricted zones, security systems, and liability.",
+      "category": "property",
+      "isPremium": false,
+      "filename": "property_access_agreement.md",
+      "icon": "key-outline",
+      "tags": ["property", "access", "key", "security", "home", "entry"]
+    },
+    {
+      "id": "digital_content_license",
+      "name": "Digital Content License",
+      "description": "License agreement for digital content and creative work. Covers usage rights, exclusivity, attribution, commercial vs non-commercial use, and IP transfer options.",
+      "category": "creative",
+      "isPremium": false,
+      "filename": "digital_content_license.md",
+      "icon": "document-text-outline",
+      "tags": ["content", "license", "digital", "IP", "creative", "copyright"]
+    }
+  ],
+  "categories": {
+    "intimate": {
+      "name": "Intimate & Personal Consent",
+      "description": "Agreements for intimate and personal encounters",
+      "color": "#E91E63"
+    },
+    "property": {
+      "name": "Property & Living",
+      "description": "Agreements for property access, vehicle lending, and shared living",
+      "color": "#2196F3"
+    },
+    "business": {
+      "name": "Business & Services",
+      "description": "Agreements for freelance work, service engagements, and business relationships",
+      "color": "#4CAF50"
+    },
+    "personal": {
+      "name": "Personal & Social",
+      "description": "Agreements for events, NDAs, pet care, and personal interactions",
+      "color": "#FF9800"
+    },
+    "creative": {
+      "name": "Creative & Content",
+      "description": "Agreements for photo/video releases, content licensing, and creative work",
+      "color": "#9C27B0"
+    }
+  }
+}

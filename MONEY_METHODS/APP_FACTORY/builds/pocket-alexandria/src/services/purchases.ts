@@ -100,9 +100,7 @@ export async function purchasePackage(pkg: any): Promise<any> {
   await new Promise<void>((resolve) => {
     const handleChange = (nextState: AppStateStatus) => {
       if (nextState === 'active') {
-        AppState.removeEventListener
-          ? AppState.removeEventListener('change', handleChange)
-          : subscription.remove();
+        subscription.remove();
         resolve();
       }
     };

@@ -24,7 +24,7 @@ import {
 } from '../services/purchases';
 import BookCover from '../components/BookCover';
 import { Book } from '../types';
-import type { PurchasesPackage } from 'react-native-purchases';
+type PurchasesPackage = { identifier: string; product: { priceString: string }; __stripeUrl?: string };
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const TOTAL_STEPS = 5;
@@ -493,7 +493,7 @@ export default function OnboardingScreen({ onComplete }: OnboardingScreenProps) 
           )}
         </TouchableOpacity>
         <Text style={styles.legalText}>
-          7-day free trial, then {selectedPlan === 'annual' ? '$9.99/year' : '$1.99/month'}.{'\n'}Cancel anytime. No payment required now.
+          7-day free trial, then {selectedPlan === 'annual' ? '$9.99/year' : '$1.99/month'}.{'\n'}Subscription automatically renews unless canceled at least 24 hours before the end of the current period. Manage subscriptions in your Apple ID account settings. Cancel anytime.
         </Text>
         <View style={styles.legalLinks}>
           <TouchableOpacity onPress={() => Linking.openURL(APP_CONFIG.PRIVACY_POLICY_URL)}>

@@ -199,6 +199,10 @@ const PaywallGate: React.FC<PaywallGateProps> = ({
               </Text>
             </Pressable>
 
+            <Text style={styles.legalTerms}>
+              Subscription automatically renews unless canceled at least 24 hours before the end of the current period. Manage subscriptions in your Apple ID account settings.
+            </Text>
+
             <Pressable
               style={styles.closeButton}
               onPress={() => setShowModal(false)}
@@ -325,6 +329,15 @@ const styles = StyleSheet.create({
     ...Typography.bodySmall,
     color: Colors.textLink,
     marginBottom: Spacing.lg,
+  },
+  legalTerms: {
+    ...Typography.caption,
+    color: Colors.textTertiary,
+    textAlign: 'center',
+    marginBottom: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    fontSize: 11,
+    lineHeight: 16,
   },
   closeButton: {
     paddingVertical: Spacing.sm,

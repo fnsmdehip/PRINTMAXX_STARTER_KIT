@@ -27,8 +27,8 @@ const COMPARISON_FEATURES = [
   { name: 'Advanced Stats', free: false, pro: true },
 ];
 
-const PRIVACY_URL = 'https://printmaxx.com/privacy';
-const TERMS_URL = 'https://printmaxx.com/tos';
+const PRIVACY_URL = 'https://printmaxx-privacy.surge.sh';
+const TERMS_URL = 'https://printmaxx-tos.surge.sh';
 
 export function PaywallScreen({ onContinueFree, onSubscribe }: PaywallScreenProps) {
   const insets = useSafeAreaInsets();
@@ -195,7 +195,7 @@ export function PaywallScreen({ onContinueFree, onSubscribe }: PaywallScreenProp
         </TouchableOpacity>
 
         <Text style={styles.legal}>
-          Cancel anytime. Subscription auto-renews.
+          Subscription automatically renews unless canceled at least 24 hours before the end of the current period. Manage subscriptions in your Apple ID account settings. Cancel anytime.
         </Text>
         <View style={styles.legalLinks}>
           <TouchableOpacity onPress={() => { Linking.openURL(TERMS_URL); }}>

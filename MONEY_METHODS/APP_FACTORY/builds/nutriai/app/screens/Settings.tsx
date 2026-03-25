@@ -359,7 +359,7 @@ const SettingsScreen = (): React.JSX.Element => {
               icon="document-text-outline"
               title="Privacy Policy"
               onPress={() => {
-                Linking.openURL('https://printmaxx.com/privacy');
+                Linking.openURL('https://printmaxx-privacy.surge.sh');
               }}
             />
             <View style={styles.divider} />
@@ -367,7 +367,7 @@ const SettingsScreen = (): React.JSX.Element => {
               icon="shield-checkmark-outline"
               title="Terms of Service"
               onPress={() => {
-                Linking.openURL('https://printmaxx.com/tos');
+                Linking.openURL('https://printmaxx-tos.surge.sh');
               }}
             />
           </View>

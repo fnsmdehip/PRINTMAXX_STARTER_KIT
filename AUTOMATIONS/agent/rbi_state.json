@@ -7,6 +7,7 @@
     "ALPHA272",
     "ALPHA324",
     "ALPHA1773993226",
+    "ALPHA1773998773",
     "ALPHA8892",
     "ALPHA1773993235",
     "ALPHA264",
@@ -38,8 +39,7 @@
     "F03",
     "F05",
     "N10",
-    "N25",
-    "N44"
+    "N25"
   ],
   "backtested": [
     {
@@ -68,6 +68,10 @@
     },
     {
       "id": "ALPHA1773993226",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA1773998773",
       "verdict": "PASS"
     },
     {
@@ -117,10 +121,6 @@
     {
       "id": "ALPHA5407",
       "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA11425",
-      "verdict": "PASS"
     }
   ],
   "implemented": [
@@ -135,7 +135,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -152,7 +152,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -168,7 +168,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -184,7 +184,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -200,7 +200,23 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA1773998773",
+      "name": "Clipping is the best side hustle in 2026",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.41,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -216,7 +232,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -232,7 +248,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -249,7 +265,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -265,7 +281,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -281,7 +297,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -297,7 +313,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -313,30 +329,14 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-25T00:57:27Z",
+      "routed_at": "2026-03-25T17:51:48Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
       ]
-    },
-    {
-      "method_id": "ALPHA11425",
-      "name": "You need to realize that there is almost no competition right now. More and more people are drawn to",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.16,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-03-25T00:57:27Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
     }
   ],
-  "last_run": "2026-03-25T00:57:27Z",
+  "last_run": "2026-03-25T17:51:48Z",
   "duration_s": 0.04,
   "summary": {
     "researched": 40,

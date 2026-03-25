@@ -40,8 +40,8 @@
       "revenueCatApiKey": "${REVENUECAT_PUBLIC_KEY}",
       "appStoreCategory": "public.app-category.healthcare-fitness",
       "appStoreSubtitle": "AI Food Scanner & Calorie Log",
-      "privacyPolicyUrl": "https://printmaxx.com/privacy",
-      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "privacyPolicyUrl": "https://printmaxx-privacy.surge.sh",
+      "termsOfServiceUrl": "https://printmaxx-tos.surge.sh",
       "supportEmail": "support@printmaxx.com"
     },
     "plugins": [

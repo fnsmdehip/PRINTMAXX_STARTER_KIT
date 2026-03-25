@@ -14,13 +14,17 @@ import {
   Pressable,
   Alert,
   ActivityIndicator,
+  Linking,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 import ErrorBoundary from '../components/ErrorBoundary';
 import authService from '../services/auth';
 import db from '../services/database';
 import exportService from '../services/export';
 import purchaseService from '../services/purchases';
+import cloudBackup, { type BackupHealthStatus } from '../services/cloudBackup';
 import { Colors, Typography, Spacing, BorderRadius, Shadows, CardBorder, MIN_TOUCH_SIZE, PRO_MONTHLY_PRICE, PRO_YEARLY_PRICE, FREE_TIER_LIMIT, Assets } from '../constants/theme';
 import type { Entitlement } from '../types';
 
@@ -33,7 +37,15 @@ interface SettingsProps {
 
 const AUTO_LOCK_OPTIONS = [1, 2, 5, 10, 15, 30];
 
+const HEALTH_COLORS: Record<BackupHealthStatus, string> = {
+  good: Colors.success,
+  warning: Colors.warning,
+  critical: Colors.error,
+  never: Colors.textTertiary,
+};
+
 const Settings: React.FC<SettingsProps> = ({ onLock }) => {
+  const navigation = useNavigation<any>();
   const [biometricEnabled, setBiometricEnabled] = useState(false);
   const [hasBiometrics, setHasBiometrics] = useState(false);
   const [biometricName, setBiometricName] = useState('Biometric');
@@ -42,6 +54,8 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
   const [recordCount, setRecordCount] = useState(0);
   const [exporting, setExporting] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [backupHealth, setBackupHealth] = useState<BackupHealthStatus>('never');
+  const [lastBackupLabel, setLastBackupLabel] = useState<string>('Never');
 
   const loadSettings = useCallback(async () => {
     try {
@@ -58,6 +72,11 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
       const purchaseState = await purchaseService.getPurchaseState();
       setEntitlement(purchaseState.entitlement);
       setRecordCount(purchaseState.recordCount);
+
+      // Load backup health
+      const lastTime = await cloudBackup.getLastBackupTime();
+      setBackupHealth(cloudBackup.getBackupHealthStatus(lastTime));
+      setLastBackupLabel(lastTime ? cloudBackup.formatRelativeTime(lastTime) : 'Never');
     } catch (_error) {
       Alert.alert('Error', 'Failed to load settings.');
     } finally {
@@ -290,6 +309,21 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
           <View style={styles.settingsGroup}>
             <Pressable
               style={styles.settingAction}
+              onPress={() => navigation.navigate('BackupSettings')}
+            >
+              <View style={[styles.settingIconContainer, { backgroundColor: '#E8F4FD' }]}>
+                <Ionicons name="cloud" size={18} color={Colors.primary} />
+              </View>
+              <View style={{ flex: 1, marginRight: Spacing.sm }}>
+                <Text style={styles.settingActionText}>Cloud Backup</Text>
+                <Text style={styles.settingDescription}>Last: {lastBackupLabel}</Text>
+              </View>
+              <View style={[styles.backupHealthDot, { backgroundColor: HEALTH_COLORS[backupHealth] }]} />
+              <Ionicons name="chevron-forward" size={16} color={Colors.textTertiary} />
+            </Pressable>
+
+            <Pressable
+              style={styles.settingAction}
               onPress={handleExportAll}
               disabled={exporting}
             >
@@ -312,14 +346,14 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
           {/* About */}
           <Text style={styles.sectionTitle}>About</Text>
           <View style={styles.aboutCard}>
-            <Text style={styles.aboutAppName}>ConsentVault</Text>
+            <Text style={styles.aboutAppName}>cnsnt</Text>
             <Text style={styles.aboutVersion}>Version 1.0.0</Text>
             <Text style={styles.aboutDescription}>
               Secure consent record management. All data is encrypted and stored locally on your device.
             </Text>
             <View style={styles.aboutDivider} />
             <Text style={styles.legalText}>
-              ConsentVault is a record management tool only. It does not provide legal advice or legal services. Consult a qualified professional for legal guidance.
+              cnsnt is a record management tool only. It does not provide legal advice or legal services. Consult a qualified professional for legal guidance.
             </Text>
             <View style={styles.legalLinks}>
               <Pressable style={styles.legalLink}>
@@ -546,6 +580,12 @@ const styles = StyleSheet.create({
     ...Typography.body,
     color: Colors.primary,
     fontWeight: '500',
+  },
+  backupHealthDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: Spacing.sm,
   },
   settingActionDanger: {
     borderBottomWidth: 0,

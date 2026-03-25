@@ -1,5 +1,5 @@
 /**
- * Stripe Payment Links integration for ConsentVault app.
+ * Stripe Payment Links integration for cnsnt app.
  *
  * Free tier: 5 consent records, no PDF export, no cloud backup
  * Pro tier: unlimited records, PDF export, cloud backup
@@ -149,7 +149,7 @@ class PurchaseService {
           subscription.remove();
           Alert.alert(
             'Confirm Purchase',
-            'Did you complete your ConsentVault Pro subscription?',
+            'Did you complete your cnsnt Pro subscription?',
             [
               {
                 text: 'No',
@@ -188,7 +188,7 @@ class PurchaseService {
     return new Promise<Entitlement>((resolve) => {
       Alert.alert(
         'Restore Purchase',
-        'Do you have an active ConsentVault Pro subscription through Stripe?',
+        'Do you have an active cnsnt Pro subscription through Stripe?',
         [
           {
             text: 'No',

@@ -120,7 +120,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
             },
           ]}
         >
-          <Text style={styles.appName}>ConsentVault</Text>
+          <Text style={styles.appName}>cnsnt</Text>
         </Animated.View>
 
         {/* Tagline */}

@@ -48,8 +48,8 @@
       "eas": {
         "projectId": "04c7bff1-f241-49d8-9c24-b4ee680c1579"
       },
-      "privacyPolicyUrl": "https://printmaxx.com/privacy",
-      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "privacyPolicyUrl": "https://printmaxx-privacy.surge.sh",
+      "termsOfServiceUrl": "https://printmaxx-tos.surge.sh",
       "supportUrl": "mailto:support@printmaxx.com",
       "supportEmail": "support@printmaxx.com"
     },
@@ -60,7 +60,7 @@
     },
     "plugins": ["expo-camera", "expo-image-picker", "expo-font"],
     "owner": "fnsmdehip",
-    "sdkVersion": "51.0.0",
+    "sdkVersion": "52.0.0",
     "appVersionSource": "expo-updates",
     "cli": {
       "appVersionSource": "local"

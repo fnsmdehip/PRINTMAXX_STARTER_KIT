@@ -348,11 +348,11 @@ export function OnboardingScreen({ onComplete }: OnboardingScreenProps) {
         {step === 0 && (
           <View style={styles.termsRow}>
             <Text style={styles.termsText}>By continuing, you agree to our </Text>
-            <TouchableOpacity onPress={() => Linking.openURL('https://printmaxx.com/tos')}>
+            <TouchableOpacity onPress={() => Linking.openURL('https://printmaxx-tos.surge.sh')}>
               <Text style={styles.termsLink}>Terms</Text>
             </TouchableOpacity>
             <Text style={styles.termsText}> & </Text>
-            <TouchableOpacity onPress={() => Linking.openURL('https://printmaxx.com/privacy')}>
+            <TouchableOpacity onPress={() => Linking.openURL('https://printmaxx-privacy.surge.sh')}>
               <Text style={styles.termsLink}>Privacy Policy</Text>
             </TouchableOpacity>
           </View>

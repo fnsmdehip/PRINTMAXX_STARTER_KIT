@@ -1,5 +1,5 @@
 {
-  "ts": "2026-03-25T10:00:07.240+00:00",
+  "ts": "2026-03-25T17:41:15.795+00:00",
   "meta": {
     "mode": "dag",
     "resume": false
@@ -12,10 +12,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 119,
+      "duration_ms": 300015,
       "result": {
         "status": "failed",
-        "output_tail": "ERROR: playwright not installed. Run: pip3 install playwright && python3 -m playwright install chromium\n"
+        "output_tail": "Timeout after 300s"
       }
     },
     "scrape_reddit": {
@@ -25,10 +25,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 57,
+      "duration_ms": 54189,
       "result": {
-        "status": "failed",
-        "output_tail": "ERROR: requests not installed. Run: pip3 install requests\n"
+        "status": "ok",
+        "output_tail": "NS/reddit_scraper_output/reddit_20260325_133706.json\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
       }
     },
     "scrape_hn": {
@@ -38,10 +38,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 66,
+      "duration_ms": 74304,
       "result": {
-        "status": "failed",
-        "output_tail": "Traceback (most recent call last):\n  File \"/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hn_ph_scraper.py\", line 19, in <module>\n    import requests\nModuleNotFoundError: No module named 'requests'\n"
+        "status": "ok",
+        "output_tail": "By ROI:      {'MEDIUM': 43, 'HIGHEST': 4, 'HIGH': 3}\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
       }
     },
     "merge_results": {
@@ -58,10 +58,10 @@
       "duration_ms": 0,
       "result": {
         "twitter": "failed",
-        "reddit": "failed",
-        "hn": "failed",
-        "merged_at": "2026-03-25T06:00:01.145672",
-        "scrapers_ok": 0,
+        "reddit": "ok",
+        "hn": "ok",
+        "merged_at": "2026-03-25T13:41:12.383928",
+        "scrapers_ok": 2,
         "scrapers_total": 3
       }
     },
@@ -74,10 +74,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 2807,
+      "duration_ms": 1499,
       "result": {
         "status": "ok",
-        "output_tail": "E) ===\n\nTotal rows in CSV:  17594\nEntries processed:  1\nEntries scored:     1\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         1\n    (of which deduped: 0)\n[2026-03-25T06:00:04-04:00] === Alpha Auto-Processor complete ===\n"
+        "output_tail": "\n\nTotal rows in CSV:  17899\nEntries processed:  100\nEntries scored:     100\n\nRouting breakdown:\n  NEW VENTURE:      4\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         96\n    (of which deduped: 62)\n[2026-03-25T13:41:13-04:00] === Alpha Auto-Processor complete ===\n"
       }
     },
     "intelligence_router": {
@@ -89,7 +89,7 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 82,
+      "duration_ms": 66,
       "result": {
         "status": "failed",
         "output_tail": "usage: intelligence_router.py [-h] [--venture VENTURE] [--task TASK] [--json]\n                              [--brief] [--full] [--stats] [--catalog]\n                              [--list-ventures] [--alpha-count ALPHA_COUNT]\nintelligence_router.py: error: unrecognized arguments: --refresh\n"
@@ -104,10 +104,10 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 2605,
+      "duration_ms": 1637,
       "result": {
         "status": "ok",
-        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[06:00:07] [RANKER] [INFO] Wrote 6780 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[06:00:07] [RANKER] [INFO] Full ranking cycle complete\n[06:00:07] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
+        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[13:41:15] [RANKER] [INFO] Wrote 6898 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[13:41:15] [RANKER] [INFO] Full ranking cycle complete\n[13:41:15] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
       }
     }
   }

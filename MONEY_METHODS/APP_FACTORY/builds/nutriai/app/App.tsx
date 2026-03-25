@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { StatusBar, View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { StatusBar, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -12,7 +12,7 @@ import { Theme } from './utils/theme';
 import { haptics } from './utils/haptics';
 
 import SplashScreen from './screens/SplashScreen';
-import OnboardingScreen from './screens/Onboarding';
+import OnboardingFlow from './screens/OnboardingFlow';
 import HomeScreen from './screens/Home';
 import AnalyticsScreen from './screens/Analytics';
 import SettingsScreen from './screens/Settings';
@@ -135,12 +135,11 @@ function AppNavigator(): React.JSX.Element {
   );
 }
 
-type AppPhase = 'splash' | 'onboarding' | 'paywall' | 'app';
+type AppPhase = 'splash' | 'onboarding' | 'app';
 
 function AppContent(): React.JSX.Element {
   const hasCompletedOnboarding = useAppSelector(state => state.user.hasCompletedOnboarding);
   const [phase, setPhase] = useState<AppPhase>('splash');
-  const [hasSeenPaywall, setHasSeenPaywall] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -163,15 +162,6 @@ function AppContent(): React.JSX.Element {
   }, [hasCompletedOnboarding]);
 
   const handleOnboardingComplete = useCallback(() => {
-    if (!hasSeenPaywall) {
-      setPhase('paywall');
-      setHasSeenPaywall(true);
-    } else {
-      setPhase('app');
-    }
-  }, [hasSeenPaywall]);
-
-  const handlePaywallDismiss = useCallback(() => {
     setPhase('app');
   }, []);
 
@@ -179,9 +169,7 @@ function AppContent(): React.JSX.Element {
     case 'splash':
       return <SplashScreen onFinish={handleSplashFinish} />;
     case 'onboarding':
-      return <OnboardingScreen onComplete={handleOnboardingComplete} />;
-    case 'paywall':
-      return <InitialPaywallWrapper onDismiss={handlePaywallDismiss} />;
+      return <OnboardingFlow onComplete={handleOnboardingComplete} />;
     case 'app':
       return (
         <NavigationContainer>
@@ -193,51 +181,6 @@ function AppContent(): React.JSX.Element {
   }
 }
 
-function InitialPaywallWrapper({ onDismiss }: { onDismiss: () => void }): React.JSX.Element {
-  return (
-    <NavigationContainer>
-      <InitialPaywallNavigator onDismiss={onDismiss} />
-    </NavigationContainer>
-  );
-}
-
-const InitialPaywallStack = createStackNavigator();
-
-function InitialPaywallNavigator({ onDismiss }: { onDismiss: () => void }): React.JSX.Element {
-  return (
-    <InitialPaywallStack.Navigator screenOptions={{ headerShown: false }}>
-      <InitialPaywallStack.Screen name="PaywallInitial">
-        {() => <PaywallWithDismiss onDismiss={onDismiss} />}
-      </InitialPaywallStack.Screen>
-    </InitialPaywallStack.Navigator>
-  );
-}
-
-function PaywallWithDismiss({ onDismiss }: { onDismiss: () => void }): React.JSX.Element {
-  const isPremium = useAppSelector(state => state.subscription.isPremium);
-
-  useEffect(() => {
-    if (isPremium) {
-      onDismiss();
-    }
-  }, [isPremium, onDismiss]);
-
-  return (
-    <View style={styles.paywallContainer}>
-      <PaywallScreen />
-      <TouchableOpacity
-        style={styles.skipButton}
-        onPress={() => {
-          haptics.light();
-          onDismiss();
-        }}
-        hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-      >
-        <Text style={styles.skipText}>Skip for now</Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
 
 const App = (): React.JSX.Element => {
   return (
@@ -250,26 +193,6 @@ const App = (): React.JSX.Element => {
   );
 };
 
-const styles = StyleSheet.create({
-  paywallContainer: {
-    flex: 1,
-    backgroundColor: Theme.colors.background,
-  },
-  skipButton: {
-    position: 'absolute',
-    bottom: 40,
-    alignSelf: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    minHeight: 44,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  skipText: {
-    color: Theme.colors.textSecondary,
-    fontSize: 15,
-    fontWeight: '500',
-  },
-});
+const styles = StyleSheet.create({});
 
 export default App;

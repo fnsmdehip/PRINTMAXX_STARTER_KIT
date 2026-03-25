@@ -21,8 +21,8 @@ import { TRANSLATIONS } from '../constants/bible';
 import { NotificationService } from '../services/notifications';
 import { getOfferings, purchasePackage, restorePurchases, checkSubscription, getManageSubscriptionsUrl } from '../services/purchases';
 
-const PRIVACY_URL = 'https://printmaxx.com/privacy';
-const TERMS_URL = 'https://printmaxx.com/tos';
+const PRIVACY_URL = 'https://printmaxx-privacy.surge.sh';
+const TERMS_URL = 'https://printmaxx-tos.surge.sh';
 const SUPPORT_URL = 'https://printmaxx.com/apps/scripture-streak/support';
 
 const NOTIFICATION_TIMES = [

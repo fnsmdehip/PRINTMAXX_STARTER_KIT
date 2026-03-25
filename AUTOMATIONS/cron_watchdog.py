@@ -9,9 +9,19 @@ LOG = PROJECT / "AUTOMATIONS" / "logs" / "cron_watchdog.log"
 BACKUP = PROJECT / "AUTOMATIONS" / "agent" / "cron_backup.txt"
 
 REQUIRED = [
+    # Sources
     "method_discovery_crawler", "sec_edgar_scanner", "crunchbase_scanner",
-    "morning_intelligence_dag", "venture_pipeline", "auto_approve",
-    "autonomous_integrator", "orphan_doc_scanner", "alpha_backlog_scanner",
+    "morning_intelligence_dag", "ecom_arb_engine", "sam_gov_monitor",
+    "opportunity_radar", "gov_tenders_scraper", "saas_opportunity_engine",
+    # Processing
+    "auto_approve", "capital_genesis_ranker", "rbi_loop",
+    "actionable_aggregator", "decision_engine", "autonomous_integrator",
+    # Execution
+    "venture_pipeline", "venture_pipeline_brokering", "loop_closer",
+    # Self-improvement
+    "user_sim_refiner", "cognitive_engine", "usage_optimizer",
+    # Weekly
+    "orphan_doc_scanner", "alpha_backlog_scanner",
 ]
 
 def log(msg):

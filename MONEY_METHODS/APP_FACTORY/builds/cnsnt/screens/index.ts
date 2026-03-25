@@ -1,5 +1,6 @@
 export { default as SplashScreen } from './SplashScreen';
 export { default as OnboardingScreen } from './OnboardingScreen';
+export { default as OnboardingFlow } from './OnboardingFlow';
 export { default as LockScreen } from './LockScreen';
 export { default as HomeScreen } from './HomeScreen';
 export { default as Dashboard } from './Dashboard';
@@ -11,3 +12,4 @@ export { default as RecordingScreen } from './RecordingScreen';
 export { default as NdaScreen } from './NdaScreen';
 export { default as WaiverScreen } from './WaiverScreen';
 export { default as MutualReleaseScreen } from './MutualReleaseScreen';
+export { default as BackupSettingsScreen } from './BackupSettingsScreen';

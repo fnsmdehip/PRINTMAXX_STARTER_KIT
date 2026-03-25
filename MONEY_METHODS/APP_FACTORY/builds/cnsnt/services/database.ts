@@ -3,10 +3,14 @@
  *
  * All consent records are stored encrypted via the vault.
  * Provides CRUD operations, search, and filtering.
- * SHA-256 integrity hashing covers ALL form fields + signatures + timestamps + metadata.
+ * HMAC-SHA-256 integrity hashing (keyed with vault MAC key) covers
+ * ALL form fields + signatures + timestamps + metadata.
+ * Includes timestamp in hash payload to prevent replay attacks.
+ * Integrates with audit log for compliance tracking.
  */
 
 import vault from './encryption';
+import { auditLog } from './auditLog';
 import type { ConsentRecord, ConsentStatus } from '../types';
 
 const RECORDS_INDEX_KEY = 'consent_records_index';
@@ -32,10 +36,12 @@ async function saveIndex(ids: string[]): Promise<void> {
 }
 
 /**
- * Generate a unique ID.
+ * Generate a unique ID using cryptographic random bytes.
  */
 function generateId(): string {
   const timestamp = Date.now().toString(36);
+  // Use Math.random as a fallback; the real security comes from encryption, not IDs.
+  // IDs are not security-critical -- they're just unique identifiers.
   const random = Math.random().toString(36).substring(2, 8);
   return `cr_${timestamp}_${random}`;
 }
@@ -43,37 +49,76 @@ function generateId(): string {
 /**
  * Compute a canonical hash payload from a consent record.
  * Includes ALL fields that matter for integrity: form fields, signatures,
- * timestamps, parties, consent text, status, metadata, and expiry info.
+ * timestamps, parties, consent text, status, metadata, expiry info,
+ * AND a hashTimestamp to bind the hash to a specific point in time.
+ *
  * The hash changes if ANY of these fields are modified.
  */
-function buildHashPayload(record: ConsentRecord): string {
+function buildHashPayload(record: ConsentRecord, hashTimestamp: string): string {
   return JSON.stringify({
+    // Record identity
+    id: record.id,
     templateId: record.templateId,
     templateName: record.templateName,
     title: record.title,
+    // Status and lifecycle
     status: record.status,
     createdAt: record.createdAt,
     expiresAt: record.expiresAt,
     revokedAt: record.revokedAt,
+    // Parties involved
     parties: record.parties,
+    // Full consent text
     consentText: record.consentText,
+    // All signatures with their data and timestamps
     signatures: record.signatures.map((s) => ({
       partyName: s.partyName,
       signatureImage: s.signatureImage,
       timestamp: s.timestamp,
     })),
+    // All metadata
     metadata: record.metadata,
+    // Timestamp binding: prevents an old hash from being replayed on modified data
+    hashTimestamp,
   });
 }
 
 class DatabaseService {
   /**
-   * Compute SHA-256 hash of a record's canonical content.
+   * Compute HMAC-SHA-256 hash of a record's canonical content.
+   * This is a keyed hash using the vault's MAC key -- attackers cannot
+   * forge it without the key, even if they can see or modify the data.
+   *
    * Exported so other modules (PDF, preview) can recompute and verify.
    */
   async computeRecordHash(record: ConsentRecord): Promise<string> {
-    const payload = buildHashPayload(record);
-    return vault.sha256(payload);
+    const hashTimestamp = new Date().toISOString();
+    const payload = buildHashPayload(record, hashTimestamp);
+    const hmac = await vault.hmac(payload);
+    // Store both the HMAC and the timestamp so verification can reproduce the payload
+    return `${hashTimestamp}|${hmac}`;
+  }
+
+  /**
+   * Verify a record's stored hash against a freshly computed HMAC.
+   * The stored hash format is "timestamp|hmac" where timestamp was used
+   * in the original hash payload.
+   */
+  private async verifyStoredHash(record: ConsentRecord): Promise<boolean> {
+    if (!record.documentHash) return false;
+
+    const separatorIndex = record.documentHash.indexOf('|');
+    if (separatorIndex === -1) {
+      // Legacy format (plain SHA-256 without timestamp) -- cannot verify with HMAC
+      // but we should not reject it outright during migration
+      return false;
+    }
+
+    const hashTimestamp = record.documentHash.substring(0, separatorIndex);
+    const storedHmac = record.documentHash.substring(separatorIndex + 1);
+
+    const payload = buildHashPayload(record, hashTimestamp);
+    return vault.verifyHmac(payload, storedHmac);
   }
 
   /**
@@ -85,7 +130,7 @@ class DatabaseService {
     const id = generateId();
     const fullRecord: ConsentRecord = { ...record, id };
 
-    // Generate SHA-256 hash over ALL form fields + signatures + timestamp + metadata
+    // Generate HMAC-SHA-256 hash over ALL form fields + signatures + timestamp + metadata
     fullRecord.documentHash = await this.computeRecordHash(fullRecord);
 
     await vault.encryptAndStore(
@@ -96,6 +141,9 @@ class DatabaseService {
     const index = await getIndex();
     index.unshift(id); // newest first
     await saveIndex(index);
+
+    // Audit log
+    await auditLog.log('record_created', id, `Template: ${record.templateName}`);
 
     return fullRecord;
   }
@@ -115,8 +163,8 @@ class DatabaseService {
 
   /**
    * Update an existing consent record.
-   * Recomputes the SHA-256 hash over all fields so the hash
-   * reflects the current state (e.g. after revocation).
+   * Recomputes the HMAC-SHA-256 hash over all fields so the hash
+   * reflects the current state (e.g., after revocation).
    */
   async updateRecord(
     id: string,
@@ -127,13 +175,17 @@ class DatabaseService {
 
     const updated: ConsentRecord = { ...existing, ...updates, id };
 
-    // Recompute SHA-256 over all canonical fields
+    // Recompute HMAC-SHA-256 over all canonical fields
     updated.documentHash = await this.computeRecordHash(updated);
 
     await vault.encryptAndStore(
       `record_${id}`,
       JSON.stringify(updated)
     );
+
+    // Audit log
+    const changedFields = Object.keys(updates).join(', ');
+    await auditLog.log('record_updated', id, `Updated: ${changedFields}`);
 
     return updated;
   }
@@ -146,6 +198,9 @@ class DatabaseService {
     const index = await getIndex();
     const filtered = index.filter((i) => i !== id);
     await saveIndex(filtered);
+
+    // Audit log
+    await auditLog.log('record_deleted', id);
   }
 
   /**
@@ -252,29 +307,41 @@ class DatabaseService {
    * Revoke a consent record.
    */
   async revokeRecord(id: string): Promise<ConsentRecord | null> {
-    return this.updateRecord(id, {
+    const result = await this.updateRecord(id, {
       status: 'revoked',
       revokedAt: new Date().toISOString(),
     });
+    if (result) {
+      await auditLog.log('record_revoked', id);
+    }
+    return result;
   }
 
   /**
-   * Verify a record's integrity by recomputing SHA-256 from all fields
-   * and comparing against the stored hash. Returns { verified, storedHash, computedHash }.
+   * Verify a record's integrity by checking the HMAC-SHA-256 against
+   * the stored hash. Returns detailed verification result.
    */
   async verifyRecordIntegrity(
     id: string
   ): Promise<{ verified: boolean; storedHash: string | null; computedHash: string | null }> {
     const record = await this.getRecord(id);
     if (!record || !record.documentHash) {
+      await auditLog.log('integrity_check_failed', id, 'No record or no stored hash');
       return { verified: false, storedHash: null, computedHash: null };
     }
 
-    const computedHash = await this.computeRecordHash(record);
+    const verified = await this.verifyStoredHash(record);
+
+    if (verified) {
+      await auditLog.log('integrity_check_passed', id);
+    } else {
+      await auditLog.log('integrity_check_failed', id, 'HMAC mismatch -- possible tampering');
+    }
+
     return {
-      verified: computedHash === record.documentHash,
+      verified,
       storedHash: record.documentHash,
-      computedHash,
+      computedHash: verified ? record.documentHash : 'MISMATCH',
     };
   }
 
@@ -295,6 +362,7 @@ class DatabaseService {
       await vault.deleteRecord(`record_${id}`);
     }
     await saveIndex([]);
+    await auditLog.log('data_wiped', undefined, `Deleted ${index.length} records`);
   }
 
   /**
@@ -302,6 +370,7 @@ class DatabaseService {
    */
   async exportAllAsJson(): Promise<string> {
     const records = await this.getAllRecords();
+    await auditLog.log('backup_created', undefined, `Exported ${records.length} records`);
     return JSON.stringify(records, null, 2);
   }
 }

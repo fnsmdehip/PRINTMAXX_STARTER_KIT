@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-03-25T05:20:05.334076",
+  "timestamp": "2026-03-25T13:36:15.935963",
   "feeds_scanned": 3,
-  "total_items": 36,
-  "unique_items": 36,
+  "total_items": 42,
+  "unique_items": 42,
   "written_to_alpha": 1,
   "top_results": [
     {
@@ -35,6 +35,48 @@
       ]
     },
     {
+      "title": "ReelShort\u00a0made\u00a0$1.2 billion\u00a0on werewolf romances. Watch Club wants to do it bett",
+      "company": "ReelShort made $1.2",
+      "score": 115,
+      "stage": "",
+      "keywords": [
+        "billion"
+      ],
+      "opportunities": [
+        "eas_target"
+      ]
+    },
+    {
+      "title": "Exclusive: YC Doubles Down On Trayd, A Construction Tech Startup That Just Raise",
+      "company": "Exclusive: YC Doubles",
+      "score": 110,
+      "stage": "series a",
+      "keywords": [
+        "million",
+        "raised",
+        "funding",
+        "series a"
+      ],
+      "opportunities": [
+        "eas_target"
+      ]
+    },
+    {
+      "title": "After pivoting, Y Combinator grad Glimpse raises $35M led by a16z",
+      "company": "After pivoting, Y Combinator grad Glimpse",
+      "score": 110,
+      "stage": "series a",
+      "keywords": [
+        "million",
+        "series a",
+        "pivot"
+      ],
+      "opportunities": [
+        "eas_target",
+        "transition_signal"
+      ]
+    },
+    {
       "title": "Doss raises $55M for AI inventory management that plugs into ERP",
       "company": "Doss",
       "score": 110,
@@ -54,8 +96,8 @@
       "score": 110,
       "stage": "",
       "keywords": [
-        "funding",
         "million",
+        "funding",
         "expansion"
       ],
       "opportunities": [
@@ -69,12 +111,20 @@
       "stage": "",
       "keywords": [
         "billion",
-        "funding",
-        "million"
+        "million",
+        "funding"
       ],
       "opportunities": [
         "eas_target"
       ]
+    },
+    {
+      "title": "Harvey confirms $11B valuation: Sequoia triples down",
+      "company": "Harvey confirms $11B",
+      "score": 105,
+      "stage": "",
+      "keywords": [],
+      "opportunities": []
     },
     {
       "title": "Startup Gimlet Labs is solving the AI inference bottleneck in a surprisingly ele",
@@ -85,19 +135,6 @@
         "million",
         "raised",
         "series a"
-      ],
-      "opportunities": [
-        "eas_target"
-      ]
-    },
-    {
-      "title": "AI startups are eating the venture industry and the returns, so far, are good",
-      "company": "AI startups are",
-      "score": 100,
-      "stage": "",
-      "keywords": [
-        "billion",
-        "raised"
       ],
       "opportunities": [
         "eas_target"
@@ -117,21 +154,6 @@
       ]
     },
     {
-      "title": "Exclusive: Stripe Alum Raises $9M For Meadow To Help People Plan Funerals Online",
-      "company": "Stripe Alum",
-      "score": 90,
-      "stage": "series a",
-      "keywords": [
-        "funding",
-        "million",
-        "raised",
-        "series a"
-      ],
-      "opportunities": [
-        "eas_target"
-      ]
-    },
-    {
       "title": "BKR Capital raises $14.5M (so far) to  invest in Black founders",
       "company": "BKR Capital",
       "score": 90,
@@ -144,28 +166,15 @@
       ]
     },
     {
-      "title": "Insight Partners scrubs investment post about Delve amid \u2018fake compliance\u2019 alleg",
-      "company": "Insight Partners scrubs",
-      "score": 90,
-      "stage": "series a",
-      "keywords": [
-        "series a",
-        "investment"
-      ],
-      "opportunities": [
-        "eas_target"
-      ]
-    },
-    {
       "title": "Capsule captures $12M to build the next version of its AI video editor for brand",
       "company": "Capsule captures $12M",
       "score": 90,
       "stage": "series a",
       "keywords": [
-        "funding",
+        "ai-powered",
         "million",
-        "series a",
-        "ai-powered"
+        "funding",
+        "series a"
       ],
       "opportunities": [
         "eas_target",
@@ -185,6 +194,27 @@
       ]
     },
     {
+      "title": "Insight Partners scrubs investment post about Delve amid \u2018fake compliance\u2019 alleg",
+      "company": "Insight Partners scrubs",
+      "score": 85,
+      "stage": "series a",
+      "keywords": [
+        "series a",
+        "investment"
+      ],
+      "opportunities": [
+        "eas_target"
+      ]
+    },
+    {
+      "title": "Lucid Bots raises $20M to keep up with demand for its\u00a0window-washing drones",
+      "company": "Lucid Bots",
+      "score": 80,
+      "stage": "",
+      "keywords": [],
+      "opportunities": []
+    },
+    {
       "title": "How 2 UC Berkeley dropouts raised $28M for their AI marketing automation startup",
       "company": "How 2 UC",
       "score": 80,
@@ -197,14 +227,6 @@
         "eas_target",
         "automation_need"
       ]
-    },
-    {
-      "title": "After Swarmer\u2019s Soaring Debut, Here Are 12 Other Potential Defense Tech IPOs",
-      "company": "After Swarmer\u2019s Soaring",
-      "score": 75,
-      "stage": "ipo",
-      "keywords": [],
-      "opportunities": []
     },
     {
       "title": "Bengaluru food delivery startup Swish raises $38M, its third round in 18 months",
@@ -231,34 +253,6 @@
         "automate"
       ],
       "opportunities": [
-        "automation_need"
-      ]
-    },
-    {
-      "title": "Conifer locks down $20M seed round for its \u2018drop-in\u2019 electric hub motor",
-      "company": "Conifer locks down $20M",
-      "score": 70,
-      "stage": "seed",
-      "keywords": [
-        "seed round"
-      ],
-      "opportunities": [
-        "eas_target"
-      ]
-    },
-    {
-      "title": "Intangible, a no-code 3D creation tool for filmmakers and game designers, raises",
-      "company": "Intangible, a no-code",
-      "score": 70,
-      "stage": "seed",
-      "keywords": [
-        "funding",
-        "million",
-        "backed by",
-        "ai-powered"
-      ],
-      "opportunities": [
-        "eas_target",
         "automation_need"
       ]
     }

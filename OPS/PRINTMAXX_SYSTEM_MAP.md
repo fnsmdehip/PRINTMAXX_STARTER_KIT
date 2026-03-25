@@ -1,6 +1,6 @@
 # PRINTMAXX — COMPLETE SYSTEM MAP
 # Canonical live architecture map. Update this file in the same session whenever the system changes.
-# One solopreneur. Zero revenue. 33 autonomous agents. 394 Python scripts. 107 cron jobs (zero collisions). 27GB.
+# One solopreneur. Zero revenue. 33 autonomous agents. 400 Python scripts. 109 cron jobs (zero collisions). 27GB.
 # Goal: $0 → hedge fund capital management via recursive automation.
 
 ---
@@ -11,7 +11,7 @@ This is the live system map for PRINTMAXX.
 
 - Update this file immediately when agents, automations, schedules, queues, dashboards, memory layers, control surfaces, key directories, or data flow change.
 - If the change also affects navigation or standing instructions, update `.claude/CLAUDE.md` in the same session.
-- Latest verified control-surface update: 2026-03-18 EDT.
+- Latest verified control-surface update: 2026-03-25 EDT.
 
 ---
 
@@ -94,6 +94,18 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── wire_missed_intelligence.py   #   L6 maintenance. Parses scan results → updates intelligence catalog.
 │   ├── build_codebase_grammar.py     #   L6 maintenance. AST-based 118x compression for LLM context.
 │   ├── _common.py                    #   Shared utilities: safe_path, ts, log, load_json, hours_since, run_script.
+│   │
+│   ├── app_factory/                  #   APP FACTORY PIPELINE — automated app lifecycle
+│   │   ├── opportunity_scanner.py    #     L4 collection. App Store RSS + Reddit pain points + keyword gaps + alpha. Scores opportunities. Cron 6 AM.
+│   │   ├── app_generator.py          #     L3 execution. Template-based app generation from opportunity specs. 8 niche configs, 3 pricing tiers.
+│   │   ├── build_submit.py           #     L3 execution. EAS Build + Submit automation. Batch mode. Tracks builds in CSV.
+│   │   ├── test_runner.py            #     L5 quality. 13-point Apple rejection checklist. Static + runtime tests. Per-app reports.
+│   │   ├── distribution_engine.py    #     L3 execution. ASO keywords, screenshot templates, social posts, influencer outreach. Cron on new builds.
+│   │   ├── portfolio_optimizer.py    #     L2 intelligence. Kill/scale/boost decisions. Stripe revenue check. Portfolio dashboard. Cron Monday 7 AM.
+│   │   ├── distribution/             #     Per-app distribution plans, ASO data, post drafts
+│   │   ├── test_results/             #     Per-app test reports
+│   │   ├── logs/                     #     Pipeline execution logs
+│   │   └── queue/                    #     Build queue items
 │   │
 │   ├── agent/                        #   Agent state, communication, orchestration
 │   │   ├── ceo_agent/                #     CEO state, decisions.jsonl, audit.jsonl

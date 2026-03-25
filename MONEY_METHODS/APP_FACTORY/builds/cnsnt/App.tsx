@@ -1,5 +1,5 @@
 /**
- * ConsentVault - Secure Consent Management App
+ * cnsnt - Secure Consent Management App
  *
  * Root component:
  * - Animated splash screen
@@ -24,7 +24,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import ErrorBoundary from './components/ErrorBoundary';
 import SplashScreen from './screens/SplashScreen';
-import OnboardingScreen from './screens/OnboardingScreen';
+import OnboardingFlow from './screens/OnboardingFlow';
 import LockScreen from './screens/LockScreen';
 import {
   HomeScreen,
@@ -37,6 +37,7 @@ import {
   MutualReleaseScreen,
   TemplateForm,
   PDFPreviewScreen,
+  BackupSettingsScreen,
 } from './screens';
 import { useAppState } from './hooks/useAppState';
 import purchaseService from './services/purchases';
@@ -209,7 +210,7 @@ export default function App() {
     return (
       <SafeAreaProvider>
         <ErrorBoundary>
-          <OnboardingScreen onComplete={handleOnboardingComplete} />
+          <OnboardingFlow onComplete={handleOnboardingComplete} />
           <StatusBar style="dark" />
         </ErrorBoundary>
       </SafeAreaProvider>
@@ -287,6 +288,11 @@ export default function App() {
               name="PDFPreview"
               component={PDFPreviewScreen as React.ComponentType<any>}
               options={{ title: 'Document Preview' }}
+            />
+            <Stack.Screen
+              name="BackupSettings"
+              component={BackupSettingsScreen as React.ComponentType<any>}
+              options={{ title: 'Cloud Backup' }}
             />
           </Stack.Navigator>
         </NavigationContainer>

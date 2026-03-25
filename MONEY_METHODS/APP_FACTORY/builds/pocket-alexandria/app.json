@@ -46,8 +46,8 @@
       "appStoreCategory": "Books",
       "secondaryCategory": "Education",
       "appReviewNotes": "Pocket Alexandria is a digital reading app containing 156 public domain classic texts sourced exclusively from Project Gutenberg (gutenberg.org). All texts are in the public domain and freely available. No proprietary or copyrighted content is included. The app offers two tiers: Free (10 books with basic reader) and Pro/Premium ($9.99/year or $1.99/month for all 156 books, offline reading, and highlights). Subscriptions are managed via RevenueCat. No user-generated content. No external accounts required.",
-      "privacyPolicyUrl": "https://printmaxx.com/privacy",
-      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "privacyPolicyUrl": "https://printmaxx-privacy.surge.sh",
+      "termsOfServiceUrl": "https://printmaxx-tos.surge.sh",
       "supportUrl": "https://pocket-alexandria.surge.sh/support",
       "supportEmail": "support@printmaxx.com"
     }

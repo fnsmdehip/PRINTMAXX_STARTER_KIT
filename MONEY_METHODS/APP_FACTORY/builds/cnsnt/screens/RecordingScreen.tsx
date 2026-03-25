@@ -396,18 +396,17 @@ const RecordingScreen: React.FC<RecordingScreenProps> = () => {
               )}
             </View>
 
-            {/* Transcription Placeholder */}
+            {/* Transcription - Pro Feature */}
             <View style={styles.transcriptionSection}>
               <View style={styles.premiumBadge}>
-                <Text style={styles.premiumBadgeText}>COMING SOON</Text>
+                <Text style={styles.premiumBadgeText}>PRO</Text>
               </View>
               <Text style={styles.transcriptionTitle}>
                 Automatic Transcription
               </Text>
               <Text style={styles.transcriptionDescription}>
-                Audio recordings will be automatically transcribed in a
-                future update. Transcriptions will be included in exported
-                PDF documents.
+                Upgrade to Pro to get automatic transcriptions of your
+                audio recordings, included in exported PDF documents.
               </Text>
             </View>
 

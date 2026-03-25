@@ -1,4 +1,4 @@
-# ConsentVault - Secure Consent Management App
+# cnsnt - Secure Consent Management App
 
 React Native Expo app for creating, signing, recording, and managing legally-relevant consent records. Built for lawyers, HR professionals, medical practitioners, and anyone who needs verifiable consent documentation.
 

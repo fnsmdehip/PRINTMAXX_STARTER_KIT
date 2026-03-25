@@ -7,7 +7,7 @@ import { colors } from '../src/constants/theme';
 import { getOnboardingState } from '../src/services/storage';
 import { initPurchases, checkEntitlements } from '../src/services/purchases';
 import AnimatedSplash from '../src/components/AnimatedSplash';
-import OnboardingScreen from '../src/screens/OnboardingScreen';
+import OnboardingScreen from '../src/screens/OnboardingFlow';
 
 SplashScreen.preventAutoHideAsync();
 
