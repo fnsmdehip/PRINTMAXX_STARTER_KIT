@@ -450,6 +450,36 @@ def main():
 
     print_summary(all_records)
 
+    # --- Feed high-value findings into ALPHA_STAGING for Capital Genesis scoring ---
+    if all_records:
+        try:
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            from _alpha_staging_writer import stage_findings_batch
+            findings = []
+            for r in all_records[:30]:  # Top 30 opportunities
+                title = r.get("title", "")
+                agency = r.get("agency", "")
+                set_aside = r.get("set_aside_description", "")
+                deadline = r.get("response_deadline", "")[:10]
+                contact = r.get("point_of_contact_email", "")
+                findings.append({
+                    "content": (
+                        f"Gov contract: {title[:150]} | Agency: {agency[:50]} | "
+                        f"Set-aside: {set_aside or 'Full & Open'} | Deadline: {deadline} | "
+                        f"Contact: {contact or 'N/A'}"
+                    ),
+                    "source": "sam_gov_scraper",
+                    "source_url": r.get("sam_gov_link", ""),
+                    "category": "BROKERING",
+                    "roi_potential": "HIGH" if set_aside else "MEDIUM",
+                    "applicable_methods": "GOV_CONTRACTS",
+                    "reviewer_notes": f"NAICS: {r.get('naics_code', 'N/A')}. Auto-staged from sam_gov_scraper.",
+                })
+            staged = stage_findings_batch(findings)
+            print(f"\n  Staged {staged} gov opportunities to ALPHA_STAGING.csv")
+        except ImportError:
+            pass
+
     return all_records
 
 

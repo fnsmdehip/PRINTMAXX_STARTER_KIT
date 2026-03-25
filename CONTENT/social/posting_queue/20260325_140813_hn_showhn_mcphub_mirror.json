@@ -1,0 +1,11 @@
+{
+  "queued_at": "2026-03-25T14:08:13.032712+00:00",
+  "platform": "hn_showhn",
+  "app_name": "Mcphub Mirror",
+  "deployment_url": "https://mcphub-mirror.surge.sh",
+  "status": "pending_review",
+  "content": {
+    "title": "Show HN: Mcphub Mirror \u2013 [one-line description of what it does]",
+    "body": "Hi HN,\n\nMcphub Mirror (https://mcphub-mirror.surge.sh) is a [brief description].\n\n**The core insight:** [non-obvious observation about the problem space]\n\n**Why now:** [market timing or technology unlock]\n\n**What's different:** Unlike [existing approach], Mcphub Mirror [key differentiator] because [reason that's technically or operationally hard to replicate].\n\nBuilt by [team size]. [Current state: alpha/beta/launched]. Looking for early feedback from people who deal with [target use case] regularly.\n\nWhat am I missing?\n"
+  }
+}

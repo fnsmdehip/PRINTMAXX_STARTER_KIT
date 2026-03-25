@@ -2878,6 +2878,63 @@ body {
         </div>
       </div>
     </div>
+
+    <!-- ====== KPI WEIGHTED OPPORTUNITY DECIDER ====== -->
+    <div class="glass-card" style="margin-top:16px; border:1px solid var(--purple); background:linear-gradient(135deg, rgba(139,92,246,0.06), transparent);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <div class="card-title" style="font-size:1.2em; margin:0;">
+          <i class="ti ti-chart-arrows-vertical"></i> ALL OPPORTUNITIES — Weighted & Ranked
+          <span id="opp-total-badge" style="display:inline-block; font-family:JetBrains Mono; font-size:0.55em; padding:3px 10px; border-radius:12px; background:var(--purple-dim); color:var(--purple); margin-left:8px; vertical-align:middle;">0</span>
+        </div>
+        <button onclick="loadOpportunities()" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; border:1px solid var(--purple); background:var(--purple-dim); color:var(--purple); cursor:pointer; transition:all 0.15s;">
+          <i class="ti ti-refresh" style="margin-right:4px;"></i>Refresh
+        </button>
+      </div>
+
+      <!-- Source breakdown bar -->
+      <div id="opp-source-breakdown" style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;"></div>
+
+      <!-- Source filter tabs -->
+      <div style="display:flex; gap:4px; margin-top:12px; background:var(--panel); border-radius:8px; padding:3px; border:1px solid var(--border); flex-wrap:wrap;">
+        <span class="opp-filter active" data-source="all" onclick="filterOpportunities('all')" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; cursor:pointer; color:var(--text); background:rgba(255,255,255,0.08);">All</span>
+        <span class="opp-filter" data-source="capital_genesis" onclick="filterOpportunities('capital_genesis')" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; cursor:pointer; color:var(--accent);">Capital Genesis</span>
+        <span class="opp-filter" data-source="ecom_arb" onclick="filterOpportunities('ecom_arb')" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; cursor:pointer; color:var(--blue);">Ecom Arb</span>
+        <span class="opp-filter" data-source="gov_contracts" onclick="filterOpportunities('gov_contracts')" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; cursor:pointer; color:var(--purple);">Gov Contracts</span>
+        <span class="opp-filter" data-source="opportunity_radar" onclick="filterOpportunities('opportunity_radar')" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; cursor:pointer; color:var(--warn);">Radar</span>
+        <span class="opp-filter" data-source="rbi" onclick="filterOpportunities('rbi')" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; cursor:pointer; color:#22d3ee;">RBI</span>
+        <span class="opp-filter" data-source="manual" onclick="filterOpportunities('manual')" style="font-family:JetBrains Mono; font-size:0.7em; padding:5px 12px; border-radius:6px; cursor:pointer; color:var(--danger);">Manual</span>
+      </div>
+
+      <!-- Sort control -->
+      <div style="display:flex; gap:8px; margin-top:8px; align-items:center;">
+        <span style="font-size:0.7em; color:var(--text-dim); font-family:JetBrains Mono;">SORT:</span>
+        <span class="opp-sort active" data-sort="score" onclick="sortOpportunities('score')" style="font-family:JetBrains Mono; font-size:0.65em; padding:3px 8px; border-radius:4px; cursor:pointer; color:var(--accent); background:var(--accent-dim);">Score</span>
+        <span class="opp-sort" data-sort="source" onclick="sortOpportunities('source')" style="font-family:JetBrains Mono; font-size:0.65em; padding:3px 8px; border-radius:4px; cursor:pointer; color:var(--text-dim);">Source</span>
+        <span class="opp-sort" data-sort="category" onclick="sortOpportunities('category')" style="font-family:JetBrains Mono; font-size:0.65em; padding:3px 8px; border-radius:4px; cursor:pointer; color:var(--text-dim);">Category</span>
+      </div>
+
+      <!-- Opportunities table -->
+      <div style="overflow-x:auto; margin-top:12px;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.85em;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="text-align:left; padding:8px 6px; color:var(--text-dim); font-family:JetBrains Mono; font-size:0.8em; font-weight:600; width:100px;">SCORE</th>
+              <th style="text-align:left; padding:8px 6px; color:var(--text-dim); font-family:JetBrains Mono; font-size:0.8em; font-weight:600; width:110px;">SOURCE</th>
+              <th style="text-align:left; padding:8px 6px; color:var(--text-dim); font-family:JetBrains Mono; font-size:0.8em; font-weight:600;">OPPORTUNITY</th>
+              <th style="text-align:left; padding:8px 6px; color:var(--text-dim); font-family:JetBrains Mono; font-size:0.8em; font-weight:600; width:90px;">CATEGORY</th>
+              <th style="text-align:left; padding:8px 6px; color:var(--text-dim); font-family:JetBrains Mono; font-size:0.8em; font-weight:600; width:110px;">ROI</th>
+              <th style="text-align:left; padding:8px 6px; color:var(--text-dim); font-family:JetBrains Mono; font-size:0.8em; font-weight:600; width:70px;">STATUS</th>
+              <th style="text-align:center; padding:8px 6px; color:var(--text-dim); font-family:JetBrains Mono; font-size:0.8em; font-weight:600; width:120px;">ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="opp-tbody"></tbody>
+        </table>
+      </div>
+      <div id="opp-empty" style="display:none; text-align:center; padding:30px; color:var(--text-muted); font-size:0.9em;">
+        No opportunities found. Run scrapers and ranker to populate.
+      </div>
+    </div>
+
   </div>
 
   <!-- ====== SCHEDULER TAB ====== -->
@@ -3081,7 +3138,7 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     if (tab.dataset.tab === 'skills') loadSkills();
     if (tab.dataset.tab === 'chains') loadChains();
     if (tab.dataset.tab === 'dag') loadDag();
-    if (tab.dataset.tab === 'kpi') { loadKPI(); loadCalendar(); }
+    if (tab.dataset.tab === 'kpi') { loadKPI(); loadCalendar(); loadOpportunities(); }
     if (tab.dataset.tab === 'scheduler') loadScheduler();
   });
 });
@@ -4785,7 +4842,7 @@ setInterval(function() {
   var tab = activeTab.dataset.tab;
   if (tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyOutput(); loadDailyFeed(); loadIntelFeed(); loadRbiPipeline(); }
   else if (tab === 'agents') loadStatus();
-  else if (tab === 'kpi') loadKPI();
+  else if (tab === 'kpi') { loadKPI(); loadOpportunities(); }
   else if (tab === 'scheduler') loadScheduler();
 }, 300000);
 
@@ -5386,6 +5443,274 @@ loadRbiPipeline();
 if (typeof showToast === 'undefined') {
   window.showToast = function(msg) { toast(msg); };
 }
+
+// ---------- KPI WEIGHTED OPPORTUNITY DECIDER ----------
+var _oppData = [];
+var _oppFilterSource = 'all';
+var _oppSortField = 'score';
+
+var OPP_SOURCE_COLORS = {
+  capital_genesis: 'var(--accent)',
+  ecom_arb: 'var(--blue)',
+  gov_contracts: 'var(--purple)',
+  opportunity_radar: 'var(--warn)',
+  rbi: '#22d3ee',
+  manual: 'var(--danger)'
+};
+
+var OPP_SOURCE_LABELS = {
+  capital_genesis: 'Capital Genesis',
+  ecom_arb: 'Ecom Arb',
+  gov_contracts: 'Gov Contracts',
+  opportunity_radar: 'Radar',
+  rbi: 'RBI',
+  manual: 'Manual'
+};
+
+function oppScoreColor(score) {
+  if (score >= 7) return 'var(--accent)';
+  if (score >= 5) return 'var(--yellow)';
+  return 'var(--danger)';
+}
+
+function oppScoreBarColor(score) {
+  if (score >= 7) return 'rgba(0,255,136,0.5)';
+  if (score >= 5) return 'rgba(234,179,8,0.5)';
+  return 'rgba(255,51,85,0.4)';
+}
+
+function oppSourceBadge(source) {
+  var color = OPP_SOURCE_COLORS[source] || 'var(--text-dim)';
+  var label = OPP_SOURCE_LABELS[source] || source;
+  return '<span style="font-family:JetBrains Mono; font-size:0.7em; padding:2px 8px; border-radius:4px; background:' +
+    color.replace(')', ',0.15)').replace('var(--', 'var(--') + '; color:' + color + '; white-space:nowrap;">' + label + '</span>';
+}
+
+function oppSourceBadgeDim(source) {
+  var color = OPP_SOURCE_COLORS[source] || 'var(--text-dim)';
+  var label = OPP_SOURCE_LABELS[source] || source;
+  var bgMap = {
+    capital_genesis: 'rgba(0,255,136,0.12)',
+    ecom_arb: 'rgba(68,136,255,0.12)',
+    gov_contracts: 'rgba(139,92,246,0.12)',
+    opportunity_radar: 'rgba(255,107,53,0.12)',
+    rbi: 'rgba(34,211,238,0.12)',
+    manual: 'rgba(255,51,85,0.12)'
+  };
+  return '<span style="font-family:JetBrains Mono; font-size:0.7em; padding:2px 8px; border-radius:4px; background:' +
+    (bgMap[source] || 'rgba(255,255,255,0.06)') + '; color:' + color + '; white-space:nowrap;">' + label + '</span>';
+}
+
+function renderOpportunityRow(opp) {
+  var scoreColor = oppScoreColor(opp.score);
+  var barColor = oppScoreBarColor(opp.score);
+  var barWidth = Math.min(opp.score * 10, 100);
+
+  var actionBtns = '';
+  (opp.actions || []).forEach(function(act) {
+    var iconMap = {
+      promote_p0: 'arrow-big-up-lines',
+      investigate: 'search',
+      dismiss: 'x',
+      implement: 'player-play',
+      demote: 'arrow-big-down-lines'
+    };
+    var titleMap = {
+      promote_p0: 'Promote to P0',
+      investigate: 'Investigate',
+      dismiss: 'Dismiss',
+      implement: 'Implement',
+      demote: 'Demote'
+    };
+    var colorMap = {
+      promote_p0: 'var(--accent)',
+      investigate: 'var(--blue)',
+      dismiss: 'var(--danger)',
+      implement: 'var(--accent)',
+      demote: 'var(--warn)'
+    };
+    var icon = iconMap[act] || 'dots';
+    var title = titleMap[act] || act;
+    var btnColor = colorMap[act] || 'var(--text-dim)';
+    actionBtns += '<button onclick="oppAction(\'' + opp.id + '\',\'' + act + '\',this)" title="' + title + '" ' +
+      'style="background:none; border:1px solid ' + btnColor + '; color:' + btnColor + '; width:28px; height:28px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; transition:all 0.15s; margin:0 2px;" ' +
+      'onmouseover="this.style.background=\'' + btnColor + '\';this.style.color=\'#000\';" ' +
+      'onmouseout="this.style.background=\'none\';this.style.color=\'' + btnColor + '\';">' +
+      '<i class="ti ti-' + icon + '" style="font-size:14px;"></i></button>';
+  });
+
+  return '<tr style="border-bottom:1px solid rgba(255,255,255,0.04); transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.03)\'" onmouseout="this.style.background=\'none\'">' +
+    '<td style="padding:8px 6px; vertical-align:middle;">' +
+      '<div style="display:flex; align-items:center; gap:6px;">' +
+        '<span style="font-family:JetBrains Mono; font-weight:700; color:' + scoreColor + '; min-width:28px;">' + opp.score.toFixed(1) + '</span>' +
+        '<div style="flex:1; height:6px; background:rgba(255,255,255,0.06); border-radius:3px; min-width:40px;">' +
+          '<div style="width:' + barWidth + '%; height:100%; background:' + barColor + '; border-radius:3px; transition:width 0.3s;"></div>' +
+        '</div>' +
+      '</div>' +
+    '</td>' +
+    '<td style="padding:8px 6px; vertical-align:middle;">' + oppSourceBadgeDim(opp.source) + '</td>' +
+    '<td style="padding:8px 6px; color:var(--text); vertical-align:middle; max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="' + (opp.text || '').replace(/"/g, '&quot;') + '">' + (opp.text || '') + '</td>' +
+    '<td style="padding:8px 6px; vertical-align:middle;"><span style="font-family:JetBrains Mono; font-size:0.7em; padding:2px 6px; border-radius:4px; background:rgba(255,255,255,0.06); color:var(--text-dim);">' + (opp.category || '') + '</span></td>' +
+    '<td style="padding:8px 6px; font-family:JetBrains Mono; font-size:0.8em; color:var(--accent); vertical-align:middle;">' + (opp.roi || '-') + '</td>' +
+    '<td style="padding:8px 6px; vertical-align:middle;"><span style="font-family:JetBrains Mono; font-size:0.65em; padding:2px 6px; border-radius:4px; background:rgba(255,255,255,0.06); color:' + (opp.status === 'P0' ? 'var(--danger)' : opp.status === 'PASS' ? 'var(--accent)' : 'var(--text-dim)') + ';">' + (opp.status || '') + '</span></td>' +
+    '<td style="padding:8px 6px; text-align:center; vertical-align:middle; white-space:nowrap;">' + actionBtns + '</td>' +
+  '</tr>';
+}
+
+function renderOpportunities() {
+  var filtered = _oppData;
+  if (_oppFilterSource !== 'all') {
+    filtered = _oppData.filter(function(o) { return o.source === _oppFilterSource; });
+  }
+
+  // Sort
+  if (_oppSortField === 'score') {
+    filtered.sort(function(a, b) { return b.score - a.score; });
+  } else if (_oppSortField === 'source') {
+    filtered.sort(function(a, b) { return (a.source || '').localeCompare(b.source || '') || b.score - a.score; });
+  } else if (_oppSortField === 'category') {
+    filtered.sort(function(a, b) { return (a.category || '').localeCompare(b.category || '') || b.score - a.score; });
+  }
+
+  var tbody = document.getElementById('opp-tbody');
+  var empty = document.getElementById('opp-empty');
+  if (!filtered.length) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  tbody.innerHTML = filtered.map(renderOpportunityRow).join('');
+}
+
+async function loadOpportunities() {
+  try {
+    var r = await fetch(API + '/api/kpi/opportunities');
+    var d = await r.json();
+    _oppData = d.opportunities || [];
+
+    // Update total badge
+    var badge = document.getElementById('opp-total-badge');
+    if (badge) badge.textContent = d.total || 0;
+
+    // Update source breakdown
+    var breakdown = document.getElementById('opp-source-breakdown');
+    if (breakdown && d.sources) {
+      var html = '';
+      var srcOrder = ['capital_genesis', 'ecom_arb', 'gov_contracts', 'opportunity_radar', 'rbi', 'manual'];
+      srcOrder.forEach(function(src) {
+        var count = d.sources[src] || 0;
+        if (count > 0) {
+          var color = OPP_SOURCE_COLORS[src] || 'var(--text-dim)';
+          var label = OPP_SOURCE_LABELS[src] || src;
+          var bgMap = {
+            capital_genesis: 'rgba(0,255,136,0.1)',
+            ecom_arb: 'rgba(68,136,255,0.1)',
+            gov_contracts: 'rgba(139,92,246,0.1)',
+            opportunity_radar: 'rgba(255,107,53,0.1)',
+            rbi: 'rgba(34,211,238,0.1)',
+            manual: 'rgba(255,51,85,0.1)'
+          };
+          html += '<div style="display:flex; align-items:center; gap:6px; padding:6px 12px; background:' + (bgMap[src] || 'rgba(255,255,255,0.05)') + '; border-radius:8px; border:1px solid rgba(255,255,255,0.06);">' +
+            '<span style="font-family:JetBrains Mono; font-size:1.4em; font-weight:800; color:' + color + ';">' + count + '</span>' +
+            '<span style="font-size:0.7em; color:var(--text-dim);">' + label + '</span>' +
+          '</div>';
+        }
+      });
+      breakdown.innerHTML = html;
+    }
+
+    renderOpportunities();
+  } catch(e) {
+    console.error('Opportunities load failed:', e);
+  }
+}
+
+function filterOpportunities(source) {
+  _oppFilterSource = source;
+  document.querySelectorAll('.opp-filter').forEach(function(el) {
+    el.classList.remove('active');
+    el.style.background = 'transparent';
+  });
+  var active = document.querySelector('.opp-filter[data-source="' + source + '"]');
+  if (active) {
+    active.classList.add('active');
+    active.style.background = 'rgba(255,255,255,0.08)';
+  }
+  renderOpportunities();
+}
+
+function sortOpportunities(field) {
+  _oppSortField = field;
+  document.querySelectorAll('.opp-sort').forEach(function(el) {
+    el.classList.remove('active');
+    el.style.background = 'transparent';
+    el.style.color = 'var(--text-dim)';
+  });
+  var active = document.querySelector('.opp-sort[data-sort="' + field + '"]');
+  if (active) {
+    active.classList.add('active');
+    active.style.background = 'var(--accent-dim)';
+    active.style.color = 'var(--accent)';
+  }
+  renderOpportunities();
+}
+
+async function oppAction(id, action, btnEl) {
+  var opp = _oppData.find(function(o) { return o.id === id; });
+  var text = opp ? opp.text : id;
+
+  try {
+    var r = await fetch(API + '/api/kpi/opportunity-action', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({id: id, action: action, text: text})
+    });
+    var d = await r.json();
+    if (d.success) {
+      showToast(d.message || 'Action completed');
+
+      // If implement returns a command, open command palette
+      if (d.action === 'open_command_palette' && d.command) {
+        var cmdInput = document.getElementById('cmd-search-input');
+        if (cmdInput) {
+          document.getElementById('command-palette-backdrop').style.display = 'flex';
+          cmdInput.value = d.command;
+          cmdInput.focus();
+          filterCommands();
+        }
+      }
+
+      // If dismiss, remove from local data and re-render
+      if (action === 'dismiss') {
+        _oppData = _oppData.filter(function(o) { return o.id !== id; });
+        var badge = document.getElementById('opp-total-badge');
+        if (badge) badge.textContent = _oppData.length;
+        renderOpportunities();
+      } else {
+        // Reload for promote/demote/investigate
+        loadOpportunities();
+      }
+    } else {
+      showToast(d.error || 'Action failed');
+    }
+  } catch(e) {
+    showToast('Network error');
+  }
+}
+
+// Auto-refresh opportunities every 5 minutes
+var _oppRefreshInterval = null;
+function startOppAutoRefresh() {
+  if (_oppRefreshInterval) clearInterval(_oppRefreshInterval);
+  _oppRefreshInterval = setInterval(function() {
+    var kpiTab = document.getElementById('tab-kpi');
+    if (kpiTab && kpiTab.style.display !== 'none') {
+      loadOpportunities();
+    }
+  }, 5 * 60 * 1000);
+}
+startOppAutoRefresh();
 </script>
 </body>
 </html>

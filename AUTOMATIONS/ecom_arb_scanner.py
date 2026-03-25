@@ -429,6 +429,30 @@ def main():
     # Save to CSV
     save_to_csv(results, args.output)
 
+    # --- Feed high-value findings into ALPHA_STAGING for Capital Genesis scoring ---
+    if results:
+        try:
+            from _alpha_staging_writer import stage_findings_batch
+            findings = []
+            for r in results[:20]:  # Top 20 by profit
+                findings.append({
+                    "content": (
+                        f"Ecom arb: {r['product_name']} | Source: {r['source']} ${r['source_price']:.2f} | "
+                        f"Sell on {r['selling_platform']} ${r['estimated_sell_price']:.2f} | "
+                        f"Profit ${r['net_profit']:.2f} ({r['margin_pct']:.1f}% margin)"
+                    ),
+                    "source": "ecom_arb_scanner",
+                    "category": "MONETIZATION",
+                    "roi_potential": "HIGH" if r['net_profit'] > 10 else "MEDIUM",
+                    "applicable_methods": "ECOM_ARB",
+                    "applicable_niches": r.get('category', ''),
+                    "reviewer_notes": f"Auto-staged from ecom_arb_scanner. Margin {r['margin_pct']:.1f}%.",
+                })
+            staged = stage_findings_batch(findings)
+            print(f"\n[*] Staged {staged} opportunities to ALPHA_STAGING.csv")
+        except ImportError:
+            pass  # _alpha_staging_writer not available
+
     print("\n[*] IMPORTANT NOTES:")
     print("    - This is a research tool. Always verify prices manually before purchasing.")
     print("    - Consider shipping times (especially AliExpress: 3-6 weeks)")

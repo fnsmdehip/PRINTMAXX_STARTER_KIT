@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-25T05:16:25.262678",
+  "api_calls": 19,
+  "total_filings": 90,
+  "unique_filings": 2,
+  "written_to_alpha": 0,
+  "top_results": [
+    {
+      "company": "Blaize Holdings, Inc.  (BZAI, BZAIW)  (CIK 0001871638)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Netcapital Inc.  (NCPL, NCPLW)  (CIK 0001414767)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}

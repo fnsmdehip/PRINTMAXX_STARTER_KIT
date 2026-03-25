@@ -1,0 +1,26 @@
+{
+  "project_name": "Mindspend",
+  "type": "PWA",
+  "build_timeline": "1-day vibe-code",
+  "stack": [
+    "React",
+    "TypeScript",
+    "IndexedDB",
+    "Service Worker",
+    "Tailwind CSS"
+  ],
+  "core_features": [
+    "Transaction logging with pre/post emotional state rating (1–5 scale + tag)",
+    "Emotion categories: stressed, bored, happy, anxious, celebratory, guilty, neutral",
+    "Spending pattern analytics: emotion vs. spend amount over time",
+    "Weekly emotional-spend digest (push notification via Service Worker)",
+    "Offline-first via IndexedDB sync",
+    "CSV export of transactions + emotion log",
+    "Simple onboarding: connect bank via Plaid (optional) or manual entry"
+  ],
+  "differentiator": "Competitor trackers (YNAB, Copilot, Monarch) track dollars. Mindspend tracks the emotional trigger behind every dollar.",
+  "target_user": "Millennials/Gen Z who understand their overspending is emotional, not informational",
+  "ph_launch_hook": "[PH LAUNCH] Mindspend: Track how you feel about spending, not just the numbers",
+  "app_factory_priority": "high",
+  "queued_at": "2026-03-25T14:08:13.045518"
+}

@@ -1,6 +1,6 @@
-# COMPOUND ACTIONS -- Cycle 31 (2026-03-25 06:02)
+# COMPOUND ACTIONS -- Cycle 32 (2026-03-25 17:10)
 
-## Status: BLOCKED ON HUMAN (unchanged since Cycle 25, ~104h)
+## Status: BLOCKED ON HUMAN (unchanged since Cycle 25, ~112h)
 
 No compound actions possible. Zero distribution channels active.
 
@@ -15,15 +15,13 @@ No compound actions possible. Zero distribution channels active.
 | Email drafts | 48 | QUEUED | No Gmail MCP authenticated |
 | Apps built | 8 | NO PAYMENT | No Stripe/RevenueCat live |
 
-## RAMADAN: CLOSED (accepted loss)
+## Actions Taken This Cycle
 
-No further escalation. PrayerLock + Hilal remain deployed. Next Ramadan = Feb 2027.
-
-## NEW FINDING: Cron Bloat
-
-Crontab has 33 PRINTMAXX entries. Minimal v8 core = 9 entries. 17 phantom scripts have NO log files (never ran successfully). Root cause: `AUTOMATIONS/agent/cron_backup.txt` contains the full v7 bloated crontab (123 lines). The cron watchdog restores from this backup, re-injecting dead entries.
-
-**Fix (non-blocking, when convenient):** Trim `cron_backup.txt` to v8 minimal 9 entries. This prevents watchdog from restoring bloat.
+### CRON BLOAT FIXED
+- **Before:** 35 PRINTMAXX cron entries (26 phantom scripts producing into dead queues)
+- **After:** 20 active entries (v8 minimal: infrastructure + intelligence + nightly + weekly + venture)
+- **Root cause eliminated:** `cron_backup.txt` trimmed from 124 lines to v8 minimal. Watchdog will no longer restore bloated entries.
+- **Integrator_v2 entries preserved:** `AUTOMATIONS/agent/cron_backup_integrator_v2.txt` (49 entries, restore when accounts exist)
 
 ## Priority Compound Actions (when unblocked)
 
@@ -47,8 +45,8 @@ Crontab has 33 PRINTMAXX entries. Minimal v8 core = 9 entries. 17 phantom script
 
 ## Deep Sleep Status
 
-Deferred to Cycle 33 (~48h). User opened Claude Code this session (positive signal). If account created: cancel deep sleep, wake agents. If no action by Cycle 33: swarm_brain 24h->48h, system_healer 2h->4h. Token burn: ~41K/day -> ~21K/day.
+Deferred again — user active in Claude Code for second consecutive session. Re-evaluate at Cycle 34 if no account creation. Current token burn: ~41K/day.
 
 ## Wake Protocol
 
-Human creates ANY account -> Brain detects on next cycle -> Wakes relevant agents -> Executes highest-priority compound -> Scales intervals based on results
+Human creates ANY account -> Brain detects on next cycle -> Wakes relevant agents -> Restores integrator_v2 crons if needed -> Executes highest-priority compound -> Scales intervals based on results

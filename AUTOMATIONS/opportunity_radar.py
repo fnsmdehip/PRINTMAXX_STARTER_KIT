@@ -717,6 +717,53 @@ def cmd_scan(args):
     new_count = save_opportunities(all_opportunities)
     save_scan_log(source_counts)
 
+    # --- Feed high-scoring findings into ALPHA_STAGING for Capital Genesis scoring ---
+    if all_opportunities:
+        try:
+            from _alpha_staging_writer import stage_findings_batch
+
+            # Category mapping for opportunity types
+            _cat_map = {
+                "ai_tools": "APP_FACTORY",
+                "developer_tools": "APP_FACTORY",
+                "saas": "APP_FACTORY",
+                "open_source": "APP_FACTORY",
+                "productivity": "APP_FACTORY",
+                "marketing": "MONETIZATION",
+                "ecom": "MONETIZATION",
+                "content": "CONTENT",
+                "community": "CONTENT",
+                "freelance": "MONETIZATION",
+                "newsletter": "CONTENT",
+            }
+
+            scored = [(opp, score_opportunity(opp)) for opp in all_opportunities]
+            high_value = [(opp, s) for opp, s in scored if s >= 40]
+            high_value.sort(key=lambda x: -x[1])
+
+            findings = []
+            for opp, s in high_value[:25]:
+                cat = _cat_map.get(opp.get("category", ""), "MARKET_SIGNAL")
+                synergies = opp.get("synergies", [])
+                findings.append({
+                    "content": (
+                        f"Opportunity: {opp.get('title', '')[:120]} | "
+                        f"{opp.get('description', '')[:150]} | "
+                        f"Score: {s}/100 | Synergies: {', '.join(synergies) if synergies else 'none'}"
+                    ),
+                    "source": f"opportunity_radar/{opp.get('source', 'unknown')}",
+                    "source_url": opp.get("url", ""),
+                    "category": cat,
+                    "roi_potential": "HIGH" if s >= 60 else "MEDIUM",
+                    "applicable_methods": ",".join(synergies) if synergies else "",
+                    "reviewer_notes": f"Relevance {s}/100. Auto-staged from opportunity_radar.",
+                })
+            if findings:
+                staged = stage_findings_batch(findings)
+                print(f"  Staged {staged} high-scoring opportunities to ALPHA_STAGING.csv")
+        except ImportError:
+            pass
+
     print(f"SCAN COMPLETE: {len(all_opportunities)} total, {new_count} new")
 
 

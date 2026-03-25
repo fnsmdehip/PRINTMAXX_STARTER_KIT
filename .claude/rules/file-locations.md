@@ -49,3 +49,4 @@ Full nav: `OPS/NAV_INDEX.md` (632 lines)
 | Email sequences | `EMAIL/sequences/` + `EMAIL/triggering_events/` |
 | Integration gap report | `OPS/INTEGRATION_GAP_REPORT.md` (308K) |
 | Niche research | `NICHE_CONTENT_RESEARCH_2025_2026.md` |
+| Cal AI playbook | `LEDGER/ALPHA_INTEL/Cal_AI_Founder_Insights.md` |

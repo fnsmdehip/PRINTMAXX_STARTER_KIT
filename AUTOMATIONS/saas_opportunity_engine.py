@@ -1162,6 +1162,37 @@ def main():
             print(f"\n  Manifest saved to: {OUTPUT_MANIFEST}")
             print(f"  {len(all_scored)} scripts analyzed, top 30 ranked.")
 
+    # --- Feed top SaaS candidates into ALPHA_STAGING for Capital Genesis scoring ---
+    if all_scored:
+        try:
+            sys.path.insert(0, str(AUTOMATIONS_DIR))
+            from _alpha_staging_writer import stage_findings_batch
+            high_score = [s for s in all_scored if s['composite'] >= 50][:15]
+            findings = []
+            for s in high_score:
+                saas_name = generate_saas_name(s['name'])
+                tactics = ', '.join(s.get('edge_tactics', [])[:3])
+                findings.append({
+                    "content": (
+                        f"SaaS candidate: {saas_name} (from {s['name']}.py) | "
+                        f"Score: {s['composite']:.0f}/100 | "
+                        f"Market: {s['scores'].get('market_size', 0):.0f} | "
+                        f"Recurring: {s['scores'].get('recurring_potential', 0):.0f} | "
+                        f"Tactics: {tactics or 'none'}"
+                    ),
+                    "source": "saas_opportunity_engine",
+                    "category": "APP_FACTORY",
+                    "roi_potential": "HIGH" if s['composite'] >= 70 else "MEDIUM",
+                    "applicable_methods": "SAAS",
+                    "reviewer_notes": f"Composite {s['composite']:.0f}. Auto-staged from saas_opportunity_engine.",
+                })
+            if findings:
+                staged = stage_findings_batch(findings)
+                if not args.quiet:
+                    print(f"\n  Staged {staged} SaaS candidates to ALPHA_STAGING.csv")
+        except ImportError:
+            pass
+
     # Log run
     LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(LOG_FILE, 'a') as f:

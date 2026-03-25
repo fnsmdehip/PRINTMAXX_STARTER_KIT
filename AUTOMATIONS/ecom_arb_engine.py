@@ -582,6 +582,32 @@ def main():
         if not quiet:
             print_report(all_opportunities)
             print(f"\n  Saved {len(all_opportunities)} opportunities to {output_path}")
+
+        # --- Feed high-value findings into ALPHA_STAGING for Capital Genesis scoring ---
+        try:
+            from _alpha_staging_writer import stage_findings_batch
+            high_value = [o for o in all_opportunities if o.get('action') == 'LIST']
+            if high_value:
+                findings = []
+                for o in high_value:
+                    findings.append({
+                        "content": (
+                            f"Ecom arb: {o['product']} | Sell ${o['sell_price']} on {o['best_platform']} | "
+                            f"Source ${o['source_price']} | Profit ${o['net_profit']} ({o['margin_pct']}% margin) | "
+                            f"Trend {o.get('trend_score', 'N/A')}/100"
+                        ),
+                        "source": "ecom_arb_engine",
+                        "category": "MONETIZATION",
+                        "roi_potential": "HIGH" if float(o.get('net_profit', 0)) > 5 else "MEDIUM",
+                        "applicable_methods": "ECOM_ARB",
+                        "applicable_niches": o.get('category', ''),
+                        "reviewer_notes": f"Composite score {o.get('composite_score', 'N/A')}. Auto-staged from ecom_arb_engine.",
+                    })
+                staged = stage_findings_batch(findings)
+                if not quiet:
+                    print(f"  Staged {staged} high-value opportunities to ALPHA_STAGING.csv")
+        except ImportError:
+            pass  # _alpha_staging_writer not available
     else:
         if not quiet:
             print("\n  No opportunities found in this scan.")

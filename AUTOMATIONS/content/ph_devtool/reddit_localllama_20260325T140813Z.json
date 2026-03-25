@@ -1,0 +1,9 @@
+{
+  "id": "reddit_localllama_20260325T140813Z",
+  "platform": "reddit",
+  "subreddit": "LocalLLaMA",
+  "title": "Cursor Composer 2 token efficiency breakdown \u2014 better than GPT-4o for code?",
+  "body": "Saw Composer 2 hit #1 on Product Hunt and ran a quick eval since this community cares about token efficiency.\n\n**Short answer:** Yes \u2014 noticeably more token-efficient than GPT-4o and Claude for pure coding tasks. The model appears heavily fine-tuned on code context management.\n\n### What makes it efficient\n\n- Repo-graph aware context: prunes irrelevant files instead of stuffing the window\n- Diff-mode output: returns only changed lines, not full files\n- Caching: repeated file reads don't cost tokens on second request\n\n### Numbers (refactoring a 500-line Django service)\n\n- Composer 2:    ~1,200 tokens, 18s\n- GPT-4o:        ~1,950 tokens, 29s\n- Claude Sonnet: ~2,100 tokens, 31s\n\nNot a huge sample (30 tasks) but results were consistent.\n\nAnyone else benchmarked long-context performance?\n\nAffiliate link if you want to try it: https://cursor.so/?ref=printmaxx",
+  "timestamp": "20260325T140813Z",
+  "status": "pending"
+}

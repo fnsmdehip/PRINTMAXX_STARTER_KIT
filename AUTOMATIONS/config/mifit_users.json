@@ -1,0 +1,24 @@
+{
+  "users": {},
+  "strava": {
+    "client_id": "",
+    "client_secret": ""
+  },
+  "google_fit": {
+    "client_id": "",
+    "client_secret": ""
+  },
+  "web": {
+    "host": "127.0.0.1",
+    "port": 8080
+  },
+  "exporter": {
+    "repo_url": "https://github.com/rolandsz/Mi-Fit-and-Zepp-workout-exporter",
+    "python_bin": "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "formats": [
+      "gpx",
+      "tcx",
+      "csv"
+    ]
+  }
+}

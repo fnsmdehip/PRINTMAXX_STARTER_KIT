@@ -3829,6 +3829,355 @@ def api_usage_burst():
 
 
 # ---------------------------------------------------------------------------
+# KPI Weighted Opportunity Decider
+# ---------------------------------------------------------------------------
+DISMISSED_FILE = OPS / "DISMISSED_OPPORTUNITIES.jsonl"
+MANUAL_NOTES_FILE = OPS / "MANUAL_NOTES.md"
+
+# Map sources to relevant automation scripts
+SOURCE_SCRIPT_MAP = {
+    "capital_genesis": "capital_genesis_ranker.py",
+    "ecom_arb": "ecom_arb_scanner.py",
+    "gov_contracts": "gov_contract_scanner.py",
+    "opportunity_radar": "opportunity_radar.py",
+    "rbi": "rbi_loop.py",
+    "manual": "decision_engine.py",
+}
+
+
+def _load_dismissed_ids():
+    """Load set of dismissed opportunity IDs."""
+    dismissed = set()
+    if DISMISSED_FILE.exists():
+        try:
+            for line in DISMISSED_FILE.read_text(encoding="utf-8").strip().split("\n"):
+                if line.strip():
+                    entry = json.loads(line)
+                    dismissed.add(entry.get("id", ""))
+        except Exception:
+            pass
+    return dismissed
+
+
+def _get_all_opportunities():
+    """Aggregate opportunities from all 6 sources with normalized scoring."""
+    opportunities = []
+    dismissed = _load_dismissed_ids()
+    idx_counters = {}
+
+    def next_id(prefix):
+        idx_counters[prefix] = idx_counters.get(prefix, 0) + 1
+        return f"{prefix}_{idx_counters[prefix]:03d}"
+
+    # 1. Capital Genesis Rankings (top 20)
+    cg_path = LEDGER / "CAPITAL_GENESIS_RANKINGS.csv"
+    if cg_path.exists():
+        rows = safe_read_csv(cg_path, max_rows=20)
+        for row in rows:
+            oid = row.get("method_id", next_id("CG"))
+            if oid in dismissed:
+                continue
+            score = 0.0
+            try:
+                score = float(row.get("composite", 0))
+            except (ValueError, TypeError):
+                pass
+            opportunities.append({
+                "id": oid,
+                "text": row.get("method_name", "Unknown method"),
+                "source": "capital_genesis",
+                "score": round(score, 2),
+                "category": row.get("category", "UNKNOWN"),
+                "roi": row.get("recommended_action", ""),
+                "status": row.get("priority", "P1"),
+                "actions": ["implement", "demote", "dismiss"],
+            })
+
+    # 2. Ecom Arb Opportunities
+    ecom_path = LEDGER / "ECOM_ARB_OPPORTUNITIES.csv"
+    if ecom_path.exists():
+        rows = safe_read_csv(ecom_path, max_rows=50)
+        for row in rows:
+            oid = next_id("ECOM")
+            if oid in dismissed:
+                continue
+            margin = 0.0
+            try:
+                margin = float(row.get("margin_pct", 0))
+            except (ValueError, TypeError):
+                pass
+            score = round(min(margin / 10.0, 10.0), 2)
+            profit = row.get("net_profit", "?")
+            name = row.get("product_name", "Unknown product")
+            opportunities.append({
+                "id": oid,
+                "text": f"{name} - ${profit} profit/unit",
+                "source": "ecom_arb",
+                "score": score,
+                "category": row.get("category", "ECOM").upper(),
+                "roi": f"${profit}/unit at {margin}% margin",
+                "status": "NEW",
+                "actions": ["promote_p0", "investigate", "dismiss"],
+            })
+
+    # 3. Government Contracts
+    gov_path = LEDGER / "GOV_OPPORTUNITIES.csv"
+    if gov_path.exists():
+        rows = safe_read_csv(gov_path, max_rows=50)
+        for row in rows:
+            oid = row.get("opportunity_id", next_id("GOV"))
+            if oid in dismissed:
+                continue
+            val = 0.0
+            try:
+                val = float(row.get("estimated_value", 0))
+            except (ValueError, TypeError):
+                pass
+            if val >= 500000:
+                score = 9.0
+            elif val >= 100000:
+                score = 8.0
+            elif val >= 50000:
+                score = 7.0
+            elif val > 0:
+                score = 6.0
+            else:
+                score = 5.0
+            title = row.get("title", "Unknown contract")
+            agency = row.get("agency", "")
+            opportunities.append({
+                "id": oid,
+                "text": f"{title[:80]} ({agency})" if agency else title[:80],
+                "source": "gov_contracts",
+                "score": score,
+                "category": "GOV_CONTRACT",
+                "roi": f"${val:,.0f}" if val > 0 else "TBD",
+                "status": row.get("status", "NEW"),
+                "actions": ["promote_p0", "investigate", "dismiss"],
+            })
+
+    # 4. Opportunity Radar
+    radar_path = LEDGER / "OPPORTUNITY_RADAR.csv"
+    if radar_path.exists():
+        rows = safe_read_csv(radar_path, max_rows=50)
+        for row in rows:
+            oid = next_id("RADAR")
+            if oid in dismissed:
+                continue
+            score = 5.0
+            try:
+                raw_score = float(row.get("relevance_score", 0))
+                # Radar scores are 0-100, normalize to 0-10
+                score = round(min(raw_score / 10.0, 10.0), 2)
+            except (ValueError, TypeError):
+                pass
+            title = row.get("title", "Unknown opportunity")
+            src = row.get("source", "")
+            opportunities.append({
+                "id": oid,
+                "text": f"[{src}] {title}" if src else title,
+                "source": "opportunity_radar",
+                "score": score,
+                "category": row.get("category", "OPPORTUNITY").upper(),
+                "roi": "",
+                "status": row.get("action_taken", "NEW") or "NEW",
+                "actions": ["promote_p0", "investigate", "dismiss"],
+            })
+
+    # 5. RBI Pipeline (PASS and CONDITIONAL items)
+    rbi_path = AUTOMATIONS / "agent" / "rbi_state.json"
+    if rbi_path.exists():
+        rbi_data = safe_read_json(rbi_path)
+        backtested = rbi_data.get("backtested", [])
+        # Cross-reference with Capital Genesis for names
+        cg_names = {}
+        if cg_path.exists():
+            for row in safe_read_csv(cg_path, max_rows=500):
+                cg_names[row.get("method_id", "")] = row.get("method_name", "")
+        for item in backtested:
+            verdict = item.get("verdict", "")
+            if verdict not in ("PASS", "CONDITIONAL"):
+                continue
+            aid = item.get("id", next_id("RBI"))
+            oid = f"RBI_{aid}"
+            if oid in dismissed:
+                continue
+            score = 7.0 if verdict == "PASS" else 5.0
+            name = cg_names.get(aid, item.get("name", aid))
+            opportunities.append({
+                "id": oid,
+                "text": f"[RBI {verdict}] {name}",
+                "source": "rbi",
+                "score": score,
+                "category": "RBI",
+                "roi": "",
+                "status": verdict,
+                "actions": ["implement", "investigate", "dismiss"] if verdict == "PASS" else ["promote_p0", "investigate", "dismiss"],
+            })
+
+    # 6. Manual Priorities
+    manual_path = OPS / "MANUAL_PRIORITIES.md"
+    if manual_path.exists():
+        try:
+            content = manual_path.read_text(encoding="utf-8", errors="replace")
+            current = None
+            for line in content.split("\n"):
+                if line.startswith("## ["):
+                    if current and current.get("text"):
+                        oid = f"MANUAL_{hash(current['text']) % 100000:05d}"
+                        if oid not in dismissed:
+                            prio = current.get("priority", "P1")
+                            score = {"P0": 9.0, "P1": 7.0, "P2": 5.0, "P3": 3.0}.get(prio, 5.0)
+                            opportunities.append({
+                                "id": oid,
+                                "text": current["text"],
+                                "source": "manual",
+                                "score": score,
+                                "category": "MANUAL",
+                                "roi": "",
+                                "status": current.get("status", "PENDING"),
+                                "actions": ["implement", "demote", "dismiss"],
+                            })
+                    match = re.match(r'## \[(.+?)\]\s*(P\d)?\s*', line)
+                    current = {
+                        "priority": match.group(2) if match and match.group(2) else "P1",
+                        "text": "", "status": "PENDING",
+                    }
+                elif current and line.strip().startswith("- **Item:**"):
+                    current["text"] = line.split("**Item:**", 1)[1].strip()
+                elif current and line.strip().startswith("- **Status:**"):
+                    current["status"] = line.split("**Status:**", 1)[1].strip()
+                elif current and line.strip().startswith("- **Priority:**"):
+                    current["priority"] = line.split("**Priority:**", 1)[1].strip()
+            if current and current.get("text"):
+                oid = f"MANUAL_{hash(current['text']) % 100000:05d}"
+                if oid not in dismissed:
+                    prio = current.get("priority", "P1")
+                    score = {"P0": 9.0, "P1": 7.0, "P2": 5.0, "P3": 3.0}.get(prio, 5.0)
+                    opportunities.append({
+                        "id": oid,
+                        "text": current["text"],
+                        "source": "manual",
+                        "score": score,
+                        "category": "MANUAL",
+                        "roi": "",
+                        "status": current.get("status", "PENDING"),
+                        "actions": ["implement", "demote", "dismiss"],
+                    })
+        except Exception:
+            pass
+
+    # Sort by score descending
+    opportunities.sort(key=lambda x: -x["score"])
+
+    # Source breakdown
+    source_counts = {}
+    for opp in opportunities:
+        src = opp["source"]
+        source_counts[src] = source_counts.get(src, 0) + 1
+
+    return {
+        "opportunities": opportunities,
+        "sources": source_counts,
+        "total": len(opportunities),
+    }
+
+
+@app.route("/api/kpi/opportunities")
+def api_kpi_opportunities():
+    """Return all opportunities from all sources, scored and ranked."""
+    return jsonify(_get_all_opportunities())
+
+
+@app.route("/api/kpi/opportunity-action", methods=["POST"])
+def api_kpi_opportunity_action():
+    """Execute an action on an opportunity."""
+    data = request.get_json(force=True)
+    opp_id = data.get("id", "")
+    action = data.get("action", "")
+    opp_text = data.get("text", "")
+
+    if not opp_id or not action:
+        return jsonify({"error": "Missing id or action"}), 400
+
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    if action == "promote_p0":
+        # Add to MANUAL_PRIORITIES.md as P0
+        manual_path = OPS / "MANUAL_PRIORITIES.md"
+        entry = (
+            f"\n## [{timestamp}] P0 — OPPORTUNITY PROMOTED\n"
+            f"- **Priority:** P0\n"
+            f"- **Source:** {opp_id}\n"
+            f"- **Score:** 9.0\n"
+            f"- **Item:** {opp_text}\n"
+            f"- **Status:** PENDING\n"
+        )
+        try:
+            if not manual_path.exists():
+                manual_path.write_text(f"# Manual Priority Overrides\n\nHuman-promoted items from the GUI.\n{entry}")
+            else:
+                with open(manual_path, "a", encoding="utf-8") as f:
+                    f.write(entry)
+            return jsonify({"success": True, "message": f"Promoted to P0: {opp_text[:60]}..."})
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    elif action == "investigate":
+        # Add note to MANUAL_NOTES.md
+        notes_path = OPS / "MANUAL_NOTES.md"
+        entry = f"\n- [{timestamp}] INVESTIGATE: {opp_text} (from {opp_id}) — tags: `opportunity`, `investigate`\n"
+        try:
+            if not notes_path.exists():
+                notes_path.write_text(f"# Manual Notes\n\nQuick notes from the GUI.\n{entry}")
+            else:
+                with open(notes_path, "a", encoding="utf-8") as f:
+                    f.write(entry)
+            return jsonify({"success": True, "message": f"Queued for investigation: {opp_text[:60]}..."})
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    elif action == "dismiss":
+        # Append to dismissed list
+        try:
+            with open(DISMISSED_FILE, "a", encoding="utf-8") as f:
+                f.write(json.dumps({"id": opp_id, "text": opp_text[:200], "dismissed_at": timestamp}) + "\n")
+            return jsonify({"success": True, "message": f"Dismissed: {opp_id}"})
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    elif action == "implement":
+        # Map source to script and return the command for the command palette
+        source = opp_id.split("_")[0].lower()
+        source_map = {
+            "cg": "capital_genesis", "alpha": "capital_genesis",
+            "ecom": "ecom_arb", "gov": "gov_contracts",
+            "radar": "opportunity_radar", "rbi": "rbi",
+            "manual": "manual",
+        }
+        source_key = source_map.get(source, "manual")
+        script = SOURCE_SCRIPT_MAP.get(source_key, "decision_engine.py")
+        cmd = f"python3 AUTOMATIONS/{script}"
+        return jsonify({"success": True, "message": f"Run: {cmd}", "command": cmd, "action": "open_command_palette"})
+
+    elif action == "demote":
+        # Mark as lower priority — add a note
+        notes_path = OPS / "MANUAL_NOTES.md"
+        entry = f"\n- [{timestamp}] DEMOTED: {opp_text} (from {opp_id}) — tags: `demoted`, `low-priority`\n"
+        try:
+            if not notes_path.exists():
+                notes_path.write_text(f"# Manual Notes\n\nQuick notes from the GUI.\n{entry}")
+            else:
+                with open(notes_path, "a", encoding="utf-8") as f:
+                    f.write(entry)
+            return jsonify({"success": True, "message": f"Demoted: {opp_text[:60]}..."})
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    return jsonify({"error": f"Unknown action: {action}"}), 400
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():

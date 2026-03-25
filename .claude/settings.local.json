@@ -256,7 +256,12 @@
       "Bash(gtimeout 10 /opt/homebrew/bin/npx -y @stripe/mcp --api-key \"test_key\")",
       "mcp__Stripe__create_product",
       "mcp__Stripe__create_price",
-      "mcp__Stripe__create_payment_link"
+      "mcp__Stripe__create_payment_link",
+      "Bash(SURGE_LOGIN=\"fnsmdehip@proton.me\" SURGE_TOKEN=\"956f5e1d2e588f92e325f706a7906723\" npx surge . printmaxx-payments.surge.sh)",
+      "WebFetch(domain:adapty.io)",
+      "WebFetch(domain:www.airbridge.io)",
+      "WebFetch(domain:www.revenuecat.com)",
+      "WebFetch(domain:superwall.com)"
     ]
   }
 }

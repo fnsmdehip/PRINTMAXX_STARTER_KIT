@@ -4,6 +4,8 @@ export type Gender = 'male' | 'female' | 'other';
 export type Goal = 'lose' | 'maintain' | 'gain';
 export type ActivityLevel = 'sedentary' | 'light' | 'moderate' | 'very_active' | 'athlete';
 export type DietType = 'regular' | 'pescatarian' | 'vegetarian' | 'vegan';
+export type DietPreference = 'none' | 'vegetarian' | 'vegan' | 'keto' | 'paleo' | 'gluten_free';
+export type GoalTimeline = '1_month' | '3_months' | '6_months' | '1_year';
 
 export interface UserProfile {
   gender: Gender | null;
@@ -14,6 +16,8 @@ export interface UserProfile {
   goal: Goal | null;
   activityLevel: ActivityLevel | null;
   dietType: DietType | null;
+  dietPreference: DietPreference | null;
+  goalTimeline: GoalTimeline | null;
   dailyCalories: number;
   proteinGoal: number;
   carbGoal: number;
@@ -40,6 +44,8 @@ const initialState: UserState = {
     goal: null,
     activityLevel: null,
     dietType: null,
+    dietPreference: null,
+    goalTimeline: null,
     dailyCalories: 2000,
     proteinGoal: 150,
     carbGoal: 200,
@@ -86,6 +92,12 @@ const userSlice = createSlice({
     setDietType: (state, action: PayloadAction<DietType>) => {
       state.userProfile.dietType = action.payload;
     },
+    setDietPreference: (state, action: PayloadAction<DietPreference>) => {
+      state.userProfile.dietPreference = action.payload;
+    },
+    setGoalTimeline: (state, action: PayloadAction<GoalTimeline>) => {
+      state.userProfile.goalTimeline = action.payload;
+    },
     setUseImperial: (state, action: PayloadAction<boolean>) => {
       state.userProfile.useImperial = action.payload;
     },
@@ -124,6 +136,8 @@ export const {
   setGoal,
   setActivityLevel,
   setDietType,
+  setDietPreference,
+  setGoalTimeline,
   setUseImperial,
   setCalculatedNutrition,
   advanceOnboardingStep,

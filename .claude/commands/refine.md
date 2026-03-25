@@ -45,31 +45,33 @@ Extract any relevant patterns, past corrections, or similar task outcomes. If no
 
 For each cycle (1 through N):
 
-### Cycle Structure
+### Cycle Structure — DRIVEN BY LIVE META-RULES
 
-Each cycle applies a different critique lens in sequence:
+The cycle lenses come from `OPS/prompt_intelligence/comprehensive_meta_rules.md` (rebuilt weekly by cognitive_engine.py from 5,000+ conversation prompts). Read that file in Phase 1 and use its rules as cycle lenses. Current rules as of last rebuild:
 
-**Cycle 1 — Customer/User Perspective:**
-- Read the target content as the end user or customer would.
-- Apply: Would this confuse, bore, or lose a customer? Is there anything that triggers skepticism?
-- Check: Are there AI slop words? Em dashes? Hedging? Banned vocabulary from copy-style.md?
-- Check: Does it pass the voice model's directness test (10/10)?
+**Cycle 1 — WRONG-DIRECTION check (468 triggers):**
+- Re-read the target. What is the ACTUAL intent? Generate 2-3 interpretations.
+- Pick the interpretation most consistent with the user's voice model patterns.
+- Check: Am I refining what the user actually wanted, or what I assumed they wanted?
+- Apply correction chains from cognitive engine lookup (Phase 2) for similar past tasks.
 
-**Cycle 2 — Depth-First (Anti-Lazy):**
-- Apply DEPTH-FIRST meta-rule: What would the user ask in follow-up? Include that answer now.
-- Apply ANTI-LAZY meta-rule: Is this below the user's expectations? Is it "basic bitch work"?
-- Check: Are there specific numbers, specific tools, specific proof points? Vague claims = fail.
-- Check: Bias-null filter — am I defaulting to popular/safe instead of genuinely best?
+**Cycle 2 — DEPTH-FIRST + ANTI-LAZY (253+51 triggers):**
+- Apply DEPTH-FIRST: What would the user ask in follow-up? Include that answer now.
+- Apply ANTI-LAZY: Is this below expectations? Would the user call this lazy? Go deeper.
+- Check: Specific numbers, tools, proof points? Vague claims = fail.
+- Check: Bias-null filter 1-3 (legacy smuggling, preemptive appeasement, lived-gap check).
 
-**Cycle 3 — Competitive Differentiation:**
-- Apply: If 10,000 other people built this, what makes this version non-obvious?
-- Check: Is there a unique angle, positioning, or specificity that a competitor wouldn't have?
-- Apply SATISFACTION-PATTERN: What makes the user say "this is exactly what I wanted"?
-- Final pass: Run all 5 bias-null filters on every major claim or recommendation.
+**Cycle 3 — SATISFACTION-PATTERN + Competitive (3964 triggers):**
+- Apply SATISFACTION-PATTERN: The user is satisfied when the system executes autonomously, output exceeds the explicit ask, non-obvious angles are found, and work compounds.
+- Check: If 10,000 people built this, what makes this version non-obvious?
+- Apply bias-null filters 4-5 (popular-default trap, training-bias correction).
+- Final pass: All 5 bias-null filters on every major claim or recommendation.
 
-**Cycles 4+ (if requested):** Alternate between:
-- Even cycles: Customer perspective + depth-first (Cycle 1+2 combined)
-- Odd cycles: Competitive differentiation + voice model fidelity check
+**Cycles 4+ (if requested):**
+- Even cycles: CHAIN-LENGTH lens — average correction chain is 6.1 prompts. Can you get to the right output in ONE pass? Simulate what the user would correct.
+- Odd cycles: HARD-TOPICS lens — topics that consistently need corrections (directory, autonomy, task, every, each). Extra care on these.
+
+### IMPORTANT: If meta-rules have changed since this was written, USE THE LIVE RULES from the file, not these examples. The rules above are a snapshot — the live file is the source of truth.
 
 ### Per-Cycle Actions
 
@@ -103,6 +105,19 @@ After all cycles complete:
 - Leave both in place
 - Confirm paths of both versions
 
+## Phase 6: Self-Update (automatic, no user action needed)
+
+After every refinement session, check if a new pattern emerged that should update the refinement process itself:
+
+1. Did any cycle reveal a NEW critique pattern not already in comprehensive_meta_rules.md?
+   - If yes: Append it to `AUTOMATIONS/logs/cognitive_refine.jsonl` with `{"type": "new_pattern", "pattern": "...", "source": "refine_session", "timestamp": "..."}`
+2. Did the user reject or revert any changes?
+   - If yes: Log what was rejected and why to cognitive_refine.jsonl — this trains future refinement to avoid that pattern
+3. Did the user approve changes that were particularly good?
+   - If yes: Log the technique used so it gets weighted higher in future cycles
+
+The cognitive_engine.py weekly rebuild will pick up these entries and incorporate them into the meta-rules, which then flow back into this command's Phase 3 cycle lenses. This creates a feedback loop: refine sessions produce learnings that improve future refine sessions.
+
 ## Rules
 
 - NEVER do full file rewrites. Use targeted Edit tool calls for surgical changes.
@@ -111,3 +126,4 @@ After all cycles complete:
 - Always show what changed and why after each cycle.
 - The backup MUST be created before ANY edits happen. Non-negotiable.
 - If the cognitive engine or pattern miner scripts fail, proceed without them. The voice model + meta-rules are the core of the process.
+- Phase 3 lenses come from LIVE meta-rules file, not hardcoded examples. Always read the file.

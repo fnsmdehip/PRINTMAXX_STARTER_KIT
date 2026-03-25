@@ -1099,6 +1099,37 @@ Set SAM_GOV_API_KEY env var for higher rate limits (free registration at sam.gov
     # Save results
     unique_opps = save_to_csv(all_opportunities, output_file)
 
+    # --- Feed high-value findings into ALPHA_STAGING for Capital Genesis scoring ---
+    if unique_opps:
+        try:
+            sys.path.insert(0, str(SCRIPT_DIR))
+            from _alpha_staging_writer import stage_findings_batch
+            findings = []
+            for opp in unique_opps[:30]:
+                title = opp.get("title", "")[:150]
+                agency = opp.get("agency", "")[:50]
+                set_aside = opp.get("set_aside_description", "") or opp.get("set_aside_type", "")
+                deadline = opp.get("deadline", "N/A")
+                naics = opp.get("naics_code", "")
+                findings.append({
+                    "content": (
+                        f"Gov tender: {title} | Agency: {agency} | "
+                        f"Set-aside: {set_aside or 'Full & Open'} | Deadline: {deadline} | "
+                        f"NAICS: {naics or 'N/A'}"
+                    ),
+                    "source": "gov_tenders_scraper",
+                    "source_url": opp.get("url", ""),
+                    "category": "BROKERING",
+                    "roi_potential": "HIGH" if set_aside else "MEDIUM",
+                    "applicable_methods": "GOV_CONTRACTS",
+                    "reviewer_notes": f"Auto-staged from gov_tenders_scraper.",
+                })
+            if findings:
+                staged = stage_findings_batch(findings)
+                print(f"\n  Staged {staged} gov tenders to ALPHA_STAGING.csv")
+        except ImportError:
+            pass
+
     # Print summary
     print_summary(unique_opps)
 

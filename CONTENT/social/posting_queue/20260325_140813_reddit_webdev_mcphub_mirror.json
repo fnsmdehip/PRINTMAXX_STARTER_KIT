@@ -1,0 +1,11 @@
+{
+  "queued_at": "2026-03-25T14:08:13.032452+00:00",
+  "platform": "reddit_webdev",
+  "app_name": "Mcphub Mirror",
+  "deployment_url": "https://mcphub-mirror.surge.sh",
+  "status": "pending_review",
+  "content": {
+    "title": "Show /r/webdev: Mcphub Mirror \u2013 built with [stack], open to feedback on the UX",
+    "body": "Hey webdev,\n\nShipped **Mcphub Mirror** this week and wanted to share it here since I borrowed heavily from discussions in this community.\n\n**Stack:** [list your stack]\n**Live demo:** https://mcphub-mirror.surge.sh\n\n**One technical decision I'm curious about:** [specific tradeoff, e.g. \"I went with SSR over CSR for X because Y \u2013 was that the right call?\"]\n\nThe frontend was the trickiest part \u2013 specifically [specific challenge]. Solved it by [approach].\n\nIf you have 2 minutes to poke at it and tell me the first thing that confused you, I'd genuinely appreciate it.\n"
+  }
+}

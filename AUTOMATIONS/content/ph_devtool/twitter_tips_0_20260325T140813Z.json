@@ -1,0 +1,8 @@
+{
+  "id": "twitter_tips_0_20260325T140813Z",
+  "platform": "twitter",
+  "category": "twitter_tips",
+  "body": "5 token-efficiency tips for Cursor Composer 2\n\n1/ Use .cursorignore to exclude node_modules and build dirs\n2/ Reference files by @filename instead of pasting code\n3/ Scope your prompt to ONE task per Composer session\n4/ Use 'apply' not 'explain' for pure refactors\n5/ Enable auto-context for monorepos\n\nSave tokens, ship faster: https://cursor.so/?ref=printmaxx\n\n#CursorTips #AIProductivity",
+  "timestamp": "20260325T140813Z",
+  "status": "pending"
+}

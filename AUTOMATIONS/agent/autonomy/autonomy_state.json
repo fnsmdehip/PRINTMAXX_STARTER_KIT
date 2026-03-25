@@ -3197,10 +3197,68 @@
           "last_run": "2026-03-22T23:45:08.140578"
         }
       }
+    },
+    "auto_brokering_deal_brokering_engin_7706": {
+      "id": "auto_brokering_deal_brokering_engin_7706",
+      "name": "Deal Brokering Engine",
+      "type": "BROKERING",
+      "status": "ACTIVE",
+      "pipeline": [
+        "scrape_targets",
+        "qualify_leads",
+        "connect_parties",
+        "earn_fee",
+        "track_revenue"
+      ],
+      "interval_hours": 6,
+      "config": {},
+      "created_at": "2026-03-25T10:08:26.948829",
+      "last_run": "2026-03-25T11:49:35.343772",
+      "cycles_run": 1,
+      "results": [
+        {
+          "ts": "2026-03-25T11:49:35.343776",
+          "steps": {
+            "scrape_targets": "ok",
+            "qualify_leads": "ok",
+            "connect_parties": "ok",
+            "earn_fee": "human_blocked",
+            "track_revenue": "ok"
+          },
+          "success_rate": "4/5"
+        }
+      ],
+      "pipeline_stats": {
+        "scrape_targets": {
+          "runs": 1,
+          "successes": 1,
+          "last_run": "2026-03-25T11:49:35.185992"
+        },
+        "qualify_leads": {
+          "runs": 1,
+          "successes": 1,
+          "last_run": "2026-03-25T11:49:35.242580"
+        },
+        "connect_parties": {
+          "runs": 1,
+          "successes": 1,
+          "last_run": "2026-03-25T11:49:35.293544"
+        },
+        "earn_fee": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "track_revenue": {
+          "runs": 1,
+          "successes": 1,
+          "last_run": "2026-03-25T11:49:35.343759"
+        }
+      }
     }
   },
-  "total_cycles": 240,
-  "total_pipeline_runs": 1235,
+  "total_cycles": 241,
+  "total_pipeline_runs": 1240,
   "created_at": "2026-03-06T21:12:45.215910",
   "RESEARCH": {
     "last_cycle": "2026-03-09T10:25:38.188614",

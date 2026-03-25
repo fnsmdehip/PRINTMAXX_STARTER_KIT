@@ -499,6 +499,35 @@ def main():
         save_opportunities(opportunities)
         log(f"Saved {len(opportunities)} new opportunities to {OUTPUT_CSV}")
 
+        # --- Feed high-value findings into ALPHA_STAGING for Capital Genesis scoring ---
+        try:
+            from _alpha_staging_writer import stage_findings_batch
+            findings = []
+            for opp in opportunities[:30]:
+                title = opp.get("title", "")
+                if title.startswith("[SEARCH RESULT]"):
+                    continue  # Skip search-count placeholders
+                agency = opp.get("agency", "")
+                deadline = opp.get("response_deadline", "")
+                findings.append({
+                    "content": (
+                        f"Gov contract: {title[:150]} | Agency: {agency[:50]} | "
+                        f"Deadline: {deadline or 'N/A'} | Source: {opp.get('source', 'SAM.gov')}"
+                    ),
+                    "source": "sam_gov_monitor",
+                    "source_url": opp.get("url", ""),
+                    "category": "BROKERING",
+                    "roi_potential": "HIGH",
+                    "applicable_methods": "GOV_CONTRACTS",
+                    "applicable_niches": opp.get("keyword_match", ""),
+                    "reviewer_notes": f"NAICS: {opp.get('naics', 'N/A')}. Auto-staged from sam_gov_monitor.",
+                })
+            if findings:
+                staged = stage_findings_batch(findings)
+                log(f"Staged {staged} gov opportunities to ALPHA_STAGING.csv")
+        except ImportError:
+            pass
+
     # Print summary
     print(f"\n{'='*60}")
     print(f"RESULTS SUMMARY")

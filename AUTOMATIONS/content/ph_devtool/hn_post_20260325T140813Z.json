@@ -1,0 +1,8 @@
+{
+  "id": "hn_post_20260325T140813Z",
+  "platform": "hackernews",
+  "title": "Cursor Composer 2 \u2013 token-efficient frontier coding model (PH #1 today)",
+  "body": "Cursor launched Composer 2 on Product Hunt today. It's their in-house frontier model tuned specifically for coding: repo-aware context pruning, diff-mode output, and noticeably faster than Claude/GPT-4o on coding benchmarks I've run.\n\nThe token efficiency story is interesting from a technical angle: they're doing graph-based file relevance scoring to decide what goes in the context window instead of naive recency or keyword matching.\n\nCurious if anyone has dug into the architecture or has independent reproduction benchmarks.",
+  "timestamp": "20260325T140813Z",
+  "status": "pending"
+}

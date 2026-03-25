@@ -1,123 +1,66 @@
-#
-# --- PRODUCTION AGENTS (all hibernated) ---
-# =============================================================================
-# 3:30 AM - SQLite alpha index rebuild
-# 4:08 AM - Log rotation (prevent disk bloat)
-# 4:30 AM Sunday - Security audit (weekly)
-# 5:00 AM - Health check all systems (daily deep check)
-# 7:00 AM - Daily digest (morning report)
-# 9:15 PM - Incremental backup
-# all offpeak/weekend entries
-# auto_resume_monitor, jitter_run wrappers, gates, task_graph
-# auto_scheduler, financial_intelligence, platform_algo_detection
-# Backup of v7: AUTOMATIONS/crontab_backup_pre_cycle25.txt
-# build_codebase_grammar, daily_tactical_engine, actionable_aggregator
-# ceo_agent, venture_autonomy, loop_closer, quality_gate
-# challenger_agents, growth_strategist, competitive_intelligence_engine
-# cognitive_engine, competitive_cognition_audit, conversation_logger
-# Created: 2026-03-23 by swarm_brain Cycle 25
-# decision_engine, closed_loop_pipeline, research_orchestrator
-# distribution_engine, cross_pollinator, content_queue
-# ecom_arb_engine, freelance_demand_scanner, trend_aggregator
-# engagement_optimizer, offpeak_maximizer revert
-# Every 1h - System health monitor (disk, processes, basic checks)
-# Every 4h - Perpetual guardian (git safety commits, self-healing watchdog)
-# Every 4h - Session briefing generator
-# Every 6h - Cron health checker
-# gov_tenders_scraper, ecom_arb_scanner, trending_products_scanner
-# hashtag_audio_tracking, daily_nocost_rbi_scanner, prompt_meta_review
-# HIBERNATED — DO NOT UNCOMMENT UNTIL HUMAN CREATES ACCOUNTS
-# inbound_lead_tracker, master_ops_bridge, app_factory_command_center
-# INFRASTRUCTURE ONLY — These keep the system alive without burning tokens
-# KEPT: Infrastructure monitoring, health, backups, digest, guardian
-# offpeak_builder (all variants), weekend blitz entries
-# openclaw entries, lead pipeline entries, EAS pipeline
-# overnight_master_runner, opportunity_radar, twitter/reddit scrapers
-# pinterest, producthunt, batch_deployer, compliance_scanner
-# platform_rpm_tracking, creator_program_monitoring, aso_keyword_research
 # PRINTMAXX Minimal Cron v8 — TRUE MINIMAL MODE
-# PRINTMAXX pipeline restored 2026-03-24
+# Created: 2026-03-23 by swarm_brain Cycle 25
+# Updated: 2026-03-25 by swarm_brain Cycle 32 (trimmed bloat)
+# RATIONALE: $0 revenue at Day 45. Zero accounts. Zero distribution channels.
 # Production agents produce output into dead queues. Only infrastructure stays.
-# RATIONALE: $0 revenue at Day 44. Zero accounts. Zero distribution channels.
-# REMOVED: All production agents (content, leads, ventures, CEo, apps, SEO, etc.)
-# Restore v7 when: human creates Gumroad/Stripe/X accounts.
-# Restore with: crontab AUTOMATIONS/crontab_backup_pre_cycle25.txt
-# sam_gov_monitor, alpha_screening, wire_missed_intelligence
-# shakespeare_agent, app_factory_autopilot, observer_agent, quinn_agent
-# Sunday 4:15 AM - MEGA_SHEET rebuild (weekly)
-# user_voice_model, system_visualizer, freshness_auditor
-0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/perpetual_guardian.py --full >> AUTOMATIONS/logs/perpetual_guardian.log 2>&1
-0 22 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/auto_approve.py >> AUTOMATIONS/logs/auto_approve.log 2>&1
-0 3 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/alpha_backlog_scanner.py --scan >> AUTOMATIONS/logs/alpha_backlog_scanner.log 2>&1
-0 4 * * 0 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/orphan_doc_scanner.py --scan --auto-archive >> AUTOMATIONS/logs/orphan_doc_scanner.log 2>&1
-0 5 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/method_discovery_crawler.py --crawl >> AUTOMATIONS/logs/method_discovery.log 2>&1
-0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/health_check_all.py --check >> AUTOMATIONS/logs/health_check_all.log 2>&1
-0 6 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/morning_intelligence_dag.py >> AUTOMATIONS/logs/morning_dag.log 2>&1
-0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_digest.py >> AUTOMATIONS/logs/daily_digest.log 2>&1
-0 8 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/venture_pipeline.py --run --limit 15 >> AUTOMATIONS/logs/venture_pipeline.log 2>&1
-15 21 * * * cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --incremental >> AUTOMATIONS/logs/backup.log 2>&1
-15 22 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/autonomous_integrator.py --run >> AUTOMATIONS/logs/autonomous_integrator.log 2>&1
-15 4 * * 0 cd $BASE && $PYTHON LEDGER/MEGA_SHEET/build_mega_sheet.py >> LEDGER/MEGA_SHEET/build.log 2>&1
-15 5 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/sec_edgar_scanner.py --scan >> AUTOMATIONS/logs/sec_edgar_scanner.log 2>&1
-20 5 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/crunchbase_scanner.py --scan >> AUTOMATIONS/logs/crunchbase_scanner.log 2>&1
-23 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/session_briefing.py >> AUTOMATIONS/logs/session_briefing.log 2>&1
-30 3 * * * cd $BASE && $PYTHON AUTOMATIONS/sqlite_alpha_index.py --rebuild --stats >> AUTOMATIONS/logs/alpha_index.log 2>&1
-30 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/security_audit.py --quick >> AUTOMATIONS/logs/security_audit.log 2>&1
-33 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/cron_health_checker.py >> AUTOMATIONS/logs/cron_health.log 2>&1
-5 * * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
-8 4 * * * cd $BASE && $PYTHON AUTOMATIONS/log_rotator.py --rotate >> AUTOMATIONS/logs/log_rotator.log 2>&1
-BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
-PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/macbookpro/.local/bin
-PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+# Restore production crons from: AUTOMATIONS/crontab_backup_pre_cycle25.txt
+# Auto-integrated scripts backup: AUTOMATIONS/agent/cron_backup_integrator_v2.txt
+# =============================================================================
+
 SHELL=/bin/bash
-# Auto-integrated 2026-03-24 by integrator_v2
-0 3 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/whale_copy_trade_monitor.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/whale_copy_trade_monitor.log 2>&1
-# 5:45 AM - RBI loop (Research, Backtest, Implement)
-45 5 * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/rbi_loop.py --full >> AUTOMATIONS/logs/rbi_loop.log 2>&1
-0 4 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/user_sim_refiner.py --all >> AUTOMATIONS/logs/user_sim_refiner.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/app_viral_content_engine.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/app_viral_content_engine.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/prediction_market_content_scraper.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/prediction_market_content_scraper.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 9 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/reddit_app_seeder.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/reddit_app_seeder.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 9 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/saas_demo_to_user_pipeline.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/saas_demo_to_user_pipeline.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/saas_exit_scorecard_generator.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/saas_exit_scorecard_generator.log 2>&1
-# 4:15 AM Sunday - Rebuild cognitive model from all conversations
-15 4 * * 0 /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/cognitive_engine.py --build-model >> AUTOMATIONS/logs/cognitive_engine.log 2>&1
-# Every 15 min - Usage optimizer (burst tasks when window ending)
-*/15 * * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/usage_optimizer.py --optimize >> AUTOMATIONS/logs/usage_optimizer.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ramadan_tracker_africa_growth.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ramadan_tracker_africa_growth.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/health_app_factory.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/health_app_factory.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/mifit_export_service.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/mifit_export_service.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/many_notes_niche_deployer.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/many_notes_niche_deployer.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-30 6 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ai_policy_engagement_converter.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ai_policy_engagement_converter.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/saasfly_scaffold.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/saasfly_scaffold.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/vc_ai_funding_lead_scraper.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/vc_ai_funding_lead_scraper.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 9 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ai_notetaker_affiliate_content.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ai_notetaker_affiliate_content.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-30 6 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ph_launch_content_router.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ph_launch_content_router.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ph_ai_tool_monitor.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ph_ai_tool_monitor.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 9 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ph_launch_mindspend_content.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ph_launch_mindspend_content.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ph_edtech_niche_monitor.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ph_edtech_niche_monitor.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ph_devtools_content_pipeline.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ph_devtools_content_pipeline.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ph_ai_devtools_content_pipeline.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ph_ai_devtools_content_pipeline.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 8 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/ph_devtool_content_generator.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/ph_devtool_content_generator.log 2>&1
-# Auto-integrated 2026-03-24 by integrator_v2
-0 7 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/google_aistudio_app_factory_feeder.py --run >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/google_aistudio_app_factory_feeder.log 2>&1
+PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/macbookpro/.local/bin
+BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+
+# === INFRASTRUCTURE (keeps the system alive) ===
+# Every 1h - System health monitor (disk, processes, basic checks)
+5 * * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
+# Every 4h - Perpetual guardian (git safety commits, self-healing watchdog)
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/perpetual_guardian.py --full >> AUTOMATIONS/logs/perpetual_guardian.log 2>&1
+# Every 4h - Session briefing generator
+23 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/session_briefing.py >> AUTOMATIONS/logs/session_briefing.log 2>&1
+# Every 6h - Cron health checker
+33 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/cron_health_checker.py >> AUTOMATIONS/logs/cron_health.log 2>&1
+# 3:30 AM - SQLite alpha index rebuild
+30 3 * * * cd $BASE && $PYTHON AUTOMATIONS/sqlite_alpha_index.py --rebuild --stats >> AUTOMATIONS/logs/alpha_index.log 2>&1
+# 4:08 AM - Log rotation
+8 4 * * * cd $BASE && $PYTHON AUTOMATIONS/log_rotator.py --rotate >> AUTOMATIONS/logs/log_rotator.log 2>&1
+# 9:15 PM - Incremental backup
+15 21 * * * cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --incremental >> AUTOMATIONS/logs/backup.log 2>&1
+
+# === INTELLIGENCE PIPELINE (alpha sourcing, low cost) ===
+# 5:00 AM - Method discovery + health check
+0 5 * * * cd $BASE && python3 AUTOMATIONS/method_discovery_crawler.py --crawl >> AUTOMATIONS/logs/method_discovery.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/health_check_all.py --check >> AUTOMATIONS/logs/health_check_all.log 2>&1
+# 5:15 AM - SEC EDGAR scanner
+15 5 * * * cd $BASE && python3 AUTOMATIONS/sec_edgar_scanner.py --scan >> AUTOMATIONS/logs/sec_edgar_scanner.log 2>&1
+# 5:20 AM - Crunchbase scanner
+20 5 * * * cd $BASE && python3 AUTOMATIONS/crunchbase_scanner.py --scan >> AUTOMATIONS/logs/crunchbase_scanner.log 2>&1
+# 6:00 AM - Morning intelligence DAG
+0 6 * * * cd $BASE && python3 AUTOMATIONS/morning_intelligence_dag.py >> AUTOMATIONS/logs/morning_dag.log 2>&1
+# 7:00 AM - Daily digest
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_digest.py >> AUTOMATIONS/logs/daily_digest.log 2>&1
+
+# === NIGHTLY PIPELINE ===
+# 10:00 PM - Auto approve alpha
+0 22 * * * cd $BASE && python3 AUTOMATIONS/auto_approve.py >> AUTOMATIONS/logs/auto_approve.log 2>&1
+# 10:15 PM - Autonomous integrator
+15 22 * * * cd $BASE && python3 AUTOMATIONS/autonomous_integrator.py --run >> AUTOMATIONS/logs/autonomous_integrator.log 2>&1
+
+# === WEEKLY ===
+# Monday 3 AM - Alpha backlog scanner
+0 3 * * 1 cd $BASE && python3 AUTOMATIONS/alpha_backlog_scanner.py --scan >> AUTOMATIONS/logs/alpha_backlog_scanner.log 2>&1
+# Sunday 4 AM - Orphan doc scanner
+0 4 * * 0 cd $BASE && python3 AUTOMATIONS/orphan_doc_scanner.py --scan --auto-archive >> AUTOMATIONS/logs/orphan_doc_scanner.log 2>&1
+# Sunday 4:15 AM - MEGA_SHEET rebuild
+15 4 * * 0 cd $BASE && $PYTHON LEDGER/MEGA_SHEET/build_mega_sheet.py >> LEDGER/MEGA_SHEET/build.log 2>&1
+# Sunday 4:30 AM - Security audit
+30 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/security_audit.py --quick >> AUTOMATIONS/logs/security_audit.log 2>&1
+
+# === PRODUCTION (venture pipeline, kept for when accounts exist) ===
+# 8:00 AM - Venture pipeline (limit 15)
+0 8 * * * cd $BASE && python3 AUTOMATIONS/venture_pipeline.py --run --limit 15 >> AUTOMATIONS/logs/venture_pipeline.log 2>&1
+
+# === END v8 MINIMAL ===
+# Total: 21 entries (infrastructure + intelligence + nightly + weekly + venture)
+# HIBERNATED: All auto-integrated scripts from integrator_v2 (see cron_backup_integrator_v2.txt)

@@ -170,6 +170,30 @@ def run(limit: int = 0, dry_run: bool = False) -> None:
 
     log(f"Pipeline complete: {completed}/{len(dags)} DAGs, {total_steps} total steps")
 
+    # --- Feed completed brokering DAG methods into ALPHA_STAGING ---
+    if not dry_run and completed > 0:
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            from _alpha_staging_writer import stage_findings_batch
+            findings = []
+            for dag in dags[:completed]:
+                method = dag.get("method", "")
+                if not method:
+                    continue
+                findings.append({
+                    "content": f"Brokering pipeline executed: {method[:200]}",
+                    "source": "venture_pipeline_brokering",
+                    "category": "BROKERING",
+                    "roi_potential": "MEDIUM",
+                    "applicable_methods": "BROKERING",
+                    "reviewer_notes": f"DAG completed {len(dag.get('phases', []))} phases. Auto-staged.",
+                })
+            if findings:
+                staged = stage_findings_batch(findings)
+                log(f"Staged {staged} brokering findings to ALPHA_STAGING.csv")
+        except ImportError:
+            pass
+
 
 def status() -> None:
     dags = load_content_dags()

@@ -1,0 +1,8 @@
+{
+  "id": "twitter_benchmark_0_20260325T140813Z",
+  "platform": "twitter",
+  "category": "twitter_benchmark",
+  "body": "Benchmark: Cursor Composer 2 vs Claude Sonnet vs GPT-4o on real dev tasks\n\nTask: Refactor a 500-line Django service\n\nComposer 2:    18s | 1,200 tokens | pass\nClaude Sonnet: 31s | 2,100 tokens | pass\nGPT-4o:        29s | 1,950 tokens | pass\n\nWinner on speed + efficiency: Composer 2\n\nTry it: https://cursor.so/?ref=printmaxx\n\n#AIBenchmark #DevTools",
+  "timestamp": "20260325T140813Z",
+  "status": "pending"
+}

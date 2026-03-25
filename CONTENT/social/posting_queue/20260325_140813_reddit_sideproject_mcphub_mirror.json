@@ -1,0 +1,11 @@
+{
+  "queued_at": "2026-03-25T14:08:13.031342+00:00",
+  "platform": "reddit_sideproject",
+  "app_name": "Mcphub Mirror",
+  "deployment_url": "https://mcphub-mirror.surge.sh",
+  "status": "pending_review",
+  "content": {
+    "title": "I built Mcphub Mirror \u2013 here's the one workflow trick that made it actually useful",
+    "body": "Hey r/SideProject,\n\nShipped something this week that I've been heads-down on for a while: **Mcphub Mirror**.\n\n**The problem it solves:** [describe the specific pain point in 1\u20132 sentences]\n\n**Why I built it instead of using X:** Most tools I found required [friction point]. Mcphub Mirror does [key differentiator] without the setup overhead.\n\n**What it does in 30 seconds:**\n1. [Step 1]\n2. [Step 2]\n3. [Result]\n\nLive at: https://mcphub-mirror.surge.sh\n\nHappy to answer any questions \u2013 and genuinely curious: how are others handling [related problem] right now? I keep hearing people mention [approach], does that actually work at scale?\n"
+  }
+}
