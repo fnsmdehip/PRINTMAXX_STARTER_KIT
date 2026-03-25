@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "NutriSnap",
+    "slug": "nutrisnap",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B1A2E"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.printmaxx.nutrisnap",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "NutriSnap needs camera access to scan your food and estimate nutrition information.",
+        "NSPhotoLibraryUsageDescription": "NutriSnap needs photo library access to analyze food images from your gallery.",
+        "NSHealthShareUsageDescription": "NutriSnap reads your health data to sync nutrition and activity information for a complete wellness overview.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B1A2E"
+      },
+      "package": "com.printmaxx.nutrisnap"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "revenueCatApiKey": "${REVENUECAT_PUBLIC_KEY}",
+      "appStoreCategory": "public.app-category.healthcare-fitness",
+      "appStoreSubtitle": "AI Food Scanner & Calorie Log",
+      "privacyPolicyUrl": "https://printmaxx.com/privacy",
+      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "supportEmail": "support@printmaxx.com"
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-image-picker"
+    ]
+  }
+}

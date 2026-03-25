@@ -492,3 +492,20 @@ MONEY_METHODS/APP_FACTORY/APP_ASSET_GENERATION_PROMPTS.md  # ImageFX prompts
 # Legacy (DO NOT use for new work)
 app factory/                                          # Old Scripture Streak + Jan 2026 docs
 ```
+
+## Production-Ready Apps (iOS compile verified, App Store audit passed)
+
+| App | Location | Bundle ID | Category | Paywall | Status |
+|-----|----------|-----------|----------|---------|--------|
+| NutriAI | builds/nutriai | com.printmaxx.nutriai | Food & Drink | Annual $29.99 + Monthly $4.99 | iOS COMPILED |
+| Scripture Streak | builds/scripture-streak | com.printmaxx.scripturestreak | Lifestyle | Annual $19.99 + Monthly $3.99 | iOS COMPILED |
+| Pocket Alexandria | builds/pocket-alexandria | com.printmaxx.pocketalexandria | Books | Annual $9.99 + Monthly $1.99 | iOS COMPILED |
+| cnsnt | builds/cnsnt | com.printmaxx.cnsnt | Productivity | Annual $29.99 + Monthly $4.99 | iOS COMPILED |
+| AutoReplyAI | builds/autoreplyai | N/A (web SaaS) | SaaS | Free/$19/$49/mo Stripe | BUILD CLEAN |
+
+All apps verified against:
+- ONBOARDING_PLAYBOOK.md (screen-by-screen flows)
+- Cal AI Founder Insights (long onboarding + hard paywall + price anchoring)
+- IOS_SUBMISSION_PROCESS.md (rejection prevention checklist)
+- ios_rejection_screener.py (20-point automated audit)
+- payment-integration.md (RevenueCat + AdMob + Stripe)

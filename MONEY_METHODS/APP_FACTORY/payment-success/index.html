@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0B1A2E;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #1a2a3e;
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .check {
+      width: 80px;
+      height: 80px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 40px;
+    }
+    h1 { font-size: 24px; margin-bottom: 12px; }
+    p { color: #94a3b8; font-size: 16px; line-height: 1.5; margin-bottom: 24px; }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+    .btn:active { transform: scale(0.97); }
+    .note { color: #64748b; font-size: 13px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">&#10003;</div>
+    <h1>Payment Successful!</h1>
+    <p id="message">Your premium subscription is now active. Return to the app to unlock all features.</p>
+    <a id="returnBtn" class="btn" href="#">Return to App</a>
+    <p class="note">If the button doesn't work, just switch back to the app manually.</p>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const app = params.get('app') || '';
+    const plan = params.get('plan') || '';
+
+    const schemes = {
+      'nutrisnap': 'nutrisnap://premium-activated',
+      'scripture-streak': 'scripture-streak://premium-activated',
+      'pocket-alexandria': 'pocket-alexandria://premium-activated',
+      'consentvault': 'consentvault://premium-activated',
+    };
+
+    const names = {
+      'nutrisnap': 'NutriSnap',
+      'scripture-streak': 'Scripture Streak',
+      'pocket-alexandria': 'Pocket Alexandria',
+      'consentvault': 'ConsentVault',
+    };
+
+    const appName = names[app] || 'the app';
+    const deepLink = schemes[app] || '#';
+
+    document.getElementById('message').textContent =
+      'Your premium subscription is now active. Return to ' + appName + ' to unlock all features.';
+    document.getElementById('returnBtn').href = deepLink;
+    document.getElementById('returnBtn').textContent = 'Return to ' + appName;
+
+    // Auto-redirect after 2 seconds
+    if (deepLink !== '#') {
+      setTimeout(function() { window.location.href = deepLink; }, 2000);
+    }
+  </script>
+</body>
+</html>

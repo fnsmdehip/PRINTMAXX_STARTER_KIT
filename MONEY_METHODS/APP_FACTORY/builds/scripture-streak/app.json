@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Scripture Streak",
+    "slug": "scripture-streak",
+    "scheme": "scripture-streak",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#1A1A2E",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.printmaxx.scripturestreak",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification"
+        ],
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSUserNotificationsUsageDescription": "Scripture Streak sends daily verse reminders to help you maintain your reading streak",
+        "LSApplicationCategoryType": "public.app-category.lifestyle"
+      },
+      "buildNumber": "1",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": []
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1A1A2E"
+      },
+      "package": "com.printmaxx.scripturestreak"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "revenueCatPublicKey": "appl_REPLACE_WITH_YOUR_PUBLIC_KEY",
+      "appStoreSubtitle": "Daily Bible Verses & Streaks",
+      "privacyPolicyUrl": "https://printmaxx.com/privacy",
+      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "supportUrl": "https://printmaxx.com/apps/scripture-streak/support",
+      "supportEmail": "support@printmaxx.com"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#E2B53F",
+          "sounds": []
+        }
+      ]
+    ]
+  }
+}

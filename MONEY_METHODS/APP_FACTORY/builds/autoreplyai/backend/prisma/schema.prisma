@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Website {
+  id                String    @id @default(uuid())
+  name              String
+  url               String
+  email             String    @default("")
+  apiKey            String    @unique
+  plan              String    @default("free")
+  status            String    @default("active")
+  stripeCustomerId  String?
+  stripeSubId       String?
+  messageCount      Int       @default(0)
+  messageResetAt    DateTime  @default(now())
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  settings          String    @default("{\"primaryColor\":\"#4f46e5\",\"position\":\"bottom-right\",\"greeting\":\"Hi! How can I help you today?\"}")
+
+  knowledgeBase     KnowledgeBaseItem[]
+  conversations     Conversation[]
+  analytics         Analytics?
+}
+
+model KnowledgeBaseItem {
+  id          String   @id @default(uuid())
+  title       String
+  content     String
+  type        String   @default("faq")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  websiteId   String
+  website     Website  @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+}
+
+model Conversation {
+  id          String    @id @default(uuid())
+  sessionId   String    @default("")
+  visitorId   String    @default("")
+  status      String    @default("active")
+  rating      Int?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  metadata    String?
+  websiteId   String
+  website     Website   @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+  messages    Message[]
+}
+
+model Message {
+  id              String       @id @default(uuid())
+  content         String
+  role            String
+  responseTimeMs  Int?
+  timestamp       DateTime     @default(now())
+  conversationId  String
+  conversation    Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+}
+
+model Analytics {
+  id                  String   @id @default(uuid())
+  totalConversations  Int      @default(0)
+  totalMessages       Int      @default(0)
+  avgResponseTime     Float    @default(0)
+  satisfactionRate    Float    @default(0)
+  popularTopics       String   @default("[]")
+  websiteId           String   @unique
+  website             Website  @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+}

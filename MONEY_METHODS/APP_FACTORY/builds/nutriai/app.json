@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "NutriSnap",
+    "slug": "nutrisnap",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./app/assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B1A2E"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.printmaxx.nutrisnap",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "NutriSnap uses your camera to photograph meals and estimate nutritional content including calories, protein, carbs, and fat.",
+        "NSPhotoLibraryUsageDescription": "NutriSnap needs access to your photos to analyze food images for nutrition tracking.",
+        "NSHealthShareUsageDescription": "NutriSnap reads your health data to sync nutrition and activity information for a complete wellness overview.",
+        "UIRequiresFullScreen": true,
+        "UIStatusBarHidden": false,
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "backgroundColor": "#0B1A2E"
+      },
+      "package": "com.printmaxx.nutrisnap",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./app/assets/favicon.png"
+    },
+    "scheme": "nutrisnap",
+    "extra": {
+      "revenueCatApiKey": "${REVENUECAT_PUBLIC_KEY}",
+      "appStoreSubtitle": "AI Food Scanner & Calorie Log",
+      "eas": {
+        "projectId": "04c7bff1-f241-49d8-9c24-b4ee680c1579"
+      },
+      "privacyPolicyUrl": "https://printmaxx.com/privacy",
+      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "supportUrl": "mailto:support@printmaxx.com",
+      "supportEmail": "support@printmaxx.com"
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
+    },
+    "plugins": ["expo-camera", "expo-image-picker", "expo-font"],
+    "owner": "fnsmdehip",
+    "sdkVersion": "51.0.0",
+    "appVersionSource": "expo-updates",
+    "cli": {
+      "appVersionSource": "local"
+    }
+  }
+}

@@ -580,3 +580,22 @@ Every app paywall should include:
 - [ScreensDesign - Fabulous Showcase](https://screensdesign.com/showcase/fabulous-daily-habit-tracker)
 - [Adapty - iOS Paywall Design Guide](https://adapty.io/blog/how-to-design-ios-paywall/)
 - [Apphud - Best Performing Paywalls](https://apphud.com/blog/best-performing-paywallls)
+
+---
+
+## Cross-Reference: Cal AI Founder Insights
+
+See `LEDGER/ALPHA_INTEL/Cal_AI_Founder_Insights.md` for detailed playbook from Cal AI ($0 → $50M ARR, 18mo, bootstrapped).
+
+Key takeaways integrated into this playbook:
+- **21-step onboarding** — long onboardings convert. Each step deepens emotional investment.
+- **Hard paywall after onboarding** — users who complete long onboarding self-select as high-intent
+- **Price anchoring** — monthly ($10) as anchor, annual ($30) as deal. Rescue offer if declined.
+- **"No Payment Due Now"** — prominently displayed to reduce friction
+- **3-day trial timeline visual** — shows sign up → reminder → billing
+- **Personalized paywall** — echo user's onboarding answers ("Based on your goal to...")
+- **Three-engine growth** — influencer saturation first, paid ads second, affiliate third
+- **Review prompt timing** — ONLY after user's first value moment, never during onboarding
+- **Tools:** Superwall for paywall A/B testing, RevenueCat for subscriptions, Amplitude for analytics
+
+**Rule:** Every new app build MUST reference both this playbook AND the Cal AI doc.

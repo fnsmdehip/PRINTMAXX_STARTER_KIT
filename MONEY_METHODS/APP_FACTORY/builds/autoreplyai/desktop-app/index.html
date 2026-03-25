@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoReplyAI Installer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #1a1a1a, #2d1b4b);
+      color: white;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .gradient-border {
+      position: relative;
+      border-radius: 0.5rem;
+      background: linear-gradient(to right, #4f46e5, #7c3aed);
+      padding: 1px;
+    }
+    .gradient-border > div {
+      background: #1a1a1a;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-8">
+  <div class="max-w-xl w-full">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+        AutoReplyAI Setup
+      </h1>
+      <p class="text-gray-400">Let's get your AI customer support up and running</p>
+    </div>
+
+    <div class="gradient-border">
+      <div class="p-8">
+        <div id="step1" class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Step 1: Enter Your Website URL</h2>
+          <div class="flex gap-4">
+            <input
+              type="text"
+              id="websiteUrl"
+              placeholder="https://your-website.com"
+              class="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:border-purple-500 focus:outline-none"
+            >
+            <button
+              onclick="scanWebsite()"
+              class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300"
+            >
+              Scan
+            </button>
+          </div>
+        </div>
+
+        <div id="step2" class="mb-8 hidden">
+          <h2 class="text-xl font-semibold mb-4">Step 2: Install Widget</h2>
+          <div class="bg-gray-800 rounded-lg p-4 mb-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="font-medium" id="platformInfo">Platform: Detecting...</p>
+                <p class="text-sm text-gray-400" id="statusInfo">Status: Scanning...</p>
+              </div>
+              <button
+                onclick="installWidget()"
+                class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300"
+              >
+                Install
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="step3" class="hidden">
+          <div class="text-center">
+            <svg class="w-16 h-16 mx-auto mb-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <h2 class="text-xl font-semibold mb-2">Installation Complete!</h2>
+            <p class="text-gray-400 mb-4">Your AI customer support is now ready to help your customers</p>
+            <button
+              onclick="openDashboard()"
+              class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300"
+            >
+              Open Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function scanWebsite() {
+      const url = document.getElementById('websiteUrl').value;
+      if (!url) return;
+
+      document.getElementById('step2').classList.remove('hidden');
+      
+      const result = await window.electron.invoke('scan-website', url);
+      
+      if (result.status === 'success') {
+        document.getElementById('platformInfo').textContent = `Platform: ${result.platform}`;
+        document.getElementById('statusInfo').textContent = 'Status: Ready to install';
+      } else {
+        document.getElementById('statusInfo').textContent = `Status: Error - ${result.message}`;
+      }
+    }
+
+    async function installWidget() {
+      const url = document.getElementById('websiteUrl').value;
+      const result = await window.electron.invoke('install-widget', {
+        url,
+        platform: 'wordpress' // This will be dynamic based on scan results
+      });
+
+      if (result.status === 'success') {
+        document.getElementById('step3').classList.remove('hidden');
+        document.getElementById('step2').classList.add('hidden');
+      } else {
+        document.getElementById('statusInfo').textContent = `Status: Error - ${result.message}`;
+      }
+    }
+
+    function openDashboard() {
+      window.open('https://autoreplyai.io/dashboard', '_blank');
+    }
+  </script>
+</body>
+</html> 

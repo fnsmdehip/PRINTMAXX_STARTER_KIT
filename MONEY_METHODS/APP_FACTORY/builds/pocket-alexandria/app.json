@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Pocket Alexandria",
+    "slug": "pocket-alexandria",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "pocket-alexandria",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1A2E"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.printmaxx.pocketalexandria",
+      "buildNumber": "1",
+      "infoPlist": {
+        "UIBackgroundModes": [],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A1A2E"
+      },
+      "package": "com.printmaxx.pocketalexandria"
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "revenueCatApiKey": "appl_REPLACE_WITH_YOUR_PUBLIC_KEY",
+      "appStoreSubtitle": "Classic Texts & Esoteric Library",
+      "appStoreCategory": "Books",
+      "secondaryCategory": "Education",
+      "appReviewNotes": "Pocket Alexandria is a digital reading app containing 156 public domain classic texts sourced exclusively from Project Gutenberg (gutenberg.org). All texts are in the public domain and freely available. No proprietary or copyrighted content is included. The app offers two tiers: Free (10 books with basic reader) and Pro/Premium ($9.99/year or $1.99/month for all 156 books, offline reading, and highlights). Subscriptions are managed via RevenueCat. No user-generated content. No external accounts required.",
+      "privacyPolicyUrl": "https://printmaxx.com/privacy",
+      "termsOfServiceUrl": "https://printmaxx.com/tos",
+      "supportUrl": "https://pocket-alexandria.surge.sh/support",
+      "supportEmail": "support@printmaxx.com"
+    }
+  }
+}
