@@ -210,3 +210,52 @@ Total items: 95 (deduplicated from all sources)
 - PERSISTENT_TASK_TRACKER: 75 items
 - swarm: 19 items
 - DAILY_TACTICAL_PLAN: 1 items
+
+
+## RBI Conditional Methods (need unblocking)
+
+*Updated: 2026-03-24T22:34:42Z*
+
+- **P0** | TikTok algo shift: completion rate threshold increased + follower-first testing | Blockers: NEED_ACCOUNT:tiktok
+- **P0** | TikTok Creator Rewards 10x payout + sponsorships > AdSense | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | how to get millions of tiktok views in one week using openclaw(the exact playboo | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | First hour determines TikTok distribution + active creator signal | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | YouTube Shorts: search SEO now matters + 50-60 sec sweet spot | Blockers: NEED_ACCOUNT:youtube
+- **P1** | IG Originality Score penalty system + remove TikTok watermarks + 3-5/week | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | TikTok search: text overlays boost discoverability + tutorials winning | Blockers: NEED_ACCOUNT:tiktok
+
+
+## RBI Conditional Methods
+*Updated: 2026-03-24T22:36:48Z*
+
+- **P0** | TikTok algo shift: completion rate threshold increased + follower-first testing | Blockers: NEED_ACCOUNT:tiktok
+- **P0** | TikTok Creator Rewards 10x payout + sponsorships > AdSense | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | how to get millions of tiktok views in one week using openclaw(the exact playboo | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | First hour determines TikTok distribution + active creator signal | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | YouTube Shorts: search SEO now matters + 50-60 sec sweet spot | Blockers: NEED_ACCOUNT:youtube
+- **P1** | IG Originality Score penalty system + remove TikTok watermarks + 3-5/week | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | TikTok search: text overlays boost discoverability + tutorials winning | Blockers: NEED_ACCOUNT:tiktok
+
+
+## RBI Conditional Methods
+*Updated: 2026-03-24T22:50:40Z*
+
+- **P0** | TikTok algo shift: completion rate threshold increased + follower-first testing | Blockers: NEED_ACCOUNT:tiktok
+- **P0** | TikTok Creator Rewards 10x payout + sponsorships > AdSense | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | how to get millions of tiktok views in one week using openclaw(the exact playboo | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | First hour determines TikTok distribution + active creator signal | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | YouTube Shorts: search SEO now matters + 50-60 sec sweet spot | Blockers: NEED_ACCOUNT:youtube
+- **P1** | IG Originality Score penalty system + remove TikTok watermarks + 3-5/week | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | TikTok search: text overlays boost discoverability + tutorials winning | Blockers: NEED_ACCOUNT:tiktok
+
+
+## RBI Conditional Methods
+*Updated: 2026-03-25T00:57:27Z*
+
+- **P0** | TikTok algo shift: completion rate threshold increased + follower-first testing | Blockers: NEED_ACCOUNT:tiktok
+- **P0** | TikTok Creator Rewards 10x payout + sponsorships > AdSense | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | how to get millions of tiktok views in one week using openclaw(the exact playboo | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | First hour determines TikTok distribution + active creator signal | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | YouTube Shorts: search SEO now matters + 50-60 sec sweet spot | Blockers: NEED_ACCOUNT:youtube
+- **P1** | IG Originality Score penalty system + remove TikTok watermarks + 3-5/week | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | TikTok search: text overlays boost discoverability + tutorials winning | Blockers: NEED_ACCOUNT:tiktok

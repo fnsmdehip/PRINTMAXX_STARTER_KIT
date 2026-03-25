@@ -1,50 +1,50 @@
 {
-  "built_at": "2026-03-18T20:55:09.007527",
-  "prompt_count": 2013,
-  "chain_count": 204,
-  "task_count": 186,
+  "built_at": "2026-03-24T19:54:47.203270",
+  "prompt_count": 5840,
+  "chain_count": 504,
+  "task_count": 249,
   "rule_count": 6,
   "rules": [
     {
       "id": "ANTI-LAZY",
-      "count": 29,
+      "count": 51,
       "rule": "Default output depth is consistently below user expectations. System must default to the ESCALATED depth, not the initial polite response depth.",
-      "evidence": "User triggered anti-lazy corrections 29 times across sessions.",
+      "evidence": "User triggered anti-lazy corrections 51 times across sessions.",
       "action": "Before presenting any output, ask: 'Would the user call this lazy?' If yes, go deeper before presenting."
     },
     {
       "id": "DEPTH-FIRST",
-      "count": 101,
+      "count": 253,
       "rule": "User consistently asks for MORE after initial response. The initial response should already include what the user typically asks for in their follow-up.",
-      "evidence": "User demanded more depth 101 times. Pattern: initial ask \u2192 'also...' / 'what about...' / 'deeper'",
+      "evidence": "User demanded more depth 253 times. Pattern: initial ask \u2192 'also...' / 'what about...' / 'deeper'",
       "action": "After completing the literal ask, proactively address 2-3 adjacent areas the user would likely follow up on."
     },
     {
       "id": "WRONG-DIRECTION",
-      "count": 288,
+      "count": 468,
       "rule": "System frequently misinterprets user intent on first pass. Need better intent parsing before executing.",
-      "evidence": "User said 'no/wrong/not that' 288 times.",
+      "evidence": "User said 'no/wrong/not that' 468 times.",
       "action": "For ambiguous requests, internally generate 2-3 interpretations and select the one most consistent with user's established patterns before executing."
     },
     {
       "id": "HARD-TOPICS",
-      "count": 115,
-      "rule": "Topics that consistently need multiple corrections: agent, printmaxx, users, every, intelligence. These need extra care.",
-      "evidence": "115 tasks had 3+ corrections.",
+      "count": 154,
+      "rule": "Topics that consistently need multiple corrections: directory, every, each, autonomy, task. These need extra care.",
+      "evidence": "154 tasks had 3+ corrections.",
       "action": "When a task matches these topics, use the correction chain from history to pre-emptively address the typical issues."
     },
     {
       "id": "SATISFACTION-PATTERN",
-      "count": 584,
+      "count": 3964,
       "rule": "User is most satisfied when: system executes autonomously without asking, output exceeds explicit ask, non-obvious angles are found, and work compounds into multiple outputs.",
-      "evidence": "584 satisfaction signals found.",
+      "evidence": "3964 satisfaction signals found.",
       "action": "Optimize for these satisfaction triggers in every output."
     },
     {
       "id": "CHAIN-LENGTH",
-      "count": 204,
-      "rule": "Average correction chain is 8.0 prompts long. This means the system typically needs 8 iterations to reach what the user wants. Target: get to the right output in 1 prompt.",
-      "evidence": "204 correction chains analyzed.",
+      "count": 504,
+      "rule": "Average correction chain is 6.1 prompts long. This means the system typically needs 6 iterations to reach what the user wants. Target: get to the right output in 1 prompt.",
+      "evidence": "504 correction chains analyzed.",
       "action": "Use the Competitive Cognition Protocol to anticipate corrections before presenting output."
     }
   ]

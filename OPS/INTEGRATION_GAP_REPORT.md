@@ -3662,3 +3662,2955 @@ Methods the pipeline should auto-catch in the future:
 **Venture:** OUTBOUND
 **Gap:** Pipeline should auto-catch any alpha mentioning timed outreach windows on public launch platforms: AppSumo launches, BetaList signups, Hacker News Show HN posts, Indie Hackers milestone posts ('just hit $X MRR'). All share the same pattern: founder is publicly visible + emotionally receptive + 24-72h window. Wire a generic launch_platform_outreach.py that accepts platform config files.
 
+# Integration Gap Report — 2026-03-24 22:01
+
+Methods the pipeline should auto-catch in the future:
+
+## Putin would halt intel to Iran if the US cuts off Ukraine - 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Oil Rises As Three More Warships, Thousands Of Marines Dispa
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## CHUCK NORRIS DIES AT 86, FAMILY STATEMENT ON INSTAGRAM SAYS
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Yesterday’s flush came with OI rising into the sell-off , 
+p
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## SPX Dealer Premiums - Volland
+Dealer Premium (SPX) is a snap
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Big Bank Stocks Set To Gain As Capital Relief Thins Buffers
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Traditional 'Safe-Havens' Are Failing: Goldman Hedge Fund Ho
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##            A dormant address containing 2,100 #BTC (147,695,
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Trump Admin announces partnership with Softbank and AEP Ohio
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## ECB said to ask banks how the Iran war impacts clients and o
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Fed's Waller: My brain understands the jobs math, but my gut
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Fed's Waller: I would advocate cuts again later in the year 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Canadian Retail Sales MoM Actual 1.1% (Forecast 1.5%, Previo
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Fed's Waller: I also now expect labor force growth to be clo
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Canadian Core Retail Sales MoM Actual 0.8% (Forecast 1.2%, P
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## US sending three warships to Middle East - WSJ
+WSJ cites unn
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Fed's Bowman: I expect strong economic growth this year
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Gooor $GOOGL CEO Sundar Pichai just posted this:
+“Google is 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Nvidia $NVDA recently posted this:
+“IBM and NVIDIA are reinv
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## If you found this useful, a like or RT goes a long way.
+Foll
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  
+@AnthropicAI
+ just made Claude Code remote-controlled.
+Mee
+**Venture:** LOCAL_BIZ
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Nvidia $NVDA to sell 1M AI chips, other products to Amazon W
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Residents exiting Massachusetts took a net of $4.2 Billion i
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Super Micro $SMCI stock is down by almost 30% so far today 
+
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## securing my Plan B before AI takes over 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 1,600 commits. 140,000 lines of code. Built in 10 days.
+Then
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Every's senior editor 
+@jackcheng
+ set up an 
+@OpenClaw
+ age
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## In 1893, a printer pinned a style guide to the wall so Oxfor
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## we just published the definitive guide to writing good prose
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I've been waxing rhapsodic about the value of an AI writing 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## At Every, 
+@kplikethebird
+ has been documenting OpenClaw wor
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Jack Cheng on what AI agents teach you about the systems you
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## GeoDuels - I built a 100% free GeoGuessr clone in my mom's b
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Wise closed my account and is holding $45,000
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P1
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Real examples of what sweaty startups have sold for (pulled 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## We're making money in the wedding industry and here's what n
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## My newsletter has made $1
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Literally building in public
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I just hit $3830 in total revenue with my app
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 40% recurring commission — AI Girlfriend SaaS affiliate prog
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I built 100% autonomous video tool from idea to publishing o
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## What makes customer engagement actually effective
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I spent 12 years building outbound sales teams
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 4M to $10M, stepped down, and started completely over
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## im done with ai slop passive income ideas
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Lovable Is Everything
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Built an exam platform universities actually use
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 4M to $10M, stepped down but kept my equity, and started com
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## What's the best way to turn 2-3 daily hours into steady side
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Spent some time looking at cold email agencies… something fe
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Hired my first full-time marketer after doing everything mys
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## What Works and What Doesn’t in Generative Engine Optimizatio
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I built webhook infrastructure for SaaS teams — looking for 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Launched an Ad Free YouTube Transcript Tool
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Made my first $50 guyssss
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Small success story with Amazon KDP book (Non-fiction)
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I screen deal flow for an early-stage syndicate
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Elevate Your SaaS with a Stunning Website 🚀
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## find one tonight
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I’ve been talking to SaaS founders for weeks
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Nobody told me that credibility in an early startup isn't ea
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Built something that turns websites, portfolio into macOS/Wi
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How can I increase traffic on my Gumroad digital product
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Looking for feedback - Tool to help manage pricing and featu
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How we run cold outreach at our B2B outbound agency and ever
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Is This A Good Idea For A Ugly Guy
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Getting hit by a return scammer and don’t know what to do
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Traffic jumped 38% in 3 weeks
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Anyone else write a business book to drive traffic to the Sa
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Literally building in Public - woke up to 37 new free trial 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## (i will not promote) PSA: Delve (YC W24 startup) caught runn
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## was spending $300/mo on ads with a 0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How Did You Get The First 100 Users For Your SaaS
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## What problem does your SaaS actually solve
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## any suggestion for saas demo video tool
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Rented out my dormant LinkedIn account for B2B outreach ($40
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Has anyone marketed their SaaS product on LinkedIn while wor
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Here's my honest story
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Asking for Advice - New to Affiliate Marketing
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Technical founder seeking growth partner for near complete t
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## At the Agents Anonymous SF meetup last night we did another 
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Bitcoin Price on Eid 
+2010: $0.06
+2011: $3
+2012: $5
+2013: $1
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Designers charge $5k+ for a mobile app UI.
+I built mine in 3
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## NYMEX Gasoline April futures settle at $3.0414 a gallon.
+NYM
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Backend developers charge $10k+ for this.
+I built it in 2 ho
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 2010: You needed $20,000 to build a small MVP.  
+2026: You j
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Whales are buying $ETH!
+Someone created a new wallet (0xfDe8
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 99% of mobile apps never hit $10k / month.
+My last app hit $
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## "you said you would start with $0"
+and i did
+- i sent 500+ d
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Two Prime appears to be selling large amounts of $BTC — 3,94
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i ran my bot's trade history against the actual outcomes of 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Oil bear 0x985f deposited another 4M $USDC into Hyperliquid 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Mar 11 Update:
+#Bitcoin ETFs:
+1D NetFlow: +3,392 $BTC(+$238.
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Today marks 16 years since the attempt to trademark 'SEO' wa
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## PLS HELP!
+Stripe asked one of my best friends (bootstrapped 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Whale 0x17c3 keeps adding to his short on #oil. 
+He now hold
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## have been stagnating like crazy since then 
+MRR is actually 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Everyone says AI is unbundling Google Search.
+ChatGPT proces
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## $SPSC is the true organic meme of USD1
+i know this as i made
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i've been telling people faceless content accounts are a rea
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Submit a memecoin idea. Get paid.
+Have a coin/narrative idea
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## OpenClaw + Arcads = 550 videos per day
+Fully-realistic UGC a
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## my bot scanned 400,000 wallets to find the best trader on po
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Mar 10 Update:
+#Bitcoin ETFs:
+1D NetFlow: +2,070 $BTC(+$146.
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Whale 0x15a4 opened 20x longs on 600 $BTC($42.5M) and 20,000
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Whale 0x985f deposited 9.5M $USDC into HyperLiquid in the pa
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Just one day later, things flipped.
+loracle.hl(
+@loraclexyz
+
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Trader 0x8A21, who sold 499 $ETH($2.21M) at a high price of 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Whale 24BLFj is selling $BTC to buy $PUMP. 
+In the past 3 da
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I made $2460 Today from a viral tiktok slideshow
+which liter
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  BREAKING: Anthropic quietly dropped a 32-page playbook on b
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## btw if you can build a category leader open source project i
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## NYMEX WTI Crude April futures settle at $94.77 a barrel, up 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Oil’s extreme intraday moves are challenging conventional bu
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## ai is going to massively increase the number of one person c
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Mar 9 Update:
+#Bitcoin ETFs:
+1D NetFlow: -5,409 $BTC(-$372.4
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Same
+Tech bros in :
+Entry Level: $400 – $700
+Mid Level: $1,0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## This trader is taking a huge risk on #oil!
+He just opened a 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  OIL ALERT: COULD BRENT CRUDE HIT $135?
+Rystad Energy warns 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Oil prices are going down, and Rune (
+@RuneKek
+)'s seven-fig
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## IRAN WAR LIFTS MARKET MELTDOWN RISK
+Ed Yardeni has raised th
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## HORMUZ CLOSURE COULD PUSH OIL TO $150
+Macquarie warns that i
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## #BTC Whale Order Analysis shows strong bid liquidity buildin
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Has #gold already topped? 
+We noticed two whales have taken 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Michael Saylor(
+@saylor
+)'s 
+@Strategy
+ bought another 17,99
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Whales are FOMO-ing long #oil!
+In the past 30 minutes:
+0xf4b
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## A whale(0xefe2) copied 
+@RuneKek
+'s trades and went long on 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Trader pension-usdt.eth opened another 3x long on 1,000 $BTC
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## CBB(
+@Cbb0fe
+), the whale who publicly formed a team to hunt
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Oil prices are surging.
+loracle.hl (
+@loraclexyz
+) is short 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## The chillest business you can run right now is building AI U
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## the FASTEST way to learn AI (save this):
+→ pareto principle:
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  BREAKING — one of the strongest OpenClaw setups on Polymark
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## BREAKING: Sweden's Central Bank is recommending that every a
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Four wallets (possibly owned by the same entity) sold 395 $W
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## A trader I know blew 5 accounts in 2 years.
+Not small accoun
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Go Claim $100 Claude API credits + $250 Stripe credits
+here 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Prediction markets are on fire 
+Polymarket just surpassed Ka
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## this is one of those stories that sounds fake but is inspira
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How to get to $1 million MRR in 90 days:
+- Raise $$$ from VC
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Here's how the largest S&P 500 stocks have performed so far 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I spent &gt; $60K/month on PR agencies at a startup that rai
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## $20k MRR to $191K MRR for supplement brand (I will not promo
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I built a tiny open-source “gym” that nudges you to move whi
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I built an open source portfolio builder for anyone who work
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Went from $0 to $1k MRR. If I started my SaaS over, here's e
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 2k users, $800 with a Habit Tracker - I can't explain how go
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I made a digital product in one day and listed it for $17. H
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Simplest Way I Turn My SaaS Demos Into Real Users (Small wor
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Built a self-healing error system that watches my prod logs,
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## The real AI gold rush isn’t in building. It’s in babysitting
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## CLI Progress Bar Most terminal progress bars look like this:
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Building SaaS in 2026? My best advice * Offer Google login. 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Sold my SaaS for $6M. After talking to 30 buyers, here's wha
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How we automated LinkedIn lead gen using keyword triggers (w
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I Analyses 200 posts and 17,946 comments from r/SaaS and r/E
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 1.3k users, but only $35 MRR. Is it time to kill my project?
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How I Added 16 New Customers in 30 Days (+31% MRR) Hey every
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I analyzed 963k iOS apps + 471k reviews I've built too many 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## email marketing tools really said “what if we just charged m
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## We said no to $2.5m vc money and I'm still kinda shocked we 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Day 200. Just hit $12k in revenue. It still feels unreal. Ab
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Making $250/month with game apps (what worked for me) Been u
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I made a website for organizing projects and tracking tasks 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I'm watching an AI agent try to build a real physical produc
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Taught how to fish and he stole my pond I honestly dont know
+**Venture:** LOCAL_BIZ
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How I got my first paying user. Here's the unfiltered truth.
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## My first app just got its first paying user 🥳 Hey everyone,
+
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## just got back from an industry conference and genuinely feel
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Stop building useless sh*t "Check out my SaaS directory list
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [RamadanTracker] Reddit opportunity: DN experience around wh
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## client paid me $1800 for a project. my tool cost was $0.53. 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## $350 in ads across X, TikTok and Instagram. Only one platfor
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [RamadanTracker] Reddit opportunity: Trapped in Egypt by my 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [RamadanTracker] Reddit opportunity: outjerked
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PrayerLock] Reddit opportunity: Where do you go to meet wom
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: Snouzy/workout-cool (7131 stars, TypeScript)
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: sorenlouv/fb-sleep-stats (1689 stars, JavaScript)
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: agencyenterprise/react-native-health (1132 stars, 
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: kingstinct/react-native-healthkit (636 stars, Type
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: brufdev/many-notes (928 stars, PHP)
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: matinzd/react-native-health-connect (385 stars, Ko
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporter (199 sta
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: Lissy93/dashy (24290 stars, Vue)
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: kriasoft/react-starter-kit (23544 stars, TypeScrip
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: ixartz/SaaS-Boilerplate (6929 stars, TypeScript)
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: dunky11/react-saas-template (1962 stars, JavaScrip
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] New court filing reveals Pentagon told Ant
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] How fusion power works and the startups pu
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MIT repo: nextify-limited/saasfly (2866 stars, TypeScript)
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] Microsoft rolls back some of its Copilot A
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] Elon Musk misled Twitter investors while t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] US accuses Iran&#8217;s government of oper
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] What happened at Nvidia GTC: NemoClaw, Rob
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] Trump&#8217;s AI framework targets state l
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] A French Navy officer accidentally leaked 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] WordPress.com now lets AI agents write and
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] The best AI investment might be in energy 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] AI startups are eating the venture industr
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] Amazon working on new smartphone with Alex
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] The gen AI Kool-Aid tastes like eugenics
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] Jeff Bezos reportedly wants $100 billion t
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] Amazon acquires Rivr, maker of a stair-cli
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] Oeuf is a punishing platformer in a cozy s
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Design Agent by Lokuma: The designer for your AI
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PLATFORM UPDATE] These AI notetaking devices can help you r
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] optimo: effortless media optimizer for the web
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] murmur: practice tough phone calls with AI befor
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Everest AI: Building the world’s fastest IPMI si
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Caplo: Real-time AI captions &amp; translation f
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Mindspend: Track how you feel about spending, no
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Novi Notes: Local-first AI note app for Mac zero
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Sanota: Stories, beautifully crafted
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Claude Cowork Projects: Tasks, context, and file
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Replit Agent 4: Build design, and ship anything 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Contral: The agentic IDE which teaches while you
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Fractal: The fastest way to ship exceptional Cha
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Cursor Glass: Unified agent workspace with seaml
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Educato App: Personalized exam prep, now in your
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Vite+: The Unified Toolchain for the Web
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] GitAgent by Lyzr: Your repository becomes your a
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Cacheless: AI-Powered Mac System Data Cleaner
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Gaze Guard: Instant Privacy &amp; Screen Blur
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] GentleLimit: Mindful screen time for macOS witho
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] AdsTurbo: Create ads with AI actors that look tr
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] ProductBridge: Agent that collects feedback acro
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Chat: turn your backend into a chat app instantl
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Google AI Studio 2.0: Full-stack vibe coding pow
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Room Service: The Mac cleaner built for develope
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Composer 2 by Cursor: Fast, token-efficient fron
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Assembly 2.0: Build modern client portals for se
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] AI Skills Manager: One place for all your AI ski
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Gately: Everything you need to build your own me
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Kickfolder: Turn your Mac's top edge into a hidd
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] MusicLib: The Ultimate Sheet Music Library Solut
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Telea: Speak like you always know what to say
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Joy for Gmail: A Gmail with clearer inbox, focus
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Looq: Preview Files: A better Quick Look: code, 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Fig Prompt: Build Figma plugins with just a prom
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Visdiff: Stop bridging the design-to-code gap, c
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Context Overflow: Knowledge Sharing for AI Agent
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Built for Devs: See how developers really experi
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] OctoClaw: Hire AI specialists for marketing, sal
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] Claude Code Channels: Push events and chat with 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [GOV CONTRACT] BJA PEER REVIEW SUPPORT SERVICES (deadline: 2
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH LAUNCH] InfrOS: Predict and validate cloud architectures
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [GOV CONTRACT] THIS TIME AND MATERIALS (T&M) TASK ORDER IS I
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [GOV CONTRACT] CONTACT CENTER TIER 1 (CCT1)- THE PURPOSE OF 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] I'm 17 and built a screenshot beautifier for W
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [GOV CONTRACT] ICAM TO FROM 09/08/2022 - 09/07/2023 (deadlin
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [GOV CONTRACT] VA GENERAL MENTAL HEALTH AND SUICIDE PREVENTI
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [GOV CONTRACT] DEFENSE ENTERPRISE OFFICE SOLUTIONS (DEOS) (d
+**Venture:** EAS
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [GOV CONTRACT] THE CONTRACTOR SHALL PROVIDE ON-SITE AND OFF-
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Marketing CRO App - Seeking Honest Feedback
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] I built a group trip planner with a Game Boy a
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] I built a forced break tool for my own Tech Ne
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] NEW PARTY GAME MOBILE APP : WHO PICKED WHO
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Unacknowledged young founder
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Let GPT-5.4 summarize the world for you every 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] I analyzed 600+ verified SaaS revenue reports.
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] why 90% of indie clothing startups fail (and a
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Working on an AI tool for Make.com automation.
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] I analyzed 600+ verified SaaS revenue reports.
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Launched my first SaaS at 15, now stuck on Goo
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Data for go-to-market is shocking. We built ou
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] You think creating fullstack project is diffic
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] MicroSaaS idea: email deliverability checker. 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] [iOS][$59.99 → $4.99 ] Ban It - Quit Bad Habit
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Honestly, tell me how a non-coder actually bui
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] 18, no funding, we shipped. Contral is live.
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Dealing with users who creates a new account e
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] solo founders are winning faster than ever rig
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Launch HN: Sitefire (YC W26) – Automating acti
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] I screen deal flow for an early-stage syndicat
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Show HN: I built a super simple email reminder
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Show HN: Context Overflow – a Stack Overflow f
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Show HN: Added API key support to my AI writin
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Ask HN: Is anyone else experiencing AI fatigue
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Launch HN: Voltair (YC W26) – Drone and chargi
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] I built a mobile IV therapy company from $0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] my saas just crossed 680 paying customers. if i had
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [ACQUISITION] Show HN: Three new Kitten TTS models – smalles
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] Customer data for tailored notifications
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] I wasted $3,400 and 9 weeks building my B2B SaaS wi
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] What did you completely misjudge when you first sta
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] Cold email agencies all claim personalizati
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] I’ve been talking to SaaS founders for weeks. Every
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/indiehackers] Looking for builders who prefer "critique" 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] What problem does your SaaS actually solve? I’ll tr
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] How do you get paying users to your saas ?
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] I built 4 products in 18 months. Zero paying custom
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] Is This A Good Idea For A Ugly Guy?
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] How much time do you all actually devote to
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Design Agent by Lokuma
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] murmur
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Contral
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Everest AI
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Caplo
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Sanota
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Educato App
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Vite+
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] GentleLimit
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Cacheless
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Chat
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Gately
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] AI Skills Manager
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] MusicLib
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Fig Prompt
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] Joy for Gmail
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [PH Launch] OctoClaw
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] Anyone put a number to how much they've tur
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] What makes customer engagement actually eff
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/SaaS] If you're trying to market your project on Reddit, 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Mayor of Paris removed parking spaces, "drastically" reduced
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/indiehackers] Build TrunkTransfer, an alternative to WeTr
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## [r/entrepreneur] I think some business decisions get worse r
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Meta's Omnilingual MT for 1,600 Languages
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: I fixed FFmpeg's subtitle conversion (the bug from 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Liberated Systemd
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Clearview Cam Lite: Real-time Cam Engine to see thr
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Deterministic security solution for AI agents – Ope
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## P0
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## At the Agents Anonymous SF meetup last night we did another 
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Bitcoin Price on Eid 
+2010: $0.06
+2011: $3
+2012: $5
+2013: $1
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Bitcoin Price on Eid 
+
+2010: $0.06
+2011: $3
+2012: $5
+2013: $
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## At the Agents Anonymous SF meetup last night we did another 
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## OpenAI set to discontinue Sora video platform
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## ARM to make processors for first time in their history
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## MSA: Memory Sparse Attention
+**Venture:** SCRAPING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Issue Tracking Is Dead
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Young Graduates Face the Grimmest Job Market in Years
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Atomic Display Switching: Solving
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## US SEC's ex-enforcement chief clashed with bosses over cases
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Updated GiantJSON Viewer – Opening 100GB JSONs on A
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: I built a party game that makes fun of corporate cu
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Skub – a sliding puzzle browser game. Hi HN, I&#x27
+**Venture:** SCRAPING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Wordif.sh – word-by-word text comparison in color, 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Apfel - Apple Intelligence from the Command Line
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: TopMail – LaunchFest Winner, $20/Mo Unlimited Email
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Country that put backdoors in Cisco routers to spy on world 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: AI Roundtable – Let 200 models debate your question
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Visualizing Apple Health workout data (stats, trend
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Jelly – SSH Social Hangout. built a social network 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Think Fast. Type Faster
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: MangoWave – Open-source browser audio visualizer
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Mapping the most convenient ways to meet someone wi
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Off By – a daily game about how wrong we are about 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: a Rust Redis GUI that doesn't freeze on 100k keys
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: The King Wen Permutation: [52, 10, 2]. I analyzed t
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: AI agent got 237 rules from another agent, still ma
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: zbot – an AI agent for MCU with Telegram chat (runs
+**Venture:** SCRAPING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Littlebird – Screenreading is the missing link in A
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Danube – AI Tools Marketplace. Hey HN, I built Danu
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Offline-first UK train planner. Hey HN! I&#x27;d li
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: AgentDrive – Persistent file storage for AI agents
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Kern – One agent. One folder. One mind. Every chann
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: WhyThere.life – Compare cities side-by-side to deci
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## SEC 8-K: Blaize Holdings, Inc.  (BZAI, BZAIW)  (CIK 00018716
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Show HN: Aerko_ – An offline-first, Vanilla JavaScript fitne
+**Venture:** LOCAL_BIZ
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## SEC S-1: Research Alliance Corp III  (CIK 0002118032) — 
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## SEC S-1: Apogee Acquisition Corp  (AACP)  (CIK 0002102123) —
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Databricks bought two (news) — With an overflowing war chest
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## SEC 8-K: Cabaletta Bio, Inc.  (CABA)  (CIK 0001759138) — 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Funding: Kleiner Perkins (growth) — Kleiner Perkins' fundrai
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Funding: Doss (series b) — Doss's AI-powered inventory manag
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Bengaluru food delivery startup Swish (news) — Swish has mor
+**Venture:** LOCAL_BIZ
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Funding: Startup Gimlet Labs (series a) — Gimlet Labs just r
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## BKR Capital (news) — BKR Capital announced Monday that its F
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Despite bitter rivalry, (news) — As prediction markets explo
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Funding: Insight Partners scrubs (series a) — After a whistl
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Littlebird (news) — Littlebird is building an AI that reads 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## The Tax Credit (news) — Startups often miss out on valuable 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Vibe-coding startup Lovable (news) — Lovable's founder said 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## US Startup (news) — The slowdown is almost entirely due to f
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Ultrahuman ramps up (news) — Ultrahuman pushes back into the
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## {   "name": "pocket-alexandria",   "version": "1.0.0",   "lo
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Flighty’s new update (news) — Flighty's new feature will giv
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## {   "name": "nutri-ai",   "version": "1.0.0",   "lockfileVer
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## {   "name": "autoreplyai-frontend",   "version": "0.1.0",   
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## {   "name": "scripture-streak",   "version": "1.0.0",   "loc
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## {   "name": "cnsnt",   "version": "1.0.0",   "lockfileVersio
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## microsoft hires the (news) — ai collaboration startup cove i
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  asked a guy at a hotel bar what he does"i sell the same pdf
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  70% of ecom subs will churn within 90 days and it has nothi
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  met a girl in a discord server who said she makes "digital 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  dude in a telegram group said he makes money "rating produc
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  two girls dmed me january 3rd asking how to start selling d
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  sold my first faceless account last month for $47,000i buil
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i've launched 11 digital products in the last 9 months8 wer
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you want to make $5k/month selling digital productslet me b
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  dm'd a girl on x last week who had 340 followers and a bio 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you can build an extremely profitable affiliate business wi
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  most digital product sellers are posting 6 times a day and 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  your first digital product should take 4 hours to make and 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  guides for organic affiliate in my tele :) https://t.me/+la
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you don’t realise how early you are so many people are miss
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  organic affiliates are still so behind on this ai video stu
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this is a genius format to use to push traffic for whop aff
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the days of the broke college student are going to be gone 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you saved that tweet about digital products 47 days ago
+you
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  heres an actual way to make $10k a month from tiktok + orga
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the real cost of moving to san francisco to grow my saas 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  everyone is overcomplicating finding a profitable digital p
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this behind-the-scenes problem slowed my affiliate growth 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the real cost of moving to san francisco to grow my saas 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i've sold digital products every single day for 14 months a
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  spent 2 weeks analyzing every digital product account i cou
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  day 14 of growing rankinpublic to $10k a month. 
+we just st
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  two girls found the same tweet about selling digital produc
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i pointed the genspark chrome extension at a website and as
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  20hrs+ of ugc research into 4 messages.
+immense productivit
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this should probably be a paid course.
+it’s basically my fu
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i built a digital product last saturday morning and it made
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  nvidia $nvda to sell 1m ai chips, other products to amazon 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  want to build your first saas?
+i dropped a 10-video course 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## literally building in public literally building in public. j
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  residents exiting massachusetts took a net of $4.2 billion 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i genuinely don't understand why more people don't get into
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i just hit $3830 in total revenue with my app i just hit $38
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## real examples of what sweaty startups have sold for (pulled 
+**Venture:** BROKERING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## my newsletter has made $1 my newsletter has made $1.2k so fa
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## we're making money in the wedding industry and here's what n
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## im done with ai slop passive income ideas im done with ai sl
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 40% recurring commission — ai girlfriend saas affiliate prog
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i built webhook infrastructure for saas teams — looking for 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## lovable is everything lovable is everything. openclaw too
+i'
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i screen deal flow for an early-stage syndicate i screen dea
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## small success story with amazon kdp book (non-fiction) small
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## how can i increase traffic on my gumroad digital product how
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## elevate your saas with a stunning website 🚀 elevate your saa
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i’ve been talking to saas founders for weeks i’ve been talki
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## how we run cold outreach at our b2b outbound agency and ever
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## looking for feedback - tool to help manage pricing and featu
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## traffic jumped 38% in 3 weeks framer seo was quietly killing
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## what problem does your saas actually solve what problem does
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## anyone else write a business book to drive traffic to the sa
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## any suggestion for saas demo video tool any suggestion for s
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## asking for advice - new to affiliate marketing asking for ad
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## how did you get the first 100 users for your saas how did yo
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## sec s-1: west enclave merger corp.  (wenc)  (cik 0002104260)
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## sec 8-k: super league enterprise, inc.  (sle)  (cik 00016216
+**Venture:** EAS
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## has anyone marketed their saas product on linkedin while wor
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## here's my honest story i launched my saas 15 days ago 3 user
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: pwc’s us ipo (ipo) — to understand what’s holding t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: the most active (seed) — to get a sense who’s buyin
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: pwc’s us ipo (ipo) — to understand what’s holding t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## serval (news) — serval is using agentic ai models to automat
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  show hn: red grid link – peer-to-peer team tracking over bl
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## the crunchbase tech (news) — over 127,000 workers at u.s.-ba
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## affiliate i genuinely don't understand why more people don't
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  delve – fake compliance as a service 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  everyone is overcomplicating finding a profitable digital p
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  show hn: vibefolio – a place to showcase your vibecoded pro
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i built a digital product last saturday morning and it made
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  - the structure behind videos that get millions of views
+- 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  we've built our paid newsletter write with ai to $400k in a
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this app is making $2m/month and 90k dowloads/month
+science
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  my fiction paid newsletter on substack, commercial fiction 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i built my entire mobile app in under a day.
+ui in 45 mins.
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  blackhats adapt to everything.
+credit line bms already goin
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the biggest ai opportunity right now is mid-market companie
+**Venture:** EAS
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  my monthly cost of living in miami 
+ $2,000 rent
+ $125 elec
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  “no way it cost $0.50, you mean $0.50/s”
+yeah sorry i was w
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  how to find goldmine digital products using free research t
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  want the exact prompt i used to create all 15 of these in g
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i spent 6 months figuring out ai ugc so you don't have to.
+
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  only a few more hours to join our 2-week substack starter s
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  how to make $1 million on x
+1) visit every large creator (>
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  50k monthly downloads.
+$2m mrr.
+6.546 keywords in the us al
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  2019: "dropshipping is dead."
+2020: "dropshipping is dead.
+
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i'm building a saas in public and documenting everything.
+b
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the headlines on monetization in 2026:
+ai sells, but it doe
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this app is making 40k installs monthly and an mrr of $200k
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this app is making 30k installs monthly and an mrr of $300k
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  today marks 16 years since the attempt to trademark 'seo' w
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  oplyscan launches telegram alerts bot for real-time arbitra
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the ai ugc agency model has about 12 months before it colla
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  here’s the full breakdown of how my agency added $45k gmv i
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  have been stagnating like crazy since then 
+mrr is actually
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Ok had to Google this what a story:
+
+Le Mayeur came to Bali 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  boost your conversions with 
+http://
+varify.io
+/?twclid=2-6
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  just one day later, things flipped.
+loracle.hl(
+@loraclexyz
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## The future where I never have to open up my laptop to get wo
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Highly recommend reading this guest post by theoretical phys
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Here is how you can deploy a claw agent without spending 10 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Here is the link to the platform:
+
+
+https://
+blink.new/claw
+
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Yes, these agents are absolutely horrible at writing decent-
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Every large company will eventually ban vibe-coding.
+
+Vibe-c
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## This Uni-1 model looks seriously good.
+
+Look at the results 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## This is probably the best keyboard I've used in a while.
+
+Th
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## The people I know who love their lives all figured out the s
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## We've 10x'd the speed of writing code, but we are still in t
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Every Saturday, I send one email that makes 180,000+ people 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## We’re saying goodbye to Sora. To everyone who created with S
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## first casualty of OpenAI’s crackdown on Side Quests:
+
+Sora i
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I haven't typed `npm run dev` on my local machine for three 
+**Venture:** LOCAL_BIZ
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Software horror: litellm PyPI supply chain attack. 
+
+Simple 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Action Text now officially supports different editors. The a
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Fizzy is now fully free! Just another gift from us to you. T
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I've been happily using 
+@Ubiquiti
+ since forever, but it's 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Fuck it, we just made Fizzy completely free.
+
+The open sourc
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Tomorrow needs to be tended to by planting new seeds. New co
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Panther Lake is a real turning point for Intel. I've been on
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## This isn't just a win for Intel, but for America too. Having
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## You don't get Silicon Valley without the wealth accumulation
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Product needs minor tweaks but has been deployed for real us
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## AI coding agents can now deliver one-shot custom apps straig
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## A lot of software is about to get a lot better, right before
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## minute
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Accidentally built a business
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I built a desktop accounting software — partner program pays
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## From nearly broke to getting booked to train 200+ people for
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Day 87 solo: $2,847 collected, one client ghosted, and I alm
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I scraped 200+ Reddit threads to build a $12k launch list
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i don’t understand why people aren’t building outbound like 
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## posted the same content on YouTube and TikTok for 60 days, t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 12 lessons after scaling my saas to 700 paid users and $9k/m
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## grow x account from zero followers in 2026
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## The complete no-code stack for solo founders 15 tools, most 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I cold called 340 local businesses with no website in 90 day
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Scaling a rental fleet to 100 units w/ custom IoT "kill swit
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Be brutally honest: Thinking of starting a free community fo
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 🚀 I built a Visual Studio extension where AI programs using 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How we grew to 500+ users in 90 days: Every growth channel b
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Multiple income streams going - happy to answer questions
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Any AI marketing tool recommendations for solo business
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I Turned a Common Client Problem Into a Profitable SEO Produ
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How did you validate demand and opinions on this idea
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## went from 6 years of wholesaling houses to running an AI aut
+**Venture:** SCRAPING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I am about to start as a social media in a burger corner
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## What If You Could Run a Full Compliance Audit (Accessibility
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Built a simple idea using psychology… someone actually paid-
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## My first sass got 31 users in just 16 days
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## TikTok organic traffic is driving me insane
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## my saas has 2,500 users in latin america
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I am about to turn down a job offer and go all in on don't k
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I flipped this $50 pair of sneakers for $110
+**Venture:** BROKERING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 7,100 views on my first Reddit post — 7 store visits, 0 sale
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Has anyone built a complete SaaS product using Vibe Coding
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Why is your cold email reply rate stuck under 2%
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Got Indexed and Ranked Anyway
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Google Analytics alternative for indie hackers: free tier, S
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Have you ever switched affiliate tracking software
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## failed hard and then succeeded
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## stop validating ideas by asking people
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I spent all week putting this together, analyzed every onboa
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## This Is My Side Income
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Your product doesn’t matter
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How to Bounce Back After Failing as Both an Entrepreneur and
+**Venture:** SCRAPING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Managing Upwork proposals as a small remote team  tips
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## AI presentation tools that replaced PowerPoint for me (free 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## No idea where to start looking
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## How I got 14,000 newsletter subscribers with exactly 1 post 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## ISO Side hustles that can be done from smartphone/computer
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## has anyone had success selling breast milk online
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Best Shopify subscription app for US merchants
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I don't know if this is worth it
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Developer who built a SaaS but can't figure out marketing
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Is it worth it for me to start a side hustle like this or no
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Every AI content tool is built for English markets first
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Does anyone actually run a proper referral program for their
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Been running a small Amazon FBA operation alongside my day j
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Side hustle Newsletters
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Got completely burned trying to build side income streams
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Does anyone else get a HUGE adrenaline rush/thrill out of co
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Is there a tool to analyze product winner status by photo/li
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I went from being a stay-at-home mom to running a small onli
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Fulfillment times just killed my best product and I need to 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Your idea is worthless (I will not promote)
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I get signups from creator promos… but no retention
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Accel, Prosus pick (news) — The six startups were selected f
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## microsoft hires the (news) — ai collaboration startup cove i
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## We built a 3000-person SaaS community starting from a 16-per
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## What does it mean to be a professional flipper
+**Venture:** BROKERING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  70% of ecom subs will churn within 90 days and it has nothi
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  asked a guy at a hotel bar what he does"i sell the same pdf
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  sold my first faceless account last month for $47,000i buil
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i've launched 11 digital products in the last 9 months8 wer
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  dude in a telegram group said he makes money "rating produc
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  two girls dmed me january 3rd asking how to start selling d
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  met a girl in a discord server who said she makes "digital 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you want to make $5k/month selling digital productslet me b
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  your first digital product should take 4 hours to make and 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  most digital product sellers are posting 6 times a day and 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this is a genius format to use to push traffic for whop aff
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  guides for organic affiliate in my tele :) https://t.me/+la
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you don’t realise how early you are so many people are miss
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  dm'd a girl on x last week who had 340 followers and a bio 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the days of the broke college student are going to be gone 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  organic affiliates are still so behind on this ai video stu
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you can build an extremely profitable affiliate business wi
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  heres an actual way to make $10k a month from tiktok + orga
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this behind-the-scenes problem slowed my affiliate growth  
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  you saved that tweet about digital products 47 days ago
+you
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the real cost of moving to san francisco to grow my saas  b
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the real cost of moving to san francisco to grow my saas  b
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  everyone is overcomplicating finding a profitable digital p
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  spent 2 weeks analyzing every digital product account i cou
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i've sold digital products every single day for 14 months a
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  two girls found the same tweet about selling digital produc
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i pointed the genspark chrome extension at a website and as
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  20hrs+ of ugc research into 4 messages.
+immense productivit
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this should probably be a paid course.
+it’s basically my fu
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  day 14 of growing rankinpublic to $10k a month. 
+we just st
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  want to build your first saas?
+i dropped a 10-video course 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i built a digital product last saturday morning and it made
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  residents exiting massachusetts took a net of $4.2 billion 
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  nvidia $nvda to sell 1m ai chips, other products to amazon 
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i genuinely don't understand why more people don't get into
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## my newsletter has made $1 my newsletter has made $1.2k so fa
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## real examples of what sweaty startups have sold for (pulled 
+**Venture:** BROKERING
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## literally building in public literally building in public. j
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 40% recurring commission — ai girlfriend saas affiliate prog
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i just hit $3830 in total revenue with my app i just hit $38
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## lovable is everything lovable is everything. openclaw too
+i'
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## im done with ai slop passive income ideas im done with ai sl
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## small success story with amazon kdp book (non-fiction) small
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i built webhook infrastructure for saas teams — looking for 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i’ve been talking to saas founders for weeks i’ve been talki
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## how can i increase traffic on my gumroad digital product how
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## traffic jumped 38% in 3 weeks framer seo was quietly killing
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## elevate your saas with a stunning website 🚀 elevate your saa
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## how we run cold outreach at our b2b outbound agency and ever
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## what problem does your saas actually solve what problem does
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## anyone else write a business book to drive traffic to the sa
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## any suggestion for saas demo video tool any suggestion for s
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## has anyone marketed their saas product on linkedin while wor
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## asking for advice - new to affiliate marketing asking for ad
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## how did you get the first 100 users for your saas how did yo
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## sec 8-k: super league enterprise, inc.  (sle)  (cik 00016216
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## here's my honest story i launched my saas 15 days ago 3 user
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: pwc’s us ipo (ipo) — to understand what’s holding t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: pwc’s us ipo (ipo) — to understand what’s holding t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## sec s-1: west enclave merger corp.  (wenc)  (cik 0002104260)
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: pwc’s us ipo (ipo) — to understand what’s holding t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: pwc’s us ipo (ipo) — to understand what’s holding t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## serval (news) — serval is using agentic ai models to automat
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## affiliate i genuinely don't understand why more people don't
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## funding: the most active (seed) — to get a sense who’s buyin
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  delve – fake compliance as a service  backlog find: revenue
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## the crunchbase tech (news) — over 127,000 workers at u.s.-ba
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  show hn: red grid link – peer-to-peer team tracking over bl
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  show hn: vibefolio – a place to showcase your vibecoded pro
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  my fiction paid newsletter on substack, commercial fiction 
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i built a digital product last saturday morning and it made
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  - the structure behind videos that get millions of views
+- 
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  we've built our paid newsletter write with ai to $400k in a
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i built my entire mobile app in under a day.
+ui in 45 mins.
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this app is making $2m/month and 90k dowloads/month
+science
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  everyone is overcomplicating finding a profitable digital p
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the biggest ai opportunity right now is mid-market companie
+**Venture:** EAS
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  my monthly cost of living in miami 
+ $2,000 rent
+ $125 elec
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  blackhats adapt to everything.
+credit line bms already goin
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  2019: "dropshipping is dead."
+2020: "dropshipping is dead.
+
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  “no way it cost $0.50, you mean $0.50/s”
+yeah sorry i was w
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  only a few more hours to join our 2-week substack starter s
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i spent 6 months figuring out ai ugc so you don't have to.
+
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  how to make $1 million on x
+1) visit every large creator (>
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  want the exact prompt i used to create all 15 of these in g
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  50k monthly downloads.
+$2m mrr.
+6.546 keywords in the us al
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  how to find goldmine digital products using free research t
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this app is making 40k installs monthly and an mrr of $200k
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  oplyscan launches telegram alerts bot for real-time arbitra
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the headlines on monetization in 2026:
+ai sells, but it doe
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  today marks 16 years since the attempt to trademark 'seo' w
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  have been stagnating like crazy since then 
+mrr is actually
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  this app is making 30k installs monthly and an mrr of $300k
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  i'm building a saas in public and documenting everything.
+b
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  the ai ugc agency model has about 12 months before it colla
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  just one day later, things flipped.
+loracle.hl(
+@loraclexyz
+**Venture:** MONETIZE
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  here’s the full breakdown of how my agency added $45k gmv i
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Best calenders for sales teams
+**Venture:** OUTBOUND
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## i built a desktop accounting software — partner program pays
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## The Acquisition Path
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+##  boost your conversions with 
+http://
+varify.io
+/?twclid=2-6
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I built a micro SaaS that does almost nothing, and that’s wh
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Has anyone tried low cost digital products for online income
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Technical Challenge: Managing 90,000 dynamic routes in Next
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I built a gamified productivity dashboard for people studyin
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Selling Online Liquor Store Business With 30,000 Contacts
+**Venture:** PRODUCT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Anyone else think boring cashflow assets (laundromats, vendi
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## I analyzed why 90% of SaaS products fail before launch
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## 34 into ~$7 from 1 share using a repeatable setup — trying t
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## What actually happens when a customer cancels your Stripe su
+**Venture:** APP
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+

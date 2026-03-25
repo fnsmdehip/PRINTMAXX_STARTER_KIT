@@ -651,3 +651,4 @@
 
 ---
 
+| Cal AI Playbook | `LEDGER/ALPHA_INTEL/Cal_AI_Founder_Insights.md` | App factory alpha — onboarding, paywall, growth |

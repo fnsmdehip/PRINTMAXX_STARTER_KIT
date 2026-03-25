@@ -243,3 +243,19 @@
 3. **CAPITAL GENESIS INTEGRATION** — Every resource with a playbook should have its method scored in Capital Genesis. If a playbook exists but the method isn't scored, add it.
 4. **CONTENT MINING** — Every resource here is content source material. The Content Factory should systematically convert these into posts, threads, and articles.
 5. **PRODUCT PIPELINE** — Every guide/playbook is a potential Gumroad/Whop product. If it's not in GUMROAD_INSTANT_UPLOAD yet, it should be evaluated for productization.
+
+### Cal AI Founder Insights (App Factory Intelligence)
+- **Path:** `LEDGER/ALPHA_INTEL/Cal_AI_Founder_Insights.md`
+- **Type:** RESEARCH / APP_FACTORY_ALPHA
+- **Content:** 10-section playbook compiled from Cal AI founders (Zach Yadegari, Blake Anderson). Covers: 21-step onboarding philosophy, hard paywall strategy, 3-engine growth model (influencer → paid ads → affiliate), ASO, retention, UI/UX, tools (Superwall, RevenueCat, Amplitude). Cal AI: $0 → $50M ARR in 18 months, bootstrapped, acquired by MyFitnessPal.
+- **Consumers:** App Factory Command Center, Onboarding Playbook, iOS Submission Process, any mobile app build
+- **Status:** ACTIVE
+
+### Production-Ready Apps (5 apps, iOS compiled + App Store audited)
+- **NutriAI:** `MONEY_METHODS/APP_FACTORY/builds/nutriai/` — AI nutrition tracker, camera food recognition, RevenueCat + AdMob, 202 files
+- **Scripture Streak:** `MONEY_METHODS/APP_FACTORY/builds/scripture-streak/` — Bible reading habit tracker, 6 reading plans, gold streak display, 44 files
+- **Pocket Alexandria:** `MONEY_METHODS/APP_FACTORY/builds/pocket-alexandria/` — 156 public domain books, tap-to-navigate reader, category browsing, 40 files
+- **cnsnt:** `MONEY_METHODS/APP_FACTORY/builds/cnsnt/` — Consent record manager, SHA-256 verification, biometric lock, 20 custom Ghibli-style visual assets, 91 files
+- **AutoReplyAI:** `MONEY_METHODS/APP_FACTORY/builds/autoreplyai/` — AI customer support SaaS, embeddable widget, Stripe billing, Next.js + Express, 230 files
+- **Status:** ALL compile clean. ALL have proper bundle IDs, privacy strings, encryption declarations. Ready for App Store submission pending developer account + RevenueCat product setup.
+- **Consumers:** App Factory Command Center, iOS Submission Process, batch_surge_deployer
