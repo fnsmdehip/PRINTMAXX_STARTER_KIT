@@ -1,0 +1,24 @@
+{
+  "name": "chain_13k_users_but_only_35_mrr_is_it_time",
+  "created": "2026-03-24T18:50:40.159239",
+  "method": "1.3k users, but only $35 MRR. Is it time to kill my project? I've been running **RankMyCV** for a few months now. The growth actually surprised me\u2014I just hit **1,356 total users** and I'm getting arou",
+  "venture": "MONETIZE",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Search Reddit r/AppBusiness r/SaaS r/indiehackers for posts with pattern: (users > 500 AND MRR < $200) OR ('free users' AND 'won't pay') OR ('1k users' AND '$0'). Extract author handle + post URL.",
+      "output": "freemium_failure_leads.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each lead: has email/Twitter linked? Product URL findable? Tech-founder vs pure marketer? Filter to top 20/week.",
+      "output": "qualified_freemium_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate personalized cold DM per lead: reference their EXACT numbers, diagnose their specific problem (wrong features paywalled vs no urgency vs wrong price point), offer free 15-min audit call to upsell $299 Freemium Fix guide or $499 full audit.",
+      "output": "freemium_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

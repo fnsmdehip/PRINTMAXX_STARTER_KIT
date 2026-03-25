@@ -1,0 +1,47 @@
+{
+  "name": "integration_mit_repo_nextifylimitedsaasfly_2866_",
+  "created": "2026-03-24T18:50:41.375507",
+  "method": "MIT repo: nextify-limited/saasfly (2866 stars, TypeScript)",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "fetch_and_audit",
+      "steps": [
+        "clone nextify-limited/saasfly to MONEY_METHODS/APP_FACTORY/templates/saasfly/",
+        "context7: pull saasfly README + package.json feature list",
+        "diff saasfly vs existing base-template/scripture-streak to identify additive features"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "extract_components",
+      "steps": [
+        "extract auth scaffold (NextAuth or Clerk config)",
+        "extract billing scaffold (Stripe Checkout wiring)",
+        "extract dashboard shell (sidebar, nav, settings page)"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "merge_into_factory",
+      "steps": [
+        "merge extracted components into app factory base-template",
+        "update APP_FACTORY_CENTRAL_INDEX.md with new template capabilities",
+        "update ONBOARDING_PLAYBOOK.md with saasfly scaffolding steps"
+      ],
+      "parallel": false,
+      "depends_on": "extract_components"
+    },
+    {
+      "name": "generate_first_app",
+      "steps": [
+        "scaffold one new niche SaaS app using updated template",
+        "wire Stripe payment link via payment_integrator.py --wire-app",
+        "deploy to Vercel, add URL to OPS/DEPLOYMENT_URLS.md"
+      ],
+      "parallel": false,
+      "depends_on": "merge_into_factory"
+    }
+  ],
+  "status": "READY"
+}

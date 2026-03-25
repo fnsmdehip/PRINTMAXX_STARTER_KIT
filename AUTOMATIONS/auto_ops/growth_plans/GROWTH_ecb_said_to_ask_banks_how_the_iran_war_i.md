@@ -1,33 +1,30 @@
 # Growth Plan: ECB said to ask banks how the Iran war impacts clients and o
 
-**Created:** 2026-03-21 12:40
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo direct. Indirect: audience building in finance/fintech niche if content hits.
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Post ECB/banking stress-test content angle on X targeting fintech/banking audience
-2. Frame as 'what this means for founders with EU banking exposure' — relatable hook
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-One engagement-bait post: 'ECB just told banks to map Iran war exposure. Here is what that means for your SaaS payments.' Route through content_repurposer.py for X + LinkedIn.
+Organic content tactics
 
 ### LOW
-N/A — not worth paid spend at this ROI tier
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --input 'ECB told banks to assess Iran war impact on clients and operations' --tone contrarian --platform twitter
-- [ ] Review output, approve best hook, add to CONTENT/social/posting_queue/
-- [ ] Do NOT create DAG, handoff chain, or growth plan — this is a news item, not a method
+- [ ] Research and validate: ECB said to ask banks how the Iran war impacts clients and operations
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -35,6 +32,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

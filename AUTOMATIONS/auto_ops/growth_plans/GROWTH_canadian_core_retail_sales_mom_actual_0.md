@@ -1,36 +1,30 @@
 # Growth Plan: Canadian Core Retail Sales MoM Actual 0.8% (Forecast 1.2%, P
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:00
+**Venture:** OUTBOUND
 **Budget Tier:** FREE
-**Revenue Est:** $0-50/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Add @financialjuice to twitter_alpha_scraper.py watch list if not already present
-2. Tag economic posts with #CAD #CanadianEconomy for organic reach
-3. Post within 15min of release for algorithmic freshness boost
-4. Cross-post: 'CAD weakens on retail miss → [what this means for X]' to Reddit r/investing r/canada
+1. Organic outbound growth
 
 ## Budget Tier Strategies
 
 ### FREE
-React to economic data misses with opinion content, engage financial Twitter accounts, post to r/PersonalFinanceCanada r/CanadaFinance
+Organic outbound tactics
 
 ### LOW
-$0-20/mo Beehiiv newsletter around Canadian economic data digests — weekly roundup monetized via affiliate links to CAD-denominated products
-
-### MID
-$50-100/mo Promote best-performing economic takes as Twitter ads targeting Canadian finance audience
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Check if @financialjuice already in twitter_alpha_scraper.py watch list — add if missing
-- [ ] Add economic data miss detection logic: if (actual < forecast - 0.2) trigger content generation
-- [ ] Pipe detected events to engagement_bait_converter.py with angle: 'CAD weakness = opportunity for X'
-- [ ] Add cron 8AM weekdays to check for overnight economic releases and queue content
+- [ ] Research and validate: Canadian Core Retail Sales MoM Actual 0.8% (Forecast 1.2%, Previous 0.1%)
+- [ ] Set up automation for outbound venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -38,6 +32,6 @@ $50-100/mo Promote best-performing economic takes as Twitter ads targeting Canad
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py + content_repurposer.py"
+  "content": "none"
 }
 ```

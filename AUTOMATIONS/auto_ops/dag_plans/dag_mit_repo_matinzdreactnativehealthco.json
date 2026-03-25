@@ -1,37 +1,46 @@
 {
   "name": "integration_mit_repo_matinzdreactnativehealthco",
-  "created": "2026-03-21T12:40:54.883020",
+  "created": "2026-03-24T18:50:41.056153",
   "method": "MIT repo: matinzd/react-native-health-connect (385 stars, Kotlin)",
   "venture": "APP",
   "phases": [
     {
-      "name": "scan",
+      "name": "scaffold",
       "steps": [
-        "enumerate_health_apps_in_app_factory",
-        "check_existing_rn_deps_in_each_app",
-        "fetch_library_docs_via_context7_mcp"
+        "clone base-template/scripture-streak as health base",
+        "install react-native-health-connect@latest",
+        "install @react-native-community/datetimepicker for logging"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "variant_gen",
+      "steps": [
+        "generate calorie-tracker variant (food log + HealthConnect calories)",
+        "generate sleep-tracker variant (sleep sessions + HealthConnect sleep)",
+        "generate fitness-streak variant (steps + HealthConnect activity)"
       ],
       "parallel": true
     },
     {
-      "name": "generate",
+      "name": "monetization",
       "steps": [
-        "generate_health_connect_base_module_ts",
-        "generate_per_app_integration_snippets",
-        "update_package_json_templates_with_dependency"
+        "wire RevenueCat IAP (premium unlock, $2.99-4.99)",
+        "wire AdMob banner on free tier",
+        "create Stripe payment link for web upsell"
       ],
       "parallel": true,
-      "depends_on": "scan"
+      "depends_on": "variant_gen"
     },
     {
-      "name": "wire",
+      "name": "deploy",
       "steps": [
-        "update_app_factory_base_template_with_health_connect_default",
-        "update_play_store_aso_copy_with_health_connect_keywords",
-        "write_integration_summary_to_ops_app_factory_alpha_command_center"
+        "EAS build for each variant",
+        "ASO keyword pack generation via Claude",
+        "Firebase Analytics wired for retention tracking"
       ],
       "parallel": false,
-      "depends_on": "generate"
+      "depends_on": "monetization"
     }
   ],
   "status": "READY"

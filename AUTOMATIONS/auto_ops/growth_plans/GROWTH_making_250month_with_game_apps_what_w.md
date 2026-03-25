@@ -1,34 +1,30 @@
 # Growth Plan: Making $250/month with game apps (what worked for me) Been u
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:00
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct (content engagement value only — method itself requires human time playing games, ceiling $250/mo is too low to build automation around)
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Post 'use AI to cut gig app task time' as engagement bait targeting r/passive_income, r/beermoney subreddits
-2. Frame as 'the 1 ChatGPT trick that 10x'd my Playful/HustleApp earnings' — high CTR hook structure
-3. Cross-post to Twitter as a thread: 'I asked AI to optimize every gig app task. Results:' — pattern fits our content lane
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Generate 3-5 posts via engagement_bait_converter.py using the AI-optimization angle. Push to posting_queue. No budget needed.
+Organic app tactics
 
 ### LOW
-N/A — this is content seed only, paid amplification not warranted at this revenue ceiling
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --method 'AI prompts cut gig app task time by 40%' --platforms twitter,reddit
-- [ ] Push output to CONTENT/social/posting_queue/
-- [ ] No venture, no cron, no new scripts needed — prior memory confirms this was already integrated at $20-80/mo and that estimate stands
+- [ ] Research and validate: Making $250/month with game apps (what worked for me) Been using [Playful](http:
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -36,6 +32,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

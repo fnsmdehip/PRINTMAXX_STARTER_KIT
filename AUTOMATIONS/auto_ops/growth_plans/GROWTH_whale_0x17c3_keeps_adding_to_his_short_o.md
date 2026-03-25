@@ -1,35 +1,32 @@
 # Growth Plan: Whale 0x17c3 keeps adding to his short on #oil. 
+He now hold
 
-He now hol
-
-**Created:** 2026-03-20 18:35
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-5/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Quote-tweet whale tracking accounts with contrarian take to farm engagement
-2. Thread format: whale position + liquidation math + what it means for retail
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Repost whale data as engagement-bait threads on printmaxxer Twitter; tag @lookonchain for algorithmic boost
+Organic content tactics
 
 ### LOW
-N/A at this revenue potential
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Add whale oil short data point to CONTENT/social/posting_queue/ as crypto intel thread seed
-- [ ] Route through engagement_bait_converter.py to generate 2-3 tweet variants
-- [ ] Queue for printmaxxer Twitter posting schedule
+- [ ] Research and validate: Whale 0x17c3 keeps adding to his short on #oil. 
+He now holds 292,980 xyz:CL($24
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -37,6 +34,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

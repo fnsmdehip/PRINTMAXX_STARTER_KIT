@@ -1,31 +1,30 @@
 # Growth Plan: [PH Launch] Cacheless
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT (enhancement of existing chain_14_ph_launches)
+**Created:** 2026-03-24 22:01
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $150-350/mo (discounted from LOW marker)
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. fresh_account_strategy
-2. cacheless_warmup_sequencing
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Launch from new/low-history account + stagger posts over 48h to avoid algorithm cache penalties
+Organic app tactics
 
 ### LOW
-$0-50/mo for account prep (Brave profiles, IP rotation via residential proxy)
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] 1. Extract 'Cacheless' as warmup tactic (fresh account, no history)
-- [ ] 2. Add PreToolUse hook to validate account age before PH launch routing
-- [ ] 3. Wire into CONTENT venture as timing variant (48h stagger + cache-bust sequencing)
-- [ ] 4. Do NOT create new venture/chain (functionally identical to existing PH launch)
+- [ ] Research and validate: [PH Launch] Cacheless
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -33,6 +32,6 @@ $0-50/mo for account prep (Brave profiles, IP rotation via residential proxy)
 {
   "browser": "none",
   "email": "none",
-  "content": "existing_content_factory"
+  "content": "none"
 }
 ```

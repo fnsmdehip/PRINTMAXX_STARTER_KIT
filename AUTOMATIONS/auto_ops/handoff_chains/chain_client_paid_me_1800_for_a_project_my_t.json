@@ -1,28 +1,28 @@
 {
   "name": "chain_client_paid_me_1800_for_a_project_my_t",
-  "created": "2026-03-20T18:35:54.002946",
+  "created": "2026-03-24T18:50:40.951595",
   "method": "client paid me $1800 for a project. my tool cost was $0.53. feeling like a goddamn genius rn ok so breakdown of my business economics:  \nclient project: landing page + contact form + chatbot client  \n",
   "venture": "EAS",
   "stages": [
     {
-      "agent": "lead_machine",
-      "task": "Scrape Upwork/Reddit/HN for clients needing landing pages, contact forms, chatbots. Filter: budget >$500, solo founder or small biz, no agency competition.",
-      "output": "webdev_leads_qualified.json"
+      "agent": "scraper",
+      "task": "Playwright scrape Google Maps + Yelp for local businesses (restaurants, contractors, salons, dentists) with no website or Wix/Squarespace sites last updated >2 years",
+      "output": "raw_leads.json"
     },
     {
-      "agent": "outbound_agent",
-      "task": "Generate personalized proposals using client brief. Highlight: 48hr turnaround, AI-powered quality, portfolio examples. Include fixed pricing ($800-2000 based on scope).",
-      "output": "proposals_sent.json"
+      "agent": "qualifier",
+      "task": "Score leads: has phone/email (2pts), reviews >50 (2pts), no chatbot (2pts), Wix/outdated site (3pts), category in high-LTV niches (1pt). Pass score >= 7",
+      "output": "qualified_leads.json"
     },
     {
-      "agent": "fulfillment_agent",
-      "task": "Use Claude Code to generate landing page + form + chatbot from client requirements. Deploy to Vercel/Surge. QA with Playwright.",
-      "output": "delivered_projects.json"
+      "agent": "proposal_generator",
+      "task": "Generate personalized cold email + DM: 'I built [BusinessName] a landing page + chatbot in 25 minutes, here is a live demo [surge_url]. $1800 flat, delivered in 48h.' \u2014 attach auto-generated demo page",
+      "output": "outreach_queue.json"
     },
     {
-      "agent": "growth_agent",
-      "task": "Convert delivered project into case study, tweet thread, portfolio entry. Ask for referral. Upsell maintenance retainer ($200/mo).",
-      "output": "compound_content.json"
+      "agent": "delivery_packager",
+      "task": "On client confirmation: Claude Code generates landing page + Tally contact form + Voiceflow chatbot embed, deploys to surge.sh subdomain, sends Stripe Payment Link for $1800",
+      "output": "delivery_log.json"
     }
   ],
   "status": "READY"

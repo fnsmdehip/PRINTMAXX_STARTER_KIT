@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_room_service_the_mac_cleane",
+  "created": "2026-03-24T18:50:42.488067",
+  "method": "[PH LAUNCH] Room Service: The Mac cleaner built for developers",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH /developer-tools daily, extract new Mac utility launches with upvote count, tagline, pricing",
+      "output": "ph_dev_tools_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter: upvotes > 50, category matches Mac/developer-tools/productivity, not already in index",
+      "output": "ph_dev_tools_qualified.json"
+    },
+    {
+      "agent": "content_gen",
+      "task": "Generate 3 content pieces per launch: comparison tweet, Reddit comment thread bait, SEO micro-article (developer-tools-for-mac niche)",
+      "output": "posting_queue/ph_dev_tools_content.csv"
+    }
+  ],
+  "status": "READY"
+}

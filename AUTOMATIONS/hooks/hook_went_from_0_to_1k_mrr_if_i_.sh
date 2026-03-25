@@ -1,7 +1,7 @@
 #!/bin/bash
 # Auto-generated hook by autonomous_integrator V2
-# Purpose: Enhance app_factory_priority_queue scoring to weight 'recurring pain point' signal higher. Apps solving one-time problems get penalized; apps with weekly/daily recurrence (streaks, tracking, reminders) get boosted. Wire as a scoring modifier in app_factory_command_center.py --refresh pipeline.
-# Created: 2026-03-21T12:40:53.526649
+# Purpose: Pre-build validation hook that scores app factory candidates against recurring-painpoint criteria: does the problem recur weekly/monthly (not one-time)? Hook rejects one-time-problem apps before build slot is allocated, improving hit rate on $500+ MRR apps.
+# Created: 2026-03-24T18:50:39.916915
 # Hook type: PreToolUse
 #
 # To wire into settings.json, add to hooks.PreToolUse:

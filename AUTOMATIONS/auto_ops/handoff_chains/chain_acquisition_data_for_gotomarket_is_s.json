@@ -1,0 +1,29 @@
+{
+  "name": "chain_acquisition_data_for_gotomarket_is_s",
+  "created": "2026-03-24T18:50:43.588132",
+  "method": "[ACQUISITION] Data for go-to-market is shocking. We built our own web app and API to fix it. 82 companies onboard so far.",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape public company data from free sources (website tech stack via BuiltWith free, LinkedIn company pages, Crunchbase free tier)",
+      "output": "raw_company_data.json"
+    },
+    {
+      "agent": "enricher",
+      "task": "Cross-reference and merge data points per company: tech stack, employee count, funding stage, contact emails from existing lead DB",
+      "output": "enriched_leads.json"
+    },
+    {
+      "agent": "scorer",
+      "task": "Score data completeness (0-100) and lead quality, flag gaps, deduplicate against existing leads in AUTOMATIONS/leads/",
+      "output": "scored_leads.json"
+    },
+    {
+      "agent": "router",
+      "task": "Route high-score leads to cold_outbound chain, log enrichment stats to KPI dashboard",
+      "output": "outreach_queue.json"
+    }
+  ],
+  "status": "READY"
+}

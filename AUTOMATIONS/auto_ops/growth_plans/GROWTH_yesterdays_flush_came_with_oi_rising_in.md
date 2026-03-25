@@ -1,33 +1,32 @@
 # Growth Plan: Yesterday’s flush came with OI rising into the sell-off , 
 p
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:00
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Extract the price+indicator divergence hook format for content templates — 'X is happening but Y isn't moving = signal' is a high-engagement post structure reusable across any niche
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Pass through engagement_bait_converter.py for hook structure extraction only — mine the narrative format, discard the crypto-specific content
+Organic app tactics
 
 ### LOW
-N/A — not worth investing at any tier
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Route to engagement_bait_converter.py for hook pattern extraction only
-- [ ] Extract reusable format: '[metric A] is moving but [metric B] is flat = [conclusion]' — apply to app metrics, SEO signals, lead gen patterns
-- [ ] Archive entry as CONTENT_ONLY in RESEARCH/crypto_signals/ — no cron, no venture, no chain
+- [ ] Research and validate: Yesterday’s flush came with OI rising into the sell-off , 
+pretty clean short bu
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -35,6 +34,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py (hook extraction only)"
+  "content": "none"
 }
 ```

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Auto-generated hook by autonomous_integrator V2
-# Purpose: Telegram bot bridge that pushes Claude Code session events (agent completions, cron failures, revenue alerts, heartbeat diffs) to Telegram — immediately useful for monitoring our 33 autonomous agents from mobile. Secondary: package the setup guide as a $9-19 Gumroad product targeting Claude Code power users who run autonomous pipelines.
-# Created: 2026-03-21T12:40:57.240336
+# Purpose: Telegram bot that receives push events from PRINTMAXX agents (revenue hits, cron completions, agent errors, alpha staged) and allows querying system status via chat commands. Real method: Claude Code becomes remotely monitorable and interactive via mobile. Secondary: generate content/guide from the implementation for Twitter + Gumroad product.
+# Created: 2026-03-24T18:50:42.914315
 # Hook type: PreToolUse
 #
 # To wire into settings.json, add to hooks.PreToolUse:

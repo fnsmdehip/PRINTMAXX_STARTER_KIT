@@ -1,35 +1,37 @@
 {
   "name": "integration_mit_repo_lissy93dashy_24290_stars_vu",
-  "created": "2026-03-21T12:40:54.965725",
+  "created": "2026-03-24T18:50:41.136140",
   "method": "MIT repo: Lissy93/dashy (24290 stars, Vue)",
   "venture": "PRODUCT",
   "phases": [
     {
-      "name": "fork_and_configure",
+      "name": "research",
       "steps": [
-        "clone lissy93/dashy into MONEY_METHODS/APP_FACTORY/builds/dashy-command-center/",
-        "generate 5 niche YAML configs via claude -p with PRINTMAXX branding and curated widget sets"
-      ],
-      "parallel": false
-    },
-    {
-      "name": "deploy_and_screenshot",
-      "steps": [
-        "npm build with indie-hacker config as showcase default",
-        "deploy to dashy-demo.surge.sh",
-        "playwright screenshot each config variant for listing assets"
+        "scrape r/selfhosted top posts for dashboard pain points",
+        "scrape Dashy GitHub starred lists + forks for popular configs",
+        "identify top 8 niche personas (crypto, devops, homelab, SaaS, finance, productivity, media, business)"
       ],
       "parallel": true
     },
     {
-      "name": "list_and_distribute",
+      "name": "generate",
       "steps": [
-        "create Gumroad listing markdown at DIGITAL_PRODUCTS/ready_to_sell/dashy-config-pack/",
-        "generate Product Hunt launch copy",
-        "post to r/selfhosted r/homelab with before/after screenshots",
-        "generate SEO landing page at builds/dashy-command-center/index.html"
+        "for each persona: generate dashy.yml config with 15-25 curated widgets/links",
+        "generate preview screenshots via Playwright (deploy local Dashy + screenshot)",
+        "write Gumroad listing copy per config bundle"
       ],
-      "parallel": true
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "package_and_list",
+      "steps": [
+        "zip each config bundle with README + install instructions",
+        "stage in PRODUCTS/GUMROAD_INSTANT_UPLOAD/ with listing MD",
+        "wire Stripe payment link per product"
+      ],
+      "parallel": false,
+      "depends_on": "generate"
     }
   ],
   "status": "READY"

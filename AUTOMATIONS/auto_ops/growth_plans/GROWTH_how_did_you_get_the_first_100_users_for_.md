@@ -1,33 +1,30 @@
-# Growth Plan: How Did You Get The First 100 Users For Your SaaS
+# Growth Plan: how did you get the first 100 users for your saas how did yo
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:01
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo direct — audience/engagement play
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Repurpose best tactics as Twitter threads targeting #buildinpublic and indie hacker communities
-2. Cross-post condensed version to our Reddit presence in r/SaaS and r/indiehackers
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Extract 3-5 specific tactics from thread, convert to engagement bait posts via engagement_bait_converter.py. Post as 'here is what actually worked for SaaS founders' content.
+Organic app tactics
 
 ### LOW
-N/A at this tier — content seed only
-
-### MID
-N/A at this tier — content seed only
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] 1. Feed thread summary to engagement_bait_converter.py as CONTENT_ONLY input
-- [ ] 2. Generate 3 tweets + 1 thread about real SaaS acquisition tactics
-- [ ] 3. Queue in CONTENT/social/posting_queue/ for scheduled distribution
+- [ ] Research and validate: how did you get the first 100 users for your saas how did you get the first 100 
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -35,6 +32,6 @@ N/A at this tier — content seed only
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

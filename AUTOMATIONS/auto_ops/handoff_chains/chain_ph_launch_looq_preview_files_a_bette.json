@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_looq_preview_files_a_bette",
+  "created": "2026-03-24T18:50:42.833304",
+  "method": "[PH LAUNCH] Looq: Preview Files: A better Quick Look: code, Markdown, Mermaid, SQLite &amp; more",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape PH /topics/developer-tools for launches tagged mac/utilities/file-management with 50+ upvotes",
+      "output": "ph_dev_launches.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each: replicable in App Factory? One-time purchase model? macOS utility? Filter score >= 7",
+      "output": "qualified_dev_tools.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Write App Factory brief for top pick + generate 3 tweets via engagement_bait_converter.py",
+      "output": "app_factory_queue.json"
+    }
+  ],
+  "status": "READY"
+}

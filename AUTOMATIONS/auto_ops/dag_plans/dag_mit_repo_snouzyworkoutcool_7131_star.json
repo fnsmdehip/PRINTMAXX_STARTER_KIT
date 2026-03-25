@@ -1,49 +1,52 @@
 {
   "name": "integration_mit_repo_snouzyworkoutcool_7131_star",
-  "created": "2026-03-21T12:40:54.693924",
+  "created": "2026-03-24T18:50:41.112963",
   "method": "MIT repo: Snouzy/workout-cool (7131 stars, TypeScript)",
   "venture": "APP",
   "phases": [
     {
-      "name": "recon",
+      "name": "fork_and_customize",
       "steps": [
-        "clone_workout_cool_repo",
-        "analyze_star_fork_issue_signals",
-        "map_appstore_fitness_tracker_competitors"
+        "git clone Snouzy/workout-cool into APP_FACTORY/builds/",
+        "strip original branding, inject PRINTMAXX App Factory base config",
+        "inject RevenueCat SDK (REVENUECAT_API_KEY from .env)",
+        "inject AdMob banner (ADMOB_APP_ID ca-app-pub-5277873663568466~6431629011)"
       ],
-      "parallel": true
+      "parallel": false
     },
     {
-      "name": "extraction",
+      "name": "spawn_niche_variants",
       "steps": [
-        "extract_workout_database_schema",
-        "extract_streak_tracking_logic",
-        "extract_ui_component_library"
+        "create yoga-streak: rebrand copy/assets for yoga audience",
+        "create hiit-tracker: rebrand copy/assets for HIIT/cardio audience",
+        "create strength-logger: rebrand copy/assets for weightlifting audience"
       ],
       "parallel": true,
-      "depends_on": "recon"
+      "depends_on": "fork_and_customize"
     },
     {
-      "name": "adaptation",
+      "name": "deploy_and_monetize",
       "steps": [
-        "generate_6_variant_configs",
-        "swap_branding_content_per_niche",
-        "wire_revenuecat_iap",
-        "wire_admob_banner"
+        "surge deploy yoga-streak.surge.sh",
+        "surge deploy hiit-tracker.surge.sh",
+        "surge deploy strength-logger.surge.sh",
+        "create Stripe payment links for each variant",
+        "wire Firebase backend for user persistence",
+        "add all 3 to MONEY_METHODS/APP_FACTORY/APP_FACTORY_CENTRAL_INDEX.md"
+      ],
+      "parallel": true,
+      "depends_on": "spawn_niche_variants"
+    },
+    {
+      "name": "content_and_distribution",
+      "steps": [
+        "run engagement_bait_converter.py on build process",
+        "generate 3 tweets + 1 thread via content_factory",
+        "queue Product Hunt launches for each variant (staggered 2 weeks apart)",
+        "generate ASO-optimized App Store copy for each variant"
       ],
       "parallel": false,
-      "depends_on": "extraction"
-    },
-    {
-      "name": "deployment",
-      "steps": [
-        "deploy_web_versions_to_surge",
-        "create_stripe_payment_links",
-        "update_deployment_urls_md",
-        "generate_seo_longtail_pages"
-      ],
-      "parallel": true,
-      "depends_on": "adaptation"
+      "depends_on": "deploy_and_monetize"
     }
   ],
   "status": "READY"

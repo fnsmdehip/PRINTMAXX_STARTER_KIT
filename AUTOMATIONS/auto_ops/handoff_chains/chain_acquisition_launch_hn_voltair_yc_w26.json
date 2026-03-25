@@ -1,0 +1,29 @@
+{
+  "name": "chain_acquisition_launch_hn_voltair_yc_w26",
+  "created": "2026-03-24T18:50:44.411113",
+  "method": "[ACQUISITION] Launch HN: Voltair (YC W26) \u2013 Drone and charging network for power utilities",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Poll HN Algolia API for 'Launch HN' posts from last 24h, extract company name, URL, category, YC batch",
+      "output": "hn_launches_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Filter for YC W25/W26 companies in infrastructure, enterprise, B2B, utilities, government-adjacent verticals. Score EAS fit 0-10 based on: regulated industry (+3), B2B (+2), <50 employees (+2), no marketing hire visible (+3). Reject consumer apps, crypto, social.",
+      "output": "hn_launches_qualified.json"
+    },
+    {
+      "agent": "researcher",
+      "task": "For each qualified company: scrape their site, find founder LinkedIn, identify content/SEO gaps, check if they have a blog or social presence. Flag companies with zero content as highest priority.",
+      "output": "hn_company_profiles.json"
+    },
+    {
+      "agent": "outreach_writer",
+      "task": "Generate personalized cold email referencing their HN launch day (recency hook), their specific vertical, and one concrete gap (no blog, no case studies, no LinkedIn posts). Offer 2-week trial EAS engagement.",
+      "output": "eas_outreach_queue.jsonl"
+    }
+  ],
+  "status": "READY"
+}

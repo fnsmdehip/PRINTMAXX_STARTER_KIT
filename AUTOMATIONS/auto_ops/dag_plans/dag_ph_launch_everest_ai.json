@@ -1,0 +1,39 @@
+{
+  "name": "integration_ph_launch_everest_ai",
+  "created": "2026-03-24T18:50:45.177048",
+  "method": "[PH Launch] Everest AI",
+  "venture": "EXISTING:CONTENT",
+  "phases": [
+    {
+      "name": "extraction",
+      "steps": [
+        "fetch_ph_page",
+        "extract_positioning",
+        "identify_use_cases",
+        "pull_competitor_angles"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "route_to_engagement_bait_converter",
+        "generate_tool_commentary_3variants",
+        "generate_use_case_posts",
+        "validate_bait_quality"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "queue_to_posting_schedule",
+        "track_impressions",
+        "log_engagement"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

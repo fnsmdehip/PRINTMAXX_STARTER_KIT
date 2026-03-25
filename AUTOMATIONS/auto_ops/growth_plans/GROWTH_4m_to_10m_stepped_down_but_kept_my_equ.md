@@ -1,30 +1,30 @@
 # Growth Plan: 4M to $10M, stepped down but kept my equity, and started com
 
-**Created:** 2026-03-21 12:40
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Route hook structure to engagement_bait_converter for 'build to exit' content angle
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Feed title + framing to engagement_bait_converter.py for 1-3 posts on build-to-exit theme
+Organic content tactics
 
 ### LOW
-n/a
-
-### MID
-n/a
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Route to engagement_bait_converter.py as CONTENT_ONLY with hook: 'How to build a business you can walk away from and still collect equity'
+- [ ] Research and validate: 4M to $10M, stepped down but kept my equity, and started completely over
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -32,6 +32,6 @@ n/a
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter"
+  "content": "none"
 }
 ```

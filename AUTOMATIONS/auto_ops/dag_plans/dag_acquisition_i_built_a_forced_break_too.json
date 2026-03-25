@@ -1,44 +1,38 @@
 {
   "name": "integration_acquisition_i_built_a_forced_break_too",
-  "created": "2026-03-21T12:40:57.765956",
+  "created": "2026-03-24T18:50:43.307564",
   "method": "[ACQUISITION] I built a forced break tool for my own Tech Neck/Burnout. Is a screen lock-out too aggressive for you?",
   "venture": "APP",
   "phases": [
     {
-      "name": "research",
+      "name": "scaffold",
       "steps": [
-        "scrape r/SideProject + r/productivity for 'break tool' + 'Tech Neck' + 'screen lock' threads (Playwright MCP)",
-        "extract top pain phrases and hook structures from high-upvote comments"
+        "Copy app-factory/base-template/scripture-streak as base (Capacitor/React)",
+        "Swap content layer: break-interval timer + screen-lock overlay component",
+        "Wire RevenueCat IAP (REVENUECAT_API_KEY) \u2014 free: 5-min interval only; premium: custom 1-60min, sounds, stats",
+        "Wire AdMob banner on free tier (ADMOB_APP_ID ca-app-pub-5277873663568466~6431629011)"
       ],
-      "parallel": true
+      "parallel": false
     },
     {
-      "name": "asset_audit",
+      "name": "deploy_and_aso",
       "steps": [
-        "confirm live URLs for deskbreak-web + walktounlock-web + focuslock-web from OPS/DEPLOYMENT_URLS.md",
-        "check if any of the 3 apps has Stripe payment link wired (payment_integrator.py --status)"
-      ],
-      "parallel": true,
-      "depends_on": "research"
-    },
-    {
-      "name": "content_gen",
-      "steps": [
-        "generate 5 Reddit posts (r/SideProject, r/productivity, r/workfromhome) using extracted pain language + our app URLs",
-        "generate 3 tweets + 1 thread about forced-break UX debate ('too aggressive?') anchored to our apps",
-        "generate 2 SEO longtail pages: 'forced screen break app mac' + 'tech neck relief software' pointing to deskbreak-web"
+        "surge deploy PWA \u2192 breakguard.surge.sh (immediate, zero cost)",
+        "Firebase Hosting fallback for PWA offline mode",
+        "Generate ASO keyword set via subagent (App Store + Google Play)",
+        "Draft 3x PH tagline variants via subagent"
       ],
       "parallel": true,
-      "depends_on": "asset_audit"
+      "depends_on": "scaffold"
     },
     {
-      "name": "queue",
+      "name": "ios_submit",
       "steps": [
-        "append all generated posts to CONTENT/social/posting_queue/break_apps_cycle.txt",
-        "append longtail pages to content-generator backlog"
+        "xcodebuild archive + export IPA via ios_release_pipeline.py",
+        "Submit to App Store Connect (TestFlight first, review queue)"
       ],
       "parallel": false,
-      "depends_on": "content_gen"
+      "depends_on": "deploy_and_aso"
     }
   ],
   "status": "READY"

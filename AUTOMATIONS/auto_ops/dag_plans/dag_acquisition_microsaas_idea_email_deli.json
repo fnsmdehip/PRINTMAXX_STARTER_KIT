@@ -1,39 +1,39 @@
 {
   "name": "integration_acquisition_microsaas_idea_email_deli",
-  "created": "2026-03-21T12:40:58.387740",
+  "created": "2026-03-24T18:50:44.069456",
   "method": "[ACQUISITION] MicroSaaS idea: email deliverability checker. Thoughts?",
   "venture": "APP",
   "phases": [
     {
-      "name": "build_core",
+      "name": "core_build",
       "steps": [
-        "DNS checker: SPF/DKIM/DMARC via dnspython",
-        "RBL blacklist scanner: check 50+ lists via dns.resolver",
-        "SMTP validation: MX record + connection test",
-        "Deliverability score 0-100 aggregator"
+        "SMTP mailbox existence check via smtplib (no API cost)",
+        "MX record + SPF/DKIM/DMARC DNS validation via dnspython",
+        "Blacklist check against 50+ RBLs via dns.resolver (free)",
+        "Domain reputation score aggregation"
       ],
       "parallel": true
     },
     {
-      "name": "build_product",
+      "name": "monetize",
       "steps": [
-        "Static HTML frontend with fetch() calls to Python backend",
-        "Stripe freemium gate (10 checks/day free, $9/mo unlimited)",
-        "Wire into cold outbound pipeline as pre-send hook"
-      ],
-      "parallel": true,
-      "depends_on": "build_core"
-    },
-    {
-      "name": "deploy_distribute",
-      "steps": [
-        "Deploy to surge.sh (existing infra)",
-        "Add to email-tools-compared landing page as featured tool",
-        "Submit to IndieHackers + r/microsaas + ProductHunt (when account created)",
-        "Add cron: nightly self-check on our own cold outbound domains"
+        "Wire Stripe Payment Link for $9/mo tier",
+        "Firebase rate-limiting for 10 checks/day free tier",
+        "RevenueCat skip (web app, not mobile)"
       ],
       "parallel": false,
-      "depends_on": "build_product"
+      "depends_on": "core_build"
+    },
+    {
+      "name": "launch",
+      "steps": [
+        "Deploy to surge.sh with live demo widget",
+        "Generate 3 tweets + 1 thread from build process",
+        "Post to r/microsaas + r/indiehackers",
+        "Add to app factory index"
+      ],
+      "parallel": true,
+      "depends_on": "monetize"
     }
   ],
   "status": "READY"

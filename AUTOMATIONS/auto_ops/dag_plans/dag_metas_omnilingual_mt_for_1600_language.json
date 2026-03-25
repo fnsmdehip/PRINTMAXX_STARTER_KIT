@@ -1,53 +1,36 @@
 {
   "name": "integration_metas_omnilingual_mt_for_1600_language",
-  "created": "2026-03-21T12:41:00.228102",
+  "created": "2026-03-24T18:50:45.766083",
   "method": "Meta's Omnilingual MT for 1,600 Languages",
   "venture": "APP",
   "phases": [
     {
-      "name": "inventory",
+      "name": "extract",
       "steps": [
-        "glob_all_builds_index_html",
-        "rank_apps_by_traffic_potential",
-        "init_nllb_model_or_hf_api"
+        "scan app factory templates for UI strings",
+        "extract App Store copy from existing listings"
       ],
-      "parallel": true
+      "parallel": false
     },
     {
       "name": "translate",
       "steps": [
-        "translate_to_arabic",
-        "translate_to_hindi",
-        "translate_to_urdu",
-        "translate_to_bengali",
-        "translate_to_malay",
-        "translate_to_hausa",
-        "translate_to_swahili",
-        "translate_to_turkish"
+        "batch-translate UI strings via NLLB HuggingFace free tier (20 target languages)",
+        "generate localized App Store title/subtitle/keywords/description",
+        "generate localized landing page copy"
       ],
       "parallel": true,
-      "depends_on": "inventory"
-    },
-    {
-      "name": "generate",
-      "steps": [
-        "write_localized_html_subdirs",
-        "inject_hreflang_tags",
-        "generate_multilingual_sitemaps",
-        "localize_meta_title_description"
-      ],
-      "parallel": false,
-      "depends_on": "translate"
+      "depends_on": "extract"
     },
     {
       "name": "deploy",
       "steps": [
-        "surge_deploy_language_variants",
-        "ping_google_indexing_api",
-        "update_deployment_urls_md"
+        "write localized i18n JSON files per app per locale",
+        "deploy localized surge.sh variants (appname-hi.surge.sh, appname-sw.surge.sh)",
+        "update OPS/DEPLOYMENT_URLS.md with new locale URLs"
       ],
-      "parallel": false,
-      "depends_on": "generate"
+      "parallel": true,
+      "depends_on": "translate"
     }
   ],
   "status": "READY"

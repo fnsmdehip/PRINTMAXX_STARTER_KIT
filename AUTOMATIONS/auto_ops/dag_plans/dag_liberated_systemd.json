@@ -1,0 +1,50 @@
+{
+  "name": "integration_liberated_systemd",
+  "created": "2026-03-24T18:50:45.926617",
+  "method": "Liberated Systemd",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research_extract",
+      "steps": [
+        "scrape_hn_article",
+        "parse_comments_for_method",
+        "validate_technique"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_create",
+      "steps": [
+        "write_how_to_guide",
+        "generate_tweet_thread",
+        "create_reddit_post",
+        "build_code_examples"
+      ],
+      "parallel": true,
+      "depends_on": "research_extract"
+    },
+    {
+      "name": "distribute",
+      "steps": [
+        "post_twitter",
+        "submit_reddit",
+        "engage_hn_comments",
+        "pin_github"
+      ],
+      "parallel": true,
+      "depends_on": "content_create"
+    },
+    {
+      "name": "monetize_path",
+      "steps": [
+        "evaluate_sas_potential",
+        "check_tool_buildability",
+        "route_to_product_if_warranted"
+      ],
+      "parallel": false,
+      "depends_on": "distribute"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude.schedule.before_you_product_narrative_001</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; claude -p "You are the PRODUCT autonomy agent for PRINTMAXX venture 'Before You'. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 24h. Each cycle: 1. REVIEW: Check AUTOMATIONS/agent/autonomy/before_you_product_narrative_001/latest_updates.json for product updates needed. 2. BUILD: Generate product narratives and landing page copy based on Before You framework. Follow .claude/rules/copy-style.md. 3. GENERATE: Create 3 narrative variations, 1 landing page draft, customer stories. 4. QUALITY: Run through quality_gate for scoring. 5. SAVE: Store to AUTOMATIONS/agent/autonomy/before_you_product_narrative_001/output/ 6. DISTRIBUTE: Package for Gumroad/product listings if approved.  Rules: - All files stay in /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt - Follow Before You product guidelines from MONEY_METHODS/BEFORE_YOU/ - NEVER use AI slop vocabulary - Narratives must be founder-authentic, not marketing-speak  AGENTIC EXECUTION: Do NOT stop after one step. Keep going until the task is COMPLETE or you hit a blocker. - Read state -> Plan -> Execute -> Verify -> If more work needed, CONTINUE - Only stop when: (a) task fully complete, (b) human action required, (c) 15+ tool calls made - Write completion status to AUTOMATIONS/agent/autonomy/before_you_product_narrative_001/output/report_20260322.md" --dangerously-skip-permissions --model claude-sonnet-4-6 >> "/Users/macbookpro/.claude/logs/before_you_product_narrative_001.log" 2>&amp;1</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/Users/macbookpro/.local/bin</string>
+    </dict>
+    <key>StartInterval</key>
+    <integer>86400</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/.claude/logs/before_you_product_narrative_001.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/.claude/logs/before_you_product_narrative_001.error.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

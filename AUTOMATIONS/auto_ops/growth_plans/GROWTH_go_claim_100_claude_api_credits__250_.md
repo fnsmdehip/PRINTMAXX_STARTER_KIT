@@ -1,44 +1,39 @@
 # Growth Plan: Go Claim $100 Claude API credits + $250 Stripe credits
+here 
 
-here
-
-**Created:** 2026-03-21 12:40
-**Venture:** RESEARCH
+**Created:** 2026-03-24 22:00
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo direct | $350 one-time cost savings + ongoing credit stacking potential
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Monitor Lovable, Vercel, Netlify, AWS Activate, Stripe Atlas, and Anthropic partner pages weekly for new credit offers
-2. Stack credits across multiple dev platforms to reduce API/infra burn rate to near-zero in Phase 0
-3. Check if Lovable has referral program — each referral may unlock additional credits
-4. Cross-reference with YC Startup School deals page (free tier available to non-YC founders) for Stripe/AWS/Anthropic credits
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Claim all available partner credits across Lovable, Vercel, AWS Activate, Heroku, Anthropic Console — reduces monthly infra cost by $200-500
+Organic app tactics
 
 ### LOW
-N/A — this is a cost-reduction method, not a paid acquisition channel
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] HUMAN NOW: Open lovable.dev → dashboard → Offers section → claim Claude $100 credit (paste Anthropic Org ID from console.anthropic.com/settings) + claim Stripe $250
-- [ ] BUILD: dev_credit_offer_scanner.py — weekly Playwright scrape of Lovable offers page + known partner credit pages, diff against last scan, alert to OPS/HUMAN_ACTIONS.md if new offer detected
-- [ ] CRON: Add weekly Monday 9 AM scan — `python3 AUTOMATIONS/dev_credit_offer_scanner.py --scan`
-- [ ] TRACK: Log claimed credits in LEDGER/ACTIVE_INVESTMENTS.csv with expiry dates so cron alerts before expiration
+- [ ] Research and validate: Go Claim $100 Claude API credits + $250 Stripe credits
+here steps :
+~ Go to your
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
 ```json
 {
-  "browser": "playwright (check offer pages weekly)",
+  "browser": "none",
   "email": "none",
   "content": "none"
 }

@@ -1,31 +1,30 @@
 # Growth Plan: Jack Cheng on what AI agents teach you about the systems you
 
-**Created:** 2026-03-21 12:40
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct / follower growth asset
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Post as a reply to active AI/agent builder threads on X — surfaces to engaged audience without cold posting
-2. Quote-tweet @every's post with PRINTMAXX-voice take on how this applies to indie operators specifically
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Convert insight to 3 engagement posts via engagement_bait_converter.py. Hook angle: 'The moment I built my first agent I realized I had no idea how my own process actually worked.' Route to posting_queue/.
+Organic content tactics
 
 ### LOW
-Not warranted — content-only entry with no revenue path
-
-### MID
-Not warranted
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'Jack Cheng: building AI agents exposes hidden system complexity you had been ignoring' --platform twitter --count 3
+- [ ] Research and validate: Jack Cheng on what AI agents teach you about the systems you've been ignoring:
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -33,6 +32,6 @@ Not warranted
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

@@ -1,67 +1,46 @@
 {
   "name": "integration_p0",
-  "created": "2026-03-20T23:36:39.451817",
+  "created": "2026-03-24T18:50:47.515851",
   "method": "P0",
   "venture": "APP",
   "phases": [
     {
-      "name": "community_validation",
+      "name": "scaffold_and_setup",
       "steps": [
-        "scrape_r_gamedev_top_1000_posts",
-        "analyze_discord_game_dev_servers_size",
-        "identify_pain_points_and_motivations"
+        "cp_scripture_streak_template",
+        "rebrand_to_stock_market_streak",
+        "setup_firebase_backend",
+        "configure_stripe_iap_revenueat"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "content_and_assets",
+      "steps": [
+        "claude_generate_daily_market_insight",
+        "fetch_realtime_stock_prices_api",
+        "generate_learning_module_from_template"
       ],
       "parallel": true
     },
     {
-      "name": "competitive_research",
+      "name": "monetization_wiring",
       "steps": [
-        "scan_existing_gamedev_tools",
-        "analyze_our_7_streak_apps_for_reusable_patterns",
-        "identify_unique_positioning"
+        "wire_revenucat_premium_tier",
+        "configure_admob_banner",
+        "test_transaction_flow"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "distribution",
+      "steps": [
+        "post_reddit_r_stocks",
+        "post_twitter_with_chart",
+        "post_linkedin_education"
       ],
       "parallel": true,
-      "depends_on": null
-    },
-    {
-      "name": "app_build",
-      "steps": [
-        "clone_fitness_streak_template",
-        "customize_game_dev_theme_and_challenges",
-        "add_studio_team_accounts"
-      ],
-      "parallel": false,
-      "depends_on": "community_validation"
-    },
-    {
-      "name": "content_automation",
-      "steps": [
-        "build_daily_challenge_generator",
-        "create_gamedev_specific_achievements",
-        "generate_launch_copy_and_social_assets"
-      ],
-      "parallel": true,
-      "depends_on": "app_build"
-    },
-    {
-      "name": "deployment_and_monetization",
-      "steps": [
-        "deploy_to_surge",
-        "wire_stripe_payment",
-        "setup_analytics_and_kpis"
-      ],
-      "parallel": false,
-      "depends_on": "content_automation"
-    },
-    {
-      "name": "launch_and_organic_growth",
-      "steps": [
-        "post_to_r_gamedev_and_r_IndieGaming",
-        "seed_5_game_dev_discord_servers",
-        "monitor_early_traction"
-      ],
-      "parallel": true,
-      "depends_on": "deployment_and_monetization"
+      "depends_on": "content_and_assets"
     }
   ],
   "status": "READY"

@@ -16,18 +16,20 @@ Usage:
     python3 user_sim_refiner.py --venture EAS --status       # Show refinement history
     python3 user_sim_refiner.py --venture EAS --revert HASH  # Revert to specific git commit
     python3 user_sim_refiner.py --list-ventures              # Show available ventures
+    python3 user_sim_refiner.py --all                        # Run one cycle on ALL ventures
 
 Ralph loop:
     while true; do python3 AUTOMATIONS/user_sim_refiner.py --venture EAS --cycle; sleep 300; done
 
-Cron (daily at 4 AM):
-    0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/user_sim_refiner.py --venture EAS --cycle >> AUTOMATIONS/logs/user_sim_refiner.log 2>&1
+Cron (daily at 4 AM — all ventures):
+    0 4 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/user_sim_refiner.py --all >> AUTOMATIONS/logs/user_sim_refiner.log 2>&1
 """
 
 import json
 import subprocess
 import sys
 import os
+import glob as _glob
 from pathlib import Path
 from datetime import datetime
 
@@ -36,7 +38,35 @@ LOGS_DIR = PROJECT_ROOT / "AUTOMATIONS" / "logs"
 LOGS_DIR.mkdir(exist_ok=True)
 REFINER_LOG = LOGS_DIR / "user_sim_refiner_history.jsonl"
 
+
+def _discover_files(base_dir, patterns, max_files=8):
+    """Discover existing files matching glob patterns under base_dir.
+
+    Returns up to max_files paths (relative to PROJECT_ROOT), sorted by
+    modification time (newest first) so the refiner reviews the most
+    recently-touched files.
+    """
+    found = []
+    for pat in patterns:
+        full_pat = str(PROJECT_ROOT / base_dir / pat)
+        found.extend(_glob.glob(full_pat, recursive=True))
+    # Deduplicate, sort newest first, convert to relative paths
+    seen = set()
+    unique = []
+    for f in found:
+        fp = Path(f)
+        if fp.is_file() and str(fp) not in seen:
+            seen.add(str(fp))
+            unique.append(fp)
+    unique.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+    return [str(p.relative_to(PROJECT_ROOT)) for p in unique[:max_files]]
+
+
+# ---------------------------------------------------------------------------
 # Venture configs — what files to review per venture
+# Static configs for ventures with known key files, plus dynamic discovery
+# for ventures where the interesting files change over time.
+# ---------------------------------------------------------------------------
 VENTURES = {
     "EAS": {
         "name": "Enterprise Automation Solutions",
@@ -68,7 +98,157 @@ VENTURES = {
         ],
         "context_files": [],
     },
+    "CONTENT": {
+        "name": "Content & Social",
+        "root": "CONTENT/social",
+        "review_files_dynamic": {
+            "base": "CONTENT/social",
+            "patterns": [
+                "posting_queue/*.txt",
+                "posting_queue/*.md",
+                "REPLY_ENGAGEMENT_STRATEGY.md",
+                "TWITTER_PROFILE_SPEC.md",
+                "TIKTOK_LAUNCH_SCRIPTS.md",
+                "**/*ENGAGEMENT_PLAN*.md",
+            ],
+        },
+        "context_files": [
+            "CONTENT/social/REPLY_ENGAGEMENT_STRATEGY.md",
+        ],
+    },
+    "OUTBOUND": {
+        "name": "Outbound & Lead Gen",
+        "root": "AUTOMATIONS/leads",
+        "review_files_dynamic": {
+            "base": "AUTOMATIONS/leads",
+            "patterns": [
+                "*.csv",
+                "*.md",
+                "*.json",
+                "**/*.csv",
+            ],
+        },
+        "context_files": [
+            "MONEY_METHODS/COLD_OUTBOUND/COLD_EMAIL_DEMO_TEMPLATE.md",
+        ],
+    },
+    "PRODUCT": {
+        "name": "Digital Products",
+        "root": "PRODUCTS",
+        "review_files_dynamic": {
+            "base": "PRODUCTS",
+            "patterns": [
+                "*.md",
+                "GUMROAD_INSTANT_UPLOAD/*.md",
+                "ready_to_sell/*.md",
+                "descriptions/*.md",
+            ],
+        },
+        "context_files_dynamic": {
+            "base": "DIGITAL_PRODUCTS",
+            "patterns": ["*.md", "**/*.md"],
+        },
+    },
+    "LOCAL_BIZ": {
+        "name": "Local Business Outreach",
+        "root": "MONEY_METHODS/LOCAL_BIZ",
+        "review_files_dynamic": {
+            "base": "MONEY_METHODS/LOCAL_BIZ",
+            "patterns": [
+                "*.md",
+                "*.html",
+                "**/*.md",
+            ],
+        },
+        "context_files": [],
+    },
+    "RESEARCH": {
+        "name": "Research & Intelligence",
+        "root": "OPS",
+        "review_files_dynamic": {
+            "base": "OPS",
+            "patterns": [
+                "CAPITAL_GENESIS_PRIORITY_STACK.md",
+                "ACTIONABLE_QUEUE.md",
+                "SESSION_BRIEFING.md",
+                "KPI_DASHBOARD.md",
+                "INTELLIGENCE_CATALOG.json",
+            ],
+        },
+        "context_files": [],
+    },
+    "MONETIZE": {
+        "name": "Monetization & Funnels",
+        "root": "MONEY_METHODS",
+        "review_files_dynamic": {
+            "base": "MONEY_METHODS",
+            "patterns": [
+                "*.md",
+                "AFFILIATE_RESEARCH_*.md",
+                "DIGITAL_PRODUCTS/**/*.md",
+                "ECOM/**/*.md",
+            ],
+        },
+        "context_files": [],
+    },
+    "SCRAPING": {
+        "name": "Scraping & Data Pipelines",
+        "root": "AUTOMATIONS",
+        "review_files": [
+            "AUTOMATIONS/twitter_alpha_scraper.py",
+            "AUTOMATIONS/background_reddit_scraper.py",
+            "AUTOMATIONS/method_discovery_crawler.py",
+            "AUTOMATIONS/alpha_auto_processor.py",
+        ],
+        "review_files_dynamic": {
+            "base": "AUTOMATIONS/leads",
+            "patterns": ["*.csv"],
+        },
+        "context_files": [],
+    },
 }
+
+
+def _resolve_review_files(venture_key):
+    """Resolve the final list of review files for a venture.
+
+    Merges static review_files with dynamically discovered files from
+    review_files_dynamic config.  Returns a list of relative paths.
+    """
+    venture = VENTURES[venture_key]
+    files = list(venture.get("review_files", []))
+
+    dynamic = venture.get("review_files_dynamic")
+    if dynamic:
+        discovered = _discover_files(
+            dynamic["base"], dynamic["patterns"], max_files=8
+        )
+        # Avoid duplicates with static list
+        existing = set(files)
+        for f in discovered:
+            if f not in existing:
+                files.append(f)
+                existing.add(f)
+    return files[:12]  # Hard cap to keep context manageable
+
+
+def _resolve_context_files(venture_key):
+    """Resolve context files, supporting both static and dynamic."""
+    venture = VENTURES[venture_key]
+    files = list(venture.get("context_files", []))
+
+    dynamic = venture.get("context_files_dynamic")
+    if dynamic:
+        discovered = _discover_files(
+            dynamic["base"], dynamic["patterns"], max_files=4
+        )
+        existing = set(files)
+        for f in discovered:
+            if f not in existing:
+                files.append(f)
+                existing.add(f)
+    return files[:6]
+
 
 # The core prompt that simulates the user's cognitive architecture
 REFINER_PROMPT_TEMPLATE = """You are simulating alex's cognitive architecture for autonomous venture refinement.
@@ -135,9 +315,9 @@ DO NOT:
 
 def get_file_contents(venture_key):
     """Read all review files for a venture."""
-    venture = VENTURES[venture_key]
+    review_files = _resolve_review_files(venture_key)
     contents = []
-    for rel_path in venture["review_files"]:
+    for rel_path in review_files:
         full_path = PROJECT_ROOT / rel_path
         if full_path.exists():
             text = full_path.read_text()
@@ -152,9 +332,9 @@ def get_file_contents(venture_key):
 
 def get_context_summary(venture_key):
     """Read context files and produce brief summary."""
-    venture = VENTURES[venture_key]
+    context_files = _resolve_context_files(venture_key)
     summaries = []
-    for rel_path in venture["context_files"]:
+    for rel_path in context_files:
         full_path = PROJECT_ROOT / rel_path
         if full_path.exists():
             text = full_path.read_text()
@@ -214,11 +394,17 @@ def run_cycle(venture_key):
     prompt_file = LOGS_DIR / f"user_sim_prompt_{venture_key}.md"
     prompt_file.write_text(prompt)
 
+    # Build claude command — use --api-key when ANTHROPIC_API_KEY is set
+    # (avoids OAuth 401 in cron/background, per CLAUDE.md Rule 18)
+    cmd = ["claude", "-p", str(prompt_file), "--output-format", "text"]
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        cmd.insert(2, "--api-key")
+
     # Run claude -p
-    print("Running claude -p with user-sim prompt...")
+    print(f"Running claude -p with user-sim prompt... (api-key={'yes' if '--api-key' in cmd else 'no'})")
     try:
         result = subprocess.run(
-            ["claude", "-p", str(prompt_file), "--output-format", "text"],
+            cmd,
             capture_output=True, text=True, timeout=300,
             cwd=str(PROJECT_ROOT),
         )
@@ -263,6 +449,31 @@ def run_cycle(venture_key):
     return output
 
 
+def run_all():
+    """Run one refinement cycle on ALL configured ventures, sequentially."""
+    print(f"\n{'#'*60}")
+    print(f"USER-SIM REFINER — ALL VENTURES — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"{'#'*60}")
+
+    results = {}
+    for key in VENTURES:
+        try:
+            output = run_cycle(key)
+            results[key] = "OK" if output and "TIMEOUT" not in output and "not available" not in output else "WARN"
+        except Exception as e:
+            print(f"\nERROR on {key}: {e}")
+            results[key] = f"ERROR: {e}"
+
+    # Summary
+    print(f"\n{'='*60}")
+    print("ALL-VENTURES SUMMARY")
+    print(f"{'='*60}")
+    for key, status in results.items():
+        print(f"  {key:15s} {status}")
+    print(f"\nTotal: {len(results)} ventures processed")
+    return results
+
+
 def show_status(venture_key):
     """Show refinement history for a venture."""
     if not REFINER_LOG.exists():
@@ -284,7 +495,7 @@ def show_status(venture_key):
         return
 
     for e in entries[-10:]:  # Last 10
-        print(f"  [{e['timestamp'][:16]}] {e['before_hash']} → {e['after_hash']}")
+        print(f"  [{e['timestamp'][:16]}] {e['before_hash']} -> {e['after_hash']}")
         print(f"    Output: {e.get('output_file', 'N/A')}")
         preview = e.get("output_preview", "")[:200]
         if preview:
@@ -311,12 +522,14 @@ def revert(venture_key, commit_hash):
 
 
 def list_ventures():
-    """List all configured ventures."""
+    """List all configured ventures with file counts."""
     print("\n=== Configured Ventures for User-Sim Refiner ===\n")
     for key, v in VENTURES.items():
-        file_count = len([f for f in v["review_files"] if (PROJECT_ROOT / f).exists()])
-        total = len(v["review_files"])
-        print(f"  {key}: {v['name']} ({file_count}/{total} files exist)")
+        review_files = _resolve_review_files(key)
+        file_count = len([f for f in review_files if (PROJECT_ROOT / f).exists()])
+        total = len(review_files)
+        print(f"  {key:15s} {v['name']}")
+        print(f"                  {file_count}/{total} review files exist | root: {v['root']}")
 
 
 if __name__ == "__main__":
@@ -329,6 +542,8 @@ if __name__ == "__main__":
 
     if "--list-ventures" in args:
         list_ventures()
+    elif "--all" in args:
+        run_all()
     elif "--cycle" in args and venture:
         run_cycle(venture)
     elif "--loop" in args and venture:
@@ -357,6 +572,7 @@ if __name__ == "__main__":
         print("  --venture NAME --status        Show history")
         print("  --venture NAME --revert HASH   Revert to commit")
         print("  --list-ventures                Show available ventures")
+        print("  --all                          Run one cycle on ALL ventures")
         print()
         print("Ralph loop:")
         print("  while true; do python3 AUTOMATIONS/user_sim_refiner.py --venture EAS --cycle; sleep 300; done")

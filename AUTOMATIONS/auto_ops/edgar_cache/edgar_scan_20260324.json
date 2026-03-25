@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-03-24T20:58:21.804913",
+  "api_calls": 19,
+  "total_filings": 255,
+  "unique_filings": 4,
+  "written_to_alpha": 0,
+  "top_results": [
+    {
+      "company": "Blaize Holdings, Inc.  (BZAI, BZAIW)  (CIK 0001871638)",
+      "form": "8-K",
+      "score": 40,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Research Alliance Corp III  (CIK 0002118032)",
+      "form": "S-1",
+      "score": 35,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    },
+    {
+      "company": "Cabaletta Bio, Inc.  (CABA)  (CIK 0001759138)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Apogee Acquisition Corp  (AACP)  (CIK 0002102123)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}

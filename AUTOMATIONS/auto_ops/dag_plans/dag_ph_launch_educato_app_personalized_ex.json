@@ -1,0 +1,45 @@
+{
+  "name": "integration_ph_launch_educato_app_personalized_ex",
+  "created": "2026-03-24T18:50:42.173959",
+  "method": "[PH LAUNCH] Educato App: Personalized exam prep, now in your pocket",
+  "venture": "APP",
+  "phases": [
+    {
+      "name": "niche_discovery",
+      "steps": [
+        "scrape PH edtech category for exam prep launches (last 90d)",
+        "extract certification niches + upvote signals as demand proxy"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "market_sizing",
+      "steps": [
+        "score each niche: exam candidate volume x avg study spend x IAP conversion",
+        "rank top 5 niches by revenue potential / build effort ratio"
+      ],
+      "parallel": false,
+      "depends_on": "niche_discovery"
+    },
+    {
+      "name": "asset_generation",
+      "steps": [
+        "clone scripture-streak base template \u2192 rename for top niche (e.g. cpa-streak, mcat-streak)",
+        "generate 3 SEO longtail pages per niche: 'best [cert] exam prep app', '[cert] practice test app', '[cert] study app free'"
+      ],
+      "parallel": true,
+      "depends_on": "market_sizing"
+    },
+    {
+      "name": "deploy_and_distribute",
+      "steps": [
+        "surge deploy SEO pages",
+        "queue 3 Reddit posts per niche sub (r/premed, r/LSAT, r/CPA, r/GRE)",
+        "add app to app factory build queue with priority score"
+      ],
+      "parallel": true,
+      "depends_on": "asset_generation"
+    }
+  ],
+  "status": "READY"
+}

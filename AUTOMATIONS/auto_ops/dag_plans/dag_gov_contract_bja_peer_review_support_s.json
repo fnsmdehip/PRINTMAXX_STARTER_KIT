@@ -1,48 +1,43 @@
 {
   "name": "integration_gov_contract_bja_peer_review_support_s",
-  "created": "2026-03-21T12:40:57.479100",
+  "created": "2026-03-24T18:50:43.033097",
   "method": "[GOV CONTRACT] BJA PEER REVIEW SUPPORT SERVICES (deadline: 2026-04-17)",
   "venture": "EAS",
   "phases": [
     {
-      "name": "ingest",
+      "name": "discover",
       "steps": [
-        "hit SAM.gov opportunities API (free, no key needed for public search): GET /opportunities/v2/search?keyword=peer+review+support&postedFrom=today-7d",
-        "Playwright fallback: scrape sam.gov/search if API rate-limited",
-        "write raw JSON to LEDGER/GOV_OPPORTUNITIES_RAW.jsonl"
+        "sam_gov_scrape_peer_review_keywords",
+        "filter_by_deadline_and_naics"
       ],
       "parallel": false
     },
     {
-      "name": "score_and_filter",
+      "name": "qualify",
       "steps": [
-        "filter: deadline >= 14 days out (enough time to bid)",
-        "filter: NAICS codes 541611/541690/541990 (management/support consulting)",
-        "score: 1-10 on (contract_value_est, past_perf_required=0 bonus, set-aside=small_biz bonus, deadline_urgency)",
-        "flag THIS entry: BJA Peer Review deadline 2026-04-17 \u2014 score 7, set-aside TBD, no past-performance cited"
+        "score_fit_vs_capabilities",
+        "extract_evaluation_criteria",
+        "check_incumbent_via_usaspending"
       ],
-      "parallel": true,
-      "depends_on": "ingest"
+      "parallel": true
     },
     {
-      "name": "proposal_prep",
+      "name": "prepare",
       "steps": [
-        "for score >= 6: call `claude -p` to generate capability statement (500 words, no AI vocab, direct, factual)",
-        "populate proposal template: executive summary, approach, key personnel placeholder, price-to-win estimate",
-        "write to DIGITAL_PRODUCTS/gov_proposals/bjaa_peer_review_2026_04_17/ with checklist"
+        "generate_capability_statement",
+        "draft_technical_approach_sections",
+        "identify_teaming_partners_via_linkedin"
       ],
-      "parallel": false,
-      "depends_on": "score_and_filter"
+      "parallel": true
     },
     {
-      "name": "alert_and_track",
+      "name": "submit_queue",
       "steps": [
-        "append scored entry to LEDGER/GOV_OPPORTUNITIES.csv",
-        "if deadline <= 7 days: write urgent alert to OPS/HEARTBEAT.md",
-        "update KPI dashboard with pipeline count and nearest deadline"
+        "compile_proposal_package",
+        "flag_for_human_review"
       ],
       "parallel": false,
-      "depends_on": "proposal_prep"
+      "depends_on": "prepare"
     }
   ],
   "status": "READY"

@@ -1,33 +1,28 @@
 {
   "name": "chain_ph_launch_ai_skills_manager",
-  "created": "2026-03-21T12:40:59.710231",
+  "created": "2026-03-24T18:50:45.198388",
   "method": "[PH Launch] AI Skills Manager",
-  "venture": "OUTBOUND (primary), CONTENT (secondary)",
+  "venture": "EXISTING:OUTBOUND+CONTENT",
   "stages": [
     {
       "agent": "ph_scraper",
-      "task": "Extract ProductHunt launch: founder name, email pattern, product URL, description, category, upvotes, top comments",
-      "output": "ph_launch_raw.json"
+      "task": "fetch ProductHunt launch data (title, description, upvotes, maker profile, hunt details)",
+      "output": "ph_launch_metadata.json"
     },
     {
-      "agent": "founder_enrich",
-      "task": "Reverse lookup: LinkedIn search, email permutation testing, company domain, Twitter handle",
-      "output": "founder_contact_enriched.json"
+      "agent": "analyzer",
+      "task": "identify: 1) partnership angle (does our stack integrate?), 2) content angle (review-worthy?), 3) audience (who benefits?), 4) revenue potential (affiliate, feature, integration?)",
+      "output": "integration_analysis.json"
     },
     {
-      "agent": "cold_email_generator",
-      "task": "Generate 3 email variants: (1) founder/CEO intro, (2) partnership opportunity, (3) feature request/integration angle. Include personalization hooks from PH comments.",
-      "output": "cold_emails_variants.json"
+      "agent": "content_generator",
+      "task": "auto-create 3 content pieces: Twitter thread (how to use + benefits), Reddit post (r/indie_hackers positioning), email template (partnership pitch to founder)",
+      "output": "content_queue.md"
     },
     {
-      "agent": "outreach_queue",
-      "task": "Wire into Instantly or custom cold email script. Queue with 2-day stagger between variants. Tag as PH_LAUNCH_2026_MAR.",
-      "output": "outreach_campaign_queued.json"
-    },
-    {
-      "agent": "content_repurpose",
-      "task": "Route to engagement_bait_converter.py. Generate posts: launch announcement, feature breakdown, comparison to existing tools (if any), early-bird angle, founder story angle.",
-      "output": "engagement_posts_queued.json"
+      "agent": "outreach",
+      "task": "send personalized partnership email to founder (integration, review feature, affiliate opportunity)",
+      "output": "outreach_log.jsonl"
     }
   ],
   "status": "READY"

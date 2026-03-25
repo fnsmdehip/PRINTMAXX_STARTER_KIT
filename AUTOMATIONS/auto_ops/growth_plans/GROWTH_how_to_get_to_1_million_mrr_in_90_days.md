@@ -1,31 +1,33 @@
 # Growth Plan: How to get to $1 million MRR in 90 days:
+- Raise $$$ from VC
 
-- Raise $$$ from V
-
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:00
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-N/A — no method to grow
+Organic app tactics
 
 ### LOW
-N/A
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Route to engagement_bait_converter as CONTENT_ONLY if not already done by prior integration
+- [ ] Research and validate: How to get to $1 million MRR in 90 days:
+- Raise $$$ from VCs
+- Spend $1M on you
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 

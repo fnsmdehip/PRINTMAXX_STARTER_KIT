@@ -1,0 +1,24 @@
+{
+  "name": "chain_gov_contract_contact_center_tier_1_cc",
+  "created": "2026-03-24T18:50:43.064118",
+  "method": "[GOV CONTRACT] CONTACT CENTER TIER 1 (CCT1)- THE PURPOSE OF THIS TASK ORDER IS TO PROVIDE TIER 0 AND TIER 1 LEVEL SUPPORT FOR THE USCIS CONTACT CENTER BY A (deadline: 2026-08-12)",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Query SAM.gov API for NAICS 561422/561320/541519 + keywords 'contact center tier 1 tier 0 help desk' + set-aside small business. Filter deadline >30d.",
+      "output": "sam_gov_contact_center_opps.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each opp: set-aside type (8a/WOSB/SDVOSB preferred), incumbent vulnerable?, recompete?, agency budget history, period of performance. Kill if: >$50M (too big solo), no set-aside (full/open = low win rate), <21d to deadline.",
+      "output": "qualified_contact_center_opps.json"
+    },
+    {
+      "agent": "connector",
+      "task": "For each qualified opp: find prime contractors already holding agency vehicles (GSA MAS, BPA, GWAC). Email outreach: 'We provide vetted Tier 0/1 contact center staff, USCIS-cleared, looking to team on CCT1 recompete.' Use existing cold_outbound chain.",
+      "output": "gov_contract_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

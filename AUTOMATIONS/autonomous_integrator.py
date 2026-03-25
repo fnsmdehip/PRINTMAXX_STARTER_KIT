@@ -246,8 +246,15 @@ def claude_p(prompt: str, timeout: int = CLAUDE_TIMEOUT, model: str = "",
              bare: bool = False) -> tuple[str, bool]:
     """Run claude -p. Set bare=True for code gen (runs from /tmp to skip
     CLAUDE.md, 15 rules files, 27 memory files, 29 plugins — cuts call
-    time from 3+ min to ~50s)."""
+    time from 3+ min to ~50s).
+
+    Uses --api-key flag when ANTHROPIC_API_KEY is set in environment to
+    bypass OAuth (which fails with 401 in cron/background contexts).
+    """
     cmd = ["claude", "-p"]
+    # Use API key auth instead of OAuth for reliability in cron/background
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        cmd.append("--api-key")
     if model:
         cmd.extend(["--model", model])
     cmd.append(prompt)
@@ -342,6 +349,166 @@ def validate_json(text: str) -> Optional[dict]:
             except (json.JSONDecodeError, TypeError):
                 continue
     return None
+
+
+# ---------------------------------------------------------------------------
+# Heuristic fallback analysis (when LLM calls fail due to auth/timeout)
+# ---------------------------------------------------------------------------
+
+# Keyword-to-venture mapping for heuristic routing
+_VENTURE_KEYWORDS: dict[str, list[str]] = {
+    "OUTBOUND": ["cold email", "outreach", "lead gen", "b2b", "linkedin", "dm", "prospect",
+                  "pipeline", "sales", "outbound", "cold call", "agency"],
+    "CONTENT": ["content", "blog", "seo", "twitter", "tiktok", "youtube", "newsletter",
+                "thread", "viral", "engagement", "post", "write", "copywriting", "hook"],
+    "APP": ["app", "saas", "mvp", "deploy", "launch", "build", "api", "tool",
+            "chrome extension", "plugin", "software", "webapp", "platform"],
+    "LOCAL_BIZ": ["local", "smb", "restaurant", "realtor", "plumber", "dentist",
+                  "brick and mortar", "google maps", "yelp", "gmb"],
+    "RESEARCH": ["research", "analysis", "report", "study", "data", "whitepaper",
+                 "thesis", "academic", "survey"],
+    "MONETIZE": ["monetize", "revenue", "income", "profit", "earning", "affiliate",
+                 "commission", "referral", "adsense", "sponsor"],
+    "PRODUCT": ["product", "ebook", "course", "template", "guide", "digital product",
+                "gumroad", "whop", "info product", "sell"],
+    "SCRAPING": ["scrape", "crawl", "extract", "parse", "spider", "data collection",
+                 "web scraping", "automation", "bot"],
+    "BROKERING": ["broker", "arbitrage", "resell", "flip", "middleman", "wholesale",
+                  "dropship", "marketplace"],
+    "EAS": ["enterprise", "automation", "consulting", "b2b service", "managed service",
+            "white label"],
+}
+
+# Specificity signals that raise quality score
+_SPECIFICITY_SIGNALS = [
+    _re.compile(r"\$\d+", _re.I),                          # Dollar amounts
+    _re.compile(r"\d+%", _re.I),                            # Percentages
+    _re.compile(r"(?:step\s*\d|phase\s*\d)", _re.I),        # Numbered steps
+    _re.compile(r"(?:use|using|with)\s+\w+(?:\.(?:com|io|ai|py))?", _re.I),  # Tool names
+    _re.compile(r"(?:cron|script|automate|schedule)", _re.I),  # Automation language
+    _re.compile(r"(?:api|webhook|endpoint|sdk)", _re.I),    # Technical specifics
+    _re.compile(r"\d+\s*(?:hours?|days?|weeks?|min)", _re.I),  # Time estimates
+    _re.compile(r"(?:github|npm|pip|docker)", _re.I),       # Dev tools
+]
+
+
+def heuristic_analysis(entry: dict) -> Optional[dict]:
+    """Fallback analysis when LLM calls fail (auth errors, timeouts, etc.).
+
+    Parses entry text for venture-type keywords and scores based on
+    specificity signals. Returns a basic analysis dict so the entry still
+    gets routed instead of being dropped entirely.
+    """
+    method = entry.get("extracted_method") or entry.get("tactic") or entry.get("content") or ""
+    source = entry.get("source") or "unknown"
+    roi = entry.get("roi_potential") or "UNKNOWN"
+
+    if not method.strip():
+        return None
+
+    text_lower = method.lower()
+
+    # --- Venture type detection ---
+    venture_scores: dict[str, int] = {}
+    for vtype, keywords in _VENTURE_KEYWORDS.items():
+        hits = sum(1 for kw in keywords if kw in text_lower)
+        if hits > 0:
+            venture_scores[vtype] = hits
+
+    if venture_scores:
+        venture_type = max(venture_scores, key=venture_scores.get)  # type: ignore[arg-type]
+    else:
+        venture_type = "CONTENT"  # Safe default: most alpha is content-adjacent
+
+    # --- Quality score based on specificity ---
+    specificity_hits = sum(1 for p in _SPECIFICITY_SIGNALS if p.search(method))
+    # Base score 4 (just above rejection threshold), +0.75 per specificity signal, cap at 8
+    quality_score = min(8, 4 + (specificity_hits * 0.75))
+    # Boost if multiple venture types match (cross-pollination signal)
+    if len(venture_scores) >= 2:
+        quality_score = min(8, quality_score + 0.5)
+
+    # --- Determine automation type ---
+    if any(kw in text_lower for kw in ["scrape", "crawl", "extract", "spider"]):
+        auto_type = "scraper"
+    elif any(kw in text_lower for kw in ["post", "tweet", "content", "write"]):
+        auto_type = "poster"
+    elif any(kw in text_lower for kw in ["email", "outreach", "dm", "cold"]):
+        auto_type = "workflow"
+    elif any(kw in text_lower for kw in ["cron", "schedule", "daily", "weekly"]):
+        auto_type = "cron"
+    else:
+        auto_type = "workflow"
+
+    # --- Build basic execution steps ---
+    steps = [
+        f"Research and validate: {method[:80]}",
+        f"Set up automation for {venture_type.lower()} venture",
+        "Test with small batch, verify output",
+        "Wire cron schedule for recurring execution",
+    ]
+
+    result = {
+        "venture_type": venture_type,
+        "quality_score": round(quality_score, 1),
+        "automation_needed": True,
+        "automation_type": auto_type,
+        "automation_description": f"Heuristic-routed: {method[:120]}",
+        "script_name": f"heuristic_{venture_type.lower()}_{abs(hash(method)) % 10000}.py",
+        "tools_selected": {
+            "venture": False,
+            "ralph_loop": False,
+            "n8n_workflow": False,
+            "automation_script": False,
+            "hook": False,
+            "dag_pipeline": False,
+            "handoff_chain": False,
+            "subagent_tasks": [],
+            "mcp_servers": [],
+            "cron_schedule": "",
+            "kpi_task": f"Track {venture_type.lower()} method progress",
+            "existing_chain": "",
+        },
+        "dag_definition": {"enabled": False, "phases": []},
+        "handoff_chain": {"enabled": False, "stages": []},
+        "growth_tactics": [f"Organic {venture_type.lower()} growth"],
+        "growth_budget_tiers": {
+            "FREE": f"Organic {venture_type.lower()} tactics",
+            "LOW": "$0-50/mo boosting",
+        },
+        "tooling_stack": {"browser": "none", "email": "none", "content": "none"},
+        "budget_tier": "FREE",
+        "estimated_revenue": "$0-100/mo (heuristic estimate)",
+        "execution_steps": steps,
+        "gap_detection": "Heuristic fallback used -- LLM analysis needed for full gap detection",
+        "_source_entry": {
+            "method": method[:200],
+            "source": source,
+            "roi": roi,
+            "alpha_id": entry.get("alpha_id") or entry.get("id") or "",
+        },
+        "_model_used": "heuristic_fallback",
+        "_heuristic": True,
+    }
+
+    log(f"Step 3 [HEURISTIC]: venture={venture_type}, q={quality_score}/10, "
+        f"specificity={specificity_hits} signals, type={auto_type}")
+    return result
+
+
+def _is_auth_error(output: str) -> bool:
+    """Check if a claude -p failure was an authentication/OAuth error."""
+    auth_patterns = [
+        "authentication_error",
+        "OAuth authentication",
+        "401",
+        "Failed to authenticate",
+        "not supported",
+        "token expired",
+        "invalid_token",
+    ]
+    output_lower = output.lower()
+    return any(p.lower() in output_lower for p in auth_patterns)
 
 
 # ---------------------------------------------------------------------------
@@ -611,14 +778,19 @@ Consider reusing this approach or improving on it.
 
     output, ok = claude_p(prompt, model=model)
     if not ok:
-        # If Haiku/Sonnet failed, DON'T retry with Opus — just log
         log(f"Claude -p ({model_label}) analysis failed: {output[:200]}", "ERROR")
-        return None
+        # Fall back to heuristic analysis so the entry still gets routed
+        if _is_auth_error(output):
+            log("Auth/OAuth error detected -- falling back to heuristic analysis", "WARN")
+        else:
+            log("LLM call failed -- falling back to heuristic analysis", "WARN")
+        return heuristic_analysis(entry)
 
     result = validate_json(output)
     if result is None:
         log(f"Failed to parse JSON from claude -p ({model_label}): {output[:300]}", "ERROR")
-        return None
+        log("JSON parse failed -- falling back to heuristic analysis", "WARN")
+        return heuristic_analysis(entry)
 
     # Quality gate
     quality = result.get("quality_score", 0)
@@ -922,6 +1094,7 @@ def _create_template_script(analysis: dict, automations_created: int,
         from __future__ import annotations
         import argparse
         import json
+        import os
         import subprocess
         import sys
         from datetime import datetime
@@ -957,10 +1130,15 @@ def _create_template_script(analysis: dict, automations_created: int,
                     log(f"  [DRY-RUN] Would execute")
                     continue
                 # Steps execute via claude -p for LLM reasoning
+                # Use --api-key when ANTHROPIC_API_KEY is set (avoids OAuth 401 in cron)
                 try:
+                    cmd = ["claude", "-p"]
+                    if os.environ.get("ANTHROPIC_API_KEY"):
+                        cmd.append("--api-key")
+                    cmd.extend(["--model", "sonnet",
+                         f"Execute this step for the PRINTMAXX system. Be concise. Output only results. Step: {{step}}"])
                     result = subprocess.run(
-                        ["claude", "-p", "--model", "sonnet",
-                         f"Execute this step for the PRINTMAXX system. Be concise. Output only results. Step: {{step}}"],
+                        cmd,
                         capture_output=True, text=True, timeout=120,
                         cwd=str(PROJECT),
                     )

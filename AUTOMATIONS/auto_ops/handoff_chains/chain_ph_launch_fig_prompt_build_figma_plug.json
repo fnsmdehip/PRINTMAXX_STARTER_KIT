@@ -1,0 +1,29 @@
+{
+  "name": "chain_ph_launch_fig_prompt_build_figma_plug",
+  "created": "2026-03-24T18:50:42.782332",
+  "method": "[PH LAUNCH] Fig Prompt: Build Figma plugins with just a prompt",
+  "venture": "PRODUCT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Figma Community forum + Reddit r/FigmaDesign for 'plugin request' or 'wish Figma had' posts with 10+ upvotes",
+      "output": "figma_plugin_requests.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score requests by: specificity (clear use case), poster activity (active user = buyer), upvote count (demand signal), commercial potential (team/agency context). Keep score >= 7.",
+      "output": "qualified_plugin_leads.json"
+    },
+    {
+      "agent": "connector",
+      "task": "DM qualified users: 'Saw your request for [X plugin]. I can build it in 48h using AI \u2014 $150 flat. Want a free prototype first?' Log responses.",
+      "output": "plugin_outreach_log.json"
+    },
+    {
+      "agent": "builder",
+      "task": "On positive reply: use Fig Prompt + Claude to generate plugin code, test in Figma sandbox via Playwright MCP, deliver zip + install instructions",
+      "output": "delivered_plugins/"
+    }
+  ],
+  "status": "READY"
+}

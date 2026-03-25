@@ -1,36 +1,32 @@
 # Growth Plan: have been stagnating like crazy since then 
+MRR is actually 
 
-MRR is actually
-
-**Created:** 2026-03-21 12:40
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-25/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Post the diagnostic story framing in r/indiehackers and r/SaaS — 'used Claude Code + Stripe to diagnose my MRR drop' is highly relatable and drives comments
-2. QT the original tweet with our own spin: what WE would investigate if we had $900 MRR stagnating
-3. Use as reply bait under SaaS founder posts about churn/stagnation — 'have you tried connecting Claude Code to your Stripe data?'
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Convert to 3 tweets + 1 Reddit post via engagement_bait_converter.py. Target: r/indiehackers, r/SaaS, Claude Code community on X. Hook angle: 'I spent 3 days letting Claude Code investigate my MRR drop — here is what it found'
+Organic content tactics
 
 ### LOW
-$0-50/mo — boost top-performing post variation with $10-20 X promotion to SaaS founder audience
-
-### MID
-$50-200/mo — N/A at current phase
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --method 'Claude Code + Stripe + Posthog MRR diagnosis' --audience 'SaaS founders' --hook 'stagnating MRR diagnosis stack'
-- [ ] Output 3 post variations to CONTENT/social/posting_queue/
-- [ ] Tag best variation for r/indiehackers + X posting
+- [ ] Research and validate: have been stagnating like crazy since then 
+MRR is actually lower now, back unde
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -38,6 +34,6 @@ $50-200/mo — N/A at current phase
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

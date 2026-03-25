@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_everest_ai_building_the_wor",
+  "created": "2026-03-24T18:50:41.940874",
+  "method": "[PH LAUNCH] Everest AI: Building the world\u2019s fastest IPMI single board computer",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape ProductHunt /topics/developer-tools + /topics/hardware daily, filter for AI infra / edge compute / IPMI / SBC launches, extract founder name + Twitter + website",
+      "output": "ph_ai_infra_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score leads: technical founder (not marketer), company <50 employees, product is infrastructure (not consumer app), has public contact info \u2014 keep score >= 6",
+      "output": "ph_ai_infra_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Route qualified leads into existing chain_cold_outbound with EAS angle: 'We help AI infra teams ship mobile/web dashboards for their hardware products faster' \u2014 personalized with their PH launch context",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

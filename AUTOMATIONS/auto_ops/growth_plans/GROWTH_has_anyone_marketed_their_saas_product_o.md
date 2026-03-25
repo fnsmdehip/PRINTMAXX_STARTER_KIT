@@ -1,32 +1,30 @@
-# Growth Plan: Has anyone marketed their SaaS product on LinkedIn while wor
+# Growth Plan: has anyone marketed their saas product on linkedin while wor
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:01
+**Venture:** OUTBOUND
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Route to engagement_bait_converter as content seed targeting side-project founders worried about employer discovery
+1. Organic outbound growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Single engagement bait post on stealth SaaS marketing angle — targets side-project founder audience
+Organic outbound tactics
 
 ### LOW
-N/A
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Route to engagement_bait_converter.py as CONTENT_ONLY
-- [ ] Generate 1 post targeting side-project founder pain point (employer discovery fear)
-- [ ] Queue in CONTENT/social/posting_queue/
+- [ ] Research and validate: has anyone marketed their saas product on linkedin while worried about their emp
+- [ ] Set up automation for outbound venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -34,6 +32,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter"
+  "content": "none"
 }
 ```

@@ -1,36 +1,39 @@
 {
   "name": "integration_how_i_got_my_first_paying_user_heres_t",
-  "created": "2026-03-21T12:40:54.463725",
+  "created": "2026-03-24T18:50:40.861019",
   "method": "How I got my first paying user. Here's the unfiltered truth. **Project:**\u00a0Email paywall service \u2014Fastpass . email  charge people to contact you  \n**Revenue:**\u00a0\u20ac0 \u2192 \\~$85 in 24h (from 1 user)  \n**Statu",
   "venture": "APP",
   "phases": [
     {
-      "name": "build",
+      "name": "research_and_spec",
       "steps": [
-        "generate landing page HTML (pay $X to get my email, Stripe Payment Link gate)",
-        "wire STRIPE_PUBLISHABLE_KEY into payment button",
-        "add success page that reveals contact email post-payment"
+        "competitor_analysis(fastpass.email, superhumanpaywall, postmark_paid_inbox)",
+        "generate_app_spec_with_3_pricing_tiers",
+        "identify_target_persona(creators_founders_with_inbox_noise)"
       ],
-      "parallel": false
+      "parallel": true
     },
     {
-      "name": "deploy_and_content",
+      "name": "build",
       "steps": [
-        "surge deploy to emailmaxx.surge.sh or similar",
-        "generate 3 build-in-public tweets + 1 Reddit post from launch story angle"
+        "scaffold_nextjs_app_from_app_factory_base_template",
+        "implement_unique_contact_url_per_user",
+        "build_stripe_payment_gate_before_form_submit",
+        "wire_firebase_for_user_accounts_and_payment_logs"
+      ],
+      "parallel": false,
+      "depends_on": "research_and_spec"
+    },
+    {
+      "name": "deploy_and_distribute",
+      "steps": [
+        "deploy_to_surge_subdomain",
+        "generate_build_in_public_content_via_engagement_bait_converter",
+        "create_product_hunt_listing_draft",
+        "add_kpi_entry_to_dashboard"
       ],
       "parallel": true,
       "depends_on": "build"
-    },
-    {
-      "name": "distribute",
-      "steps": [
-        "add posts to CONTENT/social/posting_queue/",
-        "add to OPS/DEPLOYMENT_URLS.md",
-        "add Stripe product to OPS/STRIPE_PRODUCTS.md"
-      ],
-      "parallel": false,
-      "depends_on": "deploy_and_content"
     }
   ],
   "status": "READY"

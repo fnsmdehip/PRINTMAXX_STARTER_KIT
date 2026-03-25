@@ -1,32 +1,30 @@
 # Growth Plan: 4M to $10M, stepped down, and started completely over
 
-**Created:** 2026-03-21 12:40
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Route hook structure to engagement_bait_converter for 3+ posts using the 'walked away from millions' narrative arc
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Feed hook structure to engagement_bait_converter.py — generates 3+ posts using the 'I walked away from $Xm' narrative format that reliably gets 500+ engagement on Twitter/Reddit
+Organic content tactics
 
 ### LOW
-n/a
-
-### MID
-n/a
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Route to engagement_bait_converter.py with hook template: 'I built to $[X]M, stepped down, and started completely over. Here's what I'd do differently:'
-- [ ] Generate 3 engagement posts using this narrative arc applied to our actual ventures/progress
-- [ ] Queue to CONTENT/social/posting_queue/
+- [ ] Research and validate: 4M to $10M, stepped down, and started completely over
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -34,6 +32,6 @@ n/a
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter"
+  "content": "none"
 }
 ```

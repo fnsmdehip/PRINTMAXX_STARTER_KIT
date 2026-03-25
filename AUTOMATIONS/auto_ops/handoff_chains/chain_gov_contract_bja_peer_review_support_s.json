@@ -1,28 +1,28 @@
 {
   "name": "chain_gov_contract_bja_peer_review_support_s",
-  "created": "2026-03-21T12:40:57.485572",
+  "created": "2026-03-24T18:50:43.040848",
   "method": "[GOV CONTRACT] BJA PEER REVIEW SUPPORT SERVICES (deadline: 2026-04-17)",
   "venture": "EAS",
   "stages": [
     {
       "agent": "scraper",
-      "task": "pull SAM.gov daily feed via public API + Playwright fallback, filter to peer-review/support-services solicitations, output raw opportunity list",
-      "output": "LEDGER/GOV_OPPORTUNITIES_RAW.jsonl"
+      "task": "Scrape SAM.gov daily for NAICS 541611/541990/541720 peer review support contracts, deadline >=14 days out, value $25K+",
+      "output": "gov_opportunities_raw.json"
     },
     {
       "agent": "qualifier",
-      "task": "score each contract 1-10 on value/timeline/eligibility, apply NAICS filter, flag set-asides and past-performance waivers",
-      "output": "LEDGER/GOV_OPPORTUNITIES.csv"
+      "task": "Score each opportunity: incumbent known? set-aside type? past performance match? Output top 3 by fit score",
+      "output": "gov_opportunities_qualified.json"
     },
     {
-      "agent": "proposal_drafter",
-      "task": "for score >= 6: claude -p generates capability statement stub + proposal outline + price-to-win range using market comps from USASpending.gov",
-      "output": "DIGITAL_PRODUCTS/gov_proposals/{solicitation_id}/draft.md"
+      "agent": "proposal_generator",
+      "task": "Use claude -p to generate capability statement + technical approach outline per qualified opportunity",
+      "output": "proposal_drafts/"
     },
     {
-      "agent": "deadline_watcher",
-      "task": "monitor deadline countdown, inject 7-day and 3-day warnings into OPS/HEARTBEAT.md and SESSION_BRIEFING.md",
-      "output": "OPS/HEARTBEAT.md (appended)"
+      "agent": "notifier",
+      "task": "Write summary to OPS/GOV_CONTRACT_QUEUE.md with deadlines, fit scores, and draft locations",
+      "output": "OPS/GOV_CONTRACT_QUEUE.md"
     }
   ],
   "status": "READY"

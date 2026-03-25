@@ -1,33 +1,30 @@
 # Growth Plan: Fed's Waller: My brain understands the jobs math, but my gut
 
-**Created:** 2026-03-21 12:40
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0-20/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Use Fed uncertainty quote as hook for finance commentary thread on printmaxxer Twitter
-2. Pair with macro-to-business angle: 'Fed is scared = soft landing narrative dying = X opportunity'
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Convert Fed quote to engagement bait via engagement_bait_converter.py. One post. Finance commentary hooks perform well organically when tied to a business angle.
+Organic content tactics
 
 ### LOW
-N/A — content-only signal, paid amplification not warranted at Phase 0
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input "Fed's Waller: My brain understands the jobs math, but my gut can't say it's ok" --angle finance_uncertainty --platform twitter
-- [ ] Review output and add to CONTENT/social/posting_queue/ if hook lands
-- [ ] No cron, no venture, no DAG — single conversion call
+- [ ] Research and validate: Fed's Waller: My brain understands the jobs math, but my gut can't say it's ok
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -35,6 +32,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

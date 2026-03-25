@@ -1,0 +1,24 @@
+{
+  "name": "chain_rsaas_what_problem_does_your_saas_act",
+  "created": "2026-03-24T18:50:44.648334",
+  "method": "[r/SaaS] What problem does your SaaS actually solve? I\u2019ll try to find you real users",
+  "venture": "OUTBOUND",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Pull r/SaaS posts with keywords: 'what problem', 'looking for users', 'need feedback', 'who wants to try'. Extract: username, post title, body snippet, upvotes, post_url, flair",
+      "output": "saas_founders_raw.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each entry: has_product_url (2pts), has_problem_statement (2pts), post_upvotes>5 (1pt), recent<7days (2pts), not_already_in_leads (3pts). Keep score>=5",
+      "output": "saas_founders_qualified.json"
+    },
+    {
+      "agent": "connector",
+      "task": "For each qualified founder: generate personalized cold DM or email using their stated problem. Route to existing chain_cold_outbound pipeline. Log to AUTOMATIONS/leads/reddit_saas_leads.csv",
+      "output": "outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

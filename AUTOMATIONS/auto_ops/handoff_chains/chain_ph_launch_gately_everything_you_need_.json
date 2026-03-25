@@ -1,0 +1,29 @@
+{
+  "name": "chain_ph_launch_gately_everything_you_need_",
+  "created": "2026-03-24T18:50:42.545745",
+  "method": "[PH LAUNCH] Gately: Everything you need to build your own membership",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scrape Gately PH page + website for features, pricing, use cases, screenshots",
+      "output": "gately_raw.json"
+    },
+    {
+      "agent": "researcher",
+      "task": "Pull top 5 competing membership tools (Whop, Memberful, Circle, Kajabi, Skool) \u2014 features + pricing from existing cache or Playwright",
+      "output": "competitors.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Generate 1200-word SEO comparison page targeting 'best membership site software 2026' + 'Gately vs Memberful' etc. Include comparison table, pros/cons, affiliate CTA",
+      "output": "comparison_page.html"
+    },
+    {
+      "agent": "deployer",
+      "task": "Deploy to surge.sh as /best-membership-platform or similar slug. Update sitemap.",
+      "output": "deployed_url.txt"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,349 @@
+{
+  "researched": [
+    "ALPHA263",
+    "ALPHA268",
+    "ALPHA270",
+    "ALPHA271",
+    "ALPHA272",
+    "ALPHA324",
+    "ALPHA1773993226",
+    "ALPHA8892",
+    "ALPHA1773993235",
+    "ALPHA264",
+    "ALPHA265",
+    "ALPHA266",
+    "ALPHA267",
+    "ALPHA269",
+    "ALPHA273",
+    "ALPHA339",
+    "ALPHA108053",
+    "ALPHA105219",
+    "ALPHA5407",
+    "ALPHA11425",
+    "ALPHA24174",
+    "ALPHA25276",
+    "ALPHA105035",
+    "ALPHA104720",
+    "ALPHA_OPP055_SKILLS_MARKETPLACE",
+    "ALPHA105643",
+    "ALPHA20296",
+    "ALPHA_HN_47431288",
+    "ALPHA100019",
+    "ALPHA104818",
+    "ALPHA102693",
+    "ALPHA536",
+    "ALPHA1773995846",
+    "F01",
+    "F02",
+    "F03",
+    "F05",
+    "N10",
+    "N25",
+    "N44"
+  ],
+  "backtested": [
+    {
+      "id": "ALPHA263",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA268",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA270",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA271",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA272",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA324",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA1773993226",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA8892",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA1773993235",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA264",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA265",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA266",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA267",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA269",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA273",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA339",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA108053",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA105219",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA5407",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA11425",
+      "verdict": "PASS"
+    }
+  ],
+  "implemented": [
+    {
+      "method_id": "ALPHA268",
+      "name": "IG: DM shares = new priority metric + first 2 seconds critical",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.55,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA271",
+      "name": "1-to-20 repurposing hub-and-spoke model with AI automation",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.55,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA272",
+      "name": "Stacked monetization model: CPM varies by niche + sponsorships highest ROI",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.55,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA324",
+      "name": "ALPHA324",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.55,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA1773993226",
+      "name": "My first real week of sales on my website",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.43,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA1773993235",
+      "name": "If had no followers, no email list, and no idea what to sell",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.31,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA265",
+      "name": "Systems vs outcomes messaging trend + accountability content",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.25,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA267",
+      "name": "18-22 Shorts/month optimal + trending audio first 5 sec",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.25,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA339",
+      "name": "Micro > Mega ROI",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.25,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA108053",
+      "name": "Whale 0x049b opened 20x shorts on 428.73 $BTC($29.62M) and 13,852 $ETH($29.13M) 2 hours ago, and is ",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.21,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA105219",
+      "name": "The app space is saturated is a complete myth.\n95% of apps have no idea about distribution.\nThe barr",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.17,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA5407",
+      "name": "sold my first faceless account last month for $47,000i built it in 11 weekslet me explain why this i",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.16,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA11425",
+      "name": "You need to realize that there is almost no competition right now. More and more people are drawn to",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.16,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-25T00:57:27Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    }
+  ],
+  "last_run": "2026-03-25T00:57:27Z",
+  "duration_s": 0.04,
+  "summary": {
+    "researched": 40,
+    "backtested": 20,
+    "passed": 13,
+    "conditional": 7,
+    "failed": 0,
+    "implemented": 13
+  }
+}

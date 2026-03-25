@@ -1,0 +1,24 @@
+{
+  "name": "chain_mit_repo_sorenlouvfbsleepstats_1689",
+  "created": "2026-03-24T18:50:41.033964",
+  "method": "MIT repo: sorenlouv/fb-sleep-stats (1689 stars, JavaScript)",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Pull activity signals: LinkedIn 'Active now' badges via Playwright, Twitter last-tweet timestamps, GitHub commit times. Build per-lead activity heatmap (24h x 7d grid).",
+      "output": "activity_heatmap.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each lead's active windows. Flag leads active between 8-10 AM local time as PRIME (highest reply rate window). Output ranked send schedule.",
+      "output": "send_schedule.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Inject ranked send times into existing cold outreach scripts. Override default send times with activity-optimized windows. Log A/B delta.",
+      "output": "outreach_timing_log.json"
+    }
+  ],
+  "status": "READY"
+}

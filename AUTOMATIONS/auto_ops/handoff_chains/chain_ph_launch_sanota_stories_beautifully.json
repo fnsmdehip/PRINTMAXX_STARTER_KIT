@@ -1,0 +1,24 @@
+{
+  "name": "chain_ph_launch_sanota_stories_beautifully",
+  "created": "2026-03-24T18:50:41.999504",
+  "method": "[PH LAUNCH] Sanota: Stories, beautifully crafted",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Pull top PH launches daily, filter for storytelling/narrative/writing tools",
+      "output": "ph_story_tools.json"
+    },
+    {
+      "agent": "extractor",
+      "task": "Extract narrative framework from product description (what story arc does it enable?)",
+      "output": "story_frameworks.json"
+    },
+    {
+      "agent": "content_gen",
+      "task": "Convert framework into 3 story-format posts via engagement_bait_converter.py",
+      "output": "story_posts.csv"
+    }
+  ],
+  "status": "READY"
+}

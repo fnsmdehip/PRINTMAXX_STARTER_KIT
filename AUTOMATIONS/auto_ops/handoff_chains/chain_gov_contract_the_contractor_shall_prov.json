@@ -1,23 +1,23 @@
 {
   "name": "chain_gov_contract_the_contractor_shall_prov",
-  "created": "2026-03-21T12:40:57.609879",
+  "created": "2026-03-24T18:50:43.255389",
   "method": "[GOV CONTRACT] THE CONTRACTOR SHALL PROVIDE ON-SITE AND OFF-SITE FUNCTIONAL RESOURCES TO SUPPORT THE PRINTING AND GRAPHIC DESIGN SERVICES. (deadline: 2027-02-14)",
-  "venture": "EAS",
+  "venture": "BROKERING",
   "stages": [
     {
       "agent": "scraper",
-      "task": "daily SAM.gov scan NAICS 323111/541430 + keyword: printing graphic design",
-      "output": "sam_raw_contracts.json"
+      "task": "SAM.gov API scan for printing/graphic design contracts \u2014 output raw opportunity list with value, deadline, agency, set-aside type",
+      "output": "sam_printing_opportunities.json"
     },
     {
       "agent": "qualifier",
-      "task": "filter by: budget >$25K, active/pre-solicitation, small-biz set-aside preferred, deadline >30 days",
-      "output": "sam_qualified_contracts.json"
+      "task": "Score opportunities by value * broker margin / deadline urgency; flag 8a/WOSB set-asides as priority (3-5x less competition); discard value < $25K",
+      "output": "qualified_printing_contracts.json"
     },
     {
       "agent": "connector",
-      "task": "generate capability statement + cold outreach to awarded prime contractors for subcontract opportunities",
-      "output": "sam_outreach_log.json"
+      "task": "Match top contracts to local print shop leads; generate capability statement + teaming outreach email; add to cold email queue",
+      "output": "printing_outreach_queue.json"
     }
   ],
   "status": "READY"

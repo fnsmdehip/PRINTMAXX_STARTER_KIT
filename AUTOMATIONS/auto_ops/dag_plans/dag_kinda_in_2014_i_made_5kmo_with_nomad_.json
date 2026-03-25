@@ -1,37 +1,38 @@
 {
   "name": "integration_kinda_in_2014_i_made_5kmo_with_nomad_",
-  "created": "2026-03-20T13:50:43.076772",
-  "method": "Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/mo with Remote OK added\n\nBefore that 2008-2013, I was making anywhere from $2K to $8K/mo with my YouTube channel\n\nAnd then before 2008 I was",
-  "venture": "APP",
+  "created": "2026-03-24T18:50:47.596282",
+  "method": "Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/mo with Remote OK added\nBefore that 2008-2013, I was making anywhere from $2K to $8K/mo with my YouTube channel\nAnd then before 2008 I was m",
+  "venture": "CONTENT",
   "phases": [
     {
-      "name": "niche_scan",
+      "name": "discover",
       "steps": [
-        "scan_reddit_communities_for_directory_gaps",
-        "check_existing_directories_competition",
-        "score_monetization_via_capital_genesis"
+        "scan_underserved_niches",
+        "score_competition_gap",
+        "validate_search_volume"
       ],
       "parallel": true
     },
     {
-      "name": "build_directory",
+      "name": "build",
       "steps": [
-        "generate_directory_from_app_factory_template",
-        "seed_with_scraped_listings",
-        "add_submit_and_featured_listing_forms"
+        "generate_static_html_site",
+        "inject_adsense_slots",
+        "add_featured_listing_waitlist"
       ],
       "parallel": false,
-      "depends_on": "niche_scan"
+      "depends_on": "discover"
     },
     {
-      "name": "launch_distribute",
+      "name": "distribute",
       "steps": [
-        "deploy_to_surge",
-        "post_show_hn_and_subreddits",
-        "generate_levelsio_style_buildinpublic_tweets"
+        "surge_deploy",
+        "cross_link_from_47_live_apps",
+        "submit_sitemap_google",
+        "post_to_niche_subreddit"
       ],
       "parallel": true,
-      "depends_on": "build_directory"
+      "depends_on": "build"
     }
   ],
   "status": "READY"

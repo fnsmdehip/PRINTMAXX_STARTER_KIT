@@ -1,33 +1,30 @@
 # Growth Plan: Nvidia $NVDA to sell 1M AI chips, other products to Amazon W
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:00
+**Venture:** PRODUCT
 **Budget Tier:** FREE
-**Revenue Est:** $0 direct / content engagement value only
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Post hot-take commentary on NVDA/AWS deal as an indie builder angle — 'While NVDA sells 1M chips to AWS, here is what the app layer above that looks like'
-2. Use as engagement bait reply to finance/tech accounts already posting about this deal
+1. Organic product growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Convert signal into 2-3 tweets via engagement_bait_converter.py — hot take angle for indie/builder audience. No spend required.
+Organic product tactics
 
 ### LOW
-N/A — content-only entry, not worth paid distribution
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Route to engagement_bait_converter.py with angle: 'hyperscaler AI spend = demand signal for app layer builders'
-- [ ] Generate 2 tweets + 1 reply-bait targeting finance and indie hacker crossover audience
-- [ ] Queue in CONTENT/social/posting_queue/ — do not build venture or DAG
+- [ ] Research and validate: Nvidia $NVDA to sell 1M AI chips, other products to Amazon Web Services $AMZN by
+- [ ] Set up automation for product venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -35,6 +32,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

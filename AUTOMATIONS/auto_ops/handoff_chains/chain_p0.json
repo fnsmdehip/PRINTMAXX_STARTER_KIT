@@ -1,0 +1,29 @@
+{
+  "name": "chain_p0",
+  "created": "2026-03-24T18:50:47.520692",
+  "method": "P0",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "content_generator",
+      "task": "generate 30-day batch of tax tips (daily 280-char + 5-min explainer video script)",
+      "output": "tax_tips_batch_030.csv"
+    },
+    {
+      "agent": "content_repurposer",
+      "task": "convert each tip \u2192 3 formats (tweet bait, Reddit comment, TikTok caption). Apply engagement_bait_converter.",
+      "output": "repurposed_content_queue.csv"
+    },
+    {
+      "agent": "social_distributor",
+      "task": "post daily tips across Twitter, Reddit r/tax, TikTok @TaxStreakApp. Include clickable link to app landing page.",
+      "output": "distribution_log.jsonl"
+    },
+    {
+      "agent": "conversion_tracker",
+      "task": "track link clicks, app installs, premium conversions by source. Update KPI dashboard.",
+      "output": "daily_metrics.json"
+    }
+  ],
+  "status": "READY"
+}

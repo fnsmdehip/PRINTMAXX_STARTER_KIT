@@ -1,23 +1,28 @@
 {
   "name": "chain_ph_launch_optimo_effortless_media_opt",
-  "created": "2026-03-21T12:40:55.814798",
+  "created": "2026-03-24T18:50:41.894811",
   "method": "[PH LAUNCH] optimo: effortless media optimizer for the web",
-  "venture": "OUTBOUND",
+  "venture": "CONTENT",
   "stages": [
     {
       "agent": "scraper",
-      "task": "Scrape PH daily launches \u2014 extract product name, founder Twitter/email, category, upvote count, tagline",
-      "output": "ph_launches_raw.json"
+      "task": "Extract PH launch data: upvote count, top comments, maker profile, pricing tiers, tech stack, target audience signals",
+      "output": "ph_optimo_data.json"
     },
     {
       "agent": "qualifier",
-      "task": "Filter: upvotes >= 50 OR category in [developer-tools, productivity, saas, design-tools, marketing]. Score founder reachability (Twitter DM open, email in bio, maker page)",
-      "output": "ph_qualified_leads.json"
+      "task": "Score: (1) dev/web tool? (2) affiliate program exists? (3) maker is solo founder without CTO \u2014 EAS fit? (4) comparison angle available vs incumbent tools?",
+      "output": "ph_optimo_qualified.json"
+    },
+    {
+      "agent": "content_generator",
+      "task": "Run engagement_bait_converter.py: generate 3 tweets + 1 thread on web media optimization pain points, tool comparison angles (Optimo vs Cloudinary vs manual ImageMagick), developer productivity hooks",
+      "output": "ph_optimo_content.json"
     },
     {
       "agent": "connector",
-      "task": "Generate personalized cold outreach referencing their specific launch + offer EAS/content/SEO angle. Route to cold_email_pipeline.py or twitter_dm_outreach.py",
-      "output": "ph_outreach_log.json"
+      "task": "If EAS-qualified maker: add to cold outreach queue with pitch angle (media optimization service / app build). If affiliate program found: embed links in all comparison content.",
+      "output": "ph_optimo_outreach.json"
     }
   ],
   "status": "READY"

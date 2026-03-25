@@ -1,37 +1,46 @@
 {
   "name": "integration_mit_repo_brufdevmanynotes_928_stars",
-  "created": "2026-03-21T12:40:54.924499",
+  "created": "2026-03-24T18:50:41.214322",
   "method": "MIT repo: brufdev/many-notes (928 stars, PHP)",
   "venture": "APP",
   "phases": [
     {
       "name": "research",
       "steps": [
-        "Clone brufdev/many-notes and audit feature set (PHP version, DB requirements, multi-user support)",
-        "Scrape GitHub issues for top user complaints \u2014 these become landing page pain points",
-        "Check competitors: Standard Notes pricing, Joplin pricing, Notesnook pricing"
+        "subagent: scan niche note-taking gaps (legal/medical/real-estate)",
+        "subagent: extract competitor pricing from G2/Capterra"
       ],
       "parallel": true
     },
     {
       "name": "build",
       "steps": [
-        "Fork repo, rename to 'NoteVault' or 'QuickNotes Pro', update branding in config",
-        "Add Stripe payment link guard at login \u2014 free 7-day trial, then $9/mo",
-        "Generate Railway/Render deploy config (railway.json + Procfile)"
+        "clone brufdev/many-notes, strip non-essential UI",
+        "add Firebase auth (multi-tenant user isolation)",
+        "inject Stripe checkout for $19/mo tier via payment_integrator.py --route APP"
       ],
-      "parallel": true,
+      "parallel": false,
       "depends_on": "research"
+    },
+    {
+      "name": "deploy",
+      "steps": [
+        "deploy to surge.sh or Vercel (static front + PHP backend on Railway/Render free tier)",
+        "wire RevenueCat if mobile wrapper needed",
+        "smoke-test payment flow end-to-end"
+      ],
+      "parallel": false,
+      "depends_on": "build"
     },
     {
       "name": "distribute",
       "steps": [
-        "Deploy landing page to surge.sh targeting self-hosted notes longtails",
-        "Submit to alternativeto.net as Notion/Obsidian alternative",
-        "Queue 3 tweets: pain-point hook \u2192 feature walkthrough \u2192 price anchoring"
+        "run engagement_bait_converter.py on niche angle for 3 tweets + 1 thread",
+        "post to relevant subreddit (r/selfhosted, r/legaltech, r/medicalapps)",
+        "add to posting_queue"
       ],
-      "parallel": true,
-      "depends_on": "build"
+      "parallel": false,
+      "depends_on": "deploy"
     }
   ],
   "status": "READY"

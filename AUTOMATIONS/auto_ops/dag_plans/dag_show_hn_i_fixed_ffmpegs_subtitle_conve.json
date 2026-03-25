@@ -1,47 +1,38 @@
 {
   "name": "integration_show_hn_i_fixed_ffmpegs_subtitle_conve",
-  "created": "2026-03-21T12:41:00.265997",
+  "created": "2026-03-24T18:50:45.862477",
   "method": "Show HN: I fixed FFmpeg's subtitle conversion (the bug from 2014). FFmpeg converts everything except subtitles across format boundaries. SRT to Blu-ray PGS? &quot;Subtitle encoding currently only poss",
   "venture": "APP",
   "phases": [
     {
-      "name": "research",
+      "name": "market_scan",
       "steps": [
-        "clone_and_analyze_github_repo_for_supported_formats",
-        "keyword_research_subtitle_conversion_pairs",
-        "scrape_competitor_tools_and_pricing"
+        "Search GitHub API for issues: age > 3yr, reactions > 30, labels: bug|enhancement, repos: ffmpeg/ffmpeg + similar media tools",
+        "Search Reddit r/ffmpeg r/videoediting r/premiere for subtitle conversion pain mentions",
+        "Price survey: HandBrake, Subtitle Edit, SubtitleBoss \u2014 what do they charge and what gaps exist"
       ],
       "parallel": true
     },
     {
-      "name": "build",
+      "name": "product_definition",
       "steps": [
-        "generate_subtitle_converter_webapp_from_app_factory_template",
-        "wire_stripe_freemium_free10files_per_day_pro9mo"
+        "Define MVP: CLI wrapper + web UI accepting SRT/ASS/SSA \u2192 PGS/DVDSUB/VobSub + reverse",
+        "Wire Stripe payment link ($9/mo unlimited conversions OR $0.10/conversion pay-per-use)",
+        "Generate App Store and Product Hunt listing copy"
       ],
       "parallel": false,
-      "depends_on": "research"
+      "depends_on": "market_scan"
     },
     {
-      "name": "seo_and_content",
+      "name": "distribution",
       "steps": [
-        "generate_30_landing_pages_per_format_pair_with_longtail_keywords",
-        "write_hn_story_claude_code_fixed_12yr_ffmpeg_bug",
-        "write_indie_hacker_post_boring_tool_milestone",
-        "generate_3_tweets_1_thread_for_content_queue"
+        "Post on HN Show HN thread comments (organic reply to original post)",
+        "Submit to r/ffmpeg r/videoediting r/editors",
+        "Generate 3 tweets + 1 thread: 'FFmpeg subtitle bug existed since 2014 \u2014 here is how Claude Code fixed it in weeks'",
+        "List on Product Hunt"
       ],
       "parallel": true,
-      "depends_on": "build"
-    },
-    {
-      "name": "deploy_and_distribute",
-      "steps": [
-        "surge_deploy_subtitleconverter",
-        "submit_sitemap_to_search_console",
-        "post_plex_jellyfin_discord_and_reddit"
-      ],
-      "parallel": false,
-      "depends_on": "seo_and_content"
+      "depends_on": "product_definition"
     }
   ],
   "status": "READY"

@@ -279,7 +279,7 @@ def run_dag() -> dict[str, Any]:
         err = info.get("error", "")
         log(f"  [{status:>8}] {name:<25} {dur:>6}ms{f'  ERR: {err[:50]}' if err else ''}")
 
-    _trajectory.log("morning_dag_complete", state)
+    _trajectory.log_success("morning_dag_complete")
     return state
 
 

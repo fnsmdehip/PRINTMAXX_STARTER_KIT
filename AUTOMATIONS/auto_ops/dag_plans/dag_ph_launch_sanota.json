@@ -1,0 +1,36 @@
+{
+  "name": "integration_ph_launch_sanota",
+  "created": "2026-03-24T18:50:45.105809",
+  "method": "[PH Launch] Sanota",
+  "venture": "OUTBOUND",
+  "phases": [
+    {
+      "name": "discover",
+      "steps": [
+        "scrape_ph_today",
+        "extract_tool_metadata"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "classify",
+      "steps": [
+        "relevance_score_vs_ventures",
+        "revenue_potential_estimate"
+      ],
+      "parallel": true,
+      "depends_on": "discover"
+    },
+    {
+      "name": "route",
+      "steps": [
+        "content_mention",
+        "workflow_integration_candidate",
+        "integration_guide_gen"
+      ],
+      "parallel": true,
+      "depends_on": "classify"
+    }
+  ],
+  "status": "READY"
+}

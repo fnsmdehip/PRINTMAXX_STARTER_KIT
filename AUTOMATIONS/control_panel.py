@@ -28,6 +28,7 @@ import subprocess
 import sys
 import threading
 import time
+import uuid
 import webbrowser
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -2279,8 +2280,27 @@ def api_kpi_calendar():
     m_out = mult["outreach"]
     m_rev = mult["revenue"]
 
+    # ── EFFECTIVE DAY TRACKING ────────────────────────────────────────
+    # Instead of using calendar day (which assumes linear progress),
+    # use a persistent effective_day that only advances when user
+    # completes a day's tasks. Defaults to day 1 if no progress file.
+    _progress_file = AUTOMATIONS / "agent" / "kpi_progress.json"
+    _effective_day = 1
+    if _progress_file.exists():
+        try:
+            _prog = json.loads(_progress_file.read_text())
+            _effective_day = _prog.get("effective_day", 1)
+        except Exception:
+            pass
+    _day_shift = today_day - _effective_day
+
     for day in range(1, min(days_in_month + 1, 31)):
-        plan = daily_plans.get(day, default_plan)
+        # Shift: today shows effective_day's plan, tomorrow shows effective_day+1, etc.
+        if _day_shift > 0 and day >= today_day:
+            shifted = day - _day_shift
+            plan = daily_plans.get(max(1, shifted), default_plan)
+        else:
+            plan = daily_plans.get(day, default_plan)
         is_today = (day == today_day)
         is_past = (day < today_day)
         week_num = (day - 1) // 7 + 1
@@ -2361,7 +2381,29 @@ def api_kpi_calendar():
         "mode": mode,
         "mode_label": mult["label"],
         "mode_desc": mult["desc"],
+        "effective_day": _effective_day,
+        "schedule_shifted": _day_shift > 0,
+        "shift_days": _day_shift,
     })
+
+
+@app.route("/api/kpi/advance-day", methods=["POST"])
+def api_kpi_advance_day():
+    """Advance the effective KPI day (user completed today's tasks)."""
+    progress_file = AUTOMATIONS / "agent" / "kpi_progress.json"
+    progress_file.parent.mkdir(parents=True, exist_ok=True)
+    current = 1
+    if progress_file.exists():
+        try:
+            current = json.loads(progress_file.read_text()).get("effective_day", 1)
+        except Exception:
+            pass
+    new_day = min(current + 1, 30)
+    progress_file.write_text(json.dumps({
+        "effective_day": new_day,
+        "advanced_at": datetime.now().isoformat(),
+    }, indent=2))
+    return jsonify({"effective_day": new_day, "previous": current})
 
 
 @app.route("/api/kpi/complete", methods=["POST"])
@@ -2686,6 +2728,1104 @@ def api_kpi_rerank():
 
     except Exception as e:
         return jsonify({"reranked": False, "error": str(e)})
+
+
+# ---------------------------------------------------------------------------
+# TODAY'S AUTOMATED OUTPUT — daily production summary for the dashboard
+# ---------------------------------------------------------------------------
+TIME_SENSITIVE_KEYWORDS = re.compile(
+    r"just announced|breaking|IPO|Series [A-C]|acquisition|launching|deadline|"
+    r"expires|limited|closing|urgent|time.sensitive|immediately|ending soon",
+    re.IGNORECASE,
+)
+
+
+def _is_today(filepath):
+    """Return True if a file was modified today."""
+    try:
+        mtime = Path(filepath).stat().st_mtime
+        return datetime.fromtimestamp(mtime).date() == datetime.now().date()
+    except Exception:
+        return False
+
+
+def _parse_log_counts(filepath, patterns):
+    """Scan a log file for pattern counts. Returns dict of pattern->count."""
+    counts = {p: 0 for p in patterns}
+    try:
+        p = Path(filepath)
+        if not p.exists() or not _is_today(p):
+            return counts
+        with open(p, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                for pat in patterns:
+                    if pat.upper() in line.upper():
+                        counts[pat] += 1
+    except Exception:
+        pass
+    return counts
+
+
+def get_daily_output():
+    """Aggregate everything the automated system produced today into a single view."""
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    today_ts = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
+    result = {
+        "date": today_str,
+        "summary": {
+            "total_new_alpha": 0,
+            "methods_discovered": 0,
+            "entries_integrated": 0,
+            "entries_skipped": 0,
+            "rbi_researched": 0,
+            "rbi_passed": 0,
+            "rbi_conditional": 0,
+            "rbi_failed": 0,
+            "edgar_filings": 0,
+            "crunchbase_rounds": 0,
+            "reports_generated": 0,
+            "content_created": 0,
+            "loops_closed": 0,
+            "ventures_refined": 0,
+            "dag_status": "unknown",
+        },
+        "highlights": [],
+        "rbi_status": {"researched": 0, "passed": 0, "conditional": 0, "failed": 0},
+        "loop_health": {"decisions": "UNKNOWN", "feedback": "UNKNOWN", "pipeline": "UNKNOWN", "drift": "UNKNOWN"},
+        "system_working": True,
+        "errors": [],
+    }
+
+    # ── 1. ALPHA_STAGING — new entries added today ──────────────────
+    alpha_csv = LEDGER / "ALPHA_STAGING.csv"
+    if alpha_csv.exists():
+        try:
+            with open(alpha_csv, "r", encoding="utf-8", errors="replace") as f:
+                for row in csv.DictReader(f):
+                    created = row.get("created_at", row.get("date_added", ""))
+                    if today_str in created:
+                        result["summary"]["total_new_alpha"] += 1
+                        score = 0
+                        try:
+                            score = float(row.get("synergy_score", 0) or 0)
+                        except (ValueError, TypeError):
+                            pass
+                        text = row.get("extracted_method", row.get("tactic", ""))[:120]
+                        source = row.get("source", "alpha")
+                        is_ts = bool(TIME_SENSITIVE_KEYWORDS.search(text)) or (score > 7 and bool(created))
+                        if score >= 6.0 and text:
+                            result["highlights"].append({
+                                "source": source,
+                                "text": text,
+                                "score": round(score, 1),
+                                "time_sensitive": is_ts,
+                            })
+        except Exception as e:
+            result["errors"].append(f"alpha parse: {e}")
+
+    # ── 2. LOG FILE SCANNING ────────────────────────────────────────
+    # 2a. SEC EDGAR scanner
+    edgar_log = LOGS_DIR / "sec_edgar_scanner.log"
+    if edgar_log.exists() and _is_today(edgar_log):
+        edgar_counts = _parse_log_counts(edgar_log, ["filing", "8-K", "S-1", "10-K", "10-Q", "ERROR"])
+        filing_total = sum(v for k, v in edgar_counts.items() if k != "ERROR")
+        result["summary"]["edgar_filings"] = filing_total
+        if edgar_counts.get("ERROR", 0) > 0:
+            result["errors"].append(f"EDGAR scanner: {edgar_counts['ERROR']} errors")
+        # Extract specific filings as highlights
+        try:
+            with open(edgar_log, "r", encoding="utf-8", errors="replace") as f:
+                for line in f:
+                    if any(kw in line.upper() for kw in ["8-K", "S-1", "IPO", "ACQUISITION"]):
+                        clean = line.strip()[-120:]
+                        if clean:
+                            result["highlights"].append({
+                                "source": "edgar",
+                                "text": clean,
+                                "score": 7.0,
+                                "time_sensitive": True,
+                            })
+        except Exception:
+            pass
+
+    # 2b. Crunchbase scanner
+    cb_log = LOGS_DIR / "crunchbase_scanner.log"
+    if cb_log.exists() and _is_today(cb_log):
+        cb_counts = _parse_log_counts(cb_log, ["Series", "funding", "raised", "ERROR"])
+        result["summary"]["crunchbase_rounds"] = sum(v for k, v in cb_counts.items() if k != "ERROR")
+        if cb_counts.get("ERROR", 0) > 0:
+            result["errors"].append(f"Crunchbase scanner: {cb_counts['ERROR']} errors")
+        try:
+            with open(cb_log, "r", encoding="utf-8", errors="replace") as f:
+                for line in f:
+                    if any(kw in line for kw in ["Series A", "Series B", "Series C", "$"]):
+                        clean = line.strip()[-120:]
+                        if clean:
+                            result["highlights"].append({
+                                "source": "crunchbase",
+                                "text": clean,
+                                "score": 8.0,
+                                "time_sensitive": True,
+                            })
+        except Exception:
+            pass
+
+    # 2c. Method discovery crawler
+    mdc_log = LOGS_DIR / "method_discovery_crawler.log"
+    if mdc_log.exists() and _is_today(mdc_log):
+        mdc_counts = _parse_log_counts(mdc_log, ["discovered", "new method", "scored", "ERROR"])
+        result["summary"]["methods_discovered"] = mdc_counts.get("discovered", 0) + mdc_counts.get("new method", 0)
+        if mdc_counts.get("ERROR", 0) > 0:
+            result["errors"].append(f"Method crawler: {mdc_counts['ERROR']} errors")
+    # Also check METHOD_DISCOVERY_LOG.csv
+    discovery_csv = LEDGER / "METHOD_DISCOVERY_LOG.csv"
+    if discovery_csv.exists():
+        try:
+            with open(discovery_csv, "r", encoding="utf-8", errors="replace") as f:
+                for line in f:
+                    if today_str in line:
+                        result["summary"]["methods_discovered"] += 1
+        except Exception:
+            pass
+
+    # 2d. Autonomous integrator
+    ai_log = LOGS_DIR / "autonomous_integrator.log"
+    if ai_log.exists() and _is_today(ai_log):
+        ai_counts = _parse_log_counts(ai_log, ["OK", "SKIP", "INTEGRATED", "ERROR", "timeout"])
+        result["summary"]["entries_integrated"] = ai_counts.get("OK", 0) + ai_counts.get("INTEGRATED", 0)
+        result["summary"]["entries_skipped"] = ai_counts.get("SKIP", 0)
+        if ai_counts.get("ERROR", 0) > 0:
+            result["errors"].append(f"Integrator: {ai_counts['ERROR']} errors")
+        if ai_counts.get("timeout", 0) > 0:
+            result["errors"].append(f"Integrator: {ai_counts['timeout']} timeouts")
+
+    # 2e. RBI loop
+    rbi_log = LOGS_DIR / "rbi_loop.log"
+    if rbi_log.exists() and _is_today(rbi_log):
+        rbi_counts = _parse_log_counts(rbi_log, ["PASS", "CONDITIONAL", "FAIL", "researched", "ERROR"])
+        result["summary"]["rbi_researched"] = rbi_counts.get("researched", 0)
+        result["summary"]["rbi_passed"] = rbi_counts.get("PASS", 0)
+        result["summary"]["rbi_conditional"] = rbi_counts.get("CONDITIONAL", 0)
+        result["summary"]["rbi_failed"] = rbi_counts.get("FAIL", 0)
+        result["rbi_status"] = {
+            "researched": rbi_counts.get("researched", 0),
+            "passed": rbi_counts.get("PASS", 0),
+            "conditional": rbi_counts.get("CONDITIONAL", 0),
+            "failed": rbi_counts.get("FAIL", 0),
+        }
+
+    # 2f. Morning intelligence DAG
+    dag_log = LOGS_DIR / "morning_intelligence_dag.log"
+    if dag_log.exists() and _is_today(dag_log):
+        dag_counts = _parse_log_counts(dag_log, ["COMPLETE", "FAILED", "ERROR", "SUCCESS"])
+        if dag_counts.get("COMPLETE", 0) > 0 or dag_counts.get("SUCCESS", 0) > 0:
+            result["summary"]["dag_status"] = "COMPLETE"
+        elif dag_counts.get("FAILED", 0) > 0 or dag_counts.get("ERROR", 0) > 0:
+            result["summary"]["dag_status"] = "FAILED"
+            result["errors"].append("Morning DAG had failures")
+        else:
+            result["summary"]["dag_status"] = "RUNNING"
+    # Also check DAG checkpoint
+    if DAG_CHECKPOINT.exists():
+        try:
+            cp = json.loads(DAG_CHECKPOINT.read_text())
+            if today_str in cp.get("timestamp", cp.get("last_run", "")):
+                status = cp.get("status", "unknown")
+                result["summary"]["dag_status"] = status.upper()
+        except Exception:
+            pass
+
+    # 2g. User sim refiner
+    usr_log = LOGS_DIR / "user_sim_refiner.log"
+    if usr_log.exists() and _is_today(usr_log):
+        usr_counts = _parse_log_counts(usr_log, ["refined", "venture", "updated", "ERROR"])
+        result["summary"]["ventures_refined"] = usr_counts.get("refined", 0) + usr_counts.get("venture", 0)
+
+    # 2h. Loop closer
+    loop_jsonl = AUTOMATIONS / "agent" / "swarm" / "loop_closer.jsonl"
+    if loop_jsonl.exists():
+        try:
+            loop_actions_today = 0
+            # Map JSONL action names to loop health categories
+            _action_to_loop = {
+                "soul_drift_check": "drift",
+                "pipeline_advance": "pipeline",
+                "decision_execute": "decisions",
+                "feedback_update": "feedback",
+                # Also handle direct names
+                "decisions": "decisions", "feedback": "feedback",
+                "pipeline": "pipeline", "drift": "drift",
+            }
+            with open(loop_jsonl, "r", encoding="utf-8", errors="replace") as f:
+                for line in f:
+                    try:
+                        entry = json.loads(line)
+                        ts = entry.get("timestamp", entry.get("ts", ""))
+                        if today_str in ts:
+                            loop_actions_today += 1
+                            action = entry.get("action", entry.get("loop", entry.get("type", "")))
+                            status = entry.get("result", entry.get("status", "OK"))
+                            loop_key = _action_to_loop.get(action)
+                            if loop_key:
+                                result["loop_health"][loop_key] = status
+                    except Exception:
+                        pass
+            result["summary"]["loops_closed"] = loop_actions_today
+            # If we found today's entries, any loop with actions is OK
+            # Also read the state file for definitive status
+            loop_state_file = AUTOMATIONS / "agent" / "swarm" / "loop_state.json"
+            if loop_state_file.exists():
+                try:
+                    ls = json.loads(loop_state_file.read_text())
+                    for field, key in [("last_decision_cycle", "decisions"), ("last_feedback_cycle", "feedback"),
+                                       ("last_pipeline_cycle", "pipeline")]:
+                        val = ls.get(field)
+                        if val and today_str in val:
+                            result["loop_health"][key] = "OK"
+                        elif val:
+                            result["loop_health"][key] = "STALE"
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+    # Also check loop_closer status file
+    feedback_file = AUTOMATIONS / "agent" / "swarm" / "feedback_recommendations.json"
+    if feedback_file.exists():
+        try:
+            fb = json.loads(feedback_file.read_text())
+            for loop_name in ["decisions", "feedback", "pipeline", "drift"]:
+                if loop_name in fb:
+                    status_val = fb[loop_name].get("status", fb[loop_name].get("health", "UNKNOWN"))
+                    if result["loop_health"][loop_name] == "UNKNOWN":
+                        result["loop_health"][loop_name] = status_val
+        except Exception:
+            pass
+
+    # ── 3. SWARM REPORTS — generated today ──────────────────────────
+    reports_dir = AUTOMATIONS / "agent" / "swarm" / "reports"
+    if reports_dir.exists():
+        try:
+            today_compact = today_str.replace("-", "")
+            today_reports = [
+                f for f in reports_dir.iterdir()
+                if f.is_file() and (today_compact in f.name or _is_today(f))
+            ]
+            result["summary"]["reports_generated"] = len(today_reports)
+            for rpt in today_reports[:5]:
+                try:
+                    first_line = ""
+                    with open(rpt, "r", encoding="utf-8", errors="replace") as rf:
+                        for rline in rf:
+                            rline = rline.strip()
+                            if rline and not rline.startswith("#"):
+                                first_line = rline[:120]
+                                break
+                    if first_line:
+                        result["highlights"].append({
+                            "source": "swarm_report",
+                            "text": f"{rpt.name}: {first_line}",
+                            "score": 5.0,
+                            "time_sensitive": False,
+                        })
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+    # ── 4. CONTENT — new posts created today ────────────────────────
+    queue_dir = PROJECT_ROOT / "CONTENT" / "social" / "posting_queue"
+    if queue_dir.exists():
+        try:
+            today_content = [
+                f for f in queue_dir.iterdir()
+                if f.is_file() and _is_today(f)
+            ]
+            result["summary"]["content_created"] = len(today_content)
+        except Exception:
+            pass
+
+    # ── 5. RBI STATE — latest pipeline status ───────────────────────
+    rbi_state_path = AUTOMATIONS / "agent" / "rbi_state.json"
+    if rbi_state_path.exists():
+        try:
+            rbi_state = json.loads(rbi_state_path.read_text())
+            # Override rbi_status with the state file if it has more data
+            if "researched" in rbi_state:
+                r_val = rbi_state.get("researched", 0)
+                result["rbi_status"]["researched"] = len(r_val) if isinstance(r_val, list) else int(r_val or 0)
+            if "results" in rbi_state:
+                results = rbi_state["results"]
+                if isinstance(results, dict):
+                    result["rbi_status"]["passed"] = results.get("PASS", results.get("passed", 0))
+                    result["rbi_status"]["conditional"] = results.get("CONDITIONAL", results.get("conditional", 0))
+                    result["rbi_status"]["failed"] = results.get("FAIL", results.get("failed", 0))
+        except Exception:
+            pass
+
+    # ── Scan all logs for errors today ──────────────────────────────
+    if LOGS_DIR.exists():
+        try:
+            for log_file in LOGS_DIR.iterdir():
+                if not log_file.is_file() or not log_file.name.endswith(".log"):
+                    continue
+                if not _is_today(log_file):
+                    continue
+                try:
+                    with open(log_file, "r", encoding="utf-8", errors="replace") as f:
+                        lines = f.readlines()
+                    # Check last 50 lines for critical errors
+                    for line in lines[-50:]:
+                        line_lower = line.lower()
+                        if "timeout" in line_lower and "twitter" in log_file.name.lower():
+                            if "twitter scraper timeout" not in result["errors"]:
+                                result["errors"].append("twitter scraper timeout")
+                        elif "rate limit" in line_lower:
+                            err_msg = f"{log_file.stem}: rate limit hit"
+                            if err_msg not in result["errors"]:
+                                result["errors"].append(err_msg)
+                        elif "critical" in line_lower or "fatal" in line_lower:
+                            err_msg = f"{log_file.stem}: {line.strip()[-80:]}"
+                            if len(result["errors"]) < 20 and err_msg not in result["errors"]:
+                                result["errors"].append(err_msg)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+    # ── Determine system_working ────────────────────────────────────
+    total_activity = (
+        result["summary"]["total_new_alpha"]
+        + result["summary"]["entries_integrated"]
+        + result["summary"]["reports_generated"]
+        + result["summary"]["content_created"]
+        + result["summary"]["loops_closed"]
+    )
+    critical_errors = sum(1 for e in result["errors"] if "critical" in e.lower() or "fatal" in e.lower())
+    result["system_working"] = total_activity > 0 or critical_errors == 0
+
+    # ── Sort highlights by score desc ───────────────────────────────
+    result["highlights"].sort(key=lambda x: (-x.get("score", 0),))
+    # Deduplicate highlights by text
+    seen_texts = set()
+    deduped = []
+    for h in result["highlights"]:
+        key = h["text"][:60]
+        if key not in seen_texts:
+            seen_texts.add(key)
+            deduped.append(h)
+    result["highlights"] = deduped[:30]
+
+    return result
+
+
+@app.route("/api/daily-output")
+def api_daily_output():
+    return jsonify(get_daily_output())
+
+
+@app.route("/api/kpi/manual-priority", methods=["POST"])
+def api_manual_priority():
+    """Accept a highlight item and append it to OPS/MANUAL_PRIORITIES.md for human override."""
+    data = request.get_json(force=True)
+    highlight_text = data.get("text", "")
+    highlight_source = data.get("source", "unknown")
+    highlight_score = data.get("score", 0)
+    if not highlight_text:
+        return jsonify({"success": False, "error": "No text provided"}), 400
+
+    manual_path = OPS / "MANUAL_PRIORITIES.md"
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    entry = f"\n## [{timestamp}] MANUAL OVERRIDE\n- **Source:** {highlight_source}\n- **Score:** {highlight_score}\n- **Item:** {highlight_text}\n- **Status:** PENDING\n"
+
+    try:
+        if not manual_path.exists():
+            manual_path.write_text(f"# Manual Priority Overrides\n\nHuman-promoted items from Today's Output dashboard.\n{entry}")
+        else:
+            with open(manual_path, "a", encoding="utf-8") as f:
+                f.write(entry)
+        return jsonify({"success": True, "message": f"Promoted: {highlight_text[:60]}..."})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+# ---------------------------------------------------------------------------
+# Command Palette — async job runner
+# ---------------------------------------------------------------------------
+_running_jobs = {}
+_jobs_lock = threading.Lock()
+
+
+def _get_all_commands():
+    """Build the full command palette: slash commands + system commands."""
+    commands = []
+
+    # ── Slash commands from .claude/commands/*.md ──────────────────────
+    cmd_dir = PROJECT_ROOT / ".claude" / "commands"
+    if cmd_dir.exists():
+        for f in sorted(cmd_dir.glob("*.md")):
+            name = f.stem
+            desc = ""
+            try:
+                with open(f, "r") as fh:
+                    desc = fh.readline().strip().lstrip("#").strip()
+            except Exception:
+                pass
+            commands.append({
+                "id": f"slash-{name}",
+                "name": f"/{name}",
+                "description": desc or name,
+                "category": "system",
+                "cmd": f"claude -p 'Run /{name}'",
+                "icon": "terminal-2",
+            })
+
+    # ── RBI commands ──────────────────────────────────────────────────
+    rbi_cmds = [
+        ("rbi-full", "RBI Full Loop", "Research, Backtest, Implement — full cycle", "--full", "target"),
+        ("rbi-research", "RBI Research", "Research phase only", "--research", "search"),
+        ("rbi-backtest", "RBI Backtest", "Backtest phase only", "--backtest", "chart-bar"),
+        ("rbi-implement", "RBI Implement", "Implement phase only", "--implement", "hammer"),
+        ("rbi-status", "RBI Status", "Check current RBI status", "--status", "info-circle"),
+    ]
+    for cid, name, desc, flag, icon in rbi_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "revenue",
+            "cmd": f"python3 AUTOMATIONS/rbi_loop.py {flag}",
+            "icon": icon,
+        })
+
+    # ── Loop Closer ───────────────────────────────────────────────────
+    loop_cmds = [
+        ("loops-cycle", "Loop Closer Cycle", "Run all 4 loops", "--cycle", "refresh"),
+        ("loops-status", "Loop Health", "Check all 4 loops", "--status", "heart-rate-monitor"),
+        ("loops-decisions", "Decision Loop", "Decision execution loop", "--decisions", "gavel"),
+        ("loops-feedback", "Feedback Loop", "Feedback tracking loop", "--feedback", "message-report"),
+        ("loops-pipeline", "Pipeline Loop", "Pipeline advancement loop", "--pipeline", "git-merge"),
+        ("loops-drift", "Soul Drift", "Soul drift scoring loop", "--drift", "ghost"),
+    ]
+    for cid, name, desc, flag, icon in loop_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "system",
+            "cmd": f"python3 AUTOMATIONS/loop_closer.py {flag}",
+            "icon": icon,
+        })
+
+    # ── Scanners ──────────────────────────────────────────────────────
+    scanner_cmds = [
+        ("scan-edgar", "EDGAR Scanner", "Scan SEC EDGAR filings", "python3 AUTOMATIONS/sec_edgar_scanner.py --scan", "building-bank"),
+        ("scan-crunchbase", "Crunchbase Scanner", "Scan Crunchbase for opportunities", "python3 AUTOMATIONS/crunchbase_scanner.py --scan", "brand-crunchbase"),
+        ("scan-methods", "Method Discovery", "Crawl for new revenue methods", "python3 AUTOMATIONS/method_discovery_crawler.py --crawl", "radar-2"),
+        ("scan-orphans", "Orphan Doc Scanner", "Find orphan documents", "python3 AUTOMATIONS/orphan_doc_scanner.py --scan", "file-search"),
+        ("scan-alpha-backlog", "Alpha Backlog Scanner", "Sweep historical alpha", "python3 AUTOMATIONS/alpha_backlog_scanner.py --scan", "database-search"),
+    ]
+    for cid, name, desc, cmd, icon in scanner_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "intelligence",
+            "cmd": cmd, "icon": icon,
+        })
+
+    # ── Ranker ────────────────────────────────────────────────────────
+    ranker_cmds = [
+        ("ranker-full", "Capital Genesis Rank + Report", "Rescore all methods", "python3 AUTOMATIONS/capital_genesis_ranker.py --rank --report", "chart-arrows-vertical"),
+        ("ranker-p0", "P0 Methods Only", "Show launch-now methods", "python3 AUTOMATIONS/capital_genesis_ranker.py --p0", "flame"),
+        ("ranker-top20", "Top 20 Methods", "Top 20 ranked methods", "python3 AUTOMATIONS/capital_genesis_ranker.py --top 20", "trophy"),
+    ]
+    for cid, name, desc, cmd, icon in ranker_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "revenue",
+            "cmd": cmd, "icon": icon,
+        })
+
+    # ── Intelligence ──────────────────────────────────────────────────
+    intel_cmds = [
+        ("intel-router-stats", "Intelligence Router Stats", "Coverage and doc stats", "python3 AUTOMATIONS/intelligence_router.py --stats", "brain"),
+        ("intel-sqlite-rebuild", "SQLite Index Rebuild", "Rebuild FTS5 alpha index", "python3 AUTOMATIONS/sqlite_alpha_index.py --rebuild", "database"),
+        ("intel-sqlite-stats", "SQLite Index Stats", "Alpha index statistics", "python3 AUTOMATIONS/sqlite_alpha_index.py --stats", "chart-dots"),
+    ]
+    for cid, name, desc, cmd, icon in intel_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "intelligence",
+            "cmd": cmd, "icon": icon,
+        })
+
+    # ── Pipeline / Orchestration ──────────────────────────────────────
+    pipeline_cmds = [
+        ("pipeline-autoapprove", "Auto-Approve Alpha", "Approve pending alpha entries", "python3 AUTOMATIONS/alpha_auto_processor.py --process-new", "check"),
+        ("pipeline-morning-dag", "Morning DAG", "Run morning orchestration DAG", "python3 AUTOMATIONS/ceo_agent.py --dag", "git-branch"),
+        ("pipeline-daily-digest", "Daily Digest", "Generate daily digest", "python3 AUTOMATIONS/daily_digest.py", "news"),
+        ("pipeline-session-briefing", "Session Briefing", "Generate session briefing", "python3 AUTOMATIONS/session_briefing.py", "clipboard-text"),
+        ("pipeline-actionable", "Actionable Aggregator", "Aggregate actionable items", "python3 AUTOMATIONS/actionable_aggregator.py", "list-check"),
+    ]
+    for cid, name, desc, cmd, icon in pipeline_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "system",
+            "cmd": cmd, "icon": icon,
+        })
+
+    # ── Agents ────────────────────────────────────────────────────────
+    agent_cmds = [
+        ("agents-venture-status", "Venture Status", "All venture pipeline statuses", "python3 AUTOMATIONS/venture_autonomy.py --status", "hierarchy-3"),
+        ("agents-venture-run", "Venture Run All", "Run all venture pipelines", "python3 AUTOMATIONS/venture_autonomy.py --run-all", "player-play"),
+        ("agents-swarm-status", "Swarm Status", "All swarm agent statuses", "python3 AUTOMATIONS/agent_swarm.py --status", "users-group"),
+        ("agents-swarm-health", "Swarm Health", "Swarm health check", "python3 AUTOMATIONS/agent_swarm.py --health", "stethoscope"),
+    ]
+    for cid, name, desc, cmd, icon in agent_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "agents",
+            "cmd": cmd, "icon": icon,
+        })
+
+    # ── System / Ops ──────────────────────────────────────────────────
+    system_cmds = [
+        ("sys-cron-watchdog", "Cron Watchdog", "Check cron health and restore if needed", "python3 AUTOMATIONS/cron_watchdog.py", "clock-shield"),
+        ("sys-health-quick", "System Health Quick", "Quick system health check", "python3 AUTOMATIONS/system_health_monitor.py --quick", "heartbeat"),
+        ("sys-usage-status", "Usage Optimizer Status", "Check API usage and budget", "python3 AUTOMATIONS/usage_optimizer.py --status", "gauge"),
+    ]
+    for cid, name, desc, cmd, icon in system_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "system",
+            "cmd": cmd, "icon": icon,
+        })
+
+    # ── Refiner / Cognition ───────────────────────────────────────────
+    refiner_cmds = [
+        ("refiner-sim", "User Sim Refiner", "Refine user simulation model", "python3 AUTOMATIONS/user_sim_refiner.py --all", "user-cog"),
+        ("refiner-cognitive", "Cognitive Engine Build", "Build cognitive model", "python3 AUTOMATIONS/cognitive_engine.py --build-model", "cpu"),
+    ]
+    for cid, name, desc, cmd, icon in refiner_cmds:
+        commands.append({
+            "id": cid, "name": name, "description": desc,
+            "category": "system",
+            "cmd": cmd, "icon": icon,
+        })
+
+    # ── Content ───────────────────────────────────────────────────────
+    commands.append({
+        "id": "content-voice-regen",
+        "name": "Voice Model Regen",
+        "description": "Regenerate user voice model from prompt history",
+        "category": "content",
+        "cmd": "python3 AUTOMATIONS/user_voice_model.py",
+        "icon": "microphone",
+    })
+
+    return commands
+
+
+def _job_runner(job_id, cmd_str):
+    """Background thread that runs a command and captures output."""
+    try:
+        proc = subprocess.Popen(
+            cmd_str, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            text=True, cwd=str(PROJECT_ROOT),
+        )
+        with _jobs_lock:
+            _running_jobs[job_id]["pid"] = proc.pid
+
+        output_lines = []
+        for line in proc.stdout:
+            output_lines.append(line)
+            # Keep only last 200 lines in memory
+            if len(output_lines) > 200:
+                output_lines = output_lines[-200:]
+            with _jobs_lock:
+                _running_jobs[job_id]["output"] = output_lines
+
+        proc.wait()
+        with _jobs_lock:
+            _running_jobs[job_id]["status"] = "complete" if proc.returncode == 0 else "error"
+            _running_jobs[job_id]["returncode"] = proc.returncode
+            _running_jobs[job_id]["ended"] = datetime.now().isoformat()
+    except Exception as e:
+        with _jobs_lock:
+            _running_jobs[job_id]["status"] = "error"
+            _running_jobs[job_id]["output"] = [str(e)]
+            _running_jobs[job_id]["ended"] = datetime.now().isoformat()
+
+
+@app.route("/api/commands/all")
+def api_commands_all():
+    """Return full command palette for GUI."""
+    return jsonify({"commands": _get_all_commands()})
+
+
+@app.route("/api/commands/run", methods=["POST"])
+def api_commands_run():
+    """Run a command asynchronously. Returns job_id immediately."""
+    data = request.get_json(force=True)
+    cmd_str = data.get("cmd", "").strip()
+    if not cmd_str:
+        return jsonify({"error": "No cmd provided"}), 400
+
+    job_id = str(uuid.uuid4())[:8]
+    with _jobs_lock:
+        _running_jobs[job_id] = {
+            "cmd": cmd_str,
+            "status": "running",
+            "pid": None,
+            "started": datetime.now().isoformat(),
+            "ended": None,
+            "output": [],
+            "returncode": None,
+        }
+
+    t = threading.Thread(target=_job_runner, args=(job_id, cmd_str), daemon=True)
+    t.start()
+    return jsonify({"job_id": job_id, "status": "running"})
+
+
+@app.route("/api/commands/job/<job_id>")
+def api_commands_job(job_id):
+    """Check job status. Returns last 50 lines of output."""
+    with _jobs_lock:
+        job = _running_jobs.get(job_id)
+    if not job:
+        return jsonify({"error": f"Unknown job: {job_id}"}), 404
+
+    output_lines = job.get("output", [])
+    tail = output_lines[-50:] if len(output_lines) > 50 else output_lines
+    return jsonify({
+        "job_id": job_id,
+        "cmd": job["cmd"],
+        "status": job["status"],
+        "pid": job["pid"],
+        "started": job["started"],
+        "ended": job["ended"],
+        "returncode": job["returncode"],
+        "output": "".join(tail),
+        "lines": len(output_lines),
+    })
+
+
+# ---------------------------------------------------------------------------
+# Cron Scheduler API
+# ---------------------------------------------------------------------------
+def _parse_crontab():
+    """Parse crontab -l into structured entries."""
+    try:
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+        if result.returncode != 0:
+            return []
+    except Exception:
+        return []
+
+    lines = result.stdout.strip().split("\n")
+    entries = []
+    prev_comment = ""
+    idx = 0
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            prev_comment = ""
+            continue
+        if stripped.startswith("#") and not stripped.startswith("# "):
+            # Disabled cron line: strip leading # and parse
+            inner = stripped.lstrip("#").strip()
+            parts = inner.split(None, 5)
+            if len(parts) >= 6 and _looks_like_schedule(parts[:5]):
+                schedule = " ".join(parts[:5])
+                command = parts[5]
+                entries.append({
+                    "id": idx, "schedule": schedule, "command": command,
+                    "name": prev_comment or _name_from_cmd(command),
+                    "enabled": False, "next_run": _readable_schedule(schedule),
+                    "comment": prev_comment, "raw": line,
+                })
+                idx += 1
+                prev_comment = ""
+                continue
+            # Regular comment — save as name for next entry
+            prev_comment = stripped.lstrip("# ").strip()
+            continue
+        if stripped.startswith("#"):
+            prev_comment = stripped.lstrip("# ").strip()
+            continue
+
+        # Active cron line
+        parts = stripped.split(None, 5)
+        if len(parts) >= 6 and _looks_like_schedule(parts[:5]):
+            schedule = " ".join(parts[:5])
+            command = parts[5]
+            entries.append({
+                "id": idx, "schedule": schedule, "command": command,
+                "name": prev_comment or _name_from_cmd(command),
+                "enabled": True, "next_run": _readable_schedule(schedule),
+                "comment": prev_comment, "raw": line,
+            })
+            idx += 1
+        prev_comment = ""
+
+    return entries
+
+
+def _looks_like_schedule(fields):
+    """Check if 5 fields look like a cron schedule."""
+    for f in fields:
+        if not re.match(r'^[\d\*\/\-\,]+$', f):
+            return False
+    return True
+
+
+def _name_from_cmd(cmd):
+    """Extract a readable name from a cron command string."""
+    match = re.search(r'(\w+)\.py', cmd)
+    if match:
+        return match.group(1).replace("_", " ").title()
+    return cmd[:60]
+
+
+def _readable_schedule(schedule):
+    """Convert 5-field cron schedule to human-readable text."""
+    parts = schedule.split()
+    if len(parts) != 5:
+        return schedule
+    minute, hour, dom, month, dow = parts
+    days_map = {"0": "Sun", "1": "Mon", "2": "Tue", "3": "Wed", "4": "Thu", "5": "Fri", "6": "Sat", "7": "Sun"}
+
+    desc = []
+    if minute != "*" and hour != "*":
+        desc.append(f"{hour.zfill(2)}:{minute.zfill(2)}")
+    elif hour != "*":
+        desc.append(f"{hour}:xx")
+    elif minute != "*":
+        desc.append(f"xx:{minute.zfill(2)}")
+    else:
+        desc.append("every min")
+
+    if dow != "*":
+        day_names = [days_map.get(d.strip(), d.strip()) for d in dow.split(",")]
+        desc.append(",".join(day_names))
+    if dom != "*":
+        desc.append(f"day {dom}")
+    if month != "*":
+        desc.append(f"month {month}")
+
+    return " ".join(desc) if desc else schedule
+
+
+def _reinstall_crontab(lines):
+    """Reinstall crontab from list of lines."""
+    content = "\n".join(lines) + "\n"
+    proc = subprocess.run(
+        ["crontab", "-"], input=content, capture_output=True, text=True, timeout=10,
+    )
+    return proc.returncode == 0
+
+
+@app.route("/api/scheduler/crons")
+def api_scheduler_crons():
+    """Return parsed crontab entries."""
+    return jsonify({"crons": _parse_crontab()})
+
+
+@app.route("/api/scheduler/toggle/<int:cron_id>", methods=["POST"])
+def api_scheduler_toggle(cron_id):
+    """Toggle a cron entry on/off by commenting/uncommenting."""
+    try:
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+        if result.returncode != 0:
+            return jsonify({"error": "Failed to read crontab"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    raw_lines = result.stdout.strip().split("\n")
+
+    # Map cron_id back to raw lines — skip blank/comment-only lines for counting
+    entry_idx = 0
+    target_line_idx = None
+    prev_was_comment = False
+    for i, line in enumerate(raw_lines):
+        stripped = line.strip()
+        if not stripped:
+            prev_was_comment = False
+            continue
+        # Check if this is a disabled cron (starts with # but has schedule)
+        if stripped.startswith("#"):
+            inner = stripped.lstrip("#").strip()
+            parts = inner.split(None, 5)
+            if len(parts) >= 6 and _looks_like_schedule(parts[:5]):
+                if entry_idx == cron_id:
+                    target_line_idx = i
+                    break
+                entry_idx += 1
+                continue
+            prev_was_comment = True
+            continue
+        # Active cron
+        parts = stripped.split(None, 5)
+        if len(parts) >= 6 and _looks_like_schedule(parts[:5]):
+            if entry_idx == cron_id:
+                target_line_idx = i
+                break
+            entry_idx += 1
+        prev_was_comment = False
+
+    if target_line_idx is None:
+        return jsonify({"error": f"Cron entry {cron_id} not found"}), 404
+
+    line = raw_lines[target_line_idx].strip()
+    if line.startswith("#"):
+        # Enable: remove leading #
+        raw_lines[target_line_idx] = line.lstrip("#").strip()
+        action = "enabled"
+    else:
+        # Disable: add #
+        raw_lines[target_line_idx] = "# " + line
+        action = "disabled"
+
+    if _reinstall_crontab(raw_lines):
+        return jsonify({"success": True, "action": action})
+    return jsonify({"error": "Failed to reinstall crontab"}), 500
+
+
+@app.route("/api/scheduler/add", methods=["POST"])
+def api_scheduler_add():
+    """Add a new cron entry."""
+    data = request.get_json(force=True)
+    schedule = data.get("schedule", "").strip()
+    command = data.get("command", "").strip()
+    comment = data.get("comment", "").strip()
+    if not schedule or not command:
+        return jsonify({"error": "schedule and command required"}), 400
+
+    # Validate schedule (5 fields)
+    parts = schedule.split()
+    if len(parts) != 5 or not _looks_like_schedule(parts):
+        return jsonify({"error": "Invalid cron schedule — need 5 fields"}), 400
+
+    try:
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+        existing = result.stdout.strip() if result.returncode == 0 else ""
+    except Exception:
+        existing = ""
+
+    new_lines = existing.split("\n") if existing else []
+    if comment:
+        new_lines.append(f"# {comment}")
+    new_lines.append(f"{schedule} {command}")
+
+    if _reinstall_crontab(new_lines):
+        return jsonify({"success": True, "message": f"Added cron: {schedule} {command}"})
+    return jsonify({"error": "Failed to install new crontab"}), 500
+
+
+@app.route("/api/scheduler/delete/<int:cron_id>", methods=["POST"])
+def api_scheduler_delete(cron_id):
+    """Delete a cron entry by index."""
+    try:
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+        if result.returncode != 0:
+            return jsonify({"error": "Failed to read crontab"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    raw_lines = result.stdout.strip().split("\n")
+    entry_idx = 0
+    target_line_idx = None
+    for i, line in enumerate(raw_lines):
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if stripped.startswith("#"):
+            inner = stripped.lstrip("#").strip()
+            parts = inner.split(None, 5)
+            if len(parts) >= 6 and _looks_like_schedule(parts[:5]):
+                if entry_idx == cron_id:
+                    target_line_idx = i
+                    break
+                entry_idx += 1
+                continue
+            continue
+        parts = stripped.split(None, 5)
+        if len(parts) >= 6 and _looks_like_schedule(parts[:5]):
+            if entry_idx == cron_id:
+                target_line_idx = i
+                break
+            entry_idx += 1
+
+    if target_line_idx is None:
+        return jsonify({"error": f"Cron entry {cron_id} not found"}), 404
+
+    # Remove the entry and its comment line above if it exists
+    del raw_lines[target_line_idx]
+    if target_line_idx > 0 and raw_lines[target_line_idx - 1].strip().startswith("#"):
+        del raw_lines[target_line_idx - 1]
+
+    if _reinstall_crontab(raw_lines):
+        return jsonify({"success": True, "message": f"Deleted cron entry {cron_id}"})
+    return jsonify({"error": "Failed to reinstall crontab"}), 500
+
+
+# ---------------------------------------------------------------------------
+# Manual Priority / Notes API
+# ---------------------------------------------------------------------------
+@app.route("/api/manual/priority", methods=["POST"])
+def api_manual_priority_v2():
+    """Enhanced manual priority with priority level."""
+    data = request.get_json(force=True)
+    text = data.get("text", "").strip()
+    source = data.get("source", "manual")
+    priority = data.get("priority", "P1")
+    score = data.get("score", 0)
+    if not text:
+        return jsonify({"error": "No text provided"}), 400
+
+    manual_path = OPS / "MANUAL_PRIORITIES.md"
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    entry = (
+        f"\n## [{timestamp}] {priority} — MANUAL OVERRIDE\n"
+        f"- **Priority:** {priority}\n"
+        f"- **Source:** {source}\n"
+        f"- **Score:** {score}\n"
+        f"- **Item:** {text}\n"
+        f"- **Status:** PENDING\n"
+    )
+
+    try:
+        if not manual_path.exists():
+            manual_path.write_text(
+                f"# Manual Priority Overrides\n\n"
+                f"Human-promoted items from the GUI.\n{entry}"
+            )
+        else:
+            with open(manual_path, "a", encoding="utf-8") as f:
+                f.write(entry)
+        return jsonify({"success": True, "message": f"Added {priority}: {text[:60]}..."})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/manual/priorities")
+def api_manual_priorities():
+    """Read and parse MANUAL_PRIORITIES.md into items."""
+    manual_path = OPS / "MANUAL_PRIORITIES.md"
+    if not manual_path.exists():
+        return jsonify({"items": []})
+
+    try:
+        content = manual_path.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return jsonify({"items": []})
+
+    items = []
+    current = None
+    for line in content.split("\n"):
+        if line.startswith("## ["):
+            if current:
+                items.append(current)
+            # Parse header: ## [2026-03-24 12:00:00] P0 — MANUAL OVERRIDE
+            match = re.match(r'## \[(.+?)\]\s*(P\d)?\s*', line)
+            current = {
+                "timestamp": match.group(1) if match else "",
+                "priority": match.group(2) if match and match.group(2) else "P1",
+                "text": "", "source": "", "status": "PENDING",
+            }
+        elif current and line.strip().startswith("- **Item:**"):
+            current["text"] = line.split("**Item:**", 1)[1].strip()
+        elif current and line.strip().startswith("- **Source:**"):
+            current["source"] = line.split("**Source:**", 1)[1].strip()
+        elif current and line.strip().startswith("- **Status:**"):
+            current["status"] = line.split("**Status:**", 1)[1].strip()
+        elif current and line.strip().startswith("- **Priority:**"):
+            current["priority"] = line.split("**Priority:**", 1)[1].strip()
+    if current:
+        items.append(current)
+
+    # Most recent first
+    items.reverse()
+    return jsonify({"items": items})
+
+
+@app.route("/api/manual/note", methods=["POST"])
+def api_manual_note():
+    """Append a note to OPS/MANUAL_NOTES.md with timestamp and tags."""
+    data = request.get_json(force=True)
+    text = data.get("text", "").strip()
+    tags = data.get("tags", [])
+    if not text:
+        return jsonify({"error": "No text provided"}), 400
+
+    notes_path = OPS / "MANUAL_NOTES.md"
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    tag_str = ", ".join(f"`{t}`" for t in tags) if tags else "none"
+
+    entry = f"\n- [{timestamp}] {text} — tags: {tag_str}\n"
+
+    try:
+        if not notes_path.exists():
+            notes_path.write_text(f"# Manual Notes\n\nQuick notes from the GUI.\n{entry}")
+        else:
+            with open(notes_path, "a", encoding="utf-8") as f:
+                f.write(entry)
+        return jsonify({"success": True, "message": f"Note saved: {text[:60]}..."})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/manual/notes")
+def api_manual_notes():
+    """Read and return OPS/MANUAL_NOTES.md parsed into items."""
+    notes_path = OPS / "MANUAL_NOTES.md"
+    if not notes_path.exists():
+        return jsonify({"notes": []})
+
+    try:
+        content = notes_path.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return jsonify({"notes": []})
+
+    notes = []
+    for line in content.split("\n"):
+        # Pattern: - [2026-03-24 12:00:00] Some text — tags: `revenue`, `urgent`
+        match = re.match(r'^- \[(.+?)\]\s*(.+?)\s*(?:—\s*tags:\s*(.+))?$', line.strip())
+        if match:
+            tag_text = match.group(3) or ""
+            tags = [t.strip().strip("`") for t in tag_text.split(",") if t.strip() and t.strip() != "none"]
+            notes.append({
+                "timestamp": match.group(1),
+                "text": match.group(2).rstrip(" —"),
+                "tags": tags,
+            })
+
+    notes.reverse()
+    return jsonify({"notes": notes})
+
+
+# ---------------------------------------------------------------------------
+# Usage Optimizer API
+# ---------------------------------------------------------------------------
+@app.route("/api/usage")
+def api_usage():
+    """Run usage_optimizer.py --check and return JSON output."""
+    code, out, err = run_cmd(
+        [PYTHON, str(AUTOMATIONS / "usage_optimizer.py"), "--check"], timeout=30
+    )
+    if code == 0 and out:
+        try:
+            return jsonify(json.loads(out))
+        except json.JSONDecodeError:
+            return jsonify({"raw": out, "status": "ok"})
+    return jsonify({"error": err or "usage_optimizer failed", "raw": out}), 500
+
+
+@app.route("/api/usage/burst", methods=["POST"])
+def api_usage_burst():
+    """Trigger a manual burst via usage_optimizer.py --burst."""
+    code, out, err = run_cmd(
+        [PYTHON, str(AUTOMATIONS / "usage_optimizer.py"), "--burst"], timeout=60
+    )
+    return jsonify({"success": code == 0, "output": out[-3000:], "error": err[-1000:]})
 
 
 # ---------------------------------------------------------------------------

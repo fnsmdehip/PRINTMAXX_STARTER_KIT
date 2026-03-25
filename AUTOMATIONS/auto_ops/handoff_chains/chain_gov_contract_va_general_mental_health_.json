@@ -1,23 +1,23 @@
 {
   "name": "chain_gov_contract_va_general_mental_health_",
-  "created": "2026-03-21T12:40:57.643402",
+  "created": "2026-03-24T18:50:43.150184",
   "method": "[GOV CONTRACT] VA GENERAL MENTAL HEALTH AND SUICIDE PREVENTION AWARENESS AND EDUCATION OUTREACH SERVICES (deadline: 2027-03-03)",
-  "venture": "BROKERING",
+  "venture": "EAS",
   "stages": [
     {
       "agent": "scraper",
-      "task": "Query SAM.gov API (free, api.sam.gov) for NAICS 624190/621330/923120 + keyword mental health + agency=VA. Filter: posted within 30 days, deadline >60 days out, value >$500K. Extract: title, value, deadline, setaside, POC email.",
-      "output": "va_contracts_raw.json"
+      "task": "Pull full solicitation text from SAM.gov via Playwright MCP, extract: scope of work, NAICS code, set-aside type, estimated value, incumbent, evaluation criteria",
+      "output": "va_mental_health_solicitation.json"
     },
     {
       "agent": "qualifier",
-      "task": "Score each contract: SDVOSB setaside (+3), value >$1M (+2), performance period >1yr (+2), mental health outreach (matches our content niche, +1). Keep score >=5. Flag teaming-friendly language in PWS.",
-      "output": "va_contracts_qualified.json"
+      "task": "Score PRINTMAXX fit: (1) proposal writing subcontract play, (2) content/media subcontract play, (3) direct bid viability. Extract all named deliverables that map to existing PRINTMAXX capabilities (outreach content, social media, educational materials)",
+      "output": "va_mental_health_qualified.json"
     },
     {
       "agent": "connector",
-      "task": "For each qualified contract, query LinkedIn/USASpending.gov for incumbent contractors in this NAICS with past VA performance. Build cold outreach: offer contract intelligence + teaming letter writing at 5-10% of contract value on win. Send via cold email scripts.",
-      "output": "gov_outreach_log.json"
+      "task": "Find prime contractors registered under NAICS 923120/541611 with active VA vehicles (SEWP, CIO-SP3, GSA). Generate 3 cold email variants: teaming-offer angle, subcontract-content-production angle, proposal-writing-services angle. Load from eas_lead_pipeline.py",
+      "output": "va_mental_health_outreach_log.json"
     }
   ],
   "status": "READY"

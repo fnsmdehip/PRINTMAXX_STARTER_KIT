@@ -1,0 +1,24 @@
+{
+  "name": "chain_acquisition_ios5999__499__ban",
+  "created": "2026-03-24T18:50:43.905403",
+  "method": "[ACQUISITION] [iOS][$59.99 \u2192 $4.99 ] Ban It - Quit Bad Habits &amp; Compete With Friends [rev: $$59.99]",
+  "venture": "APP",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Scan App Store (iTunes Search API + AppFollow/SensorTower free tier) for habit/productivity apps with price drop >70% in last 30d, >50 ratings, category: Health & Fitness or Productivity",
+      "output": "distressed_apps.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score each app: rating (1-5), review count (log scale), price history steepness, category fit (habit/streak/social = HIGH), revenue estimate from AppFollow free data",
+      "output": "acquisition_targets.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Extract developer email from App Store page or developer website, draft cold acquisition email using cold_outreach templates, queue in leads pipeline",
+      "output": "acquisition_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

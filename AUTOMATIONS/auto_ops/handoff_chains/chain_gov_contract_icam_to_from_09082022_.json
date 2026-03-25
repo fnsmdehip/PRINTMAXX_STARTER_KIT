@@ -1,0 +1,24 @@
+{
+  "name": "chain_gov_contract_icam_to_from_09082022_",
+  "created": "2026-03-24T18:50:43.005454",
+  "method": "[GOV CONTRACT] ICAM TO FROM 09/08/2022 - 09/07/2023 (deadline: 2026-09-07)",
+  "venture": "EAS",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "Pull prime contractors on SAM.gov ICAM vehicles via Playwright MCP \u2014 extract company name, CAGE code, subcontracting plan URL, POC email if listed",
+      "output": "icam_primes.json"
+    },
+    {
+      "agent": "qualifier",
+      "task": "Score primes by subcontracting plan presence (required for contracts >$750K), NAICS alignment with our capabilities (541512, 541519), and recent award size. Filter to top 10.",
+      "output": "icam_qualified_primes.json"
+    },
+    {
+      "agent": "connector",
+      "task": "Generate tailored capability statement per prime using claude -p. Send via cold email script (cold_email_outreach.py) targeting small business liaison officers.",
+      "output": "icam_outreach_log.json"
+    }
+  ],
+  "status": "READY"
+}

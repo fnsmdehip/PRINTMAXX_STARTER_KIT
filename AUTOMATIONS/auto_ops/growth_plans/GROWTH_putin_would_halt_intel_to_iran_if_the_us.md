@@ -1,33 +1,30 @@
 # Growth Plan: Putin would halt intel to Iran if the US cuts off Ukraine - 
 
-**Created:** 2026-03-21 12:40
+**Created:** 2026-03-24 22:00
 **Venture:** CONTENT
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Post as geopolitical hot-take on @printmaxxer using financial commentary framing
-2. Pair with market-impact angle to attract finance/macro audience
+1. Organic content growth
 
 ## Budget Tier Strategies
 
 ### FREE
-One-time post via engagement_bait_converter.py — extract hook structure and geopolitical framing pattern for reuse in future macro content
+Organic content tactics
 
 ### LOW
-N/A — single content seed, no scaling warranted
-
-### MID
-N/A
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] python3 AUTOMATIONS/engagement_bait_converter.py --input 'Putin would halt intel to Iran if US cuts Ukraine aid - Politico' --style geopolitical_hot_take
-- [ ] Review generated post, post once to @printmaxxer if macro/finance angle is strong
-- [ ] Mark alpha entry as CONTENT_ONLY in ALPHA_STAGING.csv
+- [ ] Research and validate: Putin would halt intel to Iran if the US cuts off Ukraine - Politico.
+- [ ] Set up automation for content venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -35,6 +32,6 @@ N/A
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

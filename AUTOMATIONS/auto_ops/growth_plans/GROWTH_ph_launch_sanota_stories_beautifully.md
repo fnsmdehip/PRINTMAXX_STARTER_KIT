@@ -1,44 +1,37 @@
 # Growth Plan: [PH LAUNCH] Sanota: Stories, beautifully crafted
 
-**Created:** 2026-03-21 12:40
-**Venture:** OUTBOUND
+**Created:** 2026-03-24 22:00
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $200-500/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Comment on Sanota PH thread within 24h — establishes domain expertise signal in storytelling niche, gets founder visibility for free
-2. Cross-reference Sanota founder against existing HN/Twitter lead DB — may already be in warm pipeline
-3. Use Sanota launch as social proof anchor in outreach to other creative tool founders: 'We work with teams like Sanota...'
-4. Monitor PH 'Writing', 'Stories', 'Publishing', 'Creative Tools' category weekly — recurring pipeline of same buyer profile
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-DM Sanota founder via PH + Twitter with value-first message (offer content/growth service), comment on PH thread to signal expertise, add category filter for storytelling/narrative tags to existing PH cron scraper
+Organic app tactics
 
 ### LOW
-$0-50/mo — Apollo free tier to find founder direct email, sequence 20-30 similar creative app launchers monthly via custom cold email scripts
-
-### MID
-$50-200/mo — Instantly sequence 100+ PH creative tool launchers/mo, retarget PH upvoters via LinkedIn matched audience
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Wire into chain_14_ph_launches_today — Sanota fits the identical pattern (PH launch → 48h outreach window → founder cold contact)
-- [ ] Tag entry with niche: storytelling/narrative/creative tools — personalize outreach angle toward content marketing, user acquisition, app growth services
-- [ ] Extract Sanota founder contact: PH profile → Twitter handle → email via Hunter/Apollo free tier
-- [ ] Comment on Sanota PH thread within 24h to establish creative niche presence before cold DM
-- [ ] Send value-first outreach referencing specific PH launch context, not generic pitch
+- [ ] Research and validate: [PH LAUNCH] Sanota: Stories, beautifully crafted
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
 ```json
 {
   "browser": "none",
-  "email": "custom cold email scripts",
+  "email": "none",
   "content": "none"
 }
 ```

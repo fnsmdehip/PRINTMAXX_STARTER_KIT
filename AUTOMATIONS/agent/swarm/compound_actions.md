@@ -1,6 +1,6 @@
-# COMPOUND ACTIONS — Cycle 28 (2026-03-24 01:15)
+# COMPOUND ACTIONS -- Cycle 31 (2026-03-25 06:02)
 
-## Status: BLOCKED ON HUMAN (unchanged since Cycle 25)
+## Status: BLOCKED ON HUMAN (unchanged since Cycle 25, ~104h)
 
 No compound actions possible. Zero distribution channels active.
 
@@ -15,15 +15,15 @@ No compound actions possible. Zero distribution channels active.
 | Email drafts | 48 | QUEUED | No Gmail MCP authenticated |
 | Apps built | 8 | NO PAYMENT | No Stripe/RevenueCat live |
 
-## TIME-CRITICAL: Ramadan Window (5 DAYS LEFT)
+## RAMADAN: CLOSED (accepted loss)
 
-**Deadline: ~Mar 29 (Eid al-Fitr)**
-- PrayerLock PWA: BUILT, deployed, offline-capable
-- Hilal Ramadan tracker: LIVE at ramadan-tracker.surge.sh
-- Content queued: Reddit posts for r/islam, r/Muslim, r/Ramadan
-- If missed: Next Ramadan = Feb 2027 (11 months away)
-- Human time needed: 10 minutes
-- This is escalation #5 across 5 consecutive brain cycles
+No further escalation. PrayerLock + Hilal remain deployed. Next Ramadan = Feb 2027.
+
+## NEW FINDING: Cron Bloat
+
+Crontab has 33 PRINTMAXX entries. Minimal v8 core = 9 entries. 17 phantom scripts have NO log files (never ran successfully). Root cause: `AUTOMATIONS/agent/cron_backup.txt` contains the full v7 bloated crontab (123 lines). The cron watchdog restores from this backup, re-injecting dead entries.
+
+**Fix (non-blocking, when convenient):** Trim `cron_backup.txt` to v8 minimal 9 entries. This prevents watchdog from restoring bloat.
 
 ## Priority Compound Actions (when unblocked)
 
@@ -45,5 +45,10 @@ No compound actions possible. Zero distribution channels active.
 - Expected: 500-2K followers in 30 days
 - Compounds: Every other channel
 
+## Deep Sleep Status
+
+Deferred to Cycle 33 (~48h). User opened Claude Code this session (positive signal). If account created: cancel deep sleep, wake agents. If no action by Cycle 33: swarm_brain 24h->48h, system_healer 2h->4h. Token burn: ~41K/day -> ~21K/day.
+
 ## Wake Protocol
-Human creates ANY account -> Brain detects on next 24h cycle -> Wakes relevant agents -> Executes highest-priority compound -> Scales intervals based on results
+
+Human creates ANY account -> Brain detects on next cycle -> Wakes relevant agents -> Executes highest-priority compound -> Scales intervals based on results

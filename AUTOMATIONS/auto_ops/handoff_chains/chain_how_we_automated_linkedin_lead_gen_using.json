@@ -1,33 +1,28 @@
 {
   "name": "chain_how_we_automated_linkedin_lead_gen_using",
-  "created": "2026-03-20T18:35:53.741438",
+  "created": "2026-03-24T18:50:40.254301",
   "method": "How we automated LinkedIn lead gen using keyword triggers (without getting banned) Cold LinkedIn DMs are dying. In 2026, the average reply rate is under 2%, and the spam filters are more aggressive th",
   "venture": "OUTBOUND",
   "stages": [
     {
       "agent": "scraper",
-      "task": "Scrape LinkedIn search results for buying-signal keywords (tool recommendations, pain points, competitor complaints) across target niches. Use Playwright with Brave cookies for auth. Keywords: 'looking for a tool', 'any recommendations', 'alternative to', 'frustrated with', 'need help with'",
-      "output": "linkedin_buying_signals.json"
+      "task": "Playwright scrapes LinkedIn feed/search for buying-signal keywords: 'recommend', 'looking for', 'anyone use', 'best tool for', 'switching from'. Extracts post URL, author, text, comment count, timestamp.",
+      "output": "raw_posts.json"
     },
     {
       "agent": "qualifier",
-      "task": "Score each post by signal strength: direct ask (10), pain expression (8), competitor complaint (7), general discussion (4). Filter to score >= 6. Check poster profile: decision maker / budget holder / IC. Dedupe against previous outreach log.",
-      "output": "qualified_signals.json"
+      "task": "Claude scores each post 1-10 on: intent clarity, poster seniority (decision maker?), post recency (<48h), comment opportunity (not already dominated). Filter to score>=7. Dedup against Pinecone (already engaged?). Output qualified targets.",
+      "output": "qualified_posts.json"
     },
     {
-      "agent": "content_writer",
-      "task": "Generate contextual comment for each qualified signal using Claude. Comment must: lead with genuine value (answer the question), mention relevant experience, include soft CTA (no hard sell). Match comment tone to post tone. Max 3 sentences. No links in first comment.",
-      "output": "comment_drafts.json"
-    },
-    {
-      "agent": "poster",
-      "task": "Post comments via Playwright browser automation. Rate limit: max 10 comments/day, min 5 min between comments, vary timing. Log all posted comments with timestamps.",
-      "output": "outreach_log.json"
+      "agent": "engager",
+      "task": "Claude generates contextual expert comment for each qualified post. Comment style: specific insight + soft credibility signal, no pitch, no CTA. Posts via Playwright. Rate limit: max 8 comments/session, 2h gaps between sessions.",
+      "output": "engagement_log.jsonl"
     },
     {
       "agent": "tracker",
-      "task": "24h later: check which comments got replies/likes. If reply detected, generate warm DM draft. Track conversion: comment \u2192 reply \u2192 DM \u2192 meeting \u2192 revenue.",
-      "output": "engagement_tracking.json"
+      "task": "24h after engagement: check comment for replies. If replied, score reply sentiment. If positive/curious, flag for manual DM follow-up. Append to AUTOMATIONS/leads/linkedin_warm_leads.csv.",
+      "output": "warm_leads.csv"
     }
   ],
   "status": "READY"

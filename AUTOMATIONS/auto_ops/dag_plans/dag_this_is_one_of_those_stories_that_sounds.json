@@ -1,45 +1,37 @@
 {
   "name": "integration_this_is_one_of_those_stories_that_sounds",
-  "created": "2026-03-20T18:35:51.652382",
-  "method": "this is one of those stories that sounds fake but is inspirational \n\nteenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead",
+  "created": "2026-03-24T18:50:39.830415",
+  "method": "this is one of those stories that sounds fake but is inspirational \nteenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead ",
   "venture": "APP",
   "phases": [
     {
-      "name": "competitor_intel",
+      "name": "app_audit",
       "steps": [
-        "scrape_top_calorie_apps_reviews",
-        "extract_1star_pain_points",
-        "map_feature_gaps_vs_our_streak_apps"
+        "Load 47 live apps from OPS/DEPLOYMENT_URLS.md",
+        "Score each by pain_point_clarity: 1-10 (calorie tracking = 9, scripture streak = 7)",
+        "Filter top 10 for content priority"
       ],
-      "parallel": true
+      "parallel": false
     },
     {
-      "name": "content_factory",
+      "name": "hook_generation",
       "steps": [
-        "generate_viral_short_form_scripts_transformation_format",
-        "create_screen_recording_templates_for_app_demos",
-        "build_hook_text_overlays_library"
-      ],
-      "parallel": true
-    },
-    {
-      "name": "app_enhancement",
-      "steps": [
-        "add_calorie_ai_scan_feature_to_fitness_streak_app_using_free_vision_api",
-        "wire_freemium_gate_on_scan_feature"
-      ],
-      "parallel": false,
-      "depends_on": "competitor_intel"
-    },
-    {
-      "name": "distribution",
-      "steps": [
-        "queue_viral_clips_to_posting_queue",
-        "cross_post_to_tiktok_reels_shorts",
-        "seed_in_fitness_subreddits_and_calorie_communities"
+        "Generate 3 hooks per app using builder-story template",
+        "Generate 3 hooks per app using pain-point-before/after template",
+        "Generate 3 hooks per app using milestone reveal template (X downloads in Y days)"
       ],
       "parallel": true,
-      "depends_on": "content_factory"
+      "depends_on": "app_audit"
+    },
+    {
+      "name": "content_routing",
+      "steps": [
+        "Run hooks through engagement_bait_converter.py",
+        "Append to CONTENT/social/posting_queue/ with platform tags [TikTok, IG_REELS, YT_SHORTS]",
+        "Update KPI_DASHBOARD.md with content_volume and projected_download_lift"
+      ],
+      "parallel": false,
+      "depends_on": "hook_generation"
     }
   ],
   "status": "READY"

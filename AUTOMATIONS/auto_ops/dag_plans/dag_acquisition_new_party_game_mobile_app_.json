@@ -1,37 +1,53 @@
 {
   "name": "integration_acquisition_new_party_game_mobile_app_",
-  "created": "2026-03-21T12:40:57.848010",
+  "created": "2026-03-24T18:50:43.372997",
   "method": "[ACQUISITION] NEW PARTY GAME MOBILE APP : WHO PICKED WHO",
   "venture": "APP",
   "phases": [
     {
-      "name": "research",
+      "name": "scaffold",
       "steps": [
-        "scrape_top50_party_games_app_store",
-        "extract_mechanic_patterns",
-        "identify_audience_gaps"
+        "Clone scripture-streak base template \u2192 rename to who-picked-who",
+        "Replace streak logic with pick-submission + session-code flow",
+        "Add reveal screen with animation"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "monetization",
+      "steps": [
+        "Wire AdMob banner (home) + interstitial (post-reveal)",
+        "Wire RevenueCat $2.99 premium IAP (removes ads + unlocks extra packs)"
       ],
       "parallel": true
     },
     {
-      "name": "build",
+      "name": "virality",
       "steps": [
-        "generate_question_bank_per_variant",
-        "wire_revenuecat_iap",
-        "wire_admob_interstitials",
-        "fork_base_template"
+        "Add share-result card (PNG export of who picked who + score)",
+        "Add invite-friends deeplink with session code"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "variants",
+      "steps": [
+        "Generate variant 1: Party Edition (default)",
+        "Generate variant 2: Dating Edition (different prompts, pink theme)",
+        "Generate variant 3: Office Edition (work-safe prompts)"
       ],
       "parallel": true,
-      "depends_on": "research"
+      "depends_on": "virality"
     },
     {
       "name": "deploy",
       "steps": [
-        "surge_deploy_landing_pages",
-        "submit_app_store_variants"
+        "Submit all 3 variants to App Store via app_store_submit.py",
+        "Create Firebase project per variant for session state",
+        "Add all 3 variants to OPS/KPI_DASHBOARD.md tracking"
       ],
-      "parallel": true,
-      "depends_on": "build"
+      "parallel": false,
+      "depends_on": "variants"
     }
   ],
   "status": "READY"

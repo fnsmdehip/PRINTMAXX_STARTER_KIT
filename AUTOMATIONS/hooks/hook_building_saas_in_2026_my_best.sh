@@ -1,7 +1,7 @@
 #!/bin/bash
 # Auto-generated hook by autonomous_integrator V2
-# Purpose: Pre-launch checklist hook for app_factory builds: enforces Google OAuth present, paid tier wired before launch, retention metric (D7/D30) in KPI dashboard. Runs as PostToolUse hook on any new app build completion. Secondary: routes 3 engagement posts to posting_queue using the retention>acquisition and post-launch 80% marketing angles.
-# Created: 2026-03-21T12:40:53.899422
+# Purpose: PreToolUse quality gate that validates app builds against SaaS best practices checklist: Google OAuth present, at least one payment path wired, retention metric (churn/DAU) instrumented, and marketing content queued before marking any app 'done'. Blocks premature 'done' claims on APP venture builds.
+# Created: 2026-03-24T18:50:40.233814
 # Hook type: PreToolUse
 #
 # To wire into settings.json, add to hooks.PreToolUse:

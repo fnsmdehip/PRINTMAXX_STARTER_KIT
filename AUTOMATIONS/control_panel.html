@@ -86,6 +86,48 @@ body {
   50% { box-shadow: 0 0 10px rgba(0,255,136,0.5), 0 0 30px rgba(0,255,136,0.15); }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
+@keyframes time-sensitive-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px rgba(255,51,85,0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 12px rgba(255,51,85,0.6); }
+}
+.ts-badge {
+  display: inline-block;
+  font-size: 0.6em;
+  font-family: 'JetBrains Mono';
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--danger-dim);
+  color: var(--danger);
+  animation: time-sensitive-pulse 1.5s ease-in-out infinite;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.loop-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.loop-dot.ok { background: var(--accent); box-shadow: 0 0 6px rgba(0,255,136,0.5); }
+.loop-dot.dead { background: var(--danger); box-shadow: 0 0 6px rgba(255,51,85,0.5); }
+.loop-dot.unknown { background: var(--text-muted); }
+.override-btn {
+  font-family: 'JetBrains Mono';
+  font-size: 0.6em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--warn);
+  background: var(--warn-dim);
+  color: var(--warn);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.override-btn:hover {
+  background: var(--warn);
+  color: #000;
+}
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1567,6 +1609,796 @@ body {
   color: var(--text);
   font-family: 'JetBrains Mono', monospace;
 }
+
+/* ============================================================
+   COMMAND PALETTE (Cmd+K)
+   ============================================================ */
+.command-palette-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 12vh;
+  animation: fadeInUp 0.15s ease-out;
+}
+.command-palette-backdrop.visible { display: flex; }
+
+.command-palette {
+  width: 100%;
+  max-width: 640px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6), var(--accent-glow);
+  animation: fadeInUp 0.2s ease-out;
+}
+
+.command-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.command-search i {
+  font-size: 18px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+.command-search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+.command-search input::placeholder { color: var(--text-muted); }
+.command-search .cmd-shortcut {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.06);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.command-filter-tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.command-filter-tab {
+  padding: 8px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+.command-filter-tab:hover { color: var(--text); }
+.command-filter-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.command-list {
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.command-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border-left: 3px solid transparent;
+}
+.command-item:hover,
+.command-item.selected {
+  background: rgba(0,255,136,0.04);
+  border-left-color: var(--accent);
+}
+.command-item .cmd-icon {
+  font-size: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+.command-item .cmd-info { flex: 1; min-width: 0; }
+.command-item .cmd-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.command-item .cmd-description {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.command-item .cmd-cat-badge {
+  font-size: 8px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.06);
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  flex-shrink: 0;
+}
+.command-item .cmd-run-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,255,136,0.3);
+  background: var(--accent-dim);
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+.command-item .cmd-run-btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+.command-item .cmd-run-btn.running {
+  border-color: var(--yellow);
+  background: var(--yellow-dim);
+  color: var(--yellow);
+}
+.command-item .cmd-running-spinner {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(234,179,8,0.2);
+  border-top-color: var(--yellow);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 4px;
+}
+
+.command-output-panel {
+  border-top: 1px solid var(--border);
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 14px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: rgba(0,0,0,0.3);
+  display: none;
+}
+.command-output-panel.visible { display: block; animation: fadeInUp 0.15s ease-out; }
+
+.command-empty {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* ============================================================
+   SCHEDULER TAB
+   ============================================================ */
+.scheduler-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.scheduler-count-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  margin-left: 8px;
+}
+.scheduler-add-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0,255,136,0.3);
+  background: var(--accent-dim);
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.scheduler-add-btn:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow: var(--accent-glow);
+}
+
+.scheduler-form {
+  display: none;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  animation: fadeInUp 0.2s ease-out;
+}
+.scheduler-form.visible { display: block; }
+
+.scheduler-form-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.scheduler-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.scheduler-form-field label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.scheduler-form-field input,
+.scheduler-form-field select {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.scheduler-form-field input:focus,
+.scheduler-form-field select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(0,255,136,0.15);
+}
+
+.scheduler-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.scheduler-table th {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+.scheduler-table td {
+  font-size: 11px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  vertical-align: middle;
+}
+.scheduler-table tr:hover { background: rgba(255,255,255,0.02); }
+.scheduler-table .sched-enabled { color: var(--accent); }
+.scheduler-table .sched-disabled { color: var(--text-muted); }
+.scheduler-table .sched-overdue { color: var(--warn); }
+.scheduler-table .sched-schedule {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--blue);
+}
+.scheduler-table .sched-command {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text);
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.scheduler-table .sched-next-run {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+.scheduler-table .sched-action-btn {
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.15s;
+}
+.scheduler-table .sched-action-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ============================================================
+   MANUAL INPUT DRAWER
+   ============================================================ */
+.manual-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 8000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.manual-drawer-backdrop.visible { display: block; opacity: 1; }
+
+.manual-drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  max-width: 90vw;
+  height: 100vh;
+  background: var(--bg2);
+  border-left: 1px solid var(--border);
+  z-index: 8500;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+.manual-drawer.open { right: 0; }
+
+.manual-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.manual-drawer-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.manual-drawer-close {
+  font-size: 18px;
+  color: var(--text-dim);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.15s;
+}
+.manual-drawer-close:hover { color: var(--text); }
+
+.manual-drawer-section {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.manual-drawer-section h4 {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.manual-drawer-section h4 i { font-size: 14px; color: var(--accent); }
+
+.manual-input {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+.manual-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(0,255,136,0.15);
+}
+.manual-input::placeholder { color: var(--text-muted); }
+
+.manual-select {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.manual-select:focus { border-color: var(--accent); }
+
+.manual-submit-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,255,136,0.3);
+  background: var(--accent-dim);
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+.manual-submit-btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+.tag-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.tag-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tag-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.tag-chip.active {
+  background: var(--accent-dim);
+  border-color: rgba(0,255,136,0.4);
+  color: var(--accent);
+}
+
+.quick-override-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 11px;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quick-override-item:hover {
+  background: rgba(0,255,136,0.04);
+  color: var(--accent);
+}
+.quick-override-promote {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--danger-dim);
+  color: var(--danger);
+  border: 1px solid rgba(255,51,85,0.3);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.quick-override-promote:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+.fab-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,255,136,0.3), var(--accent-glow);
+  z-index: 7000;
+  transition: all 0.2s ease;
+}
+.fab-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(0,255,136,0.4), 0 0 15px rgba(0,255,136,0.3);
+}
+
+/* ============================================================
+   USAGE OPTIMIZER WIDGET
+   ============================================================ */
+.usage-widget {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 14px;
+  background: var(--panel2);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.usage-bar-container {
+  width: 100px;
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.usage-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease, background 0.3s ease;
+}
+.usage-bar-fill.green { background: var(--accent); }
+.usage-bar-fill.yellow { background: var(--yellow); }
+.usage-bar-fill.red { background: var(--danger); }
+
+.usage-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.usage-burst-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--danger);
+  background: var(--danger-dim);
+  color: var(--danger);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: none;
+}
+.usage-burst-btn:hover {
+  background: var(--danger);
+  color: #fff;
+}
+.usage-burst-btn.pulse-active {
+  display: inline-block;
+  animation: time-sensitive-pulse 1.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   RBI PIPELINE VISUALIZATION
+   ============================================================ */
+.rbi-pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 16px;
+  position: relative;
+}
+.rbi-stage {
+  flex: 1;
+  max-width: 220px;
+  padding: 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+.rbi-stage:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.rbi-stage.stage-research {
+  background: var(--blue-dim);
+  border: 1px solid rgba(68,136,255,0.3);
+}
+.rbi-stage.stage-research:hover { border-color: rgba(68,136,255,0.6); }
+.rbi-stage.stage-backtest {
+  background: var(--yellow-dim);
+  border: 1px solid rgba(234,179,8,0.3);
+}
+.rbi-stage.stage-backtest:hover { border-color: rgba(234,179,8,0.6); }
+.rbi-stage.stage-implement {
+  background: var(--accent-dim);
+  border: 1px solid rgba(0,255,136,0.3);
+}
+.rbi-stage.stage-implement:hover { border-color: rgba(0,255,136,0.6); }
+
+.rbi-stage-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.rbi-stage-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  font-weight: 800;
+}
+.rbi-stage-top {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rbi-arrow {
+  width: 60px;
+  height: 2px;
+  background: var(--border);
+  position: relative;
+  flex-shrink: 0;
+}
+.rbi-arrow::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid var(--text-muted);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+@keyframes rbiDotFlow {
+  0% { left: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: calc(100% - 6px); opacity: 0; }
+}
+.rbi-arrow-dot {
+  position: absolute;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+  animation: rbiDotFlow 2s ease-in-out infinite;
+}
+.rbi-arrow .rbi-arrow-dot:nth-child(2) { animation-delay: 0.7s; }
+.rbi-arrow .rbi-arrow-dot:nth-child(3) { animation-delay: 1.4s; }
+
+.rbi-expanded {
+  display: none;
+  margin-top: 12px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  animation: fadeInUp 0.2s ease-out;
+}
+.rbi-expanded.visible { display: block; }
+.rbi-expanded-item {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 11px;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+}
+.rbi-expanded-item:last-child { border-bottom: none; }
+
+/* ============================================================
+   CMD+K HEADER BUTTON
+   ============================================================ */
+.cmdk-header-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.cmdk-header-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--accent-glow);
+}
+.cmdk-header-btn i { font-size: 14px; }
+.cmdk-header-btn kbd {
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+}
+
+/* ============================================================
+   RESPONSIVE ADDITIONS
+   ============================================================ */
+@media (max-width: 768px) {
+  .command-palette { max-width: 95vw; margin: 0 10px; }
+  .command-palette-backdrop { padding-top: 5vh; }
+  .manual-drawer { width: 100vw; max-width: 100vw; }
+  .fab-btn { bottom: 16px; right: 16px; width: 46px; height: 46px; font-size: 20px; }
+  .rbi-pipeline { flex-direction: column; gap: 0; }
+  .rbi-arrow { width: 2px; height: 30px; }
+  .rbi-arrow::after {
+    right: auto; top: auto; bottom: -1px; left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--text-muted);
+    border-bottom: none;
+  }
+  .rbi-stage { max-width: 100%; }
+  .usage-widget { display: none; }
+  .cmdk-header-btn { display: none; }
+  .scheduler-table { font-size: 10px; }
+  .scheduler-table th:nth-child(4),
+  .scheduler-table td:nth-child(4) { display: none; }
+}
 </style>
 </head>
 <body>
@@ -1578,6 +2410,19 @@ body {
     <span class="header-clock" id="h-clock">--:--:--</span>
   </div>
   <div class="stats-bar">
+    <!-- Usage Optimizer Widget -->
+    <div class="usage-widget" id="usage-widget">
+      <i class="ti ti-clock-bolt" style="font-size:14px; color:var(--text-dim);"></i>
+      <div class="usage-bar-container">
+        <div class="usage-bar-fill green" id="usage-bar" style="width:0%"></div>
+      </div>
+      <span class="usage-time" id="usage-time">--</span>
+      <button class="usage-burst-btn" id="usage-burst-btn" onclick="triggerBurst()">BURST</button>
+    </div>
+    <!-- Cmd+K button -->
+    <button class="cmdk-header-btn" onclick="toggleCommandPalette()">
+      <i class="ti ti-command"></i> Commands <kbd>&#8984;K</kbd>
+    </button>
     <div class="stat-pill">
       <div class="stat-value" id="h-revenue" style="color:var(--accent)">$0</div>
       <div class="stat-label">Revenue</div>
@@ -1617,12 +2462,80 @@ body {
   <div class="tab" data-tab="chains"><i class="ti ti-link"></i>Handoff Chains</div>
   <div class="tab" data-tab="dag"><i class="ti ti-git-merge"></i>Intel DAG</div>
   <div class="tab" data-tab="kpi"><i class="ti ti-target-arrow"></i>KPI Tracker</div>
+  <div class="tab" data-tab="scheduler"><i class="ti ti-clock-hour-4"></i>Scheduler</div>
 </div>
 
 <div class="content">
 
   <!-- ====== DASHBOARD TAB ====== -->
   <div class="tab-content active" id="tab-dashboard">
+
+    <!-- TODAY'S AUTOMATED OUTPUT — first thing you see -->
+    <div class="glass-card" id="daily-output-card" style="margin-bottom:16px; padding:24px; border:2px solid var(--accent);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <div id="daily-output-header" style="font-size:1.3em; font-weight:800; font-family:'JetBrains Mono'; display:flex; align-items:center; gap:10px;">
+          <i class="ti ti-bolt" style="color:var(--accent);"></i>
+          <span>TODAY'S OUTPUT</span>
+          <span id="daily-output-status" style="font-size:0.55em; padding:3px 10px; border-radius:6px; background:var(--accent-dim); color:var(--accent);">LOADING</span>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <span id="daily-output-error-count" style="font-family:'JetBrains Mono'; font-size:0.7em; color:var(--text-dim);"></span>
+          <span id="daily-output-date" style="font-family:'JetBrains Mono'; font-size:0.75em; color:var(--text-dim);"></span>
+        </div>
+      </div>
+      <!-- Summary stats row -->
+      <div id="daily-output-summary" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(100px,1fr)); gap:8px; margin-bottom:16px;"></div>
+      <!-- Loop health dots -->
+      <div id="daily-output-loops" style="display:flex; gap:16px; align-items:center; margin-bottom:16px; padding:10px; background:var(--panel); border-radius:8px; border:1px solid var(--border);"></div>
+      <!-- Highlights list -->
+      <div id="daily-output-highlights" style="max-height:350px; overflow-y:auto;"></div>
+      <!-- Errors section (hidden if none) -->
+      <div id="daily-output-errors" style="display:none; margin-top:12px; padding:10px; background:var(--danger-dim); border-radius:8px; border:1px solid rgba(255,51,85,0.3);"></div>
+    </div>
+
+    <!-- RBI PIPELINE VISUALIZATION -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="card-title"><i class="ti ti-git-branch" style="color:var(--accent);"></i> RBI Pipeline</div>
+      <div class="rbi-pipeline" id="rbi-pipeline">
+        <div class="rbi-stage stage-research" onclick="toggleRbiExpanded('research')">
+          <div class="rbi-stage-label" style="color:var(--blue);">Research</div>
+          <div class="rbi-stage-count" style="color:var(--blue);" id="rbi-research-count">0</div>
+          <div class="rbi-stage-top" id="rbi-research-top">--</div>
+        </div>
+        <div class="rbi-arrow">
+          <div class="rbi-arrow-dot" style="background:var(--blue); box-shadow:0 0 6px var(--blue);"></div>
+          <div class="rbi-arrow-dot" style="background:var(--blue); box-shadow:0 0 6px var(--blue);"></div>
+          <div class="rbi-arrow-dot" style="background:var(--blue); box-shadow:0 0 6px var(--blue);"></div>
+        </div>
+        <div class="rbi-stage stage-backtest" onclick="toggleRbiExpanded('backtest')">
+          <div class="rbi-stage-label" style="color:var(--yellow);">Backtest</div>
+          <div class="rbi-stage-count" style="color:var(--yellow);" id="rbi-backtest-count">0</div>
+          <div class="rbi-stage-top" id="rbi-backtest-top">--</div>
+        </div>
+        <div class="rbi-arrow">
+          <div class="rbi-arrow-dot" style="background:var(--yellow); box-shadow:0 0 6px var(--yellow);"></div>
+          <div class="rbi-arrow-dot" style="background:var(--yellow); box-shadow:0 0 6px var(--yellow);"></div>
+          <div class="rbi-arrow-dot" style="background:var(--yellow); box-shadow:0 0 6px var(--yellow);"></div>
+        </div>
+        <div class="rbi-stage stage-implement" onclick="toggleRbiExpanded('implement')">
+          <div class="rbi-stage-label" style="color:var(--accent);">Implement</div>
+          <div class="rbi-stage-count" style="color:var(--accent);" id="rbi-implement-count">0</div>
+          <div class="rbi-stage-top" id="rbi-implement-top">--</div>
+        </div>
+      </div>
+      <div class="rbi-expanded" id="rbi-expanded-research">
+        <div class="card-title" style="color:var(--blue);"><i class="ti ti-search"></i> Research Queue</div>
+        <div id="rbi-list-research"></div>
+      </div>
+      <div class="rbi-expanded" id="rbi-expanded-backtest">
+        <div class="card-title" style="color:var(--yellow);"><i class="ti ti-flask"></i> Backtest Queue</div>
+        <div id="rbi-list-backtest"></div>
+      </div>
+      <div class="rbi-expanded" id="rbi-expanded-implement">
+        <div class="card-title" style="color:var(--accent);"><i class="ti ti-rocket"></i> Implement Queue</div>
+        <div id="rbi-list-implement"></div>
+      </div>
+    </div>
 
     <!-- KPI HERO — first thing you see -->
     <div class="glass-card" style="border:2px solid var(--accent); background:linear-gradient(135deg, rgba(0,255,136,0.08), rgba(0,100,255,0.05)); margin-bottom:16px; padding:24px;">
@@ -1967,7 +2880,140 @@ body {
     </div>
   </div>
 
+  <!-- ====== SCHEDULER TAB ====== -->
+  <div class="tab-content" id="tab-scheduler">
+    <div class="glass-card">
+      <div class="scheduler-header">
+        <div class="card-title" style="margin:0;"><i class="ti ti-clock-hour-4"></i> Cron Scheduler <span class="scheduler-count-badge" id="scheduler-count">0</span></div>
+        <button class="scheduler-add-btn" onclick="toggleSchedulerForm()"><i class="ti ti-plus" style="margin-right:4px;"></i> Add New</button>
+      </div>
+
+      <!-- Add form (hidden by default) -->
+      <div class="scheduler-form" id="scheduler-form">
+        <div class="scheduler-form-row">
+          <div class="scheduler-form-field" style="min-width:160px;">
+            <label>Schedule Preset</label>
+            <select id="sched-preset" onchange="applySchedulePreset()">
+              <option value="">Custom</option>
+              <option value="*/15 * * * *">Every 15m</option>
+              <option value="0 * * * *">Hourly</option>
+              <option value="0 5 * * *">Daily 5AM</option>
+              <option value="0 6 * * *">Daily 6AM</option>
+              <option value="0 0 * * *">Daily Midnight</option>
+              <option value="0 4 * * 0">Weekly Sunday</option>
+            </select>
+          </div>
+          <div class="scheduler-form-field" id="sched-custom-fields" style="display:flex; gap:6px;">
+            <div><label>Min</label><input type="text" id="sched-min" placeholder="*" style="width:50px;"></div>
+            <div><label>Hour</label><input type="text" id="sched-hour" placeholder="*" style="width:50px;"></div>
+            <div><label>Day</label><input type="text" id="sched-day" placeholder="*" style="width:50px;"></div>
+            <div><label>Mon</label><input type="text" id="sched-month" placeholder="*" style="width:50px;"></div>
+            <div><label>Wkd</label><input type="text" id="sched-weekday" placeholder="*" style="width:50px;"></div>
+          </div>
+        </div>
+        <div class="scheduler-form-row">
+          <div class="scheduler-form-field" style="flex:1;">
+            <label>Command</label>
+            <input type="text" id="sched-command" placeholder="python3 AUTOMATIONS/script.py --flag" style="width:100%;">
+          </div>
+          <div class="scheduler-form-field">
+            <label>Comment</label>
+            <input type="text" id="sched-comment" placeholder="Description" style="width:200px;">
+          </div>
+          <button class="manual-submit-btn" onclick="addSchedulerEntry()" style="margin-top:auto;">Add Entry</button>
+        </div>
+      </div>
+
+      <!-- Scheduler table -->
+      <div style="overflow-x:auto;">
+        <table class="scheduler-table">
+          <thead>
+            <tr>
+              <th style="width:60px;">Enabled</th>
+              <th>Schedule</th>
+              <th>Command</th>
+              <th>Next Run</th>
+              <th style="width:80px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="scheduler-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<!-- ====== COMMAND PALETTE OVERLAY ====== -->
+<div class="command-palette-backdrop" id="command-palette-backdrop" onclick="closeCommandPalette(event)">
+  <div class="command-palette" onclick="event.stopPropagation()">
+    <div class="command-search">
+      <i class="ti ti-search"></i>
+      <input type="text" id="cmd-search-input" placeholder="Type a command..." autocomplete="off" oninput="filterCommands()" onkeydown="handleCmdKeyNav(event)">
+      <span class="cmd-shortcut">ESC</span>
+    </div>
+    <div class="command-filter-tabs" id="cmd-filter-tabs">
+      <div class="command-filter-tab active" data-cat="all" onclick="setCmdFilter('all')">All</div>
+      <div class="command-filter-tab" data-cat="revenue" onclick="setCmdFilter('revenue')">Revenue</div>
+      <div class="command-filter-tab" data-cat="system" onclick="setCmdFilter('system')">System</div>
+      <div class="command-filter-tab" data-cat="intelligence" onclick="setCmdFilter('intelligence')">Intelligence</div>
+      <div class="command-filter-tab" data-cat="content" onclick="setCmdFilter('content')">Content</div>
+      <div class="command-filter-tab" data-cat="agents" onclick="setCmdFilter('agents')">Agents</div>
+    </div>
+    <div class="command-list" id="cmd-list">
+      <div class="command-empty">Loading commands...</div>
+    </div>
+    <div class="command-output-panel" id="cmd-output"></div>
+  </div>
+</div>
+
+<!-- ====== MANUAL INPUT DRAWER ====== -->
+<div class="manual-drawer-backdrop" id="manual-drawer-backdrop" onclick="closeManualDrawer()"></div>
+<div class="manual-drawer" id="manual-drawer">
+  <div class="manual-drawer-header">
+    <h3><i class="ti ti-plus" style="margin-right:6px;"></i> Quick Input</h3>
+    <button class="manual-drawer-close" onclick="closeManualDrawer()"><i class="ti ti-x"></i></button>
+  </div>
+
+  <div class="manual-drawer-section">
+    <h4><i class="ti ti-flag-3"></i> Add Priority</h4>
+    <input type="text" class="manual-input" id="manual-priority-text" placeholder="Describe the priority task...">
+    <div style="display:flex; gap:8px; margin-top:8px; align-items:center;">
+      <select class="manual-select" id="manual-priority-level">
+        <option value="P0">P0 - Critical</option>
+        <option value="P1" selected>P1 - High</option>
+        <option value="P2">P2 - Medium</option>
+        <option value="P3">P3 - Low</option>
+      </select>
+      <button class="manual-submit-btn" onclick="submitPriority()">Submit</button>
+    </div>
+  </div>
+
+  <div class="manual-drawer-section">
+    <h4><i class="ti ti-note"></i> Add Note</h4>
+    <textarea class="manual-input" id="manual-note-text" rows="3" placeholder="Write a note..."></textarea>
+    <div class="tag-chips" id="note-tags">
+      <span class="tag-chip" data-tag="revenue" onclick="toggleNoteTag(this)">revenue</span>
+      <span class="tag-chip" data-tag="urgent" onclick="toggleNoteTag(this)">urgent</span>
+      <span class="tag-chip" data-tag="idea" onclick="toggleNoteTag(this)">idea</span>
+      <span class="tag-chip" data-tag="bug" onclick="toggleNoteTag(this)">bug</span>
+      <span class="tag-chip" data-tag="opportunity" onclick="toggleNoteTag(this)">opportunity</span>
+    </div>
+    <button class="manual-submit-btn" onclick="submitNote()">Submit Note</button>
+  </div>
+
+  <div class="manual-drawer-section">
+    <h4><i class="ti ti-arrow-big-up-lines"></i> Quick Override</h4>
+    <div id="quick-override-list" style="max-height:200px; overflow-y:auto;">
+      <div style="color:var(--text-muted); font-size:11px; padding:8px;">Loading today's highlights...</div>
+    </div>
+  </div>
+</div>
+
+<!-- FAB Button -->
+<button class="fab-btn" id="fab-btn" onclick="openManualDrawer()" title="Quick Input">
+  <i class="ti ti-plus"></i>
+</button>
 
 <div class="toast" id="toast"></div>
 
@@ -2025,7 +3071,7 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     tab.classList.add('active');
     var target = document.getElementById('tab-' + tab.dataset.tab);
     if (target) target.classList.add('active');
-    if (tab.dataset.tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyFeed(); loadIntelFeed(); }
+    if (tab.dataset.tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyOutput(); loadDailyFeed(); loadIntelFeed(); loadRbiPipeline(); }
     if (tab.dataset.tab === 'agents') loadStatus();
     if (tab.dataset.tab === 'tree') loadSystemTree();
     if (tab.dataset.tab === 'actions') loadActions();
@@ -2036,6 +3082,7 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     if (tab.dataset.tab === 'chains') loadChains();
     if (tab.dataset.tab === 'dag') loadDag();
     if (tab.dataset.tab === 'kpi') { loadKPI(); loadCalendar(); }
+    if (tab.dataset.tab === 'scheduler') loadScheduler();
   });
 });
 
@@ -3210,6 +4257,141 @@ function showOpt(containerId, idx) {
   panels.forEach(function(p, i) { p.style.display = i === idx ? 'block' : 'none'; });
 }
 
+// ---------- TODAY'S OUTPUT ----------
+async function loadDailyOutput() {
+  try {
+    var r = await fetch(API + '/api/daily-output');
+    var d = await r.json();
+
+    // Header — green if working, red if not
+    var card = document.getElementById('daily-output-card');
+    var statusEl = document.getElementById('daily-output-status');
+    var headerEl = document.getElementById('daily-output-header');
+    if (d.system_working) {
+      card.style.borderColor = 'var(--accent)';
+      card.style.background = 'linear-gradient(135deg, rgba(0,255,136,0.06), rgba(0,100,255,0.03))';
+      statusEl.textContent = 'SYSTEM ACTIVE';
+      statusEl.style.background = 'var(--accent-dim)';
+      statusEl.style.color = 'var(--accent)';
+    } else {
+      card.style.borderColor = 'var(--danger)';
+      card.style.background = 'linear-gradient(135deg, rgba(255,51,85,0.08), rgba(100,0,0,0.05))';
+      statusEl.textContent = 'SYSTEM DOWN';
+      statusEl.style.background = 'var(--danger-dim)';
+      statusEl.style.color = 'var(--danger)';
+    }
+
+    document.getElementById('daily-output-date').textContent = d.date;
+
+    // Error count badge
+    var errCountEl = document.getElementById('daily-output-error-count');
+    if (d.errors && d.errors.length > 0) {
+      errCountEl.innerHTML = '<span style="padding:2px 8px;border-radius:4px;background:var(--danger-dim);color:var(--danger);">' + d.errors.length + ' errors</span>';
+    } else {
+      errCountEl.textContent = '';
+    }
+
+    // Summary stats
+    var s = d.summary || {};
+    var summaryPairs = [
+      {label: 'New Alpha', value: s.total_new_alpha || 0, color: 'var(--accent)'},
+      {label: 'Methods', value: s.methods_discovered || 0, color: 'var(--blue)'},
+      {label: 'Integrated', value: s.entries_integrated || 0, color: 'var(--purple)'},
+      {label: 'RBI Pass', value: s.rbi_passed || 0, color: 'var(--accent)'},
+      {label: 'EDGAR', value: s.edgar_filings || 0, color: 'var(--warn)'},
+      {label: 'Crunchbase', value: s.crunchbase_rounds || 0, color: 'var(--blue)'},
+      {label: 'Reports', value: s.reports_generated || 0, color: 'var(--purple)'},
+      {label: 'Content', value: s.content_created || 0, color: 'var(--yellow)'},
+    ];
+    document.getElementById('daily-output-summary').innerHTML = summaryPairs.map(function(p) {
+      return '<div style="text-align:center; padding:10px; background:var(--panel); border-radius:8px; border:1px solid var(--border);">' +
+        '<div style="font-family:JetBrains Mono; font-size:1.6em; font-weight:800; color:' + p.color + ';">' + p.value + '</div>' +
+        '<div style="font-size:0.65em; color:var(--text-dim);">' + p.label + '</div>' +
+      '</div>';
+    }).join('');
+
+    // Loop health dots
+    var lh = d.loop_health || {};
+    var loopNames = ['decisions', 'feedback', 'pipeline', 'drift'];
+    document.getElementById('daily-output-loops').innerHTML =
+      '<span style="font-family:JetBrains Mono; font-size:0.75em; color:var(--text-dim); margin-right:8px;">LOOP HEALTH</span>' +
+      loopNames.map(function(name) {
+        var status = (lh[name] || 'UNKNOWN').toUpperCase();
+        var dotClass = status === 'OK' ? 'ok' : (status === 'DEAD' || status === 'FAILED' ? 'dead' : 'unknown');
+        return '<span style="display:flex;align-items:center;gap:4px;">' +
+          '<span class="loop-dot ' + dotClass + '"></span>' +
+          '<span style="font-family:JetBrains Mono; font-size:0.7em; color:var(--text-dim);">' + name + '</span>' +
+        '</span>';
+      }).join('');
+
+    // Highlights
+    var highlightsEl = document.getElementById('daily-output-highlights');
+    if (!d.highlights || d.highlights.length === 0) {
+      highlightsEl.innerHTML = '<div style="color:var(--text-dim);padding:12px;font-size:0.85em;">No highlights yet. Scanners run 5-7 AM daily.</div>';
+    } else {
+      highlightsEl.innerHTML = d.highlights.map(function(h, idx) {
+        var scoreColor = h.score >= 8 ? 'var(--accent)' : (h.score >= 6 ? 'var(--warn)' : 'var(--text-dim)');
+        var tsBadge = h.time_sensitive ? '<span class="ts-badge">TIME SENSITIVE</span>' : '';
+        var sourceTag = '<span style="font-family:JetBrains Mono;font-size:0.6em;padding:2px 6px;border-radius:3px;background:var(--blue-dim);color:var(--blue);">' + (h.source||'').toUpperCase() + '</span>';
+        var overrideId = 'override-' + idx;
+        return '<div style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:12px;align-items:flex-start;">' +
+          '<div style="font-family:JetBrains Mono;font-size:1.1em;font-weight:800;color:' + scoreColor + ';min-width:36px;text-align:right;">' + h.score + '</div>' +
+          '<div style="flex:1;">' +
+            '<div style="font-size:0.85em;color:var(--text);line-height:1.4;">' + h.text + tsBadge + '</div>' +
+            '<div style="margin-top:4px;display:flex;gap:8px;align-items:center;">' + sourceTag + '</div>' +
+          '</div>' +
+          '<button id="' + overrideId + '" class="override-btn" onclick="overridePriority(' + idx + ', this)">OVERRIDE</button>' +
+        '</div>';
+      }).join('');
+    }
+    // Store highlights globally for override function
+    window._dailyOutputHighlights = d.highlights || [];
+
+    // Errors section
+    var errorsEl = document.getElementById('daily-output-errors');
+    if (d.errors && d.errors.length > 0) {
+      errorsEl.style.display = 'block';
+      errorsEl.innerHTML = '<div style="font-family:JetBrains Mono;font-size:0.75em;font-weight:700;color:var(--danger);margin-bottom:8px;"><i class="ti ti-alert-triangle"></i> ERRORS (' + d.errors.length + ')</div>' +
+        d.errors.map(function(e) {
+          return '<div style="font-size:0.75em;color:var(--text);padding:3px 0;border-bottom:1px solid rgba(255,51,85,0.1);">' + e + '</div>';
+        }).join('');
+    } else {
+      errorsEl.style.display = 'none';
+    }
+
+  } catch(e) {
+    console.error('daily output load failed:', e);
+    var statusEl = document.getElementById('daily-output-status');
+    if (statusEl) { statusEl.textContent = 'LOAD FAILED'; statusEl.style.color = 'var(--danger)'; }
+  }
+}
+
+async function overridePriority(idx, btn) {
+  var highlights = window._dailyOutputHighlights || [];
+  if (idx >= highlights.length) return;
+  var h = highlights[idx];
+  try {
+    var r = await fetch(API + '/api/kpi/manual-priority', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({text: h.text, source: h.source, score: h.score})
+    });
+    var d = await r.json();
+    if (d.success) {
+      btn.textContent = 'PROMOTED';
+      btn.style.background = 'var(--accent)';
+      btn.style.color = '#000';
+      btn.style.borderColor = 'var(--accent)';
+      btn.disabled = true;
+      showToast('Promoted to manual priorities');
+    } else {
+      showToast('Override failed: ' + (d.error || 'unknown'));
+    }
+  } catch(e) {
+    showToast('Override failed');
+  }
+}
+
 async function loadDailyFeed() {
   try {
     var r = await fetch(API + '/api/daily-feed');
@@ -3596,15 +4778,614 @@ async function completeBlocker(el, text) {
 // ---------- AUTO REFRESH ----------
 loadDashboard();
 loadDashKPI();
-loadDailyFeed(); loadIntelFeed();
+loadDailyOutput(); loadDailyFeed(); loadIntelFeed();
 setInterval(function() {
   var activeTab = document.querySelector('.tab.active');
   if (!activeTab) return;
   var tab = activeTab.dataset.tab;
-  if (tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyFeed(); loadIntelFeed(); }
+  if (tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyOutput(); loadDailyFeed(); loadIntelFeed(); loadRbiPipeline(); }
   else if (tab === 'agents') loadStatus();
   else if (tab === 'kpi') loadKPI();
-}, 30000);
+  else if (tab === 'scheduler') loadScheduler();
+}, 300000);
+
+// =============================================================
+// 1. COMMAND PALETTE (Cmd+K)
+// =============================================================
+var _allCommands = [];
+var _filteredCommands = [];
+var _cmdSelectedIdx = 0;
+var _cmdCurrentFilter = 'all';
+var _cmdRunningJobs = {};
+
+// Open with Cmd+K
+document.addEventListener('keydown', function(e) {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+    e.preventDefault();
+    toggleCommandPalette();
+  }
+  if (e.key === 'Escape') {
+    closeCommandPalette();
+  }
+});
+
+function toggleCommandPalette() {
+  var backdrop = document.getElementById('command-palette-backdrop');
+  if (backdrop.classList.contains('visible')) {
+    backdrop.classList.remove('visible');
+  } else {
+    backdrop.classList.add('visible');
+    document.getElementById('cmd-search-input').value = '';
+    document.getElementById('cmd-search-input').focus();
+    loadCommands();
+  }
+}
+
+function closeCommandPalette(e) {
+  if (e && e.target !== document.getElementById('command-palette-backdrop')) return;
+  document.getElementById('command-palette-backdrop').classList.remove('visible');
+  document.getElementById('cmd-output').classList.remove('visible');
+}
+
+async function loadCommands() {
+  try {
+    var r = await fetch(API + '/api/commands/all');
+    var d = await r.json();
+    _allCommands = d.commands || d || [];
+  } catch(e) {
+    // Fallback: build from actions API
+    try {
+      var r2 = await fetch(API + '/api/actions');
+      var d2 = await r2.json();
+      _allCommands = (d2.actions || []).map(function(a) {
+        return { id: a.id, name: a.name, description: a.desc || a.category || '', category: a.category || 'system', icon: 'ti-bolt' };
+      });
+    } catch(e2) {
+      _allCommands = [];
+    }
+  }
+  filterCommands();
+}
+
+function filterCommands() {
+  var query = (document.getElementById('cmd-search-input').value || '').toLowerCase();
+  _filteredCommands = _allCommands.filter(function(cmd) {
+    var matchText = (cmd.name + ' ' + cmd.description + ' ' + cmd.id).toLowerCase().indexOf(query) !== -1;
+    var matchCat = _cmdCurrentFilter === 'all' || (cmd.category || '').toLowerCase() === _cmdCurrentFilter;
+    return matchText && matchCat;
+  });
+  _cmdSelectedIdx = 0;
+  renderCommandList();
+}
+
+function setCmdFilter(cat) {
+  _cmdCurrentFilter = cat;
+  document.querySelectorAll('.command-filter-tab').forEach(function(t) {
+    t.classList.toggle('active', t.dataset.cat === cat);
+  });
+  filterCommands();
+}
+
+function renderCommandList() {
+  var list = document.getElementById('cmd-list');
+  while (list.firstChild) list.removeChild(list.firstChild);
+
+  if (!_filteredCommands.length) {
+    list.appendChild(el('div', { className: 'command-empty' }, 'No commands found'));
+    return;
+  }
+
+  _filteredCommands.forEach(function(cmd, idx) {
+    var isRunning = _cmdRunningJobs[cmd.id];
+    var runBtnChildren = [];
+    if (isRunning) {
+      runBtnChildren.push(el('span', { className: 'cmd-running-spinner' }));
+      runBtnChildren.push(document.createTextNode('Running'));
+    } else {
+      runBtnChildren.push(document.createTextNode('Run'));
+    }
+
+    var runBtn = el('button', {
+      className: 'cmd-run-btn' + (isRunning ? ' running' : ''),
+      onclick: function(e) { e.stopPropagation(); runCommand(cmd); }
+    }, runBtnChildren);
+
+    var item = el('div', {
+      className: 'command-item' + (idx === _cmdSelectedIdx ? ' selected' : ''),
+      'data-idx': String(idx),
+      onclick: function() { _cmdSelectedIdx = idx; renderCommandList(); }
+    }, [
+      el('i', { className: 'ti ' + (cmd.icon || 'ti-terminal') + ' cmd-icon' }),
+      el('div', { className: 'cmd-info' }, [
+        el('div', { className: 'cmd-name' }, cmd.name || cmd.id || 'Unnamed'),
+        el('div', { className: 'cmd-description' }, cmd.description || '')
+      ]),
+      el('span', { className: 'cmd-cat-badge' }, cmd.category || 'system'),
+      runBtn
+    ]);
+    list.appendChild(item);
+  });
+}
+
+function handleCmdKeyNav(e) {
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    _cmdSelectedIdx = Math.min(_cmdSelectedIdx + 1, _filteredCommands.length - 1);
+    renderCommandList();
+    scrollCmdIntoView();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    _cmdSelectedIdx = Math.max(_cmdSelectedIdx - 1, 0);
+    renderCommandList();
+    scrollCmdIntoView();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (_filteredCommands[_cmdSelectedIdx]) {
+      runCommand(_filteredCommands[_cmdSelectedIdx]);
+    }
+  }
+}
+
+function scrollCmdIntoView() {
+  var selected = document.querySelector('.command-item.selected');
+  if (selected) selected.scrollIntoView({ block: 'nearest' });
+}
+
+async function runCommand(cmd) {
+  var outputPanel = document.getElementById('cmd-output');
+  outputPanel.classList.add('visible');
+  outputPanel.textContent = 'Running ' + (cmd.name || cmd.id) + '...';
+  _cmdRunningJobs[cmd.id] = true;
+  renderCommandList();
+
+  try {
+    var r = await fetch(API + '/api/commands/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ cmd: cmd.id || cmd.name })
+    });
+    var d = await r.json();
+    if (d.job_id) {
+      pollJob(d.job_id, cmd.id, outputPanel);
+    } else {
+      outputPanel.textContent = d.output || d.error || JSON.stringify(d, null, 2);
+      delete _cmdRunningJobs[cmd.id];
+      renderCommandList();
+      toast((cmd.name || cmd.id) + ' completed');
+    }
+  } catch(e) {
+    // Fallback: try action API
+    try {
+      var r2 = await fetch(API + '/api/action/' + cmd.id, { method: 'POST' });
+      var d2 = await r2.json();
+      outputPanel.textContent = d2.output || d2.error || 'Completed';
+      toast((cmd.name || cmd.id) + (d2.success ? ' completed' : ' failed'), !d2.success);
+    } catch(e2) {
+      outputPanel.textContent = 'Error: ' + e.message;
+      toast('Command failed', true);
+    }
+    delete _cmdRunningJobs[cmd.id];
+    renderCommandList();
+  }
+}
+
+async function pollJob(jobId, cmdId, outputPanel) {
+  var maxPolls = 60;
+  var pollCount = 0;
+  var interval = setInterval(async function() {
+    pollCount++;
+    if (pollCount > maxPolls) {
+      clearInterval(interval);
+      outputPanel.textContent += '\n[Polling timeout - job may still be running]';
+      delete _cmdRunningJobs[cmdId];
+      renderCommandList();
+      return;
+    }
+    try {
+      var r = await fetch(API + '/api/commands/job/' + jobId);
+      var d = await r.json();
+      outputPanel.textContent = d.output || d.log || 'Running...';
+      if (d.status === 'completed' || d.status === 'failed' || d.status === 'done') {
+        clearInterval(interval);
+        delete _cmdRunningJobs[cmdId];
+        renderCommandList();
+        toast(cmdId + ' ' + d.status);
+      }
+    } catch(e) {
+      // Keep polling
+    }
+  }, 2000);
+}
+
+// =============================================================
+// 2. SCHEDULER TAB
+// =============================================================
+var _schedulerEntries = [];
+
+async function loadScheduler() {
+  try {
+    var r = await fetch(API + '/api/scheduler/crons');
+    var d = await r.json();
+    _schedulerEntries = d.crons || d.entries || d || [];
+    document.getElementById('scheduler-count').textContent = _schedulerEntries.length;
+    renderSchedulerTable();
+  } catch(e) {
+    var tbody = document.getElementById('scheduler-tbody');
+    while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+    var row = el('tr', {}, [
+      el('td', { style: 'color:var(--warn); padding:20px;', colspan: '5' }, 'Failed to load scheduler data: ' + e.message)
+    ]);
+    tbody.appendChild(row);
+  }
+}
+
+function renderSchedulerTable() {
+  var tbody = document.getElementById('scheduler-tbody');
+  while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+
+  if (!_schedulerEntries.length) {
+    tbody.appendChild(el('tr', {}, [
+      el('td', { style: 'color:var(--text-muted); padding:20px; text-align:center;', colspan: '5' }, 'No cron entries found')
+    ]));
+    return;
+  }
+
+  var now = Date.now();
+  _schedulerEntries.forEach(function(entry, idx) {
+    var isEnabled = entry.enabled !== false;
+    var isOverdue = entry.next_run && new Date(entry.next_run).getTime() < now;
+    var statusClass = isEnabled ? (isOverdue ? 'sched-overdue' : 'sched-enabled') : 'sched-disabled';
+
+    var toggleLabel = el('label', { className: 'toggle' }, [
+      (function() {
+        var inp = el('input', { type: 'checkbox' });
+        inp.checked = isEnabled;
+        inp.onchange = function() { toggleSchedulerEntry(entry.id || idx, this.checked); };
+        return inp;
+      })(),
+      el('span', { className: 'slider' })
+    ]);
+
+    var row = el('tr', {}, [
+      el('td', {}, [toggleLabel]),
+      el('td', { className: 'sched-schedule ' + statusClass }, entry.schedule || entry.cron || '--'),
+      el('td', { className: 'sched-command', title: entry.command || '' }, entry.command || '--'),
+      el('td', { className: 'sched-next-run ' + statusClass }, entry.next_run ? formatRelativeTime(entry.next_run) : '--'),
+      el('td', {}, [
+        el('button', {
+          className: 'sched-action-btn',
+          onclick: function() { deleteSchedulerEntry(entry.id || idx); }
+        }, 'Delete')
+      ])
+    ]);
+    tbody.appendChild(row);
+  });
+}
+
+function formatRelativeTime(dateStr) {
+  try {
+    var d = new Date(dateStr);
+    var now = new Date();
+    var diff = d - now;
+    if (diff < 0) return 'overdue';
+    var mins = Math.floor(diff / 60000);
+    if (mins < 60) return mins + 'm';
+    var hrs = Math.floor(mins / 60);
+    if (hrs < 24) return hrs + 'h ' + (mins % 60) + 'm';
+    return Math.floor(hrs / 24) + 'd';
+  } catch(e) { return dateStr; }
+}
+
+function toggleSchedulerForm() {
+  var form = document.getElementById('scheduler-form');
+  form.classList.toggle('visible');
+}
+
+function applySchedulePreset() {
+  var preset = document.getElementById('sched-preset').value;
+  var customFields = document.getElementById('sched-custom-fields');
+  if (preset) {
+    customFields.style.display = 'none';
+  } else {
+    customFields.style.display = 'flex';
+  }
+}
+
+async function addSchedulerEntry() {
+  var preset = document.getElementById('sched-preset').value;
+  var schedule = preset;
+  if (!preset) {
+    var parts = [
+      document.getElementById('sched-min').value || '*',
+      document.getElementById('sched-hour').value || '*',
+      document.getElementById('sched-day').value || '*',
+      document.getElementById('sched-month').value || '*',
+      document.getElementById('sched-weekday').value || '*'
+    ];
+    schedule = parts.join(' ');
+  }
+  var command = document.getElementById('sched-command').value;
+  var comment = document.getElementById('sched-comment').value;
+
+  if (!command) { toast('Command is required', true); return; }
+
+  try {
+    var r = await fetch(API + '/api/scheduler/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ schedule: schedule, command: command, comment: comment })
+    });
+    var d = await r.json();
+    if (d.success) {
+      toast('Cron entry added');
+      document.getElementById('scheduler-form').classList.remove('visible');
+      document.getElementById('sched-command').value = '';
+      document.getElementById('sched-comment').value = '';
+      loadScheduler();
+    } else {
+      toast('Failed: ' + (d.error || 'unknown'), true);
+    }
+  } catch(e) { toast('Error: ' + e.message, true); }
+}
+
+async function toggleSchedulerEntry(id, enabled) {
+  try {
+    var r = await fetch(API + '/api/scheduler/toggle/' + id, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ enabled: enabled })
+    });
+    var d = await r.json();
+    if (d.success) {
+      toast('Entry ' + (enabled ? 'enabled' : 'disabled'));
+      loadScheduler();
+    } else { toast('Toggle failed', true); }
+  } catch(e) { toast('Error: ' + e.message, true); }
+}
+
+async function deleteSchedulerEntry(id) {
+  if (!confirm('Delete this cron entry?')) return;
+  try {
+    var r = await fetch(API + '/api/scheduler/delete/' + id, { method: 'POST' });
+    var d = await r.json();
+    if (d.success) { toast('Entry deleted'); loadScheduler(); }
+    else toast('Delete failed', true);
+  } catch(e) { toast('Error: ' + e.message, true); }
+}
+
+// =============================================================
+// 3. MANUAL INPUT DRAWER
+// =============================================================
+function openManualDrawer() {
+  document.getElementById('manual-drawer-backdrop').classList.add('visible');
+  document.getElementById('manual-drawer').classList.add('open');
+  loadQuickOverrides();
+}
+
+function closeManualDrawer() {
+  document.getElementById('manual-drawer-backdrop').classList.remove('visible');
+  document.getElementById('manual-drawer').classList.remove('open');
+}
+
+function toggleNoteTag(chip) {
+  chip.classList.toggle('active');
+}
+
+async function submitPriority() {
+  var text = document.getElementById('manual-priority-text').value.trim();
+  var level = document.getElementById('manual-priority-level').value;
+  if (!text) { toast('Priority text is required', true); return; }
+
+  try {
+    var r = await fetch(API + '/api/manual/priority', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text, priority: level })
+    });
+    var d = await r.json();
+    if (d.success) {
+      toast(level + ' priority added');
+      document.getElementById('manual-priority-text').value = '';
+    } else {
+      toast('Failed: ' + (d.error || 'unknown'), true);
+    }
+  } catch(e) { toast('Error: ' + e.message, true); }
+}
+
+async function submitNote() {
+  var text = document.getElementById('manual-note-text').value.trim();
+  if (!text) { toast('Note text is required', true); return; }
+
+  var tags = [];
+  document.querySelectorAll('#note-tags .tag-chip.active').forEach(function(c) {
+    tags.push(c.dataset.tag);
+  });
+
+  try {
+    var r = await fetch(API + '/api/manual/note', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text, tags: tags })
+    });
+    var d = await r.json();
+    if (d.success) {
+      toast('Note added');
+      document.getElementById('manual-note-text').value = '';
+      document.querySelectorAll('#note-tags .tag-chip.active').forEach(function(c) { c.classList.remove('active'); });
+    } else {
+      toast('Failed: ' + (d.error || 'unknown'), true);
+    }
+  } catch(e) { toast('Error: ' + e.message, true); }
+}
+
+async function loadQuickOverrides() {
+  var container = document.getElementById('quick-override-list');
+  try {
+    var r = await fetch(API + '/api/daily-output');
+    var d = await r.json();
+    var highlights = d.highlights || [];
+    if (!highlights.length) {
+      container.innerHTML = '<div style="color:var(--text-muted); font-size:11px; padding:8px;">No highlights available today</div>';
+      return;
+    }
+    while (container.firstChild) container.removeChild(container.firstChild);
+    highlights.slice(0, 10).forEach(function(h, idx) {
+      var item = el('div', { className: 'quick-override-item' }, [
+        el('span', { style: 'flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;' },
+          (h.score || '?') + '  ' + (h.text || '').substring(0, 60)),
+        el('button', {
+          className: 'quick-override-promote',
+          onclick: function(e) {
+            e.stopPropagation();
+            promoteToP0(h, this);
+          }
+        }, 'P0')
+      ]);
+      container.appendChild(item);
+    });
+  } catch(e) {
+    container.innerHTML = '<div style="color:var(--text-muted); font-size:11px; padding:8px;">Failed to load highlights</div>';
+  }
+}
+
+async function promoteToP0(highlight, btn) {
+  try {
+    var r = await fetch(API + '/api/kpi/manual-priority', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: highlight.text, source: highlight.source, score: highlight.score, priority: 'P0' })
+    });
+    var d = await r.json();
+    if (d.success) {
+      btn.textContent = 'DONE';
+      btn.style.background = 'var(--accent)';
+      btn.style.color = '#000';
+      btn.style.borderColor = 'var(--accent)';
+      btn.disabled = true;
+      toast('Promoted to P0');
+    }
+  } catch(e) { toast('Promote failed', true); }
+}
+
+// =============================================================
+// 4. USAGE OPTIMIZER WIDGET
+// =============================================================
+async function loadUsage() {
+  try {
+    var r = await fetch(API + '/api/usage');
+    var d = await r.json();
+    var pct = d.usage_percent || 0;
+    var remaining = d.time_remaining || '--';
+    var windowMins = d.window_remaining_minutes || 999;
+
+    var bar = document.getElementById('usage-bar');
+    bar.style.width = Math.min(pct, 100) + '%';
+    bar.className = 'usage-bar-fill ' + (pct < 50 ? 'green' : pct < 80 ? 'yellow' : 'red');
+
+    document.getElementById('usage-time').textContent = remaining;
+
+    var burstBtn = document.getElementById('usage-burst-btn');
+    if (windowMins < 30) {
+      burstBtn.classList.add('pulse-active');
+    } else {
+      burstBtn.classList.remove('pulse-active');
+      burstBtn.style.display = 'none';
+    }
+  } catch(e) {
+    // Silently fail - usage API may not exist yet
+  }
+}
+
+async function triggerBurst() {
+  try {
+    var r = await fetch(API + '/api/usage/burst', { method: 'POST' });
+    var d = await r.json();
+    if (d.success) {
+      toast('Burst mode activated');
+      loadUsage();
+    } else {
+      toast('Burst failed: ' + (d.error || 'unknown'), true);
+    }
+  } catch(e) { toast('Burst failed', true); }
+}
+
+// Load usage every 5 min
+loadUsage();
+setInterval(loadUsage, 300000);
+
+// =============================================================
+// 5. RBI PIPELINE VISUALIZATION
+// =============================================================
+var _rbiData = {};
+
+async function loadRbiPipeline() {
+  try {
+    var r = await fetch(API + '/api/daily-output');
+    var d = await r.json();
+    var rbi = d.rbi_status || d.rbi || {};
+
+    _rbiData = {
+      research: rbi.research || { count: 0, items: [], top: '--' },
+      backtest: rbi.backtest || { count: 0, items: [], top: '--' },
+      implement: rbi.implement || { count: 0, items: [], top: '--' }
+    };
+
+    // If no rbi_status, try to build from summary
+    if (!rbi.research && d.summary) {
+      _rbiData.research = { count: d.summary.methods_discovered || 0, items: [], top: 'See method discovery' };
+      _rbiData.backtest = { count: d.summary.rbi_passed || 0, items: [], top: 'See RBI results' };
+      _rbiData.implement = { count: d.summary.entries_integrated || 0, items: [], top: 'See integration log' };
+    }
+
+    document.getElementById('rbi-research-count').textContent = _rbiData.research.count || 0;
+    document.getElementById('rbi-research-top').textContent = _rbiData.research.top || '--';
+    document.getElementById('rbi-backtest-count').textContent = _rbiData.backtest.count || 0;
+    document.getElementById('rbi-backtest-top').textContent = _rbiData.backtest.top || '--';
+    document.getElementById('rbi-implement-count').textContent = _rbiData.implement.count || 0;
+    document.getElementById('rbi-implement-top').textContent = _rbiData.implement.top || '--';
+
+    // Render expanded item lists
+    ['research', 'backtest', 'implement'].forEach(function(stage) {
+      var listEl = document.getElementById('rbi-list-' + stage);
+      if (!listEl) return;
+      while (listEl.firstChild) listEl.removeChild(listEl.firstChild);
+      var items = (_rbiData[stage].items || []).slice(0, 10);
+      if (!items.length) {
+        listEl.appendChild(el('div', { style: 'color:var(--text-muted); font-size:11px; padding:8px;' }, 'No items in this stage'));
+      } else {
+        items.forEach(function(item) {
+          var name = typeof item === 'string' ? item : (item.name || item.method || item.text || JSON.stringify(item));
+          var score = typeof item === 'object' ? (item.score || '') : '';
+          listEl.appendChild(el('div', { className: 'rbi-expanded-item' }, [
+            el('span', {}, name),
+            score ? el('span', { style: 'color:var(--accent); font-family:JetBrains Mono; font-size:10px;' }, String(score)) : document.createTextNode('')
+          ]));
+        });
+      }
+    });
+  } catch(e) {
+    // Silently fail if API not ready
+  }
+}
+
+function toggleRbiExpanded(stage) {
+  ['research', 'backtest', 'implement'].forEach(function(s) {
+    var panel = document.getElementById('rbi-expanded-' + s);
+    if (s === stage) {
+      panel.classList.toggle('visible');
+    } else {
+      panel.classList.remove('visible');
+    }
+  });
+}
+
+// Load RBI data with dashboard
+loadRbiPipeline();
+
+// Also ensure showToast works (alias if needed)
+if (typeof showToast === 'undefined') {
+  window.showToast = function(msg) { toast(msg); };
+}
 </script>
 </body>
 </html>

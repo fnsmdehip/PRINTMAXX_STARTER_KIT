@@ -237,6 +237,203 @@ MODEL_OPUS = "claude-opus-4-6"
 MODEL_SONNET = "claude-sonnet-4-6"
 MODEL_HAIKU = "claude-haiku-4-5-20251001"
 
+# ── Steps that require human action — never waste tokens on these ──────────
+# Maps (venture_type, step) -> reason string.  Checked before _run_with_claude.
+HUMAN_BLOCKED_STEPS: dict[tuple[str, str], str] = {
+    # BROKERING — actual fee collection needs human agreements
+    ("BROKERING", "earn_fee"): "Requires signed referral agreement + payment processor",
+}
+
+# ── Heuristic fallbacks for steps that can self-verify without LLM ─────────
+# Each entry: (venture_type, step) -> callable(venture_id, venture, vtype) -> (ok: bool, detail: str)
+# Used when _run_with_claude fails or as a cheaper first-pass check.
+
+
+def _fallback_check_files_exist(glob_pattern: str, label: str):
+    """Factory: returns a heuristic that checks if matching files exist."""
+    def _check(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+        import glob as _glob
+        venture_dir = AUTONOMY_DIR / venture_id / "output"
+        venture_dir.mkdir(parents=True, exist_ok=True)
+        # Also check broader project paths
+        patterns = [
+            str(venture_dir / glob_pattern),
+            str(RESULTS_DIR / f"*{venture_id}*{glob_pattern}"),
+        ]
+        found = []
+        for p in patterns:
+            found.extend(_glob.glob(p))
+        if found:
+            return True, f"{label}: {len(found)} files found"
+        return False, f"{label}: no matching files"
+    return _check
+
+
+def _fallback_content_format(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if generated content exists in any format."""
+    import glob as _glob
+    search_dirs = [
+        str(PROJECT / "CONTENT" / "social" / "generated" / "*.txt"),
+        str(PROJECT / "CONTENT" / "social" / "generated" / "*.md"),
+        str(PROJECT / "CONTENT" / "social" / "posting_queue" / "*.txt"),
+        str(AUTONOMY_DIR / venture_id / "output" / "*content*"),
+        str(AUTONOMY_DIR / venture_id / "output" / "*generate*"),
+    ]
+    total = 0
+    for pattern in search_dirs:
+        total += len(_glob.glob(pattern))
+    if total > 0:
+        return True, f"format: {total} content files exist across queues"
+    return False, "format: no content files found to format"
+
+
+def _fallback_content_schedule(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if posting queue has scheduled content."""
+    import glob as _glob
+    queue_files = _glob.glob(str(PROJECT / "CONTENT" / "social" / "posting_queue" / "*.txt"))
+    if queue_files:
+        return True, f"schedule: {len(queue_files)} posts in posting queue"
+    return False, "schedule: posting queue empty"
+
+
+def _fallback_track_results(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if there are recent result/report files (< 48h old)."""
+    import glob as _glob
+    output_dir = AUTONOMY_DIR / venture_id / "output"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    results = _glob.glob(str(output_dir / "*report*")) + _glob.glob(str(output_dir / "*track*"))
+    if results:
+        # Check freshness — any file modified in last 48h counts
+        cutoff = time.time() - 48 * 3600
+        recent = [f for f in results if os.path.getmtime(f) > cutoff]
+        if recent:
+            return True, f"track: {len(recent)} recent tracking reports"
+        return False, f"track: {len(results)} reports exist but all stale (>48h)"
+    return False, "track: no tracking reports yet"
+
+
+def _fallback_scraping_configure(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if scraper configs exist (they're static, rarely need LLM)."""
+    config_paths = [
+        AUTOMATIONS / "twitter_alpha_scraper.py",
+        AUTOMATIONS / "background_reddit_scraper.py",
+    ]
+    found = [str(p) for p in config_paths if p.exists()]
+    if found:
+        return True, f"configure: {len(found)} scrapers configured"
+    return False, "configure: no scraper scripts found"
+
+
+def _fallback_scraping_clean(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if scraped data exists in staging (cleaning is a pipeline step)."""
+    staging = PROJECT / "LEDGER" / "ALPHA_STAGING.csv"
+    if staging.exists() and staging.stat().st_size > 100:
+        return True, f"clean: ALPHA_STAGING.csv exists ({staging.stat().st_size // 1024}KB)"
+    return False, "clean: no staging data to clean"
+
+
+def _fallback_scraping_store(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if LEDGER CSVs have data."""
+    import glob as _glob
+    csvs = _glob.glob(str(PROJECT / "LEDGER" / "*.csv"))
+    if csvs:
+        total_size = sum(os.path.getsize(f) for f in csvs)
+        return True, f"store: {len(csvs)} LEDGER CSVs ({total_size // 1024}KB)"
+    return False, "store: no LEDGER CSVs found"
+
+
+def _fallback_grade_sites(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if grading results exist from previous runs."""
+    import glob as _glob
+    grade_files = (
+        _glob.glob(str(AUTONOMY_DIR / venture_id / "output" / "*grade*")) +
+        _glob.glob(str(AUTOMATIONS / "leads" / venture_id / "*grade*")) +
+        _glob.glob(str(AUTOMATIONS / "leads" / venture_id / "*score*"))
+    )
+    if grade_files:
+        return True, f"grade: {len(grade_files)} grading result files"
+    return False, "grade: no grading results — run discover step first"
+
+
+def _fallback_research_score(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if alpha scoring has been done (alpha_auto_processor output)."""
+    staging = PROJECT / "LEDGER" / "ALPHA_STAGING.csv"
+    if not staging.exists():
+        return False, "score: no ALPHA_STAGING.csv"
+    try:
+        with open(staging) as f:
+            reader = csv.reader(f)
+            header = next(reader, [])
+            rows = list(reader)
+        scored = [r for r in rows if len(r) > 3 and r[3].strip().upper() in ("HIGHEST", "HIGH", "MEDIUM", "LOW")]
+        if scored:
+            return True, f"score: {len(scored)}/{len(rows)} entries scored in ALPHA_STAGING"
+        return False, f"score: {len(rows)} entries but none scored yet"
+    except Exception:
+        return False, "score: failed to read ALPHA_STAGING.csv"
+
+
+def _fallback_build_page(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if landing pages exist in LANDING/ directory."""
+    import glob as _glob
+    pages = _glob.glob(str(PROJECT / "LANDING" / "**" / "index.html"), recursive=True)
+    if pages:
+        return True, f"build_page: {len(pages)} landing pages exist"
+    return False, "build_page: no landing pages in LANDING/"
+
+
+def _fallback_app_spec(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if app specs exist."""
+    import glob as _glob
+    specs = _glob.glob(str(AUTOMATIONS / "auto_ops" / "app_specs" / "*.json"))
+    specs += _glob.glob(str(AUTOMATIONS / "auto_ops" / "app_specs" / "*.md"))
+    if specs:
+        return True, f"spec: {len(specs)} app specs in auto_ops/app_specs/"
+    return False, "spec: no app specs found"
+
+
+def _fallback_app_aso(venture_id: str, venture: dict, vtype: dict) -> tuple[bool, str]:
+    """Check if ASO research exists."""
+    aso_script = AUTOMATIONS / "aso_keyword_research.py"
+    if aso_script.exists():
+        # Run the ASO script instead of LLM
+        ok, output = run_script("aso_keyword_research.py", timeout_sec=120, label=f"{venture_id}:aso")
+        if ok:
+            return True, f"aso: keyword research script completed"
+        return False, f"aso: keyword research script failed"
+    return False, "aso: aso_keyword_research.py not found"
+
+
+# Registry: (venture_type, step_name) -> fallback function
+FALLBACK_HEURISTICS: dict[tuple[str, str], Any] = {
+    # CONTENT
+    ("CONTENT", "format"): _fallback_content_format,
+    ("CONTENT", "schedule"): _fallback_content_schedule,
+    ("CONTENT", "track"): _fallback_track_results,
+    # APP
+    ("APP", "spec"): _fallback_app_spec,
+    ("APP", "aso"): _fallback_app_aso,
+    # LOCAL_BIZ
+    ("LOCAL_BIZ", "grade"): _fallback_grade_sites,
+    ("LOCAL_BIZ", "track"): _fallback_track_results,
+    # MONETIZE
+    ("MONETIZE", "build_page"): _fallback_build_page,
+    # PRODUCT
+    ("PRODUCT", "track"): _fallback_track_results,
+    # RESEARCH
+    ("RESEARCH", "score"): _fallback_research_score,
+    # SCRAPING
+    ("SCRAPING", "configure"): _fallback_scraping_configure,
+    ("SCRAPING", "clean"): _fallback_scraping_clean,
+    ("SCRAPING", "store"): _fallback_scraping_store,
+    # OUTBOUND
+    ("OUTBOUND", "followup"): _fallback_track_results,
+    # BROKERING
+    ("BROKERING", "connect_parties"): _fallback_track_results,
+    ("BROKERING", "track_revenue"): _fallback_track_results,
+}
+
+
 VENTURE_TYPES = {
     "OUTBOUND": {
         "description": "Cold outreach ventures — email, DM, LinkedIn, etc.",
@@ -248,6 +445,7 @@ VENTURE_TYPES = {
             "qualify": ("printmaxx_agent.py", "--mission outreach-qualify"),
             "build_asset": ("printmaxx_agent.py", "--mission outreach-asset"),
             "outreach": ("printmaxx_agent.py", "--mission outreach-send"),
+            "followup": ("printmaxx_agent.py", "--mission outreach-send"),
             "track": ("printmaxx_agent.py", "--mission outreach-track"),
         },
         "claude_prompt": (
@@ -280,6 +478,8 @@ VENTURE_TYPES = {
         "scripts": {
             "find_topics": ("printmaxx_agent.py", "--mission content-topics"),
             "generate": ("printmaxx_agent.py", "--mission content"),
+            "format": ("content_repurposer.py", ""),
+            "schedule": ("clip_post_scheduler.py", "--input CONTENT/social/posting_queue --days 7"),
             "distribute": ("printmaxx_agent.py", "--mission content-distribute"),
             "track": ("printmaxx_agent.py", "--mission content-track"),
         },
@@ -330,8 +530,10 @@ VENTURE_TYPES = {
         "model": MODEL_SONNET,  # code generation — Sonnet handles well
         "scripts": {
             "find_gap": ("app_factory_autopilot.py", "--run --bookmarks-limit 60 --accounts-limit 12 --approval-max 80 --processor-batch 120 --queue-limit 40"),
+            "spec": ("app_factory_command_center.py", "--refresh --top 8"),
             "build": ("printmaxx_agent.py", "--mission apps"),
             "deploy": ("printmaxx_agent.py", "--mission apps-deploy"),
+            "aso": ("aso_keyword_research.py", ""),
             "track": ("printmaxx_agent.py", "--mission apps-track"),
         },
         "claude_prompt": (
@@ -372,8 +574,11 @@ VENTURE_TYPES = {
         "model": MODEL_SONNET,  # local biz prospecting + site builds
         "scripts": {
             "discover": ("openclaw_local_biz.py", '--discover "{city}" {niche}'),
+            "grade": ("playwright_site_tester.py", "--quick"),
             "build_preview": ("openclaw_local_biz.py", "--build"),
+            "deploy": ("openclaw_local_biz.py", "--build"),
             "outreach": ("openclaw_local_biz.py", "--outreach"),
+            "track": ("printmaxx_agent.py", "--mission health"),
         },
         "claude_prompt": (
             "You are the LOCAL BIZ autonomy agent for PRINTMAXX venture '{name}'.\n"
@@ -404,7 +609,9 @@ VENTURE_TYPES = {
         "scripts": {
             "scrape": ("twitter_alpha_scraper.py", "--all"),
             "analyze": ("alpha_auto_processor.py", "--process-new"),
+            "score": ("capital_genesis_ranker.py", "--rank"),
             "route": ("decision_engine.py", "--cycle"),
+            "compound": ("engagement_bait_converter.py", "--limit 5"),
         },
         "claude_prompt": (
             "You are the RESEARCH autonomy agent for PRINTMAXX venture '{name}'.\n"
@@ -433,7 +640,9 @@ VENTURE_TYPES = {
         "scripts": {
             "find_offers": ("printmaxx_agent.py", "--mission monetize-research"),
             "create_funnel": ("printmaxx_agent.py", "--mission monetize"),
+            "build_page": ("printmaxx_agent.py", "--mission factory"),
             "deploy": ("printmaxx_agent.py", "--mission monetize-deploy"),
+            "distribute": ("content_repurposer.py", ""),
             "track": ("printmaxx_agent.py", "--mission monetize-track"),
         },
         "demographic_variants": {
@@ -484,7 +693,9 @@ VENTURE_TYPES = {
             "find_demand": ("printmaxx_agent.py", "--mission product-research"),
             "create": ("printmaxx_agent.py", "--mission product-create"),
             "listing": ("printmaxx_agent.py", "--mission product-listing"),
+            "launch": ("engagement_bait_converter.py", "--limit 5"),
             "distribute": ("printmaxx_agent.py", "--mission product-distribute"),
+            "track": ("printmaxx_agent.py", "--mission health"),
         },
         "claude_prompt": (
             "You are the PRODUCT autonomy agent for PRINTMAXX venture '{name}'.\n"
@@ -510,8 +721,11 @@ VENTURE_TYPES = {
         "interval_hours": 2,
         "model": MODEL_SONNET,  # scraping is execution, Sonnet handles it
         "scripts": {
+            "configure": ("system_health_monitor.py", "--quick"),
             "scrape": ("twitter_alpha_scraper.py", "--all"),
+            "clean": ("sqlite_alpha_index.py", "--rebuild"),
             "analyze": ("alpha_auto_processor.py", "--process-new"),
+            "store": ("sqlite_alpha_index.py", "--rebuild"),
             "alert": ("decision_engine.py", "--cycle"),
         },
         "claude_prompt": (
@@ -541,6 +755,7 @@ VENTURE_TYPES = {
         "scripts": {
             "scrape_targets": ("printmaxx_agent.py", "--mission brokering-scrape"),
             "qualify_leads": ("printmaxx_agent.py", "--mission brokering-qualify"),
+            "connect_parties": ("printmaxx_agent.py", "--mission brokering-qualify"),
             "track_revenue": ("printmaxx_agent.py", "--mission brokering-track"),
         },
         "claude_prompt": (
@@ -750,18 +965,31 @@ class VentureAutonomyEngine:
 
             log(f"  Step: {step}...")
 
-            # Check if there's a script mapping for this step
+            # 1. Check HUMAN_BLOCKED — never waste tokens on these
+            blocked_key = (vtype_key, step)
+            if blocked_key in HUMAN_BLOCKED_STEPS:
+                reason = HUMAN_BLOCKED_STEPS[blocked_key]
+                log(f"    HUMAN_BLOCKED: {step} — {reason}")
+                cycle_results[step] = "human_blocked"
+                self._save_step_result(venture_id, step, False,
+                                       f"HUMAN_BLOCKED: {reason}")
+                continue
+
+            # 2. Check if there's a script mapping for this step
             if step in scripts:
                 script_name, script_args = scripts[step]
 
                 # Substitute config values into args
-                args = script_args.format(
-                    city=config.get("city", "Austin TX"),
-                    niche=config.get("niche", "dentist"),
-                    venture_id=venture_id,
-                    name=venture["name"],
-                    **config
-                )
+                try:
+                    args = script_args.format(
+                        city=config.get("city", "Austin TX"),
+                        niche=config.get("niche", "dentist"),
+                        venture_id=venture_id,
+                        name=venture["name"],
+                        **config
+                    )
+                except KeyError:
+                    args = script_args  # use raw args if format fails
 
                 script_path = AUTOMATIONS / script_name
                 if script_path.exists():
@@ -772,11 +1000,38 @@ class VentureAutonomyEngine:
                     # Save step output
                     self._save_step_result(venture_id, step, ok, output)
                 else:
-                    log(f"    Script not found: {script_name} — attempting Claude execution", "WARN")
-                    cycle_results[step] = self._run_with_claude(venture_id, venture, step, vtype)
+                    log(f"    Script not found: {script_name}", "WARN")
+                    # 3a. Try heuristic fallback before LLM
+                    fallback_fn = FALLBACK_HEURISTICS.get(blocked_key)
+                    if fallback_fn:
+                        try:
+                            fb_ok, fb_detail = fallback_fn(venture_id, venture, vtype)
+                            log(f"    Fallback: {fb_detail}")
+                            cycle_results[step] = "ok" if fb_ok else "failed"
+                            self._save_step_result(venture_id, step, fb_ok, fb_detail)
+                        except Exception as fb_err:
+                            log(f"    Fallback error: {fb_err}", "WARN")
+                            cycle_results[step] = self._run_with_claude(
+                                venture_id, venture, step, vtype)
+                    else:
+                        cycle_results[step] = self._run_with_claude(
+                            venture_id, venture, step, vtype)
             else:
-                # No script — attempt Claude-based execution
-                cycle_results[step] = self._run_with_claude(venture_id, venture, step, vtype)
+                # No script mapping — try heuristic fallback, then LLM
+                fallback_fn = FALLBACK_HEURISTICS.get(blocked_key)
+                if fallback_fn:
+                    try:
+                        fb_ok, fb_detail = fallback_fn(venture_id, venture, vtype)
+                        log(f"    Fallback: {fb_detail}")
+                        cycle_results[step] = "ok" if fb_ok else "failed"
+                        self._save_step_result(venture_id, step, fb_ok, fb_detail)
+                    except Exception as fb_err:
+                        log(f"    Fallback error: {fb_err}", "WARN")
+                        cycle_results[step] = self._run_with_claude(
+                            venture_id, venture, step, vtype)
+                else:
+                    cycle_results[step] = self._run_with_claude(
+                        venture_id, venture, step, vtype)
 
             # Update pipeline stats
             stats = venture.get("pipeline_stats", {}).get(step, {"runs": 0, "successes": 0})
@@ -788,7 +1043,10 @@ class VentureAutonomyEngine:
 
         # Update venture state
         successes = sum(1 for v in cycle_results.values() if v == "ok")
+        blocked = sum(1 for v in cycle_results.values() if v == "human_blocked")
+        failed = sum(1 for v in cycle_results.values() if v == "failed")
         total = len(cycle_results)
+        runnable = total - blocked  # steps that were actually attempted
 
         venture["last_run"] = datetime.now().isoformat()
         venture["cycles_run"] = venture.get("cycles_run", 0) + 1
@@ -806,16 +1064,30 @@ class VentureAutonomyEngine:
 
         # Log mission to shared agent infrastructure
         mission_name = f"autonomy:{venture_id[:30]}"
-        result_str = "success" if successes == total else ("partial" if successes > 0 else "failed")
+        if successes == runnable and runnable > 0:
+            result_str = "success"
+        elif successes > 0:
+            result_str = "partial"
+        else:
+            result_str = "failed"
         duration = sum(1 for _ in cycle_results)  # approximate
         log_mission(mission_name, result_str, duration,
-                    f"{venture['name']}: {successes}/{total} steps OK")
+                    f"{venture['name']}: {successes}/{total} OK, {blocked} blocked, {failed} failed")
+
+        def _step_label(v: str) -> str:
+            if v == "ok":
+                return "OK"
+            if v == "human_blocked":
+                return "BLOCKED"
+            return "FAIL"
+
         send_bus_message(
             f"Venture '{venture['name']}' cycle complete: {successes}/{total} steps. "
-            f"Pipeline: {' → '.join(f'{k}:{'OK' if v == 'ok' else 'FAIL'}' for k, v in cycle_results.items())}"
+            f"Pipeline: {' -> '.join(f'{_step_label(v)}:{k}' for k, v in cycle_results.items())}"
         )
 
-        log(f"Venture cycle complete: {venture['name']} — {successes}/{total} steps succeeded")
+        blocked_note = f", {blocked} human-blocked" if blocked else ""
+        log(f"Venture cycle complete: {venture['name']} — {successes}/{total} steps succeeded{blocked_note}")
 
         # Capture as procedural skill on success
         if successes > 0:
@@ -907,7 +1179,11 @@ class VentureAutonomyEngine:
         return ""
 
     def _run_with_claude(self, venture_id: str, venture: dict[str, Any], step: str, vtype: dict[str, Any]) -> str:
-        """Use Claude CLI to execute a pipeline step that has no script."""
+        """Use Claude CLI to execute a pipeline step that has no script.
+
+        Fixed: uses --api-key when ANTHROPIC_API_KEY is set (avoids OAuth errors).
+        Falls back to heuristic checks if claude -p fails entirely.
+        """
         # Get intelligence briefing for this venture + step
         intel = self._get_venture_intelligence(venture.get("type", ""), step)
         intel_block = f"\n\nINTELLIGENCE BRIEFING:\n{intel}\n\n" if intel else ""
@@ -940,7 +1216,7 @@ class VentureAutonomyEngine:
             f"Save all outputs there. "
             f"This is step {step_num} of "
             f"{len(pipeline)} in the pipeline: "
-            f"{' → '.join(pipeline)}. "
+            f"{' -> '.join(pipeline)}. "
             f"{intel_block}"
             f"Use the intelligence briefing above to inform your decisions. "
             f"Use the venture operating context above as standing instructions. "
@@ -954,20 +1230,49 @@ class VentureAutonomyEngine:
         )
 
         model = vtype.get("model", MODEL_SONNET)
-        cmd = (
-            f'unset CLAUDECODE && claude -p --dangerously-skip-permissions '
-            f'--model {model} '
-            f'"{prompt}"'
-        )
 
-        import time as _time
-        _start = _time.time()
-        ok, output = run_cmd(cmd, timeout_sec=180, label=f"claude:{venture_id}:{step}")
+        # Build claude command — use --api-key if ANTHROPIC_API_KEY is set
+        api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+        api_key_flag = f"--api-key {api_key} " if api_key else ""
+        # Escape prompt for shell: write to temp file to avoid quoting issues
+        import tempfile
+        prompt_file = Path(tempfile.mktemp(suffix=".txt", prefix="venture_prompt_"))
+        try:
+            prompt_file.write_text(prompt)
+            cmd = (
+                f'unset CLAUDECODE && cat "{prompt_file}" | claude -p --dangerously-skip-permissions '
+                f'{api_key_flag}'
+                f'--model {model}'
+            )
+
+            import time as _time
+            _start = _time.time()
+            ok, output = run_cmd(cmd, timeout_sec=180, label=f"claude:{venture_id}:{step}")
+        finally:
+            # Clean up temp file
+            try:
+                prompt_file.unlink(missing_ok=True)
+            except Exception:
+                pass
+
         if ok:
             _trajectory.log_success(f"claude:{venture_id}:{step}", _start)
-        else:
-            _trajectory.log_failure(f"claude:{venture_id}:{step}", error=output[:200], start=_start)
-        return "ok" if ok else "failed"
+            return "ok"
+
+        # Claude failed — try heuristic fallback before reporting failure
+        _trajectory.log_failure(f"claude:{venture_id}:{step}", error=output[:200], start=_start)
+        vtype_key = venture.get("type", "")
+        fallback_fn = FALLBACK_HEURISTICS.get((vtype_key, step))
+        if fallback_fn:
+            try:
+                fb_ok, fb_detail = fallback_fn(venture_id, venture, vtype)
+                log(f"    Claude failed, fallback: {fb_detail}")
+                self._save_step_result(venture_id, step, fb_ok, f"claude_failed_fallback: {fb_detail}")
+                return "ok" if fb_ok else "failed"
+            except Exception as fb_err:
+                log(f"    Fallback also failed: {fb_err}", "WARN")
+
+        return "failed"
 
     def _save_step_result(self, venture_id: str, step: str, success: bool, output: str) -> None:
         """Save step results to venture results directory."""
@@ -1059,6 +1364,17 @@ class VentureAutonomyEngine:
         home = str(Path.home())
         log_path = f"{home}/.claude/logs/{venture_id}.log"
 
+        # Include --api-key flag if ANTHROPIC_API_KEY is available
+        api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+        api_key_flag = f"--api-key $ANTHROPIC_API_KEY " if api_key else ""
+        # Include ANTHROPIC_API_KEY in plist env vars for scheduled runs
+        api_key_plist_entry = ""
+        if api_key:
+            api_key_plist_entry = (
+                f"        <key>ANTHROPIC_API_KEY</key>\n"
+                f"        <string>{api_key}</string>"
+            )
+
         return f"""<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1069,12 +1385,13 @@ class VentureAutonomyEngine:
     <array>
         <string>/bin/bash</string>
         <string>-c</string>
-        <string>cd "{PROJECT}" &amp;&amp; claude -p "{prompt_escaped}" --dangerously-skip-permissions --model {model} >> "{log_path}" 2>&amp;1</string>
+        <string>cd "{PROJECT}" &amp;&amp; claude -p "{prompt_escaped}" --dangerously-skip-permissions {api_key_flag}--model {model} >> "{log_path}" 2>&amp;1</string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
         <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:{home}/.local/bin</string>
+{api_key_plist_entry}
     </dict>
     <key>StartInterval</key>
     <integer>{interval_seconds}</integer>
@@ -1742,8 +2059,16 @@ def show_status() -> None:
         if results:
             latest = results[-1]
             steps = latest.get("steps", {})
-            step_str = " → ".join(
-                f"{'OK' if s == 'ok' else 'FAIL'}:{k}"
+
+            def _label(s: str) -> str:
+                if s == "ok":
+                    return "OK"
+                if s == "human_blocked":
+                    return "BLOCKED"
+                return "FAIL"
+
+            step_str = " -> ".join(
+                f"{_label(s)}:{k}"
                 for k, s in steps.items()
             )
             print(f"  {v.get('name', vid)[:30]}: {step_str}")

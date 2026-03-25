@@ -1,0 +1,38 @@
+{
+  "name": "integration_show_hn_deterministic_security_solution",
+  "created": "2026-03-24T18:50:46.077097",
+  "method": "Show HN: Deterministic security solution for AI agents \u2013 OpenClaw and 2 more. I wanted to share a solution that I made initially for myself for OpenClaw, that helps control what your ai agents can rea",
+  "venture": "CONTENT",
+  "phases": [
+    {
+      "name": "research",
+      "steps": [
+        "scrape_hn_ai_agent_security_posts",
+        "scrape_reddit_r_localllama_r_claudeai",
+        "fetch_openclaw_github_issues_and_discussions"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "content_gen",
+      "steps": [
+        "generate_twitter_thread_agent_sandboxing",
+        "generate_linkedin_post_ai_security",
+        "generate_blog_outline_agent_permissions"
+      ],
+      "parallel": true,
+      "depends_on": "research"
+    },
+    {
+      "name": "product_and_queue",
+      "steps": [
+        "package_ai_security_guide_outline",
+        "write_posts_to_posting_queue",
+        "stage_guide_to_gumroad_folder"
+      ],
+      "parallel": false,
+      "depends_on": "content_gen"
+    }
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "chain_acquisition_i_screen_deal_flow_for_an_",
+  "created": "2026-03-24T18:50:44.155816",
+  "method": "[ACQUISITION] I screen deal flow for an early-stage syndicate. Here are the 3 reasons your Pre-Seed deck is getting auto-rejected befo",
+  "venture": "CONTENT",
+  "stages": [
+    {
+      "agent": "scraper",
+      "task": "scrape r/startups + HN for VC rejection intel, deck teardown posts, syndicate perspectives",
+      "output": "vc_intel_raw.json"
+    },
+    {
+      "agent": "extractor",
+      "task": "extract 3-5 concrete rejection reasons per post, discard motivation fluff",
+      "output": "rejection_reasons.json"
+    },
+    {
+      "agent": "content_factory",
+      "task": "route to engagement_bait_converter.py \u2014 3 tweets + 1 thread per intel piece targeting founders",
+      "output": "CONTENT/social/posting_queue/vc_intel_posts.csv"
+    }
+  ],
+  "status": "READY"
+}

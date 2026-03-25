@@ -1,0 +1,45 @@
+{
+  "name": "integration_ph_launch_gately",
+  "created": "2026-03-24T18:50:45.329720",
+  "method": "[PH Launch] Gately",
+  "venture": "CONTENT_FARM",
+  "phases": [
+    {
+      "name": "ph_scrape_and_extract",
+      "steps": [
+        "fetch_ph_homepage",
+        "parse_launch_data"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "qualify_for_affiliate",
+      "steps": [
+        "check_affiliate_program",
+        "score_traffic_potential"
+      ],
+      "parallel": true,
+      "depends_on": "ph_scrape_and_extract"
+    },
+    {
+      "name": "content_generation",
+      "steps": [
+        "generate_comparison_page",
+        "create_social_bait"
+      ],
+      "parallel": true,
+      "depends_on": "qualify_for_affiliate"
+    },
+    {
+      "name": "publish_and_track",
+      "steps": [
+        "deploy_surge",
+        "inject_affiliate_links",
+        "queue_seo"
+      ],
+      "parallel": true,
+      "depends_on": "content_generation"
+    }
+  ],
+  "status": "READY"
+}

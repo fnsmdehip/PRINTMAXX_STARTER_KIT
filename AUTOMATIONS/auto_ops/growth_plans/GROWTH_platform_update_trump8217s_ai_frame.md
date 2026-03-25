@@ -1,34 +1,30 @@
 # Growth Plan: [PLATFORM UPDATE] Trump&#8217;s AI framework targets state l
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:00
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0-30/mo
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Post the app-developer angle on Twitter with specific reference to which state laws are being preempted — specificity drives RT
-2. Quote-tweet the TechCrunch article with a hot take to piggyback on article traffic
-3. Cross-post to r/indiegaming, r/webdev, r/SideProject with 'what this means for your app' framing
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-3 posts via engagement_bait_converter.py — developer angle, parent-burden angle, federal preemption hot take. QT the original article. Post within 24h while news is fresh.
+Organic app tactics
 
 ### LOW
-Not applicable — news shelf life is 48h, no paid boost warranted at Phase 0
-
-### MID
-Not applicable
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --input 'Trump AI framework preempts state laws, shifts child safety to parents. Source: TechCrunch 2026-03-20' --angles 'app_developer,regulatory_arbitrage,controversial_take' --platforms 'twitter,reddit'
-- [ ] Review 3 generated posts — confirm no legal/compliance risk in wording
-- [ ] Add approved posts to CONTENT/social/posting_queue/ with 6h spacing
+- [ ] Research and validate: [PLATFORM UPDATE] Trump&#8217;s AI framework targets state laws, shifts child sa
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -36,6 +32,6 @@ Not applicable
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```

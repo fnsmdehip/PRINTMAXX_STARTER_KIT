@@ -347,3 +347,16 @@
 [2026-03-23T07:23:14.802456+00:00] Total qualifying rows before dedup: 7
 [2026-03-23T07:23:14.803205+00:00] Wrote 7 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
 [2026-03-23T07:23:14.803435+00:00] === Done ===
+[2026-03-24T22:20:28.907059+00:00] === HN + PH scraper starting ===
+[2026-03-24T22:20:28.984598+00:00] Loaded 14130 existing URLs for dedup.
+[2026-03-24T22:20:28.991411+00:00] Fetching HN top stories (limit=60)...
+[2026-03-24T22:21:13.551088+00:00] WARN fetch_json failed https://hacker-news.firebaseio.com/v0/item/47507666.json: HTTPSConnectionPool(host='hacker-news.firebaseio.com', port=443): Max retries exceeded with url: /v0/item/47507666.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-03-24T22:21:23.674081+00:00]   Got 58 top stories.
+[2026-03-24T22:21:23.675640+00:00] Fetching HN Show HN stories (limit=40)...
+[2026-03-24T22:21:49.116495+00:00]   Got 40 Show HN stories.
+[2026-03-24T22:21:49.118430+00:00] Fetching ProductHunt posts...
+[2026-03-24T22:21:50.027599+00:00] WARN PH GraphQL returned 403
+[2026-03-24T22:21:50.027760+00:00]   Got 0 PH posts.
+[2026-03-24T22:21:50.027804+00:00] Total qualifying rows before dedup: 79
+[2026-03-24T22:21:50.028405+00:00] Wrote 79 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
+[2026-03-24T22:21:50.028439+00:00] === Done ===

@@ -1,36 +1,38 @@
 {
   "name": "integration_i_built_an_open_source_portfolio_builder",
-  "created": "2026-03-21T12:40:53.711517",
+  "created": "2026-03-24T18:50:40.087625",
   "method": "I built an open source portfolio builder for anyone who works in web/tech. Last week I was made redundant and started preparing to re-enter the job market. I\u2019ve heard it has been a tough time for deve",
   "venture": "APP",
   "phases": [
     {
-      "name": "research",
+      "name": "research_and_scaffold",
       "steps": [
-        "competitive_scan_portfolio_builders",
-        "keyword_research_dev_portfolio"
+        "competitive_analysis_of_portfolio_builders",
+        "define_feature_set_free_vs_paid",
+        "scaffold_nextjs_app_from_app_factory"
       ],
       "parallel": true
     },
     {
-      "name": "build",
+      "name": "core_build",
       "steps": [
-        "generate_portfolio_app_from_template",
-        "add_github_api_integration",
-        "add_narrative_editor_component"
+        "github_api_integration_pull_repos",
+        "narrative_editor_component",
+        "portfolio_template_engine",
+        "stripe_payment_integration"
       ],
-      "parallel": false,
-      "depends_on": "research"
+      "parallel": true,
+      "depends_on": "research_and_scaffold"
     },
     {
       "name": "deploy_and_distribute",
       "steps": [
-        "deploy_to_surge",
-        "generate_seo_longtail_pages",
-        "create_social_launch_posts"
+        "deploy_to_vercel",
+        "generate_launch_content_3_tweets_1_thread",
+        "post_to_r_sideproject_r_webdev_hn"
       ],
       "parallel": true,
-      "depends_on": "build"
+      "depends_on": "core_build"
     }
   ],
   "status": "READY"

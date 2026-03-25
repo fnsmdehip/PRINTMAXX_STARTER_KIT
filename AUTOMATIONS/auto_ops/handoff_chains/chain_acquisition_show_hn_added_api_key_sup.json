@@ -1,23 +1,23 @@
 {
   "name": "chain_acquisition_show_hn_added_api_key_sup",
-  "created": "2026-03-21T12:40:58.784601",
+  "created": "2026-03-24T18:50:44.302463",
   "method": "[ACQUISITION] Show HN: Added API key support to my AI writing assistant extension",
   "venture": "APP",
   "stages": [
     {
       "agent": "scraper",
-      "task": "Scrape HN Show HN (last 90d) + Chrome Web Store category AI writing \u2014 extract extension names, install counts, pricing, whether BYOK supported",
-      "output": "extension_intel.json"
+      "task": "Scrape HN daily for 'Show HN' posts mentioning browser extension + API key/BYOK/bring your own key. Filter by >10 points.",
+      "output": "hn_extension_leads.json"
     },
     {
       "agent": "qualifier",
-      "task": "Score gaps: rank niches by (search volume proxy - existing extensions). Flag BYOK-missing and niche-missing combos. Output top 3 buildable gaps.",
-      "output": "extension_gaps.json"
+      "task": "Score each extension: niche fit (writing/productivity/AI = HIGH), BYOK already implemented (YES = fork/clone candidate, NO = enhancement opportunity), open source (YES = fork+rebrand path), monetization gap (free only = opportunity).",
+      "output": "qualified_extensions.json"
     },
     {
-      "agent": "content_generator",
-      "task": "Generate Show HN post copy, 3 subreddit posts, and 3 tweets from the top gap finding. Route to CONTENT/social/posting_queue/.",
-      "output": "extension_launch_content.json"
+      "agent": "connector",
+      "task": "For HIGH-score open source extensions: clone, add premium tier + Stripe, deploy to Chrome/Firefox store. For HIGH-score closed extensions: build competing clone with BYOK + one differentiator. Route to app_factory_autopilot.py.",
+      "output": "app_factory_queue.json"
     }
   ],
   "status": "READY"

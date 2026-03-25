@@ -1,34 +1,30 @@
 # Growth Plan: Built an exam platform universities actually use
 
-**Created:** 2026-03-21 12:40
-**Venture:** CONTENT
+**Created:** 2026-03-24 22:00
+**Venture:** APP
 **Budget Tier:** FREE
-**Revenue Est:** $0/mo direct — content engagement only, feeds follower growth → product awareness funnel
+**Revenue Est:** $0-100/mo (heuristic estimate)
 
 ---
 
 ## Tactics
 
-1. Use 'built X that Y actually uses' hook template for future content — institutional social proof outperforms revenue claims in engagement
-2. Target edtech niche subreddits (r/learnprogramming, r/professors, r/highereducation) with this story angle for organic reach
-3. Repurpose as Twitter thread: 'How I got a university to use my $0-budget tool over $50K enterprise software'
+1. Organic app growth
 
 ## Budget Tier Strategies
 
 ### FREE
-Convert story to 3 platform posts via engagement_bait_converter.py — use the institutional validation angle as hook, no paid distribution needed
+Organic app tactics
 
 ### LOW
-Boost best-performing post variant ($10-20 on Twitter/X), target indie hacker and SaaS founder audiences
-
-### MID
-Not warranted at Phase 0 for LOW ROI method
+$0-50/mo boosting
 
 ## Daily Actions
 
-- [ ] Run: python3 AUTOMATIONS/engagement_bait_converter.py --entry 'Built exam platform universities actually use' --angle 'solo_vs_institution'
-- [ ] Review 3 generated posts, approve best variant to CONTENT/social/posting_queue/
-- [ ] No venture creation, no cron, no DAG — single content extraction pass only
+- [ ] Research and validate: Built an exam platform universities actually use
+- [ ] Set up automation for app venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
 
 ## Tooling
 
@@ -36,6 +32,6 @@ Not warranted at Phase 0 for LOW ROI method
 {
   "browser": "none",
   "email": "none",
-  "content": "engagement_bait_converter.py"
+  "content": "none"
 }
 ```
