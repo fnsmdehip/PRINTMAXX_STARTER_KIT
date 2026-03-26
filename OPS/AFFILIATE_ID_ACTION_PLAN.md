@@ -159,3 +159,20 @@ unusualwhales.com/predictions/us
 er/0xd3481a261f3ee307bf821a1d7a66a79bb8b6d759
 …
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773998827, Score: 30)
+
+**Source:** @pounddz (bookmarks) | **URL:** https://x.com/pounddz/status/2036784221398634863
+**Added:** 2026-03-26T05:05:01-04:00
+
+Whop affiliate is slept on massively 
+
+You could not only build a really profitable affiliate business but if you learned how to build funnels / write copy 
+
+You could become a whop info product operator and end up taking a percent of the whole product 
+
+IMO the best platform to
+

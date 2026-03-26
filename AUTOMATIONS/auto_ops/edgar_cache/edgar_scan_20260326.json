@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-26T05:01:07.015679",
+  "api_calls": 19,
+  "total_filings": 104,
+  "unique_filings": 2,
+  "written_to_alpha": 0,
+  "top_results": [
+    {
+      "company": "UiPath, Inc.  (PATH)  (CIK 0001734722)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Inflection Point Acquisition Corp. VI  (IPFX)  (CIK 0002102041)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}
