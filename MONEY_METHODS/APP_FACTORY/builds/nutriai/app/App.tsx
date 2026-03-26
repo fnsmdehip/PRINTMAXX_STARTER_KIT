@@ -5,9 +5,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import { Ionicons } from '@expo/vector-icons';
 
-import { store } from './store';
+import { store, persistor } from './store';
 import { Theme } from './utils/theme';
 import { haptics } from './utils/haptics';
 
@@ -185,10 +186,12 @@ function AppContent(): React.JSX.Element {
 const App = (): React.JSX.Element => {
   return (
     <Provider store={store}>
-      <SafeAreaProvider>
-        <StatusBar barStyle="light-content" backgroundColor={Theme.colors.background} />
-        <AppContent />
-      </SafeAreaProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <SafeAreaProvider>
+          <StatusBar barStyle="light-content" backgroundColor={Theme.colors.background} />
+          <AppContent />
+        </SafeAreaProvider>
+      </PersistGate>
     </Provider>
   );
 };

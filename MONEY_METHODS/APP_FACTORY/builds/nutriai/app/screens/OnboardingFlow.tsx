@@ -43,7 +43,7 @@ import {
 import { purchasePackage, getOfferings, restorePurchases, PurchaseCancelledError } from '../services/purchases';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
-const TOTAL_STEPS = 14;
+const TOTAL_STEPS = 16;
 
 interface OnboardingFlowProps {
   onComplete: () => void;
@@ -114,13 +114,13 @@ const TIMELINE_OPTIONS: TimelineOption[] = [
 const PAYWALL_FEATURES = [
   { icon: 'camera' as const, label: 'Unlimited AI food scans' },
   { icon: 'nutrition' as const, label: 'Detailed macro tracking' },
-  { icon: 'calendar' as const, label: 'Personalized meal planning' },
   { icon: 'analytics' as const, label: 'Progress insights & trends' },
+  { icon: 'stats-chart' as const, label: 'Monthly analytics view' },
 ];
 
 const SHOWCASE_FEATURES = [
   { icon: 'camera' as const, title: 'AI Food Scan', desc: 'Point your camera at any meal' },
-  { icon: 'barcode' as const, title: 'Barcode Scan', desc: 'Scan packaged food labels' },
+  { icon: 'nutrition' as const, title: 'Macro Tracking', desc: 'Detailed macro breakdown' },
   { icon: 'time' as const, title: 'Meal History', desc: 'Track everything you eat' },
   { icon: 'trending-up' as const, title: 'Progress Tracking', desc: 'Watch your journey unfold' },
   { icon: 'pie-chart' as const, title: 'Macro Breakdown', desc: 'Protein, carbs, and fat' },
@@ -152,6 +152,8 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
   const [selectedTimeline, setSelectedTimeline] = useState<GoalTimeline>('3_months');
   const [selectedActivity, setSelectedActivity] = useState<ActivityLevel | null>(null);
   const [selectedDiet, setSelectedDiet] = useState<DietPreference>('none');
+  const [selectedGender, setSelectedGender] = useState<Gender | null>(null);
+  const [selectedAge, setSelectedAge] = useState(30);
 
   // ── Paywall state ──
   const [selectedPlan, setSelectedPlan] = useState<PlanKey>('yearly');
@@ -171,9 +173,8 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
   const plan = useMemo(() => {
     const heightCm = feetInchesToCm(heightFeet, heightInches);
     const weightKg = lbsToKg(weightLbs);
-    // Use male as default for initial calculation; gender not collected in this flow
-    return calculateFullPlan('male', 30, heightCm, weightKg, effectiveGoal, selectedActivity ?? 'moderate');
-  }, [heightFeet, heightInches, weightLbs, effectiveGoal, selectedActivity]);
+    return calculateFullPlan(selectedGender ?? 'male', selectedAge, heightCm, weightKg, effectiveGoal, selectedActivity ?? 'moderate');
+  }, [heightFeet, heightInches, weightLbs, effectiveGoal, selectedActivity, selectedGender, selectedAge]);
 
   const projectedWeeks = useMemo(() => {
     if (effectiveGoal === 'maintain') return 0;
@@ -264,6 +265,8 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
     const targetKg = lbsToKg(targetWeightLbs);
 
     dispatch(setGoal(effectiveGoal));
+    dispatch(setGender(selectedGender ?? 'male'));
+    dispatch(setAge(selectedAge));
     dispatch(setHeightCm(heightCm));
     dispatch(setWeightKg(weightKg));
     dispatch(setGoalWeight(targetKg));
@@ -302,7 +305,7 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
     } catch (e) {
       console.warn('[Onboarding] AsyncStorage save error:', e);
     }
-  }, [dispatch, heightFeet, heightInches, weightLbs, targetWeightLbs, effectiveGoal, selectedActivity, selectedDiet, selectedTimeline, plan]);
+  }, [dispatch, heightFeet, heightInches, weightLbs, targetWeightLbs, effectiveGoal, selectedActivity, selectedDiet, selectedTimeline, selectedGender, selectedAge, plan]);
 
   // ── Purchase handler ──
   const handlePurchase = useCallback(async () => {
@@ -371,17 +374,19 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
       case 3: return true; // Target
       case 4: return selectedActivity !== null; // Activity
       case 5: return true; // Diet (always has default)
-      case 6: return true; // Validation
-      case 7: return true; // Calorie breakdown
-      case 8: return true; // Social proof
-      case 9: return true; // Magic moment
-      case 10: return true; // Feature showcase
-      case 11: return true; // Notification
-      case 12: return true; // Plan ready
-      case 13: return true; // Paywall
+      case 6: return selectedGender !== null; // Gender
+      case 7: return true; // Age (always has default)
+      case 8: return true; // Validation
+      case 9: return true; // Calorie breakdown
+      case 10: return true; // Social proof
+      case 11: return true; // Magic moment
+      case 12: return true; // Feature showcase
+      case 13: return true; // Notification
+      case 14: return true; // Plan ready
+      case 15: return true; // Paywall
       default: return true;
     }
-  }, [step, selectedGoal, selectedActivity]);
+  }, [step, selectedGoal, selectedActivity, selectedGender]);
 
   // ─── Render Functions ───────────────────────────────────────────────────────
 
@@ -624,7 +629,74 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
     </View>
   );
 
-  // === SCREEN 6: Validation (Goal Achievable + Weight Graph) ===
+  // === SCREEN 6: Gender ===
+  const renderGender = () => (
+    <View style={s.screenContainer}>
+      <Text style={s.screenTitle}>What's your biological sex?</Text>
+      <Text style={s.screenSubtitle}>This affects your calorie calculation by up to 166 kcal</Text>
+      <View style={s.optionsContainer}>
+        {([
+          { key: 'male' as Gender, label: 'Male', icon: 'male-outline' as keyof typeof Ionicons.glyphMap },
+          { key: 'female' as Gender, label: 'Female', icon: 'female-outline' as keyof typeof Ionicons.glyphMap },
+        ]).map(opt => (
+          <TouchableOpacity
+            key={opt.key}
+            style={[s.optionCard, selectedGender === opt.key && s.optionCardSelected]}
+            onPress={() => { haptics.selection(); setSelectedGender(opt.key); }}
+            activeOpacity={0.8}
+          >
+            <Ionicons
+              name={opt.icon}
+              size={28}
+              color={selectedGender === opt.key ? Theme.colors.primary : Theme.colors.textSecondary}
+            />
+            <Text style={[s.optionLabel, selectedGender === opt.key && s.optionLabelSelected]}>{opt.label}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+      <TouchableOpacity
+        style={[s.primaryButton, !selectedGender && s.primaryButtonDisabled]}
+        onPress={goNext}
+        disabled={!selectedGender}
+        activeOpacity={0.85}
+      >
+        <Text style={s.primaryButtonText}>Continue</Text>
+      </TouchableOpacity>
+    </View>
+  );
+
+  // === SCREEN 7: Age ===
+  const renderAge = () => (
+    <View style={s.screenContainer}>
+      <Text style={s.screenTitle}>How old are you?</Text>
+      <Text style={s.screenSubtitle}>Age is a key factor in your daily calorie needs</Text>
+      <View style={s.agePickerContainer}>
+        <TouchableOpacity
+          style={s.ageAdjustButton}
+          onPress={() => { haptics.light(); setSelectedAge(a => Math.max(20, a - 1)); }}
+          activeOpacity={0.7}
+        >
+          <Ionicons name="remove" size={28} color={Theme.colors.text} />
+        </TouchableOpacity>
+        <View style={s.ageValueContainer}>
+          <Text style={s.ageValue}>{selectedAge}</Text>
+          <Text style={s.ageUnit}>years old</Text>
+        </View>
+        <TouchableOpacity
+          style={s.ageAdjustButton}
+          onPress={() => { haptics.light(); setSelectedAge(a => Math.min(80, a + 1)); }}
+          activeOpacity={0.7}
+        >
+          <Ionicons name="add" size={28} color={Theme.colors.text} />
+        </TouchableOpacity>
+      </View>
+      <TouchableOpacity style={s.primaryButton} onPress={goNext} activeOpacity={0.85}>
+        <Text style={s.primaryButtonText}>Continue</Text>
+      </TouchableOpacity>
+    </View>
+  );
+
+  // === SCREEN 8: Validation (Goal Achievable + Weight Graph) ===
   const renderValidation = () => {
     const timelineWeeks = TIMELINE_OPTIONS.find(t => t.key === selectedTimeline)?.weeks ?? 13;
     const diffLbs = Math.abs(weightLbs - targetWeightLbs);
@@ -1185,14 +1257,16 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
       case 3: return renderTarget();
       case 4: return renderActivity();
       case 5: return renderDiet();
-      case 6: return renderValidation();
-      case 7: return renderCalorieBreakdown();
-      case 8: return renderSocialProof();
-      case 9: return renderMagicMoment();
-      case 10: return renderFeatureShowcase();
-      case 11: return renderNotification();
-      case 12: return renderPlanReady();
-      case 13: return renderPaywall();
+      case 6: return renderGender();
+      case 7: return renderAge();
+      case 8: return renderValidation();
+      case 9: return renderCalorieBreakdown();
+      case 10: return renderSocialProof();
+      case 11: return renderMagicMoment();
+      case 12: return renderFeatureShowcase();
+      case 13: return renderNotification();
+      case 14: return renderPlanReady();
+      case 15: return renderPaywall();
       default: return renderWelcome();
     }
   };
@@ -1203,11 +1277,11 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
     <SafeAreaView style={s.container}>
       {/* Progress bar */}
       <View style={s.header}>
-        {step > 0 && step < 13 ? (
+        {step > 0 && step < 15 ? (
           <TouchableOpacity style={s.backBtn} onPress={goBack} hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}>
             <Ionicons name="chevron-back" size={24} color={Theme.colors.text} />
           </TouchableOpacity>
-        ) : step === 13 ? (
+        ) : step === 15 ? (
           <TouchableOpacity style={s.backBtn} onPress={handleDeclinePaywall} hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}>
             <Ionicons name="close" size={24} color={Theme.colors.textSecondary} />
           </TouchableOpacity>
@@ -1450,6 +1524,39 @@ const s = StyleSheet.create({
     color: Theme.colors.textSecondary,
     fontSize: 12,
     textAlign: 'center',
+  },
+
+  // ── Age picker ──
+  agePickerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 24,
+    marginVertical: 40,
+  },
+  ageAdjustButton: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: Theme.colors.surface,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.08)',
+  },
+  ageValueContainer: {
+    alignItems: 'center',
+    minWidth: 100,
+  },
+  ageValue: {
+    fontSize: 56,
+    fontWeight: '700',
+    color: Theme.colors.primary,
+  },
+  ageUnit: {
+    fontSize: 14,
+    color: Theme.colors.textSecondary,
+    marginTop: 4,
   },
 
   // ── Input sections ──

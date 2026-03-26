@@ -98,9 +98,25 @@ def stage_generate(opportunities: list, max_apps: int = 2):
 
     return generated
 
+def stage_deep_qa(app_slugs: list = None):
+    """Stage 3a: Deep functional QA"""
+    log("=== STAGE 3a: Deep QA ===")
+
+    if app_slugs:
+        for slug in app_slugs:
+            app_path = BUILDS / slug
+            if app_path.exists():
+                success, output = run_script("deep_qa.py", [
+                    "--test", str(app_path)
+                ], timeout=120)
+                log(f"Deep QA {slug}: {'PASS' if success else 'ISSUES FOUND'}")
+    else:
+        success, output = run_script("deep_qa.py", ["--test-all"], timeout=300)
+        log(f"Deep QA all: {'PASS' if success else 'SOME ISSUES'}")
+
 def stage_test(app_slugs: list = None):
-    """Stage 3: Test all apps or specific ones"""
-    log("=== STAGE 3: Testing ===")
+    """Stage 3b: Static rejection tests"""
+    log("=== STAGE 3b: Static Testing ===")
 
     if app_slugs:
         results = {}
@@ -196,7 +212,10 @@ def run_full_pipeline(dry_run: bool = False):
         generated = stage_generate(opportunities, max_apps=2)
         decisions["generate"] = [{"action": "generated", "target": slug, "details": "new app"} for slug in generated]
 
-    # Stage 3: Test all apps
+    # Stage 3a: Deep functional QA
+    stage_deep_qa(generated if generated else None)
+
+    # Stage 3b: Static rejection tests
     test_results = stage_test(generated if generated else None)
     decisions["test"] = test_results
 

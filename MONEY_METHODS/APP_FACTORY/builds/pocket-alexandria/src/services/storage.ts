@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { BookProgress, Bookmark, Highlight, ReaderSettings, ReadingStats, ReaderTheme, OnboardingState } from '../types';
+import { dailyQuotes } from '../data/quotes';
 
 const KEYS = {
   PROGRESS_PREFIX: '@pa_progress_',
@@ -13,6 +14,7 @@ const KEYS = {
   RECENT_SEARCHES: '@pa_recent_searches',
   DAILY_QUOTE_DATE: '@pa_daily_quote_date',
   DAILY_QUOTE_INDEX: '@pa_daily_quote_index',
+  COMPLETED_BOOKS: '@pa_completed_books',
 } as const;
 
 // Onboarding
@@ -167,7 +169,7 @@ export async function getDailyQuoteIndex(): Promise<number> {
       return parseInt(savedIndex, 10);
     }
     // New day - pick new quote
-    const newIndex = Math.floor(Math.random() * 50);
+    const newIndex = Math.floor(Math.random() * dailyQuotes.length);
     await AsyncStorage.setItem(KEYS.DAILY_QUOTE_DATE, today);
     await AsyncStorage.setItem(KEYS.DAILY_QUOTE_INDEX, newIndex.toString());
     return newIndex;
@@ -269,6 +271,15 @@ export async function clearRecentSearches(): Promise<void> {
 }
 
 // Reading Stats
+async function getCompletedBookIds(): Promise<string[]> {
+  try {
+    const raw = await AsyncStorage.getItem(KEYS.COMPLETED_BOOKS);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
 async function updateStats(progress: BookProgress): Promise<void> {
   try {
     const stats = await getStats();
@@ -277,7 +288,12 @@ async function updateStats(progress: BookProgress): Promise<void> {
     }
     stats.totalPagesRead = Math.max(stats.totalPagesRead, progress.currentPage);
     if (progress.percentComplete >= 95) {
-      stats.booksCompleted = (stats.booksCompleted || 0) + 1;
+      const completedIds = await getCompletedBookIds();
+      if (!completedIds.includes(progress.bookId)) {
+        completedIds.push(progress.bookId);
+        await AsyncStorage.setItem(KEYS.COMPLETED_BOOKS, JSON.stringify(completedIds));
+        stats.booksCompleted = (stats.booksCompleted || 0) + 1;
+      }
     }
     await AsyncStorage.setItem(KEYS.STATS, JSON.stringify(stats));
   } catch {}

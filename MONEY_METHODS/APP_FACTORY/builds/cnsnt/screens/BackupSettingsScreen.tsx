@@ -76,6 +76,9 @@ const BackupSettingsScreen: React.FC<BackupSettingsProps> = ({ navigation }) => 
   const [restoring, setRestoring] = useState(false);
   const [connectingProvider, setConnectingProvider] = useState<CloudProvider | null>(null);
 
+  const gdriveConfigured = cloudBackup.isOAuthConfigured('gdrive');
+  const dropboxConfigured = cloudBackup.isOAuthConfigured('dropbox');
+
   const loadState = useCallback(async () => {
     try {
       const [autoEnabled, connState, lastTime] = await Promise.all([
@@ -468,81 +471,105 @@ const BackupSettingsScreen: React.FC<BackupSettingsProps> = ({ navigation }) => 
 
             {/* Google Drive */}
             <View style={styles.providerRow}>
-              <View style={[styles.providerIcon, { backgroundColor: '#FFF3E0' }]}>
-                <Ionicons name="logo-google" size={18} color="#EA4335" />
+              <View style={[styles.providerIcon, { backgroundColor: gdriveConfigured ? '#FFF3E0' : '#F3F4F6' }]}>
+                <Ionicons name="logo-google" size={18} color={gdriveConfigured ? '#EA4335' : Colors.textTertiary} />
               </View>
               <View style={styles.providerInfo}>
-                <Text style={styles.providerName}>Google Drive</Text>
-                <Text style={styles.providerStatus}>
-                  {connections.gdrive.connected
-                    ? connections.gdrive.email || 'Connected'
-                    : 'Not connected'}
+                <Text style={[styles.providerName, !gdriveConfigured && { color: Colors.textTertiary }]}>
+                  Google Drive
                 </Text>
-                {connections.gdrive.lastBackup && (
+                <Text style={styles.providerStatus}>
+                  {!gdriveConfigured
+                    ? 'Credentials not configured'
+                    : connections.gdrive.connected
+                      ? connections.gdrive.email || 'Connected'
+                      : 'Not connected'}
+                </Text>
+                {connections.gdrive.lastBackup && gdriveConfigured && (
                   <Text style={styles.providerLastBackup}>
                     Last: {cloudBackup.formatRelativeTime(connections.gdrive.lastBackup)}
                   </Text>
                 )}
               </View>
-              {connectingProvider === 'gdrive' ? (
-                <ActivityIndicator size="small" color={Colors.primary} />
-              ) : connections.gdrive.connected ? (
-                <Pressable
-                  style={styles.disconnectButton}
-                  onPress={handleDisconnectGDrive}
-                  hitSlop={8}
-                >
-                  <Text style={styles.disconnectText}>Disconnect</Text>
-                </Pressable>
-              ) : (
-                <Pressable
-                  style={styles.connectButton}
-                  onPress={handleConnectGDrive}
-                  hitSlop={8}
-                >
-                  <Text style={styles.connectText}>Connect</Text>
-                </Pressable>
-              )}
+              {gdriveConfigured ? (
+                connectingProvider === 'gdrive' ? (
+                  <ActivityIndicator size="small" color={Colors.primary} />
+                ) : connections.gdrive.connected ? (
+                  <Pressable
+                    style={styles.disconnectButton}
+                    onPress={handleDisconnectGDrive}
+                    hitSlop={8}
+                  >
+                    <Text style={styles.disconnectText}>Disconnect</Text>
+                  </Pressable>
+                ) : (
+                  <Pressable
+                    style={styles.connectButton}
+                    onPress={handleConnectGDrive}
+                    hitSlop={8}
+                  >
+                    <Text style={styles.connectText}>Connect</Text>
+                  </Pressable>
+                )
+              ) : null}
             </View>
 
             {/* Dropbox */}
             <View style={[styles.providerRow, { borderBottomWidth: 0 }]}>
-              <View style={[styles.providerIcon, { backgroundColor: '#E8F0FE' }]}>
-                <Ionicons name="cube" size={18} color="#0061FF" />
+              <View style={[styles.providerIcon, { backgroundColor: dropboxConfigured ? '#E8F0FE' : '#F3F4F6' }]}>
+                <Ionicons name="cube" size={18} color={dropboxConfigured ? '#0061FF' : Colors.textTertiary} />
               </View>
               <View style={styles.providerInfo}>
-                <Text style={styles.providerName}>Dropbox</Text>
-                <Text style={styles.providerStatus}>
-                  {connections.dropbox.connected
-                    ? connections.dropbox.email || 'Connected'
-                    : 'Not connected'}
+                <Text style={[styles.providerName, !dropboxConfigured && { color: Colors.textTertiary }]}>
+                  Dropbox
                 </Text>
-                {connections.dropbox.lastBackup && (
+                <Text style={styles.providerStatus}>
+                  {!dropboxConfigured
+                    ? 'Credentials not configured'
+                    : connections.dropbox.connected
+                      ? connections.dropbox.email || 'Connected'
+                      : 'Not connected'}
+                </Text>
+                {connections.dropbox.lastBackup && dropboxConfigured && (
                   <Text style={styles.providerLastBackup}>
                     Last: {cloudBackup.formatRelativeTime(connections.dropbox.lastBackup)}
                   </Text>
                 )}
               </View>
-              {connectingProvider === 'dropbox' ? (
-                <ActivityIndicator size="small" color={Colors.primary} />
-              ) : connections.dropbox.connected ? (
-                <Pressable
-                  style={styles.disconnectButton}
-                  onPress={handleDisconnectDropbox}
-                  hitSlop={8}
-                >
-                  <Text style={styles.disconnectText}>Disconnect</Text>
-                </Pressable>
-              ) : (
-                <Pressable
-                  style={styles.connectButton}
-                  onPress={handleConnectDropbox}
-                  hitSlop={8}
-                >
-                  <Text style={styles.connectText}>Connect</Text>
-                </Pressable>
-              )}
+              {dropboxConfigured ? (
+                connectingProvider === 'dropbox' ? (
+                  <ActivityIndicator size="small" color={Colors.primary} />
+                ) : connections.dropbox.connected ? (
+                  <Pressable
+                    style={styles.disconnectButton}
+                    onPress={handleDisconnectDropbox}
+                    hitSlop={8}
+                  >
+                    <Text style={styles.disconnectText}>Disconnect</Text>
+                  </Pressable>
+                ) : (
+                  <Pressable
+                    style={styles.connectButton}
+                    onPress={handleConnectDropbox}
+                    hitSlop={8}
+                  >
+                    <Text style={styles.connectText}>Connect</Text>
+                  </Pressable>
+                )
+              ) : null}
             </View>
+
+            {/* OAuth credentials note */}
+            {(!gdriveConfigured || !dropboxConfigured) && (
+              <View style={[styles.providerRow, { borderBottomWidth: 0, opacity: 0.7 }]}>
+                <View style={[styles.settingIconContainer, { backgroundColor: Colors.surfaceElevated }]}>
+                  <Ionicons name="information-circle-outline" size={18} color={Colors.textTertiary} />
+                </View>
+                <Text style={styles.infoText}>
+                  Configure Google Drive / Dropbox credentials in .env to enable cloud backup. iCloud and local export are always available.
+                </Text>
+              </View>
+            )}
           </View>
 
           {/* Manual Actions */}

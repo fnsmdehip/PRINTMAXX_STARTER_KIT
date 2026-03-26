@@ -329,3 +329,45 @@
 - Stripe/Gumroad/Whop accounts still not created (blocks ALL revenue)
 - Surge.sh blocks all search engines (blocks 65.5K monthly searches)
 - ChatGPT data export needed for AI memory archaeology
+
+---
+
+## Session: 2026-03-25 (App Factory Sprint)
+
+### What Was Built
+- **Cal AI onboarding** for 4 apps (8,187 lines total, 12-14 screens each)
+- **Stripe Payment Links** replaced RevenueCat in all 4 apps (8 payment links)
+- **cnsnt security rewrite** — XOR→AES-256-CTR+HMAC, PIN lockout, audit log (3,599 lines)
+- **Cloud backup system** — iCloud, Google Drive, Dropbox, local export (2,319 lines)
+- **11 professional templates** for cnsnt (intimate consent, NDAs, waivers, contracts)
+- **App factory pipeline** — 6 production scripts (opportunity_scanner, app_generator, test_runner, build_submit, distribution_engine, portfolio_optimizer)
+- **Auto-orchestrator** — daily cron at 6:30 AM, runs full pipeline autonomously
+- **Privacy policy + ToS** — deployed to surge, all 4 apps updated
+- **3 research reports** — paywall best practices, battle-tested monetization, automation research
+
+### Key Decisions
+- Stripe over RevenueCat (keep 97% vs 70%) — add IAP as A/B test at $1K MRR
+- Local-first architecture for cnsnt — zero server, user-owned backup, zero liability
+- App name "cnsnt" (lowercase, iconic) not "ConsentVault"
+- Cal AI-style onboarding is the standard for ALL apps
+- Weekly+Annual pricing recommended (weekly = 55.6% of subscription revenue)
+- Soft paywall default for organic growth (switch to hard paywall with paid acquisition)
+
+### Apps Running
+- Scripture Streak → iPhone 16 Pro (:8081) ✓
+- NutriSnap → iPhone 16 Pro Max (:8082) ✓
+- Pocket Alexandria → iPhone 16 (:8083) ✓
+- cnsnt → iPhone 16 Plus (:8084) ✓
+
+### New Automation
+- `AUTOMATIONS/app_factory/auto_orchestrator.py` — daily 6:30 AM cron
+- `AUTOMATIONS/app_factory/portfolio_optimizer.py` — Monday 7 AM cron
+- `.claude/rules/app-factory-pipeline.md` — permanent quality standards
+- 3 memory files stored for future sessions
+
+### Human Blockers
+- EAS Build requires Expo account login (`eas login`)
+- App Store Connect requires Apple Developer account ($99/yr)
+- Stripe test payment links needed for full E2E payment testing
+- Google Drive / Dropbox OAuth client IDs needed for cnsnt cloud backup
+

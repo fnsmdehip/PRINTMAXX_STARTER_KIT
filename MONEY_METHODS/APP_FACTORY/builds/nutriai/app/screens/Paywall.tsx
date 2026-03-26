@@ -60,10 +60,9 @@ const PLANS: PlanDisplay[] = [
 const FEATURES = [
   { icon: 'infinite-outline' as const, text: 'Unlimited AI food scans' },
   { icon: 'analytics-outline' as const, text: 'Advanced analytics & trends' },
-  { icon: 'barcode-outline' as const, text: 'Barcode scanning' },
-  { icon: 'restaurant-outline' as const, text: 'AI meal plan generator' },
+  { icon: 'nutrition-outline' as const, text: 'Detailed macro breakdown' },
   { icon: 'ban-outline' as const, text: 'Completely ad-free' },
-  { icon: 'sync-outline' as const, text: 'Apple Health integration' },
+  { icon: 'stats-chart-outline' as const, text: 'Progress analytics' },
 ];
 
 const GOAL_LABELS: Record<string, string> = {

@@ -43,6 +43,7 @@
     },
     "scheme": "nutrisnap",
     "extra": {
+      "googleAiApiKey": "${GOOGLE_AI_API_KEY}",
       "revenueCatApiKey": "${REVENUECAT_PUBLIC_KEY}",
       "appStoreSubtitle": "AI Food Scanner & Calorie Log",
       "eas": {

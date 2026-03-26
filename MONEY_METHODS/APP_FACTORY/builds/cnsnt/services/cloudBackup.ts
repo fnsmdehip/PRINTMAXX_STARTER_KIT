@@ -84,6 +84,23 @@ const GOOGLE_SCOPES = [
   'https://www.googleapis.com/auth/userinfo.email',
 ];
 
+/**
+ * Check whether a provider's OAuth credentials are real (not placeholders).
+ * Placeholder values start with '__' and end with '__'.
+ * Returns false if the client ID/app key is still a placeholder.
+ */
+function isOAuthConfigured(provider: 'gdrive' | 'dropbox'): boolean {
+  if (provider === 'gdrive') {
+    const clientId =
+      Platform.OS === 'ios' ? GOOGLE_CLIENT_ID_IOS : GOOGLE_CLIENT_ID_ANDROID;
+    return !clientId.startsWith('__') && clientId.length > 0;
+  }
+  if (provider === 'dropbox') {
+    return !DROPBOX_APP_KEY.startsWith('__') && DROPBOX_APP_KEY.length > 0;
+  }
+  return false;
+}
+
 // Ensure web browser sessions complete properly
 WebBrowser.maybeCompleteAuthSession();
 
@@ -91,11 +108,13 @@ WebBrowser.maybeCompleteAuthSession();
 
 /**
  * Encrypt a plaintext string using the vault's current key.
- * Returns hex-encoded ciphertext. Vault must be unlocked.
+ * Returns the vault's iv:ciphertext:mac format string.
+ * Vault must be unlocked.
  */
 async function encryptPayload(plaintext: string): Promise<string> {
-  // Use the vault's encrypt-and-store mechanism but extract just the encrypted data
-  // We store temporarily, read back the encrypted form, then delete
+  // Use the vault's encrypt-and-store mechanism, extract the encrypted data,
+  // then clean up the temp key. The vault produces iv:ciphertext:mac format
+  // which already includes the random IV and authentication MAC.
   const tempKey = `_backup_temp_${Date.now()}`;
   await vault.encryptAndStore(tempKey, plaintext);
   const raw = await AsyncStorage.getItem(`vault_${tempKey}`);
@@ -106,164 +125,46 @@ async function encryptPayload(plaintext: string): Promise<string> {
 }
 
 /**
- * Decrypt a hex-encoded ciphertext back to plaintext.
+ * Decrypt an iv:ciphertext:mac string back to plaintext using the vault.
  * Vault must be unlocked with the same key that encrypted it.
+ *
+ * Works by storing the encrypted data in a temporary vault envelope (v2 format)
+ * and using the vault's standard retrieveAndDecrypt, which handles IV extraction
+ * and MAC verification internally. The temp key is always cleaned up.
  */
-async function decryptPayload(ciphertext: string): Promise<string> {
-  // Reconstruct the vault envelope format and use retrieveAndDecrypt
+async function decryptPayload(encrypted: string): Promise<string> {
   const tempKey = `_backup_restore_${Date.now()}`;
-  // We need the hash of the decrypted content, but we don't have it yet.
-  // Store with a placeholder hash, decrypt, then verify via backup's payloadHash.
-  const envelope = JSON.stringify({
-    data: ciphertext,
-    hash: 'pending_verification',
-    timestamp: new Date().toISOString(),
-  });
-  await AsyncStorage.setItem(`vault_${tempKey}`, envelope);
-
-  // Retrieve the raw envelope and decrypt manually using vault internals
-  // Since vault.retrieveAndDecrypt checks hash integrity, we need to bypass that
-  // by computing the hash after decryption. We'll access the raw encrypted data
-  // and use the vault's sha256 to verify after.
-  const stored = await AsyncStorage.getItem(`vault_${tempKey}`);
-  await AsyncStorage.removeItem(`vault_${tempKey}`);
-
-  if (!stored) throw new Error('Decryption failed: temp storage missing');
-
-  // Re-store with the correct hash so vault can decrypt and verify
-  // First, do a trial decryption by storing without hash check
-  // We use a custom approach: store the ciphertext, let vault decrypt, skip hash check
-  const trialKey = `_backup_trial_${Date.now()}`;
-  await AsyncStorage.setItem(`vault_${trialKey}`, stored);
-
-  // Read back raw to get just the encrypted data field
-  const parsed = JSON.parse(stored);
-
-  // Decrypt by temporarily storing with correct hash
-  // The vault expects hash of the DECRYPTED content, which we don't know yet.
-  // Solution: decrypt manually using the same xor cipher approach the vault uses.
-  // Since encryption.ts doesn't export xorDecipher, we'll use a workaround:
-  // Store with hash='skip' and catch the integrity error, or use a two-pass approach.
-
-  // Two-pass approach:
-  // Pass 1: Store with dummy hash, decrypt (will throw integrity error)
-  // Pass 2: Hash the decrypted content, re-store with correct hash, decrypt again
-
-  // Actually, the cleanest approach is to encrypt a known value, observe the pattern,
-  // then decrypt our backup payload by the same mechanism. But the simplest real approach:
-  // We'll create a helper that directly uses vault's internal machinery.
-
-  // Since we control the ciphertext and vault key, let's use the vault's encryptAndStore
-  // in reverse. The vault stores { data: encrypted_hex, hash: sha256(plaintext), timestamp }.
-  // To decrypt without knowing the hash, we need to:
-  // 1. Store with any hash
-  // 2. Try to decrypt (vault will compute hash of decrypted, compare to stored hash)
-  // 3. If they don't match, vault throws. So we need the real hash.
-
-  // The backup format includes payloadHash which is HMAC of the ENCRYPTED payload.
-  // That's separate from the vault's internal hash which is SHA-256 of the PLAINTEXT.
-  // We need the plaintext hash to use vault.retrieveAndDecrypt.
-
-  // Best solution: bypass vault for backup decryption. Use the same XOR keystream approach.
-  // We'll replicate the decryption logic here since it's critical for backups.
-
-  await AsyncStorage.removeItem(`vault_${trialKey}`);
-
-  return await directDecrypt(ciphertext);
+  try {
+    // Build a v2 vault envelope that retrieveAndDecrypt knows how to handle.
+    // The vault's v2 path decrypts the iv:ciphertext:mac string directly
+    // with full MAC verification -- no plaintext hash needed.
+    const envelope = JSON.stringify({
+      version: 2,
+      data: encrypted,
+      timestamp: new Date().toISOString(),
+    });
+    await AsyncStorage.setItem(`vault_${tempKey}`, envelope);
+    const result = await vault.retrieveAndDecrypt(tempKey);
+    if (result === null) {
+      throw new Error('Decryption returned null -- vault key may not match.');
+    }
+    return result;
+  } finally {
+    // Always clean up, even on error
+    await AsyncStorage.removeItem(`vault_${tempKey}`);
+  }
 }
 
 /**
- * Direct decryption using the vault key, replicating the XOR keystream cipher.
- * This is necessary for backup restore because we don't have the plaintext hash
- * that vault.retrieveAndDecrypt requires for integrity verification.
- * Integrity is instead verified via the backup's HMAC payloadHash.
- */
-async function directDecrypt(hexData: string): Promise<string> {
-  // Get the vault key - vault must be unlocked
-  if (!vault.isUnlocked()) {
-    throw new Error('Vault is locked. Authenticate before restoring backups.');
-  }
-
-  // We need the vault key. Since it's private, we'll use a known-plaintext approach:
-  // Encrypt a known string, observe the keystream, then use it to decrypt our target.
-  // Actually, we can just use encryptPayload on a known string and XOR to get the keystream.
-  //
-  // But there's a much simpler approach: use vault.encryptAndStore + retrieveAndDecrypt
-  // with the correct hash. We compute the hash AFTER a trial decryption.
-  //
-  // Trial decryption: encrypt empty string, get keystream prefix, XOR with our data.
-  // This is getting overcomplicated. Let's use a clean method:
-  //
-  // Store the ciphertext in vault format, attempt retrieval with hash checking disabled,
-  // by catching the error and extracting the decrypted content from the error path.
-  //
-  // Actually the CLEANEST approach: store a known plaintext, get its ciphertext,
-  // XOR known_plaintext XOR known_ciphertext = keystream, then XOR keystream with target ciphertext.
-  // But the keystream is counter-based so it depends on position. This works if lengths match.
-  //
-  // REAL cleanest approach: temporarily store the encrypted data with a dummy hash,
-  // decrypt via vault (it will compute the real hash), catch the mismatch error,
-  // but the vault actually RETURNS the decrypted content before throwing.
-  // Looking at the vault code: it decrypts, computes checkHash, compares, throws if mismatch.
-  // The decrypted value is computed but never returned.
-  //
-  // So we need to modify our approach. The most reliable method:
-  // 1. Store encrypted data with some hash
-  // 2. Call retrieveAndDecrypt which will decrypt and then hash the result
-  // 3. If hash doesn't match, it throws before returning
-  // 4. So we need the correct hash
-  //
-  // Solution: two-pass.
-  // Pass 1: Encrypt a known value using vault, extract just the operation.
-  //         Then XOR known_encrypted with known_plaintext to get effective keystream bits.
-  //         Then XOR keystream with our target ciphertext to get target plaintext.
-  // This works perfectly because the XOR cipher is symmetric and position-dependent.
-  //
-  // But actually, since the keystream is deterministic (based on vault key + counter),
-  // encrypting ANY plaintext of the same length produces the same keystream.
-  // So encrypt(P) = P XOR K, and decrypt(C) = C XOR K.
-  // If we encrypt zeros, we get K directly.
-  // Then target_plaintext = target_ciphertext XOR K.
-  //
-  // Let's implement this.
-
-  const targetBytes: number[] = [];
-  for (let i = 0; i < hexData.length; i += 2) {
-    targetBytes.push(parseInt(hexData.substring(i, i + 2), 16));
-  }
-
-  // Create a string of null bytes the same length as our target
-  const nullString = String.fromCharCode(...new Array(targetBytes.length).fill(0));
-
-  // Encrypt the null string to extract the keystream
-  const keystreamHex = await encryptPayload(nullString);
-  const keystreamBytes: number[] = [];
-  for (let i = 0; i < keystreamHex.length && keystreamBytes.length < targetBytes.length; i += 2) {
-    keystreamBytes.push(parseInt(keystreamHex.substring(i, i + 2), 16));
-  }
-
-  // XOR target ciphertext with keystream to recover plaintext
-  // Since encrypt(null_bytes) = null_bytes XOR keystream = keystream,
-  // and encrypt(plaintext) = plaintext XOR keystream = ciphertext,
-  // then plaintext = ciphertext XOR keystream
-  const plaintextBytes: number[] = [];
-  for (let i = 0; i < targetBytes.length; i++) {
-    plaintextBytes.push(targetBytes[i] ^ keystreamBytes[i]);
-  }
-
-  return String.fromCharCode(...plaintextBytes);
-}
-
-/**
- * Compute HMAC-SHA-256 of data using the vault key as HMAC key.
+ * Compute HMAC-SHA-256 of data using the vault's MAC key.
  * Used for backup integrity verification.
+ * Vault must be unlocked.
  */
 async function computeHmac(data: string): Promise<string> {
-  // HMAC(key, message) = H((key XOR opad) || H((key XOR ipad) || message))
-  // Simplified: use SHA-256(vault_derived_key + data) as a practical HMAC
-  // The vault key is already derived from PBKDF2, so this is safe.
-  const combined = `hmac_backup_integrity_${data}`;
-  return Crypto.digestStringAsync(Crypto.CryptoDigestAlgorithm.SHA256, combined);
+  if (!vault.isUnlocked()) {
+    throw new Error('Vault must be unlocked to compute backup HMAC.');
+  }
+  return vault.hmac(data);
 }
 
 // ─── Backup Creation ────────────────────────────────────────────────────
@@ -556,6 +457,12 @@ const gDriveConnector = {
   },
 
   async connect(): Promise<boolean> {
+    if (!isOAuthConfigured('gdrive')) {
+      throw new Error(
+        'Google Drive is not configured. Set GOOGLE_IOS_CLIENT_ID / GOOGLE_ANDROID_CLIENT_ID in your environment to enable Google Drive backup.'
+      );
+    }
+
     const clientId =
       Platform.OS === 'ios' ? GOOGLE_CLIENT_ID_IOS : GOOGLE_CLIENT_ID_ANDROID;
 
@@ -822,6 +729,12 @@ const dropboxConnector = {
   },
 
   async connect(): Promise<boolean> {
+    if (!isOAuthConfigured('dropbox')) {
+      throw new Error(
+        'Dropbox is not configured. Set DROPBOX_APP_KEY in your environment to enable Dropbox backup.'
+      );
+    }
+
     const redirectUri = AuthSession.makeRedirectUri({ scheme: 'cnsnt' });
 
     const request = new AuthSession.AuthRequest({
@@ -1477,6 +1390,14 @@ class CloudBackupService {
 
   formatRelativeTime(isoString: string): string {
     return formatRelativeTime(isoString);
+  }
+
+  /**
+   * Check whether OAuth credentials are configured (not placeholders) for a provider.
+   * Use this to hide/disable connect buttons in the UI when credentials aren't set up.
+   */
+  isOAuthConfigured(provider: 'gdrive' | 'dropbox'): boolean {
+    return isOAuthConfigured(provider);
   }
 }
 

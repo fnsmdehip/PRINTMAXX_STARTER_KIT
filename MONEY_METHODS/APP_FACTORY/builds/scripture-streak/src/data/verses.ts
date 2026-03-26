@@ -381,6 +381,7 @@ export const DAILY_VERSES_KJV: Verse[] = [
   { book: 'Philippians', chapter: 4, verse: 4, text: 'Rejoice in the Lord alway: and again I say, Rejoice.', translation: 'KJV' },
   { book: 'Psalms', chapter: 96, verse: 3, text: 'Declare his glory among the heathen, his wonders among all people.', translation: 'KJV' },
   { book: 'Revelation', chapter: 22, verse: 21, text: 'The grace of our Lord Jesus Christ be with you all. Amen.', translation: 'KJV' },
+  { book: 'Psalms', chapter: 150, verse: 6, text: 'Let every thing that hath breath praise the LORD. Praise ye the LORD.', translation: 'KJV' },
 ];
 
 /**

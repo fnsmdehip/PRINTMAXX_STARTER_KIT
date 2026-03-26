@@ -356,11 +356,11 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
               cnsnt is a record management tool only. It does not provide legal advice or legal services. Consult a qualified professional for legal guidance.
             </Text>
             <View style={styles.legalLinks}>
-              <Pressable style={styles.legalLink}>
+              <Pressable style={styles.legalLink} onPress={() => Linking.openURL('https://printmaxx-privacy.surge.sh')}>
                 <Text style={styles.legalLinkText}>Privacy Policy</Text>
               </Pressable>
               <Text style={styles.legalDot}>{'\u{2022}'}</Text>
-              <Pressable style={styles.legalLink}>
+              <Pressable style={styles.legalLink} onPress={() => Linking.openURL('https://printmaxx-tos.surge.sh')}>
                 <Text style={styles.legalLinkText}>Terms of Service</Text>
               </Pressable>
             </View>

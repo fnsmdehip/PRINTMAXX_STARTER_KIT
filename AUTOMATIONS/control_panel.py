@@ -4198,5 +4198,65 @@ def main():
         print("\n  Shutting down.")
 
 
+# ---------------------------------------------------------------------------
+# Lean Mode API
+# ---------------------------------------------------------------------------
+@app.route("/api/lean-mode/status")
+def api_lean_mode_status():
+    """Get current lean mode state."""
+    state_file = AUTOMATIONS / "agent" / "lean_mode_state.json"
+    if state_file.exists():
+        try:
+            state = json.loads(state_file.read_text())
+        except Exception:
+            state = {"mode": "full", "since": None}
+    else:
+        state = {"mode": "full", "since": None}
+
+    # Count active vs disabled crons
+    try:
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+        lines = result.stdout.splitlines() if result.returncode == 0 else []
+        active = sum(1 for l in lines if l.strip() and not l.strip().startswith("#")
+                     and not l.strip().startswith("SHELL") and not l.strip().startswith("PATH")
+                     and not l.strip().startswith("BASE") and not l.strip().startswith("PYTHON"))
+        disabled = sum(1 for l in lines if "LEAN_DISABLED" in l)
+    except Exception:
+        active, disabled = 0, 0
+
+    state["active_crons"] = active
+    state["disabled_crons"] = disabled
+    return jsonify(state)
+
+
+@app.route("/api/lean-mode/toggle", methods=["POST"])
+def api_lean_mode_toggle():
+    """Toggle lean mode on/off."""
+    data = request.get_json(force=True) if request.is_json else {}
+    target = data.get("mode", "").lower()
+
+    if target not in ("lean", "full"):
+        # Auto-toggle
+        state_file = AUTOMATIONS / "agent" / "lean_mode_state.json"
+        current = "full"
+        if state_file.exists():
+            try:
+                current = json.loads(state_file.read_text()).get("mode", "full")
+            except Exception:
+                pass
+        target = "full" if current == "lean" else "lean"
+
+    flag = "--on" if target == "lean" else "--off"
+    try:
+        result = subprocess.run(
+            [PYTHON, str(AUTOMATIONS / "lean_mode.py"), flag],
+            capture_output=True, text=True, timeout=30, cwd=str(PROJECT_ROOT)
+        )
+        output = (result.stdout + result.stderr)[-2000:]
+        return jsonify({"success": result.returncode == 0, "mode": target, "output": output})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
 if __name__ == "__main__":
     main()

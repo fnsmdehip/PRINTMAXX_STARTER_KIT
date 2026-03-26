@@ -18,6 +18,7 @@ import { CameraView, useCameraPermissions } from 'expo-camera';
 import * as ImagePicker from 'expo-image-picker';
 import * as ImageManipulator from 'expo-image-manipulator';
 
+import Constants from 'expo-constants';
 import { Theme } from '../utils/theme';
 import { haptics } from '../utils/haptics';
 import { useAppSelector, useAppDispatch } from '../store/hooks';
@@ -25,7 +26,7 @@ import { addConsumedItem } from '../store/nutritionSlice';
 import { incrementDailyScans } from '../store/subscriptionSlice';
 import type { Food } from '../store/nutritionSlice';
 
-const GEMINI_API_KEY = process.env.GOOGLE_AI_API_KEY ?? '';
+const GEMINI_API_KEY = Constants.expoConfig?.extra?.googleAiApiKey ?? '';
 const GEMINI_FLASH_ENDPOINT = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
 
 interface GeminiNutritionResponse {
@@ -276,9 +277,10 @@ const CameraScreen = (): React.JSX.Element => {
     try {
       haptics.light();
       setIsAnalyzing(true);
-      dispatch(incrementDailyScans());
 
       const nutrition = await analyzeImageWithGemini(capturedImage);
+
+      dispatch(incrementDailyScans());
 
       const foodResult: Food = {
         id: `food-${Date.now()}`,

@@ -2347,6 +2347,35 @@ body {
 /* ============================================================
    CMD+K HEADER BUTTON
    ============================================================ */
+.lean-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s;
+}
+.lean-toggle-btn:hover {
+  border-color: var(--accent);
+  box-shadow: var(--accent-glow);
+}
+.lean-toggle-btn.lean-active {
+  background: rgba(255,107,53,0.15);
+  border-color: var(--warn);
+  color: var(--warn);
+}
+.lean-toggle-btn.lean-active:hover {
+  border-color: var(--warn);
+  box-shadow: 0 0 10px rgba(255,107,53,0.3);
+}
+.lean-toggle-btn i { font-size: 14px; }
 .cmdk-header-btn {
   display: flex;
   align-items: center;
@@ -2419,6 +2448,11 @@ body {
       <span class="usage-time" id="usage-time">--</span>
       <button class="usage-burst-btn" id="usage-burst-btn" onclick="triggerBurst()">BURST</button>
     </div>
+    <!-- Lean Mode Toggle -->
+    <button class="lean-toggle-btn" id="lean-toggle-btn" onclick="toggleLeanMode()">
+      <i class="ti ti-leaf" id="lean-icon"></i>
+      <span id="lean-label">FULL</span>
+    </button>
     <!-- Cmd+K button -->
     <button class="cmdk-header-btn" onclick="toggleCommandPalette()">
       <i class="ti ti-command"></i> Commands <kbd>&#8984;K</kbd>
@@ -5711,6 +5745,55 @@ function startOppAutoRefresh() {
   }, 5 * 60 * 1000);
 }
 startOppAutoRefresh();
+
+// =============================================================
+// LEAN MODE TOGGLE
+// =============================================================
+async function loadLeanMode() {
+  try {
+    var r = await fetch(API + '/api/lean-mode/status');
+    var d = await r.json();
+    var btn = document.getElementById('lean-toggle-btn');
+    var icon = document.getElementById('lean-icon');
+    var label = document.getElementById('lean-label');
+    if (!btn) return;
+    if (d.mode === 'lean') {
+      btn.classList.add('lean-active');
+      icon.className = 'ti ti-leaf';
+      label.textContent = 'LEAN (' + (d.active_crons || 0) + ' crons)';
+    } else {
+      btn.classList.remove('lean-active');
+      icon.className = 'ti ti-bolt';
+      label.textContent = 'FULL (' + (d.active_crons || 0) + ' crons)';
+    }
+  } catch(e) {}
+}
+
+async function toggleLeanMode() {
+  var btn = document.getElementById('lean-toggle-btn');
+  var label = document.getElementById('lean-label');
+  if (!btn) return;
+  label.textContent = 'Switching...';
+  btn.disabled = true;
+  try {
+    var r = await fetch(API + '/api/lean-mode/toggle', { method: 'POST', headers: {'Content-Type':'application/json'}, body: '{}' });
+    var d = await r.json();
+    if (d.success) {
+      toast(d.mode === 'lean' ? 'LEAN MODE — LLM crons disabled, saving tokens' : 'FULL MODE — all crons restored');
+    } else {
+      toast('Toggle failed: ' + (d.error || 'unknown'), true);
+    }
+  } catch(e) {
+    toast('Error: ' + e.message, true);
+  }
+  btn.disabled = false;
+  loadLeanMode();
+}
+
+// Load on startup
+loadLeanMode();
+// Refresh every 60s
+setInterval(loadLeanMode, 60000);
 </script>
 </body>
 </html>

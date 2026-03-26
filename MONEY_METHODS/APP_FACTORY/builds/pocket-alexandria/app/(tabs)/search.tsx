@@ -9,6 +9,7 @@ import {
   Keyboard,
   ActivityIndicator,
   Platform,
+  Alert,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -17,6 +18,7 @@ import { colors, fonts, spacing, borderRadius, shadows } from '../../src/constan
 import { books, categoryIcons } from '../../src/data/catalog';
 import { getBookText } from '../../src/services/bookDownloader';
 import { getRecentSearches, addRecentSearch, clearRecentSearches } from '../../src/services/storage';
+import { isPremiumCached, isBookFree, FREE_BOOK_LIMIT } from '../../src/services/purchases';
 import { Book } from '../../src/types';
 
 interface SearchResult {
@@ -37,11 +39,13 @@ export default function SearchTab() {
   const [searching, setSearching] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [isPremium, setIsPremium] = useState(false);
   const inputRef = useRef<TextInput>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     loadRecentSearches();
+    isPremiumCached().then(setIsPremium);
   }, []);
 
   const loadRecentSearches = async () => {
@@ -131,6 +135,17 @@ export default function SearchTab() {
   };
 
   const openReader = (bookId: string) => {
+    if (!isPremium && !isBookFree(bookId)) {
+      Alert.alert(
+        'Premium Required',
+        `Free users can read the first ${FREE_BOOK_LIMIT} books. Upgrade to Premium to unlock all 156 texts.`,
+        [
+          { text: 'Maybe Later', style: 'cancel' },
+          { text: 'Upgrade', onPress: () => router.push('/paywall') },
+        ]
+      );
+      return;
+    }
     router.push(`/reader/${bookId}`);
   };
 

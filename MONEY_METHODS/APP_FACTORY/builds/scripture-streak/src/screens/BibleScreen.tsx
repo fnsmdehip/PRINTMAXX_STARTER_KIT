@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, useRef } from 'react';
+import React, { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -10,6 +10,7 @@ import {
   Animated,
   Platform,
   Share,
+  ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -79,11 +80,35 @@ export function BibleScreen() {
     return books;
   }, [searchQuery, testament]);
 
-  const chapterVerses = useMemo(() => {
-    if (!selectedBook || selectedChapter === null) return [];
-    const verses = VerseService.getChapterVerses(selectedBook.name, selectedChapter);
-    // Tag verses with the currently selected translation
-    return verses.map((v) => ({ ...v, translation: selectedTranslation }));
+  const [chapterVerses, setChapterVerses] = useState<Verse[]>([]);
+  const [versesLoading, setVersesLoading] = useState(false);
+
+  // Fetch verses asynchronously when book/chapter/translation changes
+  useEffect(() => {
+    if (!selectedBook || selectedChapter === null) {
+      setChapterVerses([]);
+      return;
+    }
+
+    let cancelled = false;
+    setVersesLoading(true);
+
+    VerseService.getChapterVerses(selectedBook.name, selectedChapter)
+      .then((verses) => {
+        if (!cancelled) {
+          // Tag verses with the currently selected translation
+          setChapterVerses(verses.map((v) => ({ ...v, translation: selectedTranslation })));
+          setVersesLoading(false);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setChapterVerses([]);
+          setVersesLoading(false);
+        }
+      });
+
+    return () => { cancelled = true; };
   }, [selectedBook, selectedChapter, selectedTranslation]);
 
   const animateTransition = useCallback((forward: boolean) => {
@@ -394,7 +419,14 @@ export function BibleScreen() {
           </ScrollView>
         )}
 
-        {viewMode === 'verses' && (
+        {viewMode === 'verses' && versesLoading && (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color={Colors.gold} />
+            <Text style={styles.loadingText}>Loading verses...</Text>
+          </View>
+        )}
+
+        {viewMode === 'verses' && !versesLoading && (
           <FlatList
             data={chapterVerses}
             renderItem={renderVerseItem}
@@ -627,6 +659,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: Colors.borderLight,
+  },
+  loadingContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: Spacing.xxl,
+  },
+  loadingText: {
+    ...Typography.bodySmall,
+    color: Colors.textMuted,
+    marginTop: Spacing.md,
   },
   emptyState: {
     alignItems: 'center',
