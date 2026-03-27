@@ -295,3 +295,15 @@ Total items: 95 (deduplicated from all sources)
 - **P1** | YouTube Shorts: search SEO now matters + 50-60 sec sweet spot | Blockers: NEED_ACCOUNT:youtube
 - **P1** | IG Originality Score penalty system + remove TikTok watermarks + 3-5/week | Blockers: NEED_ACCOUNT:tiktok
 - **P1** | TikTok search: text overlays boost discoverability + tutorials winning | Blockers: NEED_ACCOUNT:tiktok
+
+
+## RBI Conditional Methods
+*Updated: 2026-03-27T09:20:00Z*
+
+- **P0** | TikTok algo shift: completion rate threshold increased + follower-first testing | Blockers: NEED_ACCOUNT:tiktok
+- **P0** | TikTok Creator Rewards 10x payout + sponsorships > AdSense | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | how to get millions of tiktok views in one week using openclaw(the exact playboo | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | First hour determines TikTok distribution + active creator signal | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | YouTube Shorts: search SEO now matters + 50-60 sec sweet spot | Blockers: NEED_ACCOUNT:youtube
+- **P1** | IG Originality Score penalty system + remove TikTok watermarks + 3-5/week | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | TikTok search: text overlays boost discoverability + tutorials winning | Blockers: NEED_ACCOUNT:tiktok

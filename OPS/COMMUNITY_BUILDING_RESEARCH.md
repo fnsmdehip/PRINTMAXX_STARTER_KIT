@@ -695,3 +695,14 @@ I’ve used it to build apps, generate content, automate deep research, and more
 
 Here are 10 ways to use Grok 4 that feel like cheating:
 
+
+
+---
+
+## Pending Enhancement (CB3C800252, Score: 29)
+
+**Source:** CRUNCHBASE | **URL:** https://techcrunch.com/2026/03/26/conntour-raises-7m-from-general-catalyst-yc-to-build-an-ai-search-engine-for-security-video-systems/
+**Added:** 2026-03-27T05:05:01-04:00
+
+Conntour — Conntour raises $7M from General Catalyst, YC to build an AI search engine for s
+

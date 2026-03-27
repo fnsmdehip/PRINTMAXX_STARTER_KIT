@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-27T05:00:54.549480",
+  "api_calls": 19,
+  "total_filings": 97,
+  "unique_filings": 2,
+  "written_to_alpha": 2,
+  "top_results": [
+    {
+      "company": "Bloom Energy Corp  (BE)  (CIK 0001664703)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Maywood Acquisition Corp. 2  (MYX)  (CIK 0002080087)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}
