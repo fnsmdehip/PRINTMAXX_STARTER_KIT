@@ -1,10 +1,10 @@
 {
-  "last_decision_cycle": "2026-03-26T16:00:00.352761",
-  "last_feedback_cycle": "2026-03-26T16:00:00.453923",
-  "last_pipeline_cycle": "2026-03-26T16:00:00.617782",
+  "last_decision_cycle": "2026-03-26T20:00:01.245585",
+  "last_feedback_cycle": "2026-03-26T20:00:01.355578",
+  "last_pipeline_cycle": "2026-03-26T20:00:01.582433",
   "decisions_executed": 25,
-  "feedback_updates": 4319,
-  "pipeline_advances": 17,
+  "feedback_updates": 4369,
+  "pipeline_advances": 19,
   "agent_scores": {
     "gap_hunter": {
       "total_runs": 157,
@@ -120,12 +120,12 @@
       "effectiveness": 99.4
     },
     "swarm_brain": {
-      "total_runs": 168,
-      "produced_output": 168,
+      "total_runs": 169,
+      "produced_output": 169,
       "led_to_action": 255,
       "led_to_revenue": 0,
       "effectiveness": 100.0,
-      "last_seen": "2026-03-26T16:00:00.432875"
+      "last_seen": "2026-03-26T18:00:01.105164"
     },
     "video_factory": {
       "total_runs": 59,
@@ -184,7 +184,7 @@
       "effectiveness": 0.0
     }
   },
-  "last_drift_check": "2026-03-26T16:00:00.627337",
+  "last_drift_check": "2026-03-26T20:00:01.596135",
   "last_drift_score": 9.5,
   "cross_pollinator_last_run": "2026-03-19T01:09",
   "cross_pollinator_bridges": {
