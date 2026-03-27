@@ -1,10 +1,10 @@
 {
-  "last_decision_cycle": "2026-03-26T20:00:01.245585",
-  "last_feedback_cycle": "2026-03-26T20:00:01.355578",
-  "last_pipeline_cycle": "2026-03-26T20:00:01.582433",
+  "last_decision_cycle": "2026-03-27T00:00:01.062171",
+  "last_feedback_cycle": "2026-03-27T00:00:01.147094",
+  "last_pipeline_cycle": "2026-03-27T00:00:01.344312",
   "decisions_executed": 25,
-  "feedback_updates": 4369,
-  "pipeline_advances": 19,
+  "feedback_updates": 4419,
+  "pipeline_advances": 21,
   "agent_scores": {
     "gap_hunter": {
       "total_runs": 157,
@@ -184,7 +184,7 @@
       "effectiveness": 0.0
     }
   },
-  "last_drift_check": "2026-03-26T20:00:01.596135",
+  "last_drift_check": "2026-03-27T00:00:01.353521",
   "last_drift_score": 9.5,
   "cross_pollinator_last_run": "2026-03-19T01:09",
   "cross_pollinator_bridges": {
