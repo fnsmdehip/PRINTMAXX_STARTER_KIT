@@ -8,6 +8,8 @@ import AuditLog from './components/AuditLog';
 import BackupManager from './components/BackupManager';
 import Settings from './components/Settings';
 import Paywall from './components/Paywall';
+import VideoConsent from './components/VideoConsent';
+import VideoPlayer from './components/VideoPlayer';
 import type { ViewName } from './types';
 
 const AUTO_LOCK_MS = 2 * 60 * 1000; // 2 minutes
@@ -21,6 +23,7 @@ export default function App() {
   const [currentView, setCurrentView] = useState<ViewName>('dashboard');
   const [selectedRecord, setSelectedRecord] = useState<string | null>(null);
   const [selectedTemplate, setSelectedTemplate] = useState<string | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [pin, setPin] = useState('');
   const lockTimerRef = useRef<number | null>(null);
 
@@ -73,6 +76,9 @@ export default function App() {
   const navigate = (view: ViewName, extra?: string) => {
     if (view === 'viewer' && extra) {
       setSelectedRecord(extra);
+    }
+    if (view === 'video-player' && extra) {
+      setSelectedVideo(extra);
     }
     if (view === 'create' && extra) {
       setSelectedTemplate(extra);
@@ -180,6 +186,12 @@ export default function App() {
           )}
           {currentView === 'audit' && <AuditLog navigate={navigate} />}
           {currentView === 'backup' && <BackupManager navigate={navigate} />}
+          {currentView === 'video-consent' && (
+            <VideoConsent pin={pin} navigate={navigate} isPremium={isPremium} />
+          )}
+          {currentView === 'video-player' && selectedVideo && (
+            <VideoPlayer videoId={selectedVideo} pin={pin} navigate={navigate} />
+          )}
           {currentView === 'settings' && (
             <Settings navigate={navigate} isPremium={isPremium} onLock={handleLock} />
           )}

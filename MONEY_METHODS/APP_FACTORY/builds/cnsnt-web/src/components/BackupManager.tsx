@@ -63,8 +63,9 @@ export default function BackupManager({ navigate }: BackupManagerProps) {
     try {
       const text = await file.text();
       const result = await importAllData(text);
-      await logAudit('backup_import', `Imported ${result.records} records and ${result.audit} audit entries`);
-      setStatus(`Imported ${result.records} records and ${result.audit} audit entries.`);
+      const videoMsg = result.videos ? `, ${result.videos} videos` : '';
+      await logAudit('backup_import', `Imported ${result.records} records, ${result.audit} audit entries${videoMsg}`);
+      setStatus(`Imported ${result.records} records, ${result.audit} audit entries${videoMsg}.`);
       setStatusType('success');
     } catch (err) {
       setStatus('Import failed. File may be corrupted or in wrong format.');

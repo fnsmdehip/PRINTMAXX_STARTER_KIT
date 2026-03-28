@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getAllRecords, getRecordCount, searchRecords } from '../db/store';
+import { getAllRecords, getRecordCount, searchRecords, getAllVideos, FREE_RECORD_LIMIT, type StoredVideo } from '../db/store';
 import type { EncryptedRecord, ViewName } from '../types';
 
 interface DashboardProps {
@@ -7,10 +7,9 @@ interface DashboardProps {
   isPremium: boolean;
 }
 
-const FREE_RECORD_LIMIT = 3;
-
 export default function Dashboard({ navigate, isPremium }: DashboardProps) {
   const [records, setRecords] = useState<EncryptedRecord[]>([]);
+  const [videos, setVideos] = useState<StoredVideo[]>([]);
   const [recordCount, setRecordCount] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
@@ -23,8 +22,10 @@ export default function Dashboard({ navigate, isPremium }: DashboardProps) {
     setLoading(true);
     const all = await getAllRecords();
     const count = await getRecordCount();
+    const vids = await getAllVideos();
     setRecords(all);
     setRecordCount(count);
+    setVideos(vids);
     setLoading(false);
   };
 
@@ -61,7 +62,7 @@ export default function Dashboard({ navigate, isPremium }: DashboardProps) {
           <p className="text-gray-400 text-sm mt-1">
             {recordCount} record{recordCount !== 1 ? 's' : ''} stored
             {!isPremium && (
-              <span className="text-coral"> ({FREE_RECORD_LIMIT - recordCount} free remaining)</span>
+              <span className="text-coral"> ({Math.max(0, FREE_RECORD_LIMIT - recordCount)}/{FREE_RECORD_LIMIT} free remaining)</span>
             )}
           </p>
         </div>
@@ -71,7 +72,7 @@ export default function Dashboard({ navigate, isPremium }: DashboardProps) {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
         <button
           onClick={() => {
             if (canCreateMore) {
@@ -86,6 +87,25 @@ export default function Dashboard({ navigate, isPremium }: DashboardProps) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
           <span className="text-sm font-medium">New Record</span>
+        </button>
+
+        <button
+          onClick={() => {
+            if (isPremium) {
+              navigate('video-consent');
+            } else {
+              navigate('paywall');
+            }
+          }}
+          className="bg-navy-light border border-coral/50 text-white rounded-xl p-4 text-left active:scale-[0.98] transition-transform relative"
+        >
+          {!isPremium && (
+            <span className="absolute top-2 right-2 px-1.5 py-0.5 bg-coral text-white text-[9px] font-bold rounded">PRO</span>
+          )}
+          <svg className="w-6 h-6 mb-2 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          <span className="text-sm font-medium">Video Consent</span>
         </button>
 
         <button
@@ -184,12 +204,51 @@ export default function Dashboard({ navigate, isPremium }: DashboardProps) {
         </div>
       )}
 
+      {/* Video Recordings */}
+      {videos.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+            <svg className="w-5 h-5 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            Video Recordings
+          </h2>
+          <div className="space-y-2">
+            {videos.map((video) => (
+              <button
+                key={video.id}
+                onClick={() => navigate('video-player', video.id)}
+                className="w-full bg-navy-light border border-gray-700 rounded-xl p-4 text-left hover:border-coral/50 active:scale-[0.99] transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="w-10 h-10 rounded-lg bg-coral/20 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-white font-medium truncate">{video.title}</h3>
+                      <p className="text-gray-400 text-sm mt-0.5">{formatDate(video.timestamp)}</p>
+                    </div>
+                  </div>
+                  <svg className="w-5 h-5 text-gray-500 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Upgrade Banner (free users) */}
       {!isPremium && recordCount > 0 && (
         <div className="mt-8 bg-gradient-to-r from-coral/20 to-ocean/20 border border-coral/30 rounded-xl p-4">
           <p className="text-white font-medium">Unlock Unlimited Records</p>
           <p className="text-gray-300 text-sm mt-1">
-            Upgrade to Pro for unlimited records, all templates, and PDF export.
+            Upgrade to Pro for unlimited records, video consent recording, all templates, and PDF export.
           </p>
           <button
             onClick={() => navigate('paywall')}

@@ -41,12 +41,23 @@ export interface EncryptedRecord {
 
 export interface AuditEntry {
   id: string;
-  action: 'create' | 'view' | 'export' | 'delete' | 'backup_export' | 'backup_import' | 'login' | 'login_failed' | 'lockout';
+  action: 'create' | 'view' | 'export' | 'delete' | 'backup_export' | 'backup_import' | 'login' | 'login_failed' | 'lockout' | 'video_recorded' | 'video_viewed' | 'video_exported';
   recordId?: string;
   timestamp: string;
   details: string;
   prevHash: string;
   hash: string;
+}
+
+export interface VideoConsentRecord {
+  id: string;
+  consentRecordId?: string;
+  partyA: string;
+  partyB: string;
+  timestamp: string;
+  gps: { latitude: number; longitude: number } | null;
+  durationSeconds: number;
+  encryptedAt: string;
 }
 
 export interface Template {
@@ -79,4 +90,6 @@ export type ViewName =
   | 'audit'
   | 'backup'
   | 'settings'
-  | 'paywall';
+  | 'paywall'
+  | 'video-consent'
+  | 'video-player';

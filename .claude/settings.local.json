@@ -270,7 +270,8 @@
       "Bash(find /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/DIGITAL_PRODUCTS -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
       "Bash(find '/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/app factory' -type f \\\\\\(-iname *cnsnt* -o -iname *consent* \\\\\\))",
       "Bash(find ~/Documents/cnsnt/mobile -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.svg -o -name *.webp -o -name *.gif \\\\\\))",
-      "Bash(cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt python3 AUTOMATIONS/app_factory/deep_qa.py --test-all)"
+      "Bash(cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt python3 AUTOMATIONS/app_factory/deep_qa.py --test-all)",
+      "Bash(npx vite:*)"
     ]
   }
 }

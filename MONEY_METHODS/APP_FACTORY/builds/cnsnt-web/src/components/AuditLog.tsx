@@ -17,6 +17,9 @@ const actionLabels: Record<string, { label: string; color: string }> = {
   login: { label: 'Login', color: 'text-gray-400' },
   login_failed: { label: 'Login Failed', color: 'text-red-400' },
   lockout: { label: 'Lockout', color: 'text-red-400' },
+  video_recorded: { label: 'Video Recorded', color: 'text-coral' },
+  video_viewed: { label: 'Video Viewed', color: 'text-blue-400' },
+  video_exported: { label: 'Video Exported', color: 'text-purple-400' },
 };
 
 export default function AuditLog({ navigate }: AuditLogProps) {

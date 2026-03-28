@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { encrypt } from '../crypto/vault';
 import { computeHmac, computeChainHash } from '../crypto/hmac';
-import { saveRecord, addAuditEntry, getLastAuditHash, getRecordCount } from '../db/store';
+import { saveRecord, addAuditEntry, getLastAuditHash, getRecordCount, FREE_RECORD_LIMIT } from '../db/store';
 import { getTemplate, templates as allTemplates } from '../templates';
 import SignatureCanvas from './SignatureCanvas';
 import type { ConsentRecord, Party, Signature, GeoData, ViewName } from '../types';
@@ -12,8 +12,6 @@ interface RecordCreatorProps {
   navigate: (view: ViewName) => void;
   isPremium: boolean;
 }
-
-const FREE_RECORD_LIMIT = 3;
 
 type Step = 'template' | 'parties' | 'terms' | 'details' | 'signatures' | 'review';
 
