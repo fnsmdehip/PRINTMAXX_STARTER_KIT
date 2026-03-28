@@ -1,10 +1,14 @@
 /**
  * Stripe Payment Links integration for cnsnt app.
  *
- * Free tier: 5 consent records, no PDF export, no cloud backup
- * Pro tier: unlimited records, PDF export, cloud backup
- *   - Monthly: $4.99/mo
- *   - Annual: $29.99/yr
+ * Free tier: 3 consent records TOTAL (not per month), text-only,
+ *   no PDF export, no video recording, basic templates only
+ *   (house guest waiver, photo release, property access).
+ *   Cloud backup available to all users (encrypted export).
+ * Pro tier ($4.99/mo | $29.99/yr): unlimited records, VIDEO consent
+ *   recording (camera+mic, timestamped, GPS-stamped, encrypted),
+ *   ALL 11+ premium templates, PDF export with digital signatures,
+ *   audit trail export, custom agreement branding.
  *
  * Uses Linking.openURL to launch Stripe Payment Links in the browser.
  * After returning to the app, confirms upgrade via Alert and stores
@@ -96,16 +100,20 @@ class PurchaseService {
   /**
    * Check if a specific feature is available.
    */
-  async canAccess(feature: 'recording' | 'templates' | 'create_record' | 'export_pdf'): Promise<boolean> {
+  async canAccess(feature: 'recording' | 'video_recording' | 'templates' | 'create_record' | 'export_pdf' | 'custom_branding'): Promise<boolean> {
     const state = await this.getPurchaseState();
     switch (feature) {
       case 'recording':
         return state.canRecord;
+      case 'video_recording':
+        return state.entitlement === 'pro';
       case 'templates':
         return state.canUseTemplates;
       case 'create_record':
         return state.canCreateRecord;
       case 'export_pdf':
+        return state.entitlement === 'pro';
+      case 'custom_branding':
         return state.entitlement === 'pro';
       default:
         return false;
@@ -218,7 +226,7 @@ class PurchaseService {
   }> {
     return {
       proMonthly: { price: '$4.99/mo', identifier: 'cnsnt_pro_monthly' },
-      proAnnual: { price: '$29.99/yr', identifier: 'cnsnt_pro_annual' },
+      proAnnual: { price: '$29.99/yr (save 50%)', identifier: 'cnsnt_pro_annual' },
     };
   }
 

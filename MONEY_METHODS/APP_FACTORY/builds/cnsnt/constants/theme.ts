@@ -195,9 +195,9 @@ export const Animations = {
 
 export const AUTO_LOCK_TIMEOUT_MS = 2 * 60 * 1000; // 2 minutes
 
-export const FREE_TIER_LIMIT = 5;
+export const FREE_TIER_LIMIT = 3;
 
-export const PRO_MONTHLY_PRICE = '$7.99';
+export const PRO_MONTHLY_PRICE = '$4.99';
 export const PRO_YEARLY_PRICE = '$29.99';
 export const PRO_RESCUE_YEARLY_PRICE = '$19.99';
 

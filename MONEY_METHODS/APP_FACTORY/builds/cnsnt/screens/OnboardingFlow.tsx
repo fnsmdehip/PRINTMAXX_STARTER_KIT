@@ -744,7 +744,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
         {/* Free tier note */}
         <View style={s.freeTierNote}>
           <Ionicons name="information-circle-outline" size={16} color={Colors.textSecondary} />
-          <Text style={s.freeTierNoteText}>Free: 3 agreements stored, no PDF export</Text>
+          <Text style={s.freeTierNoteText}>Free: 3 records total, text-only, basic templates</Text>
         </View>
 
         {/* Plan Cards */}
@@ -760,7 +760,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
               </View>
               <Text style={s.planName}>Monthly</Text>
             </View>
-            <Text style={s.planPrice}>$7.99<Text style={s.planPricePer}>/mo</Text></Text>
+            <Text style={s.planPrice}>$4.99<Text style={s.planPricePer}>/mo</Text></Text>
           </Pressable>
 
           {/* Yearly (highlighted) */}
@@ -790,11 +790,12 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
         {/* Benefits */}
         <View style={s.benefitsList}>
           {[
-            { icon: 'infinite-outline' as const, text: 'Unlimited agreements' },
-            { icon: 'documents-outline' as const, text: 'All templates included' },
-            { icon: 'create-outline' as const, text: 'Digital signatures' },
-            { icon: 'download-outline' as const, text: 'PDF export' },
-            { icon: 'headset-outline' as const, text: 'Priority support' },
+            { icon: 'infinite-outline' as const, text: 'Unlimited consent records' },
+            { icon: 'videocam-outline' as const, text: 'VIDEO consent recording (GPS + timestamp)' },
+            { icon: 'documents-outline' as const, text: 'All 11+ premium templates' },
+            { icon: 'download-outline' as const, text: 'PDF export with digital signatures' },
+            { icon: 'analytics-outline' as const, text: 'Audit trail export' },
+            { icon: 'color-palette-outline' as const, text: 'Custom agreement branding' },
           ].map((b, i) => (
             <View key={i} style={s.benefitRow}>
               <Ionicons name={b.icon} size={18} color={Colors.success} />
@@ -862,10 +863,10 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
 
       <View style={s.benefitsList}>
         {[
-          { icon: 'infinite-outline' as const, text: 'Unlimited agreements' },
-          { icon: 'documents-outline' as const, text: 'All templates included' },
-          { icon: 'create-outline' as const, text: 'Digital signatures' },
-          { icon: 'download-outline' as const, text: 'PDF export' },
+          { icon: 'infinite-outline' as const, text: 'Unlimited consent records' },
+          { icon: 'videocam-outline' as const, text: 'VIDEO consent recording' },
+          { icon: 'documents-outline' as const, text: 'All 11+ premium templates' },
+          { icon: 'download-outline' as const, text: 'PDF export with signatures' },
         ].map((b, i) => (
           <View key={i} style={s.benefitRow}>
             <Ionicons name={b.icon} size={18} color={Colors.success} />

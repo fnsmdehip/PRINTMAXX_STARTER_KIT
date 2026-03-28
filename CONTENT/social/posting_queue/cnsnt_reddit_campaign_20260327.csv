@@ -1,0 +1,115 @@
+subreddit,title,body,url
+r/legaladvice,"PSA: A consent documentation tool exists and it's free - here's why lawyers should know about it","Been following the recent wave of false accusation stories in the creator economy. One pattern keeps repeating: the accusation goes viral in hours but the legal defense takes months. By then careers are destroyed even when the accused is cleared.
+
+As someone who builds software I kept wondering why there isn't a standard tool for documenting consent. We have contracts for everything else. So I built one.
+
+cnsnt is a free web app that lets you create encrypted consent records:
+
+- AES-256 encryption with HMAC integrity verification
+- Timestamped records that can't be backdated
+- 11 templates covering different situations (medical, intimate, business, photo/video, etc.)
+- Everything stored locally on your device. No server. No account.
+- PIN-protected with lockout after failed attempts
+- Full audit log of every action
+
+This isn't legal advice. But having a timestamped, encrypted record of mutual consent is objectively better than having nothing when allegations surface months or years later.
+
+Free to use: https://cnsnt.surge.sh
+
+Curious what the legal community thinks about digital consent documentation as evidence.",https://cnsnt.surge.sh
+r/privacy,"I built a consent documentation app with zero data collection - local-first, encrypted, no accounts","I'm a privacy-first developer and the recent wave of false accusations in the creator space made me realize there's no good tool for documenting consent that doesn't require trusting a third party with extremely sensitive data.
+
+So I built cnsnt with these principles:
+
+**Privacy architecture:**
+- Zero server communication. Everything runs client-side.
+- AES-256-CTR encryption + HMAC-SHA-256 integrity checks
+- Data stored in your browser's local storage only
+- No analytics. No tracking. No cookies beyond functionality.
+- No account required. No email. No phone number.
+- Optional cloud backup to YOUR iCloud/Drive/Dropbox (encrypted before upload)
+
+**What it does:**
+- Create timestamped consent records between parties
+- 11 templates (intimate, medical, photo/video, business, NDA, etc.)
+- PIN protection with lockout after 5 failed attempts
+- Complete audit trail
+- Export your data anytime
+
+The whole point is that YOUR consent records are YOUR data. Not mine. Not a server's. Yours.
+
+Free: https://cnsnt.surge.sh
+
+Open to feedback from the privacy community. What would you want to see improved?",https://cnsnt.surge.sh
+r/selfimprovement,"Document your life. Especially the parts that matter most.","We document everything that doesn't matter. Screenshots of memes. Receipts from coffee shops. Terms of service we never read.
+
+But the interactions that can literally make or break your life? Your career? Your reputation? We leave those to memory and trust.
+
+I watched another creator get nearly destroyed by false allegations this month. The accuser eventually retracted everything. But by then the damage was done. Sponsors gone. Reputation shredded. Mental health wrecked.
+
+And I kept thinking: this is a solvable problem.
+
+So I built a tool called cnsnt. It's a consent documentation app. You create a record of mutual agreement before or after any significant interaction. It's encrypted, timestamped, and stored on your device.
+
+It's not paranoid. It's the same logic as wearing a seatbelt. You hope you never need it. But if you do, having it changes everything.
+
+Free: https://cnsnt.surge.sh
+
+This is the kind of self-improvement nobody talks about because it's uncomfortable. But protecting yourself IS self-improvement.",https://cnsnt.surge.sh
+r/Entrepreneur,"I built a free consent documentation app after watching creators lose everything to false accusations","The creator economy has a massive unaddressed liability problem. Every week another public figure faces allegations that may or may not be true. The pattern:
+
+1. Allegation posted on social media or forum
+2. Goes viral within hours
+3. Sponsors and partners drop the person within 48 hours
+4. Legal defense takes 6-18 months
+5. Even when cleared the reputation damage is permanent
+
+This week's example: a YouTuber with 1.6M subscribers had allegations retracted and an apology issued by his accuser. But he still lost months of his life and career momentum fighting it.
+
+I saw a gap in the market and built cnsnt:
+- Free consent documentation web app
+- AES-256 encrypted, local-first (no server)
+- 11 templates for different consent scenarios
+- Timestamped records that can't be backdated
+- Works offline, no account required
+
+The free tier covers basic documentation. Pro tier (coming) adds cloud backup, advanced templates, and multi-device sync.
+
+Tech: React Native / Expo for iOS app (in review), web PWA live now via Stripe payment links for premium.
+
+Not asking for investment. Just sharing because I think this solves a real problem and I'd love feedback from other builders.
+
+https://cnsnt.surge.sh",https://cnsnt.surge.sh
+r/startups,"Consent documentation is an untapped vertical - here's what I built","Thesis: the explosion of the creator economy + social media justice + cancel culture has created a massive demand for personal legal protection tools. But the market is basically empty.
+
+Every week we see:
+- False accusations destroying careers before legal systems can respond
+- True accusations where victims have no documentation
+- Both sides wishing they had proof of what actually happened
+
+The problem in both directions is the same: no documentation.
+
+I built cnsnt - a consent documentation app. Think of it as a black box recorder for personal interactions.
+
+**Product:**
+- Web PWA (live): https://cnsnt.surge.sh
+- iOS app (in App Store review)
+- AES-256 encryption, local-first, zero server dependency
+- 11 consent templates
+- Free tier + premium subscription via Stripe
+
+**Market sizing:**
+- 50M+ creators globally
+- Growing awareness of false accusation risk
+- Adjacent markets: dating apps (800M+ users), HR/workplace, healthcare
+- No direct competitor doing encrypted local-first consent docs
+
+**Current status:**
+- Web app live and functional
+- iOS app submitted
+- 4 apps in the portfolio (cnsnt is the flagship)
+- $0 revenue (pre-launch)
+
+**Ask:** Feedback on positioning and go-to-market. Not fundraising.
+
+The timing feels right given what's trending this week.",https://cnsnt.surge.sh

@@ -1,9 +1,9 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-27 08:00:12
+Generated: 2026-03-27 16:00:16
 
 ## Inputs
-- ALPHA_STAGING app candidates: 3670
+- ALPHA_STAGING app candidates: 3657
 - APP_FACTORY_METHODS candidates: 2
 - Reddit findings consumed: 6
 - Existing app specs detected: 105
