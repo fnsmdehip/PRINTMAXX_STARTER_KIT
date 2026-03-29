@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude.schedule.auto_brokering_deal_brokering_engin_7706</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; claude -p "You are the BROKERING autonomy agent for PRINTMAXX venture '\''Deal Brokering Engine'\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Reference: OPS/BROKERING_ARBITRAGE_OPPORTUNITIES.md for the full play list.  Your job runs every 6h. Each cycle: 1. SCRAPE TARGETS: Find businesses needing services in the active vertical. Use savvy_lead_scraper, nationwide_scraper, or SAM.gov monitor. Sources: Google Maps, LinkedIn, industry directories. Save to AUTOMATIONS/leads/auto_brokering_deal_brokering_engin_7706/broker_targets.csv 2. QUALIFY LEADS: Score each target on deal size, urgency, and fit. Enrich with Apollo/Clearbit data if available. Move qualified leads (score 7+) to qualified_broker_leads.csv 3. CONNECT PARTIES: For qualified leads, identify the best service provider (lender, broker, vendor, agent) and draft a warm intro email for both sides. Use cold email templates from MONEY_METHODS/EAS/email_templates/ adapted for brokering. 4. EARN FEE: Track introductions made. Follow up on connections. Send referral agreement when deal progresses. Fee structure: 1-5% of deal value or flat $50-5K per referral. 5. TRACK REVENUE: Log all referral fees earned, pending, and pipeline. Update LEDGER/BROKERING_REVENUE.csv  Verticals to rotate through: real estate referrals, equipment financing, merchant processing, insurance, SBA loans, wholesale connecting, lead gen as a service, white-label reports.  Rules: - All files stay in /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt - CAN-SPAM compliant on all outreach - Disclose referral relationship where legally required - Track referral agreements in LEDGER/ - Kill verticals with <2% conversion after 100 outreach attempts  AGENTIC EXECUTION: Do NOT stop after one step. Keep going until the task is COMPLETE or you hit a blocker. - Read state -> Plan -> Execute -> Verify -> If more work needed, CONTINUE - If you find sub-tasks while working, do them now, don'\''t defer - Only stop when: (a) task fully complete, (b) human action required, (c) 15+ tool calls made (safety limit) - Write completion status to AUTOMATIONS/agent/autonomy/auto_brokering_deal_brokering_engin_7706/output/report_20260328.md" --dangerously-skip-permissions --model claude-sonnet-4-6 >> "/Users/macbookpro/.claude/logs/auto_brokering_deal_brokering_engin_7706.log" 2>&amp;1</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/Users/macbookpro/.local/bin</string>
+
+    </dict>
+    <key>StartInterval</key>
+    <integer>21600</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_brokering_deal_brokering_engin_7706.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_brokering_deal_brokering_engin_7706.error.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
