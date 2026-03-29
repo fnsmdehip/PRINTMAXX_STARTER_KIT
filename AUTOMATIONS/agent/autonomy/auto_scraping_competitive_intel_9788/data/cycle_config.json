@@ -1,9 +1,15 @@
 {
-  "cycle_number": 113,
-  "configured_at": "2026-03-29T06:26:18.048179+00:00",
+  "cycle_number": 115,
+  "configured_at": "2026-03-29T10:39:11.483226+00:00",
   "venture": "SCRAPING_competitive_intel",
   "step": "configure",
-  "strategy": "HISTORY + WORLD CULTURES + ANTHROPOLOGY",
-  "note": "Cycle 113: History, world cultures, and anthropology niches. Ancient civilizations, world history, cultural anthropology, historical figures, archaeology. Daily streak app gap scan. Cumulative entering: 507 confirmed BOs.",
-  "cumulative_entering": 507
+  "strategy": "FINANCE & ECONOMICS HISTORY",
+  "note": "Cycle 115: FINANCE & ECONOMICS HISTORY. Cumulative entering: 527 confirmed BOs.",
+  "cumulative_entering": 527,
+  "queued_strategies": [
+    "PHILOSOPHY OF MIND & CONSCIOUSNESS",
+    "GEOPOLITICS & INTERNATIONAL RELATIONS",
+    "PSYCHOLOGY OF CREATIVITY & GENIUS",
+    "LANGUAGE & LINGUISTICS HISTORY"
+  ]
 }

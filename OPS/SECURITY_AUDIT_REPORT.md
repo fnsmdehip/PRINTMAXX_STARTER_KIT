@@ -1,12 +1,12 @@
 PRINTMAXX SECURITY AUDIT -- QUICK SUMMARY
-Date: 2026-03-15 04:35
+Date: 2026-03-29 04:32
 Grade: F (0/100)
 
-  [FAIL] Secrets Detection               101 findings  (CRITICAL:2, HIGH:99)
-  [FAIL] Injection Vectors                11 findings  (CRITICAL:1, HIGH:5, MEDIUM:5)
-  [FAIL] Prompt Injection Surface          6 findings  (HIGH:1, MEDIUM:5)
-  [PASS] File Permission Issues            0 findings  (clean)
-  [FAIL] Network Exposure                144 findings  (HIGH:3, MEDIUM:141)
-  [FAIL] Agent Safety                    328 findings  (HIGH:5, LOW:81, MEDIUM:242)
+  [FAIL] Secrets Detection               147 findings  (CRITICAL:33, HIGH:114)
+  [FAIL] Injection Vectors                18 findings  (CRITICAL:2, HIGH:5, MEDIUM:11)
+  [FAIL] Prompt Injection Surface         69 findings  (HIGH:32, MEDIUM:37)
+  [FAIL] File Permission Issues            2 findings  (HIGH:1, LOW:1)
+  [FAIL] Network Exposure                129 findings  (HIGH:3, INFO:1, MEDIUM:125)
+  [FAIL] Agent Safety                    439 findings  (HIGH:5, LOW:89, MEDIUM:345)
 
-Total findings: 590  |  Unfixed: 590  |  Auto-fixed: 0
+Total findings: 804  |  Unfixed: 804  |  Auto-fixed: 0

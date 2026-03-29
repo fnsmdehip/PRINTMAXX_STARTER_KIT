@@ -1,0 +1,84 @@
+{
+  "cycle": 113,
+  "timestamp": "2026-03-29T08:33:27.195846+00:00",
+  "strategy": "HISTORY + WORLD CULTURES + ANTHROPOLOGY",
+  "status": "COMPLETE",
+  "blue_oceans": 10,
+  "p0_count": 6,
+  "p1_count": 4,
+  "cumulative_prev": 507,
+  "cumulative_new": 517,
+  "community_total": 148937000,
+  "niches": {
+    "daily_world_history_streak": {
+      "score": 25,
+      "priority": "P0",
+      "category": "history_world_cultures",
+      "community": 21720000
+    },
+    "daily_ancient_civilizations_streak": {
+      "score": 24,
+      "priority": "P0",
+      "category": "history_world_cultures",
+      "community": 7900000
+    },
+    "daily_mythology_streak": {
+      "score": 24,
+      "priority": "P0",
+      "category": "history_world_cultures",
+      "community": 3600000
+    },
+    "daily_ancient_philosophy_streak": {
+      "score": 24,
+      "priority": "P0",
+      "category": "history_world_cultures",
+      "community": 19715000
+    },
+    "daily_historical_figures_streak": {
+      "score": 23,
+      "priority": "P0",
+      "category": "history_world_cultures",
+      "community": 60695000
+    },
+    "daily_archaeology_streak": {
+      "score": 23,
+      "priority": "P0",
+      "category": "history_world_cultures",
+      "community": 4350000
+    },
+    "daily_medieval_history_streak": {
+      "score": 22,
+      "priority": "P1",
+      "category": "history_world_cultures",
+      "community": 10560000
+    },
+    "daily_art_history_streak": {
+      "score": 22,
+      "priority": "P1",
+      "category": "history_world_cultures",
+      "community": 9590000
+    },
+    "daily_cultural_anthropology_streak": {
+      "score": 22,
+      "priority": "P1",
+      "category": "history_world_cultures",
+      "community": 3840000
+    },
+    "daily_world_religions_comparative_streak": {
+      "score": 21,
+      "priority": "P1",
+      "category": "history_world_cultures",
+      "community": 6967000
+    }
+  },
+  "p0_alerts": [
+    "daily_world_history_streak",
+    "daily_ancient_civilizations_streak",
+    "daily_mythology_streak",
+    "daily_ancient_philosophy_streak",
+    "daily_historical_figures_streak",
+    "daily_archaeology_streak"
+  ],
+  "ci_rows_written": 10,
+  "alpha_rows_written": 10
+}

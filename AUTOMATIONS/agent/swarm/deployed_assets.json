@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T03:46:59.689730",
+  "last_updated": "2026-03-29T05:27:25",
   "last_cycle": "asset_deployer_20260328_2343",
   "total_surge_deployments": 388,
   "health_status": "FULLY_OPERATIONAL",
@@ -317,26 +317,25 @@
   ],
   "total_count": 13,
   "live_test": {
-    "tested_at": "2026-03-28T22:15:40",
+    "tested_at": "2026-03-29T05:27:25",
     "total": 156,
-    "green": 114,
-    "yellow": 29,
-    "red": 13,
-    "pass_rate": "91.7%",
-    "avg_load_ms": 4797,
+    "green": 125,
+    "yellow": 22,
+    "red": 9,
+    "pass_rate": "94.2%",
+    "avg_load_ms": 4446,
     "playwright_visual_tested": 156,
-    "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 114 GREEN, 29 YELLOW, 13 RED.",
+    "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 125 GREEN, 22 YELLOW, 9 RED.",
     "still_broken": [
       "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
       "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
       "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
       "https://saas-stack-audit-200.surge.sh",
-      "https://methodist-streak-marketing.surge.sh",
-      "https://lutheran-streak-marketing.surge.sh",
-      "https://episcopal-streak-marketing.surge.sh",
-      "https://catholic-streak-marketing.surge.sh",
       "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
-      "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh"
+      "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
+      "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh"
     ]
   }
 }

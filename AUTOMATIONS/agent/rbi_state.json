@@ -1,5 +1,6 @@
 {
   "researched": [
+    "ALPHA1773999754",
     "ALPHA263",
     "ALPHA268",
     "ALPHA270",
@@ -38,10 +39,13 @@
     "F01",
     "F02",
     "F03",
-    "F05",
-    "N10"
+    "F05"
   ],
   "backtested": [
+    {
+      "id": "ALPHA1773999754",
+      "verdict": "PASS"
+    },
     {
       "id": "ALPHA263",
       "verdict": "CONDITIONAL"
@@ -117,13 +121,25 @@
     {
       "id": "ALPHA105219",
       "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA5407",
-      "verdict": "PASS"
     }
   ],
   "implemented": [
+    {
+      "method_id": "ALPHA1773999754",
+      "name": "I thought this was fake",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.58,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-29T09:20:03Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
     {
       "method_id": "ALPHA268",
       "name": "IG: DM shares = new priority metric + first 2 seconds critical",
@@ -135,7 +151,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -152,7 +168,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -168,7 +184,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -184,7 +200,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -200,7 +216,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -216,7 +232,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -232,7 +248,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -248,7 +264,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -265,7 +281,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -281,7 +297,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -297,7 +313,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -313,31 +329,14 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-27T09:20:00Z",
+      "routed_at": "2026-03-29T09:20:03Z",
       "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA5407",
-      "name": "sold my first faceless account last month for $47,000i built it in 11 weekslet me explain why this i",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.16,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-03-27T09:20:00Z",
-      "signals": [
-        "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
       ]
     }
   ],
-  "last_run": "2026-03-27T09:20:00Z",
-  "duration_s": 0.04,
+  "last_run": "2026-03-29T09:20:03Z",
+  "duration_s": 1.67,
   "summary": {
     "researched": 40,
     "backtested": 20,

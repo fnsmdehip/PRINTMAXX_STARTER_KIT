@@ -1,13 +1,14 @@
 {
-  "ts": "2026-03-29T04:00:01.037824",
-  "avg_score": 9.3,
+  "ts": "2026-03-29T08:00:01.369886",
+  "avg_score": 9.5,
   "total_scored": 16,
   "drifted_count": 1,
   "drifted_agents": [
     "conversion_optimizer"
   ],
   "scores": {
-    "swarm_brain": 8.5,
+    "swarm_brain": 10.0,
+    "test": 10.0,
     "conversion_optimizer": 6.5,
     "revenue_tracker": 10.0,
     "seo_aso_optimizer": 10.0,
@@ -16,12 +17,11 @@
     "asset_deployer": 10.0,
     "gap_hunter": 8.5,
     "competitor_stalker": 8.5,
-    "competitor_intel_20260328": 8.5,
     "ceo_decision_2026-03-15": 10.0,
-    "mission_upgrade": 10.0,
-    "mission_autonomy:auto_research_alpha_i": 10.0,
-    "mission_content": 10.0,
-    "mission_autonomy:auto_content_niche_co": 10.0,
-    "mission_autonomy:auto_outbound_cold_ou": 10.0
+    "mission_autonomy:auto_scraping_competi": 10.0,
+    "mission_autonomy:SCRAPING_competitive_": 10.0,
+    "mission_autonomy:alpha_intelligence": 10.0,
+    "mission_autonomy:before_you_product_na": 10.0,
+    "mission_autonomy:auto_brokering_deal_b": 10.0
   }
 }

@@ -1,6 +1,6 @@
-# COMPOUND ACTIONS — Cycle 35 (2026-03-29 01:50)
+# COMPOUND ACTIONS -- Cycle 36 (2026-03-29 05:52)
 
-## Status: EID AL-FITR IS TODAY — LAST CHANCE
+## Status: MACHINE OPTIMIZED, HUMAN BOTTLENECK
 
 ---
 
@@ -15,65 +15,62 @@
 
 **Why compound:** Pages become simultaneously better-converting AND better-indexed. FAQPage schemas may trigger rich snippets. OG images improve social sharing CTR. Combined lift: 15-30% on any page that gets organic traffic.
 
-**Status:** AUTOMATIC (no human action needed)
+**Status:** DEPLOYED (Sunday cron ran at 05:00)
 
 ---
 
-### COMPOUND ACTION 2: Eid Content + PrayerLock + Reddit (EXPIRES TODAY)
+### COMPOUND ACTION 2: Venture Pipeline Recovery + Alpha Intelligence = Better Routing
 
 **Inputs compounded:**
-- distribution_engine (Cycle 34): 3 Reddit posts + 2 tweets ready
-- PrayerLock PWA live at prayerlock-web.surge.sh
-- Hilal live at ramadan-tracker.surge.sh
-- TODAY IS EID AL-FITR
+- Alpha Intelligence venture: 5/5 success (scrape+analyze+score+route+compound all working)
+- Content Farm venture: 6/6 success (first ever perfect cycle -- format and schedule now working)
+- 42,803+ alpha entries, 1,648 new in last digest
 
-**Action:** Post within hours:
-1. r/islam — PrayerLock as Eid gift to the community
-2. r/Muslim — Hilal Ramadan tracker for next year's planning
-3. r/Ramadan — Eid Mubarak + tool announcement
-4. @PRINTMAXXER tweet 1 — PrayerLock launch
-5. @PRINTMAXXER tweet 2 — Eid Mubarak
+**Action:** AUTOMATIC. Recovered pipelines now correctly score and route alpha to ventures. Content farm can now format AND schedule output, meaning generated content hits the posting queue with correct timing metadata.
 
-**Expected:** 2K-20K views. First real distribution test. Community trust.
+**Why compound:** A pipeline that scrapes but can't score is half a pipeline. Now the full chain works: scrape -> analyze -> score -> route -> compound. Content that gets generated now also gets formatted and scheduled, not just dumped as raw text.
 
-**Status:** BLOCKED — requires human posting. **EXPIRES END OF DAY.**
+**Status:** AUTOMATIC (pipelines self-running via cron)
 
 ---
 
-### COMPOUND ACTION 3: Revenue Leak Fix — Fastest Path to $200/mo
+### COMPOUND ACTION 3: Site Health Recovery + Broken Site Remediation
 
 **Inputs compounded:**
-- revenue_tracker: 8 Stripe payment links with zero promotion, 9 affiliate pages with placeholder IDs
-- seo_aso_optimizer: All pages now have proper schemas + OG tags
-- conversion_optimizer: Cold email CTAs improved
+- Site health: 73.1% -> 80.1% (+7% in 7 hours)
+- 4 religious streak marketing sites recovered from 504 to GREEN
+- 7 sites with permanent DNS failure (subdomain >63 chars)
 
-**Action (25 min total):**
-1. Sign up Instantly.ai affiliate (15 min) — $200/sale commission, instant approval
-2. Replace placeholder ID in best-cold-email-tools.surge.sh (5 min)
-3. Post 1 tweet linking to the page (5 min)
+**Action:** Redeploy 7 broken sites with shorter subdomain names. These are local business lead gen pages -- the content exists, just the surge.sh subdomain is too long for DNS resolution.
 
-**Expected:** First affiliate commission within 30-90 days. $200/sale = break-even on Claude Max with 1 conversion/month.
+**Shorter name mapping:**
+1. OKC Mobile Detailing -> `okc-champion-detailing.surge.sh`
+2. OKC Car Detailing -> `okc-pure-prof-detailing.surge.sh`
+3. Portland Window Cleaning -> `portland-allpro-windows.surge.sh`
+4. Birmingham Detailing -> `bham-magic-city-detail.surge.sh`
+5. Birmingham Home Detailing -> `bham-home-detailing.surge.sh`
+6. Homeguide Handyman LV -> `lv-handyman-homeguide.surge.sh`
+7. Pink Windows Louisville -> `louisville-pinks-windows.surge.sh`
+8. Cherry Window Louisville -> `louisville-cherry-windows.surge.sh`
 
-**Status:** BLOCKED — requires human action
+**Status:** READY TO EXECUTE (autonomous, no human action needed)
 
 ---
 
-### COMPOUND ACTION 4: Lead + Improved CTA + First Send = Outreach Ignition
+### COMPOUND ACTION 4: Cold Email Blitz (unchanged, still blocked)
 
 **Inputs compounded:**
 - lead_machine: 1,547+ leads, top lead Dentists of Houston (9.5/10, no SSL)
-- conversion_optimizer: Cold email CTAs upgraded ("reply interested" → "reply yes" + pricing tiers)
+- conversion_optimizer: Cold email CTAs upgraded
 - 80+ email drafts ready
 
-**Action:** Send 1 email to Dentists of Houston (mike.warwick@pdq.net). No SSL in 2026, copyright 1999. The pain point sells itself.
+**Action:** Send 1 email to highest-scored lead. 1,547 leads at 3% reply = 46 replies. At $500/deal = $23K pipeline.
 
-**Expected:** 2-5% reply rate. 1,547 leads at 3% = 46 replies. At $500/deal average = $23K pipeline.
-
-**Status:** BLOCKED — requires human email sending
+**Status:** BLOCKED -- requires human email sending
 
 ---
 
-### COMPOUND ACTION 5: Gumroad Product Blitz
+### COMPOUND ACTION 5: Gumroad Product Blitz (unchanged, still blocked)
 
 **Inputs compounded:**
 - 22 PDFs ready, 6 with paste-ready listing copy
@@ -84,11 +81,11 @@
 
 **Expected:** $47-197 first week from Gumroad organic traffic alone.
 
-**Status:** BLOCKED — requires human account creation
+**Status:** BLOCKED -- requires human account creation
 
 ---
 
-## Inventory (Cycle 35)
+## Inventory (Cycle 36)
 
 | Asset Pool | Count | Status | Blocker |
 |-----------|-------|--------|---------|
@@ -96,17 +93,15 @@
 | Leads analyzed | 192,710+ | QUEUED | No email sender |
 | Hot leads | 17,494+ | QUEUED | No outreach capability |
 | PDF products | 22 | QUEUED | No Gumroad account |
-| Live sites | 395 | LIVE (surge Disallow:/) | Need Cloudflare/Vercel |
+| Live sites | 156 tested, 125 GREEN | LIVE (surge Disallow:/) | Need Cloudflare/Vercel |
 | Email drafts | 80+ | QUEUED | No Gmail MCP auth |
 | Apps built | 8 | NO PAYMENT | No App Store submission |
 | Stripe payment links | 8 | LIVE, ZERO TRAFFIC | No promotion |
 | Alpha entries | 42,803+ | PROCESSING | Pipeline alive |
 
-## Launchd Status (POST-PURGE)
+## Launchd Status (POST-PURGE, Cycle 36 verified)
 
-**CLEAN.** Only 2 services loaded:
-- `com.printmaxx.swarm.swarm_brain` (24h)
-- `com.printmaxx.swarm.system_healer` (2h)
-
-All 18 other services permanently unloaded. Zombie respawn pattern eliminated.
-Token burn: ~8K/day (down from ~41K/day pre-purge).
+**CLEAN (minus 2 strays being fixed this cycle).**
+Active: `com.printmaxx.swarm.swarm_brain` (24h), `com.printmaxx.swarm.system_healer` (2h)
+Stray: `com.printmaxx.scrapers` (unloading), `com.printmaxx.claude-sessions` (assessing)
+Token burn: ~8K/day

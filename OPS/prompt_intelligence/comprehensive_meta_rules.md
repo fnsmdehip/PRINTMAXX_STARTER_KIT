@@ -1,62 +1,62 @@
 # Comprehensive Meta-Rules — Cognition Model
-Built: 2026-03-24 19:54
-Source: 5840 prompts, 504 correction chains, 249 sessions
+Built: 2026-03-29 04:15
+Source: 6381 prompts, 555 correction chains, 282 sessions
 
-## ANTI-LAZY (triggered 51x)
+## ANTI-LAZY (triggered 56x)
 
 **Rule:** Default output depth is consistently below user expectations. System must default to the ESCALATED depth, not the initial polite response depth.
 
-**Evidence:** User triggered anti-lazy corrections 51 times across sessions.
+**Evidence:** User triggered anti-lazy corrections 56 times across sessions.
 
 **Action:** Before presenting any output, ask: 'Would the user call this lazy?' If yes, go deeper before presenting.
 
 ---
 
-## DEPTH-FIRST (triggered 253x)
+## DEPTH-FIRST (triggered 277x)
 
 **Rule:** User consistently asks for MORE after initial response. The initial response should already include what the user typically asks for in their follow-up.
 
-**Evidence:** User demanded more depth 253 times. Pattern: initial ask → 'also...' / 'what about...' / 'deeper'
+**Evidence:** User demanded more depth 277 times. Pattern: initial ask → 'also...' / 'what about...' / 'deeper'
 
 **Action:** After completing the literal ask, proactively address 2-3 adjacent areas the user would likely follow up on.
 
 ---
 
-## WRONG-DIRECTION (triggered 468x)
+## WRONG-DIRECTION (triggered 487x)
 
 **Rule:** System frequently misinterprets user intent on first pass. Need better intent parsing before executing.
 
-**Evidence:** User said 'no/wrong/not that' 468 times.
+**Evidence:** User said 'no/wrong/not that' 487 times.
 
 **Action:** For ambiguous requests, internally generate 2-3 interpretations and select the one most consistent with user's established patterns before executing.
 
 ---
 
-## HARD-TOPICS (triggered 154x)
+## HARD-TOPICS (triggered 174x)
 
-**Rule:** Topics that consistently need multiple corrections: directory, every, each, autonomy, task. These need extra care.
+**Rule:** Topics that consistently need multiple corrections: printmaxx, your, intelligence, working, directory. These need extra care.
 
-**Evidence:** 154 tasks had 3+ corrections.
+**Evidence:** 174 tasks had 3+ corrections.
 
 **Action:** When a task matches these topics, use the correction chain from history to pre-emptively address the typical issues.
 
 ---
 
-## SATISFACTION-PATTERN (triggered 3964x)
+## SATISFACTION-PATTERN (triggered 4354x)
 
 **Rule:** User is most satisfied when: system executes autonomously without asking, output exceeds explicit ask, non-obvious angles are found, and work compounds into multiple outputs.
 
-**Evidence:** 3964 satisfaction signals found.
+**Evidence:** 4354 satisfaction signals found.
 
 **Action:** Optimize for these satisfaction triggers in every output.
 
 ---
 
-## CHAIN-LENGTH (triggered 504x)
+## CHAIN-LENGTH (triggered 555x)
 
-**Rule:** Average correction chain is 6.1 prompts long. This means the system typically needs 6 iterations to reach what the user wants. Target: get to the right output in 1 prompt.
+**Rule:** Average correction chain is 5.9 prompts long. This means the system typically needs 6 iterations to reach what the user wants. Target: get to the right output in 1 prompt.
 
-**Evidence:** 504 correction chains analyzed.
+**Evidence:** 555 correction chains analyzed.
 
 **Action:** Use the Competitive Cognition Protocol to anticipate corrections before presenting output.
 

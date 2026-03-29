@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-03-29T02:50:00.000000",
-  "cycle_number": 4,
+  "last_run": "2026-03-29T07:57:00.000000",
+  "cycle_number": 5,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -21,14 +21,7 @@
     "Denver CO",
     "Portland OR",
     "Las Vegas NV",
-    "Indianapolis IN"
-  ],
-  "total_leads_all_cycles": 1190,
-  "total_previews_deployed": 402,
-  "total_sites_built_local": 898,
-  "total_emails_queued": 554,
-  "emails_ready_to_send": 16,
-  "next_cities": [
+    "Indianapolis IN",
     "Columbus OH",
     "St Louis MO",
     "Kansas City MO",
@@ -37,6 +30,21 @@
     "Memphis TN",
     "Oklahoma City OK",
     "Tucson AZ"
+  ],
+  "total_leads_all_cycles": 1318,
+  "total_previews_deployed": 515,
+  "total_sites_built_local": 1399,
+  "total_emails_queued": 569,
+  "emails_ready_to_send": 31,
+  "next_cities": [
+    "Fort Worth TX",
+    "El Paso TX",
+    "Washington DC",
+    "Seattle WA",
+    "San Jose CA",
+    "San Francisco CA",
+    "San Diego CA",
+    "Austin TX"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -65,14 +73,20 @@
     "davis-law-group-ps-seattle-wa.surge.sh"
   ],
   "blockers": [
-    "CRITICAL: Surge.sh Student plan domain limit FULLY EXHAUSTED — 0 new deploys possible. Fix: surge login new email (5 min) OR Surge Plus ($13/mo) OR netlify login (10 min).",
-    "CRITICAL: No outbound email domain configured — 554 emails queued, 16 ready to send (have email + surge URL), 0 sent. Fix: Smartlead/Instantly/Gmail SMTP setup (30 min).",
-    "Email enrichment 0% on new leads — 447 F/D leads without email. Scraper approach fails for trade businesses. Fix: Hunter.io ($49/mo) or Apollo.io free tier.",
-    "Netlify/Vercel not authenticated — both available as surge alternatives but require human login."
+    "CRITICAL: No outbound email service \u2014 569 emails queued, 31 ready to send, 0 sent. Fix: Smartlead/Instantly/Gmail SMTP (30 min).",
+    "CRITICAL: Surge.sh Student plan blocks new domain deploys. 383 live, 189 HTML-only. Fix: new surge email (5 min) OR Surge Plus ($13/mo).",
+    "P1: 400 surge-deployed leads without email. Fix: Hunter.io ($49/mo) or Apollo.io free tier bulk enrichment."
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_4_results": {
-    "cities_discovered": ["Boston MA", "Baltimore MD", "Denver CO", "Portland OR", "Las Vegas NV", "Indianapolis IN"],
+    "cities_discovered": [
+      "Boston MA",
+      "Baltimore MD",
+      "Denver CO",
+      "Portland OR",
+      "Las Vegas NV",
+      "Indianapolis IN"
+    ],
     "new_leads": 144,
     "new_f_grade": 111,
     "new_sites_built": 149,
@@ -90,9 +104,50 @@
   "pipeline_health": {
     "discover": "HEALTHY",
     "grade": "HEALTHY",
-    "build": "HEALTHY",
-    "deploy": "BLOCKED - surge domain limit",
+    "build": "HEALTHY (HTML built, surge blocked for new domains)",
+    "deploy": "PARTIAL - 383 live, 189 HTML-only",
+    "enrich": "HEALTHY (37% email find rate on service niches)",
     "outreach_generate": "HEALTHY",
-    "outreach_send": "BLOCKED - no email domain"
-  }
+    "outreach_send": "BLOCKED - no email service configured"
+  },
+  "cycle_5_results": {
+    "cities_discovered": [
+      "Columbus OH",
+      "St Louis MO",
+      "Kansas City MO",
+      "Cincinnati OH",
+      "New Orleans LA",
+      "Memphis TN",
+      "Oklahoma City OK",
+      "Tucson AZ"
+    ],
+    "new_leads": 127,
+    "new_f_grade": 88,
+    "new_sites_built": 54,
+    "new_surge_deploys": 0,
+    "new_emails_found": 15,
+    "new_emails_queued": 15,
+    "ready_to_send_total": 31,
+    "surge_blocker": "Student plan blocks new subdomains not previously registered to account"
+  },
+  "cycle_5_improvements": [
+    "Discovered 127 new leads across 8 cities using carpet cleaning niche (80% F-rate)",
+    "Built 54 new HTML preview sites (1,399 total)",
+    "Found 15 new email addresses via targeted enricher on service business niches",
+    "Ready-to-send pipeline grew from 16 to 31 leads (+94%)",
+    "Added carpet cleaning as permanent rotation niche due to high F-rate",
+    "Identified phone-only outreach as secondary track (175 leads with phone, no email)"
+  ],
+  "metrics_history": [
+    {
+      "cycle": 5,
+      "date": "2026-03-29",
+      "total_leads": 1318,
+      "hot_leads": 572,
+      "with_email": 367,
+      "surge_deployed": 515,
+      "outreach_queued": 569,
+      "ready_to_send": 31
+    }
+  ]
 }
