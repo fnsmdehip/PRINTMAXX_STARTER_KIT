@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 Ways to Detect People With Just Your MacBook - fnsmdehip</title>
+<meta name="description" content="Detect human presence using only your MacBook. Working Python code for ARP scanning, RSSI monitoring, WiFi fingerprinting, BLE scanning, and more. No extra hardware needed.">
+<meta name="keywords" content="MacBook presence detection, WiFi sensing laptop, ARP scanning Python, RSSI monitoring macOS, whereami WiFi fingerprint, BLE scanning bleak, CoreWLAN Python">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="index.html" class="site-name">fnsmdehip</a>
+<a href="index.html">Home</a>
+<a href="uaf.html">UAF Series</a>
+<a href="pemf.html">PEMF Series</a>
+<a href="wifi-sensing.html">WiFi Sensing</a>
+<a href="wifi-sensing-macbook.html" class="active">MacBook Detection</a>
+<a href="projects.html">Projects</a>
+<a href="health.html">Health</a>
+</div></nav>
+<div class="page-wrapper">
+<aside class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#situation">The situation</a></li>
+<li><a href="#tier-system">The tier system</a></li>
+<li><a href="#arp">1. ARP / ping scanning</a></li>
+<li><a href="#rssi">2. RSSI monitoring</a></li>
+<li><a href="#probe">3. Probe request sniffing</a></li>
+<li><a href="#whereami">4. WiFi fingerprinting</a></li>
+<li><a href="#router">5. Router-based detection</a></li>
+<li><a href="#ble">6. BLE scanning</a></li>
+<li><a href="#csi-no">7. Why CSI doesn't work</a></li>
+<li><a href="#tools-table">Full tools table</a></li>
+<li><a href="#security">Security concerns</a></li>
+<li><a href="#recommendation">What to actually use</a></li>
+</ol>
+</aside>
+<div class="content">
+<h1>7 Ways to Detect People With Just Your MacBook</h1>
+<div class="meta"><span class="date">2026-03-28</span> &middot; Series: WiFi Sensing</div>
+<p class="tagline">No ESP32, no Raspberry Pi, no extra hardware. Just your laptop and Python.</p>
+
+<div class="note">
+<p>This is the companion piece to <a href="wifi-sensing.html">WiFi Can See You Move</a>, which covers the full landscape including dedicated hardware. This article focuses exclusively on what you can do with a stock MacBook.</p>
+</div>
+
+<h2 id="situation">The situation</h2>
+<p>You want to detect whether someone is in a room, in your house, or near your computer. Maybe it's for home automation. Maybe it's a security project. Maybe you're just curious what your WiFi adapter can actually do.</p>
+<p>The good news: your MacBook has a WiFi adapter, a Bluetooth radio, and a full network stack. That's enough for six out of seven detection methods. The bad news: the one method that actually works best (CSI extraction) is the one Apple's locked you out of. Here's everything else, with working code.</p>
+
+<h2 id="tier-system">The recommended tier system</h2>
+<p>Not all detection methods are equal. Here's how they stack up for practical use:</p>
+<table>
+<tr><th>Tier</th><th>Method</th><th>Detects</th><th>Accuracy</th><th>Setup Time</th></tr>
+<tr><td><span class="tier-label tier-1">Best</span></td><td>WiFi fingerprinting</td><td>Which room you're in</td><td>85-95%</td><td>30 min training</td></tr>
+<tr><td><span class="tier-label tier-2">Good</span></td><td>BLE scanning</td><td>Nearby devices</td><td>80-90%</td><td>5 min</td></tr>
+<tr><td><span class="tier-label tier-2">Good</span></td><td>ARP scanning</td><td>Devices on network</td><td>95%+ for connected</td><td>2 min</td></tr>
+<tr><td><span class="tier-label tier-3">Okay</span></td><td>RSSI monitoring</td><td>Movement near laptop</td><td>60-75%</td><td>5 min</td></tr>
+<tr><td><span class="tier-label tier-3">Okay</span></td><td>Router-based</td><td>Devices on network</td><td>90%+</td><td>Varies</td></tr>
+<tr><td><span class="tier-label tier-4">Limited</span></td><td>Probe sniffing</td><td>Nearby WiFi devices</td><td>50-70%</td><td>10 min + caveats</td></tr>
+<tr><td><span class="tier-label tier-4">N/A</span></td><td>CSI extraction</td><td>N/A on Mac</td><td>N/A</td><td>Not possible</td></tr>
+</table>
+
+<h2 id="arp">1. ARP / ping scanning</h2>
+<p>The simplest approach. If someone's phone is on your WiFi, they're home. Send ARP requests to every IP on your subnet and see who answers.</p>
+
+<h3>What you're actually doing</h3>
+<p>ARP (Address Resolution Protocol) maps IP addresses to MAC addresses on a local network. When you send an ARP request for 192.168.1.42, the device at that IP responds with its MAC address. By sweeping the whole subnet, you discover every active device.</p>
+<p>This tells you "a device is connected" not "a person is present." Someone can leave their phone charging and go out. A smart TV is always connected. You need to know which MAC addresses belong to people's personal devices and filter accordingly.</p>
+
+<h3>Working code</h3>
+<pre><code>#!/usr/bin/env python3
+"""ARP presence scanner. Requires: pip3 install scapy"""
+import time, json
+from datetime import datetime
+from scapy.all import ARP, Ether, srp
+
+# Map MAC addresses to people (fill in your own)
+KNOWN_DEVICES = {
+    "aa:bb:cc:dd:ee:f1": "Alice iPhone",
+    "aa:bb:cc:dd:ee:f2": "Bob Pixel",
+    "aa:bb:cc:dd:ee:f3": "Alice MacBook",
+}
+SUBNET = "192.168.1.0/24"
+INTERVAL = 30  # seconds between scans
+
+def scan(subnet):
+    """Return set of (ip, mac) tuples for responding devices."""
+    ans, _ = srp(
+        Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=subnet),
+        timeout=3, verbose=False
+    )
+    return {(r.psrc, r.hwsrc) for _, r in ans}
+
+def main():
+    print(f"Scanning {SUBNET} every {INTERVAL}s...")
+    prev_people = set()
+    while True:
+        devices = scan(SUBNET)
+        current_people = set()
+        for ip, mac in devices:
+            mac_lower = mac.lower()
+            if mac_lower in KNOWN_DEVICES:
+                current_people.add(KNOWN_DEVICES[mac_lower])
+
+        arrived = current_people - prev_people
+        departed = prev_people - current_people
+        ts = datetime.now().strftime("%H:%M:%S")
+
+        if arrived:
+            print(f"[{ts}] ARRIVED: {', '.join(arrived)}")
+        if departed:
+            print(f"[{ts}] LEFT:    {', '.join(departed)}")
+        if not arrived and not departed:
+            who = ', '.join(current_people) if current_people else "nobody"
+            print(f"[{ts}] Present: {who} ({len(devices)} devices total)")
+
+        prev_people = current_people
+        time.sleep(INTERVAL)
+
+if __name__ == "__main__":
+    main()</code></pre>
+
+<h3>With nmap (no Python needed)</h3>
+<pre><code># Quick scan - who's on the network right now?
+nmap -sn 192.168.1.0/24
+
+# Just MAC addresses and IPs, fast
+nmap -sn 192.168.1.0/24 | grep -B1 "MAC Address"
+
+# Continuous monitoring (runs every 60 seconds)
+while true; do
+    echo "=== $(date) ==="
+    nmap -sn 192.168.1.0/24 --open | grep "Nmap scan"
+    sleep 60
+done</code></pre>
+
+<h3>Limitations</h3>
+<ul>
+<li>Only detects devices actively connected to your WiFi</li>
+<li>Phone in airplane mode = invisible</li>
+<li>Guest's phone not on your WiFi = invisible</li>
+<li>Can't distinguish "phone is here" from "person is here"</li>
+<li>Some devices don't respond to ARP when in sleep mode</li>
+<li>Scapy requires root on macOS: <code>sudo python3 scanner.py</code></li>
+</ul>
+
+<h2 id="rssi">2. RSSI monitoring</h2>
+<p>Your MacBook constantly measures the signal strength of its WiFi connection. That number (RSSI, in dBm) changes when the physical environment between your laptop and router changes. When you walk between them, signal drops. When you leave, it recovers. If you track the fluctuation pattern, you can detect movement.</p>
+
+<h3>How sensitive is it?</h3>
+<p>In a typical home setup with laptop 4-5 meters from the router, a person walking through the line of sight causes a 3-8 dBm dip lasting 1-3 seconds. Someone sitting down in the same room causes a sustained 1-3 dBm offset. These numbers are small but statistically distinguishable from the normal 0.5-1 dBm noise floor if you accumulate enough samples.</p>
+<p>The standard deviation of RSSI over a sliding window is the key metric. In an empty room, stdev stays below 1.0 dBm. When someone moves through, it spikes to 2.0-5.0+. A threshold of 1.5-2.0 catches most real movement while ignoring noise.</p>
+
+<h3>Working code</h3>
+<pre><code>#!/usr/bin/env python3
+"""RSSI motion detector for macOS.
+Uses the airport utility to read signal strength.
+No additional packages needed."""
+import subprocess, time, statistics, sys
+from collections import deque
+
+AIRPORT = ("/System/Library/PrivateFrameworks/Apple80211.framework"
+           "/Versions/Current/Resources/airport")
+WINDOW = 20        # samples in sliding window
+POLL_HZ = 2        # readings per second
+MOTION_THRESH = 2.0 # stdev threshold for motion
+IDLE_THRESH = 1.2   # stdev threshold to return to idle
+
+def get_rssi():
+    """Read current RSSI from airport utility."""
+    try:
+        r = subprocess.run([AIRPORT, "-I"],
+                           capture_output=True, text=True, timeout=5)
+        for line in r.stdout.splitlines():
+            if "agrCtlRSSI" in line:
+                return int(line.split(":")[1].strip())
+    except Exception:
+        pass
+    return None
+
+def get_ssid():
+    """Read current SSID."""
+    try:
+        r = subprocess.run([AIRPORT, "-I"],
+                           capture_output=True, text=True, timeout=5)
+        for line in r.stdout.splitlines():
+            stripped = line.strip()
+            if stripped.startswith("SSID:"):
+                return stripped.split(":", 1)[1].strip()
+    except Exception:
+        pass
+    return "unknown"
+
+def main():
+    ssid = get_ssid()
+    print(f"Monitoring RSSI on '{ssid}' at {POLL_HZ} Hz")
+    print(f"Window: {WINDOW} samples | Motion threshold: {MOTION_THRESH} dBm stdev")
+    print("-" * 60)
+
+    buf = deque(maxlen=WINDOW)
+    state = "IDLE"
+    motion_count = 0
+    idle_count = 0
+
+    while True:
+        rssi = get_rssi()
+        if rssi is None:
+            print("  [no signal]")
+            time.sleep(1.0 / POLL_HZ)
+            continue
+
+        buf.append(rssi)
+
+        if len(buf) >= 8:
+            mean = statistics.mean(buf)
+            sd = statistics.stdev(buf)
+            rng = max(buf) - min(buf)
+
+            # State machine with hysteresis
+            if state == "IDLE" and sd > MOTION_THRESH:
+                motion_count += 1
+                if motion_count >= 3:  # debounce: 3 consecutive readings
+                    state = "MOTION"
+                    motion_count = 0
+            elif state == "MOTION" and sd < IDLE_THRESH:
+                idle_count += 1
+                if idle_count >= 5:  # slower to go idle (avoid flicker)
+                    state = "IDLE"
+                    idle_count = 0
+            else:
+                if state == "IDLE":
+                    motion_count = 0
+                else:
+                    idle_count = 0
+
+            bar = "#" * int(sd * 5)
+            print(f"  RSSI {rssi:4d} dBm | mean {mean:6.1f} | "
+                  f"sd {sd:5.2f} | range {rng:2d} | "
+                  f"{state:6s} {bar}")
+        else:
+            print(f"  RSSI {rssi:4d} dBm | buffering ({len(buf)}/{WINDOW})...")
+
+        time.sleep(1.0 / POLL_HZ)
+
+if __name__ == "__main__":
+    main()</code></pre>
+
+<h3>Tuning tips</h3>
+<ul>
+<li>Place your MacBook so the router is on the other side of the room you're monitoring. Person walks between them = maximum signal disruption.</li>
+<li>2.4 GHz is more sensitive to body movement than 5 GHz (longer wavelength, more diffraction around obstacles). If your router supports both, force your Mac to the 2.4 GHz network for this.</li>
+<li>The threshold needs calibration per environment. Run for 5 minutes in an empty room, note the max stdev, set your threshold 50% above that.</li>
+<li>Microwave ovens operating on 2.4 GHz will cause massive RSSI spikes. Account for this or switch to 5 GHz.</li>
+</ul>
+
+<h3>Limitations</h3>
+<ul>
+<li>Only detects movement near the line between your laptop and router</li>
+<li>Cannot detect stationary presence (someone sitting still)</li>
+<li>High false positive rate compared to CSI-based methods</li>
+<li>Environmental noise (HVAC, appliances, other WiFi traffic) creates baseline drift</li>
+<li>Single RSSI number vs. 64 subcarriers in CSI = massively less information</li>
+</ul>
+
+<h2 id="probe">3. Probe request sniffing</h2>
+<p>WiFi devices periodically broadcast probe requests: "Hey, is MyHomeNetwork nearby?" Your MacBook's WiFi adapter can listen for these if you put it in monitor mode. Each probe contains the device's MAC address and sometimes the network name it's looking for.</p>
+
+<h3>The macOS caveats</h3>
+<p>This is where things get complicated on Mac. Modern macOS severely limits monitor mode. The built-in <code>airport</code> utility can capture in monitor mode, but:</p>
+<ul>
+<li>It disconnects you from WiFi while monitoring (you can't be connected AND in monitor mode simultaneously)</li>
+<li>Apple's newer chips (M1/M2/M3/M4) have inconsistent monitor mode support</li>
+<li>You need to run as root</li>
+<li>Capture quality varies by macOS version</li>
+</ul>
+<pre><code># Enable monitor mode (disconnects WiFi)
+sudo airport en0 sniff 6   # channel 6
+
+# This creates a pcap file in /tmp/
+# Parse it after capture:
+tcpdump -r /tmp/airportSniffXXXXXX.cap \
+    -e 'type mgt subtype probe-req' \
+    -l 2>/dev/null | \
+    grep -oE '(SA|DA):[0-9a-f:]+' | sort -u</code></pre>
+<p>The bigger problem: <strong>MAC randomization</strong>. Since iOS 14 and Android 10, devices randomize their MAC address in probe requests. Your iPhone sends probes with a different fake MAC each time. You can't reliably track "Alice's phone" across sessions because the identifier changes.</p>
+<p>Some devices still leak their real MAC in directed probes (when probing for a specific SSID they've connected to before), but this is increasingly rare. Apple and Google have been tightening randomization with each OS update.</p>
+
+<h3>Practical value in 2026</h3>
+<p>Low. MAC randomization has made probe request tracking unreliable for identifying specific people. You can still detect "some WiFi device is nearby" but not whose it is. Combined with the monitor mode limitations on macOS, this approach is more academic than practical.</p>
+
+<h2 id="whereami">4. WiFi fingerprinting (the best option)</h2>
+<p>This is the most useful laptop-only approach. The idea: every room in your house has a unique pattern of WiFi signal strengths from all visible access points. Your living room might see your router at -45 dBm and the neighbor's at -72 dBm. Your bedroom might see yours at -58 dBm and the neighbor's at -65 dBm. Train a classifier on these patterns and it can tell you which room your laptop is in.</p>
+
+<h3>whereami</h3>
+<p><a href="https://github.com/kootenpv/whereami">whereami</a> (~5K GitHub stars) is the easiest implementation. It's a Python CLI that handles scanning, training, and classification.</p>
+<pre><code># Install
+pip3 install whereami
+
+# Train: stand in each room and record samples
+whereami learn -l "living_room"    # records ~10 scans
+whereami learn -l "bedroom"
+whereami learn -l "kitchen"
+whereami learn -l "office"
+
+# Predict: where am I right now?
+whereami predict
+# Output: office (0.87 confidence)
+
+# Continuous monitoring
+watch -n 5 whereami predict</code></pre>
+
+<h3>How it works under the hood</h3>
+<p>whereami scans all visible access points using the OS WiFi API (CoreWLAN on macOS). Each scan produces a vector: [AP1_rssi, AP2_rssi, ..., APn_rssi]. It trains a Random Forest classifier on labeled vectors. At prediction time, it scans again and asks the classifier which room this vector most closely matches.</p>
+<p>The accuracy depends on three things:</p>
+<ol>
+<li><strong>Number of visible APs:</strong> More APs = more dimensions = better separation. In a typical apartment with 5-10 visible networks, expect 85-90% accuracy. In a dense urban area with 20+ networks, 95%+.</li>
+<li><strong>Training quality:</strong> Record at least 10 scans per room. Move around the room between scans. Train at different times of day (signal conditions shift slightly).</li>
+<li><strong>Room separation:</strong> Adjacent rooms with thin walls are hardest to distinguish. Rooms on different floors are easiest.</li>
+</ol>
+
+<h3>find3: the multi-device version</h3>
+<p><a href="https://github.com/schollz/find3">find3</a> (~4.7K stars) extends this concept to track multiple devices. It runs a server that receives fingerprints from multiple clients (phones, laptops, any WiFi device running the scanning agent). The server maintains a location model for each device.</p>
+<pre><code># Server (runs on your local machine or a Raspberry Pi)
+docker run -p 8003:8003 schollz/find3
+
+# Client (on the device you want to track)
+# find3-cli-scanner is available for macOS, Linux, Windows
+find3-cli-scanner -i en0 \
+    -server http://localhost:8003 \
+    -family "myhouse" \
+    -device "macbook" \
+    -scantime 3 \
+    -learn "office"       # during training
+    # omit -learn for prediction mode</code></pre>
+
+<h3>Limitations</h3>
+<ul>
+<li>Detects location, not motion. You know which room the laptop is in, not whether someone else just walked in.</li>
+<li>Requires the laptop to be open and awake.</li>
+<li>Accuracy degrades when the WiFi environment changes (new router, neighbor moves).</li>
+<li>Retraining needed periodically (monthly in stable environments, weekly in dynamic ones).</li>
+</ul>
+
+<h2 id="router">5. Router-based detection</h2>
+<p>Your router knows exactly which devices are connected, when they connected, when they disconnected, and how much data they're using. If you can query this information programmatically, you have a presence detection system.</p>
+
+<h3>The approach</h3>
+<p>Most routers expose a web interface. Many expose an API. The quality varies enormously by brand:</p>
+<table>
+<tr><th>Router</th><th>API Quality</th><th>Method</th></tr>
+<tr><td>OpenWrt</td><td>Excellent</td><td>ubus JSON-RPC, LUCI REST API</td></tr>
+<tr><td>UniFi</td><td>Good</td><td>REST API with auth token</td></tr>
+<tr><td>Asus (Merlin)</td><td>Good</td><td>HTTP API, SNMP</td></tr>
+<tr><td>TP-Link</td><td>Poor</td><td>Screen-scraping the web UI</td></tr>
+<tr><td>ISP-provided</td><td>Terrible</td><td>Usually locked down entirely</td></tr>
+</table>
+
+<pre><code>#!/usr/bin/env python3
+"""Query an OpenWrt router for connected devices."""
+import requests, json
+
+ROUTER = "http://192.168.1.1"
+# Get auth token (replace with your credentials)
+auth = requests.post(f"{ROUTER}/cgi-bin/luci/rpc/auth", json={
+    "id": 1, "method": "login",
+    "params": ["root", "your_password"]
+})
+token = auth.json()["result"]
+
+# List connected WiFi clients
+clients = requests.post(
+    f"{ROUTER}/cgi-bin/luci/rpc/sys?auth={token}",
+    json={"id": 2, "method": "wifi.getAssocList", "params": []}
+)
+for client in clients.json().get("result", []):
+    print(f"  MAC: {client['mac']}  Signal: {client.get('signal', '?')} dBm")</code></pre>
+
+<h3>Practical notes</h3>
+<p>If you have an OpenWrt or UniFi router, this is the easiest zero-setup option. You don't even need to run code on your Mac continuously. Set up a cron job on the router itself (OpenWrt supports this natively) or poll from your Mac every 30 seconds.</p>
+<p>The main limitation is the same as ARP scanning: you're detecting devices, not people. And the update frequency is router-limited. Some routers only refresh their client list every few minutes.</p>
+
+<h2 id="ble">6. BLE scanning</h2>
+<p>Your MacBook has a Bluetooth radio that can scan for BLE (Bluetooth Low Energy) advertisements. Modern phones, watches, earbuds, and fitness trackers all broadcast BLE advertisements periodically, even when not actively paired to anything.</p>
+
+<h3>Working code with bleak</h3>
+<pre><code>#!/usr/bin/env python3
+"""BLE presence scanner. Requires: pip3 install bleak"""
+import asyncio
+from bleak import BleakScanner
+from datetime import datetime
+
+# Known device names or partial names to track
+KNOWN_DEVICES = {
+    "Alice Watch",     # Apple Watch
+    "Galaxy Buds",     # Samsung earbuds
+    "Bob AirPods",
+}
+
+async def scan_loop():
+    print("Scanning for BLE devices...")
+    known_nearby = set()
+
+    while True:
+        devices = await BleakScanner.discover(timeout=5.0)
+        current = set()
+        ts = datetime.now().strftime("%H:%M:%S")
+
+        for d in devices:
+            name = d.name or "unnamed"
+            rssi = d.rssi
+
+            # Check if it's a known device
+            for known in KNOWN_DEVICES:
+                if known.lower() in name.lower():
+                    current.add(known)
+                    if known not in known_nearby:
+                        print(f"[{ts}] ARRIVED: {known} "
+                              f"(RSSI: {rssi} dBm)")
+
+        departed = known_nearby - current
+        for d in departed:
+            print(f"[{ts}] LEFT: {d}")
+
+        # Summary
+        all_count = len(devices)
+        tracked = ", ".join(current) if current else "none"
+        print(f"[{ts}] {all_count} BLE devices nearby | "
+              f"Tracked: {tracked}")
+
+        known_nearby = current
+        await asyncio.sleep(10)
+
+if __name__ == "__main__":
+    asyncio.run(scan_loop())</code></pre>
+
+<h3>RSSI-based distance estimation</h3>
+<p>BLE RSSI correlates with distance better than WiFi because BLE uses lower transmit power and shorter wavelength. A rough model:</p>
+<pre><code>import math
+
+def estimate_distance(rssi, tx_power=-59):
+    """Estimate distance in meters from BLE RSSI.
+    tx_power: RSSI at 1 meter (typical: -59 for phones)
+    Returns distance in meters. Accuracy: +/- 2m indoors."""
+    if rssi == 0:
+        return -1
+    ratio = rssi / tx_power
+    if ratio < 1.0:
+        return ratio ** 10
+    else:
+        return 0.89976 * (ratio ** 7.7095) + 0.111</code></pre>
+<p>This is a rough estimate. Indoors, walls and reflections make BLE distance estimation accurate to maybe 2-3 meters. Outdoors with line of sight, you can get within 1 meter. Don't rely on this for anything precision-critical.</p>
+
+<h3>The MAC randomization problem (again)</h3>
+<p>Just like WiFi probe requests, BLE advertisements use randomized MAC addresses. You can still identify devices by their advertised name (which many devices include), but unnamed devices can't be tracked across sessions. Apple devices rotate their BLE address every 15 minutes.</p>
+<p>Workaround: most personal devices (AirPods, Apple Watch, fitness trackers) include a recognizable device name in their BLE advertisements. Track by name, not by MAC.</p>
+
+<h2 id="csi-no">7. Why CSI doesn't work on your Mac</h2>
+<p>This is worth explaining properly because it's the most common question people have when they read about WiFi sensing.</p>
+
+<h3>What CSI requires at the hardware level</h3>
+<p>When your WiFi chip receives a frame, it internally computes the Channel State Information to decode the data. This computation happens in the chip's firmware. The chip uses CSI to figure out how to decode the signal, then throws the CSI away. It never passes it to the operating system because the OS doesn't need it for normal WiFi operation.</p>
+<p>To extract CSI, you need to modify the firmware to save and export this data instead of discarding it. This is what the <a href="https://github.com/seemoo-lab/nexmon">Nexmon</a> project does for Broadcom chips, and what Intel's CSI Tool does for the Intel 5300.</p>
+
+<h3>Why macOS blocks this</h3>
+<p>Three layers of lockout:</p>
+<ol>
+<li><strong>Chip support:</strong> Modern MacBooks (2020+) use the Broadcom BCM4387. Nexmon has firmware patches for many Broadcom chips (BCM4339, BCM4358, BCM43455c0 in Raspberry Pi), but not the BCM4387. Nobody has reverse-engineered this chip's firmware format.</li>
+<li><strong>SIP (System Integrity Protection):</strong> Even if you had a BCM4387 firmware patch, macOS prevents loading modified firmware. SIP blocks modifications to system-level components, including WiFi driver firmware. Disabling SIP is possible but Apple increasingly ties system features to SIP being enabled.</li>
+<li><strong>Driver integration:</strong> Apple's WiFi driver (AirPortBrcmNIC) is tightly integrated with the hardware. It's not the same driver as the open-source brcmfmac used on Linux. A firmware patch that works with the Linux driver won't work with Apple's driver.</li>
+</ol>
+
+<h3>What about external USB WiFi adapters?</h3>
+<p>Theoretically, you could plug in a USB WiFi adapter with a supported Broadcom or Atheros chip and run CSI extraction through it. In practice, macOS driver support for third-party WiFi adapters has been terrible since Apple dropped the kext-based driver model. Most USB WiFi adapters don't work on modern macOS at all, let alone with modified firmware.</p>
+<p>If you want CSI on a Mac, the realistic path is: buy an ESP32 ($8), flash ESPectre, and read the data over the network. The ESP32 handles all the RF processing. Your Mac just receives the binary MOTION/IDLE state via WiFi (through Home Assistant, MQTT, or a simple HTTP endpoint).</p>
+
+<h2 id="tools-table">Full tools table</h2>
+<table>
+<tr><th>Tool</th><th>GitHub Stars</th><th>What It Does</th><th>Works on Mac?</th><th>Install</th></tr>
+<tr><td><a href="https://github.com/kootenpv/whereami">whereami</a></td><td>~5K</td><td>WiFi fingerprint room detection</td><td>Yes</td><td><code>pip3 install whereami</code></td></tr>
+<tr><td><a href="https://github.com/schollz/find3">find3</a></td><td>~4.7K</td><td>Multi-device indoor positioning</td><td>Yes (client)</td><td>Docker + CLI binary</td></tr>
+<tr><td><a href="https://github.com/hbldh/bleak">bleak</a></td><td>~1.8K</td><td>Cross-platform BLE scanning</td><td>Yes</td><td><code>pip3 install bleak</code></td></tr>
+<tr><td><a href="https://nmap.org/">nmap</a></td><td>~10K</td><td>Network discovery and ARP scanning</td><td>Yes</td><td><code>brew install nmap</code></td></tr>
+<tr><td><a href="https://scapy.net/">scapy</a></td><td>~10K+</td><td>Packet crafting and ARP scanning</td><td>Yes (sudo)</td><td><code>pip3 install scapy</code></td></tr>
+<tr><td><a href="https://github.com/nickoala/ruview">RuView</a></td><td>~39K</td><td>WiFi CSI visualization</td><td>No (needs CSI)</td><td>N/A on Mac</td></tr>
+<tr><td><a href="https://github.com/francescopace/espectre">ESPectre</a></td><td>Growing</td><td>ESP32 CSI motion detection</td><td>No (ESP32 only)</td><td>ESPHome flash</td></tr>
+<tr><td><a href="https://github.com/seemoo-lab/nexmon_csi">nexmon_csi</a></td><td>~700</td><td>Broadcom CSI extraction</td><td>No (Linux/RPi)</td><td>N/A on Mac</td></tr>
+</table>
+
+<h2 id="security">Security concerns</h2>
+<p>Every detection method has security and ethical implications. Here's the honest breakdown:</p>
+
+<h3>ARP scanning</h3>
+<p><strong>Risk: Low.</strong> You're querying your own network. Anyone on the same LAN could do this. It's equivalent to looking at your router's connected devices page. Don't scan networks you don't own.</p>
+
+<h3>RSSI monitoring</h3>
+<p><strong>Risk: Minimal.</strong> You're reading your own WiFi connection's signal strength. No third-party data is captured. This is information your laptop already has and uses internally.</p>
+
+<h3>Probe request sniffing</h3>
+<p><strong>Risk: Moderate.</strong> You're passively capturing wireless transmissions from other people's devices. In most jurisdictions, passively receiving radio signals is legal (you're not decrypting anything), but using the data to track individuals may violate privacy laws. GDPR considers MAC addresses personal data. In your own home for your own use, the risk is low. In a public space or for commercial purposes, consult a lawyer.</p>
+
+<h3>WiFi fingerprinting</h3>
+<p><strong>Risk: Low.</strong> You're scanning signal strengths of nearby access points. This is the same data your laptop uses to choose which network to connect to. You're not accessing any other network or capturing any traffic.</p>
+
+<h3>Router-based</h3>
+<p><strong>Risk: Low for your own router.</strong> You're querying your own equipment's admin API. Accessing someone else's router API without authorization is unauthorized computer access. Don't do that.</p>
+
+<h3>BLE scanning</h3>
+<p><strong>Risk: Moderate.</strong> Similar to probe sniffing. You're receiving publicly broadcast BLE advertisements. The data is intentionally transmitted by the devices. But using it to track individuals (especially in public spaces) raises the same privacy concerns as probe sniffing.</p>
+
+<h3>General principle</h3>
+<p>On your own network, in your own home, for your own devices: all of these are fine. The moment you start tracking other people's devices without their knowledge, you're in ethically and potentially legally questionable territory. The technology doesn't care about your intentions. The law does.</p>
+
+<h2 id="recommendation">What to actually use</h2>
+<p>If you're reading this and want to set something up today, here's the decision tree:</p>
+
+<h3>Goal: know who's home</h3>
+<p>Use <strong>ARP scanning</strong>. Map your family members' phone MAC addresses, scan every 30 seconds, done. Ten minutes to set up, 95% reliable.</p>
+
+<h3>Goal: know which room you're in</h3>
+<p>Use <strong>whereami</strong>. Train it on each room, run it in the background. 30 minutes to train, 85-95% accurate. This is the best no-hardware-required option for room-level awareness.</p>
+
+<h3>Goal: detect motion in a room</h3>
+<p>Use <strong>RSSI monitoring</strong> as a rough indicator, but honestly, buy an ESP32 for $8 and run ESPectre. The laptop-only RSSI approach is a proof of concept, not a reliable system. CSI-based detection on an ESP32 is 99%+ accurate. RSSI monitoring on a laptop is 60-75%.</p>
+
+<h3>Goal: detect nearby people (not on your network)</h3>
+<p>Use <strong>BLE scanning</strong> with bleak. It'll pick up phones, watches, earbuds, and fitness trackers within 10-15 meters. You won't know whose they are (MAC randomization), but you'll know someone's nearby.</p>
+
+<h3>Goal: build a real presence detection system</h3>
+<p>Combine ARP scanning (who's home) + whereami (which room) + an ESP32 with ESPectre (is someone actually in this room right now). Layer the methods. Each covers a gap the others miss. Total hardware cost: $8 for the ESP32. Total software cost: $0.</p>
+
+<div class="note">
+<p>For the full technical landscape including ESP32 CSI hardware, the ESPectre processing pipeline, the March 2026 laptop-only sensing breakthrough, and Home Assistant integration, read the main article: <a href="wifi-sensing.html"><strong>WiFi Can See You Move</strong></a>.</p>
+</div>
+
+</div>
+</div>
+<footer>fnsmdehip &middot; <a href="https://github.com/fnsmdehip">github.com/fnsmdehip</a> &middot; 2026</footer>
+</body>
+</html>

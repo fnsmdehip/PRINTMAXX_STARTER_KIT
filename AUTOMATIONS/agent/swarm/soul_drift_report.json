@@ -1,12 +1,14 @@
 {
-  "ts": "2026-03-28T16:00:01.295229",
-  "avg_score": 9.5,
-  "total_scored": 3,
+  "ts": "2026-03-28T20:00:01.172502",
+  "avg_score": 8.7,
+  "total_scored": 5,
   "drifted_count": 0,
   "drifted_agents": [],
   "scores": {
-    "swarm_brain": 8.5,
     "system_healer": 10.0,
+    "seo_aso_optimizer": 8.0,
+    "asset_deployer": 8.5,
+    "swarm_brain": 7.0,
     "ceo_decision_2026-03-15": 10.0
   }
 }

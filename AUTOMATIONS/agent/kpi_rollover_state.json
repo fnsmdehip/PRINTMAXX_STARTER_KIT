@@ -1,8 +1,9 @@
 {
-  "last_updated": "2026-03-22T23:54:01.638026",
-  "source_day": 22,
-  "target_day": 23,
-  "task_count": 19,
+  "last_updated": "2026-03-28T18:01:40.844236",
+  "source_day": 23,
+  "target_day": 28,
+  "rolled_today": true,
+  "task_count": 5,
   "tasks": [
     {
       "text": "Scale winning brokering vertical, kill non-performers",
@@ -10,7 +11,7 @@
       "detail": "",
       "reason": "Failed on day 22: partial_failure",
       "original_day": 22,
-      "failure_count": 1
+      "failure_count": 2
     },
     {
       "text": "Post 3 TikToks: launch day behind-the-scenes",
@@ -18,7 +19,7 @@
       "detail": "Raw, authentic BTS content.\nShow real-time upvote count, comments, reactions.\nTime: 15 min.",
       "reason": "Unreviewed on day 22",
       "original_day": 22,
-      "failure_count": 0
+      "failure_count": 1
     },
     {
       "text": "Reply to 50+ accounts across all platforms (all-engagement mode)",
@@ -26,7 +27,7 @@
       "detail": "All-engagement mode. Every platform.\nSecondary accounts amplify: quote-tweet launch with unique congratulatory takes.\nDM 20 people who upvoted/commented thanking them.\nTime: 60 min.",
       "reason": "Unreviewed on day 22",
       "original_day": 22,
-      "failure_count": 0
+      "failure_count": 1
     },
     {
       "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: AI startups are (news) \u2014 AI startups\u00a0accounted for 41% of the $128 billion in ve",
@@ -34,7 +35,7 @@
       "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
       "reason": "Unreviewed on day 22",
       "original_day": 22,
-      "failure_count": 0
+      "failure_count": 1
     },
     {
       "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Candex Extends (series c) \u2014 New York-based Candex, a startup that helps",
@@ -42,119 +43,25 @@
       "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
       "reason": "Unreviewed on day 22",
       "original_day": 22,
-      "failure_count": 0
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Bluesky (series b) \u2014 The additional funds have been used to scale Blues",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 0
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Zipline charts drone (news) \u2014 That geographic expansion in the United States has",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 0
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Substack (news) \u2014 The New York Times reports that the funding brings Substack's ",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 0
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Consumer-focused privacy company Cloaked (growth) \u2014 Cloaked's latest ro",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 0
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Stripe Alum (series a) \u2014 Co-founded by Stripes alum Sam Gerstenzang, on",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 0
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Elon Musk\u2019s AI (news) \u2014 Elon Musk&#8217;s AI company, xAI, is said to be in talk",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: AI startups are (news) \u2014 AI startups\u00a0accounted for 41% of the $128 billion in ve",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: Funding: Candex Extends (series c) \u2014 New York-based Candex, a startup that helps",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: Funding: Bluesky (series b) \u2014 The additional funds have been used to scale Blues",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: Zipline charts drone (news) \u2014 That geographic expansion in the United States has",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: Substack (news) \u2014 The New York Times reports that the funding brings Substack's ",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: Funding: Consumer-focused privacy company Cloaked (growth) \u2014 Cloaked's latest ro",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: Funding: Stripe Alum (series a) \u2014 Co-founded by Stripes alum Sam Gerstenzang, on",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
-    },
-    {
-      "text": "[URGENT] CRUNCHBASE: Elon Musk\u2019s AI (news) \u2014 Elon Musk&#8217;s AI company, xAI, is said to be in talk",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Capital Genesis override (score 100)",
-      "original_day": 21,
-      "failure_count": 0
+      "failure_count": 1
     }
-  ]
+  ],
+  "stale_tasks": [],
+  "dropped_tasks": [
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Bluesky (series b) \u2014 The additional funds have been used to scale Blues",
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: Zipline charts drone (news) \u2014 That geographic expansion in the United States has",
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: Substack (news) \u2014 The New York Times reports that the funding brings Substack's ",
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Consumer-focused privacy company Cloaked (growth) \u2014 Cloaked's latest ro",
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Stripe Alum (series a) \u2014 Co-founded by Stripes alum Sam Gerstenzang, on",
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: Elon Musk\u2019s AI (news) \u2014 Elon Musk&#8217;s AI company, xAI, is said to be in talk",
+    "[URGENT] CRUNCHBASE: AI startups are (news) \u2014 AI startups\u00a0accounted for 41% of the $128 billion in ve",
+    "[URGENT] CRUNCHBASE: Funding: Candex Extends (series c) \u2014 New York-based Candex, a startup that helps",
+    "[URGENT] CRUNCHBASE: Funding: Bluesky (series b) \u2014 The additional funds have been used to scale Blues",
+    "[URGENT] CRUNCHBASE: Zipline charts drone (news) \u2014 That geographic expansion in the United States has",
+    "[URGENT] CRUNCHBASE: Substack (news) \u2014 The New York Times reports that the funding brings Substack's ",
+    "[URGENT] CRUNCHBASE: Funding: Consumer-focused privacy company Cloaked (growth) \u2014 Cloaked's latest ro",
+    "[URGENT] CRUNCHBASE: Funding: Stripe Alum (series a) \u2014 Co-founded by Stripes alum Sam Gerstenzang, on",
+    "[URGENT] CRUNCHBASE: Elon Musk\u2019s AI (news) \u2014 Elon Musk&#8217;s AI company, xAI, is said to be in talk"
+  ],
+  "completed_yesterday": 0
 }

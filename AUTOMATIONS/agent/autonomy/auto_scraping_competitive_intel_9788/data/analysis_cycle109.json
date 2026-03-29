@@ -1,0 +1,51 @@
+{
+  "cycle": 109,
+  "strategy": "HEALTH + FITNESS + WELLNESS + NUTRITION",
+  "timestamp": "2026-03-28T21:34:34.570637+00:00",
+  "niches_scanned": 10,
+  "blue_oceans": 10,
+  "soft_competition": 0,
+  "occupied": 0,
+  "p0_alerts": [
+    "daily_exercise_physiology_streak",
+    "daily_nutrition_biochemistry_streak",
+    "daily_mental_health_science_streak"
+  ],
+  "community_total": 48519000,
+  "cumulative_blue_oceans": 477,
+  "top_niches": [
+    {
+      "niche": "daily_exercise_physiology_streak",
+      "strategy": "HEALTH + FITNESS + WELLNESS + NUTRITION",
+      "community_total": 18500000,
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "p0": true,
+      "notes_summary": "18.5M fitness community \u2014 LARGEST addressable market scanned to date. MyFitnessPal 1.9M ratings proves the fitness app market is massive and paying. Yet ALL top fitness apps are TRACKERS or WORKOUT DE",
+      "cycle": 109,
+      "timestamp": "2026-03-28T21:34:34.570637+00:00"
+    },
+    {
+      "niche": "daily_nutrition_biochemistry_streak",
+      "strategy": "HEALTH + FITNESS + WELLNESS + NUTRITION",
+      "community_total": 8230000,
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "p0": true,
+      "notes_summary": "8.2M nutrition community. Zero (fasting app) has 310K ratings \u2014 people pay for nutrition behavior apps. Cronometer has 89K ratings for micronutrient tracking. Yet NO app teaches nutrition biochemistry",
+      "cycle": 109,
+      "timestamp": "2026-03-28T21:34:34.570637+00:00"
+    },
+    {
+      "niche": "daily_mental_health_science_streak",
+      "strategy": "HEALTH + FITNESS + WELLNESS + NUTRITION",
+      "community_total": 5510000,
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "p0": true,
+      "notes_summary": "5.5M mental health community. Mental health crisis globally \u2014 1 in 4 adults experiences mental health condition. Therapy apps are exploding but focus on DELIVERY (therapy sessions, chatbot CBT). No ap",
+      "cycle": 109,
+      "timestamp": "2026-03-28T21:34:34.570637+00:00"
+    }
+  ]
+}

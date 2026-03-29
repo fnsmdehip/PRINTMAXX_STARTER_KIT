@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WiFi Can See You Move: Camera-Free Motion Detection - fnsmdehip</title>
+<meta name="description" content="A technical guide to WiFi sensing for motion detection. CSI physics, ESPectre architecture, 7 detection approaches ranked, hardware requirements, and Home Assistant integration.">
+<meta name="keywords" content="WiFi sensing, CSI, channel state information, ESP32, motion detection, presence detection, ESPectre, Home Assistant, privacy, camera-free">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="index.html" class="site-name">fnsmdehip</a>
+<a href="index.html">Home</a>
+<a href="uaf.html">UAF Series</a>
+<a href="pemf.html">PEMF Series</a>
+<a href="wifi-sensing.html" class="active">WiFi Sensing</a>
+<a href="wifi-sensing-macbook.html">MacBook Detection</a>
+<a href="projects.html">Projects</a>
+<a href="health.html">Health</a>
+</div></nav>
+<div class="page-wrapper">
+<aside class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#premise">The premise</a></li>
+<li><a href="#csi-physics">What CSI actually is</a>
+  <ol>
+  <li><a href="#subcarriers">Subcarriers and OFDM</a></li>
+  <li><a href="#amplitude-phase">Amplitude vs phase</a></li>
+  <li><a href="#multipath">Multipath and the human body</a></li>
+  </ol>
+</li>
+<li><a href="#espectre">ESPectre deep dive</a>
+  <ol>
+  <li><a href="#architecture">Architecture</a></li>
+  <li><a href="#pipeline">Processing pipeline</a></li>
+  <li><a href="#performance">Performance numbers</a></li>
+  <li><a href="#ml-detector">ML detector</a></li>
+  </ol>
+</li>
+<li><a href="#seven-approaches">7 approaches ranked</a>
+  <ol>
+  <li><a href="#arp">ARP scanning</a></li>
+  <li><a href="#rssi">RSSI monitoring</a></li>
+  <li><a href="#probe">Probe request sniffing</a></li>
+  <li><a href="#fingerprint">WiFi fingerprinting</a></li>
+  <li><a href="#router">Router-based detection</a></li>
+  <li><a href="#csi-approach">CSI extraction</a></li>
+  <li><a href="#ble">BLE scanning</a></li>
+  </ol>
+</li>
+<li><a href="#macbook-problem">The macOS problem</a></li>
+<li><a href="#privacy">Privacy: the killer angle</a></li>
+<li><a href="#tools">Tools and repos</a></li>
+<li><a href="#hardware">Hardware you need</a></li>
+<li><a href="#laptop-breakthrough">The March 2026 breakthrough</a></li>
+<li><a href="#home-assistant">Home Assistant integration</a></li>
+<li><a href="#use-cases">Real use cases</a></li>
+<li><a href="#companion">Companion: MacBook-only guide</a></li>
+</ol>
+</aside>
+<div class="content">
+<h1>WiFi Can See You Move: A Technical Guide to Camera-Free Motion Detection</h1>
+<div class="meta"><span class="date">2026-03-28</span> &middot; Series: WiFi Sensing</div>
+<p class="tagline">Your router already knows when you walk into a room. Here's how to use that.</p>
+
+<h2 id="premise">The premise</h2>
+<p>Every WiFi router in your house is constantly shouting radio waves into every room. Those waves bounce off walls, furniture, and you. When you move, the bounce pattern changes. If you can measure that change precisely enough, you've built a motion detector that works through walls, in complete darkness, without a single camera.</p>
+<p>This isn't speculative. Commodity hardware can do it today for under $10. The question is which approach to use, what the tradeoffs are, and how far the technology actually goes. This article covers all of it.</p>
+
+<h2 id="csi-physics">What CSI actually is</h2>
+<p>Most people know WiFi signal strength as a single number: those bars on your phone, or the RSSI value your router reports. Channel State Information is the high-resolution version. Instead of one number, you get a matrix of complex values describing how the wireless channel behaves at each individual frequency slice.</p>
+
+<h3 id="subcarriers">Subcarriers and OFDM</h3>
+<p>Modern WiFi (802.11n and later) uses OFDM: Orthogonal Frequency-Division Multiplexing. Instead of transmitting on one frequency, it splits the channel into many narrow sub-channels called subcarriers. In HT20 mode (20 MHz bandwidth), there are 64 subcarriers, though not all carry data. Roughly 52 are data subcarriers, 4 are pilots, and the rest are guard bands and a DC null.</p>
+<p>Each subcarrier is a complex number: H(f) = |H(f)| * e^(j*angle(H(f))). The magnitude |H(f)| tells you how much the signal was attenuated at that frequency. The phase angle tells you how much the signal was delayed. Together, they describe the complete transfer function of the wireless channel at that frequency.</p>
+<p>When a standard WiFi frame arrives, the receiver estimates these values for every subcarrier to properly decode the data. CSI sensing hijacks this process. You don't care about the data in the frame. You care about how the channel itself changed since the last frame.</p>
+
+<h3 id="amplitude-phase">Amplitude vs phase</h3>
+<p>Amplitude data is the workhorse for most WiFi sensing. It's relatively stable, less sensitive to clock synchronization issues, and easier to process on embedded hardware. When someone walks through a room, you'll see amplitude fluctuations in the 0.5-10 Hz range across multiple subcarriers simultaneously.</p>
+<p>Phase data is more sensitive but harder to use. The problem is phase offset: the transmitter and receiver have independent oscillators that drift relative to each other, introducing a random phase shift that varies across subcarriers. You can partially fix this with phase calibration (using pilot subcarriers as references), but on ESP32 hardware without external clock synchronization, amplitude-based methods are more reliable.</p>
+<p>The research frontier is using both. Phase carries information that amplitude misses, especially for fine-grained gesture recognition. But for binary presence detection (someone's here vs. nobody's here), amplitude alone gets you to 99%+ accuracy.</p>
+
+<h3 id="multipath">Multipath and the human body</h3>
+<p>Here's the physics that makes this work. A WiFi signal doesn't travel in a straight line from router to receiver. It bounces off every surface: walls, floors, ceiling, furniture, that stack of books you'll never read. Each reflection arrives at the receiver with a different delay, amplitude, and phase. The receiver sees the sum of all these paths.</p>
+<p>The human body is roughly 60% water. Water absorbs 2.4 GHz radio waves. When you stand in a room, you're simultaneously absorbing energy from some paths and reflecting energy along new paths. When you move, you change which paths exist and how strong they are. The CSI matrix shifts.</p>
+<p>The key insight: different subcarriers are affected differently by the same movement. A subcarrier at the edge of the band might see a huge amplitude swing while one in the center barely changes. By looking at the pattern of changes across all subcarriers simultaneously, you get far more information than any single measurement.</p>
+
+<h2 id="espectre">ESPectre deep dive</h2>
+<p>ESPectre is the most mature open-source implementation of WiFi CSI sensing on ESP32 hardware. It's built as an ESPHome component, which means it integrates directly into Home Assistant with zero custom code.</p>
+
+<h3 id="architecture">Architecture</h3>
+<p>The system runs entirely on the ESP32 microcontroller. No cloud. No server. No external processing. The ESP32 listens to WiFi traffic from your existing router (or a dedicated access point) and extracts CSI data from every received frame. Processing happens on-chip in real time.</p>
+<p>The detection pipeline has two algorithms you can choose between:</p>
+<ul>
+<li><strong>MVS (Moving Variance Segmentation):</strong> Statistical approach. No training required. Works out of the box. Uses the variance of spatial turbulence over a sliding window to distinguish motion from stillness.</li>
+<li><strong>ML detector:</strong> A compact neural network (353 parameters, 1.4 KB) embedded directly in firmware. Extracts 12 statistical features from the turbulence buffer and classifies them through two hidden layers. Needs training data but achieves 100% accuracy on several ESP32 variants.</li>
+</ul>
+
+<h3 id="pipeline">Processing pipeline</h3>
+<p>On boot, the system runs a 10.5-second calibration sequence:</p>
+<table>
+<tr><th>Stage</th><th>Duration</th><th>Packets</th><th>Purpose</th></tr>
+<tr><td>Gain Lock</td><td>3.0s</td><td>300</td><td>Lock AGC and FFT gain using median of samples. Eliminates hardware-induced amplitude variations.</td></tr>
+<tr><td>NBVI Calibration</td><td>7.5s</td><td>750</td><td>Select 12 optimal subcarriers from 64 available using Normalized Baseline Variability Index.</td></tr>
+</table>
+<p>After calibration, every incoming packet goes through this chain:</p>
+<pre><code>Raw I/Q values
+    |
+    v
+Amplitude extraction (for each of 12 selected subcarriers)
+    |
+    v
+Spatial turbulence = CV (std_dev / mean) across subcarriers
+    |
+    v
+[Optional] Hampel filter: replaces outliers > 4x MAD with median
+    |
+    v
+[Optional] Low-pass Butterworth IIR, 11 Hz cutoff
+    |
+    v
+Moving variance over sliding window (75 packets = 0.75s at 100 pps)
+    |
+    v
+Adaptive threshold comparison (95th percentile of baseline * 1.1)
+    |
+    v
+Binary output: IDLE or MOTION</code></pre>
+<p>The spatial turbulence metric uses Coefficient of Variation (CV = standard deviation / mean), which is mathematically gain-invariant. If the receiver's AGC scales all amplitudes by factor k, the CV is unchanged. This is what makes the system robust across different ESP32 boards with different RF front-end characteristics.</p>
+
+<h4>NBVI subcarrier selection</h4>
+<p>Not all 64 subcarriers are useful. Guard bands have no data. The DC subcarrier is always zero. Some subcarriers have poor SNR in your specific environment. NBVI scores each candidate subcarrier on a weighted combination of stability (low variance at rest) and signal strength (high mean amplitude):</p>
+<pre><code>NBVI(i) = alpha * (sigma_i / mu_i^2) + (1 - alpha) * (sigma_i / mu_i)
+// alpha = 0.5 balances stability vs signal strength
+// Lower NBVI = better subcarrier for sensing</code></pre>
+<p>The algorithm selects the 12 subcarriers with the lowest NBVI scores, enforcing a minimum gap of 2 indices between selections to avoid correlated measurements. Calibration runs in 30-50ms. That's fast enough to recalibrate on the fly if the environment changes.</p>
+
+<h4>Hampel filter</h4>
+<p>WiFi environments produce occasional spikes: a microwave turning on, a Bluetooth device hopping frequencies, electrical interference. The Hampel filter catches these. For each turbulence sample, it computes the median of the local window, then the Median Absolute Deviation (MAD). If the sample deviates from the median by more than 4x the scaled MAD, it's replaced with the median. Disabled by default because most environments don't need it.</p>
+
+<h4>Low-pass filter</h4>
+<p>A 1st-order Butterworth IIR filter with 11 Hz cutoff. Human movement generates signal variations in the 0.5-10 Hz range. RF noise is typically above 15 Hz. The filter strips the noise floor. Also disabled by default since the MVS algorithm's moving variance already smooths high-frequency noise.</p>
+
+<h3 id="performance">Performance numbers</h3>
+<p>These are measured numbers from the ESPectre validation suite, not theoretical:</p>
+<table>
+<tr><th>ESP32 Variant</th><th>MVS Accuracy</th><th>ML Accuracy</th><th>Detection Latency</th><th>Price Point</th></tr>
+<tr><td>ESP32 (original)</td><td>99.2%</td><td>100%</td><td>~310 us</td><td>$5-8</td></tr>
+<tr><td>ESP32-S2</td><td>99.5%</td><td>100%</td><td>~260 us</td><td>$4-6</td></tr>
+<tr><td>ESP32-S3</td><td>99.7%</td><td>100%</td><td>~150 us</td><td>$8-10</td></tr>
+<tr><td>ESP32-C3</td><td>98.8%</td><td>99.4%</td><td>~380 us</td><td>$3-5</td></tr>
+<tr><td>ESP32-C6</td><td>99.3%</td><td>100%</td><td>~200 us</td><td>$4-6</td></tr>
+</table>
+<p>Detection latency means time from a person starting to move to the system outputting MOTION. At 150-440 microseconds, this is faster than your light switch. The ML detector hits 100% accuracy on most chips because the feature extraction captures patterns that the raw threshold comparison misses.</p>
+<p>These numbers come from controlled environments with single-person detection at 3-8 meter range. Real-world deployment adds noise: pets, fans, HVAC systems. ESPectre handles most of these with the adaptive threshold, but a ceiling fan directly between the router and ESP32 will degrade performance.</p>
+
+<h3 id="ml-detector">ML detector deep dive</h3>
+<p>The neural network is deliberately tiny. Two hidden layers: 16 neurons, then 8 neurons, both with ReLU activation. Sigmoid output. Total: 353 trainable parameters. The entire model fits in 1.4 KB and runs inference in under 100 microseconds on the ESP32's Tensilica core.</p>
+<p>The 12 input features extracted from the turbulence buffer:</p>
+<ol>
+<li><strong>Mean</strong> of turbulence values</li>
+<li><strong>Standard deviation</strong></li>
+<li><strong>Maximum</strong> value</li>
+<li><strong>Minimum</strong> value</li>
+<li><strong>Zero-crossing rate:</strong> how often the signal crosses its mean</li>
+<li><strong>Skewness:</strong> asymmetry of the distribution</li>
+<li><strong>Kurtosis:</strong> tail heaviness</li>
+<li><strong>Shannon entropy:</strong> information content</li>
+<li><strong>Lag-1 autocorrelation:</strong> temporal persistence</li>
+<li><strong>Median absolute deviation</strong></li>
+<li><strong>Linear regression slope:</strong> trend direction</li>
+<li><strong>Start-to-end delta:</strong> overall change</li>
+</ol>
+<p>Training used 5-fold stratified cross-validation on 13,711 labeled samples. The model was validated against deliberately adversarial scenarios: fan oscillation, pet movement, door opening from another room, HVAC cycling. It learned to distinguish these from human movement, which is why it outperforms the statistical MVS approach on edge cases.</p>
+<p>One practical advantage: the ML detector uses fixed subcarriers (indices 6, 12, 18, 24, 30, 36, 42, 48 plus four more), skipping the NBVI calibration phase entirely. Boot time drops from 10.5 seconds to about 3 seconds.</p>
+
+<h2 id="seven-approaches">7 approaches to WiFi sensing, ranked</h2>
+<p>CSI is the most powerful approach, but it's not the only one. Here's every method for detecting people using wireless signals, ranked from simplest to most capable. The companion article <a href="wifi-sensing-macbook.html">7 Ways to Detect People With Just Your MacBook</a> covers the laptop-only methods in depth with working code.</p>
+
+<h3 id="arp">1. ARP scanning (simplest)</h3>
+<p><strong>How it works:</strong> Send ARP requests to your local network. If a device responds, someone's phone (and therefore someone) is home. Nmap can do a full subnet scan in 2-3 seconds.</p>
+<p><strong>Accuracy:</strong> Detects presence at home level. Cannot detect room-level movement. Fails if someone leaves their phone charging and goes out.</p>
+<p><strong>Latency:</strong> 2-10 seconds per scan cycle.</p>
+<p><strong>Privacy:</strong> You're querying your own network. Low concern.</p>
+<p><strong>Tools:</strong> <code>nmap -sn 192.168.1.0/24</code>, Python <code>scapy</code></p>
+<pre><code># Quick ARP scan with scapy
+from scapy.all import ARP, Ether, srp
+
+def scan_network(subnet="192.168.1.0/24"):
+    ans, _ = srp(
+        Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=subnet),
+        timeout=2, verbose=False
+    )
+    return [(r.psrc, r.hwsrc) for _, r in ans]
+
+devices = scan_network()
+print(f"{len(devices)} devices online")
+for ip, mac in devices:
+    print(f"  {ip:16s} {mac}")</code></pre>
+
+<h3 id="rssi">2. RSSI monitoring</h3>
+<p><strong>How it works:</strong> Continuously read the signal strength of your WiFi connection. When someone walks between your device and the router, RSSI drops. When they leave, it recovers. Monitor the fluctuation pattern over time.</p>
+<p><strong>Accuracy:</strong> Room-level presence detection. Works best in small rooms where a person significantly alters the signal path. False positive rate climbs in large open spaces.</p>
+<p><strong>Latency:</strong> 1-5 seconds depending on polling rate.</p>
+<p><strong>Privacy:</strong> You're reading your own connection's signal strength. Minimal concern.</p>
+<p><strong>Tools:</strong> macOS <code>CoreWLAN</code> framework, Linux <code>iwconfig</code>, Python <code>subprocess</code></p>
+<pre><code># macOS RSSI monitoring loop
+import subprocess, time, statistics
+
+def get_rssi():
+    result = subprocess.run(
+        ["/System/Library/PrivateFrameworks/Apple80211.framework/"
+         "Versions/Current/Resources/airport", "-I"],
+        capture_output=True, text=True
+    )
+    for line in result.stdout.splitlines():
+        if "agrCtlRSSI" in line:
+            return int(line.split(":")[1].strip())
+    return None
+
+readings = []
+while True:
+    rssi = get_rssi()
+    if rssi:
+        readings.append(rssi)
+        if len(readings) > 30:
+            readings.pop(0)
+        if len(readings) >= 10:
+            stdev = statistics.stdev(readings[-10:])
+            state = "MOTION" if stdev > 2.0 else "IDLE"
+            print(f"RSSI: {rssi:4d} dBm | stdev(10): {stdev:.2f} | {state}")
+    time.sleep(0.5)</code></pre>
+
+<h3 id="probe">3. Probe request sniffing</h3>
+<p><strong>How it works:</strong> WiFi devices periodically broadcast probe requests looking for known networks. Put your WiFi adapter in monitor mode and listen. Each probe contains a MAC address (increasingly randomized) and sometimes the SSID the device is looking for.</p>
+<p><strong>Accuracy:</strong> Detects device presence, not person presence. MAC randomization (on by default in iOS 14+ and Android 10+) severely limits tracking. You'll see a device but may not be able to identify whose it is across sessions.</p>
+<p><strong>Latency:</strong> Seconds to minutes. Devices don't probe continuously.</p>
+<p><strong>Privacy:</strong> Significant concern. You're passively capturing other people's device transmissions. Legal in most jurisdictions for your own property, but grey area for public spaces. GDPR considers MAC addresses personal data.</p>
+<p><strong>Tools:</strong> <code>tshark</code>, <code>tcpdump</code>, <code>airmon-ng</code>. macOS has limited monitor mode support on newer chips.</p>
+
+<h3 id="fingerprint">4. WiFi fingerprinting (whereami)</h3>
+<p><strong>How it works:</strong> Scan all visible access points and record their signal strengths. Each room in your house has a unique "fingerprint" because walls attenuate different APs differently. Train a classifier on room-labeled scans, then classify new scans in real time.</p>
+<p><strong>Accuracy:</strong> Room-level location (which room you're in), not motion detection. 85-95% accuracy after good training. Degrades if you rearrange furniture or add/remove APs.</p>
+<p><strong>Latency:</strong> 3-5 seconds per classification.</p>
+<p><strong>Privacy:</strong> You're scanning your own environment. Low concern.</p>
+<p><strong>Tools:</strong> <a href="https://github.com/kootenpv/whereami">whereami</a> (5K stars), <a href="https://github.com/schollz/find3">find3</a> (4.7K stars)</p>
+
+<h3 id="router">5. Router-based detection</h3>
+<p><strong>How it works:</strong> Some routers expose connected device lists, bandwidth usage, and connection events via APIs or web interfaces. Query these to see who's connected, when they connected, and how much data they're using.</p>
+<p><strong>Accuracy:</strong> Home-level presence. Better than ARP scanning because routers track connection/disconnection events with timestamps.</p>
+<p><strong>Latency:</strong> Router-dependent. Some update device lists every 30 seconds, others every 5 minutes.</p>
+<p><strong>Privacy:</strong> You're querying your own router. Low concern.</p>
+<p><strong>Tools:</strong> Router-specific APIs. OpenWrt has LUCI/ubus. UniFi has a REST API. Consumer routers vary wildly.</p>
+
+<h3 id="csi-approach">6. CSI extraction (the real deal)</h3>
+<p><strong>How it works:</strong> Extract the full Channel State Information matrix from WiFi frames. Analyze the per-subcarrier amplitude and phase changes to detect movement, classify activities, count people, and even recognize gestures.</p>
+<p><strong>Accuracy:</strong> 98-100% for presence detection with ESPectre. 85-95% for activity recognition in research settings. 70-80% for gesture classification.</p>
+<p><strong>Latency:</strong> 150-440 microseconds on ESP32. Real-time.</p>
+<p><strong>Privacy:</strong> Best possible. No visual data, no audio, no personal identifiers. Just RF channel statistics.</p>
+<p><strong>Hardware required:</strong> ESP32 ($4-10), or Intel 5300/Atheros with modified firmware on Linux, or Nexmon-patched Broadcom on Raspberry Pi. Does NOT work on macOS natively.</p>
+<p><strong>Tools:</strong> <a href="https://github.com/francescopace/espectre">ESPectre</a>, <a href="https://github.com/StevenMHernandez/ESP32-CSI-Tool">ESP32-CSI-Tool</a></p>
+
+<h3 id="ble">7. BLE scanning</h3>
+<p><strong>How it works:</strong> Scan for Bluetooth Low Energy advertisements. Most modern devices (phones, watches, earbuds, fitness trackers) periodically broadcast BLE advertisements even when not actively paired.</p>
+<p><strong>Accuracy:</strong> Device-level presence. Better range fingerprinting than WiFi because BLE RSSI attenuates more predictably with distance. iBeacon and Eddystone protocols provide sub-meter positioning.</p>
+<p><strong>Latency:</strong> 1-10 seconds depending on advertising interval.</p>
+<p><strong>Privacy:</strong> Same concerns as probe request sniffing. You're listening to other devices' broadcasts. MAC randomization applies here too.</p>
+<p><strong>Tools:</strong> Python <a href="https://github.com/hbldh/bleak">bleak</a> library, <code>bluetoothctl</code> on Linux</p>
+
+<h2 id="macbook-problem">The macOS problem: why your MacBook can't do CSI</h2>
+<p>If you're on a modern MacBook (2020 or later), you have a Broadcom BCM4387 WiFi chip. This chip is perfectly capable of CSI extraction at the hardware level. The problem is software.</p>
+<p>CSI extraction requires patching the WiFi firmware to expose the per-subcarrier channel estimates that the chip computes internally but never reports to the OS. On Linux, the <a href="https://github.com/seemoo-lab/nexmon">Nexmon</a> project provides firmware patches for many Broadcom chips, including older ones found in Raspberry Pi 3/4. But Nexmon doesn't support the BCM4387.</p>
+<p>Even if someone wrote a BCM4387 patch, macOS has System Integrity Protection (SIP). SIP prevents loading unsigned kernel extensions and modifying system firmware. You'd need to disable SIP, write a custom firmware patch for an undocumented chip, and hope Apple's Wi-Fi driver accepts the modified firmware. In practice, nobody has done this.</p>
+<p>The situation is different on Linux. Intel 5300 and Atheros chips have well-supported CSI tools. The Nexmon project covers many Broadcom chips used in Raspberry Pi. But on macOS with Apple's specific Broadcom integration, you're locked out.</p>
+<p>That's why the <a href="wifi-sensing-macbook.html">companion article</a> focuses on the 6 approaches that DO work on a MacBook without any extra hardware.</p>
+
+<h2 id="privacy">Privacy: the killer angle</h2>
+<p>This is why WiFi sensing matters more than the technical novelty suggests.</p>
+<p>Camera-based smart home systems have a fundamental problem: they capture video. That video can be hacked, subpoenaed, sold to data brokers, analyzed by AI for things you never consented to, or simply leaked. Ring doorbells have been accessed by law enforcement without warrants. Nest cameras have been compromised. Every camera in your house is a potential surveillance endpoint.</p>
+<p>WiFi CSI sensing captures none of this. There is no visual data. There is no audio. There are no biometrics. The raw data is a stream of numbers describing how radio waves bounce around a room. You cannot reconstruct what someone looks like, what they're wearing, who they are, or what they're saying from CSI data.</p>
+<p>What you CAN determine:</p>
+<ul>
+<li>Someone is in the room (presence)</li>
+<li>They're moving or still (motion)</li>
+<li>Roughly how many people are present (emerging research)</li>
+<li>Coarse activity classification: walking, sitting, lying down (research-grade)</li>
+<li>Whether someone has fallen and isn't getting up (elderly care)</li>
+</ul>
+<p>What you CANNOT determine:</p>
+<ul>
+<li>Who the person is</li>
+<li>What they look like</li>
+<li>What they're saying</li>
+<li>What they're wearing</li>
+<li>What's on their screen</li>
+<li>Any biometric information</li>
+</ul>
+<p>For home automation, elderly monitoring, and security, this is exactly the right tradeoff. You get the occupancy data you need for automation without creating a surveillance system that could be turned against you.</p>
+
+<h2 id="tools">Tools and repos</h2>
+<table>
+<tr><th>Tool</th><th>Stars</th><th>Purpose</th><th>Hardware</th></tr>
+<tr><td><a href="https://github.com/nickoala/ruview">RuView</a></td><td>~39K</td><td>WiFi CSI visualization and analysis toolkit</td><td>Various</td></tr>
+<tr><td><a href="https://github.com/kootenpv/whereami">whereami</a></td><td>~5K</td><td>WiFi fingerprint room detection. Python CLI.</td><td>Any laptop</td></tr>
+<tr><td><a href="https://github.com/schollz/find3">find3</a></td><td>~4.7K</td><td>Indoor positioning framework. Multi-device.</td><td>Any WiFi device</td></tr>
+<tr><td><a href="https://github.com/francescopace/espectre">ESPectre</a></td><td>Growing</td><td>CSI motion detection for ESP32. ESPHome native.</td><td>ESP32 variants</td></tr>
+<tr><td><a href="https://github.com/StevenMHernandez/ESP32-CSI-Tool">ESP32-CSI-Tool</a></td><td>~600</td><td>Raw CSI data collection on ESP32</td><td>ESP32</td></tr>
+<tr><td><a href="https://github.com/seemoo-lab/nexmon_csi">nexmon_csi</a></td><td>~700</td><td>CSI extraction via Nexmon firmware patches</td><td>RPi 3/4, select Broadcom</td></tr>
+<tr><td><a href="https://github.com/hbldh/bleak">bleak</a></td><td>~1.8K</td><td>Cross-platform BLE scanning library</td><td>Any Bluetooth adapter</td></tr>
+</table>
+
+<h2 id="hardware">Hardware you need</h2>
+<p>For full CSI sensing, you need an ESP32 board. Here's the quick buyer's guide:</p>
+<table>
+<tr><th>Board</th><th>Price</th><th>Best For</th><th>Notes</th></tr>
+<tr><td>ESP32-S3 DevKit</td><td>$8-10</td><td>Best overall performance</td><td>150 us detection, dual-core 240 MHz, 512 KB SRAM</td></tr>
+<tr><td>ESP32-C6 DevKit</td><td>$4-6</td><td>Best value</td><td>WiFi 6 support, 200 us detection, RISC-V core</td></tr>
+<tr><td>ESP32-C3 SuperMini</td><td>$3-5</td><td>Cheapest option</td><td>Single RISC-V core, 380 us detection, slightly lower accuracy</td></tr>
+<tr><td>ESP32 (original)</td><td>$5-8</td><td>Maximum compatibility</td><td>Most documentation, largest community</td></tr>
+</table>
+<p>You also need a WiFi source. Your existing home router works. The ESP32 listens to the router's beacon frames (sent 10 times per second by default) and extracts CSI from each one. Optimal placement: ESP32 3-8 meters from the router, with the area you want to monitor between them.</p>
+<p>Total cost for a single-room sensor: $4-10 for the ESP32 plus a USB cable and power adapter you probably already have. Compare that to a Ring Indoor Cam at $60 or a Nest Cam at $100, both of which require cloud subscriptions for full functionality.</p>
+
+<h2 id="laptop-breakthrough">The March 2026 breakthrough</h2>
+<p>In March 2026, a research paper (arXiv:2603.10845) demonstrated laptop-only WiFi sensing without custom hardware or firmware modifications. The approach uses standard WiFi management frames that any WiFi adapter can receive, extracting motion signatures from timing variations and signal strength patterns across multiple access points.</p>
+<p>The key insight: you don't need per-subcarrier CSI if you have enough access points. By correlating RSSI changes across 3+ APs visible from a single location, you can triangulate motion with room-level accuracy. The paper reported 91% presence detection accuracy using just a standard laptop WiFi adapter in a typical apartment with 4-6 visible networks.</p>
+<p>This is significant because it removes the hardware barrier entirely. No ESP32 needed, no firmware patches, no special chips. Any laptop running Linux or macOS can implement this with standard WiFi scanning APIs. The tradeoff is lower accuracy (91% vs 99%+) and higher latency (3-5 seconds vs microseconds). But for home automation triggers, 91% at 3-second latency is entirely usable.</p>
+
+<h2 id="home-assistant">Home Assistant integration</h2>
+<p>ESPectre is built as a native ESPHome component. If you're already running Home Assistant, setup is YAML configuration:</p>
+<pre><code># ESPHome YAML for ESPectre motion sensor
+esphome:
+  name: room-presence
+  platform: ESP32
+  board: esp32-s3-devkitc-1
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+external_components:
+  - source: github://francescopace/espectre
+
+binary_sensor:
+  - platform: espectre
+    name: "Living Room Presence"
+    device_class: motion
+    # Optional: choose detector
+    detector: mvs          # or "ml" for neural network
+    # Optional: sensitivity tuning
+    threshold_multiplier: 1.1
+    window_size: 75</code></pre>
+<p>Once connected, the sensor appears in Home Assistant as a standard binary motion sensor. You can use it in automations exactly like a PIR sensor or camera-based motion detector:</p>
+<ul>
+<li>Turn on lights when someone enters a room</li>
+<li>Turn off HVAC when rooms are unoccupied for 15 minutes</li>
+<li>Send alerts if motion is detected while everyone's supposed to be away</li>
+<li>Track occupancy patterns over time for energy optimization</li>
+</ul>
+<p>The advantage over PIR (passive infrared) sensors: WiFi CSI detects stationary presence. If you're sitting still at your desk reading, a PIR sensor thinks the room is empty after its timeout. CSI continues to detect your presence because your breathing alone creates measurable signal variations.</p>
+
+<h2 id="use-cases">Real use cases</h2>
+
+<h3>Elderly care and fall detection</h3>
+<p>This is the highest-impact application. A WiFi CSI sensor in each room of an elderly person's home can detect: normal activity patterns, prolonged stillness that might indicate a fall, bathroom visits at unusual hours that might indicate health changes, and general daily activity levels. All without a single camera, without the person needing to wear anything, and without any dignity-compromising surveillance.</p>
+<p>If someone falls and doesn't get back up within a configurable timeout, the system can alert a caregiver. Unlike a wearable fall detector, it works even if the person forgot to put it on.</p>
+
+<h3>Whole-home energy management</h3>
+<p>HVAC is typically 40-60% of home energy costs. With room-level occupancy sensing, you can heat and cool only occupied rooms. A deployment of 5-6 ESP32 sensors ($30-60 total) can reduce HVAC costs by 15-30% in homes with zoned systems. Payback period: 1-3 months.</p>
+
+<h3>Security without surveillance</h3>
+<p>A WiFi CSI sensor can tell you someone is in your house. It can't tell you it's your kid coming home from school vs. a burglar. But combined with a door/window sensor and a smart lock, you get a layered system: authorized entry (smart lock code) + motion tracking (CSI) covers most residential security needs without any cameras.</p>
+
+<h3>Smart lighting and automation</h3>
+<p>The stationary detection capability is the game changer here. Current smart home motion sensors (PIR) have a timeout problem: you're reading on the couch, the lights turn off because you haven't moved in 10 minutes, you wave your arms to trigger the sensor. CSI sensing eliminates this by detecting the micro-movements of breathing and subtle body shifts that PIR misses entirely.</p>
+
+<h2 id="companion">Companion article</h2>
+<div class="note">
+<p>Want to try WiFi sensing with just your laptop? The companion piece <a href="wifi-sensing-macbook.html"><strong>7 Ways to Detect People With Just Your MacBook</strong></a> covers every approach that works without extra hardware, including working Python code for ARP scanning, RSSI monitoring, WiFi fingerprinting, and BLE scanning.</p>
+</div>
+
+</div>
+</div>
+<footer>fnsmdehip &middot; <a href="https://github.com/fnsmdehip">github.com/fnsmdehip</a> &middot; 2026</footer>
+</body>
+</html>

@@ -123,8 +123,11 @@ def auto_approve_alpha():
                                     f"Second line: one sentence with your reasoning.\n"
                                     f"Third line (if APPROVE_PARTIAL): FREE_ALTERNATIVE: [name the free/OSS tool to use instead]"
                                 )
+                                cmd = ["claude", "-p", "--model", "sonnet", prompt]
+                                if os.environ.get("ANTHROPIC_API_KEY"):
+                                    cmd.insert(2, "--api-key")
                                 result = subprocess.run(
-                                    ["claude", "-p", prompt],
+                                    cmd,
                                     capture_output=True, text=True, timeout=45
                                 )
                                 answer = result.stdout.strip()

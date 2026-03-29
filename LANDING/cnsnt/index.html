@@ -452,17 +452,22 @@
 
     <section class="hero">
         <div class="container">
-            <div class="urgency-badge">Another false accusation went viral this week</div>
+            <div class="urgency-badge">Another accusation in the headlines this week</div>
             <h1>Document Consent.<br><span class="highlight">Protect Yourself.</span></h1>
-            <p class="hero-sub">Allegations go viral in 4 hours. Legal defense takes 18 months. The only protection that works at the speed of the internet is documentation you already have.</p>
+            <p class="hero-sub">True or not, allegations move faster than the legal system. The only thing that works at the speed of the internet is documentation you already have.</p>
             <div class="cta-group">
-                <a href="https://cnsnt.surge.sh" class="btn-primary">
+                <a href="https://cnsnt-web.surge.sh" class="btn-primary">
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     Launch Web App - Free
                 </a>
-                <a href="#" class="btn-secondary" onclick="return false;">
+                <a href="#download" class="btn-secondary">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    Desktop App
+                    <span class="coming-soon-badge">New</span>
+                </a>
+                <a href="#" class="btn-secondary" onclick="return false;" style="opacity:0.7;">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/><path d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
-                    Get iOS App
+                    iOS App
                     <span class="coming-soon-badge">Soon</span>
                 </a>
             </div>
@@ -496,7 +501,7 @@
         <div class="container">
             <div class="context-card">
                 <h2>The Problem Is Getting Worse</h2>
-                <p>Every week another public figure faces allegations that may or may not be true. The pattern repeats: accusation posted to social media, goes viral within hours, sponsors and partners cut ties within <span class="stat-inline">48 hours</span>, legal defense takes <span class="stat-inline">6-18 months</span>. Even when accusations are retracted and apologies are issued, the career damage is permanent. This isn't about believing one side. It's about having proof either way. Documentation protects both parties.</p>
+                <p>Every week someone new is in the headlines. Guilty or innocent, the pattern is the same: accusation posted online, viral within hours, reputation damaged within <span class="stat-inline">48 hours</span>, legal process takes <span class="stat-inline">6-18 months</span>. We're not here to judge who did what. We're here because documentation protects everyone involved. If the accusation is true, the record supports the victim. If it's not, the record clears the accused. Either way, proof beats hearsay.</p>
             </div>
         </div>
     </section>
@@ -547,7 +552,7 @@
                     <div class="step-num">1</div>
                     <div>
                         <h3>Open the app</h3>
-                        <p>No signup. No email. No account. Just open cnsnt in your browser or iOS app.</p>
+                        <p>No signup. No email. No account. Open cnsnt in your browser, download the desktop app, or use the iOS app. Your choice.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -628,24 +633,57 @@
         </div>
     </section>
 
+    <!-- DOWNLOAD SECTION -->
+    <section id="download" style="padding:60px 0; background:linear-gradient(135deg, rgba(108,92,231,0.08), rgba(0,184,148,0.05));">
+        <div class="container" style="text-align:center;">
+            <h2>Get cnsnt on Every Platform</h2>
+            <p style="color:var(--text-dim); max-width:500px; margin:0 auto 40px; line-height:1.7;">Your vault, your device. Pick the platform that works for you. Desktop apps store data on disk — no browser clearing risk.</p>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; max-width:800px; margin:0 auto;">
+                <!-- Web App -->
+                <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:28px 20px; text-align:center;">
+                    <div style="font-size:2.5rem; margin-bottom:12px;">&#127760;</div>
+                    <div style="font-weight:700; font-size:1.1rem; margin-bottom:6px;">Web App</div>
+                    <div style="color:var(--text-dim); font-size:0.85rem; margin-bottom:16px; line-height:1.5;">Works in any browser. Data in localStorage. Export backups to keep your vault safe.</div>
+                    <a href="https://cnsnt-web.surge.sh" style="display:inline-block; background:var(--accent); color:white; padding:10px 24px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9rem;">Launch Free</a>
+                </div>
+                <!-- macOS Desktop -->
+                <div style="background:var(--surface); border:2px solid var(--accent); border-radius:12px; padding:28px 20px; text-align:center; position:relative;">
+                    <div style="position:absolute; top:-10px; right:16px; background:var(--green); color:white; font-size:0.65rem; font-weight:700; padding:3px 10px; border-radius:10px; text-transform:uppercase; letter-spacing:1px;">Recommended</div>
+                    <div style="font-size:2.5rem; margin-bottom:12px;">&#128187;</div>
+                    <div style="font-weight:700; font-size:1.1rem; margin-bottom:6px;">macOS App</div>
+                    <div style="color:var(--text-dim); font-size:0.85rem; margin-bottom:16px; line-height:1.5;">Persistent vault on disk. Survives browser resets. PIN-locked. ~5MB download.</div>
+                    <a href="#" onclick="return false;" style="display:inline-block; background:var(--surface-2); color:var(--text-dim); padding:10px 24px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9rem; border:1px solid var(--border);">Coming This Week</a>
+                </div>
+                <!-- Windows Desktop -->
+                <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:28px 20px; text-align:center;">
+                    <div style="font-size:2.5rem; margin-bottom:12px;">&#128421;</div>
+                    <div style="font-weight:700; font-size:1.1rem; margin-bottom:6px;">Windows App</div>
+                    <div style="color:var(--text-dim); font-size:0.85rem; margin-bottom:16px; line-height:1.5;">Same encrypted vault. Runs natively on Windows 10/11. ~5MB installer.</div>
+                    <a href="#" onclick="return false;" style="display:inline-block; background:var(--surface-2); color:var(--text-dim); padding:10px 24px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9rem; border:1px solid var(--border);">Coming This Week</a>
+                </div>
+            </div>
+            <p style="color:var(--text-dim); font-size:0.8rem; margin-top:24px; max-width:500px; margin-left:auto; margin-right:auto;">iOS app in App Store review. All platforms use the same AES-256-GCM encryption. Desktop apps save your vault to <code style="background:var(--surface-2); padding:2px 6px; border-radius:4px; font-size:0.75rem;">~/.cnsnt/vault.enc</code> on disk.</p>
+        </div>
+    </section>
+
     <section class="pricing" id="pricing">
         <div class="container">
             <h2>Simple Pricing</h2>
-            <p class="pricing-sub">Start free with 3 records. Upgrade for video consent, unlimited records, and premium templates.</p>
+            <p class="pricing-sub">Same pricing across all platforms. Start free with 3 records. Upgrade for video consent, unlimited records, and premium templates.</p>
             <div class="pricing-grid">
                 <div class="price-card">
                     <div class="price-tier">Free</div>
                     <div class="price-amount">$0</div>
-                    <div class="price-period">forever</div>
+                    <div class="price-period">forever, all platforms</div>
                     <ul class="price-features">
                         <li>3 consent records total</li>
                         <li>Text-only records</li>
                         <li>3 basic templates (guest waiver, photo release, property access)</li>
                         <li>AES-256 encryption</li>
-                        <li>Local storage + PIN protection</li>
-                        <li>Cloud backup (encrypted export)</li>
+                        <li>PIN-locked vault (web: localStorage, desktop: disk)</li>
+                        <li>Encrypted backup export</li>
                     </ul>
-                    <a href="https://cnsnt.surge.sh" class="price-btn free">Get Started Free</a>
+                    <a href="https://cnsnt-web.surge.sh" class="price-btn free">Get Started Free</a>
                 </div>
                 <div class="price-card featured">
                     <div class="price-tier">Pro</div>
@@ -659,7 +697,7 @@
                         <li>Full audit trail export</li>
                         <li>Custom agreement branding</li>
                     </ul>
-                    <a href="https://cnsnt.surge.sh" class="price-btn paid">Start Free Trial</a>
+                    <a href="https://cnsnt-web.surge.sh" class="price-btn paid">Start Free Trial</a>
                 </div>
             </div>
         </div>
@@ -670,8 +708,8 @@
             <div class="privacy-badge">
                 <div class="shield">🛡️</div>
                 <div class="text">
-                    <strong>Your data never leaves your device</strong>
-                    <span>Zero servers. Zero tracking. Zero data collection. We can't see your records even if we wanted to.</span>
+                    <strong>100% local. No servers. No accounts. Your device, your data.</strong>
+                    <span>Web app: records in browser localStorage (clear history = gone unless backed up). Desktop app: records saved to an encrypted file on disk that survives browser resets. Both use AES-256-GCM. We have no database, no backend, no way to see your data.</span>
                 </div>
             </div>
         </div>
@@ -683,6 +721,10 @@
             <div class="faq-item">
                 <div class="faq-q">Is this legally admissible?</div>
                 <div class="faq-a">Consent documentation is supporting evidence, similar to a signed contract or timestamped photo. While laws vary by jurisdiction, having a contemporaneous encrypted record is objectively stronger than having nothing. Consult a lawyer in your jurisdiction for specific legal advice.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Where is my data stored?</div>
+                <div class="faq-a"><strong>Web app:</strong> Your browser's localStorage on YOUR device. If you clear browser data, your vault is gone unless you exported a backup. <strong>Desktop app (recommended):</strong> An encrypted file on your hard drive at ~/.cnsnt/vault.enc. Survives browser resets, OS updates, everything short of formatting your drive. <strong>iOS app:</strong> Encrypted in the app's sandbox storage. In all cases: no server, no database, no account. Your PIN unlocks the vault locally. Stripe handles payment verification separately but your consent records never touch any server.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">Can my partner see or access my records?</div>

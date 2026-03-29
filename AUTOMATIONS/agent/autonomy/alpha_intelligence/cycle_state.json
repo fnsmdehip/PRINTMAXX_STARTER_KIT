@@ -1,44 +1,33 @@
 {
-  "last_cycle_timestamp": "2026-03-22T23:20:00-04:00",
-  "cycle_status": "COMPLETE",
-  "venture_id": "alpha_intelligence_research",
-  "cycle_number": 127,
-  "sources_processed": {
-    "twitter": {
-      "accounts_scanned": 20,
-      "entries_found": 1,
-      "quality": "LOW",
-      "status": "operational"
+  "last_cycle": "2026-03-28T19:35:00Z",
+  "cycle_number": 109,
+  "status": "COMPLETE",
+  "phase": "IDLE",
+  "entries_processed": 100,
+  "entries_routed": 1,
+  "ventures_created": 1,
+  "content_generated": 60,
+  "freelance_leads": 17,
+  "ecom_products": 24,
+  "next_cycle": "2026-03-28T23:35:00Z",
+  "blockers": [
+    {
+      "priority": "P0",
+      "blocker": "Twitter login required",
+      "detail": "Keep X/Brave logged in for scraper to work"
     },
-    "reddit": {
-      "subreddits_scanned": 20,
-      "entries_found": 3,
-      "quality": "LOW",
-      "status": "operational"
-    },
-    "hackernews": {
-      "status": "partial",
-      "notes": "PH GraphQL 403 error"
+    {
+      "priority": "P1",
+      "blocker": "Product Hunt API error",
+      "detail": "403 auth error, check API key in .env"
     }
-  },
-  "analysis_summary": {
-    "entries_staged": 15981,
-    "entries_processed": 3,
-    "entries_routed": 0,
-    "entries_archived": 3,
-    "avg_score": 15
-  },
-  "content_generated": {
-    "twitter_posts": 10,
-    "linkedin_posts": 5,
-    "total_posts": 15
-  },
-  "decision_engine_output": {
-    "freelance_warm_leads": 10,
-    "ready_master_ops": 87,
-    "priority_launches": 17
-  },
-  "next_cycle_scheduled": "2026-03-23T03:20:00-04:00",
-  "execution_time_ms": 385000,
-  "report_location": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260322.md"
+  ],
+  "top_findings": [
+    {
+      "id": "ALPHA1773998956",
+      "title": "Stripe payment processing alternatives",
+      "roi": "HIGHEST",
+      "status": "ROUTED_TO_VENTURE"
+    }
+  ]
 }

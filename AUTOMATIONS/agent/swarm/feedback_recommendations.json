@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-28T16:00:00.963056",
+  "generated": "2026-03-28T20:00:00.775430",
   "recommendations": [
     {
       "decision": "boost_agent",
@@ -22,13 +22,13 @@
     {
       "decision": "boost_agent",
       "agent": "asset_deployer",
-      "reason": "High effectiveness (99.7%) over 126 runs",
+      "reason": "High effectiveness (99.7%) over 128 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "content_compounder",
-      "reason": "High effectiveness (100.0%) over 105 runs",
+      "reason": "High effectiveness (100.0%) over 107 runs",
       "source": "feedback_loop"
     },
     {
@@ -40,7 +40,7 @@
     {
       "decision": "boost_agent",
       "agent": "seo_aso_optimizer",
-      "reason": "High effectiveness (100.0%) over 53 runs",
+      "reason": "High effectiveness (100.0%) over 55 runs",
       "source": "feedback_loop"
     },
     {
@@ -76,7 +76,7 @@
     {
       "decision": "boost_agent",
       "agent": "system_healer",
-      "reason": "High effectiveness (100.0%) over 167 runs",
+      "reason": "High effectiveness (100.0%) over 169 runs",
       "source": "feedback_loop"
     },
     {
@@ -118,7 +118,7 @@
     {
       "decision": "boost_agent",
       "agent": "quality_gate",
-      "reason": "High effectiveness (98.6%) over 87 runs",
+      "reason": "High effectiveness (98.7%) over 89 runs",
       "source": "feedback_loop"
     },
     {

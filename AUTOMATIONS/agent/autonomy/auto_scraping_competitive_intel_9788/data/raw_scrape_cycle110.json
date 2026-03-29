@@ -1,0 +1,327 @@
+{
+  "cycle": 110,
+  "timestamp": "2026-03-28T23:41:19.981336+00:00",
+  "strategy": "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+  "niches": {
+    "daily_personal_finance_fundamentals_streak": {
+      "reddit_communities": {
+        "personalfinance": 17200000,
+        "financialindependence": 2100000,
+        "povertyfinance": 1800000,
+        "Frugal": 1400000,
+        "budget": 620000
+      },
+      "itunes_results": [
+        {
+          "name": "Mint (discontinued)",
+          "rating": 4.5,
+          "rating_count": 532000,
+          "category": "budgeting and expense tracker \u2014 bank account linking, automated categorization, bill tracking, credit score monitoring; Mint was a TRACKER (Intuit shut it down Jan 2024 after 16 years \u2014 532K ratings proves the market existed). Its successor Credit Karma has 1.3M App Store ratings. Neither teaches personal finance concepts daily: why compound interest is the eighth wonder of the world and exactly what it does to a $5K credit card balance over 10 years, why the 4% safe withdrawal rate was derived from the Trinity Study and what it actually means for your retirement math, or why most Americans have negative net worth due to lifestyle inflation outpacing income growth"
+        },
+        {
+          "name": "YNAB (You Need A Budget)",
+          "rating": 4.8,
+          "rating_count": 218000,
+          "category": "zero-based budgeting app \u2014 envelope budgeting method, debt payoff tools, real-time sync, partner sharing; budgeting METHODOLOGY tool (at $14.99/mo) not a daily personal finance science streak teaching why the debt avalanche saves more money than the debt snowball despite the snowball's psychological advantage, why increasing your savings rate by 1% has a nonlinear impact on your retirement date via compound interest acceleration, or why the 50/30/20 budget rule was specifically calibrated for median-income households and breaks down at higher incomes"
+        },
+        {
+          "name": "Copilot",
+          "rating": 4.9,
+          "rating_count": 38000,
+          "category": "AI-powered budget app \u2014 smart categorization, net worth tracking, investment monitoring, spending insights; premium AI budget tracker NOT a daily financial literacy streak teaching why net worth is the only financial metric that matters (not income), why insurance is negative expected value that's still always worth buying (risk transfer math), or why tax-advantaged accounts (401K, IRA, HSA) create asymmetric returns that after-tax accounts can never match"
+        }
+      ],
+      "community_total": 23120000,
+      "notes": "23M personal finance community \u2014 one of the largest Reddit communities on any topic. The /r/personalfinance wiki has been read millions of times. Yet every major finance app is a TRACKER. Nobody teaches personal finance principles daily in a streak format. Dave Ramsey has sold 12M books. Ramit Sethi's 'I Will Teach You To Be Rich' is a bestseller. The market HUNGERS for financial education. Yet no streak app delivers one daily financial concept: the Rule of 72, the debt avalanche vs snowball math, the actual impact of fees on index funds, the 4% rule mechanics. Financial literacy is a certified gap \u2014 2/3 of Americans can't pass a basic financial literacy test. >>> DIRECT BUILD: daily personal finance fundamentals streak. Score: 26. P0.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_stock_market_investing_streak": {
+      "reddit_communities": {
+        "investing": 2500000,
+        "stocks": 1700000,
+        "StockMarket": 1500000,
+        "ValueInvesting": 520000,
+        "SecurityAnalysis": 110000
+      },
+      "itunes_results": [
+        {
+          "name": "Robinhood",
+          "rating": 4.2,
+          "rating_count": 4200000,
+          "category": "commission-free stock broker \u2014 fractional shares, options trading, crypto trading, IPO access, cash management; BROKERAGE platform with 4.2M ratings (proves massive market engagement with stock investing) NOT a daily investing education streak teaching why dollar-cost averaging into index funds outperforms 85% of actively managed funds over 10+ years, why the Efficient Market Hypothesis explains why stock picking is negative expected value for retail investors, or why Buffett's actual edge comes from insurance float leverage and not just stock picking"
+        },
+        {
+          "name": "Fidelity Investments",
+          "rating": 4.8,
+          "rating_count": 1900000,
+          "category": "full-service brokerage \u2014 retirement accounts, index fund investing, fractional shares, robo-advisor; investment platform NOT a daily stock market science streak teaching why P/E ratios are meaningless without PEG ratio adjustment, why market cap-weighted index funds have momentum bias baked in, or why the Shiller CAPE ratio is the only valuation metric with statistically significant long-term predictive power"
+        },
+        {
+          "name": "Public.com",
+          "rating": 4.7,
+          "rating_count": 89000,
+          "category": "social investing platform \u2014 transparent portfolios, thematic investing, alternative assets, creator economy investing; social investing tool NOT a daily education streak teaching why earnings per share growth is the actual driver of long-term stock price appreciation (not sentiment), why bond yields have an inverse relationship with bond prices and what that means for portfolio construction, or why sector rotation follows predictable economic cycle patterns that professional investors exploit"
+        }
+      ],
+      "community_total": 6330000,
+      "notes": "6.3M investing community. Robinhood has 4.2M App Store ratings \u2014 the largest engagement signal of any financial app category. Yet every investing app is a BROKERAGE. None teach investing science daily. Khan Academy and Investopedia get 200M+ monthly visitors for financial education \u2014 the demand is proven and massive. A daily streak teaching one investing concept per day (efficient market hypothesis, compound growth, valuation metrics, portfolio theory) has no direct competitor in the App Store. MCAT-style flashcards for investing education. Target: CFA candidates, finance students, retail investors who lost money without understanding what they were doing. >>> BUILD: daily stock market investing science streak. Price: $5.99/mo. Score: 24. P0.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_trading_psychology_streak": {
+      "reddit_communities": {
+        "Daytrading": 1500000,
+        "Forex": 700000,
+        "algotrading": 750000,
+        "Daytraders": 390000,
+        "TradingView": 220000
+      },
+      "itunes_results": [
+        {
+          "name": "TradingView",
+          "rating": 4.8,
+          "rating_count": 480000,
+          "category": "charting and analysis platform \u2014 technical indicators, strategy backtesting, paper trading, community ideas, broker integration; charting TOOL with 480K ratings NOT a daily trading psychology streak teaching why loss aversion causes traders to hold losers 2x longer than winners (disposition effect), why overconfidence bias causes 80% of traders to believe they are above-average performers despite losing money, or why the planning fallacy consistently causes traders to underestimate position sizing risks"
+        },
+        {
+          "name": "TD Ameritrade (thinkorswim)",
+          "rating": 4.7,
+          "rating_count": 320000,
+          "category": "advanced trading platform \u2014 complex options chains, futures trading, paper money simulator, technical analysis suite; professional TRADING tool NOT a daily psychological bias education streak teaching why anchoring to entry price is the single biggest cause of irrational hold decisions, why FOMO-driven entries consistently violate risk/reward ratios, or why the hot hand fallacy causes traders to overweight recent winning streaks when sizing future positions"
+        },
+        {
+          "name": "Webull",
+          "rating": 4.6,
+          "rating_count": 290000,
+          "category": "commission-free broker \u2014 extended hours trading, paper trading, level 2 quotes, earnings calendar, analyst ratings; trading platform NOT a daily trading psychology streak teaching why 90% of day traders lose money within 3 years (ESMA study data), why the gambler's fallacy is structurally identical to the mental error causing traders to revenge-trade after losses, or why System 1 thinking (fast, emotional) dominates trading decisions and how deliberate System 2 override protocols are the only solution"
+        }
+      ],
+      "community_total": 3560000,
+      "notes": "3.5M trading community. TradingView has 480K App Store ratings \u2014 massive trading app engagement. ESMA study: 74-89% of retail CFD traders lose money. The psychology gap between knowing a strategy and executing it consistently is where ALL trader losses originate. Daniel Kahneman's 'Thinking, Fast and Slow' is essential reading for traders but nobody has made it into a daily streak habit. Brett Steenbarger's trader psychology work has no app equivalent. Mark Douglas's 'Trading in the Zone' sells thousands of copies annually. >>> BUILD: Daily trading psychology streak. Target: the 90% of losing traders (massive market: 15M+ active retail traders). Price: $6.99/mo. Score: 22.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_macroeconomics_literacy_streak": {
+      "reddit_communities": {
+        "economics": 1800000,
+        "MacroEconomics": 95000,
+        "AskEconomics": 420000,
+        "econmonitor": 85000,
+        "neoliberal": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "Bloomberg",
+          "rating": 4.6,
+          "rating_count": 185000,
+          "category": "financial news platform \u2014 live market data, economic news, analyst reports, portfolio tracking; news DELIVERY platform NOT a daily macroeconomics education streak teaching why the yield curve inverted before every recession since 1955, why M2 money supply growth above 7% historically precedes inflation spikes with a 12-18 month lag, or why GDP is a flow measure while net worth is a stock measure and why confusing them leads to bad policy analysis"
+        },
+        {
+          "name": "The Economist",
+          "rating": 4.7,
+          "rating_count": 41000,
+          "category": "long-form news magazine app \u2014 economic analysis, geopolitics, business coverage, data journalism; weekly news magazine NOT a daily macro concept streak teaching why the Phillips Curve broke down after the 1970s (and why that actually happened), why Ricardian equivalence predicts government spending crowds out private investment (and the empirical evidence against it), or why purchasing power parity fails to equalize prices across countries despite the theoretical prediction"
+        },
+        {
+          "name": "Yahoo Finance",
+          "rating": 4.8,
+          "rating_count": 1300000,
+          "category": "financial data aggregator \u2014 stock quotes, earnings calendar, portfolio tracker, news feed, options data; financial data AGGREGATOR with 1.3M ratings NOT a daily macroeconomics literacy streak teaching why central bank independence matters for inflation expectations, why fiscal multipliers differ between recessions and expansions, or why the Mundell-Fleming model explains why a small open economy cannot simultaneously control its exchange rate, interest rates, and capital flows"
+        }
+      ],
+      "community_total": 2680000,
+      "notes": "2.7M economics community. Bloomberg has 185K App Store ratings \u2014 financial information has massive app engagement. Ray Dalio's 'How the Economy Works' video has 38M YouTube views \u2014 people desperately want macro explained simply. Yet no streak app teaches macroeconomics daily: inflation mechanics, monetary policy transmission, business cycles, trade theory, fiscal policy. Business journalists, investors, policy wonks, MBA students, and curious citizens all need macro literacy. Every recession, every Fed meeting, every CPI print \u2014 hundreds of millions of people don't understand what's happening. >>> BUILD: Daily macroeconomics literacy streak. Price: $4.99/mo. Score: 21.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_options_trading_science_streak": {
+      "reddit_communities": {
+        "options": 600000,
+        "thetagang": 300000,
+        "optionsstrategy": 85000,
+        "Optionswheel": 95000,
+        "OptionsMillionaire": 42000
+      },
+      "itunes_results": [
+        {
+          "name": "Options Profit Calculator",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "options P&L calculator \u2014 payoff diagrams, strategy builder, Greeks display, IV rank data; options CALCULATOR tool NOT a daily options science streak teaching why theta decay accelerates nonlinearly in the final 21 days before expiration, why vega exposure multiplies when implied volatility is low and options are cheap, or why the Black-Scholes model breaks down for deep ITM options and what that means for pricing"
+        },
+        {
+          "name": "Tastytrade (tastyworks)",
+          "rating": 4.5,
+          "rating_count": 29000,
+          "category": "options-focused broker \u2014 trade ticket, probability of profit display, IV rank screening, defined risk strategies; options broker NOT a daily options science education streak teaching why selling options at elevated IV creates positive expected value through the volatility risk premium, why delta hedging gamma risk requires continuous rebalancing and creates path dependency, or why calendar spreads profit from term structure of volatility rather than directional moves"
+        },
+        {
+          "name": "Option Alpha",
+          "rating": 4.6,
+          "rating_count": 8200,
+          "category": "options education platform \u2014 strategy courses, backtested automations, paper trading simulator; structured COURSE platform NOT a daily habit-forming streak delivering one concept per day: why the put-call parity relationship enforces no-arbitrage bounds, why assignment risk on short calls spikes on ex-dividend dates, or why the VIX term structure in contango vs backwardation signals different volatility regimes"
+        }
+      ],
+      "community_total": 1122000,
+      "notes": "1.1M options community. Tastytrade built a $1B+ business on options education-as-marketing. Yet no streak app delivers daily options science concepts. Options traders are the most education-hungry segment of retail investors \u2014 they actively seek knowledge because they know ignorance is catastrophically expensive. Black-Scholes derivation, Greeks relationships, volatility surface dynamics, term structure analysis \u2014 all teachable in daily 3-minute concept cards. Target: the 8M Americans who traded options in 2023. >>> BUILD: Daily options trading science streak. Price: $7.99/mo (premium pricing justified by professional utility). Score: 21.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_cryptocurrency_fundamentals_streak": {
+      "reddit_communities": {
+        "CryptoCurrency": 7500000,
+        "Bitcoin": 6300000,
+        "ethereum": 1500000,
+        "defi": 210000,
+        "CryptoTechnology": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Coinbase",
+          "rating": 4.7,
+          "rating_count": 1900000,
+          "category": "cryptocurrency exchange \u2014 buy/sell/hold BTC/ETH/altcoins, staking, NFT integration, wallet; exchange platform with 1.9M App Store ratings NOT a daily crypto fundamentals streak teaching why Bitcoin's proof-of-work creates unforgeable costliness, why the block reward halving mechanistically reduces supply issuance every 4 years and the historical price response pattern, or why Ethereum's transition from proof-of-work to proof-of-stake changed its inflation rate from positive to negative"
+        },
+        {
+          "name": "Crypto.com",
+          "rating": 4.5,
+          "rating_count": 890000,
+          "category": "crypto exchange and card \u2014 buy/sell/earn/spend, debit card with crypto cashback, NFT marketplace; exchange platform NOT a daily cryptocurrency science streak teaching why zero-knowledge proofs enable privacy without revealing transaction data, why the Byzantine Generals Problem is the core problem Bitcoin solved, or why UTXO-based blockchains (Bitcoin) have different privacy properties than account-based blockchains (Ethereum)"
+        },
+        {
+          "name": "Phantom Wallet",
+          "rating": 4.8,
+          "rating_count": 68000,
+          "category": "Solana/multi-chain wallet \u2014 DeFi browser, NFT viewer, token swapping, staking; wallet tool NOT a daily crypto fundamentals streak teaching why DeFi automated market makers (AMMs) create impermanent loss for liquidity providers, why the Nakamoto Coefficient measures blockchain decentralization, or why layer-2 rollups (optimistic vs ZK) solve the blockchain trilemma differently at different security/speed tradeoffs"
+        }
+      ],
+      "community_total": 15690000,
+      "notes": "15.7M crypto community. Coinbase has 1.9M App Store ratings and generated $6.2B revenue in 2021. The crypto education gap is enormous: the vast majority of crypto holders don't understand what they own. Andreas Antonopoulos' 'Mastering Bitcoin' is a bestseller. Yet no streak app teaches crypto fundamentals daily: consensus mechanisms, cryptographic primitives, tokenomics, DeFi protocols, Layer 2 scaling. With 300M+ crypto holders globally and adoption accelerating, a daily streak app teaching crypto fundamentals has an astronomical TAM. Target: crypto holders who admit they don't really understand blockchain. >>> BUILD: Daily crypto fundamentals streak. Price: $4.99/mo. Score: 23.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_real_estate_investing_streak": {
+      "reddit_communities": {
+        "realestateinvesting": 1500000,
+        "BiggerPockets": 280000,
+        "FirstTimeHomeBuyer": 320000,
+        "landlord": 290000,
+        "passive_income": 510000
+      },
+      "itunes_results": [
+        {
+          "name": "BiggerPockets",
+          "rating": 4.8,
+          "rating_count": 18000,
+          "category": "real estate investing network \u2014 deal analysis calculators, podcast library, property search, networking; community and podcast platform NOT a daily real estate investing streak teaching why cap rate compression in gateway cities signals yield-seeking capital overpaying for safety, why 1031 exchanges allow indefinite tax deferral of capital gains creating wealth-compounding effects unavailable in other asset classes, or why debt service coverage ratio (DSCR) is the metric lenders actually underwrite commercial real estate on"
+        },
+        {
+          "name": "Roofstock",
+          "rating": 4.3,
+          "rating_count": 4200,
+          "category": "single-family rental marketplace \u2014 turnkey rental property listings, tenant-occupied properties, property management; marketplace NOT a daily real estate science streak teaching why the cap rate vs mortgage rate spread determines whether leverage amplifies or destroys returns, why vacancy rate assumptions are the single variable that most frequently causes rental property analysis failures, or why net operating income is calculated BEFORE financing costs and why this matters for comparing leveraged and unleveraged returns"
+        },
+        {
+          "name": "Arrived Homes",
+          "rating": 4.5,
+          "rating_count": 8900,
+          "category": "fractional real estate investing \u2014 $100 minimum investment, rental income distributions, appreciation participation; fractional ownership platform NOT a daily real estate investing education streak teaching why the real estate cycle has predictable phases (recovery, expansion, hyper-supply, recession) driven by construction lead times, why commercial real estate values using the income approach diverge from sales comparison approach during rate cycles, or why triple-net (NNN) leases transfer expense risk from landlord to tenant changing the risk profile of the investment"
+        }
+      ],
+      "community_total": 2900000,
+      "notes": "2.9M real estate investing community. BiggerPockets has built a $100M+ media business on real estate education. 'Rich Dad Poor Dad' has sold 40M+ copies. Yet no streak app teaches real estate investing science daily. The concepts are perfect for daily delivery: cap rates, NOI calculations, 1031 exchanges, DSCR underwriting, real estate cycle phases, property tax assessment mechanics, depreciation recapture. Target: first-time investors (millions), real estate licensees (1.5M in US), and aspiring landlords. >>> BUILD: Daily real estate investing science streak. Price: $5.99/mo. Score: 22.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_behavioral_finance_streak": {
+      "reddit_communities": {
+        "BehavioralEconomics": 220000,
+        "psychology": 800000,
+        "investing": 2500000,
+        "DecisionTheory": 45000,
+        "CriticalThinking": 430000
+      },
+      "itunes_results": [
+        {
+          "name": "Brilliant",
+          "rating": 4.8,
+          "rating_count": 58000,
+          "category": "STEM learning app \u2014 math, science, computer science, data analysis interactive courses; STEM education NOT a daily behavioral finance streak teaching why sunk cost fallacy is structurally different from loss aversion despite both causing suboptimal hold decisions, why mental accounting leads investors to treat dividend income differently from capital gains despite being economically equivalent, or why the availability heuristic causes investors to overweight recent market events and underweight base rates"
+        },
+        {
+          "name": "Headspace",
+          "rating": 4.9,
+          "rating_count": 780000,
+          "category": "meditation app \u2014 behavioral ADJACENT but focused on mindfulness delivery, not finance-specific cognitive bias education; no coverage of prospect theory, framing effects, or the specific decision-making patterns that cost retail investors 1.5% annual underperformance vs index funds (Dalbar QAIB study data)"
+        },
+        {
+          "name": "Duolingo",
+          "rating": 4.9,
+          "rating_count": 4400000,
+          "category": "language learning streak app \u2014 gamified daily lessons, XP system, streak notifications, leaderboards; language learning NOT behavioral finance. BUT: the Duolingo streak mechanic and gamification system is EXACTLY the proven model to apply to behavioral finance education. Duolingo's 500M+ users prove the streak model works for adult education at massive scale"
+        }
+      ],
+      "community_total": 3995000,
+      "notes": "4M behavioral economics community (plus massive overlap with investing). Kahneman's 'Thinking, Fast and Slow' sold 2M+ copies. Thaler and Sunstein's 'Nudge' won the Nobel Prize. Charlie Munger's psychology of human misjudgment speech is the most-shared Berkshire content. Yet no streak app teaches behavioral finance daily: loss aversion, mental accounting, representativeness heuristic, anchoring, the disposition effect, overconfidence calibration. This is where financial education meets behavioral psychology \u2014 an entirely unoccupied category. Dalbar QAIB study: investor behavior gaps cost average investor 1.5%/year vs index. >>> BUILD: Daily behavioral finance streak. Price: $6.99/mo. Score: 24. P0.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_tax_optimization_streak": {
+      "reddit_communities": {
+        "tax": 400000,
+        "personalfinance": 17200000,
+        "tax_advice": 68000,
+        "taxpros": 55000,
+        "smallbusiness": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "TurboTax",
+          "rating": 4.6,
+          "rating_count": 980000,
+          "category": "tax preparation software \u2014 guided filing, deduction finder, import W-2/1099, prior year comparison; tax FILING tool with 980K ratings (proves massive market engagement with taxes) NOT a daily tax strategy streak teaching why Roth vs Traditional IRA conversion math depends entirely on marginal rate trajectory, why harvesting capital losses against gains reduces tax drag on a portfolio by 0.5-1.5% annually, or why qualified business income (QBI) deduction creates a 20% write-off that most self-employed people don't know they're entitled to"
+        },
+        {
+          "name": "H&R Block Tax Prep",
+          "rating": 4.8,
+          "rating_count": 420000,
+          "category": "tax filing \u2014 expert assistance, simple filing, import last year's return, audit support; filing assistance NOT a daily tax education streak teaching why S-Corp election timing can reduce self-employment tax on pass-through income by $5-15K annually, why depreciation recapture at 25% makes rental property exit timing a major tax planning decision, or why the step-up in basis at death makes estate planning structurally different from lifetime gifting strategies"
+        },
+        {
+          "name": "FreeTaxUSA",
+          "rating": 4.8,
+          "rating_count": 210000,
+          "category": "free federal tax filing \u2014 DIY guided filing, deduction optimizer, e-file; filing tool NOT a daily tax strategy education streak teaching why bunching charitable deductions in alternating years with a donor-advised fund unlocks itemized deductions in odd years and standard deduction in even years, why backdoor Roth conversion mechanics allow high-income earners to legally contribute to Roth IRAs, or why the wash-sale rule's 30-day window creates specific harvest scheduling requirements"
+        }
+      ],
+      "community_total": 18823000,
+      "notes": "18.8M (personalfinance overlap) + 400K dedicated tax community. TurboTax has 980K App Store ratings \u2014 massive tax preparation engagement. Yet every tax app is a FILING tool. Nobody teaches tax strategy daily. The IRS tax code is 75,000 pages. Average American pays 30%+ effective tax rate. Yet 90% of people have never heard of backdoor Roth, QSBS exclusion, opportunity zone deferral, or QBI deduction. CPAs charge $300-500/hour for tax strategy advice that could be taught in daily 3-minute concept cards. Target: self-employed, small business owners, high earners, investors. >>> BUILD: Daily tax optimization strategy streak. Price: $7.99/mo (highest WTP in the finance category). Score: 24. P0.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_financial_independence_math_streak": {
+      "reddit_communities": {
+        "financialindependence": 2100000,
+        "leanfire": 280000,
+        "fatFIRE": 400000,
+        "ChubbyFIRE": 95000,
+        "coastFIRE": 140000
+      },
+      "itunes_results": [
+        {
+          "name": "Personal Capital (Empower)",
+          "rating": 4.7,
+          "rating_count": 220000,
+          "category": "wealth management app \u2014 net worth tracking, retirement planner, investment fee analyzer, cash flow; wealth tracking tool NOT a daily FI math streak teaching why the safe withdrawal rate math changes catastrophically across a 30-year vs 50-year retirement horizon, why sequence of returns risk in the first 10 years of retirement determines 80% of portfolio survival outcomes, or why coast FIRE calculations require understanding compound growth in reverse \u2014 your current portfolio compounds to your retirement number without further contributions"
+        },
+        {
+          "name": "Mint (discontinued)",
+          "rating": 4.5,
+          "rating_count": 532000,
+          "category": "budgeting tracker (discontinued Jan 2024) \u2014 not a daily FI education streak; its 532K ratings prove mass market interest in personal finance tools but the app taught no financial independence math"
+        },
+        {
+          "name": "Boldin (formerly NewRetirement)",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "retirement planning software \u2014 Monte Carlo simulation, Social Security optimization, healthcare cost projection; detailed retirement PLANNING tool NOT a daily FI concepts streak teaching why every 1% increase in savings rate reduces your FIRE timeline by 1-2 years (with nonlinear acceleration at high savings rates), why the FIRE number formula (annual expenses / SWR) creates dramatically different outcomes at 3% vs 4% SWR, or why geographic arbitrage (geoarbitrage) can cut your FIRE number by 40-60% overnight by relocating"
+        }
+      ],
+      "community_total": 3015000,
+      "notes": "3M FIRE community. 'Your Money or Your Life' sparked the FIRE movement in 1992 and still sells. Mr. Money Mustache blog generated millions of readers. FIRE community is uniquely education-hungry: they actively learn retirement math, withdrawal strategies, asset allocation theory, tax optimization in retirement, healthcare before Medicare, Social Security timing optimization. Yet no streak app teaches FI math daily. The concepts are perfectly suited: Rule of 25, 4% rule, coast FIRE calculations, sequence of returns risk, Roth conversion ladders. These are learnable in 3-minute daily concepts. Target: the 5M Americans actively pursuing FIRE. >>> BUILD: Daily FI math streak. Price: $5.99/mo. Score: 22.",
+      "verdict": "BLUE_OCEAN"
+    }
+  }
+}

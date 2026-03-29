@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-23T03:51:50.021429",
-  "last_cycle": "asset_deployer_20260323_0349",
-  "total_surge_deployments": 386,
+  "last_updated": "2026-03-28T17:30:00.000000",
+  "last_cycle": "asset_deployer_20260328_1730",
+  "total_surge_deployments": 388,
   "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
     "checked": 10,
@@ -52,7 +52,8 @@
     "tasksmash-web"
   ],
   "new_deployments_this_cycle": [
-    "n8n-vs-zapier-vs-make.surge.sh"
+    "cnsnt-web.surge.sh",
+    "nutriai.surge.sh"
   ],
   "issues_found": {},
   "fixes_applied": {
@@ -290,9 +291,23 @@
       "type": "comparison_page",
       "deployed_by": "asset_deployer",
       "deployed_at": "2026-03-21T01:33:36.562728"
+    },
+    {
+      "name": "cnsnt-web",
+      "url": "https://cnsnt-web.surge.sh",
+      "type": "app",
+      "deployed_by": "asset_deployer",
+      "deployed_at": "2026-03-28T17:30:00.000000"
+    },
+    {
+      "name": "nutriai",
+      "url": "https://nutriai.surge.sh",
+      "type": "app",
+      "deployed_by": "asset_deployer",
+      "deployed_at": "2026-03-28T17:30:00.000000"
     }
   ],
-  "total_count": 11,
+  "total_count": 13,
   "live_test": {
     "tested_at": "2026-03-19T14:45:12.293883",
     "cycle": "playwright_tester_comprehensive_20260319",

@@ -1,0 +1,327 @@
+{
+  "cycle": 109,
+  "timestamp": "2026-03-28T21:34:34.570637+00:00",
+  "strategy": "HEALTH + FITNESS + WELLNESS + NUTRITION",
+  "niches": {
+    "daily_sleep_science_streak": {
+      "reddit_communities": {
+        "sleep": 1200000,
+        "insomnia": 450000,
+        "SleepApnea": 180000,
+        "sleepdeprivation": 95000,
+        "polyphasic": 55000
+      },
+      "itunes_results": [
+        {
+          "name": "Sleep Cycle",
+          "rating": 4.7,
+          "rating_count": 375000,
+          "category": "sleep tracker \u2014 movement sensor alarm, sleep phase detection, audio recording, bedtime reminder; tracks sleep quality MECHANICALLY but does NOT teach why REM consolidates procedural memory, why adenosine accumulation creates sleep pressure, why blue light delays circadian phase, or why the 90-minute sleep architecture means waking mid-cycle feels catastrophic. No daily concept streak mechanic."
+        },
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 1800000,
+          "category": "guided meditation and sleep stories \u2014 breathing exercises, soundscapes, celebrity bedtime stories; relaxation delivery NOT a daily sleep science education habit teaching circadian biology, sleep debt math, the two-process model of sleep regulation, why naps before 3PM preserve nocturnal sleep while post-3PM naps shift your whole clock, or why teenagers genuinely cannot fall asleep before midnight due to pubescent circadian delay"
+        },
+        {
+          "name": "Headspace",
+          "rating": 4.9,
+          "rating_count": 780000,
+          "category": "meditation app \u2014 guided sessions, sleep exercises, focus programs, 10-day beginner course; meditation delivery NOT a daily streak app teaching sleep neuroscience: why NREM slow-wave sleep clears metabolic waste from the brain via the glymphatic system, why growth hormone releases exclusively during deep sleep, or what Matthew Walker's research reveals about the catastrophic cognitive consequences of even one night of 6-hour sleep"
+        }
+      ],
+      "community_total": 1980000,
+      "notes": "2M sleep community. Matthew Walker's 'Why We Sleep' sold 1.5M copies \u2014 the market demonstrably BUYS sleep science content. Sleep Cycle has 375K App Store ratings = proven sleep app demand. Calm charges $69.99/yr with 1.8M ratings. Yet neither teaches daily sleep science concepts. Chronobiology is a Nobel Prize-winning field (2017). 70M Americans have chronic sleep disorders. No app teaches the science behind why you're exhausted \u2014 the two-process model, adenosine, circadian rhythms, sleep architecture, REM neuroscience. MCAT and med school sleep physiology is heavily tested. >>> DIRECT BUILD: scripture-streak template. Sleep concept = verse. Score: 23.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_exercise_physiology_streak": {
+      "reddit_communities": {
+        "Fitness": 11200000,
+        "weightlifting": 2300000,
+        "running": 2200000,
+        "bodybuilding": 1700000,
+        "xxfitness": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "MyFitnessPal",
+          "rating": 4.7,
+          "rating_count": 1900000,
+          "category": "nutrition and workout tracker \u2014 calorie counting, macro logging, workout library, barcode scanner; tracking tool with 1.9M ratings NOT a daily exercise science education habit teaching why progressive overload causes muscle hypertrophy, why VO2 max is the strongest predictor of longevity, why eccentric contractions cause DOMS, or why the phosphocreatine system depletes in 10 seconds while glycolytic capacity lasts 2 minutes"
+        },
+        {
+          "name": "Nike Training Club",
+          "rating": 4.8,
+          "rating_count": 380000,
+          "category": "workout delivery app \u2014 guided workouts, training plans, exercise videos, athlete coaching programs; workout delivery NOT a daily science streak teaching why fast-twitch Type IIb fibers only activate above 80% 1RM, why cortisol spikes from overtraining suppress testosterone, why the anabolic window for protein synthesis is actually 24-48h not 30 minutes post-workout"
+        },
+        {
+          "name": "Strava",
+          "rating": 4.8,
+          "rating_count": 1150000,
+          "category": "GPS activity tracker \u2014 segment racing, social fitness network, training load analysis, heart rate zones; activity tracker and social network NOT a daily exercise physiology streak teaching why Zone 2 training builds mitochondrial density, why lactate threshold training extends sustainable pace, or why detraining reverses cardiovascular adaptations 3x faster than strength adaptations"
+        }
+      ],
+      "community_total": 18500000,
+      "notes": "18.5M fitness community \u2014 LARGEST addressable market scanned to date. MyFitnessPal 1.9M ratings proves the fitness app market is massive and paying. Yet ALL top fitness apps are TRACKERS or WORKOUT DELIVERY. None teach exercise physiology concepts daily. 100M Americans gym membership. VO2 max testing is a $200 clinical procedure yet no app teaches what VO2 max actually measures or how to improve it. Sports performance science is a billion-dollar coaching industry. >>> BLUE OCEAN: daily exercise science streak with niche badges (Hypertrophy Expert, Endurance Architect, Recovery Specialist). Price: $6.99/mo. Community 18.5M = massive TAM. Score: 25. P0.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_nutrition_biochemistry_streak": {
+      "reddit_communities": {
+        "nutrition": 2900000,
+        "keto": 2100000,
+        "intermittentfasting": 1900000,
+        "PlantBasedDiet": 880000,
+        "CICO": 450000
+      },
+      "itunes_results": [
+        {
+          "name": "Cronometer",
+          "rating": 4.8,
+          "rating_count": 89000,
+          "category": "micronutrient tracker \u2014 detailed nutrition data, blood biomarker logging, DNA-linked recommendations; micronutrient TRACKING tool not a daily nutrition science streak teaching why magnesium deficiency impairs 300+ enzymatic reactions, why B12 requires intrinsic factor for absorption and why vegans can't supplement their way out of absorption disorders, or why the glycemic index of a food changes when combined with fat and fiber"
+        },
+        {
+          "name": "Zero",
+          "rating": 4.8,
+          "rating_count": 310000,
+          "category": "intermittent fasting tracker \u2014 timer, fasting history, educational articles; fasting TIMER with articles not a daily habit-forming streak teaching why autophagy upregulates after 16-18h fasting, why ketogenesis begins after glycogen depletion, why mTOR suppression during fasting may extend healthspan, or the actual biochemical mechanism by which time-restricted eating shifts circadian gene expression"
+        },
+        {
+          "name": "Lifesum",
+          "rating": 4.6,
+          "rating_count": 195000,
+          "category": "diet tracking \u2014 calorie counting, healthy eating plans, macro balance, recipe recommendations; meal planning/tracking NOT a daily nutrition biochemistry streak delivering one concept per day on why omega-3 fatty acids modulate eicosanoid synthesis, why phytates in legumes chelate zinc and iron, or why the gut microbiome produces more serotonin than the brain"
+        }
+      ],
+      "community_total": 8230000,
+      "notes": "8.2M nutrition community. Zero (fasting app) has 310K ratings \u2014 people pay for nutrition behavior apps. Cronometer has 89K ratings for micronutrient tracking. Yet NO app teaches nutrition biochemistry daily \u2014 the actual science behind food and metabolism. 'The Huberman Lab' podcast averages 3M downloads/episode with nutrition episodes being top performers \u2014 direct proof of mass demand for nutrition science education. Dietitians, pre-med students, fitness coaches all need biochemistry. >>> BUILD: Daily nutrition science streak. Score: 24. P0.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_mental_health_science_streak": {
+      "reddit_communities": {
+        "mentalhealth": 1900000,
+        "depression": 1200000,
+        "Anxiety": 1100000,
+        "therapy": 520000,
+        "psychology": 790000
+      },
+      "itunes_results": [
+        {
+          "name": "BetterHelp",
+          "rating": 4.5,
+          "rating_count": 87000,
+          "category": "therapy platform \u2014 therapist matching, video/text sessions, worksheet tools; therapy SERVICE not a daily mental health science streak teaching why SSRIs take 2-6 weeks and why neuroplasticity is the real mechanism, why cognitive behavioral therapy restructures maladaptive thought patterns through specific neural rewiring, or why stress-induced cortisol chronically suppresses hippocampal neurogenesis"
+        },
+        {
+          "name": "Woebot",
+          "rating": 4.6,
+          "rating_count": 38000,
+          "category": "AI therapy chatbot \u2014 CBT conversations, mood tracking, anxiety exercises; chatbot therapy tool not a daily science streak teaching the neuroscience of trauma (amygdala hijack mechanism), why rumination activates the default mode network while action suppresses it, or why the polyvagal theory explains why breathing exercises actually regulate the autonomic nervous system"
+        },
+        {
+          "name": "Sanvello",
+          "rating": 4.7,
+          "rating_count": 62000,
+          "category": "mental health app \u2014 mood tracking, CBT exercises, community support, guided meditations; CBT delivery NOT a daily mental health science concept streak teaching why exposure therapy works through extinction learning, why emotional regulation uses the same neural architecture as executive function, or why belonging to a community activates the same reward circuits as physical safety"
+        }
+      ],
+      "community_total": 5510000,
+      "notes": "5.5M mental health community. Mental health crisis globally \u2014 1 in 4 adults experiences mental health condition. Therapy apps are exploding but focus on DELIVERY (therapy sessions, chatbot CBT). No app teaches mental health science daily: neuroscience of depression, anxiety physiology, trauma biology, neuroplasticity mechanisms. Psychology students, therapists, healthcare workers, and millions managing mental health all benefit from science literacy. Stigma reduction through education is a massive mission. >>> BUILD: Daily mental health science streak. Price: $4.99/mo. Score: 22.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_longevity_science_streak": {
+      "reddit_communities": {
+        "longevity": 450000,
+        "Biohacking": 520000,
+        "anti_aging": 280000,
+        "Supplements": 810000,
+        "nootropics": 450000
+      },
+      "itunes_results": [
+        {
+          "name": "InsideTracker",
+          "rating": 4.3,
+          "rating_count": 8200,
+          "category": "biomarker testing platform \u2014 blood panel ordering, biomarker optimization recommendations, supplement guidance; expensive biomarker tracking service ($249/draw) NOT a daily longevity science streak teaching why telomere length correlates with biological age, why senolytics like dasatinib + quercetin clear zombie cells in mouse models, why NAD+ precursors (NMN/NR) extend healthspan in multiple organisms, or why caloric restriction without malnutrition is the only proven longevity intervention"
+        },
+        {
+          "name": "Oura Ring",
+          "rating": 4.7,
+          "rating_count": 185000,
+          "category": "wearable companion \u2014 sleep scoring, readiness score, heart rate variability, activity rings; hardware companion app NOT a daily science education streak teaching why HRV reflects vagal tone and autonomic resilience, why Zone 2 cardio is the primary driver of mitochondrial biogenesis, or why the senescence-associated secretory phenotype (SASP) explains why aging cells damage neighboring tissue"
+        },
+        {
+          "name": "Levels",
+          "rating": 4.6,
+          "rating_count": 29000,
+          "category": "continuous glucose monitor companion \u2014 glucose trends, food scoring, metabolic health insights; CGM companion NOT a daily longevity education streak delivering the science behind why metabolic flexibility (fat/glucose switching) predicts longevity, why postprandial glucose spikes accelerate glycation and vascular damage, or why mitochondrial health is the actual upstream cause of aging across multiple hallmarks-of-aging frameworks"
+        }
+      ],
+      "community_total": 2510000,
+      "notes": "2.5M longevity/biohacking community. David Sinclair's 'Lifespan' sold 700K+ copies. Rhonda Patrick, Peter Attia, Bryan Johnson \u2014 longevity creators generate millions of views. Market PAYS for longevity content (Levels at $99/mo with 29K App Store ratings). Yet no app teaches longevity science daily. Every 40+ year old who discovered Huberman, Attia, or Sinclair wants MORE longevity education. Subscription SaaS angle: longevity science is bottomless (senolytics, mTOR, autophagy, epigenetic clocks, hallmarks of aging). >>> BUILD: Daily longevity science streak. Price: $7.99/mo. Score: 22.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_sports_performance_streak": {
+      "reddit_communities": {
+        "swimming": 590000,
+        "AdvancedRunning": 380000,
+        "triathlon": 190000,
+        "cycling": 1100000,
+        "weightlifting": 2300000
+      },
+      "itunes_results": [
+        {
+          "name": "Garmin Connect",
+          "rating": 4.7,
+          "rating_count": 340000,
+          "category": "GPS sports tracker \u2014 activity data, training load, VO2 max estimate, race predictor; hardware companion app tracking METRICS but not teaching why lactate threshold is the gold standard predictor of endurance performance, why altitude training triggers erythropoietin-mediated red blood cell production, or why mental skills training (visualization, self-talk protocols) is the differentiator between elite athletes of equal physical capacity"
+        },
+        {
+          "name": "TrainingPeaks",
+          "rating": 4.6,
+          "rating_count": 45000,
+          "category": "training load management \u2014 TSS/ATL/CTL periodization modeling, coach-athlete platform, structured workout execution; training MANAGEMENT platform for coaches, not a daily sports science streak teaching why the central governor theory redefines the limits of human performance, why carbohydrate oxidation rate plateaus at ~60g/hr and why dual-transporter fueling strategies extend that ceiling, or why sleep debt directly reduces athletic output via decreased motor learning and reaction time"
+        },
+        {
+          "name": "Whoop",
+          "rating": 4.7,
+          "rating_count": 285000,
+          "category": "recovery tracker \u2014 strain scoring, sleep performance, HRV trend analysis; wearable companion NOT a daily sports science streak teaching the mechanisms behind why eccentric-focused training produces superior strength adaptations, why blood flow restriction training at 30% 1RM produces hypertrophy comparable to 70% 1RM, or why periodized deload weeks are mandatory for continued supercompensation"
+        }
+      ],
+      "community_total": 4560000,
+      "notes": "4.5M endurance/sports community. Garmin has 340K App Store ratings \u2014 athletes pay for data tools. Yet no app teaches sports performance science daily. Every serious recreational athlete (cyclists, runners, triathletes, lifters) wants to understand the science behind their training. Competitive runners, cyclists \u2014 millions \u2014 know they could optimize if they understood the mechanisms. Race directors, coaches, PT students all benefit. >>> BUILD: Daily sports performance science streak. Score: 21.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_yoga_mindfulness_science_streak": {
+      "reddit_communities": {
+        "yoga": 800000,
+        "Mindfulness": 650000,
+        "Meditation": 420000,
+        "breathwork": 95000,
+        "pranayama": 38000
+      },
+      "itunes_results": [
+        {
+          "name": "Down Dog",
+          "rating": 4.9,
+          "rating_count": 280000,
+          "category": "yoga practice generator \u2014 adaptive sequences, instructor voice, multiple styles, timer-based routines; yoga practice DELIVERY not a daily science streak teaching why yoga-induced parasympathetic activation reduces cortisol measured in salivary assays, why the hypothalamic-pituitary-adrenal axis is regulated by consistent mindfulness practice at the epigenetic level, or why slow diaphragmatic breathing at 6 breaths/min maximizes baroreflex sensitivity and HRV"
+        },
+        {
+          "name": "Waking Up",
+          "rating": 4.9,
+          "rating_count": 98000,
+          "category": "secular meditation app \u2014 guided sessions, philosophical lectures, theory of mind courses; meditation DELIVERY and philosophy NOT a daily neuroscience streak explaining why the default mode network and its deactivation is the neural correlate of mindfulness, why mindfulness-based cognitive therapy has Level I evidence (meta-analysis of 47 RCTs) for depression relapse prevention, or why vagus nerve stimulation via breath is accessible self-regulation unlike pharmaceutical vagal blockers"
+        },
+        {
+          "name": "Insight Timer",
+          "rating": 4.9,
+          "rating_count": 310000,
+          "category": "free meditation app \u2014 guided meditations, talks, music, courses, community; massive meditation library NOT a daily science-first streak habit teaching evidence-based mechanisms behind why an 8-week MBSR intervention produces measurable structural changes in the amygdala and anterior cingulate cortex, or why loving-kindness meditation activates the ventral striatum in the same way as receiving social rewards"
+        }
+      ],
+      "community_total": 2003000,
+      "notes": "2M yoga/mindfulness community. Insight Timer free + 310K ratings, Calm 1.8M ratings, Down Dog 280K ratings \u2014 massive proven demand for yoga/meditation apps. Yet ALL are practice delivery tools. None teach the actual neuroscience and physiology of why mindfulness works. Sam Harris (Waking Up, $99.99/yr) moves toward philosophy but not neuroscience daily habits. Yoga science, breathwork physiology, meditation neurobiology are underserved. >>> BUILD: Daily yoga/mindfulness science streak. Score: 20.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_functional_medicine_streak": {
+      "reddit_communities": {
+        "functionalmedicine": 185000,
+        "bloodwork": 95000,
+        "HealthyLiving": 520000,
+        "Medical": 1400000,
+        "medicalschool": 380000
+      },
+      "itunes_results": [
+        {
+          "name": "GoodRx",
+          "rating": 4.8,
+          "rating_count": 1500000,
+          "category": "prescription discount finder \u2014 drug prices, coupon codes, pharmacy comparison; PRICE UTILITY tool with 1.5M ratings, not a daily functional medicine education streak teaching why optimal TSH for thyroid function is 1.0-2.0 not the lab reference 0.4-4.0, why conventional lipid panels miss particle size and why NMR LipoProfile changes clinical risk stratification, or why homocysteine and hsCRP are better cardiovascular predictors than total cholesterol"
+        },
+        {
+          "name": "Ada Health",
+          "rating": 4.5,
+          "rating_count": 95000,
+          "category": "AI symptom checker \u2014 symptom input, differential diagnosis suggestions, urgency triage; diagnostic TOOL not a daily functional medicine streak teaching why conventional reference ranges are population averages not optimal ranges, why nutrient testing requires RBC not serum assays for accurate intracellular status, or why an oral glucose tolerance test with insulin levels reveals metabolic syndrome 5-10 years before HbA1c becomes diagnostic"
+        },
+        {
+          "name": "Zoe",
+          "rating": 4.5,
+          "rating_count": 19000,
+          "category": "personalized nutrition science \u2014 gut microbiome testing, blood sugar response, food effect scoring; testing service NOT a daily streak teaching why SCFA-producing gut bacteria predict metabolic health, why personalized glucose response varies 4-fold between people eating identical foods, or why the enterotype classification system links microbiome composition to long-term disease risk"
+        }
+      ],
+      "community_total": 2580000,
+      "notes": "2.58M health/medical community. GoodRx has 1.5M App Store ratings \u2014 the medical app market is enormous and willing to pay. Functional medicine is a massive patient-consumer movement. Dr. Mark Hyman, Chris Kresser \u2014 functional medicine creators get millions of views. Every person managing chronic illness, optimizing labs, or pursuing root-cause health wants daily education on interpreting their biomarkers, understanding optimal ranges, and evidence-based interventions. >>> BUILD: Daily functional medicine science streak. Price: $7.99/mo. Score: 21.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_strength_training_science_streak": {
+      "reddit_communities": {
+        "powerlifting": 970000,
+        "StrongLifts5x5": 205000,
+        "StartingStrength": 195000,
+        "olympicweightlifting": 165000,
+        "GripTraining": 78000
+      },
+      "itunes_results": [
+        {
+          "name": "Strong",
+          "rating": 4.8,
+          "rating_count": 290000,
+          "category": "workout log \u2014 exercise library, set/rep tracking, personal records, progression graphs; training TRACKER not a daily strength science streak teaching why triphasic training (eccentric/isometric/concentric phases) produces superior motor unit recruitment than traditional periodization, why inter-muscular coordination is the primary driver of strength gains in novice lifters before hypertrophy becomes dominant, or why Prilepin's chart derived from Soviet sports science still defines optimal training volume for maximal strength development"
+        },
+        {
+          "name": "Jefit",
+          "rating": 4.7,
+          "rating_count": 270000,
+          "category": "gym tracker \u2014 workout plans, community routines, muscle diagram, exercise database; tracking and plan delivery NOT a daily science streak teaching why post-activation potentiation (PAP) increases explosive power 5-8 minutes post-heavy lift, why the repeated-bout effect makes second sessions of the same exercise far less damaging, or why concurrent training (cardio + strength same session) suppresses mTOR signaling via AMPK activation and reduces hypertrophy gains by an average of 31%"
+        },
+        {
+          "name": "BarBend",
+          "rating": 4.4,
+          "rating_count": 12000,
+          "category": "strength sports news \u2014 powerlifting/weightlifting competition coverage, technique breakdowns, training advice; news and editorial NOT a daily streak habit with XP mechanics, community leaderboards, and systematic curriculum from motor unit physiology to periodization principles"
+        }
+      ],
+      "community_total": 1613000,
+      "notes": "1.6M strength training science community. Strong has 290K ratings, Jefit 270K \u2014 strength trackers dominate but no app teaches the science. Powerlifting is the fastest-growing strength sport globally (IPF reports 60% growth 2015-2025). Science-literate lifters consistently outperform those following programs blindly. Greg Nuckols' Stronger by Science blog generates significant revenue from powerlifting education. >>> BUILD: Daily strength training science streak. Score: 19.",
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_microbiome_gut_health_streak": {
+      "reddit_communities": {
+        "Microbiome": 290000,
+        "guthealth": 185000,
+        "ibs": 170000,
+        "SIBO": 98000,
+        "fermentation": 290000
+      },
+      "itunes_results": [
+        {
+          "name": "Zoe",
+          "rating": 4.5,
+          "rating_count": 19000,
+          "category": "personalized gut/metabolic testing \u2014 microbiome kit, continuous glucose, food response; expensive testing service ($299) NOT a daily microbiome science streak teaching why Akkermansia muciniphila abundance predicts metabolic health outcomes, why butyrate-producing bacteria are lost on low-fiber Western diets, or why H. pylori affects iron and B12 absorption in 50% of people colonized"
+        },
+        {
+          "name": "Viome",
+          "rating": 4.2,
+          "rating_count": 8500,
+          "category": "microbiome testing companion \u2014 stool test results, food recommendations, supplement suggestions; testing service companion NOT a daily science streak teaching why the gut-brain axis via the vagus nerve creates bidirectional communication between intestinal bacteria and neural circuits, why 95% of serotonin is produced in the gut by enterochromaffin cells, or why bacterial LPS translocation through a leaky epithelium is mechanistically linked to neuroinflammation in depression and Alzheimer's"
+        },
+        {
+          "name": "Cara Care",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "IBS/gut symptom tracker \u2014 food diary, symptom correlation, low-FODMAP meal planning; symptom tracking app NOT a daily gut science streak teaching the microbiome as the second genome \u2014 why the ratio of Firmicutes:Bacteroidetes changes with obesity and what dietary fibers selectively enrich Bifidobacterium and Lactobacillus species"
+        }
+      ],
+      "community_total": 1033000,
+      "notes": "1M microbiome community. Gut health is one of the fastest-growing wellness categories. 'I Contain Multitudes' sold 500K+ copies. Peter Attia, Rhonda Patrick, and Tim Spector (Zoe creator) generate massive audiences with microbiome content. Functional medicine practitioners, nutritionists, health coaches all need microbiome literacy. Consumer demand for probiotic/prebiotic education is enormous \u2014 the market is littered with products but thin on science-based education apps. >>> BUILD: Daily microbiome science streak. Score: 20.",
+      "verdict": "BLUE_OCEAN"
+    }
+  }
+}

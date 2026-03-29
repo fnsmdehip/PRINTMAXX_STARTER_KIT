@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX - Weekly Changelog (Mar 15-21, 2026)</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--surface2:#1a1a25;--border:#252535;--text:#e0e0e8;--dim:#888899;--accent:#4a9eff;--accent2:#7c5cff;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;--cyan:#06b6d4;--pink:#ec4899}
+body{background:var(--bg);color:var(--text);font-family:'SF Mono','Fira Code','Cascadia Code',monospace;line-height:1.6;font-size:14px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;gap:20px;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+nav a{color:var(--dim);font-size:13px}nav a:hover{color:var(--accent)}
+nav .brand{color:var(--accent);font-weight:700;font-size:15px;letter-spacing:1px}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:28px;color:var(--accent);margin-bottom:4px;letter-spacing:1px}
+h2{font-size:20px;color:var(--accent2);margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+h3{font-size:16px;color:var(--cyan);margin:24px 0 12px}
+.subtitle{color:var(--dim);font-size:13px;margin-bottom:24px}
+.stat-row{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.stat{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:12px 16px;flex:1;min-width:120px;text-align:center}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .label{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin:12px 0}
+.card h4{color:var(--amber);margin:0 0 8px;font-size:14px}
+.card .meta{color:var(--dim);font-size:11px;margin-bottom:8px}
+.card p{color:var(--dim);font-size:13px;margin:4px 0}
+.card ul{padding-left:20px;margin:8px 0}
+.card li{margin:4px 0;font-size:13px}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px}
+.tag-blue{background:#1e3a5f;color:#4a9eff}
+.tag-green{background:#14532d;color:#22c55e}
+.tag-amber{background:#422006;color:#f59e0b}
+.tag-purple{background:#2e1065;color:#a78bfa}
+.tag-cyan{background:#083344;color:#06b6d4}
+.tag-pink{background:#500724;color:#ec4899}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+th{background:var(--surface2);color:var(--accent);text-align:left;padding:8px 12px;border:1px solid var(--border);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.5px}
+td{padding:8px 12px;border:1px solid var(--border);vertical-align:top}
+tr:nth-child(even){background:var(--surface)}
+.flow{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin:12px 0;font-size:12px;line-height:1.8;white-space:pre-wrap}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600;margin:4px 0}
+.b-printmaxx{background:#1e3a5f;color:#4a9eff;border:1px solid #2d5a8f}
+.b-sigcraft{background:#500724;color:#ec4899;border:1px solid #831843}
+.b-soundgrep{background:#14532d;color:#22c55e;border:1px solid #166534}
+.b-sovrun{background:#2e1065;color:#a78bfa;border:1px solid #4c1d95}
+.b-ancestry{background:#422006;color:#f59e0b;border:1px solid #713f12}
+.b-cloud{background:#083344;color:#06b6d4;border:1px solid #155e75}
+.b-uaf{background:#2e1065;color:#a78bfa;border:1px solid #4c1d95}
+.footer{text-align:center;margin:48px 0 24px;color:var(--dim);font-size:12px}
+@media(max-width:768px){.stat-row{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav>
+<span class="brand">PRINTMAXX</span>
+<a href="index.html">Hub</a>
+<a href="overview.html">How It Works</a>
+<a href="weekly.html" style="color:var(--accent)">Weekly Changelog</a>
+</nav>
+
+<div class="container">
+
+<h1>Week of March 15-21, 2026</h1>
+<p class="subtitle">112 commits, 1.52M lines, 7 projects. SIGCRAFT built from zero to paper-trading in 6 days. PRINTMAXX went from framework to wired execution across all 37 revenue lanes. Sourced from git log, file timestamps, and session analysis.</p>
+
+<div class="stat-row">
+<div class="stat"><div class="num">112</div><div class="label">Commits</div></div>
+<div class="stat"><div class="num">1.52M</div><div class="label">Lines Written</div></div>
+<div class="stat"><div class="num">345</div><div class="label">Claude Sessions</div></div>
+<div class="stat"><div class="num">7</div><div class="label">Active Projects</div></div>
+<div class="stat"><div class="num">321</div><div class="label">Scripts Modified</div></div>
+<div class="stat"><div class="num">52</div><div class="label">Apps Built</div></div>
+<div class="stat"><div class="num">3,961</div><div class="label">Auto Sessions</div></div>
+</div>
+
+<!-- ============================== -->
+<!-- PRINTMAXX -->
+<!-- ============================== -->
+
+<h2><span class="badge b-printmaxx">PRINTMAXX</span> 80 commits &middot; +1,450,869 / -433,460 lines</h2>
+
+<p>321 Python scripts modified in AUTOMATIONS/. 130 new venture alpha docs generated. 52 app builds pushed through APP_FACTORY. 9 cold outbound email sequences with real contacts and pricing. All 37 revenue lanes now have wired execution paths, not just DAG stubs.</p>
+
+<h3>New Automation Scripts</h3>
+
+<div class="card">
+<h4>claude_video_editor.py <span class="tag tag-cyan">25KB</span></h4>
+<p class="meta">FFmpeg-based auto-edit pipeline</p>
+<ul>
+<li>Raw AI video in, captioned/cropped/CTA'd content out</li>
+<li>Whisper captions, hook text overlays, platform-specific resizing (TikTok 9:16, Reels, Shorts, YouTube 16:9)</li>
+<li>Background music layering, batch mode, output to video posting queue</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>ai_video_content_pipeline.py <span class="tag tag-cyan">43KB</span></h4>
+<p class="meta">Script generator for Seedance 2.0, Kling, Pika</p>
+<ul>
+<li>Each script: hook (3s) + body (15-45s) + CTA (5s) with affiliate offer integration</li>
+<li>Auto-selects cheapest video gen tool from ALL_TOOLS_TRACKER.csv via Capital Genesis scoring</li>
+<li>Target: 50-100 AI videos/day across accounts, per-platform optimization</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>viral_content_scanner.py <span class="tag tag-cyan">45KB</span> <span class="tag tag-amber">Playwright</span></h4>
+<p class="meta">Real-time viral content detection via headless browser</p>
+<ul>
+<li>Thresholds: 10K+ likes, 2K+ retweets, 500K+ views</li>
+<li>Auto-downloads media, generates repurpose queue with reply-bait captions</li>
+<li>Breaking news detector: viral velocity over 2h sliding window</li>
+<li>Template extraction from viral video formats for replication</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>payment_integrator.py <span class="tag tag-cyan">28KB</span></h4>
+<p class="meta">Multi-processor payment routing</p>
+<ul>
+<li>Routes to Stripe, PayPal, Whop, RevenueCat, LemonSqueezy, or AdMob based on product type + fees</li>
+<li><code>--sync-products</code> <code>--create-links</code> <code>--wire-app</code> <code>--wire-mobile</code> <code>--auto-wire-all</code></li>
+<li>Auto-detects product category (SaaS, mobile, digital download, service) and picks optimal processor</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>autonomous_integrator.py <span class="tag tag-cyan">82KB</span> <span class="tag tag-amber">V2 Rewrite</span></h4>
+<p class="meta">10-tool alpha integration with procedural memory</p>
+<ul>
+<li>10-tool analysis per entry: ventures, ralph loops, n8n workflows, DAGs, handoffs, hooks, scripts, MCP, subagents, skills</li>
+<li>Procedural memory recall from prior integration decisions</li>
+<li>Budget-aware tool selection (Capital Genesis phase determines spend caps)</li>
+<li>Parallel subagent execution, gap detection, auto-wiring code generation</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>perpetual_tool_researcher.py <span class="tag tag-cyan">26KB</span></h4>
+<p class="meta">Continuous AI tool discovery from 6 sources</p>
+<ul>
+<li>GitHub trending, ProductHunt, TAAIFT, FutureTools, Reddit, Twitter</li>
+<li>Tracks video gen, editing, scheduling, voice, design tool categories</li>
+<li>Feeds discoveries into Capital Genesis ranker with open-source preference scoring</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>auto_content_poster.py <span class="tag tag-cyan">85KB</span></h4>
+<p class="meta">Content distribution with engagement tracking</p>
+<ul>
+<li>Reads from CONTENT/social/, rewrites with viral hooks, posts via X/Twitter API</li>
+<li>Identifies winners by engagement metrics, generates ad boost recommendations</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>claude_channels_integration.py <span class="tag tag-cyan">20KB</span></h4>
+<p class="meta">Remote agent control via Telegram</p>
+<ul>
+<li>Wires Claude Code Channels into PRINTMAXX Telegram bot</li>
+<li>Remote slash commands to trigger agents from phone</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>venture_pipeline.py <span class="tag tag-cyan">8KB</span> + 10 venture-type executors</h4>
+<p class="meta">Unified parameterized pipeline replacing 10 copy-paste scripts</p>
+<ul>
+<li>Reads DAG configs, routes to existing tools (engagement_bait_converter, content_repurposer)</li>
+<li>Per-venture executors: content, app, eas, outbound, brokering, local_biz, scraping, research, monetize, product</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>control_panel.py <span class="tag tag-cyan">210KB</span> <span class="tag tag-green">Flask</span></h4>
+<p class="meta">Unified dashboard at localhost:9999</p>
+<ul>
+<li>Agent throttle controls, system status, quick actions, slash commands</li>
+<li>System tree visualization, real-time metrics, venture status, pipeline funnel</li>
+<li>Sovrun skills DB, DAG monitoring, n8n workflow catalog</li>
+</ul>
+</div>
+
+<h3>Cold Outbound System</h3>
+<p>9 industry-specific email sequences, each with a 20-lead priority send queue containing named contacts, email addresses, and per-lead pricing ($500-$1,000):</p>
+<div class="flow">dentist/     restaurant/   lawyer/       plumber/
+real_estate/ beauty_salon/ veterinarian/ chiropractor/ auto_repair/</div>
+
+<h3>Meta Ads Autonomous</h3>
+<p>6-step daily loop: health check via Marketing API, fatigue detection (frequency > 3.5), auto-pause bleeders + budget shift to winners, copy generation from top performers, creative upload, morning brief.</p>
+
+<h3>App Factory Output (52 builds)</h3>
+<div class="flow">prospectmaxx  coldmaxx     pdfmaxx      invoiceforge   soberstreak
+focuslock     prayerlock   deskbreak    promptvault    pagescorer
+roicalc       stackmaxx    runningstreak
+
+Streak Landing Variants (20+):
+  Religious: quran, torah, gita, buddhist, mormon, sikh, scripture, hilal,
+             catholic, baptist, lutheran, methodist, episcopal, presbyterian,
+             pentecostal, evangelical, orthodox, anglican, sunni, shia
+  Fitness:   pushup, hiit, plank, breathwork, cycling, yoga, water
+  Creative:  beat-making, music-theory, photography, outfit-design, coding, art</div>
+
+<h3>Affiliate/Comparison Sites</h3>
+<div class="flow">semrush-vs-ahrefs         n8n-vs-zapier-vs-make    lemlist-vs-instantly
+claude-code-vs-opencode   best-ai-tools-2026       best-lead-generation-tools
+best-cold-email-tools     klaviyo-alternative      cursor-vs-claude-code</div>
+
+<h3>EAS (Enterprise Automation Solutions)</h3>
+<p>New playbooks: Managed Ops, Ops Pilot, Phone Pilot, Signal Map. Legal templates: MSA, SOW, Risk Disclosure, Subcontractor Agreement. Pricing: $1,500-$4,500 flat packages. Competitive analysis completed. Infrastructure blueprint and tech stack research documents.</p>
+
+<h3>Video Research Pipeline</h3>
+<p>Master video tools comparison 2026 (Sora, Kling, Veo, Seedance). Scheduling, editing, avatar, and voice tool comparisons. Claude dispatch CapCut pipeline design. n8n video workflow spec. Viral format templates extracted.</p>
+
+<h3>Commit Heatmap by Area</h3>
+<table>
+<tr><th>Directory</th><th>File Changes</th><th>What</th></tr>
+<tr><td>AUTOMATIONS/</td><td>1,041</td><td>Agent swarm, auto_ops, growth plans, DAG plans, handoff chains, tool evals</td></tr>
+<tr><td>growth_plans/</td><td>896</td><td>100 DAG runner stubs, venture-specific growth strategies</td></tr>
+<tr><td>CONTENT/social/</td><td>492</td><td>Posting queue, distribution logic, printmaxxer voice, auto_generated posts</td></tr>
+<tr><td>OPS/</td><td>460</td><td>130 venture alpha docs, daily digests, guardian reports, competitive intel</td></tr>
+<tr><td>LEDGER/</td><td>380</td><td>Revenue tracking, pipeline funnels, method scoring snapshots</td></tr>
+</table>
+
+<h3>Automated Intelligence Reports Generated</h3>
+<table>
+<tr><th>Report Type</th><th>Count</th><th>Dates</th></tr>
+<tr><td>Guardian improvement reports</td><td>8</td><td>Mar 14-21 (daily)</td></tr>
+<tr><td>Research digests</td><td>6</td><td>Mar 16, 17, 18, 20, 21</td></tr>
+<tr><td>Pain point digests</td><td>7</td><td>Mar 14-18, 21</td></tr>
+<tr><td>Unified alpha digests</td><td>6</td><td>Mar 15-18, 21</td></tr>
+<tr><td>Competitive intel</td><td>4</td><td>Mar 15-18</td></tr>
+<tr><td>Venture alpha docs</td><td>130</td><td>Continuous</td></tr>
+</table>
+
+<!-- ============================== -->
+<!-- SIGCRAFT -->
+<!-- ============================== -->
+
+<h2><span class="badge b-sigcraft">SIGCRAFT</span> 73 files &middot; 17,430 lines &middot; Built from scratch this week</h2>
+
+<p>Entire prediction engine built in 6 days, from nothing to paper-trading signals across crypto, prediction markets, equities, and macro. Scrapes 22+ sources, runs them through signal processors and LLM forecasting via <code>claude -p</code>, then executes simulated positions with Kelly sizing and risk gates. Every trade passes a 5%/position, 40%-total exposure hard cap before it touches even paper money.</p>
+
+<h3>Trading Infrastructure (Built March 21)</h3>
+
+<div class="card">
+<h4>paper.py <span class="tag tag-pink">13KB</span> Paper Trading Simulator</h4>
+<ul>
+<li>Processes signals in real-time, applies strategy + risk rules per trade</li>
+<li>PaperTrade dataclass: entry/exit price, size, P&L, slippage model</li>
+<li>Supports crypto, prediction markets, equities, macro asset classes</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>strategy.py <span class="tag tag-pink">16KB</span> Strategy Framework</h4>
+<ul>
+<li>Abstract Strategy base: <code>should_enter()</code> / <code>should_exit()</code></li>
+<li>EdgeStrategy: entries on signal confidence > threshold, exits on trailing stop or target</li>
+<li><code>default_strategies()</code> factory per asset class</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>risk.py <span class="tag tag-pink">8KB</span> Risk Management</h4>
+<ul>
+<li>Max 5% per position, 40% total exposure cap</li>
+<li>Drawdown gates, correlation-adjusted sizing</li>
+<li>Every trade passes through <code>RiskManager.check()</code> before execution</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>scaler.py <span class="tag tag-pink">7KB</span> Strategy Auto-Scaler</h4>
+<ul>
+<li>Rolling Sharpe ratio per strategy. Scale up at Sharpe > 1.0, down at < 0.0</li>
+<li>Min 20 trades before scaling. Drawdown cut at 15%. 95% confidence gating</li>
+<li>Bounds: 0.2x min, 5x max allocation multiplier</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>engine.py + metrics.py <span class="tag tag-pink">26KB</span> Signal-Replay Backtesting</h4>
+<ul>
+<li>Replays SIGCRAFT's own signals against historical data (not traditional OHLCV)</li>
+<li>Flow: Historical Signals &rarr; Strategy.evaluate() &rarr; RiskManager.check() &rarr; Virtual Trades &rarr; Metrics</li>
+<li>BacktestResult: total return, Sharpe, max drawdown, win rate, profit factor</li>
+</ul>
+</div>
+
+<h3>Data Source Collectors (32 files, 5,272 lines)</h3>
+<table>
+<tr><th>Category</th><th>Sources</th><th>What It Pulls</th></tr>
+<tr><td>Crypto</td><td>CoinGecko, DexScreener, DeFi Llama, Birdeye, pump.fun</td><td>Prices, volume, TVL, new token listings, graduation events</td></tr>
+<tr><td>Prediction Markets</td><td>Polymarket, Manifold, Metaculus</td><td>Market prices, volume, resolution history</td></tr>
+<tr><td>Social</td><td>Twitter crypto, Telegram, Reddit</td><td>Sentiment, alpha calls, trending tickers</td></tr>
+<tr><td>News</td><td>RSS aggregator, GDELT</td><td>Breaking events, geopolitical signals</td></tr>
+<tr><td>Financial</td><td>EDGAR SEC, Finnhub, FRED</td><td>Filings, earnings, macro indicators</td></tr>
+<tr><td>Trends</td><td>Google Trends, Wikipedia pageviews</td><td>Search volume spikes, attention signals</td></tr>
+<tr><td>Intelligence</td><td>PRINTMAXX bridge</td><td>44K alpha entries from 133 Twitter accounts</td></tr>
+</table>
+
+<h3>Signal Processors</h3>
+<p>SentimentAggregator, AnomalyDetector, TrendDetector, MemeCoinDetector (entry/exit with Kelly sizing), TwitterAlphaScorer. Plus Polymarket mispricing detection: speed arbs, cross-market divergence, structural edges, signal divergence.</p>
+
+<h3>Module Breakdown</h3>
+<table>
+<tr><th>Package</th><th>Files</th><th>Lines</th></tr>
+<tr><td>collectors/</td><td>32</td><td>5,272</td></tr>
+<tr><td>output/</td><td>8</td><td>4,459</td></tr>
+<tr><td>signals/</td><td>4</td><td>1,984</td></tr>
+<tr><td>calibration/</td><td>6</td><td>1,449</td></tr>
+<tr><td>trading/</td><td>5</td><td>1,140</td></tr>
+<tr><td>core/</td><td>4</td><td>905</td></tr>
+<tr><td>orchestration/</td><td>4</td><td>775</td></tr>
+<tr><td>predictors/</td><td>5</td><td>763</td></tr>
+</table>
+
+<p>Dashboard on port 8888: FastAPI + Plotly. Command Center, Markets view, Edge Finder, Signals, Predictions, Calibration. Covers crypto, stocks, prediction markets, macro, SEC filings. Cron: launchd every 15min (collect) + 6h (full pipeline).</p>
+
+<!-- ============================== -->
+<!-- SOUNDGREP -->
+<!-- ============================== -->
+
+<h2><span class="badge b-soundgrep">SOUNDGREP</span> 8 commits &middot; +20,628 / -639 lines</h2>
+
+<p>Zero to working multi-agent system, native macOS app, and session engine in one week. Renamed from "seance" (vibes) to "soundgrep" (function + SEO).</p>
+
+<h3>Day-by-Day Build</h3>
+
+<div class="card">
+<h4>Days 1-2: Full System Creation <span class="tag tag-green">57 files, 11,106 insertions</span></h4>
+<ul>
+<li>7 specialist agents: Conductor, Alchemist, Arranger, Generator, Melodist, Mix Engineer, Sound Scout</li>
+<li>CLAP embeddings + FAISS semantic search ("dark atmospheric pad" finds matching samples from your library)</li>
+<li>AbletonOSC bridge for live DAW control</li>
+<li>FastAPI server (port 7777) + React dashboard + voice input + MCP bridge</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>Day 3: Open Source Tool Wiring <span class="tag tag-green">22 files, 3,170 insertions</span></h4>
+<ul>
+<li>freesound (sample search), matchering (AI mastering), whisper (transcription), music21 (theory)</li>
+<li>autochord (chord detection), allin1 (structure analysis), ACE-Step (generation)</li>
+<li>7 new intelligence modules: chord_detection, mastering, music_theory, structure_analysis, transcription</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>Day 4: Native macOS App <span class="tag tag-green">SwiftUI</span></h4>
+<ul>
+<li>SoundGrep.app in /Applications with build script and icon generator</li>
+<li>Connects to local API, native menu bar integration</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>Days 5-6: Session Engine <span class="tag tag-green">2,084 insertions</span></h4>
+<ul>
+<li>session.py: tracks samples found, files produced, arrangement state, style prefs, approval/rejection history</li>
+<li>router.py: Opus for arrangement decisions, Sonnet for standard, Haiku for classification</li>
+<li>Plan mode with approval UI for destructive operations (export, overwrite)</li>
+<li>Tests: test_session.py, test_router.py, test_audio.py, test_midi.py, test_vector.py</li>
+</ul>
+</div>
+
+<!-- ============================== -->
+<!-- SOVRUN -->
+<!-- ============================== -->
+
+<h2><span class="badge b-sovrun">SOVRUN / AGENT-SOUL</span> 17 commits &middot; +20,684 / -1,631 lines</h2>
+
+<p>Everything that makes PRINTMAXX agents actually work — procedural memory, failure recovery, context handoffs — extracted into a standalone open-source package anyone can use. Renamed agent-soul &rarr; dogwalk &rarr; sovrun. 25 modules, 2 dependencies.</p>
+
+<div class="card">
+<h4>Initial Cognitive Modules <span class="tag tag-purple">10 modules, 4,442 lines</span></h4>
+<p>cognitive_engine, conversation_logger, decision_engine, loop_closer, pattern_miner, resilience, self_audit, session_briefing, user_sim_refiner, voice_extractor</p>
+</div>
+
+<div class="card">
+<h4>6 New Core Modules <span class="tag tag-purple">7,656 lines</span></h4>
+<ul>
+<li><code>durable.py</code> persistent state across agent restarts</li>
+<li><code>handoff.py</code> context-preserving inter-agent handoffs</li>
+<li><code>mcp_bridge.py</code> MCP protocol integration</li>
+<li><code>orchestration.py</code> multi-agent coordination</li>
+<li><code>procedural_memory.py</code> learned behavior storage</li>
+<li><code>tracing.py</code> full execution path tracing</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>Memory Import + 1,200 Connectors <span class="tag tag-purple">3,367 lines</span></h4>
+<p>Import from ChatGPT, Claude, Gemini. 134 tool connectors wired: MoneyPrinterTurbo, Postiz, Crawl4AI, yt-dlp, Polar, Freqtrade, listmonk, Mautic.</p>
+</div>
+
+<div class="card">
+<h4>Media Generation Layer <span class="tag tag-purple">1,605 lines</span></h4>
+<p>bland_ai (voice calls), edge_tts, openai_media, playwright_screenshot, replicate_provider. n8n workflow bridge: 884-line API integration with tenacity retry, 19 modules.</p>
+</div>
+
+<!-- ============================== -->
+<!-- OTHER PROJECTS -->
+<!-- ============================== -->
+
+<h2>Other Active Projects</h2>
+
+<div class="card">
+<h4><span class="badge b-ancestry">Ancestry Research</span> 3 commits &middot; 6,497 lines &middot; 16 subagents</h4>
+<ul>
+<li>autoresearch-genealogy: 67 files, 12 prompt templates, 10 vault templates, 13 archive guides</li>
+<li>14 additional archive guides for global coverage (African-American through Spain/Portugal)</li>
+<li>Family heritage site: React + Vite + Tailwind + Framer Motion, deployed to donnelly-family-heritage.surge.sh</li>
+<li>Product concept: "Before You" -- parameterized ancestry site generator. Domains scouted: beforeyou.app, kinscroll.com</li>
+</ul>
+</div>
+
+<div class="card">
+<h4><span class="badge b-cloud">Switch Cloud Play</span> 1 commit &middot; 1,203 lines</h4>
+<ul>
+<li>Remote play Nintendo Switch from Mac: network bridge, nxbt_bridge, serial_bridge, controller mapper</li>
+<li>Capture card display + SysDVR integration. Pushed to GitHub as public repo.</li>
+</ul>
+</div>
+
+<div class="card">
+<h4><span class="badge b-uaf">UAF</span> 3 commits &middot; v47 &rarr; v51</h4>
+<ul>
+<li>Perpetual Refinement Agent running autonomous heartbeat mode</li>
+<li>v48: research expanded, v49: novel derivations, v50: longevity protocol, v51: longevity amended</li>
+<li>Git auto-commit/push added to heartbeat script</li>
+</ul>
+</div>
+
+<!-- ============================== -->
+<!-- AUTONOMOUS ACTIVITY -->
+<!-- ============================== -->
+
+<h2>What the Agents Did While I Slept</h2>
+
+<p>3,961 autonomous Claude Code sessions this week — 78% of all sessions ran without any human prompt. On March 21 alone, 21 batch sessions produced these scripts with zero human input:</p>
+
+<div class="card">
+<h4>Batch-Generated Scripts (21 sessions, March 21)</h4>
+<ul>
+<li>Product Hunt launch monitor + B2B lead scorer</li>
+<li>IRS SOI migration data &rarr; tax-driven relocation content pipeline</li>
+<li>Morning routine app MVP with RevenueCat IAP + AdMob</li>
+<li>Geo-game clone factory (GeoGuessr alternatives on Surge)</li>
+<li>Claude Code Channels &rarr; Telegram bot for remote agent control</li>
+<li>Building-in-public metrics posts generator</li>
+<li>Reddit r/digitalnomad monitor for fintech pain points</li>
+<li>Newsletter content pipeline with affiliate links</li>
+<li>r/sweatystartup deal scraper &rarr; valuation database</li>
+<li>Tweet variant generation engine</li>
+</ul>
+</div>
+
+<h3>Key Decisions This Week</h3>
+<table>
+<tr><th>Decision</th><th>Why</th></tr>
+<tr><td>Oracle renamed &rarr; SIGCRAFT</td><td>SEO-first naming: GitHub namespace free, zero competitors on the name</td></tr>
+<tr><td>seance renamed &rarr; soundgrep</td><td>Same methodology: function description + SEO over vibes</td></tr>
+<tr><td>Model routing adopted</td><td>Opus for complex, Sonnet for standard, Haiku for classification. Controls cost at scale.</td></tr>
+<tr><td>Guardrail hook blocks destructive ops</td><td>Even <code>--dangerously-skip-permissions</code> gets caught. Prevents autonomous agents from deleting things.</td></tr>
+<tr><td>Non-peak double-usage</td><td>Anthropic Max plan has 2x usage during off-peak. All heavy crons shifted to those windows.</td></tr>
+</table>
+
+<div class="footer">
+solo build &middot; updated weekly &middot; sourced from git log, file audits, session analysis<br>
+<a href="index.html">&larr; Back to Hub</a>
+</div>
+
+</div>
+</body>
+</html>

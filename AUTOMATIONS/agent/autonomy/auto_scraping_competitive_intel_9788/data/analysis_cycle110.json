@@ -1,0 +1,51 @@
+{
+  "cycle": 110,
+  "strategy": "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+  "timestamp": "2026-03-28T23:41:19.981336+00:00",
+  "niches_scanned": 10,
+  "blue_oceans": 10,
+  "soft_competition": 0,
+  "occupied": 0,
+  "p0_alerts": [
+    "daily_personal_finance_fundamentals_streak",
+    "daily_cryptocurrency_fundamentals_streak",
+    "daily_tax_optimization_streak"
+  ],
+  "community_total": 81235000,
+  "cumulative_blue_oceans": 487,
+  "top_niches": [
+    {
+      "niche": "daily_cryptocurrency_fundamentals_streak",
+      "strategy": "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+      "community_total": 15690000,
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "p0": true,
+      "notes_summary": "15.7M crypto community. Coinbase has 1.9M App Store ratings and generated $6.2B revenue in 2021. The crypto education gap is enormous: the vast majority of crypto holders don't understand what they ow",
+      "cycle": 110,
+      "timestamp": "2026-03-28T23:41:19.981336+00:00"
+    },
+    {
+      "niche": "daily_personal_finance_fundamentals_streak",
+      "strategy": "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+      "community_total": 23120000,
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "p0": true,
+      "notes_summary": "23M personal finance community \u2014 one of the largest Reddit communities on any topic. The /r/personalfinance wiki has been read millions of times. Yet every major finance app is a TRACKER. Nobody teach",
+      "cycle": 110,
+      "timestamp": "2026-03-28T23:41:19.981336+00:00"
+    },
+    {
+      "niche": "daily_tax_optimization_streak",
+      "strategy": "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+      "community_total": 18823000,
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "p0": true,
+      "notes_summary": "18.8M (personalfinance overlap) + 400K dedicated tax community. TurboTax has 980K App Store ratings \u2014 massive tax preparation engagement. Yet every tax app is a FILING tool. Nobody teaches tax strateg",
+      "cycle": 110,
+      "timestamp": "2026-03-28T23:41:19.981336+00:00"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "description": "Intelligent spawning config \u2014 controls how many claude -p calls scripts make based on data volume",
+  "last_updated": "2026-03-28",
+  "global": {
+    "max_daily_calls": 200,
+    "calls_today": 0,
+    "last_reset": "2026-03-28",
+    "budget_mode": "standard"
+  },
+  "model_routing": {
+    "classification": "haiku",
+    "scoring": "sonnet",
+    "code_generation": "sonnet",
+    "analysis": "sonnet",
+    "strategic_reasoning": "opus",
+    "creative_writing": "opus",
+    "simple_extraction": "haiku"
+  },
+  "scripts": {
+    "auto_approve": {
+      "model": "sonnet",
+      "spawn_mode": "variable",
+      "min_calls": 1,
+      "max_calls": 50,
+      "batch_size": 10,
+      "rule": "1 call per 10 PENDING_REVIEW entries, capped at 50",
+      "skip_if_below": 3
+    },
+    "venture_pipeline_brokering": {
+      "model": "sonnet",
+      "spawn_mode": "variable",
+      "min_calls": 1,
+      "max_calls": 30,
+      "batch_size": 5,
+      "rule": "1 call per 5 DAG steps, skip steps with no new data since last run",
+      "skip_if_below": 1
+    },
+    "user_sim_refiner": {
+      "model": "sonnet",
+      "spawn_mode": "variable",
+      "min_calls": 1,
+      "max_calls": 9,
+      "batch_size": 3,
+      "rule": "Only refine ventures that had new alpha entries or state changes since last refine",
+      "skip_if_no_changes": true
+    },
+    "autonomous_integrator": {
+      "model": "sonnet",
+      "spawn_mode": "variable",
+      "min_calls": 0,
+      "max_calls": 20,
+      "batch_size": 5,
+      "rule": "Only process newly approved entries since last run. 0 new = 0 calls.",
+      "skip_if_below": 1
+    },
+    "ceo_agent": {
+      "model": "opus",
+      "spawn_mode": "fixed",
+      "min_calls": 1,
+      "max_calls": 1,
+      "rule": "Strategic orchestration needs full reasoning \u2014 always 1 Opus call"
+    },
+    "offpeak_builder": {
+      "model": "sonnet",
+      "spawn_mode": "variable",
+      "min_calls": 0,
+      "max_calls": 6,
+      "rule": "Only build assets for ventures with new actionable items. 0 items = 0 calls."
+    }
+  },
+  "budget_modes": {
+    "lean": {
+      "max_daily_calls": 80,
+      "description": "Minimal token burn. Only CEO + auto_approve + critical integrations.",
+      "disabled_scripts": [
+        "offpeak_builder",
+        "user_sim_refiner",
+        "venture_pipeline_brokering"
+      ]
+    },
+    "standard": {
+      "max_daily_calls": 200,
+      "description": "Normal operation. All scripts active with variable spawning.",
+      "disabled_scripts": []
+    },
+    "aggressive": {
+      "max_daily_calls": 500,
+      "description": "Maximum throughput. All scripts at max_calls. Use when plan has headroom.",
+      "disabled_scripts": []
+    }
+  }
+}

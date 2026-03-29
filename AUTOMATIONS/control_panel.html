@@ -2976,7 +2976,19 @@ body {
     <div class="glass-card">
       <div class="scheduler-header">
         <div class="card-title" style="margin:0;"><i class="ti ti-clock-hour-4"></i> Cron Scheduler <span class="scheduler-count-badge" id="scheduler-count">0</span></div>
-        <button class="scheduler-add-btn" onclick="toggleSchedulerForm()"><i class="ti ti-plus" style="margin-right:4px;"></i> Add New</button>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button class="scheduler-add-btn" onclick="toggleSchedulerForm()"><i class="ti ti-plus" style="margin-right:4px;"></i> Add New</button>
+        </div>
+      </div>
+      <!-- Token Budget Widget -->
+      <div id="spawn-budget-widget" style="display:flex;gap:12px;align-items:center;padding:10px 16px;margin-bottom:12px;background:var(--panel);border-radius:8px;border:1px solid var(--border);flex-wrap:wrap;">
+        <span style="font-family:JetBrains Mono;font-size:0.75em;color:var(--text-dim);">TOKEN BUDGET</span>
+        <div style="display:flex;gap:4px;background:var(--surface);border-radius:6px;padding:2px;border:1px solid var(--border);" id="budget-mode-toggle">
+          <span class="budget-mode" data-mode="lean" onclick="setBudgetMode('lean')" style="font-family:JetBrains Mono;font-size:0.65em;padding:4px 10px;border-radius:4px;cursor:pointer;color:var(--accent);">LEAN (80/day)</span>
+          <span class="budget-mode active" data-mode="standard" onclick="setBudgetMode('standard')" style="font-family:JetBrains Mono;font-size:0.65em;padding:4px 10px;border-radius:4px;cursor:pointer;color:var(--blue);background:var(--blue-dim);">STANDARD (200/day)</span>
+          <span class="budget-mode" data-mode="aggressive" onclick="setBudgetMode('aggressive')" style="font-family:JetBrains Mono;font-size:0.65em;padding:4px 10px;border-radius:4px;cursor:pointer;color:var(--warn);">AGGRESSIVE (500/day)</span>
+        </div>
+        <span id="spawn-calls-today" style="font-family:JetBrains Mono;font-size:0.7em;color:var(--text-dim);"></span>
       </div>
 
       <!-- Add form (hidden by default) -->
@@ -3020,11 +3032,13 @@ body {
         <table class="scheduler-table">
           <thead>
             <tr>
-              <th style="width:60px;">Enabled</th>
+              <th style="width:50px;">On</th>
+              <th style="width:40px;">Type</th>
+              <th style="width:70px;">Freq</th>
               <th>Schedule</th>
               <th>Command</th>
               <th>Next Run</th>
-              <th style="width:80px;">Actions</th>
+              <th style="width:70px;">Actions</th>
             </tr>
           </thead>
           <tbody id="scheduler-tbody"></tbody>
@@ -3173,7 +3187,7 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     if (tab.dataset.tab === 'chains') loadChains();
     if (tab.dataset.tab === 'dag') loadDag();
     if (tab.dataset.tab === 'kpi') { loadKPI(); loadCalendar(); loadOpportunities(); }
-    if (tab.dataset.tab === 'scheduler') loadScheduler();
+    if (tab.dataset.tab === 'scheduler') { loadScheduler(); loadSpawnStatus(); }
   });
 });
 
@@ -3182,6 +3196,11 @@ function toast(msg, isError) {
   t.textContent = msg;
   t.className = 'toast visible' + (isError ? ' error' : '');
   setTimeout(function() { t.className = 'toast'; }, 3000);
+}
+
+function copyToClipboard(text) {
+  if (navigator.clipboard) { navigator.clipboard.writeText(text); }
+  else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }
 }
 
 function formatName(id) {
@@ -4401,19 +4420,64 @@ async function loadDailyOutput() {
       '</div>';
     }).join('');
 
-    // Loop health dots
+    // Loop health dots — clickable with explanations
     var lh = d.loop_health || {};
     var loopNames = ['decisions', 'feedback', 'pipeline', 'drift'];
-    document.getElementById('daily-output-loops').innerHTML =
-      '<span style="font-family:JetBrains Mono; font-size:0.75em; color:var(--text-dim); margin-right:8px;">LOOP HEALTH</span>' +
-      loopNames.map(function(name) {
-        var status = (lh[name] || 'UNKNOWN').toUpperCase();
-        var dotClass = status === 'OK' ? 'ok' : (status === 'DEAD' || status === 'FAILED' ? 'dead' : 'unknown');
-        return '<span style="display:flex;align-items:center;gap:4px;">' +
-          '<span class="loop-dot ' + dotClass + '"></span>' +
-          '<span style="font-family:JetBrains Mono; font-size:0.7em; color:var(--text-dim);">' + name + '</span>' +
-        '</span>';
-      }).join('');
+    var loopsContainer = document.getElementById('daily-output-loops');
+    while (loopsContainer.firstChild) loopsContainer.removeChild(loopsContainer.firstChild);
+    var loopsLabel = document.createElement('span');
+    loopsLabel.style.cssText = 'font-family:JetBrains Mono;font-size:0.75em;color:var(--text-dim);margin-right:8px;';
+    loopsLabel.textContent = 'LOOP HEALTH';
+    loopsContainer.appendChild(loopsLabel);
+    loopNames.forEach(function(name) {
+      var loop = lh[name] || {};
+      var status = (typeof loop === 'string' ? loop : loop.status || 'UNKNOWN').toUpperCase();
+      var label = loop.label || name;
+      var desc = loop.desc || '';
+      var fix = loop.fix || '';
+      var dotClass = status === 'OK' ? 'ok' : (status === 'DEAD' || status === 'FAILED' || status === 'STALE' ? 'dead' : 'unknown');
+      var statusLabel = status === 'OK' ? 'Healthy' : (status === 'STALE' ? 'Stale (ran but not today)' : (status === 'DEAD' || status === 'FAILED' ? 'DEAD - needs fix' : 'Unknown'));
+      var wrapper = document.createElement('span');
+      wrapper.style.cssText = 'display:flex;align-items:center;gap:4px;cursor:pointer;position:relative;';
+      var dot = document.createElement('span');
+      dot.className = 'loop-dot ' + dotClass;
+      wrapper.appendChild(dot);
+      var nameEl = document.createElement('span');
+      nameEl.style.cssText = 'font-family:JetBrains Mono;font-size:0.7em;color:var(--text-dim);';
+      nameEl.textContent = name;
+      wrapper.appendChild(nameEl);
+      var tip = document.createElement('div');
+      tip.id = 'loop-tip-' + name;
+      tip.style.cssText = 'display:none;position:absolute;top:28px;left:0;z-index:999;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;width:280px;box-shadow:0 8px 24px rgba(0,0,0,0.4);';
+      var tipTitle = document.createElement('div');
+      tipTitle.style.cssText = 'font-weight:700;font-size:0.85em;color:var(--text);margin-bottom:6px;';
+      tipTitle.textContent = label + ' [' + status + ']';
+      tip.appendChild(tipTitle);
+      var tipStatus = document.createElement('div');
+      tipStatus.style.cssText = 'font-size:0.75em;color:var(--text-dim);line-height:1.5;margin-bottom:8px;';
+      tipStatus.textContent = statusLabel;
+      tip.appendChild(tipStatus);
+      if (desc) {
+        var tipDesc = document.createElement('div');
+        tipDesc.style.cssText = 'font-size:0.7em;color:var(--text-dim);line-height:1.4;margin-bottom:8px;';
+        tipDesc.textContent = desc;
+        tip.appendChild(tipDesc);
+      }
+      if (fix && status !== 'OK') {
+        var tipFix = document.createElement('div');
+        tipFix.style.cssText = 'font-family:JetBrains Mono;font-size:0.65em;padding:6px;background:var(--panel);border-radius:4px;color:var(--accent);cursor:pointer;';
+        tipFix.textContent = fix + ' (click to copy)';
+        tipFix.onclick = function(e) { e.stopPropagation(); copyToClipboard(fix); toast('Copied fix command'); };
+        tip.appendChild(tipFix);
+      }
+      wrapper.appendChild(tip);
+      wrapper.onclick = function() {
+        var showing = tip.style.display !== 'none';
+        document.querySelectorAll('[id^=loop-tip-]').forEach(function(t) { t.style.display = 'none'; });
+        tip.style.display = showing ? 'none' : 'block';
+      };
+      loopsContainer.appendChild(wrapper);
+    });
 
     // Highlights
     var highlightsEl = document.getElementById('daily-output-highlights');
@@ -4531,33 +4595,81 @@ async function loadIntelFeed() {
   try {
     var r = await fetch(API + '/api/intel-feed');
     var d = await r.json();
-    var el = document.getElementById('intel-feed');
+    var feedEl = document.getElementById('intel-feed');
     var countEl = document.getElementById('intel-count');
     var ts = d.time_sensitive_count || 0;
     if (countEl) countEl.textContent = '(' + d.total + ' findings, ' + ts + ' time-sensitive)';
-    if (!el) return;
+    if (!feedEl) return;
     if (!d.findings || d.findings.length === 0) {
-      el.textContent = 'No research findings yet. Scanners run at 5-6 AM.';
+      feedEl.textContent = 'No research findings yet. Scanners run at 5-6 AM.';
       return;
     }
     var container = document.createElement('div');
-    d.findings.forEach(function(f) {
+    d.findings.forEach(function(f, idx) {
       var row = document.createElement('div');
-      row.style.cssText = 'padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);';
-      var color = f.time_sensitive ? 'var(--danger)' : (f.score >= 70 ? 'var(--accent)' : 'var(--text-dim)');
-      var urgentTag = f.time_sensitive ? ' [URGENT]' : '';
-      var methodText = document.createElement('div');
-      methodText.style.cssText = 'font-size:0.85em;color:var(--text);';
-      methodText.textContent = f.method + urgentTag + ' [' + f.score + '/100]';
-      var metaText = document.createElement('div');
-      metaText.style.cssText = 'font-size:0.65em;color:var(--text-dim);margin-top:2px;';
-      metaText.textContent = f.source + ' | ' + f.roi + ' ROI | ' + f.status + ' | ' + (f.created||'');
-      if (f.time_sensitive) methodText.style.color = color;
-      row.appendChild(methodText);
-      row.appendChild(metaText);
+      row.style.cssText = 'padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);cursor:pointer;';
+      var scoreColor = f.score >= 80 ? 'var(--accent)' : (f.score >= 60 ? 'var(--warn)' : 'var(--text-dim)');
+      var tierColors = {P0:'var(--accent)',P1:'var(--blue)',P2:'var(--warn)',P3:'var(--text-muted)'};
+      var tierColor = tierColors[f.cg_tier] || 'var(--text-dim)';
+
+      // Header row: score + method + tier badge
+      var header = document.createElement('div');
+      header.style.cssText = 'display:flex;gap:10px;align-items:center;';
+      var scoreEl = document.createElement('span');
+      scoreEl.style.cssText = 'font-family:JetBrains Mono;font-size:1.1em;font-weight:800;color:' + scoreColor + ';min-width:32px;text-align:right;';
+      scoreEl.textContent = f.score;
+      header.appendChild(scoreEl);
+      var methodEl = document.createElement('span');
+      methodEl.style.cssText = 'flex:1;font-size:0.85em;color:var(--text);';
+      methodEl.textContent = f.method;
+      header.appendChild(methodEl);
+      var tierBadge = document.createElement('span');
+      tierBadge.style.cssText = 'font-family:JetBrains Mono;font-size:0.6em;padding:2px 8px;border-radius:4px;background:rgba(0,0,0,0.3);color:' + tierColor + ';border:1px solid ' + tierColor + ';';
+      tierBadge.textContent = f.cg_tier || '?';
+      header.appendChild(tierBadge);
+      if (f.time_sensitive) {
+        var urgBadge = document.createElement('span');
+        urgBadge.style.cssText = 'font-size:0.55em;padding:2px 6px;border-radius:3px;background:var(--danger-dim);color:var(--danger);font-family:JetBrains Mono;';
+        urgBadge.textContent = 'URGENT';
+        header.appendChild(urgBadge);
+      }
+      row.appendChild(header);
+
+      // Meta row: source + venture + ROI
+      var meta = document.createElement('div');
+      meta.style.cssText = 'font-size:0.65em;color:var(--text-dim);margin-top:4px;margin-left:42px;';
+      meta.textContent = f.source + ' | ' + (f.venture || '?') + ' venture | ' + f.roi + ' ROI | ' + (f.created||'');
+      row.appendChild(meta);
+
+      // Expandable detail: action + tool
+      var detailId = 'intel-detail-' + idx;
+      var detail = document.createElement('div');
+      detail.id = detailId;
+      detail.style.cssText = 'display:none;margin-top:8px;margin-left:42px;padding:10px;background:rgba(0,0,0,0.2);border-radius:6px;border-left:3px solid ' + scoreColor + ';';
+      var actionLine = document.createElement('div');
+      actionLine.style.cssText = 'font-size:0.8em;color:var(--accent);margin-bottom:6px;font-weight:600;';
+      actionLine.textContent = f.action || 'No action recommended';
+      detail.appendChild(actionLine);
+      if (f.existing_tool) {
+        var toolLine = document.createElement('div');
+        toolLine.style.cssText = 'font-family:JetBrains Mono;font-size:0.7em;color:var(--blue);margin-bottom:6px;';
+        toolLine.textContent = 'Existing tool: ' + f.existing_tool;
+        detail.appendChild(toolLine);
+      }
+      var pushBtn = document.createElement('button');
+      pushBtn.style.cssText = 'font-family:JetBrains Mono;font-size:0.65em;padding:4px 10px;border:1px solid var(--accent);border-radius:4px;background:transparent;color:var(--accent);cursor:pointer;margin-right:8px;';
+      pushBtn.textContent = 'PUSH TO KPI';
+      pushBtn.onclick = function(e) {
+        e.stopPropagation();
+        fetch(API + '/api/kpi/manual-priority', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text:f.method, source:f.source, score:f.score, priority:f.cg_tier})})
+          .then(function(r){return r.json()}).then(function(d){if(d.success){pushBtn.textContent='PUSHED';pushBtn.style.background='var(--accent)';pushBtn.style.color='#000';toast('Pushed to KPI queue')}});
+      };
+      detail.appendChild(pushBtn);
+      row.appendChild(detail);
+      row.onclick = function() { detail.style.display = detail.style.display === 'none' ? 'block' : 'none'; };
       container.appendChild(row);
     });
-    el.replaceChildren(container);
+    feedEl.replaceChildren(container);
   } catch(e) { console.error('intel feed failed:', e); }
 }
 
@@ -4877,7 +4989,7 @@ setInterval(function() {
   if (tab === 'dashboard') { loadDashboard(); loadDashKPI(); loadDailyOutput(); loadDailyFeed(); loadIntelFeed(); loadRbiPipeline(); }
   else if (tab === 'agents') loadStatus();
   else if (tab === 'kpi') { loadKPI(); loadOpportunities(); }
-  else if (tab === 'scheduler') loadScheduler();
+  else if (tab === 'scheduler') { loadScheduler(); loadSpawnStatus(); }
 }, 300000);
 
 // =============================================================
@@ -5093,6 +5205,44 @@ async function pollJob(jobId, cmdId, outputPanel) {
 // =============================================================
 var _schedulerEntries = [];
 
+async function loadSpawnStatus() {
+  try {
+    var r = await fetch(API + '/api/scheduler/spawn-status');
+    var d = await r.json();
+    var g = d.global || {};
+    var mode = g.budget_mode || 'standard';
+    var callsToday = g.calls_today || 0;
+    var maxDaily = g.max_daily_calls || 200;
+    document.getElementById('spawn-calls-today').textContent = callsToday + '/' + maxDaily + ' calls today';
+    document.querySelectorAll('.budget-mode').forEach(function(el) {
+      el.classList.remove('active');
+      el.style.background = 'transparent';
+      if (el.dataset.mode === mode) {
+        el.classList.add('active');
+        var colors = {lean:'var(--accent-dim)',standard:'var(--blue-dim)',aggressive:'var(--warn-dim)'};
+        el.style.background = colors[mode] || 'transparent';
+      }
+    });
+  } catch(e) { /* spawn status API may not exist */ }
+}
+
+async function setBudgetMode(mode) {
+  try {
+    var r = await fetch(API + '/api/scheduler/budget-mode', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({mode: mode})
+    });
+    var d = await r.json();
+    if (d.success) {
+      toast('Budget mode: ' + mode + ' (' + d.max_daily_calls + ' calls/day)');
+      loadSpawnStatus();
+    } else {
+      toast('Failed: ' + (d.error || ''), true);
+    }
+  } catch(e) { toast('Budget mode change failed', true); }
+}
+
 async function loadScheduler() {
   try {
     var r = await fetch(API + '/api/scheduler/crons');
@@ -5126,6 +5276,8 @@ function renderSchedulerTable() {
     var isEnabled = entry.enabled !== false;
     var isOverdue = entry.next_run && new Date(entry.next_run).getTime() < now;
     var statusClass = isEnabled ? (isOverdue ? 'sched-overdue' : 'sched-enabled') : 'sched-disabled';
+    var freq = entry.frequency || 'unknown';
+    var burnsTokens = entry.burns_tokens || false;
 
     var toggleLabel = el('label', { className: 'toggle' }, [
       (function() {
@@ -5137,8 +5289,42 @@ function renderSchedulerTable() {
       el('span', { className: 'slider' })
     ]);
 
+    // Frequency toggle (daily/weekly) — only show for token-burning daily crons
+    var freqCell;
+    if (burnsTokens && (freq === 'daily' || freq === 'weekly')) {
+      var freqBtn = el('button', {
+        style: 'font-family:JetBrains Mono;font-size:0.65em;padding:3px 8px;border-radius:4px;cursor:pointer;border:1px solid ' +
+          (freq === 'daily' ? 'var(--warn)' : 'var(--accent)') + ';background:transparent;color:' +
+          (freq === 'daily' ? 'var(--warn)' : 'var(--accent)') + ';',
+        onclick: function() {
+          var newFreq = freq === 'daily' ? 'weekly' : 'daily';
+          fetch(API + '/api/scheduler/frequency/' + (entry.id || idx), {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({frequency: newFreq})
+          }).then(function(r) { return r.json(); }).then(function(d) {
+            if (d.success) { toast('Changed to ' + newFreq); loadScheduler(); }
+            else { toast('Failed: ' + (d.error || ''), true); }
+          });
+        }
+      }, freq.toUpperCase());
+      freqCell = el('td', { style: 'text-align:center;' }, [freqBtn]);
+    } else {
+      var freqLabel = el('span', {
+        style: 'font-family:JetBrains Mono;font-size:0.6em;color:var(--text-muted);'
+      }, freq);
+      freqCell = el('td', { style: 'text-align:center;' }, [freqLabel]);
+    }
+
+    // Token burn indicator
+    var tokenBadge = burnsTokens
+      ? el('span', { style: 'font-size:0.6em;padding:1px 5px;border-radius:3px;background:rgba(255,51,85,0.15);color:var(--danger);font-family:JetBrains Mono;', title: 'This script calls claude -p and burns API tokens' }, 'LLM')
+      : el('span', { style: 'font-size:0.6em;color:var(--text-muted);' }, '');
+
     var row = el('tr', {}, [
       el('td', {}, [toggleLabel]),
+      el('td', { style: 'text-align:center;' }, [tokenBadge]),
+      freqCell,
       el('td', { className: 'sched-schedule ' + statusClass }, entry.schedule || entry.cron || '--'),
       el('td', { className: 'sched-command', title: entry.command || '' }, entry.command || '--'),
       el('td', { className: 'sched-next-run ' + statusClass }, entry.next_run ? formatRelativeTime(entry.next_run) : '--'),

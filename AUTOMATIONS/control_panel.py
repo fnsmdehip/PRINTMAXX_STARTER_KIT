@@ -2595,6 +2595,63 @@ def api_intel_feed():
     # Sort: time-sensitive first, then by score descending
     findings.sort(key=lambda x: (not x.get("time_sensitive", False), -x.get("score", 0)))
 
+    # Enrich each finding with actionable recommendation + existing tool routing
+    _VENTURE_KEYWORDS = {
+        "CONTENT": ["content", "post", "tweet", "video", "tiktok", "youtube", "instagram", "newsletter", "blog", "seo", "shorts", "reels", "thread"],
+        "OUTBOUND": ["cold email", "outreach", "lead", "scrape", "prospect", "b2b", "agency", "freelance", "upwork", "fiverr", "client"],
+        "APP": ["app", "ios", "android", "mobile", "saas", "subscription", "paywall", "pwa"],
+        "PRODUCT": ["ebook", "pdf", "course", "template", "notion", "gumroad", "digital product", "printable"],
+        "LOCAL_BIZ": ["local", "smb", "small business", "website redesign", "google maps", "yelp"],
+        "SCRAPING": ["scrape", "monitor", "alert", "data", "api", "feed", "crawl"],
+        "RESEARCH": ["research", "analysis", "report", "intelligence", "competitor"],
+        "MONETIZE": ["affiliate", "ad", "sponsor", "monetize", "revenue", "payment", "stripe"],
+    }
+    _TOOL_KEYWORDS = {
+        "engagement_bait_converter.py": ["engagement", "bait", "hook", "viral", "meme"],
+        "content_repurposer.py": ["repurpose", "cross-post", "multi-platform"],
+        "cold_email_pipeline.py": ["cold email", "outreach", "email sequence"],
+        "app_factory/auto_orchestrator.py": ["app", "ios", "mobile app"],
+        "method_discovery_crawler.py": ["method", "tactic", "strategy"],
+        "capital_genesis_ranker.py": ["rank", "score", "prioritize"],
+        "edge_growth_engine.py": ["growth", "hack", "scale", "viral"],
+        "twitter_warmup_poster.py": ["twitter", "tweet", "x.com"],
+    }
+    for f in findings:
+        method_lower = f.get("method", "").lower()
+        # Route to venture
+        best_venture = "CONTENT"
+        for venture, keywords in _VENTURE_KEYWORDS.items():
+            if any(kw in method_lower for kw in keywords):
+                best_venture = venture
+                break
+        f["venture"] = best_venture
+        # Route to existing tool
+        best_tool = None
+        for tool, keywords in _TOOL_KEYWORDS.items():
+            if any(kw in method_lower for kw in keywords):
+                best_tool = tool
+                break
+        f["existing_tool"] = best_tool
+        # Generate 1-line actionable recommendation
+        if f.get("status") == "P0":
+            f["action"] = f"LAUNCH NOW via {best_venture} venture pipeline"
+        elif f.get("time_sensitive"):
+            f["action"] = f"Time-sensitive: route to {best_venture} venture, use {best_tool or 'manual pipeline'}"
+        elif best_tool:
+            f["action"] = f"Run: python3 AUTOMATIONS/{best_tool} with this method"
+        else:
+            f["action"] = f"Queue in {best_venture} venture for next execution cycle"
+        # Capital Genesis score estimate (rough)
+        score = f.get("score", 0)
+        if score >= 80:
+            f["cg_tier"] = "P0"
+        elif score >= 60:
+            f["cg_tier"] = "P1"
+        elif score >= 40:
+            f["cg_tier"] = "P2"
+        else:
+            f["cg_tier"] = "P3"
+
     return jsonify({
         "findings": findings[:50],
         "total": len(findings),
@@ -2730,6 +2787,77 @@ def api_kpi_rerank():
         return jsonify({"reranked": False, "error": str(e)})
 
 
+@app.route("/api/kpi/rollover", methods=["POST"])
+def api_kpi_rollover():
+    """Auto-rollover unfinished KPIs to the next day. Max 5 KPIs per day.
+
+    Logic:
+    - Reads today's KPI tasks from kpi_rollover_state.json
+    - Any task not marked done gets pushed to tomorrow
+    - Limit of 5 rolled-over tasks per day (drop lowest score)
+    - Tasks that have been rolled over 3+ times get flagged as STALE
+    - Automatically called by the daily digest cron
+    """
+    rollover_file = AUTOMATIONS / "agent" / "kpi_rollover_state.json"
+    MAX_ROLLOVER = 5
+    MAX_FAILURES = 3
+
+    try:
+        state = {}
+        if rollover_file.exists():
+            state = json.loads(rollover_file.read_text())
+
+        tasks = state.get("tasks", [])
+        today = datetime.now().day
+        source_day = state.get("target_day", today)
+
+        # If already processed for today, skip
+        if source_day == today and state.get("rolled_today", False):
+            return jsonify({"rolled": False, "reason": "Already rolled over today"})
+
+        # Filter incomplete tasks (not done)
+        incomplete = [t for t in tasks if not t.get("done", False)]
+        completed = [t for t in tasks if t.get("done", False)]
+
+        # Increment failure count for each incomplete task
+        for t in incomplete:
+            t["failure_count"] = t.get("failure_count", 0) + 1
+
+        # Split into active (can retry) and stale (too many failures)
+        active = [t for t in incomplete if t.get("failure_count", 0) < MAX_FAILURES]
+        stale = [t for t in incomplete if t.get("failure_count", 0) >= MAX_FAILURES]
+
+        # Limit rollover to MAX_ROLLOVER, keep highest score first
+        active.sort(key=lambda x: -x.get("score", 0) if isinstance(t.get("score"), (int, float)) else 0)
+        rolled = active[:MAX_ROLLOVER]
+        dropped = active[MAX_ROLLOVER:]
+
+        new_state = {
+            "last_updated": datetime.now().isoformat(),
+            "source_day": source_day,
+            "target_day": today,
+            "rolled_today": True,
+            "task_count": len(rolled),
+            "tasks": rolled,
+            "stale_tasks": [t.get("text", "") for t in stale],
+            "dropped_tasks": [t.get("text", "") for t in dropped],
+            "completed_yesterday": len(completed),
+        }
+        rollover_file.parent.mkdir(parents=True, exist_ok=True)
+        rollover_file.write_text(json.dumps(new_state, indent=2))
+
+        return jsonify({
+            "rolled": True,
+            "rolled_count": len(rolled),
+            "stale_count": len(stale),
+            "dropped_count": len(dropped),
+            "completed_yesterday": len(completed),
+            "stale_items": [t.get("text", "")[:60] for t in stale],
+        })
+    except Exception as e:
+        return jsonify({"rolled": False, "error": str(e)})
+
+
 # ---------------------------------------------------------------------------
 # TODAY'S AUTOMATED OUTPUT — daily production summary for the dashboard
 # ---------------------------------------------------------------------------
@@ -2791,7 +2919,12 @@ def get_daily_output():
         },
         "highlights": [],
         "rbi_status": {"researched": 0, "passed": 0, "conditional": 0, "failed": 0},
-        "loop_health": {"decisions": "UNKNOWN", "feedback": "UNKNOWN", "pipeline": "UNKNOWN", "drift": "UNKNOWN"},
+        "loop_health": {
+            "decisions": {"status": "UNKNOWN", "label": "Decision Execution", "desc": "Executes pending decisions from CEO agent. If DEAD, decisions pile up without action.", "fix": "python3 AUTOMATIONS/loop_closer.py --decisions"},
+            "feedback": {"status": "UNKNOWN", "label": "Feedback Tracking", "desc": "Captures what worked/failed and adjusts future actions. If DEAD, system repeats mistakes.", "fix": "python3 AUTOMATIONS/loop_closer.py --feedback"},
+            "pipeline": {"status": "UNKNOWN", "label": "Pipeline Advancement", "desc": "Pushes ventures through stages (research > build > deploy > monetize). If DEAD, nothing ships.", "fix": "python3 AUTOMATIONS/loop_closer.py --pipeline"},
+            "drift": {"status": "UNKNOWN", "label": "Soul Drift", "desc": "Checks if agents deviate from SOUL.md directives. If DEAD, agents drift off-mission.", "fix": "python3 AUTOMATIONS/loop_closer.py --drift"},
+        },
         "system_working": True,
         "errors": [],
     }
@@ -2899,20 +3032,46 @@ def get_daily_output():
         if ai_counts.get("timeout", 0) > 0:
             result["errors"].append(f"Integrator: {ai_counts['timeout']} timeouts")
 
-    # 2e. RBI loop
+    # 2e. RBI loop — read from state file (always), supplement with today's log
+    rbi_state_path = AUTOMATIONS / "agent" / "rbi_state.json"
+    if rbi_state_path.exists():
+        try:
+            rbi_state = json.loads(rbi_state_path.read_text())
+            rbi_summary = rbi_state.get("summary", {})
+            result["summary"]["rbi_researched"] = rbi_summary.get("researched", len(rbi_state.get("researched", [])))
+            result["summary"]["rbi_passed"] = rbi_summary.get("passed", 0)
+            result["summary"]["rbi_conditional"] = rbi_summary.get("conditional", 0)
+            result["summary"]["rbi_failed"] = rbi_summary.get("failed", 0)
+            # Build structured RBI status with item details for the pipeline viz
+            implemented = rbi_state.get("implemented", [])
+            backtested = rbi_state.get("backtested", [])
+            researched = rbi_state.get("researched", [])
+            result["rbi_status"] = {
+                "research": {
+                    "count": len(researched),
+                    "top": f"{len(researched)} methods analyzed",
+                    "items": [{"name": r, "score": ""} for r in researched[:10]] if isinstance(researched, list) and researched and isinstance(researched[0], str) else [],
+                },
+                "backtest": {
+                    "count": len(backtested),
+                    "top": f"{rbi_summary.get('passed', 0)} PASS, {rbi_summary.get('conditional', 0)} CONDITIONAL",
+                    "items": [{"name": f"{b.get('id', '?')} — {b.get('verdict', '?')}", "score": b.get('verdict', '')} for b in backtested[:10]] if backtested else [],
+                },
+                "implement": {
+                    "count": len(implemented),
+                    "top": f"{len(implemented)} methods routed" if implemented else "None yet",
+                    "items": [{"name": f"{m.get('name', m.get('method_id', '?'))[:60]}", "score": m.get('composite', '')} for m in implemented[:10]] if implemented else [],
+                },
+            }
+            result["rbi_last_run"] = rbi_state.get("last_run", "unknown")
+        except Exception as e:
+            result["errors"].append(f"rbi_state parse: {e}")
+    # Also check today's log for errors
     rbi_log = LOGS_DIR / "rbi_loop.log"
     if rbi_log.exists() and _is_today(rbi_log):
-        rbi_counts = _parse_log_counts(rbi_log, ["PASS", "CONDITIONAL", "FAIL", "researched", "ERROR"])
-        result["summary"]["rbi_researched"] = rbi_counts.get("researched", 0)
-        result["summary"]["rbi_passed"] = rbi_counts.get("PASS", 0)
-        result["summary"]["rbi_conditional"] = rbi_counts.get("CONDITIONAL", 0)
-        result["summary"]["rbi_failed"] = rbi_counts.get("FAIL", 0)
-        result["rbi_status"] = {
-            "researched": rbi_counts.get("researched", 0),
-            "passed": rbi_counts.get("PASS", 0),
-            "conditional": rbi_counts.get("CONDITIONAL", 0),
-            "failed": rbi_counts.get("FAIL", 0),
-        }
+        rbi_counts = _parse_log_counts(rbi_log, ["ERROR"])
+        if rbi_counts.get("ERROR", 0) > 0:
+            result["errors"].append(f"RBI loop: {rbi_counts['ERROR']} errors today")
 
     # 2f. Morning intelligence DAG
     dag_log = LOGS_DIR / "morning_intelligence_dag.log"
@@ -2966,8 +3125,8 @@ def get_daily_output():
                             action = entry.get("action", entry.get("loop", entry.get("type", "")))
                             status = entry.get("result", entry.get("status", "OK"))
                             loop_key = _action_to_loop.get(action)
-                            if loop_key:
-                                result["loop_health"][loop_key] = status
+                            if loop_key and loop_key in result["loop_health"]:
+                                result["loop_health"][loop_key]["status"] = status
                     except Exception:
                         pass
             result["summary"]["loops_closed"] = loop_actions_today
@@ -2981,9 +3140,9 @@ def get_daily_output():
                                        ("last_pipeline_cycle", "pipeline")]:
                         val = ls.get(field)
                         if val and today_str in val:
-                            result["loop_health"][key] = "OK"
+                            result["loop_health"][key]["status"] = "OK"
                         elif val:
-                            result["loop_health"][key] = "STALE"
+                            result["loop_health"][key]["status"] = "STALE"
                 except Exception:
                     pass
         except Exception:
@@ -2997,8 +3156,8 @@ def get_daily_output():
             for loop_name in ["decisions", "feedback", "pipeline", "drift"]:
                 if loop_name in fb:
                     status_val = fb[loop_name].get("status", fb[loop_name].get("health", "UNKNOWN"))
-                    if result["loop_health"][loop_name] == "UNKNOWN":
-                        result["loop_health"][loop_name] = status_val
+                    if loop_name in result["loop_health"] and result["loop_health"][loop_name]["status"] == "UNKNOWN":
+                        result["loop_health"][loop_name]["status"] = status_val
         except Exception:
             pass
 
@@ -3045,23 +3204,7 @@ def get_daily_output():
         except Exception:
             pass
 
-    # ── 5. RBI STATE — latest pipeline status ───────────────────────
-    rbi_state_path = AUTOMATIONS / "agent" / "rbi_state.json"
-    if rbi_state_path.exists():
-        try:
-            rbi_state = json.loads(rbi_state_path.read_text())
-            # Override rbi_status with the state file if it has more data
-            if "researched" in rbi_state:
-                r_val = rbi_state.get("researched", 0)
-                result["rbi_status"]["researched"] = len(r_val) if isinstance(r_val, list) else int(r_val or 0)
-            if "results" in rbi_state:
-                results = rbi_state["results"]
-                if isinstance(results, dict):
-                    result["rbi_status"]["passed"] = results.get("PASS", results.get("passed", 0))
-                    result["rbi_status"]["conditional"] = results.get("CONDITIONAL", results.get("conditional", 0))
-                    result["rbi_status"]["failed"] = results.get("FAIL", results.get("failed", 0))
-        except Exception:
-            pass
+    # ── 5. RBI STATE — already loaded in section 2e from rbi_state.json ──
 
     # ── Scan all logs for errors today ──────────────────────────────
     if LOGS_DIR.exists():
@@ -3440,6 +3583,8 @@ def _parse_crontab():
                     "name": prev_comment or _name_from_cmd(command),
                     "enabled": False, "next_run": _readable_schedule(schedule),
                     "comment": prev_comment, "raw": line,
+                    "frequency": _detect_frequency(schedule),
+                    "burns_tokens": _burns_tokens(command),
                 })
                 idx += 1
                 prev_comment = ""
@@ -3461,11 +3606,57 @@ def _parse_crontab():
                 "name": prev_comment or _name_from_cmd(command),
                 "enabled": True, "next_run": _readable_schedule(schedule),
                 "comment": prev_comment, "raw": line,
+                "frequency": _detect_frequency(schedule),
+                "burns_tokens": _burns_tokens(command),
             })
             idx += 1
         prev_comment = ""
 
     return entries
+
+
+def _detect_frequency(schedule: str) -> str:
+    """Detect cron frequency from schedule string."""
+    parts = schedule.split()
+    if len(parts) != 5:
+        return "unknown"
+    m, h, dom, mon, dow = parts
+    if m.startswith("*/"):
+        mins = int(m[2:])
+        if mins <= 5:
+            return "5min"
+        elif mins <= 15:
+            return "15min"
+        else:
+            return f"{mins}min"
+    if h.startswith("*/"):
+        return f"{h[2:]}h"
+    if dow not in ("*", ):
+        return "weekly"
+    if dom != "*":
+        return "monthly"
+    if m != "*" and h != "*":
+        return "daily"
+    if m != "*" and h == "*":
+        return "hourly"
+    return "continuous"
+
+
+# Token-burning scripts (confirmed by audit)
+_TOKEN_BURNERS = {
+    "venture_pipeline_brokering", "user_sim_refiner", "autonomous_integrator",
+    "ceo_agent", "auto_approve", "offpeak_builder", "generate_scripts_from_dags",
+    "ph_b2b_outreach_pipeline", "venture_autonomy",
+}
+
+
+def _burns_tokens(command: str) -> bool:
+    """Check if a cron command runs a script known to call claude -p."""
+    cmd_lower = command.lower()
+    for burner in _TOKEN_BURNERS:
+        if burner in cmd_lower:
+            return True
+    return False
 
 
 def _looks_like_schedule(fields):
@@ -3663,6 +3854,118 @@ def api_scheduler_delete(cron_id):
 
     if _reinstall_crontab(raw_lines):
         return jsonify({"success": True, "message": f"Deleted cron entry {cron_id}"})
+    return jsonify({"error": "Failed to reinstall crontab"}), 500
+
+
+@app.route("/api/scheduler/spawn-status")
+def api_spawn_status():
+    """Return current spawn controller status — budget mode, calls today, per-script config."""
+    spawn_config_path = AUTOMATIONS / "agent" / "spawn_config.json"
+    if not spawn_config_path.exists():
+        return jsonify({"error": "spawn_config.json not found"}), 404
+    try:
+        config = json.loads(spawn_config_path.read_text())
+        # Reset daily counter if needed
+        today = datetime.now().strftime("%Y-%m-%d")
+        if config.get("global", {}).get("last_reset") != today:
+            config["global"]["calls_today"] = 0
+            config["global"]["last_reset"] = today
+            spawn_config_path.write_text(json.dumps(config, indent=2))
+        return jsonify(config)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/scheduler/budget-mode", methods=["POST"])
+def api_budget_mode():
+    """Switch budget mode: lean / standard / aggressive."""
+    data = request.get_json(force=True)
+    mode = data.get("mode", "standard")
+    if mode not in ("lean", "standard", "aggressive"):
+        return jsonify({"error": "mode must be lean, standard, or aggressive"}), 400
+
+    spawn_config_path = AUTOMATIONS / "agent" / "spawn_config.json"
+    if not spawn_config_path.exists():
+        return jsonify({"error": "spawn_config.json not found"}), 404
+    try:
+        config = json.loads(spawn_config_path.read_text())
+        config["global"]["budget_mode"] = mode
+        if mode in config.get("budget_modes", {}):
+            config["global"]["max_daily_calls"] = config["budget_modes"][mode]["max_daily_calls"]
+        spawn_config_path.write_text(json.dumps(config, indent=2))
+        return jsonify({"success": True, "mode": mode, "max_daily_calls": config["global"]["max_daily_calls"]})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/scheduler/frequency/<int:cron_id>", methods=["POST"])
+def api_scheduler_frequency(cron_id):
+    """Change a cron entry's frequency between daily and weekly.
+
+    POST body: {"frequency": "daily" | "weekly" | "hourly"}
+    Modifies the day-of-week field in the cron schedule.
+    """
+    data = request.get_json(force=True)
+    target_freq = data.get("frequency", "daily")
+    if target_freq not in ("daily", "weekly", "hourly"):
+        return jsonify({"error": "frequency must be daily, weekly, or hourly"}), 400
+
+    try:
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+        if result.returncode != 0:
+            return jsonify({"error": "Failed to read crontab"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    raw_lines = result.stdout.strip().split("\n")
+    entry_idx = 0
+    target_line_idx = None
+    for i, line in enumerate(raw_lines):
+        stripped = line.strip()
+        if not stripped or (stripped.startswith("#") and not _looks_like_schedule(stripped.lstrip("#").strip().split(None, 5)[:5] if len(stripped.lstrip("#").strip().split(None, 5)) >= 5 else [])):
+            continue
+        is_disabled = stripped.startswith("#")
+        inner = stripped.lstrip("#").strip() if is_disabled else stripped
+        parts = inner.split(None, 5)
+        if len(parts) >= 6 and _looks_like_schedule(parts[:5]):
+            if entry_idx == cron_id:
+                target_line_idx = i
+                break
+            entry_idx += 1
+
+    if target_line_idx is None:
+        return jsonify({"error": f"Cron entry {cron_id} not found"}), 404
+
+    line = raw_lines[target_line_idx]
+    is_disabled = line.strip().startswith("#")
+    inner = line.strip().lstrip("#").strip() if is_disabled else line.strip()
+    parts = inner.split(None, 5)
+    if len(parts) < 6:
+        return jsonify({"error": "Cannot parse cron line"}), 500
+
+    m, h, dom, mon, dow = parts[:5]
+    cmd = parts[5]
+
+    if target_freq == "weekly":
+        dow = "1"  # Monday
+    elif target_freq == "daily":
+        dow = "*"
+    elif target_freq == "hourly":
+        h = "*"
+        dow = "*"
+
+    new_schedule = f"{m} {h} {dom} {mon} {dow}"
+    new_line = f"{'# ' if is_disabled else ''}{new_schedule} {cmd}"
+    raw_lines[target_line_idx] = new_line
+
+    if _reinstall_crontab(raw_lines):
+        # Backup
+        backup_path = AUTOMATIONS / "agent" / "cron_backup.txt"
+        try:
+            backup_path.write_text("\n".join(raw_lines))
+        except Exception:
+            pass
+        return jsonify({"success": True, "new_schedule": new_schedule, "frequency": target_freq})
     return jsonify({"error": "Failed to reinstall crontab"}), 500
 
 
