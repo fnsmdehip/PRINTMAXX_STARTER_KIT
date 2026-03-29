@@ -1,0 +1,138 @@
+{
+  "cycle": 115,
+  "timestamp": "2026-03-29T12:48:16.681647+00:00",
+  "strategy": "FINANCE & ECONOMICS HISTORY",
+  "niches": {
+    "daily_history_of_money_streak": {
+      "community": 45240000,
+      "score": 26,
+      "comm_score": 5,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_market_history_streak": {
+      "community": 25823000,
+      "score": 25,
+      "comm_score": 4,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_economic_crisis_streak": {
+      "community": 53050000,
+      "score": 25,
+      "comm_score": 5,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_business_history_streak": {
+      "community": 26830000,
+      "score": 24,
+      "comm_score": 4,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_tax_history_streak": {
+      "community": 40725000,
+      "score": 23,
+      "comm_score": 5,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_trade_history_streak": {
+      "community": 52300000,
+      "score": 24,
+      "comm_score": 5,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_economic_thought_streak": {
+      "community": 21965000,
+      "score": 23,
+      "comm_score": 4,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_real_estate_history_streak": {
+      "community": 41625000,
+      "score": 24,
+      "comm_score": 5,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    },
+    "daily_insurance_risk_history_streak": {
+      "community": 41307000,
+      "score": 22,
+      "comm_score": 5,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P1"
+    },
+    "daily_labor_history_streak": {
+      "community": 25870000,
+      "score": 23,
+      "comm_score": 4,
+      "book_score": 5,
+      "gap_score": 5,
+      "build_score": 4,
+      "wtp_score": 5,
+      "verdict": "BLUE_OCEAN",
+      "priority": "P0"
+    }
+  },
+  "blue_oceans": 10,
+  "soft_competition": 0,
+  "occupied": 0,
+  "community_total": 374735000,
+  "p0_count": 9,
+  "p0_alerts": [
+    "daily_history_of_money_streak",
+    "daily_market_history_streak",
+    "daily_economic_crisis_streak",
+    "daily_business_history_streak",
+    "daily_tax_history_streak",
+    "daily_trade_history_streak",
+    "daily_economic_thought_streak",
+    "daily_real_estate_history_streak",
+    "daily_labor_history_streak"
+  ],
+  "p1_alerts": [
+    "daily_insurance_risk_history_streak"
+  ],
+  "cumulative_prev": 527,
+  "cumulative_new": 537
+}

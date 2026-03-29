@@ -28,6 +28,7 @@ import exportService from '../services/export';
 import purchaseService from '../services/purchases';
 import type { ConsentRecord, SignatureData, PartyInfo } from '../types';
 import { Colors, Typography, Spacing, BorderRadius, Shadows, CardBorder, MIN_TOUCH_SIZE, Assets } from '../constants/theme';
+import * as StoreReview from 'expo-store-review';
 
 const TEMPLATE_ICON_MAP: Record<string, number> = {
   tpl_medical_consent: Assets.iconChecklist,
@@ -294,6 +295,18 @@ const TemplateForm: React.FC<TemplateFormProps> = ({ navigation, route }) => {
 
       const count = await db.getRecordCount();
       await purchaseService.updateRecordCount(count);
+
+      // Fire review at 5th consent (proven value moment — user has used the core feature repeatedly)
+      if (count === 5) {
+        try {
+          const isAvailable = await StoreReview.isAvailableAsync();
+          if (isAvailable) {
+            setTimeout(() => StoreReview.requestReview(), 2000);
+          }
+        } catch {
+          // Non-critical
+        }
+      }
 
       setSavedRecord(record);
       setSaved(true);

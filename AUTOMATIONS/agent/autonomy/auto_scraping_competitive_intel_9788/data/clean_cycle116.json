@@ -1,0 +1,106 @@
+{
+  "cycle": 116,
+  "timestamp": "2026-03-29T14:28:25.920071+00:00",
+  "strategy": "PHILOSOPHY OF MIND & CONSCIOUSNESS",
+  "niches": {
+    "daily_consciousness_studies_streak": {
+      "community": 5126000,
+      "comm_score": 8,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 23,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_philosophy_of_mind_streak": {
+      "community": 3494000,
+      "comm_score": 6,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 21,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_cognitive_bias_streak": {
+      "community": 3907200,
+      "comm_score": 6,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 21,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_free_will_debate_streak": {
+      "community": 7502000,
+      "comm_score": 8,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 23,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_perception_science_streak": {
+      "community": 6444000,
+      "comm_score": 8,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 23,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_dream_science_streak": {
+      "community": 4520000,
+      "comm_score": 6,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 21,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_personal_identity_streak": {
+      "community": 4966000,
+      "comm_score": 6,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 21,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_stoic_philosophy_streak": {
+      "community": 8190000,
+      "comm_score": 8,
+      "comp_score": 6,
+      "wtp_score": 5,
+      "score": 19,
+      "verdict": "SOFT_COMPETITION"
+    },
+    "daily_altered_states_streak": {
+      "community": 3082000,
+      "comm_score": 6,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 21,
+      "verdict": "BLUE_OCEAN"
+    },
+    "daily_mind_body_science_streak": {
+      "community": 3463200,
+      "comm_score": 6,
+      "comp_score": 10,
+      "wtp_score": 5,
+      "score": 21,
+      "verdict": "BLUE_OCEAN"
+    }
+  },
+  "blue_oceans": 9,
+  "soft_competition": 1,
+  "occupied": 0,
+  "p0_alerts": [
+    "daily_consciousness_studies_streak",
+    "daily_philosophy_of_mind_streak",
+    "daily_cognitive_bias_streak",
+    "daily_free_will_debate_streak",
+    "daily_perception_science_streak",
+    "daily_dream_science_streak",
+    "daily_personal_identity_streak",
+    "daily_altered_states_streak",
+    "daily_mind_body_science_streak"
+  ],
+  "p1_alerts": [],
+  "p0_count": 9,
+  "community_total": 50694400,
+  "cumulative_prev": 537,
+  "cumulative_new": 546
+}

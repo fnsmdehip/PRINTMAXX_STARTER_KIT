@@ -91,17 +91,18 @@ export function DailyScreen() {
       useNativeDriver: true,
     }).start();
 
-    // Request review after first streak day completed (first real value moment)
-    // Per Cal AI insights: NEVER during onboarding, only after genuine value
-    const wasFirstDay = previousStreak && previousStreak.totalDaysRead === 0 && updated.totalDaysRead === 1;
-    if (wasFirstDay) {
+    // Request review only at milestone streaks (7, 14, 30 days)
+    // Research: delaying to value moment = +0.8 stars avg. Never fire on day 1.
+    const reviewMilestones = [7, 14, 30];
+    const hitMilestone = reviewMilestones.includes(updated.totalDaysRead);
+    if (hitMilestone) {
       try {
         const isAvailable = await StoreReview.isAvailableAsync();
         if (isAvailable) {
-          // Slight delay so the user sees the completion animation first
+          // Delay 2s so user sees the streak celebration animation first
           setTimeout(() => {
             StoreReview.requestReview();
-          }, 1500);
+          }, 2000);
         }
       } catch {
         // Silently fail - review prompt is non-critical

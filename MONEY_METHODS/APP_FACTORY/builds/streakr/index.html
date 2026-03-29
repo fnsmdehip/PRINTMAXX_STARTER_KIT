@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#f0fdf4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Streakr">
+<meta name="description" content="The habit app for people who hate habit apps. Pick 3 non-negotiables. Swipe to complete. No account. Nothing leaves your device.">
+<meta property="og:title" content="Streakr - Swipe Habits That Stick">
+<meta property="og:description" content="Track fewer things. Actually keep them. One swipe per habit. No account. 100% private.">
+<meta name="keywords" content="habit tracker app, swipe habit app, simple streak tracker, daily habit app no account, minimum viable day app, offline habit tracker">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://streakr.surge.sh/">
+<link rel="manifest" href="manifest.json">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Streakr","applicationCategory":"HealthApplication","operatingSystem":"Web","url":"https://streakr.surge.sh/","description":"Swipe-based habit tracker. One swipe per habit. No account. 100% private. Works offline.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"},"featureList":["Swipe-to-complete habit cards","Minimum Viable Day mode","No account required","100% offline","Milestone rewards"]}
+</script>
+<title>Streakr - Swipe Habits That Stick</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+:root{
+  --ivory:#fdf8f0;--ivory-deep:#f5ede0;
+  --emerald:#10b981;--emerald-dark:#059669;--emerald-light:#d1fae5;
+  --gold:#f59e0b;--gold-light:#fef3c7;
+  --text:#1c1917;--text-muted:#6b7280;--text-light:#9ca3af;
+  --border:#e5e7eb;--card:#ffffff;
+  --shadow:0 2px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 32px rgba(0,0,0,.12);
+  --radius:16px;--radius-sm:10px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;background:var(--ivory);color:var(--text);min-height:100dvh;overflow:hidden;-webkit-font-smoothing:antialiased;}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);overflow-y:auto;-webkit-overflow-scrolling:touch;transition:opacity .25s,transform .25s;}
+.screen.hidden{opacity:0;pointer-events:none;transform:translateY(12px);}
+#screen-onboard{background:var(--ivory);justify-content:center;}
+.onboard-wrap{width:100%;max-width:380px;padding:32px 24px 40px;display:flex;flex-direction:column;align-items:center;}
+.onboard-dots{display:flex;gap:6px;margin-bottom:32px;}
+.onboard-dot{width:6px;height:6px;border-radius:50%;background:var(--border);}
+.onboard-dot.active{background:var(--emerald);width:20px;border-radius:3px;}
+.onboard-headline{font-size:1.75rem;font-weight:800;letter-spacing:-.03em;text-align:center;line-height:1.2;margin-bottom:12px;}
+.onboard-sub{font-size:1rem;color:var(--text-muted);text-align:center;line-height:1.5;margin-bottom:32px;}
+.onboard-visual{width:100%;max-width:280px;height:180px;display:flex;align-items:center;justify-content:center;margin-bottom:32px;}
+.swipe-demo{position:relative;width:260px;}
+.demo-card{background:var(--card);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow-lg);border:1px solid var(--border);display:flex;align-items:center;gap:16px;animation:demo-float 3s ease-in-out infinite;}
+@keyframes demo-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.demo-arrow{position:absolute;top:-28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;animation:demo-arrow 2s ease-in-out infinite;}
+@keyframes demo-arrow{0%,100%{transform:translateX(-50%) translateY(0);opacity:.4;}50%{transform:translateX(-50%) translateY(-6px);opacity:.9;}}
+.habit-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:340px;margin-bottom:24px;}
+.habit-chip{padding:14px 12px;border-radius:var(--radius-sm);background:var(--card);border:2px solid var(--border);cursor:pointer;text-align:center;transition:all .15s;}
+.habit-chip.selected{border-color:var(--emerald);background:var(--emerald-light);}
+.habit-chip .chip-emoji{font-size:1.5rem;display:block;margin-bottom:4px;}
+.habit-chip .chip-label{font-size:.8rem;font-weight:600;color:var(--text-muted);}
+.habit-chip.selected .chip-label{color:var(--emerald-dark);}
+.mode-picker{display:flex;flex-direction:column;gap:12px;width:100%;max-width:340px;margin-bottom:24px;}
+.mode-card{padding:18px 20px;border-radius:var(--radius);background:var(--card);border:2px solid var(--border);cursor:pointer;transition:all .15s;text-align:left;}
+.mode-card.selected{border-color:var(--emerald);}
+.mode-card h3{font-size:1rem;font-weight:700;margin-bottom:4px;}
+.mode-card p{font-size:.82rem;color:var(--text-muted);line-height:1.4;}
+.btn-primary{width:100%;max-width:340px;padding:17px 24px;border-radius:var(--radius);background:var(--emerald);color:#fff;font-size:1rem;font-weight:700;border:none;cursor:pointer;transition:background .15s,transform .1s;-webkit-appearance:none;}
+.btn-primary:active{background:var(--emerald-dark);transform:scale(.98);}
+.btn-ghost{width:100%;max-width:340px;padding:14px 24px;border-radius:var(--radius);background:transparent;color:var(--text-muted);font-size:.9rem;font-weight:500;border:none;cursor:pointer;margin-top:8px;-webkit-appearance:none;}
+/* Main */
+#screen-main{background:var(--ivory);padding-bottom:80px;}
+.main-header{width:100%;max-width:420px;padding:20px 20px 12px;display:flex;align-items:center;justify-content:space-between;}
+.header-greeting{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;}
+.header-day-label{font-size:.82rem;color:var(--text-muted);margin-top:1px;}
+.icon-btn{width:38px;height:38px;border-radius:50%;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--shadow);font-size:1.1rem;}
+.mvd-section{width:100%;max-width:420px;padding:0 16px 12px;}
+.mvd-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border);cursor:pointer;margin-bottom:8px;box-shadow:var(--shadow);}
+.mvd-title-text{font-size:.9rem;font-weight:700;}
+.mvd-badge{font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:20px;background:var(--gold-light);color:var(--gold);}
+.mvd-badge.done-badge{background:var(--emerald-light);color:var(--emerald-dark);}
+.mvd-goals-list{display:flex;flex-direction:column;gap:6px;}
+.mvd-goal-row{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:var(--radius-sm);background:var(--card);border:1px solid var(--border);cursor:pointer;transition:all .15s;}
+.mvd-goal-row.done-row{background:#f0fdf4;border-color:#bbf7d0;}
+.mvd-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;transition:all .15s;}
+.mvd-check.checked{background:var(--emerald);border-color:var(--emerald);}
+.mvd-goal-text{font-size:.85rem;}
+.mvd-goal-row.done-row .mvd-goal-text{color:var(--emerald-dark);text-decoration:line-through;}
+.card-stack{width:100%;max-width:420px;padding:0 16px;display:flex;flex-direction:column;gap:10px;}
+.habit-card{background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid var(--border);box-shadow:var(--shadow);display:flex;align-items:center;gap:16px;cursor:pointer;transition:transform .12s,box-shadow .12s,opacity .3s;user-select:none;-webkit-user-select:none;overflow:hidden;position:relative;}
+.habit-card.done-card{opacity:.6;}
+.habit-ring-wrap{position:relative;flex-shrink:0;}
+.ring-svg{transform:rotate(-90deg);}
+.ring-bg{fill:none;stroke:var(--ivory-deep);stroke-width:3;}
+.ring-prog{fill:none;stroke:var(--emerald);stroke-width:3;stroke-linecap:round;transition:stroke-dashoffset .4s;}
+.ring-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.3rem;}
+.habit-info{flex:1;min-width:0;}
+.habit-name-text{font-size:1rem;font-weight:700;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.habit-streak-text{font-size:.78rem;color:var(--text-muted);}
+.streak-count-span{font-weight:700;color:var(--emerald);}
+.done-checkmark{width:30px;height:30px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.swipe-hint{text-align:center;font-size:.72rem;color:var(--text-light);padding:12px 16px 0;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:4px;}
+.all-done-banner{width:calc(100% - 32px);max-width:388px;margin:8px 0 0;background:var(--emerald-light);border-radius:var(--radius);padding:20px 24px;text-align:center;border:1px solid #a7f3d0;display:none;}
+.all-done-banner.visible{display:block;}
+.all-done-banner h3{font-size:1.15rem;font-weight:800;color:var(--emerald-dark);}
+.all-done-banner p{font-size:.82rem;color:var(--emerald-dark);margin-top:4px;opacity:.8;}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;height:calc(60px + env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--border);display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:100;}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;gap:3px;padding-top:8px;font-size:.65rem;font-weight:600;color:var(--text-light);}
+.nav-item.active{color:var(--emerald);}
+.nav-icon{font-size:1.3rem;}
+/* Paywall */
+#screen-paywall{background:var(--ivory);}
+.paywall-wrap{width:100%;max-width:380px;padding:24px 24px 48px;display:flex;flex-direction:column;align-items:center;}
+.paywall-close{align-self:flex-end;font-size:1.3rem;cursor:pointer;padding:4px;color:var(--text-muted);background:none;border:none;}
+.paywall-hero{font-size:2.5rem;margin:8px 0;}
+.paywall-headline{font-size:1.55rem;font-weight:800;letter-spacing:-.03em;text-align:center;margin-bottom:8px;}
+.paywall-sub{font-size:.88rem;color:var(--text-muted);text-align:center;margin-bottom:24px;line-height:1.5;}
+.paywall-features{width:100%;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;}
+.pf-row{display:flex;align-items:flex-start;gap:12px;}
+.pf-check{width:20px;height:20px;background:var(--emerald-light);border-radius:50%;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--emerald-dark);font-weight:700;}
+.pf-text{font-size:.88rem;line-height:1.4;}
+.plan-cards{display:flex;flex-direction:column;gap:10px;width:100%;margin-bottom:20px;}
+.plan-card{padding:16px 20px;border-radius:var(--radius);border:2px solid var(--border);background:var(--card);cursor:pointer;display:flex;align-items:center;gap:14px;transition:border-color .15s;}
+.plan-card.selected{border-color:var(--emerald);}
+.plan-radio{width:20px;height:20px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;position:relative;}
+.plan-card.selected .plan-radio{background:var(--emerald);border-color:var(--emerald);}
+.plan-radio-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:#fff;display:none;}
+.plan-card.selected .plan-radio-dot{display:block;}
+.plan-info{flex:1;}
+.plan-badge-rec{background:var(--emerald);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:20px;display:inline-block;margin-bottom:4px;}
+.plan-name-text{font-size:.88rem;font-weight:700;}
+.plan-price-text{font-size:.82rem;color:var(--text-muted);}
+.plan-trial-badge{font-size:.7rem;font-weight:700;color:var(--emerald-dark);background:var(--emerald-light);padding:2px 8px;border-radius:20px;}
+.trial-note{font-size:.78rem;color:var(--text-muted);text-align:center;margin-bottom:20px;}
+.paywall-cta{width:100%;padding:17px;border-radius:var(--radius);background:var(--emerald);color:#fff;font-size:1rem;font-weight:700;border:none;cursor:pointer;margin-bottom:12px;-webkit-appearance:none;}
+.paywall-skip{color:var(--text-muted);font-size:.82rem;cursor:pointer;border:none;background:none;padding:8px;}
+.social-proof{font-size:.75rem;color:var(--text-light);text-align:center;}
+/* Progress */
+#screen-progress{background:var(--ivory);padding-bottom:80px;}
+.progress-wrap{width:100%;max-width:420px;padding:20px;}
+.page-title{font-size:1.35rem;font-weight:800;margin-bottom:20px;}
+.habit-stat-card{background:var(--card);border-radius:var(--radius);padding:16px 18px;border:1px solid var(--border);margin-bottom:10px;box-shadow:var(--shadow);}
+.hsc-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.hsc-name{font-size:.95rem;font-weight:700;}
+.hsc-streak{font-size:.8rem;color:var(--text-muted);}
+.heatmap{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;margin-top:4px;}
+.hm-cell{aspect-ratio:1;border-radius:3px;background:var(--ivory-deep);}
+.hm-cell.hm-done{background:var(--emerald);}
+.hm-cell.hm-today{outline:2px solid var(--emerald);}
+.milestone-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.milestone-chip{font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--ivory-deep);color:var(--text-muted);}
+.milestone-chip.achieved{background:var(--emerald-light);color:var(--emerald-dark);}
+/* Settings */
+#screen-settings{background:var(--ivory);padding-bottom:80px;}
+.settings-wrap{width:100%;max-width:420px;padding:20px;}
+.settings-section{margin-bottom:24px;}
+.settings-label{font-size:.72rem;font-weight:700;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;padding-left:4px;}
+.settings-row{background:var(--card);border-radius:var(--radius-sm);border:1px solid var(--border);overflow:hidden;}
+.settings-item{display:flex;align-items:center;padding:14px 16px;border-bottom:1px solid var(--border);cursor:pointer;}
+.settings-item:last-child{border-bottom:none;}
+.settings-item-icon{font-size:1.1rem;margin-right:12px;}
+.settings-item-label{flex:1;font-size:.9rem;font-weight:500;}
+.settings-item-value{font-size:.82rem;color:var(--text-muted);}
+.toggle{width:42px;height:24px;border-radius:12px;background:var(--border);position:relative;cursor:pointer;transition:background .2s;flex-shrink:0;}
+.toggle.on{background:var(--emerald);}
+.toggle::after{content:'';width:20px;height:20px;border-radius:50%;background:#fff;position:absolute;top:2px;left:2px;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+.toggle.on::after{transform:translateX(18px);}
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .2s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal-sheet{width:100%;background:var(--ivory);border-radius:24px 24px 0 0;padding:24px 24px calc(24px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .3s;}
+.modal-overlay.open .modal-sheet{transform:translateY(0);}
+.modal-title{font-size:1.15rem;font-weight:800;margin-bottom:20px;}
+.modal-input{width:100%;padding:14px 16px;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--card);font-size:1rem;outline:none;margin-bottom:14px;font-family:inherit;color:var(--text);}
+.modal-input:focus{border-color:var(--emerald);}
+.emoji-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.emoji-opt{width:42px;height:42px;border-radius:var(--radius-sm);background:var(--card);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;transition:all .12s;}
+.emoji-opt.selected{border-color:var(--emerald);background:var(--emerald-light);}
+/* Toast */
+.toast{position:fixed;top:80px;left:50%;transform:translateX(-50%) translateY(-12px);background:rgba(28,25,23,.88);color:#fff;padding:10px 20px;border-radius:30px;font-size:.82rem;font-weight:600;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;z-index:999;backdrop-filter:blur(8px);white-space:nowrap;}
+.toast.visible{opacity:1;transform:translateX(-50%) translateY(0);}
+.confetti-piece{position:fixed;width:8px;height:8px;border-radius:50%;pointer-events:none;z-index:998;animation:conf-fall 1.2s ease-in forwards;}
+@keyframes conf-fall{0%{opacity:1;transform:translateY(0) rotate(0deg);}100%{opacity:0;transform:translateY(180px) rotate(360deg) scale(.4);}}
+</style>
+</head>
+<body>
+
+<!-- ONBOARDING -->
+<div id="screen-onboard" class="screen">
+  <div class="onboard-wrap">
+    <div class="onboard-dots" id="onboard-dots"></div>
+    <div id="onboard-content"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="screen-main" class="screen hidden">
+  <div class="main-header">
+    <div>
+      <div class="header-greeting" id="hdr-greeting">Today</div>
+      <div class="header-day-label" id="hdr-day"></div>
+    </div>
+    <div>
+      <div class="icon-btn" onclick="openAddModal()" title="Add habit">+</div>
+    </div>
+  </div>
+  <div id="mvd-section" class="mvd-section" style="display:none;">
+    <div class="mvd-header" onclick="toggleMVDExpand()">
+      <span class="mvd-title-text">Minimum Viable Day</span>
+      <span class="mvd-badge" id="mvd-badge">0/3</span>
+    </div>
+    <div id="mvd-goals-list" class="mvd-goals-list"></div>
+  </div>
+  <div class="card-stack" id="card-stack"></div>
+  <div class="swipe-hint" id="swipe-hint">
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    Swipe up to complete
+  </div>
+  <div class="all-done-banner" id="all-done-banner">
+    <h3>Day complete!</h3>
+    <p>Every habit tracked. See you tomorrow.</p>
+  </div>
+  <div class="bottom-nav">
+    <div class="nav-item active" onclick="showScreen('main')" id="nav-t">
+      <span class="nav-icon">&#9782;</span>Today
+    </div>
+    <div class="nav-item" onclick="showScreen('progress')" id="nav-p">
+      <span class="nav-icon">&#128200;</span>Progress
+    </div>
+    <div class="nav-item" onclick="showScreen('settings')" id="nav-s">
+      <span class="nav-icon">&#9881;</span>Settings
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div id="screen-progress" class="screen hidden">
+  <div class="progress-wrap">
+    <div class="page-title">Your Progress</div>
+    <div id="progress-content"></div>
+  </div>
+  <div class="bottom-nav">
+    <div class="nav-item" onclick="showScreen('main')"><span class="nav-icon">&#9782;</span>Today</div>
+    <div class="nav-item active" onclick="showScreen('progress')"><span class="nav-icon">&#128200;</span>Progress</div>
+    <div class="nav-item" onclick="showScreen('settings')"><span class="nav-icon">&#9881;</span>Settings</div>
+  </div>
+</div>
+
+<!-- SETTINGS -->
+<div id="screen-settings" class="screen hidden">
+  <div class="settings-wrap">
+    <div class="page-title">Settings</div>
+    <div id="settings-content"></div>
+  </div>
+  <div class="bottom-nav">
+    <div class="nav-item" onclick="showScreen('main')"><span class="nav-icon">&#9782;</span>Today</div>
+    <div class="nav-item" onclick="showScreen('progress')"><span class="nav-icon">&#128200;</span>Progress</div>
+    <div class="nav-item active" onclick="showScreen('settings')"><span class="nav-icon">&#9881;</span>Settings</div>
+  </div>
+</div>
+
+<!-- PAYWALL -->
+<div id="screen-paywall" class="screen hidden">
+  <div class="paywall-wrap">
+    <button class="paywall-close" onclick="showScreen('main')">&#10005;</button>
+    <div class="paywall-hero">&#128293;</div>
+    <div class="paywall-headline">Keep Every Streak Going</div>
+    <div class="paywall-sub">Unlock unlimited habits, streak repair, and milestone sharing.</div>
+    <div class="paywall-features" id="pf-list"></div>
+    <div class="plan-cards" id="plan-cards"></div>
+    <div class="trial-note" id="trial-note">7-day free trial, then $29.99/year. Cancel any time.</div>
+    <button class="paywall-cta" onclick="startTrial()">Start Free Trial</button>
+    <button class="paywall-skip" onclick="showScreen('main')">Maybe later</button>
+    <div class="social-proof"><span style="color:#f59e0b;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 from 1,200+ reviews</div>
+  </div>
+</div>
+
+<!-- ADD HABIT MODAL -->
+<div class="modal-overlay" id="add-modal">
+  <div class="modal-sheet">
+    <div class="modal-title">Add a habit</div>
+    <input class="modal-input" id="habit-name-input" placeholder="Habit name..." maxlength="40" autocomplete="off">
+    <div class="emoji-grid" id="emoji-grid"></div>
+    <button class="btn-primary" onclick="saveNewHabit()">Add Habit</button>
+    <button class="btn-ghost" onclick="closeAddModal()">Cancel</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+
+// ---- SECURITY HELPERS ----
+function esc(str) {
+  // Escape user-provided text for safe DOM insertion via textContent
+  // This function is a reminder: always use textContent/setAttribute for user data,
+  // never concatenate raw user strings into innerHTML.
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// Safe text node setter
+function setText(el, str) {
+  if (el) el.textContent = String(str);
+}
+
+// ---- STATE ----
+const STORAGE_KEY = 'streakr_v1';
+const HABIT_EMOJIS = ['&#x1F4AA;','&#x1F4DA;','&#x1F9D8;','&#x1F3C3;','&#x1F4A7;','&#x1F957;','&#x1F3A8;','&#x1F4BB;','&#x1F6CC;','&#x1F9E0;','&#x270D;&#xFE0F;','&#x1F3B5;','&#x1F33F;','&#x1F938;','&#x1F4DD;','&#x1F9F9;','&#x1F64F;','&#x1F305;'];
+const EMOJI_DISPLAY = ['&#x1F4AA;','&#x1F4DA;','&#x1F9D8;','&#x1F3C3;','&#x1F4A7;','&#x1F957;','&#x1F3A8;','&#x1F4BB;','&#x1F6CC;','&#x1F9E0;','&#x270D;&#xFE0F;','&#x1F3B5;','&#x1F33F;','&#x1F938;','&#x1F4DD;','&#x1F9F9;','&#x1F64F;','&#x1F305;'];
+const HABIT_OPTS = [
+  ['&#x1F4AA;','Exercise'],['&#x1F4DA;','Read'],['&#x1F9D8;','Meditate'],
+  ['&#x1F4A7;','Drink Water'],['&#x1F4BB;','Deep Work'],['&#x270D;&#xFE0F;','Journal'],
+  ['&#x1F305;','Morning Walk'],['&#x1F957;','Eat Well'],
+];
+
+const DEFAULT = {
+  habits:[
+    {id:'h1',name:'Exercise',emoji:'&#x1F4AA;',history:{},longest:0},
+    {id:'h2',name:'Read',emoji:'&#x1F4DA;',history:{},longest:0},
+    {id:'h3',name:'Meditate',emoji:'&#x1F9D8;',history:{},longest:0},
+  ],
+  mvdEnabled:false,
+  mvdGoals:['','',''],
+  mvdCompleted:{},
+  onboardingDone:false,
+  reviewPrompted:false,
+  paywallShown:false,
+  isPro:false,
+};
+let S = {...DEFAULT};
+
+function loadState(){
+  try{const r=localStorage.getItem(STORAGE_KEY);if(r)S={...DEFAULT,...JSON.parse(r)};}catch(e){S={...DEFAULT};}
+}
+function save(){
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(S));}catch(e){}
+}
+
+// ---- DATES ----
+function today(){return new Date().toISOString().split('T')[0];}
+function dateAgo(n){const d=new Date();d.setDate(d.getDate()-n);return d.toISOString().split('T')[0];}
+function dayName(){return new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});}
+
+// ---- STREAK CALC ----
+function streakFor(history){
+  let n=0,d=new Date(today());
+  let cur=d.toISOString().split('T')[0];
+  if(!history[cur]){d.setDate(d.getDate()-1);cur=d.toISOString().split('T')[0];}
+  while(history[cur]){n++;d.setDate(d.getDate()-1);cur=d.toISOString().split('T')[0];}
+  return n;
+}
+function longestFor(history){
+  const dates=Object.keys(history).filter(k=>history[k]).sort();
+  if(!dates.length)return 0;
+  let best=1,cur=1;
+  for(let i=1;i<dates.length;i++){
+    const diff=(new Date(dates[i])-new Date(dates[i-1]))/86400000;
+    if(diff===1){cur++;if(cur>best)best=cur;}else cur=1;
+  }
+  return best;
+}
+
+// ---- SWIPE ----
+const swipeState={};
+function attachSwipe(el,id){
+  el.addEventListener('touchstart',e=>{
+    swipeState[id]={y:e.touches[0].clientY,x:e.touches[0].clientX};
+    el.style.transition='none';
+  },{passive:true});
+  el.addEventListener('touchmove',e=>{
+    if(!swipeState[id])return;
+    const dy=swipeState[id].y-e.touches[0].clientY;
+    if(dy>0){el.style.transform='translateY('+(-Math.min(dy,60))+'px)';el.style.opacity=''+(1-dy/200);}
+  },{passive:true});
+  el.addEventListener('touchend',e=>{
+    if(!swipeState[id])return;
+    const dy=swipeState[id].y-e.changedTouches[0].clientY;
+    const dx=Math.abs(swipeState[id].x-e.changedTouches[0].clientX);
+    el.style.transition='';el.style.transform='';el.style.opacity='';
+    if(dy>45&&dx<40){if(navigator.vibrate)navigator.vibrate(30);completeHabit(id);}
+    delete swipeState[id];
+  },{passive:true});
+  el.addEventListener('click',()=>completeHabit(id));
+}
+
+// ---- COMPLETE ----
+function completeHabit(id){
+  const t=today();
+  const h=S.habits.find(h=>h.id===id);
+  if(!h)return;
+  const wasDone=!!h.history[t];
+  h.history[t]=!wasDone;
+  if(h.history[t]){
+    h.longest=Math.max(longestFor(h.history),h.longest||0);
+  }
+  save();
+  renderMain();
+  if(!wasDone){
+    showToast(h.emoji+' '+esc(h.name)+' done!');
+    confetti();
+    checkAllDone();
+    checkReview();
+    checkPaywall();
+  }
+}
+
+function checkAllDone(){
+  const t=today();
+  if(S.habits.length&&S.habits.every(h=>h.history[t])){
+    const b=document.getElementById('all-done-banner');
+    if(b)b.classList.add('visible');
+  }
+}
+
+function checkReview(){
+  if(S.reviewPrompted)return;
+  const anyStreakGe3=S.habits.some(h=>streakFor(h.history)>=3);
+  if(anyStreakGe3){
+    setTimeout(()=>showToast('Enjoying Streakr? A review helps a lot \u2665'),3500);
+    S.reviewPrompted=true;save();
+  }
+}
+
+function checkPaywall(){
+  const total=S.habits.reduce((s,h)=>s+Object.values(h.history).filter(Boolean).length,0);
+  if(total===5&&!S.paywallShown){
+    S.paywallShown=true;save();
+    setTimeout(()=>showScreen('paywall'),1500);
+  }
+}
+
+// ---- RENDER MAIN ----
+function renderMain(){
+  const t=today();
+  const hour=new Date().getHours();
+  const g=hour<12?'Good morning.':hour<17?'Good afternoon.':'Good evening.';
+  setText(document.getElementById('hdr-greeting'),g);
+  setText(document.getElementById('hdr-day'),dayName());
+  renderMVD();
+  const stack=document.getElementById('card-stack');
+  if(!stack)return;
+  while(stack.firstChild)stack.removeChild(stack.firstChild);
+  const incomplete=S.habits.filter(h=>!h.history[t]);
+  const complete=S.habits.filter(h=>!!h.history[t]);
+  [...incomplete,...complete].forEach(h=>{
+    const card=buildCard(h,t);
+    stack.appendChild(card);
+    if(!h.history[t])attachSwipe(card,h.id);
+  });
+  const hint=document.getElementById('swipe-hint');
+  if(hint)hint.style.display=incomplete.length?'':'none';
+  const banner=document.getElementById('all-done-banner');
+  if(banner)banner.classList.toggle('visible',!!S.habits.length&&S.habits.every(h=>h.history[t]));
+}
+
+function buildCard(h,t){
+  const done=!!h.history[t];
+  const streak=streakFor(h.history);
+  const card=document.createElement('div');
+  card.className='habit-card'+(done?' done-card':'');
+  card.id='card-'+h.id;
+
+  // Ring SVG
+  const r=18,circ=2*Math.PI*r;
+  const prog=Math.min(streak/30,1);
+  const offset=circ*(1-prog);
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('class','ring-svg');
+  svg.setAttribute('width','44');svg.setAttribute('height','44');svg.setAttribute('viewBox','0 0 44 44');
+  const bgCirc=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  bgCirc.setAttribute('class','ring-bg');bgCirc.setAttribute('cx','22');bgCirc.setAttribute('cy','22');bgCirc.setAttribute('r',r);
+  const progCirc=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  progCirc.setAttribute('class','ring-prog');progCirc.setAttribute('cx','22');progCirc.setAttribute('cy','22');progCirc.setAttribute('r',r);
+  progCirc.setAttribute('stroke-dasharray',circ);progCirc.setAttribute('stroke-dashoffset',offset);
+  svg.appendChild(bgCirc);svg.appendChild(progCirc);
+  const ringWrap=document.createElement('div');ringWrap.className='habit-ring-wrap';
+  ringWrap.appendChild(svg);
+  const emojiEl=document.createElement('div');emojiEl.className='ring-icon';
+  // emoji is from our controlled list — set via innerHTML since it's HTML entity or emoji char
+  emojiEl.innerHTML=h.emoji;
+  ringWrap.appendChild(emojiEl);
+
+  // Info
+  const info=document.createElement('div');info.className='habit-info';
+  const nameEl=document.createElement('div');nameEl.className='habit-name-text';
+  nameEl.textContent=h.name; // textContent — safe for user data
+  const streakEl=document.createElement('div');streakEl.className='habit-streak-text';
+  if(done){streakEl.textContent='Completed today';}
+  else if(streak>0){
+    streakEl.textContent='';
+    const sp=document.createElement('span');sp.className='streak-count-span';sp.textContent=streak+' day streak';
+    streakEl.appendChild(sp);
+  } else {
+    streakEl.textContent='Start your streak';
+  }
+  info.appendChild(nameEl);info.appendChild(streakEl);
+
+  // Done badge
+  const badge=document.createElement('div');
+  if(done){badge.className='done-checkmark';badge.textContent='\u2713';}
+
+  card.appendChild(ringWrap);card.appendChild(info);
+  if(done)card.appendChild(badge);
+  return card;
+}
+
+// ---- MVD ----
+function renderMVD(){
+  const sec=document.getElementById('mvd-section');
+  if(!sec)return;
+  if(!S.mvdEnabled){sec.style.display='none';return;}
+  sec.style.display='';
+  const t=today();
+  const completed=S.mvdCompleted[t]||[];
+  const goals=S.mvdGoals.filter(g=>g);
+  const doneCount=goals.filter((_,i)=>completed.includes(i)).length;
+  const badge=document.getElementById('mvd-badge');
+  if(badge){
+    badge.textContent=doneCount+'/'+goals.length;
+    badge.className='mvd-badge'+(doneCount===goals.length&&goals.length>0?' done-badge':'');
+  }
+  const list=document.getElementById('mvd-goals-list');
+  if(!list)return;
+  while(list.firstChild)list.removeChild(list.firstChild);
+  S.mvdGoals.forEach((goal,i)=>{
+    if(!goal)return;
+    const done=completed.includes(i);
+    const row=document.createElement('div');
+    row.className='mvd-goal-row'+(done?' done-row':'');
+    const check=document.createElement('div');
+    check.className='mvd-check'+(done?' checked':'');
+    if(done)check.textContent='\u2713';
+    const txt=document.createElement('span');
+    txt.className='mvd-goal-text';
+    txt.textContent=goal; // textContent — safe for user-entered goal text
+    row.appendChild(check);row.appendChild(txt);
+    row.addEventListener('click',()=>{
+      if(!S.mvdCompleted[t])S.mvdCompleted[t]=[];
+      const idx=S.mvdCompleted[t].indexOf(i);
+      if(idx>=0)S.mvdCompleted[t].splice(idx,1);
+      else S.mvdCompleted[t].push(i);
+      if(navigator.vibrate)navigator.vibrate(15);
+      save();renderMVD();
+      const allDone=goals.every((_,j)=>(S.mvdCompleted[t]||[]).includes(j));
+      if(allDone)showToast('Minimum Viable Day complete!');
+    });
+    list.appendChild(row);
+  });
+}
+
+function toggleMVDExpand(){
+  const list=document.getElementById('mvd-goals-list');
+  if(list)list.style.display=list.style.display==='none'?'':'none';
+}
+
+// ---- PROGRESS ----
+function renderProgress(){
+  const wrap=document.getElementById('progress-content');
+  if(!wrap)return;
+  while(wrap.firstChild)wrap.removeChild(wrap.firstChild);
+  if(!S.habits.length){
+    const p=document.createElement('p');
+    p.style.cssText='color:var(--text-muted);text-align:center;padding:40px 0;';
+    p.textContent='No habits yet. Add one from Today.';
+    wrap.appendChild(p);return;
+  }
+  S.habits.forEach(h=>{
+    const streak=streakFor(h.history);
+    const longest=Math.max(longestFor(h.history),h.longest||0);
+    const card=document.createElement('div');card.className='habit-stat-card';
+
+    // Header
+    const hdr=document.createElement('div');hdr.className='hsc-header';
+    const em=document.createElement('span');em.innerHTML=h.emoji;em.style.fontSize='1.4rem';
+    const nameSpan=document.createElement('div');
+    const n=document.createElement('div');n.className='hsc-name';n.textContent=h.name;
+    const s=document.createElement('div');s.className='hsc-streak';
+    s.textContent='Current: '+streak+' days | Best: '+longest+' days';
+    nameSpan.appendChild(n);nameSpan.appendChild(s);
+    hdr.appendChild(em);hdr.appendChild(nameSpan);
+    card.appendChild(hdr);
+
+    // Heatmap — 30 cells
+    const hm=document.createElement('div');hm.className='heatmap';
+    const t=today();
+    for(let i=29;i>=0;i--){
+      const d=dateAgo(i);
+      const cell=document.createElement('div');
+      cell.className='hm-cell'+(h.history[d]?' hm-done':'')+(d===t?' hm-today':'');
+      hm.appendChild(cell);
+    }
+    card.appendChild(hm);
+
+    // Milestones
+    const mr=document.createElement('div');mr.className='milestone-row';
+    [3,7,14,30,90,180,365].forEach(m=>{
+      const chip=document.createElement('div');
+      chip.className='milestone-chip'+(longest>=m?' achieved':'');
+      chip.textContent=m+'d';
+      mr.appendChild(chip);
+    });
+    card.appendChild(mr);
+    wrap.appendChild(card);
+  });
+}
+
+// ---- SETTINGS ----
+function renderSettings(){
+  const wrap=document.getElementById('settings-content');
+  if(!wrap)return;
+  while(wrap.firstChild)wrap.removeChild(wrap.firstChild);
+
+  // MVD section
+  const mvdSec=document.createElement('div');mvdSec.className='settings-section';
+  const mvdLabel=document.createElement('div');mvdLabel.className='settings-label';mvdLabel.textContent='Mode';
+  const mvdRow=document.createElement('div');mvdRow.className='settings-row';
+  const mvdItem=document.createElement('div');mvdItem.className='settings-item';mvdItem.style.cursor='pointer';
+  const mvdIcon=document.createElement('span');mvdIcon.className='settings-item-icon';mvdIcon.textContent='\uD83C\uDFAF';
+  const mvdLbl=document.createElement('span');mvdLbl.className='settings-item-label';mvdLbl.textContent='Minimum Viable Day';
+  const mvdTog=document.createElement('div');mvdTog.className='toggle'+(S.mvdEnabled?' on':'');
+  mvdTog.id='mvd-toggle';
+  mvdItem.addEventListener('click',()=>{
+    S.mvdEnabled=!S.mvdEnabled;
+    if(S.mvdEnabled&&S.mvdGoals.every(g=>!g))S.mvdGoals=['Exercise','Read',''];
+    save();renderSettings();renderMain();
+  });
+  mvdItem.appendChild(mvdIcon);mvdItem.appendChild(mvdLbl);mvdItem.appendChild(mvdTog);
+  mvdRow.appendChild(mvdItem);
+  mvdSec.appendChild(mvdLabel);mvdSec.appendChild(mvdRow);
+  wrap.appendChild(mvdSec);
+
+  // MVD goals
+  if(S.mvdEnabled){
+    const goalSec=document.createElement('div');goalSec.className='settings-section';
+    const goalLabel=document.createElement('div');goalLabel.className='settings-label';goalLabel.textContent='MVD Non-Negotiables';
+    const goalWrap=document.createElement('div');goalWrap.style.cssText='display:flex;flex-direction:column;gap:8px;';
+    S.mvdGoals.forEach((g,i)=>{
+      const inp=document.createElement('input');
+      inp.className='modal-input';inp.style.margin='0';
+      inp.maxLength=50;
+      inp.placeholder='Non-negotiable '+(i+1)+'...';
+      inp.value=g||'';
+      inp.addEventListener('blur',()=>{
+        S.mvdGoals[i]=inp.value.trim();
+        save();renderMain();
+      });
+      goalWrap.appendChild(inp);
+    });
+    goalSec.appendChild(goalLabel);goalSec.appendChild(goalWrap);
+    wrap.appendChild(goalSec);
+  }
+
+  // Habits
+  const habSec=document.createElement('div');habSec.className='settings-section';
+  const habLabel=document.createElement('div');habLabel.className='settings-label';habLabel.textContent='Habits';
+  const habRow=document.createElement('div');habRow.className='settings-row';
+  S.habits.forEach(h=>{
+    const item=document.createElement('div');item.className='settings-item';
+    const icon=document.createElement('span');icon.className='settings-item-icon';icon.innerHTML=h.emoji;
+    const lbl=document.createElement('span');lbl.className='settings-item-label';lbl.textContent=h.name;
+    const rmv=document.createElement('span');rmv.className='settings-item-value';rmv.textContent='Remove';
+    rmv.style.cssText='color:#ef4444;cursor:pointer;padding:4px 8px;';
+    rmv.addEventListener('click',()=>{
+      if(confirm('Remove "'+h.name+'"? Your history will be lost.')){
+        S.habits=S.habits.filter(x=>x.id!==h.id);save();renderSettings();renderMain();
+      }
+    });
+    item.appendChild(icon);item.appendChild(lbl);item.appendChild(rmv);
+    habRow.appendChild(item);
+  });
+  habSec.appendChild(habLabel);habSec.appendChild(habRow);
+  wrap.appendChild(habSec);
+
+  // Account
+  const acSec=document.createElement('div');acSec.className='settings-section';
+  const acLabel=document.createElement('div');acLabel.className='settings-label';acLabel.textContent='Account';
+  const acRow=document.createElement('div');acRow.className='settings-row';
+  const items=[
+    {icon:'\uD83D\uDD25',label:'Upgrade to Pro',value:'$29.99/yr \u203A',action:()=>showScreen('paywall')},
+    {icon:'\uD83D\uDD12',label:'Privacy',value:'All local \u2665',action:null},
+    {icon:'\uD83D\uDCCB',label:'Privacy Policy',value:'\u203A',action:()=>window.open('privacy-policy.html','_blank')},
+    {icon:'\uD83D\uDCC4',label:'Terms',value:'\u203A',action:()=>window.open('terms.html','_blank')},
+  ];
+  items.forEach(cfg=>{
+    const it=document.createElement('div');it.className='settings-item';
+    if(cfg.action)it.style.cursor='pointer';
+    const ic=document.createElement('span');ic.className='settings-item-icon';ic.textContent=cfg.icon;
+    const lb=document.createElement('span');lb.className='settings-item-label';lb.textContent=cfg.label;
+    const vl=document.createElement('span');vl.className='settings-item-value';vl.textContent=cfg.value;
+    if(cfg.label==='Privacy')vl.style.color='#10b981';
+    it.appendChild(ic);it.appendChild(lb);it.appendChild(vl);
+    if(cfg.action)it.addEventListener('click',cfg.action);
+    acRow.appendChild(it);
+  });
+  acSec.appendChild(acLabel);acSec.appendChild(acRow);
+  wrap.appendChild(acSec);
+
+  // Reset
+  const rstSec=document.createElement('div');rstSec.className='settings-section';
+  const rstRow=document.createElement('div');rstRow.className='settings-row';
+  const rstItem=document.createElement('div');rstItem.className='settings-item';rstItem.style.cursor='pointer';
+  const rstIc=document.createElement('span');rstIc.className='settings-item-icon';rstIc.textContent='\uD83D\uDDD1\uFE0F';
+  const rstLbl=document.createElement('span');rstLbl.className='settings-item-label';rstLbl.style.color='#ef4444';rstLbl.textContent='Reset All Data';
+  rstItem.addEventListener('click',()=>{
+    if(confirm('Reset everything? Cannot be undone.')){S={...DEFAULT};save();location.reload();}
+  });
+  rstItem.appendChild(rstIc);rstItem.appendChild(rstLbl);
+  rstRow.appendChild(rstItem);rstSec.appendChild(rstRow);
+  wrap.appendChild(rstSec);
+}
+
+// ---- PAYWALL ----
+(function buildPaywall(){
+  const pf=[
+    ['Unlimited habits','Free tier: up to 3 habits'],
+    ['Streak repair','Forgive one slip per 30 days'],
+    ['Milestone sharing','Cards at 7, 30, 90, 365 days'],
+    ['Habit packs','Morning Routine, Deep Work, Fitness'],
+    ['History export','Full CSV of your streak data'],
+  ];
+  const list=document.getElementById('pf-list');
+  if(list){
+    pf.forEach(([title,sub])=>{
+      const row=document.createElement('div');row.className='pf-row';
+      const check=document.createElement('div');check.className='pf-check';check.textContent='\u2713';
+      const txt=document.createElement('div');txt.className='pf-text';
+      const b=document.createElement('strong');b.textContent=title;
+      txt.appendChild(b);txt.appendChild(document.createTextNode(' \u2014 '+sub));
+      row.appendChild(check);row.appendChild(txt);
+      list.appendChild(row);
+    });
+  }
+
+  const pc=document.getElementById('plan-cards');
+  if(pc){
+    // Annual card
+    const ann=document.createElement('div');ann.className='plan-card selected';ann.id='plan-ann';
+    ann.innerHTML='<div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-badge-rec">Most Popular</div><div class="plan-name-text">Annual</div><div class="plan-price-text"><strong>$29.99</strong>/year ($2.50/mo)</div></div><div class="plan-trial-badge">7-day free trial</div>';
+    ann.addEventListener('click',()=>selectPlan('annual'));
+    // Monthly card
+    const mon=document.createElement('div');mon.className='plan-card';mon.id='plan-mon';
+    mon.innerHTML='<div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-name-text">Monthly</div><div class="plan-price-text"><strong>$4.99</strong>/month</div></div>';
+    mon.addEventListener('click',()=>selectPlan('monthly'));
+    pc.appendChild(ann);pc.appendChild(mon);
+  }
+})();
+
+let selectedPlan='annual';
+function selectPlan(plan){
+  selectedPlan=plan;
+  const ann=document.getElementById('plan-ann');
+  const mon=document.getElementById('plan-mon');
+  if(ann)ann.className='plan-card'+(plan==='annual'?' selected':'');
+  if(mon)mon.className='plan-card'+(plan==='monthly'?' selected':'');
+  const note=document.getElementById('trial-note');
+  if(note)note.textContent=plan==='annual'?'7-day free trial, then $29.99/year. Cancel any time.':'$4.99/month. Cancel any time.';
+}
+
+function startTrial(){
+  // Stripe links — replace with real links from Stripe dashboard
+  const ANNUAL_LINK='https://buy.stripe.com/streakr-annual-placeholder';
+  const MONTHLY_LINK='https://buy.stripe.com/streakr-monthly-placeholder';
+  showToast('Opening checkout\u2026');
+  setTimeout(()=>window.open(selectedPlan==='annual'?ANNUAL_LINK:MONTHLY_LINK,'_blank'),300);
+}
+
+// ---- ADD HABIT MODAL ----
+let newEmoji='&#x1F4AA;';
+
+function openAddModal(){
+  const modal=document.getElementById('add-modal');
+  const input=document.getElementById('habit-name-input');
+  const grid=document.getElementById('emoji-grid');
+  if(!modal||!input||!grid)return;
+  input.value='';
+  newEmoji='&#x1F4AA;';
+  while(grid.firstChild)grid.removeChild(grid.firstChild);
+  EMOJI_DISPLAY.forEach(e=>{
+    const opt=document.createElement('div');
+    opt.className='emoji-opt'+(e===newEmoji?' selected':'');
+    opt.innerHTML=e; // HTML entity — safe, from controlled list
+    opt.addEventListener('click',()=>{
+      newEmoji=e;
+      grid.querySelectorAll('.emoji-opt').forEach(el=>el.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+    grid.appendChild(opt);
+  });
+  modal.classList.add('open');
+  setTimeout(()=>input.focus(),350);
+}
+
+function closeAddModal(){
+  const modal=document.getElementById('add-modal');
+  if(modal)modal.classList.remove('open');
+}
+
+function saveNewHabit(){
+  const input=document.getElementById('habit-name-input');
+  const name=input?input.value.trim():'';
+  if(!name){showToast('Enter a habit name.');return;}
+  if(S.habits.length>=3&&!S.isPro){
+    closeAddModal();
+    setTimeout(()=>showScreen('paywall'),200);
+    return;
+  }
+  const id='h'+Date.now();
+  S.habits.push({id,name,emoji:newEmoji,history:{},longest:0});
+  save();closeAddModal();renderMain();
+  showToast(esc(name)+' added!');
+}
+
+// ---- ONBOARDING ----
+let step=0;
+let selHabits=['&#x1F4AA; Exercise','&#x1F4DA; Read'];
+let selMode='classic';
+const STEPS=['welcome','mode','habits','first_win','ready'];
+
+function dots(){
+  const d=document.getElementById('onboard-dots');
+  if(!d)return;
+  while(d.firstChild)d.removeChild(d.firstChild);
+  STEPS.forEach((_,i)=>{
+    const el=document.createElement('div');
+    el.className='onboard-dot'+(i===step?' active':'');
+    d.appendChild(el);
+  });
+}
+
+function renderStep(){
+  dots();
+  const wrap=document.getElementById('onboard-content');
+  if(!wrap)return;
+  while(wrap.firstChild)wrap.removeChild(wrap.firstChild);
+  const s=STEPS[step];
+
+  if(s==='welcome'){
+    const visual=document.createElement('div');visual.className='onboard-visual';
+    visual.innerHTML='<div class="swipe-demo"><div class="demo-arrow" style="position:absolute;top:-28px;left:50%;transform:translateX(-50%)"><span style="font-size:.6rem;font-weight:700;color:#10b981;letter-spacing:.05em;">SWIPE</span></div><div class="demo-card"><div style="width:44px;height:44px;border-radius:50%;border:3px solid #10b981;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:1.3rem;">&#x1F4AA;</span></div><div><div style="font-weight:700;font-size:.95rem;">Exercise</div><div style="font-size:.78rem;color:#6b7280;">7 day streak</div></div></div></div>';
+    const h=document.createElement('div');h.className='onboard-headline';h.textContent='The habit app for people who hate habit apps.';
+    const sub=document.createElement('div');sub.className='onboard-sub';sub.textContent='Pick 3 non-negotiables. Swipe to complete. That\'s a win.';
+    const btn=document.createElement('button');btn.className='btn-primary';btn.textContent='Get Started';btn.addEventListener('click',nextStep);
+    wrap.appendChild(visual);wrap.appendChild(h);wrap.appendChild(sub);wrap.appendChild(btn);
+
+  } else if(s==='mode'){
+    const h=document.createElement('div');h.className='onboard-headline';h.textContent='How do you want to track?';
+    const sub=document.createElement('div');sub.className='onboard-sub';sub.textContent='Both use the same swipe interface. Choose what feels right.';
+    const picker=document.createElement('div');picker.className='mode-picker';
+    const modes=[
+      {id:'classic',title:'Classic Streaks',desc:'Track every habit individually. Watch each streak grow day by day.'},
+      {id:'mvd',title:'Minimum Viable Day',desc:'Define 3 non-negotiables. One daily win counts as a success. Based on the viral MVD concept.'},
+    ];
+    modes.forEach(m=>{
+      const card=document.createElement('div');
+      card.className='mode-card'+(selMode===m.id?' selected':'');
+      const t=document.createElement('h3');t.textContent=m.title;
+      const p=document.createElement('p');p.textContent=m.desc;
+      card.appendChild(t);card.appendChild(p);
+      card.addEventListener('click',()=>{selMode=m.id;renderStep();});
+      picker.appendChild(card);
+    });
+    const btn=document.createElement('button');btn.className='btn-primary';btn.textContent='Continue';btn.addEventListener('click',nextStep);
+    wrap.appendChild(h);wrap.appendChild(sub);wrap.appendChild(picker);wrap.appendChild(btn);
+
+  } else if(s==='habits'){
+    const h=document.createElement('div');h.className='onboard-headline';h.textContent='Pick your habits';
+    const sub=document.createElement('div');sub.className='onboard-sub';sub.textContent='Start with 1\u20133. Add more later.';
+    const grid=document.createElement('div');grid.className='habit-chips';
+    HABIT_OPTS.forEach(([emoji,label])=>{
+      const key=emoji+' '+label;
+      const chip=document.createElement('div');
+      chip.className='habit-chip'+(selHabits.includes(key)?' selected':'');
+      const em=document.createElement('span');em.className='chip-emoji';em.innerHTML=emoji;
+      const lb=document.createElement('span');lb.className='chip-label';lb.textContent=label;
+      chip.appendChild(em);chip.appendChild(lb);
+      chip.addEventListener('click',()=>{
+        const idx=selHabits.indexOf(key);
+        if(idx>=0){if(selHabits.length>1)selHabits.splice(idx,1);}
+        else if(selHabits.length<3)selHabits.push(key);
+        else showToast('Free tier: up to 3 habits. Upgrade for more.');
+        renderStep();
+      });
+      grid.appendChild(chip);
+    });
+    const btn=document.createElement('button');btn.className='btn-primary';btn.textContent='Continue';btn.addEventListener('click',nextStep);
+    const skip=document.createElement('button');skip.className='btn-ghost';skip.textContent='Skip';skip.addEventListener('click',nextStep);
+    wrap.appendChild(h);wrap.appendChild(sub);wrap.appendChild(grid);wrap.appendChild(btn);wrap.appendChild(skip);
+
+  } else if(s==='first_win'){
+    const habit=selHabits[0]||'&#x1F4AA; Exercise';
+    const parts=habit.split(' ');
+    const emoji=parts[0];
+    const name=parts.slice(1).join(' ');
+    const h=document.createElement('div');h.className='onboard-headline';h.textContent='Do it right now.';
+    const sub=document.createElement('div');sub.className='onboard-sub';sub.textContent='Tap to complete your first habit. Day 1 starts the moment you do.';
+
+    const card=document.createElement('div');card.className='habit-card';card.style.maxWidth='340px';card.style.width='100%';card.style.marginBottom='24px';
+    const ringWrap=document.createElement('div');ringWrap.className='habit-ring-wrap';
+    const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('class','ring-svg');svg.setAttribute('width','44');svg.setAttribute('height','44');svg.setAttribute('viewBox','0 0 44 44');
+    const bg=document.createElementNS('http://www.w3.org/2000/svg','circle');bg.setAttribute('class','ring-bg');bg.setAttribute('cx','22');bg.setAttribute('cy','22');bg.setAttribute('r','18');
+    svg.appendChild(bg);ringWrap.appendChild(svg);
+    const em=document.createElement('div');em.className='ring-icon';em.innerHTML=emoji;
+    ringWrap.appendChild(em);
+    const info=document.createElement('div');info.className='habit-info';
+    const nm=document.createElement('div');nm.className='habit-name-text';nm.textContent=name;
+    const st=document.createElement('div');st.className='habit-streak-text';st.textContent='Tap to complete';
+    info.appendChild(nm);info.appendChild(st);
+    card.appendChild(ringWrap);card.appendChild(info);
+    card.addEventListener('click',()=>{
+      card.style.background='#f0fdf4';
+      while(card.firstChild)card.removeChild(card.firstChild);
+      const done=document.createElement('div');done.style.cssText='font-size:2rem;margin:0 auto;text-align:center;width:100%;';
+      done.innerHTML=emoji+' Done!';
+      card.appendChild(done);
+      if(navigator.vibrate)navigator.vibrate([30,50,30]);
+      confetti();
+      setTimeout(nextStep,700);
+    });
+
+    const skip=document.createElement('button');skip.className='btn-ghost';skip.textContent='Skip for now';skip.addEventListener('click',nextStep);
+    wrap.appendChild(h);wrap.appendChild(sub);wrap.appendChild(card);wrap.appendChild(skip);
+
+  } else if(s==='ready'){
+    const em=document.createElement('div');em.style.cssText='font-size:3rem;margin-bottom:16px;';em.textContent='\u2705';
+    const h=document.createElement('div');h.className='onboard-headline';h.textContent='You\'re set.';
+    const sub=document.createElement('div');sub.className='onboard-sub';sub.textContent='Come back every day. Swipe your habits. That\'s the whole system.';
+    const btn=document.createElement('button');btn.className='btn-primary';btn.textContent='Start tracking';btn.addEventListener('click',finishOnboarding);
+    wrap.appendChild(em);wrap.appendChild(h);wrap.appendChild(sub);wrap.appendChild(btn);
+  }
+}
+
+function nextStep(){step++;if(step>=STEPS.length)finishOnboarding();else renderStep();}
+
+function finishOnboarding(){
+  S.habits=selHabits.map((h,i)=>{
+    const parts=h.split(' ');
+    return{id:'h'+Date.now()+i,name:parts.slice(1).join(' '),emoji:parts[0],history:{},longest:0};
+  });
+  if(selMode==='mvd'){
+    S.mvdEnabled=true;
+    S.mvdGoals=selHabits.map(h=>h.split(' ').slice(1).join(' ')).concat(['']);
+  }
+  S.onboardingDone=true;
+  save();
+  showScreen('main');
+}
+
+// ---- SCREEN NAV ----
+function showScreen(name){
+  ['onboard','main','progress','settings','paywall'].forEach(s=>{
+    const el=document.getElementById('screen-'+s);
+    if(el)el.classList.toggle('hidden',s!==name);
+  });
+  if(name==='progress')renderProgress();
+  if(name==='settings')renderSettings();
+  if(name==='main')renderMain();
+}
+
+// ---- TOAST ----
+let toastTimer;
+function showToast(msg){
+  const t=document.getElementById('toast');
+  if(!t)return;
+  t.innerHTML=msg; // msg can contain HTML entities from controlled code, not user data
+  t.classList.add('visible');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove('visible'),2800);
+}
+
+// ---- CONFETTI ----
+function confetti(){
+  const colors=['#10b981','#f59e0b','#3b82f6','#8b5cf6','#ec4899','#fbbf24'];
+  for(let i=0;i<16;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText='left:'+Math.random()*100+'vw;top:'+(30+Math.random()*40)+'vh;background:'+colors[Math.floor(Math.random()*colors.length)]+';animation-delay:'+Math.random()*.4+'s;animation-duration:'+(0.8+Math.random()*.6)+'s;';
+    document.body.appendChild(el);setTimeout(()=>el.remove(),2000);
+  }
+}
+
+// ---- SERVICE WORKER ----
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+}
+
+// ---- INIT ----
+loadState();
+if(S.onboardingDone){showScreen('main');}else{renderStep();}
+</script>
+</body>
+</html>

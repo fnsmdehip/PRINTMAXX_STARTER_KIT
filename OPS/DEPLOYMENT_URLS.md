@@ -345,3 +345,18 @@ Deployed 2026-03-14 by ASSET DEPLOYER.
 | couples-streak | https://couples-streak.surge.sh | LIVE 2026-03-21 | Couples habit tracker — blue ocean 11.14M community |
 | couples-streak-landing | https://couples-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-21 | couples relationship streak tracker |
 | mcphub-mirror | https://mcphub-mirror.surge.sh | LIVE - gap-hunter deploy 2026-03-21 |
+
+## Local Business Demo Pages (DNS-Fixed Redeployments)
+
+Redeployed 2026-03-29 with shortened subdomains (originals exceeded 63-char DNS limit).
+
+| Business | New URL | Old (Broken) Domain | Status |
+|----------|---------|---------------------|--------|
+| Champion Detailing, OKC | https://okc-champion-detailing.surge.sh | mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok | LIVE |
+| Pure Prof Detailing, OKC | https://okc-pure-prof-detailing.surge.sh | top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok | LIVE |
+| All Pro Metro Services, Portland | https://portland-allpro-windows.surge.sh | window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or | LIVE |
+| Magic City Detailing, Birmingham | https://bham-magic-city-detail.surge.sh | mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al | LIVE |
+| Home Professional Detailing, Birmingham | https://bham-home-detailing.surge.sh | home-professional-mobile-detailing-amp-products-super-store-birmingham-al | LIVE |
+| HomeGuide Handyman, Las Vegas | https://lv-handyman-homeguide.surge.sh | the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv | LIVE |
+| Pink's Windows, Louisville | https://louisville-pinks-windows.surge.sh | local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky | LIVE |
+| Cherry Window Cleaning, Louisville | https://louisville-cherry-windows.surge.sh | residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky | LIVE |

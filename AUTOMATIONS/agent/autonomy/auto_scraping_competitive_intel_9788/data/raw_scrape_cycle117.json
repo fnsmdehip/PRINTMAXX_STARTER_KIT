@@ -1,0 +1,277 @@
+{
+  "cycle": 117,
+  "timestamp": "2026-03-29T14:53:50.434377+00:00",
+  "strategy": "PSYCHOLOGY OF CREATIVITY & GENIUS",
+  "niches": {
+    "daily_creative_genius_streak": {
+      "reddit_communities": {
+        "psychology": 2140000,
+        "creativity": 98000,
+        "neuroscience": 1480000,
+        "productivity": 1560000,
+        "getdisciplined": 980000
+      },
+      "itunes_results": [
+        {
+          "name": "Headspace",
+          "rating": 4.9,
+          "rating_count": 1460000,
+          "genre": "Health & Fitness",
+          "note": "Meditation/mindfulness \u2014 not creativity science"
+        },
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "rating": 4.8,
+          "rating_count": 185000,
+          "genre": "Health & Fitness",
+          "note": "Habit building \u2014 not creativity/genius-focused"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "No streak app teaching the psychology of creative genius: Csikszentmihalyi, Wallas incubation model, divergent vs convergent thinking, biographical genius patterns. Zero direct competition."
+    },
+    "daily_flow_state_streak": {
+      "reddit_communities": {
+        "psychology": 2140000,
+        "productivity": 1560000,
+        "neuroscience": 1480000,
+        "flow": 42000,
+        "adhd": 1200000
+      },
+      "itunes_results": [
+        {
+          "name": "Brain.fm",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "genre": "Music",
+          "note": "Focus music \u2014 not flow state science education"
+        },
+        {
+          "name": "Focus@Will",
+          "rating": 4.3,
+          "rating_count": 11000,
+          "genre": "Music",
+          "note": "Music for focus \u2014 no educational content"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Mihaly Csikszentmihalyi's flow research is widely cited but no app teaches its daily science: autotelic experience, challenge-skill balance, flow triggers, 8 components. Brain.fm occupies music niche, not education."
+    },
+    "daily_divergent_thinking_streak": {
+      "reddit_communities": {
+        "psychology": 2140000,
+        "creativity": 98000,
+        "problemsolving": 67000,
+        "design": 1800000,
+        "learnmath": 210000
+      },
+      "itunes_results": [
+        {
+          "name": "Elevate - Brain Training",
+          "rating": 4.8,
+          "rating_count": 275000,
+          "genre": "Education",
+          "note": "Language/math games \u2014 not divergent thinking science"
+        },
+        {
+          "name": "Peak - Brain Training",
+          "rating": 4.6,
+          "rating_count": 89000,
+          "genre": "Games",
+          "note": "Brain games \u2014 not creativity psychology"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Divergent thinking research (Guilford, Torrance, de Bono) has no dedicated streak app. Elevate trains math/language, not creative ideation. Zero education apps on TTCT, associative thinking, remote associates."
+    },
+    "daily_polymath_habits_streak": {
+      "reddit_communities": {
+        "productivity": 1560000,
+        "selfimprovement": 2100000,
+        "history": 17600000,
+        "biographies": 98000,
+        "learnprogramming": 2800000
+      },
+      "itunes_results": [
+        {
+          "name": "Blinkist",
+          "rating": 4.7,
+          "rating_count": 310000,
+          "genre": "Education",
+          "note": "Book summaries \u2014 not polymath frameworks or biographical analysis"
+        },
+        {
+          "name": "Instaread Book Summaries",
+          "rating": 4.6,
+          "rating_count": 54000,
+          "genre": "Education",
+          "note": "Book summaries \u2014 not focused on genius/polymath study methods"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "No app studies the daily habits of Da Vinci, Newton, Leibniz, Feynman, Tesla, Lovelace through a psychological lens. Blinkist covers books broadly. Massive reddit/history community overlap for a daily polymath lesson format."
+    },
+    "daily_creative_blocks_streak": {
+      "reddit_communities": {
+        "writing": 2300000,
+        "art": 4100000,
+        "psychology": 2140000,
+        "procrastination": 560000,
+        "anxiety": 980000
+      },
+      "itunes_results": [
+        {
+          "name": "Woebot Health",
+          "rating": 4.6,
+          "rating_count": 24000,
+          "genre": "Medical",
+          "note": "CBT for anxiety/depression \u2014 not creative blocks"
+        },
+        {
+          "name": "Calm",
+          "rating": 4.8,
+          "rating_count": 2100000,
+          "genre": "Health & Fitness",
+          "note": "Meditation \u2014 not specifically creative resistance"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Steven Pressfield's Resistance, Cameron's Morning Pages, perfectionism science, creative anxiety \u2014 no streak app covers the psychology of creative blocks. Writing (2.3M) + Art (4.1M) communities are ideal targets."
+    },
+    "daily_innovation_psychology_streak": {
+      "reddit_communities": {
+        "entrepreneur": 2700000,
+        "startups": 1200000,
+        "psychology": 2140000,
+        "business": 3900000,
+        "futurology": 1700000
+      },
+      "itunes_results": [
+        {
+          "name": "MasterClass",
+          "rating": 4.8,
+          "rating_count": 91000,
+          "genre": "Education",
+          "note": "Video courses \u2014 not daily bite-sized innovation psychology"
+        },
+        {
+          "name": "Coursera",
+          "rating": 4.8,
+          "rating_count": 153000,
+          "genre": "Education",
+          "note": "Structured courses \u2014 not daily micro-lessons on innovation"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "The psychology behind disruptive innovation: T-shaped knowledge, analogical reasoning, first-principles thinking, associative combinatorics (Johansson's Medici Effect). No streak app. Business/startup communities (6.6M) crave this."
+    },
+    "daily_musical_genius_streak": {
+      "reddit_communities": {
+        "musictheory": 1500000,
+        "learnmusic": 196000,
+        "psychology": 2140000,
+        "classicalmusic": 510000,
+        "neuroscience": 1480000
+      },
+      "itunes_results": [
+        {
+          "name": "Simply Piano by JoyTunes",
+          "rating": 4.8,
+          "rating_count": 218000,
+          "genre": "Music",
+          "note": "Piano lessons \u2014 not the science of musical genius"
+        },
+        {
+          "name": "Yousician",
+          "rating": 4.7,
+          "rating_count": 150000,
+          "genre": "Music",
+          "note": "Instrument learning \u2014 not musical intelligence science"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "The neuroscience of musical genius (perfect pitch, amusia, prodigy studies, Suzuki method science, Mozart effect debunked properly) has no dedicated streak app. Music theory apps teach notes; none teach the psychology of musical cognition."
+    },
+    "daily_imagination_science_streak": {
+      "reddit_communities": {
+        "neuroscience": 1480000,
+        "psychology": 2140000,
+        "daydreaming": 18000,
+        "mindfulness": 390000,
+        "consciousness": 182000
+      },
+      "itunes_results": [
+        {
+          "name": "Headspace",
+          "rating": 4.9,
+          "rating_count": 1460000,
+          "genre": "Health & Fitness",
+          "note": "Meditation \u2014 not imagination science"
+        },
+        {
+          "name": "Waking Up with Sam Harris",
+          "rating": 4.8,
+          "rating_count": 58000,
+          "genre": "Education",
+          "note": "Meditation/philosophy \u2014 not specifically imagination neuroscience"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Default Mode Network research, mental simulation science, episodic future thinking, counterfactual reasoning \u2014 all active neuroscience fields with zero dedicated streak education apps. The science of imagination is separate from mindfulness."
+    },
+    "daily_creative_problem_solving_streak": {
+      "reddit_communities": {
+        "entrepreneur": 2700000,
+        "engineering": 1800000,
+        "productivity": 1560000,
+        "design": 1800000,
+        "datascience": 880000
+      },
+      "itunes_results": [
+        {
+          "name": "Notion",
+          "rating": 4.7,
+          "rating_count": 120000,
+          "genre": "Productivity",
+          "note": "Note-taking \u2014 not structured creativity frameworks"
+        },
+        {
+          "name": "Miro: Visual Collaboration",
+          "rating": 4.8,
+          "rating_count": 87000,
+          "genre": "Business",
+          "note": "Whiteboard tool \u2014 not educational frameworks"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "TRIZ, SCAMPER, design thinking, IDEO methods, biomimicry, lateral thinking \u2014 structured creative problem-solving has zero dedicated daily streak education app. Engineer/designer communities (8.5M aggregate) actively seek these frameworks."
+    },
+    "daily_cognitive_style_streak": {
+      "reddit_communities": {
+        "psychology": 2140000,
+        "mbti": 640000,
+        "neurodiversity": 410000,
+        "adhd": 1200000,
+        "gifted": 67000
+      },
+      "itunes_results": [
+        {
+          "name": "16Personalities",
+          "rating": 4.6,
+          "rating_count": 42000,
+          "genre": "Education",
+          "note": "Personality typing \u2014 not cognitive style science"
+        },
+        {
+          "name": "Crystal",
+          "rating": 4.4,
+          "rating_count": 8200,
+          "genre": "Productivity",
+          "note": "Personality profiles \u2014 not daily cognitive science education"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Field dependence/independence, holistic vs analytic thinking, verbalizer vs visualizer, sensory modality research \u2014 cognitive style science has no dedicated streak app. MBTI (640K) community seeks deeper science beyond personality types."
+    }
+  }
+}

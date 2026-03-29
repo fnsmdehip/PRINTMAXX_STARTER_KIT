@@ -1,6 +1,6 @@
 {
   "source": "PRINTMAXX_MASTER_OPS_ENHANCED_2026-03-03.xlsx",
-  "generated_at": "2026-03-28T16:00:04.336020",
+  "generated_at": "2026-03-29T12:00:02.890694",
   "sheets": {
     "ALL OPS MASTER": [
       {
@@ -3403,42 +3403,6 @@
         "STATUS": null,
         "PLATFORMS": null,
         "COMPLIANCE_NOTES": null
-      },
-      {
-        "OP_ID": "AUTO_20260328220111",
-        "Category": "CONTENT",
-        "Op Name": "Bitcoin Price on Eid \n\n2010: $0.06\n2011: $3\n2012: $5\n2013: $",
-        "Status": "QUEUED",
-        "Priority": "P1",
-        "Revenue Potential": "$0-100/mo (heuristic estimate)",
-        "Budget": "FREE",
-        "Added": "2026-03-28T22:01:11.591687",
-        "Source": "integrator_v2",
-        "Quality Score": 4.8
-      },
-      {
-        "OP_ID": "AUTO_20260328220111",
-        "Category": "CONTENT",
-        "Op Name": "Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/",
-        "Status": "QUEUED",
-        "Priority": "P1",
-        "Revenue Potential": "$0-100/mo (heuristic estimate)",
-        "Budget": "FREE",
-        "Added": "2026-03-28T22:01:11.878996",
-        "Source": "integrator_v2",
-        "Quality Score": 6.0
-      },
-      {
-        "OP_ID": "AUTO_20260328220111",
-        "Category": "RESEARCH",
-        "Op Name": "At the Agents Anonymous SF meetup last night we did another ",
-        "Status": "QUEUED",
-        "Priority": "P1",
-        "Revenue Potential": "$0-100/mo (heuristic estimate)",
-        "Budget": "FREE",
-        "Added": "2026-03-28T22:01:11.905163",
-        "Source": "integrator_v2",
-        "Quality Score": 4.8
       }
     ],
     "PRIORITY LAUNCH": [
@@ -6500,30 +6464,6 @@
         "SOURCE_ARTIFACT": "n/a",
         "EXPECTED_PROFIT_HINT_USD": 0,
         "UPDATED_AT": "2026-03-03 14:30:06"
-      },
-      {
-        "Script": "heuristic_content_9526.py",
-        "Status": "CREATED",
-        "Venture": "CONTENT",
-        "Created": "2026-03-28T22:01:11.591687",
-        "Type": "workflow",
-        "Tools": "kpi_task"
-      },
-      {
-        "Script": "heuristic_content_3368.py",
-        "Status": "CREATED",
-        "Venture": "CONTENT",
-        "Created": "2026-03-28T22:01:11.878996",
-        "Type": "workflow",
-        "Tools": "kpi_task"
-      },
-      {
-        "Script": "heuristic_research_3089.py",
-        "Status": "CREATED",
-        "Venture": "RESEARCH",
-        "Created": "2026-03-28T22:01:11.905163",
-        "Type": "workflow",
-        "Tools": "kpi_task"
       }
     ],
     "VENTURE_AUTOMATION_MAP": [
@@ -7174,27 +7114,6 @@
         "SIGNAL_COUNT": 0,
         "COMMAND_TEMPLATE": "python3 AUTOMATIONS/gumroad_autolist_packager.py --write",
         "NEXT_ACTION": "Open low-cost probe and validate unit economics"
-      },
-      {
-        "Venture": "CONTENT",
-        "Automation": "heuristic_content_9526.py",
-        "Type": "workflow",
-        "Schedule": "",
-        "Added": "2026-03-28T22:01:11.591687"
-      },
-      {
-        "Venture": "CONTENT",
-        "Automation": "heuristic_content_3368.py",
-        "Type": "workflow",
-        "Schedule": "",
-        "Added": "2026-03-28T22:01:11.878996"
-      },
-      {
-        "Venture": "RESEARCH",
-        "Automation": "heuristic_research_3089.py",
-        "Type": "workflow",
-        "Schedule": "",
-        "Added": "2026-03-28T22:01:11.905163"
       }
     ],
     "ALPHA_THESIS_INDEX": [
@@ -24190,6 +24109,5 @@
         "NEXT_AUTOMATION_ACTION": "Package app + deploy guard + store submission queue"
       }
     ]
-  },
-  "last_integration": "2026-03-28T22:01:11.905163"
+  }
 }
