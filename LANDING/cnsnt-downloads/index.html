@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cnsnt - Download Desktop App</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a1a;--surface:#12122a;--text:#e8e8f0;--dim:#8888aa;--accent:#6c5ce7;--green:#00b894;--border:#2a2a4a}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:500px;padding:40px 20px;text-align:center}
+.logo{font-size:2.5rem;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.logo span{color:var(--accent)}
+.sub{color:var(--dim);font-size:.95rem;margin-bottom:40px}
+.downloads{display:grid;gap:16px;margin-bottom:32px}
+.dl-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;transition:border-color .2s}
+.dl-card:hover{border-color:var(--accent)}
+.dl-card.available{border:2px solid var(--green)}
+.dl-icon{font-size:2rem;margin-bottom:8px}
+.dl-name{font-weight:700;font-size:1.1rem;margin-bottom:4px}
+.dl-meta{color:var(--dim);font-size:.8rem;margin-bottom:12px}
+.dl-btn{display:inline-block;padding:10px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem;transition:all .2s}
+.dl-btn.active{background:var(--green);color:#fff}
+.dl-btn.active:hover{transform:translateY(-1px);filter:brightness(1.1)}
+.dl-btn.soon{background:var(--surface);color:var(--dim);border:1px solid var(--border);cursor:default}
+.info{color:var(--dim);font-size:.78rem;line-height:1.6;max-width:400px;margin:0 auto}
+.info a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="logo"><span>cnsnt</span></div>
+<div class="sub">Encrypted Consent Vault. Local-first. AES-256-GCM.</div>
+<div class="downloads">
+<div class="dl-card available">
+<div class="dl-icon">&#128187;</div>
+<div class="dl-name">macOS (Apple Silicon)</div>
+<div class="dl-meta">v0.1.0 / 3.4 MB / .dmg installer</div>
+<a href="cnsnt-mac.dmg" class="dl-btn active" download>Download for Mac</a>
+</div>
+<div class="dl-card">
+<div class="dl-icon">&#128421;</div>
+<div class="dl-name">Windows</div>
+<div class="dl-meta">Coming soon / .msi installer</div>
+<span class="dl-btn soon">Coming soon</span>
+</div>
+<div class="dl-card">
+<div class="dl-icon">&#127760;</div>
+<div class="dl-name">Web App</div>
+<div class="dl-meta">No download needed / runs in browser</div>
+<a href="https://cnsnt-web.surge.sh" class="dl-btn active">Launch Web App</a>
+</div>
+</div>
+<div class="info">
+Desktop app stores your vault at <code>~/.cnsnt/vault.enc</code> on disk. Survives browser resets. Same encryption as the web version.<br><br>
+<a href="https://cnsnt-app.surge.sh">Back to cnsnt homepage</a>
+</div>
+</div>
+</body>
+</html>

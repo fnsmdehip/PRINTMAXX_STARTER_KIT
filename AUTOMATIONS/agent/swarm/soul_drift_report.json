@@ -1,14 +1,25 @@
 {
-  "ts": "2026-03-28T20:00:01.172502",
-  "avg_score": 8.7,
-  "total_scored": 5,
+  "ts": "2026-03-29T00:00:01.019925",
+  "avg_score": 9.2,
+  "total_scored": 16,
   "drifted_count": 0,
   "drifted_agents": [],
   "scores": {
-    "system_healer": 10.0,
-    "seo_aso_optimizer": 8.0,
-    "asset_deployer": 8.5,
-    "swarm_brain": 7.0,
-    "ceo_decision_2026-03-15": 10.0
+    "lead_machine": 10.0,
+    "distribution_engine": 8.5,
+    "asset_deployer": 10.0,
+    "gap_hunter": 8.5,
+    "competitor_stalker": 8.5,
+    "competitor_intel_20260328": 8.5,
+    "test": 10.0,
+    "seo_aso_optimizer": 8.5,
+    "playwright_tester": 7.0,
+    "TESTER_CYCLE_SUMMARY_20260328": 8.5,
+    "ceo_decision_2026-03-15": 10.0,
+    "mission_upgrade": 10.0,
+    "mission_autonomy:auto_research_alpha_i": 10.0,
+    "mission_content": 10.0,
+    "mission_autonomy:auto_content_niche_co": 10.0,
+    "mission_autonomy:auto_outbound_cold_ou": 10.0
   }
 }

@@ -69,3 +69,18 @@ footer a:hover{color:var(--accent)}
 .hero h1{font-size:1.6rem;margin-bottom:.3rem}
 .hero .subtitle{font-family:var(--sans);font-size:.85rem;color:var(--text-muted);margin-bottom:1.5rem}
 hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+/* Series sidebar (left) */
+.page-wrapper.has-series{flex-direction:row}
+.series-sidebar{width:200px;flex-shrink:0;position:sticky;top:4rem;max-height:calc(100vh - 5rem);overflow-y:auto;font-family:var(--sans);font-size:.75rem;line-height:1.4;order:-1}
+.series-sidebar .ss-title{color:var(--accent);text-transform:uppercase;letter-spacing:.06em;font-size:.65rem;font-weight:700;margin-bottom:.6rem}
+.series-sidebar a{display:block;color:var(--text-muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;margin-bottom:2px;border-radius:0 3px 3px 0;transition:all .12s}
+.series-sidebar a:hover{color:var(--text-bright);background:var(--bg-secondary)}
+.series-sidebar a.current{color:var(--accent);border-left-color:var(--accent);background:rgba(88,166,255,0.06);font-weight:600}
+/* Article nav (prev/next) */
+.article-nav{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-family:var(--sans);font-size:.85rem;gap:1rem}
+.article-nav a{color:var(--text-muted);text-decoration:none;padding:8px 14px;border:1px solid var(--border);border-radius:6px;transition:all .15s;max-width:48%}
+.article-nav a:hover{color:var(--accent);border-color:var(--accent)}
+.article-nav .prev::before{content:'\2190 ';font-size:.9em}
+.article-nav .next::after{content:' \2192';font-size:.9em}
+.article-nav .spacer{flex:1}
+@media(max-width:900px){.series-sidebar{position:static;width:100%;max-height:none;border:1px solid var(--border);border-radius:4px;padding:12px;margin-bottom:1.5rem;background:var(--bg-secondary);display:flex;flex-wrap:wrap;gap:4px}.series-sidebar a{padding:3px 8px;border-left:none;border:1px solid var(--border);border-radius:4px;font-size:.7rem}.series-sidebar a.current{border-color:var(--accent)}}

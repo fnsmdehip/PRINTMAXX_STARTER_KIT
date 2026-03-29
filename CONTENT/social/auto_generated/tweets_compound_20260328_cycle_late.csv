@@ -1,0 +1,163 @@
+content,type,source,schedule_date,platform,asset_url
+"a single quran habit app is making $80K/month
+
+quranly. unfunded. small uk team.
+
+their pricing: $4.99 to $199.99
+my quran app pricing: $0.99/month
+
+i was leaving $96/user/year on the table because i assumed religious users won't pay premium
+
+muslim pro has 62M downloads at $9.99/month with zero marketing spend
+
+stop pricing based on guilt. price based on value delivered.",controversial_data,competitor_stalker_report,2026-03-28,twitter,
+"found 5 zombie AI agents running on my macbook
+
+they were 'killed' in my swarm state file but still had active PIDs burning tokens
+
+33,000 tokens per day. doing nothing.
+
+launchd kept resurrecting them because the plist files were still loaded
+
+lesson: your orchestration layer and your OS process layer are two different things. if you only check one, the other will eat your budget silently.",build_in_public,swarm_brain_report,2026-03-30,twitter,
+"just fixed a canonical URL mismatch that made an entire website invisible to google
+
+the page existed. it loaded. it had content. google couldn't see it.
+
+the canonical tag pointed to a different URL than the actual page URL
+
+if you have a website: view-source your page. search for rel='canonical'. make sure it matches the URL in your browser.",technical_horror,seo_aso_optimizer_report,2026-03-30,twitter,
+"scraped 146,271 gumroad products
+
+here's where the money actually is (not where you think)
+
+software dominates total revenue at $65.8M. but revenue PER PRODUCT:
+
+writing & publishing: only 226 products. $15,750 revenue per product. highest median sales of any category.
+
+fewer sellers = more money per seller.",data_thread,OPP_060_gumroad_analysis,2026-03-29,twitter,
+"yc spring 2026 batch just said it out loud:
+
+'don't sell access to an AI tool for $50/mo. use the AI yourself and sell the finished work for $5,000'
+
+landing page: $500 to client, 2h to build
+email sequence: $1,500, 4h
+mini-app with onboarding: $3,500, 8h
+
+the client sees agency work. you see a tuesday afternoon.",hot_take,yc_rfs_2026,2026-03-29,twitter,
+"ran 110 cycles of automated reddit scanning
+
+found 487 niches with zero paid competitors
+
+today's example: personal finance education
+
+r/personalfinance has 23M members. every finance app is a tracker. nobody teaches.
+
+the bluest oceans are hiding inside the most crowded markets. one abstraction layer up.",data_flex,reddit_scan_analysis,2026-03-31,twitter,
+"prompt engineering is dead. the replacement is here.
+
+skill engineering.
+
+MCP ecosystem: 1,000 to 10,000+ servers in 12 months
+skills that access live APIs command $100-500/mo per customer
+82% of existing MCP servers have security vulnerabilities
+
+a security-audited skill is worth 10x a hacky one.
+
+the next wave of AI money isn't tools. it's skills that run inside tools.",prediction,OPP_059_skill_marketplace,2026-03-29,twitter,
+"cold email has seasons and nobody talks about this
+
+electrician in ohio. 57-year-old business. godaddy subdomain.
+
+invisible in google during spring renovation season.
+
+'electrician near me' queries spike in march. every year.
+
+'you're invisible during your busiest month' is the entire email.
+
+seasonal timing + specific pain = reply rates above 15%",useful_specific,lead_machine_report,2026-03-31,twitter,
+"priced my apps at $0.99/month because i thought 'affordable = more users'
+
+competitor analysis:
+- quranly: $4.99-199.99 (making $80K/mo)
+- muslim pro: $9.99/mo (62M downloads)
+- streaks: $4.99 one-time (top 100)
+
+i was 10x below market. not because my product was worse.
+
+because i priced based on imposter syndrome instead of competitor data.
+
+low price doesn't signal value. it signals 'this probably doesn't work.'",lesson_learned,competitor_stalker_report,2026-03-31,twitter,
+"what actually kills most AI automation projects?
+
+- ran out of context window
+- OAuth tokens expired silently
+- built too much, activated nothing
+- nobody checked if it actually worked
+
+(it's the third one. it's always the third one.)",poll_engagement,swarm_brain_synthesis,2026-03-30,twitter,
+"the gap between 'built' and 'making money' is always ________
+
+wrong answers only",engagement_bait,brand,2026-03-30,twitter,
+"confession: i have 524 automation scripts running and $0 in revenue
+
+the scripts work perfectly. the problem is me.
+
+what's the dumbest bottleneck holding YOUR project back?",engagement_bait,brand,2026-03-28,twitter,
+"192,700 leads qualified by automation
+17,484 scored as 'hot'
+0 contacted
+
+what would you do with a list of 17,000 hot leads and no outreach tool set up?",reply_bait,lead_machine_data,2026-03-28,twitter,
+"honest question for anyone building with AI:
+
+are you building a business or building a system that builds a business?
+
+because those are two very different activities and one of them doesn't make money",controversial_question,brand,2026-04-01,twitter,
+"claude code users: what's your biggest pain point with multi-agent systems?
+
+mine: background agents can't write files (auto-denied permissions)
+
+had to restructure my entire architecture. foreground agents for writes, background for reads.
+
+simple but took me 3 days to figure out.",community_bait,technical_experience,2026-04-01,twitter,
+"controversial: religious apps are the most underpriced niche in mobile
+
+quranly: $80K/month, single app, unfunded
+muslim pro: 62M downloads, $9.99/month, zero marketing
+
+most devs price religious apps at $0.99 out of weird guilt
+
+underpricing isn't respect. it's leaving value on the table while a competitor serves the same audience at 10x.",controversial_take,competitor_data,2026-03-30,twitter,
+"82% of MCP servers have security vulnerabilities
+
+same pattern as npm in 2018. move fast, ship insecure, fix later.
+
+except MCP servers handle API keys, customer data, and payment integrations.
+
+easy money: build the same skill everyone else is building, but security-audit it.
+
+security isn't a feature. it's the moat that 82% of competitors just handed you for free.",controversial_take,OPP_059_security,2026-04-01,twitter,
+"47 apps live. 22 products built. 524 scripts running. 33 agents on cron. 192,700 leads.
+
+$0 revenue.
+
+the paradox: the more you build, the harder it is to stop building and start selling.
+
+if your system can't receive a dollar from a stranger today, every hour making it 'better' is procrastination disguised as work.",controversial_take,brand_synthesis,2026-04-01,twitter,
+"n8n vs zapier vs make -- the answer nobody gives because it kills affiliate commissions:
+
+if you can write python, a $20/month VPS + cron beats all three
+
+i run 524 automation scripts locally. total monthly cost: $0.
+
+zapier would charge approximately $12,000/month for the same volume.",controversial_take,technical_comparison,2026-03-31,twitter,
+"the math on build-in-public nobody does:
+
+tweet about what you built: $0, 2 minutes
+facebook ad for same reach: $50-500
+
+the ad disappears when you stop paying
+the tweet compounds in search and follower growth forever
+
+build in public isn't a strategy. it's the highest-ROI marketing channel at $0 budget.",useful_insight,growth_analysis,2026-03-31,twitter,

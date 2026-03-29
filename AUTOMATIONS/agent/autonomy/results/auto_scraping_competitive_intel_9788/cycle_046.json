@@ -1,108 +1,108 @@
 {
-  "cycle_start": "2026-03-18T07:14:58.889495",
-  "cycle_end": "2026-03-18T07:14:58.898083",
+  "cycle_start": "2026-03-28T21:37:15.882084",
+  "cycle_end": "2026-03-28T21:37:15.893210",
   "version_changes_detected": 0,
-  "reddit_signals_found": 20,
-  "new_intel_rows_written": 19,
+  "reddit_signals_found": 16,
+  "new_intel_rows_written": 16,
   "alerts_generated": 5,
   "alerts": [
     {
       "type": "REDDIT_SIGNAL",
       "priority": "HIGHEST",
-      "title": "I built a wallpaper that shifts perspective when you move your head  looking for feedback",
-      "subreddit": "SideProject",
-      "score": 3264,
-      "url": "https://www.reddit.com/r/SideProject/comments/1rs969i/i_built_a_wallpaper_that_shifts_perspective_when/",
+      "title": "Skipping 90% of KV dequant work \u2192 +22.8% decode at 32K (llama.cpp, TurboQuant)",
+      "subreddit": "LocalLLaMA",
+      "score": 772,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1s56g07/skipping_90_of_kv_dequant_work_228_decode_at_32k/",
       "action": "Review for competitor pricing/feature intelligence."
     },
     {
       "type": "REDDIT_SIGNAL",
       "priority": "HIGHEST",
-      "title": "I wanted to see if I could build a flight sim in the browser with real-world scenery. Turns out, I can.",
+      "title": "I got tired of the internet. So I built a flamethrower for it \ud83d\udd25",
       "subreddit": "SideProject",
-      "score": 1248,
-      "url": "https://www.reddit.com/r/SideProject/comments/1ruiyvd/i_wanted_to_see_if_i_could_build_a_flight_sim_in/",
+      "score": 612,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s50nhs/i_got_tired_of_the_internet_so_i_built_a/",
       "action": "Review for competitor pricing/feature intelligence."
     },
     {
       "type": "REDDIT_SIGNAL",
       "priority": "HIGHEST",
-      "title": "Bought this domain for a OSS project and now my users see this",
-      "subreddit": "SideProject",
-      "score": 766,
-      "url": "https://www.reddit.com/r/SideProject/comments/1rr2a21/bought_this_domain_for_a_oss_project_and_now_my/",
+      "title": "The brutal truth about \u201cmaking $2000/month online\u201d that every guru deletes from their comments",
+      "subreddit": "passive_income",
+      "score": 585,
+      "url": "https://www.reddit.com/r/passive_income/comments/1s53px7/the_brutal_truth_about_making_2000month_online/",
       "action": "Review for competitor pricing/feature intelligence."
     },
     {
       "type": "REDDIT_SIGNAL",
       "priority": "HIGHEST",
-      "title": "I launched a global \u2018mood map\u2019 experiment \u2014 3,633 people shared their mood in one week",
-      "subreddit": "SideProject",
-      "score": 541,
-      "url": "https://www.reddit.com/r/SideProject/comments/1rto3gr/i_launched_a_global_mood_map_experiment_3633/",
+      "title": "Co-founder left after 14 months. No vesting agreement. He walked with 40% equity and zero obligation.",
+      "subreddit": "SaaS",
+      "score": 544,
+      "url": "https://www.reddit.com/r/SaaS/comments/1s5gsxj/cofounder_left_after_14_months_no_vesting/",
       "action": "Review for competitor pricing/feature intelligence."
     },
     {
       "type": "REDDIT_SIGNAL",
       "priority": "HIGHEST",
-      "title": "5 subscribers, $9 MRR. Tiny numbers but I'm not stopping.",
-      "subreddit": "AppBusiness",
-      "score": 55,
-      "url": "https://www.reddit.com/r/AppBusiness/comments/1rw6d76/5_subscribers_9_mrr_tiny_numbers_but_im_not/",
+      "title": "Stripe takes 2.9% + $0.30 per transaction. At $50K MRR that's $17,400/year. Is everyone just accepting this?",
+      "subreddit": "SaaS",
+      "score": 336,
+      "url": "https://www.reddit.com/r/SaaS/comments/1s5rw0m/stripe_takes_29_030_per_transaction_at_50k_mrr/",
       "action": "Review for competitor pricing/feature intelligence."
     }
   ],
   "scored_changes": [],
   "top_reddit_signals": [
     {
-      "title": "I built a wallpaper that shifts perspective when you move your head  looking for feedback",
-      "subreddit": "SideProject",
-      "score": 3264,
-      "comments": 275,
-      "url": "https://www.reddit.com/r/SideProject/comments/1rs969i/i_built_a_wallpaper_that_shifts_perspective_when/",
-      "keyword_hits": 1,
-      "roi": "HIGHEST",
-      "post_id": "ALPHA105644"
-    },
-    {
-      "title": "I wanted to see if I could build a flight sim in the browser with real-world scenery. Turns out, I can.",
-      "subreddit": "SideProject",
-      "score": 1248,
-      "comments": 150,
-      "url": "https://www.reddit.com/r/SideProject/comments/1ruiyvd/i_wanted_to_see_if_i_could_build_a_flight_sim_in/",
-      "keyword_hits": 1,
-      "roi": "HIGHEST",
-      "post_id": "ALPHA105645"
-    },
-    {
-      "title": "Bought this domain for a OSS project and now my users see this",
-      "subreddit": "SideProject",
-      "score": 766,
-      "comments": 135,
-      "url": "https://www.reddit.com/r/SideProject/comments/1rr2a21/bought_this_domain_for_a_oss_project_and_now_my/",
-      "keyword_hits": 1,
-      "roi": "HIGHEST",
-      "post_id": "ALPHA105646"
-    },
-    {
-      "title": "I launched a global \u2018mood map\u2019 experiment \u2014 3,633 people shared their mood in one week",
-      "subreddit": "SideProject",
-      "score": 541,
-      "comments": 138,
-      "url": "https://www.reddit.com/r/SideProject/comments/1rto3gr/i_launched_a_global_mood_map_experiment_3633/",
-      "keyword_hits": 2,
-      "roi": "HIGHEST",
-      "post_id": "ALPHA105647"
-    },
-    {
-      "title": "5 subscribers, $9 MRR. Tiny numbers but I'm not stopping.",
-      "subreddit": "AppBusiness",
-      "score": 55,
-      "comments": 17,
-      "url": "https://www.reddit.com/r/AppBusiness/comments/1rw6d76/5_subscribers_9_mrr_tiny_numbers_but_im_not/",
+      "title": "Skipping 90% of KV dequant work \u2192 +22.8% decode at 32K (llama.cpp, TurboQuant)",
+      "subreddit": "LocalLLaMA",
+      "score": 772,
+      "comments": 109,
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1s56g07/skipping_90_of_kv_dequant_work_228_decode_at_32k/",
       "keyword_hits": 0,
       "roi": "HIGHEST",
-      "post_id": "ALPHA106783"
+      "post_id": "ALPHA1773999004"
+    },
+    {
+      "title": "I got tired of the internet. So I built a flamethrower for it \ud83d\udd25",
+      "subreddit": "SideProject",
+      "score": 612,
+      "comments": 70,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s50nhs/i_got_tired_of_the_internet_so_i_built_a/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1773998952"
+    },
+    {
+      "title": "The brutal truth about \u201cmaking $2000/month online\u201d that every guru deletes from their comments",
+      "subreddit": "passive_income",
+      "score": 585,
+      "comments": 83,
+      "url": "https://www.reddit.com/r/passive_income/comments/1s53px7/the_brutal_truth_about_making_2000month_online/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1773998984"
+    },
+    {
+      "title": "Co-founder left after 14 months. No vesting agreement. He walked with 40% equity and zero obligation.",
+      "subreddit": "SaaS",
+      "score": 544,
+      "comments": 219,
+      "url": "https://www.reddit.com/r/SaaS/comments/1s5gsxj/cofounder_left_after_14_months_no_vesting/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1773998955"
+    },
+    {
+      "title": "Stripe takes 2.9% + $0.30 per transaction. At $50K MRR that's $17,400/year. Is everyone just accepting this?",
+      "subreddit": "SaaS",
+      "score": 336,
+      "comments": 195,
+      "url": "https://www.reddit.com/r/SaaS/comments/1s5rw0m/stripe_takes_29_030_per_transaction_at_50k_mrr/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1773998956"
     }
   ]
 }

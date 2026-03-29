@@ -3,95 +3,178 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>fnsmdehip - Independent Research Notes | Physics, Biology, Signal Processing</title>
-<meta name="description" content="Independent research notes on cross-domain theory, health experiments, PEMF therapy, WiFi sensing, and signal intelligence. Falsifiable claims, data-driven analysis.">
-<meta name="keywords" content="independent research notes, PEMF therapy research, WiFi sensing research, cross-domain theory, unified field biology, signal processing research, health experiments, autonomous systems research">
+<title>fnsmdehip - Independent Research Notes</title>
+<meta name="description" content="Independent research notes on cross-domain theory, health experiments, PEMF therapy, WiFi sensing, and signal intelligence.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fnsmdehip-research.surge.sh/">
+<link rel="stylesheet" href="style.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="fnsmdehip - Independent Research Notes">
-<meta property="og:description" content="Cross-domain theory, health experiments, signal intelligence, and autonomous systems. Independent research with falsifiable claims.">
+<meta property="og:description" content="Independent research notes on cross-domain theory, health experiments, PEMF therapy, WiFi sensing, and signal intelligence.">
 <meta property="og:url" content="https://fnsmdehip-research.surge.sh/">
+<meta property="og:site_name" content="fnsmdehip research">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fnsmdehip - Independent Research Notes">
-<meta name="twitter:description" content="Cross-domain theory, health experiments, PEMF, WiFi sensing. Independent research with falsifiable claims.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"fnsmdehip Research Notes","description":"Independent research across physics, biology, software architecture, and signal processing. Finding structural patterns that repeat across domains.","url":"https://fnsmdehip-research.surge.sh/","author":{"@type":"Person","name":"fnsmdehip"}}</script>
-<link rel="stylesheet" href="style.css">
+<meta name="twitter:description" content="Cross-domain theory, health experiments, PEMF therapy, WiFi sensing, and signal intelligence.">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"fnsmdehip research notes","url":"https://fnsmdehip-research.surge.sh/","description":"Independent research notes on cross-domain theory, PEMF therapy, WiFi sensing, health experiments, and autonomous systems.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://fnsmdehip-research.surge.sh/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"fnsmdehip research notes","url":"https://fnsmdehip-research.surge.sh/","description":"Independent research on cross-domain theory, PEMF therapy, WiFi sensing, longevity, and autonomous systems.","author":{"@type":"Person","name":"fnsmdehip"},"blogPost":[{"@type":"BlogPosting","headline":"The Unified Aetheric Framework","url":"https://fnsmdehip-research.surge.sh/uaf.html"},{"@type":"BlogPosting","headline":"PEMF Therapy: The 17 RCTs They'd Rather You Didn't Read","url":"https://fnsmdehip-research.surge.sh/pemf.html"},{"@type":"BlogPosting","headline":"WiFi Can See You Move: Camera-Free Motion Detection","url":"https://fnsmdehip-research.surge.sh/wifi-sensing.html"},{"@type":"BlogPosting","headline":"The Aetheric Wind and Why the System Fights Back","url":"https://fnsmdehip-research.surge.sh/uaf-immune-response.html"},{"@type":"BlogPosting","headline":"The Alignment-Testing Paradox","url":"https://fnsmdehip-research.surge.sh/uaf-testing-paradox.html"},{"@type":"BlogPosting","headline":"Disease as Field Distortion","url":"https://fnsmdehip-research.surge.sh/uaf-disease-biology.html"},{"@type":"BlogPosting","headline":"Macro-Scale Dynamics, System Stability, and the Instrument Roadmap","url":"https://fnsmdehip-research.surge.sh/uaf-systems.html"}]}
+</script>
+<style>
+.series-group{margin-bottom:2.5rem}
+.series-label{font-family:var(--sans);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600;margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+.article-grid{display:grid;gap:0}
+.article-item{padding:12px 0;border-bottom:1px solid rgba(48,54,61,0.5)}
+.article-item:last-child{border-bottom:none}
+.article-item a{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--text-bright);text-decoration:none}
+.article-item a:hover{color:var(--accent)}
+.article-item .desc{font-size:.8rem;color:var(--text-muted);margin-top:3px;line-height:1.5}
+.article-item .date{font-family:var(--mono);font-size:.7rem;color:var(--text-muted);margin-right:8px}
+.nav-search{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:3px 8px;color:var(--text-muted);font-family:var(--mono);font-size:.72rem;cursor:pointer;transition:border-color .15s}
+.nav-search:hover{border-color:var(--accent);color:var(--accent)}
+</style>
 </head>
 <body>
 <nav><div class="nav-inner">
 <a href="index.html" class="site-name">fnsmdehip</a>
-<a href="index.html">Home</a>
-<a href="uaf.html">UAF Series</a>
-<a href="pemf.html">PEMF Series</a>
+<a href="index.html" class="active">Home</a>
+<a href="uaf-series.html">UAF Series</a>
+<a href="pemf.html">PEMF</a>
 <a href="wifi-sensing.html">WiFi Sensing</a>
-<a href="wifi-sensing-macbook.html">MacBook Detection</a>
 <a href="projects.html">Projects</a>
-<a href="health.html">Health</a>
+<a href="search.html" class="nav-search">search</a>
 </div></nav>
 <div class="page-wrapper">
-<div class="content">
+<div class="content" style="max-width:800px;">
 <div class="hero">
-<h1>fnsmdehip &mdash; research notes</h1>
+<h1>fnsmdehip research notes</h1>
 <div class="subtitle">cross-domain theory, health experiments, signal intelligence, autonomous systems</div>
 </div>
-<p>This site collects research notes, technical writeups, and experiment logs from an independent researcher working across physics, biology, software architecture, and signal processing. The throughline: finding structural patterns that repeat across domains, then building systems that exploit them.</p>
-<p>Everything here is written to be falsifiable. Claims come with kill switches. Predictions come with breakpoints. If the data kills an idea, the idea stays dead.</p>
-<h2 id="articles">Articles</h2>
-<ul class="article-list">
-<li>
+<p>Independent research across physics, biology, software architecture, and signal processing. The throughline: structural patterns that repeat across domains. Everything is written to be falsifiable. Claims come with kill switches. If the data kills an idea, the idea stays dead.</p>
+
+<div class="series-group">
+<div class="series-label">UAF Series (13 articles)</div>
+<div class="article-grid">
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="uaf.html">The Unified Aetheric Framework: A Cross-Domain Theory That Bets Its Life on Data</a>
-<div class="desc">One PDE, seven kill switches, 23+ testable predictions. The core equation term by term. Dual attractor dynamics (All vs. Demiurgic basins). The observer gate as sigmoid of measurable variables. Sigma repair force and tipping-point bifurcation. A/B/C/D testability classification. The intervention tier hierarchy. UAF Series Overview.</div>
-</li>
-<li>
+<a href="uaf.html">The Unified Aetheric Framework: overview</a>
+<div class="desc">The core PDE, 9 carrier channels, dual attractor basins, hivemind 5 levels, religion as protocol stack, phase debt, surrogate activities, toroidal field, civilizational cycles of excess and reset</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="uaf-cancer-addiction.html">Cancer and Addiction Are the Same Trap</a>
-<div class="desc">The cancer-addiction isomorphism: same attractor dynamics, different carrier scale. Warburg effect as coherence loss. Fascial piezoelectric cancer location prediction. 2025 YAP/TAZ mechanotransduction. HRV biofeedback reaching tumor microenvironment via fascial propagation. Low-dose naltrexone as bridge drug. UAF Series Part 1.</div>
-</li>
-<li>
+<a href="uaf-immune-response.html">The aetheric wind and why the system fights back</a>
+<div class="desc">Aetheric wind 4-phase mechanism, survival-vs-surplus cycle with historical reset patterns, immune response intensity model, multi-channel resistance vectors, strategic navigation</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="uaf-bryan-johnson.html">Why Bryan Johnson's $2M Protocol Hits a Ceiling (And What Actually Works)</a>
-<div class="desc">12 hallmarks of aging have no unified upstream cause. UAF generates both: unified cause (E[s] ratchet) and ranked intervention hierarchy. PEARL rapamycin null and NAD+ nulls predicted before publication. The sigma-restoration hierarchy. CALERIE rate-vs-level dissociation. HRV as the primary sigma proxy (phenotypic, not genetic). Specific longevity protocol with mechanistic ordering. UAF Series Part 2.</div>
-</li>
-<li>
+<a href="uaf-consciousness.html">The observer gate, four competing models, and why testing can kill the effect</a>
+<div class="desc">Observer gate chi(t), four candidate formalisms (collapse, retrocausal, pilot-wave, multi-channel), presentiment 26 studies p&lt;10^-12, collective dynamics, sensitivity</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="uaf-consciousness.html">Presentiment, Flock Math, and Strategic Navigation</a>
-<div class="desc">26 studies, 7 labs, effect size 0.21, p &lt; 10<sup>-12</sup>. Geomagnetic modulation of retrocausal sensitivity. Allostatic load as inverted-U debt amplifier. The aetheric immune response: intensity model and multi-channel expression. Flock math: opposition scales as &radic;N. Phase transitions in organizational culture. Strategic indulgence with clearance constraint. Karmic mathematics as E[s] accounting. UAF Series Part 3.</div>
-</li>
-<li>
+<a href="uaf-testing-paradox.html">The alignment-testing paradox</a>
+<div class="desc">Why institutional science systematically nullifies certain effects. The suppression law. Five interference pathways. Three competing models with priors and breakpoints</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="pemf.html">PEMF Therapy: The 17 RCTs They'd Rather You Didn't Read</a>
-<div class="desc">What PEMF physically does to your cells, 17 RCTs in osteoarthritis, FDA-cleared bone healing, sepsis mouse models, coma recovery, neurodegeneration pilots, and kill switches. PEMF Series Part 1.</div>
-</li>
-<li>
+<a href="uaf-disease-biology.html">Disease as field distortion</a>
+<div class="desc">Phonon model, fascia impedance matching, CSF ventricular resonance, heart-brain mechanical coupling, crystal effects with 3 competing models, piezoelectric constitutive relations</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="pemf-history.html">How Rockefeller Money Killed Electrotherapy (And It's Coming Back)</a>
-<div class="desc">The 1910 Flexner Report, Carnegie and Rockefeller funding, which medical schools were closed, modern institutional groupthink, the financial trap of unpatentable therapies, and the path forward. PEMF Series Part 2.</div>
-</li>
-<li>
+<a href="uaf-evidence.html">How you'd actually test this</a>
+<div class="desc">RNG/REG evidence, biological markers, environmental coupling (geomagnetics, Schumann, EM saturation), protocol sensitivity, when nulls are weak evidence, instrument roadmap</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="wifi-sensing.html">WiFi Can See You Move: A Technical Guide to Camera-Free Motion Detection</a>
-<div class="desc">CSI physics, the ESPectre processing pipeline, 7 detection approaches ranked, the macOS Broadcom lockout, privacy advantages over cameras, $8 hardware, and Home Assistant integration.</div>
-</li>
-<li>
+<a href="uaf-karmic-math.html">Karmic mathematics</a>
+<div class="desc">Distortion energy E[s], Euler-Lagrange conditions, standing wave decay proof, sink matching, social enforcement threshold model, strategic indulgence</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="wifi-sensing-macbook.html">7 Ways to Detect People With Just Your MacBook</a>
-<div class="desc">ARP scanning, RSSI monitoring, WiFi fingerprinting with whereami, BLE scanning with bleak, and why CSI extraction is impossible on macOS. Working Python code for each method.</div>
-</li>
-<li>
+<a href="uaf-practical.html">Control surfaces and how to actually apply this</a>
+<div class="desc">State handles, source scheduling, sink matching, regime selection, heart-breath coherence protocol, High-Q drive amplification (sexual/creative energy channeling), coherence proxies</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="health.html">Health Experiments &amp; Longevity Notes</a>
-<div class="desc">Ongoing experiments in biohacking, longevity interventions, and a framework for ranking what actually moves biological age markers.</div>
-</li>
-<li>
+<a href="uaf-cancer-addiction.html">Cancer and addiction are the same trap</a>
+<div class="desc">Warburg-UAF bridge, cancer-addiction isomorphism, fascial decoherence as cancer location predictor, tissue-discordant aging, low-dose naltrexone, reverse Warburg</div>
+</div>
+<div class="article-item">
 <span class="date">2026-03-28</span>
-<a href="projects.html">Project Index</a>
-<div class="desc">A catalog of active and shipped projects across autonomous systems, signal intelligence, music production, iOS apps, and open-source tools.</div>
-</li>
-</ul>
+<a href="uaf-bryan-johnson.html">Longevity as sigma-restoration</a>
+<div class="desc">12 hallmarks unified, sigma-restoration hierarchy, PEARL rapamycin null predicted, NAD+ nulls, CALERIE dissociation, HRV as sigma proxy, novel cross-domain derivations J.3-J.6</div>
+</div>
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="uaf-social-dynamics.html">Framework comparisons and cross-tradition mappings</a>
+<div class="desc">What makes UAF non-redundant vs IIT/Global Workspace/predictive coding. Gnostic/Eastern/Abrahamic/Indigenous parallels. Practical extraction: what to keep vs discard</div>
+</div>
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="uaf-traditions.html">Saturn, the Gnostic mapping, and anthropomorphized abstractions</a>
+<div class="desc">Saturn/polar configuration with honest speculative assessment, Gnostic Monad-Demiurge mapping table, the entity question (4 possibility spaces), loosh/non-local farming dynamics, historical cycles</div>
+</div>
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="uaf-systems.html">Macro-scale dynamics, system stability, and the instrument roadmap</a>
+<div class="desc">Perpetual harmony as control problem, governance AI, macro-scale steering, longevity under constraints, instrument roadmap by information density per dollar, refinement loop</div>
 </div>
 </div>
-<footer>fnsmdehip &middot; <a href="https://github.com/fnsmdehip">github.com/fnsmdehip</a> &middot; 2026</footer>
+</div>
+
+<div class="series-group">
+<div class="series-label">PEMF Series (2 articles)</div>
+<div class="article-grid">
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="pemf.html">PEMF therapy: the 17 RCTs they'd rather you didn't read</a>
+<div class="desc">What PEMF does to cells, 17 RCTs / 1,197 patients in osteoarthritis, FDA-cleared bone healing, sepsis models, coma recovery, neurodegeneration pilots</div>
+</div>
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="pemf-history.html">How Rockefeller money killed electrotherapy (and it's coming back)</a>
+<div class="desc">The 1910 Flexner Report, which medical schools were closed, modern institutional groupthink, the financial trap of unpatentable therapies</div>
+</div>
+</div>
+</div>
+
+<div class="series-group">
+<div class="series-label">WiFi Sensing (2 articles)</div>
+<div class="article-grid">
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="wifi-sensing.html">WiFi can see you move: camera-free motion detection</a>
+<div class="desc">CSI physics, ESPectre processing pipeline, 99%+ accuracy across ESP32 variants, 7 detection approaches ranked, privacy advantages</div>
+</div>
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="wifi-sensing-macbook.html">7 ways to detect people with just your MacBook</a>
+<div class="desc">ARP scanning, RSSI monitoring, WiFi fingerprinting, probe request sniffing, BLE scanning. Working Python code for each method</div>
+</div>
+</div>
+</div>
+
+<div class="series-group">
+<div class="series-label">Other</div>
+<div class="article-grid">
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="health.html">Health experiments and longevity notes</a>
+<div class="desc">Ongoing experiments in biohacking, longevity interventions, biological age markers</div>
+</div>
+<div class="article-item">
+<span class="date">2026-03-28</span>
+<a href="projects.html">Project index</a>
+<div class="desc">Active and shipped projects across autonomous systems, signal intelligence, music production, iOS apps, open-source tools</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
 </body>
 </html>

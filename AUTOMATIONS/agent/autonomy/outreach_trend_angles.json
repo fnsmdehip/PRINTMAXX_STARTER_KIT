@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-03-20T09:05",
-  "source": "cross_pollinator_cycle24",
+  "generated_at": "2026-03-28T21:45",
+  "last_updated_by": "cross_pollinator_cycle25",
+  "source": "cross_pollinator_cycle24+cycle25",
   "purpose": "Lead Machine: use these as warm-up conversation angles when DMing prospects or writing follow-ups",
   "trending_angles": [
     {
@@ -145,6 +146,18 @@
       "category": "CONTENT_FARM",
       "roi": "HIGHEST",
       "source_alpha": "ALPHA324"
+    },
+    {
+      "angle": "Consent management / data privacy — cnsnt-web live, B2B angle unlocked",
+      "hook": "GDPR/CCPA compliance is a $3B+ market and most SMBs handle it with a free cookie banner that gives them zero audit trail. cnsnt-web.surge.sh is now live — AES-256-GCM encrypted consent logs, audit trail, 11 templates, cloud backup. Outreach angle for legal/compliance-adjacent businesses: 'your cookie banner is decorative. it won't survive a data request audit.' Strongest in EU-adjacent markets and US healthcare/fintech.",
+      "category": "PRODUCT_OUTBOUND",
+      "roi": "HIGHEST",
+      "source": "cross_pollinator_cycle25_cnsnt_deployment",
+      "product_url": "https://cnsnt-web.surge.sh",
+      "prospect_filter": "Law firms, healthcare practices, fintech startups, EU-adjacent businesses using free cookie banners (OneTrust free tier, CookieYes free)",
+      "cold_email_subject": "your cookie banner won't survive a data audit (here's what does)",
+      "verticals": ["legal", "healthcare", "fintech", "compliance", "privacy"],
+      "added_at": "2026-03-28T21:45"
     }
   ]
 }

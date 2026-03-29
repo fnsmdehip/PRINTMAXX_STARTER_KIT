@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-03-28T17:30:00.000000",
-  "last_cycle": "asset_deployer_20260328_1730",
+  "last_updated": "2026-03-29T03:46:59.689730",
+  "last_cycle": "asset_deployer_20260328_2343",
   "total_surge_deployments": 388,
   "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
-    "checked": 10,
-    "passed": 10,
+    "checked": 8,
+    "passed": 8,
     "failed": 0,
     "transient_504s": 0,
-    "last_checked": "2026-03-23T03:51:50.021436",
+    "last_checked": "2026-03-29T03:46:59.689730",
     "sites_verified": [
       "printmaxx.surge.sh",
       "mcp-marketplace.surge.sh",
@@ -49,7 +49,15 @@
     "sleepmaxx-web",
     "soberstreak",
     "studylock",
-    "tasksmash-web"
+    "tasksmash-web",
+    "cnsnt",
+    "builders-ledger",
+    "research-blog",
+    "best-joint-supplement-men-over-50",
+    "best-prostate-supplement-men-over-60",
+    "best-testosterone-booster-men-over-50",
+    "claude-code-vs-opencode",
+    "n8n-vs-zapier-vs-make"
   ],
   "new_deployments_this_cycle": [
     "cnsnt-web.surge.sh",
@@ -309,52 +317,26 @@
   ],
   "total_count": 13,
   "live_test": {
-    "tested_at": "2026-03-19T14:45:12.293883",
-    "cycle": "playwright_tester_comprehensive_20260319",
-    "total": 32,
-    "green": 25,
-    "yellow": 6,
-    "red": 1,
-    "pass_rate": "78.1%",
-    "red_sites": [
-      "scripture-streak-legal.surge.sh (REMOVED - orphan 404)"
-    ],
-    "green_sites": [
-      "printmaxx.surge.sh",
-      "coldmaxx.surge.sh",
-      "mcp-marketplace.surge.sh",
-      "stackmaxx.surge.sh",
-      "pagescorer.surge.sh",
-      "prayerlock-landing.surge.sh",
-      "semrush-vs-ahrefs.surge.sh",
-      "best-ai-tools-2026.surge.sh",
-      "smartlead-vs-instantly.surge.sh",
-      "prayerlock-vs-hallow.surge.sh",
-      "focuslock-vs-opal.surge.sh",
-      "spodak-dental-group-miami-fl.surge.sh",
-      "milestone-electric-a-c-plumbing-dallas-tx.surge.sh",
-      "printmaxx-website-design.surge.sh",
-      "printmaxx-cold-email.surge.sh",
-      "cold-email-roi-calculator.surge.sh",
-      "saas-stack-audit.surge.sh",
-      "sunni-streak.surge.sh",
-      "catholic-streak.surge.sh",
-      "buddhist-streak.surge.sh",
-      "reading-streak.surge.sh",
-      "fitness-streak.surge.sh",
-      "coreday.surge.sh",
-      "ai-stack-2026.surge.sh",
-      "claude-code-agent-bible.surge.sh"
-    ],
-    "yellow_sites": [
-      "invoiceforge.surge.sh (9.9s load - redeployed, memory leak?)",
-      "klavioy-alternative.surge.sh (6.8s load - redeployed)",
-      "prayerlock-web.surge.sh (7.1s load - PWA bundle size)",
-      "ramadan-tracker.surge.sh (5.2s load - time-critical, acceptable)",
-      "pdfmaxx.surge.sh (6.8s load - PDF dependencies)",
-      "hilal-landing.surge.sh (6.5s load - Ramadan-critical, acceptable)"
-    ],
-    "timestamp": "2026-03-19T14:45:12.293883",
-    "notes": "Comprehensive test of 32 sites across all categories. 78.1% GREEN pass rate healthy for 355-site portfolio. Orphan site scripture-streak-legal.surge.sh successfully removed via surge teardown. 6 YELLOW sites flagged for performance review - invoiceforge (9.9s) needs memory leak check, PWA apps need code-splitting, Ramadan apps acceptable for high-traffic period."
+    "tested_at": "2026-03-28T22:15:40",
+    "total": 156,
+    "green": 114,
+    "yellow": 29,
+    "red": 13,
+    "pass_rate": "91.7%",
+    "avg_load_ms": 4797,
+    "playwright_visual_tested": 156,
+    "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 114 GREEN, 29 YELLOW, 13 RED.",
+    "still_broken": [
+      "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "https://saas-stack-audit-200.surge.sh",
+      "https://methodist-streak-marketing.surge.sh",
+      "https://lutheran-streak-marketing.surge.sh",
+      "https://episcopal-streak-marketing.surge.sh",
+      "https://catholic-streak-marketing.surge.sh",
+      "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
+      "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-23T02:10:37.650961",
-  "last_cycle": "distribution_engine_2026-03-23_02h10",
-  "cycle_number": 32,
+  "last_updated": "2026-03-29T00:00:00.000000",
+  "last_cycle": "2026-03-29",
+  "cycle_number": 34,
   "coverage": {
     "twitter": {
       "threads": 14,
@@ -11,17 +11,16 @@
       "total_pieces": 134,
       "last_cycle": 32,
       "new_this_cycle": [
-        "music_maker_cluster_single",
-        "couples_streak_single",
-        "photography_streak_single",
-        "claude_code_ebook_series_single",
-        "deskbreak_single",
-        "world_history_single",
-        "build_in_public_honest_thread_6_tweets",
-        "reply_bait_levelsio_threads",
-        "reply_bait_claude_code_threads",
-        "qt_caption_first_revenue",
-        "qt_caption_consistency"
+        "opencode_vs_claude_code_comparison_thread_6",
+        "cnsnt_web_standalone",
+        "builders_ledger_standalone",
+        "nutriai_standalone",
+        "yc_ai_agency_take",
+        "reddit_money_machine_tease",
+        "before_you_workbook_emotional",
+        "cold_email_system_authority",
+        "reply_bait_browser_automation",
+        "eid_mubarak_relationship_close"
       ]
     },
     "reddit": {
@@ -80,19 +79,15 @@
       ],
       "last_cycle": 32,
       "new_this_cycle": [
-        "cultural_etiquette_r_travel",
-        "cultural_etiquette_r_languagelearning",
-        "geography_mastery_r_MapPorn",
-        "geography_mastery_r_geography",
-        "world_history_r_history",
-        "world_history_r_learnhistory",
-        "vibe_coding_calc_r_SideProject",
-        "vibe_coding_calc_r_webdev",
-        "cycling_streak_r_cycling",
-        "gratitude_streak_r_selfimprovement",
-        "water_streak_r_hydrohomies",
-        "couples_streak_r_relationship_advice",
-        "mcphub_mirror_r_ClaudeAI"
+        "opencode_r_ClaudeAI",
+        "opencode_r_programming",
+        "yc_ai_agency_r_solopreneur",
+        "free_tools_r_Entrepreneur",
+        "cnsnt_r_privacy",
+        "prompts_r_learnprogramming",
+        "testosterone_r_Supplements",
+        "before_you_r_Journaling",
+        "website_audit_r_webdev"
       ]
     },
     "hacker_news": {
@@ -136,7 +131,15 @@
     "indiehackers": {
       "posts_ready": 4,
       "last_cycle": 32
-    }
+    },
+    "health_affiliates": "cycle_33",
+    "pdfmaxx": "cycle_33",
+    "coldmaxx": "cycle_33",
+    "roicalc": "cycle_33",
+    "stackmaxx": "cycle_33",
+    "n8n_vs_zapier": "cycle_33",
+    "claude_code_bible": "cycle_33",
+    "prayerlock_final_push": "cycle_33"
   },
   "assets_covered": {
     "n8n-vs-zapier-vs-make": {
@@ -593,42 +596,40 @@
     }
   },
   "queue_next_cycle": [
-    "roicalc",
-    "stackmaxx",
-    "coldmaxx",
-    "prospectmaxx",
-    "pdfmaxx",
-    "pagescorer",
-    "pitchdeck",
-    "klaviyo-alternative",
-    "semrush-vs-ahrefs",
-    "best-saas-tools-solopreneurs"
+    "cnsnt-desktop DMG (Tauri app) — Show HN + ProductHunt when account live",
+    "fnsmdehip-research.surge.sh blog — UAF series Reddit/Substack push",
+    "nutriai deeper push (r/nutrition, r/keto, r/loseit)",
+    "builders-ledger cross-post to dev.to when account created",
+    "pitchdeck IH showcase post",
+    "website-audit r/webdev + r/web_design",
+    "Before You Workbook — r/Genealogy, r/family, r/dementia"
   ],
-  "persistent_gaps": {
-    "product_hunt": "Account not created \u2014 21 cycles missed",
-    "gumroad": "16 products ready, 0 listed \u2014 account not created",
-    "medium": "6+ articles written, 0 published",
-    "dev_to": "19+ articles written, 0 published",
-    "affiliate_links": "9 pages live, $0 commission \u2014 not signed up",
-    "buffer": "72 CSV rows ready, not imported"
-  },
+  "persistent_gaps": [
+    "product_hunt (needs account)",
+    "gumroad_listings (needs account)",
+    "medium_cross_posts (needs account)",
+    "dev_to_profile (needs account)",
+    "affiliate_links_live (needs signup)"
+  ],
   "cumulative_content_pieces": {
     "cycle_21": 49,
-    "estimated_total_all_cycles": 899,
-    "cycle_22": 49
+    "estimated_total_all_cycles": 928,
+    "cycle_22": 49,
+    "cycle_33": 29
   },
   "urgent_actions": {
-    "ramadan_window_closing": true,
-    "eid_date": "2026-03-29",
-    "days_remaining": 7,
+    "ramadan_window_closed": true,
+    "eid_mubarak_post": "MARCH 29 morning — tweet scheduled in cycle34",
+    "opencode_trending": true,
+    "opencode_post_urgency": "HIGH — OpenCode hit #1 HN this week, post comparison NOW",
     "posts_to_publish_today": [
-      "ramadan_push_20260322.txt \u2192 r/islam",
-      "ramadan_push_20260322.txt \u2192 r/Muslim",
-      "tweets_cycle30_20260322.md \u2192 Prayerlock Single 1",
-      "tweets_cycle30_20260322.md \u2192 Hilal tracker tweet"
-    ]
+      "twitter_cycle34 TWEET 11 \u2192 Eid Mubarak (MARCH 29 MORNING)",
+      "twitter_cycle34 TWEET 1 \u2192 OpenCode comparison (MARCH 29 AFTERNOON)",
+      "reddit_cycle34 POST 1 \u2192 r/ClaudeAI (OpenCode, MARCH 29)"
+    ],
+    "post_eid_focus": "Claude Code tools, AI agency model, health supplements, new apps"
   },
-  "total_content_pieces": 249,
+  "total_content_pieces": 280,
   "cycle_31_assets_distributed": [
     "yoga-streak.surge.sh",
     "pushup-streak.surge.sh",
@@ -652,5 +653,75 @@
     "CONTENT/social/distribution/reddit_promptvault_mcp_20260322.md",
     "CONTENT/social/distribution/reddit_claude_code_ebooks_20260322.md",
     "CONTENT/social/distribution/hn_posts_cycle31_20260322.md"
-  ]
+  ],
+  "cycle_33_assets_distributed": [
+    "prayerlock-web.surge.sh (URGENT Eid push)",
+    "ramadan-tracker.surge.sh (URGENT Eid push)",
+    "roicalc.surge.sh",
+    "pdfmaxx.surge.sh",
+    "coldmaxx.surge.sh",
+    "stackmaxx.surge.sh",
+    "prospectmaxx.surge.sh",
+    "n8n-vs-zapier-vs-make affiliate page",
+    "best-testosterone-booster-men-over-50 affiliate page",
+    "best-prostate-supplement-men-over-60 affiliate page",
+    "best-joint-supplement-men-over-50 affiliate page",
+    "Claude Code Agent Bible PDF (ebook)",
+    "Claude Code For Solopreneurs PDF",
+    "Reddit Money Machine PDF",
+    "Prompt Vault PDF",
+    "Cold Email System PDF",
+    "pitchdeck.surge.sh",
+    "pagescorer.surge.sh"
+  ],
+  "cycle_33_output_files": [
+    "CONTENT/social/distribution/twitter_cycle33_20260328.md",
+    "CONTENT/social/distribution/reddit_cycle33_20260328.md",
+    "CONTENT/social/distribution/hn_indiehackers_cycle33_20260328.md",
+    "CONTENT/social/distribution/linkedin_cycle33_20260328.md"
+  ],
+  "cycle_33_channels": {
+    "twitter": 10,
+    "reddit": 9,
+    "hacker_news": 3,
+    "indiehackers": 2,
+    "linkedin": 4,
+    "devto_medium": 1
+  },
+  "cycle_33_content_pieces": 29,
+  "cycle_34_assets_distributed": [
+    "claude-code-vs-opencode.surge.sh (URGENT — trending topic)",
+    "cnsnt-web.surge.sh (new PWA)",
+    "builders-ledger.surge.sh (new)",
+    "nutriai.surge.sh (new)",
+    "19_REDDIT_MONEY_MACHINE.pdf (ebook tease)",
+    "18_BEFORE_YOU_FAMILY_STORY_WORKBOOK.pdf (emotional angle)",
+    "21_COLD_EMAIL_SYSTEM.pdf (authority)",
+    "20_CLAUDE_CODE_MASTERY.pdf (thread angle)",
+    "website-audit.surge.sh",
+    "pagescorer.surge.sh",
+    "coldmaxx.surge.sh + prospectmaxx.surge.sh (combined tools post)",
+    "OPP_058 YC agency model (thought leadership)"
+  ],
+  "cycle_34_output_files": [
+    "CONTENT/social/distribution/twitter_cycle34_20260329.md",
+    "CONTENT/social/distribution/reddit_cycle34_20260329.md",
+    "CONTENT/social/distribution/hn_indiehackers_cycle34_20260329.md",
+    "CONTENT/social/distribution/linkedin_cycle34_20260329.md"
+  ],
+  "cycle_34_channels": {
+    "twitter": 11,
+    "reddit": 9,
+    "hacker_news": 3,
+    "indiehackers": 2,
+    "linkedin": 4
+  },
+  "cycle_34_content_pieces": 29,
+  "cumulative_content_pieces": {
+    "cycle_21": 49,
+    "cycle_22": 49,
+    "cycle_33": 29,
+    "cycle_34": 29,
+    "estimated_total_all_cycles": 957
+  }
 }

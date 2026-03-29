@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAF Series - The Unified Aetheric Framework</title>
+<meta name="description" content="Complete article series on the Unified Aetheric Framework: cross-domain theory unifying physics, biology, consciousness, social dynamics, and longevity under one PDE.">
+<link rel="stylesheet" href="style.css">
+<style>
+.series-intro{margin-bottom:2rem;line-height:1.8;color:var(--text)}
+.series-intro strong{color:var(--text-bright)}
+.card-grid{display:grid;gap:16px;margin-bottom:2.5rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px 24px;transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.card a{text-decoration:none}
+.card-title{font-family:var(--sans);font-size:1.05rem;font-weight:700;color:var(--text-bright);margin-bottom:6px}
+.card-chapters{font-family:var(--mono);font-size:.7rem;color:var(--accent);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+.card-desc{font-size:.85rem;color:var(--text-muted);line-height:1.6}
+.section-label{font-family:var(--sans);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600;margin-bottom:12px;margin-top:2rem;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.reading-order{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin-bottom:2rem}
+.reading-order h3{font-size:.9rem;margin-bottom:12px;color:var(--text-bright)}
+.reading-order ol{padding-left:20px;color:var(--text-muted);font-size:.85rem;line-height:2}
+.reading-order a{color:var(--text-bright);text-decoration:none}
+.reading-order a:hover{color:var(--accent)}
+.quick-find{margin-bottom:2rem}
+.quick-find input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 14px;color:var(--text);font-family:var(--mono);font-size:.85rem}
+.quick-find input::placeholder{color:var(--text-muted)}
+.quick-find input:focus{outline:none;border-color:var(--accent)}
+.tag-list{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:.65rem;color:var(--text-muted);background:var(--bg);border:1px solid var(--border);border-radius:3px;padding:2px 8px;cursor:pointer;transition:all .15s}
+.tag:hover{color:var(--accent);border-color:var(--accent)}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="index.html" class="site-name">fnsmdehip</a>
+<a href="index.html">Home</a>
+<a href="uaf-series.html" class="active">UAF Series</a>
+<a href="pemf.html">PEMF</a>
+<a href="wifi-sensing.html">WiFi Sensing</a>
+<a href="projects.html">Projects</a>
+<a href="search.html">Search</a>
+</div></nav>
+
+<div class="page-wrapper">
+<div class="content" style="max-width:820px;">
+
+<h1>The Unified Aetheric Framework</h1>
+<p class="series-intro">
+One PDE governing a latent coherence field <strong>s(x,t)</strong> with five terms: diffusion, drift, observer coupling, repair force, and noise. The framework maps the same dynamical structure across physics, biology, consciousness, social systems, and longevity. Every claim comes with a kill switch. 13 articles covering all 21 chapters and 11 appendices of the manuscript.
+</p>
+
+<div class="quick-find">
+<input type="text" id="articleFilter" placeholder="Filter articles... (try: saturn, consciousness, fascia, karma, religion, immune, bryan)" oninput="filterArticles()">
+<div class="tag-list">
+<span class="tag" onclick="setFilter('saturn')">saturn</span>
+<span class="tag" onclick="setFilter('consciousness')">consciousness</span>
+<span class="tag" onclick="setFilter('religion')">religion</span>
+<span class="tag" onclick="setFilter('fascia')">fascia</span>
+<span class="tag" onclick="setFilter('cancer')">cancer</span>
+<span class="tag" onclick="setFilter('karma')">karma</span>
+<span class="tag" onclick="setFilter('immune')">immune</span>
+<span class="tag" onclick="setFilter('longevity')">longevity</span>
+<span class="tag" onclick="setFilter('hivemind')">hivemind</span>
+<span class="tag" onclick="setFilter('presentiment')">presentiment</span>
+<span class="tag" onclick="setFilter('wind')">aetheric wind</span>
+<span class="tag" onclick="setFilter('crystal')">crystal</span>
+<span class="tag" onclick="setFilter('entity')">entity</span>
+<span class="tag" onclick="setFilter('gnostic')">gnostic</span>
+</div>
+</div>
+
+<div class="reading-order">
+<h3>Suggested reading order</h3>
+<ol>
+<li><a href="uaf.html">Core Framework</a> (the PDE, dual attractors, hivemind, religion)</li>
+<li><a href="uaf-immune-response.html">Aetheric Wind + Immune Response</a> (how the field propagates and resists)</li>
+<li><a href="uaf-consciousness.html">Consciousness + Collective Dynamics</a> (observer gate, presentiment data)</li>
+<li><a href="uaf-karmic-math.html">Karmic Mathematics</a> (the energy functional, standing waves)</li>
+<li><a href="uaf-practical.html">Practical Applications</a> (control surfaces, protocols, High-Q drive)</li>
+<li>Then any order: <a href="uaf-disease-biology.html">Disease</a>, <a href="uaf-cancer-addiction.html">Cancer</a>, <a href="uaf-bryan-johnson.html">Longevity</a>, <a href="uaf-testing-paradox.html">Testing Paradox</a>, <a href="uaf-evidence.html">Evidence</a>, <a href="uaf-social-dynamics.html">Social Dynamics</a>, <a href="uaf-traditions.html">Traditions</a>, <a href="uaf-systems.html">Systems</a></li>
+</ol>
+</div>
+
+<div class="section-label">Core Theory</div>
+<div class="card-grid" id="articleList">
+
+<div class="card" data-tags="pde field dual attractor hivemind religion protocol stack phase debt surrogate toroidal demiurgic carrier channel replicator dynamics">
+<a href="uaf.html">
+<div class="card-chapters">Ch 1-2 / Core Ontology + Dual Attractor System</div>
+<div class="card-title">The Core Framework: One PDE, Nine Carriers, Two Basins</div>
+<div class="card-desc">The full evolution equation term by term. 9 carrier channels (mechanical, EM, quantum, scalar, electrogravitics, neutrino, observer). Dual attractor system (The All vs Demiurgic Pattern). 5-level hivemind structure. Religion as protocol stack with replicator dynamics. Phase debt accumulation. Surrogate activities with D1/D2 neuroscience. Toroidal magnetic field. Civilizational cycles of excess and reset.</div>
+</a></div>
+
+<div class="card" data-tags="aetheric wind immune response survival surplus civilizational cycle reset threshold strategic navigation camouflage fishing anchor optimal control">
+<a href="uaf-immune-response.html">
+<div class="card-chapters">Ch 4-5 / Aetheric Wind + Immune Response</div>
+<div class="card-title">The Aetheric Wind and Why the System Fights Back</div>
+<div class="card-desc">Four-phase wind mechanism (generation, amplification, integration, manifestation). Survival-vs-surplus cycle with historical reset patterns and civilizational period analysis. Immune response intensity model I(delta). Multi-channel resistance vectors (bio/social/material). Stockholm stabilization. Strategic navigation as optimal control. Camouflage, fishing, anchor points.</div>
+</a></div>
+
+<div class="card" data-tags="consciousness observer gate presentiment retrocausal pilot wave collapse quantum collective dynamics sensitivity biology flock group pooling rng reg pear radin">
+<a href="uaf-consciousness.html">
+<div class="card-chapters">Ch 3, 11-12 / Consciousness + Collective Dynamics</div>
+<div class="card-title">The Observer Gate, Four Competing Models, and Collective Dynamics</div>
+<div class="card-desc">Observer gate chi(t) as sigmoid of HRV/EEG/focus. Four candidate formalisms (collapse, retrocausal, pilot-wave, multi-channel). Presentiment: 26 studies, 7 labs, p&lt;10^-12. Retrocausal tension propagation with exponential kernel. Group pooling. Global Consciousness Project. Morphic fields. Sensitivity and biological field integration.</div>
+</a></div>
+
+<div class="card" data-tags="testing paradox suppression law interference institutional science decline effect experimenter methodology validation observation">
+<a href="uaf-testing-paradox.html">
+<div class="card-chapters">Ch 7 / Alignment-Testing Paradox</div>
+<div class="card-title">The Alignment-Testing Paradox: Why Measuring Can Kill the Effect</div>
+<div class="card-desc">The suppression law with every variable defined. Three competing models with priors. Five interference pathways (field dispersion, methodological constraint, paradigmatic blindness, wind suppression, cascade disruption). Five alternative validation methodologies. Structural evidence: decline effect, experimenter asymmetry, protocol dependence.</div>
+</a></div>
+
+<div class="section-label">Mathematics + Evidence</div>
+
+<div class="card" data-tags="karma distortion energy euler lagrange standing wave sink matching social enforcement strategic indulgence tradition buddhism hinduism taoism">
+<a href="uaf-karmic-math.html">
+<div class="card-chapters">Ch 9 / Karmic Mathematics</div>
+<div class="card-title">Karmic Mathematics: Distortion Energy and Standing Waves</div>
+<div class="card-desc">Distortion energy E[s] = integral ||D||^2 dV. Euler-Lagrange conditions for alignment. 1D standing wave energy decay proof. Sink matching coefficient Gamma(t). Self-reinforcing loops. Social enforcement as sink-activation gradient. Strategic indulgence clearance condition. Cross-tradition correspondence (Buddhism, Hinduism, Taoism).</div>
+</a></div>
+
+<div class="card" data-tags="rng reg biological markers environmental coupling geomagnetic schumann em saturation protocol sensitivity instrument measurement null evidence exotic carrier electrogravitic stargate">
+<a href="uaf-evidence.html">
+<div class="card-chapters">Ch 8 / Evidence Architecture</div>
+<div class="card-title">How You'd Actually Test This: Measurement, Markers, and Null Results</div>
+<div class="card-desc">RNG/REG formalism (PEAR: 2.5M trials, p&lt;10^-12). Biological markers: HRV, brainwave sync, biophotonics. Environmental coupling (geomagnetics, Schumann, EM saturation). Protocol sensitivity. When nulls are weak vs strong evidence. Exotic carriers. STARGATE as protocol exemplar. Instrument roadmap.</div>
+</a></div>
+
+<div class="section-label">Biology + Health</div>
+
+<div class="card" data-tags="disease phonon fascia impedance piezoelectric crystal csf ventricular resonance heart brain inflammatory aging coherence loss pathogen antenna oscillation">
+<a href="uaf-disease-biology.html">
+<div class="card-chapters">Ch 6 / Disease as Field Distortion</div>
+<div class="card-title">Disease as Field Distortion: Fascia, Oscillation Networks, and Crystals</div>
+<div class="card-desc">Phonon-based information transfer with formal wave model. Fascia as impedance-matched network. CSF ventricular resonance with cavity model. Heart-brain mechanical coupling. Bioenergetics and inflammatory mediators. Crystal effects: 3 competing models, piezoelectric constitutive relation, gain control equation.</div>
+</a></div>
+
+<div class="card" data-tags="cancer addiction warburg fascial piezoelectric yap taz naltrexone tissue discordant aging isomorphism dopamine thermostat metabolic reverse warburg">
+<a href="uaf-cancer-addiction.html">
+<div class="card-chapters">App I, J.1-J.2 / Cancer-Addiction Bridge</div>
+<div class="card-title">Cancer and Addiction Are the Same Trap</div>
+<div class="card-desc">Warburg effect as UAF signature. Cancer-addiction isomorphism (same attractor, different carrier). Fascial decoherence as cancer location predictor (AUC 0.65+). Tissue-discordant aging evidence. HRV biofeedback reaching tumor microenvironment. Low-dose naltrexone. Reverse Warburg. Three quantitative predictions.</div>
+</a></div>
+
+<div class="card" data-tags="longevity aging bryan johnson rapamycin pearl nad calerie hrv sigma proxy senolytic cholinergic centenarian grimace intervention tier hierarchy protocol">
+<a href="uaf-bryan-johnson.html">
+<div class="card-chapters">App K, J.3-J.6 / Longevity Protocol</div>
+<div class="card-title">Longevity as Sigma-Restoration (And Why Bryan Johnson Hits a Ceiling)</div>
+<div class="card-desc">12 hallmarks unified under E[s] ratchet. 5-tier sigma-restoration hierarchy. PEARL rapamycin null and NAD+ nulls predicted. CALERIE rate-vs-level dissociation. HRV as sigma proxy (phenotypic not genetic). Cholinergic anti-inflammatory pathway. Centenarian trajectory reversal. Geomagnetic modulation. Sqrt-N social friction derivation.</div>
+</a></div>
+
+<div class="section-label">Practical Applications</div>
+
+<div class="card" data-tags="control surface state handle source scheduling sink matching regime selection heart breath coherence protocol high-q drive sexual energy tantra qigong channeling crystal artifact resonant environmental coupling instrument">
+<a href="uaf-practical.html">
+<div class="card-chapters">Ch 10 / Practical Applications</div>
+<div class="card-title">Control Surfaces, Coherence Protocols, and High-Q Drive Amplification</div>
+<div class="card-desc">Four control surface buckets. Heart-breath coherence protocol (5-7 breaths/min). Five coherence proxies. Model 1 vs Model 2 comparison. High-Q Drive Coherence Amplification (channeling sexual/creative/competitive energy). Tantra/qigong parallel. Crystal mechanism inventory. Environmental coupling equations. Instrument roadmap.</div>
+</a></div>
+
+<div class="card" data-tags="perpetual harmony system stability governance ai macro steering timeline instrument roadmap refinement loop application triage longevity constraints ramp rate">
+<a href="uaf-systems.html">
+<div class="card-chapters">Ch 16-21 / Macro-Scale Dynamics</div>
+<div class="card-title">System Stability, Governance AI, and the Instrument Roadmap</div>
+<div class="card-desc">Perpetual harmony as control problem (formal objective with penalties). Three failure modes. System stability formalism. Organizational coherence. Governance AI architecture (4 constraints including observer-creator paradox). Macro-scale steering with ramp-rate law. Instrument roadmap by information density per dollar. Three-tier application triage.</div>
+</a></div>
+
+<div class="section-label">Cross-Domain + Esoteric</div>
+
+<div class="card" data-tags="framework comparison hossenfelder gnostic eastern abrahamic indigenous cross tradition mapping alignment testing paradox non-redundant dynamical systems control theory predictive coding">
+<a href="uaf-social-dynamics.html">
+<div class="card-chapters">Ch 13-15 / Framework Comparisons + Cross-Tradition</div>
+<div class="card-title">Framework Comparisons, Cross-Tradition Mappings, and What to Keep</div>
+<div class="card-desc">UAF vs dynamical systems, control theory, predictive coding, network incentives. Hossenfelder comparison (3 divergence points). Non-redundancy claim. Gnostic/Eastern/Abrahamic/Indigenous parallels. Practical extraction: what to keep vs discard from traditions.</div>
+</a></div>
+
+<div class="card" data-tags="saturn polar configuration gnostic monad demiurge entity loosh farming non-local symbiotic black cube archon nephilim paradise lost yuga historical cycle excess reset crabs bucket anthropomorphized abstraction compression operator">
+<a href="uaf-traditions.html">
+<div class="card-chapters">App G-H / Saturn, Gnostic Mapping, and the Entity Question</div>
+<div class="card-title">Saturn, the Gnostic Mapping, and Anthropomorphized Abstractions</div>
+<div class="card-desc">Saturn/polar configuration (Talbott convergence, 3 possible roles, J_Saturn source term). Full Gnostic Monad-Demiurge mapping table. The entity question: 4 possibility spaces (literal entities, consciousness aspects, emergent patterns, non-local symbiosis). Loosh/non-local farming dynamics. Crabs-in-bucket mechanics. Historical cycles of excess and reset across Yuga/Gnostic/Taoist/Abrahamic patterns.</div>
+</a></div>
+
+</div>
+</div>
+</div>
+
+<script>
+function filterArticles(){var q=document.getElementById('articleFilter').value.toLowerCase();var cards=document.querySelectorAll('.card');cards.forEach(function(c){var tags=c.getAttribute('data-tags')||'';var title=c.querySelector('.card-title').textContent.toLowerCase();var desc=c.querySelector('.card-desc').textContent.toLowerCase();var match=!q||tags.indexOf(q)!==-1||title.indexOf(q)!==-1||desc.indexOf(q)!==-1;c.classList.toggle('hidden',!match)})}
+function setFilter(v){document.getElementById('articleFilter').value=v;filterArticles()}
+</script>
+</body>
+</html>

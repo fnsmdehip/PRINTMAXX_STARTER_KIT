@@ -3,24 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Why Bryan Johnson's $2M Protocol Hits a Ceiling (And What Actually Works) - fnsmdehip</title>
-<meta name="description" content="The UAF predicted the PEARL rapamycin null and NAD+ trial failures before they published. 12 hallmarks of aging are downstream of one upstream variable. The sigma-restoration hierarchy ranks interventions by mechanism, not hype. HRV coherence quality predicts GrimAge reversal.">
-<meta name="keywords" content="Bryan Johnson protocol, Blueprint longevity, PEARL trial rapamycin null, NAD+ NMN null results, GrimAge reversal, HRV coherence longevity, sigma restoration hierarchy, biological aging, DunedinPACE, CALERIE trial, hallmarks of aging">
+<title>Longevity as σ-Restoration and the Novel Derivations - fnsmdehip</title>
+<meta name="description" content="Appendix K: aging as E[s] ratchet, the sigma-restoration hierarchy (5 tiers), PEARL null result as UAF confirmation, HRV as primary sigma proxy (ES=1.99 mortality prediction), CALERIE rate-vs-level dissociation, protocol synthesis. Appendix J.3-J.6: geomagnetic modulation of retrocausal sensitivity, allostatic load as retrocausal debt amplifier, sqrt-N social friction, cross-scale coherence intervention (HRV to tumor microenvironment).">
+<meta name="keywords" content="longevity sigma restoration, aging phase debt, HRV mortality predictor, PEARL trial rapamycin, CALERIE DunedinPACE, sigma restoration hierarchy, senolytics DQ protocol, geomagnetic presentiment, allostatic load retrocausal, sqrt-N social friction, HRV tumor microenvironment, fascial piezoelectric, biological age reversal">
 <link rel="canonical" href="https://fnsmdehip-research.surge.sh/uaf-bryan-johnson.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Why Bryan Johnson's $2M Protocol Hits a Ceiling (And What Actually Works)">
-<meta property="og:description" content="PEARL rapamycin null. NAD+ null. The framework predicted both. The 12 hallmarks are downstream of sigma. HRV coherence quality is the variable nobody measures.">
+<meta property="og:title" content="Longevity as σ-Restoration and the Novel Derivations">
+<meta property="og:description" content="Why rapamycin failed in healthy humans (predicted by single-node J-suppression theorem). The five-tier intervention hierarchy. HRV as sigma proxy with ES=1.99. Four novel derivations connecting geomagnetics, allostatic load, social friction, and tumor microenvironments.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav><div class="nav-inner">
 <a href="index.html" class="site-name">fnsmdehip</a>
 <a href="index.html">Home</a>
-<a href="uaf.html">UAF Overview</a>
-<a href="uaf-cancer-addiction.html">Cancer &amp; Addiction</a>
-<a href="uaf-bryan-johnson.html" class="active">Longevity</a>
-<a href="uaf-consciousness.html">Consciousness</a>
-<a href="pemf.html">PEMF</a>
+<a href="uaf-series.html">UAF Series</a>
+<a href="pemf.html">PEMF Series</a>
 <a href="wifi-sensing.html">WiFi Sensing</a>
 <a href="projects.html">Projects</a>
 </div></nav>
@@ -29,259 +26,348 @@
 <aside class="toc">
 <div class="toc-title">Contents</div>
 <ol>
-<li><a href="#problem">The 12 hallmarks have no upstream cause</a></li>
-<li><a href="#ratchet">Aging as E[s] ratchet</a></li>
-<li><a href="#hierarchy">The sigma-restoration hierarchy</a>
+<li><a href="#aging-model">The UAF aging model (K.1)</a>
   <ol>
-  <li><a href="#tier1">Tier 1: Restore sigma</a></li>
-  <li><a href="#tier2">Tier 2: Eliminate J-sources</a></li>
-  <li><a href="#tier3">Tier 3: Reduce J-input</a></li>
-  <li><a href="#tier4">Tier 4: Single-node modulation</a></li>
+  <li><a href="#ratchet">Phase debt ratchet</a></li>
+  <li><a href="#hallmarks">The twelve hallmarks, unified</a></li>
+  <li><a href="#canonical-aging">Canonical tie</a></li>
+  <li><a href="#aging-proxies">Operational proxies</a></li>
+  <li><a href="#aging-predictions">Discriminating predictions</a></li>
   </ol>
 </li>
-<li><a href="#pearl">PEARL rapamycin: predicted null</a></li>
-<li><a href="#nad">NAD+ supplementation: predicted null</a></li>
-<li><a href="#calerie">CALERIE: rate vs. level</a></li>
-<li><a href="#hrv-sigma">HRV is sigma (not a metaphor)</a></li>
-<li><a href="#protocol">The UAF longevity protocol</a></li>
-<li><a href="#coherence-proxies">Measurable coherence proxies</a></li>
-<li><a href="#predictions">Discriminating predictions</a></li>
-<li><a href="#kill-switches">Kill switches</a></li>
+<li><a href="#hierarchy">The sigma-restoration hierarchy (K.2)</a>
+  <ol>
+  <li><a href="#five-tiers">Five tiers</a></li>
+  <li><a href="#tier-predictions">Predictions from the hierarchy</a></li>
+  </ol>
+</li>
+<li><a href="#pearl">The PEARL null result (K.3)</a>
+  <ol>
+  <li><a href="#j-suppression">Single-node J-suppression theorem</a></li>
+  <li><a href="#pearl-predictions">Predictions from the null</a></li>
+  </ol>
+</li>
+<li><a href="#hrv-sigma">HRV as the primary sigma proxy (K.4)</a>
+  <ol>
+  <li><a href="#hrv-mortality">HRV mortality prediction: ES = 1.99</a></li>
+  <li><a href="#phenotypic">Phenotypic vs. genetic HRV</a></li>
+  <li><a href="#cholinergic">The cholinergic anti-inflammatory bridge</a></li>
+  <li><a href="#centenarian">Centenarian trajectory reversal</a></li>
+  </ol>
+</li>
+<li><a href="#calerie">The CALERIE dissociation (K.5)</a>
+  <ol>
+  <li><a href="#rate-level">Rate vs. level</a></li>
+  <li><a href="#protocol">Protocol synthesis</a></li>
+  <li><a href="#calerie-predictions">Standard model vs. UAF predictions</a></li>
+  </ol>
+</li>
+<li><a href="#geomagnetic">Geomagnetic modulation of retrocausal sensitivity (J.3)</a></li>
+<li><a href="#allostatic">Allostatic load as retrocausal debt amplifier (J.4)</a></li>
+<li><a href="#sqrt-n">sqrt-N social friction prediction (J.5)</a></li>
+<li><a href="#cross-scale">Cross-scale coherence intervention (J.6)</a></li>
+<li><a href="#prediction-web">The interlocking prediction web (J.7 + K.6)</a></li>
 </ol>
 </aside>
 
 <div class="content">
-<h1>Why Bryan Johnson's $2M Protocol Hits a Ceiling (And What Actually Works)</h1>
-<div class="meta">2026-03-28 &middot; UAF Series: Longevity</div>
-<div class="tagline">The 12 hallmarks of aging are symptoms. The framework generates the unified upstream cause they are missing, ranks interventions by mechanism, and predicted two major trial nulls before they published.</div>
+<h1>Longevity as sigma-Restoration and the Novel Derivations</h1>
+<div class="meta">2026-03-28 · UAF Series: Longevity &amp; Novel Derivations</div>
+<div class="tagline">Aging is not the simultaneous failure of twelve independent systems. It is the monotonic increase of distortion energy E[s] under declining sigma. The twelve hallmarks are downstream expression modes of one upstream dynamic: restoration capacity falling below the phase debt accumulation rate. This reframing predicts why rapamycin failed in healthy humans, ranks longevity interventions by mechanism, and connects to four novel derivations spanning geomagnetics, social friction, and tumor microenvironments.</div>
 
-<div class="note">
-<p>This article draws from Appendix K (Longevity as &sigma;-Restoration), Chapter 10 (Practical Applications), and the longevity amendments in the <a href="https://github.com/fnsmdehip/uaf">UAF manuscript (v51)</a>. Read the <a href="uaf.html">framework overview</a> first for the core equation and dual-attractor system.</p>
-</div>
+<p>This article covers Appendix K (longevity as sigma-restoration, sections K.1 through K.6) and Appendix J sections 3 through 6 (geomagnetic modulation of retrocausal sensitivity, allostatic load as retrocausal debt amplifier, sqrt-N social friction, and cross-scale coherence intervention from HRV training to tumor microenvironment). These represent the framework's most quantitatively specific predictions, several of which are testable against existing datasets.</p>
 
-<h2 id="problem">The 12 hallmarks of aging have no unified upstream cause</h2>
+<h2 id="aging-model">The UAF aging model: phase debt ratchet and sigma-degradation cascade (K.1)</h2>
 
-<p>Standard biogerontology enumerates twelve hallmarks of aging: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, disabled macroautophagy, deregulated nutrient-sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion, altered intercellular communication, chronic inflammation, and dysbiosis. The 2023 update added the last three &mdash; which is telling. The list keeps growing because the framework is enumerating symptoms, not identifying their common generator.</p>
+<h3 id="ratchet">The phase debt ratchet</h3>
 
-<p>These twelve hallmarks are treated as relatively parallel mechanistic streams converging on organismal decline. This generates no unified upstream cause and therefore no ranked intervention hierarchy. Each hallmark gets its own research program, its own drug candidates, its own clinical trials. Rapamycin for nutrient-sensing. NAD+ for mitochondria. Senolytics for senescence. Metformin for inflammation. The strategy is: hit all the targets simultaneously and hope the combination works.</p>
+<p>Chronological time does not produce aging. Phase debt accumulation produces aging. The distinction is operational: two individuals of the same chronological age with different sigma(x,t) profiles should exhibit non-overlapping biological age trajectories. This prediction is confirmed by epigenetic clock data showing 15-20 year variance in biological age at any fixed chronological age.</p>
 
-<p>The framework generates what the standard model cannot: both a unified upstream cause and a ranked intervention hierarchy derived from mechanism, not empirical trial-and-error.</p>
+<p>The UAF mechanism is specific. sigma(x,t), the local field restoration rate, degrades as a function of accumulated E[s] through three sub-pathways:</p>
 
-<h2 id="ratchet">Aging as the E[s] ratchet</h2>
+<ol>
+<li><strong>Allostatic reserve depletion:</strong> Chronic high-distortion environments reduce allostatic reserve through HPA axis recalibration and cortisol reactivity blunting.</li>
+<li><strong>J-source compounding:</strong> Senescent cells emitting SASP cytokines, gut dysbiosis emitting LPS-derived inflammation, mitochondrial dysfunction emitting ROS. Each is a J(x,t) source that grows as the organism ages.</li>
+<li><strong>gamma*chi degradation:</strong> HRV decline, circadian fragmentation, reduced slow-wave sleep. The coherence amplification channel itself deteriorates.</li>
+</ol>
 
-<p>In UAF terms, aging is not the simultaneous failure of twelve independent systems. It is the monotonic increase of E[s] = &int;||D||&sup2;dV under declining &sigma;(x,t), with the twelve hallmarks as downstream expression modes of a single upstream dynamic: the organism's restoration capacity sigma falling below the phase debt accumulation rate.</p>
+<p>The result is a ratchet: high E[s] degrades sigma. Degraded sigma slows E[s] clearance. Slower clearance accumulates more E[s]. The ratchet clicks forward. It does not click back without intervention.</p>
 
-<p>The mechanism is a ratchet with three teeth:</p>
+<h3 id="hallmarks">The twelve hallmarks, unified</h3>
 
-<ul>
-<li><strong>Allostatic reserve depletion:</strong> Chronic high-distortion environments degrade the HPA axis, blunting cortisol reactivity and depleting adaptive capacity.</li>
-<li><strong>J-source compounding:</strong> Senescent cells emit SASP cytokines. Gut dysbiosis emits LPS-derived inflammation. Mitochondrial dysfunction emits ROS. Each is a noise source that accumulates over time, and each new source makes the others worse.</li>
-<li><strong>Coherence amplification degradation:</strong> HRV declines. Circadian rhythms fragment. Slow-wave sleep duration drops. The &gamma;(t)&chi;(t) term that amplifies repair interventions degrades.</li>
-</ul>
+<p>The standard biogerontological model enumerates twelve hallmarks of aging: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, disabled macroautophagy, deregulated nutrient-sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion, altered intercellular communication, chronic inflammation, and dysbiosis. These are treated as relatively parallel mechanistic streams converging on organismal decline. The framework generates no unified upstream cause and therefore no ranked intervention hierarchy.</p>
 
-<p>The result: high E[s] degrades sigma. Degraded sigma slows E[s] clearance. Slower clearance accumulates more E[s]. The ratchet tightens.</p>
+<p>UAF reframes: the hallmarks are downstream expression modes of a single upstream dynamic. The organism's restoration capacity sigma falling below the phase debt accumulation rate (partial_t E[s] > 0).</p>
 
-<p>Chronological time does not produce aging. Phase debt accumulation does. The distinction is operational: two individuals of the same chronological age with different sigma profiles exhibit non-overlapping biological age trajectories. Epigenetic clock data confirms this &mdash; there is 15-20 year variance in biological age at any fixed chronological age. The framework says this variance is explained primarily by sigma, not genetics. Current GWAS explains less than 5% of longevity variance, leaving over 95% to environment and physiology. That 95% is sigma territory.</p>
+<table>
+<tr><th>Hallmark</th><th>UAF interpretation</th></tr>
+<tr><td>Genomic instability</td><td>Accumulated distortion at the DNA scale</td></tr>
+<tr><td>Mitochondrial dysfunction</td><td>Accumulated distortion at the organelle scale</td></tr>
+<tr><td>Chronic inflammation</td><td>J-source amplification at the systemic scale</td></tr>
+<tr><td>Dysbiosis</td><td>J-source amplification from the microbiome channel</td></tr>
+<tr><td>Cellular senescence</td><td>sigma-suppression from formerly-functional nodes (cells that stop contributing to restoration and start emitting SASP)</td></tr>
+<tr><td>Disabled macroautophagy</td><td>sigma-clearance mechanism failure</td></tr>
+<tr><td>Deregulated nutrient-sensing</td><td>J-input channel dysregulation</td></tr>
+<tr><td>Loss of proteostasis</td><td>sigma failure at the protein maintenance scale</td></tr>
+<tr><td>Stem cell exhaustion</td><td>sigma-renewal capacity depletion</td></tr>
+<tr><td>Epigenetic alterations</td><td>Accumulated state-drift at the epigenetic scale</td></tr>
+<tr><td>Telomere attrition</td><td>Cumulative division counter (downstream marker, not driver)</td></tr>
+<tr><td>Altered intercellular communication</td><td>Coupling degradation between system components</td></tr>
+</table>
 
-<p>The hallmarks framework describes the ratchet's teeth without describing the ratchet. Genomic instability is accumulated distortion at the DNA scale. Mitochondrial dysfunction is accumulated distortion at the organelle scale. Chronic inflammation is J-source amplification at the systemic scale. Cellular senescence is sigma suppression from formerly-functional cells that now emit damage signals instead of repair signals. The three hallmarks added in 2023 (disabled macroautophagy, chronic inflammation, dysbiosis) are exactly the sigma-clearance and J-amplification mechanisms the framework identifies as upstream drivers.</p>
+<p>The 2023 hallmarks update added disabled macroautophagy, chronic inflammation, and dysbiosis. These are exactly the sigma-clearance and J-amplification mechanisms UAF identifies as upstream drivers. That the hallmarks list required expansion to include them is evidence of symptom enumeration rather than unified causal modeling.</p>
 
-<div class="killswitch">
-<strong>Kill switch:</strong> If principal component analysis of hallmark biomarkers shows no dominant factor (all eigenvalues roughly equal), the sigma-generator model is weakened &mdash; the hallmarks would be genuinely parallel, not hierarchically subordinate to sigma. Test: PCA on hallmark biomarker panel across a large biobank cohort. PC1 should load on sigma proxies (HRV, allostatic load composite) with loading &gt; 0.6, explaining &gt; 40% of variance.
-</div>
+<h3 id="canonical-aging">Canonical tie</h3>
 
-<h2 id="hierarchy">The sigma-restoration hierarchy</h2>
+<p>From the canonical equation: young organism has sigma high, J low, gamma*chi moderate. Aged organism has sigma reduced (allostatic exhaustion), J elevated (SASP, dysbiosis, ROS), gamma*chi degraded (HRV loss, circadian fragmentation). The restoration force sigma(s - s_0) weakens while distortion inputs J and eta grow. Net result: s drifts from s_0, E[s] increases. The felt-layer proxies: fatigue, hedonic blunting, reduced resilience, cognitive slowing, immunosenescence.</p>
 
-<p>The standard longevity evaluation method: run a trial, measure outcomes, rank by effect size. This produces no mechanistic hierarchy and generates no predictions about combinations or failure modes.</p>
+<h3 id="aging-proxies">Operational proxies</h3>
 
-<p>The UAF alternative: rank interventions by their primary action on the canonical equation. An intervention acting on sigma (restoration capacity) is upstream of one acting on J (noise input), which is upstream of one acting on a downstream hallmark marker. This ranking is mechanism-derivable before trial completion &mdash; generating predictions about synergies, plateaus, and adverse-effect profiles that empirical ranking cannot make.</p>
+<table>
+<tr><th>Variable</th><th>Proxies</th></tr>
+<tr><td>sigma(x,t)</td><td>HRV (SDNN, HF power), sleep slow-wave amplitude, cortisol awakening response (CAR), allostatic load index (composite: IL-6, CRP, cortisol, DHEA-S, systolic BP, waist-hip ratio, HbA1c, cholesterol)</td></tr>
+<tr><td>J(x,t)</td><td>SASP cytokine panel (IL-6, IL-1beta, TNF-alpha), LPS-binding protein (gut dysbiosis), 8-OHdG (oxidative DNA damage), mitochondrial membrane potential</td></tr>
+<tr><td>gamma*chi</td><td>HRV coherence frequency (0.10 Hz resonance), RMSSD, circadian amplitude (actigraphy), heart-brain coupling indices</td></tr>
+<tr><td>E[s]</td><td>Biological age clocks (DunedinPACE for rate, Horvath/GrimAge for absolute), senescence biomarker composite (p16, p21, SA-beta-gal)</td></tr>
+</table>
 
-<h3 id="tier1">Tier 1: Sigma restoration (upstream of everything)</h3>
-<div class="tier"><span class="tier-label tier-1">Tier 1</span> <strong>Directly restore &sigma;(x,t)</strong></div>
+<h3 id="aging-predictions">Discriminating predictions</h3>
 
-<ul>
-<li><strong>HRV coherence training:</strong> Resonance frequency breathing (0.09 Hz, approximately 5.5 breaths/min) with interoceptive anchor and affect selection, 20 minutes/day minimum. Mechanism: breath pacing &rarr; baroreflex entrainment &rarr; HRV phase stability &rarr; parasympathetic dominance &rarr; cholinergic anti-inflammatory pathway activation &rarr; systemic sigma increase. HeartMath biofeedback or comparable device for real-time feedback.</li>
-<li><strong>Slow-wave sleep optimization:</strong> Target 90+ minutes N3 per night. Consistent sleep/wake timing, dark exposure protocol, temperature optimization (65-68&deg;F), last meal 3+ hours before bed.</li>
-<li><strong>Ultradian rhythm entrainment:</strong> Structured 90-minute work/rest cycles matching the body's natural ultradian rhythm. Reduces chronic sympathetic overactivation.</li>
-</ul>
+<p><strong>Biological age variance</strong> (15-20 years at fixed chronological age) should be explained more by sigma-proxy composite than by any single hallmark biomarker. Testable against large biobank datasets.</p>
 
-<p>These directly restore sigma by training the ANS-cardiac coherence system. The molecular mechanism is established: vagal efferents suppress macrophage TNF-&alpha; release via the &alpha;7-nAChR receptor. High HRV tonically suppresses NF-&kappa;B activation, IL-6, and CRP systemically. Sigma restoration is simultaneously an anti-inflammaging intervention &mdash; the two converge on the same molecular pathway.</p>
+<p><strong>sigma degrades before hallmarks manifest.</strong> Individuals with low HRV at age 40 should show accelerated hallmark onset by 50, controlling for genetics. This is the causal wedge vs. the hallmarks-as-parallel-streams model.</p>
 
-<h3 id="tier2">Tier 2: J-source elimination (remove active damage emitters)</h3>
-<div class="tier"><span class="tier-label tier-2">Tier 2</span> <strong>Reduce the damage burden &sigma; fights against</strong></div>
+<p><strong>Single dominant factor.</strong> Principal component analysis of hallmark biomarkers should show PC1 loading on sigma-proxies > 0.6, explaining > 40% of variance.</p>
 
-<ul>
-<li><strong>Senolytics (dasatinib + quercetin):</strong> Each senescent cell emits SASP cytokines that suppress sigma in neighboring tissue. Clearing them removes active J-sources. Protocol: 100mg dasatinib + 1250mg quercetin, 2 days per 2-week cycle for 12 weeks, per 2025 LANCET eBioMedicine pilot. However, adverse signals demand caution: a DQ pilot showed no tau/amyloid change in Alzheimer's-risk patients. A separate study found approximately 3-month Horvath clock acceleration. Preclinical 2025 data showed DQ increases kidney damage in acute nephropathy. This is why the protocol specifies intermittent dosing with renal monitoring, not continuous administration.</li>
-<li><strong>Dysbiosis correction:</strong> Targeted microbiome intervention for specific taxa deficits. High-fiber, fermented food protocol or precision probiotics. LPS-binding protein as the measurable J-source proxy.</li>
-<li><strong>Mitochondrial autophagy induction:</strong> Time-restricted eating, intermittent fasting. Clears damaged mitochondria that emit ROS (another J-source).</li>
-</ul>
+<p><strong>sigma-restoration reduces multiple hallmarks simultaneously</strong> and in proportion to their sigma-loading. Interventions that only reduce J should reduce downstream markers without sigma-proxy improvement.</p>
 
-<h3 id="tier3">Tier 3: J-input reduction (slow the inflow)</h3>
-<div class="tier"><span class="tier-label tier-3">Tier 3</span> <strong>Reduce ambient damage production rate</strong></div>
+<div class="killswitch"><strong>Breakpoints:</strong> (1) If PCA of hallmark biomarkers shows no dominant factor (all eigenvalues roughly equal), the sigma-generator model is weakened. The hallmarks would be genuinely parallel, not hierarchically subordinate. (2) If sigma proxies do NOT temporally precede hallmark onset in longitudinal studies, the causal direction is reversed. (3) If biological age variance is explained primarily by genetics (GWAS hits) rather than sigma proxies, the sigma model loses leverage. Note: current GWAS explains &lt; 5% of longevity variance, leaving > 95% to environment and physiology.</div>
 
-<ul>
-<li><strong>Caloric restriction / time-restricted eating:</strong> Less fuel burned means less oxidative damage production. Reduces the ambient J load without restoring sigma or eliminating existing J-sources.</li>
-<li><strong>Protein restriction / IGF-1 reduction:</strong> Lower growth-factor signaling reduces proliferative J noise.</li>
-<li><strong>Environmental toxin reduction:</strong> Each toxin is a component in the damage vector D.</li>
-</ul>
+<h2 id="hierarchy">The sigma-restoration hierarchy: ranking longevity interventions by upstream mechanism (K.2)</h2>
 
-<h3 id="tier4">Tier 4: Single-node J modulation (the expensive stuff that mostly fails)</h3>
-<div class="tier"><span class="tier-label tier-4">Tier 4</span> <strong>Inhibit individual damage channels</strong></div>
+<h3 id="five-tiers">Five tiers</h3>
 
-<ul>
-<li><strong>Rapamycin (mTOR inhibition):</strong> Modulates the nutrient-sensing J channel. PEARL trial: null in healthy humans. Predicted by the framework. See below.</li>
-<li><strong>NAD+ supplementation (NR/NMN):</strong> Boosts one energy pathway. Null on major endpoints when the bottleneck is elsewhere.</li>
-<li><strong>Metformin:</strong> Multi-target profile gives it a wider J-coverage than rapamycin. Framework predicts modest benefit, no dramatic reversal. TAME trial pending.</li>
-</ul>
+<p>The standard longevity intervention evaluation: run trial, measure outcomes, rank by effect size. No mechanistic hierarchy. No predictions about combinations or failure modes. The UAF alternative: rank interventions by their primary action on the canonical equation.</p>
 
-<p><strong>The critical prediction from this hierarchy:</strong> combination Tier 1 + Tier 2 should be synergistic (superadditive) on biological age endpoints. Combination Tier 3 + Tier 4 should be additive at best (same mechanism layer). The "longevity cocktail" (rapamycin + NAD+ + metformin) is a same-tier combination. Adding HRV training to the cocktail adds a cross-tier synergistic component. This is directly testable: 4-arm trial (cocktail alone vs. cocktail + HRV training vs. HRV training alone vs. control).</p>
+<table>
+<tr><th>Tier</th><th>Action</th><th>Examples</th><th>Mechanism</th></tr>
+<tr><td><span class="tier-label tier-1">1</span> sigma-restoration</td><td>Directly restore restoration capacity</td><td>HRV coherence training, slow-wave sleep optimization, ultradian rhythm entrainment</td><td>Train the ANS-cardiac coherence system. Increase sigma directly.</td></tr>
+<tr><td><span class="tier-label tier-2">2</span> J-source elimination</td><td>Remove distortion emitters</td><td>Senolytics (D+Q protocol), dysbiosis correction, mitochondrial autophagy induction (time-restricted eating)</td><td>Reduce J by removing existing J-sources. Eliminate senescent cells, fix gut, clear damaged mitochondria.</td></tr>
+<tr><td><span class="tier-label tier-3">3</span> J-input reduction</td><td>Reduce ambient distortion load</td><td>Caloric restriction, protein restriction, IGF-1 reduction</td><td>Reduce the rate of new J production without clearing existing sources or restoring sigma.</td></tr>
+<tr><td><span class="tier-label tier-4">4</span> Single-node J modulation</td><td>Modulate one metabolic J channel</td><td>mTOR inhibition (rapamycin), NAD+ supplementation, metformin</td><td>Block one specific J pathway. Leave sigma unchanged. Leave other J channels open.</td></tr>
+<tr><td>5: Downstream-only</td><td>Address hallmark symptoms</td><td>Telomere lengthening, gene therapy targeting individual hallmarks, anti-inflammatory drugs</td><td>Act below the E[s] accumulation level. Address symptoms without changing the generator.</td></tr>
+</table>
 
-<h2 id="pearl">PEARL rapamycin: the predicted null</h2>
+<h3 id="tier-predictions">Predictions from the hierarchy</h3>
 
-<p>The PEARL trial (Participatory Evaluation of Aging with Rapamycin for Longevity) was a 48-week RCT. 114 healthy normative-aging adults. Double-blind, placebo-controlled. 5mg/week and 10mg/week compounded rapamycin. Six million dollars. Result: no significant changes in longevity-relevant endpoints.</p>
+<p><strong>Tier 1 agents should produce HRV improvement as primary endpoint,</strong> with biological age reversal as secondary. If an intervention produces biological age reversal WITHOUT HRV improvement, it is not a Tier 1 agent. Test: dose-response between delta-SDNN and delta-DunedinPACE.</p>
 
-<p>The standard explanation: humans differ from mice, dose optimization needed, longer trials required. The UAF explanation is more precise and more predictive.</p>
+<p><strong>Tier 1 + Tier 2 should be synergistic (superadditive)</strong> on biological age endpoints. Tier 3 + Tier 4 should be additive at best (same mechanism layer). This is a clean discriminating prediction for trial design.</p>
 
-<p>mTOR inhibition modulates the nutrient-sensing J channel. It reduces anabolic signaling noise from mTORC1 hyperactivation &mdash; a real J-source in aged organisms. In mice, this channel accounts for a disproportionate fraction of the J budget because mouse metabolic rate is approximately 7x human per unit mass (corresponding to proportionally higher ROS production and mTOR pathway activity). In healthy middle-aged humans, mTOR hyperactivation is a smaller fraction of the total damage budget &mdash; sigma degradation, SASP cytokine load, circadian disruption, dysbiosis, and chronic stress dominate.</p>
+<p><strong>Tier 4 agents should plateau earlier than Tier 1</strong> because the sigma-limited bottleneck reasserts. The PEARL trial confirmed this: 48 weeks, no significant longevity endpoints. Consistent with Tier 4 plateau dynamics without sigma-restoration.</p>
 
-<p>This is the <strong>single-node J-suppression theorem</strong>: in a system where E[s] accumulates through multiple J channels with a shared sigma-limited clearance capacity, suppressing one J channel does not reduce net E[s] accumulation unless sigma is simultaneously restored or the suppressed channel accounts for a dominant fraction of total J. For aged healthy humans, no single metabolic pathway meets this dominance threshold. For mice with disproportionate mTOR J-contribution, rapamycin does meet it. The cross-species translational failure is predicted by the framework; it is not a surprise to be explained post-hoc.</p>
+<p><strong>Tier 4 adverse effects should reflect J re-routing:</strong> blocking one metabolic J channel forces E[s] through alternative channels. Rapamycin adverse effects (elevated glucose, infection susceptibility, impaired healing) are exactly J re-routing into metabolic, immune, and tissue-repair channels.</p>
 
-<p>The adverse effects confirm the J re-routing prediction: elevated HbA1c (metabolic channel compensation), infection susceptibility (immune channel compensation), impaired healing (tissue-repair channel compensation). These are not side effects to be optimized away by dosing. They are the system-level consequence of blocking one channel while the pressure finds others.</p>
+<p><strong>Protocol order matters:</strong> senolytics (Tier 2) before HRV training (Tier 1) should outperform HRV training before senolytics, because high J-source load attenuates sigma-restoration efficiency. Test: randomize DQ + HRV training to simultaneous vs. sequential protocols.</p>
 
-<p>The framework also predicts where rapamycin should work: in individuals with HIGH baseline mTOR activity markers (high IGF-1, high insulin, metabolic syndrome). PEARL enrolled healthy adults &mdash; the wrong population for a J_mTOR suppression strategy.</p>
+<div class="killswitch"><strong>Breakpoints:</strong> (1) If Tier 4 monotherapy produces large biological age reversal (> 3 years on GrimAge) in an RCT, the hierarchy is violated. (2) If Tier 1 + Tier 2 is NOT synergistic (purely additive or subadditive), the cross-tier coupling prediction fails. (3) If adverse effect profiles from Tier 4 don't follow J re-routing patterns, the re-routing mechanism is falsified.</div>
 
-<h2 id="nad">NAD+ supplementation: the other predicted null</h2>
+<h2 id="pearl">The PEARL trial null result as UAF confirmation (K.3)</h2>
 
-<p>Nicotinamide riboside (NR) and nicotinamide mononucleotide (NMN) supplementation trials have been completed across multiple studies. The framework predicted null on major endpoints before the results published. The reasoning: NAD+ precursors boost one energy pathway (mitochondrial NAD+/NADH ratio) without addressing the connective-tissue and autonomic conditions that determine whether that additional energy gets used for repair.</p>
+<h3 id="j-suppression">The single-node J-suppression theorem</h3>
 
-<p>In framework terms: NAD+ supplementation increases one component of the cell's energy budget, but energy availability is not the bottleneck. The bottleneck is sigma &mdash; the system's capacity to direct energy toward repair rather than continuing to run on its existing (possibly dysfunctional) metabolic loops. Giving a system with suppressed sigma more energy is like giving a malfunctioning factory more electricity. The electricity is not the problem. The control system is the problem.</p>
+<p>The PEARL trial: 48-week RCT, n=114, double-blind, placebo-controlled. 5mg/week and 10mg/week compounded rapamycin in healthy normative-aging adults. Result: no significant changes in longevity-relevant endpoints. Adverse effects: elevated HbA1c, reduced RBC, carbon dioxide, and calcium variations. The standard explanation: humans differ from mice, dose optimization needed, longer trials required.</p>
 
-<p>Every major NAD+ trial came back null on the endpoints that mattered: blood pressure, body weight, resting energy expenditure, muscle mitochondrial function, and cognition &mdash; all null despite confirmed NAD+ elevation (Nature Metabolism 2025). The specificity of this null is what makes it a framework confirmation rather than a dosing problem. NAD+ levels went up. Nothing downstream improved. The bottleneck is not energy availability. It is sigma. The framework's prediction was documented before the results published.</p>
+<p>The UAF explanation is more precise and more predictive.</p>
 
-<h2 id="calerie">The CALERIE dissociation: rate vs. level</h2>
+<p>mTOR inhibition modulates the nutrient-sensing J channel. It reduces anabolic signaling noise from mTORC1 hyperactivation. In mice, this channel accounts for a disproportionate fraction of the J budget because mouse metabolic rate is approximately 7x human per unit mass (correspondingly higher ROS production and mTOR pathway activity). In healthy middle-aged humans, mTOR hyperactivation is a smaller fraction of the total J budget. Sigma degradation, SASP cytokine load, circadian disruption, dysbiosis, and social-friction stress dominate.</p>
 
-<p>The CALERIE phase 2 trial (approximately 200 participants, 2-year moderate caloric restriction averaging 11.9% below baseline) produced a critical dissociation that the standard model struggles to explain but the framework handles cleanly:</p>
+<p>This is the single-node J-suppression theorem: <strong>in a system where E[s] accumulates through multiple J channels with a shared sigma-limited clearance capacity, suppressing one J channel does not reduce net E[s] accumulation unless sigma is simultaneously restored or the suppressed channel accounts for more than sigma_threshold fraction of total J.</strong></p>
 
-<ul>
-<li><strong>DunedinPACE</strong> (pace of aging) was slowed significantly.</li>
-<li><strong>GrimAge/Horvath</strong> (accumulated biological age) did not change significantly.</li>
-<li>Telomere length: mixed results.</li>
-<li>Senescence biomarkers (p21, p16 in adipose): significantly reduced.</li>
-</ul>
+<p>For aged healthy humans, no single metabolic pathway meets this threshold. For mice with disproportionate mTOR J-contribution, rapamycin does meet it. The cross-species translational failure is predicted by UAF. It is not a surprise to be explained post-hoc but a consequence of the framework's multi-channel J accounting.</p>
 
-<p>The UAF explanation: DunedinPACE measures aging <em>rate</em> (how fast epigenetic patterns are changing &mdash; analogous to &part;&#x209C;E[s]). GrimAge measures accumulated biological age (where you sit on the trajectory &mdash; analogous to E[s] itself). CR reduces J-input (caloric J-noise production) without restoring sigma or clearing existing E[s] load. Therefore:</p>
+<p>The adverse effects confirm the mechanism: elevated glucose (metabolic J re-routing), infection susceptibility (immune J re-routing), impaired healing (tissue-repair J re-routing). Blocking one channel forces distortion through adjacent channels. The re-routing is the signature.</p>
 
-<ul>
-<li>CR slows &part;&#x209C;E[s] &rarr; DunedinPACE improves. Confirmed.</li>
-<li>CR does not reduce accumulated E[s] &rarr; GrimAge unchanged. Confirmed.</li>
-<li>Clearance of accumulated biological age requires sigma restoration (Tier 1) plus J-source elimination (Tier 2), not merely J-input reduction (Tier 3). CR is a Tier 3 intervention. It slows the clock but does not reverse it.</li>
-</ul>
+<h3 id="pearl-predictions">Predictions from the PEARL null</h3>
 
-<p>The practical implication: to reverse accumulated biological age (GrimAge decrease, not just DunedinPACE slowing), you need Tier 1 + Tier 2. Senolytics (remove existing J-sources) plus HRV coherence training (restore sigma) should produce GrimAge reversal. CR can be added as an adjunct to slow new accumulation during the active protocol.</p>
+<p><strong>Rapamycin + HRV coherence training should outperform rapamycin alone</strong> by a factor exceeding simple addition (synergy signature). sigma-restoration unlocks the clearance capacity that rapamycin's J-suppression cannot utilize alone.</p>
 
-<h2 id="hrv-sigma">HRV is sigma (this is not a metaphor &mdash; it is a measurement claim)</h2>
+<p><strong>Rapamycin should show stronger effects in high-mTOR populations</strong> (high IGF-1, high insulin, metabolic syndrome) than in healthy normative-aging individuals. PEARL enrolled the wrong population for a J_mTOR-suppression strategy.</p>
 
-<p>&sigma;(x,t) in the canonical equation is the systemic restoration rate: how efficiently the organism returns s toward s&#x2080; after perturbation. The autonomic nervous system, via parasympathetic (vagal) tone, IS this restoration mechanism at the cardiac-systemic scale. SDNN and HF-HRV measure vagal tone directly. When sigma degrades over the aging trajectory, SDNN falls. When SDNN falls below threshold, the organism operates with insufficient sigma to maintain homeostasis.</p>
+<p><strong>Mouse-to-human translation failure should be predictable</strong> from the J_mTOR / J_total ratio in each species. Species with high metabolic rate and correspondingly high J_mTOR fraction should respond. Species with distributed J budgets should not.</p>
 
-<p>The numbers are concrete:</p>
+<p><strong>Adverse effects should be present even in responders</strong> and should scale with dose. J re-routing is a system-level consequence, not a side effect to be optimized away.</p>
 
-<ul>
-<li><strong>SDNN &lt; 70ms:</strong> 1.5&ndash;2.3x elevated risk of major adverse cardiovascular events.</li>
-<li><strong>SDNN &lt; 19ms in centenarians:</strong> associated with mortality within 1 year.</li>
-<li><strong>Pooled effect size for HRV as mortality predictor:</strong> ES = 1.99 (95% CI: 1.36&ndash;2.61, p &lt; 0.001) from a 2025 systematic review and meta-analysis.</li>
-</ul>
+<h2 id="hrv-sigma">HRV as the primary sigma proxy (K.4)</h2>
 
-<p>The critical finding: <strong>phenotypic HRV predicts mortality, but genetically-predicted HRV does not.</strong> A 2023 Nature Communications Biology study showed that the mortality-relevant variation in HRV is constituted by the organism's ongoing dynamic state (exposome, behavior, accumulated phase debt), not by genetic substrate. Sigma is a state variable. It is modifiable. Interventions can move it.</p>
+<h3 id="hrv-mortality">HRV mortality prediction: ES = 1.99</h3>
 
-<p>Centenarian data add another layer: in individuals living past 95, the standard age-related HRV decline shows an 8th-decade reversal &mdash; HRV increases relative to the preceding decades' trajectory before exceptional longevity. This is a critical finding: <strong>monitor SDNN slope, not just SDNN absolute. Trajectory slope (&part;&#x209C;&sigma; &gt; 0) predicts exceptional longevity more than absolute level.</strong> A person with moderate SDNN but a rising slope is on a better trajectory than a person with high SDNN and a declining slope. Successful longevity protocols should produce <strong>increasing sigma over time</strong> (HRV slope positive), not merely sustained sigma. Monitoring delta-SDNN per month is therefore more informative than absolute SDNN. This slope reversal in centenarians is direct evidence that sigma is trainable and that the training effect can overcome the default age-related decline.</p>
+<p>A 2025 systematic review and meta-analysis of HRV as mortality predictor: pooled effect size ES = 1.99 (95% CI: 1.36-2.61, p &lt; 0.001) across healthy and patient populations. Time-domain measures (SDNN) showed strongest prediction. Specific thresholds: SDNN &lt; 70ms associated with 1.5-2.3x elevated major adverse cardiovascular event risk. SDNN &lt; 19ms in centenarians associated with early mortality (&lt; 1 year).</p>
 
-<p>The molecular mechanism connecting HRV to inflammaging is the cholinergic anti-inflammatory pathway. Vagal efferents directly suppress macrophage TNF-&alpha; release via the &alpha;7-nAChR receptor. Parasympathetic dominance tonically suppresses NF-&kappa;B, IL-6, and CRP. Low HRV removes this tonic suppression, allowing NLRP3 inflammasome activation. HRV training is therefore simultaneously an anti-inflammaging intervention through this specific molecular pathway.</p>
+<p>The mechanistic description in the literature: "natural exhaustion of allostatic systems related to age." That is the UAF sigma(x,t) degradation curve stated in plain language.</p>
 
-<h2 id="protocol">The UAF longevity protocol</h2>
+<p>HRV is sigma. This is not a metaphor. It is a measurement claim. sigma(x,t) is the systemic restoration rate: how efficiently the organism returns s toward s_0 after perturbation. The autonomic nervous system, via parasympathetic (vagal) tone, IS this restoration mechanism at the cardiac-systemic scale. SDNN and HF-HRV measure vagal tone directly. When sigma degrades, SDNN falls. When SDNN falls below threshold, the organism operates with insufficient sigma to maintain homeostasis.</p>
 
-<p>This protocol follows mechanistic ordering rather than empirical composite. The phases are sequenced because order matters: senolytics before HRV training outperforms the reverse, because high J-source load attenuates sigma-restoration efficiency.</p>
+<p>The mortality prediction is not a statistical correlation. It is a readout of the sigma-clearance system falling below the minimum threshold required to counteract ambient J accumulation.</p>
 
-<p><strong>Phase 1 (Months 1-3): J-source elimination.</strong> DQ senolytic protocol (dasatinib 100mg + quercetin 1250mg, 2 days per 2-week cycle for 12 weeks). Monitor: SASP cytokine panel at baseline and 12 weeks. Concurrent: gut microbiome assessment and dysbiosis correction (high-fiber, fermented food protocol or targeted probiotic for specific taxa deficits).</p>
+<h3 id="phenotypic">Phenotypic vs. genetic HRV: the critical finding</h3>
 
-<p><strong>Phase 2 (Months 3-9): Sigma restoration.</strong> Resonance frequency breathing (0.09 Hz, 20 min/day) via biofeedback device. Sleep architecture optimization (consistent sleep/wake, dark exposure, temperature). Social coherence investment (measurable: relationship quality indices, social friction reduction). Monitor: monthly SDNN, 24-hour HRV at baseline, 3, 6, 9 months.</p>
+<p>A 2023 Nature Communications Biology finding: phenotypic HRV predicted all-cause mortality over 7-year follow-up, but genetically-predicted HRV (derived via polygenic score) did NOT.</p>
+
+<p>This is a direct empirical answer to the anticipated critique that HRV merely reflects fixed genetic health. The mortality-relevant variation in HRV is constituted by the organism's ongoing dynamic state (exposome, behavior, accumulated phase debt), not by genetic substrate. sigma(x,t) is empirically confirmed as a state variable rather than a fixed parameter. It is modifiable. Not determined at birth.</p>
+
+<p>This is the single most important finding for the sigma-restoration protocol claim: interventions can actually move sigma because sigma is not genetic.</p>
+
+<h3 id="cholinergic">The cholinergic anti-inflammatory bridge</h3>
+
+<p>The mechanism by which low HRV is co-constitutive of the inflammaging hallmark was formally established in 2024 (Ageing Research Reviews). The cholinergic anti-inflammatory pathway: vagal efferents directly suppress macrophage TNF-alpha release via the alpha-7 nicotinic acetylcholine receptor (alpha7-nAChR). Parasympathetic dominance (high HRV) tonically suppresses NF-kB activation, IL-6, and CRP systemically. Sympathetic dominance (low HRV) removes this suppression, allowing NLRP3 inflammasome activation and the inflammaging cascade.</p>
+
+<p>This is not a downstream correlation. Low HRV is causally upstream of chronic systemic inflammation, not a marker of it. The implication: HRV training (sigma-restoration Tier 1) directly addresses the inflammaging hallmark through the vagal-cholinergic pathway, without any hallmark-specific drug. sigma-restoration is simultaneously an anti-inflammaging intervention. Two UAF mechanisms converge on a single molecular pathway.</p>
+
+<h3 id="centenarian">Centenarian trajectory reversal</h3>
+
+<p>In individuals living past 95, the standard age-related HRV decline shows an 8th-decade reversal: HRV increases relative to the preceding decade's trajectory before exceptional longevity. The trajectory slope, not merely the absolute level, is the operative variable for extreme longevity.</p>
+
+<p>In UAF terms: partial_t sigma > 0 at advanced age is what predicts exceptional lifespan, not sigma > threshold_value. Successful longevity protocols should produce increasing sigma (HRV slope positive) not merely sustained sigma. Monitoring delta-SDNN per month is more informative than absolute SDNN for predicting longevity trajectory.</p>
+
+<h2 id="calerie">The CALERIE dissociation and the rate-vs-level distinction (K.5)</h2>
+
+<h3 id="rate-level">Rate vs. level</h3>
+
+<p>The CALERIE phase 2 trial (n approximately 200, 2-year moderate CR averaging 11.9% below baseline) produced a critical dissociation: DunedinPACE (pace of aging) was slowed significantly, but biological age estimates (Horvath, GrimAge) did not change significantly. Telomere results mixed. Senescence biomarkers (p21, p16) significantly reduced. Cardiometabolic markers improved.</p>
+
+<p>The DunedinPACE vs. GrimAge dissociation maps directly to the UAF distinction between partial_t E[s] (rate of accumulation) and E[s] itself (accumulated load). DunedinPACE measures aging rate. GrimAge measures accumulated biological age. CR reduces J-input (caloric J-noise production) without restoring sigma or clearing existing E[s] load.</p>
+
+<p>The prediction: CR slows partial_t E[s] (DunedinPACE improves) but does not reduce accumulated E[s] (GrimAge unchanged) because clearance requires sigma-restoration, not merely J-reduction. CALERIE confirmed exactly this.</p>
+
+<p>The practical implication: CR is a Tier 3 intervention (J-input reduction) that slows the aging clock but does not reverse it. Reversing accumulated biological age requires Tier 1 (sigma-restoration) plus Tier 2 (J-source elimination).</p>
+
+<h3 id="protocol">Protocol synthesis (K.1-K.5)</h3>
+
+<p>From the mechanistic hierarchy, the UAF longevity protocol follows mechanistic order:</p>
+
+<p><strong>Phase 1 (Months 1-3): J-source elimination.</strong> DQ senolytic protocol (Dasatinib 100mg + Quercetin 1250mg, 2 days per 2-week cycle for 12 weeks per LANCET eBioMedicine 2025 pilot). Monitor: SASP cytokine panel at baseline and 12 weeks. Concurrent: gut microbiome assessment and dysbiosis correction.</p>
+
+<p><strong>Phase 2 (Months 3-9): sigma-restoration.</strong> Resonance frequency breathing (0.09 Hz, 20min/day) via biofeedback device. Sleep architecture optimization. Social coherence investment. Monitor: monthly SDNN, 24-hour HRV at baseline, 3, 6, 9 months.</p>
 
 <p><strong>Phase 3 (Ongoing): J-input reduction adjunct.</strong> Moderate CR or time-restricted eating (16:8 minimum). Protein cycling. Biomarker tracking: quarterly DunedinPACE, biannual GrimAge.</p>
 
-<p><strong>Phase 4 (18-month intervals): Repeat senolytics</strong> based on SASP re-accumulation trajectory. mTOR modulation (if any) only as adjunct to established sigma restoration, and only in populations with documented elevated mTOR activity.</p>
+<p><strong>Phase 4: Repeat senolytics at 18-month intervals</strong> based on SASP re-accumulation trajectory. mTOR modulation (if any) only as adjunct to established sigma-restoration, and only in populations with documented elevated mTOR activity.</p>
 
-<p>The critical difference from Bryan Johnson's Blueprint approach: Blueprint is heavy on Tier 3-4 interventions (supplements, pharmacological agents, caloric optimization) and relatively light on Tier 1 (systematic sigma restoration through coherence training). The framework predicts this will produce DunedinPACE slowing (which Blueprint data confirms) but will plateau on GrimAge reversal because sigma is not being systematically trained. The ceiling is sigma, not supplements.</p>
-
-<h2 id="coherence-proxies">Measurable coherence proxies</h2>
-
-<p>The practical state variables for tracking sigma and coherence during any longevity intervention:</p>
+<h3 id="calerie-predictions">Standard model vs. UAF predictions</h3>
 
 <table>
-<tr><th>Symbol</th><th>Proxy</th><th>How to measure</th><th>Target</th></tr>
-<tr><td><code>c(t)</code></td><td>Coherence</td><td>HRV coherence ratio (0.04-0.15 Hz / total)</td><td>&ge; 0.5 increase from baseline</td></tr>
-<tr><td><code>a(t)</code></td><td>Arousal</td><td>GSR, resting heart rate, breath variability</td><td>Stable, not volatile</td></tr>
-<tr><td><code>m(t)</code></td><td>Muscle tone</td><td>EMG, jaw/neck tension, posture score</td><td>Low chronic tension</td></tr>
-<tr><td><code>r(t)</code></td><td>Recovery</td><td>Sleep efficiency, resting HR, subjective fatigue</td><td>Improving trend</td></tr>
-<tr><td><code>p(t)</code></td><td>Protocol adherence</td><td>Binary + intensity</td><td>Consistent</td></tr>
+<tr><th>Question</th><th>Standard model predicts</th><th>UAF predicts</th></tr>
+<tr><td>Combining Tier 3+4 agents</td><td>Additive benefits</td><td>Additive at best. Same mechanism layer.</td></tr>
+<tr><td>Adding HRV training to "longevity cocktail"</td><td>Marginal improvement</td><td>Synergistic (cross-tier). The critical missing component.</td></tr>
+<tr><td>Why CR works</td><td>mTOR/IGF-1 reduction</td><td>J-input reduction, but the HRV improvement during CR is the actual sigma-mediated component</td></tr>
+<tr><td>Bed-rest CR (no ambulatory HRV benefit)</td><td>Same benefit as normal CR</td><td>Attenuated DunedinPACE benefit because HRV improvement is the mediator</td></tr>
+<tr><td>Senolytics (DQ) effect scaling</td><td>Proportional to senescence burden</td><td>Proportional to sigma times senescence burden (high-sigma individuals clear debris faster)</td></tr>
+<tr><td>Aging rate within individuals</td><td>Roughly uniform once confounders controlled</td><td>Oscillates with HRV. High-HRV periods = slower aging. Low-HRV periods = faster aging.</td></tr>
 </table>
 
-<p>A simple coherence score for monitoring: <code>c(t) = clip(&rho;(&phi;<sub>HR</sub>(t), &phi;<sub>resp</sub>(t)), 0, 1)</code>, where &rho; is a phase-locking measure between heart-rate oscillations and respiration. This captures the essential signal: are heart and lungs synchronized?</p>
+<div class="killswitch"><strong>Breakpoints:</strong> (1) If senolytics produce GrimAge reversal WITHOUT HRV improvement &#8594; sigma-restoration not required. Major framework revision. (2) If DunedinPACE and HRV show near-zero longitudinal correlation within individuals &#8594; sigma not modulating aging rate in real time. (3) If bed-rest CR replicates the full CR-DunedinPACE effect &#8594; HRV is not a mediator. Tier 1 vs. Tier 3 distinction collapses. (4) If 4-arm trial (cocktail vs. cocktail+HRV vs. HRV vs. control) shows cocktail+HRV is NOT superadditive &#8594; cross-tier synergy prediction fails.</div>
 
-<p>For longitudinal sigma tracking during any longevity intervention: monthly SDNN measurement. If an intervention does not improve SDNN within 12 weeks, reclassify it from Tier 1 to Tier 3-4. It may still have value, but it is not restoring sigma.</p>
+<h2 id="geomagnetic">Geomagnetic modulation of retrocausal sensitivity (Appendix J.3)</h2>
 
-<h2 id="predictions">Discriminating predictions vs. the standard model</h2>
+<p>McCraty et al. (2017): strong inverse correlations (r = -0.82) between HRV coherence and solar wind intensity. Geomagnetic disturbance suppresses autonomic coherence. Independently, Radin (1997, 2004): enhanced presentiment effect sizes during periods of low geomagnetic activity. No existing paper has connected these through a unified dynamical framework.</p>
 
-<table>
-<tr><th>Standard Model Predicts</th><th>UAF Predicts</th><th>Test</th></tr>
-<tr><td>Each hallmark intervention is roughly independent; combine additively</td><td>Sigma restoration is multiplicatively upstream; Tier 1 + Tier 2 synergistic for GrimAge reversal; Tier 3-4 without Tier 1 produces DunedinPACE improvement only</td><td>4-arm trial: cocktail vs. cocktail+HRV vs. HRV vs. control</td></tr>
-<tr><td>Rapamycin + NAD+ + metformin combination should show additive benefits</td><td>Same-tier combination is additive at best; adding HRV training adds a synergistic cross-tier component</td><td>Same 4-arm trial, measure GrimAge</td></tr>
-<tr><td>CR works because mTOR/IGF-1 reduction</td><td>CR works via J-input reduction, but HRV improvement during CR is the sigma-mediated component; removing HRV improvement from CR (bed-rest protocol) should attenuate DunedinPACE benefit</td><td>Bed-rest CR vs. ambulatory CR comparison</td></tr>
-<tr><td>Senolytic effects proportional to senescence burden alone</td><td>DQ effects proportional to sigma &times; senescence burden (high sigma individuals clear debris faster post-senolytics)</td><td>Stratify DQ trials by baseline HRV</td></tr>
-<tr><td>Aging rate roughly uniform once confounders controlled</td><td>Aging rate oscillates with HRV: high-HRV periods = slower aging, low-HRV periods = faster aging</td><td>Continuous wearable HRV + quarterly DunedinPACE</td></tr>
-<tr><td>Biological age variance explained primarily by genetics</td><td>Sigma-proxy composite explains biological age variance better than any single hallmark biomarker or genetic risk score</td><td>Large biobank dataset regression</td></tr>
-</table>
+<p>UAF provides the missing link. The retrocausal kernel w(t,tau) = exp(-(tau-t)/xi) governs backward-propagating tension strength. The decay length xi determines how far into the future the organism can "sense" impending coherence threats. But xi is not constant. It depends on the local noise floor. Geomagnetic disturbance injects broadband EM noise (the eta term) that raises the threshold for detecting retrocausal signals. When the geomagnetic field is quiet, eta drops, effective xi increases, presentiment sensitivity rises.</p>
 
-<p>Additional specific predictions:</p>
+<p>Quantitative prediction: xi_eff is proportional to 1/sqrt(eta_geo), where eta_geo is geomagnetic noise power spectral density.</p>
 
+<p><strong>Predictions:</strong></p>
 <ul>
-<li><strong>HRV improvement (&Delta;-SDNN &gt; 15ms over 12 weeks) should predict biological age improvement (&Delta;-DunedinPACE &lt; 0) with correlation r &gt; 0.4.</strong> If near zero, HRV is not mediating biological age improvement and the sigma-proxy claim is weakened.</li>
-<li><strong>Sigma degradation should temporally precede hallmark manifestation.</strong> Individuals with low HRV at age 40 should show accelerated hallmark onset by 50, controlling for genetics.</li>
-<li><strong>Rapamycin combined with HRV coherence training should outperform rapamycin alone by more than simple addition</strong> (synergy signature), because sigma restoration unlocks clearance capacity that rapamycin's J-suppression cannot utilize alone.</li>
-<li><strong>Rapamycin adverse effect profiles (glucose, immune, healing disruption) should scale with dose and be present even in responders,</strong> because J re-routing is a system-level consequence, not a side effect to be optimized away.</li>
+<li>P-J3.1: Presentiment effect sizes should correlate inversely with concurrent Kp index, r &lt;= -0.3 across sessions. Testable by re-analyzing existing presentiment datasets with geomagnetic co-registration.</li>
+<li>P-J3.2: The interaction should be multiplicative: high-coherence individuals during quiet geomagnetic periods should show presentiment effects 3-5x larger than low-coherence individuals during storms.</li>
+<li>P-J3.3: Faraday-cage shielding should enhance presentiment in magnetically noisy environments but show no enhancement during already-quiet periods.</li>
 </ul>
 
-<h2 id="kill-switches">Kill switches for the longevity module</h2>
+<div class="killswitch"><strong>Breakpoints:</strong> No Kp correlation across >= 500 sessions &#8594; noise-modulation model wrong. Faraday shielding enhances uniformly &#8594; not eta_geo-mediated. Presentiment fails pre-registered replication &#8594; entire retrocausal module unfounded.</div>
 
-<div class="killswitch">
-<strong>Sigma-generator model:</strong> If PCA of hallmark biomarkers shows no dominant factor (all eigenvalues roughly equal, no PC1 loading on sigma proxies) &rarr; the hallmarks are genuinely parallel, not hierarchically subordinate. The sigma-as-upstream-cause model loses its foundation.
+<h2 id="allostatic">Allostatic load as retrocausal debt amplifier (Appendix J.4)</h2>
+
+<p>Allostatic load (AL) maps directly to E[s]. Higher E[s] means larger potential Delta_E[tau] available for retrocausal propagation (more "debt" that future states can resolve or amplify). But higher E[s] also means higher eta_bio (chronic stress suppresses HRV coherence, raising the biological noise floor). These two effects compete.</p>
+
+<p>The non-obvious prediction: <strong>retrocausal sensitivity should follow an inverted-U curve with respect to allostatic load.</strong></p>
+
+<ul>
+<li><strong>Low AL (low E[s]):</strong> Little distortion energy. Small Delta_E[tau]. Low noise floor. Net: weak presentiment (small signal, good detection, but not much to detect).</li>
+<li><strong>Moderate AL:</strong> Substantial E[s]. Large Delta_E[tau]. eta_bio hasn't overwhelmed the signal. Net: peak presentiment sensitivity.</li>
+<li><strong>High AL:</strong> Maximal E[s], but eta_bio dominates. Organism too noisy to detect retrocausal signal despite massive available Delta_E[tau]. Net: suppressed presentiment.</li>
+</ul>
+
+<p>No existing model predicts this inverted-U relationship.</p>
+
+<p><strong>Predictions:</strong></p>
+<ul>
+<li>P-J4.1: Presentiment effect size vs. AL index should show inverted-U with peak at 40th-60th percentile. Quadratic models should improve R^2 by >= 0.10 over linear.</li>
+<li>P-J4.2: Meditation practitioners (who reduce eta_bio without reducing E[s]) should shift the inverted-U rightward. Maintaining presentiment sensitivity at higher AL because noise floor is artificially suppressed.</li>
+<li>P-J4.3: The three-way interaction (AL x HRV coherence x geomagnetic quietude) should explain >= 25% of variance in presentiment effect size. No existing model predicts this specific three-way interaction.</li>
+</ul>
+
+<div class="killswitch"><strong>Breakpoints:</strong> Monotonic relationship (no inversion) &#8594; competing-effects model wrong. Meditation shifts curve leftward &#8594; eta_bio mechanism misidentified. Three-way interaction explains &lt; 5% of variance &#8594; model adds negligible predictive value.</div>
+
+<h2 id="sqrt-n">sqrt-N scaling social friction prediction (Appendix J.5)</h2>
+
+<p>Section 2.3.1 introduces distributed neutralization: extractive-basin agents collectively suppress high-sigma individuals whose coherence threatens the extractive equilibrium. Swarm intelligence research (Couzin et al., 2005; Berdahl et al., 2013) establishes that collective behavioral transitions follow sqrt-N scaling: the critical minority to redirect a swarm scales as the square root of group size.</p>
+
+<p>UAF synthesis: if distributed neutralization operates through the same weak-coupling amplification as swarm redirection, then the number of active neutralizing agents recruited against a high-sigma individual should scale as sqrt(N_group).</p>
+
+<p>The distinguishing prediction: social psychology predicts conformity pressure scales linearly (or saturates per Asch at approximately 4 confederates). UAF predicts sqrt-N scaling with no saturation ceiling within biologically realistic group sizes.</p>
+
+<p><strong>Predictions:</strong></p>
+<ul>
+<li>P-J5.1: Friction event rate against whistleblowers/reformers should scale as sqrt(N_org). Log-log regression slope = 0.5 +/- 0.1 (UAF) vs. 1.0 +/- 0.1 (linear model).</li>
+<li>P-J5.2: Friction intensity (severity per event) should be independent of group size. Only frequency scales. This distinguishes weak-coupling amplification (UAF) from mob dynamics (which predicts escalating severity).</li>
+<li>P-J5.3: Organizations transitioning from extractive to regenerative culture should show discontinuous (not gradual) friction reduction. Phase transition when the group crosses the All-basin separatrix.</li>
+</ul>
+
+<div class="killswitch"><strong>Breakpoints:</strong> Linear scaling &#8594; standard social pressure suffices. Severity escalates with group size &#8594; mob dynamics, not weak-coupling. Gradual transition &#8594; phase-transition model misapplied.</div>
+
+<h2 id="cross-scale">Cross-scale coherence intervention: HRV training to tumor microenvironment (Appendix J.6)</h2>
+
+<p>Clinical trial NCT06694715 investigates HRV biofeedback in cancer survivors. Standard rationale: stress reduction. UAF predicts a radically different mechanism:</p>
+
+<p>HRV coherence training restores toroidal biofield phase-lock &#8594; restored coherence propagates through fascial matrix via piezoelectric coupling &#8594; fascial coherence normalizes local ECM stiffness &#8594; reduced stiffness deactivates mechanotransduction oncogenic pathways (YAP/TAZ, integrin-FAK) &#8594; tumor microenvironment shifts from pro-glycolytic back toward pro-oxidative &#8594; measurable tumor changes from an intervention that never directly touched the tumor.</p>
+
+<p>This chain links four UAF sections into a single causal cascade and predicts specific endpoints distinguishing the UAF mechanism from the standard stress-reduction rationale. Stress-reduction predicts only systemic immune improvement (cortisol, NK cell counts). UAF predicts local tumor microenvironment changes at specific anatomical sites determined by fascial connectivity.</p>
+
+<p><strong>Predictions:</strong></p>
+<ul>
+<li>P-J6.1: HRV training should produce intratumoral pH increases (>= 0.1 units) and pO2 increases (>= 5 mmHg) within 12 weeks, without chemo/radiation changes. Stress-reduction predicts no such local changes.</li>
+<li>P-J6.2: Changes should be anatomically specific. Strongest at sites with direct fascial connectivity to the thorax. Breast, lung, mediastinal tumors > distal extremity tumors.</li>
+<li>P-J6.3: Dose-dependent on coherence achievement, not practice time. Patients achieving high coherence but practicing less should outperform patients practicing more at lower coherence. Distinguishes toroidal mechanism (quality) from stress-reduction (quantity).</li>
+<li>P-J6.4: YAP/TAZ nuclear localization ratio should decrease in post-intervention biopsies from fascially connected sites. Standard stress-reduction predicts no change in this marker.</li>
+</ul>
+
+<div class="killswitch"><strong>Breakpoints:</strong> (1) Systemic immune improvement but no local tumor changes &#8594; standard stress-reduction sufficient, fascial pathway not operative. (2) Changes with no anatomical specificity &#8594; fascial propagation wrong, systemic (endocrine/neural) pathways mediate. (3) Practice time predicts better than coherence quality &#8594; toroidal phase-lock not active ingredient. (4) YAP/TAZ unchanged &#8594; mechanotransduction link broken.</div>
+
+<h2 id="prediction-web">The interlocking prediction web (J.7 + K.6)</h2>
+
+<p>The six derivations in Appendices J and K are not independent. They form an interlocking prediction web where confirming any one increases the posterior probability of the others.</p>
+
+<p><strong>J.1 (cancer-addiction isomorphism) + J.2 (fascial cancer prediction)</strong> converge on the same sigma-suppression mechanism from different entry points. J.1 from the neural/behavioral scale. J.2 from the tissue/mechanical scale.</p>
+
+<p><strong>J.3 (geomagnetic modulation) + J.4 (allostatic load amplifier)</strong> jointly determine the boundary conditions for J.6's coherence intervention. The intervention works best during geomagnetically quiet periods in patients with moderate (not extreme) allostatic load.</p>
+
+<p><strong>J.5 (sqrt-N social friction)</strong> predicts the social obstacles that will impede adoption of J.6's intervention protocol.</p>
+
+<p><strong>K.1 (aging as E[s] ratchet) + I.1 (cancer as coherence loss):</strong> Both describe E[s] accumulation past a basin-shift threshold. One at organism scale, one at cellular scale. Same attractor landscape, different scale.</p>
+
+<p><strong>K.2 (sigma-restoration hierarchy) + J.6 (cross-scale coherence):</strong> J.6 predicts HRV training produces fascially-specific tumor changes. K.2 places this in context: sigma-restoration is upstream of all hallmarks including tumor microenvironment regulation.</p>
+
+<p><strong>K.3 (PEARL null) + J.1 (cancer-addiction isomorphism):</strong> In both cases, single-node J-suppression without sigma-restoration fails to resolve the attractor-shift at the system level.</p>
+
+<p><strong>J.4 (allostatic load) + K.4 (HRV as sigma):</strong> Allostatic load is the chronic sigma-degradation state that simultaneously amplifies E[s] and attenuates the retrocausal temporal integration window.</p>
+
+<p>The synthesis prediction: <strong>any intervention that achieves genuine biological age reversal (GrimAge decrease, not merely DunedinPACE slowing) will, on examination, be found to have restored sigma as a necessary component of its mechanism.</strong> This converts GrimAge reversal from an endpoint to a test of sigma-restoration necessity. Every future longevity trial reporting GrimAge reversal should be analyzed for whether sigma proxies improved as a mediating variable. If a trial achieves GrimAge reversal without sigma improvement, UAF owes an explanation. If every trial achieving GrimAge reversal shows sigma improvement, UAF is confirmed at the Appendix K prediction level.</p>
+
+<p>This is a tractable empirical research program, not a philosophical claim.</p>
+
+</div>
 </div>
 
-<div class="killswitch">
-<strong>Sigma temporal precedence:</strong> If sigma proxies do NOT temporally precede hallmark onset in longitudinal studies (sigma degrades after hallmarks appear, not before) &rarr; the causal direction is reversed and the model requires substantial revision.
-</div>
-
-<div class="killswitch">
-<strong>PEARL extension:</strong> If a longer-duration rapamycin trial (&gt;3 years) in healthy humans shows significant biological age reversal (&gt;3 years on GrimAge) &rarr; the single-node J-suppression theorem needs refinement. Either the timescale assumption was wrong or the mTOR J-fraction was underestimated.
-</div>
-
-<div class="killswitch">
-<strong>Cross-tier synergy:</strong> If the 4-arm trial (cocktail vs. cocktail+HRV vs. HRV vs. control) shows cocktail+HRV is NOT superadditive compared to cocktail alone &rarr; the cross-tier synergy prediction fails. This eliminates the sigma-restoration hierarchy's key distinguishing claim.
-</div>
-
-<div class="killswitch">
-<strong>HRV-DunedinPACE link:</strong> If &Delta;-SDNN and &Delta;-DunedinPACE show near-zero correlation in a well-powered intervention trial &rarr; HRV is not causally upstream of biological aging rate. It remains a predictor but the causal sigma-restoration mechanism is wrong.
-</div>
-
-<div class="killswitch">
-<strong>CALERIE sigma mediation:</strong> If bed-rest CR (no ambulatory HRV benefit) replicates the full CALERIE DunedinPACE effect &rarr; J-input reduction alone is sufficient for pace-of-aging reduction and HRV is not a mediator. The Tier 1 vs. Tier 3 distinction collapses for this outcome.
-</div>
-
-<div class="killswitch">
-<strong>Senolytics independence:</strong> If senolytics produce GrimAge reversal WITHOUT HRV improvement (purely through J-source elimination without sigma change) &rarr; sigma restoration is not required for biological age reversal. E[s] clearance happens through other mechanisms. This would be a major framework revision.
-</div>
-
-<p>Appendix K connects to the rest of the UAF prediction web: K.1 (aging as E[s] ratchet) ties to Appendix I (cancer as coherence loss) because both describe E[s] accumulation past a basin-shift threshold at different scales. K.3 (PEARL null) ties to J.1 (<a href="uaf-cancer-addiction.html">cancer-addiction isomorphism</a>) because in both cases, single-node J-suppression without sigma restoration fails. K.4 (HRV as sigma proxy) feeds into the <a href="uaf-consciousness.html">consciousness module</a> through the allostatic-load retrocausal amplifier model. The longevity, cancer, addiction, and consciousness predictions are not independent. They are interlocking tests of the same underlying dynamics.</p>
-
-</div>
-</div>
-<footer>fnsmdehip &middot; <a href="https://github.com/fnsmdehip">github.com/fnsmdehip</a> &middot; 2026</footer>
+<footer>fnsmdehip research &middot; <a href="index.html">Home</a></footer>
 </body>
 </html>

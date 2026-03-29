@@ -8443,3 +8443,24 @@ mrr is actually
 **Venture:** MONETIZE
 **Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
 
+# Integration Gap Report — 2026-03-28 22:01
+
+Methods the pipeline should auto-catch in the future:
+
+## At the Agents Anonymous SF meetup last night we did another 
+**Venture:** RESEARCH
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Bitcoin Price on Eid 
+
+2010: $0.06
+2011: $3
+2012: $5
+2013: $
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+
+## Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/
+**Venture:** CONTENT
+**Gap:** Heuristic fallback used -- LLM analysis needed for full gap detection
+

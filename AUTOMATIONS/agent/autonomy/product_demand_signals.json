@@ -1,4 +1,21 @@
 {
+  "cross_pollinator_cycle25_signals": {
+    "added_at": "2026-03-28T21:45",
+    "source": "reddit_alpha_ALPHA1773999008",
+    "insight": "Etsy digital product success formula: ultra-specific title + 7-12 images showing product IN USE + instant download framing + 1 social proof review. Specificity beats generic. '$0 vs $500/mo' gap is discoverability + title specificity.",
+    "action_for_products": "Audit all 22 PDFs: are titles ultra-specific (niche + format + use case)? Do listings show 7-12 screenshots? Do listings include 'download immediately'? PDFs 19-22 (Reddit Money Machine, Claude Code Mastery, Cold Email System, Prompt Vault) have NO listing markdown — create these first.",
+    "pdf_listing_gap": {
+      "pdfs_with_listings": ["1-13 in GUMROAD_INSTANT_UPLOAD/"],
+      "pdfs_missing_listings": [
+        "19_REDDIT_MONEY_MACHINE.pdf — needs LISTING_reddit_money_machine.md",
+        "20_CLAUDE_CODE_MASTERY.pdf — needs LISTING_claude_code_mastery.md",
+        "21_COLD_EMAIL_SYSTEM.pdf — needs LISTING_cold_email_system.md",
+        "22_PROMPT_VAULT.pdf — needs LISTING_prompt_vault.md"
+      ],
+      "priority": "P0 — can't list without copy",
+      "action": "Agent or human creates 4 listing files in PRODUCTS/GUMROAD_INSTANT_UPLOAD/ following Etsy formula: ultra-specific title + benefit bullets + instant download framing"
+    }
+  },
   "demand": {
     "count": 10,
     "examples": [

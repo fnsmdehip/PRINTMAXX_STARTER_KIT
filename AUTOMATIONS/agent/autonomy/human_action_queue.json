@@ -1,5 +1,25 @@
 [
   {
+    "priority": 0,
+    "title": "EID AL-FITR IS TOMORROW (March 29) — POST RAMADAN/PRAYERLOCK CONTENT NOW",
+    "severity": "TIME_CRITICAL — window closes in hours",
+    "action": "Post these RIGHT NOW (last Ramadan engagement window):\n1. reddit_cycle33_20260328.md POST 1 → r/islam\n2. reddit_cycle33_20260328.md POST 2 → r/Muslim\n3. reddit_cycle33_20260328.md POST 3 → r/Ramadan\n4. twitter_cycle33_20260328.md TWEET 1 → @PRINTMAXXER\nFiles in: CONTENT/social/distribution/\nEid Mubarak tweet scheduled for March 29 morning is also in twitter_cycle33_20260328.md.",
+    "revenue_impact": "PrayerLock and Hilal (ramadan-tracker.surge.sh) are time-critical products. Last window for Ramadan-specific virality before Eid ends the season. Miss it and next window is Ramadan 2027.",
+    "source": "distribution_engine_cycle33_20260328 + cross_pollinator_cycle25",
+    "added_at": "2026-03-28T21:45",
+    "expires_at": "2026-03-29T06:00"
+  },
+  {
+    "priority": 1,
+    "title": "TAX SEASON OUTREACH WINDOW CLOSES APRIL 15 (18 DAYS) — SEND EMAILS NOW",
+    "severity": "HIGH — countdown active",
+    "action": "Content farm topic queue has 'LOCAL_BIZ_TAX_SEO_WINDOW_20260319' (expires April 15). Outreach angles file has tax prep angle with cold email subject 'your tax site is invisible during peak season'. Target: tax prep / CPA firms on GoDaddy subdomains. Draft emails in AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md. 18 days left. After April 15 this angle is dead for 11 months.",
+    "revenue_impact": "$1,500-3,000 per client close. Tax prep is the one vertical where urgency is calendar-forced and unambiguous.",
+    "source": "cross_pollinator_cycle25_tax_countdown",
+    "added_at": "2026-03-28T21:45",
+    "expires_at": "2026-04-15"
+  },
+  {
     "priority": 1,
     "title": "31 PRODUCT LISTINGS READY - ZERO ON ANY PLATFORM",
     "severity": "CRITICAL",

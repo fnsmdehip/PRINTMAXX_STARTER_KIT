@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search - fnsmdehip research</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.search-box{position:relative;margin-bottom:2rem}
+.search-input{width:100%;padding:12px 16px 12px 44px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:var(--text-bright);font-family:var(--sans);font-size:1rem;outline:none;transition:border-color .15s}
+.search-input:focus{border-color:var(--accent)}
+.search-input::placeholder{color:var(--text-muted)}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:1.1rem}
+.search-count{font-family:var(--mono);font-size:.75rem;color:var(--text-muted);margin-bottom:1rem}
+.search-result{padding:16px 0;border-bottom:1px solid var(--border)}
+.result-title{font-family:var(--sans);font-size:1.1rem;font-weight:600;margin-bottom:4px}
+.result-title a{color:var(--accent);text-decoration:none}
+.result-title a:hover{text-decoration:underline}
+.result-file{font-family:var(--mono);font-size:.7rem;color:var(--text-muted);margin-bottom:6px}
+.result-section{margin:6px 0;padding:6px 0 6px 12px;border-left:2px solid var(--border);font-size:.85rem}
+.result-section a{color:var(--text);text-decoration:none}
+.result-section a:hover{color:var(--accent)}
+.section-title{color:var(--text-bright);font-weight:600;font-family:var(--sans);font-size:.82rem}
+.section-preview{color:var(--text-muted);font-size:.78rem;margin-top:2px;line-height:1.5}
+.result-match{background:rgba(88,166,255,0.15);color:var(--accent);padding:1px 2px;border-radius:2px}
+.no-results{color:var(--text-muted);font-size:.9rem;padding:2rem 0}
+.search-shortcuts{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.5rem}
+.search-shortcut{font-family:var(--mono);font-size:.7rem;padding:4px 10px;border-radius:4px;background:var(--bg-secondary);border:1px solid var(--border);color:var(--text-muted);cursor:pointer;transition:all .15s}
+.search-shortcut:hover{border-color:var(--accent);color:var(--accent)}
+.result-snippet{font-size:.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a href="index.html" class="site-name">fnsmdehip</a>
+<a href="index.html">Home</a>
+<a href="uaf-series.html">UAF Series</a>
+<a href="pemf.html">PEMF Series</a>
+<a href="wifi-sensing.html">WiFi Sensing</a>
+<a href="projects.html">Projects</a>
+<a href="search.html" class="active">Search</a>
+</div></nav>
+<div class="page-wrapper">
+<div class="content" style="max-width:800px;">
+<h1>Search</h1>
+<div class="search-box">
+<span class="search-icon">&#128269;</span>
+<input type="text" class="search-input" id="search-input" placeholder="Search all articles... (e.g. saturn, fascia, rapamycin, hivemind)" autofocus>
+</div>
+<div class="search-shortcuts" id="shortcuts">
+<span class="search-shortcut" onclick="doSearch('saturn')">saturn</span>
+<span class="search-shortcut" onclick="doSearch('aetheric wind')">aetheric wind</span>
+<span class="search-shortcut" onclick="doSearch('hivemind')">hivemind</span>
+<span class="search-shortcut" onclick="doSearch('fascia piezoelectric')">fascia</span>
+<span class="search-shortcut" onclick="doSearch('presentiment')">presentiment</span>
+<span class="search-shortcut" onclick="doSearch('warburg cancer')">warburg</span>
+<span class="search-shortcut" onclick="doSearch('kill switch')">kill switches</span>
+<span class="search-shortcut" onclick="doSearch('religion protocol')">religion</span>
+<span class="search-shortcut" onclick="doSearch('bryan johnson')">bryan johnson</span>
+<span class="search-shortcut" onclick="doSearch('loosh entity')">loosh/entities</span>
+<span class="search-shortcut" onclick="doSearch('sigma repair')">sigma</span>
+<span class="search-shortcut" onclick="doSearch('high-q drive')">high-q drive</span>
+<span class="search-shortcut" onclick="doSearch('PEMF')">PEMF</span>
+<span class="search-shortcut" onclick="doSearch('ESP32 wifi')">ESP32</span>
+</div>
+<div class="search-count" id="search-count"></div>
+<div id="results"></div>
+</div>
+</div>
+<script>
+var _index = null;
+
+fetch('search-index.json')
+  .then(function(r){return r.json()})
+  .then(function(d){_index = d; checkHash();})
+  .catch(function(){document.getElementById('results').textContent='Failed to load search index.';});
+
+var searchInput = document.getElementById('search-input');
+var debounceTimer = null;
+searchInput.addEventListener('input', function(){
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(function(){runSearch();}, 200);
+});
+searchInput.addEventListener('keydown', function(e){
+  if(e.key==='Enter'){clearTimeout(debounceTimer);runSearch();}
+});
+
+function doSearch(q){
+  searchInput.value = q;
+  runSearch();
+  searchInput.focus();
+}
+
+function checkHash(){
+  var params = new URLSearchParams(window.location.search);
+  var q = params.get('q');
+  if(q){searchInput.value=q;runSearch();}
+}
+
+function highlightText(text, terms){
+  // Build a safe highlighted version using DOM
+  var frag = document.createDocumentFragment();
+  var remaining = text;
+  while(remaining.length > 0){
+    var earliest = -1;
+    var earliestTerm = '';
+    for(var i=0;i<terms.length;i++){
+      var idx = remaining.toLowerCase().indexOf(terms[i]);
+      if(idx !== -1 && (earliest === -1 || idx < earliest)){
+        earliest = idx;
+        earliestTerm = terms[i];
+      }
+    }
+    if(earliest === -1){
+      frag.appendChild(document.createTextNode(remaining));
+      break;
+    }
+    if(earliest > 0){
+      frag.appendChild(document.createTextNode(remaining.substring(0, earliest)));
+    }
+    var mark = document.createElement('span');
+    mark.className = 'result-match';
+    mark.textContent = remaining.substring(earliest, earliest + earliestTerm.length);
+    frag.appendChild(mark);
+    remaining = remaining.substring(earliest + earliestTerm.length);
+  }
+  return frag;
+}
+
+function runSearch(){
+  if(!_index)return;
+  var query = searchInput.value.trim().toLowerCase();
+  var container = document.getElementById('results');
+  var countEl = document.getElementById('search-count');
+  if(!query){
+    while(container.firstChild)container.removeChild(container.firstChild);
+    countEl.textContent='';
+    return;
+  }
+  var terms = query.split(/\s+/).filter(function(t){return t.length>1;});
+  if(!terms.length)return;
+
+  var results = [];
+  _index.forEach(function(article){
+    var text = article.x;
+    var allMatch = terms.every(function(t){return text.indexOf(t)!==-1;});
+    if(!allMatch)return;
+
+    var score = 0;
+    terms.forEach(function(t){
+      var idx = 0;
+      while((idx = text.indexOf(t, idx)) !== -1){score++;idx+=t.length;}
+    });
+
+    var matchingSections = [];
+    (article.s || []).forEach(function(sec){
+      var secText = (sec.t + ' ' + (sec.preview||'')).toLowerCase();
+      if(terms.some(function(t){return secText.indexOf(t)!==-1;})){
+        matchingSections.push(sec);
+      }
+    });
+
+    var snippetStart = text.indexOf(terms[0]);
+    var start = Math.max(0, snippetStart - 80);
+    var snippet = text.substring(start, start + 250);
+    if(start > 0) snippet = '...' + snippet;
+    snippet = snippet + '...';
+
+    results.push({article:article, score:score, sections:matchingSections, snippet:snippet});
+  });
+
+  results.sort(function(a,b){return b.score - a.score;});
+  var totalHits = results.reduce(function(s,r){return s+r.score;},0);
+  countEl.textContent = results.length + ' article' + (results.length===1?'':'s') + ' match "' + query + '" (' + totalHits + ' total hits)';
+
+  while(container.firstChild)container.removeChild(container.firstChild);
+
+  if(!results.length){
+    var noRes = document.createElement('div');
+    noRes.className = 'no-results';
+    noRes.textContent = 'No results for "' + query + '". Try different terms or check the shortcuts above.';
+    container.appendChild(noRes);
+    return;
+  }
+
+  results.forEach(function(r){
+    var div = document.createElement('div');
+    div.className = 'search-result';
+
+    var titleEl = document.createElement('div');
+    titleEl.className = 'result-title';
+    var link = document.createElement('a');
+    link.href = r.article.f;
+    link.textContent = r.article.t;
+    titleEl.appendChild(link);
+    var scoreSpan = document.createElement('span');
+    scoreSpan.style.cssText = 'font-family:var(--mono);font-size:.7rem;color:var(--text-muted);margin-left:8px;';
+    scoreSpan.textContent = r.score + ' hits';
+    titleEl.appendChild(scoreSpan);
+    div.appendChild(titleEl);
+
+    var fileEl = document.createElement('div');
+    fileEl.className = 'result-file';
+    fileEl.textContent = r.article.f;
+    div.appendChild(fileEl);
+
+    r.sections.slice(0, 5).forEach(function(sec){
+      var secDiv = document.createElement('div');
+      secDiv.className = 'result-section';
+      var secLink = document.createElement('a');
+      secLink.href = r.article.f + (sec.id ? '#' + sec.id : '');
+      var secTitle = document.createElement('div');
+      secTitle.className = 'section-title';
+      secTitle.textContent = sec.t;
+      secLink.appendChild(secTitle);
+      if(sec.preview){
+        var preview = document.createElement('div');
+        preview.className = 'section-preview';
+        preview.textContent = sec.preview;
+        secLink.appendChild(preview);
+      }
+      secDiv.appendChild(secLink);
+      div.appendChild(secDiv);
+    });
+
+    if(!r.sections.length){
+      var snippetDiv = document.createElement('div');
+      snippetDiv.className = 'result-snippet';
+      snippetDiv.appendChild(highlightText(r.snippet, terms));
+      div.appendChild(snippetDiv);
+    }
+
+    container.appendChild(div);
+  });
+}
+</script>
+</body>
+</html>

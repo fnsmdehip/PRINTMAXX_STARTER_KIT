@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-03-28 20:00
-Last session: 2026-03-28 19:36 (0.4h ago)
+# SESSION BRIEFING -- 2026-03-29 00:00
+Last session: 2026-03-28 23:44 (0.3h ago)
 
 ---
 
@@ -9,8 +9,11 @@ Last session: 2026-03-28 19:36 (0.4h ago)
 Revenue: $0 | Day 44 at zero
 - **1648 new entries** scraped
 
-### Agent Reports (1 since last session)
-- system_healer_report_20260328.md
+### Agent Reports (4 since last session)
+- lead_machine_report_20260328.md
+- gap_hunter_report_20260328.md
+- distribution_engine_report_20260328.md
+- asset_deployer_report_20260328.md
 
 ### Loop Closer (2 actions)
 - pipeline_advance: plumber_sites -> OK
@@ -93,7 +96,3 @@ Total items: 95 (deduplicated from all sources)
 - [ ] - Blockers:
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Remaining blocker for mobile/iPhone access:**
-
-## Recently Updated State
-
-- CEO state (updated 19:37)

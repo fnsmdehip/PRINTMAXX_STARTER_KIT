@@ -1,54 +1,89 @@
-# COMPOUND ACTIONS -- Cycle 33 (2026-03-25 21:15)
+# COMPOUND ACTIONS -- Cycle 34 (2026-03-28 21:45)
 
-## Status: BLOCKED ON HUMAN (unchanged since Cycle 25, ~120h)
+## Status: TIME-CRITICAL — EID AL-FITR IS TOMORROW (Mar 29)
 
-No compound actions possible. Zero distribution channels active.
+### COMPOUND ACTION 1: Ramadan Final Push (URGENT — post within 12 hours)
+
+**Inputs compounded:**
+- distribution_engine Cycle 33: 3 Reddit posts + 2 tweets for PrayerLock/Ramadan
+- gap_hunter: prayerlock-web.surge.sh confirmed live + healthy
+- seo_aso_optimizer: SEO tags verified on prayerlock pages
+
+**Action:** Human posts these 5 pieces TODAY/TOMORROW:
+1. `CONTENT/social/distribution/reddit_cycle33_20260328.md` POST 1 -> r/islam
+2. `CONTENT/social/distribution/reddit_cycle33_20260328.md` POST 2 -> r/Muslim
+3. `CONTENT/social/distribution/reddit_cycle33_20260328.md` POST 3 -> r/Ramadan
+4. `CONTENT/social/distribution/twitter_cycle33_20260328.md` TWEET 1 -> @PRINTMAXXER
+5. `CONTENT/social/distribution/twitter_cycle33_20260328.md` TWEET 2 -> Eid Mubarak (Mar 29 AM)
+
+**Why compound:** PrayerLock is the ONLY product with a time-critical audience (Ramadan ends tomorrow). Missing this window = waiting 11 months for next Ramadan. Reddit Islamic communities are most active during Eid. This is the highest-ROI 15 minutes of human time available.
+
+**Expected:** 2K-20K views across Reddit + Twitter. First real distribution test.
+
+---
+
+### COMPOUND ACTION 2: Cold Email Sprint (when ready)
+
+**Inputs compounded:**
+- lead_machine Cycle 34: 10 new leads (top: Dentists of Houston 9.5/10 — NO SSL in 2026)
+- 80+ email drafts across 8 cycles
+- seo_aso_optimizer: all landing pages SEO-fixed for when recipients visit
+
+**Action:** Send top 5 cold emails from `AUTOMATIONS/leads/outreach_drafts/20260328/`:
+1. Dentists of Houston (mike.warwick@pdq.net) — NO SSL, copyright 1999
+2. Professional Plumbers Denver — 9.6s load time
+3. Villalobos Law Chicago — no mobile, defense law
+4. Metro Dental Atlanta — Yahoo email = owner reads directly
+5. Addison Law Dallas — info@ generic but high-value vertical
+
+**Why compound:** These leads have SPECIFIC, MEASURABLE pain points (no SSL, 9.6s load, no mobile). Not generic "your site needs work." Dental + law = highest LTV verticals.
+
+---
+
+### COMPOUND ACTION 3: Gumroad Product Blitz (when account created)
+
+**Inputs compounded:**
+- gap_hunter: 22 PDFs ready to sell, 6 with paste-ready listing files
+- distribution_engine: content pieces mapped to r/ClaudeAI, HN, IH, LinkedIn for launch
+- seo_aso_optimizer: product landing pages SEO-optimized
+
+**Action:** Create Gumroad account (10 min) + list top 6 products:
+1. Claude Code Agent Bible ($47)
+2. Claude Code for Solopreneurs ($29)
+3. Reddit Money Machine ($29-39)
+4. Cold Email System ($19)
+5. Claude Code Mastery ($39)
+6. Prompt Vault ($19)
+
+**Expected:** $47-197 first week from Gumroad organic traffic.
+
+---
+
+## Inventory (current as of Cycle 34)
 
 | Asset Pool | Count | Status | Blocker |
 |-----------|-------|--------|---------|
-| Content pieces | 1,274+ | QUEUED | No social accounts |
-| Leads analyzed | 192,700 | QUEUED | No email sender configured |
-| Hot leads | 17,484 | QUEUED | No outreach capability |
-| Product listings | 31 | QUEUED | No Gumroad/Stripe account |
-| PDF products | 16 | QUEUED | No Gumroad account |
-| Live sites | 386+ | INVISIBLE | surge.sh Disallow:/ blocks Google |
-| Email drafts | 48 | QUEUED | No Gmail MCP authenticated |
-| Apps built | 8 | NO PAYMENT | No Stripe/RevenueCat live |
-| Alpha entries | 42,803 | PROCESSING | Pipeline alive, auto-approve running |
+| Content pieces | 1,303+ | QUEUED | No social accounts |
+| Leads analyzed | 192,710+ | QUEUED | No email sender |
+| Hot leads | 17,494+ | QUEUED | No outreach capability |
+| Product listings | 31 | QUEUED | No Gumroad/Stripe |
+| PDF products | 22 | QUEUED | No Gumroad account |
+| Live sites | 388 | LIVE but surge Disallow:/ | Need Cloudflare/Vercel |
+| Email drafts | 80+ | QUEUED | No Gmail MCP auth |
+| Apps built | 8 | NO PAYMENT | No Stripe live |
+| Alpha entries | 42,803+ | PROCESSING | Pipeline alive |
+| New deploys today | 5 | LIVE | cnsnt-web, nutriai, builders-ledger, testosterone-affiliate |
 
-## What Changed This Cycle
+## Launchd Zombie Agents (HUMAN ACTION: run these commands)
 
-### Nothing operational. System at equilibrium.
-- Cron v9 phased pipeline installed (Cycle 32 action, now verified)
-- Alpha pipeline confirmed alive: fresh ecom_arb + method_discovery entries today
-- Reddit scraper producing daily output (14.5KB today)
-- Disk stable at 1.8% (103GB free)
-- All loops running (last cycle 14:01 today)
+5 agents have live PIDs despite being hibernated/killed. Token waste.
 
-## Priority Compound Actions (when unblocked)
+```bash
+launchctl unload ~/Library/LaunchAgents/com.printmaxx.swarm.asset_deployer.plist
+launchctl unload ~/Library/LaunchAgents/com.printmaxx.swarm.cross_pollinator.plist
+launchctl unload ~/Library/LaunchAgents/com.printmaxx.swarm.playwright_tester.plist
+launchctl unload ~/Library/LaunchAgents/com.printmaxx.swarm.content_compounder.plist
+launchctl unload ~/Library/LaunchAgents/com.printmaxx.swarm.quality_enforcer.plist
+```
 
-### 1. Gumroad Product Blitz (first 48h after account)
-- Input: 16 paste-ready listings + 9 PDFs + pricing validated
-- Action: List all 16 products in single session
-- Expected: $47-197 first week from Gumroad organic
-- Compounds: Twitter launch + Reddit posts + email signature
-
-### 2. Cold Email Launch (after Gmail auth)
-- Input: 17,484 hot leads + 7 cold sequences + 5-touch templates
-- Action: Top 6 HN founders first, batch expand
-- Expected: 2-5% reply rate
-- Compounds: Product links = cross-sell
-
-### 3. Twitter/X Launch (after account creation)
-- Input: 1,274 content pieces + warmup SOP + reply guy strategy
-- Action: 21-day warmup then 5 posts/day + reply engagement
-- Expected: 500-2K followers in 30 days
-- Compounds: Every other channel
-
-## Deep Sleep Status
-
-Deferred again -- user active 3rd session today. Re-evaluate at Cycle 35 if no account creation. Current token burn: ~41K/day.
-
-## Wake Protocol
-
-Human creates ANY account -> Brain detects on next cycle -> Wakes relevant agents -> Restores integrator_v2 crons if needed -> Executes highest-priority compound -> Scales intervals based on results
+Estimated token savings: ~33K tokens/day (from ~41K to ~8K).

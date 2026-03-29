@@ -93,7 +93,7 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 0 7 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/app_factory/portfolio_optimizer.py --optimize >> AUTOMATIONS/app_factory/logs/cron_optimizer.log 2>&1
 
 # CEO Agent — 3:00 AM daily orchestration
-0 3 * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/ceo_agent.py --cycle >> AUTOMATIONS/logs/ceo_agent.log 2>&1
+0 3 * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/ceo_agent.py --run >> AUTOMATIONS/logs/ceo_agent.log 2>&1
 
 # ═══════════════════════════════════════════════════════════════
 # WEEKLY SURGE DEPLOYS — Sunday 5:00 AM
