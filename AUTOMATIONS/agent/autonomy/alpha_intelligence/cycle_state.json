@@ -1,33 +1,53 @@
 {
-  "last_cycle": "2026-03-28T19:35:00Z",
-  "cycle_number": 109,
+  "last_cycle": "2026-03-29T02:22:00Z",
+  "cycle_number": 110,
   "status": "COMPLETE",
   "phase": "IDLE",
-  "entries_processed": 100,
-  "entries_routed": 1,
-  "ventures_created": 1,
-  "content_generated": 60,
+  "entries_processed": 15,
+  "entries_routed": 0,
+  "ventures_created": 0,
+  "content_generated": 45,
   "freelance_leads": 17,
   "ecom_products": 24,
-  "next_cycle": "2026-03-28T23:35:00Z",
+  "next_cycle": "2026-03-29T06:22:00Z",
   "blockers": [
     {
       "priority": "P0",
       "blocker": "Twitter login required",
-      "detail": "Keep X/Brave logged in for scraper to work"
+      "detail": "Keep X/Brave logged in for scraper to work — losing ~30% of alpha per cycle without it"
     },
     {
       "priority": "P1",
-      "blocker": "Product Hunt API error",
-      "detail": "403 auth error, check API key in .env"
+      "blocker": "Product Hunt API 403 auth error",
+      "detail": "Check .env PRODUCTHUNT_API_KEY or re-authenticate"
     }
   ],
   "top_findings": [
     {
-      "id": "ALPHA1773998956",
-      "title": "Stripe payment processing alternatives",
+      "id": "CI_111_001-010",
+      "title": "10 new blue ocean app niches (Physics, CS, Biology, Chemistry, Neuroscience, Astronomy, Climate, Statistics, Engineering, Math streaks)",
+      "roi": "HIGH",
+      "status": "PENDING_REVIEW",
+      "scores": "20-25"
+    },
+    {
+      "id": "ALPHA1773999676",
+      "title": "SaaS at 3K MRR, 25 hours/week — acquisition case study",
       "roi": "HIGHEST",
-      "status": "ROUTED_TO_VENTURE"
+      "status": "ARCHIVED_AS_REFERENCE"
+    },
+    {
+      "id": "ALPHA1773999677",
+      "title": "Cold email campaign: 333 emails = 0 replies, then $5 alternative got first conversation",
+      "roi": "HIGHEST",
+      "status": "ARCHIVED_AS_REFERENCE"
     }
-  ]
+  ],
+  "sources_status": {
+    "reddit": "✅ 169+ entries",
+    "hackernews": "✅ 10 entries",
+    "producthunt": "⚠️ 403 auth",
+    "twitter": "❌ not logged in (P0 blocker)",
+    "method_discovery": "🔄 running in background"
+  }
 }

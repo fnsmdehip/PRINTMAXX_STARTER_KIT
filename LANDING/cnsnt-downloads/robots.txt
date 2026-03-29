@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /*.dmg
+Sitemap: https://cnsnt-downloads.surge.sh/sitemap.xml

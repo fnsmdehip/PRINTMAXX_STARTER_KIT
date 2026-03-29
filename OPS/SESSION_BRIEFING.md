@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-03-29 00:00
-Last session: 2026-03-28 23:44 (0.3h ago)
+# SESSION BRIEFING -- 2026-03-29 04:00
+Last session: 2026-03-29 02:21 (1.6h ago)
 
 ---
 
@@ -9,12 +9,6 @@ Last session: 2026-03-28 23:44 (0.3h ago)
 Revenue: $0 | Day 44 at zero
 - **1648 new entries** scraped
 
-### Agent Reports (4 since last session)
-- lead_machine_report_20260328.md
-- gap_hunter_report_20260328.md
-- distribution_engine_report_20260328.md
-- asset_deployer_report_20260328.md
-
 ### Loop Closer (2 actions)
 - pipeline_advance: plumber_sites -> OK
 - soul_drift_check: system -> OK
@@ -23,16 +17,17 @@ Revenue: $0 | Day 44 at zero
 Leads: 192,700/1,454,245 analyzed | 17,484 hot | 95,187 warm | 1,286,777 pipeline
 Revenue: $0 total | 2 entries
 Content: 5 CSVs ready | 324 pending QA
-Apps: 8 built | 47/78 live (OPS/DEPLOYMENT_URLS.md)
+Apps: 8 built | 47/82 live (OPS/DEPLOYMENT_URLS.md)
 Products: gumroad_drafts=16 | fiverr_drafts=12 | etsy_copy=1
-Alpha: 0 pending review
+Alpha: 113 pending review
 Accounts: 0/1 active (BLOCKER: need platform signups)
-Scripts: 524 automation scripts
+Scripts: 527 automation scripts
 Blocker: Account creation → `OPS/ACCOUNT_CREATION_NOW.md`
 
 ## Changes Since Last Session
 
-No git commits since last session (or not a git repo).
+### Human/Agent Commits (1)
+- 45d9bf8a [user-sim-refiner] EAS: pre-refinement snapshot
 
 ## Actionable Queue
 

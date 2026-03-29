@@ -443,3 +443,14 @@ https://smspool.net (phone verification $0.50-2 per)
 ---
 
 **Which stack do you want me to launch?** Tell me the number (1-4) or "custom".
+
+
+---
+
+## Pending Enhancement (ALPHA1773999629, Score: 24)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/bna-3
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] BNA: AI agent that builds full-stack iOS &amp; Android apps with auth
+

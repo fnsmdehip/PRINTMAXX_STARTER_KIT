@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-03-28T19:57:38.442312",
-  "cycle_number": 3,
+  "last_run": "2026-03-29T02:50:00.000000",
+  "cycle_number": 4,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -15,20 +15,28 @@
     "Sacramento CA",
     "Chicago IL",
     "Philadelphia PA",
-    "Cleveland OH"
-  ],
-  "total_leads_all_cycles": 1044,
-  "total_previews_deployed": 402,
-  "total_emails_queued": 441,
-  "next_cities": [
+    "Cleveland OH",
     "Boston MA",
     "Baltimore MD",
     "Denver CO",
     "Portland OR",
     "Las Vegas NV",
-    "Indianapolis IN",
+    "Indianapolis IN"
+  ],
+  "total_leads_all_cycles": 1190,
+  "total_previews_deployed": 402,
+  "total_sites_built_local": 898,
+  "total_emails_queued": 554,
+  "emails_ready_to_send": 16,
+  "next_cities": [
     "Columbus OH",
-    "St Louis MO"
+    "St Louis MO",
+    "Kansas City MO",
+    "Cincinnati OH",
+    "New Orleans LA",
+    "Memphis TN",
+    "Oklahoma City OK",
+    "Tucson AZ"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -57,24 +65,34 @@
     "davis-law-group-ps-seattle-wa.surge.sh"
   ],
   "blockers": [
-    "Surge.sh Student plan: ~6-8 new domains per cycle. 77 local builds awaiting deployment. FIX: Upgrade to Surge Plus ($13/mo).",
-    "No outbound email domain configured \u2014 441 emails queued, 0 sent.",
-    "Professional service niches (dentist/lawyer) have 0% email hit rate \u2014 contact forms only. SWITCH to trade/service niches.",
-    "Only 319/1044 leads have email (31%). Hunter.io or Apollo.io integration needed for enrichment."
+    "CRITICAL: Surge.sh Student plan domain limit FULLY EXHAUSTED — 0 new deploys possible. Fix: surge login new email (5 min) OR Surge Plus ($13/mo) OR netlify login (10 min).",
+    "CRITICAL: No outbound email domain configured — 554 emails queued, 16 ready to send (have email + surge URL), 0 sent. Fix: Smartlead/Instantly/Gmail SMTP setup (30 min).",
+    "Email enrichment 0% on new leads — 447 F/D leads without email. Scraper approach fails for trade businesses. Fix: Hunter.io ($49/mo) or Apollo.io free tier.",
+    "Netlify/Vercel not authenticated — both available as surge alternatives but require human login."
   ],
   "status": "CYCLE_COMPLETE",
-  "fixes_this_cycle": [
-    "Fixed broken playwright (removed Python 3.13 build from .pip_libs that shadowed system Python 3.12 playwright)",
-    "Fixed surge deploy detection: HTTP verification fallback when Student plan outputs do-not-have-permission",
-    "Synced 28 file:// preview_urls to https:// surge URLs in leads CSV"
+  "cycle_4_results": {
+    "cities_discovered": ["Boston MA", "Baltimore MD", "Denver CO", "Portland OR", "Las Vegas NV", "Indianapolis IN"],
+    "new_leads": 144,
+    "new_f_grade": 111,
+    "new_sites_built": 149,
+    "new_surge_deploys": 0,
+    "new_emails_queued": 113,
+    "surge_blocker": "Student plan domain limit exhausted after 402 deployed domains"
+  },
+  "cycle_4_improvements": [
+    "Discovered 144 new leads across 6 cities using high-email-rate niches",
+    "Built 149 new HTML preview sites (898 total across all cycles)",
+    "Identified 16 READY-TO-SEND emails with both email address and surge preview URL",
+    "Diagnosed surge domain limit as root cause of deploy failures (not rate limit)",
+    "Documented 4 fix paths for deploy blocker: new surge account, Plus upgrade, netlify, vercel"
   ],
-  "cycle_3_improvements": [
-    "Discovered 54 new leads in Detroit MI, Minneapolis MN, Sacramento CA, Chicago IL, Philadelphia PA, Cleveland OH",
-    "Pivoted to high-email niches: window cleaning (67%), junk removal (20%), handyman (17%) vs dentist (0%)",
-    "Built 45 new preview sites (all 6 niches serviced correctly)",
-    "Deployed 14 previews to surge.sh this session",
-    "Queued 45 new outreach emails (total 441)",
-    "Created openclaw_email_enricher.py \u2014 batch contact page scraper",
-    "Email enrichment: 1/130 found via website scraping (professional services block email exposure)"
-  ]
+  "pipeline_health": {
+    "discover": "HEALTHY",
+    "grade": "HEALTHY",
+    "build": "HEALTHY",
+    "deploy": "BLOCKED - surge domain limit",
+    "outreach_generate": "HEALTHY",
+    "outreach_send": "BLOCKED - no email domain"
+  }
 }

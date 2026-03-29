@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Stack Decision Scorecard — pick the right tools in 10 minutes</title>
+<meta name="description" content="Score your current AI stack against what actually ships revenue. Interactive scorecard for solopreneurs and indie builders.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#070d16;--surface:#0f1923;--card:#141e2b;--accent:#3b82f6;--green:#10b981;--yellow:#f59e0b;--red:#ef4444;--text:#e5e5e5;--muted:#6b7280;--border:#1f2937}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:720px;margin:0 auto;padding:0 20px}
+header{padding:40px 0 32px;text-align:center;border-bottom:1px solid var(--border)}
+header h1{font-size:clamp(1.7rem,5vw,2.4rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px}
+header p{color:var(--muted);font-size:0.95rem;max-width:500px;margin:0 auto}
+.badge{display:inline-block;background:#1a2a1a;border:1px solid #2a4a2a;color:var(--green);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px}
+.section{padding:40px 0 0}
+.section h2{font-size:1.3rem;font-weight:800;margin-bottom:6px;letter-spacing:-0.5px}
+.section .sub{color:var(--muted);font-size:0.88rem;margin-bottom:24px}
+.category{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px}
+.category-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.category-header h3{font-size:1rem;font-weight:700}
+.category-score{font-size:1.4rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--accent)}
+.question{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);gap:16px}
+.question:last-child{border-bottom:none}
+.q-text{font-size:0.88rem;color:var(--text);flex:1}
+.q-text small{display:block;color:var(--muted);font-size:0.75rem;margin-top:2px}
+.q-toggle{display:flex;gap:8px;flex-shrink:0;align-items:center}
+.toggle-btn{padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.15s}
+.toggle-btn.yes{background:#10b981;border-color:#10b981;color:#fff}
+.toggle-btn.no{background:#ef4444;border-color:#ef4444;color:#fff}
+.results-panel{background:var(--surface);border:1px solid var(--accent);border-radius:14px;padding:28px;margin:32px 0;display:none}
+.results-panel.visible{display:block}
+.score-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:24px}
+.score-card{background:var(--card);border-radius:10px;padding:16px;text-align:center}
+.score-card .label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+.score-card .value{font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums}
+.score-card .grade{font-size:0.8rem;margin-top:4px}
+.verdict-box{background:var(--card);border-radius:10px;padding:20px;margin-bottom:20px}
+.verdict-box h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.verdict-box p{color:var(--muted);font-size:0.88rem;margin-bottom:12px}
+.gap-list{list-style:none}
+.gap-list li{padding:4px 0;font-size:0.85rem;color:var(--text)}
+.gap-list li::before{content:"→ ";color:var(--accent)}
+.cta-section{background:linear-gradient(135deg,#0f172a,#1a1040);border:1px solid #2d1b69;border-radius:14px;padding:32px;text-align:center;margin:32px 0}
+.cta-section h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.cta-section p{color:var(--muted);font-size:0.88rem;margin-bottom:20px}
+.email-form{display:flex;gap:10px;max-width:400px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.email-form input{flex:1;min-width:180px;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-family:inherit;font-size:0.9rem;outline:none}
+.email-form input:focus{border-color:var(--accent)}
+.email-form button{padding:10px 20px;border-radius:8px;border:none;background:#7c3aed;color:#fff;font-weight:700;font-size:0.88rem;cursor:pointer;white-space:nowrap}
+.start-btn{display:block;width:100%;padding:14px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:700;font-size:1rem;cursor:pointer;margin:32px 0 0;transition:background 0.2s}
+.start-btn:hover{background:#2563eb}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.8rem;margin-top:40px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="badge">free scorecard</div>
+  <h1>AI Stack Decision Scorecard</h1>
+  <p>10 minutes. 30 questions. Know exactly where your stack leaks money and which gaps to fix first.</p>
+</header>
+
+<div class="section">
+  <h2>How it works</h2>
+  <p class="sub">Answer yes/no for each question. The scorecard calculates your stack health across 5 dimensions and tells you your #1 gap.</p>
+
+  <!-- Category 1: Content Production -->
+  <div class="category" id="cat-content">
+    <div class="category-header">
+      <h3>Content Production</h3>
+      <span class="category-score" id="score-content">—</span>
+    </div>
+    <div class="question">
+      <div class="q-text">You have a tool that generates social posts from raw notes<small>e.g. Claude, ChatGPT, Notion AI</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('c1',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('c1',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You repurpose one piece of content across 3+ platforms<small>not manually copying/pasting each time</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('c2',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('c2',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">Your content has a scheduled posting queue that runs without you<small>Buffer, Hypefury, custom script, etc.</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('c3',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('c3',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have a system that turns competitor posts into content angles<small>not just bookmarking for later</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('c4',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('c4',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You produce 10+ pieces of content per week without writing from scratch<small>templates, repurposing, or AI generation</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('c5',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('c5',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">Your long-form content links to your paid products<small>with actual CTAs, not just footer mentions</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('c6',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('c6',false,this)">no</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 2: Lead Generation -->
+  <div class="category" id="cat-leads">
+    <div class="category-header">
+      <h3>Lead Generation</h3>
+      <span class="category-score" id="score-leads">—</span>
+    </div>
+    <div class="question">
+      <div class="q-text">You have at least one active email capture form<small>on a live page, not just planned</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('l1',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('l1',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You offer a free lead magnet worth more than the email it costs<small>calculator, template, guide — not "subscribe for updates"</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('l2',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('l2',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You send cold outreach with a personalized first line<small>not just mail-merged name</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('l3',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('l3',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">Your lead list updates automatically, not by hand<small>scraper, Clay, Apollo, etc.</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('l4',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('l4',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have a follow-up sequence that runs automatically after opt-in<small>at least 3 emails, triggered automatically</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('l5',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('l5',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You know your current weekly lead volume<small>a real number, not "some"</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('l6',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('l6',false,this)">no</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 3: Automation -->
+  <div class="category" id="cat-auto">
+    <div class="category-header">
+      <h3>Automation Coverage</h3>
+      <span class="category-score" id="score-auto">—</span>
+    </div>
+    <div class="question">
+      <div class="q-text">Your most repetitive daily task runs without you<small>not just "I could automate it" — it actually runs</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('a1',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('a1',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You use a workflow tool with at least 5 active workflows<small>n8n, Make, Zapier — actually active, not just created</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('a2',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('a2',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">Your automations alert you when they fail<small>not "I check them manually"</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('a3',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('a3',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You spend less than 1 hour/day on tasks a $10/hr VA could do<small>more than that is an automation gap</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('a4',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('a4',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have at least one AI agent running tasks while you sleep<small>cron job, launchd task, or scheduled cloud workflow</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('a5',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('a5',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">Customer onboarding or product delivery is fully automated<small>zero manual steps after purchase</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('a6',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('a6',false,this)">no</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 4: Revenue Infrastructure -->
+  <div class="category" id="cat-rev">
+    <div class="category-header">
+      <h3>Revenue Infrastructure</h3>
+      <span class="category-score" id="score-rev">—</span>
+    </div>
+    <div class="question">
+      <div class="q-text">You have at least one live product with a working payment link<small>someone could buy right now, tonight</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('r1',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('r1',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">Your highest-revenue product has an upsell or order bump<small>not "I planned to add one"</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('r2',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('r2',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have a recurring revenue stream (subscription, retainer, or MRR)<small>something that bills automatically every month</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('r3',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('r3',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have affiliate links on at least 3 live pages<small>earning while others read</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('r4',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('r4',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You know your exact monthly revenue from each product or channel<small>tracked, not estimated</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('r5',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('r5',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have a low-ticket product (under $30) that converts hesitant visitors<small>tripwire, mini-product, or front-end offer</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('r6',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('r6',false,this)">no</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 5: Distribution -->
+  <div class="category" id="cat-dist">
+    <div class="category-header">
+      <h3>Distribution</h3>
+      <span class="category-score" id="score-dist">—</span>
+    </div>
+    <div class="question">
+      <div class="q-text">You post consistently on at least 2 social platforms<small>minimum 3x/week, not "when inspired"</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('d1',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('d1',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have at least one SEO page ranking in the top 20<small>for a real keyword, verified in Google Search Console</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('d2',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('d2',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You are listed in at least 3 relevant directories or marketplaces<small>Product Hunt, G2, Gumroad, App Store, etc.</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('d3',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('d3',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You have an email list you send to at least 2x per month<small>with actual content, not just promotions</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('d4',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('d4',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">You are known for something specific in a community or forum<small>subreddit, Discord, Slack, or niche group</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('d5',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('d5',false,this)">no</button>
+      </div>
+    </div>
+    <div class="question">
+      <div class="q-text">At least one external channel sends you traffic you didn't build<small>partner, affiliate, newsletter mention, collab</small></div>
+      <div class="q-toggle">
+        <button class="toggle-btn" onclick="setAnswer('d6',true,this)">yes</button>
+        <button class="toggle-btn" onclick="setAnswer('d6',false,this)">no</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="start-btn" onclick="calcResults()">Calculate my stack score</button>
+</div>
+
+<!-- Results Panel -->
+<div class="results-panel" id="results">
+  <div class="score-summary">
+    <div class="score-card">
+      <div class="label">Overall</div>
+      <div class="value" id="res-total" style="color:#3b82f6">—</div>
+      <div class="grade" id="res-grade"></div>
+    </div>
+    <div class="score-card">
+      <div class="label">Content</div>
+      <div class="value" id="res-c" style="color:#10b981">—</div>
+      <div class="grade" id="res-cg"></div>
+    </div>
+    <div class="score-card">
+      <div class="label">Leads</div>
+      <div class="value" id="res-l" style="color:#f59e0b">—</div>
+      <div class="grade" id="res-lg"></div>
+    </div>
+    <div class="score-card">
+      <div class="label">Automation</div>
+      <div class="value" id="res-a" style="color:#a78bfa">—</div>
+      <div class="grade" id="res-ag"></div>
+    </div>
+    <div class="score-card">
+      <div class="label">Revenue</div>
+      <div class="value" id="res-r" style="color:#f97316">—</div>
+      <div class="grade" id="res-rg"></div>
+    </div>
+    <div class="score-card">
+      <div class="label">Distribution</div>
+      <div class="value" id="res-d" style="color:#06b6d4">—</div>
+      <div class="grade" id="res-dg"></div>
+    </div>
+  </div>
+  <div class="verdict-box" id="verdict-box">
+    <h3 id="verdict-title"></h3>
+    <p id="verdict-desc"></p>
+    <ul class="gap-list" id="gap-list"></ul>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section" id="email-capture">
+  <h3>Want the fix list for your lowest-scoring category?</h3>
+  <p>Enter your email and we'll send the exact playbook for your #1 gap — tools, templates, and the 48-hour action plan.</p>
+  <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Lead: AI stack decision scorecard">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-magnets.surge.sh/ai-stack-decision-scorecard.html">
+    <input type="email" name="email" placeholder="your email" required>
+    <button type="submit">send my playbook</button>
+  </form>
+  <p style="color:#475569;font-size:0.72rem;margin-top:8px">no spam. one email. unsubscribe anytime.</p>
+</div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>PRINTMAXX — tools for indie builders who ship | <a href="https://printmaxx-magnets.surge.sh">more free tools</a></p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var answers = {};
+
+  var FIXES = {
+    Content: [
+      'Use Claude or ChatGPT to generate 5 social posts from your last build session notes',
+      'Set up a posting queue in Buffer (free tier) — schedule 7 days ahead in 30 minutes',
+      'Build one repurposing template: long post becomes 5 short posts, one thread, one carousel'
+    ],
+    Leads: [
+      'Add an email capture form to your highest-traffic page today — formsubmit.co takes 10 minutes',
+      'Create one free calculator or checklist with AI — publish it as a lead magnet this week',
+      'Set up a 3-email welcome sequence in ConvertKit or Beehiiv (both have free tiers)'
+    ],
+    Automation: [
+      'Identify your most-repeated daily task and automate it in Make or n8n this week',
+      'Add failure alerts to your existing automations via email or Slack notification',
+      'Schedule one AI task on a cron job or Make schedule to run while you sleep tonight'
+    ],
+    Revenue: [
+      'Get a live Stripe or Gumroad payment link up today — 30 minutes from zero to working checkout',
+      'Add an order bump or upsell to your main product checkout page',
+      'Sign up for 3 affiliate programs in your niche and add links to your top-traffic pages'
+    ],
+    Distribution: [
+      'Post to 2 platforms every day for 30 days — then look at the data and double down on the winner',
+      'Submit to 5 directories this week: Product Hunt, G2, Capterra, AlternativeTo, and one niche one',
+      'Find one newsletter in your niche and pitch a guest post, mention swap, or paid placement'
+    ]
+  };
+
+  window.setAnswer = function(q, val, btn) {
+    answers[q] = val;
+    var parent = btn.parentElement;
+    var allBtns = parent.querySelectorAll('.toggle-btn');
+    for (var i = 0; i < allBtns.length; i++) {
+      allBtns[i].classList.remove('yes', 'no');
+    }
+    btn.classList.add(val ? 'yes' : 'no');
+    updateCategoryScore(q[0]);
+  };
+
+  function getCatScore(prefix, count) {
+    var yes = 0;
+    for (var i = 1; i <= count; i++) {
+      if (answers[prefix + i]) yes++;
+    }
+    return Math.round((yes / count) * 100);
+  }
+
+  function gradeLabel(score) {
+    if (score >= 83) return 'strong';
+    if (score >= 50) return 'gaps';
+    return 'fix first';
+  }
+
+  function updateCategoryScore(prefix) {
+    var map = {c:'content', l:'leads', a:'auto', r:'rev', d:'dist'};
+    var cat = map[prefix];
+    if (!cat) return;
+    var score = getCatScore(prefix, 6);
+    var el = document.getElementById('score-' + cat);
+    if (el) el.textContent = score + '%';
+  }
+
+  window.calcResults = function() {
+    var cats = [
+      {prefix:'c', label:'Content', id:'res-c', gid:'res-cg'},
+      {prefix:'l', label:'Leads',   id:'res-l', gid:'res-lg'},
+      {prefix:'a', label:'Automation', id:'res-a', gid:'res-ag'},
+      {prefix:'r', label:'Revenue', id:'res-r', gid:'res-rg'},
+      {prefix:'d', label:'Distribution', id:'res-d', gid:'res-dg'}
+    ];
+
+    var totalYes = 0, totalQ = 30, lowestScore = 101, lowestCat = 'Content';
+
+    cats.forEach(function(cat) {
+      var yes = 0;
+      for (var i = 1; i <= 6; i++) {
+        if (answers[cat.prefix + i]) { yes++; totalYes++; }
+      }
+      var score = Math.round((yes / 6) * 100);
+      document.getElementById(cat.id).textContent = score + '%';
+      document.getElementById(cat.gid).textContent = gradeLabel(score);
+      if (score < lowestScore) { lowestScore = score; lowestCat = cat.label; }
+    });
+
+    var total = Math.round((totalYes / totalQ) * 100);
+    document.getElementById('res-total').textContent = total + '%';
+    var overallGrade = total >= 75 ? 'Ship-ready' : total >= 50 ? 'Growing' : total >= 25 ? 'Early stage' : 'Needs rebuild';
+    document.getElementById('res-grade').textContent = overallGrade;
+
+    var title = document.getElementById('verdict-title');
+    var desc = document.getElementById('verdict-desc');
+    var list = document.getElementById('gap-list');
+
+    title.textContent = 'Your #1 gap: ' + lowestCat + ' (' + lowestScore + '%)';
+    desc.textContent = 'Fix this first. Everything else compounds once your weakest link is patched.';
+
+    while (list.firstChild) list.removeChild(list.firstChild);
+    var fixes = FIXES[lowestCat] || [];
+    fixes.forEach(function(fix) {
+      var li = document.createElement('li');
+      li.textContent = fix;
+      list.appendChild(li);
+    });
+
+    var panel = document.getElementById('results');
+    panel.classList.add('visible');
+    panel.scrollIntoView({behavior:'smooth', block:'start'});
+  };
+}());
+</script>
+</body>
+</html>

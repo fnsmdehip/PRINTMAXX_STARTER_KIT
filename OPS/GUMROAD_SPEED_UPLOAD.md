@@ -887,3 +887,14 @@ It seems that if your prices are too low people don't value your product
 
 [ACQUISITION] Ask HN: AI productivity gains – do you fire devs or build better products?
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773999678, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1s6gczi/day_1_early_access_a_client_ghosted_me_after_i/
+**Added:** 2026-03-29T00:00:10-04:00
+
+[ACQUISITION] Day 1 Early Access - A client ghosted me after I built their entire product. I kept building it anyway
+

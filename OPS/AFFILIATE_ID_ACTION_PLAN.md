@@ -176,3 +176,25 @@ You could become a whop info product operator and end up taking a percent of the
 
 IMO the best platform to
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773999666, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1s6h7yo/i_got_tired_of_manually_translating_my_apps_so_i/
+**Added:** 2026-03-29T00:00:10-04:00
+
+[ACQUISITION] I got tired of manually translating my apps, so I built a GitHub Action that creates localization PRs automatically and 
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999680, Score: 35)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1s6e9gk/built_merlin_999mo_or_50_lifetime_accurate/
+**Added:** 2026-03-29T00:00:10-04:00
+
+[ACQUISITION] Built Merlin ($9.99/mo or $50 lifetime) — accurate astrology with action plans. Thoughts on the pricing + positioning? [rev: $$9.99/mo]
+

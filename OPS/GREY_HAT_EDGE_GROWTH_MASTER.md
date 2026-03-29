@@ -8173,3 +8173,289 @@ That's exactly why I built AI MVP Builders.
 
 [PH LAUNCH] Tobira.ai: A network where AI agents find deals for their humans
 
+
+
+---
+
+## Pending Enhancement (ALPHA1773999607, Score: 26)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/03/27/physical-intelligence-is-reportedly-in-talks-to-raise-1-billion-again/) | **URL:** https://techcrunch.com/2026/03/27/physical-intelligence-is-reportedly-in-talks-to-raise-1-billion-again/
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PLATFORM UPDATE] Physical Intelligence is reportedly in talks to raise $1 billion, again
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999611, Score: 20)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/03/27/european-commission-confirms-cyberattack-after-hackers-claim-data-breach/) | **URL:** https://techcrunch.com/2026/03/27/european-commission-confirms-cyberattack-after-hackers-claim-data-breach/
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PLATFORM UPDATE] European Commission confirms cyberattack after hackers claim data breach
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999612, Score: 26)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/03/27/aetherflux-reportedly-raising-series-b-at-2-billion-valuation/) | **URL:** https://techcrunch.com/2026/03/27/aetherflux-reportedly-raising-series-b-at-2-billion-valuation/
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PLATFORM UPDATE] Aetherflux reportedly raising Series B at $2 billion valuation
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999619, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/wordpress-studio-cli
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] WordPress Studio CLI: WordPress Studio now has an independently installable CLI
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999620, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lexaclaw
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Lexaclaw: Startup legal compliance built on OpenClaw
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999621, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/repolens
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] RepoLens: Know what changed and what matters across your codebase
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999622, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/domscribe
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Domscribe: Give your AI coding agent eyes on your running frontend
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999625, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/cohere-2
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Cohere Transcribe: New state-of-the-art in open source speech recognition
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999626, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/glance-give-claude-code-a-real-browser
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Glance: Real browser for Claude Code Test, Screenshot, Automate
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999628, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/crossnode
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Crossnode: Vibe code AI agents and put them behind a payment wall
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999630, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/slapmac
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] SlapMac: Slap your MacBook. It screams back. That's it.
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999631, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/santana
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Santana by Deep Softworks: Performant, real-time data visualization in your terminal
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999632, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/able-3
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Able: One-click WCAG &amp; ADA accessibility audits for any webpage
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999633, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/crabtalk
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] CrabTalk: The agent daemon that hides nothing. 8MB. Open Source
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999634, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/dwellrecord
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] DwellRecord: Keep your home records all together
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999635, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/expect
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Expect: Let agents test your code in a real browser
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999638, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/mistral-7b
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Voxtral TTS by Mistral AI: Multilingual TTS model with realistic and expressive speech
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999639, Score: 28)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/focus-flow
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Focus Flow 6.7 (Jira Plugin): Plan vs reality and multi-team epic reviews in Jira
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999640, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/superturtle
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] SuperTurtle: Remote control for Codex, handled from your phone
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999641, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/benchspan
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Benchspan: Run agent benchmarks in minutes, not hours
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999642, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/noctiluca
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Noctiluca: A new remote desktop for macOS
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999647, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/insideorg
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] InsideOrg: Free organization chart viewer for any company
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999654, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/claude-code-auto-fix-in-the-cloud
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Claude Code auto-fix: Auto-fix PRs in the cloud while you stay hands-off
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999655, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/hoop-dev-for-databases
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] hoop.dev - Claude Code Gateway: Connect Claude Code to your internal systems w/o credentials
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999656, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/gemini-memory-import
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Google Gemini Memory Import: Switch to Gemini without losing your AI memories
+
+
+
+---
+
+## Pending Enhancement (ALPHA1773999658, Score: 50)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/socap
+**Added:** 2026-03-29T00:00:10-04:00
+
+[PH LAUNCH] Audos Publishing House: Build an AI business, get up to $100K. No equity taken
+

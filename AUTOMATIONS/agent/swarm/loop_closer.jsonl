@@ -173,3 +173,7 @@
 {"ts": "2026-03-28T22:00:01.340360", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.0/10, drifted=0"}
 {"ts": "2026-03-29T00:00:01.001704", "action": "pipeline_advance", "target": "plumber_sites", "result": "OK", "details": "Triggered: seo_aso_optimizer \u2014 check logs with --logs seo_aso_optimizer"}
 {"ts": "2026-03-29T00:00:01.020178", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.2/10, drifted=0"}
+{"ts": "2026-03-29T02:00:01.214230", "action": "pipeline_advance", "target": "plumber_sites", "result": "OK", "details": "Failed to trigger seo_aso_optimizer (is it installed?)"}
+{"ts": "2026-03-29T02:00:01.234011", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.3/10, drifted=1"}
+{"ts": "2026-03-29T04:00:00.985407", "action": "pipeline_advance", "target": "plumber_sites", "result": "OK", "details": "Failed to trigger seo_aso_optimizer (is it installed?)"}
+{"ts": "2026-03-29T04:00:01.038646", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.3/10, drifted=1"}
