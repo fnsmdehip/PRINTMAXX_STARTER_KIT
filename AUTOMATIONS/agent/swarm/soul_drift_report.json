@@ -1,7 +1,7 @@
 {
-  "ts": "2026-03-30T08:00:00.779000",
+  "ts": "2026-03-30T16:00:01.561813",
   "avg_score": 9.5,
-  "total_scored": 11,
+  "total_scored": 10,
   "drifted_count": 1,
   "drifted_agents": [
     "conversion_optimizer"
@@ -11,7 +11,6 @@
     "test": 10.0,
     "broken_site_fix_20260329": 10.0,
     "conversion_optimizer": 6.5,
-    "revenue_tracker": 10.0,
     "ceo_decision_2026-03-15": 10.0,
     "mission_autonomy:auto_scraping_competi": 10.0,
     "mission_autonomy:SCRAPING_competitive_": 10.0,
