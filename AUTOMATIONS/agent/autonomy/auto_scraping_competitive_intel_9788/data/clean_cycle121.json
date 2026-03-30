@@ -1,0 +1,302 @@
+{
+  "daily_history_of_calculus_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 22,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 4,
+      "cross_appeal": 4
+    },
+    "community_total": 3008000,
+    "itunes_results": [
+      {
+        "name": "Brilliant \u2014 Math & Science",
+        "rating": 4.8,
+        "rating_count": 87000,
+        "genre": "Education",
+        "note": "Interactive problem-solving platform \u2014 not a daily streak app narrating calculus history: Newton vs Leibniz priority dispute, fluxions vs infinitesimals, Berkeley's 'The Analyst' critique, Cauchy's rigorization"
+      },
+      {
+        "name": "Khan Academy",
+        "rating": 4.7,
+        "rating_count": 310000,
+        "genre": "Education",
+        "note": "General math instruction platform \u2014 zero narrative on the historical controversy, mathematical revolutions, or personalities behind calculus"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "3.0M combined community. Newton vs Leibniz is the most famous intellectual priority dispute in science. The story of calculus \u2014 from Archimedes' method of exhaustion, through Cavalieri's indivisibles, to the Newton-Leibniz war, to Cauchy's epsilon-delta rigorization \u2014 is genuinely gripping. No streak app tells this story daily. STEM students, math lovers, science history fans would pay for bite-sized episodes."
+  },
+  "daily_number_theory_history_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 22,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 4,
+      "cross_appeal": 4
+    },
+    "community_total": 2907000,
+    "itunes_results": [
+      {
+        "name": "Photomath",
+        "rating": 4.8,
+        "rating_count": 890000,
+        "genre": "Education",
+        "note": "Camera-based math solver \u2014 solves equations, zero historical context about Euclid's proof of infinite primes, Fermat's Last Theorem 358-year journey, Riemann Hypothesis"
+      },
+      {
+        "name": "Mathway",
+        "rating": 4.7,
+        "rating_count": 125000,
+        "genre": "Education",
+        "note": "Math problem solver \u2014 no historical narrative of Gauss's Disquisitiones Arithmeticae, Ramanujan's taxicab numbers, Goldbach's unproven conjecture"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "2.9M combined community. Number theory has the best stories in mathematics: Fermat's 358-year unsolved Last Theorem, Ramanujan's miraculous intuition, the 160-year-old Riemann Hypothesis, twin primes conjecture. Euclid's infinity-of-primes proof is 2,300 years old and still elegant. Zero streak apps teach number theory history. Pure math enthusiasts and puzzle lovers are underserved."
+  },
+  "daily_famous_mathematicians_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 23,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 4,
+      "cross_appeal": 5
+    },
+    "community_total": 19935000,
+    "itunes_results": [
+      {
+        "name": "Daily Biography \u2014 Famous People",
+        "rating": 3.8,
+        "rating_count": 1200,
+        "genre": "Education",
+        "note": "General biography app covering politicians/celebrities \u2014 mathematicians get one entry among thousands, no depth on their actual work or context"
+      },
+      {
+        "name": "Anki Flashcards",
+        "rating": 4.6,
+        "rating_count": 3400,
+        "genre": "Education",
+        "note": "Spaced repetition tool \u2014 no curated narrative content on Euler, Gauss, Ramanujan, Emmy Noether, Alan Turing, Sophie Germain stories"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "19.9M combined community. Euler published 866 papers and lost his eyesight at 59 but kept working by memory. Ramanujan taught himself from a single textbook and rediscovered 100 years of mathematics before dying at 32. Emmy Noether proved theorems while banned from lecturing under Nazism. These stories are more gripping than most biographies. No streak app delivers a mathematician-per-day format. History lovers + STEM students = huge overlap."
+  },
+  "daily_history_of_geometry_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 21,
+    "score_dims": {
+      "community_size": 4,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 4,
+      "cross_appeal": 4
+    },
+    "community_total": 3125000,
+    "itunes_results": [
+      {
+        "name": "GeoGebra Geometry",
+        "rating": 4.6,
+        "rating_count": 28000,
+        "genre": "Education",
+        "note": "Interactive geometry drawing tool \u2014 zero historical narrative on Euclid's Elements, non-Euclidean geometry revolutions (Lobachevsky, Riemann), projective geometry emergence"
+      },
+      {
+        "name": "Geometry Dash",
+        "rating": 4.6,
+        "rating_count": 1250000,
+        "genre": "Games",
+        "note": "Rhythm platformer game \u2014 not educational geometry at all"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "3.1M combined community. Euclid's Elements is the second most-printed book in history after the Bible. Non-Euclidean geometry's discovery by Bolyai, Lobachevsky, and Riemann shattered 2,000 years of certainty and unlocked Einstein's relativity. Hilbert's axiomization of geometry. Fractal geometry by Mandelbrot. This history is intellectually transformative and completely untapped in streak format. Architecture and design communities would also convert."
+  },
+  "daily_cryptography_history_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 24,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 5,
+      "build_moat": 4,
+      "cross_appeal": 5
+    },
+    "community_total": 17405000,
+    "itunes_results": [
+      {
+        "name": "Simon Singh \u2014 The Code Book (audiobook)",
+        "rating": 4.7,
+        "rating_count": 890,
+        "genre": "Books",
+        "note": "Audiobook of the classic cryptography history \u2014 passive consumption, no gamification, no streak, no daily micro-lesson format"
+      },
+      {
+        "name": "Cryptogram Puzzles",
+        "rating": 4.4,
+        "rating_count": 14200,
+        "genre": "Games",
+        "note": "Solve substitution cipher puzzles \u2014 zero historical narrative on Caesar, Vigenere, Enigma, one-time pads, RSA invention"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "17.4M combined community. Cryptography history is extraordinary: Caesar cipher \u2192 Al-Kindi's frequency analysis (800 AD) \u2192 Vigenere's 'unbreakable' cipher \u2192 Babbage's hidden breakthrough \u2192 WWI Room 40 \u2192 Enigma and Bletchley Park \u2192 public key cryptography invented by Diffie-Hellman in 1976. Tech professionals, security engineers, and history fans all want this. No dedicated streak app exists. Crossover appeal with both history AND security audiences."
+  },
+  "daily_mathematical_logic_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 23,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 4,
+      "cross_appeal": 5
+    },
+    "community_total": 10155000,
+    "itunes_results": [
+      {
+        "name": "Philosophy Breaks \u2014 Daily Wisdom",
+        "rating": 4.5,
+        "rating_count": 2100,
+        "genre": "Education",
+        "note": "General philosophy app \u2014 does not cover mathematical logic revolution: Boole, Frege, Russell's Paradox, Godel's incompleteness theorems, Church-Turing thesis"
+      },
+      {
+        "name": "Logic Games \u2014 Brain Training",
+        "rating": 4.3,
+        "rating_count": 45000,
+        "genre": "Games",
+        "note": "Puzzle/brain training \u2014 no historical content on how Godel proved mathematics cannot prove its own consistency, upending Hilbert's program"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "10.2M combined community. Godel's incompleteness theorems (1931) are the most profound mathematical results of the 20th century \u2014 they proved that any sufficiently powerful mathematical system contains truths it cannot prove. Russell's paradox destroyed naive set theory. Turing's halting problem is the conceptual foundation of computer science. These ideas span math, philosophy, AND computer science. Three overlapping communities with no dedicated streak app serving any of them on this specific topic."
+  },
+  "daily_statistics_history_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 23,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 5,
+      "build_moat": 4,
+      "cross_appeal": 4
+    },
+    "community_total": 6770000,
+    "itunes_results": [
+      {
+        "name": "Statistics \u2014 Pocket Reference",
+        "rating": 3.9,
+        "rating_count": 780,
+        "genre": "Education",
+        "note": "Formula reference tool \u2014 no historical context on Pascal-Fermat probability correspondence, Bayes' posthumous theorem, Gauss inventing least squares at 18, Fisher vs Pearson feud"
+      },
+      {
+        "name": "Learn Statistics & Data Analysis",
+        "rating": 4.1,
+        "rating_count": 2300,
+        "genre": "Education",
+        "note": "Instruction-based course app \u2014 zero narrative on how Florence Nightingale invented the pie chart to save soldier lives, how Galton invented regression while studying heredity"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "6.8M combined community. Statistics history is counterintuitively gripping: Pascal and Fermat invented probability theory in 1654 correspondence about gambling debts. Bayes' theorem was published posthumously by a friend. Florence Nightingale pioneered data visualization to convince the British Army to fix hospital sanitation. Fisher and Pearson's vicious rivalry shaped modern hypothesis testing. Data scientists and ML practitioners lack historical literacy about their own field's origins \u2014 this app fills that gap with clear commercial intent."
+  },
+  "daily_history_of_algebra_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 22,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 4,
+      "cross_appeal": 4
+    },
+    "community_total": 19065000,
+    "itunes_results": [
+      {
+        "name": "Photomath",
+        "rating": 4.8,
+        "rating_count": 890000,
+        "genre": "Education",
+        "note": "Equation solver \u2014 zero historical content on Al-Khwarizmi coining 'algebra' (al-jabr), Cardano's cubic formula, Galois dying at 20 having invented group theory, Abel's impossibility proof"
+      },
+      {
+        "name": "Algebra Touch",
+        "rating": 4.5,
+        "rating_count": 6700,
+        "genre": "Education",
+        "note": "Interactive algebra manipulation tool \u2014 solves equations, no history of the word 'algebra' originating in 9th-century Baghdad or the Renaissance formula wars"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "19.1M combined community. Algebra's history is a 3,000-year thriller: Babylonian tablets to Al-Khwarizmi's Baghdad House of Wisdom, Italian Renaissance duels over cubic formulas (Tartaglia vs Cardano), 19-year-old Galois inventing group theory the night before his fatal duel, Abel proving the quintic unsolvable at 22. This progression from arithmetic to abstract algebra is the backbone of all modern mathematics. History and math communities are both large \u2014 no streak app connects them."
+  },
+  "daily_recreational_math_history_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 22,
+    "score_dims": {
+      "community_size": 5,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 4,
+      "cross_appeal": 4
+    },
+    "community_total": 4870000,
+    "itunes_results": [
+      {
+        "name": "Daily Puzzles \u2014 Brain Teasers",
+        "rating": 4.4,
+        "rating_count": 34000,
+        "genre": "Games",
+        "note": "Puzzle game app \u2014 no historical context on Euler's Konigsberg bridges (birth of graph theory), Fibonacci's rabbit problem, the 15-puzzle craze of 1880, Rubik's Cube mathematical group theory"
+      },
+      {
+        "name": "Math Riddles and Puzzles",
+        "rating": 4.5,
+        "rating_count": 89000,
+        "genre": "Games",
+        "note": "Collection of math puzzles \u2014 no narrative framing, no historical origin stories, no context about how recreational mathematics often leads to serious mathematics"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "4.9M combined community. Recreational mathematics is the gateway drug to serious math. Euler invented graph theory to solve the Konigsberg bridge problem as a party curiosity. Fibonacci's rabbit problem introduced the sequence while writing a 13th-century merchant arithmetic manual. The 15-puzzle created a national craze in 1880 and launched combinatorics research. Martin Gardner's Scientific American column introduced millions to mathematics. A daily streak app delivering the ORIGIN STORY of famous puzzles \u2014 not just the puzzles themselves \u2014 occupies a unique niche with no direct competition."
+  },
+  "daily_topology_history_streak": {
+    "verdict": "BLUE_OCEAN",
+    "score": 22,
+    "score_dims": {
+      "community_size": 4,
+      "app_gap": 5,
+      "commercial_intent": 4,
+      "build_moat": 5,
+      "cross_appeal": 4
+    },
+    "community_total": 3748000,
+    "itunes_results": [
+      {
+        "name": "3Blue1Brown (YouTube companion)",
+        "rating": 4.9,
+        "rating_count": 1200,
+        "genre": "Education",
+        "note": "Visualization companion \u2014 not a streak app, video-based, no daily lesson format on Mobius strips, Klein bottles, Poincare Conjecture proof"
+      },
+      {
+        "name": "Brilliant \u2014 Math",
+        "rating": 4.8,
+        "rating_count": 87000,
+        "genre": "Education",
+        "note": "Interactive courses \u2014 does not cover history of topology: Euler's polyhedron formula, Mobius and the one-sided surface, Poincare's 100-year conjecture, Perelman refusing the $1M prize"
+      }
+    ],
+    "exact_match_apps": [],
+    "gap_note": "3.7M combined community. Topology has the most visually arresting and philosophically strange results in mathematics. Euler's V-E+F=2 formula (1750) is topology's origin. Mobius discovered his strip while working on a German government surveying problem. Poincare's conjecture about 3-spheres was unsolved for 99 years until Perelman proved it \u2014 then refused the $1M Millennium Prize and the Fields Medal. These stories are objectively remarkable. A daily topology-history streak app would be uniquely positioned at the intersection of visual math and science storytelling."
+  }
+}

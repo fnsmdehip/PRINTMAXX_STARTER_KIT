@@ -1,13 +1,13 @@
 {
-  "ts": "2026-03-29T20:07:07.663211",
-  "avg_score": 9.6,
+  "ts": "2026-03-30T00:00:00.778344",
+  "avg_score": 9.5,
   "total_scored": 14,
   "drifted_count": 1,
   "drifted_agents": [
     "conversion_optimizer"
   ],
   "scores": {
-    "swarm_brain": 10.0,
+    "swarm_brain": 8.5,
     "broken_site_fix_20260329": 10.0,
     "test": 10.0,
     "conversion_optimizer": 6.5,

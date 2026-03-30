@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-03-29T12:30:00.000000",
-  "cycle_number": 6,
+  "last_run": "2026-03-29T22:16:20.024946",
+  "cycle_number": 7,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -37,14 +37,7 @@
     "San Jose CA",
     "San Francisco CA",
     "San Diego CA",
-    "Austin TX"
-  ],
-  "total_leads_all_cycles": 1457,
-  "total_previews_deployed": 472,
-  "total_sites_built_local": 1634,
-  "total_emails_queued": 704,
-  "emails_ready_to_send": 31,
-  "next_cities": [
+    "Austin TX",
     "Miami FL",
     "Atlanta GA",
     "Houston TX",
@@ -52,7 +45,24 @@
     "Los Angeles CA",
     "San Antonio TX",
     "Jacksonville FL",
-    "Charlotte NC"
+    "Raleigh NC"
+  ],
+  "total_leads_all_cycles": 1702,
+  "total_previews_deployed": 548,
+  "total_sites_built_local": 907,
+  "total_emails_queued": 917,
+  "emails_ready_to_send": 31,
+  "next_cities": [
+    "Virginia Beach VA",
+    "Colorado Springs CO",
+    "Omaha NE",
+    "Long Beach CA",
+    "Bakersfield CA",
+    "Tampa FL (expansion)",
+    "Fresno CA",
+    "Mesa AZ",
+    "Sacramento CA (expansion)",
+    "Tucson AZ (expansion)"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -90,14 +100,21 @@
     "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "CRITICAL: No outbound email service — 704 emails queued, 31 ready to send, 0 sent. Fix: Smartlead/Instantly/Gmail SMTP (30 min).",
-    "CRITICAL: Surge.sh Student plan blocks new domain deploys. 445 live, 1,189 HTML-only. Fix: new surge account email (5 min, free) OR Surge Plus ($13/mo). 9 new Denver sites deployed this cycle proving refreshes work.",
-    "P1: 359 surge-deployed leads without email. Fix: Apollo.io free tier (50 exports/mo) or Hunter.io ($49/mo) bulk enrichment.",
-    "P1: Surge deploy maxed at ~445 registered domains. New deploy strategy needed: Netlify (free, CLI deploy, 300 sites), Cloudflare Pages (free, unlimited), or new surge account."
+    "CRITICAL: No outbound email service \u2014 31 emails ready to send, 0 sent. Fix: Smartlead/Instantly/Gmail SMTP (30 min).",
+    "CRITICAL: No SMS/calling service \u2014 100 call scripts + SMS scripts ready. Fix: Twilio SMS (/bin/zsh.0079/msg) or human dialing.",
+    "P1: Surge Student plan blocks new subdomains. 76 on GitHub Pages now. Netlify auth (5 min) would unlock unlimited free deploys.",
+    "P1: Email enricher finding <2% \u2014 Hunter.io API (/mo) or Apollo.io would find emails for 718 phone leads."
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_4_results": {
-    "cities_discovered": ["Boston MA", "Baltimore MD", "Denver CO", "Portland OR", "Las Vegas NV", "Indianapolis IN"],
+    "cities_discovered": [
+      "Boston MA",
+      "Baltimore MD",
+      "Denver CO",
+      "Portland OR",
+      "Las Vegas NV",
+      "Indianapolis IN"
+    ],
     "new_leads": 144,
     "new_f_grade": 111,
     "new_sites_built": 149,
@@ -106,7 +123,16 @@
     "surge_blocker": "Student plan domain limit exhausted after 402 deployed domains"
   },
   "cycle_5_results": {
-    "cities_discovered": ["Columbus OH", "St Louis MO", "Kansas City MO", "Cincinnati OH", "New Orleans LA", "Memphis TN", "Oklahoma City OK", "Tucson AZ"],
+    "cities_discovered": [
+      "Columbus OH",
+      "St Louis MO",
+      "Kansas City MO",
+      "Cincinnati OH",
+      "New Orleans LA",
+      "Memphis TN",
+      "Oklahoma City OK",
+      "Tucson AZ"
+    ],
     "new_leads": 127,
     "new_f_grade": 88,
     "new_sites_built": 54,
@@ -117,7 +143,16 @@
     "surge_blocker": "Student plan blocks new subdomains not previously registered to account"
   },
   "cycle_6_results": {
-    "cities_discovered": ["Fort Worth TX", "El Paso TX", "Washington DC", "Seattle WA", "San Jose CA", "San Francisco CA", "San Diego CA", "Austin TX"],
+    "cities_discovered": [
+      "Fort Worth TX",
+      "El Paso TX",
+      "Washington DC",
+      "Seattle WA",
+      "San Jose CA",
+      "San Francisco CA",
+      "San Diego CA",
+      "Austin TX"
+    ],
     "new_leads": 139,
     "new_f_grade": 93,
     "new_sites_built": 235,
@@ -135,16 +170,19 @@
     "Outreach queue grew from 569 to 704 emails (+135)",
     "Identified 445 surge-live sites vs 1,189 HTML-only (deploy service upgrade unlocks all)",
     "Confirmed surge deploy root cause: Student plan restricts NEW subdomains, not refresh of existing ones",
-    "Next step: Netlify CLI deploy as replacement — free tier, 300 sites, no domain restriction"
+    "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
     "discover": "HEALTHY",
     "grade": "HEALTHY",
-    "build": "HEALTHY — 1,634 HTML sites built",
-    "deploy": "PARTIAL — 445 surge live, 1,189 HTML-only. Netlify migration would unblock all.",
-    "enrich": "LOW — email enricher finding 0-5% on cycle 6 cities. Need Apollo/Hunter API.",
-    "outreach_generate": "HEALTHY — 704 emails composed and queued",
-    "outreach_send": "BLOCKED — no email service. 31 fully-ready emails waiting."
+    "build": "HEALTHY \u2014 907 HTML sites in _sites/",
+    "deploy_surge": "PARTIAL \u2014 472 surge live, refresh-only (Student plan)",
+    "deploy_ghpages": "NEW \u2014 76 sites live at fnsmdehip.github.io/openclaw-previews/",
+    "enrich_email": "LOW \u2014 426 emails found of 826 hot leads (enricher finding ~1%)",
+    "enrich_phone": "HIGH \u2014 1518 phone numbers (87% coverage on hot leads)",
+    "outreach_email": "HEALTHY \u2014 917 queued, 31 ready to send",
+    "outreach_phone": "NEW \u2014 100 call/SMS scripts generated in phone_outreach_queue.csv",
+    "outreach_send": "BLOCKED \u2014 no email service or SMS service. 31 emails + 100 phone scripts waiting."
   },
   "metrics_history": [
     {
@@ -166,6 +204,43 @@
       "surge_deployed": 472,
       "outreach_queued": 704,
       "ready_to_send": 31
+    },
+    {
+      "cycle": 7,
+      "date": "2026-03-29",
+      "total_leads": 1702,
+      "hot_leads": 826,
+      "with_email": 426,
+      "with_phone": 1518,
+      "surge_deployed": 472,
+      "ghpages_deployed": 76,
+      "outreach_queued": 917,
+      "phone_queue": 100,
+      "ready_to_send": 31
     }
-  ]
+  ],
+  "ghpages_deployed": 76,
+  "phone_outreach_queue": 100,
+  "cycle_7_results": {
+    "cities_discovered": [
+      "Miami FL",
+      "Atlanta GA",
+      "Houston TX",
+      "Dallas TX",
+      "Los Angeles CA",
+      "San Antonio TX",
+      "Jacksonville FL",
+      "Raleigh NC"
+    ],
+    "new_leads": 245,
+    "new_f_grade": 160,
+    "new_sites_built": 210,
+    "new_surge_deploys": 0,
+    "new_ghpages_deploys": 76,
+    "new_emails_queued": 213,
+    "phone_queue_generated": 100,
+    "ready_to_send_email": 31,
+    "ghpages_breakthrough": "Created fnsmdehip/openclaw-previews repo, deployed 100 sites, enabled GitHub Pages",
+    "surge_blocker": "Student plan still blocks new surge subdomains; refresh of existing 472 domains still works"
+  }
 }

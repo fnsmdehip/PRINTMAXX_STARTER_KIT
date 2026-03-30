@@ -1,0 +1,243 @@
+{
+  "cycle": 120,
+  "timestamp": "2026-03-30T01:19:31.621483+00:00",
+  "strategy": "GEOPOLITICS & INTERNATIONAL RELATIONS",
+  "status": "COMPLETE",
+  "blue_oceans": 10,
+  "soft_competition": 0,
+  "occupied": 0,
+  "community_total": 311382000,
+  "cumulative_blue_oceans": 586,
+  "niches": {
+    "daily_geopolitics_fundamentals_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 34772000,
+      "itunes_results": [
+        {
+          "name": "Geopolitics Daily \u2014 News",
+          "rating": 3.9,
+          "rating_count": 2200,
+          "genre": "News",
+          "note": "Current events news aggregator \u2014 not an educational streak app teaching geopolitical theory (Mackinder, Mahan, Spykman, Mearsheimer)"
+        },
+        {
+          "name": "Council on Foreign Relations",
+          "rating": 4.1,
+          "rating_count": 890,
+          "genre": "News",
+          "note": "Think-tank publication access \u2014 not a structured daily lessons app with gamification"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "34.7M combined community. No app teaches geopolitical theory (Heartland Theory, Rimland, Sea Power) with daily bite-sized lessons. Mackinder's pivot area, Spykman's rimland, Mearsheimer's offensive realism \u2014 concepts shaping every global decision but no streak app explains them. Business strategists and students would pay for this."
+    },
+    "daily_great_power_competition_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 32970000,
+      "itunes_results": [
+        {
+          "name": "Foreign Policy Magazine",
+          "rating": 4.3,
+          "rating_count": 4100,
+          "genre": "News",
+          "note": "Premium news magazine \u2014 not a structured daily learning app on US-China-Russia dynamics"
+        },
+        {
+          "name": "The Economist",
+          "rating": 4.5,
+          "rating_count": 48000,
+          "genre": "News",
+          "note": "General news subscription \u2014 not a focused educational streak app on great power competition"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "US-China-Russia triangle is the defining geopolitical story of the 21st century. 32.9M community. No app delivers daily lessons: Taiwan Strait flashpoints, Arctic sovereignty claims, Belt and Road leverage, SWIFT weaponization, chip war escalation ladders. Professionals in finance, policy, and tech actively seek this literacy. Zero streak format competitors."
+    },
+    "daily_cold_war_proxy_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 49782000,
+      "itunes_results": [
+        {
+          "name": "Cold War History \u2014 The Documentary",
+          "rating": 3.8,
+          "rating_count": 1450,
+          "genre": "Entertainment",
+          "note": "Documentary streaming access \u2014 not a daily educational streak app with structured curriculum"
+        },
+        {
+          "name": "KGB Files \u2014 Secret History",
+          "rating": 4.0,
+          "rating_count": 3200,
+          "genre": "Books",
+          "note": "Static ebook/article collection \u2014 no gamification, no streak mechanic, no curriculum"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "49.7M combined community. Proxy wars shaped the modern world: Korea, Vietnam, Angola, Mozambique, Nicaragua, Afghanistan. Each theatre has unique CIA/KGB operations, political decisions, and long-term consequences explaining today's geopolitical map. No streak app synthesizes these conflicts as teachable lessons with modern relevance."
+    },
+    "daily_nuclear_strategy_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 17198000,
+      "itunes_results": [
+        {
+          "name": "Nuclear War Simulator",
+          "rating": 4.2,
+          "rating_count": 9800,
+          "genre": "Games",
+          "note": "Simulation game \u2014 not an educational app teaching deterrence theory, MAD, first-strike calculus"
+        },
+        {
+          "name": "Countdown to Zero",
+          "rating": 3.6,
+          "rating_count": 820,
+          "genre": "Education",
+          "note": "Anti-nuclear advocacy app \u2014 not a structured lessons app covering deterrence theory and nuclear history"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "17.1M community. Deterrence theory (MAD, NUTS, minimum deterrence, extended deterrence, first-use vs no-first-use) is genuinely complex yet critically important. 1962 Cuban Missile Crisis, 1983 Able Archer near-miss, Pakistan-India nuclear dynamics, North Korea escalation ladders \u2014 no streak app teaches the decision trees policymakers actually face."
+    },
+    "daily_diplomacy_history_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 19772000,
+      "itunes_results": [
+        {
+          "name": "Diplomacy (board game companion)",
+          "rating": 4.0,
+          "rating_count": 14000,
+          "genre": "Games",
+          "note": "Board game companion \u2014 not a historical diplomacy education app"
+        },
+        {
+          "name": "History of Diplomacy \u2014 Podcast",
+          "rating": 4.3,
+          "rating_count": 680,
+          "genre": "Education",
+          "note": "Audio podcast app \u2014 not a structured daily streak app with quizzes and progress tracking"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "19.7M community. Congress of Vienna (1815), Treaty of Westphalia (1648), Peace of Paris (1783), Yalta (1945), Camp David (1978) \u2014 each a masterclass in negotiation, power balancing, and statecraft. No streak app teaches diplomatic history as daily 5-minute lessons. Business negotiators and policy wonks are an obvious premium segment."
+    },
+    "daily_middle_east_geopolitics_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 49000000,
+      "itunes_results": [
+        {
+          "name": "Middle East Eye",
+          "rating": 4.0,
+          "rating_count": 1900,
+          "genre": "News",
+          "note": "News outlet app \u2014 not an educational app teaching Sykes-Picot, Balfour, Arab-Israeli conflict structure"
+        },
+        {
+          "name": "Al Jazeera English",
+          "rating": 4.2,
+          "rating_count": 12000,
+          "genre": "News",
+          "note": "News streaming app \u2014 not a structured educational streak app on Middle East geopolitics"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "49M community. Sykes-Picot line, Balfour Declaration, 1979 Iranian Revolution, Oslo Accords failures, petrodollar recycling, Sunni-Shia proxy conflict \u2014 all deeply connected yet rarely taught systematically. No streak app provides daily structured lessons connecting colonial history to today's headlines. High engagement potential given media saturation of the topic."
+    },
+    "daily_economic_statecraft_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 35572000,
+      "itunes_results": [
+        {
+          "name": "Reuters Business News",
+          "rating": 4.1,
+          "rating_count": 7200,
+          "genre": "News",
+          "note": "News app \u2014 not educational streak app teaching sanctions architecture, SWIFT exclusion, petrodollar mechanics"
+        },
+        {
+          "name": "Bloomberg",
+          "rating": 4.4,
+          "rating_count": 58000,
+          "genre": "Finance",
+          "note": "Financial news terminal \u2014 not a daily lessons app teaching economic coercion as geopolitical tool"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "35.5M community. Economic statecraft \u2014 SWIFT weaponization, secondary sanctions, export controls, currency swap lines, BIS settlement exclusion \u2014 is now the primary tool of great power conflict yet zero apps teach it as a curriculum. Finance professionals, IR students, and business strategists face this knowledge gap daily. Premium willingness-to-pay is high."
+    },
+    "daily_colonial_legacy_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 18910000,
+      "itunes_results": [
+        {
+          "name": "Decolonize This Place",
+          "rating": 3.5,
+          "rating_count": 340,
+          "genre": "Education",
+          "note": "Advocacy/activism app \u2014 not a structured historical streak app explaining how colonial borders created modern conflicts"
+        },
+        {
+          "name": "History of Africa",
+          "rating": 3.9,
+          "rating_count": 1200,
+          "genre": "Education",
+          "note": "Static article collection \u2014 no gamification, no streak mechanic, no modern relevance tracking"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "18.9M community. Berlin Conference (1884), Scramble for Africa, mandate system, resource extraction legacies \u2014 virtually every active conflict zone traces directly to colonial-era border drawing. No streak app teaches these causal chains systematically. Appeals to policy students, NGO workers, journalists, and globally curious professionals."
+    },
+    "daily_intelligence_agencies_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 18611000,
+      "itunes_results": [
+        {
+          "name": "Spy Museum App",
+          "rating": 4.2,
+          "rating_count": 1890,
+          "genre": "Education",
+          "note": "Museum companion app \u2014 physical location content, not a standalone daily lessons streak app"
+        },
+        {
+          "name": "The Intelligence Podcast (CIA)",
+          "rating": 4.4,
+          "rating_count": 3400,
+          "genre": "Education",
+          "note": "Audio podcast app \u2014 not a structured gamified streak app with quizzes and progress tracking"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "18.6M community. CIA Bay of Pigs, KGB Operation RYAN, MOSSAD Operation Wrath of God, MI6 and Oleg Gordievsky \u2014 intelligence operations are documented, educational, and fascinating. HUMINT vs SIGINT vs OSINT trade-offs, tradecraft basics, historical failures (Ames, Hanssen) \u2014 zero streak apps teach this curriculum. True crime + history crossover audience is massive."
+    },
+    "daily_international_law_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 34795000,
+      "itunes_results": [
+        {
+          "name": "International Law Guide",
+          "rating": 3.7,
+          "rating_count": 420,
+          "genre": "Reference",
+          "note": "Static legal reference \u2014 not an educational daily streak app on ICJ, ICC, UN charter, R2P doctrine"
+        },
+        {
+          "name": "Legal Definitions",
+          "rating": 4.0,
+          "rating_count": 8900,
+          "genre": "Reference",
+          "note": "General legal dictionary \u2014 not focused on international law, treaties, or global governance"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "34.5M community. UN Charter Article 51 self-defense, ICJ vs ICC jurisdiction, Responsibility to Protect doctrine, Law of the Sea (UNCLOS), WTO dispute resolution \u2014 these govern real-world conflicts but remain opaque even to educated people. No streak app demystifies international law with daily bite-sized lessons tied to current events. Law students, journalists, and policy professionals are ideal users."
+    }
+  }
+}

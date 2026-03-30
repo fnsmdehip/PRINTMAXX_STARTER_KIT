@@ -1,15 +1,15 @@
 {
-  "cycle_number": 120,
-  "configured_at": "2026-03-29T22:26:45.754984+00:00",
+  "cycle_number": 122,
+  "configured_at": "2026-03-30T02:01:59.586335+00:00",
   "venture": "SCRAPING_competitive_intel",
   "step": "configure",
-  "strategy": "GEOPOLITICS & INTERNATIONAL RELATIONS",
-  "note": "Cycle 120: GEOPOLITICS & INTERNATIONAL RELATIONS. Cumulative entering: 576 confirmed BOs.",
-  "cumulative_entering": 576,
+  "strategy": "EVOLUTIONARY PSYCHOLOGY",
+  "note": "Cycle 122: EVOLUTIONARY PSYCHOLOGY. Cumulative entering: 596 confirmed BOs.",
+  "cumulative_entering": 596,
   "queued_strategies": [
-    "HISTORY OF MATHEMATICS",
-    "EVOLUTIONARY PSYCHOLOGY",
     "BEHAVIORAL ECONOMICS",
-    "HISTORY OF SCIENCE & SCIENTISTS"
+    "HISTORY OF SCIENCE & SCIENTISTS",
+    "PHILOSOPHY OF LANGUAGE",
+    "ANCIENT CIVILIZATIONS"
   ]
 }

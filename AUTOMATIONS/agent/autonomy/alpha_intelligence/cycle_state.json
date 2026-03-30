@@ -1,73 +1,22 @@
 {
-  "last_cycle": "2026-03-29T18:55:42Z",
-  "cycle_number": 112,
+  "last_cycle": "2026-03-30T00:31:12Z",
+  "cycle_number": 113,
   "status": "COMPLETE",
   "phase": "COMPOUND_COMPLETE",
-  "entries_processed": 18,
-  "entries_routed": 24,
-  "ventures_created": 5,
+  "entries_processed": 44,
+  "entries_routed": 23,
+  "ventures_created": 3,
   "content_generated": 8,
   "freelance_leads": 17,
-  "ecom_products": 3,
-  "next_cycle": "2026-03-30T00:22:00Z",
-  "blockers": [
-    {
-      "priority": "P0",
-      "blocker": "Twitter login required",
-      "detail": "Keep X/Brave logged in for scraper to work — losing ~30% of alpha per cycle without it. Currently hitting 30s timeout on high-signal accounts."
-    },
-    {
-      "priority": "P1",
-      "blocker": "Product Hunt API 403 auth error",
-      "detail": "Check .env PRODUCTHUNT_API_KEY or re-authenticate. Workaround: ProductHunt findings are lower priority (covered by Twitter + Reddit signal)"
-    }
-  ],
-  "top_findings": [
-    {
-      "id": "CI117_GENIUS_STACK",
-      "title": "5 blue ocean psychology apps: Creative/Flow/Polymath/Innovation/Musical Genius. Psychology beats religion for competition + margins. Finch validation (5.0*, 652K ratings).",
-      "roi": "HIGHEST",
-      "status": "READY_FOR_APP_FACTORY",
-      "scores": "21-25",
-      "action": "Build 5 concepts, QA 1, submit to factory pipeline"
-    },
-    {
-      "id": "FREELANCE_BATCH_17",
-      "title": "17 live freelance leads from Reddit (magazine layout $500-1K, shorts editor $200, social manager $100). Same-day execution window (4-24 hours). Estimated capture $2,700 if all convert.",
-      "roi": "HIGH",
-      "status": "ROUTED_TO_EXECUTION",
-      "scores": "60-75",
-      "action": "Email all 17 with qualification + custom offer within 90 minutes"
-    },
-    {
-      "id": "PLATFORM_SHIFTS_2026",
-      "title": "Algorithm changes: TikTok completion rate raised, YouTube Shorts SEO-enabled (50-60s sweet spot), Instagram DM shares = priority metric. First 5 seconds = distribution window.",
-      "roi": "HIGH",
-      "status": "ROUTED_TO_CONTENT_FARM",
-      "scores": "18-24",
-      "action": "Update posting calendar + template tweaks (native-first strategy)"
-    },
-    {
-      "id": "EMAIL_BENCHMARKS_2026",
-      "title": "Step 1 email = 58% of replies. Intent-based timing = 2-4x reply rate multiplier. Engagement depth > open rates (2026 shift). Tracking pixels trigger Gmail warnings.",
-      "roi": "HIGH",
-      "status": "ROUTED_TO_OUTBOUND",
-      "scores": "19-22",
-      "action": "Integrate timing + first-email quality focus into next cold batch"
-    }
-  ],
+  "ecom_products": 21,
+  "twitter_entries": 2,
+  "next_cycle": "2026-03-30T04:00:00Z",
   "sources_status": {
-    "reddit": "✅ 158 posts found (20 subreddits scanned)",
-    "twitter": "⏳ running (30s timeout)",
-    "hackernews": "ℹ️ pending",
-    "producthunt": "⚠️ 403 auth",
-    "indiehackers": "ℹ️ pending"
+    "reddit": "\u2705 163 posts (20 subreddits, 6 new entries)",
+    "twitter": "\u2705 2 new entries from @swyx (high-signal)",
+    "hackernews": "\u2705 22 Show HN opportunities",
+    "github_opportunities": "\u2705 21 opportunity radar entries",
+    "producthunt": "\u26a0\ufe0f 403 auth error (deprioritized)"
   },
-  "cycle_duration_seconds": 240,
-  "content_rule_9_compliance": {
-    "tweets_generated": 3,
-    "thread_posts": 5,
-    "status": "COMPLIANT"
-  },
-  "notes": "Reddit scraper signal rate = 11% (158 posts, 18 actionable). Twitter scraper is higher quality but hitting timeout. Blue ocean psychology apps are highest ROI finding this cycle. Freelance leads are hot (same-day capture window). ProductHunt blocker remains, ProductHunt findings lower priority."
+  "summary": "Strongest cycle for opportunity quality. Reddit + GitHub + HN + Twitter all performing well. Mac Code, Gridland, Lil-agents, app validation, Show HN Stack findings are HIGHEST tier. 17 freelance leads captured. Twitter now working (2 new entries). Next cycle: execute freelance outreach + ecom listing + venture builds."
 }

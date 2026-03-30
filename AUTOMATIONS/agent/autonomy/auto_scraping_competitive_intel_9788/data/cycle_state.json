@@ -1,36 +1,36 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-29T22:26:45.754984+00:00",
-  "cycle_number": 119,
+  "last_cycle": "2026-03-30T02:01:59.586335+00:00",
+  "cycle_number": 121,
   "cycle_status": "COMPLETE",
   "current_step": "complete",
-  "configured_at": "2026-03-29T22:26:45.754984+00:00",
+  "configured_at": "2026-03-30T02:01:59.586335+00:00",
   "stats": {
     "niches_scanned": 10,
     "blue_oceans": 10,
     "soft_competition": 0,
     "occupied": 0,
-    "community_total": 189939000
+    "community_total": 90988000
   },
-  "cumulative_blue_oceans": 576,
+  "cumulative_blue_oceans": 596,
   "p0_alerts": [
-    "daily_sun_tzu_strategy_streak",
-    "daily_wwii_battles_streak",
-    "daily_ancient_warfare_streak",
-    "daily_naval_history_streak",
-    "daily_cold_war_intelligence_streak",
-    "daily_special_operations_streak",
-    "daily_military_tactics_streak",
-    "daily_siege_warfare_streak",
-    "daily_air_power_history_streak",
-    "daily_guerrilla_warfare_streak"
+    "daily_history_of_calculus_streak",
+    "daily_number_theory_history_streak",
+    "daily_famous_mathematicians_streak",
+    "daily_history_of_geometry_streak",
+    "daily_cryptography_history_streak",
+    "daily_mathematical_logic_streak",
+    "daily_statistics_history_streak",
+    "daily_history_of_algebra_streak",
+    "daily_recreational_math_history_streak",
+    "daily_topology_history_streak"
   ],
   "previous_cycle_results": {
-    "cycle": 119,
-    "strategy": "MILITARY HISTORY & STRATEGY",
+    "cycle": 121,
+    "strategy": "HISTORY OF MATHEMATICS",
     "status": "COMPLETE",
     "blue_oceans": 10,
     "soft_competition": 0,
-    "community_total": 189939000
+    "community_total": 90988000
   }
 }
