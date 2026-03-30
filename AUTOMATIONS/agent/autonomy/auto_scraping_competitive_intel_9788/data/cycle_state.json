@@ -1,36 +1,36 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-29T14:53:50.434377+00:00",
-  "cycle_number": 117,
+  "last_cycle": "2026-03-29T22:26:45.754984+00:00",
+  "cycle_number": 119,
   "cycle_status": "COMPLETE",
   "current_step": "complete",
-  "configured_at": "2026-03-29T14:53:50.434377+00:00",
+  "configured_at": "2026-03-29T22:26:45.754984+00:00",
   "stats": {
     "niches_scanned": 10,
     "blue_oceans": 10,
     "soft_competition": 0,
     "occupied": 0,
-    "community_total": 86106000
+    "community_total": 189939000
   },
-  "cumulative_blue_oceans": 556,
+  "cumulative_blue_oceans": 576,
   "p0_alerts": [
-    "daily_creative_genius_streak",
-    "daily_flow_state_streak",
-    "daily_divergent_thinking_streak",
-    "daily_polymath_habits_streak",
-    "daily_creative_blocks_streak",
-    "daily_innovation_psychology_streak",
-    "daily_musical_genius_streak",
-    "daily_imagination_science_streak",
-    "daily_creative_problem_solving_streak",
-    "daily_cognitive_style_streak"
+    "daily_sun_tzu_strategy_streak",
+    "daily_wwii_battles_streak",
+    "daily_ancient_warfare_streak",
+    "daily_naval_history_streak",
+    "daily_cold_war_intelligence_streak",
+    "daily_special_operations_streak",
+    "daily_military_tactics_streak",
+    "daily_siege_warfare_streak",
+    "daily_air_power_history_streak",
+    "daily_guerrilla_warfare_streak"
   ],
   "previous_cycle_results": {
-    "cycle": 117,
-    "strategy": "PSYCHOLOGY OF CREATIVITY & GENIUS",
+    "cycle": 119,
+    "strategy": "MILITARY HISTORY & STRATEGY",
     "status": "COMPLETE",
     "blue_oceans": 10,
     "soft_competition": 0,
-    "community_total": 86106000
+    "community_total": 189939000
   }
 }

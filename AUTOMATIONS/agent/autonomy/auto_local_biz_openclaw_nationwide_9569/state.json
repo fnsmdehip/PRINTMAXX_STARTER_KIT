@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-03-29T07:57:00.000000",
-  "cycle_number": 5,
+  "last_run": "2026-03-29T12:30:00.000000",
+  "cycle_number": 6,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -29,14 +29,7 @@
     "New Orleans LA",
     "Memphis TN",
     "Oklahoma City OK",
-    "Tucson AZ"
-  ],
-  "total_leads_all_cycles": 1318,
-  "total_previews_deployed": 515,
-  "total_sites_built_local": 1399,
-  "total_emails_queued": 569,
-  "emails_ready_to_send": 31,
-  "next_cities": [
+    "Tucson AZ",
     "Fort Worth TX",
     "El Paso TX",
     "Washington DC",
@@ -45,6 +38,21 @@
     "San Francisco CA",
     "San Diego CA",
     "Austin TX"
+  ],
+  "total_leads_all_cycles": 1457,
+  "total_previews_deployed": 472,
+  "total_sites_built_local": 1634,
+  "total_emails_queued": 704,
+  "emails_ready_to_send": 31,
+  "next_cities": [
+    "Miami FL",
+    "Atlanta GA",
+    "Houston TX",
+    "Dallas TX",
+    "Los Angeles CA",
+    "San Antonio TX",
+    "Jacksonville FL",
+    "Charlotte NC"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -70,23 +78,26 @@
     "salem-home-improvement-llc-philadelphia-pa.surge.sh",
     "the-walthew-law-firm-seattle-wa.surge.sh",
     "adler-giersch-ps-seattle-wa.surge.sh",
-    "davis-law-group-ps-seattle-wa.surge.sh"
+    "davis-law-group-ps-seattle-wa.surge.sh",
+    "mile-high-shade-llc-denver-co.surge.sh",
+    "colorado-prowash-llc-denver-co.surge.sh",
+    "the-paint-doctor-inc-denver-co.surge.sh",
+    "tzp-enterprise-inc-denver-co.surge.sh",
+    "rocky-mountain-rudy-custom-painting-restoration-denver-co.surge.sh",
+    "procam-services-inc-denver-co.surge.sh",
+    "mile-high-mobile-wash-llc-denver-co.surge.sh",
+    "manley-restoration-remodeling-denver-co.surge.sh",
+    "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "CRITICAL: No outbound email service \u2014 569 emails queued, 31 ready to send, 0 sent. Fix: Smartlead/Instantly/Gmail SMTP (30 min).",
-    "CRITICAL: Surge.sh Student plan blocks new domain deploys. 383 live, 189 HTML-only. Fix: new surge email (5 min) OR Surge Plus ($13/mo).",
-    "P1: 400 surge-deployed leads without email. Fix: Hunter.io ($49/mo) or Apollo.io free tier bulk enrichment."
+    "CRITICAL: No outbound email service — 704 emails queued, 31 ready to send, 0 sent. Fix: Smartlead/Instantly/Gmail SMTP (30 min).",
+    "CRITICAL: Surge.sh Student plan blocks new domain deploys. 445 live, 1,189 HTML-only. Fix: new surge account email (5 min, free) OR Surge Plus ($13/mo). 9 new Denver sites deployed this cycle proving refreshes work.",
+    "P1: 359 surge-deployed leads without email. Fix: Apollo.io free tier (50 exports/mo) or Hunter.io ($49/mo) bulk enrichment.",
+    "P1: Surge deploy maxed at ~445 registered domains. New deploy strategy needed: Netlify (free, CLI deploy, 300 sites), Cloudflare Pages (free, unlimited), or new surge account."
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_4_results": {
-    "cities_discovered": [
-      "Boston MA",
-      "Baltimore MD",
-      "Denver CO",
-      "Portland OR",
-      "Las Vegas NV",
-      "Indianapolis IN"
-    ],
+    "cities_discovered": ["Boston MA", "Baltimore MD", "Denver CO", "Portland OR", "Las Vegas NV", "Indianapolis IN"],
     "new_leads": 144,
     "new_f_grade": 111,
     "new_sites_built": 149,
@@ -94,33 +105,8 @@
     "new_emails_queued": 113,
     "surge_blocker": "Student plan domain limit exhausted after 402 deployed domains"
   },
-  "cycle_4_improvements": [
-    "Discovered 144 new leads across 6 cities using high-email-rate niches",
-    "Built 149 new HTML preview sites (898 total across all cycles)",
-    "Identified 16 READY-TO-SEND emails with both email address and surge preview URL",
-    "Diagnosed surge domain limit as root cause of deploy failures (not rate limit)",
-    "Documented 4 fix paths for deploy blocker: new surge account, Plus upgrade, netlify, vercel"
-  ],
-  "pipeline_health": {
-    "discover": "HEALTHY",
-    "grade": "HEALTHY",
-    "build": "HEALTHY (HTML built, surge blocked for new domains)",
-    "deploy": "PARTIAL - 383 live, 189 HTML-only",
-    "enrich": "HEALTHY (37% email find rate on service niches)",
-    "outreach_generate": "HEALTHY",
-    "outreach_send": "BLOCKED - no email service configured"
-  },
   "cycle_5_results": {
-    "cities_discovered": [
-      "Columbus OH",
-      "St Louis MO",
-      "Kansas City MO",
-      "Cincinnati OH",
-      "New Orleans LA",
-      "Memphis TN",
-      "Oklahoma City OK",
-      "Tucson AZ"
-    ],
+    "cities_discovered": ["Columbus OH", "St Louis MO", "Kansas City MO", "Cincinnati OH", "New Orleans LA", "Memphis TN", "Oklahoma City OK", "Tucson AZ"],
     "new_leads": 127,
     "new_f_grade": 88,
     "new_sites_built": 54,
@@ -130,14 +116,36 @@
     "ready_to_send_total": 31,
     "surge_blocker": "Student plan blocks new subdomains not previously registered to account"
   },
-  "cycle_5_improvements": [
-    "Discovered 127 new leads across 8 cities using carpet cleaning niche (80% F-rate)",
-    "Built 54 new HTML preview sites (1,399 total)",
-    "Found 15 new email addresses via targeted enricher on service business niches",
-    "Ready-to-send pipeline grew from 16 to 31 leads (+94%)",
-    "Added carpet cleaning as permanent rotation niche due to high F-rate",
-    "Identified phone-only outreach as secondary track (175 leads with phone, no email)"
+  "cycle_6_results": {
+    "cities_discovered": ["Fort Worth TX", "El Paso TX", "Washington DC", "Seattle WA", "San Jose CA", "San Francisco CA", "San Diego CA", "Austin TX"],
+    "new_leads": 139,
+    "new_f_grade": 93,
+    "new_sites_built": 235,
+    "new_surge_deploys": 30,
+    "new_emails_found": 0,
+    "new_emails_queued": 135,
+    "ready_to_send_total": 31,
+    "surge_blocker": "Student plan blocks NEW subdomains; refreshes of existing domains succeed (30 Denver sites deployed)",
+    "deploy_discovery": "Confirmed: only previously-registered surge subdomains can be refreshed. New domains require Plus or new account."
+  },
+  "cycle_6_improvements": [
+    "Discovered 139 new leads across 8 new cities (36 total cities covered)",
+    "Built 235 new HTML preview sites (1,634 total across all cycles)",
+    "Deployed 30 surge refreshes on Denver sites (proving refresh path works)",
+    "Outreach queue grew from 569 to 704 emails (+135)",
+    "Identified 445 surge-live sites vs 1,189 HTML-only (deploy service upgrade unlocks all)",
+    "Confirmed surge deploy root cause: Student plan restricts NEW subdomains, not refresh of existing ones",
+    "Next step: Netlify CLI deploy as replacement — free tier, 300 sites, no domain restriction"
   ],
+  "pipeline_health": {
+    "discover": "HEALTHY",
+    "grade": "HEALTHY",
+    "build": "HEALTHY — 1,634 HTML sites built",
+    "deploy": "PARTIAL — 445 surge live, 1,189 HTML-only. Netlify migration would unblock all.",
+    "enrich": "LOW — email enricher finding 0-5% on cycle 6 cities. Need Apollo/Hunter API.",
+    "outreach_generate": "HEALTHY — 704 emails composed and queued",
+    "outreach_send": "BLOCKED — no email service. 31 fully-ready emails waiting."
+  },
   "metrics_history": [
     {
       "cycle": 5,
@@ -147,6 +155,16 @@
       "with_email": 367,
       "surge_deployed": 515,
       "outreach_queued": 569,
+      "ready_to_send": 31
+    },
+    {
+      "cycle": 6,
+      "date": "2026-03-29",
+      "total_leads": 1457,
+      "hot_leads": 665,
+      "with_email": 374,
+      "surge_deployed": 472,
+      "outreach_queued": 704,
       "ready_to_send": 31
     }
   ]

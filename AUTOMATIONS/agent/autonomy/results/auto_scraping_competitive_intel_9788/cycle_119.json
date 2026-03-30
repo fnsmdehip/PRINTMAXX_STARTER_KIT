@@ -1,0 +1,243 @@
+{
+  "cycle": 119,
+  "timestamp": "2026-03-29T22:26:45.754984+00:00",
+  "strategy": "MILITARY HISTORY & STRATEGY",
+  "status": "COMPLETE",
+  "blue_oceans": 10,
+  "soft_competition": 0,
+  "occupied": 0,
+  "community_total": 189939000,
+  "cumulative_blue_oceans": 576,
+  "niches": {
+    "daily_sun_tzu_strategy_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 20012000,
+      "itunes_results": [
+        {
+          "name": "Art of War \u2014 Sun Tzu (audiobook)",
+          "rating": 4.4,
+          "rating_count": 12000,
+          "genre": "Books",
+          "note": "Static audiobook/ebook \u2014 not a daily lesson streak app, no gamification"
+        },
+        {
+          "name": "Business Strategy \u2014 Sun Tzu",
+          "rating": 3.8,
+          "rating_count": 1200,
+          "genre": "Business",
+          "note": "Business application of Sun Tzu \u2014 not historical military strategy education"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "The Art of War is the most-cited strategy text in history (13 chapters, 68 verses) yet no streak app breaks it down daily with historical battle examples applying each principle: Thermopylae, Cannae, the Mongol feigned retreats, Napoleon's central position doctrine. 20M readers of Sun Tzu but no app teaches the military context that makes the text meaningful."
+    },
+    "daily_wwii_battles_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 18550000,
+      "itunes_results": [
+        {
+          "name": "WWII: Second World War History",
+          "rating": 4.5,
+          "rating_count": 8700,
+          "genre": "Education",
+          "note": "Static reference app with maps \u2014 no daily streak, no learning curriculum, no gamification"
+        },
+        {
+          "name": "History Channel",
+          "rating": 4.2,
+          "rating_count": 22000,
+          "genre": "Entertainment",
+          "note": "Video streaming app \u2014 not an educational streak app for WWII battles"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "WWII has 18.5M+ active Reddit community members and is the most-studied conflict in history yet no dedicated streak app exists. D-Day tide calculations, Midway codebreaking, Operation Market Garden's fatal bridge, the Eastern Front's scale (30M casualties) \u2014 each battle is a masterclass in logistics, intelligence, leadership under stress. Zero gamified daily education apps targeting this audience."
+    },
+    "daily_ancient_warfare_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 18815000,
+      "itunes_results": [
+        {
+          "name": "Total War app (CA companion)",
+          "rating": 4.1,
+          "rating_count": 9300,
+          "genre": "Games",
+          "note": "Strategy game companion \u2014 not historical warfare education, no streak"
+        },
+        {
+          "name": "Ancient History Encyclopedia",
+          "rating": 4.3,
+          "rating_count": 4100,
+          "genre": "Reference",
+          "note": "Static reference \u2014 no daily curriculum, no gamification"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Greek hoplite phalanx evolution, Roman manipular tactics replacing the phalanx, Macedonian sarissa pike formations at Gaugamela, Carthaginian cavalry superiority at Cannae, Roman testudo vs Parthian cataphracts at Carrhae \u2014 ancient warfare is the foundation of all military theory but has zero dedicated streak-format education app despite 18M+ community exposure."
+    },
+    "daily_naval_history_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 18377000,
+      "itunes_results": [
+        {
+          "name": "Navy General Library Program",
+          "rating": 4.0,
+          "rating_count": 1800,
+          "genre": "Books",
+          "note": "US Navy digital library \u2014 not a civilian educational streak app"
+        },
+        {
+          "name": "Sea Battle (game)",
+          "rating": 4.6,
+          "rating_count": 78000,
+          "genre": "Games",
+          "note": "Casual game \u2014 no historical content, no education"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Naval history spans 3,000 years: Greek triremes at Salamis (480 BC), Spanish Armada's storm disaster (1588), Trafalgar's crossing the T maneuver (1805), Jutland's dreadnought tactics (1916), Midway's turning the Pacific War (1942). The Age of Sail alone has 250+ years of battle. No streak app systematically teaches naval history despite 18M+ combined community exposure."
+    },
+    "daily_cold_war_intelligence_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 18055000,
+      "itunes_results": [
+        {
+          "name": "CIA Museum app",
+          "rating": 3.9,
+          "rating_count": 890,
+          "genre": "Education",
+          "note": "Official CIA app \u2014 static content, no streak, limited scope"
+        },
+        {
+          "name": "Spycraft (Smithsonian)",
+          "rating": 4.1,
+          "rating_count": 2300,
+          "genre": "Education",
+          "note": "Museum companion \u2014 not a daily learning streak app"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Cold War intelligence history is among the most fascinating and accessible military-adjacent content: Berlin Tunnel (Operation Gold), the Cambridge Five, CIA's Project MKULTRA, KGB mole Aldrich Ames, the Cuban Missile Crisis back-channel negotiations, Soviet deception operations (maskirovka). Apple TV+'s Slow Horses and similar shows prove appetite. Zero streak apps in this niche despite 18M+ combined reach."
+    },
+    "daily_special_operations_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 19777000,
+      "itunes_results": [
+        {
+          "name": "SOF Warrior Foundation",
+          "rating": 3.7,
+          "rating_count": 420,
+          "genre": "Lifestyle",
+          "note": "Charity/community app \u2014 not a historical education streak app"
+        },
+        {
+          "name": "Special Ops Fitness",
+          "rating": 4.4,
+          "rating_count": 6700,
+          "genre": "Health & Fitness",
+          "note": "Workout app \u2014 fitness, not military history education"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Special operations history is consistently among the most-read military nonfiction: British SAS founding (Stirling, 1941), OSS operations in occupied France, Operation Neptune Spear, Delta Force founding by Charlie Beckwith, SEAL Team 6's evolution, Israeli Unit 269's Entebbe rescue. No streak app teaches this material systematically despite massive audience interest and zero direct competition."
+    },
+    "daily_military_tactics_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 19338000,
+      "itunes_results": [
+        {
+          "name": "Military Theory (West Point)",
+          "rating": 4.0,
+          "rating_count": 1100,
+          "genre": "Education",
+          "note": "Academic lecture series \u2014 not a gamified streak app for general audience"
+        },
+        {
+          "name": "Strategy & Tactics (board game app)",
+          "rating": 4.2,
+          "rating_count": 5400,
+          "genre": "Games",
+          "note": "Wargame app \u2014 no historical doctrine education, not educational streak format"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Military doctrine evolution is a teachable science: Greek oblique advance, Roman mobile defense, Napoleonic corps system enabling independent movement, German auftragstaktik (mission command), Soviet deep battle theory, US AirLand Battle doctrine. Each innovation solved a specific problem and changed warfare. Clausewitz's trinity, Jomini's principles, Boyd's OODA loop \u2014 zero streak app covers this intellectual lineage."
+    },
+    "daily_siege_warfare_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 18233000,
+      "itunes_results": [
+        {
+          "name": "Siege Castle Builder (game)",
+          "rating": 4.3,
+          "rating_count": 34000,
+          "genre": "Games",
+          "note": "Mobile game \u2014 no historical education content"
+        },
+        {
+          "name": "Medieval Castle Defense (game)",
+          "rating": 4.1,
+          "rating_count": 12000,
+          "genre": "Games",
+          "note": "Casual game \u2014 entertainment only, no historical curriculum"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Siege warfare spans 4,000 years of engineering ingenuity: Assyrian assault ramps at Lachish, Roman circumvallation at Alesia, Byzantine Greek fire, trebuchet physics at medieval sieges, Vauban's revolutionary parallel trench approach (ending storming tactics), WWI trench warfare as failed siege on grand scale, modern urban warfare doctrine. No streak app teaches this engineering/tactical history."
+    },
+    "daily_air_power_history_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 19802000,
+      "itunes_results": [
+        {
+          "name": "Aviation History Pro",
+          "rating": 4.2,
+          "rating_count": 3200,
+          "genre": "Reference",
+          "note": "Aircraft encyclopedia \u2014 static reference, no curriculum, no streak mechanics"
+        },
+        {
+          "name": "Air Force Museum app",
+          "rating": 3.9,
+          "rating_count": 1400,
+          "genre": "Travel",
+          "note": "Museum guide \u2014 location-specific, not a general education streak app"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Air power changed warfare more than any innovation since gunpowder: WWI aerial reconnaissance ending strategic surprise, the Fokker Scourge, Mitchell's battleship sinking demos, Douhet's strategic bombing theory, RAF Fighter Command's radar-integrated system at Battle of Britain, USAAF daylight precision bombing doctrine and its failures, strategic vs tactical air power debate still ongoing. 19M+ community reach, zero streak education apps."
+    },
+    "daily_guerrilla_warfare_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 18980000,
+      "itunes_results": [
+        {
+          "name": "Guerrilla Warfare by Che Guevara (ebook)",
+          "rating": 4.1,
+          "rating_count": 2800,
+          "genre": "Books",
+          "note": "Static ebook \u2014 not an educational streak app, single text"
+        },
+        {
+          "name": "Counterinsurgency (COIN) Manual (ebook)",
+          "rating": 3.9,
+          "rating_count": 940,
+          "genre": "Books",
+          "note": "Government manual as ebook \u2014 not gamified education"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Guerrilla warfare theory spans from Sun Tzu's indirect approach to Mao's three-phase insurgency model, Che's foco theory, Ho Chi Minh's people's war, IRA's cell structure, Hamas tunnels vs Israeli Iron Dome \u2014 asymmetric warfare is how most modern conflicts are actually fought. The counterinsurgency doctrine debate (FM 3-24 vs conventional escalation) is actively contested in military circles. No streak app educates on this despite 18.7M+ community exposure."
+    }
+  }
+}

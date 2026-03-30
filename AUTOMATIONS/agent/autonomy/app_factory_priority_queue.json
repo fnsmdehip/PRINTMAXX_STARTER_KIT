@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-03-29 06:27:23",
+  "generated_at": "2026-03-29 18:52:55",
   "sources": {
-    "alpha_staging_candidates": 3895,
+    "alpha_staging_candidates": 3910,
     "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
     "existing_specs_detected": 163
@@ -13,19 +13,19 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3846,
+    "total_candidates": 3851,
     "decision_counts": {
       "ITERATE_EXISTING_NOW": 60,
       "BUILD_NEW_NOW": 66,
-      "SPEC_AND_TEST": 118,
-      "PARK": 3595,
+      "SPEC_AND_TEST": 119,
+      "PARK": 3599,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
       "faith": 101,
-      "habits": 273,
-      "ai_utility": 2789,
-      "fitness": 176,
+      "habits": 276,
+      "ai_utility": 2790,
+      "fitness": 177,
       "focus": 372,
       "sleep": 119,
       "meal": 16

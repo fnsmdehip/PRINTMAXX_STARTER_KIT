@@ -1,0 +1,243 @@
+{
+  "cycle": 118,
+  "timestamp": "2026-03-29T17:13:58.711231+00:00",
+  "strategy": "LANGUAGE & LINGUISTICS HISTORY",
+  "status": "COMPLETE",
+  "blue_oceans": 10,
+  "soft_competition": 0,
+  "occupied": 0,
+  "community_total": 53065000,
+  "cumulative_blue_oceans": 566,
+  "niches": {
+    "daily_etymology_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 23,
+      "community_total": 782000,
+      "itunes_results": [
+        {
+          "name": "Merriam-Webster Dictionary",
+          "rating": 4.8,
+          "rating_count": 126000,
+          "genre": "Reference",
+          "note": "Dictionary with etymology notes \u2014 not daily etymology education"
+        },
+        {
+          "name": "Dictionary.com",
+          "rating": 4.7,
+          "rating_count": 98000,
+          "genre": "Reference",
+          "note": "Reference tool \u2014 no streak, no curriculum, no history focus"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Etymonline (the gold standard etymology resource) is web-only with no app. No streak app teaches word origins systematically: PIE roots, Latin borrowings, French Norman conquest vocabulary shifts, Greek scientific terminology, how words evolved meaning. Merriam-Webster includes etymologies but buries them in definition lookups \u2014 no curriculum, no streak, no gamification."
+    },
+    "daily_historical_linguistics_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 1955000,
+      "itunes_results": [
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 9600000,
+          "genre": "Education",
+          "note": "Teaches modern spoken languages \u2014 zero historical linguistics content"
+        },
+        {
+          "name": "Babbel",
+          "rating": 4.5,
+          "rating_count": 380000,
+          "genre": "Education",
+          "note": "Modern language acquisition \u2014 no history of language science"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Historical linguistics (the scientific study of how languages change over time: sound shifts, Grimm's Law, Great Vowel Shift, Neogrammarian hypothesis, comparative method) has zero dedicated educational app. Duolingo and Babbel teach vocabulary; neither explains WHY English 'father' and Latin 'pater' and Sanskrit 'pitr' share a root, or how the entire Indo-European family was reconstructed from living languages."
+    },
+    "daily_dead_languages_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 23,
+      "community_total": 337000,
+      "itunes_results": [
+        {
+          "name": "Duolingo Latin",
+          "rating": 4.7,
+          "rating_count": 9600000,
+          "genre": "Education",
+          "note": "Has Latin course but as modern language learning, not cultural/historical appreciation"
+        },
+        {
+          "name": "Lingua Latina",
+          "rating": 4.3,
+          "rating_count": 1800,
+          "genre": "Education",
+          "note": "Small app, reading-focused \u2014 no streaks, no gamification, very low reach"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Latin, Ancient Greek, Sanskrit, Old English, Classical Nahuatl, Classical Arabic \u2014 dead languages with enormous intellectual prestige and millions of modern learners, yet no streak app exists that teaches their cultural context, literature, and importance in daily 2-minute lessons. Duolingo Latin reduces Latin to vocabulary drills; nobody teaches WHY these languages matter, what they reveal about ancient civilizations, and how they shaped modern thought."
+    },
+    "daily_writing_systems_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 19329000,
+      "itunes_results": [
+        {
+          "name": "Simply Chinese",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "genre": "Education",
+          "note": "Chinese character learning \u2014 not history of writing systems globally"
+        },
+        {
+          "name": "Egyptian Hieroglyphics",
+          "rating": 4.2,
+          "rating_count": 3400,
+          "genre": "Education",
+          "note": "Hieroglyphics reference \u2014 static, no streak, no historical context"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "The invention of writing is one of humanity's most transformative events \u2014 cuneiform (3200 BCE), hieroglyphics, Linear A/B, the Phoenician alphabet, Chinese oracle bones, the Mayan script, Hangul's deliberate royal design \u2014 yet no streak app teaches the history of scripts, how they were deciphered, and what they reveal about ancient civilizations. Omniglot (world's largest writing systems reference) is web-only. Zero app captures this history in gamified format."
+    },
+    "daily_language_families_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 1617000,
+      "itunes_results": [
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 9600000,
+          "genre": "Education",
+          "note": "Individual language courses \u2014 no comparative language family education"
+        },
+        {
+          "name": "uTalk Language Learning",
+          "rating": 4.6,
+          "rating_count": 22000,
+          "genre": "Education",
+          "note": "Vocabulary-focused \u2014 no family trees, no comparative linguistics"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "The 142 language families of the world (Indo-European, Sino-Tibetan, Afro-Asiatic, Niger-Congo, Austronesian, Dravidian, Turkic, Japonic...) and their internal relationships reveal the prehistory of human migration. No app teaches this comparative perspective: why Turkish and Mongolian share grammar but not vocabulary, why English and Farsi are cousins, why Japanese has no proven relatives. The worldbuilding community (1.1M) actively craves this for conlang creation."
+    },
+    "daily_linguistic_relativity_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 3995000,
+      "itunes_results": [
+        {
+          "name": "Waking Up",
+          "rating": 4.8,
+          "rating_count": 58000,
+          "genre": "Health & Fitness",
+          "note": "Mindfulness/philosophy \u2014 not linguistic relativity or language-thought science"
+        },
+        {
+          "name": "Brilliant",
+          "rating": 4.7,
+          "rating_count": 62000,
+          "genre": "Education",
+          "note": "STEM education \u2014 no linguistics, no language and cognition content"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "The Sapir-Whorf hypothesis (language shapes thought), color perception across languages (Russians distinguish siniy/goluboy blue shades; English speakers don't), spatial reasoning in Hopi vs English, time conception in Aymara \u2014 linguistic relativity research is one of the most mind-bending bodies of science for educated laypeople, yet zero daily streak apps exist. The movie 'Arrival' (2016) sparked massive public interest in linguistic relativity with zero apps capitalizing on it."
+    },
+    "daily_ancient_scripts_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 2172000,
+      "itunes_results": [
+        {
+          "name": "Egyptian Hieroglyphs",
+          "rating": 4.1,
+          "rating_count": 2100,
+          "genre": "Education",
+          "note": "Basic hieroglyphics reference \u2014 no decipherment history, no streak"
+        },
+        {
+          "name": "Rosetta Stone",
+          "rating": 4.5,
+          "rating_count": 148000,
+          "genre": "Education",
+          "note": "Modern language learning \u2014 zero ancient script content despite the brand name"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "The decipherment of ancient scripts is among the greatest intellectual detective stories in history: Champollion cracking hieroglyphics via the Rosetta Stone (1822), Michael Ventris decoding Linear B as Mycenaean Greek (1952), the ongoing mystery of Linear A and the Indus Valley script. AskHistorians (1.5M) treats these as premium content. Rosetta Stone (a brand NAMED after the most famous decipherment) teaches zero ancient script content. Zero streak apps teach this."
+    },
+    "daily_proto_indo_european_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 25,
+      "community_total": 20327000,
+      "itunes_results": [
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 9600000,
+          "genre": "Education",
+          "note": "Living languages only \u2014 PIE reconstruction unavailable"
+        },
+        {
+          "name": "Anki Flashcards",
+          "rating": 4.6,
+          "rating_count": 22000,
+          "genre": "Education",
+          "note": "Community decks exist for PIE but no curated streak app"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Proto-Indo-European is the reconstructed ancestor of languages spoken by 3.2 billion people (English, Spanish, French, German, Russian, Hindi, Bengali, Farsi...). No app teaches PIE: the kurgan hypothesis of IE origins, the Yamnaya culture, how *p\u1e53ds became 'foot/pied/Fu\u00df/pada', the 8 cases, the reconstructed mythology (*Dy\u0113us Ph\u2082t\u1e17r \u2192 Zeus/Jupiter/Dyaus Pita). The r/history community (18.4M) regularly posts viral threads on this topic."
+    },
+    "daily_language_endangerment_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 24,
+      "community_total": 1910000,
+      "itunes_results": [
+        {
+          "name": "Duolingo",
+          "rating": 4.7,
+          "rating_count": 9600000,
+          "genre": "Education",
+          "note": "Teaches selected languages \u2014 no endangered language education content"
+        },
+        {
+          "name": "Mango Languages",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "genre": "Education",
+          "note": "Includes some endangered languages \u2014 not a daily education streak on endangerment"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "7,000 languages exist; half will be gone by 2100. Each language's death takes irreplaceable ecological knowledge, philosophical frameworks, and cognitive perspectives with it. The last speaker of Eyak (Marie Smith Jones, died 2008), the revival of Hebrew, the status of Welsh and Irish Gaelic \u2014 these are stories with massive cultural resonance. No streak app teaches language endangerment science, the political economy of language death, or what is lost when a language dies."
+    },
+    "daily_sign_language_history_streak": {
+      "verdict": "BLUE_OCEAN",
+      "score": 23,
+      "community_total": 641000,
+      "itunes_results": [
+        {
+          "name": "SignSchool",
+          "rating": 4.7,
+          "rating_count": 14000,
+          "genre": "Education",
+          "note": "Teaches ASL vocabulary \u2014 not history of sign languages or sign linguistics"
+        },
+        {
+          "name": "ASL - American Sign Language",
+          "rating": 4.5,
+          "rating_count": 8200,
+          "genre": "Education",
+          "note": "ASL vocabulary lessons \u2014 zero historical/linguistic perspective"
+        }
+      ],
+      "exact_match_apps": [],
+      "gap_note": "Sign languages are full natural languages with their own phonology, grammar, and regional dialects \u2014 ASL and BSL are NOT related despite both being used in English-speaking countries. The history of deaf education (Abb\u00e9 de l'\u00c9p\u00e9e founding deaf education in Paris, the Milan Conference of 1880 banning sign language in schools, William Stokoe proving ASL is a real language in 1960) is gripping yet untold in app form. SignSchool teaches vocabulary; nobody teaches the linguistics or history."
+    }
+  }
+}
