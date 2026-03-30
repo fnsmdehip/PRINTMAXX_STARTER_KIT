@@ -163,8 +163,8 @@
       "reason": "Meta-orchestrator. Cycle 23: TRUE MINIMAL MAINTENANCE. Hibernated 5 remaining active agents. Sealed 11 execution leaks (8 venture + 3 swarm launchd agents). Throttled self 12h->24h. Only managing system_healer.",
       "tier": "S",
       "launchd_status": "LOADED",
-      "last_cycle": 39,
-      "last_run": "2026-03-29T22:58:00Z"
+      "last_cycle": 40,
+      "last_run": "2026-03-30T03:25:00Z"
     },
     "video_factory": {
       "installed_at": "2026-03-06T23:06:18.197386",
@@ -236,8 +236,8 @@
     }
   },
   "deployed_at": "2026-03-23T12:45:07.327997",
-  "brain_cycles": 36,
-  "last_brain_cycle": "2026-03-29T05:52:00Z",
+  "brain_cycles": 40,
+  "last_brain_cycle": "2026-03-30T03:25:00Z",
   "conservation_mode": true,
   "conservation_level": "TRUE_MINIMAL_MAINTENANCE",
   "daily_runs_target": 1,
@@ -276,6 +276,8 @@
   "site_health_pct": 80.1,
   "site_count_tested": 156,
   "alpha_entries_total": 44451,
+  "zombie_schedules_purged_cycle40": 12,
+  "zombie_processes_killed_cycle40": 4,
   "posts_queued": 1303,
   "posts_posted": 0,
   "leads_total_qualified": 1547,
@@ -284,7 +286,7 @@
   "products_listed": 0,
   "deployments_live": 156,
   "revenue_total": 0,
-  "revenue_day": 54,
+  "revenue_day": 55,
   "cron_version": "v9_phased",
   "cron_entries": 24,
   "wake_conditions": {

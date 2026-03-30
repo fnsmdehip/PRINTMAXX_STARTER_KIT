@@ -1073,9 +1073,9 @@ def show_status():
                 total += 1
                 g = row.get("grade", "?")
                 grades[g] = grades.get(g, 0) + 1
-                if row.get("preview_url", "").strip():
+                if (row.get("preview_url") or "").strip():
                     with_preview += 1
-                if row.get("email", "").strip():
+                if (row.get("email") or "").strip():
                     with_email += 1
 
     outreach_count = 0
