@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-03-30 04:00
-Last session: 2026-03-30 03:21 (0.6h ago)
+# SESSION BRIEFING -- 2026-03-30 07:25
+Last session: 2026-03-30 06:13 (1.2h ago)
 
 ---
 
@@ -8,13 +8,6 @@ Last session: 2026-03-30 03:21 (0.6h ago)
 ### Daily Digest (latest)
 Revenue: $0 | Day 44 at zero
 - **1648 new entries** scraped
-
-### Agent Reports (1 since last session)
-- swarm_brain_report_20260330_c40.md
-
-### Loop Closer (2 actions)
-- pipeline_advance: plumber_sites -> OK
-- soul_drift_check: system -> OK
 
 ### System Heartbeat
 Leads: 192,700/1,454,245 analyzed | 17,484 hot | 95,187 warm | 1,286,777 pipeline
@@ -29,8 +22,7 @@ Blocker: Account creation → `OPS/ACCOUNT_CREATION_NOW.md`
 
 ## Changes Since Last Session
 
-### Human/Agent Commits (1)
-- 7cc3eaf8 [user-sim-refiner] EAS: pre-refinement snapshot
+No git commits since last session (or not a git repo).
 
 ## Actionable Queue
 
@@ -97,4 +89,4 @@ Total items: 95 (deduplicated from all sources)
 
 ## Recently Updated State
 
-- Swarm state (updated 03:24)
+- Autonomy state (updated 06:14)

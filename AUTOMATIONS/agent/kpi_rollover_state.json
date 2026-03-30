@@ -1,45 +1,15 @@
 {
-  "last_updated": "2026-03-29T05:35:00.348132",
-  "source_day": 28,
-  "target_day": 29,
+  "last_updated": "2026-03-30T05:35:01.126172",
+  "source_day": 29,
+  "target_day": 30,
   "rolled_today": true,
-  "task_count": 4,
-  "tasks": [
-    {
-      "text": "Post 3 TikToks: launch day behind-the-scenes",
-      "tag": "SEMI",
-      "detail": "Raw, authentic BTS content.\nShow real-time upvote count, comments, reactions.\nTime: 15 min.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 2
-    },
-    {
-      "text": "Reply to 50+ accounts across all platforms (all-engagement mode)",
-      "tag": "SEMI",
-      "detail": "All-engagement mode. Every platform.\nSecondary accounts amplify: quote-tweet launch with unique congratulatory takes.\nDM 20 people who upvoted/commented thanking them.\nTime: 60 min.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 2
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: AI startups are (news) \u2014 AI startups\u00a0accounted for 41% of the $128 billion in ve",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 2
-    },
-    {
-      "text": "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Candex Extends (series c) \u2014 New York-based Candex, a startup that helps",
-      "tag": "SEMI",
-      "detail": "Score: 100/100, ROI: HIGH. This overrides lower-ranked tasks because Capital Genesis scored it higher than existing queue items.",
-      "reason": "Unreviewed on day 22",
-      "original_day": 22,
-      "failure_count": 2
-    }
-  ],
+  "task_count": 0,
+  "tasks": [],
   "stale_tasks": [
-    "Scale winning brokering vertical, kill non-performers"
+    "Post 3 TikToks: launch day behind-the-scenes",
+    "Reply to 50+ accounts across all platforms (all-engagement mode)",
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: AI startups are (news) \u2014 AI startups\u00a0accounted for 41% of the $128 billion in ve",
+    "[ROLLOVER D21] [URGENT] CRUNCHBASE: Funding: Candex Extends (series c) \u2014 New York-based Candex, a startup that helps"
   ],
   "dropped_tasks": [],
   "completed_yesterday": 0

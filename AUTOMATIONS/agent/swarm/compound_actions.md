@@ -1,13 +1,13 @@
-# COMPOUND ACTIONS -- Cycle 40 (2026-03-30 03:25)
+# COMPOUND ACTIONS -- Cycle 41 (2026-03-30 07:30)
 
-## Status: OPERATIONAL PLATEAU. ZOMBIE CLEANUP COMPLETE. ZERO WAKE CONDITIONS MET.
+## Status: OPERATIONAL PLATEAU. USER PRESENT. ZERO WAKE CONDITIONS MET.
 
 ---
 
 ### COMPOUND ACTION 1: Blue Ocean Dataset + App Factory = Launch Queue (READY)
 
-**Inputs:** 596+ blue oceans (122 cycles) + 4 verified apps + market pricing data
-**Action:** Submit 4 apps at $4.99-9.99/mo. Next batch: History of Mathematics (90.9M community).
+**Inputs:** 615+ blue oceans (123 cycles) + 4 verified apps + market pricing data
+**Action:** Submit 4 apps at $4.99-9.99/mo. Next batch: Neuroscience niches (47M community, Addiction/Cognitive/Neuroplasticity).
 **Status:** READY. Blocked on Apple Developer + Stripe.
 
 ---
@@ -36,25 +36,25 @@
 
 ---
 
-### COMPOUND ACTION 5: 596 Blue Oceans = Sellable Research (READY)
+### COMPOUND ACTION 5: 615 Blue Oceans = Sellable Research (READY)
 
-**Inputs:** 596 validated underserved niches + auto-update pipeline
-**Action:** "App Store Blue Ocean Report 2026" product at $29-49.
+**Inputs:** 615 validated underserved niches + auto-update pipeline (15-20/day)
+**Action:** "App Store Blue Ocean Report 2026" product at $29-49. Now covering 123 niche categories.
 **Status:** READY. Blocked on Gumroad account.
 
 ---
 
-### COMPOUND ACTION 6 (NEW): Zombie Cleanup Savings = Token Budget
+### COMPOUND ACTION 6: 49K Alpha = Intelligence Product (NEW)
 
-**Inputs:** 12 zombie schedules killed + 4 processes terminated
-**Estimated savings:** 20-50K tokens/day no longer wasted on zombie claude -p processes
-**Action:** Savings auto-applied. No new agents needed -- the freed tokens extend system_healer + swarm_brain runway.
-**Status:** DONE. Permanent if human deletes plist files.
+**Inputs:** 49,464 curated alpha entries across monetization, tools, growth, app factory
+**Action:** Package as "Revenue Alpha Database 2026" -- searchable curated intelligence. $19-29.
+**Status:** READY pending Gumroad. Data needs cleanup (auto_processor has 60% failure rate on scoring).
 
 ---
 
 ## Summary
-- All 5 revenue compound actions READY, blocked on human accounts
-- 1 infrastructure compound action DONE (zombie cleanup)
+- 5 revenue compound actions READY, all blocked on human accounts
+- 1 new intelligence product identified (alpha database)
 - Human time to unblock ALL: 45 minutes (Stripe + Gumroad + Gmail)
 - Estimated monthly revenue unlock: $2,000-5,500/mo
+- Competitive intel growing at 15-20 blue oceans/day (zero cost)

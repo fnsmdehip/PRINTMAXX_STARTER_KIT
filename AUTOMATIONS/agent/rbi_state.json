@@ -11,6 +11,7 @@
     "ALPHA1773998773",
     "ALPHA8892",
     "ALPHA1773993235",
+    "ALPHA1773999827",
     "ALPHA264",
     "ALPHA265",
     "ALPHA266",
@@ -36,10 +37,9 @@
     "ALPHA102693",
     "ALPHA536",
     "ALPHA1773995846",
+    "ALPHA1773999821",
     "F01",
-    "F02",
-    "F03",
-    "F05"
+    "F02"
   ],
   "backtested": [
     {
@@ -87,6 +87,10 @@
       "verdict": "PASS"
     },
     {
+      "id": "ALPHA1773999827",
+      "verdict": "PASS"
+    },
+    {
       "id": "ALPHA264",
       "verdict": "CONDITIONAL"
     },
@@ -117,10 +121,6 @@
     {
       "id": "ALPHA108053",
       "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA105219",
-      "verdict": "PASS"
     }
   ],
   "implemented": [
@@ -135,7 +135,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -151,7 +151,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -168,7 +168,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -184,7 +184,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -200,7 +200,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -216,7 +216,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -232,7 +232,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -248,7 +248,23 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA1773999827",
+      "name": "This is honestly one of the easiest side hustle right now \ud83d\udc47",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.28,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -264,7 +280,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -281,7 +297,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -297,7 +313,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -313,30 +329,14 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-03-29T09:20:03Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA105219",
-      "name": "The app space is saturated is a complete myth.\n95% of apps have no idea about distribution.\nThe barr",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.17,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-03-29T09:20:03Z",
+      "routed_at": "2026-03-30T09:20:10Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
     }
   ],
-  "last_run": "2026-03-29T09:20:03Z",
-  "duration_s": 1.67,
+  "last_run": "2026-03-30T09:20:10Z",
+  "duration_s": 2.69,
   "summary": {
     "researched": 40,
     "backtested": 20,
