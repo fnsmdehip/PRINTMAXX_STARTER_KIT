@@ -1,0 +1,37 @@
+# Growth Plan: LinkedIn uses 2.4 GB RAM across two tabs. https:&#x2F;&#x2F;
+
+**Created:** 2026-03-30 22:11
+**Venture:** OUTBOUND
+**Budget Tier:** FREE
+**Revenue Est:** $0-100/mo (heuristic estimate)
+
+---
+
+## Tactics
+
+1. Organic outbound growth
+
+## Budget Tier Strategies
+
+### FREE
+Organic outbound tactics
+
+### LOW
+$0-50/mo boosting
+
+## Daily Actions
+
+- [ ] Research and validate: LinkedIn uses 2.4 GB RAM across two tabs. https:&#x2F;&#x2F;ibb.co&#x2F;fYQVfMWp
+- [ ] Set up automation for outbound venture
+- [ ] Test with small batch, verify output
+- [ ] Wire cron schedule for recurring execution
+
+## Tooling
+
+```json
+{
+  "browser": "none",
+  "email": "none",
+  "content": "none"
+}
+```

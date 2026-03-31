@@ -3399,3 +3399,125 @@ http | Track app method progress | APP | AUTO | DAILY | 2026-03-24 |
 | Made our cancellation process harder on  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-29 |
 
 | I built a CLI that generates production- | Track product method progress | PRODUCT | AUTO | DAILY | 2026-03-29 |
+
+| Typing and Keyboards | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| LinkedIn uses 2.4 GB RAM across two tabs | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-03-30 |
+
+| I'll buy your electronics to feed our ro | Track scraping method progress | SCRAPING | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Sheet Ninja – Google Sheets as  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Full network of clitoral nerves mapped o | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: I made a "programming language" | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Observations from carbon dioxide monitor | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| AyaFlow: A high-performance, eBPF-based  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: React-Rewrite – Figma for local | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN : DrawX - Excalidraw with Back E | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Veil – A Minimal Neovim GUI for | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| The Strait of Hormuz Oil Shock Is Now He | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Real-time visualization of Clau | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: The Alphabetical Clock | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: BreezePDF – Free, in-browser PD | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: DeepRepo – AI architecture diag | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Payphone Tag is territory game  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Pglens – 27 read-only PostgreSQ | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: I made a free list of 100 place | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: /slot-machine development (CC v | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Timezone App – Visual meeting s | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Agent Orchestrator, a local-fir | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Tabical – Tinder-style city mic | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Tinyvision:-Building Ultra-Ligh | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Run Claude Code using ChatGPT s | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: I built a Git extension to capt | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Bought a SaaS for $40K on a marketplace | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: Think Fu – Metacognition as a s | Track product method progress | PRODUCT | AUTO | DAILY | 2026-03-30 |
+
+| partner saw me finish 3 projects in 45 m | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: SuperPaint – a fluid simulation | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Show HN: I wrote a ~2KB executable file  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| We brought video production in-house thi | Track product method progress | PRODUCT | AUTO | DAILY | 2026-03-30 |
+
+| I'd pay $10/month to know if my face is  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| 60+ and he’ll also get an iPhone 17 this | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Genuine question: how do you stop yourse | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-03-30 |
+
+| Spent weeks stuck on market research | Track research method progress | RESEARCH | AUTO | DAILY | 2026-03-30 |
+
+| This is honestly one of the easiest side | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| If this is so 'easy' and 'passive,' why  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| This faceless brand gets 500,000+ websit | Track product method progress | PRODUCT | AUTO | DAILY | 2026-03-30 |
+
+| my saas hit $9k/month in 12 months | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Evaluating online business ideas that do | Track product method progress | PRODUCT | AUTO | DAILY | 2026-03-30 |
+
+| I shipped a feature in 24 hours because  | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Google Ads AI Agent startup advice | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| I Wasted $800 Building AI Trading Bots | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| 27K Followers, 12M Views in 35 Days — Mo | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| SaaS founders — do you have a proper fin | Track app method progress | APP | AUTO | DAILY | 2026-03-30 |
+
+| Lost our entire database at 3am because  | Track research method progress | RESEARCH | AUTO | DAILY | 2026-03-30 |
+
+| Weekly Shameless Self Promotion Thread | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Drop your URL, I'll reply with 5 persona | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| At what stage does AI outbound actually  | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-03-30 |
+
+| I started running monthly town halls and | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| get more people to join my affiliate pro | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
+
+| Do done-for-you assets actually fix the  | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
+
+| Advice for eBay affiliate marketing on P | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
+
+| Buyer wants partial refund but is keepin | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Looking for conversational partner | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Some specific advice if you're getting i | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| I spent 2 years trying different ways to | Track content method progress | CONTENT | AUTO | DAILY | 2026-03-30 |
+
+| Ecom arb: cable organizer | Sell $18.99  | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
+
+| Ecom arb: led candles | Sell $22.73 on F | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
+
+| Ecom arb: led face mask | Sell $39.99 on | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
