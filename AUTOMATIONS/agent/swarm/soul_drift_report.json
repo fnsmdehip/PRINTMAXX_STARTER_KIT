@@ -1,18 +1,13 @@
 {
-  "ts": "2026-03-31T00:00:01.431028",
-  "avg_score": 9.7,
-  "total_scored": 9,
+  "ts": "2026-03-31T16:00:01.783418",
+  "avg_score": 9.2,
+  "total_scored": 4,
   "drifted_count": 0,
   "drifted_agents": [],
   "scores": {
     "swarm_brain": 8.5,
     "test": 8.5,
     "broken_site_fix_20260329": 10.0,
-    "ceo_decision_2026-03-15": 10.0,
-    "mission_autonomy:auto_scraping_competi": 10.0,
-    "mission_autonomy:SCRAPING_competitive_": 10.0,
-    "mission_autonomy:alpha_intelligence": 10.0,
-    "mission_autonomy:before_you_product_na": 10.0,
-    "mission_autonomy:auto_brokering_deal_b": 10.0
+    "ceo_decision_2026-03-15": 10.0
   }
 }

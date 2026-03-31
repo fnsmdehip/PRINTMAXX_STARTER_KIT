@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-31T00:00:01.276091",
+  "generated": "2026-03-31T16:00:01.340127",
   "recommendations": [
     {
       "decision": "boost_agent",
@@ -76,7 +76,7 @@
     {
       "decision": "boost_agent",
       "agent": "system_healer",
-      "reason": "High effectiveness (100.0%) over 191 runs",
+      "reason": "High effectiveness (100.0%) over 193 runs",
       "source": "feedback_loop"
     },
     {
@@ -100,7 +100,7 @@
     {
       "decision": "boost_agent",
       "agent": "swarm_brain",
-      "reason": "High effectiveness (100.0%) over 191 runs",
+      "reason": "High effectiveness (100.0%) over 193 runs",
       "source": "feedback_loop"
     },
     {
