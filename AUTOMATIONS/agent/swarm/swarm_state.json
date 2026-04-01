@@ -28,11 +28,11 @@
     "competitor_stalker": {
       "installed_at": "2026-03-20T05:00:58.730223",
       "status": "ACTIVE",
-      "hibernated_at": "2026-03-17T10:55:04Z",
-      "hibernated_by": "swarm_brain_cycle16",
-      "reason": "HIBERNATE. Wake at first revenue or X account creation.",
-      "tier": "C",
-      "launchd_status": "UNLOADED"
+      "reason": "C48 PROMOTED C → B-tier. Found Claude Code education market DEAD (Anthropic free courses), Scripture Mate AI gap (table stakes), agentic SDR market shift, Whop $2B+ data. Strategic intelligence that changes product positioning.",
+      "tier": "B",
+      "launchd_status": "UNLOADED",
+      "c48_note": "Strategic intel value. Claude Code edu death changes entire product strategy.",
+      "c48_updated": "2026-04-01T04:58:00+00:00"
     },
     "asset_deployer": {
       "installed_at": "2026-03-20T05:00:58.910698",
@@ -114,21 +114,15 @@
     "cross_pollinator": {
       "installed_at": "2026-03-20T05:00:59.982738",
       "status": "ACTIVE",
-      "interval": "HIBERNATED",
-      "hibernated_at": "2026-03-20T02:58:00Z",
-      "hibernated_by": "swarm_brain_cycle23",
-      "reason": "HIBERNATE Cycle 23. TRUE MINIMAL MAINTENANCE. 9 consecutive S-tier, 1,591 items wired, 0 consumed downstream. Wiring dead inventory to dead queues. Wake condition: human posts first tweet, sends first email, or lists first product.",
-      "tier": "S",
+      "interval": "4h",
+      "reason": "C48 PROMOTED wasteful → A-tier. C47 was wrong. Cycle 18 report: found distribution→posting queue gap (8 items), competitor intel→app factory gap (2 specs), x402 routing. 34 items wired. Unique cross-venture gap detection no other agent does.",
+      "tier": "A",
       "connections": 42,
-      "items_wired": 1591,
+      "items_wired": 1658,
       "consecutive_s_tier": 9,
-      "wake_condition": "first_human_distribution_action",
       "launchd_status": "UNLOADED",
-      "zombie_killed_at": "2026-03-29T01:50:00Z",
-      "zombie_killed_by": "swarm_brain_cycle35",
-      "c47_flag": "WASTEFUL_RUNNING",
-      "c47_note": "Launchd running. 1,591 items wired, 0 consumed.",
-      "c47_updated": "2026-04-01T04:34:04.609903+00:00"
+      "c48_note": "REHABILITATED. C47 assessed cumulative stats without reading C18 report. Real output: systemic gap detection, spec queue creation, x402 first-mover routing.",
+      "c48_updated": "2026-04-01T04:58:00+00:00"
     },
     "revenue_tracker": {
       "installed_at": "2026-03-20T05:01:00.701964",
@@ -158,22 +152,22 @@
     "data_janitor": {
       "installed_at": "2026-03-20T05:01:00.882015",
       "status": "ACTIVE",
-      "interval": "HIBERNATED",
-      "hibernated_at": "2026-03-20T02:58:00Z",
-      "hibernated_by": "swarm_brain_cycle23",
-      "reason": "HIBERNATE Cycle 23. TRUE MINIMAL MAINTENANCE. Last cycle removed 7,681 dupes, validated 365 JSON. Data not growing with production halted. Wake condition: scraping or production resumes.",
-      "tier": "B",
-      "launchd_status": "UNLOADED"
+      "interval": "12h",
+      "reason": "C48 PROMOTED B → A-tier. 3,731 dupes removed, 139MB freed. CRITICAL: found AUTO_OPS_TRACKER 99.9% duplicate (broken merge logic) and COMPETITIVE_INTEL 99.8% duplicate (broken scraper append). These are code bugs needing fixes.",
+      "tier": "A",
+      "launchd_status": "UNLOADED",
+      "c48_note": "Outstanding cleanup cycle. Found 2 critical ingestion pipeline bugs. Preventing data rot.",
+      "c48_updated": "2026-04-01T04:58:00+00:00"
     },
     "distribution_engine": {
       "installed_at": "2026-03-20T05:01:01.058336",
       "status": "ACTIVE",
-      "hibernated_at": "2026-03-13T15:35:00Z",
-      "reason": "No distribution channels.",
+      "interval": "weekly",
+      "reason": "C48 RECLASSIFIED wasteful → reduce frequency. Quality is genuinely high (TruthScope viral thread, automation dysmorphia term, 27 pieces/cycle). But 373 total pieces to dead queue is overproduction. Reduce to weekly until posting channel opens.",
+      "tier": "B",
       "launchd_status": "UNLOADED",
-      "c47_flag": "WASTEFUL_RUNNING",
-      "c47_note": "Launchd running. 1,309+ content to dead queue. Escalation cycle 8 for plist unload.",
-      "c47_updated": "2026-04-01T04:34:04.609903+00:00"
+      "c48_note": "High quality content but diminishing returns at current frequency. 1,379 posts queued, 0 posted.",
+      "c48_updated": "2026-04-01T04:58:00+00:00"
     },
     "inbound_maximizer": {
       "installed_at": "2026-03-20T05:01:01.230752",
@@ -272,8 +266,8 @@
     }
   },
   "deployed_at": "2026-03-23T12:45:07.327997",
-  "brain_cycles": 44,
-  "last_brain_cycle": 47,
+  "brain_cycles": 48,
+  "last_brain_cycle": 48,
   "conservation_mode": true,
   "conservation_level": "TRUE_MINIMAL_MAINTENANCE",
   "daily_runs_target": 1,
@@ -311,10 +305,10 @@
   "disk_gb_free": 139,
   "site_health_pct": 82.1,
   "site_count_tested": 156,
-  "alpha_entries_total": 49464,
+  "alpha_entries_total": 21035,
   "zombie_schedules_purged_cycle40": 12,
   "zombie_processes_killed_cycle40": 4,
-  "posts_queued": 1303,
+  "posts_queued": 1379,
   "posts_posted": 0,
   "leads_total_qualified": 1547,
   "leads_contacted": 0,
@@ -339,7 +333,7 @@
     "growth_strategist": "first_revenue_or_social_account",
     "ALL_AGENTS": "any_human_activation_action"
   },
-  "last_brain_run": "2026-04-01T04:34:04.609903+00:00",
+  "last_brain_run": "2026-04-01T04:58:00+00:00",
   "day_count": 57,
   "revenue": 0
 }

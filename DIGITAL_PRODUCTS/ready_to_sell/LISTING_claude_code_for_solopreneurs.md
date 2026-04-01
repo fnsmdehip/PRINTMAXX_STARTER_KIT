@@ -4,7 +4,7 @@
 
 ## GUMROAD FORM FIELDS — COPY PASTE
 
-**Product name:** Claude Code for Solopreneurs: Build 10 Automations Before Your Competitors Wake Up
+**Product name:** The Solopreneur Automation Stack: 10 Agents That Run While You Sleep
 
 **Price:** $47
 
@@ -22,11 +22,11 @@ One-person business. Competing against teams of 10.
 
 This is how you win: autonomous agents that ship work while you sleep, scrape while you eat, and draft content while you do client work.
 
-This guide documents exactly how a solopreneur set up 33 autonomous agents on one Mac with $0/month in cloud orchestration costs. No SaaS. No vendor lock-in. No $200/month workflow tools.
+This is the actual agent stack. 8 pre-built agents, the exact CLAUDE.md configs, the cron templates, the overnight execution loops. Install them on your Mac. $0/month cloud orchestration. No SaaS. No vendor lock-in. No $200/month workflow tools.
 
-**What you get:**
+**What you install:**
 
-The solopreneur agent stack. 8 agents purpose-built for one-person businesses: lead finder, cold email drafter, content repurposer, invoice tracker, competitor monitor, SEO page generator, digital product builder, and revenue tracker. Each documented. Each runnable.
+The solopreneur agent stack. 8 agents purpose-built for one-person businesses: lead finder, cold email drafter, content repurposer, invoice tracker, competitor monitor, SEO page generator, digital product builder, and revenue tracker. Each with config files. Each runnable from day one.
 
 The overnight execution pattern. Ralph loops — `while :; do cat PROMPT.md | claude --print; done` — that run while you sleep and leave completed work by morning. Exact prompt templates for each type of solopreneur task.
 
@@ -44,7 +44,7 @@ The cold email pipeline. Scraper → lead enrichment → personalized draft → 
 - Want to compete above their weight class
 - Have more ideas than execution capacity
 
-$47. If you use it once to automate something that takes you 2 hours a week, payback is day one.
+$47. Free courses teach Claude Code concepts. This deploys revenue automations. Payback is day one.
 
 ---
 

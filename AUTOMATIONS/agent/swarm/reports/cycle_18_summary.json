@@ -1,0 +1,132 @@
+{
+  "cycle": 18,
+  "timestamp": "2026-04-01T04:45:00Z",
+  "test_type": "comprehensive_sample_test",
+  "framework": "curl + HTTP status codes",
+  "total_sites_in_portfolio": 388,
+  "sites_tested": 64,
+  "sample_percentage": 16.5,
+  "pass_rate_percent": 92.2,
+  "results": {
+    "green": {
+      "count": 59,
+      "percent": 92.2,
+      "status": "OPERATIONAL"
+    },
+    "yellow": {
+      "count": 0,
+      "percent": 0.0,
+      "status": "N/A"
+    },
+    "red": {
+      "count": 5,
+      "percent": 7.8,
+      "status": "FAILED",
+      "sites": [
+        "sleepmaxx-web.surge.sh",
+        "walktounlock-web.surge.sh",
+        "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+        "top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+        "window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh"
+      ]
+    },
+    "timeout": {
+      "count": 0,
+      "percent": 0.0
+    }
+  },
+  "category_breakdown": {
+    "brand_pages": {
+      "tested": 15,
+      "green": 14,
+      "pass_rate": 93.3
+    },
+    "pwa_apps": {
+      "tested": 11,
+      "green": 8,
+      "pass_rate": 72.7,
+      "note": "PROBLEM CATEGORY - 3 failures including 2 new regressions"
+    },
+    "tool_apps": {
+      "tested": 9,
+      "green": 9,
+      "pass_rate": 100.0
+    },
+    "comparisons": {
+      "tested": 8,
+      "green": 8,
+      "pass_rate": 100.0
+    },
+    "fiverr_services": {
+      "tested": 12,
+      "green": 12,
+      "pass_rate": 100.0
+    },
+    "lead_magnets": {
+      "tested": 12,
+      "green": 12,
+      "pass_rate": 100.0
+    },
+    "app_marketing": {
+      "tested": 7,
+      "green": 7,
+      "pass_rate": 100.0
+    },
+    "affiliate_pages": {
+      "tested": 5,
+      "green": 5,
+      "pass_rate": 100.0
+    }
+  },
+  "trend": {
+    "previous_cycle_pass_rate": 94.2,
+    "current_cycle_pass_rate": 92.2,
+    "delta": -2.0,
+    "status": "REGRESSION"
+  },
+  "root_causes": {
+    "dns_failures": {
+      "count": 3,
+      "cause": "Surge.sh 63-char DNS label limit exceeded",
+      "priority": "P2"
+    },
+    "new_regressions": {
+      "count": 2,
+      "cause": "Unknown - possibly transient Surge issue or file sync failure",
+      "priority": "P1",
+      "sites": [
+        "sleepmaxx-web.surge.sh",
+        "walktounlock-web.surge.sh"
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "P1",
+      "action": "Investigate PWA regressions (sleepmaxx-web, walktounlock-web)",
+      "effort": "15 min",
+      "timeline": "IMMEDIATE"
+    },
+    {
+      "priority": "P2",
+      "action": "Rename long-subdomain sites (<63 chars per label)",
+      "effort": "1 hour",
+      "timeline": "THIS WEEK"
+    },
+    {
+      "priority": "P2",
+      "action": "Automate hourly health checks on RED sites",
+      "effort": "2 hours",
+      "timeline": "THIS WEEK"
+    },
+    {
+      "priority": "P3",
+      "action": "Evaluate Vercel/Netlify migration for top 50+ sites",
+      "effort": "4 hours",
+      "timeline": "NEXT MONTH"
+    }
+  ],
+  "alerts_created": true,
+  "alerts_file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/agent/swarm/quality_alerts.txt",
+  "detailed_report": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/agent/swarm/reports/playwright_tester_report_20260401.md"
+}

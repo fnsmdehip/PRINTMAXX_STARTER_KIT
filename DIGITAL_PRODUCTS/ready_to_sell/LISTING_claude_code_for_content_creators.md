@@ -4,7 +4,7 @@
 
 ## GUMROAD FORM FIELDS — COPY PASTE
 
-**Product name:** Claude Code for Content Creators: Automate the Machine, Keep the Voice
+**Product name:** The Content Automation Stack: 90 Posts/Month From One Terminal
 
 **Price:** $39
 
@@ -22,7 +22,7 @@
 
 Not AI slop. Not templated garbage. Actual content with voice, with data, with takes.
 
-This guide documents the content machine built into a real system: scrapers that find raw material, agents that draft, pipelines that format and queue, and a distribution system that posts across platforms.
+This is the content machine. Scrapers that find raw material, agents that draft in your voice, pipelines that format and queue, and a distribution system that posts across platforms. Pre-built configs. Prompt templates. Cron schedules. Install and run.
 
 The machine handles the volume. You handle the voice.
 
@@ -48,7 +48,7 @@ Scheduling without Buffer. The free alternatives. The CSV import method that loa
 - Want to scale output without scaling time
 - Use or want to use Claude Code for content work
 
-$39. Worth it if it saves you 3 hours of content production per week.
+$39. Free tutorials teach Claude Code basics. This deploys a content pipeline that produces 90 posts/month from your existing work.
 
 ---
 

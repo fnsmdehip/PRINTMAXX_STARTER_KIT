@@ -1,0 +1,22 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - img [ref=e7]
+    - heading "cnsnt" [level=1] [ref=e10]
+    - paragraph [ref=e11]: Encrypted Consent Vault
+  - paragraph [ref=e12]: Create a 6-digit PIN
+  - generic [ref=e20]:
+    - button "1" [ref=e21] [cursor=pointer]
+    - button "2" [ref=e22] [cursor=pointer]
+    - button "3" [ref=e23] [cursor=pointer]
+    - button "4" [ref=e24] [cursor=pointer]
+    - button "5" [ref=e25] [cursor=pointer]
+    - button "6" [ref=e26] [cursor=pointer]
+    - button "7" [ref=e27] [cursor=pointer]
+    - button "8" [ref=e28] [cursor=pointer]
+    - button "9" [ref=e29] [cursor=pointer]
+    - button "0" [ref=e31] [cursor=pointer]
+    - button [ref=e32] [cursor=pointer]:
+      - img [ref=e33]
+  - generic [ref=e35]:
+    - paragraph [ref=e36]: All data stored locally in this browser. No server. No account.
+    - paragraph [ref=e37]: Clearing browser data will erase your vault. Export a backup in Settings.

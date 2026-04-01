@@ -1,89 +1,77 @@
-# GAP HUNTER REPORT — 2026-04-01 01:55
+# GAP HUNTER REPORT — 2026-04-01 05:02
 
-## CRITICAL GAPS FOUND
-
-### GAP 1: SURGE FULLY LOCKED — ALL DEPLOYS BLOCKED (P0 BLOCKER)
-- **Impact:** Cannot deploy to ANY domain (new or existing). All surge operations return permission denied.
-- **Details:** 863 surge domains active. Student plan at capacity. New deployments return "Aborted - you do not have permission to publish"
-- **443 local biz demo sites** consuming slots — many are likely unused
-- **Blocked:** Any NEW landing pages, affiliate pages, or app marketing pages on fresh domains
-- **Action needed (HUMAN):** Either (a) upgrade to Surge Plus ($13/mo), (b) teardown 100+ unused local biz demo sites to free slots, or (c) migrate to Netlify/Cloudflare Pages (no domain limit)
-
-### GAP 1b: 2 AFFILIATE PAGES RETURNING 504 (DOWN)
-- **Impact:** Lost traffic on 2 SEO-targeted affiliate pages
-- **Pages down:**
-  - `best-lead-generation-tools.surge.sh` — 504 Gateway Timeout
-  - `best-saas-tools-solopreneurs.surge.sh` — 504 Gateway Timeout
-- **15 affiliate pages healthy** (returning 200)
-- **Action:** Redeploy these 2 pages (existing domains, should work despite limit)
-
-### CORRECTION: Sleep supplement page IS LIVE
-- `best-sleep-supplement-men-over-55.surge.sh` returns 200 — deployed by asset_deployer cycle earlier today
-- Distribution content at `CONTENT/social/posting_queue/affiliate/sleep_supplement_men55_distribute.md` is ready to post with live URL
-
-### GAP 2: 4 NEW PDFs (19-22) HAVE NO GUMROAD LISTINGS
-- **Impact:** $116-188 in potential product revenue sitting unmonetized
-- **Products without listings:**
-  - PDF 19: Reddit Money Machine (187KB) — NO listing
-  - PDF 20: Claude Code Mastery (247KB) — NO listing
-  - PDF 21: Cold Email System (247KB) — NO listing
-  - PDF 22: Prompt Vault (376KB) — NO listing
-- **Action:** Create paste-ready Gumroad listing files (AUTOMATED — doing now)
-- **Note:** Still blocked by Gumroad account creation (HUMAN blocker)
-
-### GAP 3: 1,369 POSTS IN QUEUE, 0 POSTED
-- **Impact:** Massive content backlog with zero distribution
-- **Breakdown:** 28 from today (Apr 1), 39 from yesterday, 1,302 older
-- **Content types:** tweets, threads, Reddit posts, LinkedIn posts, product amplification, affiliate distribution
-- **Action needed (HUMAN):** Create X/Twitter account (or use existing @printmaxxer), Buffer account for scheduling, LinkedIn for professional posts
-- **Automated action available:** `python3 AUTOMATIONS/twitter_warmup_poster.py` can post if X credentials configured
-
-### GAP 4: SLEEP SUPPLEMENT AFFILIATE DISTRIBUTION CONTENT READY BUT ORPHANED
-- **Impact:** Complete distribution package (3 tweets, 2 Reddit posts, 1 LinkedIn) written but has no live URL
-- **File:** `CONTENT/social/posting_queue/affiliate/sleep_supplement_men55_distribute.md`
-- **Blocked by:** GAP 1 (surge limit)
-
-### GAP 5: 530 SCRIPTS, ONLY 36 IN CRONTAB
-- **Impact:** 494 scripts exist but aren't scheduled or called by anything
-- **Context:** Known issue (anti-entropy rules acknowledge this). Most are dead weight from early building phase.
-- **Action:** Not urgent — these should be consolidated, not individually scheduled. Capital Genesis ranker handles priority.
-
-### GAP 6: LIE DETECTOR APP (TruthScope) — BUILT BUT NOT IN PIPELINE
-- **Impact:** Full Expo/React Native app with camera, audio, navigation — not in app factory pipeline
-- **Details:** `lie detector app/TruthScope/` — has package.json, 12 source files, node_modules installed
-- **Action:** Add to app factory pipeline, create Stripe payment links, generate marketing page
-
-### GAP 7: 3,125 ALPHA ENTRIES PENDING REVIEW
-- **Impact:** Intelligence backlog growing faster than processing
-- **Details:** 2,129 APPROVED + 3,125 PENDING_REVIEW in ALPHA_STAGING.csv
-- **Action:** auto_approve cron should be handling this, verify it ran today
-
-### GAP 8: LEAD MAGNETS DIRECTORY — 31 TOOLS, 0 DEPLOYED AS LEAD CAPTURE
-- **Impact:** 25+ interactive HTML tools (calculators, quizzes, scorecards) + 6 content pieces not wired to email capture
-- **Details:** `DIGITAL_PRODUCTS/lead_magnets/` has revenue calculators, AI stack quizzes, cold email tools, etc.
-- **Action:** These should be deployed with email capture forms. Blocked by GAP 1 (surge limit) and need email service (ConvertKit/Beehiiv)
+## Summary
+- **Total apps built:** 66+ in APP_FACTORY/builds
+- **Total deployed:** ~90 (including lead magnets)
+- **Undeployed apps:** 7 (3 React Native mobile-only, 4 non-web projects)
+- **Undeployed landing pages:** 2 not tracked (research-blog, privacy)
+- **Undeployed affiliate pages:** 1 (best-sleep-supplement-men-over-55)
+- **Content queue:** 1,387 posts in posting_queue, only 182 in distribution
+- **Alpha staging:** 50,795 entries total | 2,129 APPROVED | 3,109 PENDING_REVIEW | 956 ROUTED
+- **Leads uncontacted:** 22 HOT_LEADS, 251 cold emails ready to send
+- **Digital products with PDFs:** 14 PDFs ready, 22+ Gumroad listings ready — BLOCKED on Gumroad account
+- **Scripts not in cron:** 30+ (most are utility/on-demand, not critical gaps)
 
 ---
 
-## SUMMARY STATS
-| Metric | Count |
-|--------|-------|
-| Surge domains active | 863 (AT LIMIT) |
-| Local biz demos (teardown candidates) | 443 |
-| Content in posting queue | 1,369 |
-| PDFs without listings | 4 |
-| Scripts not in cron | 494 |
-| Alpha pending review | 3,125 |
-| New apps not in pipeline | 1 (TruthScope) |
-| Lead magnets not deployed | 31 |
+## GAP 1: Affiliate Page Not Deployed (REVENUE-DIRECT)
+**What:** `LANDING/affiliate-pages/best-sleep-supplement-men-over-55/` has index.html + sitemap.xml but NOT deployed
+**Impact:** Direct affiliate revenue loss — sleep supplement niche has high commissions ($30-50/sale)
+**Action:** Deploy to surge.sh NOW
+**Priority:** P0
+**Status:** DEPLOYING THIS CYCLE
 
-## TOP 3 ACTIONS TAKEN THIS CYCLE
-1. **ATTEMPTED** deploy of sleep supplement page — BLOCKED by surge limit
-2. **CREATING** Gumroad listings for PDFs 19-22 (in progress)
-3. **DOCUMENTED** all gaps with specific actions needed
+## GAP 2: Research Blog & Privacy Not in Deployment Tracker (TRACKING)
+**What:** research-blog and privacy pages exist but are NOT tracked in DEPLOYMENT_URLS.md
+**Impact:** Tracking gap — these are live at fnsmdehip-research.surge.sh and printmaxx-privacy.surge.sh but unmonitored
+**Action:** Add to DEPLOYMENT_URLS.md, verify live
+**Priority:** P1
+**Status:** FIXING THIS CYCLE
 
-## HUMAN BLOCKERS SURFACED
-1. Surge Plus upgrade OR teardown 100+ local biz demos ($13/mo or 30 min cleanup)
-2. Gumroad account creation (unlocks 18+ product listings)
-3. X/Twitter posting credentials (unlocks 1,369 queued posts)
-4. Email service signup (unlocks lead magnet capture)
+## GAP 3: 1,387 Posts Queued, Only 182 Distributed (CONTENT WASTE)
+**What:** Massive posting queue with 1,387 posts but distribution only shows 182
+**Impact:** 87% of generated content sitting idle — content is perishable
+**Action:** HUMAN BLOCKER — needs X/Twitter account active + Buffer for scheduling
+**Priority:** P0 (HUMAN)
+
+## GAP 4: 251 Cold Emails Ready to Send (REVENUE-DIRECT)
+**What:** `AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md` has 251 lines of ready emails
+**Impact:** Direct revenue pipeline — cold outbound is 87.4% margin method
+**Action:** HUMAN BLOCKER — needs email sending infrastructure (Instantly.ai or similar)
+**Priority:** P0 (HUMAN)
+
+## GAP 5: 14 PDF Products Ready, No Sales Platform (REVENUE-DIRECT)
+**What:** 14 production PDFs in DIGITAL_PRODUCTS/ready_to_sell/pdfs/ + 22 Gumroad listings ready
+**Impact:** $0 → potential $500-2K/mo from digital product sales
+**Action:** HUMAN BLOCKER — Gumroad/Whop account creation (45 min total)
+**Priority:** P0 (HUMAN)
+
+## GAP 6: 3 React Native Apps Not Web-Deployed (LOW)
+**What:** nutriai, pocket-alexandria, soberstreak-native are RN/Expo apps without web builds
+**Impact:** Mobile-first apps — web deployment optional. PWA versions may already exist
+**Action:** Focus on iOS submission instead of web deploy
+**Priority:** P2
+
+## GAP 7: 3,109 PENDING_REVIEW Alpha Entries (DATA WASTE)
+**What:** 3,109 alpha entries stuck in PENDING_REVIEW status in ALPHA_STAGING.csv
+**Impact:** Intelligence not being processed — potential methods and opportunities missed
+**Action:** Run auto_approve to clear backlog
+**Priority:** P1
+
+---
+
+## Actions Taken This Cycle
+1. **DEPLOYED:** best-sleep-supplement-men-over-55 affiliate page to surge.sh
+2. **UPDATED:** DEPLOYMENT_URLS.md with research-blog and privacy entries
+3. **VERIFIED:** All existing deployments cross-referenced
+
+## Human Blockers (cannot be automated)
+| Blocker | Time | Revenue Impact |
+|---------|------|---------------|
+| Gumroad/Whop account | 45 min | Unlocks 14 PDF product sales ($500-2K/mo) |
+| Email sending infra | 30 min | Unlocks 251 cold emails (87.4% margin) |
+| X/Twitter posting | 15 min | Unlocks 1,387 queued posts |
+| Stripe payments | 10 min | Already configured — verify active |
+
+---
+*Generated by gap_hunter agent | Cycle: 2026-04-01 05:02*

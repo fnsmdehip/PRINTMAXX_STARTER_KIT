@@ -1,0 +1,74 @@
+{
+  "cycle": 131,
+  "timestamp": "2026-04-01T09:15:30.248717+00:00",
+  "strategy": "POLITICAL SCIENCE & GOVERNANCE",
+  "niches_scanned": 10,
+  "unique_niches": 10,
+  "duplicates_filtered": 0,
+  "ci_rows_added": 10,
+  "alpha_rows_added": 3,
+  "cumulative_blue_oceans": 692,
+  "top_opportunities": [
+    {
+      "name": "Daily Voting Theory Streak",
+      "score": 19,
+      "community": 9927700,
+      "breakdown": {
+        "community": 4,
+        "ocean": 5,
+        "competition": 5,
+        "content_richness": 3,
+        "monetization_wtp": 2
+      }
+    },
+    {
+      "name": "Daily Constitutional Design Streak",
+      "score": 18,
+      "community": 19155000,
+      "breakdown": {
+        "community": 4,
+        "ocean": 5,
+        "competition": 4,
+        "content_richness": 4,
+        "monetization_wtp": 1
+      }
+    },
+    {
+      "name": "Daily Revolution Theory Streak",
+      "score": 18,
+      "community": 20840000,
+      "breakdown": {
+        "community": 5,
+        "ocean": 5,
+        "competition": 5,
+        "content_richness": 3,
+        "monetization_wtp": 0
+      }
+    },
+    {
+      "name": "Daily Political Economy Streak",
+      "score": 17,
+      "community": 4300000,
+      "breakdown": {
+        "community": 3,
+        "ocean": 5,
+        "competition": 5,
+        "content_richness": 3,
+        "monetization_wtp": 1
+      }
+    },
+    {
+      "name": "Daily Public Administration Streak",
+      "score": 17,
+      "community": 2113000,
+      "breakdown": {
+        "community": 3,
+        "ocean": 5,
+        "competition": 5,
+        "content_richness": 3,
+        "monetization_wtp": 1
+      }
+    }
+  ],
+  "notes": "Political Science & Governance niche \u2014 r/worldnews (31M), r/politics (8.3M), r/history (16M), r/AskHistorians (1.5M), r/geopolitics (1.4M). All 10 niches confirmed blue ocean: zero exact-match political science streak apps found. 0 duplicate(s) filtered: []. Strongest WTP evidence: IR Theory (r/worldnews 31M \u2014 everyone reads geopolitics news, nobody has the theoretical lens), Democratic Theory (Arrow's impossibility, Condorcet directly relevant to electoral reform debates), Revolution Theory (r/history 16M, deeply narrative-driven = high retention). Political science has the broadest reach of any academic discipline: every election triggers millions of people seeking frameworks. 'Why Nations Fail' sold 2M+ copies. 'The Prince' is a perennial bestseller. Political literacy is the difference between understanding power and being subject to it \u2014 and nobody is building the streak app that teaches it."
+}

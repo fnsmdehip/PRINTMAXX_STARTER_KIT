@@ -4,7 +4,7 @@
 
 ## GUMROAD FORM FIELDS — COPY PASTE
 
-**Product name:** Claude Code Mastery: Ship Apps in 48 Hours
+**Product name:** Claude Code Revenue System: 14 Automations You Deploy Today
 
 **Price:** $47
 
@@ -12,39 +12,35 @@
 
 **Category:** Software & Tech
 
-**Tags:** Claude Code, app development, ship apps, solopreneur, indie hacker, vibe coding, PWA, AI coding, no-code, build fast
+**Tags:** Claude Code, automation system, revenue deployment, solopreneur, indie hacker, CLAUDE.md, autonomous agents, cron, deploy, ship fast
 
 ---
 
 ## DESCRIPTION (paste into Gumroad body)
 
-Most people spend 6 months learning to code and never ship a single thing.
+Anthropic gives away free Claude Code courses with certificates. So do 5 other sites.
 
-That's not a skills problem. It's a tools problem.
+None of them deploy revenue.
 
-Claude Code lets you build fully functional apps from your terminal — no IDE, no Stack Overflow rabbit holes, no debugging for 4 hours because you forgot a semicolon. You describe what you want, Claude builds it, and you ship it the same day.
+This is not a course. It's 14 pre-built automations you install into your terminal and run. CLAUDE.md configs. Deployment scripts. Stripe payment integration. Cron jobs that ship while you sleep.
 
-This course shows you exactly how to do that, step by step, with real code you can copy-paste and real apps you can charge money for.
+**What you install:**
 
-**5 modules. Zero fluff.**
+Configs 1-3: The Foundation. Pre-configured CLAUDE.md, hooks, and agent definitions. Drop into any project. Claude Code operates under your rules immediately. 100+ hours of iteration distilled into config files you copy-paste.
 
-Module 1: Setup. Claude Code configured in 30 minutes. File structure, project initialization, the CLAUDE.md system that makes every session start with full context. Terminal basics you actually need.
+Automations 4-7: Build and Deploy Pipeline. Scripts that generate a PWA, deploy to production ($0 hosting), wire Stripe payments, and create screenshots. Run sequentially. Output: a live, monetized app within 2 hours.
 
-Module 2: Your First App. Idea to working prototype in under 2 hours. The exact prompt sequence that produces production-ready code instead of toy examples. How to give Claude Code precise specifications. Common mistakes and how to avoid them.
+Automations 8-11: The Revenue Stack. Lead scraper. Cold email drafter with personalization. Content generator (3 tweets + 1 thread per session). Invoice tracker. All run on cron. Work while you sleep.
 
-Module 3: Deployment. Surge.sh for instant static hosting. Vercel for full-stack apps. Capacitor for iOS/Android wrapping. App Store submission checklist. Every step documented.
+Automations 12-14: Portfolio Management. Weekly optimizer that scores every app on revenue, growth, and retention. Kill triggers. Double-down triggers. Data-driven decisions, not gut-feel.
 
-Module 4: Monetization. RevenueCat for in-app subscriptions — wired in 20 minutes. AdMob for display ads. Stripe Payment Links for web. Gumroad for digital products. The pricing research framework used across 20+ apps.
+**After installing this system:**
+- You have a deployed, monetized app within 48 hours
+- Agents generate leads and content on cron
+- Portfolio optimizer makes kill/scale decisions weekly
+- Everything runs from your terminal. $0 cloud costs.
 
-Module 5: Portfolio and Scale. Building your second, third, and tenth app faster than the first. The app factory system. How to manage 10+ active apps without losing your mind. ASO keyword research that gets organic downloads.
-
-**After this course:**
-- You can ship a working app in 48 hours or less
-- You have a template library for common app patterns
-- You know how to monetize from day one
-- You have a repeatable process for going from idea to App Store
-
-$47 one-time. Every app you ship after this returns that investment.
+$47 one-time. Free courses teach concepts. This deploys revenue.
 
 ---
 

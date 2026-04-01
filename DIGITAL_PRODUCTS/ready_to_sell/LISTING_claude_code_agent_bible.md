@@ -4,7 +4,7 @@
 
 ## GUMROAD FORM FIELDS — COPY PASTE
 
-**Product name:** The Claude Code Agent Bible: 33 Autonomous Agents Running 24/7
+**Product name:** The Autonomous Agent Playbook: 33 Pre-Built Agents That Run Your Business
 
 **Price:** $47
 
@@ -20,7 +20,7 @@
 
 33 agents running right now on one Mac. No cloud bills. No external API for orchestration. Just Claude Code, Python, launchd, and cron.
 
-This is the documentation of that system. Every agent. What it does. How it's wired. The exact patterns that make autonomous agents reliable instead of hallucination machines.
+Not documentation. The actual system. Agent definitions. Config files. Cron templates. Inter-agent communication patterns. Install them, wire them, run them. The patterns that make autonomous agents reliable instead of hallucination machines.
 
 **What's inside:**
 
@@ -38,7 +38,7 @@ Model routing. Opus for strategy and quality gates. Sonnet for execution and mai
 
 Failure handling. Agents that fail silently are worse than agents that don't exist. Lock files, timeout patterns, dead agent detection, auto-recovery.
 
-$47. Worth it if you use Claude Code more than twice a week.
+$47. Anthropic's free courses teach you what Claude Code is. This gives you 33 agents that do the work.
 
 ---
 
@@ -74,4 +74,4 @@ Accent: indigo/purple (#6366f1)
 - [ ] Listed on Gumroad
 
 **REVENUE POTENTIAL:** $1,175-4,700/mo at 25-100 sales
-**PRIORITY:** TOP — unique product, no direct competitors, technical buyers pay for specificity
+**PRIORITY:** TOP — unique product, no direct competitors (Anthropic's free courses are educational, not operational), technical buyers pay for specificity

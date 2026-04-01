@@ -1,0 +1,132 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: hilal
+      - link "join the network" [ref=e5] [cursor=pointer]:
+        - /url: "#email-capture"
+  - generic [ref=e7]:
+    - generic [ref=e8]: no more confusion
+    - heading "crowdsourced moon sighting for your city. know for certain." [level=1] [ref=e9]
+    - paragraph [ref=e10]: hilal collects real moon sighting reports from verified users in your area. your masjid gets notified. you get notified. everyone starts ramadan on the same day. finally.
+    - link "join the network" [ref=e11] [cursor=pointer]:
+      - /url: "#email-capture"
+    - generic [ref=e12]: free forever. 340+ cities. 1,200+ masjids connected.
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: 340+
+      - generic [ref=e17]: cities with active reporters
+    - generic [ref=e18]:
+      - generic [ref=e19]: 1,200+
+      - generic [ref=e20]: masjids connected
+    - generic [ref=e21]:
+      - generic [ref=e22]: 14,800
+      - generic [ref=e23]: verified sighting reports
+  - generic [ref=e25]:
+    - heading "every ramadan, the same chaos" [level=2] [ref=e26]
+    - paragraph [ref=e27]: it's the 29th of sha'ban. your family group chat has 47 messages. uncle says it's tomorrow. your masjid says wait. saudi already announced it. your local committee hasn't said anything. you don't know if you're fasting tomorrow or not. this happens every single month, every single year. hilal fixes it with crowdsourced, verified, local moon sighting data in real time.
+  - generic [ref=e29]:
+    - heading "how hilal ends the confusion" [level=2] [ref=e30]
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: 🌑
+        - heading "community reports" [level=3] [ref=e34]
+        - paragraph [ref=e35]: verified users submit sighting reports with photos, GPS coordinates, and weather conditions. upvote system filters noise. real data from real people in your city.
+      - generic [ref=e36]:
+        - generic [ref=e37]: 🕌
+        - heading "masjid integration" [level=3] [ref=e38]
+        - paragraph [ref=e39]: your local masjid can publish their official decision through hilal. get the announcement instantly instead of waiting for a facebook post at midnight.
+      - generic [ref=e40]:
+        - generic [ref=e41]: 🔔
+        - heading "notification alerts" [level=3] [ref=e42]
+        - paragraph [ref=e43]: get push notifications the moment a verified sighting is reported in your region. know before the whatsapp forwards start circulating.
+      - generic [ref=e44]:
+        - generic [ref=e45]: 📊
+        - heading "historical data" [level=3] [ref=e46]
+        - paragraph [ref=e47]: full archive of every sighting report since 2024. see patterns. compare with astronomical calculations. settle debates with actual data, not opinions.
+  - generic [ref=e49]:
+    - heading "live sighting reports" [level=2] [ref=e50]
+    - paragraph [ref=e51]: real-time reports from the hilal network. updated as sightings come in.
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e56]: confirmed
+        - generic [ref=e59]: pending
+        - generic [ref=e62]: not sighted
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: toronto
+          - generic [ref=e66]: 3 confirmed
+        - generic [ref=e67]:
+          - generic [ref=e68]: london
+          - generic [ref=e69]: 7 confirmed
+        - generic [ref=e70]:
+          - generic [ref=e71]: houston
+          - generic [ref=e72]: 2 pending
+        - generic [ref=e73]:
+          - generic [ref=e74]: chicago
+          - generic [ref=e75]: 4 confirmed
+        - generic [ref=e76]:
+          - generic [ref=e77]: dubai
+          - generic [ref=e78]: 11 confirmed
+        - generic [ref=e79]:
+          - generic [ref=e80]: sydney
+          - generic [ref=e81]: 1 pending
+  - generic [ref=e83]:
+    - heading "the ummah is connecting" [level=2] [ref=e84]
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - paragraph [ref=e87]: "\"first ramadan where our entire community started on the same day. hilal's masjid integration meant our imam announced it at maghrib. no midnight confusion.\""
+        - generic [ref=e88]: "-- imam yusuf k., islamic center of toronto"
+      - generic [ref=e89]:
+        - paragraph [ref=e90]: "\"i used to dread the 29th of every islamic month. now i just check hilal. verified reports with photos. actual data. no more whatsapp drama.\""
+        - generic [ref=e91]: "-- aisha m., teacher, london"
+      - generic [ref=e92]:
+        - paragraph [ref=e93]: "\"the historical data settled a 3-year argument in our community. turns out the moon was sighted locally in 2024 and nobody reported it properly. now we have hilal.\""
+        - generic [ref=e94]: "-- br. hassan d., moon sighting committee, dallas"
+  - generic [ref=e96]:
+    - heading "next new moon, know for sure." [level=2] [ref=e97]
+    - paragraph [ref=e98]: 340+ cities. 1,200+ masjids. one network. join before the next hilal.
+    - link "join the network" [ref=e99] [cursor=pointer]:
+      - /url: "#email-capture"
+    - generic [ref=e100]: free on ios and android. become a verified reporter in 2 minutes.
+  - generic [ref=e102]:
+    - heading "get sighting alerts for your city" [level=2] [ref=e103]
+    - paragraph [ref=e104]: we'll notify you when hilal is live in your area. first to know, no whatsapp chaos.
+    - generic [ref=e105]:
+      - textbox "your email for sighting alerts" [ref=e106]
+      - button "join network" [ref=e107] [cursor=pointer]
+    - paragraph [ref=e108]: free forever. just moon sighting alerts.
+  - generic [ref=e110]:
+    - heading "more from PRINTMAXX" [level=3] [ref=e111]
+    - generic [ref=e112]:
+      - link "🔒 PrayerLock phone locks at adhan" [ref=e113] [cursor=pointer]:
+        - /url: https://prayerlock-web.surge.sh/
+        - generic [ref=e114]: 🔒
+        - generic [ref=e115]: PrayerLock
+        - text: phone locks at adhan
+      - link "🌟 SleepMaxx fix your sleep score" [ref=e116] [cursor=pointer]:
+        - /url: https://sleepmaxx-web.surge.sh/
+        - generic [ref=e117]: 🌟
+        - generic [ref=e118]: SleepMaxx
+        - text: fix your sleep score
+      - link "🍽 MealMaxx meal prep in 10 min" [ref=e119] [cursor=pointer]:
+        - /url: https://mealmaxx-web.surge.sh/
+        - generic [ref=e120]: 🍽
+        - generic [ref=e121]: MealMaxx
+        - text: meal prep in 10 min
+      - link "🚶 WalkToUnlock step gate for phone time" [ref=e122] [cursor=pointer]:
+        - /url: https://walktounlock-web.surge.sh/
+        - generic [ref=e123]: 🚶
+        - generic [ref=e124]: WalkToUnlock
+        - text: step gate for phone time
+  - contentinfo [ref=e125]:
+    - generic [ref=e126]:
+      - paragraph [ref=e127]: PRINTMAXX 2026. hilal. all rights reserved.
+      - paragraph [ref=e128]:
+        - link "all products" [ref=e129] [cursor=pointer]:
+          - /url: https://printmaxx-store.surge.sh/
+        - text: ·
+        - link "free tools" [ref=e130] [cursor=pointer]:
+          - /url: https://printmaxx-magnets.surge.sh/
+        - text: ·
+        - link "solopreneur stack" [ref=e131] [cursor=pointer]:
+          - /url: https://ai-stack-2026.surge.sh/

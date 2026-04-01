@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-31 (gap-hunter cycle)
+**Last updated:** 2026-04-01 (gap-hunter cycle)
 
 ---
 
@@ -93,6 +93,10 @@
 | streakr | https://streakr.surge.sh | LIVE — gap-hunter deploy 2026-03-31 (swipe habit tracker PWA) |
 | best-blood-pressure-supplement-men-over-55 | https://best-blood-pressure-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-03-31 |
 | best-memory-supplement-men-over-60 | https://best-memory-supplement-men-over-60.surge.sh | LIVE — gap-hunter deploy 2026-03-31 |
+| best-sleep-supplement-men-over-55 | https://best-sleep-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-04-01 |
+| research-blog | https://fnsmdehip-research.surge.sh | LIVE — UAF research blog (17 articles) |
+| privacy | https://printmaxx-privacy.surge.sh | LIVE — privacy policy (required for app store) |
+| tos | https://printmaxx-tos.surge.sh | LIVE — terms of service |
 
 ---
 

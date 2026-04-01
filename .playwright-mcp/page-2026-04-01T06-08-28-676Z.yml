@@ -1,0 +1,133 @@
+- generic [ref=e3]:
+  - region "top of page"
+  - link "wix This website was built on Wix. Create yours today. Get Started" [ref=e5] [cursor=pointer]:
+    - /url: https://www.wix.com/lpviral/enviral?utm_campaign=vir_wixad_live&adsVersion=banner_2024&orig_msid=aa99f552-cce6-4d9b-96f0-a304175f7068&orig_msid=83f8552b-39ad-4341-bc81-83d58af13703&adsVersion=banner_2024
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img "wix" [ref=e10]
+        - text: This website was built on Wix. Create yours today.
+      - generic [ref=e15]: Get Started
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - generic [ref=e29]:
+        - generic:
+          - generic:
+            - heading "Wayne's Landscaping" [level=2] [ref=e30]
+            - button "Log In" [ref=e33] [cursor=pointer]:
+              - img [ref=e37]
+              - generic [ref=e40]: Log In
+            - navigation "Site" [ref=e42]:
+              - list [ref=e43]:
+                - listitem [ref=e44] [cursor=pointer]:
+                  - link "Home" [ref=e45]:
+                    - /url: https://dickersonl.wixsite.com/wayneslandscapingnc
+                    - paragraph [ref=e48]: Home
+                - listitem [ref=e49] [cursor=pointer]:
+                  - link "Outdoor Patios & Kitchens" [ref=e50]:
+                    - /url: https://dickersonl.wixsite.com/wayneslandscapingnc/work-01
+                    - paragraph [ref=e53]: Outdoor Patios & Kitchens
+                - listitem [ref=e54] [cursor=pointer]:
+                  - link "Pools & Waterfalls" [ref=e55]:
+                    - /url: https://dickersonl.wixsite.com/wayneslandscapingnc/work-02
+                    - paragraph [ref=e58]: Pools & Waterfalls
+                - listitem [ref=e59] [cursor=pointer]:
+                  - link "Synthetic Grass" [ref=e60]:
+                    - /url: https://dickersonl.wixsite.com/wayneslandscapingnc/work-03
+                    - paragraph [ref=e63]: Synthetic Grass
+                  - button "More Synthetic Grass pages" [ref=e64]:
+                    - img [ref=e65]
+    - main [ref=e67]:
+      - generic [ref=e72]:
+        - generic:
+          - generic:
+            - generic:
+              - img "IMG_5923_edited.jpg" [ref=e88]
+              - generic [ref=e93]:
+                - generic:
+                  - generic:
+                    - generic [ref=e102]:
+                      - generic:
+                        - generic:
+                          - link "outdoor kitchen" [ref=e107] [cursor=pointer]:
+                            - /url: https://dickersonl.wixsite.com/wayneslandscapingnc/work-01
+                            - img [ref=e108]
+                          - generic:
+                            - paragraph [ref=e112]:
+                              - generic [ref=e113]: Album No.1
+                            - heading [level=2]
+                          - heading "Outdoor Patios & Kitchens" [level=5] [ref=e115]:
+                            - generic [ref=e118]:
+                              - text: Outdoor Patios
+                              - generic [ref=e119]: "& Kitchens"
+                          - link [ref=e121] [cursor=pointer]:
+                            - /url: https://dickersonl.wixsite.com/wayneslandscapingnc/work-02
+                            - img [ref=e122]
+                          - generic "IMG_5923.JPG" [ref=e126] [cursor=pointer]:
+                            - link "Stewart_DSF5225_edited.jpg" [ref=e127]:
+                              - /url: https://dickersonl.wixsite.com/wayneslandscapingnc/work-02
+                              - img "Stewart_DSF5225_edited.jpg" [ref=e128]
+                          - link [ref=e130] [cursor=pointer]:
+                            - /url: https://dickersonl.wixsite.com/wayneslandscapingnc/work-03
+                            - img [ref=e131]
+                          - generic:
+                            - paragraph [ref=e135]:
+                              - generic [ref=e136]: Album No.2
+                            - heading [level=2]
+                          - heading "Pools & Waterfalls" [level=5] [ref=e138]:
+                            - generic [ref=e141]: Pools & Waterfalls
+                          - generic:
+                            - paragraph [ref=e142]:
+                              - generic [ref=e143]: Album No.3
+                            - heading [level=2]
+                          - heading "Synthetic Grass" [level=5] [ref=e145]:
+                            - generic [ref=e148]: Synthetic Grass
+                          - generic [ref=e149]:
+                            - generic:
+                              - generic:
+                                - heading "WELCOME!" [level=3] [ref=e151]:
+                                  - generic [ref=e153]: WELCOME!
+                                - img "24059334_10156731618202656_8112414388241" [ref=e156]
+                                - generic:
+                                  - paragraph [ref=e157]:
+                                    - generic [ref=e158]: Your Trusted Outdoor Living & Hardscaping Experts in Rockingham County, NC
+                                  - paragraph [ref=e159]
+                                  - paragraph [ref=e160]: Transform your outdoor spaces with Wayne’s Landscaping, your one-stop shop for all landscaping and hardscaping needs. We specialize in creating stunning patios, retaining walls, walkways, fire pits, and outdoor living areas—so you can relax and enjoy the space you’ve worked hard for.
+                                  - paragraph [ref=e161]
+                                  - paragraph [ref=e162]: As a locally owned and operated landscaping company in Rockingham County, NC, we proudly serve homeowners and businesses throughout surrounding counties in North Carolina. Our company is licensed, insured, and committed to quality craftsmanship in every project, from complete yard makeovers to custom hardscapes.
+                                  - paragraph [ref=e163]
+                                  - paragraph [ref=e164]:
+                                    - generic [ref=e168]: Call or text us at 336.613.3904
+                          - link "CONTACT US TODAY" [ref=e170] [cursor=pointer]:
+                            - /url: https://dickersonl.wixsite.com/wayneslandscapingnc
+                            - generic [ref=e171]: CONTACT US TODAY
+                          - img "IMG_3368_edited.jpg" [ref=e174]
+                          - img "Business card final_edited_edited_edited_edited.png" [ref=e177]
+                          - generic [ref=e178]:
+                            - generic:
+                              - generic:
+                                - heading "Contact Us" [level=5] [ref=e179]
+                                - textbox "First Name" [ref=e182]
+                                - textbox "Email" [ref=e185]
+                                - textbox "Last Name" [ref=e188]
+                                - textbox "Phone" [ref=e191]
+                                - textbox [ref=e193]:
+                                  - /placeholder: Type your message here...
+                                - button "Submit" [ref=e195] [cursor=pointer]:
+                                  - generic [ref=e196]: Submit
+                    - region "Contact"
+    - contentinfo [ref=e197]:
+      - generic [ref=e203]:
+        - generic:
+          - generic:
+            - paragraph [ref=e204]:
+              - generic [ref=e206]: 336.613.3904
+            - list "Social Bar" [ref=e208]:
+              - listitem [ref=e209]:
+                - link "Instagram Social Icon" [ref=e210] [cursor=pointer]:
+                  - /url: https://www.instagram.com/wayneslandscaping/
+                  - img "Instagram Social Icon" [ref=e211]
+              - listitem [ref=e212]:
+                - link "Facebook Social Icon" [ref=e213] [cursor=pointer]:
+                  - /url: https://www.facebook.com/wayneslandscapingnc/
+                  - img "Facebook Social Icon" [ref=e214]
+  - region "bottom of page"

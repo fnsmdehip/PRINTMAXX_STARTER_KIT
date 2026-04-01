@@ -1,0 +1,84 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]: PRINTMAXX
+  - generic [ref=e6]:
+    - heading "7 apps. real problems. no fluff." [level=1] [ref=e7]
+    - paragraph [ref=e8]: we build tools that fix specific things. phone addiction, bad sleep, cold email, meal prep, waking up. if the problem is real, we build for it.
+  - generic [ref=e11]:
+    - link "PrayerLock your phone locks itself at prayer time. no willpower needed. auto-lock at adhan. customizable duration. streak tracking. family mode. built for muslim professionals who want to protect their salah. view app →" [ref=e12] [cursor=pointer]:
+      - /url: prayerlock/
+      - generic [ref=e15]: PrayerLock
+      - generic [ref=e16]: your phone locks itself at prayer time. no willpower needed.
+      - generic [ref=e17]: auto-lock at adhan. customizable duration. streak tracking. family mode. built for muslim professionals who want to protect their salah.
+      - generic [ref=e18]:
+        - text: view app
+        - generic [ref=e19]: →
+    - link "FocusLock block everything. ship something. your phone is the enemy. pomodoro lock. app whitelist. emergency unlock with a shame counter. focus streaks. for builders who need to actually build. view app →" [ref=e20] [cursor=pointer]:
+      - /url: focuslock/
+      - generic [ref=e23]: FocusLock
+      - generic [ref=e24]: block everything. ship something. your phone is the enemy.
+      - generic [ref=e25]: pomodoro lock. app whitelist. emergency unlock with a shame counter. focus streaks. for builders who need to actually build.
+      - generic [ref=e26]:
+        - text: view app
+        - generic [ref=e27]: →
+    - link "MealMaxx meal prep in 10 minutes. grocery list included. weekly planner. auto grocery list. macro tracking. budget mode. stop spending $1,620/month on uber eats. view app →" [ref=e28] [cursor=pointer]:
+      - /url: mealmaxx/
+      - generic [ref=e31]: MealMaxx
+      - generic [ref=e32]: meal prep in 10 minutes. grocery list included.
+      - generic [ref=e33]: weekly planner. auto grocery list. macro tracking. budget mode. stop spending $1,620/month on uber eats.
+      - generic [ref=e34]:
+        - text: view app
+        - generic [ref=e35]: →
+    - link "SleepMaxx your sleep sucks. this fixes it. no $300 mattress needed. sleep score. wind-down routine. blue light reminder. sleep debt tracker. 47 more minutes of sleep per night. free. view app →" [ref=e36] [cursor=pointer]:
+      - /url: sleepmaxx/
+      - generic [ref=e39]: SleepMaxx
+      - generic [ref=e40]: your sleep sucks. this fixes it. no $300 mattress needed.
+      - generic [ref=e41]: sleep score. wind-down routine. blue light reminder. sleep debt tracker. 47 more minutes of sleep per night. free.
+      - generic [ref=e42]:
+        - text: view app
+        - generic [ref=e43]: →
+    - link "WalkToUnlock your alarm doesn't stop until you walk 100 steps. step-verified alarm. GPS check-in mode. social accountability. streak rewards. 0 snooze buttons available. view app →" [ref=e44] [cursor=pointer]:
+      - /url: walktounlock/
+      - generic [ref=e47]: WalkToUnlock
+      - generic [ref=e48]: your alarm doesn't stop until you walk 100 steps.
+      - generic [ref=e49]: step-verified alarm. GPS check-in mode. social accountability. streak rewards. 0 snooze buttons available.
+      - generic [ref=e50]:
+        - text: view app
+        - generic [ref=e51]: →
+    - link "Hilal crowdsourced moon sighting for your city. no more confusion. community reports. masjid integration. notification alerts. historical data. 340+ cities. 1,200+ masjids connected. view app →" [ref=e52] [cursor=pointer]:
+      - /url: hilal/
+      - generic [ref=e55]: Hilal
+      - generic [ref=e56]: crowdsourced moon sighting for your city. no more confusion.
+      - generic [ref=e57]: community reports. masjid integration. notification alerts. historical data. 340+ cities. 1,200+ masjids connected.
+      - generic [ref=e58]:
+        - text: view app
+        - generic [ref=e59]: →
+    - link "ColdMaxx cold emails that get replies. not spam. actual meetings. AIDA/PAS/BAB frameworks. spam score checker. follow-up sequences. A/B testing. 34% avg open rate vs 17% industry standard. view app →" [ref=e60] [cursor=pointer]:
+      - /url: coldmaxx/
+      - generic [ref=e63]: ColdMaxx
+      - generic [ref=e64]: cold emails that get replies. not spam. actual meetings.
+      - generic [ref=e65]: AIDA/PAS/BAB frameworks. spam score checker. follow-up sequences. A/B testing. 34% avg open rate vs 17% industry standard.
+      - generic [ref=e66]:
+        - text: view app
+        - generic [ref=e67]: →
+  - generic [ref=e69]:
+    - heading "get early access to new apps" [level=2] [ref=e70]
+    - paragraph [ref=e71]: we ship a new app every 2 weeks. drop your email and get first access before anyone else. no spam. just launch alerts.
+    - generic [ref=e72]:
+      - textbox "your@email.com" [ref=e73]
+      - button "get early access" [ref=e74] [cursor=pointer]
+    - paragraph [ref=e75]: 1,200+ builders already on the list
+  - generic [ref=e77]:
+    - generic [ref=e78]: build things that fix things.
+    - paragraph [ref=e79]: PRINTMAXX ships apps for specific problems. no feature bloat. no pivot every quarter. if the problem is real and the solution is clear, we build it and ship it.
+  - contentinfo [ref=e80]:
+    - paragraph [ref=e82]:
+      - text: PRINTMAXX 2026. all rights reserved. |
+      - link "free tools" [ref=e83] [cursor=pointer]:
+        - /url: https://printmaxx-lead-magnets.surge.sh/
+      - text: "|"
+      - link "AI stack" [ref=e84] [cursor=pointer]:
+        - /url: https://ai-stack-2026.surge.sh/
+      - text: "|"
+      - link "store" [ref=e85] [cursor=pointer]:
+        - /url: https://printmaxx-store.surge.sh/

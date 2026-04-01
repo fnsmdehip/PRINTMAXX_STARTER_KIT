@@ -1,0 +1,200 @@
+- generic [ref=e3]:
+  - region "top of page"
+  - link "wix This website was built on Wix. Create yours today. Get Started" [ref=e5] [cursor=pointer]:
+    - /url: https://www.wix.com/lpviral/enviral?utm_campaign=vir_wixad_live&adsVersion=banner_2024&orig_msid=aa99f552-cce6-4d9b-96f0-a304175f7068&orig_msid=d9d70545-9dc1-49ed-b157-1c264180cbcf&adsVersion=banner_2024
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img "wix" [ref=e10]
+        - text: This website was built on Wix. Create yours today.
+      - generic [ref=e15]: Get Started
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - generic [ref=e29]:
+        - generic:
+          - generic:
+            - paragraph [ref=e30]:
+              - link "gozinc@charter.net" [ref=e32] [cursor=pointer]:
+                - /url: mailto:gozinc@charter.net
+            - paragraph [ref=e33]: 828-850-0466
+            - list "Social Bar" [ref=e35]:
+              - listitem [ref=e36]:
+                - link "Facebook" [ref=e37] [cursor=pointer]:
+                  - /url: https://www.facebook.com/wix
+                  - img "Facebook" [ref=e38]
+              - listitem [ref=e39]:
+                - link "Twitter" [ref=e40] [cursor=pointer]:
+                  - /url: https://twitter.com/Wix
+                  - img "Twitter" [ref=e41]
+              - listitem [ref=e42]:
+                - link "LinkedIn" [ref=e43] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/wix-com
+                  - img "LinkedIn" [ref=e44]
+            - paragraph [ref=e46]:
+              - generic [ref=e47]: GOZ INC. ROOFING & HANDYMAN
+            - navigation "Site" [ref=e49]:
+              - list [ref=e50]:
+                - listitem [ref=e51] [cursor=pointer]:
+                  - link "Home" [ref=e52]:
+                    - /url: https://gozincroofing.wixsite.com/website
+                    - paragraph [ref=e55]: Home
+                - listitem [ref=e56] [cursor=pointer]:
+                  - link "Book Online" [ref=e57]:
+                    - /url: https://gozincroofing.wixsite.com/website/book-online
+                    - paragraph [ref=e60]: Book Online
+    - main [ref=e61]:
+      - generic [ref=e66]:
+        - generic:
+          - generic:
+            - generic:
+              - generic [ref=e76]:
+                - generic:
+                  - generic:
+                    - heading "WELCOME TO GOZ INC. ROOFING & HANDYMAN" [level=1] [ref=e83]:
+                      - generic [ref=e84]: WELCOME TO GOZ INC. ROOFING & HANDYMAN
+                    - paragraph [ref=e85]: Your Trusted Roofing Contractor and Handyman
+              - generic [ref=e94]:
+                - img "roof shingles" [ref=e100]
+                - generic [ref=e101]:
+                  - generic:
+                    - generic:
+                      - heading "PROFESSIONAL CONSULTING SERVICES" [level=2] [ref=e105]:
+                        - generic [ref=e106]: PROFESSIONAL CONSULTING SERVICES
+                      - paragraph [ref=e107]: Precision. Punctuality. Commitment to Excellence.
+                      - paragraph [ref=e108]: GOZ INC. Roofing is a leading Roofing Contractor and Handyman. I provide my clients with a comprehensive approach to contracting and specialize in a wide range of services. Since I started out in 2003, I’ve been committed to my clients’ needs and satisfaction. Get in touch to receive your free estimate today.
+                      - button "Learn More" [ref=e109]:
+                        - generic "Learn More" [ref=e110] [cursor=pointer]:
+                          - generic [ref=e111]: Learn More
+              - generic [ref=e112]:
+                - generic:
+                  - generic:
+                    - generic [ref=e121]:
+                      - generic:
+                        - generic:
+                          - paragraph [ref=e125]: Contracting With a Lasting Impact
+                          - heading "SERVICES" [level=2] [ref=e126]:
+                            - generic [ref=e127]: SERVICES
+                          - paragraph [ref=e128]: GOZ INC. Roofing and Handyman is your one-stop-shop for all your construction and repair needs. Whether you’re looking for help with something minor or need an experienced professional to take on a larger scale project — I’m your go-to pro and I’m ready to handle it all. Roofing repairs, roof installation, gutter repairs, gutter installation, drywall work, painting, and so much more.
+                    - generic [ref=e133]:
+                      - generic [ref=e134]:
+                        - generic:
+                          - generic:
+                            - img "Varnishing the Deck" [ref=e140]
+                            - generic [ref=e141]:
+                              - generic:
+                                - generic:
+                                  - heading "Customized to Your Preferences" [level=3] [ref=e143]
+                                  - paragraph [ref=e144]: My clients are my number one priority, and I’ll go the extra mile to make sure they’re completely satisfied with my work.
+                      - generic [ref=e145]:
+                        - generic:
+                          - generic:
+                            - img "Cleaning a Rain Gutter" [ref=e151]
+                            - generic [ref=e152]:
+                              - generic:
+                                - generic:
+                                  - heading "It’s All in the Details" [level=3] [ref=e154]
+                                  - paragraph [ref=e155]: Have a specific project that requires professional attention? My services are designed to tackle even the most complex projects.
+                      - generic [ref=e156]:
+                        - generic:
+                          - generic:
+                            - img "Climbing a Ladder" [ref=e162]
+                            - generic [ref=e163]:
+                              - generic:
+                                - generic:
+                                  - heading "Efficient. Reliable. Exceptional Service." [level=3] [ref=e165]
+                                  - paragraph [ref=e166]: Call me today to discover how I can help.
+                    - paragraph [ref=e176]: Contact me and see what I can do for you.
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - img "Suburban House" [ref=e191]
+                  - heading "Homes" [level=2] [ref=e192]
+                - generic [ref=e193]:
+                  - img "Buildings Close Together" [ref=e198]
+                  - heading "Apartment Complex" [level=2] [ref=e199]
+                - generic [ref=e200]:
+                  - img "Office Building" [ref=e205]
+                  - heading "Business" [level=2] [ref=e206]
+              - generic [ref=e207]:
+                - generic:
+                  - generic:
+                    - heading "TESTIMONIALS" [level=2] [ref=e220]:
+                      - generic [ref=e221]: TESTIMONIALS
+                    - generic [ref=e226]:
+                      - generic [ref=e227]:
+                        - generic:
+                          - generic:
+                            - img [ref=e233]
+                            - paragraph [ref=e237]: “I really can’t believe how amazing the final result came out. This is a true talent with the skills and expertise to get the job done right. Highly recommended!”
+                            - heading "Riley Jones" [level=3] [ref=e238]
+                      - generic [ref=e239]:
+                        - generic:
+                          - generic:
+                            - img [ref=e245]
+                            - paragraph [ref=e249]: “If you’re looking for someone reliable, efficient, and trustworthy, you’ve definitely come to the right place. GOZ INC. Roofing is the absolute best and really knows how to deliver. You won’t be let down!”
+                            - heading "Casey Johnson" [level=3] [ref=e250]
+                      - generic [ref=e251]:
+                        - generic:
+                          - generic:
+                            - img [ref=e257]
+                            - paragraph [ref=e261]: “I’m so happy I chose to work with GOZ INC. Roofing. From the initial consultation all the way through the project’s conclusion, the service I received was impeccable and the end result really brought my vision to life.”
+                            - heading "Kris Michaels" [level=3] [ref=e262]
+              - generic [ref=e263]:
+                - generic:
+                  - generic:
+                    - heading "CONTACT" [level=2] [ref=e267]:
+                      - generic [ref=e268]: CONTACT
+                    - img "Roof Tiles" [ref=e271]
+                    - list "Social Bar" [ref=e273]:
+                      - listitem [ref=e274]:
+                        - link "Facebook" [ref=e275] [cursor=pointer]:
+                          - /url: https://www.facebook.com/wix
+                          - img "Facebook" [ref=e276]
+                      - listitem [ref=e277]:
+                        - link "Twitter" [ref=e278] [cursor=pointer]:
+                          - /url: https://twitter.com/Wix
+                          - img "Twitter" [ref=e279]
+                      - listitem [ref=e280]:
+                        - link "LinkedIn" [ref=e281] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/wix-com
+                          - img "LinkedIn" [ref=e282]
+                    - generic [ref=e284]:
+                      - generic:
+                        - generic:
+                          - textbox "Name" [ref=e287]
+                          - textbox "Email" [ref=e290]
+                          - textbox "Phone" [ref=e293]
+                          - textbox "Address" [ref=e296]
+                          - textbox "Subject" [ref=e299]
+                          - textbox [ref=e301]:
+                            - /placeholder: Type your message here...
+                          - button "Submit" [ref=e303] [cursor=pointer]:
+                            - generic [ref=e304]: Submit
+    - contentinfo [ref=e305]:
+      - generic [ref=e311]:
+        - generic:
+          - generic:
+            - paragraph [ref=e312]:
+              - link "gozinc@charter.net" [ref=e314] [cursor=pointer]:
+                - /url: mailto:gozinc@charter.net
+            - generic:
+              - paragraph [ref=e315]: 828-850-0466
+              - paragraph [ref=e316]
+            - paragraph [ref=e317]:
+              - generic [ref=e318]:
+                - text: 308 Wood Hollow Rd
+                - text: Taylorsville, Alexander County 28681
+                - text: USA
+            - list "Social Bar" [ref=e320]:
+              - listitem [ref=e321]:
+                - link "Facebook" [ref=e322] [cursor=pointer]:
+                  - /url: https://www.facebook.com/clay.gosnell.3
+                  - img "Facebook" [ref=e323]
+              - listitem [ref=e324]:
+                - link "Twitter" [ref=e325] [cursor=pointer]:
+                  - /url: https://twitter.com/Wix
+                  - img "Twitter" [ref=e326]
+              - listitem [ref=e327]:
+                - link "LinkedIn" [ref=e328] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/wix-com
+                  - img "LinkedIn" [ref=e329]
+            - paragraph [ref=e339]: ©2017 by GOZ INC. Roofing. Proudly created with Wix.com
+  - region "bottom of page"

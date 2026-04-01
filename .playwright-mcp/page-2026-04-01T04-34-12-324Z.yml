@@ -1,0 +1,372 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - heading "46 free tools. zero cost." [level=1] [ref=e4]
+      - paragraph [ref=e5]: built by one person with Claude Code. productivity apps, faith trackers, business tools, lead magnets. all free, all live.
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: "46"
+          - generic [ref=e9]: tools live
+        - generic [ref=e10]:
+          - generic [ref=e11]: "8"
+          - generic [ref=e12]: PWA apps
+        - generic [ref=e13]:
+          - generic [ref=e14]: "13"
+          - generic [ref=e15]: faith trackers
+        - generic [ref=e16]:
+          - generic [ref=e17]: "7"
+          - generic [ref=e18]: biz tools
+        - generic [ref=e19]:
+          - generic [ref=e20]: "4"
+          - generic [ref=e21]: lead magnets
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: get notified when we launch new tools (shipping weekly)
+        - generic [ref=e25]:
+          - textbox "your email" [ref=e26]
+          - button "notify me" [ref=e27] [cursor=pointer]
+        - generic [ref=e28]: no spam. just tool drops.
+    - navigation [ref=e29]:
+      - link "productivity" [ref=e30] [cursor=pointer]:
+        - /url: "#productivity"
+      - link "health" [ref=e31] [cursor=pointer]:
+        - /url: "#health"
+      - link "faith" [ref=e32] [cursor=pointer]:
+        - /url: "#faith"
+      - link "faith extended" [ref=e33] [cursor=pointer]:
+        - /url: "#faith-extended"
+      - link "lifestyle streaks" [ref=e34] [cursor=pointer]:
+        - /url: "#lifestyle"
+      - link "biz tools" [ref=e35] [cursor=pointer]:
+        - /url: "#biz-tools"
+      - link "free calculators" [ref=e36] [cursor=pointer]:
+        - /url: "#lead-magnets"
+      - link "store" [ref=e37] [cursor=pointer]:
+        - /url: "#store"
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - heading "productivity" [level=2] [ref=e40]
+        - generic [ref=e41]: 4 apps
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - heading "FocusLock" [level=3] [ref=e44]:
+            - link "FocusLock" [ref=e45] [cursor=pointer]:
+              - /url: https://focuslock-app.surge.sh
+          - paragraph [ref=e46]: pomodoro timer that locks your phone until the session ends
+          - generic [ref=e47]: PWA
+        - generic [ref=e48]:
+          - heading "ADHD-Streak" [level=3] [ref=e49]:
+            - link "ADHD-Streak" [ref=e50] [cursor=pointer]:
+              - /url: https://adhd-streak.surge.sh
+          - paragraph [ref=e51]: daily streak tracker built for brains that forget everything
+          - generic [ref=e52]: PWA
+        - generic [ref=e53]:
+          - heading "Coding Streak" [level=3] [ref=e54]:
+            - link "Coding Streak" [ref=e55] [cursor=pointer]:
+              - /url: https://coding-streak-app.surge.sh
+          - paragraph [ref=e56]: track your daily coding habit. don't break the chain.
+          - generic [ref=e57]: streak app
+        - generic [ref=e58]:
+          - heading "Journal Streak" [level=3] [ref=e59]:
+            - link "Journal Streak" [ref=e60] [cursor=pointer]:
+              - /url: https://journal-streak-app.surge.sh
+          - paragraph [ref=e61]: daily journaling tracker with streak accountability
+          - generic [ref=e62]: streak app
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - heading "health & wellness" [level=2] [ref=e65]
+        - generic [ref=e66]: 5 apps
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - heading "MealMaxx" [level=3] [ref=e69]:
+            - link "MealMaxx" [ref=e70] [cursor=pointer]:
+              - /url: https://mealmaxx-app.surge.sh
+          - paragraph [ref=e71]: meal tracking without the calorie counting nonsense
+          - generic [ref=e72]: PWA
+        - generic [ref=e73]:
+          - heading "ColdMaxx" [level=3] [ref=e74]:
+            - link "ColdMaxx" [ref=e75] [cursor=pointer]:
+              - /url: https://coldmaxx.surge.sh
+          - paragraph [ref=e76]: cold exposure tracker. log showers, ice baths, streaks.
+          - generic [ref=e77]: PWA
+        - generic [ref=e78]:
+          - heading "SleepMaxx" [level=3] [ref=e79]:
+            - link "SleepMaxx" [ref=e80] [cursor=pointer]:
+              - /url: https://sleepmaxx-app.surge.sh
+          - paragraph [ref=e81]: sleep quality tracker. find out why you feel like garbage.
+          - generic [ref=e82]: PWA
+        - generic [ref=e83]:
+          - heading "WalkToUnlock" [level=3] [ref=e84]:
+            - link "WalkToUnlock" [ref=e85] [cursor=pointer]:
+              - /url: https://walktounlock-app.surge.sh
+          - paragraph [ref=e86]: locks your phone until you hit your step goal
+          - generic [ref=e87]: PWA
+        - generic [ref=e88]:
+          - heading "Fitness Streak" [level=3] [ref=e89]:
+            - link "Fitness Streak" [ref=e90] [cursor=pointer]:
+              - /url: https://fitness-streak-app.surge.sh
+          - paragraph [ref=e91]: daily workout streak tracker. visual accountability.
+          - generic [ref=e92]: streak app
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - heading "faith trackers" [level=2] [ref=e95]
+        - generic [ref=e96]: 3 apps
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - heading "PrayerLock" [level=3] [ref=e99]:
+            - link "PrayerLock" [ref=e100] [cursor=pointer]:
+              - /url: https://prayerlock-app.surge.sh
+          - paragraph [ref=e101]: daily prayer tracker with streak counter and reminders
+          - generic [ref=e102]: PWA
+        - generic [ref=e103]:
+          - heading "Hilal" [level=3] [ref=e104]:
+            - link "Hilal" [ref=e105] [cursor=pointer]:
+              - /url: https://hilal-app.surge.sh
+          - paragraph [ref=e106]: ramadan tracker. fasting times, duas, daily progress.
+          - generic [ref=e107]: PWA
+        - generic [ref=e108]:
+          - heading "Meditation Streak" [level=3] [ref=e109]:
+            - link "Meditation Streak" [ref=e110] [cursor=pointer]:
+              - /url: https://meditation-streak-app.surge.sh
+          - paragraph [ref=e111]: daily meditation habit tracker. streak-based.
+          - generic [ref=e112]: streak app
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - heading "denomination-specific streaks" [level=2] [ref=e115]
+        - generic [ref=e116]: 19 apps
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - heading "Anglican Streak" [level=3] [ref=e119]:
+            - link "Anglican Streak" [ref=e120] [cursor=pointer]:
+              - /url: https://anglican-streak.surge.sh
+          - paragraph [ref=e121]: daily devotional tracker for anglicans
+          - generic [ref=e122]: faith
+        - generic [ref=e123]:
+          - heading "Baptist Streak" [level=3] [ref=e124]:
+            - link "Baptist Streak" [ref=e125] [cursor=pointer]:
+              - /url: https://baptist-streak.surge.sh
+          - paragraph [ref=e126]: scripture reading tracker for baptists
+          - generic [ref=e127]: faith
+        - generic [ref=e128]:
+          - heading "Catholic Streak" [level=3] [ref=e129]:
+            - link "Catholic Streak" [ref=e130] [cursor=pointer]:
+              - /url: https://catholic-streak.surge.sh
+          - paragraph [ref=e131]: daily rosary and devotion tracker
+          - generic [ref=e132]: faith
+        - generic [ref=e133]:
+          - heading "Episcopal Streak" [level=3] [ref=e134]:
+            - link "Episcopal Streak" [ref=e135] [cursor=pointer]:
+              - /url: https://episcopal-streak.surge.sh
+          - paragraph [ref=e136]: daily office and prayer tracker
+          - generic [ref=e137]: faith
+        - generic [ref=e138]:
+          - heading "Evangelical Streak" [level=3] [ref=e139]:
+            - link "Evangelical Streak" [ref=e140] [cursor=pointer]:
+              - /url: https://evangelical-streak.surge.sh
+          - paragraph [ref=e141]: quiet time and bible study tracker
+          - generic [ref=e142]: faith
+        - generic [ref=e143]:
+          - heading "Lutheran Streak" [level=3] [ref=e144]:
+            - link "Lutheran Streak" [ref=e145] [cursor=pointer]:
+              - /url: https://lutheran-streak.surge.sh
+          - paragraph [ref=e146]: daily devotion tracker for lutherans
+          - generic [ref=e147]: faith
+        - generic [ref=e148]:
+          - heading "Methodist Streak" [level=3] [ref=e149]:
+            - link "Methodist Streak" [ref=e150] [cursor=pointer]:
+              - /url: https://methodist-streak.surge.sh
+          - paragraph [ref=e151]: daily prayer and study tracker
+          - generic [ref=e152]: faith
+        - generic [ref=e153]:
+          - heading "Orthodox Streak" [level=3] [ref=e154]:
+            - link "Orthodox Streak" [ref=e155] [cursor=pointer]:
+              - /url: https://orthodox-streak.surge.sh
+          - paragraph [ref=e156]: prayer rule and fasting tracker
+          - generic [ref=e157]: faith
+        - generic [ref=e158]:
+          - heading "Pentecostal Streak" [level=3] [ref=e159]:
+            - link "Pentecostal Streak" [ref=e160] [cursor=pointer]:
+              - /url: https://pentecostal-streak.surge.sh
+          - paragraph [ref=e161]: daily devotion and prayer tracker
+          - generic [ref=e162]: faith
+        - generic [ref=e163]:
+          - heading "Presbyterian Streak" [level=3] [ref=e164]:
+            - link "Presbyterian Streak" [ref=e165] [cursor=pointer]:
+              - /url: https://presbyterian-streak.surge.sh
+          - paragraph [ref=e166]: daily scripture and catechism tracker
+          - generic [ref=e167]: faith
+        - generic [ref=e168]:
+          - heading "Protestant Streak" [level=3] [ref=e169]:
+            - link "Protestant Streak" [ref=e170] [cursor=pointer]:
+              - /url: https://protestant-streak.surge.sh
+          - paragraph [ref=e171]: daily bible reading and prayer tracker
+          - generic [ref=e172]: faith
+        - generic [ref=e173]:
+          - heading "Shia Streak" [level=3] [ref=e174]:
+            - link "Shia Streak" [ref=e175] [cursor=pointer]:
+              - /url: https://shia-streak.surge.sh
+          - paragraph [ref=e176]: daily prayer and dua tracker for shia muslims
+          - generic [ref=e177]: faith
+        - generic [ref=e178]:
+          - heading "Sunni Streak" [level=3] [ref=e179]:
+            - link "Sunni Streak" [ref=e180] [cursor=pointer]:
+              - /url: https://sunni-streak.surge.sh
+          - paragraph [ref=e181]: salah tracker and daily sunnah streak
+          - generic [ref=e182]: faith
+        - generic [ref=e183]:
+          - heading "Quran Streak" [level=3] [ref=e184]:
+            - link "Quran Streak" [ref=e185] [cursor=pointer]:
+              - /url: https://quran-streak-app.surge.sh
+          - paragraph [ref=e186]: daily quran reading tracker with juz progress
+          - generic [ref=e187]: faith
+        - generic [ref=e188]:
+          - heading "Torah Streak" [level=3] [ref=e189]:
+            - link "Torah Streak" [ref=e190] [cursor=pointer]:
+              - /url: https://torah-streak-app.surge.sh
+          - paragraph [ref=e191]: daily torah study tracker with parsha progress
+          - generic [ref=e192]: faith
+        - generic [ref=e193]:
+          - heading "Sutra Streak" [level=3] [ref=e194]:
+            - link "Sutra Streak" [ref=e195] [cursor=pointer]:
+              - /url: https://sutra-streak-app.surge.sh
+          - paragraph [ref=e196]: daily buddhist practice and sutra reading tracker
+          - generic [ref=e197]: faith
+        - generic [ref=e198]:
+          - heading "Gita Streak" [level=3] [ref=e199]:
+            - link "Gita Streak" [ref=e200] [cursor=pointer]:
+              - /url: https://gita-streak-app.surge.sh
+          - paragraph [ref=e201]: daily bhagavad gita study tracker
+          - generic [ref=e202]: faith
+        - generic [ref=e203]:
+          - heading "Guru Streak" [level=3] [ref=e204]:
+            - link "Guru Streak" [ref=e205] [cursor=pointer]:
+              - /url: https://guru-streak-app.surge.sh
+          - paragraph [ref=e206]: daily gurbani and sikh practice tracker
+          - generic [ref=e207]: faith
+        - generic [ref=e208]:
+          - heading "Scripture Streak" [level=3] [ref=e209]:
+            - link "Scripture Streak" [ref=e210] [cursor=pointer]:
+              - /url: https://scripture-streak-lds.surge.sh
+          - paragraph [ref=e211]: daily scripture study for latter-day saints
+          - generic [ref=e212]: faith
+    - generic [ref=e213]:
+      - generic [ref=e214]:
+        - heading "lifestyle streaks" [level=2] [ref=e215]
+        - generic [ref=e216]: 4 apps
+      - generic [ref=e217]:
+        - generic [ref=e218]:
+          - heading "Art Streak" [level=3] [ref=e219]:
+            - link "Art Streak" [ref=e220] [cursor=pointer]:
+              - /url: https://art-streak-app.surge.sh
+          - paragraph [ref=e221]: daily creative practice tracker for artists
+          - generic [ref=e222]: streak app
+        - generic [ref=e223]:
+          - heading "Language Streak" [level=3] [ref=e224]:
+            - link "Language Streak" [ref=e225] [cursor=pointer]:
+              - /url: https://language-streak-app.surge.sh
+          - paragraph [ref=e226]: daily language learning tracker. don't lose the streak.
+          - generic [ref=e227]: streak app
+        - generic [ref=e228]:
+          - heading "Reading Streak" [level=3] [ref=e229]:
+            - link "Reading Streak" [ref=e230] [cursor=pointer]:
+              - /url: https://reading-streak-app.surge.sh
+          - paragraph [ref=e231]: daily reading habit tracker with page logging
+          - generic [ref=e232]: streak app
+        - generic [ref=e233]:
+          - heading "Ramadan Tracker" [level=3] [ref=e234]:
+            - link "Ramadan Tracker" [ref=e235] [cursor=pointer]:
+              - /url: https://ramadan-tracker.surge.sh
+          - paragraph [ref=e236]: bilingual EN/AR ramadan planner with fasting times
+          - generic [ref=e237]: PWA
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - heading "business tools" [level=2] [ref=e240]
+        - generic [ref=e241]: 7 apps
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - heading "InvoiceForge" [level=3] [ref=e244]:
+            - link "InvoiceForge" [ref=e245] [cursor=pointer]:
+              - /url: https://invoiceforge-app.surge.sh
+          - paragraph [ref=e246]: generate clean invoices in 30 seconds. no signup.
+          - generic [ref=e247]: tool
+        - generic [ref=e248]:
+          - heading "PageScorer" [level=3] [ref=e249]:
+            - link "PageScorer" [ref=e250] [cursor=pointer]:
+              - /url: https://pagescorer-app.surge.sh
+          - paragraph [ref=e251]: audit any landing page. get a score + fix list.
+          - generic [ref=e252]: tool
+        - generic [ref=e253]:
+          - heading "PitchDeck" [level=3] [ref=e254]:
+            - link "PitchDeck" [ref=e255] [cursor=pointer]:
+              - /url: https://pitchdeck-app.surge.sh
+          - paragraph [ref=e256]: generate a pitch deck from a one-liner description
+          - generic [ref=e257]: tool
+        - generic [ref=e258]:
+          - heading "ProspectMaxx" [level=3] [ref=e259]:
+            - link "ProspectMaxx" [ref=e260] [cursor=pointer]:
+              - /url: https://prospectmaxx-app.surge.sh
+          - paragraph [ref=e261]: find leads by industry and location. export CSV.
+          - generic [ref=e262]: tool
+        - generic [ref=e263]:
+          - heading "ROICalc" [level=3] [ref=e264]:
+            - link "ROICalc" [ref=e265] [cursor=pointer]:
+              - /url: https://roicalc-app.surge.sh
+          - paragraph [ref=e266]: plug in your numbers. see if the math works.
+          - generic [ref=e267]: tool
+        - generic [ref=e268]:
+          - heading "StackMaxx" [level=3] [ref=e269]:
+            - link "StackMaxx" [ref=e270] [cursor=pointer]:
+              - /url: https://stackmaxx-app.surge.sh
+          - paragraph [ref=e271]: portfolio builder for freelancers and agencies
+          - generic [ref=e272]: tool
+        - generic [ref=e273]:
+          - heading "ColdMaxx Tool" [level=3] [ref=e274]:
+            - link "ColdMaxx Tool" [ref=e275] [cursor=pointer]:
+              - /url: https://coldmaxx-app.surge.sh
+          - paragraph [ref=e276]: cold email sequence builder with templates
+          - generic [ref=e277]: tool
+    - generic [ref=e278]:
+      - generic [ref=e279]:
+        - heading "free calculators & checklists" [level=2] [ref=e280]
+        - generic [ref=e281]: 4 tools
+      - generic [ref=e282]:
+        - generic [ref=e283]:
+          - heading "Cold Email ROI Calculator" [level=3] [ref=e284]:
+            - link "Cold Email ROI Calculator" [ref=e285] [cursor=pointer]:
+              - /url: https://cold-email-calc.surge.sh
+          - paragraph [ref=e286]: plug in send volume + close rate. see real revenue math.
+          - generic [ref=e287]: calculator
+        - generic [ref=e288]:
+          - heading "Subject Line Grader" [level=3] [ref=e289]:
+            - link "Subject Line Grader" [ref=e290] [cursor=pointer]:
+              - /url: https://printmaxx-tools.surge.sh/subject-line-grader.html
+          - paragraph [ref=e291]: paste your subject line. get a score + improvement tips.
+          - generic [ref=e292]: grader
+        - generic [ref=e293]:
+          - heading "Solopreneur Launch Checklist" [level=3] [ref=e294]:
+            - link "Solopreneur Launch Checklist" [ref=e295] [cursor=pointer]:
+              - /url: https://solopreneur-launch-checklist.surge.sh
+          - paragraph [ref=e296]: 47-step checklist from idea to first dollar
+          - generic [ref=e297]: checklist
+        - generic [ref=e298]:
+          - heading "Ramadan Daily Planner" [level=3] [ref=e299]:
+            - link "Ramadan Daily Planner" [ref=e300] [cursor=pointer]:
+              - /url: https://printmaxx-tools.surge.sh/ramadan-daily-planner.html
+          - paragraph [ref=e301]: printable daily ramadan schedule with imsak + iftar
+          - generic [ref=e302]: planner
+    - generic [ref=e303]:
+      - heading "want the full toolkit?" [level=3] [ref=e304]
+      - paragraph [ref=e305]: digital products, templates, cold email kits, and more. all priced for solopreneurs.
+      - link "browse the store" [ref=e306] [cursor=pointer]:
+        - /url: https://printmaxx-storefront.surge.sh
+    - generic [ref=e309]:
+      - paragraph [ref=e310]: shipping new tools weekly. get notified.
+      - generic [ref=e311]:
+        - textbox "your email" [ref=e312]
+        - button "notify me" [ref=e313] [cursor=pointer]
+      - generic [ref=e314]: no spam. just tool drops.
+  - contentinfo [ref=e315]:
+    - paragraph [ref=e316]:
+      - text: built by
+      - link "PRINTMAXX" [ref=e317] [cursor=pointer]:
+        - /url: https://printmaxx.surge.sh
+      - text: with Claude Code. 46 tools, $0 hosting, surge.sh + PWA.

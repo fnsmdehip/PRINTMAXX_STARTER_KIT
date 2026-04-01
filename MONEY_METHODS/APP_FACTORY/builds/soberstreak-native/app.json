@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "SoberStreak",
+    "slug": "soberstreak",
+    "scheme": "soberstreak",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#0A1628",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.printmaxx.soberstreak",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"],
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSUserNotificationsUsageDescription": "SoberStreak sends optional daily check-in reminders. You control when and how often.",
+        "LSApplicationCategoryType": "public.app-category.healthcare-fitness",
+        "NSCameraUsageDescription": "Not used",
+        "NSPhotoLibraryUsageDescription": "Not used"
+      },
+      "buildNumber": "1",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": []
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A1628"
+      },
+      "package": "com.printmaxx.soberstreak"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-notifications",
+      "expo-haptics"
+    ],
+    "extra": {
+      "stripePublishableKey": "pk_live_placeholder",
+      "annualPriceId": "price_soberstreak_annual",
+      "monthlyPriceId": "price_soberstreak_monthly",
+      "paymentLinkAnnual": "https://buy.stripe.com/soberstreak-annual",
+      "paymentLinkMonthly": "https://buy.stripe.com/soberstreak-monthly"
+    }
+  }
+}

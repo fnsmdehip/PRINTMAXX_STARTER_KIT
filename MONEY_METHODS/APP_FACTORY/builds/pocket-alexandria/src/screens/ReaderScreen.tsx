@@ -18,7 +18,8 @@ import { colors, fonts, spacing, borderRadius, shadows } from '../constants/them
 import { readerThemes } from '../constants/theme';
 import { getBookById } from '../data/catalog';
 import { downloadBook, getBookText } from '../services/bookDownloader';
-import { getProgress, saveProgress, getSettings, saveSettings, addBookmark, getBookmarks, removeBookmark } from '../services/storage';
+import { getProgress, saveProgress, getSettings, saveSettings, addBookmark, getBookmarks, removeBookmark, getAllProgress } from '../services/storage';
+import * as StoreReview from 'expo-store-review';
 import { RootStackParamList, ReaderTheme, Bookmark, BookProgress } from '../types';
 
 type ReaderRoute = RouteProp<RootStackParamList, 'Reader'>;
@@ -128,17 +129,35 @@ export default function ReaderScreen() {
     })();
   }, [bookId, showBookmarks]);
 
-  // Save progress on page change
+  // Save progress on page change + fire review at first book completion
   useEffect(() => {
     if (pages.length === 0) return;
+    const pct = ((currentPage + 1) / pages.length) * 100;
     const progress: BookProgress = {
       bookId,
       currentPage,
       totalPages: pages.length,
-      percentComplete: ((currentPage + 1) / pages.length) * 100,
+      percentComplete: pct,
       lastReadAt: new Date().toISOString(),
     };
-    saveProgress(progress);
+    saveProgress(progress).then(async () => {
+      // Fire review prompt only when a book first crosses 95% — proven value moment
+      if (pct >= 95) {
+        try {
+          const allProgress = await getAllProgress();
+          const completedCount = Object.values(allProgress).filter(p => p.percentComplete >= 95).length;
+          // Fire on 1st or 3rd completion to avoid hammering; Apple rate-limits to 3x/year anyway
+          if (completedCount === 1 || completedCount === 3) {
+            const available = await StoreReview.isAvailableAsync();
+            if (available) {
+              setTimeout(() => StoreReview.requestReview(), 1500);
+            }
+          }
+        } catch {
+          // Non-critical — never block the reader
+        }
+      }
+    });
   }, [currentPage, pages.length, bookId]);
 
   const goToPage = useCallback(

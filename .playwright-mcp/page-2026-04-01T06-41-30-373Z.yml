@@ -1,0 +1,89 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - region "Notifications alt+T"
+    - banner:
+      - generic:
+        - generic [ref=e3]:
+          - button "ImageFX arrow_drop_down" [ref=e5]:
+            - generic [ref=e6]:
+              - text: ImageFX
+              - generic [ref=e7]: arrow_drop_down
+          - link "Try Flow" [ref=e9] [cursor=pointer]:
+            - /url: /fx/tools/flow
+            - text: Try Flow
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - button "About help_outlined" [ref=e12]:
+              - generic [ref=e13]: About
+              - generic [ref=e14]: help_outlined
+            - generic [ref=e15] [cursor=pointer]:
+              - generic [ref=e16]: Options
+              - generic [ref=e17]: more_vert
+          - button "About Google Logo Sign in with Google" [ref=e18]:
+            - generic [ref=e19]: About
+            - generic "Google Logo" [ref=e20]
+            - generic [ref=e21]: Sign in with Google
+    - generic [ref=e24]:
+      - generic:
+        - generic:
+          - generic:
+            - img
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - heading "Sign in to start creating images just like this" [level=1] [ref=e28]
+            - paragraph [ref=e29]: Your creativity beckons…
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - img "A generated image based on your input prompt" [ref=e36]
+              - generic [ref=e40]:
+                - button "share Copy share link" [ref=e41]:
+                  - generic: share
+                  - generic [ref=e42]: Copy share link
+                - button "flag Flag output" [ref=e44]:
+                  - generic: flag
+                  - generic [ref=e45]: Flag output
+                - button "flip_camera_android Flip card" [ref=e47]:
+                  - generic: flip_camera_android
+                  - generic [ref=e48]: Flip card
+            - generic:
+              - generic:
+                - generic:
+                  - img "A generated image based on your input prompt"
+                  - heading "cluttered artist studio, light shining through, welcoming" [level=3]
+                - generic:
+                  - heading "Prompt input" [level=4]
+                  - generic:
+                    - generic: cluttered artist studio, light shining through, welcoming
+                    - button "content_copy Copy":
+                      - generic: content_copy
+                      - generic: Copy
+                - generic:
+                  - heading "Seed" [level=4]
+                  - generic:
+                    - generic: "-1010538901"
+                    - button "content_copy Copy":
+                      - generic: content_copy
+                      - generic: Copy
+              - generic:
+                - button "download Download":
+                  - generic: download
+                  - generic: Download
+                - button "share Copy share link":
+                  - generic: share
+                  - generic: Copy share link
+                - button "flip_camera_android Flip card":
+                  - generic: flip_camera_android
+                  - generic: Flip card
+        - button "About Google Logo Sign in with Google" [ref=e52]:
+          - generic [ref=e53]: About
+          - generic "Google Logo" [ref=e54]
+          - generic [ref=e55]: Sign in with Google
+      - generic [ref=e59]:
+        - link "Privacy" [ref=e60] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy
+        - link "Terms of Service" [ref=e61] [cursor=pointer]:
+          - /url: https://policies.google.com/terms
+  - alert [ref=e62]
+  - generic:
+    - region "Notification Drawer (Use the F8 key to toggle container)"

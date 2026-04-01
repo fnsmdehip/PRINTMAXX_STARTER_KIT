@@ -275,7 +275,14 @@
       "Bash(cp -r /Users/macbookpro/Documents/research-blog/ /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LANDING/research-blog/)",
       "Bash(cp -r /Users/macbookpro/Documents/weekly-report/ /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LANDING/builders-ledger/)",
       "Bash(npx tauri:*)",
-      "Bash(rustup update:*)"
+      "Bash(rustup update:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "mcp__plugin_firebase_firebase__firebase_get_environment",
+      "WebFetch(domain:christophermeiklejohn.com)",
+      "mcp__scheduled-tasks__list_scheduled_tasks",
+      "Bash(npm uninstall:*)"
     ]
   }
 }

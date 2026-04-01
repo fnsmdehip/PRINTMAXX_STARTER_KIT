@@ -24,6 +24,7 @@ import { haptics } from '../utils/haptics';
 import { useAppSelector, useAppDispatch } from '../store/hooks';
 import { addConsumedItem } from '../store/nutritionSlice';
 import { incrementDailyScans } from '../store/subscriptionSlice';
+import * as StoreReview from 'expo-store-review';
 import type { Food } from '../store/nutritionSlice';
 
 const GEMINI_API_KEY = Constants.expoConfig?.extra?.googleAiApiKey ?? '';
@@ -232,6 +233,7 @@ const CameraScreen = (): React.JSX.Element => {
   const isPremium = useAppSelector(state => state.subscription.isPremium);
   const dailyScansUsed = useAppSelector(state => state.subscription.dailyScansUsed);
   const dailyScanLimit = useAppSelector(state => state.subscription.dailyScanLimit);
+  const consumedItems = useAppSelector(state => state.nutrition.consumedItems);
 
   const scansRemaining = isPremium ? null : Math.max(0, dailyScanLimit - dailyScansUsed);
 
@@ -307,8 +309,18 @@ const CameraScreen = (): React.JSX.Element => {
     if (!analysisResult) return;
     haptics.success();
     dispatch(addConsumedItem(analysisResult));
+
+    // Fire review prompt at 5th total logged item — proven value moment (user has real data)
+    const totalLogged = Object.values(consumedItems).reduce((sum, day) => sum + day.length, 0);
+    if (totalLogged === 4) {
+      // +1 for the item just dispatched = 5th meal logged
+      StoreReview.isAvailableAsync().then(available => {
+        if (available) setTimeout(() => StoreReview.requestReview(), 2000);
+      }).catch(() => {/* non-critical */});
+    }
+
     navigation.goBack();
-  }, [analysisResult, dispatch, navigation]);
+  }, [analysisResult, dispatch, navigation, consumedItems]);
 
   const resetCamera = useCallback((): void => {
     haptics.light();

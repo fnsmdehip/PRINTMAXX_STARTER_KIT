@@ -1,0 +1,110 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: ScriptureStreak
+      - link "Download Free" [ref=e5] [cursor=pointer]:
+        - /url: "#download"
+  - generic [ref=e7]:
+    - generic [ref=e8]: Universal Scripture Reading Tracker
+    - heading "your reading streak. any tradition." [level=1] [ref=e9]
+    - paragraph [ref=e10]: it's 10:43pm. you meant to read today. you haven't. scripture streak sends you a nudge at 9pm. 31 days straight and counting.
+    - link "Start Your Streak — Free" [ref=e11] [cursor=pointer]:
+      - /url: "#email-capture"
+    - generic [ref=e12]: Free forever. Premium $1.99 lifetime.
+  - generic [ref=e14]:
+    - paragraph [ref=e15]: every person of faith knows the feeling. strong intention on monday. you check in thursday and realize you haven't opened the text once. the desire is real. the habit isn't built.
+    - paragraph [ref=e16]: scripture streak makes daily reading automatic. not through guilt. through the same streak mechanics that keep your duolingo alive. works for any text, any pace, any tradition.
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: 6+
+      - generic [ref=e21]: Major traditions supported
+    - generic [ref=e22]:
+      - generic [ref=e23]: 40+
+      - generic [ref=e24]: Streak milestones
+    - generic [ref=e25]:
+      - generic [ref=e26]: 5 min
+      - generic [ref=e27]: Daily check-in
+  - generic [ref=e29]:
+    - heading "Built for readers who actually want to stay consistent" [level=2] [ref=e30]
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: 🔥
+        - heading "Daily Streak Counter" [level=3] [ref=e34]
+        - paragraph [ref=e35]: See your reading streak grow every day. One missed day resets it. That pressure is the point.
+      - generic [ref=e36]:
+        - generic [ref=e37]: 📖
+        - heading "Multi-Tradition Support" [level=3] [ref=e38]
+        - paragraph [ref=e39]: Bible, Quran, Torah, Bhagavad Gita, Dhammapada, Book of Mormon. Track any text, or add your own.
+      - generic [ref=e40]:
+        - generic [ref=e41]: 📅
+        - heading "Reading Plans" [level=3] [ref=e42]
+        - paragraph [ref=e43]: One-year Bible plan, 30-day Gita, Quran by juz, Torah parashah. Or set your own daily goal.
+      - generic [ref=e44]:
+        - generic [ref=e45]: 📊
+        - heading "Progress Tracking" [level=3] [ref=e46]
+        - paragraph [ref=e47]: Visual calendar showing every day you read. See patterns. Identify where you fall off.
+      - generic [ref=e48]:
+        - generic [ref=e49]: 🔔
+        - heading "Custom Reminders" [level=3] [ref=e50]
+        - paragraph [ref=e51]: Set your reminder time. Get a push notification before midnight so you never accidentally miss.
+      - generic [ref=e52]:
+        - generic [ref=e53]: 🤝
+        - heading "Accountability Sharing" [level=3] [ref=e54]
+        - paragraph [ref=e55]: Share your streak with a friend or family member. Keep each other honest.
+  - generic [ref=e57]:
+    - heading "Every major tradition. One app." [level=2] [ref=e58]
+    - generic [ref=e59]:
+      - generic [ref=e60]: ✝️ Bible
+      - generic [ref=e61]: ☪️ Quran
+      - generic [ref=e62]: ✡️ Torah
+      - generic [ref=e63]: 🕉️ Bhagavad Gita
+      - generic [ref=e64]: ☸️ Dhammapada
+      - generic [ref=e65]: 🌿 Book of Mormon
+      - generic [ref=e66]: 🪯 Guru Granth Sahib
+      - generic [ref=e67]: 📚 Custom Text
+    - paragraph [ref=e68]: track any text you read daily. it just counts the streak.
+  - generic [ref=e70]:
+    - heading "Three steps to a consistent reading habit" [level=2] [ref=e71]
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]: "1"
+        - heading "Pick your scripture" [level=3] [ref=e75]
+        - paragraph [ref=e76]: "Choose from supported texts or add your own. Set a daily reading goal: one chapter, one page, 10 minutes."
+      - generic [ref=e77]:
+        - generic [ref=e78]: "2"
+        - heading "Log it daily" [level=3] [ref=e79]
+        - paragraph [ref=e80]: Tap to confirm your reading. Takes 10 seconds. Streak grows automatically every day you check in.
+      - generic [ref=e81]:
+        - generic [ref=e82]: "3"
+        - heading "Protect the chain" [level=3] [ref=e83]
+        - paragraph [ref=e84]: Reminder fires before midnight. Your streak is the accountability. Don't break it.
+  - generic [ref=e86]:
+    - heading "Start your scripture streak today" [level=2] [ref=e87]
+    - paragraph [ref=e88]: Free to download. No account required. Start building your reading habit in 60 seconds.
+    - generic [ref=e89]:
+      - generic [ref=e90]: Free
+      - generic [ref=e91]: Ad-supported tier — forever free
+      - generic [ref=e92]: "Premium: $1.99 lifetime or $0.99/mo"
+    - link "join the waitlist" [ref=e93] [cursor=pointer]:
+      - /url: "#email-capture"
+    - generic [ref=e94]: iOS & Android. Available now.
+  - generic [ref=e96]:
+    - heading "get notified when Scripture Streak launches" [level=2] [ref=e97]
+    - paragraph [ref=e98]: drop your email. we'll let you know the second it's live on App Store and Google Play. no spam.
+    - generic [ref=e99]:
+      - textbox "your@email.com" [ref=e100]
+      - button "notify me" [ref=e101] [cursor=pointer]
+  - contentinfo [ref=e102]:
+    - paragraph [ref=e104]:
+      - text: © 2026 ScriptureStreak. Any tradition, any text, any pace. |
+      - link "Support" [ref=e105] [cursor=pointer]:
+        - /url: mailto:support@printmaxx.com
+    - generic [ref=e106]:
+      - link "all apps" [ref=e107] [cursor=pointer]:
+        - /url: https://printmaxx-apps.surge.sh/
+      - text: "|"
+      - link "free tools" [ref=e108] [cursor=pointer]:
+        - /url: https://printmaxx-magnets.surge.sh/
+      - text: "|"
+      - link "AI stack" [ref=e109] [cursor=pointer]:
+        - /url: https://ai-stack-2026.surge.sh/

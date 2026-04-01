@@ -1,0 +1,83 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: MCP
+        - text: Hub
+      - generic [ref=e6]:
+        - link "categories" [ref=e7] [cursor=pointer]:
+          - /url: "#categories"
+        - link "servers" [ref=e8] [cursor=pointer]:
+          - /url: "#servers"
+        - link "submit server" [ref=e9] [cursor=pointer]:
+          - /url: submit.html
+  - generic [ref=e10]:
+    - generic [ref=e11]: 33 servers indexed and counting
+    - heading "find the MCP server you need in 30 seconds" [level=1] [ref=e12]
+    - paragraph [ref=e13]: the directory for Model Context Protocol servers. search, filter, copy the install command. done.
+    - generic [ref=e14]:
+      - generic:
+        - img
+      - textbox "search servers... try 'slack', 'database', 'scraping'" [ref=e15]
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: "33"
+        - generic [ref=e19]: servers indexed
+      - generic [ref=e20]:
+        - generic [ref=e21]: "7"
+        - generic [ref=e22]: categories
+      - generic [ref=e23]:
+        - generic [ref=e24]: 1 cmd
+        - generic [ref=e25]: to install
+  - generic [ref=e26]:
+    - heading "categories" [level=2] [ref=e28]
+    - generic [ref=e29]:
+      - generic [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: "*"
+        - generic [ref=e32]: all
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]: ~
+        - generic [ref=e35]: AI / ML
+      - generic [ref=e36] [cursor=pointer]:
+        - generic [ref=e37]: ">_"
+        - generic [ref=e38]: dev tools
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: "{}"
+        - generic [ref=e41]: data
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: /
+        - generic [ref=e44]: productivity
+      - generic [ref=e45] [cursor=pointer]:
+        - generic [ref=e46]: $
+        - generic [ref=e47]: finance
+      - generic [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]: "@"
+        - generic [ref=e50]: social
+      - generic [ref=e51] [cursor=pointer]:
+        - generic [ref=e52]: "%"
+        - generic [ref=e53]: e-commerce
+  - generic [ref=e55]:
+    - heading "featured servers" [level=2] [ref=e56]
+    - link "view all" [ref=e57] [cursor=pointer]:
+      - /url: "#servers"
+  - heading "all servers" [level=2] [ref=e60]
+  - generic [ref=e62]:
+    - heading "new servers drop weekly" [level=2] [ref=e63]
+    - paragraph [ref=e64]: get notified when we add servers to the directory. no spam. just new tools for your AI stack.
+    - generic [ref=e65]:
+      - textbox "you@email.com" [ref=e66]
+      - button "notify me" [ref=e67] [cursor=pointer]
+  - generic [ref=e68]:
+    - heading "built an MCP server?" [level=2] [ref=e69]
+    - paragraph [ref=e70]: get it listed. takes 30 seconds. free forever.
+    - generic [ref=e71]:
+      - link "submit your server" [ref=e72] [cursor=pointer]:
+        - /url: submit.html
+      - link "browse official servers" [ref=e73] [cursor=pointer]:
+        - /url: https://github.com/modelcontextprotocol/servers
+  - contentinfo [ref=e74]:
+    - paragraph [ref=e75]:
+      - text: MCPHub. built for the MCP ecosystem.
+      - link "submit a server" [ref=e76] [cursor=pointer]:
+        - /url: submit.html
+  - generic [ref=e77]: copied to clipboard

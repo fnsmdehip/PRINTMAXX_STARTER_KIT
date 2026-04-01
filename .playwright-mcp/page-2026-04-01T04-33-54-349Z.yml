@@ -1,0 +1,405 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: Updated March 2026
+    - heading "n8n vs Zapier vs Make (2026)" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Which automation tool is worth your money? We tested all three with real workflows and real pricing. No vendor bias.
+    - paragraph [ref=e7]: By PRINTMAXX Research · March 21, 2026 · 12 min read
+  - generic [ref=e8]:
+    - generic [ref=e9]: ⚡
+    - generic [ref=e10]:
+      - heading "Quick verdict (2026)" [level=3] [ref=e11]
+      - paragraph [ref=e12]:
+        - strong [ref=e13]: n8n
+        - text: wins for technical teams and AI workflows (self-hosted = $0, unlimited executions).
+        - strong [ref=e14]: Make
+        - text: wins for visual builders who need complex logic without coding.
+        - strong [ref=e15]: Zapier
+        - text: wins if you need the widest app ecosystem and have budget.
+  - generic [ref=e16]:
+    - heading "In this comparison" [level=4] [ref=e17]
+    - list [ref=e18]:
+      - listitem [ref=e19]:
+        - link "Pricing breakdown 2026" [ref=e20] [cursor=pointer]:
+          - /url: "#pricing"
+      - listitem [ref=e21]:
+        - link "Features head-to-head" [ref=e22] [cursor=pointer]:
+          - /url: "#features"
+      - listitem [ref=e23]:
+        - link "AI workflow support" [ref=e24] [cursor=pointer]:
+          - /url: "#ai-workflows"
+      - listitem [ref=e25]:
+        - link "Best use cases by tool" [ref=e26] [cursor=pointer]:
+          - /url: "#use-cases"
+      - listitem [ref=e27]:
+        - link "Zapier deep dive" [ref=e28] [cursor=pointer]:
+          - /url: "#zapier"
+      - listitem [ref=e29]:
+        - link "Make deep dive" [ref=e30] [cursor=pointer]:
+          - /url: "#make"
+      - listitem [ref=e31]:
+        - link "n8n deep dive" [ref=e32] [cursor=pointer]:
+          - /url: "#n8n"
+      - listitem [ref=e33]:
+        - link "Final verdict + who should use what" [ref=e34] [cursor=pointer]:
+          - /url: "#verdict"
+  - generic [ref=e35]:
+    - heading "Pricing Breakdown (2026)" [level=2] [ref=e36]
+    - paragraph [ref=e37]:
+      - text: Automation pricing is where the
+      - emphasis [ref=e38]: real
+      - text: differences live. Zapier's free plan sounds generous until you hit 100 tasks/month and need Zaps to run every 15 minutes instead of every 2.
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]: Zapier
+        - generic [ref=e42]: $0–$799
+        - generic [ref=e43]: per month (billed annually)
+        - list [ref=e44]:
+          - listitem [ref=e45]: "• Free: 100 tasks/mo, 5 Zaps"
+          - listitem [ref=e46]: "• Starter: $29.99 (750 tasks)"
+          - listitem [ref=e47]: "• Professional: $73.50 (2K tasks)"
+          - listitem [ref=e48]: "• Team: $103.50 (2K tasks)"
+          - listitem [ref=e49]: • Per-task pricing adds up FAST
+        - generic [ref=e50]: "Best for: large app ecosystem"
+      - generic [ref=e51]:
+        - generic [ref=e52]: Make
+        - generic [ref=e53]: $0–$29+
+        - generic [ref=e54]: per month (operations-based)
+        - list [ref=e55]:
+          - listitem [ref=e56]: "• Free: 1K ops/mo, 2 active scenarios"
+          - listitem [ref=e57]: "• Core: $10.59 (10K ops)"
+          - listitem [ref=e58]: "• Pro: $18.82 (10K ops + features)"
+          - listitem [ref=e59]: "• Teams: $34.12 (10K ops)"
+          - listitem [ref=e60]: • Ops ≠ tasks (can be cheaper)
+        - generic [ref=e61]: "Best for: visual complex workflows"
+      - generic [ref=e62]:
+        - generic [ref=e63]: n8n
+        - generic [ref=e64]: $0–$50
+        - generic [ref=e65]: per month (or self-host free)
+        - list [ref=e66]:
+          - listitem [ref=e67]: "• Self-hosted: FREE forever"
+          - listitem [ref=e68]: "• Cloud Starter: $20 (2.5K runs)"
+          - listitem [ref=e69]: "• Cloud Pro: $50 (10K runs)"
+          - listitem [ref=e70]: • No per-execution charges
+          - listitem [ref=e71]: • AI-native with LangChain built in
+        - generic [ref=e72]: "Best for: AI agents + technical teams"
+    - paragraph [ref=e74]:
+      - strong [ref=e75]: "Real talk on pricing:"
+      - text: At 10,000 monthly executions, Zapier costs ~$550/mo (Professional + overages). Make costs ~$34-50. n8n cloud costs $50 - or $0 if you self-host on a $5 VPS. The 10x price difference is real.
+  - generic [ref=e76]:
+    - heading "Features Head-to-Head" [level=2] [ref=e77]
+    - table [ref=e79]:
+      - rowgroup [ref=e80]:
+        - row "Feature Zapier Make n8n" [ref=e81]:
+          - columnheader "Feature" [ref=e82]
+          - columnheader "Zapier" [ref=e83]
+          - columnheader "Make" [ref=e84]
+          - columnheader "n8n" [ref=e85]
+      - rowgroup [ref=e86]:
+        - row "Native app integrations 7,000+ Most 1,800+ 400+ nodes" [ref=e87]:
+          - cell "Native app integrations" [ref=e88]
+          - cell "7,000+ Most" [ref=e89]:
+            - text: 7,000+
+            - generic [ref=e90]: Most
+          - cell "1,800+" [ref=e91]
+          - cell "400+ nodes" [ref=e92]
+        - row "Free plan executions/mo 100 Tight 1,000 ops Unlimited (self-host) Best" [ref=e93]:
+          - cell "Free plan executions/mo" [ref=e94]
+          - cell "100 Tight" [ref=e95]:
+            - text: "100"
+            - generic [ref=e96]: Tight
+          - cell "1,000 ops" [ref=e97]
+          - cell "Unlimited (self-host) Best" [ref=e98]:
+            - text: Unlimited (self-host)
+            - generic [ref=e99]: Best
+        - row "Visual workflow builder Basic (linear) Advanced (branching) Best Node-based" [ref=e100]:
+          - cell "Visual workflow builder" [ref=e101]
+          - cell "Basic (linear)" [ref=e102]
+          - cell "Advanced (branching) Best" [ref=e103]:
+            - text: Advanced (branching)
+            - generic [ref=e104]: Best
+          - cell "Node-based" [ref=e105]
+        - row "AI / LLM integrations Zapier AI Actions OpenAI, Claude modules LangChain native + any LLM Best" [ref=e106]:
+          - cell "AI / LLM integrations" [ref=e107]
+          - cell "Zapier AI Actions" [ref=e108]
+          - cell "OpenAI, Claude modules" [ref=e109]
+          - cell "LangChain native + any LLM Best" [ref=e110]:
+            - text: LangChain native + any LLM
+            - generic [ref=e111]: Best
+        - row "Custom code execution JS only (paid) Limited JS Python + JS + any lang Best" [ref=e112]:
+          - cell "Custom code execution" [ref=e113]
+          - cell "JS only (paid)" [ref=e114]
+          - cell "Limited JS" [ref=e115]
+          - cell "Python + JS + any lang Best" [ref=e116]:
+            - text: Python + JS + any lang
+            - generic [ref=e117]: Best
+        - row "Error handling Basic retry Routes + error paths Full try/catch + retry Best" [ref=e118]:
+          - cell "Error handling" [ref=e119]
+          - cell "Basic retry" [ref=e120]
+          - cell "Routes + error paths" [ref=e121]
+          - cell "Full try/catch + retry Best" [ref=e122]:
+            - text: Full try/catch + retry
+            - generic [ref=e123]: Best
+        - row "Webhook speed 2-15 min (free) Instant (paid) Instant Best" [ref=e124]:
+          - cell "Webhook speed" [ref=e125]
+          - cell "2-15 min (free)" [ref=e126]
+          - cell "Instant (paid)" [ref=e127]
+          - cell "Instant Best" [ref=e128]:
+            - text: Instant
+            - generic [ref=e129]: Best
+        - row "Data storage Tables (limited) Data stores Any DB (self-host) Best" [ref=e130]:
+          - cell "Data storage" [ref=e131]
+          - cell "Tables (limited)" [ref=e132]
+          - cell "Data stores" [ref=e133]
+          - cell "Any DB (self-host) Best" [ref=e134]:
+            - text: Any DB (self-host)
+            - generic [ref=e135]: Best
+        - row "Self-hosting No No Yes - fully open source Best" [ref=e136]:
+          - cell "Self-hosting" [ref=e137]
+          - cell "No" [ref=e138]
+          - cell "No" [ref=e139]
+          - cell "Yes - fully open source Best" [ref=e140]:
+            - text: Yes - fully open source
+            - generic [ref=e141]: Best
+        - row "Learning curve Easiest Best Medium Steeper (worth it)" [ref=e142]:
+          - cell "Learning curve" [ref=e143]
+          - cell "Easiest Best" [ref=e144]:
+            - text: Easiest
+            - generic [ref=e145]: Best
+          - cell "Medium" [ref=e146]
+          - cell "Steeper (worth it)" [ref=e147]
+        - row "API access Yes (paid) Yes (paid) Full API + CLI Best" [ref=e148]:
+          - cell "API access" [ref=e149]
+          - cell "Yes (paid)" [ref=e150]
+          - cell "Yes (paid)" [ref=e151]
+          - cell "Full API + CLI Best" [ref=e152]:
+            - text: Full API + CLI
+            - generic [ref=e153]: Best
+  - generic [ref=e154]:
+    - heading "AI Workflow Support in 2026" [level=2] [ref=e155]
+    - paragraph [ref=e156]: This is where the comparison has shifted dramatically. AI agent workflows - where Claude or GPT calls tools, loops, and makes decisions - are the biggest use case growth area right now. Let's be honest about where each tool stands.
+    - heading "n8n for AI Agents" [level=3] [ref=e157]
+    - paragraph [ref=e158]:
+      - text: n8n has gone
+      - strong [ref=e159]: all-in on AI
+      - text: . The LangChain integration means you can build real AI agents that use tools, have memory, and make decisions - all visually. Built-in support for OpenAI, Anthropic Claude, Ollama (local models), and custom LLM endpoints. The AI Agent node handles tool calling natively.
+    - paragraph [ref=e160]: For AI workflows, n8n is genuinely ahead by 12-18 months compared to Zapier.
+    - heading "Make for AI Workflows" [level=3] [ref=e161]
+    - paragraph [ref=e162]: Make has OpenAI and Claude modules. You can build prompt chains and conditional AI logic. The visual canvas makes complex prompt routing readable. But it lacks the native agent loop concept - you're stitching AI as a step, not as an orchestrator.
+    - heading "Zapier for AI" [level=3] [ref=e163]
+    - paragraph [ref=e164]: Zapier launched "AI Actions" and "Zapier Agents" but they remain limited compared to n8n's depth. Better for simple "summarize email → send Slack message" than for complex multi-step agent workflows.
+  - generic [ref=e165]:
+    - heading "Best Use Case by Tool" [level=2] [ref=e166]
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - generic [ref=e169]: Use case
+        - generic [ref=e170]: Zapier
+        - generic [ref=e171]: Make
+        - generic [ref=e172]: n8n
+      - generic [ref=e173]:
+        - generic [ref=e174]: Simple 2-step automations (Gmail → Sheets)
+        - generic [ref=e175]: ✓
+        - generic [ref=e176]: ✓
+        - generic [ref=e177]: ~
+      - generic [ref=e178]:
+        - generic [ref=e179]: Multi-branch conditional workflows
+        - generic [ref=e180]: ~
+        - generic [ref=e181]: ✓
+        - generic [ref=e182]: ✓
+      - generic [ref=e183]:
+        - generic [ref=e184]: AI agent workflows (Claude, GPT)
+        - generic [ref=e185]: ✗
+        - generic [ref=e186]: ~
+        - generic [ref=e187]: ✓
+      - generic [ref=e188]:
+        - generic [ref=e189]: High-volume automation (10K+ runs/mo)
+        - generic [ref=e190]: ✗
+        - generic [ref=e191]: ~
+        - generic [ref=e192]: ✓
+      - generic [ref=e193]:
+        - generic [ref=e194]: Nontechnical users, no-code teams
+        - generic [ref=e195]: ✓
+        - generic [ref=e196]: ✓
+        - generic [ref=e197]: ✗
+      - generic [ref=e198]:
+        - generic [ref=e199]: On-premise / data compliance (HIPAA)
+        - generic [ref=e200]: ✗
+        - generic [ref=e201]: ✗
+        - generic [ref=e202]: ✓
+      - generic [ref=e203]:
+        - generic [ref=e204]: Custom code in workflows
+        - generic [ref=e205]: ✗
+        - generic [ref=e206]: ~
+        - generic [ref=e207]: ✓
+      - generic [ref=e208]:
+        - generic [ref=e209]: CRM + Salesforce heavy workflows
+        - generic [ref=e210]: ✓
+        - generic [ref=e211]: ~
+        - generic [ref=e212]: ~
+      - generic [ref=e213]:
+        - generic [ref=e214]: eCommerce (Shopify, WooCommerce)
+        - generic [ref=e215]: ✓
+        - generic [ref=e216]: ✓
+        - generic [ref=e217]: ~
+      - generic [ref=e218]:
+        - generic [ref=e219]: Budget under $20/mo, high volume
+        - generic [ref=e220]: ✗
+        - generic [ref=e221]: ~
+        - generic [ref=e222]: ✓
+  - generic [ref=e223]:
+    - 'heading "Zapier: The Enterprise Standard" [level=2] [ref=e224]'
+    - paragraph [ref=e225]: Zapier is the original automation platform and still has the widest app ecosystem (7,000+). If a new SaaS tool launches, it has a Zapier integration before it has a Make or n8n integration. That matters.
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - heading "Pros" [level=4] [ref=e228]
+        - list [ref=e229]:
+          - listitem [ref=e230]: + 7,000+ native integrations
+          - listitem [ref=e231]: + Easiest setup (15-min onboarding)
+          - listitem [ref=e232]: + Best documentation + community
+          - listitem [ref=e233]: + Excellent enterprise security
+          - listitem [ref=e234]: + Zap templates library is massive
+      - generic [ref=e235]:
+        - heading "Cons" [level=4] [ref=e236]
+        - list [ref=e237]:
+          - listitem [ref=e238]: "- Most expensive at scale"
+          - listitem [ref=e239]: "- Free plan: 15-min trigger delays"
+          - listitem [ref=e240]: "- Limited code/logic capabilities"
+          - listitem [ref=e241]: "- Per-task pricing kills high-volume use"
+          - listitem [ref=e242]: "- AI features still catching up"
+    - paragraph [ref=e243]:
+      - strong [ref=e244]: "Who Zapier is right for:"
+      - text: Non-technical users who need to connect popular apps. Teams at companies where IT requires a vendor with enterprise SOC2 compliance. Anyone who uses niche SaaS tools that only have Zapier integrations.
+    - generic [ref=e245]:
+      - heading "Try Zapier Free" [level=3] [ref=e246]
+      - paragraph [ref=e247]: 100 tasks/month free. No credit card required. Best for quick wins with popular apps.
+      - link "Start Free on Zapier →" [ref=e249] [cursor=pointer]:
+        - /url: https://zapier.com/?utm_source=printmaxx&utm_medium=affiliate
+  - generic [ref=e250]:
+    - 'heading "Make: Visual Power at Lower Cost" [level=2] [ref=e251]'
+    - paragraph [ref=e252]: Make (formerly Integromat) is where complex logic meets visual design. The canvas-based editor lets you see your entire workflow as a diagram - routing, error handling, data transformation all visible at a glance.
+    - generic [ref=e253]:
+      - generic [ref=e254]:
+        - heading "Pros" [level=4] [ref=e255]
+        - list [ref=e256]:
+          - listitem [ref=e257]: + Visual canvas beats Zapier for complex flows
+          - listitem [ref=e258]: + Operations pricing = cheaper at scale
+          - listitem [ref=e259]: + Strong data transformation tools
+          - listitem [ref=e260]: + Better free plan (1K ops vs 100 tasks)
+          - listitem [ref=e261]: + Good AI module integrations
+      - generic [ref=e262]:
+        - heading "Cons" [level=4] [ref=e263]
+        - list [ref=e264]:
+          - listitem [ref=e265]: "- Smaller app library than Zapier"
+          - listitem [ref=e266]: "- Learning curve steeper than Zapier"
+          - listitem [ref=e267]: "- Cloud-only (no self-hosting)"
+          - listitem [ref=e268]: "- Slower webhook trigger on free plan"
+          - listitem [ref=e269]: "- No native LLM agent loop"
+    - paragraph [ref=e270]:
+      - strong [ref=e271]: "Who Make is right for:"
+      - text: Solopreneurs and small agencies who need complex branching logic and data manipulation without Zapier's premium pricing. Great for eCommerce automation, lead routing, and multi-app workflows.
+    - generic [ref=e272]:
+      - heading "Try Make Free" [level=3] [ref=e273]
+      - paragraph [ref=e274]: 1,000 operations/month free. Best value for visual complex automation.
+      - link "Start Free on Make →" [ref=e276] [cursor=pointer]:
+        - /url: https://www.make.com/en/register?utm_source=printmaxx&utm_medium=affiliate
+  - generic [ref=e277]:
+    - 'heading "n8n: Technical Teams'' Secret Weapon" [level=2] [ref=e278]'
+    - paragraph [ref=e279]: n8n is the open-source automation platform that went from niche tool to mainstream in 2025 as AI agent workflows became the dominant use case. If you're running any kind of LLM-powered automation, n8n has a 12-month lead on the competition.
+    - generic [ref=e280]:
+      - generic [ref=e281]:
+        - heading "Pros" [level=4] [ref=e282]
+        - list [ref=e283]:
+          - listitem [ref=e284]: + Self-host on $5/mo VPS = truly free
+          - listitem [ref=e285]: + Native AI agent support (LangChain)
+          - listitem [ref=e286]: + Python + JS + any language in workflows
+          - listitem [ref=e287]: + Full open source (fair-code license)
+          - listitem [ref=e288]: + No execution limits on self-hosted
+          - listitem [ref=e289]: + Growing at 3x rate vs competitors
+      - generic [ref=e290]:
+        - heading "Cons" [level=4] [ref=e291]
+        - list [ref=e292]:
+          - listitem [ref=e293]: "- Steeper learning curve"
+          - listitem [ref=e294]: "- Smaller native app library"
+          - listitem [ref=e295]: "- Self-hosting requires DevOps basics"
+          - listitem [ref=e296]: "- Fewer pre-built templates"
+          - listitem [ref=e297]: "- Less polished UI than Zapier"
+    - paragraph [ref=e298]:
+      - strong [ref=e299]: "Who n8n is right for:"
+      - text: Developers, technical solopreneurs, agencies building AI-powered client workflows, anyone running high-volume automation who can't afford Zapier at scale. The $0 self-hosted tier is unmatched.
+    - generic [ref=e300]:
+      - heading "Try n8n Free" [level=3] [ref=e301]
+      - paragraph [ref=e302]: Cloud trial available. Or self-host for $0 on any VPS. Best for AI workflows and technical teams.
+      - generic [ref=e303]:
+        - link "Try n8n Cloud Free →" [ref=e304] [cursor=pointer]:
+          - /url: https://n8n.io/?utm_source=printmaxx&utm_medium=affiliate
+        - link "Self-Host Guide →" [ref=e305] [cursor=pointer]:
+          - /url: https://docs.n8n.io/hosting/
+  - generic [ref=e306]:
+    - 'heading "Final Verdict: Scores by Category" [level=2] [ref=e307]'
+    - generic [ref=e308]:
+      - generic [ref=e309]:
+        - generic [ref=e310]: Zapier
+        - generic [ref=e311]: "7.1"
+        - generic [ref=e312]: Best ecosystem, worst value at scale
+      - generic [ref=e313]:
+        - generic [ref=e314]: Make
+        - generic [ref=e315]: "7.8"
+        - generic [ref=e316]: Best visual builder, solid mid-tier
+      - generic [ref=e317]:
+        - generic [ref=e318]: n8n ⭐ Winner
+        - generic [ref=e319]: "9.1"
+        - generic [ref=e320]: Best for AI, best value, open source
+    - heading "Our recommendation by profile:" [level=3] [ref=e321]
+    - table [ref=e323]:
+      - rowgroup [ref=e324]:
+        - row "Your situation Recommended tool" [ref=e325]:
+          - columnheader "Your situation" [ref=e326]
+          - columnheader "Recommended tool" [ref=e327]
+      - rowgroup [ref=e328]:
+        - row "Non-technical, need quick setup with popular apps Zapier" [ref=e329]:
+          - cell "Non-technical, need quick setup with popular apps" [ref=e330]
+          - cell "Zapier" [ref=e331]
+        - row "Visual thinker, complex logic, moderate budget Make" [ref=e332]:
+          - cell "Visual thinker, complex logic, moderate budget" [ref=e333]
+          - cell "Make" [ref=e334]
+        - row "Developer or technical founder, AI workflows n8n (self-hosted)" [ref=e335]:
+          - cell "Developer or technical founder, AI workflows" [ref=e336]
+          - cell "n8n (self-hosted)" [ref=e337]
+        - row "High-volume (10K+ runs/mo) on a budget n8n cloud or self-hosted" [ref=e338]:
+          - cell "High-volume (10K+ runs/mo) on a budget" [ref=e339]
+          - cell "n8n cloud or self-hosted" [ref=e340]
+        - row "Enterprise with Salesforce, security requirements Zapier Teams/Enterprise" [ref=e341]:
+          - cell "Enterprise with Salesforce, security requirements" [ref=e342]
+          - cell "Zapier Teams/Enterprise" [ref=e343]
+        - row "Solo agency building AI automations for clients n8n (white-label capable)" [ref=e344]:
+          - cell "Solo agency building AI automations for clients" [ref=e345]
+          - cell "n8n (white-label capable)" [ref=e346]
+        - row "eCommerce automation on a tight budget Make" [ref=e347]:
+          - cell "eCommerce automation on a tight budget" [ref=e348]
+          - cell "Make" [ref=e349]
+  - generic [ref=e350]:
+    - heading "Ready to automate? Start with the right tool." [level=2] [ref=e351]
+    - paragraph [ref=e352]: All three offer free tiers. Test before you commit. The best tool is the one you'll actually use.
+    - generic [ref=e353]:
+      - link "Try n8n Free →" [ref=e354] [cursor=pointer]:
+        - /url: https://n8n.io/?utm_source=printmaxx&utm_medium=affiliate
+      - link "Try Make Free →" [ref=e355] [cursor=pointer]:
+        - /url: https://www.make.com/en/register?utm_source=printmaxx&utm_medium=affiliate
+      - link "Try Zapier Free →" [ref=e356] [cursor=pointer]:
+        - /url: https://zapier.com/?utm_source=printmaxx&utm_medium=affiliate
+  - generic [ref=e357]:
+    - paragraph [ref=e358]: free cheat sheet
+    - heading "The 10-Workflow Automation Starter Pack" [level=2] [ref=e359]
+    - paragraph [ref=e360]: 10 pre-built automation templates for n8n, Make, and Zapier. Copy-paste workflows for lead scraping, email sequences, social posting, and invoice tracking. Tested and working.
+    - generic [ref=e361]:
+      - textbox "your email" [ref=e362]
+      - button "get the pack" [ref=e363] [cursor=pointer]
+    - paragraph [ref=e364]: free. no spam.
+  - generic [ref=e365]:
+    - strong [ref=e366]: "Affiliate Disclosure:"
+    - text: This page contains affiliate links. If you sign up for a paid plan through our links, we may earn a commission at no extra cost to you. Our recommendations are based on independent research and testing - we only recommend tools we'd use ourselves. This disclosure complies with FTC guidelines.
+  - contentinfo [ref=e367]:
+    - paragraph [ref=e368]:
+      - text: © 2026 PRINTMAXX ·
+      - link "Home" [ref=e369] [cursor=pointer]:
+        - /url: /
+      - text: · Research-based, no fake reviews

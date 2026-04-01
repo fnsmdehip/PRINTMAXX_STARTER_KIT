@@ -1,0 +1,158 @@
+- generic [ref=e3]:
+  - region "top of page"
+  - link "wix This website was built on Wix. Create yours today. Get Started" [ref=e5] [cursor=pointer]:
+    - /url: https://www.wix.com/lpviral/enviral?utm_campaign=vir_wixad_live&adsVersion=banner_2024&orig_msid=aa99f552-cce6-4d9b-96f0-a304175f7068&orig_msid=ef4a38de-f864-4ff8-9410-ede234ca0f70&adsVersion=banner_2024
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img "wix" [ref=e10]
+        - text: This website was built on Wix. Create yours today.
+      - generic [ref=e15]: Get Started
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - generic [ref=e29]:
+        - generic:
+          - generic:
+            - paragraph [ref=e39]:
+              - link "HildebrandtRoofing@gmail.com" [ref=e41] [cursor=pointer]:
+                - /url: mailto:HildebrandtRoofing@gmail.com
+            - paragraph [ref=e42]: 306-316-0975
+            - navigation "Site" [ref=e44]:
+              - list [ref=e45]:
+                - listitem [ref=e46] [cursor=pointer]:
+                  - link "Home" [ref=e47]:
+                    - /url: https://hildebrandtroofing.wixsite.com/website-1
+                    - paragraph [ref=e50]: Home
+                - listitem [ref=e51] [cursor=pointer]:
+                  - link "About" [ref=e52]:
+                    - /url: https://hildebrandtroofing.wixsite.com/website-1
+                    - paragraph [ref=e55]: About
+                - listitem [ref=e56] [cursor=pointer]:
+                  - link "Projects" [ref=e57]:
+                    - /url: https://hildebrandtroofing.wixsite.com/website-1
+                    - paragraph [ref=e60]: Projects
+                - listitem [ref=e61] [cursor=pointer]:
+                  - link "Contact" [ref=e62]:
+                    - /url: https://hildebrandtroofing.wixsite.com/website-1
+                    - paragraph [ref=e65]: Contact
+            - link "Untitled" [ref=e67] [cursor=pointer]:
+              - /url: https://hildebrandtroofing.wixsite.com/website-1
+              - img "Untitled" [ref=e68]
+            - paragraph [ref=e69]: Hildebrandt Roofing
+    - main [ref=e70]:
+      - generic [ref=e74]:
+        - generic:
+          - generic:
+            - generic:
+              - generic [ref=e80]:
+                - generic:
+                  - generic:
+                    - heading "Hildebrandt Roofing" [level=1] [ref=e84]
+                    - paragraph [ref=e85]: Now utilising the RB4000 Equipter for a New Roof No Mess experience.
+                    - iframe [ref=e88]:
+                      - generic [active] [ref=f6e1]:
+                        - generic "YouTube Video Player" [ref=f6e3]
+                        - generic [ref=f6e5]:
+                          - generic:
+                            - generic:
+                              - button "Play video" [ref=f6e10] [cursor=pointer]:
+                                - generic [ref=f6e13]:
+                                  - img
+                              - button "Hide player controls" [ref=f6e14] [cursor=pointer]
+                              - generic [ref=f6e16]:
+                                - generic [ref=f6e21]:
+                                  - generic [ref=f6e22]:
+                                    - link "What is the Equipter 4000 Roofing Trailer?" [ref=f6e23] [cursor=pointer]:
+                                      - /url: https://www.youtube.com/watch?v=RuobWQ-Hu8Y
+                                    - link "Equipter" [ref=f6e24] [cursor=pointer]:
+                                      - /url: /channel/UCx2bTFJxFcOgC2z1rwo-jag
+                                      - generic [ref=f6e25]: Equipter
+                                  - generic [ref=f6e26]:
+                                    - button "thumbnail-image" [ref=f6e27] [cursor=pointer]:
+                                      - img "thumbnail-image" [ref=f6e28]
+                                    - generic [ref=f6e30]:
+                                      - generic: Equipter
+                                      - generic: 1.83K subscribers
+                                - generic [ref=f6e31]:
+                                  - button "Share" [ref=f6e34] [cursor=pointer]:
+                                    - generic [ref=f6e38]:
+                                      - img
+                                  - link "Watch on YouTube" [ref=f6e45] [cursor=pointer]:
+                                    - /url: https://www.youtube.com/watch?v=RuobWQ-Hu8Y
+                                    - generic [ref=f6e48]:
+                                      - text: Watch on
+                                      - img [ref=f6e50]:
+                                        - generic [ref=f6e52]:
+                                          - img
+              - 'region "Home: Welcome"'
+              - generic [ref=e94]:
+                - img "Finally have a trailer!" [ref=e99]
+                - generic [ref=e100]:
+                  - generic:
+                    - generic:
+                      - heading "About Us" [level=2] [ref=e102]
+                      - paragraph [ref=e103]: The Journey
+                      - paragraph [ref=e104]: I do residential and commercial roofing in Swift Current and the surrounding areas, primarily specializing in architectural shingles. I have learned from 3 of the best roofers in the country. Now with 10 years of experience, contributing to excellent roofing quality, with a special attention to detail. In February 2020, we purchased our RB4000 Equipter! This machine could be described as "mechanical joy"! With wide lawn mower tires, it is gentle on lawns, and catches debris off the roof protecting landscapes. This self propelled machine also aids installation in lifting materials for us! The above promo video has more details of this revolution to hit the roofing industry!
+              - 'region "Home: About"'
+              - generic [ref=e110]:
+                - generic:
+                  - generic:
+                    - generic [ref=e118]:
+                      - generic [ref=e119]:
+                        - generic:
+                          - generic:
+                            - heading "St. Olaf Church" [level=2] [ref=e123]
+                            - paragraph [ref=e124]: Summer of 2017
+                            - paragraph [ref=e125]: This 80-square hail insurance claim was a proving ground for our crew! It was completed in a very short amount of time to the parishioners' satisfaction.
+                      - img "Untitled" [ref=e132]
+                    - generic [ref=e137]:
+                      - img "This one was fun to do.jpg" [ref=e144]
+                      - generic [ref=e145]:
+                        - generic:
+                          - generic:
+                            - heading "Residential" [level=2] [ref=e149]
+                            - paragraph [ref=e150]: Summer of 2017
+                            - paragraph [ref=e151]: One of the many roofs done by Hildebrandt Roofing, with total and complete satisfaction!
+                    - generic [ref=e156]:
+                      - generic [ref=e157]:
+                        - generic:
+                          - generic:
+                            - heading "Residential" [level=2] [ref=e161]
+                            - paragraph [ref=e162]: Summer of 2016
+                            - paragraph [ref=e163]: Our crew pays special attention to detail - we combine ice and water shield, underlayment and tar to often have as many as 4 layers of waterproofing in the vulnerable areas. This results in a perfect job, and complete peace of mind!
+                      - img "Last and biggest roof we did!" [ref=e170]
+                    - generic [ref=e175]:
+                      - img "Condo pic.jpg" [ref=e182]
+                      - generic [ref=e183]:
+                        - generic:
+                          - generic:
+                            - heading "Condo Project" [level=2] [ref=e187]
+                            - paragraph [ref=e188]: October, 2019
+                            - paragraph [ref=e189]: This was a Condo Roof project split with another contractor consisting of 128,000 sq feet of roof!
+              - 'region "Home: Projects"'
+              - generic [ref=e195]:
+                - generic:
+                  - generic:
+                    - heading "Contact" [level=2] [ref=e199]
+                    - paragraph [ref=e200]: Phone or call for a free roofing estimate! Please remember to provide your house address and phone number.
+                    - generic [ref=e202]:
+                      - generic:
+                        - generic:
+                          - textbox "Name" [ref=e205]
+                          - textbox "Email" [ref=e208]
+                          - textbox "Subject" [ref=e211]
+                          - textbox [ref=e213]:
+                            - /placeholder: Type your message here...
+                          - button "Submit" [ref=e215] [cursor=pointer]:
+                            - generic [ref=e216]: Submit
+                    - paragraph [ref=e217]: 306-316-0975
+              - 'region "Home: Contact"'
+    - contentinfo [ref=e218]:
+      - generic [ref=e224]:
+        - generic:
+          - generic:
+            - paragraph [ref=e225]:
+              - link "HildebrandtRoofing@gmail.com" [ref=e227] [cursor=pointer]:
+                - /url: mailto:HildebrandtRoofing@gmail.com
+            - paragraph [ref=e228]: 306-316-0975
+            - paragraph [ref=e229]: ©2017 by Hildebrandt Roofing. Proudly created with Wix.com
+  - region "bottom of page"

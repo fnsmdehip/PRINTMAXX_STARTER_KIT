@@ -1,0 +1,84 @@
+- generic [ref=e3]:
+  - region "top of page"
+  - link "wix This website was built on Wix. Create yours today. Get Started" [ref=e5] [cursor=pointer]:
+    - /url: https://www.wix.com/lpviral/enviral?utm_campaign=vir_wixad_live&adsVersion=banner_2024&orig_msid=aa99f552-cce6-4d9b-96f0-a304175f7068&orig_msid=31a9cec8-08a2-4c95-ad1f-708bce9570e3&adsVersion=banner_2024
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img "wix" [ref=e10]
+        - text: This website was built on Wix. Create yours today.
+      - generic [ref=e15]: Get Started
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - generic [ref=e29]:
+        - generic:
+          - generic:
+            - generic "445046155_7476679609034757_3890710091379273380_n.jpg" [ref=e30]
+            - navigation "Site" [ref=e34]:
+              - list [ref=e35]:
+                - listitem [ref=e36] [cursor=pointer]:
+                  - link "Home" [ref=e37]:
+                    - /url: https://leesroofingandsidi.wixsite.com/roofing-contractor
+                    - paragraph [ref=e40]: Home
+    - main [ref=e41]:
+      - generic [ref=e45]:
+        - generic:
+          - generic:
+            - generic:
+              - generic [ref=e46]:
+                - generic:
+                  - generic:
+                    - generic [ref=e55]:
+                      - generic:
+                        - generic:
+                          - heading "Lee's Roofing and Siding" [level=1] [ref=e59]:
+                            - generic [ref=e61]: Lee's Roofing and Siding
+                          - region "Slide show gallery" [ref=e62]:
+                            - button "Red Roof" [ref=e65] [cursor=pointer]:
+                              - img "Red Roof" [ref=e70]
+                              - generic [ref=e71]:
+                                - paragraph
+                    - 'region "Home: Welcome"'
+              - generic [ref=e73]:
+                - generic:
+                  - generic:
+                    - heading "About" [level=2] [ref=e77]
+                    - generic:
+                      - paragraph [ref=e78]:
+                        - text: Lee's Roofing and Siding
+                        - text: Grantsville, UT, 84029
+                        - text: (435) 250-3833
+                      - paragraph [ref=e79]
+                      - paragraph [ref=e80]:
+                        - text: Lee's Roofing and Siding offers professional roofing services in Grantsville, UT. Do not hesitate to contact us right away!
+                        - text: Metal Roofing Services, Metal Roof Installation
+                        - text: Grantsville, UT; Stansbury park, UT; Copperton, UT; Stockton, UT; Rush Valley, UT
+                        - link "Roofer,Roofing Company,Roof Maintenance,Roofing Contractor,Roofing Services,Shingles Roofing,Flat Roof Repair,Roofing Repair,Gutter Repair,Roofing Replacement,Flat Roofing,Gutter Installation" [ref=e82] [cursor=pointer]:
+                          - /url: http://roofingcontractor-grantsvilleut.com/
+                      - paragraph [ref=e83]
+                      - paragraph [ref=e84]:
+                        - link "http://roofingcontractor-grantsvilleut.com/" [ref=e85] [cursor=pointer]:
+                          - /url: http://roofingcontractor-grantsvilleut.com/
+              - generic [ref=e86]:
+                - generic:
+                  - generic:
+                    - heading "Services" [level=2] [ref=e90]
+                    - generic:
+                      - paragraph [ref=e91]: Roofer,Roofing Company,Roof Maintenance,Roofing Contractor,Roofing Services,Shingles Roofing,Flat Roof Repair,Roofing Repair,Gutter Repair,Roofing Replacement,Flat Roofing,Gutter Installation
+                      - paragraph [ref=e92]
+                      - paragraph [ref=e93]
+              - generic [ref=e94]:
+                - generic:
+                  - generic:
+                    - heading "Contact Us" [level=2] [ref=e98]:
+                      - generic [ref=e99]: Contact Us
+                    - heading "Grantsville, UT, 84029 (435) 250-3833" [level=3] [ref=e100]:
+                      - generic [ref=e104]: Grantsville, UT, 84029
+                      - generic [ref=e108]: (435) 250-3833
+                    - list "Social Bar" [ref=e110]:
+                      - listitem [ref=e111]:
+                        - link "Facebook" [ref=e112] [cursor=pointer]:
+                          - /url: https://www.facebook.com/people/Lees-Roofing-and-Siding/61559809817651/
+                          - img "Facebook" [ref=e113]
+    - contentinfo [ref=e115]:
+      - paragraph [ref=e122]: ©2019 by Lee's Roofing and Siding. Proudly created with Wix.com
+  - region "bottom of page"

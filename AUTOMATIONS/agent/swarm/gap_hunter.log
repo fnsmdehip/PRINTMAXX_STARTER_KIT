@@ -1361,3 +1361,13 @@ Blocked: Surge deploys (need upgrade or teardown)
   - Attempted redeploy of 504 pages — ALSO BLOCKED by surge permissions
   - SEVERITY UPGRADE: Surge is fully locked, not just for new domains. ALL deploys blocked.
   - 15/17 affiliate pages healthy, 2/17 down
+
+[2026-04-01 05:02] GAP HUNTER CYCLE
+Scanned: 66 apps, 9 landing dirs, 50795 alpha entries, 1387 queued posts, 14 PDFs, 251 cold emails
+Gaps found: 7
+Actions taken:
+  1. DEPLOYED best-sleep-supplement-men-over-55 to surge.sh (affiliate page, revenue-direct)
+  2. UPDATED DEPLOYMENT_URLS.md with 4 missing entries (research-blog, privacy, tos, sleep-supplement)
+  3. WROTE gap report to reports/gap_hunter_report_20260401.md
+Human blockers surfaced: Gumroad (45m), email infra (30m), X/Twitter posting (15m)
+Revenue at risk from gaps: $500-2K/mo (digital products) + cold outbound margin + content distribution

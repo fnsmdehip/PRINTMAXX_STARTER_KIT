@@ -1,58 +1,75 @@
-[2026-04-01 04:34] PLAYWRIGHT TESTER — CYCLE 17 ALERTS
+PLAYWRIGHT TESTER QUALITY ALERTS
+================================
+Generated: 2026-04-01 04:45 UTC
+Cycle: 18
 
-🔴 CRITICAL: 9 Sites Still Broken
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRITICAL (P1) - 2 NEW REGRESSIONS
+===================================
 
-ROOT CAUSE #1: DNS Failure (8 sites)
-  ├─ Type: net::ERR_NAME_NOT_RESOLVED
-  ├─ Reason: Surge.sh DNS label limit (~63 chars)
-  ├─ Affected Subdomains: 75-85 characters (exceeds limit)
-  └─ Impact: Complete DNS resolution failure
+[P1] REGRESSION: sleepmaxx-web.surge.sh
+  Status: HTTP 000 (DNS/connection failure)
+  Previous: HTTP 200 ✓
+  Impact: PWA app (potential revenue loss)
+  Action: Retest now; check deployment logs if persists
 
-SITES (DNS):
-  1. mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok
-  2. top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok
-  3. window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or
-  4. mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al
-  5. home-professional-mobile-detailing-amp-products-super-store-birmingham-al
-  6. the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv
-  7. local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky
-  8. residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky
+[P1] REGRESSION: walktounlock-web.surge.sh
+  Status: HTTP 000 (DNS/connection failure)
+  Previous: HTTP 200 ✓
+  Impact: PWA app (potential revenue loss)
+  Action: Retest now; check deployment logs if persists
 
-FIX: Regenerate with shortened domain names:
-  OLD: mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok (80 chars)
-  NEW: mobile-detailing-experts-okc (46 chars) ✓
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HIGH (P2) - PERSISTENT DNS FAILURES
+====================================
 
-ROOT CAUSE #2: Performance Timeout (1 site)
-  ├─ Type: HTTP Timeout (30s exceeded)
-  ├─ Reason: Heavy dataset OR unoptimized JavaScript
-  └─ Impact: Page hangs on load
+[P2] DNS FAILURE: mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh
+  Status: HTTP 000
+  Root Cause: Subdomain length 83 chars (limit: 63)
+  Fix: Rename to abbrev (e.g. "mobile-detail-okc-champion")
+  Impact: Low (local biz page)
 
-SITE (TIMEOUT):
-  1. saas-stack-audit-200.surge.sh
+[P2] DNS FAILURE: top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh
+  Status: HTTP 000
+  Root Cause: Subdomain length 90 chars (limit: 63)
+  Fix: Rename to abbrev
+  Impact: Low (local biz page)
 
-FIX: Profile and optimize
-  • Check LANDING/tools/saas-stack-audit-200/ for large datasets
-  • Minify JavaScript
-  • Split code chunks
-  • Move data to CDN if static
+[P2] DNS FAILURE: window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh
+  Status: HTTP 000
+  Root Cause: Subdomain length 76 chars (limit: 63)
+  Fix: Rename to abbrev (e.g. "window-clean-pdx-allpro")
+  Impact: Low (local biz page)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-YELLOW ALERTS (8 sites with console warnings)
-  → Non-blocking but should audit deprecated APIs
-  → Check analytics/tracking not throwing errors
-  → Verify font/image loading
+PORTFOLIO HEALTH
+================
+Pass Rate: 92.2% (59/64 sites)
+Trend: -2% (was 94.2% last cycle)
+Red Sites: 5
+Categories 100%: Tool Apps, Comparisons, Fiverr Services, Lead Magnets, Affiliate Pages
+Categories <100%: Brand Pages (93.3%), PWA Apps (72.7% - PROBLEM CATEGORY)
 
-PORTFOLIO HEALTH: 94.2% (STABLE)
-  ✅ Core path: unaffected
-  ✅ Major apps: operational
-  ⚠️ Minor issues: 9 sites (2% of portfolio)
 
-NEXT ACTIONS:
-  [ ] Regenerate 8 DNS-failed sites with <63 char subdomains
-  [ ] Profile & optimize saas-stack-audit-200
-  [ ] Add domain length validation to deployment pipeline
-  [ ] Re-test after fixes (target: 99% pass rate)
+ACTIONS REQUIRED
+================
+1. IMMEDIATE: Retest sleepmaxx-web + walktounlock-web (may be transient)
+2. THIS WEEK: Rename 3 DNS-failed sites
+3. ONGOING: Hourly health checks on RED sites
+4. STRATEGIC: Consider Vercel/Netlify migration for reliability
+
+
+Next Test Cycle: 2026-04-01 12:00 UTC
+---
+
+[2026-04-01 05:32] PLAYWRIGHT ALERT — 11 RED site(s):
+  ✗ OKC Mobile Detailing | https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-c
+  ✗ OKC Car Detailing | https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-c
+  ✗ Portland Window Cleaning | https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.s
+  ✗ Pentecostal Streak Landing | https://pentecostal-streak-landing.surge.sh | HTTP 504
+  ✗ Baptist Streak Landing | https://baptist-streak-landing.surge.sh | HTTP 504
+  ✗ SaaS Stack Audit 200 | https://saas-stack-audit-200.surge.sh | Page.title: Execution context was destroyed, most likely because of a navigation
+  ✗ Birmingham Detailing | https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham
+  ✗ Birmingham Home Detailing | https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://home-professional-mobile-detailing-amp-products-super-store-birmingham-
+  ✗ Homeguide Handyman LV | https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-
+  ✗ Pink Windows Louisville | https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.su
+  ✗ Cherry Window Louisville | https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville

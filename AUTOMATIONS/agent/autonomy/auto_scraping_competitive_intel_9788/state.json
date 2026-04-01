@@ -1,48 +1,141 @@
 {
-  "venture": "competitive_intel",
-  "last_cycle": 129,
-  "last_run": "2026-04-01T07:09:26Z",
-  "cumulative_blue_oceans": 672,
-  "ci_csv_rows": 443,
-  "alpha_csv_rows": 50861,
-  "strategies_covered": [
-    "HEALTH + FITNESS + WELLNESS + NUTRITION",
-    "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
-    "HISTORY + WORLD CULTURES + ANTHROPOLOGY",
-    "PSYCHOLOGY + COGNITIVE SCIENCE + BEHAVIORAL ECONOMICS",
-    "SCIENCE + TECHNOLOGY + ENGINEERING + MATHEMATICS",
-    "PARENTING + CHILD DEVELOPMENT + EDUCATION",
-    "CREATIVE ARTS + MUSIC + VISUAL ARTS + PERFORMANCE",
-    "SCIENCE & TECHNOLOGY HISTORY + INNOVATION",
-    "PHILOSOPHY OF MIND & CONSCIOUSNESS",
-    "NEUROSCIENCE & BRAIN SCIENCE",
-    "MILITARY HISTORY & STRATEGY",
-    "GEOPOLITICS & INTERNATIONAL RELATIONS",
-    "PSYCHOLOGY OF CREATIVITY & GENIUS",
-    "LANGUAGE & LINGUISTICS HISTORY",
-    "HISTORY OF MATHEMATICS",
-    "GENETICS",
-    "FINANCE & ECONOMICS HISTORY",
-    "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
-    "CULINARY SCIENCE & FOOD HISTORY",
-    "ASTRONOMY & SPACE SCIENCE",
-    "CLIMATE SCIENCE & ENVIRONMENTAL SCIENCE",
-    "MEDICINE & HUMAN PHYSIOLOGY",
-    "PHILOSOPHY & ETHICS + LOGIC",
-    "BEHAVIORAL ECONOMICS"
-  ],
-  "next_strategy": "SOCIOLOGY & SOCIAL DYNAMICS",
-  "top_all_time": [
-    {"name": "Daily Oncology Science Streak", "score": 25, "cycle": 127},
-    {"name": "Daily Film Studies Streak", "score": 25, "cycle": 106},
-    {"name": "Daily CS Fundamentals Streak", "score": 25, "cycle": 111},
-    {"name": "Daily Neuroscience Streak", "score": 25, "cycle": 111},
-    {"name": "Daily Game Theory Streak", "score": 23, "cycle": 129},
-    {"name": "Daily Epidemiology Streak", "score": 22, "cycle": 127},
-    {"name": "Daily Moral Philosophy Streak", "score": 22, "cycle": 128},
-    {"name": "Daily Epistemology Streak", "score": 22, "cycle": 128},
-    {"name": "Daily Existentialism Streak", "score": 22, "cycle": 128},
-    {"name": "Daily Prospect Theory Streak", "score": 22, "cycle": 129}
-  ],
-  "status": "RUNNING"
+    "venture": "competitive_intel",
+    "last_cycle": 132,
+    "last_run": "2026-04-01T11:20:45Z",
+    "cumulative_blue_oceans": 702,
+    "ci_csv_rows": 40,
+    "alpha_csv_rows": 51232,
+    "strategies_covered": [
+        "HEALTH + FITNESS + WELLNESS + NUTRITION",
+        "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+        "HISTORY + WORLD CULTURES + ANTHROPOLOGY",
+        "PSYCHOLOGY + COGNITIVE SCIENCE + BEHAVIORAL ECONOMICS",
+        "SCIENCE + TECHNOLOGY + ENGINEERING + MATHEMATICS",
+        "PARENTING + CHILD DEVELOPMENT + EDUCATION",
+        "CREATIVE ARTS + MUSIC + VISUAL ARTS + PERFORMANCE",
+        "SCIENCE & TECHNOLOGY HISTORY + INNOVATION",
+        "PHILOSOPHY OF MIND & CONSCIOUSNESS",
+        "NEUROSCIENCE & BRAIN SCIENCE",
+        "MILITARY HISTORY & STRATEGY",
+        "GEOPOLITICS & INTERNATIONAL RELATIONS",
+        "PSYCHOLOGY OF CREATIVITY & GENIUS",
+        "LANGUAGE & LINGUISTICS HISTORY",
+        "HISTORY OF MATHEMATICS",
+        "GENETICS",
+        "FINANCE & ECONOMICS HISTORY",
+        "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+        "CULINARY SCIENCE & FOOD HISTORY",
+        "ASTRONOMY & SPACE SCIENCE",
+        "CLIMATE SCIENCE & ENVIRONMENTAL SCIENCE",
+        "MEDICINE & HUMAN PHYSIOLOGY",
+        "PHILOSOPHY & ETHICS + LOGIC",
+        "BEHAVIORAL ECONOMICS",
+        "SOCIOLOGY & SOCIAL DYNAMICS",
+        "POLITICAL SCIENCE & GOVERNANCE",
+        "LITERATURE & LITERARY THEORY"
+    ],
+    "next_strategy": "ARCHITECTURE & DESIGN THEORY",
+    "top_all_time": [
+        {
+            "name": "Daily Oncology Science Streak",
+            "score": 25,
+            "cycle": 127
+        },
+        {
+            "name": "Daily Film Studies Streak",
+            "score": 25,
+            "cycle": 106
+        },
+        {
+            "name": "Daily CS Fundamentals Streak",
+            "score": 25,
+            "cycle": 111
+        },
+        {
+            "name": "Daily Neuroscience Streak",
+            "score": 25,
+            "cycle": 111
+        },
+        {
+            "name": "Daily Game Theory Streak",
+            "score": 23,
+            "cycle": 129
+        },
+        {
+            "name": "Daily Epidemiology Streak",
+            "score": 22,
+            "cycle": 127
+        },
+        {
+            "name": "Daily Moral Philosophy Streak",
+            "score": 22,
+            "cycle": 128
+        },
+        {
+            "name": "Daily Epistemology Streak",
+            "score": 22,
+            "cycle": 128
+        },
+        {
+            "name": "Daily Existentialism Streak",
+            "score": 22,
+            "cycle": 128
+        },
+        {
+            "name": "Daily Prospect Theory Streak",
+            "score": 22,
+            "cycle": 129
+        },
+        {
+            "name": "Daily Social Movements Streak",
+            "score": 19,
+            "cycle": 130
+        },
+        {
+            "name": "Daily Voting Theory Streak",
+            "score": 19,
+            "cycle": 131
+        },
+        {
+            "name": "Daily Network Sociology Streak",
+            "score": 18,
+            "cycle": 130
+        },
+        {
+            "name": "Daily Race Ethnicity Sociology Streak",
+            "score": 18,
+            "cycle": 130
+        },
+        {
+            "name": "Daily Constitutional Design Streak",
+            "score": 18,
+            "cycle": 131
+        },
+        {
+            "name": "Daily Revolution Theory Streak",
+            "score": 18,
+            "cycle": 131
+        },
+        {
+            "name": "Daily Narrative Theory Streak",
+            "score": 19,
+            "cycle": 132
+        },
+        {
+            "name": "Daily Rhetoric Streak",
+            "score": 19,
+            "cycle": 132
+        },
+        {
+            "name": "Daily Gothic Literature Streak",
+            "score": 18,
+            "cycle": 132
+        },
+        {
+            "name": "Daily Comparative Mythology Streak",
+            "score": 18,
+            "cycle": 132
+        }
+    ],
+    "status": "RUNNING"
 }

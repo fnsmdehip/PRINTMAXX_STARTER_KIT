@@ -1,0 +1,8 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: free audit
+    - heading "score any landing page" [level=1] [ref=e5]
+    - paragraph [ref=e6]: paste a URL. get a conversion score with actionable fixes in 30 seconds.
+  - generic [ref=e7]:
+    - textbox "https://example.com" [ref=e8]
+    - button "audit" [ref=e9] [cursor=pointer]

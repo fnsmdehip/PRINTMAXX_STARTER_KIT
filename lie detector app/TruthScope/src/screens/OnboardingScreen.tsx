@@ -39,8 +39,8 @@ import { DISCLAIMER_SHORT } from '../legal/disclaimer';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 
-const MONTHLY_LINK = 'https://buy.stripe.com/truthscope_monthly';
-const ANNUAL_LINK = 'https://buy.stripe.com/truthscope_annual';
+const MONTHLY_LINK = 'https://buy.stripe.com/fZu5kEgmk4Bv51n1Ar3F60F';
+const ANNUAL_LINK = 'https://buy.stripe.com/6oU6oI7POgkd65rcf53F60G';
 
 const STEPS: OnboardingStep[] = [
   'welcome',

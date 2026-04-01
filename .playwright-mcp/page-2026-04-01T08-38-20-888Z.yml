@@ -1,0 +1,141 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - heading "cold email ROI calculator" [level=1] [ref=e4]
+    - paragraph [ref=e5]: plug in your numbers. see if cold outreach is worth your time.
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading "your outreach volume" [level=2] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - text: emails sent per day
+          - generic [ref=e11]: most tools send 30-50/day per inbox
+        - spinbutton [ref=e12]: "40"
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - text: sending days per month
+          - generic [ref=e15]: weekdays only = 22, 7 days = 30
+        - spinbutton [ref=e16]: "22"
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - text: number of inboxes
+          - generic [ref=e19]: more inboxes = more volume
+        - spinbutton [ref=e20]: "3"
+    - generic [ref=e21]:
+      - heading "your conversion rates" [level=2] [ref=e22]
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - text: reply rate %
+          - generic [ref=e25]: "good: 3-8%. great: 8-15%"
+        - spinbutton [ref=e26]: "5"
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - text: positive reply % (of replies)
+          - generic [ref=e29]: typically 30-60% of replies are positive
+        - spinbutton [ref=e30]: "40"
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - text: meeting book rate % (of positive)
+          - generic [ref=e33]: how many positive replies become calls
+        - spinbutton [ref=e34]: "50"
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - text: close rate % (of meetings)
+          - generic [ref=e37]: "service businesses: 20-40%"
+        - spinbutton [ref=e38]: "25"
+    - generic [ref=e39]:
+      - heading "your deal economics" [level=2] [ref=e40]
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - text: average deal value ($)
+          - generic [ref=e43]: one-time or first month revenue
+        - spinbutton [ref=e44]: "2500"
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - text: monthly cost per inbox ($)
+          - generic [ref=e47]: "Google Workspace: $6. Instantly: $30/seat"
+        - spinbutton [ref=e48]: "36"
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - text: tool cost per month ($)
+          - generic [ref=e51]: Instantly/Smartlead/Apollo etc
+        - spinbutton [ref=e52]: "97"
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - text: hours per week on outreach
+          - generic [ref=e55]: prospecting + writing + following up
+        - spinbutton [ref=e56]: "5"
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - text: your hourly rate ($)
+          - generic [ref=e59]: what's your time worth?
+        - spinbutton [ref=e60]: "50"
+    - generic [ref=e61]:
+      - heading "your cold email math" [level=2] [ref=e62]
+      - generic [ref=e63]:
+        - generic [ref=e64]: emails sent / month
+        - generic [ref=e65]: 2,640
+      - generic [ref=e66]:
+        - generic [ref=e67]: total replies
+        - generic [ref=e68]: "132.0"
+      - generic [ref=e69]:
+        - generic [ref=e70]: positive replies
+        - generic [ref=e71]: "52.8"
+      - generic [ref=e72]:
+        - generic [ref=e73]: meetings booked
+        - generic [ref=e74]: "26.4"
+      - generic [ref=e75]:
+        - generic [ref=e76]: deals closed
+        - generic [ref=e77]: "6.6"
+      - generic [ref=e78]:
+        - generic [ref=e79]: projected monthly revenue
+        - generic [ref=e80]: $16,500
+        - generic [ref=e81]: $198,000/year at this pace
+      - generic [ref=e82]:
+        - generic [ref=e83]: total monthly cost (tools + inboxes)
+        - generic [ref=e84]: $205
+      - generic [ref=e85]:
+        - generic [ref=e86]: time cost (your hours x rate)
+        - generic [ref=e87]: $1,083
+      - generic [ref=e88]:
+        - generic [ref=e89]: total cost (tools + time)
+        - generic [ref=e90]: $1,288
+      - generic [ref=e91] [cursor=pointer]: "get the full breakdown: net profit, ROI, cost per deal, effective hourly rate, and verdict. drop your email below."
+  - generic [ref=e92]:
+    - heading "want the full cold email playbook?" [level=3] [ref=e93]
+    - paragraph [ref=e94]: 73 proven subject lines, 4-email sequences, deliverability setup, and the exact scripts that book meetings.
+    - generic [ref=e95]:
+      - textbox "your@email.com" [ref=e96]
+      - button "send me the playbook" [ref=e97] [cursor=pointer]
+      - paragraph [ref=e98]: free preview + early access pricing. no spam.
+  - generic [ref=e99]:
+    - heading "more free tools" [level=3] [ref=e100]
+    - generic [ref=e101]:
+      - link "Subject Line Grader score your subject line against 847 winners" [ref=e102] [cursor=pointer]:
+        - /url: https://subject-line-grader.surge.sh
+        - generic [ref=e103]: Subject Line Grader
+        - generic [ref=e104]: score your subject line against 847 winners
+      - link "Deliverability Checklist 23-point audit to get out of spam" [ref=e105] [cursor=pointer]:
+        - /url: https://cold-email-deliverability-checklist.surge.sh
+        - generic [ref=e106]: Deliverability Checklist
+        - generic [ref=e107]: 23-point audit to get out of spam
+      - link "Revenue Leak Audit find where you're losing $1,200-4,850/mo" [ref=e108] [cursor=pointer]:
+        - /url: https://revenue-leak-audit.surge.sh
+        - generic [ref=e109]: Revenue Leak Audit
+        - generic [ref=e110]: find where you're losing $1,200-4,850/mo
+      - link "Revenue Estimator see if your side project prints money or burns time" [ref=e111] [cursor=pointer]:
+        - /url: https://side-project-revenue-estimator.surge.sh
+        - generic [ref=e112]: Revenue Estimator
+        - generic [ref=e113]: see if your side project prints money or burns time
+    - link "see all 11 tools →" [ref=e114] [cursor=pointer]:
+      - /url: https://app-hub-crosslinks.surge.sh
+  - contentinfo [ref=e115]:
+    - paragraph [ref=e116]:
+      - text: © 2026 PRINTMAXX ·
+      - link "all products" [ref=e117] [cursor=pointer]:
+        - /url: https://printmaxx-store.surge.sh/
+      - text: ·
+      - link "coldmaxx" [ref=e118] [cursor=pointer]:
+        - /url: https://coldmaxx-web.surge.sh/
+      - text: ·
+      - link "solopreneur stack" [ref=e119] [cursor=pointer]:
+        - /url: https://ai-stack-2026.surge.sh/

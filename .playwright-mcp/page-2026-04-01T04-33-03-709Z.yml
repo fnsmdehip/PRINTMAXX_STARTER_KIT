@@ -1,0 +1,43 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - img [ref=e10]
+    - heading "Hilal" [level=1] [ref=e14]
+    - paragraph [ref=e15]: Ramadan Companion
+    - paragraph [ref=e16]: رفيق رمضان
+  - generic [ref=e19]:
+    - paragraph [ref=e20]: more free tools
+    - generic [ref=e21]:
+      - link "TaskSmash ADHD task breaker. free goblin tools alternative." [ref=e22] [cursor=pointer]:
+        - /url: https://tasksmash.surge.sh
+        - generic [ref=e23]: TaskSmash
+        - text: ADHD task breaker. free goblin tools alternative.
+      - link "CoreDay 3 non-negotiables. that's it. win your day." [ref=e24] [cursor=pointer]:
+        - /url: https://coreday.surge.sh
+        - generic [ref=e25]: CoreDay
+        - text: 3 non-negotiables. that's it. win your day.
+      - link "FocusLock pomodoro timer with stats. lock in." [ref=e26] [cursor=pointer]:
+        - /url: https://focuslock-web.surge.sh
+        - generic [ref=e27]: FocusLock
+        - text: pomodoro timer with stats. lock in.
+      - link "HabitForge build streaks. track habits. no BS." [ref=e28] [cursor=pointer]:
+        - /url: https://habitforge-web.surge.sh
+        - generic [ref=e29]: HabitForge
+        - text: build streaks. track habits. no BS.
+      - link "MealMaxx meal planning that doesn't suck." [ref=e30] [cursor=pointer]:
+        - /url: https://mealmaxx-web.surge.sh
+        - generic [ref=e31]: MealMaxx
+        - text: meal planning that doesn't suck.
+      - link "SleepMaxx sleep tracking and optimization." [ref=e32] [cursor=pointer]:
+        - /url: https://sleepmaxx-web.surge.sh
+        - generic [ref=e33]: SleepMaxx
+        - text: sleep tracking and optimization.
+      - link "WalkToUnlock walking incentive. earn your screen time." [ref=e34] [cursor=pointer]:
+        - /url: https://walktounlock-web.surge.sh
+        - generic [ref=e35]: WalkToUnlock
+        - text: walking incentive. earn your screen time.
+    - generic [ref=e36]:
+      - paragraph [ref=e37]: daily ramadan reminders and duas
+      - paragraph [ref=e38]: get daily reminders and duas in your inbox. free.
+      - generic [ref=e39]:
+        - textbox "your@email.com" [ref=e40]
+        - button "send it" [ref=e41] [cursor=pointer]

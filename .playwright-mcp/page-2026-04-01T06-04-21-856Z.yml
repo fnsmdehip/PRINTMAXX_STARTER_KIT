@@ -1,0 +1,201 @@
+- generic [ref=e3]:
+  - region "top of page"
+  - link "wix This website was built on Wix. Create yours today. Get Started" [ref=e5] [cursor=pointer]:
+    - /url: https://www.wix.com/lpviral/enviral?utm_campaign=vir_wixad_live&adsVersion=banner_2024&orig_msid=aa99f552-cce6-4d9b-96f0-a304175f7068&orig_msid=16bd8b07-f7e5-4e84-a308-a3a05a3bde4b&adsVersion=banner_2024
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img "wix" [ref=e10]
+        - text: This website was built on Wix. Create yours today.
+      - generic [ref=e15]: Get Started
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - generic [ref=e29]:
+        - generic:
+          - generic:
+            - link "Untitled" [ref=e31] [cursor=pointer]:
+              - /url: https://roofingresolutions.wixsite.com/website
+              - img "Untitled" [ref=e32]
+            - paragraph [ref=e33]:
+              - generic [ref=e34]: ROOFING RESOLUTIONS
+            - paragraph [ref=e35]:
+              - link "roofingresolutions@hotmail.com" [ref=e37] [cursor=pointer]:
+                - /url: mailto:roofingresolutions@hotmail.com
+            - paragraph [ref=e38]: "0409631509"
+            - list "Social Bar" [ref=e49]:
+              - listitem [ref=e50]:
+                - link "Facebook" [ref=e51] [cursor=pointer]:
+                  - /url: https://www.facebook.com/roofingresolutions/
+                  - img "Facebook" [ref=e52]
+            - navigation "Site" [ref=e54]:
+              - list [ref=e55]:
+                - listitem [ref=e56] [cursor=pointer]:
+                  - link "Home" [ref=e57]:
+                    - /url: https://roofingresolutions.wixsite.com/website
+                    - paragraph [ref=e60]: Home
+                - listitem [ref=e61] [cursor=pointer]:
+                  - link "Welcome" [ref=e62]:
+                    - /url: https://roofingresolutions.wixsite.com/website
+                    - paragraph [ref=e65]: Welcome
+                - listitem [ref=e66] [cursor=pointer]:
+                  - link "About" [ref=e67]:
+                    - /url: https://roofingresolutions.wixsite.com/website
+                    - paragraph [ref=e70]: About
+                - listitem [ref=e71] [cursor=pointer]:
+                  - link "Services" [ref=e72]:
+                    - /url: https://roofingresolutions.wixsite.com/website
+                    - paragraph [ref=e75]: Services
+                - listitem [ref=e76] [cursor=pointer]:
+                  - link "Recent Work" [ref=e77]:
+                    - /url: https://roofingresolutions.wixsite.com/website
+                    - paragraph [ref=e80]: Recent Work
+                - listitem [ref=e81] [cursor=pointer]:
+                  - link "Testimonial" [ref=e82]:
+                    - /url: https://roofingresolutions.wixsite.com/website
+                    - paragraph [ref=e85]: Testimonial
+                - listitem [ref=e86] [cursor=pointer]:
+                  - link "Contact" [ref=e87]:
+                    - /url: https://roofingresolutions.wixsite.com/website
+                    - paragraph [ref=e90]: Contact
+    - main [ref=e91]:
+      - generic [ref=e95]:
+        - generic:
+          - generic:
+            - generic:
+              - img "RoofingRes..PNG" [ref=e107]
+              - 'region "Home: Welcome"'
+              - generic [ref=e113]:
+                - generic:
+                  - generic:
+                    - heading "WELCOME TO ROOFING RESOLUTIONS" [level=1] [ref=e117]:
+                      - generic [ref=e118]: WELCOME TO ROOFING RESOLUTIONS
+                    - paragraph [ref=e119]: Your Professional Roofing Service
+                    - img "15356680_375341026135109_4599550406118021890_n.jpg" [ref=e122]
+              - 'region "Home: Welcome"'
+              - generic [ref=e128]:
+                - generic:
+                  - generic:
+                    - img "030.JPG" [ref=e134]
+                    - heading "GET TO KNOW US" [level=2] [ref=e135]:
+                      - generic [ref=e136]: GET TO KNOW US
+                    - paragraph [ref=e137]: Our Story
+                    - paragraph [ref=e138]: "Family owned and operated Fast, friendly and professional. Roofing Resolutions has over 12 years experience. Our team is up for every job, managing projects with the skill and experience our clients have come to expect. We always stand behind our work, with customer satisfaction being our #1 priority. Contact us to learn more about our incredible staff and how they can help you!"
+              - 'region "Home: About"'
+              - generic [ref=e144]:
+                - generic:
+                  - generic:
+                    - heading "OUR SERVICES" [level=2] [ref=e148]:
+                      - generic [ref=e149]: OUR SERVICES
+                    - img "reroof..png" [ref=e152]
+                    - heading "Re-roofing" [level=3] [ref=e153]
+                    - button "Contact Us" [ref=e154]:
+                      - generic "Contact Us" [ref=e155] [cursor=pointer]:
+                        - generic [ref=e156]: Contact Us
+                    - img "Climbing a Ladder" [ref=e159]
+                    - heading "Roofing Repair" [level=3] [ref=e160]
+                    - link "Contact Us" [ref=e162] [cursor=pointer]:
+                      - /url: https://roofingresolutions.wixsite.com/website
+                      - generic [ref=e163]: Contact Us
+                    - img "gutter.jpg" [ref=e166]
+                    - heading "Fascia and gutter" [level=3] [ref=e167]
+                    - link "Contact Us" [ref=e169] [cursor=pointer]:
+                      - /url: https://roofingresolutions.wixsite.com/website
+                      - generic [ref=e170]: Contact Us
+                    - img "download.jpg" [ref=e173]
+                    - heading "patios" [level=3] [ref=e174]
+                    - link "Contact Us" [ref=e176] [cursor=pointer]:
+                      - /url: https://roofingresolutions.wixsite.com/website
+                      - generic [ref=e177]: Contact Us
+                    - img "4576899241.jpg" [ref=e180]
+                    - heading "Leaf Guard" [level=3] [ref=e181]
+                    - link "Contact Us" [ref=e183] [cursor=pointer]:
+                      - /url: https://roofingresolutions.wixsite.com/website
+                      - generic [ref=e184]: Contact Us
+                    - img "Cleaning a Rain Gutter" [ref=e187]
+                    - heading "Gutter cleaning" [level=3] [ref=e188]
+                    - link "Contact Us" [ref=e190] [cursor=pointer]:
+                      - /url: https://roofingresolutions.wixsite.com/website
+                      - generic [ref=e191]: Contact Us
+              - 'region "Home: Services"'
+              - generic [ref=e197]:
+                - generic:
+                  - generic:
+                    - heading "SOME OF OUR WORK" [level=2] [ref=e201]:
+                      - generic [ref=e202]: SOME OF OUR WORK
+                    - paragraph [ref=e203]: Proud To Serve You
+                    - img "12474009_226109457724934_8552013297831862661_o.jpg" [ref=e206]
+                    - generic [ref=e207]:
+                      - generic:
+                        - generic:
+                          - heading "Re-roof /new roof on extentions" [level=3] [ref=e209]
+                          - paragraph [ref=e210]: Step by Step Process
+                    - generic [ref=e211]:
+                      - generic:
+                        - generic:
+                          - heading "Re-roof" [level=3] [ref=e213]
+                          - paragraph [ref=e214]: Great Results
+                    - img "017.JPG" [ref=e217]
+                    - img "IMG_1558.JPG" [ref=e220]
+                    - generic [ref=e221]:
+                      - generic:
+                        - generic:
+                          - heading "nothings to hard" [level=3] [ref=e223]
+                          - paragraph [ref=e224]: Commitment to Quality
+              - 'region "Home: Recent Work"'
+              - generic [ref=e230]:
+                - generic:
+                  - generic:
+                    - img "15356533_373051076364104_6253798524240570468_n.jpg" [ref=e236]
+                    - generic [ref=e237]:
+                      - generic:
+                        - generic:
+                          - paragraph [ref=e239]:
+                            - generic [ref=e240]:
+                              - text: Chris and Michelle did such an awesome job on replacing old gutters and down pipes. Chris really nailed that challenging veranda curve! Great professional and friendly service at a very reasonable price. No damage to my garden and a spot on clean up job. I can thoroughly recommend their work!
+                              - text: Thank you so much!
+                          - heading "Catherine Lalor" [level=2] [ref=e241]
+              - 'region "Home: Testimonial"'
+              - generic [ref=e247]:
+                - generic:
+                  - generic:
+                    - heading "WE WANT TO HEAR FROM YOU" [level=2] [ref=e251]:
+                      - generic [ref=e252]: WE WANT TO HEAR FROM YOU
+                    - paragraph [ref=e253]: When you're in need of a dependable Roofing Service, don’t hesitate. Contact Roofing resolutions today.
+                    - paragraph [ref=e254]: Aratula QLD Australia 4309
+                    - paragraph [ref=e255]:
+                      - link "roofingresolutions@hotmail.com" [ref=e257] [cursor=pointer]:
+                        - /url: mailto:roofingresolutions@hotmail.com
+                    - paragraph [ref=e258]: "0409631509"
+                    - list "Social Bar" [ref=e260]:
+                      - listitem [ref=e261]:
+                        - link "Facebook" [ref=e262] [cursor=pointer]:
+                          - /url: https://www.facebook.com/roofingresolutions/
+                          - img "Facebook" [ref=e263]
+                    - generic [ref=e265]:
+                      - generic:
+                        - generic:
+                          - textbox "Name" [ref=e268]
+                          - textbox "Email" [ref=e271]
+                          - textbox "Phone" [ref=e274]
+                          - textbox "Address" [ref=e277]
+                          - textbox "Subject" [ref=e280]
+                          - textbox [ref=e282]:
+                            - /placeholder: Type your message here...
+                          - button "Submit" [ref=e284] [cursor=pointer]:
+                            - generic [ref=e285]: Submit
+              - 'region "Home: Contact"'
+    - contentinfo [ref=e286]:
+      - generic [ref=e292]:
+        - generic:
+          - generic:
+            - list "Social Bar" [ref=e294]:
+              - listitem [ref=e295]:
+                - link "Facebook" [ref=e296] [cursor=pointer]:
+                  - /url: https://www.facebook.com/roofingresolutions/
+                  - img "Facebook" [ref=e297]
+            - paragraph [ref=e298]:
+              - link "roofingresolutions@hotmail.com" [ref=e300] [cursor=pointer]:
+                - /url: mailto:roofingresolutions@hotmail.com
+            - paragraph [ref=e301]: "0409631509"
+            - paragraph [ref=e302]: Aratula QLD Australia 4309
+            - paragraph [ref=e312]: ©2017 by Roofing resolutions. Proudly created with Wix.com
+  - region "bottom of page"

@@ -1,25 +1,31 @@
 {
-  "last_updated": "2026-04-01T00:00:00.000000",
+  "last_updated": "2026-04-01T09:00:00.000000",
   "last_cycle": "2026-04-01",
-  "cycle_number": 36,
+  "cycle_number": 38,
   "coverage": {
     "twitter": {
       "threads": 14,
       "singles": 75,
       "reply_baits": 26,
       "qt_captions": 15,
-      "total_pieces": 152,
-      "last_cycle": 36,
+      "total_pieces": 170,
+      "last_cycle": 38,
       "new_this_cycle": [
-        "tw_streakr_swipe_mechanic",
-        "tw_sleep_supplement_melatonin_overdose",
-        "tw_cnsnt_desktop_launch",
-        "tw_22_products_zero_gumroad",
-        "tw_398_deployed_zero_revenue",
-        "tw_supplement_cluster_6page",
-        "rb_streakr_productivity",
-        "rb_melatonin_overdose_health",
-        "rb_398_apps_bottleneck"
+        "thread_hedge_fund_app_portfolio",
+        "thread_automation_dysmorphia",
+        "thread_x402_micropayments",
+        "tw_automation_dysmorphia_single",
+        "tw_competitor_intel_agent",
+        "tw_surgehsh_robots_psa",
+        "tw_cold_email_gap",
+        "tw_soberstreak_launch",
+        "tw_blender_addons_discovery",
+        "tw_obsidian_vault_systems",
+        "tw_vibe_coder_job_board",
+        "tw_supplement_affiliate_cluster",
+        "reply_bait_graveyard",
+        "community_bait_kill_rule",
+        "controversial_take_ship_speed"
       ],
       "prev_cycle_35": [
         "day56_thread_7tweets",
@@ -37,7 +43,7 @@
       ]
     },
     "reddit": {
-      "posts_ready": 108,
+      "posts_ready": 115,
       "subreddits": [
         "r/nocode",
         "r/automation",
@@ -90,7 +96,7 @@
         "r/solopreneur",
         "r/content_marketing"
       ],
-      "last_cycle": 35,
+      "last_cycle": 38,
       "new_this_cycle": [
         "r1_day56_sideproject",
         "r2_agent_architecture_claudeai",
@@ -103,6 +109,15 @@
         "r9_sleepmaxx",
         "r10_ai_stack_2026",
         "r11_blue_ocean_method"
+      ],
+      "new_this_cycle_38": [
+        "r/sobriety_soberstreak",
+        "r/blender_addon_opportunity",
+        "r/ObsidianMD_vault_systems",
+        "r/Entrepreneur_automation_dysmorphia",
+        "r/SEO_surgehsh_robots",
+        "r/ClaudeAI_x402_protocol",
+        "r/Entrepreneur_vibe_coder_job_board"
       ]
     },
     "hacker_news": {
@@ -115,8 +130,8 @@
       ]
     },
     "linkedin": {
-      "posts_ready": 33,
-      "last_cycle": 35,
+      "posts_ready": 38,
+      "last_cycle": 38,
       "new_this_cycle": [
         "li1_seo_automation_b2b",
         "li2_day56_thought_leadership",
@@ -148,7 +163,11 @@
     "stackmaxx": "cycle_33",
     "n8n_vs_zapier": "cycle_33",
     "claude_code_bible": "cycle_33",
-    "prayerlock_final_push": "cycle_33"
+    "prayerlock_final_push": "cycle_33",
+    "hn": {
+      "posts_ready": 5,
+      "last_cycle": 38
+    }
   },
   "assets_covered": {
     "n8n-vs-zapier-vs-make": {
@@ -720,7 +739,11 @@
       "channels": [
         "reddit"
       ],
-      "subreddits": ["r/ADHD", "r/productivity", "r/selfimprovement"]
+      "subreddits": [
+        "r/ADHD",
+        "r/productivity",
+        "r/selfimprovement"
+      ]
     },
     "sleepmaxx-cycle36": {
       "first_covered": "2026-04-01",
@@ -728,7 +751,11 @@
       "channels": [
         "reddit"
       ],
-      "subreddits": ["r/biohackers", "r/longevity", "r/sleep"]
+      "subreddits": [
+        "r/biohackers",
+        "r/longevity",
+        "r/sleep"
+      ]
     },
     "walktounlock-hn": {
       "first_covered": "2026-04-01",
@@ -747,16 +774,46 @@
       "note": "Products teased as pending Gumroad. Creates demand before launch."
     }
   },
+  "cycle_37_assets_distributed": [
+    "TruthScope / lie-detector app (NEW \u2014 Show HN + r/iphone + r/technology + Twitter thread)",
+    "soberstreak-native (r/stopdrinking, r/soberlife)",
+    "mealmaxx (r/nutrition, r/keto, r/loseit \u2014 carried from c35, NOW FILLED)",
+    "website-builders-compared.surge.sh (HN Show + LinkedIn + r/webdev)",
+    "toolstack-review.surge.sh (Twitter controversy angle)",
+    "ai-stack-2026 (HN Ask HN \u2014 carried from c35, NOW FILLED)",
+    "research-blog UAF (r/altneuroscience \u2014 carried from c35, NOW FILLED)",
+    "9 Claude Code PDFs (r/ClaudeAI + LinkedIn direct send offer)",
+    "Day 57 builder trap / automation dysmorphia (LinkedIn thought leadership)"
+  ],
+  "cycle_37_output_files": [
+    "CONTENT/social/distribution/twitter_cycle37_20260401.md",
+    "CONTENT/social/distribution/reddit_cycle37_20260401.md",
+    "CONTENT/social/distribution/hn_cycle37_20260401.md",
+    "CONTENT/social/distribution/linkedin_cycle37_20260401.md",
+    "AUTOMATIONS/agent/swarm/reports/distribution_engine_report_20260401_c37.md"
+  ],
+  "cycle_37_channels": {
+    "twitter": 12,
+    "reddit": 7,
+    "hacker_news": 4,
+    "linkedin": 4,
+    "total": 27
+  },
+  "cycle_37_content_pieces": 27,
+  "cycle_37_new_assets": [
+    "TruthScope (lie detector app, viral potential, first distribution)",
+    "soberstreak-native (native iOS build)",
+    "website-builders-compared.surge.sh",
+    "toolstack-review.surge.sh"
+  ],
   "queue_next_cycle": [
-    "mealmaxx \u2014 r/nutrition, r/keto, r/loseit posts (carried from c35)",
-    "ai-stack-2026 \u2014 HN Ask HN angle (carried from c35)",
-    "research-blog UAF \u2014 r/altneuroscience, r/quantum posts (carried from c35)",
+    "TruthScope \u2014 r/psychology, r/science (deception science angle not yet covered)",
+    "supplement cluster \u2014 Pinterest pins for men over 55 (still unexecuted, needs Pinterest account)",
     "builders-ledger \u2014 dev.to cross-post when account created",
     "digital products \u2014 Gumroad listings when account live (22 products waiting)",
     "streakr \u2014 ProductHunt launch when account live",
-    "supplement cluster \u2014 Pinterest pins for men over 55 audience",
     "cnsnt \u2014 ProductHunt launch when account live",
-    "walktounlock \u2014 Show HN (posted this cycle, monitor response)"
+    "soberstreak-native \u2014 App Store launch post when approved"
   ],
   "persistent_gaps": [
     "product_hunt (needs account)",
@@ -776,6 +833,19 @@
     "cycle_35": 32,
     "cycle_36": 34
   },
+  "cycle_37_gap_analysis": {
+    "not_yet_covered": [
+      "TruthScope \u2014 r/psychology, r/science (deception research angle)",
+      "supplement cluster \u2014 Pinterest (no Pinterest account)",
+      "soberstreak-native \u2014 App Store page (not yet live)",
+      "Claude Code PDFs \u2014 Gumroad (no account)"
+    ],
+    "gaps_filled_this_cycle": [
+      "mealmaxx r/nutrition r/keto r/loseit (was carried from c35 AND c36)",
+      "ai-stack-2026 HN Ask HN (was carried from c35 AND c36)",
+      "research-blog UAF r/altneuroscience (was carried from c35 AND c36)"
+    ]
+  },
   "urgent_actions": {
     "p0_revenue_unblock": {
       "action": "Create Stripe account (10 min), Gumroad account (30 min), Gmail API auth (5 min)",
@@ -789,7 +859,7 @@
       "priority": "P0 \u2014 every day without real links is lost commission"
     }
   },
-  "total_content_pieces": 346,
+  "total_content_pieces": 373,
   "cycle_31_assets_distributed": [
     "yoga-streak.surge.sh",
     "pushup-streak.surge.sh",
@@ -949,5 +1019,11 @@
       "ProductHunt launches (streakr, cnsnt, walktounlock)",
       "Affiliate links on supplement pages (placeholder only)"
     ]
+  },
+  "coverage_gaps": {
+    "directories": "SoberStreak not yet on BetaList, Product Hunt, AlternativeTo",
+    "communities": "OPP_068 Vibe Coder Job Board not yet in Anthropic Discord / r/ClaudeAI",
+    "email": "Supplement affiliate newsletter not built yet",
+    "blender_market": "OPP_065 needs actual addon built before listing on Blender Market"
   }
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-01 00:37:10",
+  "generated_at": "2026-04-01 06:10:29",
   "sources": {
-    "alpha_staging_candidates": 4023,
+    "alpha_staging_candidates": 4106,
     "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 176
+    "existing_specs_detected": 196
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,55 +13,25 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3955,
+    "total_candidates": 4112,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 53,
-      "BUILD_NEW_NOW": 41,
-      "SPEC_AND_TEST": 140,
-      "PARK": 3713,
+      "ITERATE_EXISTING_NOW": 55,
+      "BUILD_NEW_NOW": 43,
+      "SPEC_AND_TEST": 154,
+      "PARK": 3852,
       "VALIDATE_FIRST": 8
     },
     "cluster_counts": {
       "faith": 102,
-      "habits": 328,
-      "ai_utility": 2838,
-      "fitness": 177,
-      "focus": 375,
-      "sleep": 119,
+      "habits": 357,
+      "ai_utility": 2916,
+      "fitness": 181,
+      "focus": 420,
+      "sleep": 120,
       "meal": 16
     }
   },
   "queue": [
-    {
-      "candidate_id": "LEADMACHINE_WEBGL_20260401",
-      "title": "WebGL/3D portfolio demo \u2014 2 active leads require it (Arcol + Ayeeye)",
-      "source": "lead_machine_report_20260318",
-      "source_type": "lead_machine_demand",
-      "roi_potential": "HIGHEST",
-      "priority": "P0",
-      "status": "APPROVED",
-      "evidence": "Lead Machine found 2 HN leads needing WebGL: Arcol (thomas@arcol.io, 8.5/10) and Ayeeye (ayeeye.careers@gmail.com, 9.5/10). Both need React + WebGL/Three.js. Having one 3D portfolio piece closes both leads. Immediate contract revenue path.",
-      "reviewer_notes": "Build a single-page Three.js demo. Can be showcased at webgl-demo.surge.sh. Doubles as portfolio for EAS pitches. Use as conversation opener in outreach to Arcol and Ayeeye.",
-      "applicable_niches": "EAS_FREELANCE",
-      "applicable_methods": "OUTBOUND",
-      "cross_pollinator_inject": true,
-      "injected_at": "2026-04-01T00:46"
-    },
-    {
-      "candidate_id": "LEADMACHINE_LOCALBIZ_AUDIT_20260401",
-      "title": "Local biz website audit tool \u2014 lead machine generating 10+ dental/chiro leads/day via audits",
-      "source": "lead_machine_report_20260318",
-      "source_type": "lead_machine_demand",
-      "roi_potential": "HIGH",
-      "priority": "P1",
-      "status": "APPROVED",
-      "evidence": "GoDaddy/Wix subdomain hunting generating 10 leads/cycle. pagescorer.surge.sh is the audit tool but needs polish. Dental leads score 41/100 average. Visual pain point needs branded report output (PDF). Could sell audit reports at $99-499.",
-      "reviewer_notes": "Upgrade pagescorer.surge.sh to output a branded PDF report. Then the audit IS the product \u2014 sell it at $99. Lead machine becomes a revenue engine, not just a lead finder.",
-      "applicable_niches": "LOCAL_BIZ",
-      "applicable_methods": "OUTBOUND",
-      "cross_pollinator_inject": true,
-      "injected_at": "2026-04-01T00:46"
-    },
     {
       "candidate_id": "RF_005",
       "title": "Review prompt timing hack: +0.8 stars by delaying review request to value moment",
@@ -2525,6 +2495,5 @@
       "risk_score": 0,
       "rank": 40
     }
-  ],
-  "cross_pollinator_update": "2026-04-01T00:46"
+  ]
 }
