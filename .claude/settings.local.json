@@ -283,7 +283,9 @@
       "WebFetch(domain:christophermeiklejohn.com)",
       "mcp__scheduled-tasks__list_scheduled_tasks",
       "Bash(npm uninstall:*)",
-      "Bash(export PATH=\"/usr/local/bin:/opt/homebrew/bin:$HOME/.nvm/versions/node/v25.6.1/bin:$PATH\")"
+      "Bash(export PATH=\"/usr/local/bin:/opt/homebrew/bin:$HOME/.nvm/versions/node/v25.6.1/bin:$PATH\")",
+      "Bash(export PATH=/opt/homebrew/bin:$PATH export LANG=en_US.UTF-8 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope rm -rf ios .expo 2)",
+      "Bash(/dev/null npx:*)"
     ]
   }
 }

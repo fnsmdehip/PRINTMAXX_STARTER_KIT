@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "TruthScope",
+    "slug": "truthscope",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "scheme": "truthscope",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0F"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.printmaxx.truthscope",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "TruthScope uses the camera to measure physiological signals like heart rate through photoplethysmography (PPG) and to analyze facial micro-expressions during lie detection sessions.",
+        "NSMicrophoneUsageDescription": "TruthScope uses the microphone to perform voice stress analysis, detecting changes in vocal pitch, tremor, and other acoustic features during lie detection sessions.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A0F"
+      },
+      "package": "com.printmaxx.truthscope",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "TruthScope uses the camera to measure your heart rate via fingertip photoplethysmography and to track facial micro-expressions for deception analysis.",
+          "microphonePermission": "TruthScope uses the microphone for voice stress analysis during lie detection sessions.",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "truthscope-printmaxx"
+      }
+    }
+  }
+}
