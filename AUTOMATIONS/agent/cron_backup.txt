@@ -113,3 +113,4 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 10 5 * * 0 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LANDING/research-blog && /opt/homebrew/bin/npx surge . fnsmdehip-research.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
 # KPI auto-rollover (pushes unfinished KPIs to next day, max 5)
 35 5 * * * curl -s -X POST http://localhost:9999/api/kpi/rollover >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/kpi_rollover.log 2>&1
+30 */4 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/cross_pollinator_daily.py --cycle >> AUTOMATIONS/logs/cross_pollinator_daily.log 2>&1
