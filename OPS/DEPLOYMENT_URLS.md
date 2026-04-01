@@ -8,6 +8,7 @@
 
 | App | URL | Status |
 |-----|-----|--------|
+| truthscope | https://truthscope.surge.sh | LIVE — gap-hunter deploy 2026-04-01 |
 | beat-making-streak-landing | https://beat-making-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
 | music-theory-streak-landing | https://music-theory-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
 | outfit-design-streak-landing | https://outfit-design-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
