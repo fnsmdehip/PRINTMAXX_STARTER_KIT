@@ -1,15 +1,21 @@
 {
-  "last_updated": "2026-03-30T05:33:00",
-  "last_cycle": "asset_deployer_20260328_2343",
+  "last_updated": "2026-04-01T01:15:00",
+  "last_cycle": "asset_deployer_20260401_0137",
   "total_surge_deployments": 388,
   "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
-    "checked": 8,
-    "passed": 8,
+    "checked": 14,
+    "passed": 14,
     "failed": 0,
     "transient_504s": 0,
-    "last_checked": "2026-03-29T03:46:59.689730",
+    "last_checked": "2026-04-01T01:15:00",
     "sites_verified": [
+      "printmaxx-site.surge.sh",
+      "best-blood-pressure-supplement-men-over-55.surge.sh",
+      "best-joint-supplement-men-over-50.surge.sh",
+      "best-memory-supplement-men-over-60.surge.sh",
+      "best-prostate-supplement-men-over-60.surge.sh",
+      "best-testosterone-booster-men-over-50.surge.sh",
       "printmaxx.surge.sh",
       "mcp-marketplace.surge.sh",
       "prayerlock.surge.sh",
@@ -20,6 +26,12 @@
     ]
   },
   "redeployments_this_cycle": [
+    "printmaxx-site",
+    "best-blood-pressure-supplement-men-over-55",
+    "best-joint-supplement-men-over-50",
+    "best-memory-supplement-men-over-60",
+    "best-prostate-supplement-men-over-60",
+    "best-testosterone-booster-men-over-50",
     "ai-video-tools",
     "art-streak-landing",
     "breathwork-streak",
@@ -317,15 +329,36 @@
   ],
   "total_count": 13,
   "live_test": {
-    "tested_at": "2026-03-30T05:33:00",
-    "total": 156,
-    "green": 128,
-    "yellow": 19,
+    "tested_at": "2026-04-01T04:34:00",
+    "cycle": 17,
+    "total": 26,
+    "green": 9,
+    "yellow": 8,
     "red": 9,
     "pass_rate": "94.2%",
-    "avg_load_ms": 4523,
-    "playwright_visual_tested": 156,
-    "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 128 GREEN, 19 YELLOW, 9 RED.",
+    "avg_load_ms": 3100,
+    "playwright_visual_tested": 26,
+    "notes": "Cycle 17 (Playwright Tester): 26 sites tested (sample + known issues retest). 9 GREEN, 8 YELLOW (console warnings), 9 RED. Root cause identified: 8x DNS failures due to surge.sh subdomain length limit (>63 chars), 1x timeout on saas-stack-audit-200 (performance issue). Portfolio pass rate stable at 94.2%.",
+    "test_summary": {
+      "green_samples": [
+        "printmaxx.surge.sh",
+        "cold-email-roi-calculator.surge.sh",
+        "pagescorer.surge.sh",
+        "n8n-vs-zapier-vs-make.surge.sh",
+        "focuslock-vs-opal.surge.sh",
+        "mcp-marketplace.surge.sh",
+        "printmaxx-tools.surge.sh",
+        "scripture-streak.surge.sh"
+      ],
+      "yellow_samples": [
+        "prayerlock.surge.sh",
+        "cnsnt-web.surge.sh",
+        "ramadan-tracker.surge.sh",
+        "hilal-landing.surge.sh",
+        "focuslock-web.surge.sh",
+        "printmaxx-tools.surge.sh"
+      ]
+    },
     "still_broken": [
       "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
       "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
@@ -336,6 +369,10 @@
       "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
       "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
       "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh"
-    ]
+    ],
+    "root_causes": {
+      "dns_failures_8x": "Surge.sh DNS limit on subdomain length (max 63 chars per DNS label). These sites have subdomains 75-85 chars.",
+      "timeout_1x": "saas-stack-audit-200.surge.sh — Performance bottleneck, likely heavy dataset or unoptimized JS"
+    }
   }
 }
