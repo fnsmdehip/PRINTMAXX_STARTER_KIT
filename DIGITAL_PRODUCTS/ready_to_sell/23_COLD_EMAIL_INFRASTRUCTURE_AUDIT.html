@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Email Infrastructure Audit — 14-Point Pre-Campaign Checklist</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', serif;
+    background: #fafaf8;
+    color: #1a1a1a;
+    line-height: 1.7;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 48px;
+  }
+
+  /* Cover */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #0f0f0f;
+    color: #fff;
+    padding: 80px 60px;
+    page-break-after: always;
+  }
+  .cover-badge {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ff4d00;
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+  .cover h1 em {
+    color: #ff4d00;
+    font-style: normal;
+  }
+  .cover-sub {
+    font-size: 18px;
+    color: #999;
+    max-width: 500px;
+    margin-bottom: 48px;
+    line-height: 1.5;
+  }
+  .cover-divider {
+    width: 48px;
+    height: 3px;
+    background: #ff4d00;
+    margin-bottom: 48px;
+  }
+  .cover-stats {
+    display: flex;
+    gap: 48px;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-num {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    font-family: 'Courier New', monospace;
+  }
+  .cover-footer {
+    margin-top: auto;
+    padding-top: 60px;
+    font-size: 12px;
+    color: #444;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Content */
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 48px 0 16px;
+    letter-spacing: -0.5px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: #1a1a1a;
+  }
+  p {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .lede {
+    font-size: 20px;
+    color: #333;
+    border-left: 4px solid #ff4d00;
+    padding: 12px 20px;
+    margin: 24px 0 32px;
+    line-height: 1.5;
+    background: #fff8f6;
+  }
+
+  /* Checklist items */
+  .checklist {
+    margin: 24px 0;
+  }
+  .check-item {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px 24px 20px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    page-break-inside: avoid;
+  }
+  .check-item:hover {
+    border-color: #ff4d00;
+  }
+  .check-box {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .check-content {
+    flex: 1;
+  }
+  .check-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #0f0f0f;
+  }
+  .check-detail {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .check-fix {
+    font-size: 13px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: 'Courier New', monospace;
+    color: #333;
+  }
+  .check-fix strong {
+    color: #ff4d00;
+  }
+
+  /* Warning box */
+  .warning {
+    background: #fff4f0;
+    border: 1px solid #ff4d00;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .warning-label {
+    font-size: 11px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff4d00;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .warning p {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+  }
+
+  /* Platform blindspot table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+  }
+  th {
+    background: #0f0f0f;
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: #fafaf8;
+  }
+  .pass { color: #16a34a; font-weight: 700; }
+  .fail { color: #dc2626; font-weight: 700; }
+  .partial { color: #d97706; font-weight: 700; }
+
+  /* Section number */
+  .section-num {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ff4d00;
+    margin-bottom: 8px;
+  }
+
+  /* Summary scorecard */
+  .scorecard {
+    background: #0f0f0f;
+    color: #fff;
+    border-radius: 10px;
+    padding: 32px;
+    margin: 32px 0;
+  }
+  .scorecard h3 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 20px;
+  }
+  .score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+  }
+  .score-label { color: #aaa; }
+  .score-value { color: #ff4d00; font-weight: 700; font-family: 'Courier New', monospace; }
+
+  @media print {
+    .cover { page-break-after: always; }
+    .check-item { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-badge">PRINTMAXX — OPERATIONAL GUIDE #23</div>
+  <h1>Cold Email<br><em>Infrastructure</em><br>Audit</h1>
+  <p class="cover-sub">14-point pre-campaign checklist. Run this before every campaign. Your dashboard says "healthy" — your inbox placement says otherwise.</p>
+  <div class="cover-divider"></div>
+  <div class="cover-stats">
+    <div class="stat">
+      <span class="stat-num">76%</span>
+      <span class="stat-label">emails never reach inbox</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">14</span>
+      <span class="stat-label">audit checkpoints</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">$0</span>
+      <span class="stat-label">tools required</span>
+    </div>
+  </div>
+  <div class="cover-footer">
+    <span>printmaxx.io</span>
+    <span>2026 EDITION — v1.0</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="page">
+
+<div class="section-num">THE PROBLEM</div>
+<h2>Your Platform Dashboard Is Lying to You</h2>
+
+<p class="lede">Instantly shows "healthy." Smartlead shows "warming up." Your emails land in spam. Here's what none of the dashboards actually check.</p>
+
+<p>Cold email infrastructure has exactly one job: get your message into the inbox. Not the promotions tab. Not spam. The inbox.</p>
+
+<p>Most operators fail this before they write a single word. They set up domains, connect them to Instantly or Smartlead, wait 14 days for warmup, and launch campaigns that quietly land in spam. The platform dashboard shows green. The reply rate shows zero.</p>
+
+<p>The 14 points below are what the platforms don't check. Run this before every campaign — new domains AND existing ones that have been running for more than 30 days.</p>
+
+<div class="warning">
+  <div class="warning-label">CRITICAL CONTEXT</div>
+  <p>Domains degrade. A domain that passed this audit 60 days ago may fail today. Repeat this checklist monthly on all active sending domains, not just at setup.</p>
+</div>
+
+---
+
+<div class="section-num">SECTION 1 — DNS AUTHENTICATION (Points 1-4)</div>
+<h2>The Foundation Nobody Reads Twice</h2>
+
+<p>DNS authentication is the baseline. If these fail, nothing else matters. Yet 40%+ of operators get these wrong at setup and never recheck them after domain transfers, DNS provider changes, or hosting migrations.</p>
+
+<div class="checklist">
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">1. SPF Record — Exists and Has No Syntax Error</div>
+      <div class="check-detail">Your SPF record tells receiving servers which IPs are allowed to send on behalf of your domain. A missing or broken SPF is an instant spam signal. Common mistake: having <em>two</em> SPF records (Gmail creates one automatically when you set up Google Workspace — then you add another for your cold email tool. Two SPF records = neither works).</div>
+      <div class="check-fix"><strong>Check:</strong> mxtoolbox.com/spf → enter your domain → confirm exactly ONE SPF record exists with no "permerror." <br><strong>Fix:</strong> Merge all sending sources into one SPF record. Format: <code>v=spf1 include:_spf.google.com include:sendgrid.net ~all</code></div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">2. DKIM Record — Aligned and Valid</div>
+      <div class="check-detail">DKIM signs your emails with a cryptographic signature. Without it, your emails fail authentication at Gmail, Outlook, and Yahoo. After connecting your domain to a new ESP (email service provider), DKIM takes 24-72h to propagate — most operators check it at hour 2 and assume it's broken when it's just slow.</div>
+      <div class="check-fix"><strong>Check:</strong> mxtoolbox.com/dkim → enter your domain + selector (usually "google" or your ESP's name) → confirm "DKIM Record Found." <br><strong>Fix:</strong> If missing, re-add the DKIM TXT record from your ESP settings. If still failing after 72h, the record has a typo — copy-paste directly from ESP, don't retype.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">3. DMARC Record — Present with Quarantine Policy</div>
+      <div class="check-detail">DMARC tells receiving servers what to do when an email fails SPF or DKIM. Without DMARC, Gmail treats your domain as less trustworthy. "None" policy is better than nothing. "Quarantine" is the sweet spot — shows you care without being so strict that legitimate mail bounces.</div>
+      <div class="check-fix"><strong>Check:</strong> mxtoolbox.com/dmarc → confirm record exists. <br><strong>Minimum acceptable:</strong> <code>v=DMARC1; p=quarantine; rua=mailto:dmarc@yourdomain.com</code><br><strong>Add monitoring email</strong> — the rua address gets weekly reports on who's sending email from your domain (catches spoofing).</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">4. BIMI Record — Optional but +15% Trust Signal</div>
+      <div class="check-detail">BIMI (Brand Indicators for Message Identification) displays your logo next to your email in Gmail's inbox. It requires a Verified Mark Certificate at the enterprise level, but the standard version works without that and still sends trust signals to spam filters. Most cold emailers don't implement this. It's a 20-minute setup that most of your competition skips.</div>
+      <div class="check-fix"><strong>Skip if:</strong> You don't have a brand logo or this is a throwaway sending domain.<br><strong>Add if:</strong> You're sending from a domain you want associated with a real brand. DNS TXT record at <code>default._bimi.yourdomain.com</code>.</div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+<div class="section-num">SECTION 2 — DOMAIN REPUTATION (Points 5-8)</div>
+<h2>What Your Warmup Score Doesn't Show</h2>
+
+<p>Warmup tools track engagement metrics. They don't track your domain's actual reputation with Google, Microsoft, and Cisco Talos — the three databases that matter most for inbox placement.</p>
+
+<div class="checklist">
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">5. Google Postmaster Tools — Domain Reputation Check</div>
+      <div class="check-detail">Google Postmaster Tools is the only free, direct-from-Google signal about how Gmail perceives your domain. It shows domain reputation (Bad/Low/Medium/High) and spam rate. Most cold emailers never set this up. They find out their domain is "Bad" after sending 1,000 emails into a void.</div>
+      <div class="check-fix"><strong>Setup (10 min, one-time):</strong> postmaster.google.com → add domain → verify via DNS TXT record → wait 24-48h for data to appear. <br><strong>Required status:</strong> "Medium" or "High" before launching campaign. "Low" = proceed with caution. "Bad" = pause all sending immediately, 30-day recovery minimum.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">6. Microsoft SNDS — Outlook Sender Reputation</div>
+      <div class="check-detail">40%+ of business email inboxes run on Microsoft Outlook/Exchange. If you're not checking Microsoft SNDS (Smart Network Data Services), you're flying blind on nearly half your potential recipients. Outlook uses different spam signals than Gmail — a domain that passes Google's filters can still fail Outlook's.</div>
+      <div class="check-fix"><strong>Check:</strong> sendersupport.olc.protection.outlook.com/snds → register your IP range.<br><strong>Green status required</strong> before sending to Outlook domains. Yellow = monitor. Red = do not send, open Microsoft's mitigation form immediately.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">7. Cisco Talos — IP and Domain Reputation</div>
+      <div class="check-detail">Cisco Talos powers spam filters for 85% of enterprise mail servers. Your domain's reputation here determines whether your email reaches anyone behind a corporate firewall. Warmup tools don't track Talos. You can be fully warmed up in Instantly and blacklisted in Talos simultaneously.</div>
+      <div class="check-fix"><strong>Check:</strong> talosintelligence.com/reputation_center → enter your sending domain AND your ESP's sending IP (find in email headers). <br><strong>Required:</strong> "Neutral" or "Good." "Poor" = stop all campaigns, investigate bounce and complaint sources.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">8. Blacklist Check — 50+ Lists in 5 Minutes</div>
+      <div class="check-detail">Blacklists are maintained by hundreds of organizations. Your domain or sending IP might be on one or more of them without any warning from your ESP. Being on even one major blacklist (Spamhaus, SORBS, Barracuda) can reduce inbox placement by 30-60%.</div>
+      <div class="check-fix"><strong>Check (free):</strong> mxtoolbox.com/blacklists → run on your sending domain AND your ESP's IP. Check monthly.<br><strong>If blacklisted:</strong> Each blacklist has its own removal request process. Spamhaus removal requires addressing the root cause (bounces, spam complaints) before they'll delist you. Do not spam the removal request form — one submission per 72h maximum.</div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+<div class="section-num">SECTION 3 — LIST QUALITY (Points 9-11)</div>
+<h2>The Variable Your ESP Never Audits</h2>
+
+<p>Your infrastructure can be perfect and your campaigns can still fail if your list is dirty. Sending to invalid addresses, spam traps, or role-based accounts generates bounce signals and complaint rates that permanently damage domain reputation.</p>
+
+<div class="checklist">
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">9. Bounce Rate — Must Be Under 2%</div>
+      <div class="check-detail">Hard bounce rate above 2% is a platform-level spam signal. Instantly and Smartlead will throttle or suspend accounts that exceed this threshold. Most operators don't check bounce rates per-domain — they see the aggregate across all domains and miss that one domain is dragging the average down while others are clean.</div>
+      <div class="check-fix"><strong>Check per-domain, not in aggregate.</strong> If any single domain exceeds 2% bounces, pause it immediately. Investigate: were those contacts verified before import? <br><strong>Verify lists before import</strong> with ZeroBounce ($0.008/email) or NeverBounce ($0.003/email). Non-negotiable for purchased or scraped lists.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">10. Spam Trap Test — Run Before Every New List</div>
+      <div class="check-detail">Spam traps are email addresses maintained by blacklist organizations. They never sign up for anything. If they receive your email, it means you scraped or purchased a dirty list. One spam trap hit can get your entire sending domain blacklisted within 48h. There is no appeal process at most blacklists — you just rebuild from a new domain.</div>
+      <div class="check-fix"><strong>Check:</strong> Use ZeroBounce's spam trap detection ($0.008/email — same price as bounce verification, run both simultaneously).<br><strong>Rule of thumb:</strong> Any list older than 6 months needs re-verification. Email addresses go invalid at ~22% per year. A list from 12 months ago has potentially 22% invalid addresses.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">11. Role-Based Address Filter — Remove Before Sending</div>
+      <div class="check-detail">Role-based addresses (info@, admin@, support@, sales@, marketing@, team@, hello@) are monitored by multiple people, rarely result in replies, and frequently click "spam" because no one person owns the inbox. They inflate bounce rates and complaint rates without contributing to reply rates.</div>
+      <div class="check-fix"><strong>Filter these before import:</strong> info@, admin@, support@, sales@, marketing@, contact@, hello@, team@, noreply@, careers@, jobs@, hr@, billing@, accounts@. <br><strong>Simple regex filter</strong> in your list processing step catches 95% of these.</div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+<div class="section-num">SECTION 4 — SENDING BEHAVIOR (Points 12-14)</div>
+<h2>How the Platforms Still Get It Wrong</h2>
+
+<p>Even with perfect infrastructure and clean lists, sending behavior patterns trigger spam filters. These are the three that catch experienced operators.</p>
+
+<div class="checklist">
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">12. Daily Send Volume — Ramp Doesn't End at Day 14</div>
+      <div class="check-detail">The "14-day warmup" narrative is a simplification that gets people burned. Warmup tools build engagement scores by sending emails between warming accounts. Real inbox placement builds over 60-90 days with real recipients. Day 14 warmup completion means you can start sending — it doesn't mean you can send 200 emails/day from a 14-day-old domain.</div>
+      <div class="check-fix"><strong>Ramp schedule per domain:</strong> Days 1-14: warmup only (tool handles this). Days 15-30: max 20 real emails/day. Days 31-45: max 40/day. Days 46-60: max 60/day. Days 61-90: max 100/day. After 90 days: up to 150/day. <br><strong>Most operators blow past these limits</strong> because warmup tool says "complete" and they immediately send 100/day. Domain reputation degrades within 2 weeks.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">13. Email Copy — AI-Detection Signal Check</div>
+      <div class="check-detail">Gmail and Outlook have been training AI-detection models on cold email copy since 2024. Over-polished, grammatically perfect copy now triggers spam signals that poorly-written human copy doesn't. This is counterintuitive but confirmed: casual, slightly imperfect copy outperforms corporate-style copy on deliverability in 2026.</div>
+      <div class="check-fix"><strong>Check your copy for:</strong> Em dashes (—), passive voice chains, "I wanted to reach out," "I hope this finds you well," three-sentence value propositions, bullet lists in first emails. These are AI writing markers that spam filters now detect. <br><strong>Fix:</strong> Write like a human who's slightly rushed. Short sentences. One typo per 200 words is fine. No em dashes.</div>
+    </div>
+  </div>
+
+  <div class="check-item">
+    <div class="check-box"></div>
+    <div class="check-content">
+      <div class="check-title">14. Reply-to Address — Matches Sending Domain</div>
+      <div class="check-detail">When the reply-to address differs from the sending domain, spam filters flag it as a phishing signal. This happens most often when operators set up a sending domain (outreach.acme.com) but have replies go to their primary domain (acme.com). The mismatch is a spam signal regardless of both domains' individual reputations.</div>
+      <div class="check-fix"><strong>Check in your ESP:</strong> Confirm reply-to is either identical to or a subdomain of your sending domain. <br><strong>If you need replies at a different address:</strong> Set up email forwarding from the sending domain to your primary inbox — keeps the reply-to consistent while you still receive replies where you want them.</div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+<div class="section-num">PLATFORM BLINDSPOT REFERENCE</div>
+<h2>What Each Platform Actually Checks</h2>
+
+<p>Use this when a platform tells you you're "healthy" and you're still not hitting the inbox.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Check</th>
+      <th>Instantly</th>
+      <th>Smartlead</th>
+      <th>Lemlist</th>
+      <th>Manual Required?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SPF / DKIM / DMARC</td>
+      <td class="partial">Partial</td>
+      <td class="pass">Yes (setup)</td>
+      <td class="partial">Partial</td>
+      <td>Verify manually post-setup</td>
+    </tr>
+    <tr>
+      <td>Google Postmaster Domain Rep</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td>Always manual</td>
+    </tr>
+    <tr>
+      <td>Microsoft SNDS</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td>Always manual</td>
+    </tr>
+    <tr>
+      <td>Cisco Talos</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td>Always manual</td>
+    </tr>
+    <tr>
+      <td>Blacklist (50+ lists)</td>
+      <td class="fail">No</td>
+      <td class="partial">Partial</td>
+      <td class="fail">No</td>
+      <td>Run mxtoolbox monthly</td>
+    </tr>
+    <tr>
+      <td>Bounce Rate Per Domain</td>
+      <td class="pass">Yes</td>
+      <td class="pass">Yes</td>
+      <td class="pass">Yes</td>
+      <td>Act on it — platforms don't pause automatically</td>
+    </tr>
+    <tr>
+      <td>Spam Trap Detection</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td>ZeroBounce before every import</td>
+    </tr>
+    <tr>
+      <td>Role-Based Address Filter</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td class="partial">Partial</td>
+      <td>Filter in your list tool</td>
+    </tr>
+    <tr>
+      <td>AI-Detection Copy Check</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td>Manual copy review every campaign</td>
+    </tr>
+    <tr>
+      <td>Reply-to Alignment</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td class="fail">No</td>
+      <td>Check ESP settings manually</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+<div class="scorecard">
+  <h3>Pre-Campaign Scorecard</h3>
+  <p style="color:#aaa; font-size:14px; margin-bottom:20px;">Pass all 14 before sending. Come back to this before every new campaign or domain.</p>
+  <div class="score-row"><span class="score-label">Section 1 — DNS Authentication (1-4)</span><span class="score-value">___ / 4</span></div>
+  <div class="score-row"><span class="score-label">Section 2 — Domain Reputation (5-8)</span><span class="score-value">___ / 4</span></div>
+  <div class="score-row"><span class="score-label">Section 3 — List Quality (9-11)</span><span class="score-value">___ / 3</span></div>
+  <div class="score-row"><span class="score-label">Section 4 — Sending Behavior (12-14)</span><span class="score-value">___ / 3</span></div>
+  <div class="score-row" style="border:none; margin-top:12px;"><span class="score-label" style="color:#fff; font-weight:700;">TOTAL SCORE</span><span class="score-value" style="font-size:24px;">___ / 14</span></div>
+  <p style="color:#666; font-size:13px; font-family: 'Courier New', monospace; margin-top:16px;">14/14 = launch. 12-13 = address gaps first. Below 12 = do not send.</p>
+</div>
+
+---
+
+<div class="section-num">QUICK REFERENCE — FREE TOOLS</div>
+<h2>Everything You Need, Zero Cost</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Tool</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SPF / DKIM / DMARC check</td>
+      <td>mxtoolbox.com</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Blacklist check (50+ lists)</td>
+      <td>mxtoolbox.com/blacklists</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Google domain reputation</td>
+      <td>postmaster.google.com</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Microsoft sender reputation</td>
+      <td>sendersupport.olc.protection.outlook.com/snds</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Cisco Talos reputation</td>
+      <td>talosintelligence.com/reputation_center</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Email list verification + spam trap</td>
+      <td>ZeroBounce or NeverBounce</td>
+      <td>$0.003-0.008/email</td>
+    </tr>
+    <tr>
+      <td>Role-based address filter</td>
+      <td>Your list tool + a regex filter</td>
+      <td>Free</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="warning">
+  <div class="warning-label">ONE RULE</div>
+  <p>Run this checklist before every campaign on every domain. Not once at setup. Before every campaign. Domain reputation is not static — it degrades with every bad send, every spam complaint, every bounce. The 20 minutes this takes saves you weeks of recovery.</p>
+</div>
+
+<p style="margin-top:48px; font-size:13px; color:#999; font-family:'Courier New',monospace; text-align:center;">PRINTMAXX — Cold Email Infrastructure Audit v1.0 — 2026<br>printmaxx.io</p>
+
+</div>
+</body>
+</html>

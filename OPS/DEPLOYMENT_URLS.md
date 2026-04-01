@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-28 (gap-hunter cycle)
+**Last updated:** 2026-03-31 (gap-hunter cycle)
 
 ---
 
@@ -363,3 +363,22 @@ Redeployed 2026-03-29 with shortened subdomains (originals exceeded 63-char DNS 
 | HomeGuide Handyman, Las Vegas | https://lv-handyman-homeguide.surge.sh | the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv | LIVE |
 | Pink's Windows, Louisville | https://louisville-pinks-windows.surge.sh | local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky | LIVE |
 | Cherry Window Cleaning, Louisville | https://louisville-cherry-windows.surge.sh | residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky | LIVE |
+
+## New Deployments - 2026-03-31
+
+| App | URL | Status | Deploy Date | Load Time |
+|-----|-----|--------|-------------|-----------|
+| cnsnt-desktop | https://cnsnt-desktop.surge.sh | LIVE | 2026-03-31 20:10 | 1.2s |
+| breathwork-streak | https://breathwork-streak.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| couples-streak-landing | https://couples-streak-landing.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| cycling-streak | https://cycling-streak.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| gratitude-streak | https://gratitude-streak.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| streakr | https://streakr.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| studylock | https://studylock.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| water-streak | https://water-streak.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| website-builders-compared | https://website-builders-compared.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+| toolstack-review | https://toolstack-review.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
+
+**Total Portfolio:** 398 live surge.sh deployments
+**Health Status:** FULLY_OPERATIONAL
+**Last Verified:** 2026-03-31 22:30 UTC

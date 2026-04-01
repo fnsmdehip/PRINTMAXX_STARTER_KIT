@@ -1,18 +1,20 @@
 {
-  "ts": "2026-03-31T20:00:00.925036",
-  "avg_score": 9.1,
-  "total_scored": 7,
-  "drifted_count": 1,
-  "drifted_agents": [
-    "swarm_brain"
-  ],
+  "ts": "2026-04-01T00:00:01.901534",
+  "avg_score": 9.0,
+  "total_scored": 11,
+  "drifted_count": 0,
+  "drifted_agents": [],
   "scores": {
     "lead_machine": 10.0,
-    "distribution_engine": 8.5,
     "gap_hunter": 8.5,
-    "seo_aso_optimizer": 10.0,
-    "asset_deployer": 10.0,
-    "swarm_brain": 6.5,
+    "asset_deployer": 8.0,
+    "competitor_stalker": 10.0,
+    "competitor_intel_20260331": 8.5,
+    "seo_aso_optimizer": 8.5,
+    "cross_pollinator": 10.0,
+    "inbound": 7.0,
+    "opportunity_scanner": 10.0,
+    "playwright_tester_final": 8.5,
     "ceo_decision_2026-03-15": 10.0
   }
 }

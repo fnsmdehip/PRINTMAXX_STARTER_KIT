@@ -1,0 +1,41 @@
+{
+  "venture": "competitive_intel",
+  "last_cycle": 127,
+  "last_run": "2026-03-31T22:53:57Z",
+  "cumulative_blue_oceans": 654,
+  "ci_csv_rows": 425,
+  "alpha_csv_rows": 49768,
+  "strategies_covered": [
+    "HEALTH + FITNESS + WELLNESS + NUTRITION",
+    "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+    "HISTORY + WORLD CULTURES + ANTHROPOLOGY",
+    "PSYCHOLOGY + COGNITIVE SCIENCE + BEHAVIORAL ECONOMICS",
+    "SCIENCE + TECHNOLOGY + ENGINEERING + MATHEMATICS",
+    "PARENTING + CHILD DEVELOPMENT + EDUCATION",
+    "CREATIVE ARTS + MUSIC + VISUAL ARTS + PERFORMANCE",
+    "SCIENCE & TECHNOLOGY HISTORY + INNOVATION",
+    "PHILOSOPHY OF MIND & CONSCIOUSNESS",
+    "NEUROSCIENCE & BRAIN SCIENCE",
+    "MILITARY HISTORY & STRATEGY",
+    "GEOPOLITICS & INTERNATIONAL RELATIONS",
+    "PSYCHOLOGY OF CREATIVITY & GENIUS",
+    "LANGUAGE & LINGUISTICS HISTORY",
+    "HISTORY OF MATHEMATICS",
+    "GENETICS",
+    "FINANCE & ECONOMICS HISTORY",
+    "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+    "CULINARY SCIENCE & FOOD HISTORY",
+    "ASTRONOMY & SPACE SCIENCE",
+    "CLIMATE SCIENCE & ENVIRONMENTAL SCIENCE",
+    "MEDICINE & HUMAN PHYSIOLOGY"
+  ],
+  "next_strategy": "PHILOSOPHY & ETHICS + LOGIC",
+  "top_all_time": [
+    {"name": "Daily Oncology Science Streak", "score": 25, "cycle": 127},
+    {"name": "Daily Film Studies Streak", "score": 25, "cycle": 106},
+    {"name": "Daily CS Fundamentals Streak", "score": 25, "cycle": 111},
+    {"name": "Daily Neuroscience Streak", "score": 25, "cycle": 111},
+    {"name": "Daily Epidemiology Streak", "score": 22, "cycle": 127}
+  ],
+  "status": "RUNNING"
+}

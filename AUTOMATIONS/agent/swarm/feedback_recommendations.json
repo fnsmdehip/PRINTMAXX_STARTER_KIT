@@ -1,46 +1,46 @@
 {
-  "generated": "2026-03-31T20:00:00.629927",
+  "generated": "2026-04-01T00:00:01.285089",
   "recommendations": [
     {
       "decision": "boost_agent",
       "agent": "gap_hunter",
-      "reason": "High effectiveness (100.0%) over 169 runs",
+      "reason": "High effectiveness (100.0%) over 171 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "opportunity_scanner",
-      "reason": "High effectiveness (100.0%) over 89 runs",
+      "reason": "High effectiveness (100.0%) over 91 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "competitor_stalker",
-      "reason": "High effectiveness (100.0%) over 81 runs",
+      "reason": "High effectiveness (100.0%) over 82 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "asset_deployer",
-      "reason": "High effectiveness (99.7%) over 141 runs",
+      "reason": "High effectiveness (99.7%) over 143 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "content_compounder",
-      "reason": "High effectiveness (100.0%) over 119 runs",
+      "reason": "High effectiveness (100.0%) over 121 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "lead_machine",
-      "reason": "High effectiveness (100.0%) over 169 runs",
+      "reason": "High effectiveness (100.0%) over 171 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "seo_aso_optimizer",
-      "reason": "High effectiveness (100.0%) over 69 runs",
+      "reason": "High effectiveness (100.0%) over 71 runs",
       "source": "feedback_loop"
     },
     {
@@ -52,19 +52,19 @@
     {
       "decision": "boost_agent",
       "agent": "quality_enforcer",
-      "reason": "High effectiveness (100.0%) over 101 runs",
+      "reason": "High effectiveness (100.0%) over 103 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "trend_synthesizer",
-      "reason": "High effectiveness (100.0%) over 52 runs",
+      "reason": "High effectiveness (100.0%) over 53 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "cross_pollinator",
-      "reason": "High effectiveness (100.0%) over 154 runs",
+      "reason": "High effectiveness (100.0%) over 156 runs",
       "source": "feedback_loop"
     },
     {
@@ -76,7 +76,7 @@
     {
       "decision": "boost_agent",
       "agent": "system_healer",
-      "reason": "High effectiveness (100.0%) over 195 runs",
+      "reason": "High effectiveness (100.0%) over 197 runs",
       "source": "feedback_loop"
     },
     {
@@ -88,19 +88,19 @@
     {
       "decision": "boost_agent",
       "agent": "distribution_engine",
-      "reason": "High effectiveness (100.0%) over 117 runs",
+      "reason": "High effectiveness (100.0%) over 119 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "inbound_maximizer",
-      "reason": "High effectiveness (99.4%) over 143 runs",
+      "reason": "High effectiveness (99.4%) over 145 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "swarm_brain",
-      "reason": "High effectiveness (100.0%) over 195 runs",
+      "reason": "High effectiveness (100.0%) over 197 runs",
       "source": "feedback_loop"
     },
     {
@@ -118,13 +118,13 @@
     {
       "decision": "boost_agent",
       "agent": "quality_gate",
-      "reason": "High effectiveness (98.8%) over 103 runs",
+      "reason": "High effectiveness (98.9%) over 105 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "playwright_tester",
-      "reason": "High effectiveness (99.4%) over 138 runs",
+      "reason": "High effectiveness (99.4%) over 140 runs",
       "source": "feedback_loop"
     },
     {

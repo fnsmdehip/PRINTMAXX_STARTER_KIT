@@ -1,98 +1,108 @@
-# GAP HUNTER REPORT — 2026-03-31 19:00
+# Gap Hunter Report — 2026-03-31 22:30
 
-## Cycle Summary
-- Scanned: 65 app builds, 14 PDFs, 16 affiliate pages, 1,309 queued posts, 1,537 leads
-- Deployed URLs before cycle: 157
-- Deployed URLs after cycle: 160 (+3 new)
-
----
-
-## ACTIONS TAKEN (this cycle)
-
-### 1. Deployed streakr PWA
-- **URL:** https://streakr.surge.sh
-- **What:** Swipe-based habit tracker, 8 files, 64KB. Full PWA with manifest, privacy policy, schema.org markup.
-- **Why it was a gap:** Built and sitting in builds/ with no deployment. Ready to go, just needed `surge`.
-
-### 2. Deployed best-blood-pressure-supplement-men-over-55
-- **URL:** https://best-blood-pressure-supplement-men-over-55.surge.sh
-- **What:** Affiliate page targeting men's blood pressure supplement niche.
-- **Why it was a gap:** index.html existed in LANDING/affiliate-pages/ but was never pushed to surge.
-
-### 3. Deployed best-memory-supplement-men-over-60
-- **URL:** https://best-memory-supplement-men-over-60.surge.sh
-- **What:** Affiliate page targeting men's memory supplement niche.
-- **Why it was a gap:** Same as above — built, not deployed.
-
-### 4. Updated DEPLOYMENT_URLS.md with all 3 new deployments.
+## Scan Summary
+- **Built apps:** 65 | **Deployed (verified):** 398 surge.sh domains
+- **Digital products:** 14 PDFs ready | 7 paste-ready Gumroad listings
+- **Lead magnets:** 23 HTML tools/calculators (all live)
+- **Affiliate pages:** 16 (all deployed, 5 health supplements new)
+- **Content posting queue:** 25 posts ready for today
+- **Freelance responses:** 163 drafts ready
+- **App factory queue:** 45 unbuilt apps (C087-C089 cycles)
+- **AUTOMATIONS scripts:** 529 Python files | 37 in crontab
 
 ---
 
-## GAPS FOUND (not yet resolved)
+## GAPS FOUND
 
-### GAP 1: 14 PDFs with $0 revenue — HUMAN BLOCKER
-- **14 PDF products** in `DIGITAL_PRODUCTS/ready_to_sell/pdfs/` ready to sell
-- **6 Gumroad listings** copy-paste ready in `GUMROAD_INSTANT_UPLOAD/LISTINGS_READY.md`
-- **6 additional LISTING files** in `DIGITAL_PRODUCTS/ready_to_sell/LISTING_*.md`
-- Products: Claude Code Agent Bible ($47), Claude Code for Solopreneurs, Nontechnical Founders, Content Creators, Before You Family Story Workbook, Reddit Money Machine, Claude Code Mastery, Cold Email System, Prompt Vault, plus 5 original products
-- **BLOCKER:** No Gumroad/Whop/Stripe account created. This is the single highest-value human action.
-- **Estimated revenue impact:** $500-2,000/mo at even modest conversion (14 products x 5-20 sales/mo x $9-47)
+### GAP 1: DEPLOYMENT_URLS.md Missing 9 Live Apps (FIXED)
+**Severity:** Low (doc gap, not revenue gap)
+**What:** 9 apps were live on surge.sh but not tracked in DEPLOYMENT_URLS.md:
+breathwork-streak, couples-streak-landing, cycling-streak, gratitude-streak, streakr, studylock, water-streak, website-builders-compared, toolstack-review
+**Action taken:** Updated DEPLOYMENT_URLS.md with all 9. Portfolio count updated to 398.
 
-### GAP 2: 1,537 leads sitting uncontacted — HUMAN BLOCKER
-- `AUTOMATIONS/leads/MASTER_LEADS.csv` — 1,537 rows
-- `AUTOMATIONS/leads/HOT_LEADS.csv` — 22 hot leads with bad websites
-- `AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md` — 10 personalized cold emails ready to paste-send
-- **BLOCKER:** Need email sending infrastructure (Instantly.ai, Smartlead, or manual Gmail sends)
-- **Estimated revenue impact:** At 2% reply rate on 22 hot leads = ~1 client = $500-2,000 first deal
+### GAP 2: Lead Magnets Hub Stale Deploy (FIXED)
+**Severity:** Medium (5 modified files + 1 new file since last deploy Mar 13)
+**What:** 6 lead magnets were modified/created since last hub deploy:
+- app-niche-finder.html (modified)
+- mcp-roi-calculator.html (modified)
+- mcp-tools-saas-replacements.html (modified)
+- saas-stack-audit-200.html (modified)
+- solopreneur-ai-stack-2026.html (modified)
+- claude-code-revenue-audit.html (NEW, untracked)
+**Action taken:** Redeployed printmaxx-lead-magnets.surge.sh. All 23 lead magnets now fresh.
 
-### GAP 3: 10 social posts created today, not distributed — HUMAN BLOCKER
-- `CONTENT/social/posting_queue/20260331_*.md` — 10 posts (5 tweets, 2 Reddit, 2 engagement bait, 1 thread)
-- **BLOCKER:** Need to post from @printmaxxer Twitter account manually. No X API key or Buffer connected.
-- **Estimated engagement impact:** 5-10 tweets/day = minimum viable posting cadence for growth
+### GAP 3: Testosterone Booster Affiliate Page 504 (FIXED)
+**Severity:** Medium (page returning 504 gateway timeout)
+**What:** best-testosterone-booster-men-over-50.surge.sh was returning 504.
+**Action taken:** Redeployed. Now live.
 
-### GAP 4: 1,309 total items in posting queue — CONTENT DEBT
-- `CONTENT/social/posting_queue/` has 1,309 files
-- Many are stale (from March 7-25). Content has a shelf life.
-- **Action needed:** Batch-post the best 50 pieces this week, archive the rest.
+### GAP 4: 14 PDFs + 7 Listings Ready, No Sales Platform (HUMAN BLOCKED)
+**Severity:** CRITICAL -- direct revenue blocker
+**What:** 14 polished PDFs in DIGITAL_PRODUCTS/ready_to_sell/pdfs/ with 7 paste-ready listing files. Products include:
+- Claude Code Agent Bible ($47)
+- Claude Code for Solopreneurs
+- Claude Code for Non-Technical Founders
+- Claude Code for Content Creators
+- Reddit Money Machine ($29-39)
+- Cold Email System
+- Prompt Vault
+- 73 Cold Email Subject Lines
+- Funnel Teardown Pack
+- AI Automation Blueprint
+- Solopreneur Ops System
+- Cold Email Playbook
+- Solo Launch Checklist Pack
+- Before You Family Story Workbook
+**BLOCKER:** No Gumroad/Whop/Stripe storefront account created.
+**Required human action:** Create Gumroad account (10 min) OR Whop account (10 min). Copy-paste listings from LISTING_*.md files.
+**Estimated revenue unlock:** $500-2,000/mo based on comparable digital products in Claude Code / cold email niches.
 
-### GAP 5: 6 app builds with no index.html — INCOMPLETE BUILDS
-- `autoreplyai` — has backend/frontend dirs but no compiled index.html
-- `biomaxx-sdk54` — has checklist but no web build
-- `nutriai` — React Native app, not a web deployment target
-- `pocket-alexandria` — same, RN app
-- `roblox_tycoon` / `robloxmaxx` — Roblox game, not web deployable
-- **Action:** nutriai and pocket-alexandria should get PWA web versions like cnsnt-web did
+### GAP 5: 25 Content Posts Ready, Not Distributed (HUMAN BLOCKED)
+**Severity:** HIGH -- engagement/growth blocker
+**What:** 25 posts in CONTENT/social/posting_queue/20260331* ready for:
+- Twitter/X (14 tweets + threads)
+- Reddit (4 posts across claudeai, entrepreneur, sideproject, indiehackers)
+- LinkedIn (1 post)
+- Hacker News (1 post)
+- Indie Hackers (1 post)
+**BLOCKER:** Requires manual posting or X Premium + Buffer for scheduling.
+**Required human action:** Post manually (30 min) or set up Buffer CSV import (5 min setup).
 
-### GAP 6: Affiliate links still placeholder
-- 16 affiliate pages deployed but affiliate signup not done
-- Revenue = $0 until actual affiliate IDs replace placeholders
-- **BLOCKER:** Human needs to sign up for 5-10 affiliate programs (~30 min)
+### GAP 6: 163 Freelance Responses Not Sent (HUMAN BLOCKED)
+**Severity:** MEDIUM -- outbound pipeline stalled
+**What:** 163 drafted freelance proposal responses in CONTENT/freelance_responses/.
+**BLOCKER:** Requires human to submit on respective platforms.
+
+### GAP 7: 45 Apps in Factory Queue Unbuilt
+**Severity:** LOW -- capacity constrained, not a gap per se
+**What:** 45 streak app variants queued across 3 cycles (C087: entrepreneurship, C088: relationships/wellness, C089: hobbies/mental health). Plus 1 competitive intel scraper.
+**Note:** Building more apps with $0 revenue is anti-pattern per Rule 21 (RBI over building). Focus on monetizing existing 398 deployments first.
+
+### GAP 8: 529 Scripts, Only 37 in Crontab
+**Severity:** LOW -- known tech debt, per anti-entropy rules
+**What:** 492 Python scripts in AUTOMATIONS/ not wired to any cron or caller.
+**Note:** Most are dead weight from earlier build sprints. Consolidation needed per anti-entropy rules, but not a revenue-blocking gap.
 
 ---
 
-## PRIORITY STACK (what to do next)
+## ACTIONS TAKEN THIS CYCLE
 
-| Priority | Action | Time | Revenue Impact | Blocker |
-|----------|--------|------|---------------|---------|
-| P0 | Create Gumroad account + list 6 products | 45 min | $500-2K/mo | HUMAN |
-| P0 | Create Stripe account | 10 min | Unlocks all app payments | HUMAN |
-| P0 | Send 10 cold emails from HOT_LEADS | 20 min | $500-2K first deal | HUMAN |
-| P1 | Post today's 10 tweets/Reddit posts | 15 min | Growth compound | HUMAN |
-| P1 | Sign up for 5 affiliate programs | 30 min | $200-500/mo passive | HUMAN |
-| P2 | Build nutriai-web PWA version | 2h agent | New deployment | AGENT |
-| P2 | Build pocket-alexandria-web PWA | 2h agent | New deployment | AGENT |
-| P2 | Archive stale posting queue content | 30 min agent | Clean pipeline | AGENT |
+| # | Action | Result |
+|---|--------|--------|
+| 1 | Redeployed printmaxx-lead-magnets.surge.sh | SUCCESS -- 23 lead magnets fresh |
+| 2 | Redeployed best-testosterone-booster-men-over-50.surge.sh | SUCCESS -- was 504, now live |
+| 3 | Updated DEPLOYMENT_URLS.md with 9 missing apps | SUCCESS -- 398 tracked |
+
+## HUMAN ACTIONS REQUIRED (sorted by revenue impact)
+
+| Priority | Action | Time | Revenue Unlock |
+|----------|--------|------|---------------|
+| P0 | Create Gumroad account + list 14 PDFs | 45 min | $500-2K/mo |
+| P0 | Create Stripe storefront for web apps | 10 min | Enables all payment |
+| P1 | Post 25 content pieces from today's queue | 30 min | Growth/engagement |
+| P1 | Set up Buffer for automated posting | 5 min | Saves 30 min/day |
+| P2 | Send freelance responses (top 10) | 20 min | $500-2K/project |
 
 ---
 
-## SYSTEM HEALTH
-
-- **Total deployed URLs:** 160
-- **Total app builds:** 65
-- **Deployable but not deployed:** 0 (all cleared this cycle)
-- **PDFs ready to sell:** 14 ($0 revenue, no sales channel)
-- **Hot leads ready:** 22 ($0 outreach done)
-- **Content queue:** 1,309 items (10 from today)
-- **Revenue:** $0 — Day 44 at zero
-
-**Bottom line:** The system has built substantial assets. The gap is now 100% at the HUMAN ACTION layer: Gumroad account, Stripe account, email sending, affiliate signups, and manual posting. Every automated gap that CAN be closed HAS been closed this cycle.
+**Day 44 at $0 revenue. The products exist. The listings are written. Only platform accounts block first dollar.**

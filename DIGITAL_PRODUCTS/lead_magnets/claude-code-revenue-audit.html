@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Code Revenue Audit — Are You Leaving Money on the Table?</title>
+<meta name="description" content="Free 2-minute audit. Find out exactly why your Claude Code setup isn't making money yet — and what to fix first.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#e8e8e8;min-height:100vh;padding:24px 16px}
+.wrap{max-width:680px;margin:0 auto}
+.header{text-align:center;padding:48px 0 32px}
+.badge{display:inline-block;background:#1a1a2e;border:1px solid #7c3aed;color:#a78bfa;font-size:0.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:20px}
+h1{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:800;line-height:1.2;margin-bottom:16px}
+.purple{color:#7c3aed}
+.sub{color:#999;font-size:1rem;line-height:1.6;max-width:520px;margin:0 auto}
+.progress-bar{height:4px;background:#1a1a1a;border-radius:2px;margin:32px 0 6px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#7c3aed,#06b6d4);border-radius:2px;transition:width .4s ease;width:0%}
+.progress-label{text-align:right;font-size:0.72rem;color:#666;margin-bottom:20px}
+.question{display:none;animation:fadeIn .3s ease}
+.question.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.q-number{font-size:0.78rem;color:#7c3aed;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.q-text{font-size:1.15rem;font-weight:700;margin-bottom:24px;line-height:1.4}
+.options{display:flex;flex-direction:column;gap:10px}
+.option{background:#111;border:1.5px solid #222;border-radius:10px;padding:14px 18px;cursor:pointer;font-size:0.9rem;line-height:1.4;transition:all .15s;text-align:left}
+.option:hover{border-color:#7c3aed;background:#1a0a2e}
+.option.selected{border-color:#7c3aed;background:#1a0a2e;color:#c4b5fd}
+.opt-label{font-weight:600;color:#7c3aed;margin-right:8px}
+.next-btn{display:none;margin-top:20px;width:100%;padding:14px;background:#7c3aed;color:#fff;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background .15s}
+.next-btn:hover{background:#6d28d9}
+.next-btn.show{display:block}
+.results{display:none;animation:fadeIn .3s ease}
+.score-ring{width:120px;height:120px;margin:0 auto 16px;position:relative}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring .track{fill:none;stroke:#1a1a1a;stroke-width:10}
+.score-ring .arc{fill:none;stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset 1s ease}
+.score-number{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.8rem;font-weight:800}
+.score-tier{text-align:center;font-size:0.8rem;color:#999;margin-bottom:32px}
+.gaps{background:#111;border:1px solid #1f1f1f;border-radius:12px;padding:24px;margin-bottom:24px}
+.gaps-heading{font-size:1rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.gaps-dot{width:8px;height:8px;background:#ef4444;border-radius:50%;display:inline-block;flex-shrink:0}
+.gap-item{padding:12px 0;border-bottom:1px solid #1a1a1a;font-size:0.88rem;line-height:1.5}
+.gap-item:last-child{border-bottom:none;padding-bottom:0}
+.gap-title{color:#f87171;font-weight:700;display:block;margin-bottom:3px}
+.gap-detail{color:#999}
+.cta-box{background:linear-gradient(135deg,#1a0a2e,#0a1a2e);border:1px solid #7c3aed44;border-radius:12px;padding:28px;text-align:center;margin-bottom:20px}
+.cta-box h3{font-size:1.2rem;font-weight:800;margin-bottom:8px}
+.cta-desc{color:#999;font-size:0.88rem;margin-bottom:20px;line-height:1.6}
+.gate-input{width:100%;padding:12px 16px;background:#0a0a0a;border:1.5px solid #333;border-radius:8px;color:#e8e8e8;font-size:0.95rem;margin-bottom:12px}
+.gate-input:focus{outline:none;border-color:#7c3aed}
+.gate-btn{width:100%;padding:14px;background:#7c3aed;color:#fff;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background .15s}
+.gate-btn:hover{background:#6d28d9}
+.fine{font-size:0.72rem;color:#555;margin-top:8px}
+.unlocked{display:none}
+.unlocked.show{display:block}
+.fix-list{background:#111;border:1px solid #1f1f1f;border-radius:12px;padding:24px;margin-bottom:20px}
+.fix-heading{font-size:1rem;font-weight:700;margin-bottom:16px;color:#4ade80}
+.fix-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #1a1a1a;font-size:0.88rem;line-height:1.4;align-items:flex-start}
+.fix-item:last-child{border-bottom:none}
+.fix-num{color:#7c3aed;font-weight:800;min-width:24px;flex-shrink:0}
+.fix-text{color:#ccc}
+.products-intro{text-align:center;color:#999;font-size:0.88rem;margin-bottom:16px}
+.products-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.product-card{background:#111;border:1px solid #222;border-radius:10px;padding:16px;text-align:center;cursor:pointer;text-decoration:none;display:block;transition:border-color .15s}
+.product-card:hover{border-color:#7c3aed}
+.prod-price{font-size:1.2rem;font-weight:800;color:#7c3aed}
+.prod-name{font-size:0.78rem;color:#999;margin-top:4px;line-height:1.4}
+.prod-tag{font-size:0.65rem;background:#7c3aed22;color:#a78bfa;padding:2px 8px;border-radius:10px;margin-top:8px;display:inline-block}
+@media(max-width:400px){.products-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="badge">Free 2-Min Audit</div>
+    <h1>Why Isn't Your<br><span class="purple">Claude Code Setup</span><br>Making Money Yet?</h1>
+    <p class="sub">10 questions. Instant diagnosis. Find the exact gap between your current setup and your first dollar.</p>
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+  <div class="progress-label" id="prog-label">0 / 10</div>
+
+  <div id="quiz">
+    <div class="question active" data-q="0">
+      <div class="q-number">Question 1 of 10</div>
+      <div class="q-text">How long have you been using Claude Code?</div>
+      <div class="options">
+        <div class="option" data-score="1"><span class="opt-label">A.</span> Less than a week</div>
+        <div class="option" data-score="2"><span class="opt-label">B.</span> 1–4 weeks</div>
+        <div class="option" data-score="3"><span class="opt-label">C.</span> 1–3 months</div>
+        <div class="option" data-score="4"><span class="opt-label">D.</span> 3+ months</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="1">
+      <div class="q-number">Question 2 of 10</div>
+      <div class="q-text">What have you shipped with Claude Code so far?</div>
+      <div class="options">
+        <div class="option" data-score="0"><span class="opt-label">A.</span> Nothing yet — still learning</div>
+        <div class="option" data-score="1"><span class="opt-label">B.</span> Small scripts / experiments</div>
+        <div class="option" data-score="2"><span class="opt-label">C.</span> A working project or tool</div>
+        <div class="option" data-score="3"><span class="opt-label">D.</span> Multiple deployed products</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="2">
+      <div class="q-number">Question 3 of 10</div>
+      <div class="q-text">Do you have a payment processor (Stripe, Gumroad, etc.) connected to anything you built?</div>
+      <div class="options">
+        <div class="option" data-score="0"><span class="opt-label">A.</span> No — haven't thought about monetization</div>
+        <div class="option" data-score="1"><span class="opt-label">B.</span> I have an account but nothing is wired</div>
+        <div class="option" data-score="2"><span class="opt-label">C.</span> One product has a payment link</div>
+        <div class="option" data-score="3"><span class="opt-label">D.</span> Multiple products have payment flows</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="3">
+      <div class="q-number">Question 4 of 10</div>
+      <div class="q-text">How do you primarily use Claude Code?</div>
+      <div class="options">
+        <div class="option" data-score="1"><span class="opt-label">A.</span> One-off prompts to fix things</div>
+        <div class="option" data-score="2"><span class="opt-label">B.</span> Building features manually with its help</div>
+        <div class="option" data-score="3"><span class="opt-label">C.</span> Running autonomous agents on tasks</div>
+        <div class="option" data-score="4"><span class="opt-label">D.</span> Full pipeline automation via cron + agents</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="4">
+      <div class="q-number">Question 5 of 10</div>
+      <div class="q-text">Do you have email capture on any site you've built?</div>
+      <div class="options">
+        <div class="option" data-score="0"><span class="opt-label">A.</span> No sites deployed yet</div>
+        <div class="option" data-score="0"><span class="opt-label">B.</span> Sites are live but no email capture</div>
+        <div class="option" data-score="2"><span class="opt-label">C.</span> Some pages have email forms</div>
+        <div class="option" data-score="3"><span class="opt-label">D.</span> Every site has email capture wired</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="5">
+      <div class="q-number">Question 6 of 10</div>
+      <div class="q-text">Are you using CLAUDE.md to give Claude persistent project context?</div>
+      <div class="options">
+        <div class="option" data-score="0"><span class="opt-label">A.</span> What is CLAUDE.md?</div>
+        <div class="option" data-score="1"><span class="opt-label">B.</span> I've heard of it but haven't set it up</div>
+        <div class="option" data-score="2"><span class="opt-label">C.</span> I have a basic CLAUDE.md</div>
+        <div class="option" data-score="3"><span class="opt-label">D.</span> Full CLAUDE.md + rules + references configured</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="6">
+      <div class="q-number">Question 7 of 10</div>
+      <div class="q-text">How many hours per week do you spend on tasks Claude Code could automate?</div>
+      <div class="options">
+        <div class="option" data-score="0"><span class="opt-label">A.</span> Not sure — haven't mapped this</div>
+        <div class="option" data-score="1"><span class="opt-label">B.</span> 1–3 hours (mostly manual still)</div>
+        <div class="option" data-score="2"><span class="opt-label">C.</span> 4–8 hours, some things automated</div>
+        <div class="option" data-score="3"><span class="opt-label">D.</span> Under 2 hours — most is automated</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="7">
+      <div class="q-number">Question 8 of 10</div>
+      <div class="q-text">Have you sold anything created with or by Claude Code?</div>
+      <div class="options">
+        <div class="option" data-score="0"><span class="opt-label">A.</span> No — $0 revenue from Claude Code</div>
+        <div class="option" data-score="1"><span class="opt-label">B.</span> Made 1–2 sales, mostly testing</div>
+        <div class="option" data-score="2"><span class="opt-label">C.</span> Under $500/mo</div>
+        <div class="option" data-score="3"><span class="opt-label">D.</span> $500+/mo and scaling</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="8">
+      <div class="q-number">Question 9 of 10</div>
+      <div class="q-text">What is your primary blocker right now?</div>
+      <div class="options">
+        <div class="option" data-score="1" data-blocker="0"><span class="opt-label">A.</span> Don't know what to build that makes money</div>
+        <div class="option" data-score="1" data-blocker="1"><span class="opt-label">B.</span> I build things but can't distribute them</div>
+        <div class="option" data-score="1" data-blocker="2"><span class="opt-label">C.</span> I know what to do but execution is slow</div>
+        <div class="option" data-score="1" data-blocker="3"><span class="opt-label">D.</span> Making some money but can't scale it</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+
+    <div class="question" data-q="9">
+      <div class="q-number">Question 10 of 10</div>
+      <div class="q-text">Do you run Claude Code agents autonomously while you sleep?</div>
+      <div class="options">
+        <div class="option" data-score="0"><span class="opt-label">A.</span> No — only when I'm at the keyboard</div>
+        <div class="option" data-score="1"><span class="opt-label">B.</span> Tried it but it breaks without supervision</div>
+        <div class="option" data-score="2"><span class="opt-label">C.</span> Yes, a few automated tasks run daily</div>
+        <div class="option" data-score="3"><span class="opt-label">D.</span> Full overnight pipelines running autonomously</div>
+      </div>
+      <button class="next-btn" onclick="next()">Next →</button>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="results" id="results">
+    <div class="score-ring">
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle class="track" cx="60" cy="60" r="50"/>
+        <circle class="arc" id="score-arc" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="314"/>
+      </svg>
+      <div class="score-number" id="score-num">0%</div>
+    </div>
+    <div class="score-tier" id="score-tier">Calculating...</div>
+
+    <div class="gaps">
+      <div class="gaps-heading"><span class="gaps-dot"></span><strong>Your Revenue Gaps</strong></div>
+      <div id="gaps-list"></div>
+    </div>
+
+    <div class="cta-box" id="gate-section">
+      <h3>Get Your Full Fix Plan</h3>
+      <p class="cta-desc">Enter your email to unlock step-by-step action items for your specific gaps — plus the exact Claude Code setup used to go from $0 to first sale.</p>
+      <input type="email" class="gate-input" id="gate-email" placeholder="your@email.com" autocomplete="email">
+      <button class="gate-btn" onclick="unlockPlan()">Send Me the Fix Plan</button>
+      <p class="fine">no spam. one email with the fix plan. unsubscribe any time.</p>
+    </div>
+
+    <div class="unlocked" id="unlocked-section">
+      <div class="fix-list">
+        <div class="fix-heading">Your Personalized Fix List</div>
+        <div id="fix-items"></div>
+      </div>
+      <p class="products-intro">The fastest way to close these gaps — built for solopreneurs using Claude Code:</p>
+      <div class="products-row" id="products-row"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+var answers = [];
+var blockerIdx = -1;
+var current = 0;
+var TOTAL = 10;
+
+var questions = document.querySelectorAll('.question');
+var progressFill = document.getElementById('progress');
+var progLabel = document.getElementById('prog-label');
+
+document.querySelectorAll('.option').forEach(function(opt) {
+  opt.addEventListener('click', function() {
+    var q = this.closest('.question');
+    q.querySelectorAll('.option').forEach(function(o) { o.classList.remove('selected'); });
+    this.classList.add('selected');
+    if (this.hasAttribute('data-blocker')) {
+      blockerIdx = parseInt(this.getAttribute('data-blocker'));
+    }
+    q.querySelector('.next-btn').classList.add('show');
+  });
+});
+
+function next() {
+  var q = questions[current];
+  var selected = q.querySelector('.option.selected');
+  if (!selected) return;
+  answers.push(parseInt(selected.getAttribute('data-score')));
+  current++;
+  updateProgress();
+  if (current >= TOTAL) { showResults(); return; }
+  q.classList.remove('active');
+  questions[current].classList.add('active');
+}
+
+function updateProgress() {
+  progressFill.style.width = ((current / TOTAL) * 100) + '%';
+  progLabel.textContent = current + ' / ' + TOTAL;
+}
+
+var GAP_DATA = [
+  null,
+  { threshold: 1, title: 'Nothing shipped yet', detail: 'Claude Code only generates revenue when something is deployed. Your gap: ship one thing this week — a landing page, a tool, a PDF.' },
+  { threshold: 1, title: 'No payment processor connected', detail: 'Zero wired payments = zero revenue ceiling. Stripe takes 10 minutes to activate. This is the single highest-leverage unblocked action you have.' },
+  { threshold: 2, title: 'Using Claude Code reactively, not autonomously', detail: 'Agentic mode (cron jobs, autonomous sessions) is where the leverage is. Interactive use caps your output at your working hours.' },
+  { threshold: 1, title: 'No email capture on live sites', detail: 'Traffic with no capture is permanently lost. One formsubmit.co form on every page costs 5 minutes and creates a revenue channel independent of algorithms.' },
+  { threshold: 1, title: 'No persistent project context (CLAUDE.md)', detail: 'Without CLAUDE.md, every session restarts from zero. Claude wastes 20-30% of context re-learning your project. Set it up once, save hours per week.' },
+  { threshold: 2, title: 'High manual task load — automation headroom available', detail: 'Spending more than 3 hours/week on repetitive tasks? Claude Code can automate most of them. Map your weekly tasks and identify what repeats.' },
+  { threshold: 0, title: '$0 from Claude Code output — distribution gap', detail: "You're building but not selling. The gap is almost never the product. It's the distribution: no posting, no email list, no warm audience." },
+  null,
+  { threshold: 1, title: 'Not running agents autonomously overnight', detail: 'The highest-leverage Claude Code users run pipelines while they sleep: scraping, content gen, deployment. If you are not, you are leaving 8 hours/day on the table.' }
+];
+
+var BLOCKER_FIXES = [
+  "You don't know what to build: use Claude to analyze 20 Reddit threads in your niche. Ask it what problems people pay to solve. Validate with 10 DMs before building.",
+  "You build but can't distribute: pick ONE channel and post daily for 30 days. Reddit works without followers. 5 targeted posts/day beats 1,000 passive subscribers.",
+  "Execution is slow: set up CLAUDE.md with full context, then run agent sessions. You should ship a working product in a 2-hour session, not 2 weeks.",
+  "You're making money but can't scale: document the 20% that drives 80% of revenue and let agents repeat it. Hire Claude as your growth agent."
+];
+
+var FIX_MAP = [
+  { check: function(a) { return a[2] <= 1; }, text: 'Create a Stripe account and generate a payment link for your highest-value offer. 10 minutes.' },
+  { check: function(a) { return a[4] <= 1; }, text: 'Add formsubmit.co to every live page. One line of HTML. Done in 5 minutes per site.' },
+  { check: function(a) { return a[5] <= 1; }, text: 'Write a CLAUDE.md with: project goal, stack, rules, file structure. Paste your README as a starting point.' },
+  { check: function(a) { return a[3] <= 2; }, text: 'Try your first autonomous session: run Claude with --dangerously-skip-permissions on a task and let it execute without you watching.' },
+  { check: function(a) { return a[9] <= 1; }, text: 'Set up one cron job: a daily content generation script that posts to your draft queue while you sleep.' },
+  { check: function(a) { return a[7] === 0; }, text: 'Post your build publicly today. One tweet, one Reddit post, one HN comment. Distribution is the only gap between $0 and $1.' }
+];
+
+var PRODUCTS = [
+  { price: '$47', name: 'Claude Code Agent Bible', tag: 'Bestseller', href: 'https://printmaxx-store.surge.sh/?ref=cc-audit-bible' },
+  { price: '$37', name: 'Claude Code for Solopreneurs', tag: 'Most Popular', href: 'https://printmaxx-store.surge.sh/?ref=cc-audit-solopreneur' },
+  { price: '$27', name: 'Claude Code for Non-Technical Founders', tag: 'No-code friendly', href: 'https://printmaxx-store.surge.sh/?ref=cc-audit-founders' },
+  { price: '$67', name: 'Claude Code Mastery', tag: 'Complete System', href: 'https://printmaxx-store.surge.sh/?ref=cc-audit-mastery' }
+];
+
+function showResults() {
+  document.getElementById('quiz').style.display = 'none';
+  progressFill.style.width = '100%';
+  progLabel.textContent = '10 / 10';
+
+  var totalScore = answers.reduce(function(a, b) { return a + b; }, 0);
+  var maxScore = 31;
+  var pct = Math.round((totalScore / maxScore) * 100);
+
+  var arc = document.getElementById('score-arc');
+  var offset = 314 - (314 * pct / 100);
+  var color = pct < 35 ? '#ef4444' : pct < 65 ? '#f59e0b' : '#4ade80';
+  arc.style.stroke = color;
+  arc.style.strokeDashoffset = offset;
+
+  var scoreNum = document.getElementById('score-num');
+  scoreNum.textContent = pct + '%';
+  scoreNum.style.color = color;
+
+  var tier = pct < 35 ? 'Early Stage — major gaps identified' :
+             pct < 65 ? 'Building — a few critical gaps to close' :
+                        'Executing — fine-tune and scale';
+  document.getElementById('score-tier').textContent = tier;
+
+  var gapsList = document.getElementById('gaps-list');
+  var gapsFound = 0;
+  for (var i = 0; i < GAP_DATA.length; i++) {
+    if (!GAP_DATA[i]) continue;
+    if (answers[i] <= GAP_DATA[i].threshold) {
+      var item = document.createElement('div');
+      item.className = 'gap-item';
+      var titleEl = document.createElement('strong');
+      titleEl.className = 'gap-title';
+      titleEl.textContent = GAP_DATA[i].title;
+      var detailEl = document.createElement('span');
+      detailEl.className = 'gap-detail';
+      detailEl.textContent = GAP_DATA[i].detail;
+      item.appendChild(titleEl);
+      item.appendChild(detailEl);
+      gapsList.appendChild(item);
+      gapsFound++;
+    }
+  }
+  if (gapsFound === 0) {
+    var item = document.createElement('div');
+    item.className = 'gap-item';
+    var titleEl = document.createElement('strong');
+    titleEl.className = 'gap-title';
+    titleEl.textContent = 'Strong foundation';
+    var detailEl = document.createElement('span');
+    detailEl.className = 'gap-detail';
+    detailEl.textContent = "You've closed most gaps. The fix plan below focuses on scaling what's already working.";
+    item.appendChild(titleEl);
+    item.appendChild(detailEl);
+    gapsList.appendChild(item);
+  }
+
+  // Build fix items (shown after email unlock)
+  var fixItems = document.getElementById('fix-items');
+  var fixes = FIX_MAP.filter(function(f) { return f.check(answers); }).map(function(f) { return f.text; });
+  if (blockerIdx >= 0) fixes.push(BLOCKER_FIXES[blockerIdx]);
+  if (fixes.length === 0) fixes.push("You're executing well. Document your process and sell it. A detailed guide about what you've built is a sellable digital product.");
+  fixes.forEach(function(fix, idx) {
+    var row = document.createElement('div');
+    row.className = 'fix-item';
+    var num = document.createElement('div');
+    num.className = 'fix-num';
+    num.textContent = String(idx + 1);
+    var txt = document.createElement('div');
+    txt.className = 'fix-text';
+    txt.textContent = fix;
+    row.appendChild(num);
+    row.appendChild(txt);
+    fixItems.appendChild(row);
+  });
+
+  // Build product cards
+  var productsRow = document.getElementById('products-row');
+  PRODUCTS.forEach(function(prod) {
+    var a = document.createElement('a');
+    a.className = 'product-card';
+    a.href = prod.href;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    var price = document.createElement('div');
+    price.className = 'prod-price';
+    price.textContent = prod.price;
+    var name = document.createElement('div');
+    name.className = 'prod-name';
+    name.textContent = prod.name;
+    var tag = document.createElement('div');
+    tag.className = 'prod-tag';
+    tag.textContent = prod.tag;
+    a.appendChild(price);
+    a.appendChild(name);
+    a.appendChild(tag);
+    productsRow.appendChild(a);
+  });
+
+  document.getElementById('results').style.display = 'block';
+}
+
+function unlockPlan() {
+  var email = document.getElementById('gate-email').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('gate-email').style.borderColor = '#ef4444';
+    return;
+  }
+  fetch('https://formsubmit.co/ajax/printmaxxweb@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      email: email,
+      source: 'claude-code-revenue-audit',
+      score: document.getElementById('score-num').textContent,
+      _subject: '[Lead] Claude Code Revenue Audit — ' + email,
+      _captcha: 'false'
+    })
+  }).catch(function() {});
+  localStorage.setItem('cc_audit_email', email);
+  localStorage.setItem('cc_audit_unlocked', '1');
+  document.getElementById('gate-section').style.display = 'none';
+  document.getElementById('unlocked-section').classList.add('show');
+}
+</script>
+</body>
+</html>

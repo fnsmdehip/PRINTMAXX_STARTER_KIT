@@ -578,6 +578,188 @@ def bridge_ci_to_openclaw_context():
     connections[name] = {"status": "OK", "items": 1}
 
 
+# ─── CONNECTION 9: BUILD_APP Alpha → App Factory Queue ───────────────────────
+# 48 scored BUILD_APP entries sit in ALPHA_STAGING but never reach app_factory/queue/
+def bridge_build_app_alpha_to_queue():
+    global wired_total
+    name = "BUILD_APP Alpha → App Factory Queue"
+
+    queue_dir = safe_path(AUTOMATIONS / "app_factory" / "queue")
+    queue_dir.mkdir(parents=True, exist_ok=True)
+
+    existing_ids = {f.stem for f in queue_dir.glob("*.json")}
+    staged_path = LEDGER / "ALPHA_STAGING.csv"
+    if not staged_path.exists():
+        connections[name] = {"status": "no_alpha_staging", "items": 0}
+        return
+
+    new_count = 0
+    try:
+        with open(staged_path, encoding="utf-8", errors="replace") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                status = row.get("status", "").strip()
+                alpha_id = row.get("alpha_id", "").strip()
+                if status != "BUILD_APP" or not alpha_id:
+                    continue
+                safe_id = re.sub(r"[^a-zA-Z0-9_-]", "_", alpha_id)[:60]
+                if safe_id in existing_ids:
+                    continue
+                tactic = row.get("tactic", "").strip()
+                niche = row.get("applicable_niches", "").strip() or "general"
+                roi = row.get("roi_potential", "").strip()
+                spec = {
+                    "alpha_id": alpha_id,
+                    "source": "alpha_staging_build_app",
+                    "tactic": tactic[:300],
+                    "niche": niche[:100],
+                    "roi_potential": roi,
+                    "category": row.get("category", "").strip(),
+                    "queued_at": TIMESTAMP,
+                    "priority": "high" if roi == "HIGH" else "medium",
+                }
+                out = safe_path(queue_dir / f"{safe_id}.json")
+                out.write_text(json.dumps(spec, indent=2))
+                existing_ids.add(safe_id)
+                new_count += 1
+    except Exception as e:
+        connections[name] = {"status": f"error: {e}", "items": 0}
+        return
+
+    wired_total += new_count
+    connections[name] = {"status": "OK", "items_wired": new_count}
+
+
+# ─── CONNECTION 10: ENGAGEMENT_BAIT Alpha → Posting Queue CSV ────────────────
+# 4,114 engagement bait entries with hook structures → tweet drafts for posting queue
+def bridge_engagement_bait_to_posts():
+    global wired_total
+    name = "Engagement Bait Alpha → Posting Queue"
+
+    posting_dir = safe_path(PROJECT_ROOT / "CONTENT" / "social" / "posting_queue")
+    posting_dir.mkdir(parents=True, exist_ok=True)
+    out_path = safe_path(posting_dir / f"alpha_bait_hooks_{TODAY.replace('-','')}.csv")
+    if out_path.exists():
+        connections[name] = {"status": "already_done_today", "items_wired": 0}
+        return
+
+    staged_path = LEDGER / "ALPHA_STAGING.csv"
+    if not staged_path.exists():
+        connections[name] = {"status": "no_alpha_staging", "items": 0}
+        return
+
+    rows_out = []
+    seen_tactics = set()
+    try:
+        with open(staged_path, encoding="utf-8", errors="replace") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row.get("status", "").strip() != "ENGAGEMENT_BAIT":
+                    continue
+                tactic = row.get("tactic", "").strip()
+                if not tactic or tactic[:60] in seen_tactics:
+                    continue
+                seen_tactics.add(tactic[:60])
+                # Only use tactics that have real hook structure (not generic labels)
+                if len(tactic) < 20 or tactic.upper() == tactic:
+                    continue
+                rows_out.append({
+                    "platform": "twitter",
+                    "content": tactic[:280],
+                    "source": "alpha_engagement_bait",
+                    "alpha_id": row.get("alpha_id", ""),
+                    "category": row.get("category", ""),
+                    "created_at": TIMESTAMP,
+                    "status": "draft",
+                })
+                if len(rows_out) >= 50:  # Cap at 50 drafts per run
+                    break
+    except Exception as e:
+        connections[name] = {"status": f"error: {e}", "items": 0}
+        return
+
+    if not rows_out:
+        connections[name] = {"status": "no_qualifying_bait", "items_wired": 0}
+        return
+
+    fieldnames = ["platform", "content", "source", "alpha_id", "category", "created_at", "status"]
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows_out)
+
+    wired_total += len(rows_out)
+    connections[name] = {"status": "OK", "items_wired": len(rows_out)}
+
+
+# ─── CONNECTION 11: REVENUE_METHOD + MONETIZATION Alpha → Outreach Angles ────
+# 366 REVENUE_METHOD + 286 MONETIZATION entries → outreach opening lines
+def bridge_revenue_alpha_to_outreach():
+    global wired_total
+    name = "Revenue Alpha → Outreach Angles"
+
+    angles_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "outreach_trend_angles.json")
+    existing_angles = []
+    if angles_path.exists():
+        try:
+            data = json.loads(angles_path.read_text())
+            existing_angles = [a for a in data if isinstance(a, dict)]
+        except Exception:
+            existing_angles = []
+    existing_signals = {a.get("signal", "")[:60] for a in existing_angles}
+
+    staged_path = LEDGER / "ALPHA_STAGING.csv"
+    if not staged_path.exists():
+        connections[name] = {"status": "no_alpha_staging", "items": 0}
+        return
+
+    new_angles = []
+    target_statuses = {"INTEGRATED", "ROUTED_TO_VENTURE", "AUTO_APPROVED"}
+    target_cats = {"REVENUE_METHOD", "MONETIZATION", "GROWTH_HACK", "SAAS"}
+    try:
+        with open(staged_path, encoding="utf-8", errors="replace") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                cat = row.get("category", "").strip()
+                status = row.get("status", "").strip()
+                if cat not in target_cats:
+                    continue
+                if status not in target_statuses:
+                    continue
+                tactic = row.get("tactic", "").strip()
+                if not tactic or len(tactic) < 30:
+                    continue
+                sig = tactic[:60]
+                if sig in existing_signals:
+                    continue
+                existing_signals.add(sig)
+                roi = row.get("roi_potential", "MEDIUM").strip() or "MEDIUM"
+                score = 80 if roi == "HIGH" else 60
+                new_angles.append({
+                    "signal": sig,
+                    "full_signal": tactic[:200],
+                    "source": f"alpha/{cat.lower()}",
+                    "signal_type": "revenue_method",
+                    "score": score,
+                    "outreach_angle": f"We're seeing traction with: {tactic[:80]}. Relevant to your business?",
+                    "detected_at": TIMESTAMP,
+                })
+                if len(new_angles) >= 30:
+                    break
+    except Exception as e:
+        connections[name] = {"status": f"error: {e}", "items": 0}
+        return
+
+    if new_angles:
+        all_angles = existing_angles + new_angles
+        all_angles = all_angles[-200:]
+        angles_path.write_text(json.dumps(all_angles, indent=2))
+        wired_total += len(new_angles)
+        connections[name] = {"status": "OK", "items_wired": len(new_angles)}
+    else:
+        connections[name] = {"status": "no_new_angles", "items_wired": 0}
+
+
 # ─── CONNECTION 8: Twitter Signals → Outreach Angles (direct) ───────────────
 # Bypass the subreddit-filter bottleneck: write twitter biz signals direct to angles file
 def bridge_twitter_to_outreach_angles():
@@ -649,6 +831,82 @@ def bridge_twitter_to_outreach_angles():
         connections[name] = {"status": "no_qualifying_tweets", "items": 0}
 
 
+# ─── CONNECTION 12: App Factory Queue JSONs → APP_FACTORY_OPPORTUNITIES.csv ──
+# Converts queue/*.json specs to the CSV format the auto_orchestrator reads.
+# Without this, BUILD_APP alpha specs sit in queue/ but never reach the pipeline.
+def bridge_queue_to_opportunities_csv():
+    global wired_total
+    name = "App Factory Queue → Opportunities CSV"
+
+    queue_dir = AUTOMATIONS / "app_factory" / "queue"
+    opp_csv = safe_path(LEDGER / "APP_FACTORY_OPPORTUNITIES.csv")
+
+    # Load existing IDs from opportunities CSV
+    existing_ids = set()
+    if opp_csv.exists():
+        try:
+            with open(opp_csv, encoding="utf-8", errors="replace") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    existing_ids.add(row.get("id", ""))
+        except Exception:
+            pass
+
+    csv_fields = [
+        "id", "score", "source", "niche", "opportunity_type", "template_fit",
+        "keyword", "title", "chart_frequency", "reddit_score", "comments",
+        "pain_signals", "roi_estimate", "url", "scanned_at", "status",
+    ]
+
+    new_rows = []
+    for spec_file in sorted(queue_dir.glob("*.json")):
+        spec = load_json_safe(spec_file)
+        if not isinstance(spec, dict):
+            continue
+        opp_id = f"QUEUE_{spec_file.stem[:40]}"
+        if opp_id in existing_ids:
+            continue
+        tactic = spec.get("tactic", spec.get("project_name", spec_file.stem))
+        niche_raw = spec.get("niche", spec.get("target_user", "general"))
+        roi = spec.get("roi_potential", spec.get("priority", "MEDIUM")).upper()
+        score = 85 if roi == "HIGH" else 70
+        template = "HIGH" if any(kw in tactic.lower() for kw in ["streak", "habit", "daily", "track", "prayer"]) else "MEDIUM"
+        new_rows.append({
+            "id": opp_id,
+            "score": score,
+            "source": "alpha_queue",
+            "niche": niche_raw[:80],
+            "opportunity_type": "build_app_alpha",
+            "template_fit": template,
+            "keyword": spec_file.stem[:60],
+            "title": tactic[:120],
+            "chart_frequency": "",
+            "reddit_score": "",
+            "comments": "",
+            "pain_signals": spec.get("category", ""),
+            "roi_estimate": roi,
+            "url": "",
+            "scanned_at": TIMESTAMP,
+            "status": "queued",
+        })
+        existing_ids.add(opp_id)
+
+    if not new_rows:
+        connections[name] = {"status": "deduped", "items_wired": 0}
+        return
+
+    opp_csv.parent.mkdir(parents=True, exist_ok=True)
+    write_header = not opp_csv.exists() or opp_csv.stat().st_size < 10
+    with open(opp_csv, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=csv_fields, extrasaction="ignore")
+        if write_header:
+            writer.writeheader()
+        writer.writerows(new_rows)
+
+    wired_total += len(new_rows)
+    connections[name] = {"status": "OK", "items_wired": len(new_rows)}
+
+
 # ─── RUN ALL BRIDGES ──────────────────────────────────────────────────────
 def run():
     print("=" * 60)
@@ -664,11 +922,15 @@ def run():
     bridge_ci_signals_to_app_factory()
     bridge_ci_to_openclaw_context()
     bridge_twitter_to_outreach_angles()
+    bridge_build_app_alpha_to_queue()
+    bridge_engagement_bait_to_posts()
+    bridge_revenue_alpha_to_outreach()
+    bridge_queue_to_opportunities_csv()
 
     print("\n--- BRIDGE RESULTS ---")
     for conn_name, result in connections.items():
         status = result["status"]
-        items = result.get("items", 0)
+        items = result.get("items", result.get("items_wired", 0))
         symbol = "[+]" if items > 0 else "[-]"
         print(f"  {symbol} {conn_name}: {items} ({status})")
 

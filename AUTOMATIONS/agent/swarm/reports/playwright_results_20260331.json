@@ -1,0 +1,401 @@
+{
+  "summary": {
+    "tested_at": "2026-03-31T20:03:59.121265",
+    "total_tests": 24,
+    "green": 8,
+    "yellow": 5,
+    "red": 0,
+    "error": 11,
+    "avg_load_ms": 5260,
+    "pass_rate": "33.3%",
+    "broken_sites": [
+      "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "https://saas-stack-audit-200.surge.sh",
+      "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
+      "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
+      "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh",
+      "https://printmaxx.surge.sh",
+      "https://prayerlock.surge.sh"
+    ],
+    "slow_sites": [
+      [
+        "https://mcp-marketplace.surge.sh",
+        8252
+      ],
+      [
+        "https://ramadan-tracker.surge.sh",
+        5854
+      ],
+      [
+        "https://coreday.surge.sh",
+        7408
+      ]
+    ],
+    "sites_with_errors": [
+      [
+        "https://scripture-streak.surge.sh",
+        [
+          "Failed to load resource: the server responded with a status of 400 ()"
+        ]
+      ],
+      [
+        "https://best-ai-tools-2026.surge.sh",
+        [
+          "Failed to load resource: the server responded with a status of 400 ()"
+        ]
+      ]
+    ]
+  },
+  "results": [
+    {
+      "url": "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh/\nCall log:\n  - navigating to \"https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh/\nCall log:\n  - navigating to \"https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh/\nCall log:\n  - navigating to \"https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://saas-stack-audit-200.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://saas-stack-audit-200.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh/\nCall log:\n  - navigating to \"https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh/\nCall log:\n  - navigating to \"https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh/\nCall log:\n  - navigating to \"https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh/\nCall log:\n  - navigating to \"https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh/\nCall log:\n  - navigating to \"https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://printmaxx.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://printmaxx.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://prayerlock.surge.sh",
+      "status": "ERROR",
+      "http_code": 0,
+      "load_time_ms": 0,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": false,
+      "content_length": 0,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": null,
+      "error": "Page.goto: Timeout 10000ms exceeded.\nCall log:\n  - navigating to \"https://prayerlock.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://mcp-marketplace.surge.sh",
+      "status": "YELLOW",
+      "http_code": 200,
+      "load_time_ms": 8252,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 116461,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/mcp-marketplace_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://ramadan-tracker.surge.sh",
+      "status": "YELLOW",
+      "http_code": 200,
+      "load_time_ms": 5854,
+      "console_errors": [],
+      "console_warnings": [
+        "cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation"
+      ],
+      "has_content": true,
+      "content_length": 103912,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/ramadan-tracker_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://focuslock.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4973,
+      "console_errors": [],
+      "console_warnings": [
+        "cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation"
+      ],
+      "has_content": true,
+      "content_length": 110169,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/focuslock_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://coldmaxx.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4885,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 43976,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/coldmaxx_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://invoiceforge.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4631,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 52144,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/invoiceforge_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://pagescorer.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4497,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 21100,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/pagescorer_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://coreday.surge.sh",
+      "status": "YELLOW",
+      "http_code": 200,
+      "load_time_ms": 7408,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 56739,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/coreday_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://walktounlock-web.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4919,
+      "console_errors": [],
+      "console_warnings": [
+        "cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation"
+      ],
+      "has_content": true,
+      "content_length": 68899,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/walktounlock-web_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://scripture-streak.surge.sh",
+      "status": "YELLOW",
+      "http_code": 200,
+      "load_time_ms": 4633,
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 400 ()"
+      ],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 15962,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/scripture-streak_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://best-ai-tools-2026.surge.sh",
+      "status": "YELLOW",
+      "http_code": 200,
+      "load_time_ms": 4831,
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 400 ()"
+      ],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 25646,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/best-ai-tools-2026_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://cold-email-roi-calculator.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4531,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 23192,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/cold-email-roi-calculator_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://prayerlock-vs-hallow.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4449,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 1939,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/prayerlock-vs-hallow_surge_sh.png",
+      "error": null
+    },
+    {
+      "url": "https://n8n-vs-zapier-vs-make.surge.sh",
+      "status": "GREEN",
+      "http_code": 200,
+      "load_time_ms": 4518,
+      "console_errors": [],
+      "console_warnings": [],
+      "has_content": true,
+      "content_length": 35136,
+      "links_checked": 0,
+      "broken_links": [],
+      "screenshot_path": "AUTOMATIONS/agent/swarm/screenshots/n8n-vs-zapier-vs-make_surge_sh.png",
+      "error": null
+    }
+  ]
+}

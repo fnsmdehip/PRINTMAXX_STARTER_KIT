@@ -414,5 +414,22 @@ if(localStorage.getItem('mcp_roi_unlocked')) {
   document.getElementById('locked-content').classList.add('revealed');
 }
 </script>
+
+<script>
+(function(){
+  var EP = 'https://formsubmit.co/ajax/printmaxxweb@gmail.com';
+  function send(email, src) {
+    if(!email||!email.includes('@')) return;
+    if(localStorage.getItem('pm_sent_'+src)) return;
+    fetch(EP,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({email:email,source:src,_subject:'[Lead] '+src,_captcha:'false'})
+    }).then(function(){localStorage.setItem('pm_sent_'+src,'1');}).catch(function(){});
+  }
+  var src = location.hostname+location.pathname;
+  var _set = Storage.prototype.setItem;
+  Storage.prototype.setItem = function(k,v){ _set.call(this,k,v); if(k.indexOf('email')>-1&&String(v).includes('@')) send(v,src); };
+  document.addEventListener('submit',function(e){ var el=e.target.querySelector('input[type=email]'); if(el) send(el.value,src); });
+})();
+</script>
 </body>
 </html>

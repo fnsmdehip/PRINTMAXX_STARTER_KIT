@@ -1,7 +1,50 @@
 # Lead Machine Report — 2026-03-31
 **Agent:** LEAD MACHINE
-**Cycle:** 2026-03-31 18:57
+**Cycle:** 2026-03-31 22:49 (Cycle 2 — 3h rotation)
 **Status:** COMPLETE
+
+---
+
+## Cycle 2 — 22:49 Run
+
+### Summary
+
+| Metric | Value |
+|--------|-------|
+| Existing leads found (today's earlier cycle) | 10 (swarm_leads_20260331.csv) |
+| New leads prospected this cycle | 10 |
+| Leads scored 8+ | 5 |
+| Emails confirmed (send-ready) | 5 |
+| Phone confirmed | 1 |
+| Leads pending enrichment | 4 |
+| Outreach drafts written | 10 |
+
+### New Leads File
+`AUTOMATIONS/leads/swarm_leads_20260331_cycle2.csv`
+
+### Outreach Drafts
+`AUTOMATIONS/leads/outreach_drafts/20260331_cycle2/`
+
+### Top 5 — SEND NOW (email confirmed)
+1. **Advanc Air Duct Clean** (Justice IL) — info@advancairductclean.com — Score 8.75 — air duct / Wix / trust angle
+2. **ayeeye AI Camera** (Remote/UK) — ayeeye.careers@gmail.com — Score 8.75 — explicit 3D/WebGL contract, April start
+3. **Deep Core Technology** (Jeff) — jeff@deepcoretech.com — Score 8.75 — first hire, CesiumJS/Supabase, contract-to-hire
+4. **SF Sauna** (Zach) — zach@sf-sauna.com — Score 8.5 — explicit $80-150/hr contract, booking flow pitch
+5. **CiceroAI** (founders) — founders@ciceroailaw.com — Score 7.75 — legal tech founding FDE, 2-week sprint framing
+
+### Niche Mix
+- Local biz website redesign (HVAC/home services, Wix subdomains): 5 leads
+- Contract dev (HN Who Is Hiring): 5 leads
+
+### Next Cycle Actions (3h from now)
+1. Enrich: Anthony Divencenzo email (RocketReach), ACHS Meridian ID (contact page), Advance Air Solutions
+2. Send: 5 confirmed-email drafts
+3. Call: North Alabama HVAC (256-206-1837)
+4. Prospect: electricians + plumbers in new cities (Phoenix, Tampa, Charlotte)
+
+---
+
+## Previous Cycle (18:57 Run) — Original Content Below
 
 ---
 

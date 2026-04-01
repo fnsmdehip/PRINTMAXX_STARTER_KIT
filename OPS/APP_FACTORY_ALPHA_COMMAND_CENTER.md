@@ -1,9 +1,9 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-30 06:10:48
+Generated: 2026-03-31 20:07:02
 
 ## Inputs
-- ALPHA_STAGING app candidates: 3975
+- ALPHA_STAGING app candidates: 3994
 - APP_FACTORY_METHODS candidates: 2
 - Reddit findings consumed: 6
 - Existing app specs detected: 176
@@ -44,8 +44,8 @@ Generated: 2026-03-30 06:10:48
 | 16 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 20 | HTML interactive tools as digital products ($17 price point validated) | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 22 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 24 | Show HN: Run Claude Code using ChatGPT subscription | NEW_BUILD | 92 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 26 | Vibe-coded apps revenue: Plinq $456K/yr (Lovable). Pieter Levels flight sim $12K | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 25 | Vibe-coded apps revenue: Plinq $456K/yr (Lovable). Pieter Levels flight sim $12K | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 26 | Fiverr boring category arb: Top Fiverr gigs in resume/biz plan/cover letter at $ | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.
