@@ -90,6 +90,9 @@
 | cnsnt-web | https://cnsnt-web.surge.sh | LIVE — gap-hunter deploy 2026-03-28 (PWA) |
 | builders-ledger | https://builders-ledger.surge.sh | LIVE — gap-hunter deploy 2026-03-28 |
 | cnsnt-downloads | https://cnsnt-downloads.surge.sh | LIVE — gap-hunter deploy 2026-03-28 (desktop DMG download page) |
+| streakr | https://streakr.surge.sh | LIVE — gap-hunter deploy 2026-03-31 (swipe habit tracker PWA) |
+| best-blood-pressure-supplement-men-over-55 | https://best-blood-pressure-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-03-31 |
+| best-memory-supplement-men-over-60 | https://best-memory-supplement-men-over-60.surge.sh | LIVE — gap-hunter deploy 2026-03-31 |
 
 ---
 

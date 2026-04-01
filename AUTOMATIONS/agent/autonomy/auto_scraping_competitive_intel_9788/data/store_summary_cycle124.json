@@ -1,0 +1,74 @@
+{
+  "cycle": 124,
+  "timestamp": "2026-03-31T22:01:52.154176+00:00",
+  "strategy": "CULINARY SCIENCE & FOOD HISTORY",
+  "niches_scanned": 10,
+  "unique_niches": 10,
+  "duplicates_filtered": 0,
+  "ci_rows_added": 10,
+  "alpha_rows_added": 10,
+  "cumulative_blue_oceans": 625,
+  "top_opportunities": [
+    {
+      "name": "Daily Food Science Streak",
+      "score": 21,
+      "community": 28378000,
+      "breakdown": {
+        "community": 4,
+        "ocean": 5,
+        "competition": 3,
+        "content_richness": 5,
+        "monetization_wtp": 4
+      }
+    },
+    {
+      "name": "Daily Culinary History Streak",
+      "score": 21,
+      "community": 40665000,
+      "breakdown": {
+        "community": 5,
+        "ocean": 5,
+        "competition": 4,
+        "content_richness": 5,
+        "monetization_wtp": 2
+      }
+    },
+    {
+      "name": "Daily Spice Flavor Science Streak",
+      "score": 21,
+      "community": 27630000,
+      "breakdown": {
+        "community": 4,
+        "ocean": 5,
+        "competition": 5,
+        "content_richness": 5,
+        "monetization_wtp": 2
+      }
+    },
+    {
+      "name": "Daily Baking Science Streak",
+      "score": 21,
+      "community": 2695000,
+      "breakdown": {
+        "community": 2,
+        "ocean": 5,
+        "competition": 5,
+        "content_richness": 5,
+        "monetization_wtp": 4
+      }
+    },
+    {
+      "name": "Daily Food Anthropology Streak",
+      "score": 21,
+      "community": 41140000,
+      "breakdown": {
+        "community": 5,
+        "ocean": 5,
+        "competition": 4,
+        "content_richness": 5,
+        "monetization_wtp": 2
+      }
+    }
+  ],
+  "notes": "Culinary science niche \u2014 massive food communities (r/food 21.6M, r/history 16.8M) with zero streak-learning competition. All 10 niches confirmed blue ocean. 0 duplicate(s) filtered: []. High WTP signal: 8/10 niches cite bestselling books with 100K+ copies sold."
+}

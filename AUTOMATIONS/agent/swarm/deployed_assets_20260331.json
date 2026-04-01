@@ -1,0 +1,151 @@
+{
+  "generated": "2026-03-31T17:57:00Z",
+  "cycle": "asset-deployer-20260331",
+  "total_deployed": 12,
+  "deployments": [
+    {
+      "name": "Research Blog",
+      "url": "https://fnsmdehip-research.surge.sh",
+      "domain": "fnsmdehip-research.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "research-blog",
+      "content_items": 17,
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true,
+      "changes": ["twitter-meta-tag", "article-updates"]
+    },
+    {
+      "name": "Blood Pressure Supplement",
+      "url": "https://best-blood-pressure-supplement-men-over-55.surge.sh",
+      "domain": "best-blood-pressure-supplement-men-over-55.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "affiliate-page",
+      "category": "health-supplements",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Memory Supplement",
+      "url": "https://best-memory-supplement-men-over-60.surge.sh",
+      "domain": "best-memory-supplement-men-over-60.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "affiliate-page",
+      "category": "health-supplements",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Testosterone Booster",
+      "url": "https://best-testosterone-booster-men-over-50.surge.sh",
+      "domain": "best-testosterone-booster-men-over-50.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "affiliate-page",
+      "category": "health-supplements",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "AI Stack 2026",
+      "url": "https://ai-stack-2026-landing.surge.sh",
+      "domain": "ai-stack-2026-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "ai-tools",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Baptist Streak",
+      "url": "https://baptist-streak-landing.surge.sh",
+      "domain": "baptist-streak-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "religious-streak",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Cold Email Tools",
+      "url": "https://best-cold-email-tools-landing.surge.sh",
+      "domain": "best-cold-email-tools-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "productivity-tools",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Episcopal Streak",
+      "url": "https://episcopal-streak-landing.surge.sh",
+      "domain": "episcopal-streak-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "religious-streak",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Lutheran Streak",
+      "url": "https://lutheran-streak-landing.surge.sh",
+      "domain": "lutheran-streak-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "religious-streak",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Methodist Streak",
+      "url": "https://methodist-streak-landing.surge.sh",
+      "domain": "methodist-streak-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "religious-streak",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Pentecostal Streak",
+      "url": "https://pentecostal-streak-landing.surge.sh",
+      "domain": "pentecostal-streak-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "religious-streak",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    },
+    {
+      "name": "Protestant Streak",
+      "url": "https://protestant-streak-landing.surge.sh",
+      "domain": "protestant-streak-landing.surge.sh",
+      "status": "live",
+      "http_code": 200,
+      "type": "app-marketing-landing",
+      "category": "religious-streak",
+      "deployed_at": "2026-03-31T17:57:00Z",
+      "verified": true
+    }
+  ],
+  "infrastructure": {
+    "platform": "surge.sh",
+    "cdn_regions": ["SFO", "LHR", "YYZ", "JFK", "AMS", "FRA", "SGP", "BLR", "SYD", "NRT"],
+    "all_active": true
+  },
+  "verification": {
+    "total_deployed": 12,
+    "http_200_count": 12,
+    "success_rate": "100%",
+    "failures": 0
+  }
+}
