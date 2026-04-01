@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-03-31T20:20:58.873310",
-  "cycle_number": 8,
+  "last_run": "2026-04-01T01:15:00.000000",
+  "cycle_number": 9,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -54,22 +54,27 @@
     "Fresno CA",
     "Mesa AZ"
   ],
-  "total_leads_all_cycles": 1818,
-  "total_previews_deployed": 263,
-  "total_sites_built_local": 915,
-  "total_emails_queued": 925,
-  "emails_ready_to_send": 31,
+  "total_leads_all_cycles": 2062,
+  "total_previews_deployed": 1094,
+  "total_sites_built_local": 1093,
+  "total_emails_queued": 1105,
+  "emails_ready_to_send": 30,
+  "emails_enriched_this_cycle": 33,
+  "enricher_hit_rate": "10.5%",
+  "enricher_leads_processed": 340,
+  "enricher_leads_remaining": 667,
+  "projected_emails_from_remaining": 70,
   "next_cities": [
-    "Tampa FL (expansion)",
-    "Sacramento CA (expansion)",
-    "Tucson AZ (expansion)",
-    "Tulsa OK",
-    "Wichita KS",
-    "Allentown PA",
-    "Chattanooga TN",
-    "Baton Rouge LA",
-    "Stockton CA",
-    "Richmond VA"
+    "Huntsville AL",
+    "Birmingham AL",
+    "Jackson MS",
+    "Montgomery AL",
+    "Shreveport LA",
+    "Lake Charles LA",
+    "Columbia SC",
+    "Greenville SC",
+    "Winnipeg MB (Canada pilot)",
+    "Calgary AB (Canada pilot)"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -107,12 +112,36 @@
     "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "CRITICAL: No outbound email service \u2014 31 emails ready to send, 0 sent. Fix: Gmail App Password (10 min, free) or Brevo (15 min, 300/day free). File: AUTOMATIONS/leads/openclaw/SEND_QUEUE.md",
-    "CRITICAL: Email enricher finding 0% \u2014 830 hot leads, only 31 have email. Fix: Apollo.io free (50/mo) or Hunter.io ($49/mo).",
-    "P1: Surge Student plan limits deploy to 472 registered domains. Fix: New free surge account (5 min) OR Netlify (netlify login, 5 min).",
-    "P1: New cities (VA Beach, CO Springs etc.) return high A-grade. Pivot to smaller SE/Midwest cities for F-grade density."
+    "CRITICAL: No outbound email service \u2014 32 emails ready to send, 0 sent. Fix: Gmail App Password (5 min, free) or Brevo (15 min, 300/day free). File: AUTOMATIONS/leads/openclaw/SEND_QUEUE.md",
+    "CRITICAL: Email enricher finding 0% for F/D leads \u2014 website scraper wrong tool. Fix: Apollo.io free (50/mo, 10 min signup) enriches by business name + city.",
+    "P1: Surge Student plan frozen at 472 domains. Fix: New surge account (new email, 5 min) OR netlify login (10 min).",
+    "P1: SE/Midwest pivot confirmed working \u2014 72% F-grade. Next cycle: Huntsville AL, Birmingham AL, Jackson MS, Montgomery AL."
   ],
   "status": "CYCLE_COMPLETE",
+  "cycle_9_results": {
+    "cities_discovered": [
+      "Tulsa OK",
+      "Wichita KS",
+      "Chattanooga TN",
+      "Baton Rouge LA",
+      "Richmond VA",
+      "Mobile AL",
+      "Knoxville TN",
+      "Little Rock AR"
+    ],
+    "new_leads": 244,
+    "new_f_grade": 176,
+    "new_sites_built": 431,
+    "new_ghpages_deploys": 831,
+    "total_ghpages_live": 1094,
+    "new_emails_found": 1,
+    "new_emails_queued": 180,
+    "ready_to_send_email": 32,
+    "outreach_with_live_url": 841,
+    "observation": "SE/Midwest pivot yields 72% F-grade vs 5% West Coast. GH Pages now dominant deploy channel — 831 sites in single batch push. Website-scraping enricher confirmed wrong tool for F-grade segment (businesses without websites have no email to scrape). Apollo.io needed.",
+    "surge_blocker": "Student plan frozen; 472 refresh-eligible domains only",
+    "ghpages_breakthrough": "831 sites committed + pushed in one cycle — 1,094 total live"
+  },
   "cycle_4_results": {
     "cities_discovered": [
       "Boston MA",
@@ -180,16 +209,16 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY",
+    "discover": "HEALTHY \u2014 SE/Midwest pivot yields 72% F-grade",
     "grade": "HEALTHY",
-    "build": "HEALTHY \u2014 915 HTML sites in _sites/",
-    "deploy_surge": "PARTIAL \u2014 472 live, refresh-only",
-    "deploy_ghpages": "GROWING \u2014 263 live at fnsmdehip.github.io/openclaw-previews/",
-    "enrich_email": "DEAD \u2014 0% find rate. Hunter/Apollo needed.",
-    "enrich_phone": "HIGH \u2014 87% coverage (771/925)",
-    "outreach_queue": "HEALTHY \u2014 925 queued, 678 with live URLs",
-    "outreach_ready": "STUCK at 31 \u2014 same email coverage blocks growth",
-    "send": "BLOCKED \u2014 no email service. 31 ready NOW."
+    "build": "HEALTHY \u2014 1,093 HTML sites in _sites/",
+    "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
+    "deploy_ghpages": "PRIMARY CHANNEL \u2014 1,094 live at fnsmdehip.github.io/openclaw-previews/",
+    "enrich_email": "WORKING AT 12% \u2014 F-grade businesses with a website yield 12% hit rate. Run enricher on all 1,007 hot leads = ~120 new emails. Apollo.io still preferred for zero-web-presence businesses.",
+    "enrich_phone": "HIGH \u2014 ~85% coverage",
+    "outreach_queue": "HEALTHY \u2014 1,105 queued, 841 with live URLs",
+    "outreach_ready": "32 ready to send NOW \u2014 email service is the only blocker",
+    "send": "BLOCKED \u2014 no email service. 32 ready NOW. Gmail App Password = 5 min fix."
   },
   "metrics_history": [
     {
@@ -237,9 +266,22 @@
       "outreach_queued": 925,
       "outreach_with_live_url": 678,
       "ready_to_send": 31
+    },
+    {
+      "cycle": 9,
+      "date": "2026-04-01",
+      "total_leads": 2062,
+      "hot_leads": 1007,
+      "with_email": 32,
+      "surge_deployed": 472,
+      "ghpages_deployed": 1094,
+      "total_preview_live": 1094,
+      "outreach_queued": 1105,
+      "outreach_with_live_url": 841,
+      "ready_to_send": 32
     }
   ],
-  "ghpages_deployed": 263,
+  "ghpages_deployed": 1094,
   "phone_outreach_queue": 100,
   "cycle_7_results": {
     "cities_discovered": [

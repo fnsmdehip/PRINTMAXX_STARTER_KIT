@@ -1336,3 +1336,28 @@ Gaps found: 8 (3 fixed, 3 human-blocked, 2 low-priority)
 Actions: Redeployed lead magnets hub (23 files), redeployed testosterone booster affiliate (was 504), updated DEPLOYMENT_URLS.md (+9 apps, now 398 tracked)
 Revenue blockers: Gumroad account (14 PDFs ready), Stripe storefront, content posting access
 
+
+[2026-04-01 01:58] GAP HUNTER CYCLE
+Scanned: built assets, data pipelines, scripts, deployment status
+Findings: 8 gaps identified
+  - P0: Surge at 863 domain limit (443 local biz demos hogging slots) - ALL new deploys BLOCKED
+  - P1: Sleep supplement affiliate page built, cannot deploy (blocked by surge limit)
+  - P1: 1,369 posts in queue, 0 distributed (needs X/Twitter credentials)
+  - P2: 4 PDFs missing top-level listings → FIXED (created 4 LISTING_*.md files)
+  - P2: TruthScope app built but not in pipeline
+  - P2: 3,125 alpha entries pending review
+  - P3: 494 scripts not in crontab (known, consolidation needed)
+  - P3: 31 lead magnets not deployed as capture tools
+Actions taken:
+  - Created LISTING_reddit_money_machine.md
+  - Created LISTING_claude_code_mastery.md
+  - Created LISTING_cold_email_system.md
+  - Created LISTING_prompt_vault.md
+  - Wrote full gap report to reports/gap_hunter_report_20260401.md
+Blocked: Surge deploys (need upgrade or teardown)
+[2026-04-01 02:02] UPDATE: Background task completed - affiliate page status check
+  - Sleep supplement page IS LIVE (200) — deployed by asset_deployer earlier today
+  - 2 pages returning 504: best-lead-generation-tools, best-saas-tools-solopreneurs
+  - Attempted redeploy of 504 pages — ALSO BLOCKED by surge permissions
+  - SEVERITY UPGRADE: Surge is fully locked, not just for new domains. ALL deploys blocked.
+  - 15/17 affiliate pages healthy, 2/17 down

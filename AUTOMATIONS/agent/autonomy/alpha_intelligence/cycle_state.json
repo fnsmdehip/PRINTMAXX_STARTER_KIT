@@ -1,22 +1,23 @@
 {
-  "last_cycle": "2026-03-30T00:31:12Z",
-  "cycle_number": 113,
+  "last_cycle": "2026-04-01T00:38:32.671401Z",
+  "cycle_number": 114,
   "status": "COMPLETE",
   "phase": "COMPOUND_COMPLETE",
-  "entries_processed": 44,
-  "entries_routed": 23,
-  "ventures_created": 3,
-  "content_generated": 8,
-  "freelance_leads": 17,
-  "ecom_products": 21,
-  "twitter_entries": 2,
-  "next_cycle": "2026-03-30T04:00:00Z",
+  "entries_processed": 8,
+  "entries_routed": 407,
+  "ventures_created": 0,
+  "content_generated": 50,
+  "tweets": 35,
+  "threads": 5,
+  "linkedin_posts": 10,
+  "twitter_entries": 0,
+  "next_cycle": "2026-04-01T04:38:32.671408Z",
   "sources_status": {
     "reddit": "\u2705 163 posts (20 subreddits, 6 new entries)",
-    "twitter": "\u2705 2 new entries from @swyx (high-signal)",
-    "hackernews": "\u2705 22 Show HN opportunities",
-    "github_opportunities": "\u2705 21 opportunity radar entries",
-    "producthunt": "\u26a0\ufe0f 403 auth error (deprioritized)"
+    "twitter": "\u23f3 In progress (twitter_alpha_scraper.py --all)",
+    "hackernews": "\u2705 Show HN opportunities monitored",
+    "producthunt": "\u26a0\ufe0f 403 auth error (deprioritized)",
+    "engagement_bait": "\u2705 4,114 entries queued for conversion"
   },
-  "summary": "Strongest cycle for opportunity quality. Reddit + GitHub + HN + Twitter all performing well. Mac Code, Gridland, Lil-agents, app validation, Show HN Stack findings are HIGHEST tier. 17 freelance leads captured. Twitter now working (2 new entries). Next cycle: execute freelance outreach + ecom listing + venture builds."
+  "summary": "Cycle 114 complete. 8 entries processed (low quality, archived). 407 HIGHEST-tier entries routed. 50 content posts generated (30 from EB converter + 20 from P0 findings). Key P0s: MeditationStreak (3.52M), SobrietyStreak (1.24M), LTD pricing ($199\u2192$17.7K), cold email patterns (95% fail). Next: Higher volume EB routing + APP_FACTORY execution."
 }

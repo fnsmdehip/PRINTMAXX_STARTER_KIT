@@ -1,16 +1,27 @@
 {
-  "last_updated": "2026-03-31T18:57:00.000000",
-  "last_cycle": "2026-03-31",
-  "cycle_number": 35,
+  "last_updated": "2026-04-01T00:00:00.000000",
+  "last_cycle": "2026-04-01",
+  "cycle_number": 36,
   "coverage": {
     "twitter": {
       "threads": 14,
-      "singles": 69,
-      "reply_baits": 23,
+      "singles": 75,
+      "reply_baits": 26,
       "qt_captions": 15,
-      "total_pieces": 146,
-      "last_cycle": 35,
+      "total_pieces": 152,
+      "last_cycle": 36,
       "new_this_cycle": [
+        "tw_streakr_swipe_mechanic",
+        "tw_sleep_supplement_melatonin_overdose",
+        "tw_cnsnt_desktop_launch",
+        "tw_22_products_zero_gumroad",
+        "tw_398_deployed_zero_revenue",
+        "tw_supplement_cluster_6page",
+        "rb_streakr_productivity",
+        "rb_melatonin_overdose_health",
+        "rb_398_apps_bottleneck"
+      ],
+      "prev_cycle_35": [
         "day56_thread_7tweets",
         "tw1_seo_agent_fix",
         "tw2_day56_numbers",
@@ -660,18 +671,92 @@
         "reddit"
       ],
       "note": "19 articles SEO-fixed, ready for social sharing with proper OG cards"
+    },
+    "streakr": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "twitter",
+        "reddit"
+      ]
+    },
+    "best-sleep-supplement-men-over-55": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "twitter",
+        "reddit"
+      ],
+      "note": "6-page supplement cluster now fully interlinked"
+    },
+    "best-blood-pressure-supplement-men-over-55": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "twitter",
+        "linkedin"
+      ]
+    },
+    "best-memory-supplement-men-over-60": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "twitter"
+      ]
+    },
+    "cnsnt-desktop": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hacker_news",
+        "linkedin"
+      ]
+    },
+    "focuslock-cycle36": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "reddit"
+      ],
+      "subreddits": ["r/ADHD", "r/productivity", "r/selfimprovement"]
+    },
+    "sleepmaxx-cycle36": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "reddit"
+      ],
+      "subreddits": ["r/biohackers", "r/longevity", "r/sleep"]
+    },
+    "walktounlock-hn": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "hacker_news"
+      ]
+    },
+    "digital-products-22-pdfs": {
+      "first_covered": "2026-04-01",
+      "cycle": 36,
+      "channels": [
+        "twitter",
+        "reddit"
+      ],
+      "note": "Products teased as pending Gumroad. Creates demand before launch."
     }
   },
   "queue_next_cycle": [
-    "focuslock \u2014 r/ADHD specific post",
-    "mealmaxx \u2014 r/nutrition, r/keto, r/loseit posts",
-    "sleepmaxx \u2014 r/biohackers, r/longevity posts",
-    "walktounlock \u2014 Show HN post",
-    "ai-stack-2026 \u2014 HN Ask HN angle",
-    "research-blog UAF \u2014 r/altneuroscience, r/quantum posts",
-    "cnsnt desktop DMG \u2014 Show HN + ProductHunt when account live",
-    "builders-ledger cross-post to dev.to when account created",
-    "Day 57 update \u2014 revenue number if accounts created"
+    "mealmaxx \u2014 r/nutrition, r/keto, r/loseit posts (carried from c35)",
+    "ai-stack-2026 \u2014 HN Ask HN angle (carried from c35)",
+    "research-blog UAF \u2014 r/altneuroscience, r/quantum posts (carried from c35)",
+    "builders-ledger \u2014 dev.to cross-post when account created",
+    "digital products \u2014 Gumroad listings when account live (22 products waiting)",
+    "streakr \u2014 ProductHunt launch when account live",
+    "supplement cluster \u2014 Pinterest pins for men over 55 audience",
+    "cnsnt \u2014 ProductHunt launch when account live",
+    "walktounlock \u2014 Show HN (posted this cycle, monitor response)"
   ],
   "persistent_gaps": [
     "product_hunt (needs account)",
@@ -687,23 +772,24 @@
     "cycle_22": 49,
     "cycle_33": 29,
     "cycle_34": 29,
-    "estimated_total_all_cycles": 989,
-    "cycle_35": 32
+    "estimated_total_all_cycles": 1023,
+    "cycle_35": 32,
+    "cycle_36": 34
   },
   "urgent_actions": {
     "p0_revenue_unblock": {
       "action": "Create Stripe account (10 min), Gumroad account (30 min), Gmail API auth (5 min)",
       "unlocks": "$2-5K/mo revenue pipeline",
       "time_required": "45 minutes total",
-      "days_at_zero": 56,
+      "days_at_zero": 57,
       "priority": "P0 \u2014 do today"
     },
-    "cursor_vs_claude_code_trending": {
-      "note": "Cursor vs Claude Code is a trending topic. Post R3 to r/ClaudeAI + TW-NEW1 ASAP.",
-      "priority": "P0 \u2014 window closes in 48h"
+    "affiliate_links_needed": {
+      "note": "Supplement affiliate cluster is live (6 pages) but affiliate links are placeholder. Need to sign up for Amazon Associates or iHerb affiliate.",
+      "priority": "P0 \u2014 every day without real links is lost commission"
     }
   },
-  "total_content_pieces": 312,
+  "total_content_pieces": 346,
   "cycle_31_assets_distributed": [
     "yoga-streak.surge.sh",
     "pushup-streak.surge.sh",
@@ -822,5 +908,46 @@
     "linkedin": 4,
     "total": 32
   },
-  "cycle_35_content_pieces": 32
+  "cycle_35_content_pieces": 32,
+  "cycle_36_assets_distributed": [
+    "streakr.surge.sh (new PWA, swipe habit tracker)",
+    "best-sleep-supplement-men-over-55.surge.sh (6-page cluster now complete)",
+    "best-blood-pressure-supplement-men-over-55.surge.sh",
+    "best-memory-supplement-men-over-60.surge.sh",
+    "cnsnt-desktop.surge.sh (Tauri macOS DMG)",
+    "focuslock-web.surge.sh (r/ADHD targeted post)",
+    "sleepmaxx-web.surge.sh (r/biohackers targeted post)",
+    "walktounlock-web.surge.sh (Show HN post)",
+    "22 digital PDFs (teased as pre-Gumroad, builds demand)",
+    "Day 57 builder trap thread (LinkedIn + Reddit)"
+  ],
+  "cycle_36_output_files": [
+    "CONTENT/social/distribution/20260401_twitter_cycle36.md",
+    "CONTENT/social/distribution/20260401_reddit_cycle36.md",
+    "CONTENT/social/distribution/20260401_hn_cycle36.md",
+    "CONTENT/social/distribution/20260401_linkedin_cycle36.md",
+    "AUTOMATIONS/agent/swarm/reports/distribution_engine_report_20260401.md"
+  ],
+  "cycle_36_channels": {
+    "twitter": 9,
+    "reddit": 5,
+    "hacker_news": 3,
+    "linkedin": 3,
+    "total": 20
+  },
+  "cycle_36_content_pieces": 34,
+  "cycle_36_gap_analysis": {
+    "not_yet_covered": [
+      "mealmaxx (r/nutrition, r/keto, r/loseit)",
+      "ai-stack-2026 (HN Ask HN)",
+      "research-blog UAF (r/altneuroscience, r/quantum)",
+      "builders-ledger (dev.to, LinkedIn tech)",
+      "coding-streak (r/learnprogramming thread)"
+    ],
+    "blocked_by_accounts": [
+      "Gumroad listings (22 products, $0 live)",
+      "ProductHunt launches (streakr, cnsnt, walktounlock)",
+      "Affiliate links on supplement pages (placeholder only)"
+    ]
+  }
 }
