@@ -1,66 +1,102 @@
 # Opportunity Scanner Report — 2026-04-01
-**Cycle:** 4-hour opportunity scan | **Status:** COMPLETE
+
+**Agent:** swarm_opportunity_scanner
+**Timestamp:** 2026-04-01T00:00:00Z
+**Session type:** Full scan (web search + state read + scoring + brief creation + routing)
 
 ---
 
 ## Summary
 
-Scanned web for trending solopreneur/indie hacker opportunities. Cross-referenced against 64 existing OPPs (OPP_001-064). Found 4 genuinely new opportunities scoring 8.0+ not covered by existing entries.
-
-**4 briefs written. 4 entries added to ALPHA_STAGING.csv as PENDING_REVIEW.**
+Ran 6 targeted web searches across micro-SaaS, affiliate programs, underserved app niches, Claude API opportunities, MCP monetization, and tradesperson SaaS. Read existing ALPHA_STAGING.csv and confirmed 68 opportunity briefs already exist (OPP_001 through OPP_068). Checked last 3 OPPs to avoid overlap. Generated 4 new briefs (OPP_069-072) and appended all to ALPHA_STAGING.csv.
 
 ---
 
-## Scoring Matrix
+## Opportunities Researched (with scores)
 
-| OPP | Name | Score | Verdict |
-|-----|------|-------|---------|
-| 065 | Blender Python Addon Store | **8.7** | BRIEF WRITTEN |
-| 066 | x402 Micropayment API Wrappers | **8.5** | BRIEF WRITTEN |
-| 067 | Obsidian Premium Vault Systems | **8.0** | BRIEF WRITTEN |
-| 068 | Vibe Coder Job Board | **8.7** | BRIEF WRITTEN |
-| —   | AI Newsletter Tool | 7.5 | BELOW THRESHOLD — skip |
-
----
-
-## New Opportunities
-
-### OPP_065: Blender Python Addon Store
-- **Score:** 8.7/10 | Startup: $0 | Time to revenue: 5-7 days | Monthly potential: $1K-8K/mo
-- **Key insight:** 88% of Gumroad's $2.2B total revenue comes from 3D/Blender. Addons are pure Python. Our stack. Top creators earn $5-20K/mo. Not covered by OPP_036 (which targets Figma/Affinity design assets, not Python development).
-- **File:** OPP_065_BLENDER_PYTHON_ADDON_STORE.md
-
-### OPP_066: x402 Micropayment API Wrappers
-- **Score:** 8.5/10 | Startup: $0 | Time to revenue: 3-5 days | Monthly potential: $500-5K/mo+
-- **Key insight:** x402 is a brand-new protocol (HTTP 402 + USDC) launched Q1 2026. Less than 5% of 11K MCP servers are monetized. AI agents pay per API call autonomously. Zero competition. Our 529 scripts become monetizable data products. First-mover window is NOW.
-- **File:** OPP_066_X402_MICROPAYMENT_API_WRAPPERS.md
-
-### OPP_067: Obsidian Premium Vault Systems
-- **Score:** 8.0/10 | Startup: $0 | Time to revenue: 3-5 days | Monthly potential: $1.5K-8K/mo
-- **Key insight:** Obsidian vault bundles sell $150-300 vs $19-39 for Notion templates. 5M users. Less crowded. Our own PRINTMAXX file system converts directly to a sellable Obsidian vault. AI integration scripts are a moat.
-- **File:** OPP_067_OBSIDIAN_PREMIUM_VAULT_SYSTEMS.md
-
-### OPP_068: Vibe Coder Job Board
-- **Score:** 8.7/10 | Startup: $0 | Time to revenue: 5-7 days | Monthly potential: $1K-8K/mo
-- **Key insight:** No niche job board exists for AI-native developers. RemoteOK model at $2.5M/yr. Both supply and demand are live. Next.js MVP in 1.5 days. We are IN this community — organic launch is free. $149/listing x 20 postings = $3K/mo minimum.
-- **File:** OPP_068_VIBE_CODER_JOB_BOARD.md
+| # | Opportunity | Score | Decision |
+|---|-------------|-------|----------|
+| 1 | Claude Code Skill Bundles for SMBs | 9.2 | BRIEF CREATED |
+| 2 | MCP Server Monetization (Apify/MCPize 80-85% rev share) | 8.5 | BRIEF CREATED |
+| 3 | SaaS Affiliate Content Funnel (30-50% lifetime recurring) | 8.5 | BRIEF CREATED |
+| 4 | Multi-Currency Freelancer Finance App | 8.0 | BRIEF CREATED |
+| 5 | Tradesperson/HVAC Vertical SaaS | 6.5 | SKIPPED — crowded (ServiceTitan, HousecallPro, ServiceM8, Jobber) |
+| 6 | Ghost Kitchen Finance Tool | 6.0 | SKIPPED — MarginEdge + Square already serve this |
+| 7 | AI Influencer ASMR/Faith expansion | 5.5 | SKIPPED — covered in existing ALPHA (ALPHA222-232) |
 
 ---
 
-## Key Market Signals
+## Top 3 Ranked Opportunities
 
-1. **x402 protocol** (Zuplo/Coinbase, April 2026) — HTTP 402 + USDC micropayments for AI agents. Zero deployed implementations. Route to MONETIZATION P1.
-2. **Blender addon dominance** (InsightRaider 146K product analysis) — 88% of Gumroad revenue. Python-based. Our stack completely ignores this.
-3. **MCP monetization gap** — 11K servers, <5% monetized. x402 is the solution. Stacks on existing MCP work (OPP_033).
-4. **Obsidian PKM growth** — 5M users, 60% YoY plugin growth. Higher price ceiling than Notion.
-5. **Vibe coder hiring surge** — Companies racing to hire Claude Code/Cursor users. No job board serves this niche.
+### RANK 1: OPP_069 — Claude Code Skill Bundles for SMBs (Score: 9.2)
+
+Zero build cost. Raw material (skills in /skills/) already exists.
+Anthropic Marketplace launched March 2026 with zero revenue cut — first-mover window.
+$0 to first dollar: list a Gumroad product, post to r/ClaudeAI. Revenue possible in 24h.
+Recurring subscription upsell ("Skill OS" at $29-97/mo) compounds revenue month over month.
+
+**Conservative Month 1 target:** $4,410/mo (30 sales x $147 avg)
+**Stack fit:** 10/10
+
+### RANK 2: OPP_071 — SaaS Affiliate Content Funnel (Score: 8.5)
+
+Pure passive income. Content ranks once, pays forever.
+Leadpages 50% lifetime recurring = highest mainstream SaaS affiliate rate.
+Claude Code generates 50 comparison pages per day — competitors do this manually.
+Compounds: Month 6 estimate $6,000/mo from work done in Month 1.
+
+**Conservative Month 3 target:** $1,250/mo growing to $6K/mo by Month 6
+**Stack fit:** 8/10
+
+### RANK 3: OPP_070 — MCP Server Monetization via Apify (Score: 8.5)
+
+Existing PRINTMAXX scrapers become revenue-generating assets, not just internal tools.
+Apify 130K subscriber base = built-in distribution.
+21st.dev proof: $10K MRR in 6 weeks on MCP marketplace with zero marketing.
+Stacks on OPP_066 (x402 micropayments) for dual revenue from same tools.
+
+**Conservative Month 3 target:** $1,000/mo growing via organic marketplace discovery
+**Stack fit:** 9/10
 
 ---
 
-## Alpha Staging Entries Added
+## New ALPHA_STAGING Entries Added
 
-All 4 added to `LEDGER/ALPHA_STAGING.csv` as `PENDING_REVIEW` with source `swarm_opportunity_scanner`.
+| Alpha ID | Category | Score | Status |
+|----------|----------|-------|--------|
+| ALPHA_OPP069_SKILL_BUNDLES | DIGITAL_PRODUCTS | 9.2 | PENDING_REVIEW |
+| ALPHA_OPP070_MCP_APIFY | APP_FACTORY | 8.5 | PENDING_REVIEW |
+| ALPHA_OPP071_AFFILIATE_FUNNEL | AFFILIATE | 8.5 | PENDING_REVIEW |
+| ALPHA_OPP072_NOMAD_FINANCE_APP | APP_FACTORY | 8.0 | PENDING_REVIEW |
 
 ---
 
-*Generated by swarm_opportunity_scanner | 2026-04-01*
+## Key Market Intelligence
+
+- **Claude Marketplace launched March 6, 2026.** Zero revenue cut to sellers (Anthropic not taking a cut unlike AWS/Azure at 3-15%). Biggest distribution unlock for PRINTMAXX skills/tools this year.
+- **MCP protocol:** 8M downloads, 85% MoM growth. Only 5% of 11,000 servers monetized. Apify + MCPize just removed friction for monetization.
+- **Dario Amodei prediction:** 70-80% chance of a billion-dollar solopreneur in 2026 — mainstream awareness peak = new buyers for AI tools.
+- **Leadpages affiliate:** 50% lifetime recurring is the highest rate in mainstream SaaS affiliate marketing. Most solopreneurs don't know this program exists.
+- **Tradesperson SaaS is CROWDED.** Do not build here without radical vertical differentiation.
+
+---
+
+## Files Created
+
+- AUTOMATIONS/agent/swarm/opportunities/OPP_069_CLAUDE_CODE_SKILL_BUNDLES_SMB.md
+- AUTOMATIONS/agent/swarm/opportunities/OPP_070_MCP_SERVER_APIFY_MONETIZATION.md
+- AUTOMATIONS/agent/swarm/opportunities/OPP_071_SAAS_AFFILIATE_CONTENT_FUNNEL.md
+- AUTOMATIONS/agent/swarm/opportunities/OPP_072_FREELANCER_MULTICURRENCY_FINANCE_APP.md
+- AUTOMATIONS/agent/swarm/reports/opportunity_scanner_report_20260401.md (this file)
+
+---
+
+## Recommended Immediate Actions
+
+1. **TODAY:** Start OPP_069 — audit /skills/ dir, package E-Commerce Operator Bundle, list on Gumroad. $0 cost, revenue possible in 24h.
+2. **THIS WEEK:** Execute OPP_071 affiliate signups (1h). Leadpages is instant approval. Starts compounding immediately.
+3. **NEXT WEEK:** Wrap 2 existing PRINTMAXX scrapers as Apify MCP Actors (OPP_070). Turn internal assets into public revenue tools.
+
+---
+
+*Report generated by swarm_opportunity_scanner | 2026-04-01 | All 7 steps complete*

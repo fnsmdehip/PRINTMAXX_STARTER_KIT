@@ -743,9 +743,16 @@
     document.getElementById('notify-form').addEventListener('submit', function(e) {
       e.preventDefault();
       var email = document.getElementById('notify-email').value;
+      // localStorage backup
       var subs = JSON.parse(localStorage.getItem('mcphub_subs') || '[]');
-      subs.push({ email: email, date: new Date().toISOString() });
+      subs.push({ email: email, date: new Date().toISOString(), source: 'mcp-marketplace' });
       localStorage.setItem('mcphub_subs', JSON.stringify(subs));
+      // Send to formsubmit
+      fetch('https://formsubmit.co/ajax/printmaxxweb@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'mcp-marketplace.surge.sh', _subject: 'New MCP lead' })
+      }).catch(function(){});
       showToast('added. we will email you when new servers drop.');
       document.getElementById('notify-email').value = '';
     });

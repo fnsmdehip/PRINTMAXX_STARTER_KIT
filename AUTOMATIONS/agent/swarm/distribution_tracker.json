@@ -1,31 +1,26 @@
 {
-  "last_updated": "2026-04-01T09:00:00.000000",
+  "last_updated": "2026-04-01T23:00:00.000000",
   "last_cycle": "2026-04-01",
-  "cycle_number": 38,
+  "cycle_number": 39,
   "coverage": {
     "twitter": {
       "threads": 14,
       "singles": 75,
       "reply_baits": 26,
       "qt_captions": 15,
-      "total_pieces": 170,
-      "last_cycle": 38,
+      "total_pieces": 180,
+      "last_cycle": 39,
       "new_this_cycle": [
-        "thread_hedge_fund_app_portfolio",
-        "thread_automation_dysmorphia",
-        "thread_x402_micropayments",
-        "tw_automation_dysmorphia_single",
-        "tw_competitor_intel_agent",
-        "tw_surgehsh_robots_psa",
-        "tw_cold_email_gap",
-        "tw_soberstreak_launch",
-        "tw_blender_addons_discovery",
-        "tw_obsidian_vault_systems",
-        "tw_vibe_coder_job_board",
-        "tw_supplement_affiliate_cluster",
-        "reply_bait_graveyard",
-        "community_bait_kill_rule",
-        "controversial_take_ship_speed"
+        "tw_truthscope_teaser_day7",
+        "tw_truthscope_ppg_technical",
+        "tw_cursor_vs_claude_code",
+        "tw_nutriai_launch",
+        "tw_day44_zero_revenue",
+        "tw_cnsnt_pwa",
+        "tw_quran_streak_friday",
+        "rb_poll_bottleneck",
+        "rb_mcp_marketplace",
+        "rb_controversial_automation"
       ],
       "prev_cycle_35": [
         "day56_thread_7tweets",
@@ -96,19 +91,13 @@
         "r/solopreneur",
         "r/content_marketing"
       ],
-      "last_cycle": 38,
+      "last_cycle": 39,
       "new_this_cycle": [
-        "r1_day56_sideproject",
-        "r2_agent_architecture_claudeai",
-        "r3_cursor_vs_claude_code",
-        "r4_seo_automation",
-        "r5_convertkit_vs_beehiiv",
-        "r6_uaf_consciousness",
-        "r7_focuslock_mealmaxx",
-        "r8_walktounlock_nosurf",
-        "r9_sleepmaxx",
-        "r10_ai_stack_2026",
-        "r11_blue_ocean_method"
+        "cursor_vs_claudecode_chatgptcoding",
+        "quran_streak_islam",
+        "cnsnt_privacy",
+        "day44_revenue_solopreneur",
+        "cnsnt_freelance"
       ],
       "new_this_cycle_38": [
         "r/sobriety_soberstreak",
@@ -122,21 +111,22 @@
     },
     "hacker_news": {
       "posts_ready": 31,
-      "last_cycle": 35,
+      "last_cycle": 39,
       "new_this_cycle": [
-        "show_hn_33agent_system",
-        "show_hn_seo_audit_agent",
-        "ask_hn_account_creation_bottleneck"
+        "show_hn_truthscope_pending",
+        "ask_hn_cursor_vs_claude_code",
+        "show_hn_cnsnt",
+        "ask_hn_x402_payments"
       ]
     },
     "linkedin": {
       "posts_ready": 38,
-      "last_cycle": 38,
+      "last_cycle": 39,
       "new_this_cycle": [
-        "li1_seo_automation_b2b",
-        "li2_day56_thought_leadership",
-        "li3_agent_architecture",
-        "li4_cursor_vs_claude_code_teams"
+        "day44_zero_revenue",
+        "cursor_vs_claude_code",
+        "truthscope_prelaunch",
+        "mcp_ecosystem_update"
       ]
     },
     "indie_hackers": {
@@ -1025,5 +1015,38 @@
     "communities": "OPP_068 Vibe Coder Job Board not yet in Anthropic Discord / r/ClaudeAI",
     "email": "Supplement affiliate newsletter not built yet",
     "blender_market": "OPP_065 needs actual addon built before listing on Blender Market"
+  },
+  "new_assets_since_last_cycle": [
+    "truthscope_ios_app",
+    "cnsnt-web.surge.sh",
+    "nutriai.surge.sh",
+    "cursor-vs-claudecode.surge.sh (updated)",
+    "coldmaxx-vs-instantly.surge.sh (updated)",
+    "instantly-vs-lemlist.surge.sh (updated)"
+  ],
+  "cycle_summary": {
+    "cycle": 39,
+    "date": "2026-04-01",
+    "total_pieces": 23,
+    "platforms": [
+      "twitter",
+      "reddit",
+      "hacker_news",
+      "linkedin"
+    ],
+    "key_themes": [
+      "TruthScope pre-launch teasers (App Store submission pending)",
+      "cursor-vs-claudecode comparison page multi-channel launch",
+      "nutriai.surge.sh product launch",
+      "Quran Streak Muslim community seeding",
+      "cnsnt-web PWA (privacy audience)",
+      "Day 44 zero revenue community bait"
+    ],
+    "human_blockers": [
+      "Gumroad account (16 products blocked)",
+      "App Store submission (4 apps)",
+      "Stripe account (payment on all apps)",
+      "Affiliate program signups (5 pages)"
+    ]
   }
 }

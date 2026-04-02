@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 132,
-    "last_run": "2026-04-01T11:20:45Z",
-    "cumulative_blue_oceans": 702,
-    "ci_csv_rows": 40,
-    "alpha_csv_rows": 51232,
+    "last_cycle": 135,
+    "last_run": "2026-04-02T03:48:41.324720+00:00",
+    "cumulative_blue_oceans": 732,
+    "ci_csv_rows": 69,
+    "alpha_csv_rows": 51273,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -32,14 +32,17 @@
         "BEHAVIORAL ECONOMICS",
         "SOCIOLOGY & SOCIAL DYNAMICS",
         "POLITICAL SCIENCE & GOVERNANCE",
-        "LITERATURE & LITERARY THEORY"
+        "LITERATURE & LITERARY THEORY",
+        "ARCHITECTURE & DESIGN THEORY",
+        "LEGAL THEORY & JURISPRUDENCE",
+        "ENVIRONMENTAL LAW & CLIMATE GOVERNANCE"
     ],
-    "next_strategy": "ARCHITECTURE & DESIGN THEORY",
+    "next_strategy": "PUBLIC HEALTH LAW & BIOETHICS",
     "top_all_time": [
         {
-            "name": "Daily Oncology Science Streak",
+            "name": "Daily CS Fundamentals Streak",
             "score": 25,
-            "cycle": 127
+            "cycle": 111
         },
         {
             "name": "Daily Film Studies Streak",
@@ -47,14 +50,29 @@
             "cycle": 106
         },
         {
-            "name": "Daily CS Fundamentals Streak",
+            "name": "Daily Neuroscience Streak",
             "score": 25,
             "cycle": 111
         },
         {
-            "name": "Daily Neuroscience Streak",
+            "name": "Daily Oncology Science Streak",
             "score": 25,
-            "cycle": 111
+            "cycle": 127
+        },
+        {
+            "name": "Daily Contract Law & Common Law Streak",
+            "score": 24,
+            "cycle": 134
+        },
+        {
+            "name": "Daily Legal Philosophy & Jurisprudence Streak",
+            "score": 24,
+            "cycle": 134
+        },
+        {
+            "name": "Daily Property Law Theory Streak",
+            "score": 24,
+            "cycle": 134
         },
         {
             "name": "Daily Game Theory Streak",
@@ -67,11 +85,6 @@
             "cycle": 127
         },
         {
-            "name": "Daily Moral Philosophy Streak",
-            "score": 22,
-            "cycle": 128
-        },
-        {
             "name": "Daily Epistemology Streak",
             "score": 22,
             "cycle": 128
@@ -82,39 +95,29 @@
             "cycle": 128
         },
         {
+            "name": "Daily Moral Philosophy Streak",
+            "score": 22,
+            "cycle": 128
+        },
+        {
             "name": "Daily Prospect Theory Streak",
             "score": 22,
             "cycle": 129
         },
         {
-            "name": "Daily Social Movements Streak",
-            "score": 19,
-            "cycle": 130
+            "name": "Daily Esg Regulation Streak",
+            "score": 21,
+            "cycle": 135
         },
         {
-            "name": "Daily Voting Theory Streak",
-            "score": 19,
-            "cycle": 131
+            "name": "Daily Climate Litigation Streak",
+            "score": 21,
+            "cycle": 135
         },
         {
-            "name": "Daily Network Sociology Streak",
-            "score": 18,
-            "cycle": 130
-        },
-        {
-            "name": "Daily Race Ethnicity Sociology Streak",
-            "score": 18,
-            "cycle": 130
-        },
-        {
-            "name": "Daily Constitutional Design Streak",
-            "score": 18,
-            "cycle": 131
-        },
-        {
-            "name": "Daily Revolution Theory Streak",
-            "score": 18,
-            "cycle": 131
+            "name": "Daily Green Finance Climate Risk Streak",
+            "score": 20,
+            "cycle": 135
         },
         {
             "name": "Daily Narrative Theory Streak",
@@ -127,14 +130,14 @@
             "cycle": 132
         },
         {
-            "name": "Daily Gothic Literature Streak",
-            "score": 18,
-            "cycle": 132
+            "name": "Daily Social Movements Streak",
+            "score": 19,
+            "cycle": 130
         },
         {
-            "name": "Daily Comparative Mythology Streak",
-            "score": 18,
-            "cycle": 132
+            "name": "Daily Voting Theory Streak",
+            "score": 19,
+            "cycle": 131
         }
     ],
     "status": "RUNNING"

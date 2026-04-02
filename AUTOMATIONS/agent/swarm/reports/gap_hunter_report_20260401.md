@@ -1,77 +1,103 @@
-# GAP HUNTER REPORT — 2026-04-01 05:02
+# Gap Hunter Report — 2026-04-01 23:15 (Cycle 2)
 
-## Summary
-- **Total apps built:** 66+ in APP_FACTORY/builds
-- **Total deployed:** ~90 (including lead magnets)
-- **Undeployed apps:** 7 (3 React Native mobile-only, 4 non-web projects)
-- **Undeployed landing pages:** 2 not tracked (research-blog, privacy)
-- **Undeployed affiliate pages:** 1 (best-sleep-supplement-men-over-55)
-- **Content queue:** 1,387 posts in posting_queue, only 182 in distribution
-- **Alpha staging:** 50,795 entries total | 2,129 APPROVED | 3,109 PENDING_REVIEW | 956 ROUTED
-- **Leads uncontacted:** 22 HOT_LEADS, 251 cold emails ready to send
-- **Digital products with PDFs:** 14 PDFs ready, 22+ Gumroad listings ready — BLOCKED on Gumroad account
-- **Scripts not in cron:** 30+ (most are utility/on-demand, not critical gaps)
+## Cycle Summary
+- **Assets scanned:** 67 app builds, 6 comparison pages, 17 affiliate pages, 206 queued posts, 14 ready-to-sell PDFs
+- **Gaps found:** 12
+- **Actions taken:** 4 deploys, 1 redeploy, deployment URLs updated
 
 ---
 
-## GAP 1: Affiliate Page Not Deployed (REVENUE-DIRECT)
-**What:** `LANDING/affiliate-pages/best-sleep-supplement-men-over-55/` has index.html + sitemap.xml but NOT deployed
-**Impact:** Direct affiliate revenue loss — sleep supplement niche has high commissions ($30-50/sale)
-**Action:** Deploy to surge.sh NOW
-**Priority:** P0
-**Status:** DEPLOYING THIS CYCLE
+## CRITICAL GAPS (Revenue-Blocking)
 
-## GAP 2: Research Blog & Privacy Not in Deployment Tracker (TRACKING)
-**What:** research-blog and privacy pages exist but are NOT tracked in DEPLOYMENT_URLS.md
-**Impact:** Tracking gap — these are live at fnsmdehip-research.surge.sh and printmaxx-privacy.surge.sh but unmonitored
-**Action:** Add to DEPLOYMENT_URLS.md, verify live
-**Priority:** P1
-**Status:** FIXING THIS CYCLE
+### GAP-1: 206 Social Posts Sitting in Queue -- ZERO Posted
+- **Location:** `CONTENT/social/posting_queue/` -- 206 .md files (69 from today alone)
+- **Impact:** HIGH -- content is the distribution engine. 206 posts = weeks of engagement sitting idle.
+- **Blocker:** HUMAN -- need X/Twitter account logged in + Buffer/scheduling tool connected
+- **Action needed:** Log into X, copy-paste top 5 posts from queue TODAY. Takes 10 minutes.
 
-## GAP 3: 1,387 Posts Queued, Only 182 Distributed (CONTENT WASTE)
-**What:** Massive posting queue with 1,387 posts but distribution only shows 182
-**Impact:** 87% of generated content sitting idle — content is perishable
-**Action:** HUMAN BLOCKER — needs X/Twitter account active + Buffer for scheduling
-**Priority:** P0 (HUMAN)
+### GAP-2: 14 PDFs Ready to Sell -- ZERO Listed on Any Platform
+- **Location:** `DIGITAL_PRODUCTS/ready_to_sell/pdfs/` -- 14 finished PDFs
+- **Products:** Claude Code Agent Bible, Cold Email Playbook, AI Automation Blueprint, Solopreneur Ops System, Reddit Money Machine, Prompt Vault, Before You Workbook, + 7 more
+- **Plus:** 11 Gumroad listing MDs with copy ready to paste
+- **Impact:** HIGHEST -- these are finished products with $0 revenue. Each could generate $29-97/sale.
+- **Blocker:** HUMAN -- Gumroad/Whop account creation (10 min setup)
+- **Action needed:** Create Gumroad account, paste listing copy from `DIGITAL_PRODUCTS/ready_to_sell/LISTING_*.md`
 
-## GAP 4: 251 Cold Emails Ready to Send (REVENUE-DIRECT)
-**What:** `AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md` has 251 lines of ready emails
-**Impact:** Direct revenue pipeline — cold outbound is 87.4% margin method
-**Action:** HUMAN BLOCKER — needs email sending infrastructure (Instantly.ai or similar)
-**Priority:** P0 (HUMAN)
+### GAP-3: 251 Cold Emails Ready to Send -- ZERO Sent
+- **Location:** `AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md` -- 251 lines of personalized emails
+- **Plus:** 22 hot leads, 6 scored leads
+- **Impact:** HIGH -- cold outbound has 87.4% margins per Kelly Criterion analysis
+- **Blocker:** HUMAN -- need email sending infrastructure (Instantly.ai or manual send)
+- **Action needed:** Send first 5 manually via Gmail as test. Takes 15 minutes.
 
-## GAP 5: 14 PDF Products Ready, No Sales Platform (REVENUE-DIRECT)
-**What:** 14 production PDFs in DIGITAL_PRODUCTS/ready_to_sell/pdfs/ + 22 Gumroad listings ready
-**Impact:** $0 → potential $500-2K/mo from digital product sales
-**Action:** HUMAN BLOCKER — Gumroad/Whop account creation (45 min total)
-**Priority:** P0 (HUMAN)
-
-## GAP 6: 3 React Native Apps Not Web-Deployed (LOW)
-**What:** nutriai, pocket-alexandria, soberstreak-native are RN/Expo apps without web builds
-**Impact:** Mobile-first apps — web deployment optional. PWA versions may already exist
-**Action:** Focus on iOS submission instead of web deploy
-**Priority:** P2
-
-## GAP 7: 3,109 PENDING_REVIEW Alpha Entries (DATA WASTE)
-**What:** 3,109 alpha entries stuck in PENDING_REVIEW status in ALPHA_STAGING.csv
-**Impact:** Intelligence not being processed — potential methods and opportunities missed
-**Action:** Run auto_approve to clear backlog
-**Priority:** P1
+### GAP-4: 8 Key Distribution Scripts Not in Crontab
+- **Scripts missing from cron:** gap_hunter, content_repurposer, engagement_bait_converter, content_multiplier, payment_integrator, twitter_warmup_poster, app_factory_autopilot, distribution_engine
+- **Total:** 531 scripts, only 40 in cron (7.5% utilization)
+- **Impact:** MEDIUM -- these scripts exist but never run automatically
+- **Action needed:** Wire top 3 (content_repurposer, engagement_bait_converter, distribution_engine) to cron
 
 ---
 
-## Actions Taken This Cycle
-1. **DEPLOYED:** best-sleep-supplement-men-over-55 affiliate page to surge.sh
-2. **UPDATED:** DEPLOYMENT_URLS.md with research-blog and privacy entries
-3. **VERIFIED:** All existing deployments cross-referenced
+## DEPLOYED GAPS (Fixed This Cycle)
 
-## Human Blockers (cannot be automated)
-| Blocker | Time | Revenue Impact |
-|---------|------|---------------|
-| Gumroad/Whop account | 45 min | Unlocks 14 PDF product sales ($500-2K/mo) |
-| Email sending infra | 30 min | Unlocks 251 cold emails (87.4% margin) |
-| X/Twitter posting | 15 min | Unlocks 1,387 queued posts |
-| Stripe payments | 10 min | Already configured — verify active |
+### GAP-5: instantly-vs-lemlist.surge.sh -- Was Returning 504 [FIXED]
+- **Was:** HTTP 504 (Gateway Timeout)
+- **Now:** Redeployed successfully
+- **URL:** https://instantly-vs-lemlist.surge.sh
+
+### GAP-6: gratitude-streak -- Built But Not Deployed [FIXED]
+- **Now:** LIVE at https://gratitude-streak.surge.sh
+
+### GAP-7: water-streak -- Built But Not Deployed [FIXED]
+- **Now:** LIVE at https://water-streak.surge.sh
+
+### GAP-8: couples-streak-landing -- Built But Not Deployed [FIXED]
+- **Now:** LIVE at https://couples-streak-landing.surge.sh
 
 ---
-*Generated by gap_hunter agent | Cycle: 2026-04-01 05:02*
+
+## NON-DEPLOYABLE GAPS (Need Work)
+
+### GAP-9: 7 App Builds Without Web Exports
+React Native/Expo apps without index.html -- not web-deployable:
+- autoreplyai (Next.js frontend, needs npm build)
+- biomaxx-sdk54 (iOS only)
+- nutriai (Expo dist, native only)
+- pocket-alexandria (Expo dist, native only)
+- roblox_tycoon (Roblox game, Luau)
+- robloxmaxx (has web/ dir but no index.html)
+- soberstreak-native (native only, web version already at soberstreak.surge.sh)
+
+### GAP-10: 17 Gumroad Products Ready -- 0 Uploaded
+- **Location:** PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/ -- 17 PDFs + HTML products
+- **Blocker:** HUMAN -- Gumroad account not created
+
+### GAP-11: TruthScope -- Simulator-Only, Not Submitted
+- Runs on iOS Simulator, Stripe products created
+- Needs full QA + eas build + App Store submission
+
+### GAP-12: printmaxx-site -- Next.js Not Built
+- 07_LANDING/printmaxx-site/ -- source exists, needs build + deploy
+
+---
+
+## METRICS
+| Metric | Value |
+|--------|-------|
+| Total apps deployed (surge) | ~100 |
+| Apps deployed this cycle | 3 new + 1 redeploy |
+| Content in queue (unposted) | 206 posts |
+| Cold emails ready (unsent) | 251 |
+| Products ready (unlisted) | 14 PDFs + 17 Gumroad |
+| Hot leads (uncontacted) | 22 |
+| Scripts in cron | 40/531 (7.5%) |
+| Revenue | $0 (Day 44) |
+
+---
+
+## TOP 3 HUMAN ACTIONS (highest ROI, lowest time)
+1. **Create Gumroad account (10 min)** -- unlists 14+ products worth $29-97 each
+2. **Send 5 cold emails manually (15 min)** -- 87.4% margin method, 251 ready to go
+3. **Post 5 tweets from queue (10 min)** -- 206 posts sitting idle, zero distribution
+
+**Total human time needed: 35 minutes. Potential unlock: $500-5000/mo pipeline.**

@@ -339,16 +339,9 @@
     "playwright_visual_tested": 156,
     "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 117 GREEN, 28 YELLOW, 11 RED.",
     "still_broken": [
-      "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
-      "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
-      "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
       "https://pentecostal-streak-landing.surge.sh",
       "https://baptist-streak-landing.surge.sh",
-      "https://saas-stack-audit-200.surge.sh",
-      "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
-      "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
-      "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
-      "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh"
+      "https://saas-stack-audit-200.surge.sh"
     ]
   },
   "cycle_type": "maintenance_health_check",

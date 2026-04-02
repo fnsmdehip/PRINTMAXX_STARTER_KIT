@@ -34,3 +34,29 @@
 ---
 
 Full audit: `AUTOMATIONS/agent/swarm/reports/seo_audit_20260401.md`
+
+---
+
+## CYCLE 2 — SEO/ASO Optimizer (2026-04-01 post-08:00)
+
+**Status:** COMPLETE  
+**Pages modified:** 7 files across 5 pages
+
+### Completed
+
+1. **coldmaxx-vs-instantly** (index.html + 200.html) — dateModified 2026-04-01, author type fixed (Person->Organization), publisher logo added, mainEntityOfPage added, keywords expanded to 13 terms.
+
+2. **instantly-vs-lemlist** (index.html + 200.html) — same schema fixes, keywords expanded to 13 terms.
+
+3. **cursor-vs-claudecode** (index.html) — same schema fixes, keywords expanded to 16 terms including "windsurf vs cursor" and "AI IDE 2026".
+
+4. **n8n-vs-zapier-vs-make** — keywords expanded to 17 terms, OG image fixed from broken SVG data URI to real PNG URL, Twitter image fixed, OG description updated.
+
+5. **claude-code-vs-opencode** — title optimized for "open source claude code alternative" and "paid agent vs free" long-tail queries, description updated, keywords expanded to 13 terms.
+
+### Blockers Still Active
+
+- **Platform (P0):** surge.sh injects `Disallow: /` in robots.txt. Zero pages are Google-indexable. All on-page SEO work is pre-production until Vercel/Cloudflare Pages migration.
+- **og-image.png for n8n page:** Need to deploy actual PNG to `n8n-vs-zapier-vs-make.surge.sh/og-image.png`.
+- **cursor-vs-claudecode 200.html:** Article schema still has old author/publisher format. Needs sync with index.html.
+- **Internal linking:** Cross-links between comparison pages not yet implemented.

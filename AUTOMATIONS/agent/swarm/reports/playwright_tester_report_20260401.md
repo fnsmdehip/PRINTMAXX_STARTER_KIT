@@ -1,153 +1,146 @@
-# PLAYWRIGHT TESTER FINAL REPORT
-**Date:** 2026-04-01 | **Cycle:** 18 | **Agent:** playwright-tester
+# Playwright Tester Report — April 1, 2026
+
+**Test Date:** 2026-04-01 20:51:30  
+**Sites Tested:** 33  
+**Pass Rate:** 54.5% (18 GREEN, 6 YELLOW, 9 RED)  
+**Avg Load Time:** 4,995ms
+
+---
 
 ## Executive Summary
 
-Portfolio health: **92.2% OPERATIONAL** (59/64 sites tested across all categories)
+Health check on 33 surge.sh deployments shows **72.7% operational** (18 GREEN + 6 YELLOW). Nine sites completely broken due to:
+- **8 DNS resolution failures** — domain names exceed 63-character DNS limit
+- **1 blank page** — HTTP 200 but empty content
 
-### Key Metrics
-| Metric | Value | Status |
-|--------|-------|--------|
-| **Total Deployments** | 388 sites | ✅ |
-| **Sample Tested** | 64 sites (16%) | ✅ |
-| **Pass Rate** | 92.2% (59/64) | ✅ |
-| **Green Sites** | 59 | ✅ |
-| **Red Sites** | 5 | ⚠️ |
-| **Categories Covered** | 8/8 | ✅ |
+### Status Breakdown
 
----
-
-## Test Results by Category
-
-| Category | Tested | Green | Pass Rate |
-|----------|--------|-------|-----------|
-| Brand Pages | 15 | 14 | 93.3% |
-| PWA Apps | 11 | 8 | 72.7% 🔴 |
-| Tool Apps | 9 | 9 | 100% ✅ |
-| Comparisons | 8 | 8 | 100% ✅ |
-| Fiverr Services | 12 | 12 | 100% ✅ |
-| Lead Magnets | 12 | 12 | 100% ✅ |
-| App Marketing | 7 | 7 | 100% ✅ |
-| Affiliate Pages | 5 | 5 | 100% ✅ |
+| Status | Count | % | Issue |
+|--------|-------|---|-------|
+| GREEN | 18 | 54.5% | Working, <5s load time |
+| YELLOW | 6 | 18.2% | Working, but slow (6-8s load) |
+| RED | 9 | 27.3% | DNS failures or blank pages |
 
 ---
 
-## 🔴 Failed Sites (5)
+## GREEN Sites (18) ✅
 
-### DNS Failures (Long Subdomain Names) - 3 sites
-These fail at DNS resolution due to Surge.sh 63-character subdomain label limit:
-- `mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh` (83 chars)
-- `top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh` (90 chars)
-- `window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh` (76 chars)
+All sites working perfectly, proper rendering, <5s load time.
 
-**Root Cause:** Surge DNS limitations
-**Fix:** Rename subdomains to abbreviate names below 63-char limit
-**Priority:** P2 (affects 3 local biz pages, not core revenue)
+**Streak landing pages:**
+- pentecostal-streak-landing (4,278ms) ✅
+- baptist-streak-landing (4,200ms) ✅
+- scripture-streak-landing (3,938ms) ✅
+- quran-streak-landing (4,077ms) ✅
+- torah-streak-landing (4,057ms) ✅
 
-### New Regressions - 2 sites
-Previously GREEN, now HTTP 000 (DNS/connectivity issue):
-- `sleepmaxx-web.surge.sh`
-- `walktounlock-web.surge.sh`
+**Brand & Education:**
+- printmaxx-site (4,138ms) ✅
+- printmaxx (4,135ms) ✅
+- claude-code-agent-bible (4,251ms) ✅
 
-**Root Cause:** Unknown (possibly transient Surge issue or file sync failure)
-**Action:** Retest in next cycle; if persistent, check deployment logs
-**Priority:** P1 (PWA apps = revenue potential)
+**Tools & Calculators:**
+- invoiceforge (4,267ms) ✅
+- pagescorer (3,858ms) ✅
+- roicalc (3,852ms) ✅
+- cold-email-roi-calculator (4,096ms) ✅
 
----
+**Checklists & Audits:**
+- solopreneur-launch-checklist (4,139ms) ✅
+- revenue-leak-audit (4,406ms) ✅
 
-## 🟡 Quality Issues (Console Errors)
+**Comparison Pages:**
+- n8n-vs-zapier-vs-make (4,473ms) ✅
+- cursor-vs-claudecode (4,344ms) ✅
+- prayerlock-vs-hallow (4,062ms) ✅
 
-All tested sites show minor favicon 404 errors (non-blocking). No critical JS errors found.
-
----
-
-## Trend Analysis
-
-| Cycle | Date | Pass Rate | Status |
-|-------|------|-----------|--------|
-| 15 | 2026-03-14 | 94.2% | ✅ |
-| 16 | 2026-03-28 | 94.2% | ✅ |
-| 17 | 2026-04-01 | 94.2% | ✅ |
-| **18** | **2026-04-01** | **92.2%** | **⚠️** |
-
-**Delta:** -2% (2 new regressions in PWA category)
+**Other:**
+- ramadan-tracker (4,681ms) ✅
 
 ---
 
-## Recommendations
+## YELLOW Sites (6) ⚠️
 
-### Immediate (P1)
-1. **Investigate PWA Regressions** - `sleepmaxx-web` and `walktounlock-web`
-   - Retest in 1 hour (may be transient)
-   - Check Surge deployment logs if persists
-   - Verify source files exist in LANDING/ directory
+All working but slow (>6s load time). Render correctly but need performance optimization.
 
-2. **Monitor DNS-Failed Sites** - Don't attempt redeployment until renamed
+| Site | Load Time | Status | Issue |
+|------|-----------|--------|-------|
+| prayerlock-web | 7,443ms | 200 | PWA slow load |
+| focuslock-web | 7,422ms | 200 | PWA slow load |
+| sleepmaxx-web | 6,846ms | 200 | PWA slow load |
+| coldmaxx | 6,838ms | 200 | Tool app slow |
+| handyman-service-in-dallas-tx | 8,653ms | 200 | Local biz page |
+| atlanta-electricians | 8,340ms | 200 | Local biz page |
 
-### Short-term (P2)
-3. **Rename Long Subdomains**
-   - Audit all sites >63 chars
-   - Create abbreviation list (e.g., "mobile-auto-detail-okc-champ" instead of full name)
-   - Batch redeploy after rename
-
-4. **Automate Health Checks**
-   - Set up hourly curl check on RED sites
-   - Alert if any GREEN site drops to RED
-   - Track regression patterns
-
-### Strategic (P3)
-5. **Platform Diversification**
-   - 388 sites on single Surge.sh account = single point of failure
-   - Consider Vercel/Netlify for 50+ top-priority sites
-   - Surge.sh → good for rapid deploy, not for reliability
+**Performance Target:** <5s load time (Web Vitals)  
+**Recommendation:** Profile & optimize (lazy load, code split, compress assets)
 
 ---
 
-## 🟢 Healthy Categories
+## RED Sites (9) ❌
 
-**Fully Operational (100% pass):**
-- Tool Apps (invoiceforge, pagescorer, roicalc, etc.)
-- Comparison Pages (all 8 tested)
-- Fiverr Service Pages (all 12 tested)
-- Lead Magnets (all 12 tested)
-- Affiliate Pages (all 5 tested)
-- App Marketing (all 7 tested)
+### Type 1: DNS Resolution Failures (8 sites)
 
----
+**Error:** `net::ERR_NAME_NOT_RESOLVED`
 
-## Deployment Quality Check
+**Root Cause:** Domain names exceed 63-character DNS limit (industry standard). Surge.sh enforces this.
 
-### By Deployment Date
-- **4 hours ago** (Latest batch): 9/9 passed ✅
-- **6 hours ago:** 8/8 passed ✅
-- **2 days ago:** 4/5 passed (1 DNS limit) ⚠️
-- **>2 days:** Stable, minimal churn
+| Domain | Length | Issue |
+|--------|--------|-------|
+| mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok | 89 | TOO LONG |
+| top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok | 80 | TOO LONG |
+| window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or | 71 | TOO LONG |
+| mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al | 77 | TOO LONG |
+| home-professional-mobile-detailing-amp-products-super-store-birmingham-al | 77 | TOO LONG |
+| the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv | 77 | TOO LONG |
+| local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky | 71 | TOO LONG |
+| miami-pest-control-experts-reliable-extermination-services-miami-fl | 70 | TOO LONG |
 
-### By Deployer Agent
-- **gap_hunter:** 15/16 tested (94%) ✅
-- **asset_deployer:** 42/48 tested (87.5%) - includes 2 regressions
-- **Unknown:** 2/2 tested (100%) ✅
+**Fix:** Shorten to <63 chars, redeploy, update links:
+```
+OLD: mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh
+NEW: mobile-detailing-okc-champion.surge.sh (38 chars)
+```
 
----
+### Type 2: Blank Page (1 site)
 
-## Next Steps
+**saas-stack-audit-200**
+- HTTP: 200 ✓
+- Page height: 0px ✗
+- No console errors
+- Empty content
 
-1. ✅ **This Cycle:** Mark 2 PWA regressions for monitoring
-2. 🔧 **Tomorrow:** Retest RED sites (should resolve if transient)
-3. 📋 **This Week:** Rename 3+ DNS-failed sites or migrate to Vercel
-4. 📊 **Ongoing:** Auto-test portfolio hourly, alert on regressions
-
----
-
-## Appendix: Sites Tested
-
-### Sample (64 sites)
-**Green (59):** printmaxx.surge.sh, claude-code-agent-bible.surge.sh, invoiceforge.surge.sh, pagescorer.surge.sh, roicalc.surge.sh, cold-email-roi-calculator.surge.sh, n8n-vs-zapier-vs-make.surge.sh, scripture-streak.surge.sh, quran-streak.surge.sh, buddhist-streak.surge.sh, prayerlock-web.surge.sh, focuslock-web.surge.sh, ramadan-tracker.surge.sh, tasksmash-web.surge.sh, focuslock-landing.surge.sh, mealmaxx-landing.surge.sh, sleepmaxx-landing.surge.sh, walktounlock-landing.surge.sh, scripture-streak-landing.surge.sh, hilal-landing.surge.sh, printmaxx-site.surge.sh, printmaxx-store.surge.sh, printmaxx-apps.surge.sh, [+36 more]
-
-**Red (5):** sleepmaxx-web.surge.sh, walktounlock-web.surge.sh, mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh, top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh, window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh
+**Fix:** Check source file exists and has content, redeploy
 
 ---
 
-**Report Generated By:** playwright-tester agent
-**Test Framework:** curl + HTTP status codes
-**Total Runtime:** ~4 minutes for 64 sites
+## Performance Insights
+
+- **Best performers:** pagescorer, roicalc, prayerlock-vs-hallow (3.8-4.0s)
+- **Average:** Most sites 4-4.5s
+- **Slow:** PWA apps and local biz pages (6-8s+)
+- **Optimization opportunity:** ~600ms margin to target <5s
+
+---
+
+## Action Items
+
+### P0 (Critical)
+1. Shorten 8 DNS-broken domains to <63 chars
+2. Investigate saas-stack-audit-200 blank page
+
+### P1 (Performance)
+3. Profile & optimize 6 YELLOW sites
+
+### P2 (Prevention)
+4. Add domain length validation to deployment pipeline
+
+---
+
+## Test Coverage
+
+- **Tested:** 33 sites (11 brand/tool, 6 PWA, 8 comparison/lead magnet, 8+ local biz)
+- **Screenshots:** 30 captured
+- **Concurrent:** 5 browsers max
+- **Timeout:** 15s per page
+- **Viewport:** 1280x720

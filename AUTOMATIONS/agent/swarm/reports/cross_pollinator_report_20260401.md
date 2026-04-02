@@ -1,9 +1,36 @@
-# Cross-Pollinator Report — 2026-04-01 (Cycle 18)
+# Cross-Pollinator Report — 2026-04-01 (Cycle 18 + 21:00 cycle)
 
-**Run time:** 2026-04-01T04:55:16
-**Agent:** cross_pollinator (4-hour cycle)
-**Total items wired this cycle:** 34 (v2: 19 + daily: 4 + new connections: 11)
-**Cumulative wired:** 1,658
+**Run time:** 2026-04-01T04:55:16 + 2026-04-01T21:00
+**Agent:** cross_pollinator (4-hour cycle + evening manual cycle)
+**Total items wired this cycle:** 34 + 467 = 501
+**Cumulative wired:** 2,125
+
+---
+
+## Evening Cycle (21:00) — NEW CONNECTIONS
+
+### Connection A: BROKERING Alpha → Brokering Engine
+- **Wired:** 188 gov contract leads → `AUTOMATIONS/leads/auto_brokering_deal_brokering_engin_7706/gov_contract_leads.json`
+- Deadlines: 2026-04-08 (Ventilation Materials), 2026-04-16 (Defense Health Agency)
+
+### Connection B: High-ROI Alpha → Content Posts
+- **Wired:** 4 new posts → posting queue (n8n template store, TikTok Shop toolkit, trades AI, supplement affiliate)
+- Registry: `AUTOMATIONS/agent/autonomy/alpha_content_registry.json`
+
+### Connection C: SAAS Alpha → App Factory Queue
+- **Wired:** 268 SAAS entries → `AUTOMATIONS/app_factory/queue/saas_alpha_queue.json`
+- Top: AI Micro-SaaS for property managers, MCP Server monetization (8.5/10)
+
+### Connection D: P0 Methods → Thread Starters
+- **Wired:** 7 P0 thread drafts → posting queue
+- Methods: TikTok algo (7.55), IG DM shares (7.55), Creator Rewards (7.55), 1-to-20 repurposing (7.55)
+
+**Human actions needed:**
+- [ ] Review gov contracts in `gov_contract_leads.json` — 188 leads, earliest deadline Apr 8
+- [ ] Finish 7 P0 thread drafts in posting queue (need copy fill-in)
+- [ ] Evaluate top SAAS queue: property manager SaaS + MCP monetization
+
+---
 
 ---
 

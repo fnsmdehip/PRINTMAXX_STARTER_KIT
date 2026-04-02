@@ -3521,3 +3521,223 @@ http | Track app method progress | APP | AUTO | DAILY | 2026-03-24 |
 | Ecom arb: led candles | Sell $22.73 on F | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
 
 | Ecom arb: led face mask | Sell $39.99 on | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-03-30 |
+
+| Teenage Engineering's PO-32 acoustic mod | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Open source CAD in the browser (Solvespa | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Butterfly-collecting: The history of an  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Remembering Magnetic Memories and the Ap | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Axios compromised on NPM – Malicious ver | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Why the US Navy won't blast the Iranians | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Back to FreeBSD – Part 2 – Jails | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Analyzing Geekbench 6 under Intel's BOT | Track scraping method progress | SCRAPING | AUTO | DAILY | 2026-04-01 |
+
+| Cohere Transcribe: Speech Recognition | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Ordinary Lab Gloves May Have Skewed Micr | Track research method progress | RESEARCH | AUTO | DAILY | 2026-04-01 |
+
+| From 300KB to 69KB per Token: How LLM Ar | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Learn Something Old Every Day, Part XVII | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| I traced my traffic through a home Tails | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Joel Meyerowitz on Photographing Giorgio | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| We intercepted the White House app's net | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Inside the 'self-driving' lab revolution | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Claude Wrote a Full FreeBSD Remote Kerne | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| GitHub's Historic Uptime | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| The German state (Schleswig-Holstein) tr | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| GitHub Monaspace Case Study | Track research method progress | RESEARCH | AUTO | DAILY | 2026-04-01 |
+
+| What major works of literature were writ | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Combinators | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Nematophagous Fungus | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Accidentally created my first fork bomb  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Super Micro Computer Investors Look for  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Google's 200M-parameter time-series foun | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Microsoft: Copilot is for entertainment  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Artemis II is not safe to fly | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Good CTE, Bad CTE | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Ollama is now powered by MLX on Apple Si | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Prompt Engineering for Humans | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Claude Code rewritten as a bash | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Art schools are being torn apart by AI | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Claude Code users hitting usage limits ' | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| AWS App Runner availability change | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Claude Code's source code has been leake | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Safe ways to do things in bash (2023) | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| A Look at Some Retro Desktop Graphical U | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Scotty: A beautiful SSH task runner | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Pretext's most interesting use cases hav | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: A sandboxed AI agent that can w | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: TraceLit – debug LeetCode step  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Loreline, narrative language tr | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: WordBattle – Daily word game wh | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Sundial – a new way to look at  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: EU Leadership – Live API data s | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Asciimap – Interactive ASCII wo | Track research method progress | RESEARCH | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: I turned a sketch into a 3D-pri | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Coasts – Containerized Hosts fo | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Margo – Find the font your brai | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: DeepTable – an API that convert | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Pardus Browser- a browser for A | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Hyprmoncfg – Terminal-based mon | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Lazy-tool: reducing prompt bloa | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Rust UEFI UI Lib | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: ClawDesk – Agent orchestration  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: I built a self-hosted Fly.io en | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: LogicStamp – A Context Compiler | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: INTERCALsky.ATproto client.Ada  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Gravimera, AI(LLM) driven 3D wo | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Prawduct, a product development | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: A 3D Body Scan for Nine Cents – | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Free AI API gateway that auto-f | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: PromptQL – AI-Native Slack | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: A complete index of all 14,000  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Show HN: Vibe Check – UX Benchmark for v | Track research method progress | RESEARCH | AUTO | DAILY | 2026-04-01 |
+
+| This guy made $68K from tiktok pages now | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| You will never make $10k/month in 4 mont | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Cash flow planning used to stress me out | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Email outreach agencies bombed my edtech | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-04-01 |
+
+| I spent ~$45 on Instagram ads to validat | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| I've worked with 30+ founders | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| I tracked every marketing channel for 12 | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| This mistake cost me $3000 in affiliate  | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-04-01 |
+
+| Where can I get a true full-body checkup | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| The reasons why passive income failed my | Track monetize method progress | MONETIZE | AUTO | DAILY | 2026-04-01 |
+
+| Quoted 2-5% shrinkage as 'normal' by my  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Stop stacking jobs | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Built a pay-per-minute expert call app — | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| How to market is as vertical saas instea | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| reddit lead gen tip: stop scrolling, sta | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-04-01 |
+
+| Potential nightmare for those who accept | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| I built 5 features for one reason | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Wanting to make money | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| would you actually use this | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Issa Compass &amp; Thai Visa Centre scam | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| I analyzed 200+ Etsy digital product nic | Track product method progress | PRODUCT | AUTO | DAILY | 2026-04-01 |
+
+| What's actually working for top-of-funne | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Annoyed - HiBid Auction HiJinks | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Proof of income from eBay sales/in perso | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-04-01 |
+
+| What SaaS security practices matter most | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| What are you building | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| Our single highest-ROI growth investment | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| E-commerce owners: How do you handle soc | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Idea for creator outreach | Track outbound method progress | OUTBOUND | AUTO | DAILY | 2026-04-01 |
+
+| This is too hard but I love this game | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Please share me your opinion/review abou | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| it‘s my first time to use reddit | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Non-technical founder here, built a micr | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| How do you figure out who a new signup a | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| I'm looking for suggestions | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Selling the very same course you’ve just | Track product method progress | PRODUCT | AUTO | DAILY | 2026-04-01 |
+
+| Looking for a  way just to make money as | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Decided to go all in, now a small commun | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| I’m looking for a way out of my current  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| approach unequal personal guarantees - I | Track app method progress | APP | AUTO | DAILY | 2026-04-01 |
+
+| How do I go about scaling my reselling b | Track product method progress | PRODUCT | AUTO | DAILY | 2026-04-01 |
+
+| How do people actually afford long-term  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| Struggling to manage a very niche small  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |
+
+| From blank page to listed on Etsy in 20  | Track content method progress | CONTENT | AUTO | DAILY | 2026-04-01 |

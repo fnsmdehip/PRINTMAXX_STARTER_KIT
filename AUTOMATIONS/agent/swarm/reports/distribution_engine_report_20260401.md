@@ -1,7 +1,7 @@
-# Distribution Engine Report - Cycle 36 - 2026-04-01
+# Distribution Engine Report — Cycle 39 — 2026-04-01
 
-**Agent:** distribution_engine
-**Cycle:** 36
+**Agent:** distribution_engine  
+**Cycle:** 39  
 **Date:** 2026-04-01
 **Status:** COMPLETE
 
@@ -153,3 +153,32 @@ File: `AUTOMATIONS/agent/swarm/distribution_tracker.json`
 4. **Gmail API auth** — 5 min — cold email pipeline is built and sitting idle
 
 Total: 65 minutes of admin to unlock the revenue pipeline that's been building for 57 days.
+
+---
+
+## CYCLE 39 ADDENDUM (2026-04-01 23:00)
+
+**Status:** COMPLETE
+
+### New files created this cycle:
+- `CONTENT/social/distribution/20260401_twitter_cycle39.md` — 10 pieces (7 tweets + 3 reply baits)
+- `CONTENT/social/distribution/20260401_reddit_cycle39.md` — 5 posts across 12 subreddits
+- `CONTENT/social/distribution/20260401_hn_cycle39.md` — 4 posts (1 pending App Store)
+- `CONTENT/social/distribution/20260401_linkedin_cycle39.md` — 4 posts
+- `CONTENT/social/distribution/indiehackers_cycle39_20260401.md` — 3 posts (gap: last cycle was 35)
+- `CONTENT/social/distribution/COVERAGE_MAP_CYCLE39.md` — full coverage map
+- `AUTOMATIONS/agent/swarm/distribution_tracker.json` — updated to cycle 39
+
+### Total: 26 distribution pieces
+
+### Key decisions:
+1. TruthScope pre-launch teasers begin NOW (not waiting for App Store). Teasers on Twitter build curiosity 7 days before submission.
+2. IndieHackers gap (4 cycles) closed — 3 posts created.
+3. Quran Streak seeding in Muslim communities timed to Ramadan (Day 33 of Ramadan 2026).
+4. Day 44 $0 revenue post is the highest-engagement piece — community bait across all platforms.
+5. cursor-vs-claudecode comparison page gets multi-channel push this cycle (high-traffic keyword).
+
+### Deferred:
+- Dev.to articles (60+ days gap — needs dedicated cycle)
+- nutriai Reddit (need r/nutrition/MealPrepSunday posts — cycle 40)
+- soberstreak Reddit (r/stopdrinking — cycle 40)
