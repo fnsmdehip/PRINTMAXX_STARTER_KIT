@@ -128,7 +128,7 @@ def _claude_step(step: str) -> tuple[str, bool]:
     try:
         r = subprocess.run(
             [PYTHON, "-c",
-             f"import subprocess; r = subprocess.run(['claude', '-p', '--model', 'sonnet', "
+             f"import subprocess, os; r = subprocess.run(['claude', '-p', '--model', 'sonnet'] + (['--api-key'] if os.environ.get('ANTHROPIC_API_KEY') else []) + ["
              f"'Execute concisely: {step[:200]}'], capture_output=True, text=True, cwd='/tmp', "
              f"stdin=__import__('subprocess').DEVNULL); print(r.stdout[:200])"],
             capture_output=True, text=True, timeout=180, cwd="/tmp",

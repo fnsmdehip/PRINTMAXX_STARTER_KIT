@@ -1,26 +1,25 @@
 {
-  "last_updated": "2026-04-01T23:00:00.000000",
-  "last_cycle": "2026-04-01",
-  "cycle_number": 39,
+  "last_updated": "2026-04-02T02:21:30.128845",
+  "last_cycle": "2026-04-02",
+  "cycle_number": 40,
   "coverage": {
     "twitter": {
       "threads": 14,
-      "singles": 75,
-      "reply_baits": 26,
+      "singles": 80,
+      "reply_baits": 29,
       "qt_captions": 15,
-      "total_pieces": 180,
-      "last_cycle": 39,
+      "total_pieces": 189,
+      "last_cycle": 40,
       "new_this_cycle": [
-        "tw_truthscope_teaser_day7",
-        "tw_truthscope_ppg_technical",
-        "tw_cursor_vs_claude_code",
-        "tw_nutriai_launch",
-        "tw_day44_zero_revenue",
-        "tw_cnsnt_pwa",
-        "tw_quran_streak_friday",
-        "rb_poll_bottleneck",
-        "rb_mcp_marketplace",
-        "rb_controversial_automation"
+        "tw_newsletter_platforms_comparison",
+        "tw_nutriai_personalized_macros",
+        "tw_truthscope_teaser_day3",
+        "tw_day44_zero_revenue_lessons",
+        "tw_n8n_vs_zapier_comparison",
+        "rb_newsletter_platform_question",
+        "rb_nutrition_macro_question",
+        "rb_n8n_zapier_cost_question",
+        "thread_draft_388_sites_zero_revenue"
       ],
       "prev_cycle_35": [
         "day56_thread_7tweets",
@@ -38,7 +37,7 @@
       ]
     },
     "reddit": {
-      "posts_ready": 115,
+      "posts_ready": 120,
       "subreddits": [
         "r/nocode",
         "r/automation",
@@ -89,9 +88,16 @@
         "r/mcp",
         "r/TheGirlSurvivalGuide",
         "r/solopreneur",
-        "r/content_marketing"
+        "r/content_marketing",
+        "r/newsletters",
+        "r/nutrition",
+        "r/MealPrepSunday",
+        "r/loseit",
+        "r/sobriety",
+        "r/n8n",
+        "r/freelance"
       ],
-      "last_cycle": 39,
+      "last_cycle": 40,
       "new_this_cycle": [
         "cursor_vs_claudecode_chatgptcoding",
         "quran_streak_islam",
@@ -107,34 +113,58 @@
         "r/SEO_surgehsh_robots",
         "r/ClaudeAI_x402_protocol",
         "r/Entrepreneur_vibe_coder_job_board"
+      ],
+      "new_this_cycle_40": [
+        "r/newsletters_best_newsletter_platforms",
+        "r/emailmarketing_best_newsletter_platforms",
+        "r/nutrition_nutriai",
+        "r/MealPrepSunday_nutriai",
+        "r/stopdrinking_soberstreak",
+        "r/sobriety_soberstreak",
+        "r/nocode_n8n_vs_zapier",
+        "r/n8n_comparison",
+        "r/freelance_automation_pricing"
       ]
     },
     "hacker_news": {
-      "posts_ready": 31,
-      "last_cycle": 39,
+      "posts_ready": 33,
+      "last_cycle": 40,
       "new_this_cycle": [
         "show_hn_truthscope_pending",
         "ask_hn_cursor_vs_claude_code",
         "show_hn_cnsnt",
         "ask_hn_x402_payments"
+      ],
+      "new_this_cycle_40": [
+        "show_hn_nutriai_food_scanner",
+        "ask_hn_lie_detector_fake_data",
+        "pending_show_hn_truthscope_appstore"
       ]
     },
     "linkedin": {
-      "posts_ready": 38,
-      "last_cycle": 39,
+      "posts_ready": 41,
+      "last_cycle": 40,
       "new_this_cycle": [
         "day44_zero_revenue",
         "cursor_vs_claude_code",
         "truthscope_prelaunch",
         "mcp_ecosystem_update"
+      ],
+      "new_this_cycle_40": [
+        "li_388_sites_zero_revenue_lessons",
+        "li_nutriai_launch_clinical_formula",
+        "li_newsletter_platform_comparison"
       ]
     },
     "indie_hackers": {
-      "posts_ready": 19,
-      "last_cycle": 35,
+      "posts_ready": 20,
+      "last_cycle": 40,
       "new_this_cycle": [
         "ih1_day56_milestone",
         "ih2_new_tools_showcase"
+      ],
+      "new_this_cycle_40": [
+        "ih_day44_zero_revenue_honest_breakdown"
       ]
     },
     "hackernews": {
@@ -161,15 +191,13 @@
   },
   "assets_covered": {
     "n8n-vs-zapier-vs-make": {
-      "cycle": 21,
+      "first_cycle": 37,
       "channels": [
         "twitter",
-        "reddit",
-        "hacker_news",
-        "linkedin",
-        "indie_hackers"
+        "reddit"
       ],
-      "last_updated_cycle": 29
+      "url": "n8n-vs-zapier-vs-make.surge.sh",
+      "notes": "Expanded coverage this cycle"
     },
     "best-cold-email-tools": {
       "cycle": 21,
@@ -216,13 +244,13 @@
       "last_updated_cycle": 29
     },
     "soberstreak": {
-      "cycle": 20,
+      "first_cycle": 38,
       "channels": [
         "twitter",
-        "reddit",
-        "hn",
-        "ih"
-      ]
+        "reddit"
+      ],
+      "url": "soberstreak.surge.sh",
+      "notes": "Reddit r/stopdrinking filled this cycle"
     },
     "runningstreak": {
       "cycle": 20,
@@ -762,6 +790,35 @@
         "reddit"
       ],
       "note": "Products teased as pending Gumroad. Creates demand before launch."
+    },
+    "best-newsletter-platforms": {
+      "first_cycle": 40,
+      "channels": [
+        "twitter",
+        "reddit",
+        "linkedin"
+      ],
+      "url": "best-newsletter-platforms.surge.sh",
+      "notes": "New \u2014 first distribution this cycle"
+    },
+    "nutriai": {
+      "first_cycle": 39,
+      "channels": [
+        "twitter",
+        "reddit",
+        "hacker_news",
+        "linkedin"
+      ],
+      "url": "nutriai.surge.sh",
+      "notes": "Reddit + HN + LinkedIn gaps filled this cycle"
+    },
+    "printmaxx-automation": {
+      "first_cycle": 40,
+      "channels": [
+        "reddit"
+      ],
+      "url": "printmaxx-automation.surge.sh",
+      "notes": "First fiverr service page covered"
     }
   },
   "cycle_37_assets_distributed": [
@@ -797,22 +854,22 @@
     "toolstack-review.surge.sh"
   ],
   "queue_next_cycle": [
-    "TruthScope \u2014 r/psychology, r/science (deception science angle not yet covered)",
-    "supplement cluster \u2014 Pinterest pins for men over 55 (still unexecuted, needs Pinterest account)",
-    "builders-ledger \u2014 dev.to cross-post when account created",
-    "digital products \u2014 Gumroad listings when account live (22 products waiting)",
-    "streakr \u2014 ProductHunt launch when account live",
-    "cnsnt \u2014 ProductHunt launch when account live",
-    "soberstreak-native \u2014 App Store launch post when approved"
+    "prayerlock.surge.sh \u2014 Twitter refresh (Ramadan countdown, 17 days left)",
+    "cnsnt-web.surge.sh \u2014 LinkedIn post needed",
+    "best-newsletter-platforms.surge.sh \u2014 HN Ask HN angle",
+    "remaining fiverr pages (11x) \u2014 r/freelance distribution",
+    "best-blood-pressure-supplement pages \u2014 Reddit r/supplements",
+    "TruthScope Show HN \u2014 HOLD until App Store approval",
+    "soberstreak.surge.sh \u2014 LinkedIn professional recovery angle"
   ],
   "persistent_gaps": [
-    "product_hunt (needs account)",
-    "gumroad_listings (needs account \u2014 22 products waiting)",
-    "medium_cross_posts (needs account)",
-    "dev_to_profile (needs account)",
-    "affiliate_links_live (needs signup)",
-    "stripe_account (CRITICAL \u2014 blocks all revenue)",
-    "gmail_api_auth (blocks cold email pipeline)"
+    "Digital products (16x) \u2014 BLOCKED by Gumroad account (10 min to unblock)",
+    "iOS apps (4x) \u2014 BLOCKED by App Store submission (2 hrs to unblock)",
+    "Affiliate links (5 pages) \u2014 BLOCKED by affiliate program signups (45 min)",
+    "Cold email leads \u2014 BLOCKED by Stripe account (30 min to unblock)",
+    "Twitter posting \u2014 account active but no scheduled posts tool set up",
+    "Reddit posting \u2014 all posts manual (no scheduler)",
+    "HN posting \u2014 manual only"
   ],
   "cumulative_content_pieces": {
     "cycle_21": 49,
@@ -849,7 +906,7 @@
       "priority": "P0 \u2014 every day without real links is lost commission"
     }
   },
-  "total_content_pieces": 373,
+  "total_content_pieces": 393,
   "cycle_31_assets_distributed": [
     "yoga-streak.surge.sh",
     "pushup-streak.surge.sh",
@@ -1025,28 +1082,59 @@
     "instantly-vs-lemlist.surge.sh (updated)"
   ],
   "cycle_summary": {
-    "cycle": 39,
-    "date": "2026-04-01",
-    "total_pieces": 23,
+    "cycle": 40,
+    "date": "2026-04-02",
+    "total_pieces": 20,
     "platforms": [
       "twitter",
       "reddit",
       "hacker_news",
-      "linkedin"
+      "linkedin",
+      "indie_hackers"
     ],
     "key_themes": [
-      "TruthScope pre-launch teasers (App Store submission pending)",
-      "cursor-vs-claudecode comparison page multi-channel launch",
-      "nutriai.surge.sh product launch",
-      "Quran Streak Muslim community seeding",
-      "cnsnt-web PWA (privacy audience)",
-      "Day 44 zero revenue community bait"
+      "Newsletter platform comparison (new asset first coverage)",
+      "NutriAI Reddit + HN gap fill",
+      "SoberStreak Reddit community coverage",
+      "IndieHackers channel opened (first time)",
+      "Day 44 honest build-in-public arc",
+      "TruthScope pre-launch Day -3"
     ],
-    "human_blockers": [
-      "Gumroad account (16 products blocked)",
-      "App Store submission (4 apps)",
-      "Stripe account (payment on all apps)",
-      "Affiliate program signups (5 pages)"
+    "new_channels_opened": [
+      "indie_hackers_proper"
+    ],
+    "coverage_gaps_filled": [
+      "nutriai_reddit",
+      "nutriai_hn",
+      "nutriai_linkedin",
+      "soberstreak_reddit",
+      "newsletter_platforms_all"
     ]
-  }
+  },
+  "cycle_40_assets_distributed": [
+    "best-newsletter-platforms.surge.sh",
+    "nutriai.surge.sh",
+    "soberstreak.surge.sh",
+    "n8n-vs-zapier-vs-make.surge.sh",
+    "printmaxx-automation.surge.sh",
+    "TruthScope (pre-launch)",
+    "build-in-public Day 44"
+  ],
+  "cycle_40_output_files": [
+    "CONTENT/social/distribution/20260402_twitter_cycle40.md",
+    "CONTENT/social/distribution/20260402_reddit_cycle40.md",
+    "CONTENT/social/distribution/20260402_hn_cycle40.md",
+    "CONTENT/social/distribution/20260402_linkedin_cycle40.md",
+    "CONTENT/social/distribution/indiehackers_cycle40_20260402.md",
+    "CONTENT/social/distribution/COVERAGE_MAP_CYCLE40.md"
+  ],
+  "cycle_40_channels": {
+    "twitter": 9,
+    "reddit": 5,
+    "hacker_news": 2,
+    "linkedin": 3,
+    "indie_hackers": 1,
+    "total": 20
+  },
+  "cycle_40_content_pieces": 20
 }

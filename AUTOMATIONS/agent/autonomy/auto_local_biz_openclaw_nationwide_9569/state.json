@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-01T01:15:00.000000",
-  "cycle_number": 9,
+  "last_run": "2026-04-02T00:55:00.000000",
+  "cycle_number": 10,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -52,29 +52,37 @@
     "Long Beach CA",
     "Bakersfield CA",
     "Fresno CA",
-    "Mesa AZ"
-  ],
-  "total_leads_all_cycles": 2062,
-  "total_previews_deployed": 1094,
-  "total_sites_built_local": 1093,
-  "total_emails_queued": 1105,
-  "emails_ready_to_send": 30,
-  "emails_enriched_this_cycle": 33,
-  "enricher_hit_rate": "10.5%",
-  "enricher_leads_processed": 340,
-  "enricher_leads_remaining": 667,
-  "projected_emails_from_remaining": 70,
-  "next_cities": [
+    "Mesa AZ",
     "Huntsville AL",
-    "Birmingham AL",
     "Jackson MS",
     "Montgomery AL",
-    "Shreveport LA",
     "Lake Charles LA",
     "Columbia SC",
-    "Greenville SC",
-    "Winnipeg MB (Canada pilot)",
-    "Calgary AB (Canada pilot)"
+    "Hattiesburg MS",
+    "Meridian MS",
+    "Tuscaloosa AL"
+  ],
+  "total_leads_all_cycles": 2257,
+  "total_previews_deployed": 1199,
+  "total_sites_built_local": 1198,
+  "total_emails_queued": 1210,
+  "emails_ready_to_send": 32,
+  "emails_enriched_this_cycle": 0,
+  "enricher_hit_rate": "0% (F-grade no-website segment)",
+  "enricher_leads_processed": 50,
+  "enricher_leads_remaining": 1058,
+  "projected_emails_from_remaining": 0,
+  "next_cities": [
+    "Dothan AL",
+    "Anniston AL",
+    "Gadsden AL",
+    "Biloxi MS",
+    "Vicksburg MS",
+    "Natchez MS",
+    "Monroe LA",
+    "Alexandria LA",
+    "Macon GA",
+    "Augusta GA"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -113,9 +121,9 @@
   ],
   "blockers": [
     "CRITICAL: No outbound email service \u2014 32 emails ready to send, 0 sent. Fix: Gmail App Password (5 min, free) or Brevo (15 min, 300/day free). File: AUTOMATIONS/leads/openclaw/SEND_QUEUE.md",
-    "CRITICAL: Email enricher finding 0% for F/D leads \u2014 website scraper wrong tool. Fix: Apollo.io free (50/mo, 10 min signup) enriches by business name + city.",
-    "P1: Surge Student plan frozen at 472 domains. Fix: New surge account (new email, 5 min) OR netlify login (10 min).",
-    "P1: SE/Midwest pivot confirmed working \u2014 72% F-grade. Next cycle: Huntsville AL, Birmingham AL, Jackson MS, Montgomery AL."
+    "CRITICAL: Email enricher 0% on F-grade (no-website businesses). Fix: Apollo.io free (50/mo, 10 min signup) enriches by business name + city. 1,108 hot leads \u2192 ~110 emails at 10%.",
+    "P1: Surge Student plan frozen at 472 domains. Fix: netlify login (10 min, free, unlimited sites).",
+    "P1: Deep South AL/MS confirmed 79-100% F-grade. Lock in for cycles 11-20."
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_9_results": {
@@ -138,9 +146,9 @@
     "new_emails_queued": 180,
     "ready_to_send_email": 32,
     "outreach_with_live_url": 841,
-    "observation": "SE/Midwest pivot yields 72% F-grade vs 5% West Coast. GH Pages now dominant deploy channel — 831 sites in single batch push. Website-scraping enricher confirmed wrong tool for F-grade segment (businesses without websites have no email to scrape). Apollo.io needed.",
+    "observation": "SE/Midwest pivot yields 72% F-grade vs 5% West Coast. GH Pages now dominant deploy channel \u2014 831 sites in single batch push. Website-scraping enricher confirmed wrong tool for F-grade segment (businesses without websites have no email to scrape). Apollo.io needed.",
     "surge_blocker": "Student plan frozen; 472 refresh-eligible domains only",
-    "ghpages_breakthrough": "831 sites committed + pushed in one cycle — 1,094 total live"
+    "ghpages_breakthrough": "831 sites committed + pushed in one cycle \u2014 1,094 total live"
   },
   "cycle_4_results": {
     "cities_discovered": [
@@ -279,9 +287,22 @@
       "outreach_queued": 1105,
       "outreach_with_live_url": 841,
       "ready_to_send": 32
+    },
+    {
+      "cycle": 10,
+      "date": "2026-04-02",
+      "total_leads": 2257,
+      "hot_leads": 1108,
+      "with_email": 555,
+      "surge_deployed": 472,
+      "ghpages_deployed": 1199,
+      "total_preview_live": 1199,
+      "outreach_queued": 1210,
+      "outreach_with_live_url": 1147,
+      "ready_to_send": 32
     }
   ],
-  "ghpages_deployed": 1094,
+  "ghpages_deployed": 1199,
   "phone_outreach_queue": 100,
   "cycle_7_results": {
     "cities_discovered": [
@@ -328,5 +349,32 @@
     "new_niche_focus": "Roofing + tree service = higher ticket, same pipeline",
     "surge_blocker": "Student plan still blocks new subdomains; 472 refresh-eligible",
     "ghpages_breakthrough": "163 new sites pushed to fnsmdehip/openclaw-previews (263 total live)"
+  },
+  "cycle_10_results": {
+    "cities_discovered": [
+      "Huntsville AL",
+      "Jackson MS",
+      "Montgomery AL",
+      "Lake Charles LA",
+      "Columbia SC",
+      "Hattiesburg MS",
+      "Meridian MS",
+      "Tuscaloosa AL"
+    ],
+    "new_leads": 195,
+    "new_f_grade": 101,
+    "new_sites_built": 105,
+    "new_ghpages_deploys": 105,
+    "total_ghpages_live": 1199,
+    "new_emails_found": 0,
+    "new_emails_queued": 105,
+    "outreach_synced_to_live_url": 306,
+    "ready_to_send_email": 32,
+    "observation": "Deep South pivot confirmed: Meridian MS 100%, Columbia SC 91%, Montgomery AL 79%, Jackson MS 75% F-grade. GH Pages at 1,199 live sites. Email enricher 0% on F-grade segment \u2014 Apollo.io required.",
+    "top_f_grade_city": "Meridian MS (100%)",
+    "cities_to_avoid": [
+      "Lake Charles LA (6% F-grade)",
+      "Huntsville AL (14% F-grade)"
+    ]
   }
 }

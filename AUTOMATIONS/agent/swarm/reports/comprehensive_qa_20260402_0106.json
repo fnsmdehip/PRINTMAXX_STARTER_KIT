@@ -1,0 +1,1060 @@
+{
+  "green": [
+    {
+      "site": "printmaxx-site",
+      "url": "https://printmaxx-site.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1734.3969345092773,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:21.437042"
+    },
+    {
+      "site": "printmaxx",
+      "url": "https://printmaxx.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1918.9708232879639,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:23.356153"
+    },
+    {
+      "site": "prayerlock",
+      "url": "https://prayerlock.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1767.5020694732666,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:25.123792"
+    },
+    {
+      "site": "focuslock",
+      "url": "https://focuslock.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1766.7527198791504,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:26.890693"
+    },
+    {
+      "site": "cnsnt",
+      "url": "https://cnsnt.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1765.169382095337,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:28.655968"
+    },
+    {
+      "site": "cnsnt-web",
+      "url": "https://cnsnt-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 2760.941982269287,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:31.417097"
+    },
+    {
+      "site": "ramadan-tracker",
+      "url": "https://ramadan-tracker.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1811.5448951721191,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:33.228763"
+    },
+    {
+      "site": "truthscope",
+      "url": "https://truthscope.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1757.1041584014893,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:34.985991"
+    },
+    {
+      "site": "mcp-marketplace",
+      "url": "https://mcp-marketplace.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1915.1561260223389,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:36.901272"
+    },
+    {
+      "site": "fnsmdehip-research",
+      "url": "https://fnsmdehip-research.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1753.9610862731934,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:38.655343"
+    },
+    {
+      "site": "printmaxx-store",
+      "url": "https://printmaxx-store.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4481.378793716431,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:43.136822"
+    },
+    {
+      "site": "coldmaxx",
+      "url": "https://coldmaxx.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1778.0590057373047,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:50.804226"
+    },
+    {
+      "site": "invoiceforge",
+      "url": "https://invoiceforge.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1735.7439994812012,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:52.540090"
+    },
+    {
+      "site": "pagescorer",
+      "url": "https://pagescorer.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1773.9381790161133,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:54.314143"
+    },
+    {
+      "site": "roicalc",
+      "url": "https://roicalc.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1781.1779975891113,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:56.095440"
+    },
+    {
+      "site": "stackmaxx",
+      "url": "https://stackmaxx.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1753.0229091644287,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:57.848585"
+    },
+    {
+      "site": "prospectmaxx",
+      "url": "https://prospectmaxx.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1033.5278511047363,
+      "issue": null,
+      "tested_at": "2026-04-02T01:02:58.882496"
+    },
+    {
+      "site": "pitchdeck",
+      "url": "https://pitchdeck.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1952.3680210113525,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:00.834983"
+    },
+    {
+      "site": "printmaxx-tools",
+      "url": "https://printmaxx-tools.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1922.7399826049805,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:02.758237"
+    },
+    {
+      "site": "ai-revenue-calculator",
+      "url": "https://ai-revenue-calculator.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 980.0879955291748,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:03.738439"
+    },
+    {
+      "site": "coldmaxx-vs-instantly",
+      "url": "https://coldmaxx-vs-instantly.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1761.199951171875,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:05.500015"
+    },
+    {
+      "site": "cursor-vs-claudecode",
+      "url": "https://cursor-vs-claudecode.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1945.4820156097412,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:07.445616"
+    },
+    {
+      "site": "instantly-vs-lemlist",
+      "url": "https://instantly-vs-lemlist.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1737.16402053833,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:09.183026"
+    },
+    {
+      "site": "pagescorer-vs-gtmetrix",
+      "url": "https://pagescorer-vs-gtmetrix.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1753.5228729248047,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:10.936646"
+    },
+    {
+      "site": "sleepmaxx-vs-sleepcycle",
+      "url": "https://sleepmaxx-vs-sleepcycle.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1745.6319332122803,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:12.682382"
+    },
+    {
+      "site": "prayerlock-vs-hallow",
+      "url": "https://prayerlock-vs-hallow.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1947.923183441162,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:14.632054"
+    },
+    {
+      "site": "focuslock-vs-opal",
+      "url": "https://focuslock-vs-opal.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1986.405849456787,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:16.618562"
+    },
+    {
+      "site": "n8n-vs-zapier-vs-make",
+      "url": "https://n8n-vs-zapier-vs-make.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 2001.2168884277344,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:18.619953"
+    },
+    {
+      "site": "prayerlock-landing",
+      "url": "https://prayerlock-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1762.7851963043213,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:20.382831"
+    },
+    {
+      "site": "focuslock-landing",
+      "url": "https://focuslock-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1766.4239406585693,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:22.149395"
+    },
+    {
+      "site": "scripture-streak-landing",
+      "url": "https://scripture-streak-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1790.8978462219238,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:23.940388"
+    },
+    {
+      "site": "mealmaxx-landing",
+      "url": "https://mealmaxx-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1763.3967399597168,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:25.703915"
+    },
+    {
+      "site": "sleepmaxx-landing",
+      "url": "https://sleepmaxx-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1984.631061553955,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:27.688647"
+    },
+    {
+      "site": "walktounlock-landing",
+      "url": "https://walktounlock-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1947.4141597747803,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:29.636156"
+    },
+    {
+      "site": "hilal-landing",
+      "url": "https://hilal-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1972.322702407837,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:31.608597"
+    },
+    {
+      "site": "coreday",
+      "url": "https://coreday.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1952.16703414917,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:33.560867"
+    },
+    {
+      "site": "walktounlock-web",
+      "url": "https://walktounlock-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1971.5259075164795,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:35.532534"
+    },
+    {
+      "site": "tasksmash-web",
+      "url": "https://tasksmash-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1000.5168914794922,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:36.533182"
+    },
+    {
+      "site": "sleepmaxx-web",
+      "url": "https://sleepmaxx-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1936.0997676849365,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:38.469402"
+    },
+    {
+      "site": "focuslock-web",
+      "url": "https://focuslock-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1001.0678768157959,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:39.470877"
+    },
+    {
+      "site": "mealmaxx-web",
+      "url": "https://mealmaxx-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1903.3536911010742,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:41.374361"
+    },
+    {
+      "site": "habitforge-web",
+      "url": "https://habitforge-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1979.5429706573486,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:43.357117"
+    },
+    {
+      "site": "prayerlock-web",
+      "url": "https://prayerlock-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1934.262990951538,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:45.291499"
+    },
+    {
+      "site": "pdfmaxx",
+      "url": "https://pdfmaxx.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1909.3732833862305,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:47.201002"
+    },
+    {
+      "site": "deskbreak-web",
+      "url": "https://deskbreak-web.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1931.6840171813965,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:49.132881"
+    },
+    {
+      "site": "deskbreak",
+      "url": "https://deskbreak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 2017.045021057129,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:51.150043"
+    },
+    {
+      "site": "cold-email-roi-calculator",
+      "url": "https://cold-email-roi-calculator.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1775.8357524871826,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:52.926051"
+    },
+    {
+      "site": "ramadan-daily-planner",
+      "url": "https://ramadan-daily-planner.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1925.563097000122,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:54.851774"
+    },
+    {
+      "site": "revenue-leak-audit",
+      "url": "https://revenue-leak-audit.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1959.0790271759033,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:56.810979"
+    },
+    {
+      "site": "solopreneur-launch-checklist",
+      "url": "https://solopreneur-launch-checklist.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1960.7601165771484,
+      "issue": null,
+      "tested_at": "2026-04-02T01:03:58.771850"
+    },
+    {
+      "site": "subject-line-grader",
+      "url": "https://subject-line-grader.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1737.929105758667,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:00.509901"
+    },
+    {
+      "site": "side-project-revenue-estimator",
+      "url": "https://side-project-revenue-estimator.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1979.2160987854004,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:02.489297"
+    },
+    {
+      "site": "saas-stack-audit",
+      "url": "https://saas-stack-audit.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1766.171932220459,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:04.255638"
+    },
+    {
+      "site": "vibe-coding-profit-calculator",
+      "url": "https://vibe-coding-profit-calculator.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1929.7561645507812,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:06.185514"
+    },
+    {
+      "site": "200-day-calculator",
+      "url": "https://200-day-calculator.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1910.964012145996,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:08.096613"
+    },
+    {
+      "site": "cold-email-deliverability-checklist",
+      "url": "https://cold-email-deliverability-checklist.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1939.558982849121,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:10.036377"
+    },
+    {
+      "site": "app-hub-crosslinks",
+      "url": "https://app-hub-crosslinks.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1906.3410758972168,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:11.942865"
+    },
+    {
+      "site": "printmaxx-lead-magnets",
+      "url": "https://printmaxx-lead-magnets.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1976.4859676361084,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:13.919490"
+    },
+    {
+      "site": "scripture-streak",
+      "url": "https://scripture-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1950.2363204956055,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:15.869854"
+    },
+    {
+      "site": "quran-streak",
+      "url": "https://quran-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1992.8278923034668,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:17.862801"
+    },
+    {
+      "site": "torah-streak",
+      "url": "https://torah-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1976.058006286621,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:19.838961"
+    },
+    {
+      "site": "gita-streak",
+      "url": "https://gita-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 2416.0897731781006,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:22.255115"
+    },
+    {
+      "site": "buddhist-streak",
+      "url": "https://buddhist-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1998.4760284423828,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:24.253714"
+    },
+    {
+      "site": "meditation-streak",
+      "url": "https://meditation-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1892.3749923706055,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:26.146219"
+    },
+    {
+      "site": "coding-streak",
+      "url": "https://coding-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 3384.359836578369,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:35.922222"
+    },
+    {
+      "site": "fitness-streak",
+      "url": "https://fitness-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4196.425914764404,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:40.118764"
+    },
+    {
+      "site": "reading-streak",
+      "url": "https://reading-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1980.233907699585,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:42.099112"
+    },
+    {
+      "site": "language-streak",
+      "url": "https://language-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4290.855169296265,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:46.390090"
+    },
+    {
+      "site": "art-streak",
+      "url": "https://art-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4108.701944351196,
+      "issue": null,
+      "tested_at": "2026-04-02T01:04:50.498905"
+    },
+    {
+      "site": "photography-streak",
+      "url": "https://photography-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4244.362831115723,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:00.024822"
+    },
+    {
+      "site": "yoga-streak",
+      "url": "https://yoga-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1989.5522594451904,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:02.014497"
+    },
+    {
+      "site": "cycling-streak",
+      "url": "https://cycling-streak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1866.0099506378174,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:03.880620"
+    },
+    {
+      "site": "soberstreak",
+      "url": "https://soberstreak.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1985.328197479248,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:08.405578"
+    },
+    {
+      "site": "pest-control-miami-fl",
+      "url": "https://pest-control-miami-fl.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1773.7810611724854,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:10.179569"
+    },
+    {
+      "site": "window-cleaning-louisville-ky",
+      "url": "https://window-cleaning-louisville-ky.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1838.960886001587,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:12.018673"
+    },
+    {
+      "site": "handyman-las-vegas-nv",
+      "url": "https://handyman-las-vegas-nv.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1745.253086090088,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:13.764106"
+    },
+    {
+      "site": "mobile-detailing-birmingham-al",
+      "url": "https://mobile-detailing-birmingham-al.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1754.0721893310547,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:15.518311"
+    },
+    {
+      "site": "window-cleaning-portland-or",
+      "url": "https://window-cleaning-portland-or.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4953.132152557373,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:26.605344"
+    },
+    {
+      "site": "mobile-detailing-okc-pure-pro",
+      "url": "https://mobile-detailing-okc-pure-pro.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4113.04783821106,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:30.718935"
+    },
+    {
+      "site": "auto-detailing-okc-champion",
+      "url": "https://auto-detailing-okc-champion.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 987.4310493469238,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:31.706533"
+    },
+    {
+      "site": "twitter-growth-projector",
+      "url": "https://twitter-growth-projector.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4073.127031326294,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:35.779803"
+    },
+    {
+      "site": "best-sleep-supplement-men-over-55",
+      "url": "https://best-sleep-supplement-men-over-55.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1975.8310317993164,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:37.755758"
+    },
+    {
+      "site": "best-blood-pressure-supplement-men-over-55",
+      "url": "https://best-blood-pressure-supplement-men-over-55.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1912.9719734191895,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:39.668947"
+    },
+    {
+      "site": "best-joint-supplement-men-over-50",
+      "url": "https://best-joint-supplement-men-over-50.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1923.2800006866455,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:41.592601"
+    },
+    {
+      "site": "best-memory-supplement-men-over-60",
+      "url": "https://best-memory-supplement-men-over-60.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1929.7032356262207,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:43.522460"
+    },
+    {
+      "site": "best-prostate-supplement-men-over-60",
+      "url": "https://best-prostate-supplement-men-over-60.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 969.6781635284424,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:44.492253"
+    },
+    {
+      "site": "best-testosterone-booster-men-over-50",
+      "url": "https://best-testosterone-booster-men-over-50.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1945.3868865966797,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:46.437765"
+    },
+    {
+      "site": "printmaxx-website-design",
+      "url": "https://printmaxx-website-design.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 996.1309432983398,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:47.434024"
+    },
+    {
+      "site": "printmaxx-landing-page",
+      "url": "https://printmaxx-landing-page.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1975.6839275360107,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:49.409924"
+    },
+    {
+      "site": "printmaxx-cold-email",
+      "url": "https://printmaxx-cold-email.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1795.607089996338,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:51.205668"
+    },
+    {
+      "site": "printmaxx-web-scraping",
+      "url": "https://printmaxx-web-scraping.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1983.6289882659912,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:53.189439"
+    },
+    {
+      "site": "printmaxx-automation",
+      "url": "https://printmaxx-automation.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1768.179178237915,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:54.957748"
+    },
+    {
+      "site": "printmaxx-seo-pages",
+      "url": "https://printmaxx-seo-pages.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1939.5592212677002,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:56.897536"
+    },
+    {
+      "site": "printmaxx-content-writing",
+      "url": "https://printmaxx-content-writing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 969.9161052703857,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:57.867582"
+    },
+    {
+      "site": "printmaxx-app-development",
+      "url": "https://printmaxx-app-development.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1961.9100093841553,
+      "issue": null,
+      "tested_at": "2026-04-02T01:05:59.830287"
+    },
+    {
+      "site": "printmaxx-ai-chatbot",
+      "url": "https://printmaxx-ai-chatbot.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 2011.7640495300293,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:01.842267"
+    },
+    {
+      "site": "printmaxx-data-analysis",
+      "url": "https://printmaxx-data-analysis.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1974.0078449249268,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:03.816375"
+    },
+    {
+      "site": "best-ai-tools-2026",
+      "url": "https://best-ai-tools-2026.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 969.7921276092529,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:04.786666"
+    },
+    {
+      "site": "best-cold-email-tools",
+      "url": "https://best-cold-email-tools.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 2031.43310546875,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:06.818226"
+    },
+    {
+      "site": "best-lead-generation-tools",
+      "url": "https://best-lead-generation-tools.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 2033.9572429656982,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:08.852329"
+    },
+    {
+      "site": "best-saas-tools-solopreneurs",
+      "url": "https://best-saas-tools-solopreneurs.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 998.7819194793701,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:09.851214"
+    },
+    {
+      "site": "ai-stack-2026-landing",
+      "url": "https://ai-stack-2026-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1137.5389099121094,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:10.989024"
+    },
+    {
+      "site": "quality-janitorial-services-kansas-city-mo",
+      "url": "https://quality-janitorial-services-kansas-city-mo.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1003.093957901001,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:11.992264"
+    },
+    {
+      "site": "sunrise-property-care-llc-kansas-city-mo",
+      "url": "https://sunrise-property-care-llc-kansas-city-mo.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 1798.8879680633545,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:13.791330"
+    },
+    {
+      "site": "kc-remodel-repair-llc-kansas-city-mo",
+      "url": "https://kc-remodel-repair-llc-kansas-city-mo.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4606.504917144775,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:24.409985"
+    },
+    {
+      "site": "stanley-steemer-air-duct-cleaning-service-st-louis-mo",
+      "url": "https://stanley-steemer-air-duct-cleaning-service-st-louis-mo.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 4101.526975631714,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:51.651089"
+    },
+    {
+      "site": "couples-streak-landing",
+      "url": "https://couples-streak-landing.surge.sh",
+      "status": "green",
+      "http_code": "200",
+      "load_ms": 3697.511911392212,
+      "issue": null,
+      "tested_at": "2026-04-02T01:06:55.350918"
+    }
+  ],
+  "yellow": [
+    {
+      "site": "claude-code-revenue-audit",
+      "url": "https://claude-code-revenue-audit.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 5889.105796813965,
+      "issue": "Slow (5889ms)",
+      "tested_at": "2026-04-02T01:02:49.026052"
+    },
+    {
+      "site": "journal-streak",
+      "url": "https://journal-streak.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 6391.24321937561,
+      "issue": "Slow (6391ms)",
+      "tested_at": "2026-04-02T01:04:32.537738"
+    },
+    {
+      "site": "music-theory-streak",
+      "url": "https://music-theory-streak.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 5281.286001205444,
+      "issue": "Slow (5281ms)",
+      "tested_at": "2026-04-02T01:04:55.780316"
+    },
+    {
+      "site": "running-streak",
+      "url": "https://running-streak.surge.sh",
+      "status": "yellow",
+      "http_code": "404",
+      "load_ms": 2539.285898208618,
+      "issue": "HTTP 404",
+      "tested_at": "2026-04-02T01:05:06.420112"
+    },
+    {
+      "site": "interior-detailing-birmingham-magic-city",
+      "url": "https://interior-detailing-birmingham-magic-city.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 6133.509159088135,
+      "issue": "Slow (6134ms)",
+      "tested_at": "2026-04-02T01:05:21.651961"
+    },
+    {
+      "site": "on-the-ball-remodeling-kansas-city-mo",
+      "url": "https://on-the-ball-remodeling-kansas-city-mo.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 6011.839866638184,
+      "issue": "Slow (6012ms)",
+      "tested_at": "2026-04-02T01:06:19.803300"
+    },
+    {
+      "site": "perfect-surface-solutions-llc-kansas-city-mo",
+      "url": "https://perfect-surface-solutions-llc-kansas-city-mo.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 5927.500009536743,
+      "issue": "Slow (5928ms)",
+      "tested_at": "2026-04-02T01:06:30.337620"
+    },
+    {
+      "site": "global-pro-s-services-llc-kansas-city-mo",
+      "url": "https://global-pro-s-services-llc-kansas-city-mo.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 6096.514701843262,
+      "issue": "Slow (6097ms)",
+      "tested_at": "2026-04-02T01:06:36.434313"
+    },
+    {
+      "site": "cleaning-magic-kansas-city-mo",
+      "url": "https://cleaning-magic-kansas-city-mo.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 6052.801132202148,
+      "issue": "Slow (6053ms)",
+      "tested_at": "2026-04-02T01:06:42.487351"
+    },
+    {
+      "site": "sweet-n-discreet-cleaning-service-llc-kansas-city-mo",
+      "url": "https://sweet-n-discreet-cleaning-service-llc-kansas-city-mo.surge.sh",
+      "status": "yellow",
+      "http_code": "200",
+      "load_ms": 5061.985969543457,
+      "issue": "Slow (5062ms)",
+      "tested_at": "2026-04-02T01:06:47.549478"
+    }
+  ],
+  "red": []
+}

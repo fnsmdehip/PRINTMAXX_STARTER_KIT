@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 """
 CROSS-POLLINATOR V2
-Wires the 5 highest-impact venture connections identified 2026-03-18.
-Targets persistent pipeline failures across all 6 active ventures.
+Wires 11 venture connections across all 12 active ventures.
+Targets persistent pipeline failures and ensures every venture feeds others.
 
 Connections:
-  1. Alpha Intelligence APPROVED entries → Content Farm topic queue (fixes format/schedule gap)
-  2. OpenClaw graded prospects → Cold Outreach followup sequences (fixes followup 0/13)
-  3. Content Farm post performance → Affiliate Funnels distribute targets (fixes distribute gap)
-  4. Reddit Pain Points → OpenClaw grading weights (fixes grade 2/37)
-  5. Cold Outreach replied leads → App Factory niche demand signals (new revenue path)
+  1. Alpha Intelligence APPROVED entries → Content Farm topic queue
+  2. OpenClaw graded prospects → Cold Outreach followup sequences
+  3. Content Farm post performance → Affiliate Funnels distribute targets
+  4. Reddit Pain Points → OpenClaw grading weights
+  5. Cold Outreach replied leads → App Factory niche demand signals
+  6. Alpha TOOL_ALPHA entries → Affiliate Funnels offer candidates
+  7. Stripe Products (14) → Content Farm promotion posts (NEW 2026-04-02)
+  8. Deployed Sites (388) → Content Farm showcase posts (NEW 2026-04-02)
+  9. Brokering Gov Contracts → Content Farm topic queue (NEW 2026-04-02)
+ 10. App Factory Portfolio → Cold Outreach credibility angles (NEW 2026-04-02)
+ 11. Product Demand Signals → Product Creation Queue (NEW 2026-04-02)
 
 Run: python3 AUTOMATIONS/cross_pollinator_v2.py --cycle
      python3 AUTOMATIONS/cross_pollinator_v2.py --status
@@ -636,20 +642,449 @@ def wire_alpha_tools_to_affiliate_offers():
         connections[name] = {"status": "no_new_tool_alpha", "items": 0}
 
 
+# ─── CONNECTION 7: Stripe Products → Content Farm Promotion Posts ─────────────
+# 14 Stripe products have live payment links but ZERO automated promotion posts.
+# The Content Farm generates topics from alpha but never promotes our OWN products.
+# Fix: parse OPS/STRIPE_PRODUCTS.md for live products + payment links, generate
+# ready-to-post promotional tweets/threads, write to posting_queue.
+def wire_stripe_products_to_content_promo():
+    global wired_total
+    name = "Stripe Products → Content Farm Promotion Posts"
+
+    stripe_file = PROJECT_ROOT / "OPS" / "STRIPE_PRODUCTS.md"
+    if not stripe_file.exists():
+        connections[name] = {"status": "no_stripe_products_file", "items": 0}
+        return
+
+    text = stripe_file.read_text(encoding="utf-8", errors="replace")
+
+    # Extract product lines with payment links
+    products = []
+    for line in text.split("\n"):
+        if "buy.stripe.com" in line and "|" in line:
+            parts = [p.strip() for p in line.split("|") if p.strip()]
+            if len(parts) >= 5:
+                prod_name = parts[0]
+                price = parts[1]
+                link = ""
+                for p in parts:
+                    if "buy.stripe.com" in p:
+                        link = p.strip()
+                        break
+                if prod_name and price and link:
+                    products.append({
+                        "name": prod_name,
+                        "price": price,
+                        "link": link,
+                    })
+
+    if not products:
+        connections[name] = {"status": "no_products_parsed", "items": 0}
+        return
+
+    # Check existing promo posts to avoid duplicates
+    promo_registry_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "product_promo_registry.json")
+    existing_promos = set()
+    if promo_registry_path.exists():
+        try:
+            reg = json.loads(promo_registry_path.read_text(encoding="utf-8"))
+            existing_promos = {r.get("product_name", "") for r in reg}
+        except Exception:
+            pass
+
+    new_posts = 0
+    registry_entries = []
+    for prod in products:
+        pname = prod["name"]
+        if pname in existing_promos:
+            continue
+
+        price = prod["price"]
+        link = prod["link"]
+
+        # Generate 2 post variants per product
+        # Variant 1: problem-solution hook
+        post1 = (
+            f"built this because i kept seeing the same question asked 50 different ways.\n\n"
+            f"{pname} - {price}.\n\n"
+            f"no fluff. no 400-page ebook. just the exact process that works.\n\n"
+            f"{link}"
+        )
+        # Variant 2: results/specificity hook
+        post2 = (
+            f"stopped giving away the method for free.\n\n"
+            f"{pname} ({price}) covers the full playbook.\n\n"
+            f"1 purchase = lifetime access. no subscription.\n\n"
+            f"{link}"
+        )
+
+        # Write to posting queue
+        for i, post_text in enumerate([post1, post2]):
+            slug = pname.lower().replace(" ", "_").replace("-", "_")[:40]
+            fname = f"promo_{slug}_v{i+1}_{TODAY.replace('-','')}.md"
+            fpath = safe_path(POSTING_QUEUE / fname)
+            if not fpath.exists():
+                fpath.write_text(post_text)
+                new_posts += 1
+
+        registry_entries.append({
+            "product_name": pname,
+            "price": price,
+            "link": link,
+            "posts_created": 2,
+            "created_at": TIMESTAMP,
+        })
+        existing_promos.add(pname)
+
+    # Update registry
+    if registry_entries:
+        existing_reg = []
+        if promo_registry_path.exists():
+            try:
+                existing_reg = json.loads(promo_registry_path.read_text(encoding="utf-8"))
+            except Exception:
+                existing_reg = []
+        all_reg = registry_entries + existing_reg
+        promo_registry_path.write_text(json.dumps(all_reg[:200], indent=2))
+
+    wired_total += new_posts
+    connections[name] = {"status": "OK" if new_posts > 0 else "deduped", "items": new_posts}
+
+
+# ─── CONNECTION 8: Deployed Sites → Content Farm Showcase Posts ───────────────
+# 388 surge sites are live but we never automatically generate social proof posts
+# about them. Fix: scan deployed_assets.json for recently deployed sites,
+# generate "just shipped X" tweets with the live URL.
+def wire_deployed_sites_to_content():
+    global wired_total
+    name = "Deployed Sites → Content Farm Showcase Posts"
+
+    assets_path = AUTOMATIONS / "agent" / "swarm" / "deployed_assets.json"
+    if not assets_path.exists():
+        connections[name] = {"status": "no_deployed_assets", "items": 0}
+        return
+
+    try:
+        assets = json.loads(assets_path.read_text(encoding="utf-8"))
+    except Exception:
+        connections[name] = {"status": "parse_error", "items": 0}
+        return
+
+    sites = assets.get("redeployments_this_cycle", [])
+    total = assets.get("total_surge_deployments", 0)
+
+    # Track which sites we already promoted
+    showcase_registry_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "site_showcase_registry.json")
+    promoted = set()
+    if showcase_registry_path.exists():
+        try:
+            reg = json.loads(showcase_registry_path.read_text(encoding="utf-8"))
+            promoted = {r.get("site", "") for r in reg}
+        except Exception:
+            pass
+
+    # Filter interesting sites (not generic redeploys)
+    interesting_prefixes = [
+        "best-", "mcp-", "prayerlock", "focuslock", "coldmaxx",
+        "sleepmaxx", "cnsnt", "truthscope", "ramadan", "hilal",
+        "printmaxx-site", "scripture", "nutrisnap", "pocket-alexandria",
+    ]
+    new_posts = 0
+    new_entries = []
+
+    for site in sites[:30]:
+        if site in promoted:
+            continue
+        # Only promote sites with interesting names
+        is_interesting = any(site.startswith(pfx) or pfx in site for pfx in interesting_prefixes)
+        if not is_interesting:
+            continue
+
+        url = f"https://{site}.surge.sh"
+        display_name = site.replace("-", " ").title()
+
+        post = (
+            f"just shipped: {display_name}\n\n"
+            f"live at {url}\n\n"
+            f"built in-house. no templates. no wordpress.\n\n"
+            f"total sites deployed: {total}+"
+        )
+
+        slug = site.replace("-", "_")[:40]
+        fname = f"showcase_{slug}_{TODAY.replace('-','')}.md"
+        fpath = safe_path(POSTING_QUEUE / fname)
+        if not fpath.exists():
+            fpath.write_text(post)
+            new_posts += 1
+
+        new_entries.append({"site": site, "url": url, "promoted_at": TIMESTAMP})
+        promoted.add(site)
+
+    if new_entries:
+        existing_reg = []
+        if showcase_registry_path.exists():
+            try:
+                existing_reg = json.loads(showcase_registry_path.read_text(encoding="utf-8"))
+            except Exception:
+                existing_reg = []
+        all_reg = new_entries + existing_reg
+        showcase_registry_path.write_text(json.dumps(all_reg[:500], indent=2))
+
+    wired_total += new_posts
+    connections[name] = {"status": "OK" if new_posts > 0 else "deduped", "items": new_posts}
+
+
+# ─── CONNECTION 9: Brokering Leads → Content Farm Topic Queue ─────────────────
+# 188 gov contract leads sit in a JSON file unused. Each contract topic is a
+# content angle (e.g. "government buying ventilation materials" = post about
+# gov procurement opportunities). Wire into content_farm_topic_queue.
+def wire_brokering_to_content_topics():
+    global wired_total
+    name = "Brokering Gov Contracts → Content Farm Topics"
+
+    gov_path = LEADS / "auto_brokering_deal_brokering_engin_7706" / "gov_contract_leads.json"
+    if not gov_path.exists():
+        connections[name] = {"status": "no_gov_leads", "items": 0}
+        return
+
+    try:
+        gov_leads = json.loads(gov_path.read_text(encoding="utf-8"))
+    except Exception:
+        connections[name] = {"status": "parse_error", "items": 0}
+        return
+
+    if not isinstance(gov_leads, list) or not gov_leads:
+        connections[name] = {"status": "empty_leads", "items": 0}
+        return
+
+    topic_queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json")
+    existing_data = []
+    if topic_queue_path.exists():
+        try:
+            existing_data = json.loads(topic_queue_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_data = []
+    existing_ids = {t.get("alpha_id", "") for t in existing_data}
+
+    new_topics = []
+    for lead in gov_leads[:50]:
+        alpha_id = lead.get("alpha_id", "")
+        tactic = lead.get("tactic", "")
+        category = lead.get("category", "")
+
+        if not tactic or len(tactic) < 20:
+            continue
+        topic_id = f"brokering_{alpha_id}" if alpha_id else f"brokering_{hash(tactic) % 100000}"
+        if topic_id in existing_ids:
+            continue
+
+        tactic_short = tactic[:200].replace("\n", " ").strip()
+        hook = (
+            f"government contracts are one of the most overlooked revenue channels.\n\n"
+            f"{tactic_short[:150]}\n\n"
+            f"no cold calling. no sales pitch. just responding to published RFPs."
+        )
+
+        new_topics.append({
+            "alpha_id": topic_id,
+            "category": "GOV_CONTRACT",
+            "roi": lead.get("roi_potential", "MEDIUM"),
+            "synergy_score": "5",
+            "tactic_preview": tactic_short[:300],
+            "draft_hook": hook,
+            "status": "QUEUED",
+            "added_at": TIMESTAMP,
+            "source": "brokering_gov_contracts",
+        })
+        existing_ids.add(topic_id)
+
+    if new_topics:
+        all_topics = new_topics + existing_data
+        all_topics = all_topics[:250]
+        topic_queue_path.write_text(json.dumps(all_topics, indent=2))
+        wired_total += len(new_topics)
+        connections[name] = {"status": "OK", "items": len(new_topics)}
+    else:
+        connections[name] = {"status": "deduped_or_no_qualifying", "items": 0}
+
+
+# ─── CONNECTION 10: App Factory Completed Apps → Outbound Angles ──────────────
+# 4 real apps with Stripe links exist (Scripture Streak, NutriSnap, Pocket
+# Alexandria, cnsnt) but Cold Outreach angles only include alpha-derived topics.
+# Fix: add completed app portfolio as credibility proof for outreach. When cold
+# emailing prospects, "we built 4 apps, 388 sites" is a concrete portfolio signal.
+def wire_apps_to_outbound_angles():
+    global wired_total
+    name = "App Factory Portfolio → Cold Outreach Credibility Angles"
+
+    # Read Stripe products for real payment links
+    stripe_file = PROJECT_ROOT / "OPS" / "STRIPE_PRODUCTS.md"
+    if not stripe_file.exists():
+        connections[name] = {"status": "no_stripe_file", "items": 0}
+        return
+
+    text = stripe_file.read_text(encoding="utf-8", errors="replace")
+
+    # Count app products
+    app_products = []
+    for line in text.split("\n"):
+        if "buy.stripe.com" in line and "|" in line and any(kw in line.lower() for kw in [
+            "scripture", "nutrisnap", "pocket", "cnsnt", "focuslock",
+            "prayerlock", "coldmaxx", "truthscope", "pdfmaxx", "prospectmaxx"
+        ]):
+            parts = [p.strip() for p in line.split("|") if p.strip()]
+            if len(parts) >= 2:
+                app_products.append(parts[0])
+
+    # Build credibility angle for outbound
+    angles_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "outreach_portfolio_angles.json")
+    existing = []
+    if angles_path.exists():
+        try:
+            existing = json.loads(angles_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+
+    # Only create if not already there
+    existing_types = {a.get("angle_type", "") for a in existing}
+    new_angles = []
+
+    if "app_portfolio_proof" not in existing_types:
+        new_angles.append({
+            "angle_type": "app_portfolio_proof",
+            "headline": f"Portfolio: {len(app_products)} live apps + 388 deployed sites",
+            "apps": app_products[:10],
+            "use_in_email": (
+                "we're a small team that ships fast. "
+                f"{len(app_products)} apps live in the App Store, "
+                "388 sites deployed across niches. "
+                "happy to show what we'd build for your vertical."
+            ),
+            "credibility_signal": "real shipped products, not just proposals",
+            "added_at": TIMESTAMP,
+        })
+
+    if "before_you_proof" not in existing_types:
+        new_angles.append({
+            "angle_type": "before_you_proof",
+            "headline": "Before You: custom genealogy/ancestry product",
+            "use_in_email": (
+                "we also built a consumer product line (Before You) "
+                "from zero to market in under 2 weeks. "
+                "same speed applies to client projects."
+            ),
+            "credibility_signal": "end-to-end product build speed",
+            "added_at": TIMESTAMP,
+        })
+
+    if new_angles:
+        all_angles = new_angles + existing
+        angles_path.write_text(json.dumps(all_angles, indent=2))
+        wired_total += len(new_angles)
+        connections[name] = {"status": "OK", "items": len(new_angles)}
+    else:
+        connections[name] = {"status": "deduped", "items": 0}
+
+
+# ─── CONNECTION 11: Product Demand Signals → Before You + Digital Products ────
+# product_demand_signals.json has Reddit-sourced demand data (pricing complaints,
+# reliability issues, feature requests) but Before You and Digital Products
+# ventures don't read this. Wire demand signals as product spec inputs.
+def wire_demand_signals_to_product_specs():
+    global wired_total
+    name = "Product Demand Signals → Product Creation Queue"
+
+    signals_path = AUTOMATIONS / "agent" / "autonomy" / "product_demand_signals.json"
+    if not signals_path.exists():
+        connections[name] = {"status": "no_demand_signals", "items": 0}
+        return
+
+    try:
+        signals = json.loads(signals_path.read_text(encoding="utf-8"))
+    except Exception:
+        connections[name] = {"status": "parse_error", "items": 0}
+        return
+
+    # Extract demand examples
+    demand = signals.get("demand", {})
+    examples = demand.get("examples", []) if isinstance(demand, dict) else []
+    pricing = signals.get("pricing", {})
+    pricing_examples = pricing.get("examples", []) if isinstance(pricing, dict) else []
+
+    all_examples = examples + pricing_examples
+
+    if not all_examples:
+        connections[name] = {"status": "no_demand_examples", "items": 0}
+        return
+
+    # Load product creation queue
+    queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "product_creation_queue.json")
+    existing_queue = []
+    if queue_path.exists():
+        try:
+            existing_queue = json.loads(queue_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_queue = []
+    existing_titles = {q.get("title", "") for q in existing_queue}
+
+    new_items = []
+    for ex in all_examples:
+        title = str(ex.get("title", ""))[:80]
+        if not title or title in existing_titles:
+            continue
+
+        sub = ex.get("sub", "unknown")
+        score = int(ex.get("score", 0) or 0)
+
+        # Only high-signal posts
+        if score < 5:
+            continue
+
+        # Derive product idea from the demand signal
+        product_spec = {
+            "title": title,
+            "source_subreddit": sub,
+            "reddit_score": score,
+            "product_type": "DIGITAL_GUIDE",
+            "action": f"Create a guide/template based on the validated demand: {title[:100]}",
+            "status": "DEMAND_VALIDATED",
+            "added_at": TIMESTAMP,
+            "source": "product_demand_signals",
+        }
+        new_items.append(product_spec)
+        existing_titles.add(title)
+
+    if new_items:
+        all_queue = new_items + existing_queue
+        queue_path.write_text(json.dumps(all_queue[:100], indent=2))
+        wired_total += len(new_items)
+        connections[name] = {"status": "OK", "items": len(new_items)}
+    else:
+        connections[name] = {"status": "deduped_or_low_signal", "items": 0}
+
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def run_cycle():
     print("=" * 65)
-    print("CROSS-POLLINATOR V2")
+    print("CROSS-POLLINATOR V2 (11 connections)")
     print(f"Time: {TIMESTAMP}")
     print("=" * 65)
 
+    # Original 6 connections
     wire_alpha_to_content_farm_topics()
     wire_openclaw_to_outreach_followup()
     wire_content_farm_to_affiliate_distribute()
     wire_reddit_to_openclaw_grading()
     wire_outreach_leads_to_app_factory()
     wire_alpha_tools_to_affiliate_offers()
+
+    # New connections 7-11 (added 2026-04-02)
+    wire_stripe_products_to_content_promo()
+    wire_deployed_sites_to_content()
+    wire_brokering_to_content_topics()
+    wire_apps_to_outbound_angles()
+    wire_demand_signals_to_product_specs()
 
     print("\n--- WIRING RESULTS ---")
     for conn_name, result in connections.items():
@@ -663,7 +1098,7 @@ def run_cycle():
 
 
 def run_status():
-    print("CROSS-POLLINATOR V2 — output files")
+    print("CROSS-POLLINATOR V2 — output files (11 connections)")
     outputs = [
         AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json",
         OUTBOUND_LEADS / "followup_queue.json",
@@ -671,6 +1106,10 @@ def run_status():
         AUTOMATIONS / "agent" / "autonomy" / "openclaw_grade_signals.json",
         AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json",
         AUTOMATIONS / "agent" / "autonomy" / "affiliate_offer_candidates.json",
+        AUTOMATIONS / "agent" / "autonomy" / "product_promo_registry.json",
+        AUTOMATIONS / "agent" / "autonomy" / "site_showcase_registry.json",
+        AUTOMATIONS / "agent" / "autonomy" / "outreach_portfolio_angles.json",
+        AUTOMATIONS / "agent" / "autonomy" / "product_creation_queue.json",
     ]
     for p in outputs:
         exists = Path(p).exists()

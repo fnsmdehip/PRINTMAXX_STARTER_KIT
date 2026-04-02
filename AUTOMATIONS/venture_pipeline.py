@@ -126,11 +126,16 @@ def execute_dag(dag: dict, dry_run: bool = False) -> dict:
 
 
 def _claude_step(step: str) -> tuple[str, bool]:
-    """Execute a step via claude -p sonnet in bare mode."""
+    """Execute a step via claude -p sonnet with API key auth (Rule 18)."""
+    import os
     try:
+        # Build command with --api-key flag if ANTHROPIC_API_KEY is set
+        api_key_arg = "'--api-key'" if os.environ.get("ANTHROPIC_API_KEY") else ""
+        api_key_comma = "," if api_key_arg else ""
+
         r = subprocess.run(
             [PYTHON, "-c",
-             f"import subprocess; r = subprocess.run(['claude', '-p', '--model', 'sonnet', "
+             f"import subprocess; r = subprocess.run(['claude', '-p', '--model', 'sonnet'{api_key_comma}{api_key_arg}, "
              f"'Execute concisely: {step[:200]}'], capture_output=True, text=True, cwd='/tmp', "
              f"stdin=__import__('subprocess').DEVNULL); print(r.stdout[:200])"],
             capture_output=True, text=True, timeout=180, cwd="/tmp",

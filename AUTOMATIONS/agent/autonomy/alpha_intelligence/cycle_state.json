@@ -1,23 +1,23 @@
 {
-  "last_cycle": "2026-04-01T00:38:32.671401Z",
-  "cycle_number": 114,
+  "last_cycle": "2026-04-02T00:55:30.456789Z",
+  "cycle_number": 115,
   "status": "COMPLETE",
   "phase": "COMPOUND_COMPLETE",
-  "entries_processed": 8,
-  "entries_routed": 407,
+  "entries_processed": 65,
+  "entries_routed": 433,
   "ventures_created": 0,
-  "content_generated": 50,
-  "tweets": 35,
-  "threads": 5,
-  "linkedin_posts": 10,
-  "twitter_entries": 0,
-  "next_cycle": "2026-04-01T04:38:32.671408Z",
+  "content_generated": 63,
+  "tweets": 40,
+  "threads": 1,
+  "linkedin_posts": 20,
+  "twitter_entries": 32,
+  "next_cycle": "2026-04-02T04:55:30.456789Z",
   "sources_status": {
-    "reddit": "\u2705 163 posts (20 subreddits, 6 new entries)",
-    "twitter": "\u23f3 In progress (twitter_alpha_scraper.py --all)",
-    "hackernews": "\u2705 Show HN opportunities monitored",
-    "producthunt": "\u26a0\ufe0f 403 auth error (deprioritized)",
-    "engagement_bait": "\u2705 4,114 entries queued for conversion"
+    "reddit": "✅ 163 posts (20 subreddits, 25 new entries)",
+    "twitter": "✅ 32 entries (8 bookmarks + 24 from 20 monitored accounts)",
+    "hackernews": "✅ Show HN opportunities monitored",
+    "producthunt": "⚠️ 403 auth error (deprioritized)",
+    "engagement_bait": "✅ 4,733 entries queued for conversion"
   },
-  "summary": "Cycle 114 complete. 8 entries processed (low quality, archived). 407 HIGHEST-tier entries routed. 50 content posts generated (30 from EB converter + 20 from P0 findings). Key P0s: MeditationStreak (3.52M), SobrietyStreak (1.24M), LTD pricing ($199\u2192$17.7K), cold email patterns (95% fail). Next: Higher volume EB routing + APP_FACTORY execution."
+  "summary": "Cycle 115 COMPLETE. All sources active. Reddit: 25 new. Twitter: 32 new (8 bookmarks, 24 from key accounts: @levelsio 7, @swyx 7, @dhh 4, @thejustinwelsh 3, @svpino 3). Total entries processed: 65. Routed: 433 HIGHEST-tier entries. Content generated: 63 posts (20 LinkedIn, 40 Twitter, 3 custom tweets, 1 thread). Key findings: Premium sleep pricing ($99 validated), Virtual pet mechanic (652K ratings). Total alpha database: 51,455 rows. Next cycle: 04:55 UTC."
 }
