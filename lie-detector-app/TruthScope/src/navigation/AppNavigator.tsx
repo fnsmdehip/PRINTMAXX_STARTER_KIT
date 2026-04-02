@@ -54,8 +54,22 @@ export function AppNavigator() {
     );
   }
 
+  const linking = {
+    prefixes: ['truthscope://'],
+    config: {
+      screens: {
+        Onboarding: 'onboarding',
+        Home: 'home',
+        Detection: 'detection/:mode?',
+        Result: 'result',
+        Settings: 'settings',
+        PartyMode: 'party',
+      },
+    },
+  };
+
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={linking}>
       <StatusBar style="light" />
       <Stack.Navigator
         initialRouteName={hasOnboarded ? 'Home' : 'Onboarding'}

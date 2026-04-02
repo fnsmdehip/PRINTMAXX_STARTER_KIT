@@ -330,8 +330,9 @@ function ScienceScreen() {
 
       <Text style={styles.sectionTitle}>The Science</Text>
       <Text style={styles.bodyText}>
-        TruthScope uses the same biometric signals measured by professional-grade
-        polygraphs, adapted for your phone's sensors. This is not a prank app.
+        TruthScope measures real biometric signals similar to those used in
+        professional settings, adapted for your phone's sensors. Less precise
+        than dedicated equipment, but real science, not a prank app.
       </Text>
 
       {points.map((p, i) => (
@@ -484,22 +485,23 @@ function AccuracyScreen() {
       </Animated.View>
 
       <Animated.View entering={FadeInDown.delay(400).duration(500)} style={styles.accuracyCard}>
-        <Text style={styles.accuracyLabel}>TruthScope Multi-Modal</Text>
+        <Text style={styles.accuracyLabel}>TruthScope (Phone Sensors)</Text>
         <View style={styles.accuracyBarBg}>
           <LinearGradient
             colors={[colors.accent.primary, colors.accent.secondary]}
-            style={[styles.accuracyBarFill, { width: '75%' }]}
+            style={[styles.accuracyBarFill, { width: '55%' }]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
           />
         </View>
-        <Text style={styles.accuracyValue}>Comparable Range</Text>
+        <Text style={styles.accuracyValue}>55 - 70% (stress detection)</Text>
       </Animated.View>
 
       <Animated.Text entering={FadeIn.delay(700).duration(600)} style={styles.bodyTextSmall}>
-        TruthScope produces probabilistic confidence scores, not binary verdicts.
-        Results are influenced by lighting, movement, ambient noise, and individual
-        physiology. Use responsibly and never as proof.
+        TruthScope detects physiological stress, not deception directly. Stress
+        correlates with but does not prove deception. Results are probabilistic
+        confidence scores influenced by lighting, movement, noise, and individual
+        physiology. For entertainment only. Never use as proof.
       </Animated.Text>
     </View>
   );

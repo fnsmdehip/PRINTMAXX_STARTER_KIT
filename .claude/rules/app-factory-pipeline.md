@@ -11,6 +11,9 @@
 8. **Real visual assets** — logos, icons, screenshots. Not Ionicons placeholders.
 9. **ASO-optimized descriptions** — every feature, template, use case named in description
 10. **Weekly + Annual pricing** — weekly+trial = highest LTV configuration
+11. **ZERO SIMULATED SENSOR DATA** — Rule 31. If the app claims to read a sensor (camera, mic, accelerometer, heart rate), it MUST read the REAL sensor. Use libraries that provide real frame/audio/sensor data (react-native-vision-camera for camera frames, react-native-pitch-detector for voice F0, expo-sensors for accelerometer). NEVER use Math.random() to generate fake readings behind a real-looking UI. NEVER estimate values from proxy data when the real data is obtainable with the right library. If a sensor isn't available in the current environment (Simulator), show "SENSOR UNAVAILABLE" not fake data. The entire value proposition is REAL vs the App Store's sea of fakes.
+12. **Apple Watch / HealthKit integration** — Rule 32. For ANY health/biometric app: check if Apple Watch can provide better data via HealthKit. HR, HRV, SpO2, skin temp, respiratory rate are all available. Use `react-native-health` or `expo-health-connect`. Apple Watch data is medical-grade continuous monitoring, always prefer it over phone camera PPG when available. SpO2 available on Series 6+, 10, Ultra 2 (was disabled on 9/Ultra 1, resolved late 2025).
+13. **No exaggerated accuracy claims** — Never claim "medical-grade", "comparable to polygraph", "same signals as professional equipment" unless backed by cited peer-reviewed research. Phone sensors are LESS precise than dedicated equipment. Say so. Honest positioning builds trust and avoids Apple review rejection + FTC issues. Show real accuracy ranges from published research, not marketing numbers.
 
 ## Pipeline Commands
 ```bash

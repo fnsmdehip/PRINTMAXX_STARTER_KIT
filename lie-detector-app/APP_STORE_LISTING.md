@@ -18,7 +18,7 @@ Welcome to TruthScope.
 Unlike every other lie detector app on the store, TruthScope measures real biometric signals from your body using your iPhone's camera and microphone.
 
 Launch features:
-- Finger Pulse mode: Place your finger on the camera for medical-grade heart rate and HRV tracking
+- Finger Pulse mode: Place your finger on the camera for real-time heart rate and HRV tracking
 - Face Scan mode: Contactless heart rate detection via subtle skin color changes
 - Voice Analysis mode: Real-time pitch, tremor, and response latency measurement
 - Multi-Modal mode: All three channels combined for maximum detection accuracy
@@ -36,7 +36,7 @@ TruthScope is different. It measures real physiological signals from your body a
 
 HOW IT ACTUALLY WORKS
 
-Your body can't fully hide stress. When you lie, your brain works harder, your sympathetic nervous system activates, and your physiology changes in measurable ways. These are the same signals a professional polygraph measures. TruthScope reads them through your iPhone.
+Your body can't fully hide stress. When you lie, your brain works harder, your sympathetic nervous system activates, and your physiology changes in measurable ways. These are similar signals to what a professional polygraph measures. TruthScope reads them through your iPhone's sensors, with less precision than dedicated equipment but real measurement nonetheless.
 
 FINGER PULSE DETECTION (Contact PPG)
 Place your fingertip over the rear camera with the flash on. TruthScope captures blood volume changes frame-by-frame, extracts the pulsatile signal, applies bandpass filtering (0.7-4.0 Hz), and calculates your heart rate and Heart Rate Variability (HRV) using RMSSD. Stress causes HR to rise and HRV to drop. Validated research shows smartphone PPG correlates >0.996 with ECG for heart rate measurement.

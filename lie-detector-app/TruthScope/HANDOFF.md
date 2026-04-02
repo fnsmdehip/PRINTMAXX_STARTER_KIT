@@ -1,109 +1,123 @@
-# TruthScope Handoff — Fix and Ship
+# TruthScope Handoff — For Fresh CLI Session
 
-## STATUS: App code complete, NOT running. Two blocking bugs.
+## STATUS: App RUNS on simulator. Home screen verified. Needs full screen-by-screen QA.
 
-## Bug 1: Space in path breaks xcodebuild
-The folder `lie detector app/TruthScope` has a space. Xcode build scripts split the path at the space:
+**Location:** `/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope/`
+
+## FIXED BUGS (already resolved)
+1. Folder renamed from `lie detector app` to `lie-detector-app` (spaces broke xcodebuild)
+2. Using native dev build (`expo run:ios`) instead of Expo Go (Reanimated 4.x incompatible with Expo Go)
+3. Missing `babel.config.js` with reanimated plugin — created
+4. Missing `babel-preset-expo` — installed
+
+## WHAT TO DO (in order)
+
+### Step 1: Enable Computer Use (one-time setup)
 ```
-bash: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie: No such file or directory
+/mcp
+# Select "computer-use" → Enable
+# Grant macOS Accessibility + Screen Recording permissions in System Settings
+# Click "Try again" after granting
 ```
 
-**FIX:** Move folder to `lie-detector-app/` (no spaces):
+### Step 2: Launch the app
 ```bash
-cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
-mv "lie detector app" "lie-detector-app"
-cd lie-detector-app/TruthScope
-rm -rf ios .expo node_modules/.cache
-npx expo prebuild --platform ios --clean
+cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope
 npx expo run:ios
 ```
+If it says "Build Succeeded" the app is installed. If not, run:
+```bash
+rm -rf ios .expo && npx expo prebuild --platform ios --clean && npx expo run:ios
+```
 
-## Bug 2: Reanimated 4.x crashes in Expo Go
-SDK 54 ships Reanimated 4.x which requires native build (NOT Expo Go).
-The app works in Expo Go when reanimated import is removed (confirmed via screenshot).
+### Step 3: QA every screen with Computer Use
+Once computer-use is enabled, ask Claude:
+```
+Open the iOS Simulator. The TruthScope app should be running.
+Tap through every screen and screenshot each one:
+1. Home screen (should show 4 mode cards + Party Mode banner)
+2. Tap "Finger Pulse" → Detection screen with camera view
+3. Go back, tap "Face Scan" → Detection with front camera
+4. Go back, tap "Voice Analysis" → Detection with waveform
+5. Go back, tap settings gear → Settings screen
+6. Go back, tap "Party Mode" → Party setup screen
+7. Add 2 players, start game → Question screen
+8. Tap "Analyze" → Analysis animation
+File bugs for any screen that crashes or looks broken.
+```
 
-**FIX:** Use `npx expo run:ios` (native dev client) instead of `npx expo start --ios` (Expo Go).
-The prebuild + run:ios already works once the path space is fixed.
+Alternative without computer-use (xcrun simctl screenshots):
+```bash
+# Screenshot current screen
+xcrun simctl io booted screenshot /tmp/ts_screen.png
 
-## What's Built (verified: TypeScript 0 errors, Expo export passes)
+# Deep link to specific screens (linking configured)
+xcrun simctl openurl booted "truthscope://home"
+xcrun simctl openurl booted "truthscope://detection/finger"
+xcrun simctl openurl booted "truthscope://settings"
+xcrun simctl openurl booted "truthscope://party"
+xcrun simctl openurl booted "truthscope://onboarding"
+```
+Note: Deep links trigger an "Open in TruthScope?" dialog. Dismiss it via Simulator click.
 
-### 17 source files, ~8,315 lines
-- `src/engines/PPGEngine.ts` — Finger-on-camera heart rate via photoplethysmography
-- `src/engines/VoiceEngine.ts` — Voice stress analysis (pitch, jitter, response latency)
-- `src/engines/FaceEngine.ts` — Facial micro-expression tracking (blink rate, gaze, asymmetry)
-- `src/engines/DeceptionAnalyzer.ts` — Multi-modal fusion (weighted combination of all engines)
-- `src/screens/OnboardingScreen.tsx` — 14-screen Cal AI-style onboarding (1,654 lines)
-- `src/screens/DetectionScreen.tsx` — Main detection UI with real-time viz (1,419 lines)
-- `src/screens/PartyModeScreen.tsx` — 6-phase party game (1,575 lines, viral feature)
-- `src/screens/HomeScreen.tsx` — Dashboard with mode cards, recent sessions
-- `src/screens/ResultScreen.tsx` — Analysis results with verdict, breakdown, share
-- `src/screens/SettingsScreen.tsx` — Settings, calibration, science explanation
-- `src/components/ScoreGauge.tsx` — Animated circular score gauge (color-coded verdict)
-- `src/components/PulseWaveform.tsx` — SVG pulse wave + ECG waveform generator
-- `src/components/MetricCard.tsx` — HR, HRV, signal quality, stress bar components
-- `src/navigation/AppNavigator.tsx` — Stack navigator with onboarding gate
-- `src/store/index.ts` — AsyncStorage persistence (profile, sessions, baseline)
-- `src/theme/index.ts` — Dark theme (cyan/purple/pink accents)
-- `src/utils/types.ts` — Full TypeScript types for all detection data
-- `src/utils/partyQuestions.ts` — 34 party questions (mild/spicy/random + premium)
-- `src/legal/disclaimer.ts` — Full disclaimer, short disclaimer, consent text
+### Step 4: Fix any broken screens
+Common issues to watch for:
+- Red error screens → check Metro terminal for the actual JS error
+- Blank screens → missing export (check default vs named exports)
+- Camera screens → Camera won't work in Simulator, but UI should render with placeholder
+- Reanimated animations → should work in native build, if not check babel.config.js
+
+### Step 5: Final verification
+```bash
+npx tsc --noEmit                    # TypeScript check
+npx expo export --platform ios      # Bundle check
+xcrun simctl io booted screenshot /tmp/final_verify.png  # Visual check
+```
+
+## WHAT'S BUILT
+
+### App (17 files, ~8,315 lines TypeScript)
+| File | Lines | What |
+|------|-------|------|
+| `src/engines/PPGEngine.ts` | 373 | Finger-on-camera heart rate (PPG) |
+| `src/engines/VoiceEngine.ts` | 298 | Voice stress analysis |
+| `src/engines/FaceEngine.ts` | 339 | Facial micro-expression tracking |
+| `src/engines/DeceptionAnalyzer.ts` | 246 | Multi-modal fusion scorer |
+| `src/screens/OnboardingScreen.tsx` | 1,654 | 14-screen Cal AI-style onboarding |
+| `src/screens/DetectionScreen.tsx` | 1,419 | Main detection UI + real-time viz |
+| `src/screens/PartyModeScreen.tsx` | 1,575 | 6-phase party game (viral feature) |
+| `src/screens/HomeScreen.tsx` | 862 | Dashboard with mode cards |
+| `src/screens/ResultScreen.tsx` | 322 | Analysis results + share |
+| `src/screens/SettingsScreen.tsx` | 276 | Settings + science explanation |
+| `src/components/ScoreGauge.tsx` | 175 | Animated score circle |
+| `src/components/PulseWaveform.tsx` | 125 | SVG pulse + ECG waveform |
+| `src/components/MetricCard.tsx` | 202 | HR, HRV, signal quality bars |
+| `src/navigation/AppNavigator.tsx` | 100 | Stack nav + deep linking |
+| `src/store/index.ts` | 75 | AsyncStorage persistence |
+| `src/theme/index.ts` | 64 | Dark theme colors |
+| `src/utils/types.ts` | 94 | TypeScript types |
+| `src/utils/partyQuestions.ts` | 64 | 34 party questions |
+| `src/legal/disclaimer.ts` | 62 | Legal disclaimers |
+
+### Stripe (LIVE on production)
+- Monthly $4.99: `https://buy.stripe.com/fZu5kEgmk4Bv51n1Ar3F60F` (prod_UFr5UfHXrdFre7)
+- Annual $29.99: `https://buy.stripe.com/6oU6oI7POgkd65rcf53F60G` (prod_UFrIVBd0jWOBIQ)
+
+### Other deliverables
+- `APP_STORE_LISTING.md` — ASO-optimized App Store copy (8KB)
+- `CONTENT/social/posting_queue/20260401_truthscope_launch.md` — 3 tweets + 1 thread
+- `LANDING/truthscope/index.html` — Pre-launch landing page (14KB, deploy blocked by Surge free tier)
+- `RESEARCH.md` — iPhone biometric science (PPG, voice, face accuracy)
+- `COMPETITIVE_RESEARCH.md` — App Store gap analysis
+- `NEW_CLAUDE_CAPABILITIES.md` — Computer-use, KAIROS, agent teams
 
 ### Config
-- `app.json` — Bundle ID: com.printmaxx.truthscope, camera+mic permissions, dark theme
+- `app.json` — Bundle ID: com.printmaxx.truthscope, dark theme, camera+mic permissions
 - `babel.config.js` — babel-preset-expo + reanimated/plugin
-- `package.json` — 30 dependencies, Expo SDK 54
+- Deep linking: truthscope:// scheme with routes for all screens
 
-### Stripe (LIVE)
-- Monthly $4.99: https://buy.stripe.com/fZu5kEgmk4Bv51n1Ar3F60F
-- Annual $29.99: https://buy.stripe.com/6oU6oI7POgkd65rcf53F60G
-- Product IDs: prod_UFr5UfHXrdFre7 (monthly), prod_UFrIVBd0jWOBIQ (annual)
-
-### Assets
-- `assets/icon.png` — 1024x1024 (Pillow-generated, need Imagen 4 upgrade)
-- `assets/adaptive-icon.png`, `splash-icon.png`, `favicon.png`
-
-### Research docs
-- `RESEARCH.md` — iPhone biometric science (PPG, voice, face, accuracy claims)
-- `COMPETITIVE_RESEARCH.md` — App Store gap analysis, LiarLiar.ai teardown
-- `NEW_CLAUDE_CAPABILITIES.md` — Computer-use MCP, KAIROS, agent teams
-- `APP_STORE_LISTING.md` — Full ASO-optimized listing
-
-### Content
-- `CONTENT/social/posting_queue/20260401_truthscope_launch.md` — 3 tweets + 1 thread
-
-### Landing page
-- `LANDING/truthscope/index.html` — 225-line pre-launch page (deploy blocked by Surge free tier)
-
-## ONE-SHOT FIX SCRIPT
-Run this to fix everything and launch:
-```bash
-export PATH="/opt/homebrew/bin:$PATH"
-export LANG=en_US.UTF-8
-cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
-
-# Fix the space in path
-mv "lie detector app" "lie-detector-app"
-
-# Update any references
-grep -rl "lie detector app" .claude/ OPS/ AUTOMATIONS/ 2>/dev/null | head -20
-
-# Clean and rebuild
-cd lie-detector-app/TruthScope
-rm -rf ios .expo node_modules/.cache ~/Library/Developer/Xcode/DerivedData/TruthScope*
-npx expo prebuild --platform ios --clean
-npx expo run:ios
-```
-
-## NEXT: After app runs
-1. Screenshot every screen with `xcrun simctl io booted screenshot`
-2. Enable computer-use MCP (`/mcp` → select computer-use → Enable) for automated QA
-3. Fix any runtime errors
-4. Generate Imagen 4 icon (Google ImageFX already has the prompt saved)
-5. `npx expo export --platform ios` final check
-6. EAS Build for App Store submission
-
-## IMPORTANT: Lessons learned
-- NEVER use folder names with spaces for React Native projects
-- NEVER claim "app is running" without a screenshot showing the actual app UI
-- Expo Go does NOT support Reanimated 4.x — always use native dev builds for SDK 54
-- Computer-use MCP works in desktop app too, enable via `/mcp`
+## KNOWN LIMITATIONS
+- Camera doesn't work in Simulator (shows blank/placeholder) — normal, works on real device
+- Pillow-generated icon is placeholder quality — need Imagen 4 from Google ImageFX for production
+- Detection engines use simulated data for UI testing — real sensor processing needs react-native-vision-camera (for PPG frame processing) and react-native-pitch-detector (for real voice analysis)
+- Surge free tier blocks deployment of landing page
