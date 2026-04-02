@@ -1,25 +1,20 @@
 {
-  "ts": "2026-04-02T04:00:34.143942",
-  "avg_score": 9.5,
-  "total_scored": 16,
+  "ts": "2026-04-02T16:00:01.254652",
+  "avg_score": 9.1,
+  "total_scored": 11,
   "drifted_count": 0,
   "drifted_agents": [],
   "scores": {
+    "DATA_JANITOR_MASTER_INDEX": 8.5,
+    "DATA_JANITOR_COMPLETION_STATUS_20260402": 8.5,
+    "dead_scripts_audit_20260402": 8.0,
+    "data_hygiene_final_20260402": 8.0,
+    "data_janitor": 10.0,
     "gap": 8.5,
     "distribution_engine": 8.5,
     "seo_audit_20260402": 10.0,
     "swarm_brain_cycle50_20260402": 10.0,
     "cross_pollination_20260402": 10.0,
-    "cross_pollinator": 10.0,
-    "opportunity_scanner": 8.5,
-    "comprehensive_qa_20260402_0106": 8.5,
-    "playwright_tester_cycle_20260402_FINAL": 8.5,
-    "playwright_tester_cycle_20260402_0101": 10.0,
-    "ceo_decision_2026-03-15": 10.0,
-    "mission_autonomy:auto_scraping_competi": 10.0,
-    "mission_autonomy:SCRAPING_competitive_": 10.0,
-    "mission_autonomy:alpha_intelligence": 10.0,
-    "mission_autonomy:before_you_product_na": 10.0,
-    "mission_autonomy:auto_brokering_deal_b": 10.0
+    "ceo_decision_2026-03-15": 10.0
   }
 }
