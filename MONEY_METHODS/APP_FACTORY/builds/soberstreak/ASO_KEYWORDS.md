@@ -41,11 +41,13 @@ Generated: 2026-03-21
 - Copy: "7 days. That is real." (milestone-specific, not generic)
 - Maybe later = retry in 5 days
 
-## Pricing Tests
+## Pricing (LIVE — Stripe connected 2026-04-02)
 - Free: basic streak, 1 habit, 90-day heatmap
-- Pro: $19.99/yr (annual-first) or $2.99/mo — 5 habits, export, custom milestones
-- 7-day trial on both tiers
-- Early test: $9.99/yr for first 100 users
+- Pro Annual: $19.99/yr — https://buy.stripe.com/7sY14o7PO1pj9hD5QH3F60H
+- Pro Monthly: $2.99/mo — https://buy.stripe.com/fZu00k6LKfg98dzbb13F60p
+- Both plans: 5 habits, data export (CSV), custom milestones, no upgrade prompts
+- NO 7-day trial currently wired (paywall.js not integrated in soberstreak — manual modal)
+- Future: integrate paywall.js for auto-trial flow
 
 ## Reddit Distribution
 - r/NoFap (1.24M), r/pornfree, r/stopdrinking, r/leaves

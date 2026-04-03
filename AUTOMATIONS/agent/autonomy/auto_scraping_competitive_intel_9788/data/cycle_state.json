@@ -1,27 +1,31 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-04-02T19:21:30.892291+00:00",
-  "cycle_number": 137,
+  "last_cycle": "2026-04-02T23:40:15.685294+00:00",
+  "cycle_number": 140,
   "cycle_status": "COMPLETE",
   "current_step": "complete",
-  "configured_at": "2026-04-02T19:21:30.892291+00:00",
+  "configured_at": "2026-04-02T23:40:15.685294+00:00",
   "stats": {
     "niches_scanned": 10,
     "blue_oceans": 10,
     "soft_competition": 0,
     "occupied": 0,
-    "community_total": 222327000
+    "community_total": 126384000
   },
-  "cumulative_blue_oceans": 752,
+  "cumulative_blue_oceans": 780,
   "p0_alerts": [
-    "daily_neuroethics_streak"
+    "daily_criminal_procedure_streak",
+    "daily_constitutional_rights_streak",
+    "daily_evidence_law_streak",
+    "daily_forensic_science_streak",
+    "daily_cybercrime_law_streak"
   ],
   "previous_cycle_results": {
-    "cycle": 137,
-    "strategy": "NEUROSCIENCE & COGNITIVE SCIENCE",
+    "cycle": 140,
+    "strategy": "CRIMINAL LAW & CRIMINAL PROCEDURE",
     "status": "COMPLETE",
     "blue_oceans": 10,
     "soft_competition": 0,
-    "community_total": 222327000
+    "community_total": 126384000
   }
 }

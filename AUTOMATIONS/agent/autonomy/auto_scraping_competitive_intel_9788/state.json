@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 136,
-    "last_run": "2026-04-02T06:03:08.786872+00:00",
-    "cumulative_blue_oceans": 742,
-    "ci_csv_rows": 79,
-    "alpha_csv_rows": 51441,
+    "last_cycle": 140,
+    "last_run": "2026-04-02T23:40:15.685294+00:00",
+    "cumulative_blue_oceans": 780,
+    "ci_csv_rows": 118,
+    "alpha_csv_rows": 51640,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -36,9 +36,11 @@
         "ARCHITECTURE & DESIGN THEORY",
         "LEGAL THEORY & JURISPRUDENCE",
         "ENVIRONMENTAL LAW & CLIMATE GOVERNANCE",
-        "PUBLIC HEALTH LAW & BIOETHICS"
+        "PUBLIC HEALTH LAW & BIOETHICS",
+        "PHILOSOPHY & ETHICS",
+        "CRIMINAL LAW & CRIMINAL PROCEDURE"
     ],
-    "next_strategy": "CRIMINAL LAW & CRIMINAL PROCEDURE",
+    "next_strategy": "INTELLECTUAL PROPERTY LAW",
     "top_all_time": [
         {
             "name": "Daily CS Fundamentals Streak",
@@ -139,6 +141,21 @@
             "name": "Daily Prospect Theory Streak",
             "score": 22,
             "cycle": 129
+        },
+        {
+            "name": "Daily Criminal Procedure Streak",
+            "score": 23,
+            "cycle": 140
+        },
+        {
+            "name": "Daily Constitutional Rights Streak",
+            "score": 22,
+            "cycle": 140
+        },
+        {
+            "name": "Daily Forensic Science Streak",
+            "score": 22,
+            "cycle": 140
         }
     ],
     "status": "RUNNING"

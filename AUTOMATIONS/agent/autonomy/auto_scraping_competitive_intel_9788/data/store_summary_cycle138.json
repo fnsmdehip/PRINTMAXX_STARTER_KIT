@@ -1,0 +1,44 @@
+{
+  "cycle": 138,
+  "timestamp": "2026-04-02T20:20:25.554602+00:00",
+  "strategy": "LINGUISTICS & LANGUAGE SCIENCE",
+  "niches_scanned": 10,
+  "unique_niches": 10,
+  "duplicates_filtered": 0,
+  "ci_rows_added": 10,
+  "alpha_rows_added": 10,
+  "cumulative_blue_oceans": 762,
+  "top_opportunities": [
+    {
+      "niche": "daily_phonetics_streak",
+      "score": 22,
+      "community": 4023000,
+      "priority": "P0"
+    },
+    {
+      "niche": "daily_computational_linguistics_streak",
+      "score": 22,
+      "community": 8720000,
+      "priority": "P0"
+    },
+    {
+      "niche": "daily_morphology_streak",
+      "score": 21,
+      "community": 3837000,
+      "priority": "P0"
+    },
+    {
+      "niche": "daily_psycholinguistics_streak",
+      "score": 21,
+      "community": 5695000,
+      "priority": "P0"
+    },
+    {
+      "niche": "daily_syntax_streak",
+      "score": 20,
+      "community": 4240000,
+      "priority": "P1"
+    }
+  ],
+  "notes": "LINGUISTICS & LANGUAGE SCIENCE scan. 10 niches confirmed blue ocean. 0 duplicates filtered. Key finding: Linguistics sits at the crossover of language learning (2.5M), NLP/ML engineering (3.1M r/MachineLearning), SLP clinical training (85K), and mainstream curiosity (r/etymology 357K, r/history 17M for historical linguistics). Computational linguistics (score 22/25) is uniquely positioned: every ML engineer building on LLMs lacks the linguistic vocabulary to understand why models fail. Phonetics (score 22/25) has the most captive professional audience: every SLP student, language teacher, and NLP researcher needs IPA fluency. Psycholinguistics (score 21/25) crosses neuroscience + language learning with the Broca/Wernicke clinical angle driving SLP demand. Historical linguistics (score 19/25) taps the largest community via r/history (17M) and r/etymology (357K) \u2014 sound change laws like Grimm's Law give the 'aha' factor."
+}

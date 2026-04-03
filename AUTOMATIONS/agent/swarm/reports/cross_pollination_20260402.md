@@ -1,8 +1,25 @@
 # Cross-Pollination Cycle -- 2026-04-02
 
-**Connections:** 11 (6 original + 5 new)
-**Items wired:** 118
-**Script:** `cross_pollinator_v2.py` (upgraded from 6 to 11 connections)
+**Connections:** 14 (6 original + 5 + 3 new)
+**Items wired:** 118 (first run) + 44 (second run at 16:37) = 162 total
+**Script:** `cross_pollinator_v2.py` (upgraded to 14 connections)
+
+## Second Run Additions (16:37 — Connections 12-14)
+
+### Connection 12: Competitive Intel P0/P1 Blue Oceans → App Factory Spec Queue
+- 762 cumulative blue ocean niches found by scraper, NONE reaching app factory until now
+- 8 specs wired: 4×P0 + 4×P1 linguistics/language niches from cycle 138
+- Every future scraper cycle now auto-feeds app factory within hours
+
+### Connection 13: Before You Listings → Content Farm Promo Posts
+- 11 product listings had zero automated social promotion
+- 22 posts created (2 variants each): launch post + value post
+- Registry: `before_you_promo_registry.json`
+
+### Connection 14: TOOL_ALPHA/MONETIZATION/SAAS Alpha → Cold Outreach Trend Angles
+- High-priority alpha from TOOL_ALPHA, MONETIZATION, SAAS categories not feeding outreach
+- 4 new trend angles wired, 14 total in `outreach_trend_angles.json`
+- Format: "saw something interesting about [category] this week — [tactic excerpt]"
 
 ## New Connections Added This Cycle
 

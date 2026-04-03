@@ -29,10 +29,36 @@
 <link rel="canonical" href="https://runningstreak.surge.sh/">
 <title>RunningStreak - Free Running Streak Tracker App | Log Runs & Miles</title>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RunningStreak","applicationCategory":"HealthAndFitness","operatingSystem":"Web","url":"https://runningstreak.surge.sh/","description":"Free running streak tracker. Log daily runs, distance, and time. Hit milestones at 7, 30, and 100 days. No account, no ads — build the daily run habit.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"},"featureList":["Daily run streak tracking","Distance and time logging","Milestone badges at 7, 30, 100, 365 days","Run history heatmap","Personal records","No account required"]}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RunningStreak","applicationCategory":"HealthAndFitness","operatingSystem":"Web","url":"https://runningstreak.surge.sh/","description":"Daily run streak tracker with 7-day free trial. Log runs, track pace, hit milestones. No account, no ads. Pro: pace analytics, training plans, CSV export.","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","name":"Free"},{"@type":"Offer","price":"1.99","priceCurrency":"USD","name":"Pro Monthly","priceSpecification":{"@type":"UnitPriceSpecification","price":"1.99","priceCurrency":"USD","billingDuration":"P1M"}},{"@type":"Offer","price":"14.99","priceCurrency":"USD","name":"Pro Annual","priceSpecification":{"@type":"UnitPriceSpecification","price":"14.99","priceCurrency":"USD","billingDuration":"P1Y"}}],"author":{"@type":"Organization","name":"PRINTMAXX"},"featureList":["Daily run streak tracking","Distance and time logging","Milestone badges at 7, 30, 100, 365 days","Run history heatmap","Personal records","No account required","Pro: Pace analytics + personal records","Pro: Data export CSV","Pro: Training plan templates"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is RunningStreak free?","acceptedAnswer":{"@type":"Answer","text":"Yes, RunningStreak is completely free. No account, no subscription, no ads. All data stays on your device."}},{"@type":"Question","name":"Does RunningStreak track distance?","acceptedAnswer":{"@type":"Answer","text":"Yes. Log your run distance and time each day. RunningStreak tracks your total lifetime distance and your personal bests."}},{"@type":"Question","name":"What happens if I miss a day?","acceptedAnswer":{"@type":"Answer","text":"Your running streak resets to zero. The reset is motivating — it keeps you consistent. Your total distance logged is always preserved."}},{"@type":"Question","name":"Can I use RunningStreak for a running challenge?","acceptedAnswer":{"@type":"Answer","text":"Yes. RunningStreak is built for daily run challenges. Log each run to maintain your streak and track your improvement across 7, 30, and 100 days."}},{"@type":"Question","name":"Does RunningStreak work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. RunningStreak is a Progressive Web App that works offline. Your data never leaves your device."}}]}
+</script>
+<script src="paywall.js"></script>
+<script>
+// ── RunningStreak Paywall Config ─────────────────────────────────────────
+const pw = Paywall.init({
+  appId: 'runningstreak',
+  appName: 'RunningStreak',
+  trialDays: 7,
+  annualUrl: 'https://buy.stripe.com/4gM5kEfig6JD9hD0wn3F60I',
+  monthlyUrl: 'https://buy.stripe.com/aFa00kfig4Bv79vfrh3F60J',
+  annualPrice: '$14.99/yr',
+  monthlyPrice: '$1.99/mo',
+  annualLabel: 'Best value — save 37%',
+  icon: '🏃',
+  tagline: 'Advanced analytics for serious runners',
+  features: [
+    'Pace analytics + personal records tracking',
+    'Training plan templates (5K, 10K, half marathon)',
+    'Data export (CSV)',
+    'Extended history (unlimited)',
+    'No upgrade prompts',
+  ],
+  premiumFeatures: ['training-plans', 'export', 'advanced-analytics'],
+  reviewUrl: 'https://runningstreak.surge.sh/',
+  reviewMilestones: [7, 30, 100, 365],
+});
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
@@ -170,6 +196,7 @@ body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; b
         <div class="text-4xl mb-3">🏃</div>
         <p class="text-sm">No runs logged yet.<br>Start your streak today.</p>
       </div>
+      <button id="export-csv-btn" class="w-full mt-4 py-3 rounded-xl text-sm font-semibold" style="background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.25);color:#4ade80">Export Run History (CSV) 🔒 Pro</button>
     </div>
 
     <!-- SCIENCE TAB -->
@@ -372,6 +399,7 @@ function saveRun() {
   const m = MILESTONES.find(x => x.days === s);
   setTimeout(() => showToast(m ? m.emoji + ' ' + m.title + ' unlocked! ' + m.msg : 'Run logged. Day ' + s + ' streak!'), 200);
   maybeShowReviewPrompt(s);
+  pw.markMilestone(s);
 }
 
 function updateLogBtn() {
@@ -635,6 +663,18 @@ function bindEvents() {
 
 // SERVICE WORKER
 if ('serviceWorker' in navigator) {
+  // Export CSV — gated behind Pro
+  document.getElementById('export-csv-btn').onclick = () => {
+    if (!pw.gate('export')) return;
+    const header = 'Date,Distance (km),Time,Notes\n';
+    const rows = state.runs.map(r => [r.date, r.dist || '', r.time || '', (r.notes || '').replace(/,/g, ' ')].join(',')).join('\n');
+    const blob = new Blob([header + rows], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'runningstreak_history.csv'; a.click();
+    URL.revokeObjectURL(url);
+  };
+
   window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
 }
 

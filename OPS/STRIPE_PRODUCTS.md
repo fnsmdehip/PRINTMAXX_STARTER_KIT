@@ -52,6 +52,9 @@ Note: ColdMaxx Pro already had a $19 product + price from 2026-03-20 (see App Pr
 | StackMaxx Pro | prod_UBsqH8S6Kww2Ho | $4.99/mo | price_1TDV5uKlbvFndmYLXeb55Ulk | https://buy.stripe.com/00wcN67POc3X1Pbend3F60n |
 | Scripture Streak Premium | prod_UBsq9yzLIK64I6 | $2.99/mo | price_1TDV5vKlbvFndmYLUasaEC2s | https://buy.stripe.com/4gMcN6eec3xr3Xjdj93F60o |
 | SoberStreak Premium | prod_UBsqya4GBG9QXZ | $2.99/mo | price_1TDV5yKlbvFndmYL0R72mAPV | https://buy.stripe.com/fZu00k6LKfg98dzbb13F60p |
+| SoberStreak Pro Annual | prod_UGO9G2g6OzJsbV | $19.99/yr | price_1THrNoKlbvFndmYLdmLd2Cyi | https://buy.stripe.com/7sY14o7PO1pj9hD5QH3F60H |
+| RunningStreak Pro Annual | prod_UGOMpWzr0Rrl2g | $14.99/yr | price_1THra1KlbvFndmYLRkp7ni7N | https://buy.stripe.com/4gM5kEfig6JD9hD0wn3F60I |
+| RunningStreak Pro Monthly | prod_UGOMpWzr0Rrl2g | $1.99/mo | price_1THra2KlbvFndmYLoIPNFAjJ | https://buy.stripe.com/aFa00kfig4Bv79vfrh3F60J |
 
 ## Before You (Ancestry Narrative Product)
 | Product | Price | Stripe Product ID | Stripe Price ID | Payment Link |

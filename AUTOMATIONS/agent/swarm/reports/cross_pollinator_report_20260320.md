@@ -1,52 +1,77 @@
-# CROSS-POLLINATOR REPORT — 2026-03-31 20:17
+# CROSS-POLLINATOR REPORT — 2026-04-02 16:37
 
 **Agent:** CROSS-POLLINATOR
-**Run time:** 2026-03-31T20:17:59
-**Total items bridged this cycle:** 113
+**Run time:** 2026-04-02T16:37:18
+**Total items bridged this cycle:** 44
+**Script:** `cross_pollinator_v2.py` (upgraded from 11 to 14 connections)
 
 ---
 
-## New Connections Implemented (4)
+## New Connections Implemented (3)
 
-### 1. BUILD_APP Alpha → App Factory Queue
-- 48 BUILD_APP alpha entries scored and ready, never reached app_factory/queue/
-- Fix: bridge_build_app_alpha_to_queue() writes spec JSONs per entry
-- Result: 44 new spec files in AUTOMATIONS/app_factory/queue/
+### Connection 12: Competitive Intel P0/P1 Blue Ocean → App Factory Spec Queue
+- **Gap:** 762 cumulative blue ocean opportunities identified by the scraper, NONE reaching app factory
+- **Fix:** `wire_comp_intel_to_app_factory()` reads `cycle_state.json` p0_alerts + parses `alert_latest.txt` for P1 entries, writes spec JSON per alert
+- **Result:** 8 new specs in `app_factory_spec_queue.json`
+  - P0: Phonetics Daily, Morphology Daily, Psycholinguistics Daily, Computational Linguistics Daily
+  - P1: Syntax Daily, Pragmatics Daily, Language Acquisition Daily, Sociolinguistics Daily
+- **Impact:** Every future scraper cycle (runs 4x/day) now auto-flows P0/P1 niches to app factory within hours
 
-### 2. ENGAGEMENT_BAIT Alpha → Posting Queue
-- 4,114 ENGAGEMENT_BAIT entries with hooks never flowed to content pipeline
-- Fix: bridge_engagement_bait_to_posts() samples top 50/day with content filter
-- Result: posting_queue/alpha_bait_hooks_20260331.csv — 50 tweet drafts
+### Connection 13: Before You Listings → Content Farm Promo Posts
+- **Gap:** 11 product listings in `DIGITAL_PRODUCTS/ready_to_sell/LISTING_*.md` had zero automated promotion posts
+- **Fix:** `wire_before_you_to_content_farm()` reads all `LISTING_*.md` files, generates 2 post variants per product (launch + value), writes to posting queue
+- **Result:** 22 new posts in posting queue
+  - Covers: Claude Code Agent Bible, Claude Code for Solopreneurs, Claude Code for Nontechnical Founders, Claude Code for Content Creators, Before You Family Story Workbook, Ancestry Workbook, Reddit Money Machine, Claude Code Mastery, Prompt Vault, Cold Email System, Cold Email Infrastructure Audit
+- **Registry:** `before_you_promo_registry.json` dedup tracking
 
-### 3. REVENUE_METHOD + MONETIZATION Alpha → Outreach Angles
-- 366+286+341 revenue/growth alpha never fed cold outreach
-- Fix: bridge_revenue_alpha_to_outreach() reads INTEGRATED entries, converts to angles
-- Result: 30 new revenue-backed angles in outreach_trend_angles.json
-
-### 4. App Factory Queue JSONs → APP_FACTORY_OPPORTUNITIES.CSV (CRITICAL FIX)
-- Queue JSONs wrong format for auto_orchestrator (reads CSV not JSON dir)
-- Fix: bridge_queue_to_opportunities_csv() converts to CSV schema
-- Result: LEDGER/APP_FACTORY_OPPORTUNITIES.csv created with 45 entries
-- Impact: auto_orchestrator --full can now generate apps from alpha specs
-
----
-
-## This Cycle Metrics
-
-| Connection | Items |
-|------------|-------|
-| Twitter → TREND_SIGNALS | 34 |
-| Twitter → Outreach Angles | 4 |
-| Revenue Alpha → Outreach Angles | 30 |
-| Queue JSONs → Opportunities CSV | 45 |
-| Total | 113 |
+### Connection 14: TOOL_ALPHA/MONETIZATION/SAAS Alpha → Cold Outreach Trend Angles
+- **Gap:** New alpha entries (TOOL_ALPHA, MONETIZATION, SAAS categories) not flowing to outreach
+- **Fix:** `wire_new_alpha_to_outreach_angles()` reads high-priority entries from those categories, converts to trend-aware outreach hooks
+- **Result:** 14 total angles in `outreach_trend_angles.json` (4 new this cycle)
+- **Format:** "saw something interesting about [category] this week — [tactic]. worth a 15 min call?"
 
 ---
 
-## Files Modified
+## Full Connection Status (14 connections)
 
-- AUTOMATIONS/cross_pollination_bridge.py — +4 bridge connections (9-12)
-- AUTOMATIONS/app_factory/queue/ — 44 new app spec JSON files
-- CONTENT/social/posting_queue/alpha_bait_hooks_20260331.csv — 50 tweet drafts
-- AUTOMATIONS/agent/autonomy/outreach_trend_angles.json — 30 new angles
-- LEDGER/APP_FACTORY_OPPORTUNITIES.csv — created, 45 entries
+| # | Connection | Items | Status |
+|---|-----------|-------|--------|
+| 1 | Alpha APPROVED → Content Farm Topics | 0 | deduped (182+ topics in queue) |
+| 2 | OpenClaw Targets → Outreach Followup | 0 | deduped (42KB queue) |
+| 3 | Content Farm Posts → Affiliate Distribute | 10 | OK |
+| 4 | Reddit Pain Points → OpenClaw Grade | 0 | stable |
+| 5 | Outreach Leads → App Factory Demand | 0 | deduped |
+| 6 | Alpha TOOL_ALPHA → Affiliate Offers | 0 | no new tool alpha |
+| 7 | Stripe Products → Content Promo Posts | 0 | deduped (54 posts from prev cycle) |
+| 8 | Deployed Sites → Content Showcase | 0 | deduped |
+| 9 | Brokering Gov Contracts → Content Topics | 0 | deduped |
+| 10 | App Portfolio → Outbound Angles | 0 | deduped |
+| 11 | Product Demand Signals → Product Queue | 0 | deduped |
+| 12 | Comp Intel P0/P1 Blue Oceans → App Factory | 8 | OK |
+| 13 | Before You Listings → Content Farm | 22 | OK (22 posts) |
+| 14 | TOOL/MONETIZATION/SAAS Alpha → Outreach | 4 | OK |
+
+---
+
+## Output File Verification
+
+| File | Size | Notes |
+|------|------|-------|
+| app_factory_spec_queue.json | 200 specs | 8 from competitive intel blue oceans |
+| outreach_trend_angles.json | 14 angles | 4 new TOOL_ALPHA/SAAS entries |
+| before_you_promo_registry.json | 11 products | all listings promoted |
+| posting_queue/ | 1,519 posts | +22 Before You promos added |
+| content_farm_topic_queue.json | 182+ topics | stable |
+| followup_queue.json | 42KB | stable |
+| affiliate_distribute_targets.json | 67KB+ | +10 new targets |
+
+---
+
+## Remaining Gaps (human blocked)
+1. **Posting → actual posts:** 1,519 posts queued, 0 posted. Twitter/Reddit credentials needed.
+2. **Comp intel alerts → notifications:** alert_latest.txt not being emailed/notified to human for immediate action.
+3. **App Factory built apps → cross-promotion:** built apps not promoted from existing deployed sites.
+
+---
+
+*Generated by cross_pollinator agent | 2026-04-02T16:37 | 14 connections, 44 items wired*

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 CROSS-POLLINATOR V2
-Wires 11 venture connections across all 12 active ventures.
+Wires 14 venture connections across all 12 active ventures.
 Targets persistent pipeline failures and ensures every venture feeds others.
 
 Connections:
@@ -16,6 +16,9 @@ Connections:
   9. Brokering Gov Contracts → Content Farm topic queue (NEW 2026-04-02)
  10. App Factory Portfolio → Cold Outreach credibility angles (NEW 2026-04-02)
  11. Product Demand Signals → Product Creation Queue (NEW 2026-04-02)
+ 12. Competitive Intel P0/P1 Blue Oceans → App Factory Spec Queue (NEW 2026-04-02)
+ 13. Before You Listings → Content Farm promo posts (NEW 2026-04-02)
+ 14. TOOL_ALPHA/MONETIZATION/SAAS alpha → Cold Outreach trend angles (NEW 2026-04-02)
 
 Run: python3 AUTOMATIONS/cross_pollinator_v2.py --cycle
      python3 AUTOMATIONS/cross_pollinator_v2.py --status
@@ -38,6 +41,8 @@ POSTING_QUEUE = CONTENT / "posting_queue"
 REDDIT_OUTPUT = AUTOMATIONS / "reddit_scraper_output"
 OPENCLAW_LEADS = LEADS / "auto_local_biz_openclaw_nationwide_9569"
 OUTBOUND_LEADS = LEADS / "auto_outbound_cold_outreach_engine_9569"
+COMP_INTEL_DIR = AUTOMATIONS / "agent" / "autonomy" / "auto_scraping_competitive_intel_9788"
+DIGITAL_PRODUCTS = PROJECT_ROOT / "DIGITAL_PRODUCTS" / "ready_to_sell"
 
 NOW = datetime.now()
 TODAY = NOW.strftime("%Y-%m-%d")
@@ -1063,11 +1068,264 @@ def wire_demand_signals_to_product_specs():
         connections[name] = {"status": "deduped_or_low_signal", "items": 0}
 
 
+# ─── CONNECTION 12: Competitive Intel P0/P1 Blue Oceans → App Factory Spec Queue ─
+# The competitive intel scraper finds blue ocean app niches (low competition, huge
+# communities) every 4h but they NEVER reach the app factory. Wire the cycle_state
+# p0_alerts and alert_latest.txt into app_factory_spec_queue.json so the app factory
+# orchestrator can act on them immediately.
+def wire_comp_intel_to_app_factory():
+    global wired_total
+    name = "Competitive Intel P0/P1 Blue Oceans → App Factory Spec Queue"
+
+    cycle_state_path = COMP_INTEL_DIR / "data" / "cycle_state.json"
+    alert_path = COMP_INTEL_DIR / "data" / "alert_latest.txt"
+
+    if not cycle_state_path.exists():
+        connections[name] = {"status": "no_cycle_state", "items": 0}
+        return
+
+    try:
+        cycle_state = json.loads(cycle_state_path.read_text(encoding="utf-8"))
+    except Exception:
+        connections[name] = {"status": "parse_error", "items": 0}
+        return
+
+    p0_alerts = cycle_state.get("p0_alerts", [])
+    p1_alerts = []
+    # Parse alert_latest.txt for P1 entries too
+    if alert_path.exists():
+        try:
+            alert_text = alert_path.read_text(encoding="utf-8")
+            for line in alert_text.splitlines():
+                if "P1 BLUE OCEAN:" in line:
+                    # Extract niche slug: "!! NEW_C138 P1 BLUE OCEAN: DAILY_X_STREAK ..."
+                    parts = line.split("BLUE OCEAN:")
+                    if len(parts) > 1:
+                        slug = parts[1].strip().split(" ")[0].strip().lower()
+                        if slug and slug not in p0_alerts:
+                            p1_alerts.append(slug)
+        except Exception:
+            pass
+
+    all_alerts = [(a, "P0") for a in p0_alerts] + [(a, "P1") for a in p1_alerts[:4]]
+
+    if not all_alerts:
+        connections[name] = {"status": "no_alerts_in_cycle_state", "items": 0}
+        return
+
+    spec_queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json")
+    existing_queue = []
+    if spec_queue_path.exists():
+        try:
+            existing_queue = json.loads(spec_queue_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_queue = []
+
+    existing_niches = {s.get("niche_slug", "").lower() for s in existing_queue}
+
+    cycle_num = cycle_state.get("cycle_number", 0)
+    strategy = cycle_state.get("previous_cycle_results", {}).get("strategy", "")
+    cumulative = cycle_state.get("cumulative_blue_oceans", 0)
+
+    new_specs = []
+    for slug, priority in all_alerts:
+        niche_clean = slug.replace("daily_", "").replace("_streak", "").replace("_", " ").strip()
+        if not niche_clean or slug in existing_niches:
+            continue
+
+        # Build a spec that matches what app_factory_spec_queue expects
+        app_name = " ".join(w.capitalize() for w in niche_clean.split()) + " Daily"
+        spec = {
+            "niche_slug": slug,
+            "app_name": app_name,
+            "niche": niche_clean,
+            "category": "STREAK_APP",
+            "priority": priority,
+            "source": "competitive_intel_blue_ocean",
+            "cycle": cycle_num,
+            "strategy_theme": strategy,
+            "cumulative_blue_oceans": cumulative,
+            "market_signal": "blue_ocean_low_competition",
+            "status": "PENDING_BUILD",
+            "added_at": TIMESTAMP,
+        }
+        new_specs.append(spec)
+        existing_niches.add(slug)
+
+    if new_specs:
+        all_queue = new_specs + existing_queue
+        spec_queue_path.write_text(json.dumps(all_queue[:200], indent=2))
+        wired_total += len(new_specs)
+        connections[name] = {"status": "OK", "items": len(new_specs)}
+    else:
+        connections[name] = {"status": "deduped", "items": 0}
+
+
+# ─── CONNECTION 13: Before You Listings → Content Farm Promo Posts ────────────
+# DIGITAL_PRODUCTS/ready_to_sell/ has 20+ product listings but zero automated
+# content generation from them. Wire LISTING_*.md files into posting queue as
+# product launch announcement posts.
+def wire_before_you_to_content_farm():
+    global wired_total
+    name = "Before You Listings → Content Farm Promo Posts"
+
+    if not DIGITAL_PRODUCTS.exists():
+        connections[name] = {"status": "no_digital_products_dir", "items": 0}
+        return
+
+    listing_files = list(DIGITAL_PRODUCTS.glob("LISTING_*.md"))
+    if not listing_files:
+        connections[name] = {"status": "no_listing_files", "items": 0}
+        return
+
+    promo_registry_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "before_you_promo_registry.json")
+    existing_reg = []
+    if promo_registry_path.exists():
+        try:
+            existing_reg = json.loads(promo_registry_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_reg = []
+    promoted_slugs = {e.get("slug") for e in existing_reg}
+
+    new_posts = 0
+    new_entries = []
+    for listing_path in listing_files:
+        slug = listing_path.stem.replace("LISTING_", "").lower()
+        if slug in promoted_slugs:
+            continue
+
+        try:
+            content = listing_path.read_text(encoding="utf-8", errors="replace")[:2000]
+        except Exception:
+            continue
+
+        # Extract product name from first heading or filename
+        product_name = slug.replace("_", " ").title()
+        for line in content.splitlines():
+            if line.startswith("# "):
+                product_name = line[2:].strip()
+                break
+
+        # Generate 2 post variants: launch post + value post
+        post_launch = (
+            f"just published: {product_name}\n\n"
+            f"everything i learned building this — condensed into one guide.\n\n"
+            f"if you're doing this manually, you're wasting hours every week.\n\n"
+            f"link in bio. grab it while it's live."
+        )
+
+        post_value = (
+            f"what's in {product_name}:\n\n"
+            f"not theory. actual systems that work.\n\n"
+            f"built this because i needed it and nothing like it existed.\n\n"
+            f"dropping it this week. follow to get the link first."
+        )
+
+        for variant, post_text in [("launch", post_launch), ("value", post_value)]:
+            fname = f"before_you_promo_{slug}_{variant}_{TODAY.replace('-','')}.md"
+            fpath = safe_path(POSTING_QUEUE / fname)
+            if not fpath.exists():
+                fpath.write_text(post_text)
+                new_posts += 1
+
+        new_entries.append({"slug": slug, "product_name": product_name, "promoted_at": TIMESTAMP})
+        promoted_slugs.add(slug)
+
+    if new_entries:
+        all_reg = new_entries + existing_reg
+        promo_registry_path.write_text(json.dumps(all_reg[:100], indent=2))
+        wired_total += new_posts
+        connections[name] = {"status": "OK", "items": new_posts}
+    else:
+        connections[name] = {"status": "deduped", "items": 0}
+
+
+# ─── CONNECTION 14: TOOL_ALPHA/MONETIZATION/SAAS alpha → Cold Outreach Angles ─
+# New alpha entries (TOOL_ALPHA, MONETIZATION, SAAS categories) are never routed
+# to cold outreach as trend-aware angles. Prospects respond better to emails that
+# reference current trends. Wire top-scoring new alpha into outreach_trend_angles.json.
+def wire_new_alpha_to_outreach_angles():
+    global wired_total
+    name = "TOOL/MONETIZATION/SAAS Alpha → Cold Outreach Trend Angles"
+
+    alpha_path = LEDGER / "ALPHA_STAGING.csv"
+    if not alpha_path.exists():
+        connections[name] = {"status": "no_alpha_staging", "items": 0}
+        return
+
+    TARGET_CATS = {"TOOL_ALPHA", "MONETIZATION", "SAAS", "MARKETING", "AFFILIATE"}
+    HIGH_PRIORITY = {"HIGH", "P0", "P1", "CRITICAL"}
+
+    rows = load_csv_safe(alpha_path, max_rows=2000)
+    candidates = [
+        r for r in rows
+        if r.get("category", "").upper() in TARGET_CATS
+        and r.get("status", "").upper() in {"APPROVED", "INTEGRATED", "PENDING_REVIEW"}
+        and r.get("priority", "").upper() in HIGH_PRIORITY
+        and r.get("tactic", "").strip()
+    ]
+
+    angles_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "outreach_trend_angles.json")
+    existing_angles = []
+    if angles_path.exists():
+        try:
+            raw = json.loads(angles_path.read_text(encoding="utf-8"))
+            # Handle both list format and legacy dict format
+            if isinstance(raw, list):
+                existing_angles = raw
+            elif isinstance(raw, dict):
+                # Legacy format has trending_angles key
+                existing_angles = raw.get("trending_angles", [])
+                if not isinstance(existing_angles, list):
+                    existing_angles = []
+        except Exception:
+            existing_angles = []
+    existing_ids = {a.get("alpha_id") for a in existing_angles if isinstance(a, dict)}
+
+    new_angles = []
+    for row in candidates[:50]:
+        alpha_id = row.get("alpha_id", "")
+        if alpha_id and alpha_id in existing_ids:
+            continue
+
+        tactic = row.get("tactic", "").strip()[:300]
+        category = row.get("category", "")
+        roi = row.get("roi_potential", "")
+
+        # Build an outreach angle: "I saw X is trending — here's how we apply it"
+        angle = {
+            "alpha_id": alpha_id,
+            "category": category,
+            "roi_potential": roi,
+            "tactic_summary": tactic[:150],
+            "outreach_hook": (
+                f"saw something interesting about {category.lower().replace('_', ' ')} this week — "
+                f"{tactic[:100].rstrip('.')}. "
+                f"we've been applying this to client campaigns. "
+                f"worth a quick 15 min to see if it fits your workflow?"
+            ),
+            "source": "alpha_staging",
+            "status": "READY_FOR_OUTREACH",
+            "added_at": TIMESTAMP,
+        }
+        new_angles.append(angle)
+        if alpha_id:
+            existing_ids.add(alpha_id)
+
+    if new_angles:
+        all_angles = new_angles + existing_angles
+        angles_path.write_text(json.dumps(all_angles[:150], indent=2))
+        wired_total += len(new_angles)
+        connections[name] = {"status": "OK", "items": len(new_angles)}
+    else:
+        connections[name] = {"status": "deduped_or_no_qualifying", "items": 0}
+
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def run_cycle():
     print("=" * 65)
-    print("CROSS-POLLINATOR V2 (11 connections)")
+    print("CROSS-POLLINATOR V2 (14 connections)")
     print(f"Time: {TIMESTAMP}")
     print("=" * 65)
 
@@ -1079,12 +1337,17 @@ def run_cycle():
     wire_outreach_leads_to_app_factory()
     wire_alpha_tools_to_affiliate_offers()
 
-    # New connections 7-11 (added 2026-04-02)
+    # Connections 7-11 (added 2026-04-02)
     wire_stripe_products_to_content_promo()
     wire_deployed_sites_to_content()
     wire_brokering_to_content_topics()
     wire_apps_to_outbound_angles()
     wire_demand_signals_to_product_specs()
+
+    # Connections 12-14 (added 2026-04-02 cycle 2)
+    wire_comp_intel_to_app_factory()
+    wire_before_you_to_content_farm()
+    wire_new_alpha_to_outreach_angles()
 
     print("\n--- WIRING RESULTS ---")
     for conn_name, result in connections.items():
@@ -1098,7 +1361,7 @@ def run_cycle():
 
 
 def run_status():
-    print("CROSS-POLLINATOR V2 — output files (11 connections)")
+    print("CROSS-POLLINATOR V2 — output files (14 connections)")
     outputs = [
         AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json",
         OUTBOUND_LEADS / "followup_queue.json",
@@ -1110,6 +1373,8 @@ def run_status():
         AUTOMATIONS / "agent" / "autonomy" / "site_showcase_registry.json",
         AUTOMATIONS / "agent" / "autonomy" / "outreach_portfolio_angles.json",
         AUTOMATIONS / "agent" / "autonomy" / "product_creation_queue.json",
+        AUTOMATIONS / "agent" / "autonomy" / "before_you_promo_registry.json",
+        AUTOMATIONS / "agent" / "autonomy" / "outreach_trend_angles.json",
     ]
     for p in outputs:
         exists = Path(p).exists()

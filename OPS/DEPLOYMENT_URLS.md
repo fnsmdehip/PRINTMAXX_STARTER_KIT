@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-04-01 (gap-hunter cycle)
+**Last updated:** 2026-04-02 (gap-hunter cycle)
 
 ---
 
@@ -388,6 +388,33 @@ Redeployed 2026-03-29 with shortened subdomains (originals exceeded 63-char DNS 
 | website-builders-compared | https://website-builders-compared.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
 | toolstack-review | https://toolstack-review.surge.sh | LIVE | gap-hunter verified 2026-03-31 | - |
 
-**Total Portfolio:** 398 live surge.sh deployments
+## Affiliate / Comparison Pages (deployed 2026-04-02 gap-hunter)
+
+| App | URL | Status | Notes | Stripe |
+|-----|-----|--------|-------|--------|
+| best-ai-tools-2026 | https://best-ai-tools-2026.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-cold-email-tools | https://best-cold-email-tools.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-lead-generation-tools | https://best-lead-generation-tools.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-saas-tools-solopreneurs | https://best-saas-tools-solopreneurs.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| claude-code-vs-opencode | https://claude-code-vs-opencode.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| n8n-vs-zapier-vs-make | https://n8n-vs-zapier-vs-make.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| lemlist-vs-instantly | https://lemlist-vs-instantly.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| semrush-vs-ahrefs | https://semrush-vs-ahrefs.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| smartlead-vs-instantly | https://smartlead-vs-instantly.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| framer-vs-webflow | https://framer-vs-webflow.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| klaviyo-alternative | https://klaviyo-alternative.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-testosterone-booster-men-over-50 | https://best-testosterone-booster-men-over-50.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-joint-supplement-men-over-50 | https://best-joint-supplement-men-over-50.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-prostate-supplement-men-over-60 | https://best-prostate-supplement-men-over-60.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-memory-supplement-men-over-60 | https://best-memory-supplement-men-over-60.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-hearing-supplement-men-over-60 | https://best-hearing-supplement-men-over-60.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-blood-pressure-supplement-men-over-55 | https://best-blood-pressure-supplement-men-over-55.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-sleep-supplement-men-over-55 | https://best-sleep-supplement-men-over-55.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+| best-golf-accessories-seniors | https://best-golf-accessories-seniors.surge.sh | LIVE | gap-hunter deploy 2026-04-02 | - |
+
+| printmaxx-nutriai | https://printmaxx-nutriai.surge.sh | LIVE | gap-hunter deploy 2026-04-02 cycle2 | NutriAI AI calorie tracker landing |
+| printmaxx-autoreplyai | https://printmaxx-autoreplyai.surge.sh | LIVE | gap-hunter deploy 2026-04-02 cycle2 | AutoReplyAI installer landing |
+
+**Total Portfolio:** 419 live surge.sh deployments
 **Health Status:** FULLY_OPERATIONAL
-**Last Verified:** 2026-03-31 22:30 UTC
+**Last Verified:** 2026-04-02 19:55 UTC

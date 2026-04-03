@@ -1,106 +1,106 @@
 {
-  "generated": "2026-04-02T16:00:00.770127",
+  "generated": "2026-04-02T20:00:00.524372",
   "recommendations": [
     {
       "decision": "boost_agent",
       "agent": "gap_hunter",
-      "reason": "High effectiveness (100.0%) over 186 runs",
+      "reason": "High effectiveness (100.0%) over 188 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "opportunity_scanner",
-      "reason": "High effectiveness (100.0%) over 106 runs",
+      "reason": "High effectiveness (100.0%) over 108 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "competitor_stalker",
-      "reason": "High effectiveness (100.0%) over 97 runs",
+      "reason": "High effectiveness (100.0%) over 99 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "asset_deployer",
-      "reason": "High effectiveness (99.7%) over 158 runs",
+      "reason": "High effectiveness (99.8%) over 160 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "content_compounder",
-      "reason": "High effectiveness (100.0%) over 136 runs",
+      "reason": "High effectiveness (100.0%) over 138 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "lead_machine",
-      "reason": "High effectiveness (100.0%) over 186 runs",
+      "reason": "High effectiveness (100.0%) over 188 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "seo_aso_optimizer",
-      "reason": "High effectiveness (100.0%) over 86 runs",
+      "reason": "High effectiveness (100.0%) over 88 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "conversion_optimizer",
-      "reason": "High effectiveness (100.0%) over 55 runs",
+      "reason": "High effectiveness (100.0%) over 57 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "quality_enforcer",
-      "reason": "High effectiveness (100.0%) over 118 runs",
+      "reason": "High effectiveness (100.0%) over 120 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "trend_synthesizer",
-      "reason": "High effectiveness (100.0%) over 68 runs",
+      "reason": "High effectiveness (100.0%) over 70 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "cross_pollinator",
-      "reason": "High effectiveness (100.0%) over 171 runs",
+      "reason": "High effectiveness (100.0%) over 173 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "revenue_tracker",
-      "reason": "High effectiveness (100.0%) over 84 runs",
+      "reason": "High effectiveness (100.0%) over 86 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "system_healer",
-      "reason": "High effectiveness (100.0%) over 212 runs",
+      "reason": "High effectiveness (100.0%) over 214 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "data_janitor",
-      "reason": "High effectiveness (100.0%) over 42 runs",
+      "reason": "High effectiveness (100.0%) over 44 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "distribution_engine",
-      "reason": "High effectiveness (100.0%) over 134 runs",
+      "reason": "High effectiveness (100.0%) over 136 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "inbound_maximizer",
-      "reason": "High effectiveness (99.5%) over 160 runs",
+      "reason": "High effectiveness (99.5%) over 162 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "swarm_brain",
-      "reason": "High effectiveness (100.0%) over 212 runs",
+      "reason": "High effectiveness (100.0%) over 214 runs",
       "source": "feedback_loop"
     },
     {
@@ -118,13 +118,13 @@
     {
       "decision": "boost_agent",
       "agent": "quality_gate",
-      "reason": "High effectiveness (99.0%) over 120 runs",
+      "reason": "High effectiveness (99.0%) over 122 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "playwright_tester",
-      "reason": "High effectiveness (99.5%) over 155 runs",
+      "reason": "High effectiveness (99.5%) over 157 runs",
       "source": "feedback_loop"
     },
     {

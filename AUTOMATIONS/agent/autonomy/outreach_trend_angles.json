@@ -1,77 +1,112 @@
-{
-  "generated_at": "2026-04-01T00:46",
-  "source": "cross_pollinator_bridge",
-  "purpose": "Lead Machine: use these as warm-up conversation angles when DMing prospects or writing follow-ups",
-  "trending_angles": [
-    {
-      "angle": "Habit Pixel: $0 to $1K MRR in 8 months, solo dev, no funding. We have 114 apps.",
-      "hook": "habit pixel went from $0 to $1K MRR in 8 months.",
-      "category": "APP_FACTORY",
-      "roi": "HIGHEST",
-      "source_alpha": "CI_HABIT_PIXEL_CASE_STUDY_20260319"
-    },
-    {
-      "angle": "FaithTime owns generic faith search. We own denomination-specific search. Zero competition.",
-      "hook": "faithtime.ai is publishing 'best faith apps 2026' comparison articles.",
-      "category": "APP_FACTORY",
-      "roi": "HIGHEST",
-      "source_alpha": "CI_DENOMINATION_SEO_GAP_20260319"
-    },
-    {
-      "angle": "AI CI/CD autonomous deployment",
-      "hook": "found a pattern worth tracking.",
-      "category": "TOOL_ALPHA",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA249"
-    },
-    {
-      "angle": "No-code browser automation via AI",
-      "hook": "found a pattern worth tracking.",
-      "category": "TOOL_ALPHA",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA252"
-    },
-    {
-      "angle": "1-bit LLMs for consumer-grade local inference",
-      "hook": "found a pattern worth tracking.",
-      "category": "TOOL_ALPHA",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA253"
-    },
-    {
-      "angle": "n8n AI-native workflow automation",
-      "hook": "found a pattern worth tracking.",
-      "category": "TOOL_ALPHA",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA255"
-    },
-    {
-      "angle": "TikTok algo shift: completion rate threshold increased + follower-first testing",
-      "hook": "this distribution pattern keeps showing up in the top performers.",
-      "category": "CONTENT_FARM",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA263"
-    },
-    {
-      "angle": "IG: DM shares = new priority metric + first 2 seconds critical",
-      "hook": "this distribution pattern keeps showing up in the top performers.",
-      "category": "CONTENT_FARM",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA268"
-    },
-    {
-      "angle": "TikTok Creator Rewards 10x payout + sponsorships > AdSense",
-      "hook": "this distribution pattern keeps showing up in the top performers.",
-      "category": "CONTENT_FARM",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA270"
-    },
-    {
-      "angle": "1-to-20 repurposing hub-and-spoke model with AI automation",
-      "hook": "this distribution pattern keeps showing up in the top performers.",
-      "category": "CONTENT_FARM",
-      "roi": "HIGHEST",
-      "source_alpha": "ALPHA271"
-    }
-  ]
-}
+[
+  {
+    "alpha_id": "ALPHA106727",
+    "category": "TOOL_ALPHA",
+    "roi_potential": "https://reddit.com/r/SideProject/comments/1rma15a/im_building_a_youtube_intelligence_api_because/",
+    "tactic_summary": "I'm building a YouTube Intelligence API because vidIQ and TubeBuddy have 30M users but zero public API access Hey everyone. I've been deep in the YouT",
+    "outreach_hook": "saw something interesting about tool alpha this week \u2014 I'm building a YouTube Intelligence API because vidIQ and TubeBuddy have 30M users but zero public A. we've been applying this to client campaigns. worth a quick 15 min to see if it fits your workflow?",
+    "source": "alpha_staging",
+    "status": "READY_FOR_OUTREACH",
+    "added_at": "2026-04-02T16:37:18"
+  },
+  {
+    "alpha_id": "ALPHA106748",
+    "category": "TOOL_ALPHA",
+    "roi_potential": "https://reddit.com/r/SaaS/comments/1rmpj8k/reducing_saas_overhead_a_selfhosted_pdf_engine_to/",
+    "tactic_summary": "Reducing SaaS overhead: A self-hosted PDF engine to replace expensive API subscriptions Hello everyone,\nOne of the most common hidden costs for SaaS c",
+    "outreach_hook": "saw something interesting about tool alpha this week \u2014 Reducing SaaS overhead: A self-hosted PDF engine to replace expensive API subscriptions Hello everyo. we've been applying this to client campaigns. worth a quick 15 min to see if it fits your workflow?",
+    "source": "alpha_staging",
+    "status": "READY_FOR_OUTREACH",
+    "added_at": "2026-04-02T16:37:18"
+  },
+  {
+    "alpha_id": "ALPHA106753",
+    "category": "MONETIZATION",
+    "roi_potential": "https://reddit.com/r/Affiliatemarketing/comments/1rmg4tu/curious_on_what_the_best_methods_of_earnings/",
+    "tactic_summary": "Curious on what the best methods of earnings affiliate income is in this day and age from digital products? Hi all,\nI really want to take my affiliate",
+    "outreach_hook": "saw something interesting about monetization this week \u2014 Curious on what the best methods of earnings affiliate income is in this day and age from digital pr. we've been applying this to client campaigns. worth a quick 15 min to see if it fits your workflow?",
+    "source": "alpha_staging",
+    "status": "READY_FOR_OUTREACH",
+    "added_at": "2026-04-02T16:37:18"
+  },
+  {
+    "alpha_id": "ALPHA106767",
+    "category": "MONETIZATION",
+    "roi_potential": "https://reddit.com/r/smallbusiness/comments/1rmw3kb/shopify_really_said_what_if_we_just_charged_more/",
+    "tactic_summary": "shopify really said \u2018what if we just charged more\u2019 huh sooo... yeah... shopify just casually dropped an email saying they\u2019re bumping online card fees ",
+    "outreach_hook": "saw something interesting about monetization this week \u2014 shopify really said \u2018what if we just charged more\u2019 huh sooo... yeah... shopify just casually dropped. we've been applying this to client campaigns. worth a quick 15 min to see if it fits your workflow?",
+    "source": "alpha_staging",
+    "status": "READY_FOR_OUTREACH",
+    "added_at": "2026-04-02T16:37:18"
+  },
+  {
+    "angle": "Habit Pixel: $0 to $1K MRR in 8 months, solo dev, no funding. We have 114 apps.",
+    "hook": "habit pixel went from $0 to $1K MRR in 8 months.",
+    "category": "APP_FACTORY",
+    "roi": "HIGHEST",
+    "source_alpha": "CI_HABIT_PIXEL_CASE_STUDY_20260319"
+  },
+  {
+    "angle": "FaithTime owns generic faith search. We own denomination-specific search. Zero competition.",
+    "hook": "faithtime.ai is publishing 'best faith apps 2026' comparison articles.",
+    "category": "APP_FACTORY",
+    "roi": "HIGHEST",
+    "source_alpha": "CI_DENOMINATION_SEO_GAP_20260319"
+  },
+  {
+    "angle": "AI CI/CD autonomous deployment",
+    "hook": "found a pattern worth tracking.",
+    "category": "TOOL_ALPHA",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA249"
+  },
+  {
+    "angle": "No-code browser automation via AI",
+    "hook": "found a pattern worth tracking.",
+    "category": "TOOL_ALPHA",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA252"
+  },
+  {
+    "angle": "1-bit LLMs for consumer-grade local inference",
+    "hook": "found a pattern worth tracking.",
+    "category": "TOOL_ALPHA",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA253"
+  },
+  {
+    "angle": "n8n AI-native workflow automation",
+    "hook": "found a pattern worth tracking.",
+    "category": "TOOL_ALPHA",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA255"
+  },
+  {
+    "angle": "TikTok algo shift: completion rate threshold increased + follower-first testing",
+    "hook": "this distribution pattern keeps showing up in the top performers.",
+    "category": "CONTENT_FARM",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA263"
+  },
+  {
+    "angle": "IG: DM shares = new priority metric + first 2 seconds critical",
+    "hook": "this distribution pattern keeps showing up in the top performers.",
+    "category": "CONTENT_FARM",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA268"
+  },
+  {
+    "angle": "TikTok Creator Rewards 10x payout + sponsorships > AdSense",
+    "hook": "this distribution pattern keeps showing up in the top performers.",
+    "category": "CONTENT_FARM",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA270"
+  },
+  {
+    "angle": "1-to-20 repurposing hub-and-spoke model with AI automation",
+    "hook": "this distribution pattern keeps showing up in the top performers.",
+    "category": "CONTENT_FARM",
+    "roi": "HIGHEST",
+    "source_alpha": "ALPHA271"
+  }
+]

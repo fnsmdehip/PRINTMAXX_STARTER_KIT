@@ -147,3 +147,141 @@
 | Brief 080 | `AUTOMATIONS/agent/swarm/opportunities/opp_080_affiliate_skill_claude_code_20260402.md` |
 | Alpha staging | 8 entries appended to `LEDGER/ALPHA_STAGING.csv` |
 | This report | `AUTOMATIONS/agent/swarm/reports/opportunity_scanner_report_20260402.md` |
+
+---
+
+# Opportunity Scanner Report v2 -- April 2, 2026 (Afternoon Run)
+
+**Agent:** swarm_opportunity_scanner (Opus 4.6)
+**Run time:** ~15 minutes
+**Date:** 2026-04-02 (second scan of the day)
+**Data sources:** Reddit JSON API (10 subreddits, 113 posts), Hacker News Firebase API (15 top stories)
+
+---
+
+## Summary
+
+| Metric | Value |
+|--------|-------|
+| Subreddits scraped | 10 (SideProject, microsaas, EntrepreneurRideAlong, SAAS, Entrepreneur, ClaudeAI, webdev, slavelabour, juststart, indiehackers) |
+| Posts analyzed | 113 |
+| Dedup checks | 6 pattern checks against 51,617 existing staging entries |
+| Qualified opportunities (8+ score) | 5 |
+| Briefs created | 5 (OPP_SCAN_20260402_01 through _05) |
+| Alpha staging entries added | 5 |
+| All entries verified unique | YES (all passed dedup check) |
+
+---
+
+## New Qualified Opportunities (5 briefs, all 8+ score)
+
+### 1. Claude Code Optimization Kit (Digital Product) -- Score 9.0/10
+**Signal:** Claude Code source leak went viral this week (5,107 + 2,595 + 2,259 upvotes across 3 r/ClaudeAI posts). The cc-cache-fix repo proves people will seek and implement CC optimizations. Our 32-rule CLAUDE.md IS the product.
+**Revenue:** $27-97 on Gumroad/Whop. Estimated $1K-5K/mo.
+**Why top pick:** Product already exists. Zero build time. Package + list + launch = 2-3 days.
+**Priority:** NOW (HIGHEST)
+**Brief:** `opportunities/opportunity_claude_code_optimization_kit_20260402.md`
+
+### 2. WhatsApp AI CRM for Service Businesses -- Score 8.6/10
+**Signal:** r/microsaas validated: $7K/mo MRR with 160 customers at $49/mo on exact same model. ZERO existing entries in our 51K staging database. WhatsApp Business Cloud API now self-serve free tier.
+**Revenue:** $49/mo SaaS. Estimated $2K-10K/mo.
+**Why strong:** 0 matches in existing staging = genuinely unexplored territory for us. Proven revenue at validated price point.
+**Priority:** NOW
+**Brief:** `opportunities/opportunity_whatsapp_ai_crm_20260402.md`
+
+### 3. Niche Vertical SaaS for HVAC/Trades -- Score 8.4/10
+**Signal:** Algerian car dealership ERP (262 upvotes, 95 comments r/SideProject). conductor.is $25K MRR on niche B2B. "SaaS falling apart for small businesses" (588 upvotes r/Entrepreneur).
+**Revenue:** $29/mo PWA. Estimated $3K-15K/mo at 100-500 customers.
+**Why strong:** Highest long-term ceiling. The $29/mo tier for 1-3 person trade shops has no commercial competitor.
+**Priority:** SOON
+**Brief:** `opportunities/opportunity_niche_vertical_saas_local_trades_20260402.md`
+
+### 4. Automated DM Outreach as Productized Service -- Score 8.2/10
+**Signal:** r/slavelabour demand at $0.20/DM, $3.25/hr for cold DMs. Leadverse.ai hit 100 paying customers in 260 days. We already have Playwright + Claude + 37 scrapers.
+**Revenue:** $297-697/mo managed service. Estimated $1.5K-5K/mo with 5-17 clients.
+**Why strong:** Infrastructure already exists. Packaging + landing page = 3-5 days to first revenue.
+**Priority:** NOW
+**Brief:** `opportunities/opportunity_automated_dm_outreach_service_20260402.md`
+
+### 5. AI Motion Graphics / Video Template SaaS -- Score 8.0/10
+**Signal:** FrameNet $6K in 3 months (282 upvotes r/microsaas). Three.js 3x growth in 1 year. r/slavelabour TikTok slideshow demand at $4/post. Remotion already in our stack.
+**Revenue:** $29/mo freemium SaaS. Estimated $2K-8K/mo.
+**Risk:** Longest build time (10-14 days).
+**Priority:** SOON
+**Brief:** `opportunities/opportunity_ai_motion_graphics_saas_20260402.md`
+
+---
+
+## Key Market Signals From This Run
+
+### Validated Revenue Patterns (real founders this week)
+1. **conductor.is** -- $25K MRR, solo, niche B2B integration, 100% inbound (241 upvotes, 119 comments)
+2. **WhatsApp CRM** -- $7K/mo, 160 customers at $49/mo, WhatsApp + AI qualification
+3. **FrameNet** -- $6K in 3 months, AI motion graphics (282 upvotes)
+4. **Leadverse.ai** -- 100 paying customers in 260 days, social monitoring + automated DM
+5. **SaaS conversion math** -- 17.5% CTA click, 8.5% onboarding completion. Friction = bottleneck, not traffic.
+6. **Chessable** -- $8M ARR exit, spaced repetition in niche domain (27 upvotes but high signal density)
+
+### Demand Signals (active buyers this week on r/slavelabour)
+- Instagram DM outreach: $0.20/DM
+- Cold DMs + Zillow scraping: VA $3.25/hr
+- TikTok slideshow creation: $4/post
+- Video editing: $150-200/mo
+- Web novel translation: $5/1K words
+
+### Sentiment Shifts (engagement-weighted)
+- Claude Code source leak: 5,107 + 2,595 + 2,259 upvotes (creates optimization product window)
+- "Building apps is the new starting a podcast": 144 upvotes (saturation in generic apps)
+- "SaaS model falling apart for small businesses": 588 upvotes (demand for cheap vertical tools)
+- "AI slop" frustration: 2,767 upvotes (quality differentiation opportunity)
+- "axios compromised": 2,423 upvotes (security tools demand)
+- "NPM biggest weakness of internet": 1,114 upvotes (supply chain security opportunity)
+
+---
+
+## Cross-Reference With Morning Run (OPP_073-080)
+
+| Morning Opportunity | Afternoon Complement |
+|---------------------|---------------------|
+| OPP_073 Agent Observability | WhatsApp AI CRM uses same dashboard pattern |
+| OPP_074 Context Optimizer | Claude Code Kit overlaps; kit is faster to ship |
+| OPP_077 Skill File Marketplace | Claude Code Kit can seed this marketplace |
+| OPP_080 Affiliate Skill Files | Claude Code Kit IS the product for this channel |
+| OPP_076 Professional Services Intel | Vertical SaaS for trades is the product version |
+
+**Recommendation:** Morning's OPP_073 + OPP_074 + OPP_077 are BUILD opportunities. Afternoon's top picks are SHIP NOW opportunities that leverage existing assets. Do afternoon picks first for immediate revenue, then build morning picks for sustainable MRR.
+
+---
+
+## Files Created (This Run)
+
+| File | Path |
+|------|------|
+| Brief 01 | `AUTOMATIONS/agent/swarm/opportunities/opportunity_whatsapp_ai_crm_20260402.md` |
+| Brief 02 | `AUTOMATIONS/agent/swarm/opportunities/opportunity_automated_dm_outreach_service_20260402.md` |
+| Brief 03 | `AUTOMATIONS/agent/swarm/opportunities/opportunity_claude_code_optimization_kit_20260402.md` |
+| Brief 04 | `AUTOMATIONS/agent/swarm/opportunities/opportunity_ai_motion_graphics_saas_20260402.md` |
+| Brief 05 | `AUTOMATIONS/agent/swarm/opportunities/opportunity_niche_vertical_saas_local_trades_20260402.md` |
+| Alpha staging | 5 entries appended (OPP_SCAN_20260402_01 through _05) |
+| Research script | `AUTOMATIONS/agent/swarm/opp_research.py` (reusable Gemini research script) |
+
+---
+
+## Execution Priority Stack (Combined Morning + Afternoon)
+
+**IMMEDIATE (this week, $0 cost):**
+1. Claude Code Optimization Kit (Score 9.0) -- 2-3 days, product exists
+2. Automated DM Outreach Service (Score 8.2) -- 3-5 days, infrastructure exists
+3. Affiliate Skill Files OPP_080 (Score 8.0) -- 1-2 days, packaging only
+
+**NEXT SPRINT (next week):**
+4. Agent Observability Dashboard OPP_073 (Score 9.0) -- 5-7 days build
+5. WhatsApp AI CRM (Score 8.6) -- 7-10 days build
+6. Context Optimizer OPP_074 (Score 9.0) -- 7-14 days build
+
+**BACKLOG:**
+7. Niche Vertical SaaS HVAC (Score 8.4) -- 7-10 days build
+8. AI Motion Graphics SaaS (Score 8.0) -- 10-14 days build
+9. Skill File Marketplace OPP_077 (Score 8.0) -- 5-7 days build
+
+*Report v2 generated by swarm_opportunity_scanner agent, April 2, 2026*
