@@ -3338,3 +3338,14 @@ One AI engine that creates, tests, and scales short-form ads automatically — n
 
 Show HN: Minimalist library to generate SVG views of scientific data. Just wanted to share with HN a simple&#x2F;minimal open source Python library that generates SVG files visualizing two dimensional data and distributions, in case others find it useful or interesting. I wrote it as a fun project, mostly because I found that the standard libraries in Python generated
 
+
+
+---
+
+## Pending Enhancement (ALPHA_OPP086_MCP_NICHE_TOOLS, Score: 43)
+
+**Source:** swarm_opportunity_scanner | **URL:** 
+**Added:** 2026-04-03T02:04:41-04:00
+
+MCP pay-per-call niche servers (ICD-10 medical codes/contractor pricing/legal statutes). 8M downloads 85% MoM growth. 21st.dev $10K MRR in 6 weeks. $0 startup.
+

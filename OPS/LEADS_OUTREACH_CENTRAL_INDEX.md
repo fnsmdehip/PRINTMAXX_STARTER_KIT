@@ -976,3 +976,14 @@ i went in wit
 
 Automated DM Outreach as Productized Service - Done-for-you IG/LinkedIn/Twitter DM outreach using Playwright + Claude personalization. r/slavelabour showing $0.20/DM demand. Leadverse.ai hit 100 customers in 260 days. Package existing PRINTMAXX scraper infra as managed service at $297-697/mo.
 
+
+
+---
+
+## Pending Enhancement (ALPHA_OPP084_AI_SERVICE_ARB, Score: 47)
+
+**Source:** swarm_opportunity_scanner | **URL:** 
+**Added:** 2026-04-03T02:04:41-04:00
+
+AI service arbitrage agency. $500-1500/mo retainers. Deliver with Claude in 60 min/client/week. 90%+ margin. Use existing eas_lead_pipeline.py. 5 clients = $2.5K MRR.
+

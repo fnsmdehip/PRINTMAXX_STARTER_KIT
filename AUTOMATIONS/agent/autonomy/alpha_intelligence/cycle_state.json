@@ -1,32 +1,75 @@
 {
-  "cycle_id": "20260402_2010",
-  "timestamp": "2026-04-02T20:15:00Z",
+  "cycle_id": "20260403_0206",
+  "timestamp": "2026-04-03T02:06:32Z",
   "status": "COMPLETE",
-  "duration_seconds": 300,
+  "duration_seconds": 360,
   "phase": "compound_complete",
   "metrics": {
-    "alpha_entries_processed": 33,
-    "findings_scored": 33,
-    "new_ventures_identified": 2,
-    "bolster_existing": 2,
-    "content_posts_generated": 15,
-    "twitter_posts": 10,
-    "linkedin_posts": 5,
-    "capital_genesis_methods_rescored": 8096,
-    "p0_methods": 7,
-    "p1_methods": 787,
-    "freelance_leads_warm": 17,
-    "ecom_products_quality": 26
+    "alpha_entries_scraped": 165,
+    "new_entries_created": 6,
+    "entries_processed": 26,
+    "findings_routed": 3,
+    "content_posts_generated": 60,
+    "twitter_posts": 40,
+    "linkedin_posts": 20,
+    "warm_freelance_leads": 17,
+    "ecom_products_identified": 26,
+    "master_ops_ready": 87,
+    "capital_genesis_methods_rescored": 781,
+    "p0_launch_methods": 781
   },
   "outputs": {
-    "report": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260402.md",
+    "report": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260403.md",
     "twitter_posts_csv": "/AUTOMATIONS/content_posting/eb_twitter_posts.csv",
     "linkedin_posts_csv": "/AUTOMATIONS/content_posting/eb_linkedin_posts.csv"
+  },
+  "phase_breakdown": {
+    "scrape": {
+      "status": "COMPLETE",
+      "duration_sec": 45,
+      "twitter_background": true,
+      "reddit_posts_found": 159,
+      "new_entries": 6
+    },
+    "analyze": {
+      "status": "COMPLETE",
+      "duration_sec": 15,
+      "entries_processed": 26,
+      "entries_scored": 26,
+      "routed": 3,
+      "archived": 23
+    },
+    "score": {
+      "status": "COMPLETE",
+      "duration_sec": 120,
+      "freelance_opportunities": 17,
+      "ecom_arbitrage_products": 26,
+      "ready_ops": 87,
+      "capital_genesis_methods": 781
+    },
+    "route": {
+      "status": "VERIFIED",
+      "duration_sec": 30,
+      "verified_routed_batches": 3,
+      "batches": [
+        "AI_INFLUENCER (ALPHA220-235)",
+        "OUTBOUND (ALPHA274-279)",
+        "CONTENT_FARM (ALPHA263-273)"
+      ]
+    },
+    "compound": {
+      "status": "COMPLETE",
+      "duration_sec": 90,
+      "niches_covered": 3,
+      "total_posts": 60,
+      "rule_9_compliance": "SATISFIED"
+    }
   },
   "next_cycle": {
     "scheduled": true,
     "interval_hours": 4,
-    "next_run": "2026-04-03T00:15:00Z"
+    "next_run": "2026-04-03T06:06:32Z",
+    "previous_cycle_timestamp": "2026-04-02T20:15:00Z"
   },
-  "status_detail": "All scrapers operational. Twitter + Reddit collection in background. Alpha processor routed 2 new ventures + 2 bolster existing. Content converter generated 15 engagement posts. Capital Genesis rescored 8K+ methods. System healthy, no blockers."
+  "status_detail": "All scrapers operational. Twitter collection in background, Reddit completed (159 posts). Alpha processor routed 3 findings + verified 3 prior routed batches. Content converter generated 60 posts across AI_INFLUENCER, OUTBOUND, and GROWTH_HACK niches. Capital Genesis has 781 P0 methods ranked. System healthy, no blockers. Next cycle ready at 06:06Z."
 }

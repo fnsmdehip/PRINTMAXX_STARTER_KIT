@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-02T18:02:22.525251",
-  "cycle_number": 11,
+  "last_run": "2026-04-03T04:14:32.480283",
+  "cycle_number": 12,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -70,19 +70,7 @@
     "Monroe LA",
     "Alexandria LA",
     "Macon GA",
-    "Augusta GA"
-  ],
-  "total_leads_all_cycles": 2443,
-  "total_previews_deployed": 2443,
-  "total_sites_built_local": 1397,
-  "total_emails_queued": 1632,
-  "emails_ready_to_send": 32,
-  "emails_enriched_this_cycle": 0,
-  "enricher_hit_rate": "0% (F-grade no-website segment)",
-  "enricher_leads_processed": 50,
-  "enricher_leads_remaining": 1058,
-  "projected_emails_from_remaining": 0,
-  "next_cities": [
+    "Augusta GA",
     "Brunswick GA",
     "Valdosta GA",
     "Albany GA",
@@ -92,7 +80,39 @@
     "Laurel MS",
     "Decatur AL",
     "Opelika AL",
-    "Rock Hill SC"
+    "Rock Hill SC",
+    "Starkville MS",
+    "Oxford MS",
+    "Greenville MS",
+    "Corinth MS",
+    "Florence AL",
+    "Douglas GA",
+    "Tifton GA",
+    "Fitzgerald GA"
+  ],
+  "total_leads_all_cycles": 2720,
+  "total_previews_deployed": 2720,
+  "total_sites_built_local": 1430,
+  "total_emails_queued": 1423,
+  "emails_ready_to_send": 32,
+  "emails_enriched_this_cycle": 0,
+  "enricher_hit_rate": "0% (F-grade no-website segment)",
+  "enricher_leads_processed": 50,
+  "enricher_leads_remaining": 1058,
+  "projected_emails_from_remaining": 0,
+  "next_cities": [
+    "Moultrie GA",
+    "Thomasville GA",
+    "Calhoun GA",
+    "Dalton GA",
+    "Rome GA",
+    "McComb MS",
+    "Brookhaven MS",
+    "Picayune MS",
+    "Talladega AL",
+    "Athens AL",
+    "Selma AL",
+    "Scottsboro AL"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -130,10 +150,11 @@
     "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "CRITICAL P0: Email service still unconnected \u2014 1,632 outreach emails queued, 0 sent. Fix: Gmail App Password (5 min) or Brevo free (300/day, 15 min signup).",
-    "CRITICAL P1: Apollo.io needed for email enrichment \u2014 F-grade businesses have no website to scrape. Apollo finds emails by business name + city. 50 free/mo, 10 min signup.",
-    "P1: Surge Student plan frozen at 472 domains. GH Pages is primary channel (1,398 live).",
-    "P2: Response tracking loop needs to be built \u2014 when emails start sending, need to track opens/replies."
+    "CRITICAL P0: Email service unconnected \u2014 1,423 outreach emails queued. Gmail App Password (5 min) or Brevo free (300/day, 15 min signup).",
+    "CRITICAL P1: Apollo.io needed for email enrichment \u2014 F-grade businesses have no website to scrape email from. 50 free/mo, 10 min signup.",
+    "P1: Surge Student plan frozen at 472 domains. GH Pages is primary channel (1,432 live).",
+    "P1: Domain blacklist needed \u2014 ulta.com, kbb.com, gaf.com, findlaw.com inflating F-grade count with chain/directory results.",
+    "P2: Response tracking loop needed when emails start sending."
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_9_results": {
@@ -227,15 +248,15 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 Deep South yielding 182/222 F-grade (82.0% this cycle)",
-    "grade": "HEALTHY",
-    "build": "HEALTHY \u2014 1397 HTML sites in _sites/",
+    "discover": "HEALTHY \u2014 277 new leads Cycle 12",
+    "grade": "HEALTHY \u2014 chain contamination inflating F-count; blacklist fix needed",
+    "build": "HEALTHY \u2014 1,430 HTML sites in _sites/",
     "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
-    "deploy_ghpages": "PRIMARY CHANNEL \u2014 1398 live at fnsmdehip.github.io/openclaw-previews/",
-    "enrich_email": "0% on F-grade segment \u2014 Apollo.io required (50 free/mo, 10min signup)",
-    "outreach_queue": "HEALTHY \u2014 1632 queued, all with live GH Pages URLs",
+    "deploy_ghpages": "PRIMARY CHANNEL \u2014 1,432 live at fnsmdehip.github.io/openclaw-previews/",
+    "enrich_email": "0% on F-grade segment \u2014 Apollo.io required",
+    "outreach_queue": "HEALTHY \u2014 1,423 queued, 760 with live GH Pages URLs",
     "outreach_ready": "32 ready to send NOW \u2014 email service is the only blocker",
-    "send": "BLOCKED \u2014 no email service. Gmail App Password = 5 min fix. Brevo = 300/day free."
+    "send": "BLOCKED \u2014 no email service. Gmail App Password = 5 min fix."
   },
   "metrics_history": [
     {
@@ -321,9 +342,22 @@
       "total_preview_live": 1398,
       "outreach_queued": 1632,
       "ready_to_send": 32
+    },
+    {
+      "cycle": 12,
+      "date": "2026-04-03",
+      "total_leads": 2720,
+      "hot_leads": 1334,
+      "with_email": 32,
+      "surge_deployed": 472,
+      "ghpages_deployed": 1432,
+      "total_preview_live": 1432,
+      "outreach_queued": 1423,
+      "outreach_with_live_url": 760,
+      "ready_to_send": 32
     }
   ],
-  "ghpages_deployed": 1398,
+  "ghpages_deployed": 1432,
   "phone_outreach_queue": 100,
   "cycle_7_results": {
     "cities_discovered": [
@@ -485,5 +519,49 @@
     "ready_to_send_email": 32,
     "top_f_grade_city": "Dothan AL (94.4%)",
     "observation": "Deep South Cycle 11 delivers as expected. Dothan AL leads at 94.4% F-grade, Natchez MS 87%, Vicksburg MS 86.4%. 1,398 total GH Pages sites live. Email enricher still 0% on F-grade segment \u2014 Apollo.io remains the unlock. 1,632 outreach emails ready to send when email service connected. Next: expand to Shreveport LA / Tupelo MS / Valdosta GA for continued Deep South sweep."
+  },
+  "cycle_12_results": {
+    "cities_discovered": [
+      "Brunswick GA",
+      "Valdosta GA",
+      "Albany GA",
+      "Shreveport LA",
+      "Lafayette LA",
+      "Tupelo MS",
+      "Laurel MS",
+      "Decatur AL",
+      "Opelika AL",
+      "Rock Hill SC"
+    ],
+    "bonus_cities": [
+      "Starkville MS",
+      "Oxford MS",
+      "Greenville MS",
+      "Corinth MS",
+      "Florence AL",
+      "Douglas GA",
+      "Tifton GA",
+      "Fitzgerald GA"
+    ],
+    "new_leads": 277,
+    "new_f_grade": 11,
+    "new_d_grade": 2,
+    "new_sites_built": 33,
+    "new_ghpages_deploys": 33,
+    "total_ghpages_live": 1432,
+    "new_emails_queued": 33,
+    "ready_to_send_email": 32,
+    "observation": "Mid-size cities (100K+ pop) yielded only 9.6% F-grade vs 80%+ from micro-cities. National chain contamination (Ulta, KBB, GAF) inflating F-count. Bonus batch of 8 micro-cities recovered yield. Recommend targeting only pop<50K cities going forward. Domain blacklist needed for chains/directories.",
+    "top_yielding_city": "Rock Hill SC (25% F-grade)",
+    "low_yield_cities": [
+      "Decatur AL (0%)",
+      "Albany GA (~7%)",
+      "Shreveport LA (~10%)"
+    ],
+    "ghpages_commits": [
+      "1af5161",
+      "366cfdb"
+    ],
+    "intelligence": "City size <50K = sweet spot. City size >100K = wrong target segment."
   }
 }

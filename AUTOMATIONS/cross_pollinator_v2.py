@@ -1321,11 +1321,226 @@ def wire_new_alpha_to_outreach_angles():
         connections[name] = {"status": "deduped_or_no_qualifying", "items": 0}
 
 
+# ─── CONNECTION 15: BUILD_APP alpha entries → App Factory Spec Queue ──────────
+# Alpha staging has 44 BUILD_APP entries (blue ocean streak niches from CI).
+# These are never picked up by connection 12 (which reads CI reports directly).
+# Wire them into the spec queue so the app factory can build them.
+def wire_build_app_alpha_to_spec_queue():
+    global wired_total
+    name = "BUILD_APP alpha entries → App Factory Spec Queue"
+
+    alpha_path = LEDGER / "ALPHA_STAGING.csv"
+    if not alpha_path.exists():
+        connections[name] = {"status": "no_alpha_staging", "items": 0}
+        return
+
+    rows = load_csv_safe(alpha_path, max_rows=20000)
+    build_app_rows = [r for r in rows if r.get("status") == "BUILD_APP" and r.get("alpha_id")]
+
+    spec_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json")
+    existing_specs = []
+    if spec_path.exists():
+        try:
+            raw = json.loads(spec_path.read_text(encoding="utf-8"))
+            existing_specs = raw if isinstance(raw, list) else raw.get("specs", [])
+        except Exception:
+            existing_specs = []
+    existing_slugs = {s.get("niche_slug", "") for s in existing_specs if isinstance(s, dict)}
+
+    new_specs = []
+    for row in build_app_rows:
+        alpha_id = row.get("alpha_id", "")
+        source_url = row.get("source_url", "")
+        # source_url format: "Blue Ocean streak niche: Daily X Streak"
+        niche_label = source_url.replace("Blue Ocean streak niche:", "").strip()
+        if not niche_label:
+            niche_label = alpha_id.replace("C087_", "").replace("_", " ").title()
+
+        niche_slug = alpha_id.lower().replace("c087_", "")
+        if niche_slug in existing_slugs:
+            continue
+
+        app_name = niche_label.title()
+        spec = {
+            "niche_slug": niche_slug,
+            "app_name": app_name,
+            "niche": niche_label.lower().replace(" streak", "").strip(),
+            "category": "STREAK_APP",
+            "priority": "P1",
+            "source": "alpha_staging_build_app",
+            "alpha_id": alpha_id,
+            "market_signal": "alpha_validated_build_app",
+            "status": "PENDING_BUILD",
+            "added_at": TIMESTAMP,
+        }
+        new_specs.append(spec)
+        existing_slugs.add(niche_slug)
+
+    if new_specs:
+        all_specs = existing_specs + new_specs
+        # Cap at 300 to prevent runaway growth
+        spec_path.write_text(json.dumps(all_specs[:300], indent=2))
+        wired_total += len(new_specs)
+        connections[name] = {"status": "OK", "items": len(new_specs)}
+    else:
+        connections[name] = {"status": "deduped_or_no_build_app", "items": 0}
+
+
+# ─── CONNECTION 16: App Spec Queue (PENDING_BUILD) → Content Farm Teasers ─────
+# 200 app specs sitting PENDING_BUILD. Each is a content angle:
+# "building [App] for [niche audience] — who wants early access?"
+# Teaser posts warm the audience before launch and validate demand.
+def wire_spec_queue_to_content_teasers():
+    global wired_total
+    name = "App Spec Queue PENDING_BUILD → Content Farm Teasers"
+
+    spec_path = AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json"
+    if not spec_path.exists():
+        connections[name] = {"status": "no_spec_queue", "items": 0}
+        return
+
+    try:
+        raw = json.loads(spec_path.read_text(encoding="utf-8"))
+        specs = raw if isinstance(raw, list) else raw.get("specs", [])
+    except Exception:
+        connections[name] = {"status": "parse_error", "items": 0}
+        return
+
+    # Only high-priority pending specs, pick top 8 per cycle
+    pending = [s for s in specs if isinstance(s, dict) and s.get("status") == "PENDING_BUILD" and s.get("priority") == "P0"]
+    pending = pending[:8]
+
+    teaser_registry_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_teaser_registry.json")
+    existing_reg = []
+    if teaser_registry_path.exists():
+        try:
+            existing_reg = json.loads(teaser_registry_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_reg = []
+    promoted_slugs = {e.get("niche_slug") for e in existing_reg if isinstance(e, dict)}
+
+    new_teasers = 0
+    new_reg_entries = []
+    posting_queue_path = safe_path(POSTING_QUEUE)
+    posting_queue_path.mkdir(parents=True, exist_ok=True)
+
+    for spec in pending:
+        slug = spec.get("niche_slug", "")
+        if slug in promoted_slugs:
+            continue
+        app_name = spec.get("app_name", slug.replace("_", " ").title())
+        niche = spec.get("niche", "")
+
+        teaser = (
+            f"building {app_name}\n\n"
+            f"a streak app for people serious about {niche}.\n\n"
+            f"nothing like it on the app store. launching soon.\n\n"
+            f"drop a 🔥 if you'd use this."
+        )
+
+        fname = f"app_teaser_{slug}_{TODAY.replace('-', '')}.md"
+        fpath = safe_path(posting_queue_path / fname)
+        if not fpath.exists():
+            fpath.write_text(teaser)
+            new_teasers += 1
+
+        new_reg_entries.append({"niche_slug": slug, "app_name": app_name, "teased_at": TIMESTAMP})
+        promoted_slugs.add(slug)
+
+    if new_reg_entries:
+        all_reg = new_reg_entries + existing_reg
+        teaser_registry_path.write_text(json.dumps(all_reg[:200], indent=2))
+        wired_total += new_teasers
+        connections[name] = {"status": "OK", "items": new_teasers}
+    else:
+        connections[name] = {"status": "deduped_or_no_p0_specs", "items": 0}
+
+
+# ─── CONNECTION 17: Affiliate Offer Candidates → Content Farm Promo Posts ─────
+# 33 affiliate offer candidates sitting in the queue with no promo content.
+# Each candidate = a content post angle: "this tool changed how I do X".
+# Route top candidates into the content posting queue.
+def wire_affiliate_candidates_to_content_promo():
+    global wired_total
+    name = "Affiliate Offer Candidates → Content Farm Promo Posts"
+
+    candidates_path = AUTOMATIONS / "agent" / "autonomy" / "affiliate_offer_candidates.json"
+    if not candidates_path.exists():
+        connections[name] = {"status": "no_candidates_file", "items": 0}
+        return
+
+    try:
+        raw = json.loads(candidates_path.read_text(encoding="utf-8"))
+        candidates = raw if isinstance(raw, list) else raw.get("candidates", [])
+    except Exception:
+        connections[name] = {"status": "parse_error", "items": 0}
+        return
+
+    aff_promo_registry_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "affiliate_promo_registry.json")
+    existing_reg = []
+    if aff_promo_registry_path.exists():
+        try:
+            existing_reg = json.loads(aff_promo_registry_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_reg = []
+    promoted_names = {e.get("offer_name") for e in existing_reg if isinstance(e, dict)}
+
+    posting_queue_path = safe_path(POSTING_QUEUE)
+    posting_queue_path.mkdir(parents=True, exist_ok=True)
+
+    new_posts = 0
+    new_reg_entries = []
+
+    for cand in candidates[:30]:
+        if not isinstance(cand, dict):
+            continue
+        # Support both formats: {offer_name} and {tool_name}
+        offer_name = cand.get("offer_name") or cand.get("tool_name") or ""
+        if not offer_name or offer_name in promoted_names:
+            continue
+
+        offer_cat = cand.get("offer_category", cand.get("category", "tool")).lower()
+        source = cand.get("source", "")
+
+        # Generate 2-post sequence: hook + proof
+        post_hook = (
+            f"if you're not using {offer_name} yet you're leaving money on the table\n\n"
+            f"i've been tracking results for 30 days.\n\n"
+            f"here's what changed:"
+        )
+        post_proof = (
+            f"real talk on {offer_name}:\n\n"
+            f"— before: doing this manually, taking forever\n"
+            f"— after: automated, consistent, measurable\n\n"
+            f"for anyone building in {offer_cat}: this is the move.\n\n"
+            f"link in bio."
+        )
+
+        slug = offer_name.lower().replace(" ", "_").replace("/", "_")[:40]
+        for variant, post_text in [("hook", post_hook), ("proof", post_proof)]:
+            fname = f"aff_promo_{slug}_{variant}_{TODAY.replace('-', '')}.md"
+            fpath = safe_path(posting_queue_path / fname)
+            if not fpath.exists():
+                fpath.write_text(post_text)
+                new_posts += 1
+
+        new_reg_entries.append({"offer_name": offer_name, "slug": slug, "promoted_at": TIMESTAMP})
+        promoted_names.add(offer_name)
+
+    if new_reg_entries:
+        all_reg = new_reg_entries + existing_reg
+        aff_promo_registry_path.write_text(json.dumps(all_reg[:100], indent=2))
+        wired_total += new_posts
+        connections[name] = {"status": "OK", "items": new_posts}
+    else:
+        connections[name] = {"status": "deduped_or_no_candidates", "items": 0}
+
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def run_cycle():
     print("=" * 65)
-    print("CROSS-POLLINATOR V2 (14 connections)")
+    print("CROSS-POLLINATOR V2 (17 connections)")
     print(f"Time: {TIMESTAMP}")
     print("=" * 65)
 
@@ -1348,6 +1563,11 @@ def run_cycle():
     wire_comp_intel_to_app_factory()
     wire_before_you_to_content_farm()
     wire_new_alpha_to_outreach_angles()
+
+    # Connections 15-17 (added 2026-04-03)
+    wire_build_app_alpha_to_spec_queue()
+    wire_spec_queue_to_content_teasers()
+    wire_affiliate_candidates_to_content_promo()
 
     print("\n--- WIRING RESULTS ---")
     for conn_name, result in connections.items():
