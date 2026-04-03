@@ -1,23 +1,32 @@
 {
-  "last_cycle": "2026-04-02T00:55:30.456789Z",
-  "cycle_number": 115,
+  "cycle_id": "20260402_2010",
+  "timestamp": "2026-04-02T20:15:00Z",
   "status": "COMPLETE",
-  "phase": "COMPOUND_COMPLETE",
-  "entries_processed": 65,
-  "entries_routed": 433,
-  "ventures_created": 0,
-  "content_generated": 63,
-  "tweets": 40,
-  "threads": 1,
-  "linkedin_posts": 20,
-  "twitter_entries": 32,
-  "next_cycle": "2026-04-02T04:55:30.456789Z",
-  "sources_status": {
-    "reddit": "✅ 163 posts (20 subreddits, 25 new entries)",
-    "twitter": "✅ 32 entries (8 bookmarks + 24 from 20 monitored accounts)",
-    "hackernews": "✅ Show HN opportunities monitored",
-    "producthunt": "⚠️ 403 auth error (deprioritized)",
-    "engagement_bait": "✅ 4,733 entries queued for conversion"
+  "duration_seconds": 300,
+  "phase": "compound_complete",
+  "metrics": {
+    "alpha_entries_processed": 33,
+    "findings_scored": 33,
+    "new_ventures_identified": 2,
+    "bolster_existing": 2,
+    "content_posts_generated": 15,
+    "twitter_posts": 10,
+    "linkedin_posts": 5,
+    "capital_genesis_methods_rescored": 8096,
+    "p0_methods": 7,
+    "p1_methods": 787,
+    "freelance_leads_warm": 17,
+    "ecom_products_quality": 26
   },
-  "summary": "Cycle 115 COMPLETE. All sources active. Reddit: 25 new. Twitter: 32 new (8 bookmarks, 24 from key accounts: @levelsio 7, @swyx 7, @dhh 4, @thejustinwelsh 3, @svpino 3). Total entries processed: 65. Routed: 433 HIGHEST-tier entries. Content generated: 63 posts (20 LinkedIn, 40 Twitter, 3 custom tweets, 1 thread). Key findings: Premium sleep pricing ($99 validated), Virtual pet mechanic (652K ratings). Total alpha database: 51,455 rows. Next cycle: 04:55 UTC."
+  "outputs": {
+    "report": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260402.md",
+    "twitter_posts_csv": "/AUTOMATIONS/content_posting/eb_twitter_posts.csv",
+    "linkedin_posts_csv": "/AUTOMATIONS/content_posting/eb_linkedin_posts.csv"
+  },
+  "next_cycle": {
+    "scheduled": true,
+    "interval_hours": 4,
+    "next_run": "2026-04-03T00:15:00Z"
+  },
+  "status_detail": "All scrapers operational. Twitter + Reddit collection in background. Alpha processor routed 2 new ventures + 2 bolster existing. Content converter generated 15 engagement posts. Capital Genesis rescored 8K+ methods. System healthy, no blockers."
 }

@@ -1523,5 +1523,33 @@
     "status": "QUEUED",
     "priority": "MEDIUM",
     "added_at": "2026-03-16T08:22:13.424457"
+  },
+  {
+    "alpha_id": "ALPHA1774000009",
+    "priority": "HIGH",
+    "source": "alpha_cross_pollination_connection_14",
+    "validation_type": "REAL_REVENUE_PROOF",
+    "tactic_summary": "My small app is making $45/month \u2014 sharing stats and what I learned",
+    "source_url": "https://www.reddit.com/r/AppBusiness/comments/1s9bonp/my_small_app_is_making_45month_sharing_stats_and/",
+    "signal": "Real indie app revenue verified by community (not marketing)",
+    "added_at": "2026-04-02T20:46:11.237273",
+    "connection": 14,
+    "action": "USE_AS_VALIDATION_BENCHMARK",
+    "revenue_benchmark": "Verified: small apps ($45/mo) to $100K+ are achievable from App Store",
+    "confidence": "HIGH"
+  },
+  {
+    "alpha_id": "ALPHA1774000010",
+    "priority": "HIGH",
+    "source": "alpha_cross_pollination_connection_14",
+    "validation_type": "REAL_REVENUE_PROOF",
+    "tactic_summary": "My first-ever post on Reddit (on how my appp made over $100k) reached over 100k views \ud83d\ude00",
+    "source_url": "https://www.reddit.com/r/AppBusiness/comments/1s8w07d/my_firstever_post_on_reddit_on_how_my_appp_made/",
+    "signal": "Real indie app revenue verified by community (not marketing)",
+    "added_at": "2026-04-02T20:46:11.237287",
+    "connection": 14,
+    "action": "USE_AS_VALIDATION_BENCHMARK",
+    "revenue_benchmark": "Verified: small apps ($45/mo) to $100K+ are achievable from App Store",
+    "confidence": "HIGH"
   }
 ]

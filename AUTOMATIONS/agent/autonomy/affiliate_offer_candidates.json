@@ -298,5 +298,35 @@
     "affiliate_search_query": "tools for tool_alpha affiliate",
     "status": "CANDIDATE",
     "added_at": "2026-03-18T20:40:56"
+  },
+  {
+    "source": "competitor_stalker_20260402",
+    "offer_name": "Whop Marketplace",
+    "offer_category": "DIGITAL_PRODUCT_PLATFORM",
+    "key_insight": "Whop charges 3% vs Gumroad 10% \u2014 direct savings on every sale",
+    "action": "SWITCH_LISTING_PLATFORM",
+    "dollar_impact": "7% margin improvement on every digital product sale",
+    "connection": 15,
+    "added_at": "2026-04-02T20:45:06.508819"
+  },
+  {
+    "source": "competitor_stalker_20260402",
+    "offer_name": "Claude Code Bundle Differentiation",
+    "offer_category": "DIGITAL_PRODUCT_POSITIONING",
+    "key_insight": "ClaudeCodeAgents.com sells prompts. We sell production architecture. Bundle at $127 = $92 savings vs standalone",
+    "action": "BUNDLE_AND_DIFFERENTIATE",
+    "dollar_impact": "Higher AOV via bundle \u2014 from $47 single to $127 bundle",
+    "connection": 15,
+    "added_at": "2026-04-02T20:45:06.508847"
+  },
+  {
+    "source": "competitor_stalker_20260402",
+    "offer_name": "App Store #500 Revenue Benchmark",
+    "offer_category": "APP_MARKET_INTEL",
+    "key_insight": "App Store #500 generates $76K/mo. Health & Fitness = best indie ROI category.",
+    "action": "TARGET_TOP_500_HEALTH_FITNESS",
+    "dollar_impact": "Benchmark: $76K/mo at rank 500, $1.5M/mo at rank 10",
+    "connection": 15,
+    "added_at": "2026-04-02T20:45:06.508851"
   }
 ]

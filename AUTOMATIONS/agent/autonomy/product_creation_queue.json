@@ -66,5 +66,19 @@
     "speed": "1-2 weeks",
     "status": "QUEUED",
     "added_at": "2026-04-01T00:49:16"
+  },
+  {
+    "alpha_id": "tool_alpha_mcp_paypercall_icd10",
+    "priority": "IMMEDIATE",
+    "source": "tool_alpha_cross_pollination_connection_16",
+    "title": "MCP pay-per-call niche server \u2014 ICD-10 medical codes",
+    "tactic_summary": "MCP pay-per-call niche servers for specialized data (ICD-10, contractor pricing, legal statutes). Signal: 8M downloads on similar tools. Zero competition in MCP ecosystem.",
+    "product_type": "MCP_SERVER",
+    "niche": "healthcare_coding",
+    "revenue_model": "Pay-per-call API at $0.001-0.01/call. At 8M calls/mo = $8K-80K MRR.",
+    "build_time": "2-4 hours (Python MCP server + ICD-10 database)",
+    "action": "BUILD_AND_LIST_ON_MCP_REGISTRY",
+    "connection": 16,
+    "added_at": "2026-04-02T20:47:10.522864"
   }
 ]

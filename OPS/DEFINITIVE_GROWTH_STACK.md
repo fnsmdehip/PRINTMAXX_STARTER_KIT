@@ -141,3 +141,14 @@ We ARE:
 This is exactly what agencies do. GoLogin's customer base is primarily social media managers and agencies. Using it is no more "deceptive" than using a VPN.
 
 **The compliance-first playbook stands for everything EXCEPT the anti-detect/proxy prohibition.** FTC disclosures, AI labeling, testimonial rules — all correct and non-negotiable. Just wrong on the tooling.
+
+
+---
+
+## Pending Enhancement (OPP_SCAN_20260402_04, Score: 55)
+
+**Source:** swarm_opportunity_scanner | **URL:** 
+**Added:** 2026-04-02T20:13:39-04:00
+
+AI Motion Graphics / Video Template SaaS - Text-to-motion-graphics using Remotion + Claude code gen. FrameNet hit $6K in 3 months (282 upvotes r/microsaas). Three.js 3x growth. r/slavelabour TikTok slideshow demand at $4/post. Remotion already in our stack. $29/mo SaaS.
+

@@ -965,3 +965,14 @@ i went in wit
 
 [r/sidehustle] Rented out my dormant LinkedIn account for B2B outreach ($40/mo). Has anyone else done this?
 
+
+
+---
+
+## Pending Enhancement (OPP_SCAN_20260402_02, Score: 41)
+
+**Source:** swarm_opportunity_scanner | **URL:** 
+**Added:** 2026-04-02T20:13:39-04:00
+
+Automated DM Outreach as Productized Service - Done-for-you IG/LinkedIn/Twitter DM outreach using Playwright + Claude personalization. r/slavelabour showing $0.20/DM demand. Leadverse.ai hit 100 customers in 260 days. Package existing PRINTMAXX scraper infra as managed service at $297-697/mo.
+

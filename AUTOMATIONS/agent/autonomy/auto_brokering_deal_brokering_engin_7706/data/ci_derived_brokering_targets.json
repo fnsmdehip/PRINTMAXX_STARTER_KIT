@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-04-02T20:44:42.794218",
+  "source": "competitive_intel_cross_pollination",
+  "connection": 12,
+  "description": "Niches with entrenched competitors \u2014 better to broker/affiliate than build directly",
+  "targets": [
+    {
+      "source": "COMPETITOR_CHANGES",
+      "niche": "Dogo: Dog Training Streak",
+      "category": "streak_apps",
+      "reason": "Dogo confirmed 85K App Store reviews at $9.99/mo with full gamified daily streak. Puppr 55K and Woofz 28K also have streak features. Dog training niche is SOFT_COMPETITION/OCCUPIED at streak level.",
+      "competitor_pricing": "$9.99/mo",
+      "action": "DO_NOT_ENTER_DOG_TRAINING",
+      "brokering_angle": "OCCUPIED NICHE \u2014 broker partnerships with Dogo: Dog Training Streak instead of competing",
+      "deal_type": "WHITE_LABEL_OR_AFFILIATE",
+      "added_at": "2026-04-02T20:44:42.794034",
+      "connection": 12
+    },
+    {
+      "source": "COMPETITOR_CHANGES",
+      "niche": "Brilliant: Learn Math & Science",
+      "category": "stem_education",
+      "reason": "Brilliant 4.8 stars 245K reviews owns daily statistics/probability streak with XP and course progression. Physics and Chemistry NOT covered with dedicated streak. Stats niche OCCUPIED others still open.",
+      "competitor_pricing": "$6.99/mo",
+      "action": "AVOID_STATISTICS_BUILD_PHYSICS_CHEMISTRY",
+      "brokering_angle": "OCCUPIED NICHE \u2014 broker partnerships with Brilliant: Learn Math & Science instead of competing",
+      "deal_type": "WHITE_LABEL_OR_AFFILIATE",
+      "added_at": "2026-04-02T20:44:42.794048",
+      "connection": 12
+    }
+  ]
+}
