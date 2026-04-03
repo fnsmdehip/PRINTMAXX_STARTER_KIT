@@ -1,4 +1,4 @@
-# SESSION BRIEFING -- 2026-04-03 04:01
+# SESSION BRIEFING -- 2026-04-03 04:02
 Last session: 2026-04-03 04:01 (0.0h ago)
 
 ---
@@ -22,12 +22,16 @@ Blocker: Account creation → `OPS/ACCOUNT_CREATION_NOW.md`
 
 ## Changes Since Last Session
 
-### Human/Agent Commits (5)
+### Human/Agent Commits (7)
+- 181444a9 [user-sim-refiner] RESEARCH: pre-refinement snapshot
+- 6dc57317 [user-sim-refiner] LOCAL_BIZ: post-refinement
 - f5883d53 [user-sim-refiner] LOCAL_BIZ: pre-refinement snapshot
 - e2a871ac [user-sim-refiner] PRODUCT: post-refinement
 - b95600bd [user-sim-refiner] PRODUCT: pre-refinement snapshot
 - 427cb083 [user-sim-refiner] OUTBOUND: post-refinement
 - 365c3cb7 [user-sim-refiner] OUTBOUND: pre-refinement snapshot
+
+**Diff summary:** 3 files changed, 11 insertions(+), 6 deletions(-)
 
 ## Actionable Queue
 
