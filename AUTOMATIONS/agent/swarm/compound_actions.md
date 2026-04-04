@@ -1,16 +1,32 @@
-# COMPOUND ACTIONS — Cycle 54 (2026-04-04 04:40)
+# COMPOUND ACTIONS -- Cycle 55 (2026-04-04 14:39)
 
-**Day 60 | Revenue: $0 | Net P&L: -$524+ | 388 live sites | 1,485+ posts queued | 192K leads uncontacted**
-
----
-
-## Status: DEEP FREEZE HOLDING PATTERN
-
-The swarm has been in deep freeze since C51 (Apr 2). C54 confirms this is the correct posture. All queues are full. All draining at 0/day. The bottleneck is 100% human action.
+**Day 60 | Revenue: $0 | Net P&L: -$524+ | 388 live sites | 1,519+ posts queued | 192K leads uncontacted**
 
 ---
 
-## Compound A: The 100-Minute Revenue Unlock (UNCHANGED since C51)
+## Status: DEEP FREEZE + CRON LEAK IDENTIFIED
+
+C55 found the last major efficiency gap: 116 cron entries still firing daily while the swarm is frozen. Three high-cost entries (venture_autonomy, ceo_agent, loop_closer) consume Max plan rate limit for zero output. Fix below.
+
+---
+
+## Compound A: Cron Trim (NEW -- HIGHEST PRIORITY autonomous action)
+
+The swarm brain optimized launchd from 25 agents to 3. But the cron system was never audited. Three entries should be disabled immediately:
+
+```bash
+# HUMAN OR BRAIN: Comment out these 3 cron entries
+# 1. venture_autonomy: 12 ventures daily, Claude API calls, all queues full
+#    25 5 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_autonomy.py --run-all
+# 2. ceo_agent: orchestrating frozen agents
+#    0 3 * * * ... AUTOMATIONS/ceo_agent.py --run
+# 3. loop_closer: every 2h, feedback loop defunct since C12
+#    0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/loop_closer.py --cycle
+```
+
+**Impact:** Eliminates 50-70% of remaining daily rate limit consumption. Saves capacity for interactive sessions.
+
+## Compound B: The 100-Minute Revenue Unlock (UNCHANGED since C51)
 
 | Min | Action | Revenue Unlock |
 |-----|--------|---------------|
@@ -22,37 +38,39 @@ The swarm has been in deep freeze since C51 (Apr 2). C54 confirms this is the co
 | 45 | Create Gumroad + upload 14 PDFs | $200-500/mo digital products |
 | **100** | **TOTAL** | **$1,300-5,300/mo pipeline** |
 
-## Compound B: Storefront Ready (revenue_tracker C14, STILL LIVE)
+## Compound C: Day 65 Cold Storage Trigger (NEW)
 
-printmaxx-shop.surge.sh has 17 products with 13 Stripe checkout links. 54 promotional posts ready. Revenue tracker autonomously fixed CTAs on 3 app landing pages. All local-only, blocked by surge account mismatch.
+If no human activation by April 9:
+1. Unload cross_pollinator from launchd
+2. Comment out ALL cron entries except cron_watchdog
+3. Reduce swarm_brain to weekly
+4. System enters COLD STORAGE -- zero cost, fully preserved, instantly reactivatable
+5. Only the cron_watchdog remains to detect when cron is restored
 
-**Shortest path to first dollar:** Post storefront link in 2 subreddits (10 min human time).
+## Compound D: TruthScope Rename (P0 before marketing)
 
-## Compound C: TruthScope Rename (P0 before App Store)
+competitor_stalker found TruthScopeAI.com naming collision. Rename before marketing.
 
-competitor_stalker found TruthScopeAI.com naming collision. Rename before marketing. Candidates: TruthLens, VerifyScope, SignalScope, DeepRead. Effort: 2 hours.
+## Compound E: Plist Cleanup (housekeeping)
 
-## Compound D: Plist Cleanup (housekeeping)
+18-22 dead plists in ~/Library/LaunchAgents/. Human cleanup when convenient.
 
-22 plist files in ~/Library/LaunchAgents/, only 4 loaded. 18 dead weight. Human:
-```bash
-rm ~/Library/LaunchAgents/com.printmaxx.swarm.{opportunity_scanner,content_compounder,conversion_optimizer,quality_enforcer,trend_synthesizer,growth_strategist,inbound_maximizer,quality_gate,lead_machine,video_factory,image_factory}.plist
-```
+## Compound F: System Healer Fix (DEPRIORITIZED)
 
-## Compound E: System Healer Fix (LOW PRIORITY)
-
-Plist bash escaping bug. Create wrapper script. Not urgent while frozen.
+Bash escaping bug in plist. Not needed while system is frozen.
 
 ---
 
-## Swarm Efficiency (C54)
+## Swarm Efficiency (C55)
 
-| Metric | C51 | C53 | C54 |
-|--------|-----|-----|-----|
-| Agents loaded | 12 | 4 | 4 |
-| Daily token cost | $8-12 | $2-3 | $1-2 |
-| Items wired | 1,820 | 1,820 | 1,822 |
-| Items consumed | 0 | 0 | 0 |
-| Revenue | $0 | $0 | $0 |
-| Brain decisions | 692 | 711 | 717 |
-| Days at zero | 58 | 59 | 60 |
+| Metric | C51 | C53 | C54 | C55 |
+|--------|-----|-----|-----|-----|
+| Launchd agents loaded | 12 | 4 | 4 | 4 (recommend 3) |
+| Cron entries active | 116 | 116 | 116 | 116 (recommend ~100) |
+| Daily token cost (launchd) | $8-12 | $2-3 | $1-2 | $1-2 |
+| Daily token cost (cron) | unknown | unknown | unknown | $2-5 (NEW FINDING) |
+| Items wired | 1,820 | 1,820 | 1,822 | 1,842 |
+| Items consumed | 0 | 0 | 0 | 0 |
+| Revenue | $0 | $0 | $0 | $0 |
+| Brain decisions | 692 | 711 | 717 | 735 |
+| Days at zero | 58 | 59 | 60 | 60 |

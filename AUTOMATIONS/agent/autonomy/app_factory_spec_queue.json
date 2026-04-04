@@ -8,12 +8,17 @@
     "source": "competitive_intel_CI_CYCLE_146 + cross_pollinator_cycle26",
     "cycle": 146,
     "strategy_theme": "FIRST AMENDMENT & CIVIL LIBERTIES",
-    "market_signal": "blue_ocean_trending — civil liberties search demand elevated due to US political climate Apr 2026",
-    "urgency": "SHIP THIS MONTH — first mover advantage while trending. Competitors: none in specific First Amendment streak niche.",
+    "market_signal": "blue_ocean_trending \u2014 civil liberties search demand elevated due to US political climate Apr 2026",
+    "urgency": "SHIP THIS MONTH \u2014 first mover advantage while trending. Competitors: none in specific First Amendment streak niche.",
     "build_template": "scripture-streak base (same daily content + streak mechanic)",
     "content_source": "First Amendment text, case law summaries, landmark rulings (public domain)",
     "monetization": "Annual $29.99 + Monthly $2.99 via Stripe Payment Link (same as cnsnt model)",
-    "aso_keywords": ["first amendment", "free speech app", "bill of rights daily", "civil liberties tracker"],
+    "aso_keywords": [
+      "first amendment",
+      "free speech app",
+      "bill of rights daily",
+      "civil liberties tracker"
+    ],
     "status": "PENDING_BUILD",
     "added_at": "2026-04-04T04:29:00"
   },
@@ -26,12 +31,17 @@
     "source": "competitive_intel_CI_CYCLE_146 + cross_pollinator_cycle26",
     "cycle": 146,
     "strategy_theme": "CIVIL RIGHTS & EQUAL PROTECTION",
-    "market_signal": "blue_ocean_trending — civil rights search demand elevated Apr 2026",
-    "urgency": "SHIP THIS MONTH — complements First Amendment Daily, same content pipeline",
+    "market_signal": "blue_ocean_trending \u2014 civil rights search demand elevated Apr 2026",
+    "urgency": "SHIP THIS MONTH \u2014 complements First Amendment Daily, same content pipeline",
     "build_template": "scripture-streak base",
     "content_source": "Civil Rights Act, 14th Amendment, landmark SCOTUS cases (public domain)",
     "monetization": "Annual $29.99 + Monthly $2.99 via Stripe Payment Link",
-    "aso_keywords": ["civil rights", "equal protection", "constitutional rights app", "civil rights history daily"],
+    "aso_keywords": [
+      "civil rights",
+      "equal protection",
+      "constitutional rights app",
+      "civil rights history daily"
+    ],
     "status": "PENDING_BUILD",
     "added_at": "2026-04-04T04:29:00"
   },
@@ -2150,5 +2160,53 @@
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
     "added_at": "2026-04-03T02:38:37"
+  },
+  {
+    "niche_slug": "daily_free_speech_doctrine_streak",
+    "app_name": "Free Speech Daily",
+    "niche": "free speech / first amendment doctrine",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_CI_CYCLE_148 + cross_pollinator_2026-04-04T08:53:17",
+    "strategy_theme": "FIRST AMENDMENT & CIVIL LIBERTIES",
+    "market_signal": "blue_ocean_trending \u2014 civil liberties search demand elevated due to US political climate Apr 2026. Community: 12,383",
+    "urgency": "SHIP THIS MONTH \u2014 first mover advantage while trending",
+    "added_at": "2026-04-04T08:53:17"
+  },
+  {
+    "niche_slug": "daily_freedom_of_press_streak",
+    "app_name": "Press Freedom Daily",
+    "niche": "freedom of press / media law",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_CI_CYCLE_148 + cross_pollinator_2026-04-04T08:53:17",
+    "strategy_theme": "FIRST AMENDMENT & CIVIL LIBERTIES",
+    "market_signal": "blue_ocean_trending \u2014 press freedom searches spiking. Community: 13,366",
+    "urgency": "SHIP THIS MONTH \u2014 trending topic",
+    "added_at": "2026-04-04T08:53:17"
+  },
+  {
+    "niche_slug": "daily_4th_amendment_digital_privacy_streak",
+    "app_name": "4th Amendment Daily",
+    "niche": "digital privacy / 4th amendment rights",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_CI_CYCLE_148 + cross_pollinator_2026-04-04T08:53:17",
+    "strategy_theme": "DIGITAL PRIVACY & CONSTITUTIONAL LAW",
+    "market_signal": "blue_ocean_trending \u2014 digital privacy searches rising. Community: 14,435",
+    "urgency": "SHIP THIS MONTH \u2014 privacy concerns elevated",
+    "added_at": "2026-04-04T08:53:17"
+  },
+  {
+    "niche_slug": "daily_freedom_of_religion_streak",
+    "app_name": "Religious Liberty Daily",
+    "niche": "freedom of religion / establishment clause",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_CI_CYCLE_148 + cross_pollinator_2026-04-04T08:53:17",
+    "strategy_theme": "FIRST AMENDMENT & RELIGIOUS LIBERTY",
+    "market_signal": "blue_ocean_trending \u2014 religious freedom searches elevated. Community: 6,286",
+    "urgency": "SHIP THIS MONTH \u2014 trending niche",
+    "added_at": "2026-04-04T08:53:17"
   }
 ]

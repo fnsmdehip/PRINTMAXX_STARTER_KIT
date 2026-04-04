@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 147,
-    "last_run": "2026-04-04T10:06:15.285246+00:00",
-    "cumulative_blue_oceans": 849,
-    "ci_csv_rows": 187,
-    "alpha_csv_rows": 51767,
+    "last_cycle": 151,
+    "last_run": "2026-04-04T18:47:49.322258+00:00",
+    "cumulative_blue_oceans": 879,
+    "ci_csv_rows": 226,
+    "alpha_csv_rows": 51806,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -45,9 +45,13 @@
         "ADMINISTRATIVE LAW & REGULATORY THEORY",
         "CONSTITUTIONAL LAW: SEPARATION OF POWERS & FEDERALISM",
         "FIRST AMENDMENT & CIVIL LIBERTIES",
-        "SPORTS SCIENCE + PERFORMANCE PSYCHOLOGY + ATHLETIC OPTIMIZATION"
+        "SPORTS SCIENCE + PERFORMANCE PSYCHOLOGY + ATHLETIC OPTIMIZATION",
+        "ENTREPRENEURSHIP + STARTUP CULTURE + VENTURE CAPITAL",
+        "CLIMATE TECH + SUSTAINABILITY + CLEANTECH + IMPACT INVESTING",
+        "URBAN TECH + SMART CITIES + PROPTECH + REAL ESTATE INNOVATION",
+        "BIOTECH + LIFE SCIENCES + PHARMACEUTICAL INNOVATION + DRUG DEVELOPMENT"
     ],
-    "next_strategy": "ENTREPRENEURSHIP + STARTUP CULTURE + VENTURE CAPITAL",
+    "next_strategy": "AGING + LONGEVITY SCIENCE + GEROSCIENCE + HEALTHSPAN OPTIMIZATION",
     "top_all_time": [
         {
             "name": "Daily CS Fundamentals Streak",
@@ -115,64 +119,64 @@
             "cycle": 147
         },
         {
+            "name": "Daily Sports Psychology Streak",
+            "score": 25,
+            "cycle": 147
+        },
+        {
+            "name": "Daily Strength Conditioning Science Streak",
+            "score": 25,
+            "cycle": 147
+        },
+        {
+            "name": "Daily Sports Analytics Streak",
+            "score": 25,
+            "cycle": 147
+        },
+        {
+            "name": "Daily Venture Capital Fundamentals Streak",
+            "score": 25,
+            "cycle": 148
+        },
+        {
+            "name": "Daily Product Market Fit Streak",
+            "score": 25,
+            "cycle": 148
+        },
+        {
+            "name": "Daily Corporate Climate Disclosure Streak",
+            "score": 25,
+            "cycle": 149
+        },
+        {
+            "name": "Daily Corporate Climate Disclosure Streak",
+            "score": 25,
+            "cycle": 149
+        },
+        {
+            "name": "Daily Real Estate Investing Fundamentals Streak",
+            "score": 25,
+            "cycle": 150
+        },
+        {
+            "name": "Daily Biotech Investing Streak",
+            "score": 25,
+            "cycle": 151
+        },
+        {
+            "name": "Daily Drug Discovery Science Streak",
+            "score": 25,
+            "cycle": 151
+        },
+        {
+            "name": "Daily Pharmacology Fundamentals Streak",
+            "score": 25,
+            "cycle": 151
+        },
+        {
             "name": "Daily Public Health Law Streak",
             "score": 24,
             "cycle": 136
-        },
-        {
-            "name": "Daily Research Ethics Streak",
-            "score": 24,
-            "cycle": 136
-        },
-        {
-            "name": "Daily Contract Law & Common Law Streak",
-            "score": 24,
-            "cycle": 134
-        },
-        {
-            "name": "Daily Legal Philosophy & Jurisprudence Streak",
-            "score": 24,
-            "cycle": 134
-        },
-        {
-            "name": "Daily Property Law Theory Streak",
-            "score": 24,
-            "cycle": 134
-        },
-        {
-            "name": "Daily Patent Law Streak",
-            "score": 24,
-            "cycle": 141
-        },
-        {
-            "name": "Daily Human Rights Law Streak",
-            "score": 24,
-            "cycle": 142
-        },
-        {
-            "name": "Daily International Criminal Law Streak",
-            "score": 24,
-            "cycle": 142
-        },
-        {
-            "name": "Daily Comparative Constitutional Rights Streak",
-            "score": 24,
-            "cycle": 143
-        },
-        {
-            "name": "Daily Administrative Procedure Streak",
-            "score": 24,
-            "cycle": 144
-        },
-        {
-            "name": "Daily Criminal Procedure Streak",
-            "score": 23,
-            "cycle": 140
-        },
-        {
-            "name": "Daily International Trade Law Streak",
-            "score": 23,
-            "cycle": 142
         }
     ],
     "status": "RUNNING"

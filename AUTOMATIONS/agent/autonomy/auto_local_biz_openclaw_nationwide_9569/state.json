@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-04T07:01:29.001359",
-  "cycle_number": 14,
+  "last_run": "2026-04-04T11:32:31.587942",
+  "cycle_number": 15,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -120,12 +120,24 @@
     "Elizabethtown KY",
     "Bowling Green KY",
     "Hopkinsville KY",
-    "Henderson KY"
+    "Henderson KY",
+    "Pikeville KY",
+    "Middlesboro KY",
+    "Morehead KY",
+    "Glasgow KY",
+    "Corbin KY",
+    "Paducah KY",
+    "Lawrenceburg TN",
+    "Shelbyville TN",
+    "Lewisburg TN",
+    "Batesville AR",
+    "Searcy AR",
+    "Russellville AR"
   ],
-  "total_leads_all_cycles": 3530,
-  "total_previews_deployed": 1953,
-  "total_sites_built_local": 7611,
-  "total_emails_queued": 1948,
+  "total_leads_all_cycles": 3711,
+  "total_previews_deployed": 2104,
+  "total_sites_built_local": 7764,
+  "total_emails_queued": 2101,
   "emails_ready_to_send": 36,
   "emails_enriched_this_cycle": 0,
   "enricher_hit_rate": "0% (F-grade no-website segment)",
@@ -133,29 +145,29 @@
   "enricher_leads_remaining": 1058,
   "projected_emails_from_remaining": 0,
   "next_cities": [
-    "Paducah KY",
-    "Owensboro KY",
-    "Madisonville KY",
-    "Corbin KY",
-    "Morehead KY",
-    "Pikeville KY",
-    "Middlesboro KY",
-    "Glasgow KY",
     "Jackson TN",
     "Clarksville TN",
     "Columbia TN",
     "Cookeville TN",
     "Murfreesboro TN",
-    "Shelbyville TN",
-    "Lewisburg TN",
-    "Lawrenceburg TN",
+    "Elizabethtown KY",
+    "Owensboro KY",
+    "Madisonville KY",
+    "Camden AR",
+    "Magnolia AR",
+    "Hot Springs AR",
     "Jonesboro AR",
     "Fort Smith AR",
     "Conway AR",
-    "Hot Springs AR",
     "Batesville AR",
-    "Russellville AR",
-    "Searcy AR"
+    "McKenzie TN",
+    "Savannah TN",
+    "Paris TN",
+    "Bolivar TN",
+    "Brownsville TN",
+    "Lexington TN",
+    "Humboldt TN",
+    "Milan TN"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -290,15 +302,14 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 471 new leads Cycle 14",
-    "grade": "HEALTHY \u2014 TN/KY confirmed 80-100% F-grade",
-    "build": "HEALTHY \u2014 1,953 GH Pages live",
+    "discover": "HEALTHY \u2014 181 new leads Cycle 15",
+    "grade": "HEALTHY \u2014 KY towing/handyman 90-100% F-grade",
+    "build": "HEALTHY \u2014 2,066 preview sites built",
     "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
-    "deploy_ghpages": "PRIMARY CHANNEL \u2014 1,953 live at fnsmdehip.github.io/openclaw-previews/",
+    "deploy_ghpages": "PRIMARY CHANNEL \u2014 2,104 live at fnsmdehip.github.io/openclaw-previews/",
     "enrich_email": "0% on F-grade segment \u2014 Apollo.io required",
-    "outreach_queue": "HEALTHY \u2014 1,948 queued, ALL 1,948 with live GH Pages URLs (0 file:// remaining)",
-    "outreach_ready": "36 ready to send NOW \u2014 email service is the only blocker",
-    "send": "BLOCKED \u2014 Gmail App Password (5 min fix). Brevo free (300/day, 15 min) = 10x scale."
+    "outreach_queue": "HEALTHY \u2014 2,101 queued, 36 ready-to-send",
+    "send": "BLOCKED \u2014 Gmail App Password (5 min fix). Brevo free (300/day) = 10x scale."
   },
   "metrics_history": [
     {
@@ -424,9 +435,22 @@
       "outreach_queued": 1948,
       "outreach_with_live_url": 1948,
       "ready_to_send": 36
+    },
+    {
+      "cycle": 15,
+      "date": "2026-04-04",
+      "total_leads": 3711,
+      "hot_leads": 1998,
+      "with_email": 36,
+      "surge_deployed": 472,
+      "ghpages_deployed": 2104,
+      "total_preview_live": 2104,
+      "outreach_queued": 2101,
+      "outreach_with_live_url": 2099,
+      "ready_to_send": 36
     }
   ],
-  "ghpages_deployed": 1953,
+  "ghpages_deployed": 2104,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -706,5 +730,96 @@
       "Dyersburg TN auto repair (92%)"
     ],
     "observation": "+471 leads in one cycle, discovering TN/KY as new frontier with 80-100% F-grade. Waynesboro MS landscaping and Columbia MS landscaping both 100% F-grade. 263 new live GH Pages sites. 780 file:// URL debt resolved \u2014 now all 1,948 outreach entries have live preview URLs. Email dispatch remains only bottleneck."
+  },
+  "cycle_15_results": {
+    "cities_discovered": [
+      "Pikeville KY",
+      "Middlesboro KY",
+      "Morehead KY",
+      "Glasgow KY",
+      "Corbin KY",
+      "Paducah KY",
+      "Lawrenceburg TN",
+      "Shelbyville TN",
+      "Lewisburg TN",
+      "Batesville AR",
+      "Searcy AR",
+      "Russellville AR"
+    ],
+    "city_stats": {
+      "Pikeville KY (towing)": {
+        "F": 11,
+        "total": 11,
+        "f_rate": 100.0
+      },
+      "Pikeville KY (auto repair)": {
+        "F": 7,
+        "total": 10,
+        "f_rate": 70.0
+      },
+      "Pikeville KY (plumber)": {
+        "F": 12,
+        "total": 14,
+        "f_rate": 85.7
+      },
+      "Middlesboro KY (auto repair)": {
+        "F": 8,
+        "total": 9,
+        "f_rate": 88.9
+      },
+      "Morehead KY (handyman)": {
+        "F": 11,
+        "total": 11,
+        "f_rate": 100.0
+      },
+      "Glasgow KY (towing)": {
+        "F": 7,
+        "total": 7,
+        "f_rate": 100.0
+      },
+      "Paducah KY (towing+handyman)": {
+        "F": 14,
+        "total": 22,
+        "f_rate": 63.6
+      },
+      "Lawrenceburg TN (handyman+plumber)": {
+        "F": 19,
+        "total": 21,
+        "f_rate": 90.5
+      },
+      "Searcy AR (towing+handyman)": {
+        "F": 13,
+        "total": 16,
+        "f_rate": 81.3
+      },
+      "Batesville AR (towing+auto)": {
+        "F": 20,
+        "total": 23,
+        "f_rate": 87.0
+      }
+    },
+    "new_leads": 181,
+    "new_f_grade": 126,
+    "new_d_grade": 0,
+    "new_sites_built": 153,
+    "new_ghpages_deploys": 151,
+    "total_ghpages_live": 2104,
+    "new_emails_queued": 153,
+    "ready_to_send_email": 36,
+    "new_leads_with_url_updated": 165,
+    "ghpages_commit": "619c9ef",
+    "verified_live_spot_check": [
+      "yarber-tire-towing-pikeville-ky 200",
+      "atchley-s-home-improvement-lawrenceburg-tn 200",
+      "wisecup-towing-recovery-morehead-ky 200"
+    ],
+    "top_f_grade_combos": [
+      "Pikeville KY towing (100%)",
+      "Glasgow KY towing (100%)",
+      "Morehead KY handyman (100%)",
+      "Lawrenceburg TN handyman (90%+)",
+      "Batesville AR auto repair (87%)"
+    ],
+    "observation": "KY micro-cities confirm towing+handyman = 100% F-grade. Pikeville KY towing 11/11, Glasgow KY towing 7/7, Morehead KY handyman 11/11. Lawrenceburg TN 90%+ across niches. AR adds new frontier. GH Pages now at 2,104 live sites. Email bottleneck unchanged \u2014 36 ready, 2,063 need Apollo.io enrichment."
   }
 }
