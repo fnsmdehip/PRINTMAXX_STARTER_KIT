@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-03T05:00:44.854078",
+  "api_calls": 19,
+  "total_filings": 69,
+  "unique_filings": 2,
+  "written_to_alpha": 2,
+  "top_results": [
+    {
+      "company": "Xerox Holdings Corp  (XRX, XRXDW)  (CIK 0001770450)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Churchill Capital Corp XII  (CIK 0002114227)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}
