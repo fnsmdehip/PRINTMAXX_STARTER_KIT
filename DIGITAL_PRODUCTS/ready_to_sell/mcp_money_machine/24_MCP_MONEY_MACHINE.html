@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The MCP Money Machine — Build & Sell Claude Integrations in 48 Hours</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --surface2: #1a1a25;
+    --border: #2a2a3a;
+    --accent: #7c3aed;
+    --accent2: #06b6d4;
+    --accent3: #10b981;
+    --text: #e8e8f0;
+    --text2: #9090a8;
+    --highlight: #fbbf24;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.25) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(6,182,212,0.15) 0%, transparent 50%),
+                var(--bg);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237c3aed' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(124,58,237,0.2);
+    border: 1px solid rgba(124,58,237,0.4);
+    color: #a78bfa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .cover h1 {
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 0%, #a78bfa 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cover .subtitle {
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: var(--text2);
+    font-weight: 400;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  .cover .stats-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-item .number {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--highlight);
+    display: block;
+  }
+
+  .stat-item .label {
+    font-size: 12px;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .cover .tagline {
+    font-size: 13px;
+    color: var(--text2);
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    max-width: 500px;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 48px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  h2 .ch-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    margin-top: 32px;
+    color: #c4b5fd;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 24px;
+    color: var(--accent2);
+  }
+
+  p { margin-bottom: 16px; color: var(--text); }
+
+  .callout {
+    background: var(--surface2);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .callout.green { border-color: var(--accent3); }
+  .callout.yellow { border-color: var(--highlight); }
+  .callout.cyan { border-color: var(--accent2); }
+
+  .callout .callout-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .callout.green .callout-title { color: var(--accent3); }
+  .callout.yellow .callout-title { color: var(--highlight); }
+  .callout.cyan .callout-title { color: var(--accent2); }
+
+  code, .code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 8px;
+    color: #93c5fd;
+  }
+
+  pre {
+    background: #0d0d17;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #e2e8f0;
+  }
+
+  .pre-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--text2);
+  }
+
+  .pre-header + pre {
+    border-radius: 0 0 12px 12px;
+    margin-top: 0;
+  }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot.r { background: #ff5f57; }
+  .dot.y { background: #ffbd2e; }
+  .dot.g { background: #28c941; }
+
+  ul, ol {
+    padding-left: 24px;
+    margin-bottom: 16px;
+  }
+
+  li { margin-bottom: 8px; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .card h4 { margin-top: 0; }
+
+  .table-wrap {
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  th {
+    background: var(--surface2);
+    color: var(--text2);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(42,42,58,0.5);
+    color: var(--text);
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(124,58,237,0.05); }
+
+  .price-tag {
+    display: inline-block;
+    background: rgba(16,185,129,0.15);
+    border: 1px solid rgba(16,185,129,0.3);
+    color: var(--accent3);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+
+  .step-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    position: relative;
+    padding-left: 70px;
+  }
+
+  .step-block::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+  }
+
+  .step-block h4 {
+    margin-top: 0;
+    color: #fff;
+  }
+
+  .template-box {
+    background: #0d0d17;
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 20px 0;
+    position: relative;
+  }
+
+  .template-box::before {
+    content: 'TEMPLATE';
+    position: absolute;
+    top: -11px;
+    left: 20px;
+    background: var(--bg);
+    padding: 0 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent);
+  }
+
+  .income-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+
+  .income-row .tier {
+    font-size: 13px;
+    font-weight: 700;
+    width: 100px;
+    color: var(--text2);
+    flex-shrink: 0;
+  }
+
+  .income-row .bar {
+    flex: 1;
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .income-row .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+
+  .income-row .amount {
+    font-weight: 700;
+    font-size: 15px;
+    width: 100px;
+    text-align: right;
+    color: var(--accent3);
+    flex-shrink: 0;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .toc-item .num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(124,58,237,0.15);
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 48px 0;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(6,182,212,0.1));
+    border: 1px solid rgba(124,58,237,0.3);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 32px 0;
+    text-align: center;
+  }
+
+  .highlight-box .big-number {
+    font-size: 64px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .keyword { color: #c084fc; font-weight: 600; }
+  .string { color: #86efac; }
+  .comment { color: #4b5563; font-style: italic; }
+  .fn { color: #93c5fd; }
+  .num-color { color: #fbbf24; }
+
+  @media print {
+    .cover { page-break-after: always; }
+    h2 { page-break-before: auto; }
+    pre, .template-box { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="badge">Digital Playbook — April 2026</div>
+  <h1>The MCP Money Machine</h1>
+  <p class="subtitle">Build and sell Claude integrations in 48 hours. The complete playbook for the fastest-growing category in the AI economy.</p>
+
+  <div class="stats-row">
+    <div class="stat-item">
+      <span class="number">$2K–$15K</span>
+      <span class="label">Monthly per server</span>
+    </div>
+    <div class="stat-item">
+      <span class="number">48h</span>
+      <span class="label">Time to first listing</span>
+    </div>
+    <div class="stat-item">
+      <span class="number">7</span>
+      <span class="label">Templates included</span>
+    </div>
+    <div class="stat-item">
+      <span class="number">Zero</span>
+      <span class="label">Prior AI exp. needed</span>
+    </div>
+  </div>
+
+  <p class="tagline">Every startup, agency, and solo operator is hunting for Claude integrations to existing tools. This playbook shows you exactly how to build them and where to sell them.</p>
+</div>
+
+<!-- BODY PAGES -->
+<div class="page">
+
+  <!-- TABLE OF CONTENTS -->
+  <h2><span class="ch-num">→</span> What You Get</h2>
+  <div class="toc-grid">
+    <div class="toc-item"><span class="num">01</span> The MCP Market Opportunity (and why now)</div>
+    <div class="toc-item"><span class="num">02</span> Your First MCP Server in 2 Hours</div>
+    <div class="toc-item"><span class="num">03</span> 7 Copy-Paste Server Templates</div>
+    <div class="toc-item"><span class="num">04</span> The Pricing Architecture That Scales</div>
+    <div class="toc-item"><span class="num">05</span> Where to Sell (Complete Platform Guide)</div>
+    <div class="toc-item"><span class="num">06</span> The Listing Formula That Converts</div>
+    <div class="toc-item"><span class="num">07</span> Launch Sequence: 0 to First Sale in 48h</div>
+    <div class="toc-item"><span class="num">08</span> Distribution Stack for Ongoing Sales</div>
+    <div class="toc-item"><span class="num">09</span> Scaling to $10K/mo: The Portfolio Play</div>
+    <div class="toc-item"><span class="num">10</span> 30-Day Action Plan + Tracker</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 1 -->
+  <h2><span class="ch-num">1</span> The MCP Market Opportunity</h2>
+
+  <p>The Model Context Protocol (MCP) is the most important developer primitive to emerge from the AI wave since the transformer architecture itself. Anthropic open-sourced it in late 2024. By April 2026, it has become the default integration layer for Claude, Cursor, Windsurf, and every serious AI coding environment.</p>
+
+  <div class="highlight-box">
+    <div class="big-number">$840B</div>
+    <p style="color:var(--text2); margin:0; font-size:15px;">Estimated enterprise software market that MCP integrations can tap into.<br>You don't need 0.001% of that to build a $10K/mo business.</p>
+  </div>
+
+  <h3>Why the Timing Is Perfect Right Now</h3>
+
+  <p>Three things converged in Q1 2026 to create the largest under-served market in developer tooling:</p>
+
+  <ul>
+    <li><strong>Claude Max plan adoption exploded.</strong> Anthropic's subscriber base tripled. Every new subscriber immediately asks: "What MCP servers should I install?"</li>
+    <li><strong>The enterprise bought in.</strong> Fortune 500 companies are budgeting for Claude integrations with existing SaaS stacks. They need connectors for Salesforce, HubSpot, Jira, Notion, Linear, Slack — every tool in their stack.</li>
+    <li><strong>The marketplace is young.</strong> Smithery, Glama, and PulseMCP are the three main MCP marketplaces. Combined they have fewer than 2,000 servers. The App Store launched with 500. There is massive white space.</li>
+  </ul>
+
+  <div class="callout yellow">
+    <div class="callout-title">The Gap That Makes You Money</div>
+    Most MCP servers on marketplaces are one-function hobby projects. Buyers want: packaged solutions for specific workflows, setup in under 5 minutes, and ongoing support. Nobody is packaging MCP servers as products. Yet.
+  </div>
+
+  <h3>Who Pays for MCP Servers?</h3>
+
+  <div class="table-wrap">
+  <table>
+    <tr>
+      <th>Buyer Type</th>
+      <th>What They Need</th>
+      <th>Willingness to Pay</th>
+      <th>Deal Size</th>
+    </tr>
+    <tr>
+      <td>Solo operators / indie hackers</td>
+      <td>Productivity integrations (Notion, Gmail, Calendar)</td>
+      <td>High — they see direct ROI</td>
+      <td class="price-tag">$19–$49</td>
+    </tr>
+    <tr>
+      <td>Small dev agencies</td>
+      <td>Client tool integrations, CRM connections</td>
+      <td>Very high — billable to client</td>
+      <td class="price-tag">$99–$299</td>
+    </tr>
+    <tr>
+      <td>SaaS companies</td>
+      <td>Native MCP integration for their product</td>
+      <td>Extremely high — it's a feature</td>
+      <td class="price-tag">$500–$5K</td>
+    </tr>
+    <tr>
+      <td>Enterprise IT teams</td>
+      <td>Internal tool connectors, security-vetted</td>
+      <td>Budget already approved</td>
+      <td class="price-tag">$2K–$15K</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="callout cyan">
+    <div class="callout-title">This Playbook's Sweet Spot</div>
+    We focus on solo operators and dev agencies. These buyers move fast, pay online, and leave reviews. The enterprise sales cycle is 6+ months. Start with the $19–$299 market, then convert agencies to recurring contracts once you have credibility.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 2 -->
+  <h2><span class="ch-num">2</span> Your First MCP Server in 2 Hours</h2>
+
+  <p>MCP servers are simpler than you think. They have four components: a transport layer, a list of tools, handlers for those tools, and a manifest file. That's it. No complex infrastructure. No authentication overhead for most use cases. No deployment required for many buyers.</p>
+
+  <h3>The Anatomy of an MCP Server</h3>
+
+  <div class="callout">
+    <div class="callout-title">Core Concept</div>
+    An MCP server exposes "tools" to the AI model. A tool is just a named function with a description and input schema. The model decides when to call it. Your job: build useful tools and describe them well enough for the model to use them correctly.
+  </div>
+
+  <div class="pre-header">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <span>mcp_server.py — Minimal viable server</span>
+  </div>
+  <pre><span class="keyword">from</span> mcp.server <span class="keyword">import</span> Server, NotificationOptions
+<span class="keyword">from</span> mcp.server.models <span class="keyword">import</span> InitializationOptions
+<span class="keyword">import</span> mcp.server.stdio
+<span class="keyword">import</span> mcp.types <span class="keyword">as</span> types
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Create server instance</span>
+server = <span class="fn">Server</span>(<span class="string">"my-mcp-server"</span>)
+
+<span class="comment"># Define your tools</span>
+@server.list_tools()
+<span class="keyword">async def</span> <span class="fn">handle_list_tools</span>():
+    <span class="keyword">return</span> [
+        types.Tool(
+            name=<span class="string">"get_data"</span>,
+            description=<span class="string">"Fetches data from your API. Use when user asks for information."</span>,
+            inputSchema={
+                <span class="string">"type"</span>: <span class="string">"object"</span>,
+                <span class="string">"properties"</span>: {
+                    <span class="string">"query"</span>: {<span class="string">"type"</span>: <span class="string">"string"</span>, <span class="string">"description"</span>: <span class="string">"What to look up"</span>}
+                },
+                <span class="string">"required"</span>: [<span class="string">"query"</span>]
+            }
+        )
+    ]
+
+<span class="comment"># Handle tool calls</span>
+@server.call_tool()
+<span class="keyword">async def</span> <span class="fn">handle_call_tool</span>(name: str, arguments: dict):
+    <span class="keyword">if</span> name == <span class="string">"get_data"</span>:
+        result = <span class="keyword">await</span> <span class="fn">your_api_function</span>(arguments[<span class="string">"query"</span>])
+        <span class="keyword">return</span> [types.TextContent(type=<span class="string">"text"</span>, text=<span class="keyword">str</span>(result))]
+
+<span class="comment"># Run the server</span>
+<span class="keyword">async def</span> <span class="fn">main</span>():
+    <span class="keyword">async with</span> mcp.server.stdio.stdio_server() <span class="keyword">as</span> (read, write):
+        <span class="keyword">await</span> server.run(read, write,
+            <span class="fn">InitializationOptions</span>(server_name=<span class="string">"my-mcp-server"</span>, server_version=<span class="string">"1.0.0"</span>))
+
+asyncio.run(<span class="fn">main</span>())</pre>
+
+  <p>That's the entire server. Every MCP server you build follows this exact pattern. The only difference is what your tools do inside the handlers.</p>
+
+  <h3>Step-by-Step: From Idea to Running Server</h3>
+
+  <div class="step-block" data-step="1">
+    <h4>Install the SDK</h4>
+    <p><code>pip install mcp</code> — The official Anthropic Python SDK. Includes everything you need. Node.js users: <code>npm install @modelcontextprotocol/sdk</code></p>
+  </div>
+
+  <div class="step-block" data-step="2">
+    <h4>Pick Your Integration Target</h4>
+    <p>Choose a tool people use daily: Notion, Airtable, Linear, Jira, HubSpot, GitHub, Slack, Stripe, or any REST API. The simpler the target API, the faster you ship. Most have Python SDKs already.</p>
+  </div>
+
+  <div class="step-block" data-step="3">
+    <h4>Design 3–5 Core Tools</h4>
+    <p>Don't try to wrap every API endpoint. Find the 3–5 actions users do 80% of the time. For a Notion server: <code>search_pages</code>, <code>create_page</code>, <code>update_block</code>, <code>query_database</code>. That's the product.</p>
+  </div>
+
+  <div class="step-block" data-step="4">
+    <h4>Write Descriptions That Make the Model Smart</h4>
+    <p>Tool descriptions are your UX. Claude reads them to decide when to use your tool. Write like you're briefing a new employee: what it does, when to use it, what format it expects. This is the difference between a tool that fires correctly 90% of the time and one that fires 30% of the time.</p>
+  </div>
+
+  <div class="step-block" data-step="5">
+    <h4>Test Locally with Claude Desktop</h4>
+    <p>Add your server to <code>claude_desktop_config.json</code>. Run 10 real workflows. Fix anything that requires 3+ prompts to get right. A good server handles the whole task in one prompt.</p>
+  </div>
+
+  <div class="step-block" data-step="6">
+    <h4>Package and Price</h4>
+    <p>ZIP the files, write the README, create the listing. See Chapter 6 for the listing formula. You're done in 2 hours if you move fast.</p>
+  </div>
+
+  <div class="callout green">
+    <div class="callout-title">Fastest Path to First Sale</div>
+    Build a Notion MCP server. Every Claude user with Notion immediately understands the value. The official Notion API is well-documented. Setup time: 90 minutes. The market is large, buyers are technical enough to configure it, and $29 is an easy yes.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 3 — TEMPLATES -->
+  <h2><span class="ch-num">3</span> 7 Copy-Paste Server Templates</h2>
+
+  <p>Each template below is a complete starting point. Replace the API calls with your actual integration and you have a sellable product. Every template includes the tool schema, handler pattern, and authentication setup for that specific API type.</p>
+
+  <h3>Template 1: REST API Connector</h3>
+  <p>The universal pattern. Works for 90% of SaaS tools. Swap out the base URL, auth headers, and endpoint paths.</p>
+
+  <div class="pre-header">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <span>template_rest_api.py</span>
+  </div>
+  <pre><span class="keyword">import</span> httpx
+<span class="keyword">import</span> os
+<span class="keyword">from</span> mcp.server <span class="keyword">import</span> Server
+<span class="keyword">import</span> mcp.types <span class="keyword">as</span> types
+
+BASE_URL = <span class="string">"https://api.your-target.com/v1"</span>
+server = <span class="fn">Server</span>(<span class="string">"your-tool-mcp"</span>)
+
+<span class="keyword">def</span> <span class="fn">get_headers</span>():
+    <span class="keyword">return</span> {
+        <span class="string">"Authorization"</span>: <span class="keyword">f</span><span class="string">"Bearer {os.environ['API_KEY']}"</span>,
+        <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>
+    }
+
+@server.list_tools()
+<span class="keyword">async def</span> <span class="fn">list_tools</span>():
+    <span class="keyword">return</span> [
+        types.Tool(name=<span class="string">"list_items"</span>,
+            description=<span class="string">"List items from [TOOL]. Call when user wants to see, find, or browse their data."</span>,
+            inputSchema={<span class="string">"type"</span>:<span class="string">"object"</span>, <span class="string">"properties"</span>:{
+                <span class="string">"limit"</span>:{<span class="string">"type"</span>:<span class="string">"integer"</span>,<span class="string">"default"</span>:<span class="num-color">20</span>},
+                <span class="string">"filter"</span>:{<span class="string">"type"</span>:<span class="string">"string"</span>,<span class="string">"description"</span>:<span class="string">"Optional filter query"</span>}
+            }}),
+        types.Tool(name=<span class="string">"create_item"</span>,
+            description=<span class="string">"Create a new item in [TOOL]. Use when user asks to add, create, or make something."</span>,
+            inputSchema={<span class="string">"type"</span>:<span class="string">"object"</span>, <span class="string">"required"</span>:[<span class="string">"title"</span>],
+                <span class="string">"properties"</span>:{
+                <span class="string">"title"</span>:{<span class="string">"type"</span>:<span class="string">"string"</span>},
+                <span class="string">"body"</span>:{<span class="string">"type"</span>:<span class="string">"string"</span>}
+            }}),
+        types.Tool(name=<span class="string">"search_items"</span>,
+            description=<span class="string">"Search [TOOL] for specific content. Use for find, search, look up requests."</span>,
+            inputSchema={<span class="string">"type"</span>:<span class="string">"object"</span>, <span class="string">"required"</span>:[<span class="string">"query"</span>],
+                <span class="string">"properties"</span>:{<span class="string">"query"</span>:{<span class="string">"type"</span>:<span class="string">"string"</span>}}})
+    ]
+
+@server.call_tool()
+<span class="keyword">async def</span> <span class="fn">call_tool</span>(name: str, arguments: dict):
+    <span class="keyword">async with</span> httpx.AsyncClient() <span class="keyword">as</span> client:
+        <span class="keyword">if</span> name == <span class="string">"list_items"</span>:
+            r = <span class="keyword">await</span> client.get(<span class="keyword">f</span><span class="string">"{BASE_URL}/items"</span>,
+                headers=<span class="fn">get_headers</span>(),
+                params={<span class="string">"limit"</span>: arguments.get(<span class="string">"limit"</span>, <span class="num-color">20</span>)})
+            <span class="keyword">return</span> [types.TextContent(type=<span class="string">"text"</span>, text=r.json())]
+        <span class="keyword">elif</span> name == <span class="string">"create_item"</span>:
+            r = <span class="keyword">await</span> client.post(<span class="keyword">f</span><span class="string">"{BASE_URL}/items"</span>,
+                headers=<span class="fn">get_headers</span>(),
+                json={<span class="string">"title"</span>: arguments[<span class="string">"title"</span>], <span class="string">"body"</span>: arguments.get(<span class="string">"body"</span>,<span class="string">""</span>)})
+            <span class="keyword">return</span> [types.TextContent(type=<span class="string">"text"</span>, text=<span class="keyword">f</span><span class="string">"Created: {r.json()}"</span>)]</pre>
+
+  <h3>Template 2: Database Read/Write Server</h3>
+  <p>For teams that want Claude to query their internal databases — SQLite, Postgres, or MySQL.</p>
+
+  <div class="pre-header">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <span>template_database.py</span>
+  </div>
+  <pre><span class="keyword">import</span> sqlite3  <span class="comment"># swap for asyncpg for Postgres</span>
+<span class="keyword">import</span> json
+<span class="keyword">from</span> mcp.server <span class="keyword">import</span> Server
+<span class="keyword">import</span> mcp.types <span class="keyword">as</span> types
+
+server = <span class="fn">Server</span>(<span class="string">"database-mcp"</span>)
+
+<span class="comment"># SECURITY: Only allow SELECT by default. Expose write tools only on opt-in.</span>
+ALLOWED_WRITE = os.environ.get(<span class="string">"ALLOW_WRITES"</span>, <span class="string">"false"</span>).lower() == <span class="string">"true"</span>
+
+@server.list_tools()
+<span class="keyword">async def</span> <span class="fn">list_tools</span>():
+    tools = [
+        types.Tool(name=<span class="string">"query_database"</span>,
+            description=<span class="string">"Run a SELECT query on the database. Use for any data lookup, analysis, or reporting request."</span>,
+            inputSchema={<span class="string">"type"</span>:<span class="string">"object"</span>, <span class="string">"required"</span>:[<span class="string">"sql"</span>],
+                <span class="string">"properties"</span>:{
+                    <span class="string">"sql"</span>:{<span class="string">"type"</span>:<span class="string">"string"</span>, <span class="string">"description"</span>:<span class="string">"A valid SQL SELECT statement only"</span>}
+                }})
+    ]
+    <span class="keyword">if</span> ALLOWED_WRITE:
+        tools.append(types.Tool(name=<span class="string">"execute_query"</span>,
+            description=<span class="string">"Execute INSERT, UPDATE, or DELETE. Only use when user explicitly requests a data change."</span>,
+            inputSchema={<span class="string">"type"</span>:<span class="string">"object"</span>, <span class="string">"required"</span>:[<span class="string">"sql"</span>],
+                <span class="string">"properties"</span>:{<span class="string">"sql"</span>:{<span class="string">"type"</span>:<span class="string">"string"</span>}}}))
+    <span class="keyword">return</span> tools
+
+@server.call_tool()
+<span class="keyword">async def</span> <span class="fn">call_tool</span>(name: str, arguments: dict):
+    db_path = os.environ[<span class="string">"DATABASE_PATH"</span>]
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    <span class="keyword">try</span>:
+        cursor = conn.cursor()
+        cursor.execute(arguments[<span class="string">"sql"</span>])
+        rows = [dict(r) <span class="keyword">for</span> r <span class="keyword">in</span> cursor.fetchall()]
+        <span class="keyword">return</span> [types.TextContent(type=<span class="string">"text"</span>, text=json.dumps(rows, indent=<span class="num-color">2</span>))]
+    <span class="keyword">finally</span>:
+        conn.close()</pre>
+
+  <h3>Template 3: File System Operations Server</h3>
+  <p>The most-requested server type. Lets Claude read, write, search, and organize local files within a sandboxed directory. Extremely high demand from developers and researchers.</p>
+
+  <div class="template-box">
+    <p><strong>Key tools to implement:</strong></p>
+    <ul>
+      <li><code>read_file(path)</code> — Read file contents</li>
+      <li><code>write_file(path, content)</code> — Write or append to file</li>
+      <li><code>list_directory(path)</code> — Browse directory tree</li>
+      <li><code>search_files(query, extension)</code> — Full-text search across files</li>
+      <li><code>move_file(source, destination)</code> — Move/rename files</li>
+    </ul>
+    <p><strong>Security requirement:</strong> Validate that all paths stay inside a configurable <code>ALLOWED_ROOT</code> directory. Path traversal protection is required. Include this and buyers immediately trust your server over unofficial alternatives.</p>
+  </div>
+
+  <h3>Templates 4–7: High-Value Vertical Servers</h3>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>Template 4: CRM Connector</h4>
+      <p>HubSpot or Pipedrive. Tools: <code>search_contacts</code>, <code>create_deal</code>, <code>log_activity</code>, <code>get_pipeline</code>. Sales teams pay $99–$299 for this.</p>
+    </div>
+    <div class="card">
+      <h4>Template 5: Project Tracker</h4>
+      <p>Linear or Jira. Tools: <code>list_issues</code>, <code>create_issue</code>, <code>update_status</code>, <code>search_issues</code>. Devs use it hourly. Price at $49.</p>
+    </div>
+    <div class="card">
+      <h4>Template 6: Knowledge Base</h4>
+      <p>Confluence, Notion, or Obsidian. Tools: <code>search_pages</code>, <code>get_page</code>, <code>create_note</code>, <code>add_to_page</code>. Universal demand.</p>
+    </div>
+    <div class="card">
+      <h4>Template 7: Finance &amp; Analytics</h4>
+      <p>Stripe dashboard or Google Analytics. Tools: <code>get_revenue</code>, <code>list_transactions</code>, <code>get_metrics</code>. Finance teams love this. Price at $79–$149.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 4 — PRICING -->
+  <h2><span class="ch-num">4</span> The Pricing Architecture That Scales</h2>
+
+  <p>Most first-time sellers underprice MCP servers because they feel like "just code." Buyers don't pay for code. They pay for workflow transformation. A server that saves a developer 30 minutes a day is worth $200/mo in productivity. Price relative to that value, not relative to your time.</p>
+
+  <h3>The Three-Tier Model</h3>
+
+  <div class="income-row">
+    <div class="tier">Starter</div>
+    <div class="bar"><div class="bar-fill" style="width:25%"></div></div>
+    <div class="amount">$29 one-time</div>
+  </div>
+  <p style="margin:-8px 0 20px 116px; font-size:13px; color:var(--text2);">Core tools only. No support. For developers who just want the code.</p>
+
+  <div class="income-row">
+    <div class="tier">Pro</div>
+    <div class="bar"><div class="bar-fill" style="width:55%"></div></div>
+    <div class="amount">$79 one-time</div>
+  </div>
+  <p style="margin:-8px 0 20px 116px; font-size:13px; color:var(--text2);">All tools + detailed setup guide + config templates. Your most purchased tier.</p>
+
+  <div class="income-row">
+    <div class="tier">Agency</div>
+    <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+    <div class="amount">$249/mo</div>
+  </div>
+  <p style="margin:-8px 0 20px 116px; font-size:13px; color:var(--text2);">Includes white-labeling rights, custom tool additions, priority updates. Your recurring revenue base.</p>
+
+  <div class="callout yellow">
+    <div class="callout-title">The Anchor Trick That Increases Revenue 40%</div>
+    Always show the Agency tier first. The $249/mo makes $79 look like a deal. This single change typically increases your average order value from $29 to $55+. Implement it on every listing.
+  </div>
+
+  <h3>Revenue Model Comparison</h3>
+
+  <div class="table-wrap">
+  <table>
+    <tr>
+      <th>Scenario</th>
+      <th>Sales/Month</th>
+      <th>Avg Price</th>
+      <th>MRR</th>
+    </tr>
+    <tr>
+      <td>1 server, launch week</td>
+      <td>15</td>
+      <td>$49</td>
+      <td>$735</td>
+    </tr>
+    <tr>
+      <td>1 server, steady state</td>
+      <td>30</td>
+      <td>$49</td>
+      <td>$1,470</td>
+    </tr>
+    <tr>
+      <td>3 servers, mix of tiers</td>
+      <td>80</td>
+      <td>$62</td>
+      <td>$4,960</td>
+    </tr>
+    <tr>
+      <td>3 servers + 5 agency clients</td>
+      <td>80 + 5 retainers</td>
+      <td>$85 blended</td>
+      <td>$8,000+</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 5 — WHERE TO SELL -->
+  <h2><span class="ch-num">5</span> Where to Sell</h2>
+
+  <p>Sell on all channels simultaneously. Set up once, collect from everywhere. The marketplaces drive discovery; your own listings drive margin.</p>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>Smithery.ai</h4>
+      <p>Largest MCP-specific marketplace. High-intent buyers. Submit your server here first. Free to list.</p>
+      <p style="font-size:13px; color:var(--text2);">Best for: discovery + credibility</p>
+    </div>
+    <div class="card">
+      <h4>Glama.ai</h4>
+      <p>MCP and AI tool marketplace. Growing fast. Submit the same package here as Smithery.</p>
+      <p style="font-size:13px; color:var(--text2);">Best for: additional organic traffic</p>
+    </div>
+    <div class="card">
+      <h4>Gumroad</h4>
+      <p>Where developers buy digital products. Instant payout. 10% fee. Create the listing, set price, done.</p>
+      <p style="font-size:13px; color:var(--text2);">Best for: primary revenue collection</p>
+    </div>
+    <div class="card">
+      <h4>Whop</h4>
+      <p>Community + product platform. Add a Discord community and you have a recurring subscription product.</p>
+      <p style="font-size:13px; color:var(--text2);">Best for: community + recurring MRR</p>
+    </div>
+    <div class="card">
+      <h4>Product Hunt</h4>
+      <p>Launch here for initial surge. Coordinate 20+ upvotes before launch. Can yield 50–200 sales in 48h.</p>
+      <p style="font-size:13px; color:var(--text2);">Best for: launch spike</p>
+    </div>
+    <div class="card">
+      <h4>GitHub Marketplace</h4>
+      <p>For servers with OAuth apps. Higher technical barrier, but direct access to developer eyeballs.</p>
+      <p style="font-size:13px; color:var(--text2);">Best for: developer tool category</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 6 — LISTING FORMULA -->
+  <h2><span class="ch-num">6</span> The Listing Formula That Converts</h2>
+
+  <p>Your listing does the selling. Most technical sellers write listings that describe the code. Buyers want to know what their day looks like after buying. Write that instead.</p>
+
+  <h3>Headline Formula</h3>
+
+  <div class="template-box">
+    <p><strong>Structure:</strong> [Tool Name] MCP Server — [Specific Benefit] in [Time Frame]</p>
+    <br>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Notion MCP Server — Full database access in Claude in under 5 minutes</li>
+      <li>HubSpot MCP Server — Manage your CRM from Claude without opening HubSpot</li>
+      <li>Linear MCP Server — Create and update issues with plain English, never leave your conversation</li>
+    </ul>
+  </div>
+
+  <h3>Description Structure (copy this exactly)</h3>
+
+  <div class="template-box">
+    <p><strong>Block 1 — The Problem (2 sentences):</strong><br>
+    "Every time you need to [check X / update Y / find Z] you break out of your flow to open [Tool]. You lose context, lose momentum, and lose time."</p>
+    <br>
+    <p><strong>Block 2 — The Solution (2 sentences):</strong><br>
+    "This MCP server gives Claude direct access to [Tool]. Ask in plain English. Get results. Stay in flow."</p>
+    <br>
+    <p><strong>Block 3 — What It Does (bullet list, 5–7 items):</strong><br>
+    • [Tool 1]: [specific action in plain language]<br>
+    • [Tool 2]: [specific action]<br>
+    • [etc.]</p>
+    <br>
+    <p><strong>Block 4 — Setup Time:</strong><br>
+    "Setup takes 4 minutes. Download, configure your API key, add to Claude Desktop config, done."</p>
+    <br>
+    <p><strong>Block 5 — Social Proof (add when available):</strong><br>
+    "[X] developers use this server daily / Featured in [newsletter] / 5 stars from [N] buyers"</p>
+    <br>
+    <p><strong>Block 6 — Guarantee:</strong><br>
+    "If it doesn't work on first setup I will refund you immediately. No questions."</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 7 — LAUNCH SEQUENCE -->
+  <h2><span class="ch-num">7</span> Launch Sequence: 0 to First Sale in 48 Hours</h2>
+
+  <h3>Hour 0–2: Build</h3>
+  <ul>
+    <li>Pick one server type from the templates above</li>
+    <li>Code it (2 hours if using the template as a base)</li>
+    <li>Test it with Claude Desktop — 10 real workflow tests</li>
+    <li>Document any edge cases you find</li>
+  </ul>
+
+  <h3>Hour 2–4: Package and List</h3>
+  <ul>
+    <li>Create README with the listing formula from Chapter 6</li>
+    <li>Add a 60-second setup guide (people read this before buying)</li>
+    <li>ZIP the files with a clean directory structure</li>
+    <li>List on Gumroad: upload ZIP, set price, paste description</li>
+    <li>Submit to Smithery.ai (free, same day listing)</li>
+  </ul>
+
+  <h3>Hour 4–24: Launch Push</h3>
+
+  <p>Post on all channels the same day. Sequence matters:</p>
+
+  <ol>
+    <li><strong>Post on X/Twitter</strong> — "I built an MCP server for [Tool] in 2 hours. Here's what it can do: [demo screenshot thread]"</li>
+    <li><strong>Post in r/ClaudeAI</strong> — "Built a free [Tool] MCP server, sharing it here. Full source on GitHub." (free version drives paid version sales)</li>
+    <li><strong>Post in r/mcp</strong> — Same post, different sub</li>
+    <li><strong>DM 5 people in your network</strong> who use [Tool] daily — personal outreach converts at 30%+</li>
+    <li><strong>Share in indie hacker communities</strong> — IndieHackers, Hacker News Show HN</li>
+  </ol>
+
+  <h3>Hour 24–48: Iterate on Feedback</h3>
+  <ul>
+    <li>If you got any sales: message every buyer, ask what they'd add</li>
+    <li>If zero sales: check if the listing is findable, check if the description converts, post in one more community</li>
+    <li>Ship a v1.1 with any bug fixes or feature requests from early buyers</li>
+  </ul>
+
+  <div class="callout green">
+    <div class="callout-title">The Fastest Path to Social Proof</div>
+    Give your server away free for the first 48 hours. Collect feedback. Fix issues. Ask for reviews. Then raise the price. You'll have 10–50 users before you charge a cent, and their reviews will sell the paid version for you.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 8 — DISTRIBUTION -->
+  <h2><span class="ch-num">8</span> Distribution Stack for Ongoing Sales</h2>
+
+  <p>Launch week is the spike. Distribution is the slow compound. Set this up once and it generates sales passively.</p>
+
+  <div class="table-wrap">
+  <table>
+    <tr>
+      <th>Channel</th>
+      <th>Action</th>
+      <th>Frequency</th>
+      <th>Expected Impact</th>
+    </tr>
+    <tr>
+      <td>Twitter/X</td>
+      <td>Weekly demo posts showing a use case in action</td>
+      <td>Weekly</td>
+      <td>1–5 sales per post</td>
+    </tr>
+    <tr>
+      <td>Reddit (r/ClaudeAI, r/mcp)</td>
+      <td>Monthly "what MCP servers do you use?" thread participation</td>
+      <td>Monthly</td>
+      <td>5–20 sales per mention</td>
+    </tr>
+    <tr>
+      <td>GitHub README</td>
+      <td>Add paid version upsell in open source version README</td>
+      <td>One-time</td>
+      <td>Passive conversion</td>
+    </tr>
+    <tr>
+      <td>YouTube</td>
+      <td>5-minute setup tutorial video</td>
+      <td>One-time per product</td>
+      <td>Long-tail search traffic</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>Announce each new server to buyers list</td>
+      <td>Per launch</td>
+      <td>20–40% of existing buyers repurchase</td>
+    </tr>
+    <tr>
+      <td>Smithery.ai featured</td>
+      <td>Apply for featured section once you have 10+ reviews</td>
+      <td>Once</td>
+      <td>2–5x sales multiplier</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 9 — SCALING -->
+  <h2><span class="ch-num">9</span> Scaling to $10K/mo: The Portfolio Play</h2>
+
+  <p>One server at $49 with 30 monthly sales = $1,470/mo. That's meaningful but not life-changing. The scale play is a portfolio of 5–10 servers, each maintained in 1 hour per week, collectively generating $8K–$15K/mo.</p>
+
+  <h3>The Portfolio Build Order</h3>
+
+  <ol>
+    <li><strong>Month 1:</strong> Build 1 server, validate demand, get 10+ reviews</li>
+    <li><strong>Month 2:</strong> Build 2nd server in adjacent niche (same buyer, different tool). Cross-sell to existing customers. 40% rebuy rate is normal.</li>
+    <li><strong>Month 3:</strong> Add Agency tier to both servers. Convert 2–3 existing buyers to retainers.</li>
+    <li><strong>Month 4–6:</strong> Add servers 3–5. Each new server benefits from existing reputation and buyer list.</li>
+  </ol>
+
+  <h3>Cross-Sell Matrix</h3>
+
+  <div class="callout">
+    <div class="callout-title">Proven Buyer Paths</div>
+    <ul>
+      <li>Notion buyer → also buys Linear (same devs use both)</li>
+      <li>HubSpot buyer → also buys Slack + Gmail (sales teams)</li>
+      <li>Database buyer → also buys file system (technical teams)</li>
+      <li>Linear buyer → also buys GitHub (engineers)</li>
+    </ul>
+    Map these paths and include "customers also bought" in your listings.
+  </div>
+
+  <h3>The Agency Upgrade Path</h3>
+
+  <p>After you have any server live, email buyers every 30 days with one message:</p>
+
+  <div class="template-box">
+    <p>Subject: Want a custom version for your team?</p>
+    <br>
+    <p>Hey [Name],</p>
+    <p>Quick question — are you using [Server] at a team level, or just personally?</p>
+    <p>If it's team-level, I offer a white-label version where I add any custom tools your workflow needs, keep it updated, and you can brand it as your own.</p>
+    <p>Starts at $249/mo. Works out to less than one hour of dev time per month.</p>
+    <p>Worth a quick call?</p>
+    <p>[Your name]</p>
+  </div>
+
+  <p>1 in 20 buyers takes this offer. At 200 buyers, that's 10 retainers at $249/mo = $2,490/mo from email alone.</p>
+
+  <div class="divider"></div>
+
+  <!-- CHAPTER 10 — 30-DAY PLAN -->
+  <h2><span class="ch-num">10</span> 30-Day Action Plan</h2>
+
+  <div class="table-wrap">
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Task</th>
+      <th>Done?</th>
+    </tr>
+    <tr><td>1</td><td>Install MCP SDK. Run the minimal server. Verify it appears in Claude Desktop.</td><td>☐</td></tr>
+    <tr><td>2</td><td>Pick target integration. Find its Python SDK. Read the authentication docs.</td><td>☐</td></tr>
+    <tr><td>3</td><td>Build 3 core tools using the REST API template. Test each one manually.</td><td>☐</td></tr>
+    <tr><td>4</td><td>Write tool descriptions. Run 10 real workflows. Fix any tool that requires 3+ prompts.</td><td>☐</td></tr>
+    <tr><td>5</td><td>Create Gumroad listing. Write the description using the formula from Chapter 6.</td><td>☐</td></tr>
+    <tr><td>6</td><td>Submit to Smithery.ai and Glama.ai. Post launch thread on Twitter.</td><td>☐</td></tr>
+    <tr><td>7</td><td>Post in r/ClaudeAI and r/mcp. DM 5 people who use the target tool.</td><td>☐</td></tr>
+    <tr><td>8–14</td><td>Ship v1.1 with feedback fixes. Respond to every comment and message within 24h.</td><td>☐</td></tr>
+    <tr><td>15</td><td>Add Pro and Agency tiers to your listing. Update description with any testimonials.</td><td>☐</td></tr>
+    <tr><td>16–20</td><td>Start second server in adjacent niche. Use same build process.</td><td>☐</td></tr>
+    <tr><td>21</td><td>Email all buyers about the second server. Cross-sell with 20% discount.</td><td>☐</td></tr>
+    <tr><td>22–28</td><td>Ship second server. Apply for featured listing on Smithery once you have 10 reviews.</td><td>☐</td></tr>
+    <tr><td>29</td><td>Send agency upgrade email to all buyers. Book any calls that come in.</td><td>☐</td></tr>
+    <tr><td>30</td><td>Review revenue. If &gt;$500: plan server 3. If &lt;$500: audit listing copy and description.</td><td>☐</td></tr>
+  </table>
+  </div>
+
+  <div class="highlight-box">
+    <p style="font-size:13px; color:var(--text2); margin-bottom:8px;">FINAL NOTE</p>
+    <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">The MCP market is expanding faster than supply. Every week you wait, someone else is listing the server you were going to build. The templates in this guide exist so you have no excuse to start tomorrow instead of today.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BONUS: QUICK REFERENCE -->
+  <h2><span class="ch-num">+</span> Quick Reference Card</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4>Essential Links</h4>
+      <ul style="font-size:13px;">
+        <li>MCP Python SDK: <code>pip install mcp</code></li>
+        <li>MCP TypeScript SDK: <code>npm install @modelcontextprotocol/sdk</code></li>
+        <li>Official spec: modelcontextprotocol.io</li>
+        <li>Smithery marketplace: smithery.ai</li>
+        <li>Glama marketplace: glama.ai</li>
+        <li>PulseMCP: pulsemcp.com</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Top Niches by Revenue Potential</h4>
+      <ul style="font-size:13px;">
+        <li>Notion + databases: high volume</li>
+        <li>Linear / Jira: high willingness to pay</li>
+        <li>Salesforce / HubSpot: highest deal size</li>
+        <li>Stripe / analytics: finance teams = $$$</li>
+        <li>Internal databases: enterprise budgets</li>
+        <li>Email / calendar: universal need</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Pricing Quick Guide</h4>
+      <ul style="font-size:13px;">
+        <li>Personal tool server: $29</li>
+        <li>Business tool server: $49–$79</li>
+        <li>Enterprise tool: $99–$249</li>
+        <li>Custom/agency: $249–$999/mo</li>
+        <li>White-label rights: +$150 one-time</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Launch Channels Priority</h4>
+      <ul style="font-size:13px;">
+        <li>1. Smithery.ai (MCP-specific)</li>
+        <li>2. r/ClaudeAI (high-intent buyers)</li>
+        <li>3. Gumroad (revenue collection)</li>
+        <li>4. Twitter thread (discovery)</li>
+        <li>5. Product Hunt (spike only)</li>
+        <li>6. Hacker News Show HN</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <p style="text-align:center; color:var(--text2); font-size:13px;">
+    Built by PRINTMAXX — April 2026<br>
+    The MCP Money Machine v1.0
+  </p>
+
+</div>
+</body>
+</html>
