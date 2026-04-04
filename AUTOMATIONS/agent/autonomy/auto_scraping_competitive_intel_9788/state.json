@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 144,
-    "last_run": "2026-04-03T05:55:00.000000+00:00",
-    "cumulative_blue_oceans": 819,
-    "ci_csv_rows": 157,
-    "alpha_csv_rows": 51737,
+    "last_cycle": 145,
+    "last_run": "2026-04-04T07:56:19.295957+00:00",
+    "cumulative_blue_oceans": 829,
+    "ci_csv_rows": 167,
+    "alpha_csv_rows": 51747,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -42,9 +42,10 @@
         "INTELLECTUAL PROPERTY LAW",
         "INTERNATIONAL LAW & GLOBAL GOVERNANCE",
         "COMPARATIVE CONSTITUTIONAL LAW",
-        "ADMINISTRATIVE LAW & REGULATORY THEORY"
+        "ADMINISTRATIVE LAW & REGULATORY THEORY",
+        "CONSTITUTIONAL LAW: SEPARATION OF POWERS & FEDERALISM"
     ],
-    "next_strategy": "CONSTITUTIONAL LAW: SEPARATION OF POWERS & FEDERALISM",
+    "next_strategy": "FIRST AMENDMENT: SPEECH, RELIGION & PRESS FREEDOM",
     "top_all_time": [
         {
             "name": "Daily CS Fundamentals Streak",
@@ -85,6 +86,16 @@
             "name": "Daily Tech Ai Regulation Streak",
             "score": 25,
             "cycle": 144
+        },
+        {
+            "name": "Daily Separation Of Powers Streak",
+            "score": 25,
+            "cycle": 145
+        },
+        {
+            "name": "Daily Presidential Immunity Streak",
+            "score": 25,
+            "cycle": 145
         },
         {
             "name": "Daily Public Health Law Streak",
@@ -158,16 +169,6 @@
         },
         {
             "name": "Daily Financial Regulation Streak",
-            "score": 23,
-            "cycle": 144
-        },
-        {
-            "name": "Daily Environmental Regulation Streak",
-            "score": 23,
-            "cycle": 144
-        },
-        {
-            "name": "Daily Healthcare Fda Regulation Streak",
             "score": 23,
             "cycle": 144
         }

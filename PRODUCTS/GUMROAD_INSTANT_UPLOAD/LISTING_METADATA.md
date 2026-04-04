@@ -369,6 +369,22 @@ $39. Close one $2K client and this pays for itself 50x.
 
 ---
 
+## PRODUCT 24: THE MCP MONEY MACHINE
+
+**Product name:** The MCP Money Machine — Build & Sell Claude Integrations in 48 Hours
+**Price:** $47
+**Category:** Software & Tools / Development
+**Tags:** mcp, claude, ai tools, developer tools, digital product, side income, ai integration, mcp server, anthropic, passive income
+**File to upload:** `DIGITAL_PRODUCTS/ready_to_sell/mcp_money_machine/24_MCP_MONEY_MACHINE.html` (open in browser → Print → Save as PDF for upload)
+**One-liner:** 7 copy-paste MCP server templates + pricing + launch sequence. First sale in 48h.
+**Description:** (see `DIGITAL_PRODUCTS/ready_to_sell/mcp_money_machine/LISTING_mcp_money_machine.md`)
+**Cover image spec:** Dark background, purple gradient, bold white text "The MCP Money Machine", gold stat "$2K–$15K/mo", minimal dev aesthetic
+**Upsell:** Claude Code Agent Bible ($47) — same buyer, adjacent need
+**Cross-sell:** All other Claude Code guides (products 14–17, 20)
+**Free preview:** Show Chapter 1 (Market Opportunity) + Table of Contents only
+
+---
+
 ## MARKDOWN TO PDF CONVERSION
 
 Before uploading, convert each .md file to PDF using any of:

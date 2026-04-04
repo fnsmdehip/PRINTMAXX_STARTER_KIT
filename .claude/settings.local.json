@@ -292,7 +292,8 @@
       "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" export LANG=en_US.UTF-8 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope npx expo run:ios)",
       "WebFetch(domain:juliangoldie.com)",
       "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope __NEW_LINE_12965fcb4c1640b9__ echo \"=== CHECKING FOR MOCK/FAKE/SIMULATED DATA ===\" grep -rn \"simulat\\\\|mock\\\\|fake\\\\|random\\\\|Math.random\\\\|hardcode\\\\|placeholder\\\\|TODO\\\\|FIXME\\\\|stub\" src/ --include=\"*.ts\" --include=\"*.tsx\")",
-      "Bash(cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope grep -rn \"sound\\\\|audio\\\\|play\\\\|beep\\\\|haptic\\\\|vibrat\\\\|sfx\\\\|tone\\\\|chime\\\\|click.*sound\" src/ --include=\"*.ts\" --include=\"*.tsx\")"
+      "Bash(cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope grep -rn \"sound\\\\|audio\\\\|play\\\\|beep\\\\|haptic\\\\|vibrat\\\\|sfx\\\\|tone\\\\|chime\\\\|click.*sound\" src/ --include=\"*.ts\" --include=\"*.tsx\")",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope npx tsc --noEmit)"
     ]
   }
 }

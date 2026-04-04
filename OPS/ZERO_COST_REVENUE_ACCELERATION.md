@@ -2718,3 +2718,31 @@ My app just made $20k in revenue
 
 Niche job board for AI-native developers (Claude Code, Cursor, Copilot users). RemoteOK does $2.5M/yr. Zero competition in this specific niche. Revenue: $149/job listing + $299 featured + $299/week sponsor. Next.js MVP in 1.5 days. Claude Code community = organic launch channel. $6K/mo at modest scale.
 
+
+
+---
+
+## Pending Enhancement (ALPHA1774000139, Score: 52)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2039792230337306756
+**Added:** 2026-04-04T03:52:45-04:00
+
+tech guys are pissed that the first 1 man $1B revenue company is a ecomm clickfunnel master slinging GLP-1s because they were busy trying to vertically integrate while he was pushing ROAS to the breaking point
+
+
+
+---
+
+## Pending Enhancement (ALPHA1774000144, Score: 28)
+
+**Source:** @levelsio (high-signal-accounts) | **URL:** https://x.com/levelsio/status/2040212566023270810
+**Added:** 2026-04-04T03:52:45-04:00
+
+My worst fear is 
+@X
+ will start to lock our content to the countries we are staying in
+
+There was that announcement revenue sharing would be tied to your own country's views more
+
+As a person that's lived all over the world, my content was always for a global audience and there's
+

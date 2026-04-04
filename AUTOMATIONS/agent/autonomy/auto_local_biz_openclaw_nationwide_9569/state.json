@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-03T04:14:32.480283",
-  "cycle_number": 12,
+  "last_run": "2026-04-03T04:36:47.302914",
+  "cycle_number": 13,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -88,19 +88,7 @@
     "Florence AL",
     "Douglas GA",
     "Tifton GA",
-    "Fitzgerald GA"
-  ],
-  "total_leads_all_cycles": 2720,
-  "total_previews_deployed": 2720,
-  "total_sites_built_local": 1430,
-  "total_emails_queued": 1423,
-  "emails_ready_to_send": 32,
-  "emails_enriched_this_cycle": 0,
-  "enricher_hit_rate": "0% (F-grade no-website segment)",
-  "enricher_leads_processed": 50,
-  "enricher_leads_remaining": 1058,
-  "projected_emails_from_remaining": 0,
-  "next_cities": [
+    "Fitzgerald GA",
     "Moultrie GA",
     "Thomasville GA",
     "Calhoun GA",
@@ -113,6 +101,31 @@
     "Athens AL",
     "Selma AL",
     "Scottsboro AL"
+  ],
+  "total_leads_all_cycles": 3059,
+  "total_previews_deployed": 1690,
+  "total_sites_built_local": 7348,
+  "total_emails_queued": 1927,
+  "emails_ready_to_send": 35,
+  "emails_enriched_this_cycle": 0,
+  "enricher_hit_rate": "0% (F-grade no-website segment)",
+  "enricher_leads_processed": 50,
+  "enricher_leads_remaining": 1058,
+  "projected_emails_from_remaining": 0,
+  "next_cities": [
+    "Quitman MS",
+    "Hazlehurst MS",
+    "Columbia MS",
+    "Waynesboro MS",
+    "Demopolis AL",
+    "Greenville AL",
+    "Troy AL",
+    "Hayneville AL",
+    "Americus GA",
+    "Cordele GA",
+    "El Dorado AR",
+    "Magnolia AR",
+    "Camden AR"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -150,10 +163,10 @@
     "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "CRITICAL P0: Email service unconnected \u2014 1,423 outreach emails queued. Gmail App Password (5 min) or Brevo free (300/day, 15 min signup).",
-    "CRITICAL P1: Apollo.io needed for email enrichment \u2014 F-grade businesses have no website to scrape email from. 50 free/mo, 10 min signup.",
-    "P1: Surge Student plan frozen at 472 domains. GH Pages is primary channel (1,432 live).",
-    "P1: Domain blacklist needed \u2014 ulta.com, kbb.com, gaf.com, findlaw.com inflating F-grade count with chain/directory results.",
+    "CRITICAL P0: Gmail App Password (5 min) \u2014 35 emails ready to send NOW. python3 AUTOMATIONS/cold_email_sender.py --send-queue AUTOMATIONS/leads/openclaw/outreach_queue.csv --limit 35",
+    "CRITICAL P1: Apollo.io needed for email enrichment \u2014 1,592 F-grade businesses have no website/email. 50 free/mo, 10 min signup.",
+    "P1: Surge Student plan frozen at 472 domains. GH Pages is primary channel (1,690 live).",
+    "P2: Domain blacklist for chains (Ulta, KBB, GAF, FindLaw) \u2014 inflates F-count with non-local results.",
     "P2: Response tracking loop needed when emails start sending."
   ],
   "status": "CYCLE_COMPLETE",
@@ -248,15 +261,15 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 277 new leads Cycle 12",
-    "grade": "HEALTHY \u2014 chain contamination inflating F-count; blacklist fix needed",
-    "build": "HEALTHY \u2014 1,430 HTML sites in _sites/",
+    "discover": "HEALTHY \u2014 339 new leads Cycle 13",
+    "grade": "HEALTHY \u2014 towing niche confirmed 95%+ F-grade",
+    "build": "HEALTHY \u2014 1,690 GH Pages live",
     "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
-    "deploy_ghpages": "PRIMARY CHANNEL \u2014 1,432 live at fnsmdehip.github.io/openclaw-previews/",
+    "deploy_ghpages": "PRIMARY CHANNEL \u2014 1,690 live at fnsmdehip.github.io/openclaw-previews/",
     "enrich_email": "0% on F-grade segment \u2014 Apollo.io required",
-    "outreach_queue": "HEALTHY \u2014 1,423 queued, 760 with live GH Pages URLs",
-    "outreach_ready": "32 ready to send NOW \u2014 email service is the only blocker",
-    "send": "BLOCKED \u2014 no email service. Gmail App Password = 5 min fix."
+    "outreach_queue": "HEALTHY \u2014 1,927 queued, 1,685 with live GH Pages URLs, 358 file:// URLs fixed",
+    "outreach_ready": "35 ready to send NOW \u2014 email service is the only blocker",
+    "send": "BLOCKED \u2014 Gmail App Password (5 min fix). Brevo free (300/day, 15 min) = 10x scale."
   },
   "metrics_history": [
     {
@@ -355,10 +368,24 @@
       "outreach_queued": 1423,
       "outreach_with_live_url": 760,
       "ready_to_send": 32
+    },
+    {
+      "cycle": 13,
+      "date": "2026-04-03",
+      "total_leads": 3059,
+      "hot_leads": 1592,
+      "with_email": 35,
+      "surge_deployed": 472,
+      "ghpages_deployed": 1690,
+      "total_preview_live": 1690,
+      "outreach_queued": 1927,
+      "outreach_with_live_url": 1685,
+      "phone_queue": 1497,
+      "ready_to_send": 35
     }
   ],
-  "ghpages_deployed": 1432,
-  "phone_outreach_queue": 100,
+  "ghpages_deployed": 1690,
+  "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
       "Miami FL",
@@ -563,5 +590,37 @@
       "366cfdb"
     ],
     "intelligence": "City size <50K = sweet spot. City size >100K = wrong target segment."
+  },
+  "cycle_13_results": {
+    "cities_discovered": [
+      "Moultrie GA",
+      "Thomasville GA",
+      "Calhoun GA",
+      "Dalton GA",
+      "Rome GA",
+      "McComb MS",
+      "Brookhaven MS",
+      "Picayune MS",
+      "Talladega AL",
+      "Athens AL",
+      "Selma AL",
+      "Scottsboro AL"
+    ],
+    "new_leads": 339,
+    "new_f_grade": 258,
+    "new_sites_built": 780,
+    "new_ghpages_deploys": 259,
+    "total_ghpages_live": 1690,
+    "new_emails_queued": 262,
+    "file_urls_fixed_to_ghpages": 358,
+    "ready_to_send_email": 35,
+    "top_niche_discovery": "towing = 100% F-grade in micro-cities",
+    "top_cities": [
+      "Moultrie GA (towing 100%)",
+      "Rome GA (towing 100%)",
+      "Picayune MS (92%)",
+      "Selma AL (86%)"
+    ],
+    "observation": "Towing confirmed as #1 F-grade niche: ~95% across all micro-cities. Micro-city targeting (<20K pop) delivers 75-100% F-grade vs 8-15% for major metros. 1,690 GH Pages live. 358 file:// URLs converted to live github.io URLs. Email dispatch remains the single blocker."
   }
 }

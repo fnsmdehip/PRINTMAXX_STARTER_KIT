@@ -694,3 +694,16 @@ rtg ad &gt; product
 
 @TheShamdoo The arbitrage between AI literacy and local businesses is still wide open. Most people just aren't looking there.
 
+
+
+---
+
+## Pending Enhancement (ALPHA1774000141, Score: 22)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2039537638256910753
+**Added:** 2026-04-04T03:52:45-04:00
+
+Having “young energy” as you get older is literally just not getting fucking demoralised and becoming a resentful endless whiner, but instead possessing hope, passion, and vigour at an age where people expect life to have already sucked the soul out of you.
+
+It is true power.
+
