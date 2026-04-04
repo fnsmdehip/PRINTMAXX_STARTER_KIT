@@ -56,19 +56,19 @@ export default function PaywallScreen() {
   const sourceHeadlines: Record<string, { title: string; sub: string }> = {
     habit_limit: {
       title: 'Unlock unlimited habits.',
-      sub: 'Free tier is 3 habits. You're building momentum — don't cap it.',
+      sub: "Free tier is 3 habits. You're building momentum \u2014 don't cap it.",
     },
     mvd_history: {
       title: 'See your full MVD history.',
       sub: 'Which days did you hit the full goal vs the minimum? That data matters.',
     },
     streak_repair: {
-      title: 'One slip doesn't have to end it.',
+      title: "One slip doesn't have to end it.",
       sub: 'Streak repair forgives one missed day per month. For when life happens.',
     },
     share: {
       title: 'Share your milestones.',
-      sub: '30-day streak? That's worth sharing. Unlock shareable milestone cards.',
+      sub: "30-day streak? That's worth sharing. Unlock shareable milestone cards.",
     },
     settings: {
       title: 'Go unlimited.',

@@ -28,6 +28,8 @@ export interface AppSettings {
   isPremium: boolean;
   onboardingComplete: boolean;
   hasSeenEmergencyPrompt: boolean;
+  hasReviewedApp: boolean;
+  lastReviewPrompt: string | null; // ISO date, 90-day cooldown
 }
 
 export type RootStackParamList = {

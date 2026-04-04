@@ -110,14 +110,14 @@
     "cross_pollinator": {
       "installed_at": "2026-03-20T05:00:59.982738",
       "status": "ACTIVE",
-      "interval": "8h",
-      "reason": "C53 REDUCED 4h→8h. Queue saturation: 192 topics, 202 specs, 1,485 posts, 0 consumed. Marginal value per wiring approaches zero when nothing drains. Still A-tier for novel connections (MCP pay-per-call). Will reassess when first queue starts draining.",
+      "interval": "12h",
+      "reason": "C54 REDUCED 8h→12h. Last 3 daily runs produced 0, 0, 2 items (health supplement affiliate pages). All queues full, draining at 0/day. 244 specs, 192 topics, 1,485+ posts. Marginal value per wiring is zero. 12h still catches same-day data. A-tier for novel connections but frequency overkill.",
       "tier": "A",
       "connections": 42,
-      "items_wired": 1820,
+      "items_wired": 1822,
       "consecutive_s_tier": 10,
-      "launchd_status": "LOADED_8H",
-      "c53_updated": "2026-04-03T02:41:00+00:00"
+      "launchd_status": "LOADED_12H",
+      "c54_updated": "2026-04-04T04:40:00+00:00"
     },
     "revenue_tracker": {
       "installed_at": "2026-03-20T05:01:00.701964",
@@ -145,11 +145,11 @@
     "data_janitor": {
       "installed_at": "2026-03-20T05:01:00.882015",
       "status": "ACTIVE",
-      "interval": "24h",
-      "reason": "C53 REDUCED 12h→24h. No new data ingestion happening. Scrapers produce minimal new rows. Nothing to clean. Data isn't growing when no scraping or content production is active.",
+      "interval": "48h",
+      "reason": "C54 REDUCED 24h→48h. No new data ingestion. Last runs: exit 0, no action taken. Nothing to clean when nothing is being produced. 48h sufficient for maintenance hygiene.",
       "tier": "B",
-      "launchd_status": "LOADED_24H",
-      "c53_updated": "2026-04-03T02:41:00+00:00"
+      "launchd_status": "LOADED_48H",
+      "c54_updated": "2026-04-04T04:40:00+00:00"
     },
     "distribution_engine": {
       "installed_at": "2026-03-20T05:01:01.058336",
@@ -324,7 +324,7 @@
     "growth_strategist": "first_revenue_or_social_account",
     "ALL_AGENTS": "any_human_activation_action"
   },
-  "last_brain_run": "2026-04-03T02:41:00+00:00",
-  "day_count": 59,
+  "last_brain_run": "2026-04-04T04:40:00+00:00",
+  "day_count": 60,
   "revenue": 0
 }

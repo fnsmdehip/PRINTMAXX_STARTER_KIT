@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-03T00:30:48.722107Z",
+  "last_updated": "2026-04-04T05:38:32",
   "last_cycle": "asset_deployer_20260402_2028",
   "total_surge_deployments": 388,
   "health_status": "FULLY_OPERATIONAL",
@@ -273,16 +273,27 @@
   ],
   "total_count": 13,
   "live_test": {
-    "tested_at": "2026-04-03T00:30:48.722427",
-    "total": 388,
-    "green": 388,
-    "yellow": 0,
-    "red": 0,
-    "pass_rate": "100% (388/388)",
-    "avg_load_ms": 2500,
+    "tested_at": "2026-04-04T05:38:32",
+    "total": 156,
+    "green": 55,
+    "yellow": 55,
+    "red": 46,
+    "pass_rate": "70.5%",
+    "avg_load_ms": 5373,
     "playwright_visual_tested": 156,
-    "notes": "Cycle 17 (April 2, 01:15 UTC): Full health check. 35 priority sites tested (100% pass after false alarm fixes). All 388 deployments confirmed operational. Critical apps all GREEN. Previously broken streak pages FIXED. Performance excellent (2.5s avg). No emergency fixes needed.",
-    "still_broken": []
+    "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 55 GREEN, 55 YELLOW, 46 RED.",
+    "still_broken": [
+      "https://printmaxx-web-scraping.surge.sh",
+      "https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh",
+      "https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh",
+      "https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh",
+      "https://a-1-aluminum-inc-louisville-ky.surge.sh",
+      "https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh",
+      "https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh",
+      "https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh",
+      "https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh",
+      "https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh"
+    ]
   },
   "cycle_type": "full_health_check",
   "status_note": "All 388 surge deployments operational. Network health excellent. No critical issues. Awaiting human actions: payment account setup, affiliate signups."

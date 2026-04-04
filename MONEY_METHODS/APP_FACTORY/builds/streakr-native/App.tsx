@@ -5,25 +5,19 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { getSettings } from './src/services/storage';
 import { Colors } from './src/constants/theme';
+import Navigation from './src/navigation';
 
 // Keep splash visible while loading
 SplashScreen.preventAutoHideAsync();
 
-// Lazy-load navigation to avoid initialization errors during splash
-const Navigation = React.lazy(() => import('./src/navigation'));
-
 export default function App() {
   const [ready, setReady] = useState(false);
-  const [initialRoute, setInitialRoute] = useState<'Onboarding' | 'Main'>('Onboarding');
 
   useEffect(() => {
     async function init() {
       try {
-        const settings = await getSettings();
-        setInitialRoute(settings.onboardingComplete ? 'Main' : 'Onboarding');
-      } catch {
-        setInitialRoute('Onboarding');
-      } finally {
+        await getSettings(); // warm storage cache
+      } catch { /* non-critical */ } finally {
         setReady(true);
         await SplashScreen.hideAsync();
       }
@@ -42,9 +36,7 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar style="dark" />
-      <React.Suspense fallback={<View style={s.splash} />}>
-        <Navigation />
-      </React.Suspense>
+      <Navigation />
     </GestureHandlerRootView>
   );
 }

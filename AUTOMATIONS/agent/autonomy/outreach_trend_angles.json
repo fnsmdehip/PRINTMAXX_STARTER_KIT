@@ -1,5 +1,31 @@
 [
   {
+    "alpha_id": "APP_SOBERSTREAK_COMMUNITY_SEED_20260404",
+    "category": "RECOVERY_COMMUNITY_SEEDING",
+    "roi_potential": "HIGHEST",
+    "tactic_summary": "SoberStreak iOS app targeting NoFap/alcohol/smoking/gambling communities. r/NoFap = 930K, r/stopdrinking = 215K, r/StopSmoking = 110K. These communities actively seek accountability tools. Organic community seeding, not cold outreach.",
+    "outreach_hook": "built a native iOS app for NoFap / sobriety streaks — no AA branding, no shame spiral, emergency SOS button. just shipped. thought this community would find it useful.",
+    "source": "cross_pollinator_cycle26",
+    "status": "READY_FOR_OUTREACH",
+    "added_at": "2026-04-04T04:29:00",
+    "targets": ["r/NoFap", "r/stopdrinking", "r/StopSmoking", "r/problemgambling"],
+    "product_url": "TBD — needs Stripe payment link + App Store link",
+    "notes": "Community seeding (not cold DM). Post as genuine community member sharing a tool. App is at MONEY_METHODS/APP_FACTORY/builds/soberstreak-native/"
+  },
+  {
+    "alpha_id": "SHOPIFY_FEE_HIKE_ANGLE_20260404",
+    "category": "PLATFORM_PAIN_OUTREACH",
+    "roi_potential": "HIGH",
+    "tactic_summary": "Shopify raised card processing fees in April 2026. r/smallbusiness and r/Entrepreneur users are openly angry. This is a platform-pain signal: affected merchants are emotionally open to alternatives and switching conversations. Target: Shopify store owners who use GoDaddy for their domain (same profile as local-biz leads).",
+    "outreach_hook": "saw Shopify just bumped your card fees again. you're paying 2.9% + 30c on every sale. there are options with better economics for small stores. worth 10 min to compare?",
+    "source": "cross_pollinator_cycle26 | ALPHA106767",
+    "status": "READY_FOR_OUTREACH",
+    "added_at": "2026-04-04T04:29:00",
+    "targets": ["r/smallbusiness Shopify owners", "Shopify store + GoDaddy domain combo leads from lead machine"],
+    "cold_email_subject": "Shopify just raised your fees (alternatives worth checking)",
+    "notes": "Wire into lead machine: flag any lead with Shopify store + GoDaddy domain as highest priority for this angle. Fee hike = open door."
+  },
+  {
     "alpha_id": "ALPHA106727",
     "category": "TOOL_ALPHA",
     "roi_potential": "https://reddit.com/r/SideProject/comments/1rma15a/im_building_a_youtube_intelligence_api_because/",

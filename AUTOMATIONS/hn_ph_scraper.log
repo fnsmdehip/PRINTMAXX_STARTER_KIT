@@ -492,3 +492,15 @@
 [2026-04-03T09:01:14.070204+00:00] Total qualifying rows before dedup: 75
 [2026-04-03T09:01:14.071293+00:00] Wrote 75 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
 [2026-04-03T09:01:14.071388+00:00] === Done ===
+[2026-04-04T09:00:01.813198+00:00] === HN + PH scraper starting ===
+[2026-04-04T09:00:02.742969+00:00] Loaded 17595 existing URLs for dedup.
+[2026-04-04T09:00:02.743114+00:00] Fetching HN top stories (limit=60)...
+[2026-04-04T09:00:41.680343+00:00]   Got 59 top stories.
+[2026-04-04T09:00:41.683009+00:00] Fetching HN Show HN stories (limit=40)...
+[2026-04-04T09:01:07.677881+00:00]   Got 40 Show HN stories.
+[2026-04-04T09:01:07.679581+00:00] Fetching ProductHunt posts...
+[2026-04-04T09:01:08.155626+00:00] WARN PH GraphQL returned 403
+[2026-04-04T09:01:08.156154+00:00]   Got 0 PH posts.
+[2026-04-04T09:01:08.156300+00:00] Total qualifying rows before dedup: 64
+[2026-04-04T09:01:08.157990+00:00] Wrote 64 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
+[2026-04-04T09:01:08.158267+00:00] === Done ===

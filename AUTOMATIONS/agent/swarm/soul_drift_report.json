@@ -1,22 +1,24 @@
 {
-  "ts": "2026-04-04T04:00:02.543258",
-  "avg_score": 9.2,
-  "total_scored": 10,
-  "drifted_count": 2,
+  "ts": "2026-04-04T08:00:01.737562",
+  "avg_score": 9.4,
+  "total_scored": 13,
+  "drifted_count": 1,
   "drifted_agents": [
-    "qa_alerts_20260402",
-    "playwright_tester"
+    "qa_alerts_20260402"
   ],
   "scores": {
+    "test": 8.5,
     "swarm_brain": 8.5,
-    "cross_pollination_20260403": 10.0,
     "cross_pollinator": 10.0,
+    "cross_pollination_20260404": 8.5,
+    "cross_pollination_20260403": 10.0,
     "opportunity_scanner": 10.0,
     "qa_alerts_20260402": 6.5,
-    "playwright_tester": 6.5,
-    "asset_deployer": 10.0,
-    "revenue_tracker": 10.0,
-    "revenue": 10.0,
-    "ceo_decision_2026-03-15": 10.0
+    "ceo_decision_2026-03-15": 10.0,
+    "mission_autonomy:auto_scraping_competi": 10.0,
+    "mission_autonomy:SCRAPING_competitive_": 10.0,
+    "mission_autonomy:alpha_intelligence": 10.0,
+    "mission_autonomy:before_you_product_na": 10.0,
+    "mission_autonomy:auto_brokering_deal_b": 10.0
   }
 }

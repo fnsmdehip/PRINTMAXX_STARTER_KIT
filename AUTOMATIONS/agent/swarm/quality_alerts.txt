@@ -99,3 +99,115 @@ P2 (PROCESS):
 --- ALERT 2026-04-02 16:19 ---
 1 RED sites detected:
   - https://saas-stack-audit-200.surge.sh [ERROR]
+
+[2026-04-04 05:38] PLAYWRIGHT ALERT — 46 RED site(s):
+  ✗ PM Web Scraping | https://printmaxx-web-scraping.surge.sh | Page.goto: net::ERR_CONNECTION_CLOSED at https://printmaxx-web-scraping.surge.sh/
+Call log:
+  - navigating to "https://p
+  ✗ A1 Concrete Louisville | https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh/
+Call log:
+ 
+  ✗ Down To Earth Sealcoating | https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh/
+Call log:
+  - 
+  ✗ Skyrockett Construction | https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh/
+Call log:
+ 
+  ✗ A1 Aluminum Louisville | https://a-1-aluminum-inc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://a-1-aluminum-inc-louisville-ky.surge.sh/
+Call log:
+  - navigating to
+  ✗ The Maids Louisville | https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh/
+Call lo
+  ✗ McCoy Window Cleaning | https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh/
+Call log:
+ 
+  ✗ Cutting Hedge Landscaping | https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh/
+Call lo
+  ✗ Greenworks Lawn Louisville | https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh/
+Call log:
+  ✗ Accurate Lawn Louisville | https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh/
+Call log:
+  - 
+  ✗ Daves Tree Surgeons | https://dave-s-tree-surgeons-inc-louisville-ky.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://dave-s-tree-surgeons-inc-louisville-ky.surge.sh/
+Call log:
+  - navigating 
+  ✗ Mr Fix It Louisville | https://mr-fix-it-solutions-llc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://mr-fix-it-solutions-llc-louisville-ky.surge.sh/
+Call log:
+  - naviga
+  ✗ Wildcat Moving Louisville | https://wildcat-moving-llc-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://wildcat-moving-llc-louisville-ky.surge.sh/
+Call log:
+  - navigating 
+  ✗ Right Way Hauling Louisville | https://right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh/
+Ca
+  ✗ New Seasons Auction | https://new-seasons-auction-and-estates-louisville-ky.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://new-seasons-auction-and-estates-louisville-ky.surge.sh/
+Call log:
+  - navi
+  ✗ Kings Hands LLC | https://kings-hands-llc-louisville-ky.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://kings-hands-llc-louisville-ky.surge.sh/
+Call log:
+  - navigating to "https
+  ✗ New Leaf Tree Service | https://new-leaf-tree-service-llc-louisville-ky.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://new-leaf-tree-service-llc-louisville-ky.surge.sh/
+Call log:
+  - navigating
+  ✗ Jeff Reed Logging | https://jeff-reed-logging-tree-service-louisville-ky.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://jeff-reed-logging-tree-service-louisville-ky.surge.sh/
+Call log:
+  - navig
+  ✗ David Fox Roofer | https://david-fox-roofer-louisville-ky.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://david-fox-roofer-louisville-ky.surge.sh/
+Call log:
+  - navigating to "http
+  ✗ OKC Mobile Detailing | https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-c
+  ✗ OKC Car Detailing | https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-c
+  ✗ Portland Window Cleaning | https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.s
+  ✗ PageScorer vs GTmetrix | https://pagescorer-vs-gtmetrix.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://pagescorer-vs-gtmetrix.surge.sh/
+Call log:
+  - navigating to "https:
+  ✗ SaaS Stack Audit 200 | https://saas-stack-audit-200.surge.sh | Page.title: Execution context was destroyed, most likely because of a navigation
+  ✗ Gians Flooring MKE | https://gians-flooring-mke.surge.sh | timeout >15s
+  ✗ Landlords Pest MKE | https://a-landlords-pest-mke.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://a-landlords-pest-mke.surge.sh/
+Call log:
+  - navigating to "https://
+  ✗ Shorewood Family Chiro | https://shorewood-family-chiro-mke.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://shorewood-family-chiro-mke.surge.sh/
+Call log:
+  - navigating to "ht
+  ✗ Milwaukee Plumber Service | https://milwaukee-plumber-service-mke.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://milwaukee-plumber-service-mke.surge.sh/
+Call log:
+  - navigating to 
+  ✗ Solopreneur Launch Check | https://solopreneur-launch-checklist.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://solopreneur-launch-checklist.surge.sh/
+Call log:
+  - navigating to "https:
+  ✗ Birmingham Detailing | https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham
+  ✗ Birmingham Home Detailing | https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://home-professional-mobile-detailing-amp-products-super-store-birmingham-
+  ✗ Homeguide Handyman LV | https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-
+  ✗ Pink Windows Louisville | https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.su
+  ✗ Cherry Window Louisville | https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville
+  ✗ Vista Ridge Dentistry ATX | https://vista-ridge-family-dentistry-austin-tx.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://vista-ridge-family-dentistry-austin-tx.surge.sh/
+Call log:
+  - navigating 
+  ✗ Austin Elite Smiles | https://austin-elite-smiles-pllc-austin-tx.surge.sh | Page.goto: net::ERR_EMPTY_RESPONSE at https://austin-elite-smiles-pllc-austin-tx.surge.sh/
+Call log:
+  - navigating to "
+  ✗ Helen Ragsdale DDS ATX | https://austin-laser-dentist-helen-ragsdale-dds-austin-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://austin-laser-dentist-helen-ragsdale-dds-austin-tx.surge.sh/
+Call log
+  ✗ About Smiles Dentistry | https://about-smiles-family-and-cosmetic-dentistry-austin-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://about-smiles-family-and-cosmetic-dentistry-austin-tx.surge.sh/
+Call 
+  ✗ Vitadox Austin Dentists | https://dentists-in-austin-tx-vitadox-austin-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://dentists-in-austin-tx-vitadox-austin-tx.surge.sh/
+Call log:
+  - navi
+  ✗ Austin Dentistry | https://austin-dentistry-dentist-in-austin-tx-austin-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://austin-dentistry-dentist-in-austin-tx-austin-tx.surge.sh/
+Call log:
+
+  ✗ Dental Blush Miami | https://dental-blush-associates-pa-miami-fl.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://dental-blush-associates-pa-miami-fl.surge.sh/
+Call log:
+  - navigati
+  ✗ J Family Dental Miami | https://j-family-dental-llc-miami-fl.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://j-family-dental-llc-miami-fl.surge.sh/
+Call log:
+  - navigating to "
+  ✗ Hedricks Dallas | https://hedrick-s-service-now-dallas-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://hedrick-s-service-now-dallas-tx.surge.sh/
+Call log:
+  - navigating t
+  ✗ ARS Rescue Rooter Dallas | https://ars-rescue-rooter-dfw-dallas-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://ars-rescue-rooter-dfw-dallas-tx.surge.sh/
+Call log:
+  - navigating t
+  ✗ Berkeys AC Plumbing Dallas | https://berkeys-air-conditioning-plumbing-and-electrical-dallas-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://berkeys-air-conditioning-plumbing-and-electrical-dallas-tx.surge.sh/
+  ✗ Triune Plumbing Dallas | https://triune-plumbing-llc-dallas-tx.surge.sh | Page.goto: net::ERR_SOCKET_NOT_CONNECTED at https://triune-plumbing-llc-dallas-tx.surge.sh/
+Call log:
+  - navigating to 

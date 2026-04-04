@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-04T05:00:46.742263",
+  "api_calls": 19,
+  "total_filings": 29,
+  "unique_filings": 2,
+  "written_to_alpha": 2,
+  "top_results": [
+    {
+      "company": "ASIAFIN HOLDINGS CORP.  (ASFH)  (CIK 0001828748)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "VIDA Global Inc.  (CIK 0001973062)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}

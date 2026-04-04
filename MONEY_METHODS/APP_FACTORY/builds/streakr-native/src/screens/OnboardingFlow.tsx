@@ -85,7 +85,7 @@ export default function OnboardingFlow() {
     setSaving(true);
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
 
-    const name = selectedPreset?.name ?? customName || 'My habit';
+    const name = (selectedPreset?.name ?? customName) || 'My habit';
     const emoji = selectedPreset?.emoji ?? customEmoji;
     const category = selectedPreset?.category ?? 'custom';
     const mvdLabel = useMvd
@@ -142,7 +142,7 @@ export default function OnboardingFlow() {
           )}
           {step === 4 && (
             <StepFirstCheckIn
-              habitName={selectedPreset?.name ?? customName || 'your habit'}
+              habitName={(selectedPreset?.name ?? customName) || 'your habit'}
               habitEmoji={selectedPreset?.emoji ?? customEmoji}
               onFinish={handleFinish}
               saving={saving}

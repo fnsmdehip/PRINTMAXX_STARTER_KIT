@@ -83,11 +83,24 @@ export default function TodayScreen() {
         { text: 'Thanks', style: 'default' },
       ]);
 
-      // Fire review at 7-day milestone — proven value moment
-      if (updated.currentStreak === 7) {
+      // Fire review at day 3 or day 7 — post-value, not on app open.
+      // 90-day cooldown prevents spamming. iOS system adds its own limit on top.
+      if (updated.currentStreak === 3 || updated.currentStreak === 7) {
         try {
-          const available = await StoreReview.isAvailableAsync();
-          if (available) setTimeout(() => StoreReview.requestReview(), 2500);
+          const settings = await getSettings();
+          const ninetyDaysAgo = new Date();
+          ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
+          const lastPrompt = settings.lastReviewPrompt;
+          const cooldownOk = !lastPrompt || new Date(lastPrompt) < ninetyDaysAgo;
+          if (cooldownOk && !settings.hasReviewedApp) {
+            const available = await StoreReview.isAvailableAsync();
+            if (available) {
+              setTimeout(() => StoreReview.requestReview(), 2500);
+              // Record prompt so we respect the 90-day cooldown
+              const { saveSettings } = await import('../services/storage');
+              await saveSettings({ lastReviewPrompt: new Date().toISOString() });
+            }
+          }
         } catch { /* non-critical */ }
       }
     }

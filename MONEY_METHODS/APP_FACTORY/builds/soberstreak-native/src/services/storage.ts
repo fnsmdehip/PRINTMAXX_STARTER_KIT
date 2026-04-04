@@ -12,6 +12,8 @@ const DEFAULT_SETTINGS: AppSettings = {
   isPremium: false,
   onboardingComplete: false,
   hasSeenEmergencyPrompt: false,
+  hasReviewedApp: false,
+  lastReviewPrompt: null,
 };
 
 export async function getStreakData(): Promise<StreakData | null> {

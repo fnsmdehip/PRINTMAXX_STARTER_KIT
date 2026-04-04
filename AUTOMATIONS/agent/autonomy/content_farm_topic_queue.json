@@ -1,5 +1,31 @@
 [
   {
+    "alpha_id": "APP_SOBERSTREAK_BUILDPOST_20260404",
+    "category": "BUILD_IN_PUBLIC",
+    "roi": "HIGHEST",
+    "synergy_score": "5",
+    "tactic_preview": "SoberStreak: native iOS app for NoFap / alcohol / smoking / gambling streaks. Built in 48h. Ships to r/NoFap (930K), r/stopdrinking (215K), r/StopSmoking (110K).",
+    "draft_hook": "built a native iOS streak tracker for addiction recovery. no AA stigma. no shame spiral. just your streak, your check-in, and an emergency SOS button.\n\nworks for: NoFap, alcohol, smoking, gambling, custom.\n\nShipping this week. who wants early access?\n\n(yes it's free to start. paywall at day 7.)",
+    "target_platforms": ["twitter", "reddit_r/NoFap", "reddit_r/stopdrinking", "reddit_r/StopSmoking"],
+    "status": "QUEUED",
+    "added_at": "2026-04-04T04:29:00",
+    "source": "cross_pollinator_cycle26",
+    "app_build": "MONEY_METHODS/APP_FACTORY/builds/soberstreak-native/"
+  },
+  {
+    "alpha_id": "APP_STREAKR_BUILDPOST_20260404",
+    "category": "BUILD_IN_PUBLIC",
+    "roi": "HIGH",
+    "synergy_score": "4",
+    "tactic_preview": "Streakr: general-purpose native iOS habit streak tracker. Daily check-in, streak calendar, notification reminder. Minimal, fast, no subscription wall for basic use.",
+    "draft_hook": "built a minimal streak tracker. no gamification bloat. no subscription just to see your data.\n\njust: pick a habit, check in daily, see your streak.\n\nships this week on iOS. built with Expo + native build.\n\nwhat habit are you trying to build?",
+    "target_platforms": ["twitter", "reddit_r/getdisciplined", "reddit_r/habits", "reddit_r/productivity"],
+    "status": "QUEUED",
+    "added_at": "2026-04-04T04:29:00",
+    "source": "cross_pollinator_cycle26",
+    "app_build": "MONEY_METHODS/APP_FACTORY/builds/streakr-native/"
+  },
+  {
     "alpha_id": "brokering_ALPHA1773994825",
     "category": "GOV_CONTRACT",
     "roi": "HIGHEST",

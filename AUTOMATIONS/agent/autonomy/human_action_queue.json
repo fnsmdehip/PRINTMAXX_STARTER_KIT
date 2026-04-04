@@ -1,19 +1,40 @@
 [
   {
     "priority": 0,
-    "title": "EID AL-FITR IS TOMORROW (March 29) — POST RAMADAN/PRAYERLOCK CONTENT NOW",
-    "severity": "TIME_CRITICAL — window closes in hours",
-    "action": "Post these RIGHT NOW (last Ramadan engagement window):\n1. reddit_cycle33_20260328.md POST 1 → r/islam\n2. reddit_cycle33_20260328.md POST 2 → r/Muslim\n3. reddit_cycle33_20260328.md POST 3 → r/Ramadan\n4. twitter_cycle33_20260328.md TWEET 1 → @PRINTMAXXER\nFiles in: CONTENT/social/distribution/\nEid Mubarak tweet scheduled for March 29 morning is also in twitter_cycle33_20260328.md.",
-    "revenue_impact": "PrayerLock and Hilal (ramadan-tracker.surge.sh) are time-critical products. Last window for Ramadan-specific virality before Eid ends the season. Miss it and next window is Ramadan 2027.",
+    "title": "56 APPS NEED ITERATION NOW — PRIORITY QUEUE GENERATED TODAY 04:05 AM",
+    "severity": "P0 — 56 ITERATE_EXISTING_NOW decisions, 46 BUILD_NEW_NOW decisions",
+    "action": "App Factory Priority Queue generated 2026-04-04 04:05 AM. 56 existing apps flagged for immediate iteration (review prompt timing, onboarding depth, ASO keywords, paywall rescue offers). Top known fix: audit ALL 22 apps for review prompt timing — move prompt to post-milestone (not first session). +0.8 stars per app. 1 hour to apply across all apps. File: AUTOMATIONS/agent/autonomy/app_factory_priority_queue.json",
+    "revenue_impact": "Review prompt timing fix alone: +0.8 stars across 22 apps = significant ASO rank improvement = more organic downloads at zero marginal cost.",
+    "source": "cross_pollinator_cycle26 + app_factory_priority_queue_20260404",
+    "added_at": "2026-04-04T04:29:00",
+    "expires_at": null
+  },
+  {
+    "priority": 0,
+    "title": "SOBERSTREAK + STREAKR APPS BUILT — SHIP THIS WEEK TO RECOVERY COMMUNITIES",
+    "severity": "P0 — apps built, communities ready, zero revenue without shipping",
+    "action": "Two new apps built: (1) SoberStreak (nofap/alcohol/smoking/gambling) at MONEY_METHODS/APP_FACTORY/builds/soberstreak-native/ — seed in r/NoFap (930K), r/stopdrinking (215K), r/StopSmoking (110K). (2) Streakr (general habits) at MONEY_METHODS/APP_FACTORY/builds/streakr-native/ — seed in r/getdisciplined, r/habits, r/productivity. Build-in-public posts queued in content_farm_topic_queue.json. Steps: (a) Wire Stripe Payment Links for both apps, (b) EAS build + submit, (c) Community seed post from content farm queue.",
+    "revenue_impact": "Recovery community apps have high LTV ($4.99-9.99/mo). NoFap community = 930K users actively seeking accountability tools. First mover in native iOS sobriety streak niche.",
+    "source": "cross_pollinator_cycle26",
+    "added_at": "2026-04-04T04:29:00",
+    "expires_at": null
+  },
+  {
+    "priority": 0,
+    "title": "[EXPIRED 2026-03-29] EID AL-FITR — POST RAMADAN/PRAYERLOCK CONTENT",
+    "severity": "EXPIRED — Eid was March 29. Next Ramadan 2027.",
+    "action": "ARCHIVED. Window closed 2026-03-29 06:00. PrayerLock and Hilal remain live but Ramadan virality window closed until 2027.",
+    "revenue_impact": "Missed. Note for 2027: pre-schedule Ramadan content 2 weeks before Ramadan start.",
     "source": "distribution_engine_cycle33_20260328 + cross_pollinator_cycle25",
     "added_at": "2026-03-28T21:45",
-    "expires_at": "2026-03-29T06:00"
+    "expires_at": "2026-03-29T06:00",
+    "status": "EXPIRED"
   },
   {
     "priority": 1,
-    "title": "TAX SEASON OUTREACH WINDOW CLOSES APRIL 15 (18 DAYS) — SEND EMAILS NOW",
-    "severity": "HIGH — countdown active",
-    "action": "Content farm topic queue has 'LOCAL_BIZ_TAX_SEO_WINDOW_20260319' (expires April 15). Outreach angles file has tax prep angle with cold email subject 'your tax site is invisible during peak season'. Target: tax prep / CPA firms on GoDaddy subdomains. Draft emails in AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md. 18 days left. After April 15 this angle is dead for 11 months.",
+    "title": "TAX SEASON OUTREACH WINDOW CLOSES APRIL 15 (11 DAYS) — SEND EMAILS NOW",
+    "severity": "HIGH — countdown active, 11 days left (was 18 days on Mar 28)",
+    "action": "Content farm topic queue has 'LOCAL_BIZ_TAX_SEO_WINDOW_20260319' (expires April 15). Outreach angles file has tax prep angle with cold email subject 'your tax site is invisible during peak season'. Target: tax prep / CPA firms on GoDaddy subdomains. Draft emails in AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md. 11 days left as of Apr 4. After April 15 this angle is dead for 11 months.",
     "revenue_impact": "$1,500-3,000 per client close. Tax prep is the one vertical where urgency is calendar-forced and unambiguous.",
     "source": "cross_pollinator_cycle25_tax_countdown",
     "added_at": "2026-03-28T21:45",

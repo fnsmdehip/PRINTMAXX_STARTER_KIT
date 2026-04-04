@@ -1,12 +1,12 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-04-04 03:52:50
+Generated: 2026-04-04 06:16:06
 
 ## Inputs
-- ALPHA_STAGING app candidates: 4251
+- ALPHA_STAGING app candidates: 4304
 - APP_FACTORY_METHODS candidates: 2
 - Reddit findings consumed: 6
-- Existing app specs detected: 218
+- Existing app specs detected: 237
 
 ## Hard Gates
 - No fake paywalls. Real RevenueCat or real billing path before shipping.
