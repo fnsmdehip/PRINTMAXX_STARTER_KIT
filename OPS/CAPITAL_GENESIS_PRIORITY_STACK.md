@@ -1,9 +1,9 @@
 # Capital Genesis Priority Stack
 
-**Generated:** 2026-04-04 14:23
+**Generated:** 2026-04-04 18:34
 **Revenue phase:** Phase 0 ($0 — speed sprint)
-**Total methods ranked:** 8461
-**P0 (DO NOW):** 7 | **P1 (DO SOON):** 835 | **P2 (QUEUE):** 7152 | **P3 (WATCH):** 467 | **KILL:** 0
+**Total methods ranked:** 8465
+**P0 (DO NOW):** 7 | **P1 (DO SOON):** 836 | **P2 (QUEUE):** 7154 | **P3 (WATCH):** 468 | **KILL:** 0
 
 ---
 
@@ -205,675 +205,675 @@ a “21- | **6.6** | LAUNCH | 5 | 8.0 | 8.3 | 9.0 | 8.2 | $49 | CONTENT_FARM |
 the easiest and highest  | **6.48** | LAUNCH | 2 | 9.5 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
 | 171 | introducing vibe-clipping
 the easiest and highest  | **6.48** | LAUNCH | 2 | 9.5 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
-| 172 | my BIGGEST competitive advantage is signing BAD cl | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $5 | MONETIZATION |
-| 173 | 50 platforms to sell your digital product (and it' | **6.47** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 6.1 | $0 | CONTENT_FARM |
-| 174 | [r/SaaS] 12 lessons after scaling my saas to 700 p | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $9 | MONETIZATION |
-| 175 | How to make $1 million on X
+| 172 | open their tiktok profile. sort by "most liked." s | **6.48** | LAUNCH | 2 | 9.5 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
+| 173 | my BIGGEST competitive advantage is signing BAD cl | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $5 | MONETIZATION |
+| 174 | 50 platforms to sell your digital product (and it' | **6.47** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 6.1 | $0 | CONTENT_FARM |
+| 175 | [r/SaaS] 12 lessons after scaling my saas to 700 p | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $9 | MONETIZATION |
+| 176 | How to make $1 million on X
 
 1) Visit every large  | **6.47** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 10.0 | $1 | CONTENT_FORMAT |
-| 176 | Ecom arb: yoga mat | Sell $27 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $7 | MONETIZATION |
-| 177 | Ecom arb: phone projector | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $14 | MONETIZATION |
-| 178 | Ecom arb: led face mask | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $13 | MONETIZATION |
-| 179 | Ecom arb: cable organizer | Sell $13 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
-| 180 | Ecom arb: phone projector | Sell $84 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $14 | MONETIZATION |
-| 181 | Ecom arb: cable organizer | Sell $14 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
-| 182 | Ecom arb: cable organizer | Sell $15 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
-| 183 | Ecom arb: led face mask | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $13 | MONETIZATION |
-| 184 | [ACQUISITION] My SaaS makes $3K MRR. I work 25 hou | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $3 | MONETIZATION |
-| 185 | I started running monthly town halls and AI worksh | **6.47** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 6.1 | $0 | CONTENT_FARM |
-| 186 | Ecom arb: led face mask | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $13 | MONETIZATION |
-| 187 | Ecom arb: led candles | Sell $22 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $3 | MONETIZATION |
-| 188 | Ecom arb: cable organizer | Sell $18 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
-| 189 | Ecom arb: yoga mat | Sell $35 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $7 | MONETIZATION |
-| 190 | Ecom arb: cable organizer | Sell $12 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
-| 191 | Ecom arb: yoga mat | Sell $29 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $7 | MONETIZATION |
-| 193 | I made my first $30 from my side project thanks to | **6.46** | LAUNCH | 2 | 9.5 | 8.3 | 9.0 | 6.8 | $30 | CONTENT_FARM |
-| 194 | I made $30 in a week from my side project thanks t | **6.46** | LAUNCH | 2 | 9.5 | 8.3 | 9.0 | 6.8 | $30 | CONTENT_FARM |
-| 195 | [PH LAUNCH] Fastlane: Remix viral videos into cont | **6.45** | LAUNCH | 5 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 196 | 73% of senators have a median net worth of more th | **6.44** | LAUNCH | 10 | 7.0 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 197 | Someone created a new wallet and spent $57.5K bett | **6.44** | LAUNCH | 10 | 7.0 | 7.3 | 5.0 | 4.6 | $31 | MONETIZATION |
-| 198 | Build ColdEmailWriter bot on Poe first (highest WT | **6.44** | LAUNCH | 8 | 6.5 | 7.3 | 5.6 | 8.4 | $0 | MONETIZATION |
-| 199 | Firm boosts H.264 streaming license fees from $100 | **6.44** | LAUNCH | 10 | 7.0 | 7.3 | 5.0 | 4.6 | $4 | MONETIZATION |
-| 200 | How to find goldmine digital products using free r | **6.43** | LAUNCH | 8 | 8.0 | 7.3 | 5.0 | 5.4 | $2 | MONETIZATION |
-| 201 | LOOKING FOR AN AI STUDY APP TO WORK WITH
+| 177 | Ecom arb: yoga mat | Sell $27 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $7 | MONETIZATION |
+| 178 | Ecom arb: phone projector | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $14 | MONETIZATION |
+| 179 | Ecom arb: led face mask | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $13 | MONETIZATION |
+| 180 | Ecom arb: cable organizer | Sell $13 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
+| 181 | Ecom arb: phone projector | Sell $84 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $14 | MONETIZATION |
+| 182 | Ecom arb: cable organizer | Sell $14 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
+| 183 | Ecom arb: cable organizer | Sell $15 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
+| 184 | Ecom arb: led face mask | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $13 | MONETIZATION |
+| 185 | [ACQUISITION] My SaaS makes $3K MRR. I work 25 hou | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $3 | MONETIZATION |
+| 186 | I started running monthly town halls and AI worksh | **6.47** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 6.1 | $0 | CONTENT_FARM |
+| 187 | Ecom arb: led face mask | Sell $39 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $13 | MONETIZATION |
+| 188 | Ecom arb: led candles | Sell $22 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $3 | MONETIZATION |
+| 189 | Ecom arb: cable organizer | Sell $18 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
+| 190 | Ecom arb: yoga mat | Sell $35 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $7 | MONETIZATION |
+| 191 | Ecom arb: cable organizer | Sell $12 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $2 | MONETIZATION |
+| 192 | Ecom arb: yoga mat | Sell $29 | **6.47** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $7 | MONETIZATION |
+| 194 | I made my first $30 from my side project thanks to | **6.46** | LAUNCH | 2 | 9.5 | 8.3 | 9.0 | 6.8 | $30 | CONTENT_FARM |
+| 195 | I made $30 in a week from my side project thanks t | **6.46** | LAUNCH | 2 | 9.5 | 8.3 | 9.0 | 6.8 | $30 | CONTENT_FARM |
+| 196 | [PH LAUNCH] Fastlane: Remix viral videos into cont | **6.45** | LAUNCH | 5 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 197 | 73% of senators have a median net worth of more th | **6.44** | LAUNCH | 10 | 7.0 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
+| 198 | Someone created a new wallet and spent $57.5K bett | **6.44** | LAUNCH | 10 | 7.0 | 7.3 | 5.0 | 4.6 | $31 | MONETIZATION |
+| 199 | Build ColdEmailWriter bot on Poe first (highest WT | **6.44** | LAUNCH | 8 | 6.5 | 7.3 | 5.6 | 8.4 | $0 | MONETIZATION |
+| 200 | Firm boosts H.264 streaming license fees from $100 | **6.44** | LAUNCH | 10 | 7.0 | 7.3 | 5.0 | 4.6 | $4 | MONETIZATION |
+| 201 | How to find goldmine digital products using free r | **6.43** | LAUNCH | 8 | 8.0 | 7.3 | 5.0 | 5.4 | $2 | MONETIZATION |
+| 202 | LOOKING FOR AN AI STUDY APP TO WORK WITH
 Pulled we | **6.43** | LAUNCH | 2 | 9.0 | 8.8 | 9.0 | 4.6 | $0 | CONTENT_FARM |
-| 202 | Stripe Machine Payments Protocol (MPP) - machines  | **6.43** | LAUNCH | 10 | 5.0 | 7.3 | 7.3 | 5.4 | $0 | TOOL_ALPHA |
-| 203 | I spent years running niche IG theme pages  blasti | **6.43** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 5.4 | $0 | CONTENT_FARM |
-| 204 | Would anyone use a tool that turns an idea into a  | **6.43** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 5.3 | $0 | CONTENT_FARM |
-| 205 | [ACQUISITION] Launched my first micro-SaaS: a GitH | **6.42** | LAUNCH | 8 | 7.5 | 7.3 | 6.1 | 5.4 | $49 | MONETIZATION |
-| 206 | Washington Post using reader data to set dynamic s | **6.42** | LAUNCH | 5 | 8.5 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
-| 207 | create an ai influencer using foxy ai | **6.42** | LAUNCH | 2 | 9.0 | 7.3 | 9.0 | 6.8 | $0 | CONTENT_FARM |
-| 208 | [PH LAUNCH] Ask Fellow: Automate post-meeting acti | **6.4** | LAUNCH | 5 | 7.5 | 8.3 | 8.3 | 4.6 | $0 | CONTENT_FORMAT |
-| 209 | Vibe coding platforms validated at scale | **6.39** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 8.5 | $2 | TOOL_ALPHA |
-| 210 | You can build an extremely profitable affiliate bu | **6.39** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
-| 211 | This is a genius format to use to push traffic for | **6.39** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
-| 212 | [ACQUISITION] Bootstrapped SaaS with 2,700 users a | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $1 | MONETIZATION |
-| 213 | This is genuinely 1 of the weirdest apps I’ve ever | **6.39** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
-| 214 | the fastest path to $5k/month isn't a revolutionar | **6.39** | LAUNCH | 8 | 8.0 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
-| 215 | [ACQUISITION] I built a lead gen SaaS in 2026 [rev | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $19 | MONETIZATION |
-| 216 | My fiction paid newsletter on Substack, Commercial | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $13 | MONETIZATION |
-| 217 | Cursor just dropped Composer 2 and it's honestly i | **6.39** | LAUNCH | 10 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 218 | If you want to avoid that, learn how to build some | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $12 | MONETIZATION |
-| 219 | Monetization Plan: ALPHA5410 | **6.39** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 220 | Monetization Plan: ALPHA6570 | **6.39** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 221 | Student Phiri just got the $50K role added
+| 203 | Stripe Machine Payments Protocol (MPP) - machines  | **6.43** | LAUNCH | 10 | 5.0 | 7.3 | 7.3 | 5.4 | $0 | TOOL_ALPHA |
+| 204 | I spent years running niche IG theme pages  blasti | **6.43** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 5.4 | $0 | CONTENT_FARM |
+| 205 | Would anyone use a tool that turns an idea into a  | **6.43** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 5.3 | $0 | CONTENT_FARM |
+| 206 | [ACQUISITION] Launched my first micro-SaaS: a GitH | **6.42** | LAUNCH | 8 | 7.5 | 7.3 | 6.1 | 5.4 | $49 | MONETIZATION |
+| 207 | Washington Post using reader data to set dynamic s | **6.42** | LAUNCH | 5 | 8.5 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
+| 208 | create an ai influencer using foxy ai | **6.42** | LAUNCH | 2 | 9.0 | 7.3 | 9.0 | 6.8 | $0 | CONTENT_FARM |
+| 209 | [PH LAUNCH] Ask Fellow: Automate post-meeting acti | **6.4** | LAUNCH | 5 | 7.5 | 8.3 | 8.3 | 4.6 | $0 | CONTENT_FORMAT |
+| 210 | Vibe coding platforms validated at scale | **6.39** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 8.5 | $2 | TOOL_ALPHA |
+| 211 | You can build an extremely profitable affiliate bu | **6.39** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
+| 212 | This is a genius format to use to push traffic for | **6.39** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
+| 213 | [ACQUISITION] Bootstrapped SaaS with 2,700 users a | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $1 | MONETIZATION |
+| 214 | This is genuinely 1 of the weirdest apps I’ve ever | **6.39** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
+| 215 | the fastest path to $5k/month isn't a revolutionar | **6.39** | LAUNCH | 8 | 8.0 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
+| 216 | [ACQUISITION] I built a lead gen SaaS in 2026 [rev | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $19 | MONETIZATION |
+| 217 | My fiction paid newsletter on Substack, Commercial | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $13 | MONETIZATION |
+| 218 | Cursor just dropped Composer 2 and it's honestly i | **6.39** | LAUNCH | 10 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 219 | If you want to avoid that, learn how to build some | **6.39** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 5.4 | $12 | MONETIZATION |
+| 220 | Monetization Plan: ALPHA5410 | **6.39** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 221 | Monetization Plan: ALPHA6570 | **6.39** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 222 | Student Phiri just got the $50K role added
 And he  | **6.38** | LAUNCH | 5 | 8.0 | 8.3 | 9.0 | 3.8 | $10 | CONTENT_FARM |
-| 222 | [ACQUISITION] 18, found a zero-day in the world's  | **6.38** | LAUNCH | 8 | 7.5 | 7.3 | 6.1 | 4.6 | $9 | MONETIZATION |
-| 223 | when you realize you can run a $30K/mo business wi | **6.37** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 6.0 | $30 | MONETIZATION |
-| 224 | i've been telling people faceless content accounts | **6.37** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
-| 225 | MCP multi-server automation | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 226 | AI CI/CD autonomous deployment | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 227 | No-code browser automation via AI | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 228 | 1-bit LLMs for consumer-grade local inference | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 229 | n8n AI-native workflow automation | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 230 | Vibe coding paradigm | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 231 | Claude Code trading bots | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 232 | Agent-browser: Vercel Labs browser automation | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 233 | [ACQUISITION] Where are you posting your SaaS cont | **6.36** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 234 | Package existing stack as client service | **6.36** | LAUNCH | 8 | 7.0 | 6.3 | 5.8 | 9.9 | $1 | OUTBOUND|MONETIZATION |
-| 235 | Show HN: JSON-to-PDF e-book generator for CJK cont | **6.36** | LAUNCH | 5 | 7.5 | 8.3 | 8.3 | 3.8 | $0 | CONTENT_FORMAT |
-| 236 | Show HN: SyNumpy – a Header only C++17 library for | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 237 | wasted $2k on Reddit ads then found something that | **6.36** | LAUNCH | 8 | 6.0 | 7.3 | 8.3 | 8.4 | $2 | OUTBOUND |
-| 238 | Monetization Plan: ALPHA5423 | **6.36** | LAUNCH | 5 | 9.5 | 7.3 | 5.0 | 5.4 | $39 | MONETIZATION |
-| 239 | Monetization Plan: ALPHA5441 | **6.36** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 240 | how to steal your competitor's email strategy for  | **6.35** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 241 | You can make this level of content with AI but sti | **6.35** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
-| 242 | [ACQUISITION] Reaching $10k MRR with my vibecoded  | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 243 | [ACQUISITION] Most micro-SaaS advice breaks after  | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 244 | [ACQUISITION] How often do you guys actually get r | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $20 | MONETIZATION |
-| 245 | [ACQUISITION] Built a micro-SaaS for special educa | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 246 | [ACQUISITION] I analyzed 6 successful SaaS launche | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
-| 247 | ReelClaw revolution is here
+| 223 | [ACQUISITION] 18, found a zero-day in the world's  | **6.38** | LAUNCH | 8 | 7.5 | 7.3 | 6.1 | 4.6 | $9 | MONETIZATION |
+| 224 | when you realize you can run a $30K/mo business wi | **6.37** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 6.0 | $30 | MONETIZATION |
+| 225 | i've been telling people faceless content accounts | **6.37** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
+| 226 | MCP multi-server automation | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 227 | AI CI/CD autonomous deployment | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 228 | No-code browser automation via AI | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 229 | 1-bit LLMs for consumer-grade local inference | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 230 | n8n AI-native workflow automation | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 231 | Vibe coding paradigm | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 232 | Claude Code trading bots | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 233 | Agent-browser: Vercel Labs browser automation | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 234 | [ACQUISITION] Where are you posting your SaaS cont | **6.36** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 235 | Package existing stack as client service | **6.36** | LAUNCH | 8 | 7.0 | 6.3 | 5.8 | 9.9 | $1 | OUTBOUND|MONETIZATION |
+| 236 | Show HN: JSON-to-PDF e-book generator for CJK cont | **6.36** | LAUNCH | 5 | 7.5 | 8.3 | 8.3 | 3.8 | $0 | CONTENT_FORMAT |
+| 237 | Show HN: SyNumpy – a Header only C++17 library for | **6.36** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 238 | wasted $2k on Reddit ads then found something that | **6.36** | LAUNCH | 8 | 6.0 | 7.3 | 8.3 | 8.4 | $2 | OUTBOUND |
+| 239 | Monetization Plan: ALPHA5423 | **6.36** | LAUNCH | 5 | 9.5 | 7.3 | 5.0 | 5.4 | $39 | MONETIZATION |
+| 240 | Monetization Plan: ALPHA5441 | **6.36** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 241 | how to steal your competitor's email strategy for  | **6.35** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 242 | You can make this level of content with AI but sti | **6.35** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
+| 243 | [ACQUISITION] Reaching $10k MRR with my vibecoded  | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 244 | [ACQUISITION] Most micro-SaaS advice breaks after  | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 245 | [ACQUISITION] How often do you guys actually get r | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $20 | MONETIZATION |
+| 246 | [ACQUISITION] Built a micro-SaaS for special educa | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 247 | [ACQUISITION] I analyzed 6 successful SaaS launche | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
+| 248 | ReelClaw revolution is here
 you can scale to 1000  | **6.35** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
-| 248 | this article tells you exactly why you're not maki | **6.35** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
-| 249 | Okay, that aside, my students are using my method  | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 250 | [ACQUISITION] Looking to acquire a small Micro-Saa | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 251 | [ACQUISITION] Free tools are still one of the bigg | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $35 | MONETIZATION |
-| 252 | this AI tiktok page has 34k followers and thousand | **6.35** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
-| 253 | [ACQUISITION] SportsFlux.live—from side project to | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $45 | MONETIZATION |
-| 254 | [ACQUISITION] I analyzed 600+ verified SaaS revenu | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 249 | this article tells you exactly why you're not maki | **6.35** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
+| 250 | Okay, that aside, my students are using my method  | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 251 | [ACQUISITION] Looking to acquire a small Micro-Saa | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 252 | [ACQUISITION] Free tools are still one of the bigg | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $35 | MONETIZATION |
+| 253 | this AI tiktok page has 34k followers and thousand | **6.35** | LAUNCH | 2 | 9.0 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
+| 254 | [ACQUISITION] SportsFlux.live—from side project to | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $45 | MONETIZATION |
 | 255 | [ACQUISITION] I analyzed 600+ verified SaaS revenu | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 256 | [ACQUISITION] I’m 17 and got a $1k offer to buy my | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
-| 257 | Someone in this sub called my morning shopify chec | **6.35** | LAUNCH | 8 | 7.5 | 5.3 | 6.8 | 6.9 | $8 | ECOM |
-| 258 | Mm007 Cold Outbound | **6.35** | HOLD | 8 | 6.5 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 259 | Solopreneur billionaire thesis: AI as multiplier | **6.34** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 7.6 | $0 | MONETIZATION |
-| 260 | I'm going to give you a business model that sounds | **6.34** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 6.0 | $20 | MONETIZATION |
-| 261 | GStack - Use Garry Tan exact Claude Code setup (YC | **6.34** | LAUNCH | 8 | 7.0 | 7.3 | 5.3 | 4.6 | $0 | MONETIZATION |
-| 262 | [ACQUISITION] Building a micro-SaaS personal CRM — | **6.34** | LAUNCH | 8 | 7.0 | 7.3 | 5.3 | 4.6 | $0 | MONETIZATION |
-| 263 | 48 SVG backgrounds | **6.34** | LAUNCH | 8 | 5.5 | 7.3 | 7.0 | 7.7 | $0 | TOOL_ALPHA |
-| 264 | this is one of those stories that sounds fake but  | **6.34** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 10.0 | $30 | CONTENT_FORMAT |
-| 265 | Gov contract: TOOL,FASTENER | Agency: NAVSUP WEAPO | **6.34** | LAUNCH | 8 | 5.5 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 266 | Show HN: Zerobox – Sandbox any command with file,  | **6.34** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 267 | Monetization Plan: ALPHA5395 | **6.34** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 6.0 | $2 | MONETIZATION |
-| 268 | Monetization Plan: ALPHA14560 | **6.34** | LAUNCH | 5 | 8.5 | 7.3 | 5.3 | 6.0 | $0 | MONETIZATION |
-| 269 | Monetization Plan: ALPHA10342 | **6.34** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 6.0 | $10 | MONETIZATION |
-| 270 | WalkToUnlock: gamified walking + rewards | **6.33** | LAUNCH | 10 | 5.0 | 6.8 | 6.8 | 9.5 | $28 | APP_FACTORY |
-| 271 | [PH LAUNCH] SitSense: Use your webcam to fix your  | **6.33** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 272 | [PH LAUNCH] Glam AI: Pick a trend, add your photo, | **6.33** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 273 | 18yo in South Asia | **6.33** | LAUNCH | 8 | 5.5 | 7.3 | 8.8 | 9.1 | $30 | OUTBOUND |
-| 274 | [PLATFORM UPDATE] WordPress.com now lets AI agents | **6.33** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 275 | dm'd a girl on X last week who had 340 followers a | **6.32** | LAUNCH | 5 | 9.5 | 7.3 | 5.0 | 4.6 | $39 | MONETIZATION |
-| 276 | AI service arbitrage agency. $500-1500/mo retainer | **6.32** | LAUNCH | 8 | 6.0 | 7.3 | 9.4 | 5.4 | $2 | OUTBOUND |
-| 277 | Contextual prompts > random | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 278 | Value Era shift | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 279 | Onboarding = most critical retention moment | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 280 | helped a guy go from $800/mo to $14k/mo in 63 days | **6.31** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 5.4 | $14 | MONETIZATION |
-| 281 | [ACQUISITION] 12 days in: still 7 users and no rev | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 282 | These AI OF pages on Instagram have been getting m | **6.31** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 5.4 | $10 | MONETIZATION |
-| 283 | 90% cheaper. 5 min setup. $0 token fees.
+| 256 | [ACQUISITION] I analyzed 600+ verified SaaS revenu | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 257 | [ACQUISITION] I’m 17 and got a $1k offer to buy my | **6.35** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
+| 258 | Someone in this sub called my morning shopify chec | **6.35** | LAUNCH | 8 | 7.5 | 5.3 | 6.8 | 6.9 | $8 | ECOM |
+| 259 | Mm007 Cold Outbound | **6.35** | HOLD | 8 | 6.5 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 260 | Solopreneur billionaire thesis: AI as multiplier | **6.34** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 7.6 | $0 | MONETIZATION |
+| 261 | I'm going to give you a business model that sounds | **6.34** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 6.0 | $20 | MONETIZATION |
+| 262 | GStack - Use Garry Tan exact Claude Code setup (YC | **6.34** | LAUNCH | 8 | 7.0 | 7.3 | 5.3 | 4.6 | $0 | MONETIZATION |
+| 263 | [ACQUISITION] Building a micro-SaaS personal CRM — | **6.34** | LAUNCH | 8 | 7.0 | 7.3 | 5.3 | 4.6 | $0 | MONETIZATION |
+| 264 | 48 SVG backgrounds | **6.34** | LAUNCH | 8 | 5.5 | 7.3 | 7.0 | 7.7 | $0 | TOOL_ALPHA |
+| 265 | this is one of those stories that sounds fake but  | **6.34** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 10.0 | $30 | CONTENT_FORMAT |
+| 266 | Gov contract: TOOL,FASTENER | Agency: NAVSUP WEAPO | **6.34** | LAUNCH | 8 | 5.5 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 267 | Show HN: Zerobox – Sandbox any command with file,  | **6.34** | LAUNCH | 10 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 268 | Monetization Plan: ALPHA5395 | **6.34** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 6.0 | $2 | MONETIZATION |
+| 269 | Monetization Plan: ALPHA14560 | **6.34** | LAUNCH | 5 | 8.5 | 7.3 | 5.3 | 6.0 | $0 | MONETIZATION |
+| 270 | Monetization Plan: ALPHA10342 | **6.34** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 6.0 | $10 | MONETIZATION |
+| 271 | WalkToUnlock: gamified walking + rewards | **6.33** | LAUNCH | 10 | 5.0 | 6.8 | 6.8 | 9.5 | $28 | APP_FACTORY |
+| 272 | [PH LAUNCH] SitSense: Use your webcam to fix your  | **6.33** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 273 | [PH LAUNCH] Glam AI: Pick a trend, add your photo, | **6.33** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 274 | 18yo in South Asia | **6.33** | LAUNCH | 8 | 5.5 | 7.3 | 8.8 | 9.1 | $30 | OUTBOUND |
+| 275 | [PLATFORM UPDATE] WordPress.com now lets AI agents | **6.33** | LAUNCH | 5 | 7.5 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 276 | dm'd a girl on X last week who had 340 followers a | **6.32** | LAUNCH | 5 | 9.5 | 7.3 | 5.0 | 4.6 | $39 | MONETIZATION |
+| 277 | AI service arbitrage agency. $500-1500/mo retainer | **6.32** | LAUNCH | 8 | 6.0 | 7.3 | 9.4 | 5.4 | $2 | OUTBOUND |
+| 278 | Contextual prompts > random | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 279 | Value Era shift | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 280 | Onboarding = most critical retention moment | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 281 | helped a guy go from $800/mo to $14k/mo in 63 days | **6.31** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 5.4 | $14 | MONETIZATION |
+| 282 | [ACQUISITION] 12 days in: still 7 users and no rev | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 283 | These AI OF pages on Instagram have been getting m | **6.31** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 5.4 | $10 | MONETIZATION |
+| 284 | 90% cheaper. 5 min setup. $0 token fees.
 SaladClou | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 284 | How to make $1 million on X
+| 285 | How to make $1 million on X
 1) Visit every large c | **6.31** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 5.4 | $1 | MONETIZATION |
-| 285 | Build privacy-first NoFap streak tracker | **6.31** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 10.0 | $1 | APP_FACTORY |
-| 286 | 5 fitness niches confirmed blue ocean | **6.31** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 10.0 | $1 | APP_FACTORY |
-| 287 | [r/wallstreetbets] This is my down payment for a h | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 288 | Spoke to an agency owner last week
+| 286 | Build privacy-first NoFap streak tracker | **6.31** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 10.0 | $1 | APP_FACTORY |
+| 287 | 5 fitness niches confirmed blue ocean | **6.31** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 10.0 | $1 | APP_FACTORY |
+| 288 | [r/wallstreetbets] This is my down payment for a h | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 289 | Spoke to an agency owner last week
 He wanted to hi | **6.31** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 5.4 | $30 | MONETIZATION |
-| 289 | $MU
+| 290 | $MU
 Adjusted EPS $12.20, est. $9
 Sees Q3 adjusted  | **6.31** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 290 | I cold called 340 local businesses with no website | **6.31** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 10.0 | $23 | APP_FACTORY |
-| 291 | Monetization Plan: ALPHA5412 | **6.31** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 5.4 | $11 | MONETIZATION |
-| 292 | Introducing ClawWork : Transform your openclaw/nan | **6.3** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 4.6 | $10 | MONETIZATION |
-| 293 | Introducing ClawWork 🚀: Transform your openclaw/na | **6.3** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 4.6 | $10 | MONETIZATION |
-| 294 | If someone in the Philippines can do it for $5/hou | **6.3** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 4.6 | $5 | MONETIZATION |
-| 295 | Abraxas Capital is shorting #oil.
+| 291 | I cold called 340 local businesses with no website | **6.31** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 10.0 | $23 | APP_FACTORY |
+| 292 | Monetization Plan: ALPHA5412 | **6.31** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 5.4 | $11 | MONETIZATION |
+| 293 | Introducing ClawWork : Transform your openclaw/nan | **6.3** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 4.6 | $10 | MONETIZATION |
+| 294 | Introducing ClawWork 🚀: Transform your openclaw/na | **6.3** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 4.6 | $10 | MONETIZATION |
+| 295 | If someone in the Philippines can do it for $5/hou | **6.3** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 4.6 | $5 | MONETIZATION |
+| 296 | Abraxas Capital is shorting #oil.
 In the past 13 h | **6.3** | LAUNCH | 8 | 7.5 | 7.3 | 5.3 | 4.6 | $13 | MONETIZATION |
-| 296 | 47M HN items as Parquet dataset | **6.3** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 8.7 | $0 | TOOL_ALPHA |
-| 297 | $65K/yr side hustle at 10% margin, is going full-t | **6.3** | LAUNCH | 10 | 7.0 | 5.3 | 6.8 | 9.1 | $65 | ECOM |
-| 298 | So I built something | **6.3** | LAUNCH | 10 | 6.0 | 4.3 | 6.8 | 8.9 | $50 | APP_FACTORY |
-| 299 | How do people actually afford long-term solo trave | **6.3** | LAUNCH | 2 | 8.5 | 8.3 | 9.0 | 5.3 | $0 | CONTENT_FARM |
-| 300 | Build niche apps with vibe tools | **6.29** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 9.5 | $2 | APP_FACTORY |
-| 301 | [GOV CONTRACT] HEALTH INSURANCE EXCHANGE PUBLIC ED | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 302 | [GOV CONTRACT] MEDICARE OPEN ENROLLMENT (MOE) AND  | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 303 | I make $100K+ per month with TikTok slideshows
+| 297 | 47M HN items as Parquet dataset | **6.3** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 8.7 | $0 | TOOL_ALPHA |
+| 298 | $65K/yr side hustle at 10% margin, is going full-t | **6.3** | LAUNCH | 10 | 7.0 | 5.3 | 6.8 | 9.1 | $65 | ECOM |
+| 299 | So I built something | **6.3** | LAUNCH | 10 | 6.0 | 4.3 | 6.8 | 8.9 | $50 | APP_FACTORY |
+| 300 | How do people actually afford long-term solo trave | **6.3** | LAUNCH | 2 | 8.5 | 8.3 | 9.0 | 5.3 | $0 | CONTENT_FARM |
+| 301 | Build niche apps with vibe tools | **6.29** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 9.5 | $2 | APP_FACTORY |
+| 302 | [GOV CONTRACT] HEALTH INSURANCE EXCHANGE PUBLIC ED | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 303 | [GOV CONTRACT] MEDICARE OPEN ENROLLMENT (MOE) AND  | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 304 | I make $100K+ per month with TikTok slideshows
 Her | **6.29** | LAUNCH | 5 | 9.0 | 8.3 | 9.0 | 3.8 | $100 | CONTENT_FARM |
-| 304 | AI + UGC = GOLDMINE 
+| 305 | AI + UGC = GOLDMINE 
 One can easily scale to $100K | **6.29** | LAUNCH | 5 | 9.0 | 8.3 | 9.0 | 3.8 | $100 | CONTENT_FARM |
-| 305 | I turned my passion into a side business that’s be | **6.29** | LAUNCH | 10 | 6.5 | 5.3 | 6.8 | 4.6 | $2 | ECOM |
-| 306 | [GOV CONTRACT] THIS TIME AND MATERIALS (T&M) TASK  | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 307 | [GOV CONTRACT] BJA PEER REVIEW SUPPORT SERVICES (d | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 308 | [GOV CONTRACT] CONTACT CENTER TIER 1 (CCT1)- THE P | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 309 | [GOV CONTRACT] ICAM TO FROM 09/08/2022 - 09/07/202 | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 310 | [GOV CONTRACT] VA GENERAL MENTAL HEALTH AND SUICID | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 311 | [GOV CONTRACT] THE CONTRACTOR SHALL PROVIDE ON-SIT | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
-| 312 | This NVDA is hysterical
+| 306 | I turned my passion into a side business that’s be | **6.29** | LAUNCH | 10 | 6.5 | 5.3 | 6.8 | 4.6 | $2 | ECOM |
+| 307 | [GOV CONTRACT] THIS TIME AND MATERIALS (T&M) TASK  | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 308 | [GOV CONTRACT] BJA PEER REVIEW SUPPORT SERVICES (d | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 309 | [GOV CONTRACT] CONTACT CENTER TIER 1 (CCT1)- THE P | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 310 | [GOV CONTRACT] ICAM TO FROM 09/08/2022 - 09/07/202 | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 311 | [GOV CONTRACT] VA GENERAL MENTAL HEALTH AND SUICID | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 312 | [GOV CONTRACT] THE CONTRACTOR SHALL PROVIDE ON-SIT | **6.29** | LAUNCH | 8 | 7.0 | 8.3 | 4.0 | 4.6 | $0 | FREELANCE |
+| 313 | This NVDA is hysterical
 
 First it's red bar *NVIDI | **6.29** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 10.0 | $1 | MONETIZATION |
-| 313 | Monetization Plan: ALPHA10329 | **6.29** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
-| 314 | Cook CLI orchestrates Claude Code sessions | **6.28** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 8.3 | $0 | TOOL_ALPHA |
-| 315 | I tracked every marketing channel for 12 months | **6.28** | LAUNCH | 8 | 5.0 | 7.8 | 8.8 | 10.0 | $9 | OUTBOUND |
-| 316 | Monetization Plan: ALPHA19132 | **6.28** | LAUNCH | 5 | 8.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
-| 317 | meanwhile blackhat rebillers doing 10x worse on cu | **6.27** | LAUNCH | 10 | 6.5 | 7.3 | 4.5 | 4.6 | $30 | MONETIZATION |
-| 318 | the funniest part about the AI OF explosion is who | **6.27** | LAUNCH | 2 | 8.5 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
-| 319 | the pricing page tweak that added $4,200/month to  | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $47 | MONETIZATION |
-| 320 | Tron ranked #1 in revenue, far ahead of other bloc | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
-| 321 | Whale 0x15a4 has stopped trading perps and switche | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 322 | You know what you want. So why waste time?
+| 314 | Monetization Plan: ALPHA10329 | **6.29** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
+| 315 | Cook CLI orchestrates Claude Code sessions | **6.28** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 8.3 | $0 | TOOL_ALPHA |
+| 316 | I tracked every marketing channel for 12 months | **6.28** | LAUNCH | 8 | 5.0 | 7.8 | 8.8 | 10.0 | $9 | OUTBOUND |
+| 317 | Monetization Plan: ALPHA19132 | **6.28** | LAUNCH | 5 | 8.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
+| 318 | meanwhile blackhat rebillers doing 10x worse on cu | **6.27** | LAUNCH | 10 | 6.5 | 7.3 | 4.5 | 4.6 | $30 | MONETIZATION |
+| 319 | the funniest part about the AI OF explosion is who | **6.27** | LAUNCH | 2 | 8.5 | 8.3 | 9.0 | 4.6 | $0 | CONTENT_FARM |
+| 320 | the pricing page tweak that added $4,200/month to  | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $47 | MONETIZATION |
+| 321 | Tron ranked #1 in revenue, far ahead of other bloc | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
+| 322 | Whale 0x15a4 has stopped trading perps and switche | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
+| 323 | You know what you want. So why waste time?
 Stablec | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $2 | MONETIZATION |
-| 323 | A newly created wallet(GVnRrk) withdrew 1.5M $TRUM | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
-| 324 | Whales are buying $ETH!
+| 324 | A newly created wallet(GVnRrk) withdrew 1.5M $TRUM | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
+| 325 | Whales are buying $ETH!
 Whale 0x7143 withdrew 10,0 | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
-| 325 | billΞ.eth (
+| 326 | billΞ.eth (
 @0xbilly
 ) sold another 5,571 $ETH($11 | **6.27** | LAUNCH | 8 | 7.5 | 7.3 | 5.0 | 4.6 | $11 | MONETIZATION |
-| 326 | Do done-for-you assets actually fix the beginner p | **6.27** | LAUNCH | 2 | 9.0 | 8.3 | 7.0 | 6.1 | $0 | AFFILIATE |
-| 327 | Show HN: GitClassic.com, a fast, lightweight GitHu | **6.26** | LAUNCH | 8 | 5.5 | 7.3 | 7.0 | 6.0 | $0 | TOOL_ALPHA |
-| 328 | The "zero upfront cost" dropshipping myth is a jok | **6.26** | LAUNCH | 8 | 7.0 | 5.3 | 6.8 | 7.6 | $2 | ECOM |
-| 329 | Show HN: Agent Orchestrator, a local-first Harness | **6.26** | LAUNCH | 8 | 5.5 | 7.3 | 7.3 | 5.4 | $0 | TOOL_ALPHA |
-| 330 | Monetization Plan: ALPHA5377 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
-| 331 | Monetization Plan: ALPHA104754 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 332 | Monetization Plan: ALPHA9109 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
-| 333 | Monetization Plan: ALPHA10702 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
-| 334 | Monetization Plan: ALPHA5421 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 335 | Monetization Plan: HN_002 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 336 | Monetization Plan: ALPHA11674 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
-| 337 | Sleep app market $1B+ growing 17 | **6.25** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 8.7 | $1 | APP_FACTORY |
-| 338 | Premium Obsidian vault systems (Second Brain setup | **6.25** | LAUNCH | 5 | 10.0 | 9.3 | 5.0 | 8.0 | $150 | DIGITAL_PRODUCTS |
-| 339 | TikTok Content Farm | **6.25** | HOLD | 10 | 6.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 340 | Long-tail SEO Content Farm | **6.25** | LAUNCH | 10 | 6.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 341 | [r/webdev] Over 260k people installed fake AI assi | **6.24** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
-| 342 | [r/NewTubers] Went Viral - But I Won't Get Paid Si | **6.24** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
-| 343 | you think digital products are complicated.
+| 327 | Do done-for-you assets actually fix the beginner p | **6.27** | LAUNCH | 2 | 9.0 | 8.3 | 7.0 | 6.1 | $0 | AFFILIATE |
+| 328 | Show HN: GitClassic.com, a fast, lightweight GitHu | **6.26** | LAUNCH | 8 | 5.5 | 7.3 | 7.0 | 6.0 | $0 | TOOL_ALPHA |
+| 329 | The "zero upfront cost" dropshipping myth is a jok | **6.26** | LAUNCH | 8 | 7.0 | 5.3 | 6.8 | 7.6 | $2 | ECOM |
+| 330 | Show HN: Agent Orchestrator, a local-first Harness | **6.26** | LAUNCH | 8 | 5.5 | 7.3 | 7.3 | 5.4 | $0 | TOOL_ALPHA |
+| 331 | Monetization Plan: ALPHA5377 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
+| 332 | Monetization Plan: ALPHA104754 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 333 | Monetization Plan: ALPHA9109 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
+| 334 | Monetization Plan: ALPHA10702 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
+| 335 | Monetization Plan: ALPHA5421 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 336 | Monetization Plan: HN_002 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 337 | Monetization Plan: ALPHA11674 | **6.26** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 5.4 | $0 | MONETIZATION |
+| 338 | Sleep app market $1B+ growing 17 | **6.25** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 8.7 | $1 | APP_FACTORY |
+| 339 | Premium Obsidian vault systems (Second Brain setup | **6.25** | LAUNCH | 5 | 10.0 | 9.3 | 5.0 | 8.0 | $150 | DIGITAL_PRODUCTS |
+| 340 | TikTok Content Farm | **6.25** | HOLD | 10 | 6.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 341 | Long-tail SEO Content Farm | **6.25** | LAUNCH | 10 | 6.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 342 | [r/webdev] Over 260k people installed fake AI assi | **6.24** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
+| 343 | [r/NewTubers] Went Viral - But I Won't Get Paid Si | **6.24** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
+| 344 | you think digital products are complicated.
 like y | **6.24** | LAUNCH | 5 | 8.5 | 7.3 | 5.0 | 8.0 | $30 | MONETIZATION |
-| 344 | POV Camera does $150k mrr.
+| 345 | POV Camera does $150k mrr.
 11 TikTok accounts. 67M | **6.24** | LAUNCH | 5 | 9.0 | 8.3 | 9.0 | 7.7 | $150 | CONTENT_FARM |
-| 345 | Show HN: Horizon – GPU-accelerated infinite-canvas | **6.24** | LAUNCH | 10 | 4.5 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 346 | Show HN: Necessary Cuts – an interactive fiction f | **6.24** | LAUNCH | 10 | 4.5 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 347 | After one year operating, I finally paid myself fo | **6.24** | LAUNCH | 10 | 5.5 | 6.3 | 6.8 | 6.1 | $20 | APP_FACTORY |
-| 348 | Monetization Plan: ALPHA17063 | **6.24** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 349 | Local Biz Website Service | **6.24** | HOLD | 10 | 6.0 | 6.3 | 6.8 | 4.6 | $50 | SERVICE |
-| 350 | AI videos are about to completely take over YouTub | **6.23** | LAUNCH | 2 | 8.5 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
-| 351 | [ACQUISITION] Your SaaS isn’t "pre-revenue." It’s  | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 352 | JUST IN: Silver crashes under $70, falling over 5% | **6.23** | LAUNCH | 10 | 7.5 | 7.3 | 5.0 | 4.6 | $70 | MONETIZATION |
-| 353 | [ACQUISITION] How I got 14,000 newsletter subscrib | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 354 | I am about to turn down a job offer and go all in  | **6.23** | LAUNCH | 8 | 8.0 | 8.3 | 9.0 | 8.6 | $500 | CONTENT_FARM |
-| 355 | Show HN: Pglens – 27 read-only PostgreSQL tools fo | **6.23** | LAUNCH | 8 | 5.5 | 7.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
-| 356 | Monetization Plan: ALPHA19843 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 357 | Monetization Plan: ALPHA24963 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 358 | Monetization Plan: ALPHA104624 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 359 | Monetization Plan: ALPHA23777 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 360 | Monetization Plan: ALPHA104752 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 361 | Monetization Plan: ALPHA106706 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 362 | Monetization Plan: ALPHA22388 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 363 | Monetization Plan: ALPHA21397 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 364 | Gmail warns users about tracking pixels - disable  | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 365 | Too polished = AI detection flag | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 366 | 500+ peer warmup network size matters | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 367 | Volume consistency > volume size | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 368 | 4-6 lines sweet spot for cold email length | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 369 | 2026 email tool landscape update | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 370 | College student BDRs | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 371 | Pre-warmed inboxes | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 372 | Budget warmup | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
-| 373 | 70% of ecom subs will churn within 90 days and it  | **6.22** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 4.6 | $0 | MONETIZATION |
-| 374 | [ACQUISITION] If you’re starting a SaaS in 2026, d | **6.22** | LAUNCH | 8 | 7.0 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
-| 375 | Negotiate Influencer Brand Deals Without Overpayin | **6.22** | LAUNCH | 5 | 8.5 | 8.3 | 7.0 | 8.9 | $100 | AFFILIATE |
-| 376 | MIT repo: dunky11/react-saas-template (1962 stars, | **6.22** | LAUNCH | 8 | 5.5 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 377 | [ACQUISITION] i'm 2 years old and just sold my saa | **6.22** | LAUNCH | 8 | 7.0 | 7.3 | 5.8 | 4.6 | $3 | MONETIZATION |
-| 378 | Have proven Amazon track record but can't get smal | **6.22** | LAUNCH | 10 | 4.5 | 7.3 | 6.3 | 10.0 | $50 | APP_FACTORY |
-| 379 | Monetization Plan: ALPHA5385 | **6.22** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $14 | MONETIZATION |
-| 380 | Monetization Plan: ALPHA5404 | **6.22** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $31 | MONETIZATION |
-| 381 | Monetization Plan: ALPHA5450 | **6.22** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $2 | MONETIZATION |
-| 382 | i taught a ghostwriter friend how to send cold DMs | **6.21** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 6.0 | $20 | MONETIZATION |
-| 383 | [GOV CONTRACT] ENTERPRISE SERVICE DESK (ESD) TIER  | **6.21** | LAUNCH | 8 | 6.5 | 8.3 | 4.0 | 5.4 | $0 | FREELANCE |
-| 384 | $70k added revenue for a client we launched on tik | **6.21** | LAUNCH | 5 | 8.5 | 8.3 | 9.0 | 4.6 | $70 | CONTENT_FARM |
-| 385 | Owning Affiliate Program for Large Beauty Brand | **6.21** | LAUNCH | 2 | 8.0 | 8.3 | 7.8 | 8.4 | $0 | AFFILIATE |
-| 386 | [GOV CONTRACT] DEFENSE ENTERPRISE OFFICE SOLUTIONS | **6.21** | LAUNCH | 8 | 6.5 | 8.3 | 4.0 | 5.4 | $0 | FREELANCE |
-| 387 | Update: From $36K → $90K on AppSumo (Day 17) | **6.21** | LAUNCH | 10 | 5.5 | 6.3 | 5.8 | 8.4 | $36 | SAAS |
-| 388 | 0 is the best opportunity to make money right now | **6.21** | LAUNCH | 2 | 8.0 | 7.3 | 7.8 | 10.0 | $0 | AFFILIATE |
-| 389 | Gov contract: McNary Lock & Dam Spillway Infrastru | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 390 | Gov contract: SEAL, AIR, AIRCRAFT, G | Agency: DLA | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 391 | Gov contract: REAT TEST SYSTEM: Computer-controlle | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 392 | Gov contract: CABLE ASSY | Agency: NAVSUP WEAPON S | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 393 | Gov contract: Synopsis: CM25303002 – ICQ for Heads | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 394 | Gov contract: **Amendment 5** Beluga Whale Explosi | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 395 | Gov contract: Boiler Replacements | Agency: USDA A | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 396 | Gov contract: Lab Coat Services | Agency: FDA OFFI | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 397 | Gov contract: MTE Nitrogen for K2A | Agency: GREAT | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 398 | Gov contract: Q999--Pharmacy Repackaging and Dispe | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 399 | Gov contract: Sources Sought: Hand Held Assembly ( | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 400 | Gov contract: Southwest Fisheries Science Center D | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 401 | Gov contract: Sanding Booth-Tobyhanna-Sources Soug | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 402 | Gov contract: 3066 NAO Derrickboat Elizabeth Repla | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 403 | Gov contract: BROAD AGENCY ANNOUNCEMENT (BAA) RESE | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 404 | Gov contract: UPS Maintenance Services | Agency: N | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 405 | Gov contract: Firm-Fixed Price, Commercial Item, P | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 406 | Gov contract: Forklift Rental | Agency: PEARL HARB | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 407 | Gov contract: IBS-CUS Bridge Action | Agency: FA85 | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 408 | Gov contract: Mobile Communications Unit for Regio | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 409 | Gov contract: DA10--36C24126Q0309 Embase Database  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 410 | Gov contract: Emergency Teleradiology Services for | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 411 | Gov contract: 6520--644-TITAN 3 STRAIGHT NOSE CONE | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 412 | Gov contract: USNS GRASP Hawser Reels | Agency: MS | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 413 | Gov contract: 47--ADAPTER ASSEMBLY | Agency: NAVSU | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 414 | Gov contract: John Day Dam Turbine Replacement and | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 415 | Gov contract: USCG Base Kodiak Landfill Services | | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 416 | Gov contract: 55--DENA - BRIDGE STRINGER LUMBER |  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 417 | Gov contract: Base Alarm Services - Los Angeles Ai | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 418 | Gov contract: Specialized OSINT Tools IDIQ | Agenc | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 419 | Gov contract: Septic Pumping Service | Agency: MWR | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 420 | Gov contract: Food Delivery Service for Pine Ridge | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 421 | Gov contract: Z1DA--612A4-19-016 | Renovate Outpat | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 422 | Gov contract: McNary Lock and Dam Diesel-Powered M | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 423 | Gov contract: Request for Information (RFI) Air Fo | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 424 | Gov contract: OPTUS SERVICE AGREEMENT | Agency: OK | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 425 | Gov contract: Area of Interest for Case Developmen | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 426 | Gov contract: SAF/CDM Commercial Solutions Opening | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 427 | Gov contract: S201--Window Washing - NWI  (VA-26-0 | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 428 | Gov contract: 6515--THYROID UPTAKE EQUIPMENT | Age | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 429 | Gov contract: Request for Information: Removal and | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 430 | Gov contract: 68--Propane Delivery | Agency: MWR O | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 431 | Gov contract: Diesel Engine Wire Harness Replaceme | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 432 | Gov contract: 40 FOOT, HIGH CUBE, DOUBLE DOOR DRY  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 433 | Gov contract: Purchase Boeing ONE (1) 737-700 or 7 | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 434 | Gov contract: D--Business Process and Information  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 435 | Gov contract: KIMBROUGH AMBULATORY CARE CENTER, FO | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 436 | Niche job board for AI-native developers (Claude C | **6.21** | LAUNCH | 5 | 7.5 | 7.8 | 6.1 | 9.5 | $2 | MONETIZATION |
-| 437 | Monetization Plan: ALPHA_101332 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.6 | 5.4 | $0 | MONETIZATION |
-| 438 | Monetization Plan: ALPHA8844 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 439 | Monetization Plan: ALPHA5333 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 6.0 | $0 | MONETIZATION |
-| 440 | Monetization Plan: ALPHA310 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 441 | Monetization Plan: ALPHA100028 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 442 | Monetization Plan: ALPHA359 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 443 | HeyGen video avatar creation tool | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 444 | ASMR niche for AI influencers | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 445 | Transparency builds trust faster than hiding AI na | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 446 | Fitness niche AI influencer | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 447 | Faith niche AI influencer | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 448 | Content calendar framework | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 449 | Platform priority for AI influencers | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 450 | AI-appropriate content framing | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 451 | Affiliate review structure | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 452 | Fanvue/Fansly > OnlyFans for AI creators | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
-| 453 | [PH LAUNCH] MS AUTO CAPTIONS: Generate trending su | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 454 | OpenAI set to discontinue Sora video platform | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 455 | Meta and YouTube Found Negligent in Landmark Socia | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 456 | A Compiler Writing Journey | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 457 | 5M on a failed business | **6.2** | LAUNCH | 10 | 5.5 | 6.3 | 6.8 | 5.3 | $4 | APP_FACTORY |
-| 458 | Nationwide Local Biz Website Redesign | **6.2** | LAUNCH | 10 | 6.0 | 6.3 | 6.8 | 3.8 | $50 | SERVICE |
-| 459 | [ACQUISITION] Day 11 after launching Temetro  traf | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 460 | [ACQUISITION] From $0 → $4,457 MRR as a solo found | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 461 | [ACQUISITION] Perplexity AI hit $200M ARR with 250 | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 462 | [ACQUISITION] $0 → $31 MRR in 28 days. No ads. Jus | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 463 | ChatGPT is overhyped.
+| 346 | Show HN: Horizon – GPU-accelerated infinite-canvas | **6.24** | LAUNCH | 10 | 4.5 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 347 | Show HN: Necessary Cuts – an interactive fiction f | **6.24** | LAUNCH | 10 | 4.5 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 348 | After one year operating, I finally paid myself fo | **6.24** | LAUNCH | 10 | 5.5 | 6.3 | 6.8 | 6.1 | $20 | APP_FACTORY |
+| 349 | Monetization Plan: ALPHA17063 | **6.24** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 350 | Local Biz Website Service | **6.24** | HOLD | 10 | 6.0 | 6.3 | 6.8 | 4.6 | $50 | SERVICE |
+| 351 | AI videos are about to completely take over YouTub | **6.23** | LAUNCH | 2 | 8.5 | 8.3 | 9.0 | 3.8 | $0 | CONTENT_FARM |
+| 352 | [ACQUISITION] Your SaaS isn’t "pre-revenue." It’s  | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 353 | JUST IN: Silver crashes under $70, falling over 5% | **6.23** | LAUNCH | 10 | 7.5 | 7.3 | 5.0 | 4.6 | $70 | MONETIZATION |
+| 354 | [ACQUISITION] How I got 14,000 newsletter subscrib | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 355 | I am about to turn down a job offer and go all in  | **6.23** | LAUNCH | 8 | 8.0 | 8.3 | 9.0 | 8.6 | $500 | CONTENT_FARM |
+| 356 | Show HN: Pglens – 27 read-only PostgreSQL tools fo | **6.23** | LAUNCH | 8 | 5.5 | 7.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
+| 357 | Monetization Plan: ALPHA19843 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 358 | Monetization Plan: ALPHA24963 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 359 | Monetization Plan: ALPHA104624 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 360 | Monetization Plan: ALPHA23777 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 361 | Monetization Plan: ALPHA104752 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 362 | Monetization Plan: ALPHA106706 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 363 | Monetization Plan: ALPHA22388 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 364 | Monetization Plan: ALPHA21397 | **6.23** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 365 | Gmail warns users about tracking pixels - disable  | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 366 | Too polished = AI detection flag | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 367 | 500+ peer warmup network size matters | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 368 | Volume consistency > volume size | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 369 | 4-6 lines sweet spot for cold email length | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 370 | 2026 email tool landscape update | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 371 | College student BDRs | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 372 | Pre-warmed inboxes | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 373 | Budget warmup | **6.22** | LAUNCH | 8 | 6.0 | 7.3 | 8.8 | 4.6 | $30 | OUTBOUND |
+| 374 | 70% of ecom subs will churn within 90 days and it  | **6.22** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 4.6 | $0 | MONETIZATION |
+| 375 | [ACQUISITION] If you’re starting a SaaS in 2026, d | **6.22** | LAUNCH | 8 | 7.0 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
+| 376 | Negotiate Influencer Brand Deals Without Overpayin | **6.22** | LAUNCH | 5 | 8.5 | 8.3 | 7.0 | 8.9 | $100 | AFFILIATE |
+| 377 | MIT repo: dunky11/react-saas-template (1962 stars, | **6.22** | LAUNCH | 8 | 5.5 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 378 | [ACQUISITION] i'm 2 years old and just sold my saa | **6.22** | LAUNCH | 8 | 7.0 | 7.3 | 5.8 | 4.6 | $3 | MONETIZATION |
+| 379 | Have proven Amazon track record but can't get smal | **6.22** | LAUNCH | 10 | 4.5 | 7.3 | 6.3 | 10.0 | $50 | APP_FACTORY |
+| 380 | Monetization Plan: ALPHA5385 | **6.22** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $14 | MONETIZATION |
+| 381 | Monetization Plan: ALPHA5404 | **6.22** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $31 | MONETIZATION |
+| 382 | Monetization Plan: ALPHA5450 | **6.22** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $2 | MONETIZATION |
+| 383 | i taught a ghostwriter friend how to send cold DMs | **6.21** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 6.0 | $20 | MONETIZATION |
+| 384 | [GOV CONTRACT] ENTERPRISE SERVICE DESK (ESD) TIER  | **6.21** | LAUNCH | 8 | 6.5 | 8.3 | 4.0 | 5.4 | $0 | FREELANCE |
+| 385 | $70k added revenue for a client we launched on tik | **6.21** | LAUNCH | 5 | 8.5 | 8.3 | 9.0 | 4.6 | $70 | CONTENT_FARM |
+| 386 | Owning Affiliate Program for Large Beauty Brand | **6.21** | LAUNCH | 2 | 8.0 | 8.3 | 7.8 | 8.4 | $0 | AFFILIATE |
+| 387 | [GOV CONTRACT] DEFENSE ENTERPRISE OFFICE SOLUTIONS | **6.21** | LAUNCH | 8 | 6.5 | 8.3 | 4.0 | 5.4 | $0 | FREELANCE |
+| 388 | Update: From $36K → $90K on AppSumo (Day 17) | **6.21** | LAUNCH | 10 | 5.5 | 6.3 | 5.8 | 8.4 | $36 | SAAS |
+| 389 | 0 is the best opportunity to make money right now | **6.21** | LAUNCH | 2 | 8.0 | 7.3 | 7.8 | 10.0 | $0 | AFFILIATE |
+| 390 | Gov contract: McNary Lock & Dam Spillway Infrastru | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 391 | Gov contract: SEAL, AIR, AIRCRAFT, G | Agency: DLA | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 392 | Gov contract: REAT TEST SYSTEM: Computer-controlle | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 393 | Gov contract: CABLE ASSY | Agency: NAVSUP WEAPON S | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 394 | Gov contract: Synopsis: CM25303002 – ICQ for Heads | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 395 | Gov contract: **Amendment 5** Beluga Whale Explosi | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 396 | Gov contract: Boiler Replacements | Agency: USDA A | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 397 | Gov contract: Lab Coat Services | Agency: FDA OFFI | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 398 | Gov contract: MTE Nitrogen for K2A | Agency: GREAT | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 399 | Gov contract: Q999--Pharmacy Repackaging and Dispe | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 400 | Gov contract: Sources Sought: Hand Held Assembly ( | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 401 | Gov contract: Southwest Fisheries Science Center D | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 402 | Gov contract: Sanding Booth-Tobyhanna-Sources Soug | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 403 | Gov contract: 3066 NAO Derrickboat Elizabeth Repla | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 404 | Gov contract: BROAD AGENCY ANNOUNCEMENT (BAA) RESE | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 405 | Gov contract: UPS Maintenance Services | Agency: N | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 406 | Gov contract: Firm-Fixed Price, Commercial Item, P | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 407 | Gov contract: Forklift Rental | Agency: PEARL HARB | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 408 | Gov contract: IBS-CUS Bridge Action | Agency: FA85 | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 409 | Gov contract: Mobile Communications Unit for Regio | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 410 | Gov contract: DA10--36C24126Q0309 Embase Database  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 411 | Gov contract: Emergency Teleradiology Services for | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 412 | Gov contract: 6520--644-TITAN 3 STRAIGHT NOSE CONE | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 413 | Gov contract: USNS GRASP Hawser Reels | Agency: MS | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 414 | Gov contract: 47--ADAPTER ASSEMBLY | Agency: NAVSU | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 415 | Gov contract: John Day Dam Turbine Replacement and | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 416 | Gov contract: USCG Base Kodiak Landfill Services | | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 417 | Gov contract: 55--DENA - BRIDGE STRINGER LUMBER |  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 418 | Gov contract: Base Alarm Services - Los Angeles Ai | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 419 | Gov contract: Specialized OSINT Tools IDIQ | Agenc | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 420 | Gov contract: Septic Pumping Service | Agency: MWR | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 421 | Gov contract: Food Delivery Service for Pine Ridge | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 422 | Gov contract: Z1DA--612A4-19-016 | Renovate Outpat | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 423 | Gov contract: McNary Lock and Dam Diesel-Powered M | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 424 | Gov contract: Request for Information (RFI) Air Fo | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 425 | Gov contract: OPTUS SERVICE AGREEMENT | Agency: OK | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 426 | Gov contract: Area of Interest for Case Developmen | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 427 | Gov contract: SAF/CDM Commercial Solutions Opening | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 428 | Gov contract: S201--Window Washing - NWI  (VA-26-0 | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 429 | Gov contract: 6515--THYROID UPTAKE EQUIPMENT | Age | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 430 | Gov contract: Request for Information: Removal and | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 431 | Gov contract: 68--Propane Delivery | Agency: MWR O | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 432 | Gov contract: Diesel Engine Wire Harness Replaceme | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 433 | Gov contract: 40 FOOT, HIGH CUBE, DOUBLE DOOR DRY  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 434 | Gov contract: Purchase Boeing ONE (1) 737-700 or 7 | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 435 | Gov contract: D--Business Process and Information  | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 436 | Gov contract: KIMBROUGH AMBULATORY CARE CENTER, FO | **6.21** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 437 | Niche job board for AI-native developers (Claude C | **6.21** | LAUNCH | 5 | 7.5 | 7.8 | 6.1 | 9.5 | $2 | MONETIZATION |
+| 438 | Monetization Plan: ALPHA_101332 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.6 | 5.4 | $0 | MONETIZATION |
+| 439 | Monetization Plan: ALPHA8844 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 440 | Monetization Plan: ALPHA5333 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 6.0 | $0 | MONETIZATION |
+| 441 | Monetization Plan: ALPHA310 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 442 | Monetization Plan: ALPHA100028 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 443 | Monetization Plan: ALPHA359 | **6.21** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 444 | HeyGen video avatar creation tool | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 445 | ASMR niche for AI influencers | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 446 | Transparency builds trust faster than hiding AI na | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 447 | Fitness niche AI influencer | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 448 | Faith niche AI influencer | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 449 | Content calendar framework | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 450 | Platform priority for AI influencers | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 451 | AI-appropriate content framing | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 452 | Affiliate review structure | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 453 | Fanvue/Fansly > OnlyFans for AI creators | **6.2** | LAUNCH | 8 | 7.0 | 5.3 | 7.0 | 4.6 | $0 | AI_INFLUENCER |
+| 454 | [PH LAUNCH] MS AUTO CAPTIONS: Generate trending su | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 455 | OpenAI set to discontinue Sora video platform | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 456 | Meta and YouTube Found Negligent in Landmark Socia | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 457 | A Compiler Writing Journey | **6.2** | LAUNCH | 5 | 7.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 458 | 5M on a failed business | **6.2** | LAUNCH | 10 | 5.5 | 6.3 | 6.8 | 5.3 | $4 | APP_FACTORY |
+| 459 | Nationwide Local Biz Website Redesign | **6.2** | LAUNCH | 10 | 6.0 | 6.3 | 6.8 | 3.8 | $50 | SERVICE |
+| 460 | [ACQUISITION] Day 11 after launching Temetro  traf | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 461 | [ACQUISITION] From $0 → $4,457 MRR as a solo found | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 462 | [ACQUISITION] Perplexity AI hit $200M ARR with 250 | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 463 | [ACQUISITION] $0 → $31 MRR in 28 days. No ads. Jus | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 464 | ChatGPT is overhyped.
 That's what I told myself af | **6.19** | LAUNCH | 8 | 5.5 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 464 | [ACQUISITION] Launching my microsaas today — ATS r | **6.19** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 465 | [ACQUISITION] UPDATE: How we hit $14k in revenue w | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 466 | Gov contract: R420--John D | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 467 | Gov contract: Intelligence Technology Discovery Ex | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 468 | Gov contract: J065--Medical Physicist and Radiatio | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 469 | Gov contract: Materiel Management Operations Servi | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 470 | Claude API prompt -> Remotion component code gener | **6.19** | LAUNCH | 8 | 6.5 | 6.3 | 6.1 | 8.5 | $4 | MICRO_SAAS |
-| 471 | Ecom arb: posture corrector | Sell $17 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $3 | MONETIZATION |
-| 472 | Monetization Plan: ALPHA17079 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $15 | MONETIZATION |
-| 473 | Monetization Plan: ALPHA9084 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
-| 474 | Monetization Plan: ALPHA11649 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
-| 475 | Monetization Plan: ALPHA10677 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
-| 476 | Monetization Plan: ALPHA98718 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $2 | MONETIZATION |
-| 477 | Monetization Plan: ALPHA_ECOM_ARB_ENG_FC76810F | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $3 | MONETIZATION |
-| 478 | Monetization Plan: ALPHA6571 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
-| 479 | Freelance Service Listing: ALPHA18490 | **6.19** | LAUNCH | 5 | 8.0 | 8.3 | 4.3 | 6.0 | $0 | FREELANCE |
-| 480 | Content Clipping Service | **6.19** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 4.6 | $50 | SERVICE |
-| 481 | Sell AI prompt packs | **6.18** | LAUNCH | 8 | 8.0 | 4.3 | 7.8 | 8.4 | $100 | ECOM_ARB |
-| 482 | girl in my DMs said she'd been stuck for 14 months | **6.18** | LAUNCH | 2 | 8.0 | 8.3 | 9.0 | 5.4 | $0 | CONTENT_FARM |
-| 483 | this bible app makes $70k/month by doing exactly t | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $3 | MONETIZATION |
-| 484 | why are people still paying aws prices for gpusthe | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $4 | MONETIZATION |
-| 485 | 3. 8 AI companion apps that made $2.89M in 30 days | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $2 | MONETIZATION |
-| 486 | Fewer bills. More savings. Bundle mobile with inte | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $25 | MONETIZATION |
-| 487 | How literally anyone can get to $10K/month in 60 d | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $10 | MONETIZATION |
-| 488 | running_streak: r/running = 4.19M subs. iTunes sca | **6.18** | LAUNCH | 10 | 4.5 | 6.3 | 6.8 | 9.7 | $1 | APP_FACTORY |
-| 489 | Aster appears to have launched its mainnet, and a  | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $3 | MONETIZATION |
-| 490 | 95% of apps die before they hit 10k users.
+| 465 | [ACQUISITION] Launching my microsaas today — ATS r | **6.19** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 466 | [ACQUISITION] UPDATE: How we hit $14k in revenue w | **6.19** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 467 | Gov contract: R420--John D | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 468 | Gov contract: Intelligence Technology Discovery Ex | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 469 | Gov contract: J065--Medical Physicist and Radiatio | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 470 | Gov contract: Materiel Management Operations Servi | **6.19** | LAUNCH | 8 | 5.0 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 471 | Claude API prompt -> Remotion component code gener | **6.19** | LAUNCH | 8 | 6.5 | 6.3 | 6.1 | 8.5 | $4 | MICRO_SAAS |
+| 472 | Ecom arb: posture corrector | Sell $17 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $3 | MONETIZATION |
+| 473 | Monetization Plan: ALPHA17079 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $15 | MONETIZATION |
+| 474 | Monetization Plan: ALPHA9084 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
+| 475 | Monetization Plan: ALPHA11649 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
+| 476 | Monetization Plan: ALPHA10677 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
+| 477 | Monetization Plan: ALPHA98718 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $2 | MONETIZATION |
+| 478 | Monetization Plan: ALPHA_ECOM_ARB_ENG_FC76810F | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 6.0 | $3 | MONETIZATION |
+| 479 | Monetization Plan: ALPHA6571 | **6.19** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
+| 480 | Freelance Service Listing: ALPHA18490 | **6.19** | LAUNCH | 5 | 8.0 | 8.3 | 4.3 | 6.0 | $0 | FREELANCE |
+| 481 | Content Clipping Service | **6.19** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 4.6 | $50 | SERVICE |
+| 482 | Sell AI prompt packs | **6.18** | LAUNCH | 8 | 8.0 | 4.3 | 7.8 | 8.4 | $100 | ECOM_ARB |
+| 483 | girl in my DMs said she'd been stuck for 14 months | **6.18** | LAUNCH | 2 | 8.0 | 8.3 | 9.0 | 5.4 | $0 | CONTENT_FARM |
+| 484 | this bible app makes $70k/month by doing exactly t | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $3 | MONETIZATION |
+| 485 | why are people still paying aws prices for gpusthe | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $4 | MONETIZATION |
+| 486 | 3. 8 AI companion apps that made $2.89M in 30 days | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $2 | MONETIZATION |
+| 487 | Fewer bills. More savings. Bundle mobile with inte | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $25 | MONETIZATION |
+| 488 | How literally anyone can get to $10K/month in 60 d | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $10 | MONETIZATION |
+| 489 | running_streak: r/running = 4.19M subs. iTunes sca | **6.18** | LAUNCH | 10 | 4.5 | 6.3 | 6.8 | 9.7 | $1 | APP_FACTORY |
+| 490 | Aster appears to have launched its mainnet, and a  | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $3 | MONETIZATION |
+| 491 | 95% of apps die before they hit 10k users.
 Mine di | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $44 | MONETIZATION |
-| 491 | $22k/mo service business built with just cold emai | **6.18** | LAUNCH | 8 | 6.0 | 7.3 | 8.0 | 5.4 | $22 | COLD_OUTBOUND |
-| 492 | My app just made $20k in revenue | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $20 | MONETIZATION |
-| 493 | Doing great work got us fired | **6.18** | LAUNCH | 10 | 6.5 | 5.3 | 6.8 | 9.1 | $70 | ECOM |
-| 494 | Monetization Plan: ALPHA5397 | **6.18** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
-| 495 | Monetization Plan: ALPHA_GOV_003 | **6.18** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
-| 496 | Monetization Plan: ALPHA15655 | **6.18** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
-| 497 | If you make $20-30M+/yr takehome (not revenue, not | **6.17** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 10.0 | $20 | MONETIZATION |
-| 498 | [ACQUISITION] My AI agent finds customers for only | **6.17** | LAUNCH | 8 | 6.5 | 7.3 | 4.8 | 4.6 | $0 | MONETIZATION |
-| 499 | ever wonder how much those annoying games on tikto | **6.17** | LAUNCH | 5 | 8.5 | 8.3 | 9.0 | 3.8 | $80 | CONTENT_FARM |
-| 500 | Monetization Plan: ALPHA14565 | **6.17** | LAUNCH | 5 | 7.5 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
-| 501 | you've bought 14 courses on how to make money onli | **6.16** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 502 | i could get perma banned + blacklisted for sharing | **6.16** | LAUNCH | 8 | 7.0 | 6.3 | 5.6 | 5.4 | $40 | MONETIZATION |
-| 503 | MeditationStreak app | **6.16** | LAUNCH | 10 | 4.5 | 6.3 | 6.8 | 10.0 | $1 | APP_FACTORY |
-| 504 | Monetization Plan: ALPHA98942 | **6.16** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $40 | MONETIZATION |
-| 505 | Micro-SaaS Portfolio | **6.16** | LAUNCH | 10 | 6.0 | 6.3 | 6.8 | 3.0 | $50 | APP |
-| 506 | CONTENT_FARM | **6.15** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 3.8 | $50 | I'VE OFFICIALLY EARNED BACK MY $99 DEVELOPER LICENSE FEE | I HAVE A DREAM JOURNAL APP WITH AI CAPABILITIES THAT I CREATED 6 MONTHS AGO. IT HAS A MONTHLY SUBSCRIPTION AVERAGING $4.99 FOR "RICH" COUNTRIES (I LOCALIZE AND CATEGORIZE MY SUBSCRIPTION FEES BASED ON THE COUNTRY'S ECONOMY). I SPLIT IT INTO 4 GROUPS: $1.99 FOR LOWER-INCOME COUNTRIES, $2.99 FOR MID,  |
-| 507 | CONTENT_FARM | **6.15** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 3.8 | $50 | WHY MOST AI AGENCIES FAIL TO SCALE AND HOW I BUILT A "PLUG & PLAY" AI CREATOR SYSTEM TO SKIP THE 3-MONTH COMFYUI LEARNING CURVE(AND THE "PLUG & PLAY" FIX) | THE BIGGEST BARRIER TO STARTING AN AI/HYBRID MODEL SIDE HUSTLE ISN'T THE "ART"—IT'S THE TECHNICAL "SPAGHETTI" OF COMFYUI NODES. MOST PEOPLE SPEND MONTHS WATCHING TUTORIALS JUST TO GET ONE CONSISTENT FACE. |
-| 508 | CONTENT_FARM | **6.15** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 3.8 | $50 | BUILT 5 MICRO SAAS IN 2 YEARS. 4 NEVER HIT $1K MRR. 1 HIT $11K MRR IN 7 MONTHS. | SPENT 2 YEARS BUILDING 5 DIFFERENT MICRO SAAS PRODUCTS. FIRST 4 SOLVED PROBLEMS I FOUND INTERESTING. BUILT DEVELOPER TOOLS, PRODUCTIVITY APPS, SOCIAL MEDIA SCHEDULERS. COMBINED TOTAL AFTER 18 MONTHS WAS $840 MRR. FIFTH PRODUCT SOLVED EXPENSIVE PROBLEM FOR SPECIFIC NICHE. HIT $11,200 MRR IN 7 MONTHS. |
-| 509 | my bot scanned 400,000 wallets to find the best tr | **6.15** | LAUNCH | 8 | 7.0 | 7.3 | 5.3 | 4.6 | $4 | MONETIZATION |
-| 510 | I keep seeing people flexing millions in B2C app r | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 511 | How I got my first paying user. Here's the unfilte | **6.15** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 8.9 | $85 | MONETIZATION |
-| 512 | Monetization Plan: ALPHA19890 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 513 | Monetization Plan: ALPHA25010 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 514 | Monetization Plan: ALPHA5419 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 515 | Monetization Plan: ALPHA104671 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 516 | Monetization Plan: ALPHA21444 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 517 | Monetization Plan: ALPHA106753 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 518 | Monetization Plan: ALPHA23824 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 519 | Monetization Plan: ALPHA22435 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 520 | Nordic market: high purchasing power + AI adoption | **6.14** | LAUNCH | 8 | 8.0 | 4.3 | 7.8 | 8.1 | $100 | ECOM_ARB |
-| 521 | AI Pages are printing $30k - $50k+ a month Get the | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $30 | MONETIZATION |
-| 522 | @gsitechnology $GSIT Quarterly revs +12% to $6.1 m | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $6 | MONETIZATION |
-| 523 | OIL FUTURES EXTEND LOSSES, U.S. AND BRENT CRUDE DO | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $15 | MONETIZATION |
-| 524 | Whale 0x17c3 keeps adding to his short on #oil. 
+| 492 | $22k/mo service business built with just cold emai | **6.18** | LAUNCH | 8 | 6.0 | 7.3 | 8.0 | 5.4 | $22 | COLD_OUTBOUND |
+| 493 | My app just made $20k in revenue | **6.18** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 5.4 | $20 | MONETIZATION |
+| 494 | Doing great work got us fired | **6.18** | LAUNCH | 10 | 6.5 | 5.3 | 6.8 | 9.1 | $70 | ECOM |
+| 495 | Monetization Plan: ALPHA5397 | **6.18** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
+| 496 | Monetization Plan: ALPHA_GOV_003 | **6.18** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
+| 497 | Monetization Plan: ALPHA15655 | **6.18** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
+| 498 | If you make $20-30M+/yr takehome (not revenue, not | **6.17** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 10.0 | $20 | MONETIZATION |
+| 499 | [ACQUISITION] My AI agent finds customers for only | **6.17** | LAUNCH | 8 | 6.5 | 7.3 | 4.8 | 4.6 | $0 | MONETIZATION |
+| 500 | ever wonder how much those annoying games on tikto | **6.17** | LAUNCH | 5 | 8.5 | 8.3 | 9.0 | 3.8 | $80 | CONTENT_FARM |
+| 501 | Monetization Plan: ALPHA14565 | **6.17** | LAUNCH | 5 | 7.5 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
+| 502 | you've bought 14 courses on how to make money onli | **6.16** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 503 | i could get perma banned + blacklisted for sharing | **6.16** | LAUNCH | 8 | 7.0 | 6.3 | 5.6 | 5.4 | $40 | MONETIZATION |
+| 504 | MeditationStreak app | **6.16** | LAUNCH | 10 | 4.5 | 6.3 | 6.8 | 10.0 | $1 | APP_FACTORY |
+| 505 | Monetization Plan: ALPHA98942 | **6.16** | LAUNCH | 5 | 8.5 | 7.3 | 5.8 | 5.4 | $40 | MONETIZATION |
+| 506 | Micro-SaaS Portfolio | **6.16** | LAUNCH | 10 | 6.0 | 6.3 | 6.8 | 3.0 | $50 | APP |
+| 507 | CONTENT_FARM | **6.15** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 3.8 | $50 | I'VE OFFICIALLY EARNED BACK MY $99 DEVELOPER LICENSE FEE | I HAVE A DREAM JOURNAL APP WITH AI CAPABILITIES THAT I CREATED 6 MONTHS AGO. IT HAS A MONTHLY SUBSCRIPTION AVERAGING $4.99 FOR "RICH" COUNTRIES (I LOCALIZE AND CATEGORIZE MY SUBSCRIPTION FEES BASED ON THE COUNTRY'S ECONOMY). I SPLIT IT INTO 4 GROUPS: $1.99 FOR LOWER-INCOME COUNTRIES, $2.99 FOR MID,  |
+| 508 | CONTENT_FARM | **6.15** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 3.8 | $50 | WHY MOST AI AGENCIES FAIL TO SCALE AND HOW I BUILT A "PLUG & PLAY" AI CREATOR SYSTEM TO SKIP THE 3-MONTH COMFYUI LEARNING CURVE(AND THE "PLUG & PLAY" FIX) | THE BIGGEST BARRIER TO STARTING AN AI/HYBRID MODEL SIDE HUSTLE ISN'T THE "ART"—IT'S THE TECHNICAL "SPAGHETTI" OF COMFYUI NODES. MOST PEOPLE SPEND MONTHS WATCHING TUTORIALS JUST TO GET ONE CONSISTENT FACE. |
+| 509 | CONTENT_FARM | **6.15** | LAUNCH | 10 | 6.5 | 6.3 | 5.0 | 3.8 | $50 | BUILT 5 MICRO SAAS IN 2 YEARS. 4 NEVER HIT $1K MRR. 1 HIT $11K MRR IN 7 MONTHS. | SPENT 2 YEARS BUILDING 5 DIFFERENT MICRO SAAS PRODUCTS. FIRST 4 SOLVED PROBLEMS I FOUND INTERESTING. BUILT DEVELOPER TOOLS, PRODUCTIVITY APPS, SOCIAL MEDIA SCHEDULERS. COMBINED TOTAL AFTER 18 MONTHS WAS $840 MRR. FIFTH PRODUCT SOLVED EXPENSIVE PROBLEM FOR SPECIFIC NICHE. HIT $11,200 MRR IN 7 MONTHS. |
+| 510 | my bot scanned 400,000 wallets to find the best tr | **6.15** | LAUNCH | 8 | 7.0 | 7.3 | 5.3 | 4.6 | $4 | MONETIZATION |
+| 511 | I keep seeing people flexing millions in B2C app r | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 512 | How I got my first paying user. Here's the unfilte | **6.15** | LAUNCH | 5 | 9.0 | 7.3 | 5.8 | 8.9 | $85 | MONETIZATION |
+| 513 | Monetization Plan: ALPHA19890 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 514 | Monetization Plan: ALPHA25010 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 515 | Monetization Plan: ALPHA5419 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 516 | Monetization Plan: ALPHA104671 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 517 | Monetization Plan: ALPHA21444 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 518 | Monetization Plan: ALPHA106753 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 519 | Monetization Plan: ALPHA23824 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 520 | Monetization Plan: ALPHA22435 | **6.15** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 521 | Nordic market: high purchasing power + AI adoption | **6.14** | LAUNCH | 8 | 8.0 | 4.3 | 7.8 | 8.1 | $100 | ECOM_ARB |
+| 522 | AI Pages are printing $30k - $50k+ a month Get the | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $30 | MONETIZATION |
+| 523 | @gsitechnology $GSIT Quarterly revs +12% to $6.1 m | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $6 | MONETIZATION |
+| 524 | OIL FUTURES EXTEND LOSSES, U.S. AND BRENT CRUDE DO | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $15 | MONETIZATION |
+| 525 | Whale 0x17c3 keeps adding to his short on #oil. 
 H | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $24 | MONETIZATION |
-| 525 | [r/AmazonFBA] From ~$900/month to $40k–$80k/month  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $40 | MONETIZATION |
-| 526 | the old flex used to be “we’re hiring like crazy”
+| 526 | [r/AmazonFBA] From ~$900/month to $40k–$80k/month  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $40 | MONETIZATION |
+| 527 | the old flex used to be “we’re hiring like crazy”
  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
-| 527 | this digital ebook resin art store is making $50k+ | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $50 | MONETIZATION |
-| 528 | NYMEX Gasoline April futures settle at $3.0414 a g | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $2 | MONETIZATION |
-| 529 | MAMDANI PROPOSES SLASHING NY ESTATE TAX EXEMPTION  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
-| 530 | Apple Small Business Program: 15% commission on fi | **6.14** | LAUNCH | 10 | 4.5 | 6.3 | 6.8 | 9.0 | $1 | APP_FACTORY |
-| 531 | Someone created a new wallet and opened a 10x long | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $2 | MONETIZATION |
-| 532 | The #EthereumFoundation transferred 5,000 $ETH($10 | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
-| 533 | Ashao 
+| 528 | this digital ebook resin art store is making $50k+ | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $50 | MONETIZATION |
+| 529 | NYMEX Gasoline April futures settle at $3.0414 a g | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $2 | MONETIZATION |
+| 530 | MAMDANI PROPOSES SLASHING NY ESTATE TAX EXEMPTION  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $5 | MONETIZATION |
+| 531 | Apple Small Business Program: 15% commission on fi | **6.14** | LAUNCH | 10 | 4.5 | 6.3 | 6.8 | 9.0 | $1 | APP_FACTORY |
+| 532 | Someone created a new wallet and opened a 10x long | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $2 | MONETIZATION |
+| 533 | The #EthereumFoundation transferred 5,000 $ETH($10 | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
+| 534 | Ashao 
 → Closed $3K setup + $300/meeting
 → 50% upf | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $3 | MONETIZATION |
-| 534 | Competitor copied product + priced at 50% ($29 vs  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $29 | MONETIZATION |
-| 535 | A newly created wallet 0x352a just withdrew 20,000 | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $44 | MONETIZATION |
-| 536 | Claude Code custom skills for Godot | **6.14** | LAUNCH | 8 | 4.5 | 7.3 | 7.3 | 8.0 | $0 | TOOL_ALPHA |
-| 537 | [ACQUISITION] We started sending our newsletter on | **6.14** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 538 | Smart trader pension-usdt.eth, with a win rate ove | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
-| 539 | In less than 15 minutes, trader 0xf4b0 closed his  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $44 | MONETIZATION |
-| 540 | Trader 0xf4b0 FOMOed into a long on $ASTER after A | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 541 | A #BitcoinOG with 5K $BTC($356M) sold another 1,00 | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 542 | Trader 0xF35A deposited 4.105M $USDC into Hyperliq | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $20 | MONETIZATION |
-| 543 | $40k drones destroy $100 billion in revenue | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $40 | MONETIZATION |
-| 544 | Whale 0xc9d spent nearly 1 year buying 742.8 $WBTC | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $14 | MONETIZATION |
-| 545 | $FDX FedEx Q3 Earnings
+| 535 | Competitor copied product + priced at 50% ($29 vs  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $29 | MONETIZATION |
+| 536 | A newly created wallet 0x352a just withdrew 20,000 | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $44 | MONETIZATION |
+| 537 | Claude Code custom skills for Godot | **6.14** | LAUNCH | 8 | 4.5 | 7.3 | 7.3 | 8.0 | $0 | TOOL_ALPHA |
+| 538 | [ACQUISITION] We started sending our newsletter on | **6.14** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 539 | Smart trader pension-usdt.eth, with a win rate ove | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
+| 540 | In less than 15 minutes, trader 0xf4b0 closed his  | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $44 | MONETIZATION |
+| 541 | Trader 0xf4b0 FOMOed into a long on $ASTER after A | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
+| 542 | A #BitcoinOG with 5K $BTC($356M) sold another 1,00 | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
+| 543 | Trader 0xF35A deposited 4.105M $USDC into Hyperliq | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $20 | MONETIZATION |
+| 544 | $40k drones destroy $100 billion in revenue | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $40 | MONETIZATION |
+| 545 | Whale 0xc9d spent nearly 1 year buying 742.8 $WBTC | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $14 | MONETIZATION |
+| 546 | $FDX FedEx Q3 Earnings
 Adjusted EPS $5.25, est. $4 | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 546 | [ACQUISITION] I built a tiny tool to save founders | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $15 | MONETIZATION |
-| 547 | I made an app that moans when you slap your MacBoo | **6.14** | LAUNCH | 8 | 6.0 | 6.3 | 6.8 | 7.6 | $5 | APP_FACTORY |
-| 548 | Advice for eBay affiliate marketing on Pinterest | **6.14** | LAUNCH | 2 | 8.5 | 8.3 | 7.0 | 6.1 | $0 | AFFILIATE |
-| 549 | Monetization Plan: ALPHA18478 | **6.14** | LAUNCH | 5 | 8.5 | 7.3 | 5.0 | 6.0 | $17 | MONETIZATION |
-| 550 | Monetization Plan: ALPHA1773995965 | **6.14** | LAUNCH | 5 | 7.5 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
-| 551 | Monetization Plan: ALPHA98939 | **6.14** | LAUNCH | 5 | 8.5 | 7.3 | 5.3 | 6.0 | $9 | MONETIZATION |
-| 552 | Monetization Plan: ALPHA14829 | **6.14** | LAUNCH | 5 | 8.5 | 7.3 | 5.3 | 5.4 | $5 | MONETIZATION |
-| 553 | Somebody released a directory of 1,700+ dead start | **6.13** | LAUNCH | 10 | 6.0 | 6.3 | 6.1 | 3.8 | $50 | GENERAL |
-| 554 | Trader BlueHorseshoe86, who previously made $260K  | **6.13** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $92 | MONETIZATION |
-| 555 | Monetization Plan: ALPHA19152 | **6.13** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 556 | Monetization Plan: ALPHA536 | **6.13** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 557 | shopify really said ‘what if we just charged more’ | **6.12** | LAUNCH | 5 | 7.0 | 7.3 | 5.0 | 9.7 | $0 | MONETIZATION |
-| 558 | Go to Reddit > r/AskRedditFind elderly wisdom stor | **6.12** | LAUNCH | 8 | 5.0 | 7.3 | 7.6 | 4.6 | $0 | TOOL_ALPHA |
-| 559 | my AI woke me up at 3am with a message: "there's a | **6.12** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $50 | MONETIZATION |
-| 560 | There’s a guy in Romania
+| 547 | [ACQUISITION] I built a tiny tool to save founders | **6.14** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $15 | MONETIZATION |
+| 548 | I made an app that moans when you slap your MacBoo | **6.14** | LAUNCH | 8 | 6.0 | 6.3 | 6.8 | 7.6 | $5 | APP_FACTORY |
+| 549 | Advice for eBay affiliate marketing on Pinterest | **6.14** | LAUNCH | 2 | 8.5 | 8.3 | 7.0 | 6.1 | $0 | AFFILIATE |
+| 550 | Monetization Plan: ALPHA18478 | **6.14** | LAUNCH | 5 | 8.5 | 7.3 | 5.0 | 6.0 | $17 | MONETIZATION |
+| 551 | Monetization Plan: ALPHA1773995965 | **6.14** | LAUNCH | 5 | 7.5 | 7.3 | 6.1 | 6.0 | $0 | MONETIZATION |
+| 552 | Monetization Plan: ALPHA98939 | **6.14** | LAUNCH | 5 | 8.5 | 7.3 | 5.3 | 6.0 | $9 | MONETIZATION |
+| 553 | Monetization Plan: ALPHA14829 | **6.14** | LAUNCH | 5 | 8.5 | 7.3 | 5.3 | 5.4 | $5 | MONETIZATION |
+| 554 | Somebody released a directory of 1,700+ dead start | **6.13** | LAUNCH | 10 | 6.0 | 6.3 | 6.1 | 3.8 | $50 | GENERAL |
+| 555 | Trader BlueHorseshoe86, who previously made $260K  | **6.13** | LAUNCH | 8 | 8.0 | 7.3 | 5.8 | 4.6 | $92 | MONETIZATION |
+| 556 | Monetization Plan: ALPHA19152 | **6.13** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 557 | Monetization Plan: ALPHA536 | **6.13** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 558 | shopify really said ‘what if we just charged more’ | **6.12** | LAUNCH | 5 | 7.0 | 7.3 | 5.0 | 9.7 | $0 | MONETIZATION |
+| 559 | Go to Reddit > r/AskRedditFind elderly wisdom stor | **6.12** | LAUNCH | 8 | 5.0 | 7.3 | 7.6 | 4.6 | $0 | TOOL_ALPHA |
+| 560 | my AI woke me up at 3am with a message: "there's a | **6.12** | LAUNCH | 8 | 7.0 | 7.3 | 5.0 | 4.6 | $50 | MONETIZATION |
+| 561 | There’s a guy in Romania
 Runs a faceless AI +18 di | **6.12** | LAUNCH | 5 | 9.5 | 8.3 | 9.0 | 8.0 | $300 | CONTENT_FARM |
-| 561 | I've made $500k+ on X in the last 11 months
+| 562 | I've made $500k+ on X in the last 11 months
 I just | **6.12** | LAUNCH | 5 | 9.5 | 8.3 | 9.0 | 8.0 | $500 | CONTENT_FARM |
-| 562 | Fitness MCP server | **6.12** | LAUNCH | 8 | 4.5 | 7.3 | 7.0 | 8.2 | $0 | TOOL_ALPHA |
-| 563 | $20k MRR to $191K MRR for supplement brand (I will | **6.12** | LAUNCH | 5 | 6.5 | 8.3 | 8.0 | 8.1 | $20 | CONTENT_FORMAT |
-| 564 | Evaluating online business ideas that don't requir | **6.12** | LAUNCH | 2 | 7.5 | 8.3 | 7.8 | 9.0 | $0 | AFFILIATE |
-| 565 | Monetization Plan: ALPHA5296 | **6.12** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 6.0 | $1 | MONETIZATION |
-| 566 | YouTube Automation (Faceless) | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 567 | Notion Template Marketplace | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
-| 568 | AI Wrapper Micro-SaaS | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
-| 569 | AI Automation Agency | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | SERVICE |
-| 570 | AI Wrapper Apps | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | APP |
-| 571 | [ACQUISITION] I built an secret agent that can fin | **6.11** | LAUNCH | 8 | 6.5 | 7.3 | 4.5 | 4.6 | $0 | MONETIZATION |
-| 572 | These digital products are printing right now.
+| 563 | Fitness MCP server | **6.12** | LAUNCH | 8 | 4.5 | 7.3 | 7.0 | 8.2 | $0 | TOOL_ALPHA |
+| 564 | $20k MRR to $191K MRR for supplement brand (I will | **6.12** | LAUNCH | 5 | 6.5 | 8.3 | 8.0 | 8.1 | $20 | CONTENT_FORMAT |
+| 565 | Evaluating online business ideas that don't requir | **6.12** | LAUNCH | 2 | 7.5 | 8.3 | 7.8 | 9.0 | $0 | AFFILIATE |
+| 566 | Monetization Plan: ALPHA5296 | **6.12** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 6.0 | $1 | MONETIZATION |
+| 567 | YouTube Automation (Faceless) | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 568 | Notion Template Marketplace | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
+| 569 | AI Wrapper Micro-SaaS | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
+| 570 | AI Automation Agency | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | SERVICE |
+| 571 | AI Wrapper Apps | **6.12** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.8 | $50 | APP |
+| 572 | [ACQUISITION] I built an secret agent that can fin | **6.11** | LAUNCH | 8 | 6.5 | 7.3 | 4.5 | 4.6 | $0 | MONETIZATION |
+| 573 | These digital products are printing right now.
 Peo | **6.11** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 8.0 | $1 | MONETIZATION |
-| 573 | Current 
+| 574 | Current 
 @Polymarket
  odds put the CLARITY Act pas | **6.11** | LAUNCH | 5 | 8.0 | 6.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 574 | [ACQUISITION] MicroSaaS idea: email deliverability | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 575 | Is organic affiliate marketing still worth to star | **6.11** | LAUNCH | 2 | 8.5 | 8.8 | 7.0 | 4.6 | $0 | AFFILIATE |
-| 576 | Monetization Plan: ALPHA17031 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 577 | Monetization Plan: ALPHA106870 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 578 | Monetization Plan: ALPHA5415 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 579 | Monetization Plan: ALPHA1773995969 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 580 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | I BUILT AN OFFLINE SURVIVAL AI [UPDATE] | 14K USERS IN THE APP STORE, AND WE'RE THE WORLD'S #1 RATED SURVIVAL AI |
-| 581 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | I BUILT A KIDS AI APP AS A SIDE PROJECT 5 MONTHS AGO. IT JUST CROSSED $17K ARR AND RANKS #1 FOR "AI FOR KIDS" IN THE US AND UK. | FIVE MONTHS AGO MY KID ASKED CHATGPT ABOUT DANGEROUS SNAKES. THE RESPONSE WAS DETAILED, ACCURATE, AND COMPLETELY AGE-INAPPROPRIATE. WEEKS OF ANXIETY AND SLEEP ISSUES FOLLOWED. THAT WAS MY "I SHOULD BUILD SOMETHING" MOMENT. |
-| 582 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | SELLING MY MOBILE APP - 100% ORGANIC GROWTH - WHAT'S IT WORTH? | I'VE ATTACHED THE DASHBOARD I'VE BUILT TO TRACK THE APP, SOME KEY NOTES: |
-| 583 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | HOW 8 APPS CLONED THE SAME IDEA AND EACH MAKES $100K+/MONTH (FULL BREAKDOWN) | AFTER WATCHING A MIND-BOGGLINGLY SIMPLE APP CLONING STRATEGY VIDEO ON STARTER STORY, I'VE GOTTEN REALLY INTO THE APP CLONING SPACE. *FOR THE RECORD, CLONING ISN'T BEING A DIRECT COPYCAT - IT CAN BE FINDING WHAT WORKS, MAKING IT 1% BETTER, CHEAPER, OR APPLYING TO A DIFFERENT MARKET.* |
-| 584 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | MY FORGOTTEN SIDE PROJECT OUTRANKS ZILLOW FOR DOZENS OF SEARCHES. HERE'S THE ACCIDENTAL PLAYBOOK | **NOTE**: *NOT PROMOTING THIS SIDE PROJECT - ITS NOT RELEVANT FOR PEOPLE, ONLY THE LESSONS ARE. I BLURRED THE NAME AND DETAILS OUT FOR THIS REASON.* |
-| 585 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | NO PASSIVE INCOME IDEAS? USE THESE 9 PROMPTS TO FIND IDEAS THAT CAN TURN INTO PASSIVE INCOME | HERE ARE 9 PROMPTS TO HELP YOU SIFT THROUGH POTENTIAL IDEAS AND PICK THE ONE THAT IS A POTENTIAL WINNER! |
-| 586 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | FAITH APPS NICHE: 23 COMPETITORS, ALL FREE. ZERO PAID APPS. PREMIUM SUBSCRIPTION GAP = UNTAPPED PRICING ARBITRAGE FOR PRAYERLOCK. |
-| 587 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | PAID HABIT TRACKERS (STREAKS $5.99/4.8★ 27K RATINGS, DUE $7.99/4.7★, GOBLIN $2.99/4.8★) PROVE WILLINGNESS TO PAY. MOST COMPETITORS ARE FREE. FIRST $5.99 HABIT-STREAK APP WITH STRONG ASO = WINS PAID SEGMENT. |
-| 589 | Show HN: Real-time local TTS (31M params, 5.6x CPU | **6.1** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
-| 590 | [ACQUISITION] Building a SaaS as a gap year studen | **6.1** | LAUNCH | 8 | 6.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 591 | Show HN: AI Roundtable – Let 200 models debate you | **6.1** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
-| 592 | Monetization Plan: ALPHA11312 | **6.1** | LAUNCH | 5 | 8.0 | 7.8 | 5.8 | 5.4 | $10 | MONETIZATION |
-| 593 | Newsletter Empire | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | CONTENT |
-| 594 | MIT repo: MohGovIL/hamagen-react-native (510 stars | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 595 | what i see $100k/mo app doing:
+| 575 | [ACQUISITION] MicroSaaS idea: email deliverability | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 576 | Is organic affiliate marketing still worth to star | **6.11** | LAUNCH | 2 | 8.5 | 8.8 | 7.0 | 4.6 | $0 | AFFILIATE |
+| 577 | Monetization Plan: ALPHA17031 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 578 | Monetization Plan: ALPHA106870 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 579 | Monetization Plan: ALPHA5415 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 580 | Monetization Plan: ALPHA1773995969 | **6.11** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 581 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | I BUILT AN OFFLINE SURVIVAL AI [UPDATE] | 14K USERS IN THE APP STORE, AND WE'RE THE WORLD'S #1 RATED SURVIVAL AI |
+| 582 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | I BUILT A KIDS AI APP AS A SIDE PROJECT 5 MONTHS AGO. IT JUST CROSSED $17K ARR AND RANKS #1 FOR "AI FOR KIDS" IN THE US AND UK. | FIVE MONTHS AGO MY KID ASKED CHATGPT ABOUT DANGEROUS SNAKES. THE RESPONSE WAS DETAILED, ACCURATE, AND COMPLETELY AGE-INAPPROPRIATE. WEEKS OF ANXIETY AND SLEEP ISSUES FOLLOWED. THAT WAS MY "I SHOULD BUILD SOMETHING" MOMENT. |
+| 583 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | SELLING MY MOBILE APP - 100% ORGANIC GROWTH - WHAT'S IT WORTH? | I'VE ATTACHED THE DASHBOARD I'VE BUILT TO TRACK THE APP, SOME KEY NOTES: |
+| 584 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | HOW 8 APPS CLONED THE SAME IDEA AND EACH MAKES $100K+/MONTH (FULL BREAKDOWN) | AFTER WATCHING A MIND-BOGGLINGLY SIMPLE APP CLONING STRATEGY VIDEO ON STARTER STORY, I'VE GOTTEN REALLY INTO THE APP CLONING SPACE. *FOR THE RECORD, CLONING ISN'T BEING A DIRECT COPYCAT - IT CAN BE FINDING WHAT WORKS, MAKING IT 1% BETTER, CHEAPER, OR APPLYING TO A DIFFERENT MARKET.* |
+| 585 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | MY FORGOTTEN SIDE PROJECT OUTRANKS ZILLOW FOR DOZENS OF SEARCHES. HERE'S THE ACCIDENTAL PLAYBOOK | **NOTE**: *NOT PROMOTING THIS SIDE PROJECT - ITS NOT RELEVANT FOR PEOPLE, ONLY THE LESSONS ARE. I BLURRED THE NAME AND DETAILS OUT FOR THIS REASON.* |
+| 586 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | NO PASSIVE INCOME IDEAS? USE THESE 9 PROMPTS TO FIND IDEAS THAT CAN TURN INTO PASSIVE INCOME | HERE ARE 9 PROMPTS TO HELP YOU SIFT THROUGH POTENTIAL IDEAS AND PICK THE ONE THAT IS A POTENTIAL WINNER! |
+| 587 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | FAITH APPS NICHE: 23 COMPETITORS, ALL FREE. ZERO PAID APPS. PREMIUM SUBSCRIPTION GAP = UNTAPPED PRICING ARBITRAGE FOR PRAYERLOCK. |
+| 588 | APP_FACTORY | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | PAID HABIT TRACKERS (STREAKS $5.99/4.8★ 27K RATINGS, DUE $7.99/4.7★, GOBLIN $2.99/4.8★) PROVE WILLINGNESS TO PAY. MOST COMPETITORS ARE FREE. FIRST $5.99 HABIT-STREAK APP WITH STRONG ASO = WINS PAID SEGMENT. |
+| 590 | Show HN: Real-time local TTS (31M params, 5.6x CPU | **6.1** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
+| 591 | [ACQUISITION] Building a SaaS as a gap year studen | **6.1** | LAUNCH | 8 | 6.5 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 592 | Show HN: AI Roundtable – Let 200 models debate you | **6.1** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
+| 593 | Monetization Plan: ALPHA11312 | **6.1** | LAUNCH | 5 | 8.0 | 7.8 | 5.8 | 5.4 | $10 | MONETIZATION |
+| 594 | Newsletter Empire | **6.1** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.8 | $50 | CONTENT |
+| 595 | MIT repo: MohGovIL/hamagen-react-native (510 stars | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 596 | what i see $100k/mo app doing:
 ~50% profit
 ~40% ma | **6.09** | LAUNCH | 8 | 8.0 | 7.3 | 5.0 | 5.4 | $100 | MONETIZATION |
-| 596 | [ACQUISITION] Just passed $50 MRR on my App Store  | **6.09** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 6.0 | $50 | MONETIZATION |
-| 597 | MIT repo: Snouzy/workout-cool (7131 stars, TypeScr | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 598 | MIT repo: sorenlouv/fb-sleep-stats (1689 stars, Ja | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 599 | MIT repo: kingstinct/react-native-healthkit (636 s | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 600 | MIT repo: kriasoft/react-starter-kit (23544 stars, | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 601 | MIT repo: ixartz/SaaS-Boilerplate (6929 stars, Typ | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 602 | MIT repo: nextify-limited/saasfly (2866 stars, Typ | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 603 | Today, my little one-person business crossed $10M  | **6.09** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 10.0 | $10 | MONETIZATION |
-| 604 | Tron ranked #1 in revenue, far ahead of other bloc | **6.09** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 10.0 | $5 | MONETIZATION |
-| 605 | Gov contract: Department of War Enterprise Agreeme | **6.09** | LAUNCH | 8 | 4.5 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 606 | Gov contract: Course Development and Delivery Serv | **6.09** | LAUNCH | 8 | 4.5 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
-| 607 | [ACQUISITION] Sent 333 cold emails. Zero replies.  | **6.09** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 6.0 | $5 | MONETIZATION |
-| 608 | Claude Code's source code has been leaked via a ma | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 609 | Show HN: A sandboxed AI agent that can watch webpa | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 610 | WhatsApp Business Cloud API webhook -> Claude clas | **6.09** | LAUNCH | 8 | 6.0 | 6.3 | 5.9 | 9.3 | $7 | MICRO_SAAS |
-| 611 | Show HN: Wazear – A visual AI orchestrator where a | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
-| 612 | Monetization Plan: ALPHA10019 | **6.09** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $22 | MONETIZATION |
-| 613 | Monetization Plan: ALPHA5369 | **6.09** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $5 | MONETIZATION |
-| 614 | Monetization Plan: ALPHA25039 | **6.09** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $9 | MONETIZATION |
-| 615 | [ACQUISITION] Built a self-hosted security automat | **6.08** | LAUNCH | 8 | 6.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 616 | [ACQUISITION] GPT 5.4 &amp; GPT 5.4 Pro + Claude O | **6.08** | LAUNCH | 8 | 6.5 | 7.3 | 5.6 | 4.6 | $5 | MONETIZATION |
-| 617 | Show HN: GitGlimpse – GitHub Action that generates | **6.08** | LAUNCH | 8 | 5.0 | 7.3 | 6.8 | 5.4 | $0 | TOOL_ALPHA |
-| 618 | Show HN: Minimalist library to generate SVG views  | **6.08** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 619 | Open source CAD in the browser (Solvespace) | **6.08** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 620 | Monetization Plan: ALPHA10072 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 621 | Monetization Plan: ALPHA12235 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 622 | Monetization Plan: ALPHA14914 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 623 | Monetization Plan: ALPHA1773995964 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 624 | Monetization Plan: ALPHA13147 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 625 | Monetization Plan: ALPHA7931 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 626 | Monetization Plan: ALPHA11381 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 627 | Monetization Plan: ALPHA307 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 628 | Monetization Plan: ALPHA1773995973 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 629 | Monetization Plan: ALPHA5411 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 630 | Monetization Plan: ALPHA1773995967 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 631 | Monetization Plan: ALPHA8403 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
-| 632 | Podcast Factory (AI Host) | **6.08** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | CONTENT |
-| 633 | AI Prompt Marketplace | **6.08** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | DIGITAL |
-| 634 | AI Influencer Portfolio (SFW) | **6.08** | HOLD | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | PERSONA |
-| 635 | Fitness AI Influencer | **6.08** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | PERSONA |
-| 636 | [ACQUISITION] How do you sell a pre-revenue SaaS/S | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 637 | [ACQUISITION] I spent 12 months and $25k building  | **6.07** | LAUNCH | 8 | 6.5 | 7.3 | 5.8 | 4.6 | $25 | MONETIZATION |
-| 638 | [ACQUISITION] 2026 SaaS vibe check | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 639 | [ACQUISITION] 500 users in 10 days. Here is the #1 | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 640 | btw if you can build a category leader open source | **6.07** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $10 | MONETIZATION |
-| 641 | [ACQUISITION] I built an open-source project becau | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 642 | [ACQUISITION] Thesis: Discord is an underrated pla | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 643 | [ACQUISITION] The best micro-SaaS ideas in my data | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 644 | [ACQUISITION] Launched my first SaaS at 15, now st | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 645 | [ACQUISITION] I screen deal flow for an early-stag | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 646 | Show HN: TopMail – LaunchFest Winner, $20/Mo Unlim | **6.07** | LAUNCH | 10 | 5.0 | 6.3 | 7.1 | 4.6 | $20 | APP_FACTORY |
-| 647 | Whop affiliate is slept on massively 
+| 597 | [ACQUISITION] Just passed $50 MRR on my App Store  | **6.09** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 6.0 | $50 | MONETIZATION |
+| 598 | MIT repo: Snouzy/workout-cool (7131 stars, TypeScr | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 599 | MIT repo: sorenlouv/fb-sleep-stats (1689 stars, Ja | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 600 | MIT repo: kingstinct/react-native-healthkit (636 s | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 601 | MIT repo: kriasoft/react-starter-kit (23544 stars, | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 602 | MIT repo: ixartz/SaaS-Boilerplate (6929 stars, Typ | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 603 | MIT repo: nextify-limited/saasfly (2866 stars, Typ | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 604 | Today, my little one-person business crossed $10M  | **6.09** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 10.0 | $10 | MONETIZATION |
+| 605 | Tron ranked #1 in revenue, far ahead of other bloc | **6.09** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 10.0 | $5 | MONETIZATION |
+| 606 | Gov contract: Department of War Enterprise Agreeme | **6.09** | LAUNCH | 8 | 4.5 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 607 | Gov contract: Course Development and Delivery Serv | **6.09** | LAUNCH | 8 | 4.5 | 7.3 | 8.3 | 6.0 | $0 | BROKERING |
+| 608 | [ACQUISITION] Sent 333 cold emails. Zero replies.  | **6.09** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 6.0 | $5 | MONETIZATION |
+| 609 | Claude Code's source code has been leaked via a ma | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 610 | Show HN: A sandboxed AI agent that can watch webpa | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 611 | WhatsApp Business Cloud API webhook -> Claude clas | **6.09** | LAUNCH | 8 | 6.0 | 6.3 | 5.9 | 9.3 | $7 | MICRO_SAAS |
+| 612 | Show HN: Wazear – A visual AI orchestrator where a | **6.09** | LAUNCH | 8 | 5.0 | 7.3 | 7.3 | 4.6 | $0 | TOOL_ALPHA |
+| 613 | Monetization Plan: ALPHA10019 | **6.09** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $22 | MONETIZATION |
+| 614 | Monetization Plan: ALPHA5369 | **6.09** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $5 | MONETIZATION |
+| 615 | Monetization Plan: ALPHA25039 | **6.09** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 6.0 | $9 | MONETIZATION |
+| 616 | [ACQUISITION] Built a self-hosted security automat | **6.08** | LAUNCH | 8 | 6.0 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 617 | [ACQUISITION] GPT 5.4 &amp; GPT 5.4 Pro + Claude O | **6.08** | LAUNCH | 8 | 6.5 | 7.3 | 5.6 | 4.6 | $5 | MONETIZATION |
+| 618 | Show HN: GitGlimpse – GitHub Action that generates | **6.08** | LAUNCH | 8 | 5.0 | 7.3 | 6.8 | 5.4 | $0 | TOOL_ALPHA |
+| 619 | Show HN: Minimalist library to generate SVG views  | **6.08** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 620 | Open source CAD in the browser (Solvespace) | **6.08** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 621 | Monetization Plan: ALPHA10072 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 622 | Monetization Plan: ALPHA12235 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 623 | Monetization Plan: ALPHA14914 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 624 | Monetization Plan: ALPHA1773995964 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 625 | Monetization Plan: ALPHA13147 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 626 | Monetization Plan: ALPHA7931 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 627 | Monetization Plan: ALPHA11381 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 628 | Monetization Plan: ALPHA307 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 629 | Monetization Plan: ALPHA1773995973 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 630 | Monetization Plan: ALPHA5411 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 631 | Monetization Plan: ALPHA1773995967 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 632 | Monetization Plan: ALPHA8403 | **6.08** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 5.4 | $0 | MONETIZATION |
+| 633 | Podcast Factory (AI Host) | **6.08** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | CONTENT |
+| 634 | AI Prompt Marketplace | **6.08** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | DIGITAL |
+| 635 | AI Influencer Portfolio (SFW) | **6.08** | HOLD | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | PERSONA |
+| 636 | Fitness AI Influencer | **6.08** | LAUNCH | 10 | 6.0 | 6.3 | 6.0 | 3.0 | $50 | PERSONA |
+| 637 | [ACQUISITION] How do you sell a pre-revenue SaaS/S | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 638 | [ACQUISITION] I spent 12 months and $25k building  | **6.07** | LAUNCH | 8 | 6.5 | 7.3 | 5.8 | 4.6 | $25 | MONETIZATION |
+| 639 | [ACQUISITION] 2026 SaaS vibe check | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 640 | [ACQUISITION] 500 users in 10 days. Here is the #1 | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 641 | btw if you can build a category leader open source | **6.07** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $10 | MONETIZATION |
+| 642 | [ACQUISITION] I built an open-source project becau | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 643 | [ACQUISITION] Thesis: Discord is an underrated pla | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 644 | [ACQUISITION] The best micro-SaaS ideas in my data | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 645 | [ACQUISITION] Launched my first SaaS at 15, now st | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 646 | [ACQUISITION] I screen deal flow for an early-stag | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 647 | Show HN: TopMail – LaunchFest Winner, $20/Mo Unlim | **6.07** | LAUNCH | 10 | 5.0 | 6.3 | 7.1 | 4.6 | $20 | APP_FACTORY |
+| 648 | Whop affiliate is slept on massively 
 
 You could n | **6.07** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 648 | Monetization Plan: ALPHA_GOV_001 | **6.07** | LAUNCH | 5 | 8.0 | 7.3 | 5.6 | 6.0 | $10 | MONETIZATION |
-| 649 | Autonomous code review tool | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 650 | YC W26 batch analysis for clone/compete/tool oppor | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 651 | ALPHA942 | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | FOOD TRUCK CASH MANAGEMENT WHEN HALF YOUR CUSTOMERS STILL PAY CASH AND BANKS MAKE IT IMPOSSIBLE | I RUN A FOOD TRUCK AND ABOUT 40% OF TRANSACTIONS ARE STILL CASH DESPITE HAVING SQUARE, PEOPLE AT FESTIVALS AND STREET CORNERS JUST PREFER CASH I GUESS. PROBLEM IS DEALING WITH THAT CASH IS A NIGHTMARE, I CAN'T MOBILE DEPOSIT IT OBVIOUSLY, MOST ATMS DON'T ACCEPT DEPOSITS FOR BUSINESS ACCOUNTS, I HAVE |
-| 652 | SAAS_TACTICS | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | 53 PAYING CUSTOMERS, $4,150 MRR, AND A CEASE-AND-DESIST. AMA. |
-| 653 | ALPHA4290 | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | I DOUBLED OUR MRR FROM $25K TO $50K IN 30 DAYS |
-| 654 | MIT repo: viccon/pulse (241 stars, Go) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 655 | MIT repo: Hanziness/FocusTide (399 stars, Vue) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 656 | Segmenting your email list by purchase behavior in | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $5 | MONETIZATION |
-| 657 | Shopify holding your funds for 90 days is how "pro | **6.06** | LAUNCH | 8 | 7.0 | 6.3 | 5.0 | 4.6 | $50 | MONETIZATION |
-| 658 | SAAS_TACTICS | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | MY YOUTUBE VIDEOS GET 100 VIEWS. THEY GENERATE $12,000/MONTH. |
-| 659 | SAAS_TACTICS | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | I'M A RESEARCHER WHO CAN'T CODE. BUILT A SAAS WITH VIBE CODING. $1K MRR IN 25 DAYS, 2,000+ USERS. HERE'S EVERYTHING I DID. |
-| 660 | ALPHA8272 | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | WE’RE DAYS AWAY FROM $1M ARR. HERE’S THE FULL GROWTH BREAKDOWN. |
-| 661 | [ACQUISITION] Honest progress report: Day 12 of bu | **6.06** | LAUNCH | 8 | 6.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
-| 662 | Here's exactly how to create these 3D Animations i | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 663 | There has never been more opportunity’s to change  | **6.06** | LAUNCH | 5 | 8.0 | 7.8 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 664 | [ACQUISITION] 1k+ users and $5-10 everyday from my | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $5 | MONETIZATION |
-| 665 | [ACQUISITION] built a starter kit for openclaw wra | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $5 | MONETIZATION |
-| 666 | [ACQUISITION] Built a lead gen tool for people sel | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $5 | MONETIZATION |
-| 667 | [r/entrepreneur] How many of you people stopped us | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 668 | Fani Spanked Again: Judge Allows Trump And Co-Defe | **6.06** | LAUNCH | 8 | 7.0 | 6.3 | 5.0 | 4.6 | $17 | MONETIZATION |
-| 669 | here's how to do this in 2 minutes:
+| 649 | Monetization Plan: ALPHA_GOV_001 | **6.07** | LAUNCH | 5 | 8.0 | 7.3 | 5.6 | 6.0 | $10 | MONETIZATION |
+| 650 | Autonomous code review tool | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 651 | YC W26 batch analysis for clone/compete/tool oppor | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 652 | ALPHA942 | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | FOOD TRUCK CASH MANAGEMENT WHEN HALF YOUR CUSTOMERS STILL PAY CASH AND BANKS MAKE IT IMPOSSIBLE | I RUN A FOOD TRUCK AND ABOUT 40% OF TRANSACTIONS ARE STILL CASH DESPITE HAVING SQUARE, PEOPLE AT FESTIVALS AND STREET CORNERS JUST PREFER CASH I GUESS. PROBLEM IS DEALING WITH THAT CASH IS A NIGHTMARE, I CAN'T MOBILE DEPOSIT IT OBVIOUSLY, MOST ATMS DON'T ACCEPT DEPOSITS FOR BUSINESS ACCOUNTS, I HAVE |
+| 653 | SAAS_TACTICS | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | 53 PAYING CUSTOMERS, $4,150 MRR, AND A CEASE-AND-DESIST. AMA. |
+| 654 | ALPHA4290 | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | I DOUBLED OUR MRR FROM $25K TO $50K IN 30 DAYS |
+| 655 | MIT repo: viccon/pulse (241 stars, Go) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 656 | MIT repo: Hanziness/FocusTide (399 stars, Vue) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 657 | Segmenting your email list by purchase behavior in | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $5 | MONETIZATION |
+| 658 | Shopify holding your funds for 90 days is how "pro | **6.06** | LAUNCH | 8 | 7.0 | 6.3 | 5.0 | 4.6 | $50 | MONETIZATION |
+| 659 | SAAS_TACTICS | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | MY YOUTUBE VIDEOS GET 100 VIEWS. THEY GENERATE $12,000/MONTH. |
+| 660 | SAAS_TACTICS | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | I'M A RESEARCHER WHO CAN'T CODE. BUILT A SAAS WITH VIBE CODING. $1K MRR IN 25 DAYS, 2,000+ USERS. HERE'S EVERYTHING I DID. |
+| 661 | ALPHA8272 | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | WE’RE DAYS AWAY FROM $1M ARR. HERE’S THE FULL GROWTH BREAKDOWN. |
+| 662 | [ACQUISITION] Honest progress report: Day 12 of bu | **6.06** | LAUNCH | 8 | 6.0 | 7.3 | 5.0 | 4.6 | $0 | MONETIZATION |
+| 663 | Here's exactly how to create these 3D Animations i | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 664 | There has never been more opportunity’s to change  | **6.06** | LAUNCH | 5 | 8.0 | 7.8 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 665 | [ACQUISITION] 1k+ users and $5-10 everyday from my | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $5 | MONETIZATION |
+| 666 | [ACQUISITION] built a starter kit for openclaw wra | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $5 | MONETIZATION |
+| 667 | [ACQUISITION] Built a lead gen tool for people sel | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $5 | MONETIZATION |
+| 668 | [r/entrepreneur] How many of you people stopped us | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 669 | Fani Spanked Again: Judge Allows Trump And Co-Defe | **6.06** | LAUNCH | 8 | 7.0 | 6.3 | 5.0 | 4.6 | $17 | MONETIZATION |
+| 670 | here's how to do this in 2 minutes:
 - upload image | **6.06** | LAUNCH | 8 | 7.0 | 6.3 | 5.0 | 4.6 | $10 | MONETIZATION |
-| 670 | [ACQUISITION] Ohh yeah... Got my first sale... $2K | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $2 | MONETIZATION |
-| 671 | 5 Min. Read: You finished a $50K roof — now the ca | **6.06** | LAUNCH | 8 | 7.0 | 6.3 | 5.0 | 4.6 | $50 | MONETIZATION |
-| 672 | Apps are paying affiliates $4 for someone signing  | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $4 | MONETIZATION |
-| 673 | MIT repo: matinzd/react-native-health-connect (385 | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 674 | MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporte | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 675 | MIT repo: Lissy93/dashy (24290 stars, Vue) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 676 | MIT repo: brufdev/many-notes (928 stars, PHP) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 677 | Show HN: Lazy-tool: reducing prompt bloat in MCP-b | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 678 | Delve allegedly forked an open-source tool and sol | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 679 | Show HN: Semantic atlas of 188 constitutions in 3D | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 680 | Show HN: OpenCode Pollinations Plugin –AI & tool l | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 681 | Monetization Plan: ALPHA5381 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $37 | MONETIZATION |
-| 682 | Monetization Plan: ALPHA100025 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $8 | MONETIZATION |
-| 683 | Monetization Plan: ALPHA8801 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
-| 684 | Monetization Plan: ALPHA12250 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
-| 685 | Monetization Plan: ALPHA14831 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
-| 686 | Monetization Plan: ALPHA14722 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $9 | MONETIZATION |
-| 687 | Monetization Plan: ALPHA5422 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
-| 688 | Monetization Plan: ALPHA10405 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.6 | 5.4 | $0 | MONETIZATION |
-| 689 | Monetization Plan: ALPHA5465 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $5 | MONETIZATION |
-| 690 | Monetization Plan: ALPHA14562 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $34 | MONETIZATION |
-| 691 | Monetization Plan: ALPHA14569 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $2 | MONETIZATION |
-| 692 | Monetization Plan: ALPHA5396 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $50 | MONETIZATION |
-| 693 | Monetization Plan: ALPHA10343 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $10 | MONETIZATION |
-| 694 | White-Label SaaS Reselling | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | DIGITAL |
-| 695 | [ACQUISITION] The weekend Redis and compose turned | **6.05** | LAUNCH | 8 | 6.5 | 7.3 | 5.3 | 4.6 | $50 | MONETIZATION |
-| 696 | Quick update on MoldCo's (
+| 671 | [ACQUISITION] Ohh yeah... Got my first sale... $2K | **6.06** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 5.4 | $2 | MONETIZATION |
+| 672 | 5 Min. Read: You finished a $50K roof — now the ca | **6.06** | LAUNCH | 8 | 7.0 | 6.3 | 5.0 | 4.6 | $50 | MONETIZATION |
+| 673 | Apps are paying affiliates $4 for someone signing  | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $4 | MONETIZATION |
+| 674 | MIT repo: matinzd/react-native-health-connect (385 | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 675 | MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporte | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 676 | MIT repo: Lissy93/dashy (24290 stars, Vue) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 677 | MIT repo: brufdev/many-notes (928 stars, PHP) | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 678 | Show HN: Lazy-tool: reducing prompt bloat in MCP-b | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 679 | Delve allegedly forked an open-source tool and sol | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 680 | Show HN: Semantic atlas of 188 constitutions in 3D | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 681 | Show HN: OpenCode Pollinations Plugin –AI & tool l | **6.06** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 682 | Monetization Plan: ALPHA5381 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $37 | MONETIZATION |
+| 683 | Monetization Plan: ALPHA100025 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $8 | MONETIZATION |
+| 684 | Monetization Plan: ALPHA8801 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
+| 685 | Monetization Plan: ALPHA12250 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
+| 686 | Monetization Plan: ALPHA14831 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
+| 687 | Monetization Plan: ALPHA14722 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $9 | MONETIZATION |
+| 688 | Monetization Plan: ALPHA5422 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $47 | MONETIZATION |
+| 689 | Monetization Plan: ALPHA10405 | **6.06** | LAUNCH | 5 | 7.5 | 7.3 | 5.6 | 5.4 | $0 | MONETIZATION |
+| 690 | Monetization Plan: ALPHA5465 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $5 | MONETIZATION |
+| 691 | Monetization Plan: ALPHA14562 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $34 | MONETIZATION |
+| 692 | Monetization Plan: ALPHA14569 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $2 | MONETIZATION |
+| 693 | Monetization Plan: ALPHA5396 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $50 | MONETIZATION |
+| 694 | Monetization Plan: ALPHA10343 | **6.06** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $10 | MONETIZATION |
+| 695 | White-Label SaaS Reselling | **6.06** | LAUNCH | 10 | 6.0 | 6.3 | 5.8 | 3.0 | $50 | DIGITAL |
+| 696 | [ACQUISITION] The weekend Redis and compose turned | **6.05** | LAUNCH | 8 | 6.5 | 7.3 | 5.3 | 4.6 | $50 | MONETIZATION |
+| 697 | Quick update on MoldCo's (
 @themoldcompany
 ) Start | **6.05** | LAUNCH | 8 | 8.0 | 7.3 | 5.0 | 4.6 | $56 | MONETIZATION |
-| 697 | Been running a small Amazon FBA operation alongsid | **6.05** | LAUNCH | 8 | 6.5 | 5.3 | 6.3 | 6.9 | $4 | ECOM |
-| 698 | [r/Affiliatemarketing] How We Dropped Bounce Rate  | **6.04** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
-| 699 | anyone could have a tiktok shop brand that adds $1 | **6.04** | LAUNCH | 5 | 8.0 | 8.3 | 9.0 | 3.8 | $100 | CONTENT_FARM |
-| 700 | [r/Affiliatemarketing] Why do most creators fail a | **6.04** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
-| 701 | Abacus Global Management $ABX Reports Fourth Quart | **6.04** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
-| 702 | SaaS built to $8K/month - turned down acqui-hire.  | **6.04** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 4.6 | $8 | APP_FACTORY |
-| 703 | Long time fan of 
+| 698 | Been running a small Amazon FBA operation alongsid | **6.05** | LAUNCH | 8 | 6.5 | 5.3 | 6.3 | 6.9 | $4 | ECOM |
+| 699 | [r/Affiliatemarketing] How We Dropped Bounce Rate  | **6.04** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
+| 700 | anyone could have a tiktok shop brand that adds $1 | **6.04** | LAUNCH | 5 | 8.0 | 8.3 | 9.0 | 3.8 | $100 | CONTENT_FARM |
+| 701 | [r/Affiliatemarketing] Why do most creators fail a | **6.04** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 4.6 | $0 | CONTENT_FORMAT |
+| 702 | Abacus Global Management $ABX Reports Fourth Quart | **6.04** | LAUNCH | 5 | 7.5 | 7.3 | 5.8 | 4.6 | $0 | MONETIZATION |
+| 703 | SaaS built to $8K/month - turned down acqui-hire.  | **6.04** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 4.6 | $8 | APP_FACTORY |
+| 704 | Long time fan of 
 @MuleRun_AI
 , but V2's in a leag | **6.04** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 704 | 61% of businesses say lead generation is their big | **6.04** | LAUNCH | 5 | 7.0 | 7.3 | 5.0 | 8.2 | $0 | MONETIZATION |
-| 705 | Does anyone actually run a proper referral program | **6.04** | LAUNCH | 2 | 7.5 | 8.3 | 7.3 | 8.4 | $0 | AFFILIATE |
-| 706 | Micro-SaaS case study: analytics dashboard for Cha | **6.04** | LAUNCH | 10 | 4.5 | 6.3 | 5.8 | 10.0 | $3 | SAAS |
-| 707 | Show HN: Cognium – Tree-sitter+taint Tracking SAST | **6.04** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 708 | Trusted a "SaaS advisor" who charged $5K/mo | **6.04** | LAUNCH | 10 | 4.5 | 6.3 | 5.8 | 10.0 | $5 | SAAS |
-| 709 | Wrap twitter_alpha_scraper | **6.04** | LAUNCH | 8 | 5.0 | 6.3 | 7.7 | 8.7 | $10 | APP_FACTORY |
-| 710 | Show HN: Git bayesect – Bayesian Git bisection for | **6.04** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
-| 711 | Monetization Plan: ALPHA_ECOM_ARB_ENG_3D39D6F5 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $2 | MONETIZATION |
-| 712 | Monetization Plan: ALPHA104820 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $13 | MONETIZATION |
-| 713 | Monetization Plan: ALPHA_ECOM_ARB_ENG_4257B002 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $2 | MONETIZATION |
-| 714 | Monetization Plan: ALPHA_ECOM_ARB_ENG_C639EF1A | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $7 | MONETIZATION |
-| 715 | Monetization Plan: ALPHA_ECOM_ARB_ENG_6B0C63AF | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $7 | MONETIZATION |
-| 716 | Monetization Plan: ALPHA_ECOM_ARB_ENG_50A9FB04 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $13 | MONETIZATION |
-| 717 | Monetization Plan: ALPHA5354 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $1 | MONETIZATION |
-| 718 | Monetization Plan: ALPHA_ECOM_ARB_ENG_57F074DD | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $3 | MONETIZATION |
-| 719 | Gumroad Product Portfolio | **6.04** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 4.6 | $50 | DIGITAL |
-| 720 | YouTube = highest RPM ($5-9 finance/tech) | **6.03** | LAUNCH | 10 | 5.0 | 6.3 | 5.0 | 9.0 | $50 | PLATFORM_META |
-| 721 | you've been "providing value" for 8 months and mad | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 722 | you posted 3 times today47 likes totalchecked your | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 723 | Day 14 of growing RankInPublic to $10K a month. 
+| 705 | 61% of businesses say lead generation is their big | **6.04** | LAUNCH | 5 | 7.0 | 7.3 | 5.0 | 8.2 | $0 | MONETIZATION |
+| 706 | Does anyone actually run a proper referral program | **6.04** | LAUNCH | 2 | 7.5 | 8.3 | 7.3 | 8.4 | $0 | AFFILIATE |
+| 707 | Micro-SaaS case study: analytics dashboard for Cha | **6.04** | LAUNCH | 10 | 4.5 | 6.3 | 5.8 | 10.0 | $3 | SAAS |
+| 708 | Show HN: Cognium – Tree-sitter+taint Tracking SAST | **6.04** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 709 | Trusted a "SaaS advisor" who charged $5K/mo | **6.04** | LAUNCH | 10 | 4.5 | 6.3 | 5.8 | 10.0 | $5 | SAAS |
+| 710 | Wrap twitter_alpha_scraper | **6.04** | LAUNCH | 8 | 5.0 | 6.3 | 7.7 | 8.7 | $10 | APP_FACTORY |
+| 711 | Show HN: Git bayesect – Bayesian Git bisection for | **6.04** | LAUNCH | 8 | 5.0 | 7.3 | 7.0 | 4.6 | $0 | TOOL_ALPHA |
+| 712 | Monetization Plan: ALPHA_ECOM_ARB_ENG_3D39D6F5 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $2 | MONETIZATION |
+| 713 | Monetization Plan: ALPHA104820 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $13 | MONETIZATION |
+| 714 | Monetization Plan: ALPHA_ECOM_ARB_ENG_4257B002 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $2 | MONETIZATION |
+| 715 | Monetization Plan: ALPHA_ECOM_ARB_ENG_C639EF1A | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $7 | MONETIZATION |
+| 716 | Monetization Plan: ALPHA_ECOM_ARB_ENG_6B0C63AF | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $7 | MONETIZATION |
+| 717 | Monetization Plan: ALPHA_ECOM_ARB_ENG_50A9FB04 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $13 | MONETIZATION |
+| 718 | Monetization Plan: ALPHA5354 | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $1 | MONETIZATION |
+| 719 | Monetization Plan: ALPHA_ECOM_ARB_ENG_57F074DD | **6.04** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 5.4 | $3 | MONETIZATION |
+| 720 | Gumroad Product Portfolio | **6.04** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 4.6 | $50 | DIGITAL |
+| 721 | YouTube = highest RPM ($5-9 finance/tech) | **6.03** | LAUNCH | 10 | 5.0 | 6.3 | 5.0 | 9.0 | $50 | PLATFORM_META |
+| 722 | you've been "providing value" for 8 months and mad | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 723 | you posted 3 times today47 likes totalchecked your | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 724 | Day 14 of growing RankInPublic to $10K a month. 
 W | **6.03** | LAUNCH | 5 | 8.0 | 7.3 | 6.1 | 4.6 | $10 | MONETIZATION |
-| 724 | [ACQUISITION] Marketing CRO App - Seeking Honest F | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 725 | Monetization Plan: ALPHA1773994659 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
-| 726 | Monetization Plan: ALPHA14622 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
-| 727 | Monetization Plan: ALPHA1773995956 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
-| 728 | Monetization Plan: ALPHA5375 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 729 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HIT MY FIRST 6 FIGURES AS A SOLO CONSULTANT, COLD EMAIL DID 80% OF THE HEAVY LIFTING | HEY FOLKS, JUST WANTED TO SHARE THIS BECAUSE A YEAR AGO I WAS LURKING HERE TRYING TO FIGURE THIS STUFF OUT AND POSTS LIKE THIS HELPED ME |
-| 730 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | I SENT 15,000 COLD EMAILS LAST MONTH. HERE’S THE ENTIRE PLAYBOOK I BUILT TO DO IT. (FOR EXPERIENCED AND NEWBIES) | I'M A SOLO FOUNDER, AND PAID ADS WERE BLEEDING ME DRY. A FEW MONTHS AGO, I DECIDED TO GO ALL-IN ON COLD EMAIL TO FIND CUSTOMERS FOR MY SAAS. |
-| 731 | ALPHA767 | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SCALE A SAAS TO $20K MRR IN 90 DAYS USING AI | MOST FOUNDERS THINK SCALING TO $20K MRR REQUIRES A MASSIVE TEAM AND 12 MONTHS OF CODING. |
-| 732 | ALPHA1006 | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SCALE A SAAS TO $20K MRR IN 90 DAYS USING AI | MOST FOUNDERS THINK SCALING TO $20K MRR REQUIRES A MASSIVE TEAM AND 12 MONTHS OF CODING. |
-| 733 | ALPHA1023 | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SCALE A SAAS TO $20K MRR IN 90 DAYS USING AI | MOST FOUNDERS THINK SCALING TO $20K MRR REQUIRES A MASSIVE TEAM AND 12 MONTHS OF CODING. |
-| 734 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | THE TOOLS I WISH I KNEW ABOUT WHEN I STARTED MY SAAS 6 MONTHS AGO (WOULD'VE SAVED ME $180K AND A FAILED TEAM) | I BURNED THROUGH $180K IN 7 MONTHS AND HAD NOTHING TO SHOW FOR IT. |
-| 735 | Tool/technique alpha | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | ENABLED FP8 TRAINING FOR +4.3% IMPROVEMENT TO "TIME TO GPT-2", DOWN TO 2.91 HOURS NOW. ALSO WORTH NOTING THAT IF YOU USE 8XH100 SPOT INSTANCE PRICES, THIS GPT-2 REPRO REALLY ONLY COSTS ~$20. SO THIS IS EXCITING -GPT-2 (7 YEARS AGO): TOO DANGEROUS TO RELEASE.GPT-2 (TODAY): NEW |
-| 736 | Tool/technique alpha | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | NANOCHAT CAN NOW TRAIN GPT-2 GRADE LLM FOR <<$100 (~$73, 3 HOURS ON A SINGLE 8XH100 NODE).GPT-2 IS JUST MY FAVORITE LLM BECAUSE IT'S THE FIRST TIME THE LLM STACK COMES TOGETHER IN A RECOGNIZABLY MODERN FORM. SO IT HAS BECOME A BIT OF A WEIRD & LASTING OBSESSION OF MINE TO TRAIN |
-| 737 | Americans are expected to wager a record $1.76B on | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 738 | Mark Cubans advice on selling AI agents to SMBs is | **6.02** | LAUNCH | 8 | 5.0 | 6.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
-| 739 | [ACQUISITION] Just hit my first $29 sale [rev: $$2 | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $29 | MONETIZATION |
-| 740 | [ACQUISITION] If you sell online, you probably nee | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
-| 741 | We will never live in a time again where it’s this | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 742 | We are excited to announce that @tether, the large | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 743 | [ACQUISITION] Launched a pet sitter marketplace th | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $15 | MONETIZATION |
-| 744 | if you buy 10 of my deploys, 9 of them will nuke
+| 725 | [ACQUISITION] Marketing CRO App - Seeking Honest F | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 726 | Monetization Plan: ALPHA1773994659 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
+| 727 | Monetization Plan: ALPHA14622 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.3 | 5.4 | $0 | MONETIZATION |
+| 728 | Monetization Plan: ALPHA1773995956 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 6.0 | $0 | MONETIZATION |
+| 729 | Monetization Plan: ALPHA5375 | **6.03** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 730 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HIT MY FIRST 6 FIGURES AS A SOLO CONSULTANT, COLD EMAIL DID 80% OF THE HEAVY LIFTING | HEY FOLKS, JUST WANTED TO SHARE THIS BECAUSE A YEAR AGO I WAS LURKING HERE TRYING TO FIGURE THIS STUFF OUT AND POSTS LIKE THIS HELPED ME |
+| 731 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | I SENT 15,000 COLD EMAILS LAST MONTH. HERE’S THE ENTIRE PLAYBOOK I BUILT TO DO IT. (FOR EXPERIENCED AND NEWBIES) | I'M A SOLO FOUNDER, AND PAID ADS WERE BLEEDING ME DRY. A FEW MONTHS AGO, I DECIDED TO GO ALL-IN ON COLD EMAIL TO FIND CUSTOMERS FOR MY SAAS. |
+| 732 | ALPHA767 | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SCALE A SAAS TO $20K MRR IN 90 DAYS USING AI | MOST FOUNDERS THINK SCALING TO $20K MRR REQUIRES A MASSIVE TEAM AND 12 MONTHS OF CODING. |
+| 733 | ALPHA1006 | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SCALE A SAAS TO $20K MRR IN 90 DAYS USING AI | MOST FOUNDERS THINK SCALING TO $20K MRR REQUIRES A MASSIVE TEAM AND 12 MONTHS OF CODING. |
+| 734 | ALPHA1023 | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SCALE A SAAS TO $20K MRR IN 90 DAYS USING AI | MOST FOUNDERS THINK SCALING TO $20K MRR REQUIRES A MASSIVE TEAM AND 12 MONTHS OF CODING. |
+| 735 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | THE TOOLS I WISH I KNEW ABOUT WHEN I STARTED MY SAAS 6 MONTHS AGO (WOULD'VE SAVED ME $180K AND A FAILED TEAM) | I BURNED THROUGH $180K IN 7 MONTHS AND HAD NOTHING TO SHOW FOR IT. |
+| 736 | Tool/technique alpha | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | ENABLED FP8 TRAINING FOR +4.3% IMPROVEMENT TO "TIME TO GPT-2", DOWN TO 2.91 HOURS NOW. ALSO WORTH NOTING THAT IF YOU USE 8XH100 SPOT INSTANCE PRICES, THIS GPT-2 REPRO REALLY ONLY COSTS ~$20. SO THIS IS EXCITING -GPT-2 (7 YEARS AGO): TOO DANGEROUS TO RELEASE.GPT-2 (TODAY): NEW |
+| 737 | Tool/technique alpha | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | NANOCHAT CAN NOW TRAIN GPT-2 GRADE LLM FOR <<$100 (~$73, 3 HOURS ON A SINGLE 8XH100 NODE).GPT-2 IS JUST MY FAVORITE LLM BECAUSE IT'S THE FIRST TIME THE LLM STACK COMES TOGETHER IN A RECOGNIZABLY MODERN FORM. SO IT HAS BECOME A BIT OF A WEIRD & LASTING OBSESSION OF MINE TO TRAIN |
+| 738 | Americans are expected to wager a record $1.76B on | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
+| 739 | Mark Cubans advice on selling AI agents to SMBs is | **6.02** | LAUNCH | 8 | 5.0 | 6.3 | 7.0 | 5.4 | $0 | TOOL_ALPHA |
+| 740 | [ACQUISITION] Just hit my first $29 sale [rev: $$2 | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $29 | MONETIZATION |
+| 741 | [ACQUISITION] If you sell online, you probably nee | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $10 | MONETIZATION |
+| 742 | We will never live in a time again where it’s this | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 743 | We are excited to announce that @tether, the large | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
+| 744 | [ACQUISITION] Launched a pet sitter marketplace th | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $15 | MONETIZATION |
+| 745 | if you buy 10 of my deploys, 9 of them will nuke
 " | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 745 | imagine making $4M per year just uploading Al slop | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $4 | MONETIZATION |
-| 746 | most people's AI models look like plastic dolls an | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $14 | MONETIZATION |
-| 747 | Upgrade all PRINTMAXX agents to use 1M context win | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | 1M CONTEXT NOW GA FOR OPUS 4.6 AND SONNET 4.6 - ENABLES MASSIVE AGENT CONTEXT WINDOWS |
-| 748 | Day 7 of growing RankInPublic to $10k a month:
+| 746 | imagine making $4M per year just uploading Al slop | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $4 | MONETIZATION |
+| 747 | most people's AI models look like plastic dolls an | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $14 | MONETIZATION |
+| 748 | Upgrade all PRINTMAXX agents to use 1M context win | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | 1M CONTEXT NOW GA FOR OPUS 4.6 AND SONNET 4.6 - ENABLES MASSIVE AGENT CONTEXT WINDOWS |
+| 749 | Day 7 of growing RankInPublic to $10k a month:
 Rea | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 749 | This NVDA is hysterical
+| 750 | This NVDA is hysterical
 First it's red bar *NVIDIA | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
-| 750 | Pippin has crashed 85% from its peak! 
+| 751 | Pippin has crashed 85% from its peak! 
 A wallet Bx | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $1 | MONETIZATION |
-| 751 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SEND 100,000 COLD EMAILS PER MONTH FOR ABOUT $1000
+| 752 | COLD_OUTBOUND | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | HOW TO SEND 100,000 COLD EMAILS PER MONTH FOR ABOUT $1000
 HYPERTIDE IO FOR INBOXES
 CONNECT TO INSTANTLY FOR WARMING
 SOURCE LEADS FROM APOLLO IO API AND LEADMAGIC AND SALESQL 
 CASCADE ENRICHMENT WATERFALL
 1% TURN INTO CUSTOMERS
 REMARKET TO THEM ACROSS ALL CHANNELS WITH A VSL |
-| 752 | When someone says "ecom is saturated" and you just | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
-| 753 | post: i built a site where people rename world geo | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 754 | monetization method | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 755 | cursor's real-time collab feature dropped 90 mins  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 756 | i just watched the most important 2 hour ai podcas | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 757 | triggering events nobody tracks:- leadership chang | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 758 | A whale wallet 1NB3ZX, holding 2,100 $BTC($148M),  | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $6 | MONETIZATION |
-| 759 | [ACQUISITION] why 90% of indie clothing startups f | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $3 | MONETIZATION |
-| 760 | 20hrs+ of ugc research into 4 messages | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 761 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 762 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 763 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 764 | funding: the most active (seed) — to get a sense w | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 765 | the crunchbase tech (news) — over 127,000 workers  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 766 | show hn: vibefolio – a place to showcase your vibe | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 767 | 20hrs+ of ugc research into 4 messages | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 768 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 769 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 770 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 753 | When someone says "ecom is saturated" and you just | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $10 | MONETIZATION |
+| 754 | post: i built a site where people rename world geo | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 755 | monetization method | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 756 | cursor's real-time collab feature dropped 90 mins  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 757 | i just watched the most important 2 hour ai podcas | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 758 | triggering events nobody tracks:- leadership chang | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 759 | A whale wallet 1NB3ZX, holding 2,100 $BTC($148M),  | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $6 | MONETIZATION |
+| 760 | [ACQUISITION] why 90% of indie clothing startups f | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $3 | MONETIZATION |
+| 761 | 20hrs+ of ugc research into 4 messages | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 762 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 763 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 764 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 765 | funding: the most active (seed) — to get a sense w | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 766 | the crunchbase tech (news) — over 127,000 workers  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 767 | show hn: vibefolio – a place to showcase your vibe | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 768 | 20hrs+ of ugc research into 4 messages | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 769 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 770 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 771 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 772 | funding: the most active (seed) — to get a sense w | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 773 | the crunchbase tech (news) — over 127,000 workers  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 774 | show hn: vibefolio – a place to showcase your vibe | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 775 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 776 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 777 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 772 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 773 | funding: the most active (seed) — to get a sense w | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 774 | the crunchbase tech (news) — over 127,000 workers  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 775 | show hn: vibefolio – a place to showcase your vibe | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 776 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 777 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 778 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 779 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 780 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 781 | funding: the most active (seed) — to get a sense w | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 782 | the crunchbase tech (news) — over 127,000 workers  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 783 | show hn: vibefolio – a place to showcase your vibe | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 784 | [ACQUISITION] Built a marketplace that matches dev | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $49 | MONETIZATION |
-| 785 | [ACQUISITION] Built Merlin ($9.99/mo or $50 lifeti | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $9 | MONETIZATION |
-| 786 | 20hrs+ of ugc research into 4 messages | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 787 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 788 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 789 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 781 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 782 | funding: the most active (seed) — to get a sense w | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 783 | the crunchbase tech (news) — over 127,000 workers  | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 784 | show hn: vibefolio – a place to showcase your vibe | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 785 | [ACQUISITION] Built a marketplace that matches dev | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $49 | MONETIZATION |
+| 786 | [ACQUISITION] Built Merlin ($9.99/mo or $50 lifeti | **6.02** | LAUNCH | 8 | 6.5 | 7.3 | 5.0 | 4.6 | $9 | MONETIZATION |
+| 787 | 20hrs+ of ugc research into 4 messages | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 788 | sec 8-k: super league enterprise, inc | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 789 | sec s-1: west enclave merger corp | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 790 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 791 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 792 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
@@ -894,138 +894,139 @@ REMARKET TO THEM ACROSS ALL CHANNELS WITH A VSL |
 | 807 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 808 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
 | 809 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
-| 810 | tech guys are pissed that the first 1 man $1B reve | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
-| 811 | Monetization Plan: ALPHA11690 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
-| 812 | Monetization Plan: ALPHA10718 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
-| 813 | Monetization Plan: ALPHA5399 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
-| 814 | Monetization Plan: ALPHA9125 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
-| 815 | Paywall Optimization Service | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | SERVICE |
-| 816 | Domain Flipping | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | INVEST |
-| 817 | [ACQUISITION] I've Build A Youtube to Newsletter A | **6.01** | LAUNCH | 5 | 7.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
-| 818 | [ACQUISITION] My SaaS crossed $100 MRR 🥳 [rev: $$1 | **6.01** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $100 | MONETIZATION |
-| 819 | Best of Passive Income: March 2026 | **6.01** | LAUNCH | 10 | 7.0 | 5.3 | 6.8 | 8.4 | $200 | ECOM |
-| 820 | Build with existing app factory pipeline | **6.01** | LAUNCH | 8 | 5.0 | 6.3 | 7.4 | 8.7 | $4 | APP_FACTORY |
-| 821 | Monetization Plan: ALPHA5376 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $50 | MONETIZATION |
-| 822 | Monetization Plan: ALPHA5363 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $40 | MONETIZATION |
-| 823 | Monetization Plan: ALPHA13191 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 6.0 | $5 | MONETIZATION |
-| 824 | Monetization Plan: ALPHA_MICRO_INFO_001 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 6.0 | $13 | MONETIZATION |
-| 825 | Algo Trading Bot | **6.01** | LAUNCH | 10 | 6.0 | 6.3 | 5.3 | 3.0 | $50 | APP |
-| 826 | Podcast Guesting Pipeline | **6.01** | LAUNCH | 10 | 6.0 | 6.3 | 5.3 | 3.0 | $50 | GROWTH |
-| 827 | holy shit, @thedankoe just secured the EASIEST $1M | **6.0** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
-| 828 | [r/SaaS] Tested 6 marketing channels to scale a B2 | **6.0** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 829 | 99% of mobile apps never hit $10k / month.
+| 810 | funding: pwc’s us ipo (ipo) — to understand what’s | **6.02** | LAUNCH | 8 | 6.0 | 6.3 | 6.1 | 7.5 | $50 | TOOL_SCANNER |
+| 811 | tech guys are pissed that the first 1 man $1B reve | **6.02** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
+| 812 | Monetization Plan: ALPHA11690 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
+| 813 | Monetization Plan: ALPHA10718 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
+| 814 | Monetization Plan: ALPHA5399 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
+| 815 | Monetization Plan: ALPHA9125 | **6.02** | LAUNCH | 5 | 8.0 | 6.8 | 5.8 | 5.4 | $27 | MONETIZATION |
+| 816 | Paywall Optimization Service | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | SERVICE |
+| 817 | Domain Flipping | **6.02** | LAUNCH | 10 | 6.0 | 6.3 | 5.0 | 3.8 | $50 | INVEST |
+| 818 | [ACQUISITION] I've Build A Youtube to Newsletter A | **6.01** | LAUNCH | 5 | 7.0 | 7.3 | 5.8 | 6.0 | $0 | MONETIZATION |
+| 819 | [ACQUISITION] My SaaS crossed $100 MRR 🥳 [rev: $$1 | **6.01** | LAUNCH | 8 | 7.5 | 7.3 | 5.8 | 4.6 | $100 | MONETIZATION |
+| 820 | Best of Passive Income: March 2026 | **6.01** | LAUNCH | 10 | 7.0 | 5.3 | 6.8 | 8.4 | $200 | ECOM |
+| 821 | Build with existing app factory pipeline | **6.01** | LAUNCH | 8 | 5.0 | 6.3 | 7.4 | 8.7 | $4 | APP_FACTORY |
+| 822 | Monetization Plan: ALPHA5376 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $50 | MONETIZATION |
+| 823 | Monetization Plan: ALPHA5363 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.3 | 5.4 | $40 | MONETIZATION |
+| 824 | Monetization Plan: ALPHA13191 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 6.0 | $5 | MONETIZATION |
+| 825 | Monetization Plan: ALPHA_MICRO_INFO_001 | **6.01** | LAUNCH | 5 | 8.0 | 7.3 | 5.0 | 6.0 | $13 | MONETIZATION |
+| 826 | Algo Trading Bot | **6.01** | LAUNCH | 10 | 6.0 | 6.3 | 5.3 | 3.0 | $50 | APP |
+| 827 | Podcast Guesting Pipeline | **6.01** | LAUNCH | 10 | 6.0 | 6.3 | 5.3 | 3.0 | $50 | GROWTH |
+| 828 | holy shit, @thedankoe just secured the EASIEST $1M | **6.0** | LAUNCH | 5 | 8.0 | 7.3 | 5.8 | 4.6 | $1 | MONETIZATION |
+| 829 | [r/SaaS] Tested 6 marketing channels to scale a B2 | **6.0** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 830 | 99% of mobile apps never hit $10k / month.
 My last | **6.0** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 3.8 | $10 | APP_FACTORY |
-| 830 | Ink - deploy full-stack apps from AI agents via MC | **6.0** | LAUNCH | 8 | 4.5 | 7.3 | 7.6 | 4.6 | $0 | TOOL_ALPHA |
-| 831 | [r/passive_income] Day 6 $0 - $10k With AI Influen | **6.0** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 832 | [r/passive_income] Day 8 $0 - $10k With AI Influen | **6.0** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
-| 833 | Show HN: AI-first PostgreSQL client for Mac. &quot | **6.0** | LAUNCH | 10 | 6.0 | 6.3 | 7.1 | 4.6 | $100 | APP_FACTORY |
-| 834 | Monetization Plan: ALPHA1773994658 | **6.0** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
-| 835 | Instagram Content Network | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 836 | Reddit Content Mining | **6.0** | HOLD | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 837 | FB Reels Crosspost | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 838 | Viral Content Repurposer | **6.0** | HOLD | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 839 | ASMR AI Content Channel | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 840 | Canva Template Store | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
-| 841 | Cross-Platform Content Arbitrage | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 842 | Medium/Substack Cross-Post Strategy | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
-| 843 | Template Marketplace Multi-list | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
-| 844 | Ramadan Fasting Tracker PWA | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | APP |
+| 831 | Ink - deploy full-stack apps from AI agents via MC | **6.0** | LAUNCH | 8 | 4.5 | 7.3 | 7.6 | 4.6 | $0 | TOOL_ALPHA |
+| 832 | [r/passive_income] Day 6 $0 - $10k With AI Influen | **6.0** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 833 | [r/passive_income] Day 8 $0 - $10k With AI Influen | **6.0** | LAUNCH | 2 | 8.0 | 8.3 | 8.0 | 3.8 | $0 | CONTENT_FORMAT |
+| 834 | Show HN: AI-first PostgreSQL client for Mac. &quot | **6.0** | LAUNCH | 10 | 6.0 | 6.3 | 7.1 | 4.6 | $100 | APP_FACTORY |
+| 835 | Monetization Plan: ALPHA1773994658 | **6.0** | LAUNCH | 5 | 7.5 | 7.3 | 5.0 | 5.4 | $0 | MONETIZATION |
+| 836 | Instagram Content Network | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 837 | Reddit Content Mining | **6.0** | HOLD | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 838 | FB Reels Crosspost | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 839 | Viral Content Repurposer | **6.0** | HOLD | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 840 | ASMR AI Content Channel | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 841 | Canva Template Store | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
+| 842 | Cross-Platform Content Arbitrage | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 843 | Medium/Substack Cross-Post Strategy | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | CONTENT |
+| 844 | Template Marketplace Multi-list | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | DIGITAL |
+| 845 | Ramadan Fasting Tracker PWA | **6.0** | LAUNCH | 10 | 5.5 | 6.3 | 6.0 | 3.8 | $50 | APP |
 
 ## P2: QUEUE (composite >= 4.5)
 
 | Rank | Method | Score | Action | Rev | Speed | Auto | Category |
 |------|--------|-------|--------|-----|-------|------|----------|
-| 192 | You guys helped me learn new stuff, and I'm here t | 6.46 | QUEUE | 10 | 9.5 | 9.0 | CONTENT_FARM |
-| 588 | Facebook is launching the Creator Fast Track progr | 6.1 | QUEUE | 8 | 10.0 | 9.0 | CONTENT_FARM |
-| 845 | Switching from Shopify payments to a 3rd party che | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 846 | i FIRED my 3 filipino setters and replaced them wi | 5.99 | QUEUE | 8 | 5.0 | 7.6 | TOOL_ALPHA |
-| 847 | [ACQUISITION] SaaS founders: we're giving away AI  | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 848 | Earlier today, a user attempted to buy AAVE using  | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 849 | JUST IN:  Nearly $1 trillion wiped out from the US | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 850 | $DOT is back
+| 193 | You guys helped me learn new stuff, and I'm here t | 6.46 | QUEUE | 10 | 9.5 | 9.0 | CONTENT_FARM |
+| 589 | Facebook is launching the Creator Fast Track progr | 6.1 | QUEUE | 8 | 10.0 | 9.0 | CONTENT_FARM |
+| 846 | Switching from Shopify payments to a 3rd party che | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
+| 847 | i FIRED my 3 filipino setters and replaced them wi | 5.99 | QUEUE | 8 | 5.0 | 7.6 | TOOL_ALPHA |
+| 848 | [ACQUISITION] SaaS founders: we're giving away AI  | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
+| 849 | Earlier today, a user attempted to buy AAVE using  | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
+| 850 | JUST IN:  Nearly $1 trillion wiped out from the US | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
+| 851 | $DOT is back
 @Polkadot
  $DOT just hit $5 and its g | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 851 | $0 to $7K MRR in 18 months - transparent revenue b | 5.99 | QUEUE | 10 | 5.5 | 5.8 | MICRO_SAAS |
-| 852 | Super Micro $SMCI stock is down by almost 30% so f | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 853 | Today, my little one-person business crossed $3M i | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 854 | Monetization Plan: ALPHA13144 | 5.99 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
-| 855 | Monetization Plan: ALPHA_101330 | 5.99 | QUEUE | 5 | 8.0 | 5.3 | MONETIZATION |
-| 856 | the most fucked up thing about the AI OF space isn | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 857 | The amount of kids that are going to be making $5k | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 858 | MIT repo: agencyenterprise/react-native-health (11 | 5.98 | QUEUE | 8 | 4.5 | 7.0 | TOOL_ALPHA |
-| 859 | x402 is a brand-new open payment protocol (HTTP 40 | 5.98 | QUEUE | 5 | 7.0 | 5.3 | MONETIZATION |
-| 860 | Show HN: I thought merging two photos with AI woul | 5.98 | QUEUE | 8 | 5.0 | 7.0 | TOOL_ALPHA |
-| 861 | How I Made ~$15K as a College Student I might be m | 5.98 | QUEUE | 10 | 4.5 | 7.1 | APP_FACTORY |
-| 862 | Monetization Plan: ALPHA16673 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 863 | Monetization Plan: ALPHA5417 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 864 | Monetization Plan: ALPHA14564 | 5.98 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
-| 865 | Monetization Plan: ALPHA15034 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 866 | Monetization Plan: ALPHA99998 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 867 | Monetization Plan: ALPHA5393 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 868 | Monetization Plan: ALPHA14558 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 869 | Algo Trading Infrastructure | 5.98 | QUEUE | 10 | 6.0 | 5.0 | INVEST |
-| 870 | SMS Marketing (Opted-in) | 5.98 | QUEUE | 10 | 6.0 | 5.0 | GROWTH |
-| 871 | Quora/Reddit Answer Marketing | 5.98 | QUEUE | 10 | 6.0 | 5.0 | GROWTH |
-| 872 | You can literally lose money on every single sale  | 5.97 | QUEUE | 5 | 8.0 | 5.3 | MONETIZATION |
-| 873 | A single customer is worth $50 or $500+ for your e | 5.97 | QUEUE | 5 | 8.0 | 5.3 | MONETIZATION |
-| 874 | i had my reply rates increase by 35%+ by doing ONE | 5.97 | QUEUE | 8 | 6.5 | 5.8 | GENERAL |
-| 875 | Btw, my students are hitting $10K-$100K months wit | 5.97 | QUEUE | 8 | 6.0 | 5.0 | MONETIZATION |
-| 876 | Post 40-50 times/subreddit | 5.97 | QUEUE | 8 | 6.5 | 5.8 | CONTENT |
-| 877 | Monetization Plan: ALPHA_PH_1092091 | 5.97 | QUEUE | 5 | 7.0 | 5.6 | MONETIZATION |
-| 878 | Monetization Plan: ALPHA13401 | 5.97 | QUEUE | 5 | 7.5 | 6.1 | MONETIZATION |
-| 879 | Differentiate from Muslim Pro (bloated) | 5.96 | QUEUE | 10 | 5.0 | 6.8 | APP_FACTORY |
-| 880 | [ACQUISITION] [For Sale] SaaS with 1,000+ users, 1 | 5.96 | QUEUE | 8 | 7.5 | 5.3 | MONETIZATION |
-| 881 | Just finished up an exclusive call with 
+| 852 | $0 to $7K MRR in 18 months - transparent revenue b | 5.99 | QUEUE | 10 | 5.5 | 5.8 | MICRO_SAAS |
+| 853 | Super Micro $SMCI stock is down by almost 30% so f | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
+| 854 | Today, my little one-person business crossed $3M i | 5.99 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
+| 855 | Monetization Plan: ALPHA13144 | 5.99 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
+| 856 | Monetization Plan: ALPHA_101330 | 5.99 | QUEUE | 5 | 8.0 | 5.3 | MONETIZATION |
+| 857 | the most fucked up thing about the AI OF space isn | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 858 | The amount of kids that are going to be making $5k | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 859 | MIT repo: agencyenterprise/react-native-health (11 | 5.98 | QUEUE | 8 | 4.5 | 7.0 | TOOL_ALPHA |
+| 860 | x402 is a brand-new open payment protocol (HTTP 40 | 5.98 | QUEUE | 5 | 7.0 | 5.3 | MONETIZATION |
+| 861 | Show HN: I thought merging two photos with AI woul | 5.98 | QUEUE | 8 | 5.0 | 7.0 | TOOL_ALPHA |
+| 862 | How I Made ~$15K as a College Student I might be m | 5.98 | QUEUE | 10 | 4.5 | 7.1 | APP_FACTORY |
+| 863 | Monetization Plan: ALPHA16673 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 864 | Monetization Plan: ALPHA5417 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 865 | Monetization Plan: ALPHA14564 | 5.98 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
+| 866 | Monetization Plan: ALPHA15034 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 867 | Monetization Plan: ALPHA99998 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 868 | Monetization Plan: ALPHA5393 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 869 | Monetization Plan: ALPHA14558 | 5.98 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 870 | Algo Trading Infrastructure | 5.98 | QUEUE | 10 | 6.0 | 5.0 | INVEST |
+| 871 | SMS Marketing (Opted-in) | 5.98 | QUEUE | 10 | 6.0 | 5.0 | GROWTH |
+| 872 | Quora/Reddit Answer Marketing | 5.98 | QUEUE | 10 | 6.0 | 5.0 | GROWTH |
+| 873 | You can literally lose money on every single sale  | 5.97 | QUEUE | 5 | 8.0 | 5.3 | MONETIZATION |
+| 874 | A single customer is worth $50 or $500+ for your e | 5.97 | QUEUE | 5 | 8.0 | 5.3 | MONETIZATION |
+| 875 | i had my reply rates increase by 35%+ by doing ONE | 5.97 | QUEUE | 8 | 6.5 | 5.8 | GENERAL |
+| 876 | Btw, my students are hitting $10K-$100K months wit | 5.97 | QUEUE | 8 | 6.0 | 5.0 | MONETIZATION |
+| 877 | Post 40-50 times/subreddit | 5.97 | QUEUE | 8 | 6.5 | 5.8 | CONTENT |
+| 878 | Monetization Plan: ALPHA_PH_1092091 | 5.97 | QUEUE | 5 | 7.0 | 5.6 | MONETIZATION |
+| 879 | Monetization Plan: ALPHA13401 | 5.97 | QUEUE | 5 | 7.5 | 6.1 | MONETIZATION |
+| 880 | Differentiate from Muslim Pro (bloated) | 5.96 | QUEUE | 10 | 5.0 | 6.8 | APP_FACTORY |
+| 881 | [ACQUISITION] [For Sale] SaaS with 1,000+ users, 1 | 5.96 | QUEUE | 8 | 7.5 | 5.3 | MONETIZATION |
+| 882 | Just finished up an exclusive call with 
 @joeyleey | 5.96 | QUEUE | 5 | 7.5 | 5.0 | MONETIZATION |
-| 882 | MCP pay-per-call niche servers (ICD-10 medical cod | 5.96 | QUEUE | 8 | 5.0 | 7.0 | TOOL_ALPHA |
-| 883 | Monetization Plan: ALPHA14623 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
-| 884 | Monetization Plan: ALPHA102445 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
-| 885 | Monetization Plan: ALPHA13186 | 5.96 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 886 | Monetization Plan: ALPHA8852 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
-| 887 | Monetization Plan: ALPHA10071 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
-| 888 | Monetization Plan: ALPHA1773995968 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
-| 889 | PrayerLock: privacy-focused + lightweight PWA + ga | 5.94 | QUEUE | 10 | 5.0 | 6.8 | APP_FACTORY |
-| 890 | dude in a telegram group said he makes money "rati | 5.94 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 891 | a guy with 847 followers made $11K last month on g | 5.94 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| 892 | you want to make $5K/month selling digital product | 5.94 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
-| ... | +7102 more | | | | | | |
+| 883 | MCP pay-per-call niche servers (ICD-10 medical cod | 5.96 | QUEUE | 8 | 5.0 | 7.0 | TOOL_ALPHA |
+| 884 | Monetization Plan: ALPHA14623 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
+| 885 | Monetization Plan: ALPHA102445 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
+| 886 | Monetization Plan: ALPHA13186 | 5.96 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 887 | Monetization Plan: ALPHA8852 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
+| 888 | Monetization Plan: ALPHA10071 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
+| 889 | Monetization Plan: ALPHA1773995968 | 5.96 | QUEUE | 5 | 7.0 | 5.8 | MONETIZATION |
+| 890 | PrayerLock: privacy-focused + lightweight PWA + ga | 5.94 | QUEUE | 10 | 5.0 | 6.8 | APP_FACTORY |
+| 891 | dude in a telegram group said he makes money "rati | 5.94 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 892 | a guy with 847 followers made $11K last month on g | 5.94 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| 893 | you want to make $5K/month selling digital product | 5.94 | QUEUE | 5 | 8.0 | 5.0 | MONETIZATION |
+| ... | +7104 more | | | | | | |
 
 ## P3: WATCH (composite >= 3.0)
 
 | Rank | Method | Score | Action | Category |
 |------|--------|-------|--------|----------|
-| 7995 | [ACQUISITION] Former colleague wants 30% equity to | 4.49 | WATCH | MONETIZATION |
-| 7996 | BARRIOS vs. GARCIA: THE WARRIOR SPIRITThe epic bat | 4.49 | WATCH | APP_FACTORY |
-| 7997 | [r/passive_income] I spent 3 months figuring out w | 4.49 | WATCH | ECOM |
-| 7998 | Meshup – a social app to meet people nearby throug | 4.49 | WATCH | BETA_TESTING |
-| 7999 | Making $250/month with game apps (what worked for  | 4.49 | WATCH | AI_ALPHA |
-| 8000 | Google Merchant Center = Merri-go-round of Hell | 4.49 | WATCH | ECOM |
-| 8001 | Growth Plan:  i set up 6 ai agents that sell web s | 4.49 | WATCH | GROWTH_PLANS |
-| 8002 | AI Tool Integration: ALPHA11825 | 4.49 | WATCH | AI_TOOLS |
-| 8003 | AI Tool Integration: ALPHA9260 | 4.49 | WATCH | AI_TOOLS |
-| 8004 | AI Tool Integration: ALPHA10853 | 4.49 | WATCH | AI_TOOLS |
-| 8005 | Monetization Plan: ALPHA14540 | 4.49 | WATCH | MONETIZATION |
-| 8006 | Monetization Plan: ALPHA14536 | 4.49 | WATCH | MONETIZATION |
-| 8007 | if the thing you're working on doesn't either...>  | 4.48 | WATCH | GENERAL |
-| 8008 | You see change. We see breakthroughs. HPE helps cu | 4.48 | WATCH | GENERAL |
-| 8009 | this polymarket wallet caught my eye
+| 7998 | [ACQUISITION] Former colleague wants 30% equity to | 4.49 | WATCH | MONETIZATION |
+| 7999 | BARRIOS vs. GARCIA: THE WARRIOR SPIRITThe epic bat | 4.49 | WATCH | APP_FACTORY |
+| 8000 | [r/passive_income] I spent 3 months figuring out w | 4.49 | WATCH | ECOM |
+| 8001 | Meshup – a social app to meet people nearby throug | 4.49 | WATCH | BETA_TESTING |
+| 8002 | Making $250/month with game apps (what worked for  | 4.49 | WATCH | AI_ALPHA |
+| 8003 | Google Merchant Center = Merri-go-round of Hell | 4.49 | WATCH | ECOM |
+| 8004 | Growth Plan:  i set up 6 ai agents that sell web s | 4.49 | WATCH | GROWTH_PLANS |
+| 8005 | AI Tool Integration: ALPHA11825 | 4.49 | WATCH | AI_TOOLS |
+| 8006 | AI Tool Integration: ALPHA9260 | 4.49 | WATCH | AI_TOOLS |
+| 8007 | AI Tool Integration: ALPHA10853 | 4.49 | WATCH | AI_TOOLS |
+| 8008 | Monetization Plan: ALPHA14540 | 4.49 | WATCH | MONETIZATION |
+| 8009 | Monetization Plan: ALPHA14536 | 4.49 | WATCH | MONETIZATION |
+| 8010 | if the thing you're working on doesn't either...>  | 4.48 | WATCH | GENERAL |
+| 8011 | You see change. We see breakthroughs. HPE helps cu | 4.48 | WATCH | GENERAL |
+| 8012 | this polymarket wallet caught my eye
 91.6% win rat | 4.48 | WATCH | MONETIZATION |
-| 8010 | Big Bank Stocks Set To Gain As Capital Relief Thin | 4.48 | WATCH | GENERAL |
-| 8011 | We're making money in the wedding industry and her | 4.48 | WATCH | SAAS |
-| 8012 | Ultrahuman ramps up (news) — Ultrahuman pushes bac | 4.48 | WATCH | STARTUP_NEWS |
-| 8013 | Cold Email Template: ALPHA_REDDIT_0309_002 | 4.48 | WATCH | EMAIL_TEMPLATES |
-| 8014 | Monetization Plan: ALPHA5398 | 4.48 | WATCH | MONETIZATION |
-| 8015 | Tracking refund patterns by product, traffic sourc | 4.47 | WATCH | GENERAL |
-| 8016 | this goated follow-up strategy booked me 5 calls y | 4.47 | WATCH | GENERAL |
-| 8017 | My OpenClaw bot runs a full website sales business | 4.47 | WATCH | GENERAL |
-| 8018 | Got completely burned trying to build side income  | 4.47 | WATCH | APP_FACTORY |
-| 8019 | Launched 12 months ago to crickets | 4.47 | WATCH | APP_FACTORY |
-| 8020 | Stop stacking jobs | 4.47 | WATCH | APP_FACTORY |
-| 8021 | Australia ecomm brands using Zonos for DDP to US | 4.47 | WATCH | ECOM |
-| 8022 | Growth Playbook: ALPHA1773995538 | 4.47 | WATCH | PLAYBOOKS |
-| 8023 | Growth Plan: Package existing stack as client serv | 4.47 | WATCH | GROWTH_PLANS |
-| 8024 | Monetization Plan: ALPHA8084 | 4.47 | WATCH | MONETIZATION |
-| ... | +437 more | | | |
+| 8013 | Big Bank Stocks Set To Gain As Capital Relief Thin | 4.48 | WATCH | GENERAL |
+| 8014 | We're making money in the wedding industry and her | 4.48 | WATCH | SAAS |
+| 8015 | Ultrahuman ramps up (news) — Ultrahuman pushes bac | 4.48 | WATCH | STARTUP_NEWS |
+| 8016 | Cold Email Template: ALPHA_REDDIT_0309_002 | 4.48 | WATCH | EMAIL_TEMPLATES |
+| 8017 | Monetization Plan: ALPHA5398 | 4.48 | WATCH | MONETIZATION |
+| 8018 | Tracking refund patterns by product, traffic sourc | 4.47 | WATCH | GENERAL |
+| 8019 | this goated follow-up strategy booked me 5 calls y | 4.47 | WATCH | GENERAL |
+| 8020 | My OpenClaw bot runs a full website sales business | 4.47 | WATCH | GENERAL |
+| 8021 | Got completely burned trying to build side income  | 4.47 | WATCH | APP_FACTORY |
+| 8022 | Launched 12 months ago to crickets | 4.47 | WATCH | APP_FACTORY |
+| 8023 | Stop stacking jobs | 4.47 | WATCH | APP_FACTORY |
+| 8024 | Australia ecomm brands using Zonos for DDP to US | 4.47 | WATCH | ECOM |
+| 8025 | Growth Playbook: ALPHA1773995538 | 4.47 | WATCH | PLAYBOOKS |
+| 8026 | Growth Plan: Package existing stack as client serv | 4.47 | WATCH | GROWTH_PLANS |
+| 8027 | Monetization Plan: ALPHA8084 | 4.47 | WATCH | MONETIZATION |
+| ... | +438 more | | | |
 
 ---
 
@@ -1053,16 +1054,16 @@ My last | **6.0** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 3.8 | $10 | APP_FACTORY |
 
 | Venture | Methods Feeding It | Count |
 |---------|-------------------|-------|
-| APP_FACTORY | ALPHA105219, ALPHA25039, ALPHA8400, ALPHA25107, ALPHA103651 +2884 more | 2889 |
+| APP_FACTORY | ALPHA105219, ALPHA25039, ALPHA8400, ALPHA25107, ALPHA103651 +2886 more | 2891 |
 | BROKERING | ALPHA22498, ALPHA1773994825, ALPHA_SAM_GOV_MONI_A1FB0049, ALPHA_SAM_GOV_MONI_20EFAD4D, ALPHA_SAM_GOV_MONI_765B19A0 +89 more | 94 |
-| CONTENT | ALPHA1773999754, ALPHA263, ALPHA268, ALPHA270, ALPHA271 +2590 more | 2595 |
+| CONTENT | ALPHA1773999754, ALPHA263, ALPHA268, ALPHA270, ALPHA271 +2591 more | 2596 |
 | EAS | ALPHA1773998845, ALPHA20296, ALPHA1773999821, ALPHA_CI_51_COLD_001, ALPHA107884 +1802 more | 1807 |
 | FREELANCE | ALPHA_OPP069_SKILL_BUNDLES, ALPHA20296, ALPHA1774000173, ALPHA1773999837, ALPHA558 +269 more | 274 |
 | LOCAL_BIZ | ALPHA_OPP069_SKILL_BUNDLES, ALPHA8404, ALPHA1773997587, ALPHA1773994825, ALPHA_SAM_GOV_MONI_A1FB0049 +302 more | 307 |
-| MONETIZATION | ALPHA1773993226, OPP_SCAN_20260402_03, ALPHA_OPP069_SKILL_BUNDLES, ALPHA_OPP071_AFFILIATE_FUNNEL, ALPHA5407 +4004 more | 4009 |
+| MONETIZATION | ALPHA1773993226, OPP_SCAN_20260402_03, ALPHA_OPP069_SKILL_BUNDLES, ALPHA_OPP071_AFFILIATE_FUNNEL, ALPHA5407 +4005 more | 4010 |
 | OUTBOUND | ALPHA1773993235, ALPHA_OPP071_AFFILIATE_FUNNEL, ALPHA1773998845, ALPHA1773995846, ALPHA1773998703 +1075 more | 1080 |
-| PRODUCT | OPP_SCAN_20260402_03, ALPHA_OPP069_SKILL_BUNDLES, ALPHA1773993235, ALPHA5407, ALPHA_OPP085_FB_FAST_TRACK +2940 more | 2945 |
-| RESEARCH | ALPHA1773998845, ALPHA1773995846, ALPHA20293, ALPHA8385, ALPHA1773998703 +4418 more | 4423 |
+| PRODUCT | OPP_SCAN_20260402_03, ALPHA_OPP069_SKILL_BUNDLES, ALPHA1773993235, ALPHA5407, ALPHA_OPP085_FB_FAST_TRACK +2943 more | 2948 |
+| RESEARCH | ALPHA1773998845, ALPHA1773995846, ALPHA20293, ALPHA8385, ALPHA1773998703 +4419 more | 4424 |
 | SCRAPING | ALPHA1773994825, ALPHA_SAM_GOV_MONI_A1FB0049, ALPHA_SAM_GOV_MONI_20EFAD4D, ALPHA_SAM_GOV_MONI_765B19A0, ALPHA_SAM_GOV_MONI_0456E25B +55 more | 60 |
 
 ---
@@ -1071,11 +1072,11 @@ My last | **6.0** | LAUNCH | 10 | 5.0 | 6.3 | 6.8 | 3.8 | $10 | APP_FACTORY |
 
 **Immediate action:** 7 P0 methods ready for launch. Top: I thought this was fake (score: 7.58)
 
-**High synergy alert:** 3974 methods feed 3+ ventures. Prioritize these for maximum cross-pollination.
+**High synergy alert:** 3975 methods feed 3+ ventures. Prioritize these for maximum cross-pollination.
 
-**Active pipeline:** 842 methods in P0+P1 (actionable now/soon)
-**Watch list:** 7619 methods queued or under watch
+**Active pipeline:** 843 methods in P0+P1 (actionable now/soon)
+**Watch list:** 7622 methods queued or under watch
 **Kill candidates:** 0 methods below viability threshold
 
 ---
-*Auto-generated by capital_genesis_ranker.py at 2026-04-04 14:23. Consumer: CEO agent, daily engagement planner.*
+*Auto-generated by capital_genesis_ranker.py at 2026-04-04 18:34. Consumer: CEO agent, daily engagement planner.*

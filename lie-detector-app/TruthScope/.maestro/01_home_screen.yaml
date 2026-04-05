@@ -1,0 +1,19 @@
+appId: com.printmaxx.truthscope
+name: "Home Screen - All Elements Render"
+---
+- launchApp
+- assertVisible: "TruthScope"
+- assertVisible: "QUICK START"
+- assertVisible:
+    text: ".*Finger Pulse.*"
+- assertVisible:
+    text: ".*Face Scan.*"
+- assertVisible:
+    text: ".*Voice Analysis.*"
+- assertVisible:
+    text: ".*Multi-Modal.*"
+- assertVisible:
+    text: ".*Party Mode.*"
+- assertVisible: "RECENT SESSIONS"
+- assertVisible: "No sessions yet"
+- takeScreenshot: "home_screen_verified"

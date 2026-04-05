@@ -1,5 +1,5 @@
 {
-  "ran_at": "2026-04-04 05:54:27",
+  "ran_at": "2026-04-04 18:06:05",
   "mode": "LIVE",
   "config": {
     "bookmarks_limit": 60,
@@ -14,7 +14,7 @@
     {
       "name": "twitter_bookmarks_scraper",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/usr/local/bin/python3",
         "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/twitter_bookmarks_scraper.py",
         "--scrape",
         "--limit",
@@ -22,12 +22,12 @@
       ],
       "status": "OK",
       "returncode": 0,
-      "output_tail": "2026-04-04 05:54:29,203 [INFO] ============================================================\n2026-04-04 05:54:29,204 [INFO] TWITTER BOOKMARKS SCRAPER\n2026-04-04 05:54:29,205 [INFO] ============================================================\n2026-04-04 05:54:29,205 [INFO] Time: 2026-04-04 05:54:29\n2026-04-04 05:54:29,210 [INFO] Extracted auth_token and ct0 from Brave cookies\n2026-04-04 05:54:29,211 [INFO] Previously scraped: 286 bookmark IDs\n2026-04-04 05:54:29,211 [INFO] Fetching bookmarks page 1 (cursor=None)...\n2026-04-04 05:54:34,018 [INFO]   Page 1: got 100 tweets\n2026-04-04 05:54:34,018 [INFO] Reached limit of 60 bookmarks\n2026-04-04 05:54:34,018 [INFO] Total bookmarks fetched: 60\n2026-04-04 05:54:34,043 [INFO] Raw bookmarks saved: 286 total in twitter_bookmarks_raw.json\n2026-04-04 05:54:34,043 [INFO] New bookmarks (not previously scraped): 0 / 60\n2026-04-04 05:54:34,043 [INFO] All bookmarks already processed. Nothing to do."
+      "output_tail": "2026-04-04 18:06:05,365 [INFO] ============================================================\n2026-04-04 18:06:05,365 [INFO] TWITTER BOOKMARKS SCRAPER\n2026-04-04 18:06:05,365 [INFO] ============================================================\n2026-04-04 18:06:05,365 [INFO] Time: 2026-04-04 18:06:05\n2026-04-04 18:06:05,378 [INFO] Extracted auth_token and ct0 from Brave cookies\n2026-04-04 18:06:05,378 [INFO] Previously scraped: 286 bookmark IDs\n2026-04-04 18:06:05,378 [INFO] Fetching bookmarks page 1 (cursor=None)...\n2026-04-04 18:06:10,158 [INFO]   Page 1: got 100 tweets\n2026-04-04 18:06:10,159 [INFO] Reached limit of 60 bookmarks\n2026-04-04 18:06:10,159 [INFO] Total bookmarks fetched: 60\n2026-04-04 18:06:10,170 [INFO] Raw bookmarks saved: 293 total in twitter_bookmarks_raw.json\n2026-04-04 18:06:10,170 [INFO] New bookmarks (not previously scraped): 7 / 60\n2026-04-04 18:06:10,170 [INFO] Actionable bookmarks (len >= 30): 7 / 7\n2026-04-04 18:06:10,279 [INFO] Fresh (not already in ALPHA_STAGING): 7 / 7\n2026-04-04 18:06:10,379 [INFO] Appended 7 entries to ALPHA_STAGING.csv\n2026-04-04 18:06:10,379 [INFO] ============================================================\n2026-04-04 18:06:10,379 [INFO] SCRAPE COMPLETE\n2026-04-04 18:06:10,379 [INFO] ============================================================\n2026-04-04 18:06:10,379 [INFO] Bookmarks fetched: 60\n2026-04-04 18:06:10,379 [INFO] New (not previously seen): 7\n2026-04-04 18:06:10,379 [INFO] Actionable: 7\n2026-04-04 18:06:10,379 [INFO] Added to ALPHA_STAGING: 7\n2026-04-04 18:06:10,379 [INFO] IDs: ALPHA1774000227 - ALPHA1774000233\n2026-04-04 18:06:10,380 [INFO] State file: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/twitter_bookmarks_state.json\n2026-04-04 18:06:10,380 [INFO] Raw bookmarks: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/twitter_bookmarks_raw.json"
     },
     {
       "name": "twitter_alpha_scraper_accounts",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/usr/local/bin/python3",
         "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/twitter_alpha_scraper.py",
         "--accounts",
         "--limit",
@@ -37,12 +37,12 @@
       ],
       "status": "OK",
       "returncode": 0,
-      "output_tail": "\ud83d\udd11 Extracting Twitter cookies from Brave Browser...\n   Got 15 cookies\n   15/15 cookies injected\n\ud83d\udd0d Checking Twitter login...\n\u2705 Logged into Twitter\n\n\n\ud83d\udce1 Scraping 12/20 high-signal accounts...\n\n[1/12] @levelsio (HIGHEST)...  Found 3 tweets from @levelsio\n\n[2/12] @marc_louvion (HIGHEST)...  Found 0 tweets from @marc_louvion\n\n[3/12] @alexalbert__ (HIGHEST)...  Found 0 tweets from @alexalbert__\n\n[4/12] @dankulakov (HIGH)...  Found 0 tweets from @dankulakov\n\n[5/12] @taborekp (HIGH)...  Found 0 tweets from @taborekp\n\n[6/12] @haborian (HIGH)...  Found 0 tweets from @haborian\n\n[7/12] @kreaborian (HIGH)...  Found 0 tweets from @kreaborian\n\n[8/12] @svpino (HIGH)...  Found 0 tweets from @svpino\n\n[9/12] @haborian (HIGH)...  Found 0 tweets from @haborian\n\n[10/12] @mcaborsk (HIGH)...  Found 0 tweets from @mcaborsk\n\n[11/12] @thisonepanda (HIGH)...  Found 0 tweets from @thisonepanda\n\n[12/12] @thejustinwelsh (HIGH)...  Found 0 tweets from @thejustinwelsh\n\ud83d\udcbe Saving 3 high-signal-accounts to ALPHA_STAGING.csv...\n\u2705 Saved 3 entries (ALPHA1774000196-ALPHA1774000198)\n\n============================================================\nSCRAPE COMPLETE\n============================================================\nTotal entries saved: 3\nCSV: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv\nJSON: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/twitter_scraper_output/scrape_20260404_055901.json\n============================================================"
+      "output_tail": "\ud83d\udd11 Extracting Twitter cookies from Brave Browser...\n   Got 15 cookies\n   15/15 cookies injected\n\ud83d\udd0d Checking Twitter login...\n\u2705 Logged into Twitter\n\n\n\ud83d\udce1 Scraping 12/20 high-signal accounts...\n\n[1/12] @levelsio (HIGHEST)...  Found 1 tweets from @levelsio\n\n[2/12] @marc_louvion (HIGHEST)...  Found 0 tweets from @marc_louvion\n\n[3/12] @alexalbert__ (HIGHEST)...  Found 0 tweets from @alexalbert__\n\n[4/12] @dankulakov (HIGH)...  Found 0 tweets from @dankulakov\n\n[5/12] @taborekp (HIGH)...  Found 0 tweets from @taborekp\n\n[6/12] @haborian (HIGH)...  Found 0 tweets from @haborian\n\n[7/12] @kreaborian (HIGH)...  Found 0 tweets from @kreaborian\n\n[8/12] @svpino (HIGH)...  Found 2 tweets from @svpino\n\n[9/12] @haborian (HIGH)...  Found 0 tweets from @haborian\n\n[10/12] @mcaborsk (HIGH)...  Found 0 tweets from @mcaborsk\n\n[11/12] @thisonepanda (HIGH)...  Found 0 tweets from @thisonepanda\n\n[12/12] @thejustinwelsh (HIGH)...  Found 0 tweets from @thejustinwelsh\n\ud83d\udcbe Saving 3 high-signal-accounts to ALPHA_STAGING.csv...\n\u2705 Saved 3 entries (ALPHA1774000234-ALPHA1774000236)\n\n============================================================\nSCRAPE COMPLETE\n============================================================\nTotal entries saved: 3\nCSV: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv\nJSON: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/twitter_scraper_output/scrape_20260404_180900.json\n============================================================"
     },
     {
       "name": "alpha_auto_approver",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/usr/local/bin/python3",
         "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/alpha_auto_approver.py",
         "--tick",
         "--max",
@@ -50,12 +50,12 @@
       ],
       "status": "OK",
       "returncode": 0,
-      "output_tail": "alpha_auto_approver: scanned=21995 approved=0 skipped=21995"
+      "output_tail": "alpha_auto_approver: scanned=22099 approved=1 skipped=22098"
     },
     {
       "name": "alpha_auto_processor",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/usr/local/bin/python3",
         "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/alpha_auto_processor.py",
         "--process-new",
         "--batch-size",
@@ -63,23 +63,23 @@
       ],
       "status": "OK",
       "returncode": 0,
-      "output_tail": "=== ALPHA AUTO-PROCESSOR REPORT (LIVE) ===\n\nTotal rows in CSV:  21995\nEntries processed:  3\nEntries scored:     3\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         3\n    (of which deduped: 0)\n[2026-04-04T05:59:01-04:00] === Alpha Auto-Processor starting ===\n[2026-04-04T05:59:01-04:00] Loaded 21995 rows from ALPHA_STAGING.csv\n[2026-04-04T05:59:01-04:00] Indexed 974 OPS/ files\n[2026-04-04T05:59:01-04:00] Found 3 entries to process (batch_size=120, process_all=False)\n[2026-04-04T05:59:01-04:00]   [ALPHA1774000196] ARCHIVE (score=5): Low score (5)\n[2026-04-04T05:59:01-04:00]   [ALPHA1774000197] ARCHIVE (score=12): Low score (12)\n[2026-04-04T05:59:01-04:00]   [ALPHA1774000198] ARCHIVE (score=5): Low score (5)\n[2026-04-04T05:59:04-04:00] CSV updated and last-run marker saved\n[2026-04-04T05:59:04-04:00] === ALPHA AUTO-PROCESSOR REPORT (LIVE) ===\n\nTotal rows in CSV:  21995\nEntries processed:  3\nEntries scored:     3\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         3\n    (of which deduped: 0)\n[2026-04-04T05:59:04-04:00] === Alpha Auto-Processor complete ==="
+      "output_tail": "ore=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [] ARCHIVE (score=0): Low score (0)\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000227] BOLSTER (score=28): CONTENT_POSTING_GUIDE.md\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000228] ARCHIVED (dedup): Duplicate content: You need to get your Hermes agent scraping Facebook market p...\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000229] RESEARCH (score=28): cron=0 6 * * *\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000231] ARCHIVED (dedup): Duplicate content: Okay honestly this makes vibe coding into production very da...\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000232] ARCHIVED (dedup): Duplicate content: LLM Knowledge Bases\n\nSomething I'm finding very useful recen...\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000233] ARCHIVED (dedup): Duplicate content: SOMEONE VIBE CODED A TOOL THAT FINDS BUSINESSES, READS THEIR...\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000234] ARCHIVE (score=6): Low score (6)\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000235] ARCHIVE (score=12): Low score (12)\n[2026-04-04T18:09:01-04:00]   [ALPHA1774000236] ARCHIVE (score=6): Low score (6)\n[2026-04-04T18:09:02-04:00] CSV updated and last-run marker saved\n[2026-04-04T18:09:02-04:00] === ALPHA AUTO-PROCESSOR REPORT (LIVE) ===\n\nTotal rows in CSV:  22099\nEntries processed:  35\nEntries scored:     35\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 1\n  RESEARCH TASKS:   1\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         33\n    (of which deduped: 5)\n[2026-04-04T18:09:02-04:00] === Alpha Auto-Processor complete ==="
     },
     {
       "name": "alpha_to_ops",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/usr/local/bin/python3",
         "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/alpha_to_ops.py",
         "--process"
       ],
       "status": "OK",
       "returncode": 0,
-      "output_tail": "UTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA1774000183.md (priority: HIGH)\n  [ALPHA1774000189] APP_FACTORY -> AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA1774000189.md (priority: LOW)\n  [ALPHA1774000191] APP_FACTORY -> AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA1774000191.md (priority: LOW)\n  [ALPHA1774000194] APP_FACTORY -> AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA1774000194.md (priority: LOW)\n  [ALPHA_ECOM_ARB_ENG_C639EF1A] MONETIZATION -> AUTOMATIONS/auto_ops/monetization/PLAN_ALPHA_ECOM_ARB_ENG_C639EF1A.md (priority: HIGH)\n\nupdated 46 alpha entries with ops_generated=TRUE\n\napp factory command center refreshed\nApp factory queue refreshed at 2026-04-04 05:59:07\nCandidates: 4310\nDecisions: {'ITERATE_EXISTING_NOW': 62, 'BUILD_NEW_NOW': 49, 'SPEC_AND_TEST': 167, 'PARK': 4024, 'VALIDATE_FIRST': 8}\nTop priorities:\n   1. Review prompt timing hack: +0.8 stars by delaying review request to value moment | ITERATE_EXISTING_NOW | score=125 | target=PrayerLock / Scripture Streak AI layer\n   2. Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   3. Minimum Viable Day concept: 307 upvotes, viral productivity framework | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   4. NEW BLUE OCEAN: NoFap/sobriety streak tracker. r/NoFap = 1.24M subs, 0 paid dedicated streak apps. Quittr app had privacy scandal (exposed user data) = MASSIVE trust gap. Privacy-first paid app at $1.99-2.99 directly addresses this. | ITERATE_EXISTING_NOW | score=121 | target=Streakr\n   5. Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard paywall k | BUILD_NEW_NOW | score=118 | target=NEW_BUILD\n\n=== SUMMARY ===\ntotal processed: 46\n\nby category:\n  TOOL_ALPHA: 20\n  APP_FACTORY: 19\n  MONETIZATION: 2\n  OUTBOUND: 2\n  ECOM: 1\n  CONTENT_FARM: 1\n  GENERAL: 1\n\nby priority:\n  HIGH: 13\n  MEDIUM: 24\n  LOW: 9\n\nops files written to: AUTOMATIONS/auto_ops/\ntracker updated at: LEDGER/AUTO_OPS_TRACKER.csv"
+      "output_tail": "=== PROCESSING: 1 alpha entries ===\n\n  [ALPHA1774000230] MONETIZATION -> AUTOMATIONS/auto_ops/monetization/PLAN_ALPHA1774000230.md (priority: HIGH)\n\nupdated 1 alpha entries with ops_generated=TRUE\n\n=== SUMMARY ===\ntotal processed: 1\n\nby category:\n  MONETIZATION: 1\n\nby priority:\n  HIGH: 1\n\nops files written to: AUTOMATIONS/auto_ops/\ntracker updated at: LEDGER/AUTO_OPS_TRACKER.csv"
     },
     {
       "name": "app_factory_command_center",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/usr/local/bin/python3",
         "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/app_factory_command_center.py",
         "--refresh",
         "--top",
@@ -89,7 +89,7 @@
       ],
       "status": "OK",
       "returncode": 0,
-      "output_tail": "App factory queue refreshed at 2026-04-04 05:59:09\nCandidates: 4310\nDecisions: {'ITERATE_EXISTING_NOW': 62, 'BUILD_NEW_NOW': 49, 'SPEC_AND_TEST': 167, 'PARK': 4024, 'VALIDATE_FIRST': 8}\nTop priorities:\n   1. Review prompt timing hack: +0.8 stars by delaying review request to value moment | ITERATE_EXISTING_NOW | score=125 | target=PrayerLock / Scripture Streak AI layer\n   2. Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   3. Minimum Viable Day concept: 307 upvotes, viral productivity framework | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   4. NEW BLUE OCEAN: NoFap/sobriety streak tracker. r/NoFap = 1.24M subs, 0 paid dedicated streak apps. Quittr app had privacy scandal (exposed user data) = MASSIVE trust gap. Privacy-first paid app at $1.99-2.99 directly addresses this. | ITERATE_EXISTING_NOW | score=121 | target=Streakr\n   5. Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard paywall k | BUILD_NEW_NOW | score=118 | target=NEW_BUILD\n   6. running_streak: r/running = 4.19M subs. iTunes scan confirms ZERO dedicated paid running-streak app. Only Streaks ($5.99 generic) appears. This is the largest unserved fitness niche found to date. Build dedicated RunningStreak at $1.99 launch. | ITERATE_EXISTING_NOW | score=112 | target=Steplock\n   7. Fitness streak app cluster: yoga (3.31M), hiit (4.72M), pushup (4.72M), plank (4.72M), cycling (1.45M). All 5 niches = 0 dedicated paid apps on iTunes. One template, 5 apps. Sequential builds at $1.99 each. | ITERATE_EXISTING_NOW | score=112 | target=Streakr\n   8. BLUE OCEAN APP: DEEP WORK STREAK \u2014 Daily Deep Work / Focus Block Completion Streak | ITERATE_EXISTING_NOW | score=109 | target=Vault"
+      "output_tail": "App factory queue refreshed at 2026-04-04 18:09:04\nCandidates: 4320\nDecisions: {'ITERATE_EXISTING_NOW': 62, 'BUILD_NEW_NOW': 49, 'SPEC_AND_TEST': 171, 'PARK': 4030, 'VALIDATE_FIRST': 8}\nTop priorities:\n   1. Review prompt timing hack: +0.8 stars by delaying review request to value moment | ITERATE_EXISTING_NOW | score=125 | target=PrayerLock / Scripture Streak AI layer\n   2. Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   3. Minimum Viable Day concept: 307 upvotes, viral productivity framework | ITERATE_EXISTING_NOW | score=122 | target=Streakr\n   4. NEW BLUE OCEAN: NoFap/sobriety streak tracker. r/NoFap = 1.24M subs, 0 paid dedicated streak apps. Quittr app had privacy scandal (exposed user data) = MASSIVE trust gap. Privacy-first paid app at $1.99-2.99 directly addresses this. | ITERATE_EXISTING_NOW | score=121 | target=Streakr\n   5. Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard paywall k | BUILD_NEW_NOW | score=118 | target=NEW_BUILD\n   6. running_streak: r/running = 4.19M subs. iTunes scan confirms ZERO dedicated paid running-streak app. Only Streaks ($5.99 generic) appears. This is the largest unserved fitness niche found to date. Build dedicated RunningStreak at $1.99 launch. | ITERATE_EXISTING_NOW | score=112 | target=Steplock\n   7. Fitness streak app cluster: yoga (3.31M), hiit (4.72M), pushup (4.72M), plank (4.72M), cycling (1.45M). All 5 niches = 0 dedicated paid apps on iTunes. One template, 5 apps. Sequential builds at $1.99 each. | ITERATE_EXISTING_NOW | score=112 | target=Streakr\n   8. BLUE OCEAN APP: DEEP WORK STREAK \u2014 Daily Deep Work / Focus Block Completion Streak | ITERATE_EXISTING_NOW | score=109 | target=Vault"
     }
   ],
   "top_queue": [

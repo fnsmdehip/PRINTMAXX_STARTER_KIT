@@ -1,0 +1,12 @@
+appId: com.printmaxx.truthscope
+name: "Finger Pulse Detection Screen"
+---
+- launchApp
+- tapOn:
+    text: ".*Finger Pulse.*"
+- assertVisible:
+    text: ".*finger.*"
+- assertVisible:
+    text: ".*HR.*"
+- takeScreenshot: "finger_detection_verified"
+- back

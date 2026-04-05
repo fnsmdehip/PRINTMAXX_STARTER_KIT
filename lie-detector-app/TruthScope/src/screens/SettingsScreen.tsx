@@ -4,11 +4,12 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TouchableOpacity,
+
   Alert,
   Linking,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { SoundTouchable as TouchableOpacity } from '../components/SoundTouchable';
 import { colors, spacing, radii, typography } from '../theme';
 import { getProfile, getSessions, saveProfile } from '../store';
 import { UserProfile } from '../utils/types';

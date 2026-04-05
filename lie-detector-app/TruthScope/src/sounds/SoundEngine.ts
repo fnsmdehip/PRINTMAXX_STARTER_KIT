@@ -14,7 +14,7 @@
 
 import { Audio } from 'expo-av';
 
-type SoundName =
+export type SoundName =
   | 'tap'
   | 'tapHeavy'
   | 'toggle'

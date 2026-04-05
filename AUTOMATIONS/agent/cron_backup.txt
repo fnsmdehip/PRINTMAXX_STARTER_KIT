@@ -37,8 +37,8 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 20 5 * * * cd $BASE && $PYTHON AUTOMATIONS/rbi_loop.py --full >> AUTOMATIONS/logs/rbi_loop.log 2>&1
 20 5 * * * cd $BASE && $PYTHON AUTOMATIONS/actionable_aggregator.py >> AUTOMATIONS/logs/actionable_aggregator.log 2>&1
 20 5 * * * cd $BASE && $PYTHON AUTOMATIONS/decision_engine.py --cycle >> AUTOMATIONS/logs/decision_engine.log 2>&1
-25 5 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_autonomy.py --run-all >> AUTOMATIONS/logs/venture_pipeline.log 2>&1
-25 5 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_pipeline_brokering.py --run >> AUTOMATIONS/logs/venture_pipeline_brokering.log 2>&1
+# C56_DISABLED: 25 5 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_autonomy.py --run-all >> AUTOMATIONS/logs/venture_pipeline.log 2>&1
+# C56_DISABLED: 25 5 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_pipeline_brokering.py --run >> AUTOMATIONS/logs/venture_pipeline_brokering.log 2>&1
 # ═══════════════════════════════════════════════════════════════
 # PHASE 5: REPORT — Summary + briefing (5:30 AM)
 # ═══════════════════════════════════════════════════════════════
@@ -48,22 +48,22 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 # CONTINUOUS — Run throughout the day
 # ═══════════════════════════════════════════════════════════════
 # Every 2h - Loop Closer (decisions + feedback + pipeline + drift)
-0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/loop_closer.py --cycle >> AUTOMATIONS/logs/loop_closer.log 2>&1
+# C56_DISABLED: 0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/loop_closer.py --cycle >> AUTOMATIONS/logs/loop_closer.log 2>&1
 # Every 4h - Perpetual guardian (git safety + watchdog)
 0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/perpetual_guardian.py --full >> AUTOMATIONS/logs/perpetual_guardian.log 2>&1
 # Every 1h - System health
-5 * * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
+# C56_REDUCED_TO_DAILY: 5 * * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
 # Every 15 min - Usage optimizer (burst when window ending)
-5 * * * * cd $BASE && $PYTHON AUTOMATIONS/usage_optimizer.py --optimize >> AUTOMATIONS/logs/usage_optimizer.log 2>&1
+# C56_REDUCED_TO_DAILY: 5 * * * * cd $BASE && $PYTHON AUTOMATIONS/usage_optimizer.py --optimize >> AUTOMATIONS/logs/usage_optimizer.log 2>&1
 # ═══════════════════════════════════════════════════════════════
 # NIGHTLY — Deep integration (10 PM)
 # ═══════════════════════════════════════════════════════════════
-0 22 * * * cd $BASE && $PYTHON AUTOMATIONS/autonomous_integrator.py --run >> AUTOMATIONS/logs/autonomous_integrator.log 2>&1
+# C56_DISABLED: 0 22 * * * cd $BASE && $PYTHON AUTOMATIONS/autonomous_integrator.py --run >> AUTOMATIONS/logs/autonomous_integrator.log 2>&1
 # ═══════════════════════════════════════════════════════════════
 # SELF-IMPROVEMENT — Refine + learn
 # ═══════════════════════════════════════════════════════════════
 # 4 AM daily - User Sim Refiner (all 9 ventures)
-0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/user_sim_refiner.py --all >> AUTOMATIONS/logs/user_sim_refiner.log 2>&1
+# C56_DISABLED: 0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/user_sim_refiner.py --all >> AUTOMATIONS/logs/user_sim_refiner.log 2>&1
 # 4:08 AM - Log rotation
 8 4 * * * cd $BASE && $PYTHON AUTOMATIONS/log_rotator.py --rotate >> AUTOMATIONS/logs/log_rotator.log 2>&1
 # ═══════════════════════════════════════════════════════════════
@@ -93,7 +93,7 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 0 7 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/app_factory/portfolio_optimizer.py --optimize >> AUTOMATIONS/app_factory/logs/cron_optimizer.log 2>&1
 
 # CEO Agent — 3:00 AM daily orchestration
-0 3 * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/ceo_agent.py --run >> AUTOMATIONS/logs/ceo_agent.log 2>&1
+# C56_DISABLED: 0 3 * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/ceo_agent.py --run >> AUTOMATIONS/logs/ceo_agent.log 2>&1
 
 # ═══════════════════════════════════════════════════════════════
 # WEEKLY SURGE DEPLOYS — Sunday 5:00 AM
@@ -113,4 +113,7 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 10 5 * * 0 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LANDING/research-blog && /opt/homebrew/bin/npx surge . fnsmdehip-research.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
 # KPI auto-rollover (pushes unfinished KPIs to next day, max 5)
 35 5 * * * curl -s -X POST http://localhost:9999/api/kpi/rollover >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/kpi_rollover.log 2>&1
-30 */4 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/cross_pollinator_daily.py --cycle >> AUTOMATIONS/logs/cross_pollinator_daily.log 2>&1
+# C56_DISABLED: 30 */4 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/cross_pollinator_daily.py --cycle >> AUTOMATIONS/logs/cross_pollinator_daily.log 2>&1
+# C56 replacements (reduced frequency)
+30 5 * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
+35 5 * * * cd $BASE && $PYTHON AUTOMATIONS/usage_optimizer.py --optimize >> AUTOMATIONS/logs/usage_optimizer.log 2>&1

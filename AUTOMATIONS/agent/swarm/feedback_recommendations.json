@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T16:00:01.001414",
+  "generated": "2026-04-04T18:00:00.582535",
   "recommendations": [
     {
       "decision": "boost_agent",
@@ -64,7 +64,7 @@
     {
       "decision": "boost_agent",
       "agent": "cross_pollinator",
-      "reason": "High effectiveness (100.0%) over 181 runs",
+      "reason": "High effectiveness (100.0%) over 182 runs",
       "source": "feedback_loop"
     },
     {
@@ -82,7 +82,7 @@
     {
       "decision": "boost_agent",
       "agent": "data_janitor",
-      "reason": "High effectiveness (100.0%) over 53 runs",
+      "reason": "High effectiveness (100.0%) over 54 runs",
       "source": "feedback_loop"
     },
     {
@@ -100,7 +100,7 @@
     {
       "decision": "boost_agent",
       "agent": "swarm_brain",
-      "reason": "High effectiveness (100.0%) over 222 runs",
+      "reason": "High effectiveness (100.0%) over 223 runs",
       "source": "feedback_loop"
     },
     {

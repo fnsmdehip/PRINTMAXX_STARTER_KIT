@@ -4,11 +4,12 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TouchableOpacity,
+
   Dimensions,
   RefreshControl,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { SoundTouchable as TouchableOpacity } from '../components/SoundTouchable';
 import { LinearGradient } from 'expo-linear-gradient';
 import Animated, {
   useSharedValue,

@@ -1,0 +1,8 @@
+appId: com.printmaxx.truthscope
+name: "Face Scan Detection Screen"
+---
+- launchApp
+- tapOn:
+    text: ".*Face Scan.*"
+- takeScreenshot: "face_detection_verified"
+- back

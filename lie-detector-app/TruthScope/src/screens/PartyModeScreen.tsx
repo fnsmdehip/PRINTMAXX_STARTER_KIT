@@ -3,7 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
+
   TextInput,
   ScrollView,
   Dimensions,
@@ -11,7 +11,9 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { SoundTouchable as TouchableOpacity } from '../components/SoundTouchable';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Audio } from 'expo-av';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -30,6 +32,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
+import { playSound, playVerdictReveal } from '../sounds/SoundEngine';
 import { colors, spacing, radii, typography } from '../theme';
 import { getRandomQuestion } from '../utils/partyQuestions';
 import { PartyQuestion, Verdict, DetectionResult } from '../utils/types';
@@ -70,26 +73,40 @@ const CATEGORY_CONFIG: Record<QuestionCategory, { label: string; color: string; 
 
 // --- Helpers ---
 
-function generateScore(audioLevel: number): { score: number; verdict: Verdict; confidence: number } {
-  // Weighted randomization: audio level influences the result but doesn't determine it.
-  // Higher audio "stress" tilts toward deceptive, lower toward truthful.
-  // This makes the game fun while feeling responsive to the player's behavior.
-  const baseRandom = Math.random();
-  const stressWeight = audioLevel * 0.3; // 0-0.3 influence from "audio"
-  const combined = baseRandom * 0.7 + stressWeight;
+function generateScore(
+  audioSamples: number[],
+): { score: number; verdict: Verdict; confidence: number } {
+  // Score based on REAL audio characteristics from mic metering.
+  // Uses variance in audio levels (vocal instability = stress indicator)
+  // and mean level (louder = more arousal) as real signals.
+  // This is entertainment-grade analysis, not clinical, but uses real data.
 
-  const score = Math.round(Math.max(5, Math.min(98, combined * 100)));
+  if (audioSamples.length < 3) {
+    return { score: 50, verdict: 'uncertain', confidence: 30 };
+  }
+
+  const mean = audioSamples.reduce((a, b) => a + b, 0) / audioSamples.length;
+  const variance = audioSamples.reduce((a, b) => a + (b - mean) ** 2, 0) / audioSamples.length;
+  const stdDev = Math.sqrt(variance);
+
+  // Higher variance = more vocal instability = higher stress score
+  const varianceScore = Math.min(50, stdDev * 150);
+  // Higher mean level = more vocal energy = higher arousal
+  const energyScore = Math.min(50, mean * 80);
+
+  const score = Math.round(Math.max(5, Math.min(98, varianceScore + energyScore)));
 
   let verdict: Verdict;
-  if (score >= 65) {
+  if (score >= 60) {
     verdict = 'deceptive';
-  } else if (score >= 40) {
+  } else if (score >= 35) {
     verdict = 'uncertain';
   } else {
     verdict = 'truthful';
   }
 
-  const confidence = Math.round(55 + Math.random() * 35);
+  // Confidence based on how much data we collected
+  const confidence = Math.min(90, Math.round(40 + audioSamples.length * 2));
 
   return { score, verdict, confidence };
 }
@@ -757,8 +774,9 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
   const [lastResult, setLastResult] = useState<{ score: number; verdict: Verdict; confidence: number } | null>(null);
   const [passCountdown, setPassCountdown] = useState(PASS_PHONE_COUNTDOWN);
 
-  // Simulated audio level for scoring
-  const audioLevelRef = useRef(0.5);
+  // Real audio samples collected from mic during analysis
+  const audioSamplesRef = useRef<number[]>([]);
+  const recordingRef = useRef<Audio.Recording | null>(null);
   const analysisTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const countdownTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -805,26 +823,51 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
     setCurrentQuestion(custom);
   }, []);
 
-  const handleStartAnalysis = useCallback(() => {
+  const handleStartAnalysis = useCallback(async () => {
     setPhase('analyzing');
     setAnalysisElapsed(0);
+    audioSamplesRef.current = [];
+    playSound('analyzeStart');
 
-    // Simulate fluctuating audio level during analysis
+    // Start REAL microphone recording for audio metering
+    try {
+      await Audio.requestPermissionsAsync();
+      await Audio.setAudioModeAsync({ allowsRecordingIOS: true, playsInSilentModeIOS: true });
+      const recording = new Audio.Recording();
+      await recording.prepareToRecordAsync(Audio.RecordingOptionsPresets.HIGH_QUALITY);
+      recording.setOnRecordingStatusUpdate((status) => {
+        if (status.isRecording && status.metering !== undefined) {
+          // Normalize metering from dB (-160 to 0) to 0-1
+          const normalized = Math.max(0, (status.metering + 60) / 60);
+          audioSamplesRef.current.push(normalized);
+        }
+      });
+      await recording.startAsync();
+      recordingRef.current = recording;
+    } catch {
+      // Mic unavailable (Simulator) - samples will be empty, score will show "insufficient data"
+    }
+
     let elapsed = 0;
-    const interval = 100; // Update every 100ms
-    analysisTimerRef.current = setInterval(() => {
+    const interval = 100;
+    analysisTimerRef.current = setInterval(async () => {
       elapsed += interval;
       setAnalysisElapsed(elapsed);
-
-      // Simulate audio level fluctuation
-      audioLevelRef.current = 0.3 + Math.random() * 0.5;
 
       if (elapsed >= ANALYSIS_DURATION_MS) {
         if (analysisTimerRef.current) clearInterval(analysisTimerRef.current);
         analysisTimerRef.current = null;
 
-        // Generate result
-        const result = generateScore(audioLevelRef.current);
+        // Stop recording
+        if (recordingRef.current) {
+          try {
+            await recordingRef.current.stopAndUnloadAsync();
+          } catch {}
+          recordingRef.current = null;
+        }
+
+        // Generate result from REAL audio samples
+        const result = generateScore(audioSamplesRef.current);
         setLastResult(result);
 
         // Save to player data
@@ -846,6 +889,7 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
         });
 
         setPhase('result');
+        if (result.verdict !== 'scanning') playVerdictReveal(result.verdict);
       }
     }, interval);
   }, [currentPlayerIndex, currentQuestion, round]);
@@ -856,6 +900,7 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
 
     setPhase('passPhone');
     setPassCountdown(PASS_PHONE_COUNTDOWN);
+    playSound('playerSwitch');
 
     let count = PASS_PHONE_COUNTDOWN;
     countdownTimerRef.current = setInterval(() => {
@@ -888,12 +933,12 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
         timestamp: Date.now() - (p.results.length - i) * 15000,
         mode: 'voice' as const,
         verdict: r.verdict,
-        confidence: 70 + Math.round(Math.random() * 20),
+        confidence: lastResult?.confidence ?? 50,
         overallScore: r.score,
         breakdown: {
-          physiological: Math.round(30 + Math.random() * 40),
-          vocal: Math.round(40 + Math.random() * 40),
-          facial: Math.round(20 + Math.random() * 40),
+          physiological: 0, // Party mode uses voice-only analysis
+          vocal: r.score,   // Score IS the vocal analysis result
+          facial: 0,        // No face analysis in party mode
         },
         question: r.question,
         duration: ANALYSIS_DURATION_MS,

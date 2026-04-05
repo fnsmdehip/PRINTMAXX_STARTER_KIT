@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 151,
-    "last_run": "2026-04-04T18:47:49.322258+00:00",
-    "cumulative_blue_oceans": 879,
-    "ci_csv_rows": 226,
-    "alpha_csv_rows": 51806,
+    "last_cycle": 154,
+    "last_run": "2026-04-04T23:17:08.674971+00:00",
+    "cumulative_blue_oceans": 909,
+    "ci_csv_rows": 256,
+    "alpha_csv_rows": 53164,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -49,9 +49,12 @@
         "ENTREPRENEURSHIP + STARTUP CULTURE + VENTURE CAPITAL",
         "CLIMATE TECH + SUSTAINABILITY + CLEANTECH + IMPACT INVESTING",
         "URBAN TECH + SMART CITIES + PROPTECH + REAL ESTATE INNOVATION",
-        "BIOTECH + LIFE SCIENCES + PHARMACEUTICAL INNOVATION + DRUG DEVELOPMENT"
+        "BIOTECH + LIFE SCIENCES + PHARMACEUTICAL INNOVATION + DRUG DEVELOPMENT",
+        "AGING + LONGEVITY SCIENCE + GEROSCIENCE + HEALTHSPAN OPTIMIZATION",
+        "MICROBIOME + GUT HEALTH + LONGEVITY SCIENCE + PSYCHOBIOTICS",
+        "COGNITIVE SCIENCE + LEARNING SCIENCE + METACOGNITION + NEUROPLASTICITY"
     ],
-    "next_strategy": "AGING + LONGEVITY SCIENCE + GEROSCIENCE + HEALTHSPAN OPTIMIZATION",
+    "next_strategy": "SLEEP SCIENCE + CIRCADIAN BIOLOGY + CHRONOBIOLOGY + SLEEP OPTIMIZATION",
     "top_all_time": [
         {
             "name": "Daily CS Fundamentals Streak",
@@ -174,9 +177,9 @@
             "cycle": 151
         },
         {
-            "name": "Daily Public Health Law Streak",
-            "score": 24,
-            "cycle": 136
+            "name": "Daily Mtor Longevity Pathways Streak",
+            "score": 25,
+            "cycle": 152
         }
     ],
     "status": "RUNNING"

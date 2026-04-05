@@ -1,0 +1,116 @@
+# PRINTMAXX Optimized Pipeline v9 — Correct logical order
+# Created: 2026-03-25
+# Flow: SCAN → PROCESS → RANK → DECIDE → EXECUTE
+# Total pipeline: ~15 min (5:00-5:20 AM)
+# =============================================================================
+SHELL=/bin/bash
+PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/macbookpro/.local/bin
+BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+# ═══════════════════════════════════════════════════════════════
+# PHASE 1: SCAN — All sources fire at 5:00 AM (parallel, ~6 min)
+# ═══════════════════════════════════════════════════════════════
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/sec_edgar_scanner.py --scan >> AUTOMATIONS/logs/sec_edgar_scanner.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/crunchbase_scanner.py --scan >> AUTOMATIONS/logs/crunchbase_scanner.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_engine.py --scan >> AUTOMATIONS/logs/ecom_arb_engine.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/method_discovery_crawler.py --crawl >> AUTOMATIONS/logs/method_discovery.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/opportunity_radar.py --scan >> AUTOMATIONS/logs/opportunity_radar.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/sam_gov_monitor.py >> AUTOMATIONS/logs/sam_gov_monitor.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/morning_intelligence_dag.py >> AUTOMATIONS/logs/morning_dag.log 2>&1
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/health_check_all.py --check >> AUTOMATIONS/logs/health_check_all.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# PHASE 2: PROCESS — After scans finish (5:10 AM)
+# Auto-approve, rebuild index, scan backlog
+# ═══════════════════════════════════════════════════════════════
+10 5 * * * cd $BASE && $PYTHON AUTOMATIONS/auto_approve.py >> AUTOMATIONS/logs/auto_approve.log 2>&1
+10 5 * * * cd $BASE && $PYTHON AUTOMATIONS/sqlite_alpha_index.py --rebuild >> AUTOMATIONS/logs/alpha_index.log 2>&1
+10 5 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_backlog_scanner.py --scan >> AUTOMATIONS/logs/alpha_backlog_scanner.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# PHASE 3: RANK — Capital Genesis scores EVERYTHING (5:15 AM)
+# This MUST run AFTER all sources + processing
+# ═══════════════════════════════════════════════════════════════
+15 5 * * * cd $BASE && $PYTHON AUTOMATIONS/capital_genesis_ranker.py --rank --report >> AUTOMATIONS/logs/capital_genesis_ranker.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# PHASE 4: DECIDE + EXECUTE — Act on ranked data (5:20 AM)
+# RBI, decisions, actionable queue, ventures, brokering
+# ═══════════════════════════════════════════════════════════════
+20 5 * * * cd $BASE && $PYTHON AUTOMATIONS/rbi_loop.py --full >> AUTOMATIONS/logs/rbi_loop.log 2>&1
+20 5 * * * cd $BASE && $PYTHON AUTOMATIONS/actionable_aggregator.py >> AUTOMATIONS/logs/actionable_aggregator.log 2>&1
+20 5 * * * cd $BASE && $PYTHON AUTOMATIONS/decision_engine.py --cycle >> AUTOMATIONS/logs/decision_engine.log 2>&1
+25 5 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_autonomy.py --run-all >> AUTOMATIONS/logs/venture_pipeline.log 2>&1
+25 5 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_pipeline_brokering.py --run >> AUTOMATIONS/logs/venture_pipeline_brokering.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# PHASE 5: REPORT — Summary + briefing (5:30 AM)
+# ═══════════════════════════════════════════════════════════════
+30 5 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_digest.py >> AUTOMATIONS/logs/daily_digest.log 2>&1
+30 5 * * * cd $BASE && $PYTHON AUTOMATIONS/session_briefing.py >> AUTOMATIONS/logs/session_briefing.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# CONTINUOUS — Run throughout the day
+# ═══════════════════════════════════════════════════════════════
+# Every 2h - Loop Closer (decisions + feedback + pipeline + drift)
+0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/loop_closer.py --cycle >> AUTOMATIONS/logs/loop_closer.log 2>&1
+# Every 4h - Perpetual guardian (git safety + watchdog)
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/perpetual_guardian.py --full >> AUTOMATIONS/logs/perpetual_guardian.log 2>&1
+# Every 1h - System health
+5 * * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
+# Every 15 min - Usage optimizer (burst when window ending)
+5 * * * * cd $BASE && $PYTHON AUTOMATIONS/usage_optimizer.py --optimize >> AUTOMATIONS/logs/usage_optimizer.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# NIGHTLY — Deep integration (10 PM)
+# ═══════════════════════════════════════════════════════════════
+0 22 * * * cd $BASE && $PYTHON AUTOMATIONS/autonomous_integrator.py --run >> AUTOMATIONS/logs/autonomous_integrator.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# SELF-IMPROVEMENT — Refine + learn
+# ═══════════════════════════════════════════════════════════════
+# 4 AM daily - User Sim Refiner (all 9 ventures)
+0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/user_sim_refiner.py --all >> AUTOMATIONS/logs/user_sim_refiner.log 2>&1
+# 4:08 AM - Log rotation
+8 4 * * * cd $BASE && $PYTHON AUTOMATIONS/log_rotator.py --rotate >> AUTOMATIONS/logs/log_rotator.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# WEEKLY
+# ═══════════════════════════════════════════════════════════════
+# Sunday 3:30 AM - Full backup
+30 3 * * 0 cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --full >> AUTOMATIONS/logs/backup.log 2>&1
+# Sunday 4:15 AM - Cognitive engine rebuild + MEGA_SHEET
+15 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/cognitive_engine.py --build-model >> AUTOMATIONS/logs/cognitive_engine.log 2>&1
+15 4 * * 0 cd $BASE && $PYTHON LEDGER/MEGA_SHEET/build_mega_sheet.py >> LEDGER/MEGA_SHEET/build.log 2>&1
+# Sunday 4:30 AM - Security audit + orphan scanner
+30 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/security_audit.py --quick >> AUTOMATIONS/logs/security_audit.log 2>&1
+30 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/orphan_doc_scanner.py --scan --auto-archive >> AUTOMATIONS/logs/orphan_doc_scanner.log 2>&1
+# Wednesday 4 AM - Gov tenders (UK/EU/AU)
+0 4 * * 3 cd $BASE && $PYTHON AUTOMATIONS/gov_tenders_scraper.py >> AUTOMATIONS/logs/gov_tenders_scraper.log 2>&1
+# Friday 4 AM - SaaS opportunity scan
+0 4 * * 5 cd $BASE && $PYTHON AUTOMATIONS/saas_opportunity_engine.py --scan >> AUTOMATIONS/logs/saas_opportunity_engine.log 2>&1
+# 9:15 PM daily - Incremental backup
+15 21 * * * cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --incremental >> AUTOMATIONS/logs/backup.log 2>&1
+# ═══════════════════════════════════════════════════════════════
+# END v9 — SCAN → PROCESS → RANK → DECIDE → EXECUTE
+# Total: 37 entries. All feed into Capital Genesis → KPI → Control Panel
+# Protected by cron_watchdog.py (23 required entries)
+# ═══════════════════════════════════════════════════════════════
+# App Factory Pipeline (added 2026-03-25)
+30 6 * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/app_factory/auto_orchestrator.py --full >> AUTOMATIONS/app_factory/logs/cron_orchestrator.log 2>&1
+0 7 * * 1 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/app_factory/portfolio_optimizer.py --optimize >> AUTOMATIONS/app_factory/logs/cron_optimizer.log 2>&1
+
+# CEO Agent — 3:00 AM daily orchestration
+0 3 * * * /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 AUTOMATIONS/ceo_agent.py --run >> AUTOMATIONS/logs/ceo_agent.log 2>&1
+
+# ═══════════════════════════════════════════════════════════════
+# WEEKLY SURGE DEPLOYS — Sunday 5:00 AM
+# Auto-updates all public-facing surge websites
+# ═══════════════════════════════════════════════════════════════
+# Builder's Ledger (weekly report)
+0 5 * * 0 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LANDING/builders-ledger && /opt/homebrew/bin/npx surge . builders-ledger.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
+# Devprint portfolio
+2 5 * * 0 cd /Users/macbookpro/Documents/devprint/portfolio_site/build && /opt/homebrew/bin/npx surge . devprint-portfolio.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
+# Sovrun agent OS site
+4 5 * * 0 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/OPEN_SOURCE/agent-soul/site && /opt/homebrew/bin/npx surge . sovrun-agent-os.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
+# EAS website
+6 5 * * 0 /opt/homebrew/bin/npx surge . eas-preview.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
+# Ancestry / Before You
+8 5 * * 0 cd /Users/macbookpro/Documents/ancestry-research/website/dist && /opt/homebrew/bin/npx surge . before-you-ancestry.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
+# Research blog (Gwern-style)
+10 5 * * 0 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LANDING/research-blog && /opt/homebrew/bin/npx surge . fnsmdehip-research.surge.sh >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/surge_deploy.log 2>&1
+# KPI auto-rollover (pushes unfinished KPIs to next day, max 5)
+35 5 * * * curl -s -X POST http://localhost:9999/api/kpi/rollover >> /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/kpi_rollover.log 2>&1
+30 */4 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/cross_pollinator_daily.py --cycle >> AUTOMATIONS/logs/cross_pollinator_daily.log 2>&1

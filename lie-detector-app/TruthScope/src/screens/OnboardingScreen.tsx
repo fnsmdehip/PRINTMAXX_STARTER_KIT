@@ -5,7 +5,7 @@ import {
   StyleSheet,
   Dimensions,
   FlatList,
-  TouchableOpacity,
+
   Pressable,
   Alert,
   Linking,
@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { SoundTouchable as TouchableOpacity } from '../components/SoundTouchable';
 import { Camera } from 'expo-camera';
 import * as Haptics from 'expo-haptics';
 import Animated, {
@@ -847,7 +848,7 @@ export default function OnboardingScreen({ navigation }: OnboardingScreenProps) 
   const handleComplete = useCallback(async () => {
     await saveProfile({ hasCompletedOnboarding: true });
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    navigation.replace('Main');
+    navigation.replace('Home');
   }, [navigation]);
 
   const handleAcknowledge = useCallback(() => {

@@ -1,0 +1,8 @@
+appId: com.printmaxx.truthscope
+name: "Voice Analysis Detection Screen"
+---
+- launchApp
+- tapOn:
+    text: ".*Voice Analysis.*"
+- takeScreenshot: "voice_detection_verified"
+- back

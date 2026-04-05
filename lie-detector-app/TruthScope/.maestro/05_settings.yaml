@@ -1,0 +1,16 @@
+appId: com.printmaxx.truthscope
+name: "Settings Screen"
+---
+- launchApp
+- openLink: "truthscope://settings"
+- tapOn:
+    text: "Open"
+    optional: true
+- extendedWaitUntil:
+    visible: "Settings"
+    timeout: 5000
+- assertVisible: "Subscription"
+- assertVisible:
+    text: ".*Baseline.*"
+- assertVisible: "Privacy Policy"
+- takeScreenshot: "settings_verified"

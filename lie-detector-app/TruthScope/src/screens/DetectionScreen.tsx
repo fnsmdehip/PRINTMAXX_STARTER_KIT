@@ -3,12 +3,13 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
+
   Dimensions,
   Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { SoundTouchable as TouchableOpacity } from '../components/SoundTouchable';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import Animated, {
   useSharedValue,
@@ -29,21 +30,14 @@ import * as Haptics from 'expo-haptics';
 
 import { colors, spacing, typography, radii } from '../theme';
 import { DetectionMode, Verdict } from '../utils/types';
+import { useDetectionEngine, DetectionReadings } from '../hooks/useDetectionEngine';
+import { playSound, playVerdictReveal } from '../sounds/SoundEngine';
 
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
 
-interface SimulatedReadings {
-  heartRate: number;
-  hrv: number;
-  voiceStress: number;
-  faceScore: number;
-  signalQuality: number;
-  overallScore: number;
-  verdict: Verdict;
-  confidence: number;
-}
+// DetectionReadings type imported from useDetectionEngine hook
 
 type RouteParams = { mode?: DetectionMode };
 
@@ -104,132 +98,11 @@ const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 // ---------------------------------------------------------------------------
-// Simulated data hook
+// REMOVED: Simulated data hook — replaced by useDetectionEngine (real sensors)
+// See src/hooks/useDetectionEngine.ts
 // ---------------------------------------------------------------------------
 
-function useSimulatedReadings(
-  isRecording: boolean,
-  mode: DetectionMode,
-): SimulatedReadings {
-  const [readings, setReadings] = useState<SimulatedReadings>({
-    heartRate: 0,
-    hrv: 0,
-    voiceStress: 0,
-    faceScore: 0,
-    signalQuality: 0,
-    overallScore: 0,
-    verdict: 'scanning',
-    confidence: 0,
-  });
-  const elapsed = useRef(0);
-  const baseHR = useRef(72 + Math.random() * 8);
-  const baseHRV = useRef(35 + Math.random() * 10);
-
-  useEffect(() => {
-    if (!isRecording) {
-      elapsed.current = 0;
-      setReadings({
-        heartRate: 0,
-        hrv: 0,
-        voiceStress: 0,
-        faceScore: 0,
-        signalQuality: 0,
-        overallScore: 0,
-        verdict: 'scanning',
-        confidence: 0,
-      });
-      return;
-    }
-
-    const interval = setInterval(() => {
-      elapsed.current += 0.5;
-      const t = elapsed.current;
-
-      // Signal quality ramps up over first 3 seconds
-      const sigQ = Math.min(1, t / 3);
-
-      // Heart rate: natural fluctuation with occasional small jumps
-      const hrNoise = Math.sin(t * 0.7) * 3 + Math.sin(t * 1.3) * 2 + (Math.random() - 0.5) * 2;
-      const hr = Math.round(baseHR.current + hrNoise);
-
-      // HRV: inverse correlation with stress, slower variation
-      const hrvNoise = Math.sin(t * 0.3) * 5 + (Math.random() - 0.5) * 3;
-      const hrv = Math.round(Math.max(15, baseHRV.current + hrvNoise));
-
-      // Voice stress: slow drift with occasional spikes
-      const vStress = Math.min(
-        100,
-        Math.max(
-          0,
-          25 + Math.sin(t * 0.4) * 15 + Math.sin(t * 1.1) * 8 + (Math.random() - 0.5) * 10,
-        ),
-      );
-
-      // Face score: generally low with subtle movements
-      const fScore = Math.min(
-        100,
-        Math.max(
-          0,
-          20 + Math.sin(t * 0.25) * 12 + Math.sin(t * 0.9) * 6 + (Math.random() - 0.5) * 8,
-        ),
-      );
-
-      // Combined score based on mode weighting
-      let combined = 0;
-      switch (mode) {
-        case 'finger': {
-          const hrDeviation = Math.abs(hr - baseHR.current) / baseHR.current;
-          const hrvDeviation = Math.max(0, (baseHRV.current - hrv) / baseHRV.current);
-          combined = Math.min(100, (hrDeviation * 200 + hrvDeviation * 150) * sigQ);
-          break;
-        }
-        case 'face':
-          combined = fScore * sigQ;
-          break;
-        case 'voice':
-          combined = vStress * sigQ;
-          break;
-        case 'multi':
-          combined =
-            ((Math.abs(hr - baseHR.current) / baseHR.current) * 100 * 0.4 +
-              vStress * 0.3 +
-              fScore * 0.3) *
-            sigQ;
-          break;
-      }
-      combined = Math.round(Math.min(100, Math.max(0, combined)));
-
-      // Verdict
-      let verdict: Verdict = 'scanning';
-      if (t > 3) {
-        if (combined < 30) verdict = 'truthful';
-        else if (combined < 55) verdict = 'uncertain';
-        else verdict = 'deceptive';
-      }
-
-      // Confidence builds over time and with signal quality
-      const confidence = Math.min(
-        95,
-        Math.round(sigQ * 40 + Math.min(30, t) + (t > 5 ? 15 : 0)),
-      );
-
-      setReadings({
-        heartRate: sigQ > 0.5 ? hr : 0,
-        hrv: sigQ > 0.5 ? hrv : 0,
-        voiceStress: Math.round(vStress),
-        faceScore: Math.round(fScore),
-        signalQuality: sigQ,
-        overallScore: combined,
-        verdict,
-        confidence,
-      });
-    }, 500);
-
-    return () => clearInterval(interval);
-  }, [isRecording, mode]);
-
-  return readings;
-}
+// Simulated data hook DELETED. Real sensor hook: useDetectionEngine in src/hooks/
 
 // ---------------------------------------------------------------------------
 // Sub-components
@@ -507,7 +380,7 @@ function MetricsPanel({
   readings,
   mode,
 }: {
-  readings: SimulatedReadings;
+  readings: DetectionReadings;
   mode: DetectionMode;
 }) {
   const showHR = mode === 'finger' || mode === 'multi';
@@ -765,7 +638,7 @@ export default function DetectionScreen({ navigation, route }: Props) {
   const [isPremium] = useState(false); // Will come from store later
   const [cameraPermission, requestCameraPermission] = useCameraPermissions();
 
-  const readings = useSimulatedReadings(isRecording, mode);
+  const { readings, processCameraFrame, processFaceData, markQuestion } = useDetectionEngine(isRecording, mode);
 
   // Request camera permission on mount
   useEffect(() => {
@@ -785,16 +658,24 @@ export default function DetectionScreen({ navigation, route }: Props) {
 
   const handleToggleRecording = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    setIsRecording((prev) => !prev);
+    setIsRecording((prev) => {
+      if (!prev) {
+        playSound('analyzeStart');
+      } else {
+        playSound('analyzeComplete');
+      }
+      return !prev;
+    });
   }, []);
 
   const handleMarkQuestion = useCallback(() => {
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    // In real implementation, this would mark a timestamp on the analyzer
-  }, []);
+    playSound('scanPulse');
+    markQuestion();
+  }, [markQuestion]);
 
   const handlePartyMode = useCallback(() => {
-    navigation.navigate('Party');
+    navigation.navigate('PartyMode');
   }, [navigation]);
 
   // Camera configuration
@@ -825,6 +706,15 @@ export default function DetectionScreen({ navigation, route }: Props) {
 
   return (
     <View style={styles.container}>
+      {/* Back button */}
+      <TouchableOpacity
+        style={{ position: 'absolute', top: 50, left: 16, zIndex: 100, padding: 8 }}
+        onPress={() => { if (isRecording) setIsRecording(false); navigation.goBack(); }}
+        sound="swipe"
+      >
+        <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
+      </TouchableOpacity>
+
       {/* Mode selector */}
       <ModeSelector
         current={mode}
@@ -987,7 +877,7 @@ function MiniPulseGraph({
     }
     const interval = setInterval(() => {
       setPoints((prev) => {
-        const next = [...prev, heartRate > 0 ? heartRate : 72 + Math.random() * 5];
+        const next = [...prev, heartRate > 0 ? heartRate : 0]; // No fake data - show 0 when no sensor
         if (next.length > 20) next.shift();
         return next;
       });

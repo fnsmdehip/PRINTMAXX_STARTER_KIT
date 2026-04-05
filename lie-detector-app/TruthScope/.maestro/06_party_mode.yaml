@@ -1,0 +1,13 @@
+appId: com.printmaxx.truthscope
+name: "Party Mode Setup"
+---
+- launchApp
+- tapOn:
+    text: ".*Party Mode.*"
+- assertVisible:
+    text: ".*Party.*"
+- assertVisible:
+    text: ".*Players.*"
+- assertVisible:
+    text: ".*Start.*"
+- takeScreenshot: "party_mode_verified"

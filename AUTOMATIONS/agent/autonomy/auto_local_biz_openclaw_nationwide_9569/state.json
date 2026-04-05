@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-04T11:32:31.587942",
-  "cycle_number": 15,
+  "last_run": "2026-04-04T17:59:29.428491",
+  "cycle_number": 16,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -132,12 +132,31 @@
     "Lewisburg TN",
     "Batesville AR",
     "Searcy AR",
-    "Russellville AR"
+    "Russellville AR",
+    "McKenzie TN",
+    "Savannah TN",
+    "Paris TN",
+    "Bolivar TN",
+    "Milan TN",
+    "Humboldt TN",
+    "Lexington TN",
+    "Brownsville TN",
+    "Clarksville TN",
+    "Cookeville TN",
+    "Columbia TN",
+    "Murfreesboro TN",
+    "Jackson TN",
+    "Owensboro KY",
+    "Madisonville KY",
+    "Hot Springs AR",
+    "Jonesboro AR",
+    "Fort Smith AR",
+    "Conway AR"
   ],
-  "total_leads_all_cycles": 3711,
-  "total_previews_deployed": 2104,
-  "total_sites_built_local": 7764,
-  "total_emails_queued": 2101,
+  "total_leads_all_cycles": 3909,
+  "total_previews_deployed": 2233,
+  "total_sites_built_local": 7932,
+  "total_emails_queued": 2230,
   "emails_ready_to_send": 36,
   "emails_enriched_this_cycle": 0,
   "enricher_hit_rate": "0% (F-grade no-website segment)",
@@ -145,29 +164,27 @@
   "enricher_leads_remaining": 1058,
   "projected_emails_from_remaining": 0,
   "next_cities": [
-    "Jackson TN",
-    "Clarksville TN",
-    "Columbia TN",
-    "Cookeville TN",
-    "Murfreesboro TN",
-    "Elizabethtown KY",
-    "Owensboro KY",
-    "Madisonville KY",
-    "Camden AR",
-    "Magnolia AR",
-    "Hot Springs AR",
-    "Jonesboro AR",
-    "Fort Smith AR",
-    "Conway AR",
-    "Batesville AR",
-    "McKenzie TN",
-    "Savannah TN",
-    "Paris TN",
-    "Bolivar TN",
-    "Brownsville TN",
-    "Lexington TN",
-    "Humboldt TN",
-    "Milan TN"
+    "Pine Bluff AR",
+    "Texarkana AR",
+    "Mountain Home AR",
+    "Harrison AR",
+    "Morrilton AR",
+    "Stuttgart AR",
+    "Paragould AR",
+    "Harlan KY",
+    "Hazard KY",
+    "Prestonsburg KY",
+    "Jackson KY",
+    "Campbellsville KY",
+    "Danville KY",
+    "Richmond KY",
+    "Winchester TN",
+    "Fayetteville TN",
+    "Tullahoma TN",
+    "McMinnville TN",
+    "Sparta TN",
+    "Crossville TN",
+    "Livingston TN"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -206,8 +223,8 @@
   ],
   "blockers": [
     "CRITICAL P0: Gmail App Password (5 min) \u2014 36 emails ready to send NOW. python3 AUTOMATIONS/cold_email_sender.py --send-queue AUTOMATIONS/leads/openclaw/outreach_queue.csv --limit 36",
-    "CRITICAL P1: Apollo.io needed for email enrichment \u2014 1,810+ F-grade businesses have no email address. 50 free/mo, 10 min signup.",
-    "P1: Surge Student plan frozen at 472 domains. GH Pages is primary channel (1,953 live).",
+    "CRITICAL P1: Apollo.io needed for email enrichment \u2014 2,194 F-grade businesses have no email address. 50 free/mo, 10 min signup.",
+    "P1: Surge Student plan frozen at 472 domains. GH Pages is primary channel (2,233 live).",
     "P2: Domain blacklist for chains (Ulta, KBB, GAF, FindLaw, Yelp) \u2014 inflates F-count with directory sites."
   ],
   "status": "CYCLE_COMPLETE",
@@ -302,13 +319,13 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 181 new leads Cycle 15",
-    "grade": "HEALTHY \u2014 KY towing/handyman 90-100% F-grade",
-    "build": "HEALTHY \u2014 2,066 preview sites built",
+    "discover": "HEALTHY \u2014 198 new leads Cycle 16",
+    "grade": "HEALTHY \u2014 Paris TN / Jonesboro AR / Bolivar TN 87-100% F-grade",
+    "build": "HEALTHY \u2014 2,246 preview sites built",
     "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
-    "deploy_ghpages": "PRIMARY CHANNEL \u2014 2,104 live at fnsmdehip.github.io/openclaw-previews/",
+    "deploy_ghpages": "PRIMARY CHANNEL \u2014 2,233 live at fnsmdehip.github.io/openclaw-previews/",
     "enrich_email": "0% on F-grade segment \u2014 Apollo.io required",
-    "outreach_queue": "HEALTHY \u2014 2,101 queued, 36 ready-to-send",
+    "outreach_queue": "HEALTHY \u2014 2,230 queued, all with live GH Pages URLs",
     "send": "BLOCKED \u2014 Gmail App Password (5 min fix). Brevo free (300/day) = 10x scale."
   },
   "metrics_history": [
@@ -448,9 +465,22 @@
       "outreach_queued": 2101,
       "outreach_with_live_url": 2099,
       "ready_to_send": 36
+    },
+    {
+      "cycle": 16,
+      "date": "2026-04-04",
+      "total_leads": 3909,
+      "hot_leads": 2126,
+      "with_email": 36,
+      "surge_deployed": 472,
+      "ghpages_deployed": 2233,
+      "total_preview_live": 2233,
+      "outreach_queued": 2230,
+      "outreach_with_live_url": 2230,
+      "ready_to_send": 36
     }
   ],
-  "ghpages_deployed": 2104,
+  "ghpages_deployed": 2233,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -821,5 +851,103 @@
       "Batesville AR auto repair (87%)"
     ],
     "observation": "KY micro-cities confirm towing+handyman = 100% F-grade. Pikeville KY towing 11/11, Glasgow KY towing 7/7, Morehead KY handyman 11/11. Lawrenceburg TN 90%+ across niches. AR adds new frontier. GH Pages now at 2,104 live sites. Email bottleneck unchanged \u2014 36 ready, 2,063 need Apollo.io enrichment."
+  },
+  "cycle_16_results": {
+    "cities_discovered": [
+      "McKenzie TN",
+      "Savannah TN",
+      "Paris TN",
+      "Bolivar TN",
+      "Milan TN",
+      "Humboldt TN",
+      "Lexington TN",
+      "Brownsville TN",
+      "Clarksville TN",
+      "Cookeville TN",
+      "Columbia TN",
+      "Murfreesboro TN",
+      "Jackson TN",
+      "Owensboro KY",
+      "Madisonville KY",
+      "Hot Springs AR",
+      "Jonesboro AR",
+      "Fort Smith AR",
+      "Conway AR"
+    ],
+    "city_stats": {
+      "Paris TN (handyman)": {
+        "F": 7,
+        "total": 7,
+        "f_rate": 100.0
+      },
+      "Bolivar TN (handyman)": {
+        "F": 13,
+        "total": 15,
+        "f_rate": 86.7
+      },
+      "Cookeville TN (handyman)": {
+        "F": 11,
+        "total": 13,
+        "f_rate": 84.6
+      },
+      "Jonesboro AR (handyman)": {
+        "F": 11,
+        "total": 12,
+        "f_rate": 91.7
+      },
+      "Fort Smith AR (handyman)": {
+        "F": 8,
+        "total": 10,
+        "f_rate": 80.0
+      },
+      "Hot Springs AR (handyman)": {
+        "F": 4,
+        "total": 6,
+        "f_rate": 66.7
+      },
+      "Owensboro KY (handyman)": {
+        "F": 4,
+        "total": 5,
+        "f_rate": 80.0
+      },
+      "Madisonville KY (handyman)": {
+        "F": 5,
+        "total": 5,
+        "f_rate": 100.0
+      },
+      "McKenzie TN (auto repair)": {
+        "F": 5,
+        "total": 8,
+        "f_rate": 62.5
+      },
+      "Milan TN (handyman)": {
+        "F": 2,
+        "total": 2,
+        "f_rate": 100.0
+      },
+      "Clarksville TN (handyman)": {
+        "F": 4,
+        "total": 5,
+        "f_rate": 80.0
+      }
+    },
+    "new_leads": 198,
+    "new_f_grade": 128,
+    "new_d_grade": 0,
+    "new_sites_built": 168,
+    "new_ghpages_deploys": 129,
+    "total_ghpages_live": 2233,
+    "ghpages_commit": "b453415",
+    "new_emails_queued": 129,
+    "file_urls_fixed_to_ghpages": 168,
+    "ready_to_send_email": 36,
+    "top_f_grade_combos": [
+      "Paris TN handyman (100%)",
+      "Madisonville KY handyman (100%)",
+      "Milan TN handyman (100%)",
+      "Jonesboro AR handyman (92%)",
+      "Bolivar TN handyman (87%)"
+    ],
+    "observation": "AR expansion confirms pattern: Jonesboro AR 92% F-grade handyman, Fort Smith AR 80% handyman. Bolivar TN 87% handyman. Paris TN handyman 100%. Total GH Pages now 2,233. Email dispatch remains only blocker \u2014 36 ready with live GH Pages URLs. 2,194 need Apollo.io enrichment."
   }
 }

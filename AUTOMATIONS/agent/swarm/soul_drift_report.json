@@ -1,11 +1,12 @@
 {
-  "ts": "2026-04-04T16:00:01.163030",
+  "ts": "2026-04-04T18:00:01.057100",
   "avg_score": 9.6,
-  "total_scored": 12,
+  "total_scored": 13,
   "drifted_count": 0,
   "drifted_agents": [],
   "scores": {
-    "swarm_brain": 8.5,
+    "data_janitor": 10.0,
+    "swarm_brain": 8.0,
     "cross_pollinator": 10.0,
     "cross_pollination_20260320": 10.0,
     "test": 8.5,

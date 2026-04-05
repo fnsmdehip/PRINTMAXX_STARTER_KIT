@@ -1,0 +1,7 @@
+appId: com.printmaxx.truthscope
+name: "Onboarding Welcome"
+---
+- launchApp
+- openLink: "truthscope://onboarding"
+- assertVisible: "TruthScope"
+- takeScreenshot: "onboarding_verified"
