@@ -36,8 +36,8 @@ const MODE_WEIGHTS: Record<DetectionMode, { physio: number; vocal: number; facia
 // Deception thresholds (calibrated conservatively to reduce false positives)
 const THRESHOLDS = {
   truthful: 30,    // Below 30 = likely truthful
-  uncertain: 55,   // 30-55 = uncertain
   deceptive: 55,   // Above 55 = elevated stress (possible deception)
+  // Between truthful and deceptive = uncertain
 };
 
 export class DeceptionAnalyzer {
@@ -140,7 +140,7 @@ export class DeceptionAnalyzer {
 
   private getVerdict(score: number): Verdict {
     if (score < THRESHOLDS.truthful) return 'truthful';
-    if (score < THRESHOLDS.uncertain) return 'uncertain';
+    if (score < THRESHOLDS.deceptive) return 'uncertain';
     return 'deceptive';
   }
 

@@ -1,33 +1,31 @@
-# COMPOUND ACTIONS -- Cycle 56 (2026-04-04 18:55)
+# COMPOUND ACTIONS -- Cycle 57 (2026-04-04 23:05)
 
 **Day 60 | Revenue: $0 | Net P&L: -$524+ | 388 live sites | 1,519+ posts queued | 192K leads uncontacted**
 
 ---
 
-## Compound A: Cron Trim -- IMPLEMENTED (C56)
+## Compound A: Ghost Agent Cleanup (NEW — C57)
 
-C55 identified the cron leak. C56 implemented the fix.
+Two ghost launchd agents found that C56 missed. Neither is tracked in swarm_state.
 
-**Disabled (7 entries):**
-| Entry | Was | Savings |
-|-------|-----|---------|
-| venture_autonomy --run-all | Daily 5:25 AM | 14 Claude API calls/day |
-| venture_pipeline_brokering --run | Daily 5:25 AM | Associated calls |
-| ceo_agent --run | Daily 3 AM | Orchestrating nothing |
-| loop_closer --cycle | Every 2h | 12 defunct runs/day |
-| cross_pollinator_daily --cycle | Every 4h | 6 runs/day into saturated queues |
-| autonomous_integrator --run | Daily 10 PM | Integration into full queues |
-| user_sim_refiner --all | Daily 4 AM | Refinement with no consumer |
+**HUMAN ACTION — 30 seconds:**
+```bash
+launchctl unload ~/Library/LaunchAgents/com.printmaxx.scrapers.plist
+launchctl unload ~/Library/LaunchAgents/com.printmaxx.claude-sessions.plist
+```
 
-**Reduced (2 entries):**
-| Entry | Was | Now |
-|-------|-----|-----|
-| system_health_monitor --quick | Every hour (24/day) | Daily 5:30 AM |
-| usage_optimizer --optimize | Every hour (24/day) | Daily 5:35 AM |
+| Agent | What it does | Why unload |
+|-------|-------------|------------|
+| com.printmaxx.scrapers | Runs daily_agent_runner.py --status at 6/12/18 | Status output goes to log nobody reads |
+| com.printmaxx.claude-sessions | Runs schedule_claude.sh morning at 7/13/18 | EXIT 32256 — always fails. Dead code. |
 
-**Result:** ~30-50 Claude API calls/day eliminated. ~46 Python spawns/day eliminated.
-**Backup:** `AUTOMATIONS/agent/cron_backup_pre_c56.txt`
-**To restore:** `crontab AUTOMATIONS/agent/cron_backup_pre_c56.txt`
+After unload: 3 loaded agents remain (brain, janitor, watchdog). Down from 5.
+
+**Optional — delete 18 dead plist files:**
+```bash
+cd ~/Library/LaunchAgents/
+rm com.printmaxx.swarm.asset_deployer.plist com.printmaxx.swarm.competitor_stalker.plist com.printmaxx.swarm.content_compounder.plist com.printmaxx.swarm.conversion_optimizer.plist com.printmaxx.swarm.cross_pollinator.plist com.printmaxx.swarm.distribution_engine.plist com.printmaxx.swarm.gap_hunter.plist com.printmaxx.swarm.growth_strategist.plist com.printmaxx.swarm.inbound_maximizer.plist com.printmaxx.swarm.lead_machine.plist com.printmaxx.swarm.opportunity_scanner.plist com.printmaxx.swarm.playwright_tester.plist com.printmaxx.swarm.quality_enforcer.plist com.printmaxx.swarm.quality_gate.plist com.printmaxx.swarm.revenue_tracker.plist com.printmaxx.swarm.seo_aso_optimizer.plist com.printmaxx.swarm.system_healer.plist com.printmaxx.swarm.trend_synthesizer.plist
+```
 
 ## Compound B: The 100-Minute Revenue Unlock (UNCHANGED since C51)
 
@@ -48,28 +46,7 @@ If no human activation by April 9:
 2. Comment out ALL remaining cron entries except cron_watchdog
 3. Unload data_janitor from launchd
 4. System enters COLD STORAGE -- zero cost, instantly reactivatable
-5. To restore: `crontab AUTOMATIONS/agent/cron_backup_pre_c56.txt` + reload plists
 
-## Compound D: TruthScope Rename (P0 before marketing)
+## Compound D: Competitive Intel Ghost Path (NEW — C57)
 
-competitor_stalker found TruthScopeAI.com naming collision. Rename before any promotion.
-
-## Compound E: Plist Cleanup (housekeeping)
-
-18-22 dead plists in ~/Library/LaunchAgents/. Human cleanup when convenient.
-
----
-
-## System Cost Model (C56)
-
-| Component | Frequency | Est. Daily Cost |
-|-----------|-----------|----------------|
-| swarm_brain (launchd) | 24h | ~$0.10 |
-| data_janitor (launchd) | 48h | ~$0.05 |
-| cron_watchdog | 30min | ~$0.00 |
-| Python scanners (cron) | Daily 5 AM | ~$0.00 (no Claude) |
-| perpetual_guardian (cron) | Every 4h | ~$0.02 |
-| Remaining daily cron | Various | ~$0.05 |
-| **TOTAL** | | **~$0.22/day** |
-
-Down from $8-12/day (C51). 97% reduction from peak.
+competitive_intel_cycle.py ran at 21:23 today (cycle 58) with no cron entry and no launchd plist. Source unknown. Produces useful output (24 new rows, 8 alerts) but violates execution tracking. Low priority — lightweight Python, no Claude API calls. Monitor next cycle to see if it recurs.

@@ -1,0 +1,321 @@
+{
+  "cycle_start": "2026-04-04T21:23:21.824166",
+  "cycle_end": "2026-04-04T21:23:21.830920",
+  "version_changes_detected": 14,
+  "reddit_signals_found": 10,
+  "new_intel_rows_written": 24,
+  "alerts_generated": 8,
+  "alerts": [
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGHEST",
+      "app": "Hallow",
+      "category": "faith",
+      "change": "12.20.0 -> 13.0.0",
+      "threat_level": "UNKNOWN",
+      "note": "Major version bump - likely significant feature release",
+      "action": "Check Hallow App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Opal",
+      "category": "screen_time",
+      "change": "3.152 -> 3.155",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+3) - active development",
+      "action": "Check Opal App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "FitBod",
+      "category": "fitness",
+      "change": "8.10.0 -> 8.12.0",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+2) - active development",
+      "action": "Check FitBod App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Taught Claude to talk like a caveman to use 75% less tokens.",
+      "subreddit": "ClaudeAI",
+      "score": 6161,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sble09/taught_claude_to_talk_like_a_caveman_to_use_75/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "My apps crossed $100/mo mark for first time in March \ud83e\udd79",
+      "subreddit": "AppBusiness",
+      "score": 131,
+      "url": "https://www.reddit.com/r/AppBusiness/comments/1sb5t58/my_apps_crossed_100mo_mark_for_first_time_in_march/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I built a WiFi bell system in my garage because a local school couldn't afford a commercial solution. Now factories acro",
+      "subreddit": "SideProject",
+      "score": 238,
+      "url": "https://www.reddit.com/r/SideProject/comments/1sbr7sm/i_built_a_wifi_bell_system_in_my_garage_because_a/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "MIT study challenges AI job apocalypse narrative",
+      "subreddit": "artificial",
+      "score": 172,
+      "url": "https://www.reddit.com/r/artificial/comments/1sb7qxc/mit_study_challenges_ai_job_apocalypse_narrative/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "PDFs are dead. I started selling interactive web apps as digital products and it changed everything.",
+      "subreddit": "passive_income",
+      "score": 136,
+      "url": "https://www.reddit.com/r/passive_income/comments/1sce9h6/pdfs_are_dead_i_started_selling_interactive_web/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [
+    {
+      "app": "Hallow",
+      "from_version": "12.20.0",
+      "to_version": "13.0.0",
+      "price": "Free",
+      "rating": 4.89,
+      "ratings_count": 358702,
+      "category": "faith",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "HIGHEST",
+      "threat": "UNKNOWN",
+      "note": "Major version bump - likely significant feature release"
+    },
+    {
+      "app": "Pray.com",
+      "from_version": "2.133.1",
+      "to_version": "2.134.1",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 189583,
+      "category": "faith",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Glorify",
+      "from_version": "2.170.0",
+      "to_version": "2.171.0",
+      "price": "Free",
+      "rating": 4.93,
+      "ratings_count": 90789,
+      "category": "faith",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Abide",
+      "from_version": "3.80.1",
+      "to_version": "3.81.0",
+      "price": "Free",
+      "rating": 4.87,
+      "ratings_count": 121058,
+      "category": "faith",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Opal",
+      "from_version": "3.152",
+      "to_version": "3.155",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 69552,
+      "category": "screen_time",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+3) - active development"
+    },
+    {
+      "app": "BePresent",
+      "from_version": "0.18.65",
+      "to_version": "0.18.69",
+      "price": "Free",
+      "rating": 4.84,
+      "ratings_count": 42160,
+      "category": "screen_time",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Gauth",
+      "from_version": "1.92.0",
+      "to_version": "1.93.0",
+      "price": "Free",
+      "rating": 4.83,
+      "ratings_count": 1377192,
+      "category": "study",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Knowunity",
+      "from_version": "6.13.1",
+      "to_version": "6.14.1",
+      "price": "Free",
+      "rating": 4.63,
+      "ratings_count": 4041,
+      "category": "study",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "FitBod",
+      "from_version": "8.10.0",
+      "to_version": "8.12.0",
+      "price": "Free",
+      "rating": 4.81,
+      "ratings_count": 267185,
+      "category": "fitness",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+2) - active development"
+    },
+    {
+      "app": "Streaks Workout",
+      "from_version": "7.2.3",
+      "to_version": "7.2.4",
+      "price": "$4.99",
+      "rating": 4.76,
+      "ratings_count": 6954,
+      "category": "fitness",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Forest",
+      "from_version": "5.11.1",
+      "to_version": "5.11.2",
+      "price": "Free",
+      "rating": 4.82,
+      "ratings_count": 47760,
+      "category": "productivity",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Focus Keeper",
+      "from_version": "4.2.15",
+      "to_version": "4.2.16",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 31256,
+      "category": "productivity",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Sleep Cycle",
+      "from_version": "6.26.11",
+      "to_version": "6.26.12",
+      "price": "Free",
+      "rating": 4.66,
+      "ratings_count": 21891,
+      "category": "sleep",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Pillow",
+      "from_version": "6.2.11",
+      "to_version": "6.2.13",
+      "price": "Free",
+      "rating": 4.37,
+      "ratings_count": 95383,
+      "category": "sleep",
+      "scan_date": "2026-04-04T21:22:28.636982",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    }
+  ],
+  "top_reddit_signals": [
+    {
+      "title": "Taught Claude to talk like a caveman to use 75% less tokens.",
+      "subreddit": "ClaudeAI",
+      "score": 6161,
+      "comments": 305,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sble09/taught_claude_to_talk_like_a_caveman_to_use_75/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1774000118"
+    },
+    {
+      "title": "My apps crossed $100/mo mark for first time in March \ud83e\udd79",
+      "subreddit": "AppBusiness",
+      "score": 131,
+      "comments": 47,
+      "url": "https://www.reddit.com/r/AppBusiness/comments/1sb5t58/my_apps_crossed_100mo_mark_for_first_time_in_march/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1774000134"
+    },
+    {
+      "title": "I built a WiFi bell system in my garage because a local school couldn't afford a commercial solution. Now factories acro",
+      "subreddit": "SideProject",
+      "score": 238,
+      "comments": 54,
+      "url": "https://www.reddit.com/r/SideProject/comments/1sbr7sm/i_built_a_wifi_bell_system_in_my_garage_because_a/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA1774000111"
+    },
+    {
+      "title": "MIT study challenges AI job apocalypse narrative",
+      "subreddit": "artificial",
+      "score": 172,
+      "comments": 72,
+      "url": "https://www.reddit.com/r/artificial/comments/1sb7qxc/mit_study_challenges_ai_job_apocalypse_narrative/",
+      "keyword_hits": 0,
+      "roi": "HIGH",
+      "post_id": "ALPHA1774000115"
+    },
+    {
+      "title": "PDFs are dead. I started selling interactive web apps as digital products and it changed everything.",
+      "subreddit": "passive_income",
+      "score": 136,
+      "comments": 58,
+      "url": "https://www.reddit.com/r/passive_income/comments/1sce9h6/pdfs_are_dead_i_started_selling_interactive_web/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA1774000243"
+    }
+  ]
+}

@@ -240,9 +240,12 @@ export class PPGEngine {
 
     if (intervals.length === 0) return 0;
 
-    // Use median for robustness against outliers
+    // Use true median for robustness against outliers
     const sorted = [...intervals].sort((a, b) => a - b);
-    const medianInterval = sorted[Math.floor(sorted.length / 2)];
+    const mid = Math.floor(sorted.length / 2);
+    const medianInterval = sorted.length % 2 === 0
+      ? (sorted[mid - 1] + sorted[mid]) / 2
+      : sorted[mid];
 
     return 60000 / medianInterval; // Convert ms interval to BPM
   }

@@ -561,12 +561,14 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
                   key={session.id}
                   session={session}
                   index={i}
-                  onPress={() =>
-                    navigation.navigate('Detection', {
-                      mode: session.mode,
-                      sessionId: session.id,
-                    })
-                  }
+                  onPress={() => {
+                    const lastResult = session.results?.[session.results.length - 1];
+                    if (lastResult) {
+                      navigation.navigate('Result', { result: lastResult });
+                    } else {
+                      navigation.navigate('Detection', { mode: session.mode });
+                    }
+                  }}
                 />
               ))}
             </View>

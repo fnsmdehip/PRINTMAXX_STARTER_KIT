@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-04T17:59:29.428491",
-  "cycle_number": 16,
+  "last_run": "2026-04-04T22:23:30.883653",
+  "cycle_number": 17,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -151,40 +151,38 @@
     "Hot Springs AR",
     "Jonesboro AR",
     "Fort Smith AR",
-    "Conway AR"
+    "Conway AR",
+    "Prestonsburg KY",
+    "Harlan KY",
+    "Hazard KY",
+    "Somerset KY",
+    "Paintsville KY",
+    "Texarkana AR",
+    "Pine Bluff AR"
   ],
-  "total_leads_all_cycles": 3909,
-  "total_previews_deployed": 2233,
-  "total_sites_built_local": 7932,
-  "total_emails_queued": 2230,
-  "emails_ready_to_send": 36,
+  "total_leads_all_cycles": 3999,
+  "total_previews_deployed": 2294,
+  "total_sites_built_local": 8056,
+  "total_emails_queued": 2292,
+  "emails_ready_to_send": 38,
   "emails_enriched_this_cycle": 0,
   "enricher_hit_rate": "0% (F-grade no-website segment)",
   "enricher_leads_processed": 50,
   "enricher_leads_remaining": 1058,
   "projected_emails_from_remaining": 0,
   "next_cities": [
-    "Pine Bluff AR",
-    "Texarkana AR",
-    "Mountain Home AR",
-    "Harrison AR",
-    "Morrilton AR",
-    "Stuttgart AR",
-    "Paragould AR",
-    "Harlan KY",
-    "Hazard KY",
-    "Prestonsburg KY",
-    "Jackson KY",
+    "Salyersville KY",
+    "Whitesburg KY",
+    "Williamsburg KY",
+    "Barbourville KY",
+    "Flemingsburg KY",
+    "Maysville KY",
+    "London KY",
+    "Monticello KY",
+    "Russell Springs KY",
     "Campbellsville KY",
-    "Danville KY",
-    "Richmond KY",
-    "Winchester TN",
-    "Fayetteville TN",
-    "Tullahoma TN",
-    "McMinnville TN",
-    "Sparta TN",
-    "Crossville TN",
-    "Livingston TN"
+    "Mountain Home AR",
+    "Harrison AR"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -222,10 +220,10 @@
     "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "CRITICAL P0: Gmail App Password (5 min) \u2014 36 emails ready to send NOW. python3 AUTOMATIONS/cold_email_sender.py --send-queue AUTOMATIONS/leads/openclaw/outreach_queue.csv --limit 36",
-    "CRITICAL P1: Apollo.io needed for email enrichment \u2014 2,194 F-grade businesses have no email address. 50 free/mo, 10 min signup.",
-    "P1: Surge Student plan frozen at 472 domains. GH Pages is primary channel (2,233 live).",
-    "P2: Domain blacklist for chains (Ulta, KBB, GAF, FindLaw, Yelp) \u2014 inflates F-count with directory sites."
+    "P0: Add BREVO_SMTP_LOGIN + BREVO_SMTP_KEY + PHYSICAL_ADDRESS to SECRETS/PAYMENT_INFO.md, then: python3 AUTOMATIONS/email_sender.py --outreach AUTOMATIONS/leads/openclaw/outreach_queue.csv --provider brevo --max-sends 38",
+    "P0 alt: Gmail app password \u2014 myaccount.google.com/apppasswords, then run with --provider gmail",
+    "P1: Apollo.io free (50/mo) for email enrichment \u2014 2,254 F-grade with no email",
+    "P2: Surge Student plan frozen at 472. GH Pages is primary channel (2,294 live)."
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_9_results": {
@@ -319,14 +317,14 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 198 new leads Cycle 16",
-    "grade": "HEALTHY \u2014 Paris TN / Jonesboro AR / Bolivar TN 87-100% F-grade",
-    "build": "HEALTHY \u2014 2,246 preview sites built",
+    "discover": "HEALTHY \u2014 90 new leads Cycle 17",
+    "grade": "HEALTHY \u2014 66% F-grade in Appalachian KY (Pikeville 94%, Prestonsburg 100%)",
+    "build": "HEALTHY \u2014 8,056 preview sites total",
     "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
-    "deploy_ghpages": "PRIMARY CHANNEL \u2014 2,233 live at fnsmdehip.github.io/openclaw-previews/",
-    "enrich_email": "0% on F-grade segment \u2014 Apollo.io required",
-    "outreach_queue": "HEALTHY \u2014 2,230 queued, all with live GH Pages URLs",
-    "send": "BLOCKED \u2014 Gmail App Password (5 min fix). Brevo free (300/day) = 10x scale."
+    "deploy_ghpages": "PRIMARY CHANNEL \u2014 2,294 live at fnsmdehip.github.io/openclaw-previews/",
+    "enrich_email": "1.7% hit rate (38/2,292) \u2014 Apollo.io needed for scale",
+    "outreach_queue": "HEALTHY \u2014 2,292 queued, 100% with live URLs",
+    "send": "UNBLOCKED (pending creds) \u2014 Brevo SMTP added to email_sender.py. 10-min setup."
   },
   "metrics_history": [
     {
@@ -478,9 +476,34 @@
       "outreach_queued": 2230,
       "outreach_with_live_url": 2230,
       "ready_to_send": 36
+    },
+    {
+      "cycle": 17,
+      "date": "2026-04-04",
+      "total_leads": 3999,
+      "hot_leads": 2185,
+      "with_email": 38,
+      "surge_deployed": 472,
+      "ghpages_deployed": 2294,
+      "total_preview_live": 2294,
+      "outreach_queued": 2292,
+      "outreach_with_live_url": 2292,
+      "ready_to_send": 38,
+      "new_cities": [
+        "Pikeville KY",
+        "Prestonsburg KY",
+        "Morehead KY",
+        "Harlan KY",
+        "Hazard KY",
+        "Corbin KY",
+        "Somerset KY",
+        "Paintsville KY",
+        "Texarkana AR",
+        "Pine Bluff AR"
+      ]
     }
   ],
-  "ghpages_deployed": 2233,
+  "ghpages_deployed": 2294,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [

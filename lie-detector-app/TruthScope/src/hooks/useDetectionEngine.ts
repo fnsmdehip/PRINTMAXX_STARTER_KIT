@@ -156,7 +156,8 @@ export function useDetectionEngine(
     updateTimer.current = setInterval(() => {
       if (!analyzer.current) return;
 
-      const physioScore = ppgEngine.current
+      // BUG 1 FIX: Don't score PPG when no data (HR=0 means sensor not ready)
+      const physioScore = ppgEngine.current && latestPPG.current.hr > 0
         ? ppgEngine.current.getDeceptionScore(latestPPG.current.hr, latestPPG.current.hrv)
         : -1;
       const vocalScore = voiceEngine.current
@@ -167,9 +168,9 @@ export function useDetectionEngine(
         : -1;
 
       const result = analyzer.current.analyze({
-        physiological: physioScore >= 0 ? physioScore : 0,
-        vocal: vocalScore >= 0 ? vocalScore : 0,
-        facial: facialScore >= 0 ? facialScore : 0,
+        physiological: Math.max(0, physioScore),
+        vocal: Math.max(0, vocalScore),
+        facial: Math.max(0, facialScore),
       });
 
       setReadings(prev => ({
@@ -208,15 +209,25 @@ export function useDetectionEngine(
     latestFace.current = { score: 0 };
   }, []);
 
+  // BUG 2 FIX: Use ref to prevent double stopEngines
+  const enginesRunning = useRef(false);
+
   useEffect(() => {
     if (isRecording) {
+      enginesRunning.current = true;
       startEngines();
-    } else {
+    } else if (enginesRunning.current) {
+      enginesRunning.current = false;
       stopEngines();
       setReadings(INITIAL_READINGS);
     }
 
-    return () => { stopEngines(); };
+    return () => {
+      if (enginesRunning.current) {
+        enginesRunning.current = false;
+        stopEngines();
+      }
+    };
   }, [isRecording, startEngines, stopEngines]);
 
   // Camera frame callback - call this from the CameraView onFrame

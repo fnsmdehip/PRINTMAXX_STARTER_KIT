@@ -15,6 +15,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { SoundTouchable as TouchableOpacity } from '../components/SoundTouchable';
+import { playSound } from '../sounds/SoundEngine';
 import { Camera } from 'expo-camera';
 import * as Haptics from 'expo-haptics';
 import Animated, {
@@ -802,6 +803,7 @@ export default function OnboardingScreen({ navigation }: OnboardingScreenProps) 
     (index: number) => {
       if (index >= 0 && index < STEPS.length) {
         flatListRef.current?.scrollToIndex({ index, animated: true });
+        playSound('swipe');
       }
     },
     [],
@@ -811,6 +813,7 @@ export default function OnboardingScreen({ navigation }: OnboardingScreenProps) 
     // Block advancing past disclaimer if not acknowledged
     if (STEPS[currentIndex] === 'disclaimer' && !disclaimerAcknowledged) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+      playSound('error');
       Alert.alert('Required', 'Please acknowledge the disclaimer before continuing.');
       return;
     }
@@ -829,6 +832,7 @@ export default function OnboardingScreen({ navigation }: OnboardingScreenProps) 
       setPermissionsGranted(granted);
       if (granted) {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        playSound('permissionGranted');
         goNext();
       } else {
         Alert.alert(
@@ -848,12 +852,14 @@ export default function OnboardingScreen({ navigation }: OnboardingScreenProps) 
   const handleComplete = useCallback(async () => {
     await saveProfile({ hasCompletedOnboarding: true });
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    playSound('success');
     navigation.replace('Home');
   }, [navigation]);
 
   const handleAcknowledge = useCallback(() => {
     setDisclaimerAcknowledged((prev) => !prev);
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    playSound('toggle');
   }, []);
 
   const renderItem = useCallback(

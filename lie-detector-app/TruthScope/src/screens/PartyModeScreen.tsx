@@ -105,8 +105,11 @@ function generateScore(
     verdict = 'truthful';
   }
 
-  // Confidence based on how much data we collected
-  const confidence = Math.min(90, Math.round(40 + audioSamples.length * 2));
+  // Confidence based on data quantity AND signal quality
+  // Low mean (near silence) = low confidence regardless of sample count
+  const signalStrength = Math.min(1, mean * 3);
+  const dataQuality = Math.min(1, audioSamples.length / 50);
+  const confidence = Math.min(90, Math.round(signalStrength * 50 + dataQuality * 40));
 
   return { score, verdict, confidence };
 }
@@ -824,6 +827,16 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
   }, []);
 
   const handleStartAnalysis = useCallback(async () => {
+    // BUG 8 FIX: Clear any running countdown timer before starting analysis
+    if (countdownTimerRef.current) {
+      clearInterval(countdownTimerRef.current);
+      countdownTimerRef.current = null;
+    }
+    // BUG 4 FIX: Clear any existing analysis timer
+    if (analysisTimerRef.current) {
+      clearInterval(analysisTimerRef.current);
+      analysisTimerRef.current = null;
+    }
     setPhase('analyzing');
     setAnalysisElapsed(0);
     audioSamplesRef.current = [];

@@ -331,6 +331,22 @@ def send_gmail(from_email, app_password, to_email, subject, body):
     return True
 
 
+def send_brevo(smtp_login, smtp_key, from_email, to_email, subject, body):
+    """Send email via Brevo SMTP relay (300/day free, no domain verification)."""
+    msg = MIMEMultipart("alternative")
+    msg["From"] = from_email
+    msg["To"] = to_email
+    msg["Subject"] = subject
+    msg.attach(MIMEText(body, "plain"))
+
+    with smtplib.SMTP("smtp-relay.brevo.com", 587) as server:
+        server.starttls()
+        server.login(smtp_login, smtp_key)
+        server.send_message(msg)
+
+    return True
+
+
 def send_resend(api_key, from_email, to_email, subject, body):
     """Send email via Resend API."""
     import urllib.request
@@ -580,7 +596,7 @@ def main():
     parser.add_argument("--delay-min", type=int, default=30, help="Min seconds between sends (default: 30)")
     parser.add_argument("--delay-max", type=int, default=90, help="Max seconds between sends (default: 90)")
     parser.add_argument("--preview", "--dry-run", action="store_true", help="Preview emails without sending (dry run)")
-    parser.add_argument("--provider", choices=["gmail", "resend"], default="gmail", help="Email provider (default: gmail)")
+    parser.add_argument("--provider", choices=["gmail", "resend", "brevo"], default="gmail", help="Email provider (default: gmail)")
     parser.add_argument("--stats", action="store_true", help="Show stats on all lead files")
     parser.add_argument("--from-email", help="Override sender email")
     args = parser.parse_args()
@@ -665,6 +681,16 @@ def main():
             return
         from_email = args.from_email or secrets.get("RESEND_FROM_EMAIL", "onboarding@resend.dev")
         log(f"Using Resend API: {from_email}")
+    elif args.provider == "brevo":
+        brevo_login = secrets.get("BREVO_SMTP_LOGIN")
+        brevo_key = secrets.get("BREVO_SMTP_KEY")
+        if not brevo_login or not brevo_key:
+            log("Brevo credentials missing. add BREVO_SMTP_LOGIN and BREVO_SMTP_KEY to SECRETS/PAYMENT_INFO.md", "ERROR")
+            log("Get keys: app.brevo.com → SMTP & API → SMTP → Generate new key", "ERROR")
+            log("Free tier: 300 emails/day, no domain verification needed to start", "ERROR")
+            return
+        from_email = args.from_email or brevo_login
+        log(f"Using Brevo SMTP: {from_email} (300/day free)")
 
     # Send loop
     sent_count = 0
@@ -681,6 +707,8 @@ def main():
                 success = send_resend(resend_key, from_email, e["email"], e["subject"], e_body)
                 if not success:
                     raise Exception("Resend API failed")
+            elif args.provider == "brevo":
+                send_brevo(brevo_login, brevo_key, from_email, e["email"], e["subject"], e_body)
 
             sent_count += 1
             log_send(e["email"], e["subject"], "SENT", args.provider, e.get("company", ""))

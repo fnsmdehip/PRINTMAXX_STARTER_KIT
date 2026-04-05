@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 154,
-    "last_run": "2026-04-04T23:17:08.674971+00:00",
-    "cumulative_blue_oceans": 909,
-    "ci_csv_rows": 256,
-    "alpha_csv_rows": 53164,
+    "last_cycle": 155,
+    "last_run": "2026-04-05T03:32:54.335567+00:00",
+    "cumulative_blue_oceans": 921,
+    "ci_csv_rows": 268,
+    "alpha_csv_rows": 53173,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -52,9 +52,10 @@
         "BIOTECH + LIFE SCIENCES + PHARMACEUTICAL INNOVATION + DRUG DEVELOPMENT",
         "AGING + LONGEVITY SCIENCE + GEROSCIENCE + HEALTHSPAN OPTIMIZATION",
         "MICROBIOME + GUT HEALTH + LONGEVITY SCIENCE + PSYCHOBIOTICS",
-        "COGNITIVE SCIENCE + LEARNING SCIENCE + METACOGNITION + NEUROPLASTICITY"
+        "COGNITIVE SCIENCE + LEARNING SCIENCE + METACOGNITION + NEUROPLASTICITY",
+        "SLEEP SCIENCE + CIRCADIAN BIOLOGY + CHRONOBIOLOGY + SLEEP OPTIMIZATION"
     ],
-    "next_strategy": "SLEEP SCIENCE + CIRCADIAN BIOLOGY + CHRONOBIOLOGY + SLEEP OPTIMIZATION",
+    "next_strategy": "MENTAL HEALTH SCIENCE + NEUROSCIENCE OF STRESS + ANXIETY RESEARCH",
     "top_all_time": [
         {
             "name": "Daily CS Fundamentals Streak",

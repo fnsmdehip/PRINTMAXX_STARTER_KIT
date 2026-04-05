@@ -81,7 +81,7 @@ export async function initSounds(): Promise<void> {
 
   try {
     await Audio.setAudioModeAsync({
-      playsInSilentModeIOS: false, // Respect silent switch
+      playsInSilentModeIOS: true, // BUG 13 FIX: Play sounds even in silent mode (party/detection needs audio)
       staysActiveInBackground: false,
       shouldDuckAndroid: true,
     });
