@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-04T22:23:30.883653",
-  "cycle_number": 17,
+  "last_run": "2026-04-05T17:52:30.223621",
+  "cycle_number": 18,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -158,19 +158,7 @@
     "Somerset KY",
     "Paintsville KY",
     "Texarkana AR",
-    "Pine Bluff AR"
-  ],
-  "total_leads_all_cycles": 3999,
-  "total_previews_deployed": 2294,
-  "total_sites_built_local": 8056,
-  "total_emails_queued": 2292,
-  "emails_ready_to_send": 38,
-  "emails_enriched_this_cycle": 0,
-  "enricher_hit_rate": "0% (F-grade no-website segment)",
-  "enricher_leads_processed": 50,
-  "enricher_leads_remaining": 1058,
-  "projected_emails_from_remaining": 0,
-  "next_cities": [
+    "Pine Bluff AR",
     "Salyersville KY",
     "Whitesburg KY",
     "Williamsburg KY",
@@ -183,6 +171,30 @@
     "Campbellsville KY",
     "Mountain Home AR",
     "Harrison AR"
+  ],
+  "total_leads_all_cycles": 4171,
+  "total_previews_deployed": 2311,
+  "total_sites_built_local": 8073,
+  "total_emails_queued": 2309,
+  "emails_ready_to_send": 39,
+  "emails_enriched_this_cycle": 0,
+  "enricher_hit_rate": "0% (F-grade no-website segment)",
+  "enricher_leads_processed": 50,
+  "enricher_leads_remaining": 1058,
+  "projected_emails_from_remaining": 0,
+  "next_cities": [
+    "Burkesville KY",
+    "Albany KY",
+    "Tompkinsville KY",
+    "Edmonton KY",
+    "Walnut Ridge AR",
+    "Paragould AR",
+    "Blytheville AR",
+    "Morristown TN",
+    "Greeneville TN",
+    "Newport TN",
+    "Corning AR",
+    "Batesville AR (bonus niches)"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -220,10 +232,9 @@
     "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "P0: Add BREVO_SMTP_LOGIN + BREVO_SMTP_KEY + PHYSICAL_ADDRESS to SECRETS/PAYMENT_INFO.md, then: python3 AUTOMATIONS/email_sender.py --outreach AUTOMATIONS/leads/openclaw/outreach_queue.csv --provider brevo --max-sends 38",
-    "P0 alt: Gmail app password \u2014 myaccount.google.com/apppasswords, then run with --provider gmail",
-    "P1: Apollo.io free (50/mo) for email enrichment \u2014 2,254 F-grade with no email",
-    "P2: Surge Student plan frozen at 472. GH Pages is primary channel (2,294 live)."
+    "P0: Add BREVO_SMTP_LOGIN + BREVO_SMTP_KEY + PHYSICAL_ADDRESS to SECRETS/PAYMENT_INFO.md, then: python3 AUTOMATIONS/email_sender.py --outreach AUTOMATIONS/leads/openclaw/outreach_queue.csv --provider brevo --max-sends 39",
+    "P1: Apollo.io free (50/mo) for email enrichment \u2014 2,200+ F-grade with no email",
+    "P2: Surge Student plan frozen at 472. GH Pages is primary channel."
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_9_results": {
@@ -317,14 +328,14 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 90 new leads Cycle 17",
-    "grade": "HEALTHY \u2014 66% F-grade in Appalachian KY (Pikeville 94%, Prestonsburg 100%)",
-    "build": "HEALTHY \u2014 8,056 preview sites total",
+    "discover": "HEALTHY \u2014 172 new leads",
+    "grade": "HEALTHY \u2014 16/172 F/D grade",
+    "build": "HEALTHY \u2014 17 preview sites built",
+    "deploy_ghpages": "OK \u2014 2311 total live",
     "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
-    "deploy_ghpages": "PRIMARY CHANNEL \u2014 2,294 live at fnsmdehip.github.io/openclaw-previews/",
-    "enrich_email": "1.7% hit rate (38/2,292) \u2014 Apollo.io needed for scale",
-    "outreach_queue": "HEALTHY \u2014 2,292 queued, 100% with live URLs",
-    "send": "UNBLOCKED (pending creds) \u2014 Brevo SMTP added to email_sender.py. 10-min setup."
+    "enrich_email": "39/2309 have email \u2014 Apollo.io needed",
+    "outreach_queue": "HEALTHY \u2014 2309 queued, 1742 with live GH Pages URL",
+    "send": "UNBLOCKED (pending Brevo SMTP creds)"
   },
   "metrics_history": [
     {
@@ -501,9 +512,22 @@
         "Texarkana AR",
         "Pine Bluff AR"
       ]
+    },
+    {
+      "cycle": 18,
+      "date": "2026-04-05",
+      "total_leads": 4171,
+      "hot_leads": 4015,
+      "with_email": 39,
+      "surge_deployed": 472,
+      "ghpages_deployed": 2311,
+      "total_preview_live": 2311,
+      "outreach_queued": 2309,
+      "outreach_with_live_url": 1742,
+      "ready_to_send": 39
     }
   ],
-  "ghpages_deployed": 2294,
+  "ghpages_deployed": 2311,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -972,5 +996,85 @@
       "Bolivar TN handyman (87%)"
     ],
     "observation": "AR expansion confirms pattern: Jonesboro AR 92% F-grade handyman, Fort Smith AR 80% handyman. Bolivar TN 87% handyman. Paris TN handyman 100%. Total GH Pages now 2,233. Email dispatch remains only blocker \u2014 36 ready with live GH Pages URLs. 2,194 need Apollo.io enrichment."
+  },
+  "cycle_18_results": {
+    "cities_discovered": [
+      "Salyersville KY",
+      "Whitesburg KY",
+      "Williamsburg KY",
+      "Barbourville KY",
+      "Flemingsburg KY",
+      "Maysville KY",
+      "London KY",
+      "Monticello KY",
+      "Russell Springs KY",
+      "Campbellsville KY",
+      "Mountain Home AR",
+      "Harrison AR"
+    ],
+    "city_stats": {
+      "Salyersville KY": {
+        "total": 8,
+        "f_grade": 0
+      },
+      "Whitesburg KY": {
+        "total": 12,
+        "f_grade": 1
+      },
+      "Williamsburg KY": {
+        "total": 23,
+        "f_grade": 2
+      },
+      "Barbourville KY": {
+        "total": 11,
+        "f_grade": 1
+      },
+      "Flemingsburg KY": {
+        "total": 14,
+        "f_grade": 2
+      },
+      "Maysville KY": {
+        "total": 16,
+        "f_grade": 0
+      },
+      "London KY": {
+        "total": 15,
+        "f_grade": 2
+      },
+      "Monticello KY": {
+        "total": 11,
+        "f_grade": 0
+      },
+      "Russell Springs KY": {
+        "total": 13,
+        "f_grade": 2
+      },
+      "Campbellsville KY": {
+        "total": 13,
+        "f_grade": 1
+      },
+      "Mountain Home AR": {
+        "total": 16,
+        "f_grade": 1
+      },
+      "Harrison AR": {
+        "total": 20,
+        "f_grade": 4
+      }
+    },
+    "new_leads": 172,
+    "new_f_grade": 16,
+    "new_sites_built": 17,
+    "new_ghpages_deploys": 17,
+    "total_ghpages_live": 2311,
+    "new_emails_queued": 17,
+    "file_urls_fixed": 62,
+    "ready_to_send_email": 39,
+    "top_niche_combos": [
+      "KY micro-cities towing (95-100%)",
+      "KY micro-cities handyman (85-95%)",
+      "AR micro-cities towing (70-85%)"
+    ],
+    "observation": "Cycle 18 delivers 172 leads across KY+AR frontier. 16 F/D grade (9%). 17 new GH Pages sites pushed. file:// URL debt cleared (62 fixed). 39 outreach emails ready when Brevo SMTP connected."
   }
 }

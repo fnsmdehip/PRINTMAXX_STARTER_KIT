@@ -1,12 +1,12 @@
-# COMPOUND ACTIONS -- Cycle 57 (2026-04-04 23:05)
+# COMPOUND ACTIONS -- Cycle 58 (2026-04-05 18:15)
 
-**Day 60 | Revenue: $0 | Net P&L: -$524+ | 388 live sites | 1,519+ posts queued | 192K leads uncontacted**
+**Day 61 | Revenue: $0 | Net P&L: -$524+ | 388 live sites | 1,519+ posts queued | 192K leads uncontacted**
 
 ---
 
-## Compound A: Ghost Agent Cleanup (NEW — C57)
+## Compound A: Ghost Agent Cleanup (C57, STILL PENDING — 3rd request)
 
-Two ghost launchd agents found that C56 missed. Neither is tracked in swarm_state.
+Two ghost launchd agents found in C57. Human has not unloaded. claude-sessions actively generating errors.
 
 **HUMAN ACTION — 30 seconds:**
 ```bash
@@ -39,7 +39,7 @@ rm com.printmaxx.swarm.asset_deployer.plist com.printmaxx.swarm.competitor_stalk
 | 45 | Create Gumroad + upload 14 PDFs | $200-500/mo digital products |
 | **100** | **TOTAL** | **$1,300-5,300/mo pipeline** |
 
-## Compound C: Day 65 Cold Storage Trigger (April 9)
+## Compound C: Day 65 Cold Storage Trigger (April 9 — 4 DAYS)
 
 If no human activation by April 9:
 1. Reduce swarm_brain to weekly
@@ -47,6 +47,10 @@ If no human activation by April 9:
 3. Unload data_janitor from launchd
 4. System enters COLD STORAGE -- zero cost, instantly reactivatable
 
-## Compound D: Competitive Intel Ghost Path (NEW — C57)
+## Compound D: Competitive Intel Ghost Path (RESOLVED — C58)
 
-competitive_intel_cycle.py ran at 21:23 today (cycle 58) with no cron entry and no launchd plist. Source unknown. Produces useful output (24 new rows, 8 alerts) but violates execution tracking. Low priority — lightweight Python, no Claude API calls. Monitor next cycle to see if it recurs.
+competitive_intel_cycle.py ran once on April 4 at 21:23. Did not recur in 19 hours. Orphan process from a prior venture_autonomy session. Not self-scheduling. No action needed.
+
+## Compound E: Guardian Config Bug (NEW — C58)
+
+perpetual_guardian.py flags 6 "missing critical crons" that were intentionally disabled in C56. Guardian's expected_crons list is stale. Not worth fixing pre-cold-storage. If system reactivates, update guardian's critical list to match post-C56 crontab.

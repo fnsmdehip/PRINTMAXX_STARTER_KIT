@@ -3349,3 +3349,25 @@ Show HN: Minimalist library to generate SVG views of scientific data. Just wante
 
 MCP pay-per-call niche servers (ICD-10 medical codes/contractor pricing/legal statutes). 8M downloads 85% MoM growth. 21st.dev $10K MRR in 6 weeks. $0 startup.
 
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47639779, Score: 28)
+
+**Source:** HackerNews (showhn) | **URL:** https://sllm.cloud
+**Added:** 2026-04-05T17:50:48-04:00
+
+Show HN: sllm – Split a GPU node with other developers, unlimited tokens. Running DeepSeek V3 (685B) requires 8×H100 GPUs which is about $14k&#x2F;month. Most developers only need 15-25 tok&#x2F;s. sllm lets you join a cohort of developers sharing a dedicated node. You reserve a spot with your card, and nobody is charged until the cohort fills. Prices start at $5&#x2F;mo 
+
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47649301, Score: 24)
+
+**Source:** HackerNews (showhn) | **URL:** https://news.ycombinator.com/item?id=47649301
+**Added:** 2026-04-05T17:50:48-04:00
+
+Show HN: Crabby – Claude Code skill that reviews code like the Rust compiler. I built a Claude Code skill called crabby that makes Claude output diagnostics in rustc error format - severity codes, location arrows, causation spans, and a paste-able fix every time. The twist: Claude becomes Ferris the crab, grumpy and unimpressed, but technically precise. The format works for c
+
