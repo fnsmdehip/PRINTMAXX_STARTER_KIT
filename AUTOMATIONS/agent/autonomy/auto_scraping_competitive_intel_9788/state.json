@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 160,
-    "last_run": "2026-04-06T02:15:15.299229+00:00",
-    "cumulative_blue_oceans": 973,
-    "ci_csv_rows": 329,
-    "alpha_csv_rows": 53368,
+    "last_cycle": 161,
+    "last_run": "2026-04-06T03:39:56.969450+00:00",
+    "cumulative_blue_oceans": 983,
+    "ci_csv_rows": 339,
+    "alpha_csv_rows": 53376,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -58,9 +58,10 @@
         "ADDICTION SCIENCE + NEUROSCIENCE OF HABIT FORMATION + BEHAVIORAL ADDICTION",
         "TRAUMA SCIENCE + PTSD NEUROSCIENCE + ADVERSE CHILDHOOD EXPERIENCES",
         "INTERGENERATIONAL TRAUMA + EPIGENETICS OF ADVERSITY",
-        "QUANTUM PHYSICS + PARTICLE PHYSICS + COSMOLOGY + QUANTUM COMPUTING"
+        "QUANTUM PHYSICS + PARTICLE PHYSICS + COSMOLOGY + QUANTUM COMPUTING",
+        "STELLAR ASTROPHYSICS + EXOPLANET SCIENCE + ASTROBIOLOGY + SETI SCIENCE"
     ],
-    "next_strategy": "STELLAR ASTROPHYSICS + EXOPLANET SCIENCE + ASTROBIOLOGY + SETI SCIENCE",
+    "next_strategy": "ENVIRONMENTAL PSYCHOLOGY + NATURE DEFICIT DISORDER + ECOTHERAPY SCIENCE",
     "top_all_time": [
         {
             "name": "Daily CS Fundamentals Streak",
@@ -191,29 +192,49 @@
     "status": "RUNNING",
     "top_performers": [
         {
-            "name": "Daily Quantum Mechanics Foundations Streak",
-            "score": 24,
-            "cycle": 160
+            "niche": "daily_astrobiology_streak",
+            "display_name": "Daily Astrobiology",
+            "score": 25,
+            "community": 84490000,
+            "priority": "P0",
+            "price": "$7.99-$9.99/mo",
+            "is_new": true
         },
         {
-            "name": "Daily Quantum Computing Science Streak",
-            "score": 24,
-            "cycle": 160
+            "niche": "daily_exoplanet_science_streak",
+            "display_name": "Daily Exoplanet Science",
+            "score": 25,
+            "community": 80445000,
+            "priority": "P0",
+            "price": "$7.99-$9.99/mo",
+            "is_new": true
         },
         {
-            "name": "Daily Cosmology & Big Bang Science Streak",
+            "niche": "daily_stellar_evolution_science_streak",
+            "display_name": "Daily Stellar Evolution Science",
             "score": 24,
-            "cycle": 160
+            "community": 83870000,
+            "priority": "P0",
+            "price": "$6.99-$8.99/mo",
+            "is_new": true
         },
         {
-            "name": "Daily Dark Matter & Dark Energy Science Streak",
+            "niche": "daily_fermi_paradox_science_streak",
+            "display_name": "Daily Fermi Paradox Science",
             "score": 24,
-            "cycle": 160
+            "community": 83200000,
+            "priority": "P0",
+            "price": "$6.99-$8.99/mo",
+            "is_new": true
         },
         {
-            "name": "Daily Nuclear Physics & Fusion Science Streak",
+            "niche": "daily_planetary_habitability_science_streak",
+            "display_name": "Daily Planetary Habitability Science",
             "score": 24,
-            "cycle": 160
+            "community": 78095000,
+            "priority": "P0",
+            "price": "$7.99-$9.99/mo",
+            "is_new": true
         }
     ]
 }

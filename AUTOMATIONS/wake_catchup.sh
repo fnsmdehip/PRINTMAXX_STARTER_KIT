@@ -76,9 +76,15 @@ run_if_missed "session_briefing" "$LOGDIR/session_briefing.log" "$PYTHON AUTOMAT
 # === DAILY JOBS (6:30 AM) ===
 run_if_missed "app_factory" "$BASE/AUTOMATIONS/app_factory/logs/cron_orchestrator.log" "$PYTHON AUTOMATIONS/app_factory/auto_orchestrator.py --full"
 
-# === SKIP REDUNDANT DAILY JOBS (these are less critical, run via cron if laptop is awake) ===
-# sec_edgar, crunchbase, ecom_arb, opportunity_radar, sam_gov — skip on wake
-# These are research/scanning jobs that can wait for the next 5 AM window
+# === RESEARCH SCANNERS (all included, no skips) ===
+run_if_missed "sec_edgar" "$LOGDIR/sec_edgar_scanner.log" "$PYTHON AUTOMATIONS/sec_edgar_scanner.py --scan"
+run_if_missed "crunchbase" "$LOGDIR/crunchbase_scanner.log" "$PYTHON AUTOMATIONS/crunchbase_scanner.py --scan"
+run_if_missed "ecom_arb" "$LOGDIR/ecom_arb_engine.log" "$PYTHON AUTOMATIONS/ecom_arb_engine.py --scan"
+run_if_missed "opportunity_radar" "$LOGDIR/opportunity_radar.log" "$PYTHON AUTOMATIONS/opportunity_radar.py --scan"
+run_if_missed "sam_gov" "$LOGDIR/sam_gov_monitor.log" "$PYTHON AUTOMATIONS/sam_gov_monitor.py"
+run_if_missed "alpha_backlog" "$LOGDIR/alpha_backlog_scanner.log" "$PYTHON AUTOMATIONS/alpha_backlog_scanner.py --scan"
+run_if_missed "perpetual_guardian" "$LOGDIR/perpetual_guardian.log" "$PYTHON AUTOMATIONS/perpetual_guardian.py --full"
+run_if_missed "log_rotator" "$LOGDIR/log_rotator.log" "$PYTHON AUTOMATIONS/log_rotator.py --rotate"
 
 # === WEEKLY JOBS — only catch up if it's been >7 days ===
 WEEKLY_LOG="$LOGDIR/weekly_deploy.log"

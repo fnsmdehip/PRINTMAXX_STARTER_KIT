@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-05T17:52:30.223621",
-  "cycle_number": 18,
+  "last_run": "2026-04-05T22:36:47.747457",
+  "cycle_number": 19,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -170,12 +170,46 @@
     "Russell Springs KY",
     "Campbellsville KY",
     "Mountain Home AR",
-    "Harrison AR"
+    "Harrison AR",
+    "Burkesville KY (towing)",
+    "Burkesville KY (handyman)",
+    "Albany KY (towing)",
+    "Albany KY (handyman)",
+    "Tompkinsville KY (towing)",
+    "Tompkinsville KY (handyman)",
+    "Edmonton KY (towing)",
+    "Edmonton KY (handyman)",
+    "Glasgow KY (towing)",
+    "Glasgow KY (plumber)",
+    "Greensburg KY (towing)",
+    "Greensburg KY (handyman)",
+    "Columbia KY (towing)",
+    "Columbia KY (handyman)",
+    "Columbia KY (auto repair)",
+    "Walnut Ridge AR (towing)",
+    "Walnut Ridge AR (handyman)",
+    "Walnut Ridge AR (auto repair)",
+    "Paragould AR (towing)",
+    "Paragould AR (handyman)",
+    "Paragould AR (plumber)",
+    "Blytheville AR (towing)",
+    "Blytheville AR (handyman)",
+    "Corning AR (towing)",
+    "Corning AR (handyman)",
+    "Batesville AR (landscaping)",
+    "Batesville AR (auto repair)",
+    "Morristown TN (towing)",
+    "Morristown TN (handyman)",
+    "Morristown TN (auto repair)",
+    "Greeneville TN (towing)",
+    "Greeneville TN (handyman)",
+    "Newport TN (towing)",
+    "Newport TN (handyman)"
   ],
-  "total_leads_all_cycles": 4171,
-  "total_previews_deployed": 2311,
+  "total_leads_all_cycles": 4367,
+  "total_previews_deployed": 2391,
   "total_sites_built_local": 8073,
-  "total_emails_queued": 2309,
+  "total_emails_queued": 2313,
   "emails_ready_to_send": 39,
   "emails_enriched_this_cycle": 0,
   "enricher_hit_rate": "0% (F-grade no-website segment)",
@@ -183,18 +217,18 @@
   "enricher_leads_remaining": 1058,
   "projected_emails_from_remaining": 0,
   "next_cities": [
-    "Burkesville KY",
-    "Albany KY",
-    "Tompkinsville KY",
-    "Edmonton KY",
-    "Walnut Ridge AR",
-    "Paragould AR",
-    "Blytheville AR",
-    "Morristown TN",
-    "Greeneville TN",
-    "Newport TN",
-    "Corning AR",
-    "Batesville AR (bonus niches)"
+    "Munfordville KY",
+    "Horse Cave KY",
+    "Cave City KY",
+    "Leitchfield KY",
+    "Harrodsburg KY",
+    "Danville KY",
+    "Pine Bluff AR",
+    "Jonesboro AR (bonus niches)",
+    "Kingsport TN",
+    "Johnson City TN",
+    "Cookeville TN (bonus)",
+    "Crossville TN"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -232,9 +266,9 @@
     "wash-on-wheels-denver-co.surge.sh"
   ],
   "blockers": [
-    "P0: Add BREVO_SMTP_LOGIN + BREVO_SMTP_KEY + PHYSICAL_ADDRESS to SECRETS/PAYMENT_INFO.md, then: python3 AUTOMATIONS/email_sender.py --outreach AUTOMATIONS/leads/openclaw/outreach_queue.csv --provider brevo --max-sends 39",
-    "P1: Apollo.io free (50/mo) for email enrichment \u2014 2,200+ F-grade with no email",
-    "P2: Surge Student plan frozen at 472. GH Pages is primary channel."
+    "P0: Add BREVO_SMTP_LOGIN + BREVO_SMTP_KEY, then: python3 AUTOMATIONS/email_sender.py --outreach AUTOMATIONS/leads/openclaw/outreach_queue.csv --provider brevo --max-sends 39",
+    "P1: Apollo.io 50 free lookups \u2192 target Elizabethtown KY + Hopkinsville KY F-grade leads",
+    "P2: Surge upgrade $13/mo \u2014 frozen at 472, GH Pages primary channel"
   ],
   "status": "CYCLE_COMPLETE",
   "cycle_9_results": {
@@ -328,14 +362,14 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 172 new leads",
-    "grade": "HEALTHY \u2014 16/172 F/D grade",
-    "build": "HEALTHY \u2014 17 preview sites built",
-    "deploy_ghpages": "OK \u2014 2311 total live",
-    "deploy_surge": "FROZEN \u2014 472 live, Student plan blocked",
-    "enrich_email": "39/2309 have email \u2014 Apollo.io needed",
-    "outreach_queue": "HEALTHY \u2014 2309 queued, 1742 with live GH Pages URL",
-    "send": "UNBLOCKED (pending Brevo SMTP creds)"
+    "discover": "HEALTHY \u2014 191 new leads",
+    "grade": "HEALTHY \u2014 19/191 F/D grade",
+    "build": "HEALTHY \u2014 80 preview sites built",
+    "deploy_ghpages": "OK \u2014 2391 total live",
+    "deploy_surge": "FROZEN \u2014 472 live, Student plan",
+    "enrich_email": "39/2313 have email",
+    "outreach_queue": "HEALTHY \u2014 2313 queued, 1746 with live URL",
+    "send": "BLOCKED \u2014 Brevo SMTP creds needed"
   },
   "metrics_history": [
     {
@@ -525,9 +559,20 @@
       "outreach_queued": 2309,
       "outreach_with_live_url": 1742,
       "ready_to_send": 39
+    },
+    {
+      "cycle": 19,
+      "date": "2026-04-05",
+      "total_leads": 4367,
+      "hot_leads": 2221,
+      "with_email": 39,
+      "surge_deployed": 472,
+      "ghpages_deployed": 2391,
+      "outreach_queued": 2313,
+      "ready_to_send": 39
     }
   ],
-  "ghpages_deployed": 2311,
+  "ghpages_deployed": 2391,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -1076,5 +1121,332 @@
       "AR micro-cities towing (70-85%)"
     ],
     "observation": "Cycle 18 delivers 172 leads across KY+AR frontier. 16 F/D grade (9%). 17 new GH Pages sites pushed. file:// URL debt cleared (62 fixed). 39 outreach emails ready when Brevo SMTP connected."
+  },
+  "cycle_19_results": {
+    "cities_discovered": [
+      "Burkesville KY (towing)",
+      "Burkesville KY (handyman)",
+      "Albany KY (towing)",
+      "Albany KY (handyman)",
+      "Tompkinsville KY (towing)",
+      "Tompkinsville KY (handyman)",
+      "Edmonton KY (towing)",
+      "Edmonton KY (handyman)",
+      "Glasgow KY (towing)",
+      "Glasgow KY (plumber)",
+      "Greensburg KY (towing)",
+      "Greensburg KY (handyman)",
+      "Columbia KY (towing)",
+      "Columbia KY (handyman)",
+      "Columbia KY (auto repair)",
+      "Walnut Ridge AR (towing)",
+      "Walnut Ridge AR (handyman)",
+      "Walnut Ridge AR (auto repair)",
+      "Paragould AR (towing)",
+      "Paragould AR (handyman)",
+      "Paragould AR (plumber)",
+      "Blytheville AR (towing)",
+      "Blytheville AR (handyman)",
+      "Corning AR (towing)",
+      "Corning AR (handyman)",
+      "Batesville AR (landscaping)",
+      "Batesville AR (auto repair)",
+      "Morristown TN (towing)",
+      "Morristown TN (handyman)",
+      "Morristown TN (auto repair)",
+      "Greeneville TN (towing)",
+      "Greeneville TN (handyman)",
+      "Newport TN (towing)",
+      "Newport TN (handyman)"
+    ],
+    "city_stats": {
+      "Burkesville KY (towing)": {
+        "total": 6,
+        "f_grade": 0,
+        "grades": {
+          "A": 5,
+          "C": 1
+        }
+      },
+      "Burkesville KY (handyman)": {
+        "total": 5,
+        "f_grade": 0,
+        "grades": {
+          "A": 5
+        }
+      },
+      "Albany KY (towing)": {
+        "total": 7,
+        "f_grade": 2,
+        "grades": {
+          "B": 2,
+          "A": 3,
+          "F": 2
+        }
+      },
+      "Albany KY (handyman)": {
+        "total": 5,
+        "f_grade": 3,
+        "grades": {
+          "F": 3,
+          "A": 2
+        }
+      },
+      "Tompkinsville KY (towing)": {
+        "total": 5,
+        "f_grade": 0,
+        "grades": {
+          "A": 4,
+          "B": 1
+        }
+      },
+      "Tompkinsville KY (handyman)": {
+        "total": 5,
+        "f_grade": 0,
+        "grades": {
+          "A": 5
+        }
+      },
+      "Edmonton KY (towing)": {
+        "total": 6,
+        "f_grade": 1,
+        "grades": {
+          "A": 5,
+          "F": 1
+        }
+      },
+      "Edmonton KY (handyman)": {
+        "total": 4,
+        "f_grade": 0,
+        "grades": {
+          "B": 1,
+          "A": 3
+        }
+      },
+      "Glasgow KY (towing)": {
+        "total": 9,
+        "f_grade": 2,
+        "grades": {
+          "A": 5,
+          "B": 2,
+          "F": 2
+        }
+      },
+      "Glasgow KY (plumber)": {
+        "total": 4,
+        "f_grade": 4,
+        "grades": {
+          "F": 4
+        }
+      },
+      "Greensburg KY (towing)": {
+        "total": 8,
+        "f_grade": 1,
+        "grades": {
+          "F": 1,
+          "A": 3,
+          "B": 4
+        }
+      },
+      "Greensburg KY (handyman)": {
+        "total": 3,
+        "f_grade": 0,
+        "grades": {
+          "A": 3
+        }
+      },
+      "Columbia KY (towing)": {
+        "total": 7,
+        "f_grade": 0,
+        "grades": {
+          "A": 3,
+          "B": 4
+        }
+      },
+      "Columbia KY (handyman)": {
+        "total": 3,
+        "f_grade": 0,
+        "grades": {
+          "A": 3
+        }
+      },
+      "Columbia KY (auto repair)": {
+        "total": 4,
+        "f_grade": 1,
+        "grades": {
+          "B": 1,
+          "A": 2,
+          "F": 1
+        }
+      },
+      "Walnut Ridge AR (towing)": {
+        "total": 6,
+        "f_grade": 0,
+        "grades": {
+          "B": 2,
+          "A": 4
+        }
+      },
+      "Walnut Ridge AR (handyman)": {
+        "total": 6,
+        "f_grade": 0,
+        "grades": {
+          "A": 6
+        }
+      },
+      "Walnut Ridge AR (auto repair)": {
+        "total": 6,
+        "f_grade": 0,
+        "grades": {
+          "B": 3,
+          "A": 3
+        }
+      },
+      "Paragould AR (towing)": {
+        "total": 8,
+        "f_grade": 0,
+        "grades": {
+          "A": 5,
+          "B": 3
+        }
+      },
+      "Paragould AR (handyman)": {
+        "total": 7,
+        "f_grade": 0,
+        "grades": {
+          "A": 3,
+          "B": 4
+        }
+      },
+      "Paragould AR (plumber)": {
+        "total": 6,
+        "f_grade": 0,
+        "grades": {
+          "B": 3,
+          "A": 3
+        }
+      },
+      "Blytheville AR (towing)": {
+        "total": 5,
+        "f_grade": 0,
+        "grades": {
+          "A": 3,
+          "B": 2
+        }
+      },
+      "Blytheville AR (handyman)": {
+        "total": 6,
+        "f_grade": 0,
+        "grades": {
+          "A": 4,
+          "B": 2
+        }
+      },
+      "Corning AR (towing)": {
+        "total": 8,
+        "f_grade": 1,
+        "grades": {
+          "F": 1,
+          "A": 4,
+          "B": 3
+        }
+      },
+      "Corning AR (handyman)": {
+        "total": 7,
+        "f_grade": 0,
+        "grades": {
+          "A": 6,
+          "B": 1
+        }
+      },
+      "Batesville AR (landscaping)": {
+        "total": 6,
+        "f_grade": 1,
+        "grades": {
+          "C": 1,
+          "A": 2,
+          "B": 2,
+          "F": 1
+        }
+      },
+      "Batesville AR (auto repair)": {
+        "total": 3,
+        "f_grade": 0,
+        "grades": {
+          "A": 2,
+          "B": 1
+        }
+      },
+      "Morristown TN (towing)": {
+        "total": 6,
+        "f_grade": 1,
+        "grades": {
+          "A": 5,
+          "D": 1
+        }
+      },
+      "Morristown TN (handyman)": {
+        "total": 4,
+        "f_grade": 1,
+        "grades": {
+          "F": 1,
+          "A": 3
+        }
+      },
+      "Morristown TN (auto repair)": {
+        "total": 3,
+        "f_grade": 0,
+        "grades": {
+          "A": 3
+        }
+      },
+      "Greeneville TN (towing)": {
+        "total": 11,
+        "f_grade": 0,
+        "grades": {
+          "A": 10,
+          "B": 1
+        }
+      },
+      "Greeneville TN (handyman)": {
+        "total": 6,
+        "f_grade": 1,
+        "grades": {
+          "A": 4,
+          "B": 1,
+          "F": 1
+        }
+      },
+      "Newport TN (towing)": {
+        "total": 3,
+        "f_grade": 0,
+        "grades": {
+          "A": 2,
+          "B": 1
+        }
+      },
+      "Newport TN (handyman)": {
+        "total": 3,
+        "f_grade": 0,
+        "grades": {
+          "A": 3
+        }
+      }
+    },
+    "new_leads": 191,
+    "new_f_grade": 19,
+    "new_sites_built": 80,
+    "new_ghpages_deploys": 80,
+    "total_ghpages_live": 2391,
+    "new_emails_queued": 4,
+    "file_urls_fixed": 3,
+    "ready_to_send_email": 39,
+    "top_niche_combos": [
+      "KY 270 area micro-cities towing (90-100%)",
+      "AR 870 area towing/handyman (65-85%)",
+      "TN 423 corridor towing (70-90%)",
+      "Landscaping AR/TN rural (85-100%)"
+    ],
+    "observation": "Cycle 19 completes KY 270 area code sweep + AR 870 expansion + TN 423 opening. 191 new leads, 19 F/D grade (10%). 80 new GH Pages pushed. Pipeline at 2313 outreach entries, 39 ready to send. Single blocker: Brevo SMTP credentials."
   }
 }
