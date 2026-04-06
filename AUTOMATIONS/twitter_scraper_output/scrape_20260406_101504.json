@@ -1,0 +1,45 @@
+[
+  {
+    "url": "https://x.com/levelsio/status/2041132289065631988",
+    "text": " Done\n\n Made an auto-dispute response system for Interior AI to see how easy it'd be\n\nIt syncs old disputes but also catches new disputes via Stripe webhook and then auto submits evidence to try win them, it even includes the interior designs they generated in the evidence",
+    "handle": "levelsio",
+    "timestamp": "2026-04-06T12:33:54.000Z",
+    "likes": 322,
+    "retweets": 14,
+    "replies": 41,
+    "views": 55936,
+    "images": [
+      "https://pbs.twimg.com/media/HFOFcMIXEAA_Qc5?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HFOKimdasAAwnrG?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HFOKimFXUAAPhpy?format=jpg&name=large"
+    ],
+    "hasVideo": false,
+    "engagement_ratio": "0.127"
+  },
+  {
+    "url": "https://x.com/levelsio/status/2041113604854866265",
+    "text": "Okay I'll try to vibe code an automatic Stripe dispute responder that:\n1) receives disputes via webhook\n2) collects evidence of user sign up and activity\n3) puts it in a beautiful PDF\n4) submits it back to Stripe for the banks to review\n\nOnce it works I'll ask it to summarize it",
+    "handle": "levelsio",
+    "timestamp": "2026-04-06T11:19:40.000Z",
+    "likes": 262,
+    "retweets": 9,
+    "replies": 34,
+    "views": 98045,
+    "images": [],
+    "hasVideo": false,
+    "engagement_ratio": "0.130"
+  },
+  {
+    "url": "https://x.com/levelsio/status/2041112253349442037",
+    "text": "Tried Gemma 4 ran locally on my iPhone today\n\nI thought it'd be useful in case the apocalypse happens and I need to ask it for survival tips\n\nLike how to make a fire  \n\nI guess I'll freeze to death instead ",
+    "handle": "levelsio",
+    "timestamp": "2026-04-06T11:14:17.000Z",
+    "likes": 2067,
+    "retweets": 71,
+    "replies": 238,
+    "views": 202213,
+    "images": [],
+    "hasVideo": false,
+    "engagement_ratio": "0.115"
+  }
+]

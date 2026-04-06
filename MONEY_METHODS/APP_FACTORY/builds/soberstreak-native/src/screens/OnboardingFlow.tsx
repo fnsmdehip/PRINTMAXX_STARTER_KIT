@@ -40,7 +40,7 @@ export default function OnboardingFlow() {
   const totalSteps = 8;
 
   const reasons = [
-    { label: 'Mental clarity', icon: 'brain-outline' as const },
+    { label: 'Mental clarity', icon: 'fitness-outline' as const },
     { label: 'More energy', icon: 'flash-outline' as const },
     { label: 'Better relationships', icon: 'heart-outline' as const },
     { label: 'Self-respect', icon: 'shield-checkmark-outline' as const },

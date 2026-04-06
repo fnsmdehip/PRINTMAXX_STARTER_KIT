@@ -16,7 +16,7 @@ import * as Haptics from 'expo-haptics';
 import * as StoreReview from 'expo-store-review';
 import { Colors, Spacing, Radius, Typography } from '../constants/theme';
 import { MODES, getMilestoneForDay, getNextMilestone } from '../constants/modes';
-import { getStreakData, performCheckIn, recordRelapse, getSettings } from '../services/storage';
+import { getStreakData, performCheckIn, recordRelapse, getSettings, saveSettings } from '../services/storage';
 import { StreakData } from '../types';
 import type { RootStackParamList } from '../types';
 
@@ -97,7 +97,6 @@ export default function TodayScreen() {
             if (available) {
               setTimeout(() => StoreReview.requestReview(), 2500);
               // Record prompt so we respect the 90-day cooldown
-              const { saveSettings } = await import('../services/storage');
               await saveSettings({ lastReviewPrompt: new Date().toISOString() });
             }
           }

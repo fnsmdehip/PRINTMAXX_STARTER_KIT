@@ -1,10 +1,10 @@
-# COMPOUND ACTIONS -- Cycle 61 (2026-04-06 06:45)
+# COMPOUND ACTIONS -- Cycle 62 (2026-04-06 11:05)
 
-**Day 62 | Revenue: $0 | Net P&L: -$530+ | 388 live sites | 1,557+ posts queued | 19.2K alpha entries | 192K leads uncontacted**
+**Day 62 | Revenue: $0 | Net P&L: -$530+ | 388 live sites | 1,557+ posts queued | 18.3K alpha entries | 192K leads uncontacted**
 
 ---
 
-## Compound A: Ghost Agent Cleanup (6th request for 2, 3rd for 2)
+## Compound A: Ghost Agent Cleanup (7th request for 2, 4th for 2)
 
 **HUMAN ACTION -- 30 seconds:**
 ```bash
@@ -28,40 +28,41 @@ The system has everything pre-built. Only human account creation blocks revenue.
 
 **Total: ~90 min. Estimated revenue impact: $1,300-5,300/mo.**
 
-## Compound C: Cold Storage Preparation (April 9 -- 3 days)
+## Compound C: Cold Storage PAUSED
 
-If no human activation by April 9, brain will execute cold storage:
+User reactivation detected at ~11:02. Cold storage trigger moved from April 9 to April 12. If no further activity by April 12, brain will execute:
 1. swarm_brain: 24h to weekly
 2. ALL cron entries: commented out except watchdog
 3. data_janitor: unloaded from launchd
 4. System cost drops from $0.22/day to ~$0.02/day
 5. Instantly reactivatable with `python3 AUTOMATIONS/agent_swarm.py --deploy`
 
-No action needed now. Brain will auto-execute on April 9 if conditions unchanged.
-
-## Compound D: Deferred Bug Fixes (Execute on Reactivation)
+## Compound D: Deferred Bug Fixes (Execute on Deep Engagement)
 
 | Bug | Fix | Effort |
 |-----|-----|--------|
 | Guardian stale config (6 false alarms) | Update expected_crons in perpetual_guardian.py | 5 min |
 | Cron watchdog double-logging | Check for duplicate crontab entry | 5 min |
 | Control panel port conflict | `lsof -ti :9999 | xargs kill` | 10 sec |
-| system_healer plist unescaped parens | Rewrite prompt to use wrapper script | 15 min |
 | alpha_auto_processor CSV write bug | Fix status field column assignment | 10 min |
+| PENDING_REVIEW NaN dates (3 entries) | Manual review or archive | 5 min |
 
 ## Compound E: Pipeline Continuity (Automatic)
 
-Morning DAG ran successfully at 05:05 today. Next scheduled run tomorrow ~05:00. Pipeline is self-sustaining:
-- Scrapers feed ALPHA_STAGING (+630 entries today)
-- Alpha processor dedupes and routes
+Morning DAG ran at 05:05 (2nd consecutive success). Janitor ran at 08:43 (excellent: 91% COMPETITIVE_INTEL bloat removed, 425MB disk savings). Pipeline is self-sustaining:
+- Scrapers feed ALPHA_STAGING (+630 entries today, net 18,261 after dedup)
 - Capital Genesis ranks 8,227 methods
-- Janitor cleans every 48h (next: Apr 7 ~20:41)
-- Brain audits every 24h (this cycle)
+- Janitor next: ~Apr 6 20:43 (12h interval)
+- Brain next: C63 at ~Apr 7 06:45
 
-No manual intervention needed for pipeline health.
+## Compound F: Data Quality (New)
+
+COMPETITIVE_INTEL was 91% duplicates (408 to 34 rows). Root cause: competitor_stalker high-frequency scans before monthly restriction. Won't recur. Monitor next janitor cycle to confirm.
+
+3 ALPHA_STAGING entries with NaN dates (ALPHA1774000365-367). Low priority. Auto-archive if unprocessed by next cycle.
 
 ## Net Status
 
-Swarm optimized from $8-12/day to $0.22/day across 61 cycles. 801 brain decisions. 3 legitimate agents running, 4 killed, 18 hibernated. 4 ghost launchd agents are the only remaining waste (30 sec human fix).
+Swarm optimized from $8-12/day to $0.22/day across 62 cycles. 812 brain decisions. 3 legitimate agents running, 4 killed, 18 hibernated. 4 ghost launchd agents remain (30 sec human fix). Cold storage paused due to user reactivation.
 
 **The system is fully fueled. 90 minutes of human action = $1,300-5,300/mo revenue pipeline.**

@@ -175,5 +175,4 @@ const styles = StyleSheet.create({
   upgradeDesc: { ...Typography.label, color: Colors.textSecondary, marginBottom: 4 },
   upgradePrice: { ...Typography.label, color: Colors.primary, fontWeight: '600' },
   version: { ...Typography.tiny, textAlign: 'center', marginTop: Spacing.xl, color: Colors.textTertiary },
-  white: Colors.white,
 });

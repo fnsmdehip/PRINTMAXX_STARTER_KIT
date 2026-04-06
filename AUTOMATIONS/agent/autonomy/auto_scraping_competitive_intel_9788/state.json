@@ -1,10 +1,10 @@
 {
   "venture": "competitive_intel",
-  "last_cycle": 165,
-  "last_run": "2026-04-06T10:20:07.888908+00:00",
-  "cumulative_blue_oceans": 1023,
-  "ci_csv_rows": 379,
-  "alpha_csv_rows": 53416,
+  "last_cycle": 167,
+  "last_run": "2026-04-06T14:52:33.283073+00:00",
+  "cumulative_blue_oceans": 1042,
+  "ci_csv_rows": 56,
+  "alpha_csv_rows": 36808,
   "strategies_covered": [
     "HEALTH + FITNESS + WELLNESS + NUTRITION",
     "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -63,9 +63,12 @@
     "COSMOLOGY + DARK MATTER + DARK ENERGY + BIG BANG SCIENCE",
     "ENVIRONMENTAL PSYCHOLOGY + NATURE DEFICIT DISORDER + ECOTHERAPY SCIENCE",
     "LONELINESS SCIENCE + SOCIAL CONNECTION NEUROSCIENCE + BELONGING PSYCHOLOGY",
-    "POSITIVE PSYCHOLOGY + FLOURISHING SCIENCE + CHARACTER STRENGTHS"
+    "POSITIVE PSYCHOLOGY + FLOURISHING SCIENCE + CHARACTER STRENGTHS",
+    "FINANCIAL PSYCHOLOGY + MONEY MINDSET + BEHAVIORAL FINANCE NEUROSCIENCE",
+    "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
+    "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE"
   ],
-  "next_strategy": "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
+  "next_strategy": "COGNITIVE LOAD THEORY + WORKING MEMORY + ATTENTION SCIENCE",
   "top_all_time": [
     {
       "name": "Daily CS Fundamentals Streak",
@@ -191,6 +194,16 @@
       "name": "Daily Mtor Longevity Pathways Streak",
       "score": 25,
       "cycle": 152
+    },
+    {
+      "name": "Daily Flow State Science Streak",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Growth Mindset Neuroscience Streak",
+      "score": 25,
+      "cycle": 167
     }
   ],
   "status": "RUNNING",
@@ -239,6 +252,33 @@
       "priority": "P0",
       "price": "$5.99-$8.99/mo",
       "is_new": true
+    }
+  ],
+  "top_niches_all_time": [
+    {
+      "name": "Daily SDT Autonomy Needs",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Intrinsic Motivation Diagnostics",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Self-Concordance Goals Science",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Behavioral Finance Science Streak",
+      "score": 25,
+      "cycle": 166
+    },
+    {
+      "name": "Daily Prospect Theory Loss Aversion Streak",
+      "score": 25,
+      "cycle": 166
     }
   ]
 }

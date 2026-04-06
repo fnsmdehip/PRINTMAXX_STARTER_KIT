@@ -1,0 +1,122 @@
+{
+  "cycle_start": "2026-04-06T08:27:30.628379",
+  "cycle_end": "2026-04-06T08:27:30.637416",
+  "version_changes_detected": 1,
+  "reddit_signals_found": 20,
+  "new_intel_rows_written": 20,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Taught Claude to talk like a caveman to use 75% less tokens.",
+      "subreddit": "ClaudeAI",
+      "score": 10417,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sble09/taught_claude_to_talk_like_a_caveman_to_use_75/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "obviously not from Dall-E but still a hilarious example of what CGPT slop coukd actually be good at (Harry Potter and th",
+      "subreddit": "ChatGPT",
+      "score": 3944,
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1scvrgd/obviously_not_from_dalle_but_still_a_hilarious/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Automated pigeon defense system",
+      "subreddit": "SideProject",
+      "score": 2490,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s9ywir/automated_pigeon_defense_system/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I built an AI job search system with Claude Code that scored 740+ offers and landed me a job. Just open sourced it.",
+      "subreddit": "ClaudeAI",
+      "score": 1945,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sd2f37/i_built_an_ai_job_search_system_with_claude_code/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I built an alarm clock that won\u2019t stop ringing until you go to the toilet to turn it off",
+      "subreddit": "SideProject",
+      "score": 1512,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s9kov9/i_built_an_alarm_clock_that_wont_stop_ringing/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [
+    {
+      "app": "Hallow",
+      "from_version": "13.0.0",
+      "to_version": "13.0.1",
+      "price": "Free",
+      "rating": 4.89,
+      "ratings_count": 358935,
+      "category": "faith",
+      "scan_date": "2026-04-06T08:25:19.093248",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    }
+  ],
+  "top_reddit_signals": [
+    {
+      "title": "Taught Claude to talk like a caveman to use 75% less tokens.",
+      "subreddit": "ClaudeAI",
+      "score": 10417,
+      "comments": 461,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sble09/taught_claude_to_talk_like_a_caveman_to_use_75/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA61"
+    },
+    {
+      "title": "obviously not from Dall-E but still a hilarious example of what CGPT slop coukd actually be good at (Harry Potter and th",
+      "subreddit": "ChatGPT",
+      "score": 3944,
+      "comments": 331,
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1scvrgd/obviously_not_from_dalle_but_still_a_hilarious/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA55"
+    },
+    {
+      "title": "Automated pigeon defense system",
+      "subreddit": "SideProject",
+      "score": 2490,
+      "comments": 142,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s9ywir/automated_pigeon_defense_system/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1"
+    },
+    {
+      "title": "I built an AI job search system with Claude Code that scored 740+ offers and landed me a job. Just open sourced it.",
+      "subreddit": "ClaudeAI",
+      "score": 1945,
+      "comments": 149,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sd2f37/i_built_an_ai_job_search_system_with_claude_code/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA66"
+    },
+    {
+      "title": "I built an alarm clock that won\u2019t stop ringing until you go to the toilet to turn it off",
+      "subreddit": "SideProject",
+      "score": 1512,
+      "comments": 277,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s9kov9/i_built_an_alarm_clock_that_wont_stop_ringing/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA2"
+    }
+  ]
+}
