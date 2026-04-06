@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-06T07:52:21.507224",
-  "cycle_number": 21,
+  "last_run": "2026-04-06T13:03:37.666196",
+  "cycle_number": 22,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -305,9 +305,100 @@
     "Beckley WV (towing)",
     "Beckley WV (handyman)",
     "Beckley WV (auto repair)",
-    "Beckley WV (HVAC)"
+    "Beckley WV (HVAC)",
+    "Charleston WV (towing)",
+    "Charleston WV (handyman)",
+    "Charleston WV (auto repair)",
+    "Charleston WV (plumber)",
+    "Charleston WV (HVAC)",
+    "Huntington WV (towing)",
+    "Huntington WV (handyman)",
+    "Huntington WV (auto repair)",
+    "Huntington WV (plumber)",
+    "Morgantown WV (towing)",
+    "Morgantown WV (handyman)",
+    "Morgantown WV (auto repair)",
+    "Morgantown WV (HVAC)",
+    "Fairmont WV (towing)",
+    "Fairmont WV (handyman)",
+    "Fairmont WV (plumber)",
+    "Clarksburg WV (towing)",
+    "Clarksburg WV (handyman)",
+    "Clarksburg WV (auto repair)",
+    "Parkersburg WV (towing)",
+    "Parkersburg WV (handyman)",
+    "Parkersburg WV (auto repair)",
+    "Parkersburg WV (plumber)",
+    "Martinsburg WV (towing)",
+    "Martinsburg WV (handyman)",
+    "Martinsburg WV (HVAC)",
+    "Wheeling WV (towing)",
+    "Wheeling WV (handyman)",
+    "Wheeling WV (auto repair)",
+    "Wheeling WV (plumber)",
+    "Roanoke VA (towing)",
+    "Roanoke VA (handyman)",
+    "Roanoke VA (auto repair)",
+    "Roanoke VA (plumber)",
+    "Roanoke VA (HVAC)",
+    "Lynchburg VA (towing)",
+    "Lynchburg VA (handyman)",
+    "Lynchburg VA (auto repair)",
+    "Lynchburg VA (plumber)",
+    "Harrisonburg VA (towing)",
+    "Harrisonburg VA (handyman)",
+    "Harrisonburg VA (HVAC)",
+    "Harrisonburg VA (landscaping)",
+    "Salem VA (towing)",
+    "Salem VA (handyman)",
+    "Salem VA (auto repair)",
+    "Asheville NC (towing)",
+    "Asheville NC (handyman)",
+    "Asheville NC (auto repair)",
+    "Asheville NC (plumber)",
+    "Asheville NC (landscaping)",
+    "Hickory NC (towing)",
+    "Hickory NC (handyman)",
+    "Hickory NC (auto repair)",
+    "Hickory NC (plumber)",
+    "Gastonia NC (towing)",
+    "Gastonia NC (handyman)",
+    "Gastonia NC (auto repair)",
+    "Gastonia NC (HVAC)",
+    "Morganton NC (towing)",
+    "Morganton NC (handyman)",
+    "Morganton NC (plumber)",
+    "Greenville SC (towing)",
+    "Greenville SC (handyman)",
+    "Greenville SC (auto repair)",
+    "Greenville SC (plumber)",
+    "Greenville SC (HVAC)",
+    "Spartanburg SC (towing)",
+    "Spartanburg SC (handyman)",
+    "Spartanburg SC (auto repair)",
+    "Spartanburg SC (plumber)",
+    "Anderson SC (towing)",
+    "Anderson SC (handyman)",
+    "Anderson SC (auto repair)",
+    "Gaffney SC (towing)",
+    "Gaffney SC (handyman)",
+    "Gaffney SC (plumber)",
+    "Pensacola FL (towing)",
+    "Pensacola FL (handyman)",
+    "Pensacola FL (auto repair)",
+    "Pensacola FL (plumber)",
+    "Pensacola FL (HVAC)",
+    "Panama City FL (towing)",
+    "Panama City FL (handyman)",
+    "Panama City FL (auto repair)",
+    "Panama City FL (landscaping)",
+    "Tallahassee FL (towing)",
+    "Tallahassee FL (handyman)",
+    "Tallahassee FL (auto repair)",
+    "Tallahassee FL (plumber)",
+    "Tallahassee FL (HVAC)"
   ],
-  "total_leads_all_cycles": 4878,
+  "total_leads_all_cycles": 5400,
   "total_previews_deployed": 2510,
   "total_sites_built_local": 8073,
   "total_emails_queued": 2432,
@@ -696,7 +787,7 @@
       "ready_to_send": 39
     }
   ],
-  "ghpages_deployed": 2510,
+  "ghpages_deployed": 2610,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -2522,5 +2613,889 @@
       "landscaping (KY)"
     ],
     "observation": "Cycle 21: KY Central Frontier + TN SE + AR I-40 + FIRST WV coverage (Bluefield/Beckley) + Eastern KY Appalachian corridor (Pikeville/Hazard). 309 new leads, 218 F/D (71%). 90 new GH Pages pushed. Pipeline at 2432 outreach entries, 39 ready to send. WV F-grade rate: 90%, Eastern KY F-grade rate: 85%."
+  },
+  "total_hot_leads": 2488,
+  "total_outreach": 2532,
+  "ready_to_send": 39,
+  "cycles": {
+    "cycle_22": {
+      "run_at": "2026-04-06T13:03:37.666170",
+      "cities_targeted": [
+        "Charleston WV (towing)",
+        "Charleston WV (handyman)",
+        "Charleston WV (auto repair)",
+        "Charleston WV (plumber)",
+        "Charleston WV (HVAC)",
+        "Huntington WV (towing)",
+        "Huntington WV (handyman)",
+        "Huntington WV (auto repair)",
+        "Huntington WV (plumber)",
+        "Morgantown WV (towing)",
+        "Morgantown WV (handyman)",
+        "Morgantown WV (auto repair)",
+        "Morgantown WV (HVAC)",
+        "Fairmont WV (towing)",
+        "Fairmont WV (handyman)",
+        "Fairmont WV (plumber)",
+        "Clarksburg WV (towing)",
+        "Clarksburg WV (handyman)",
+        "Clarksburg WV (auto repair)",
+        "Parkersburg WV (towing)",
+        "Parkersburg WV (handyman)",
+        "Parkersburg WV (auto repair)",
+        "Parkersburg WV (plumber)",
+        "Martinsburg WV (towing)",
+        "Martinsburg WV (handyman)",
+        "Martinsburg WV (HVAC)",
+        "Wheeling WV (towing)",
+        "Wheeling WV (handyman)",
+        "Wheeling WV (auto repair)",
+        "Wheeling WV (plumber)",
+        "Roanoke VA (towing)",
+        "Roanoke VA (handyman)",
+        "Roanoke VA (auto repair)",
+        "Roanoke VA (plumber)",
+        "Roanoke VA (HVAC)",
+        "Lynchburg VA (towing)",
+        "Lynchburg VA (handyman)",
+        "Lynchburg VA (auto repair)",
+        "Lynchburg VA (plumber)",
+        "Harrisonburg VA (towing)",
+        "Harrisonburg VA (handyman)",
+        "Harrisonburg VA (HVAC)",
+        "Harrisonburg VA (landscaping)",
+        "Salem VA (towing)",
+        "Salem VA (handyman)",
+        "Salem VA (auto repair)",
+        "Asheville NC (towing)",
+        "Asheville NC (handyman)",
+        "Asheville NC (auto repair)",
+        "Asheville NC (plumber)",
+        "Asheville NC (landscaping)",
+        "Hickory NC (towing)",
+        "Hickory NC (handyman)",
+        "Hickory NC (auto repair)",
+        "Hickory NC (plumber)",
+        "Gastonia NC (towing)",
+        "Gastonia NC (handyman)",
+        "Gastonia NC (auto repair)",
+        "Gastonia NC (HVAC)",
+        "Morganton NC (towing)",
+        "Morganton NC (handyman)",
+        "Morganton NC (plumber)",
+        "Greenville SC (towing)",
+        "Greenville SC (handyman)",
+        "Greenville SC (auto repair)",
+        "Greenville SC (plumber)",
+        "Greenville SC (HVAC)",
+        "Spartanburg SC (towing)",
+        "Spartanburg SC (handyman)",
+        "Spartanburg SC (auto repair)",
+        "Spartanburg SC (plumber)",
+        "Anderson SC (towing)",
+        "Anderson SC (handyman)",
+        "Anderson SC (auto repair)",
+        "Gaffney SC (towing)",
+        "Gaffney SC (handyman)",
+        "Gaffney SC (plumber)",
+        "Pensacola FL (towing)",
+        "Pensacola FL (handyman)",
+        "Pensacola FL (auto repair)",
+        "Pensacola FL (plumber)",
+        "Pensacola FL (HVAC)",
+        "Panama City FL (towing)",
+        "Panama City FL (handyman)",
+        "Panama City FL (auto repair)",
+        "Panama City FL (landscaping)",
+        "Tallahassee FL (towing)",
+        "Tallahassee FL (handyman)",
+        "Tallahassee FL (auto repair)",
+        "Tallahassee FL (plumber)",
+        "Tallahassee FL (HVAC)"
+      ],
+      "discover_results": {
+        "Charleston WV (towing)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 1
+          }
+        },
+        "Charleston WV (handyman)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "B": 2,
+            "A": 1,
+            "F": 1
+          }
+        },
+        "Charleston WV (auto repair)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "B": 1
+          }
+        },
+        "Charleston WV (plumber)": {
+          "total": 7,
+          "f_grade": 2,
+          "grades": {
+            "B": 1,
+            "A": 4,
+            "F": 2
+          }
+        },
+        "Charleston WV (HVAC)": {
+          "total": 10,
+          "f_grade": 0,
+          "grades": {
+            "B": 3,
+            "A": 7
+          }
+        },
+        "Huntington WV (towing)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "C": 1,
+            "A": 3,
+            "B": 2
+          }
+        },
+        "Huntington WV (handyman)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Huntington WV (auto repair)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Huntington WV (plumber)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 6,
+            "B": 2,
+            "F": 1
+          }
+        },
+        "Morgantown WV (towing)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 2
+          }
+        },
+        "Morgantown WV (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 1
+          }
+        },
+        "Morgantown WV (auto repair)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 1
+          }
+        },
+        "Morgantown WV (HVAC)": {
+          "total": 8,
+          "f_grade": 1,
+          "grades": {
+            "A": 7,
+            "D": 1
+          }
+        },
+        "Fairmont WV (towing)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "F": 1,
+            "B": 1,
+            "A": 3
+          }
+        },
+        "Fairmont WV (handyman)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 2
+          }
+        },
+        "Fairmont WV (plumber)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "B": 1,
+            "C": 1,
+            "A": 2,
+            "F": 1
+          }
+        },
+        "Clarksburg WV (towing)": {
+          "total": 8,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1,
+            "B": 3
+          }
+        },
+        "Clarksburg WV (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 3
+          }
+        },
+        "Clarksburg WV (auto repair)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "B": 1,
+            "F": 1,
+            "A": 2
+          }
+        },
+        "Parkersburg WV (towing)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 5
+          }
+        },
+        "Parkersburg WV (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 5
+          }
+        },
+        "Parkersburg WV (auto repair)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 1
+          }
+        },
+        "Parkersburg WV (plumber)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 6,
+            "B": 2,
+            "F": 1
+          }
+        },
+        "Martinsburg WV (towing)": {
+          "total": 7,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "D": 1,
+            "B": 1
+          }
+        },
+        "Martinsburg WV (handyman)": {
+          "total": 7,
+          "f_grade": 2,
+          "grades": {
+            "F": 2,
+            "B": 2,
+            "A": 3
+          }
+        },
+        "Martinsburg WV (HVAC)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 8
+          }
+        },
+        "Wheeling WV (towing)": {
+          "total": 11,
+          "f_grade": 1,
+          "grades": {
+            "D": 1,
+            "A": 8,
+            "B": 2
+          }
+        },
+        "Wheeling WV (handyman)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 6
+          }
+        },
+        "Wheeling WV (auto repair)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 1,
+            "B": 1
+          }
+        },
+        "Wheeling WV (plumber)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 1,
+            "B": 3
+          }
+        },
+        "Roanoke VA (towing)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "D": 1
+          }
+        },
+        "Roanoke VA (handyman)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "A": 3,
+            "F": 1
+          }
+        },
+        "Roanoke VA (auto repair)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 2
+          }
+        },
+        "Roanoke VA (plumber)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 2
+          }
+        },
+        "Roanoke VA (HVAC)": {
+          "total": 9,
+          "f_grade": 0,
+          "grades": {
+            "A": 9
+          }
+        },
+        "Lynchburg VA (towing)": {
+          "total": 8,
+          "f_grade": 1,
+          "grades": {
+            "A": 7,
+            "D": 1
+          }
+        },
+        "Lynchburg VA (handyman)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Lynchburg VA (auto repair)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 5
+          }
+        },
+        "Lynchburg VA (plumber)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "A": 2,
+            "B": 1,
+            "D": 1
+          }
+        },
+        "Harrisonburg VA (towing)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 4
+          }
+        },
+        "Harrisonburg VA (handyman)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 6,
+            "B": 2
+          }
+        },
+        "Harrisonburg VA (HVAC)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "B": 1,
+            "F": 1
+          }
+        },
+        "Harrisonburg VA (landscaping)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1,
+            "C": 1
+          }
+        },
+        "Salem VA (towing)": {
+          "total": 7,
+          "f_grade": 1,
+          "grades": {
+            "A": 6,
+            "F": 1
+          }
+        },
+        "Salem VA (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Salem VA (auto repair)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Asheville NC (towing)": {
+          "total": 8,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "D": 1,
+            "C": 2
+          }
+        },
+        "Asheville NC (handyman)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 2,
+            "C": 1
+          }
+        },
+        "Asheville NC (auto repair)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 1
+          }
+        },
+        "Asheville NC (plumber)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 2
+          }
+        },
+        "Asheville NC (landscaping)": {
+          "total": 11,
+          "f_grade": 0,
+          "grades": {
+            "A": 11
+          }
+        },
+        "Hickory NC (towing)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 5
+          }
+        },
+        "Hickory NC (handyman)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "C": 2,
+            "A": 3
+          }
+        },
+        "Hickory NC (auto repair)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "B": 1,
+            "D": 1
+          }
+        },
+        "Hickory NC (plumber)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Gastonia NC (towing)": {
+          "total": 11,
+          "f_grade": 0,
+          "grades": {
+            "A": 9,
+            "B": 2
+          }
+        },
+        "Gastonia NC (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 2
+          }
+        },
+        "Gastonia NC (auto repair)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "A": 1
+          }
+        },
+        "Gastonia NC (HVAC)": {
+          "total": 8,
+          "f_grade": 1,
+          "grades": {
+            "A": 6,
+            "B": 1,
+            "F": 1
+          }
+        },
+        "Morganton NC (towing)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Morganton NC (handyman)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 2,
+            "B": 3,
+            "F": 1
+          }
+        },
+        "Morganton NC (plumber)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "C": 1,
+            "A": 1,
+            "B": 1
+          }
+        },
+        "Greenville SC (towing)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 6
+          }
+        },
+        "Greenville SC (handyman)": {
+          "total": 10,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 6,
+            "C": 2
+          }
+        },
+        "Greenville SC (auto repair)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Greenville SC (plumber)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "A": 1
+          }
+        },
+        "Greenville SC (HVAC)": {
+          "total": 11,
+          "f_grade": 1,
+          "grades": {
+            "A": 9,
+            "B": 1,
+            "F": 1
+          }
+        },
+        "Spartanburg SC (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "B": 1
+          }
+        },
+        "Spartanburg SC (handyman)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 6
+          }
+        },
+        "Spartanburg SC (auto repair)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Spartanburg SC (plumber)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1,
+            "B": 1
+          }
+        },
+        "Anderson SC (towing)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 2
+          }
+        },
+        "Anderson SC (handyman)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 8
+          }
+        },
+        "Anderson SC (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 1
+          }
+        },
+        "Gaffney SC (towing)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 4
+          }
+        },
+        "Gaffney SC (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Gaffney SC (plumber)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 1
+          }
+        },
+        "Pensacola FL (towing)": {
+          "total": 8,
+          "f_grade": 1,
+          "grades": {
+            "B": 2,
+            "A": 5,
+            "D": 1
+          }
+        },
+        "Pensacola FL (handyman)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "C": 1,
+            "A": 7
+          }
+        },
+        "Pensacola FL (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 1,
+            "B": 2
+          }
+        },
+        "Pensacola FL (plumber)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "B": 1
+          }
+        },
+        "Pensacola FL (HVAC)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 2
+          }
+        },
+        "Panama City FL (towing)": {
+          "total": 8,
+          "f_grade": 1,
+          "grades": {
+            "A": 6,
+            "B": 1,
+            "F": 1
+          }
+        },
+        "Panama City FL (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "C": 1,
+            "A": 4
+          }
+        },
+        "Panama City FL (auto repair)": {
+          "total": 2,
+          "f_grade": 1,
+          "grades": {
+            "F": 1,
+            "A": 1
+          }
+        },
+        "Panama City FL (landscaping)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "B": 1
+          }
+        },
+        "Tallahassee FL (towing)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "D": 1,
+            "B": 1
+          }
+        },
+        "Tallahassee FL (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "B": 2
+          }
+        },
+        "Tallahassee FL (auto repair)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "B": 2,
+            "A": 2,
+            "F": 1
+          }
+        },
+        "Tallahassee FL (plumber)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "C": 1
+          }
+        },
+        "Tallahassee FL (HVAC)": {
+          "total": 8,
+          "f_grade": 2,
+          "grades": {
+            "F": 2,
+            "A": 6
+          }
+        }
+      },
+      "new_leads": 522,
+      "new_f_grade": 35,
+      "new_sites_built": 100,
+      "new_ghpages_deploys": 100,
+      "total_ghpages_live": 2610,
+      "new_emails_queued": 100,
+      "ready_to_send_email": 39,
+      "file_urls_fixed": 0,
+      "top_performers": [
+        [
+          "Panama City FL (auto repair)",
+          1,
+          2
+        ],
+        [
+          "Charleston WV (plumber)",
+          2,
+          7
+        ],
+        [
+          "Martinsburg WV (handyman)",
+          2,
+          7
+        ],
+        [
+          "Charleston WV (handyman)",
+          1,
+          4
+        ],
+        [
+          "Clarksburg WV (auto repair)",
+          1,
+          4
+        ]
+      ],
+      "new_states_entered": [
+        "WV (expansion)",
+        "NC (west)",
+        "SC (upstate)",
+        "FL (panhandle)"
+      ],
+      "new_niches_tested": [],
+      "observation": "Cycle 22: WV Full Sweep (8 cities, 9% F-grade) + VA Interior (Roanoke/Lynchburg/Harrisonburg/Salem) + NC Western Appalachian foothills + SC Upstate FIRST COVERAGE (3% F-grade) + FL Panhandle FIRST COVERAGE (9% F-grade). 522 new leads, 35 F/D (6%). 100 new GH Pages pushed. Pipeline at 2532 outreach entries, 39 ready to send."
+    }
   }
 }

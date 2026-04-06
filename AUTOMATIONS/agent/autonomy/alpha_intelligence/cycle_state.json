@@ -1,62 +1,65 @@
 {
   "venture": "ALPHA_INTELLIGENCE",
-  "last_cycle": "2026-04-06T06:27:00Z",
-  "next_cycle": "2026-04-06T10:27:00Z",
+  "last_cycle": "2026-04-06T14:52:00Z",
+  "next_cycle": "2026-04-06T18:27:00Z",
   "cycle_interval_hours": 4,
   "status": "CYCLE_COMPLETE",
-  
+
   "latest_cycle_metrics": {
-    "timestamp": "2026-04-06T06:27:00Z",
-    "duration_seconds": 900,
-    "scrape_entries": 1,
-    "processing_entries": 1,
-    "archived_entries": 1,
+    "timestamp": "2026-04-06T14:52:00Z",
+    "duration_seconds": 1250,
+    "scrape_entries": 20,
+    "processing_entries": 4,
+    "archived_entries": 4,
     "deduped_entries": 0,
     "new_ventures": 0,
+    "freelance_opportunities_identified": 17,
+    "ecom_products_identified": 36,
     "content_generated": {
       "tweets": 3,
       "threads": 1,
       "engagement_posts": 0
     }
   },
-  
+
   "sources_health": {
     "twitter": {
       "status": "AUTH_FRICTION",
       "last_success": "2026-04-05T22:10:00Z",
       "new_entries": 0,
-      "note": "Brave cookie stale; background scraper running"
+      "note": "Brave cookie stale; needs refresh before next cycle"
     },
     "reddit": {
       "status": "OPERATIONAL",
-      "last_success": "2026-04-06T06:26:00Z",
-      "new_entries": 1,
+      "last_success": "2026-04-06T14:52:00Z",
+      "new_entries": 20,
       "subreddits_scanned": 20,
-      "note": "All 20 subreddits scanned; 1 new entry identified"
+      "note": "Consistent 15-20 posts per cycle; r/microsaas + r/forhire + r/DesignJobs high signal"
     },
     "hackernews": {
       "status": "OPERATIONAL",
       "last_success": "2026-04-06T02:16:00Z",
       "new_entries": 0,
-      "note": "Scheduled for 8 AM UTC"
+      "note": "Scheduled for 8 AM UTC; due next cycle"
     },
     "producthunt": {
       "status": "BLOCKED",
       "last_success": "2026-03-31T10:00:00Z",
       "error": "403 Forbidden",
-      "note": "Auth token expired — needs manual refresh"
+      "note": "Auth token expired — manual refresh needed"
     }
   },
-  
+
   "output_artifacts": {
-    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260406.md",
+    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260406_1450.md",
+    "content": "CONTENT/social/posting_queue/research_cycle_20260406_1452.md",
     "alpha_staging": "LEDGER/ALPHA_STAGING.csv",
-    "content_queue": "CONTENT/social/posting_queue/tweets_20260406_research_cycle.md"
+    "posting_queue_total": 6
   },
-  
+
   "system_state": {
-    "alpha_entries_total": 19156,
-    "alpha_new_this_cycle": 1,
+    "alpha_entries_total": 18688,
+    "alpha_approved_new": 0,
     "freelance_opportunities_routed": 17,
     "ecom_products_identified": 36,
     "master_ops_ready": 87,
@@ -64,27 +67,25 @@
     "master_ops_blocked": 179,
     "capital_genesis_p0": 785,
     "content_pieces_generated": 4,
-    "posting_queue_pending": 4
+    "posting_queue_pending": 6
   },
-  
+
   "blockers": [
-    "Twitter cookie: Stale — Brave profile needs refresh (non-critical, background running)",
-    "ProductHunt scraper: 403 auth — token needs refresh",
-    "Master ops human blockers: 179 ops awaiting Stripe/Gumroad/Pinterest account creation"
+    "Twitter auth: Brave cookie stale — needs manual refresh",
+    "ProductHunt scraper: 403 auth — API token needs refresh",
+    "Master ops: 179 blocked on human account creation (Stripe, Gumroad, Pinterest, PayPal)"
   ],
-  
+
   "recommendations": [
-    "Priority 1: Refresh Twitter/Brave cookies before 10:27 cycle (Restore 4/4 source coverage)",
-    "Priority 2: Test ProductHunt API token refresh (Unlock discovery source)",
-    "Priority 3: Complete human blockers (6 account signups unblock 179 master ops = $10K/mo)",
-    "Priority 4: Post generated content to social (3 tweets + 1 thread ready)",
-    "Priority 5: Monitor posting engagement (Track meta-insight about bottlenecks)"
+    "URGENT: Refresh Twitter/Brave cookies before 18:27 cycle (restore full source coverage)",
+    "HIGH: Refresh ProductHunt API token (unlock 3rd discovery source)",
+    "HIGH: Complete human blockers (4 account signups = $10K/mo+ unblocked)",
+    "MEDIUM: Post generated content to social (6 pieces ready in queue)",
+    "MEDIUM: Monitor engagement on freelance arbitrage + ecom content posted"
   ],
-  
+
   "next_actions": [
-    "4-hour wait until 2026-04-06 10:27 UTC",
-    "Refresh auth sources before cycle",
-    "Scrape all 4 sources",
+    "18:27 UTC: Scrape all sources (Twitter if auth fixed, Reddit, HN due)",
     "Process findings through alpha pipeline",
     "Route opportunities to ventures",
     "Generate content (3 tweets + 1 thread min)",
