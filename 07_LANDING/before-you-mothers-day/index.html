@@ -147,9 +147,23 @@
     footer { background: var(--deep-sepia); color: #c4aa7a; text-align: center; padding: 32px 24px; font-size: 0.8rem; }
     footer a { color: #c4aa7a; text-decoration: underline; }
 
+    .email-capture { background: var(--parchment); border-top: 3px solid var(--rust); border-bottom: 1px solid var(--border); padding: 52px 24px; text-align: center; }
+    .email-capture-inner { max-width: 560px; margin: 0 auto; }
+    .email-capture h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--deep-sepia); margin-bottom: 10px; }
+    .email-capture p { font-family: 'EB Garamond', serif; font-size: 1.1rem; color: var(--muted); margin-bottom: 28px; line-height: 1.7; }
+    .email-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; flex-wrap: wrap; }
+    .email-form input[type="email"] { flex: 1 1 220px; padding: 14px 16px; border: 1.5px solid var(--border); border-radius: 4px; font-size: 0.95rem; background: white; color: var(--text); font-family: 'Inter', sans-serif; outline: none; }
+    .email-form input[type="email"]:focus { border-color: var(--rust); }
+    .email-form button { flex-shrink: 0; background: var(--rust); color: white; border: none; padding: 14px 24px; border-radius: 4px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; font-family: 'Inter', sans-serif; }
+    .email-form button:hover { background: #963d18; }
+    .email-success { display: none; background: var(--forest); color: #c8e6c8; padding: 14px 20px; border-radius: 6px; font-size: 0.9rem; margin-top: 16px; }
+    .email-note { margin-top: 12px; font-size: 0.78rem; color: var(--muted); }
+
     @media (max-width: 640px) {
       .hero { padding: 48px 20px 56px; }
       .btn-primary, .btn-secondary { width: 100%; text-align: center; display: block; }
+      .email-form { flex-direction: column; }
+      .email-form input[type="email"], .email-form button { width: 100%; }
     }
     @media print {
       body > *:not(.cert-section) { display: none !important; }
@@ -184,6 +198,22 @@
 </section>
 
 <div class="ornament">&#10022; &nbsp; &#10022; &nbsp; &#10022;</div>
+
+<section class="email-capture">
+  <div class="email-capture-inner">
+    <h2>Not sure yet? Get a free heritage preview.</h2>
+    <p>Enter your email and her family surname. We'll send a sample narrative showing what her site could look like — at no cost, no commitment.</p>
+    <form class="email-form" action="https://formsubmit.co/hello@before-you.co" method="POST" id="preview-form">
+      <input type="hidden" name="_subject" value="Before You — Free Preview Request (Mother's Day)" />
+      <input type="hidden" name="_next" value="https://before-you-mothers-day.surge.sh?preview=sent" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="email" name="email" placeholder="Your email address" required autocomplete="email" />
+      <button type="submit">Send me a preview</button>
+    </form>
+    <div class="email-success" id="email-success">Done — we'll send your heritage preview within 48 hours.</div>
+    <p class="email-note">No spam. Unsubscribe anytime. Preview is free and no purchase required.</p>
+  </div>
+</section>
 
 <section class="demo-section">
   <p class="section-label">See it before you buy</p>
@@ -369,6 +399,14 @@
   const el = document.getElementById('days-left');
   if (el && diff > 0) el.textContent = diff + (diff === 1 ? ' day' : ' days');
   else if (el && diff <= 0) el.closest('.countdown-banner').style.display = 'none';
+
+  // Show success message if returning from formsubmit redirect
+  if (window.location.search.includes('preview=sent')) {
+    const s = document.getElementById('email-success');
+    const f = document.getElementById('preview-form');
+    if (s) { s.style.display = 'block'; }
+    if (f) { f.style.display = 'none'; }
+  }
 </script>
 </body>
 </html>

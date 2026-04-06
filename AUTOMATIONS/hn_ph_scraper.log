@@ -516,3 +516,28 @@
 [2026-04-05T21:50:39.012410+00:00] Total qualifying rows before dedup: 76
 [2026-04-05T21:50:39.013070+00:00] Wrote 76 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
 [2026-04-05T21:50:39.013119+00:00] === Done ===
+[2026-04-06T02:09:32.461615+00:00] === HN + PH scraper starting ===
+[2026-04-06T02:09:32.626935+00:00] Loaded 17906 existing URLs for dedup.
+[2026-04-06T02:09:32.627213+00:00] Fetching HN top stories (limit=60)...
+[2026-04-06T02:10:28.172890+00:00]   Got 59 top stories.
+[2026-04-06T02:10:28.176770+00:00] Fetching HN Show HN stories (limit=40)...
+[2026-04-06T02:11:06.295297+00:00]   Got 40 Show HN stories.
+[2026-04-06T02:11:06.309226+00:00] Fetching ProductHunt posts...
+[2026-04-06T02:11:07.577072+00:00] WARN PH GraphQL returned 403
+[2026-04-06T02:11:07.577598+00:00]   Got 0 PH posts.
+[2026-04-06T02:11:07.577883+00:00] Total qualifying rows before dedup: 27
+[2026-04-06T02:11:07.581427+00:00] Wrote 27 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
+[2026-04-06T02:11:07.582298+00:00] === Done ===
+[2026-04-06T02:17:42.786960+00:00] === HN + PH scraper starting ===
+[2026-04-06T02:17:43.067822+00:00] Loaded 17933 existing URLs for dedup.
+[2026-04-06T02:17:43.070433+00:00] Fetching HN top stories (limit=60)...
+[2026-04-06T02:19:18.277295+00:00] WARN fetch_json failed https://hacker-news.firebaseio.com/v0/item/47608040.json: HTTPSConnectionPool(host='hacker-news.firebaseio.com', port=443): Read timed out. (read timeout=10)
+[2026-04-06T02:19:27.743515+00:00]   Got 58 top stories.
+[2026-04-06T02:19:27.743989+00:00] Fetching HN Show HN stories (limit=40)...
+[2026-04-06T02:20:40.919549+00:00]   Got 40 Show HN stories.
+[2026-04-06T02:20:40.920213+00:00] Fetching ProductHunt posts...
+[2026-04-06T02:20:41.625573+00:00] WARN PH GraphQL returned 403
+[2026-04-06T02:20:41.625930+00:00]   Got 0 PH posts.
+[2026-04-06T02:20:41.626056+00:00] Total qualifying rows before dedup: 1
+[2026-04-06T02:20:41.626548+00:00] Wrote 1 new rows to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/ALPHA_STAGING.csv
+[2026-04-06T02:20:41.626688+00:00] === Done ===

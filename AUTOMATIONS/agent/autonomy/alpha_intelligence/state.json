@@ -1,63 +1,84 @@
 {
-  "agent_id": "alpha_intelligence_research",
-  "venture_type": "RESEARCH",
-  "last_cycle": "2026-03-16T10:39:00Z",
-  "cycles_completed": 248,
-  "status": "IDLE",
-  "next_scheduled": "2026-03-16T12:39:00Z",
-  "cycle_interval": "2h",
-  "metrics": {
-    "entries_scraped_today": 290,
-    "entries_processed_today": 308,
-    "entries_routed_today": 141,
-    "high_roi_entries_today": 62,
-    "content_posts_generated": 52,
-    "scraper_health": {
-      "twitter": "needs_playwright",
-      "reddit": "complete",
-      "hn_ph_ih": "complete"
+  "venture": "ALPHA_INTELLIGENCE",
+  "last_cycle": "2026-04-05T22:15:00Z",
+  "next_cycle": "2026-04-06T02:15:00Z",
+  "cycle_interval_hours": 4,
+  "status": "IDLE_BETWEEN_CYCLES",
+  
+  "latest_cycle_metrics": {
+    "timestamp": "2026-04-05T22:15:00Z",
+    "duration_seconds": 900,
+    "scrape_entries": 31,
+    "processing_entries": 27,
+    "archived_entries": 41,
+    "deduped_entries": 1,
+    "content_generated": {
+      "tweets": 3,
+      "threads": 1
     }
   },
-  "last_output": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260316.md",
-  "content_generated": {
-    "filename": "CONTENT/social/posting_queue/alpha_research_cycle_20260316_1030.txt",
-    "posts": 28,
-    "status": "PENDING_REVIEW",
-    "note": "28 pieces: 21 standalone tweets, 2 threads (Tangle 7-tweet, Habit Pixel 6-tweet), 7 cross-niche adaptations"
+  
+  "sources_health": {
+    "twitter": {
+      "status": "RUNNING_BG",
+      "last_success": "2026-04-05T22:10:00Z",
+      "new_entries": 0,
+      "note": "Auth friction; duplicates detected"
+    },
+    "reddit": {
+      "status": "OPERATIONAL",
+      "last_success": "2026-04-05T22:07:00Z",
+      "new_entries": 4,
+      "subreddits_scanned": 20
+    },
+    "hackernews": {
+      "status": "OPERATIONAL",
+      "last_success": "2026-04-05T22:11:00Z",
+      "new_entries": 27,
+      "note": "HN top + Show HN working; signal > 40pts"
+    },
+    "producthunt": {
+      "status": "BLOCKED",
+      "last_success": "2026-03-31T10:00:00Z",
+      "error": "403 Forbidden",
+      "note": "Auth token expired"
+    }
   },
-  "venture_routing": {
-    "APP_FACTORY": 57,
-    "OUTBOUND": 39,
-    "CONTENT": 69,
-    "MONETIZATION": 55,
-    "RESEARCH": 31,
-    "SCRAPING": 12,
-    "LOCAL_BIZ": 8,
-    "PRODUCT": 5,
-    "TOOL_ALPHA": 62,
-    "GROWTH_HACK": 1
+  
+  "output_artifacts": {
+    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260405.md",
+    "content": "CONTENT/social/research_content_20260405.md",
+    "alpha_staging": "LEDGER/ALPHA_STAGING.csv"
   },
-  "cycle_248_summary": {
-    "reddit_scrape": "4 new entries (3 low SEO, 1 medium Meta layoffs 392 upvotes)",
-    "twitter_scrape": "blocked - playwright not installed in pip_libs. Last scrape 09:14 had 42 entries.",
-    "hn_scrape": "81 new entries (59 top, 40 Show HN). Categories: TOOL_ALPHA 62, APP_FACTORY 12, MONETIZATION 3, CONTENT 2, GROWTH 1, OUTBOUND 1. ROI: 3 HIGHEST, 13 HIGH, 65 MEDIUM.",
-    "ph_scrape": "0 entries - GraphQL auth required. Need API token.",
-    "alpha_processor_pass1": "4 processed, 4 archived (low signal)",
-    "alpha_processor_pass2": "100 processed. 1 new venture, 2 bolster existing, 97 archived (9 deduped)",
-    "decision_engine": "87 READY ops, 17 priority launches, 13 freelance leads scored 60+",
-    "content_generation": "28 pieces generated from top 7 findings",
-    "top_alpha": [
-      "ALPHA98738: Newsletter $4.5M/yr (Tangle) - HIGHEST",
-      "ALPHA98741: OpenClaw AI content manager - HIGH",
-      "ALPHA98737: Outseta bootstrapped 7 figures - HIGH",
-      "ALPHA98739: Habit Pixel $1K MRR 8mo - HIGH (comparable to streak apps)",
-      "3 HIGHEST from HN top stories (pending review)"
-    ]
+  
+  "system_state": {
+    "alpha_entries_total": 18351,
+    "master_ops_ready": 87,
+    "master_ops_priority": 17,
+    "capital_genesis_p0": 830,
+    "content_files": 212
   },
-  "new_script_created": "AUTOMATIONS/hn_ph_scraper.py - HackerNews + ProductHunt scraper, 450+ lines, keyword classification, dedup, CSV append",
+  
   "blockers": [
-    "Twitter scraper needs: pip3 install --target=.pip_libs playwright && python3 -m playwright install chromium",
-    "ProductHunt API needs auth token for GraphQL endpoint"
+    "ProductHunt scraper: 403 auth — needs token refresh",
+    "Twitter cookie: Likely stale — refresh before next cycle",
+    "Master ops: 179 blocked (await human action: account signups)"
   ],
-  "notes": "Cycle 248 fully complete. All 5 steps executed. Reddit + HN scraped (85 new entries total). 104 entries processed (1 new venture, 2 bolsters). 28 content pieces generated. 21,368 total rows in ALPHA_STAGING.csv. Next cycle 12:39 UTC."
+  
+  "recommendations": [
+    "Debug ProductHunt 403 error",
+    "Refresh Twitter auth cookies",
+    "Deploy generated content at optimal times",
+    "Monitor e-commerce watch category saturation",
+    "Escalate master ops blockers to human task"
+  ],
+  
+  "next_actions": [
+    "4-hour wait until 2026-04-06 02:15 UTC",
+    "Scrape Twitter, Reddit, HN, PH (if auth fixed)",
+    "Process findings through alpha_auto_processor",
+    "Route to ventures via decision_engine",
+    "Generate content (3 tweets + 1 thread)",
+    "Write cycle report"
+  ]
 }

@@ -1,84 +1,106 @@
-# Alpha Backlog Report — 2026-04-04 05:10
+# Alpha Backlog Report — 2026-04-05 22:30
 
-**Matches found:** 326
-**Staged for integration:** 100
+**Matches found:** 988
+**Staged for integration:** 94
 
-## GROWTH_TACTIC — Growth/marketing tactics applicable to existing ventures (149 matches)
+## REVENUE_METHOD — Revenue methods not yet wired into ventures (505 matches)
 
-- `ALPHA_CI85_PH_LEADS_48H` (COMPETITIVE_INTEL_cycle_085):  14 ph launches today - high quality b2b leads. 48h outreach window. cold email: congrats on launch 
-- `ALPHA266` (YouTube Shorts Algorithm): youtube shorts: search seo now matters + 50-60 sec sweet spot  
-- `ALPHA286` (EmailChaser): 4-6 lines sweet spot for cold email length  
-- `ALPHA312` (UserPilot Conversion Tactics): contextual prompts > random. phone calls >>> emails for conversion.  
-- `ALPHA1096` (r/Entrepreneur (Reddit)):  post: i spent 8 months building in stealth and launched to complete silence. here's what i do diffe
-- `ALPHA1153` (r/bigseo):  the state of ai seo advice on x 
-- `ALPHA106733` (2026-03-18):  i tracked which marketing channels actually make money vs just send traffic. the results surprised 
-- `ALPHA5359` (@Fortuze (explicit-handles)):  how to rob amazon's billion-dollar algorithmtheir "frequently bought together" section shows you ex
-- `ALPHA5375` (@Fortuze (explicit-handles)):  switching from shopify payments to a 3rd party checkout / gateway can instantly kill ur momentum an
-- `ALPHA5451` (@dimitarangg (explicit-handles)):  i found a way to combine linkedin/email/twitter outreach to steal your competitors’ prospectsit boo
-- `ALPHA5468` (@dimitarangg (explicit-handles)):  men respond 10x faster to women because they’re simps male account: 2% reply ratefemale account: 12
-- `ALPHA5478` (@dimitarangg (explicit-handles)):  if someone showed me this at the start of my cold email journey i'd hit 6-figures at 14 and not 16j
-- `ALPHA6665` (ProductHunt):  [ph launch] mozart for ios: say it with a song — while you're on the go 
-- `ALPHA6667` (ProductHunt):  [ph launch] metme: remember everyone you meet, save contacts with context fast 
-- `ALPHA6673` (ProductHunt):  [ph launch] figr ai: learns your product. thinks through ux. 
-- ... and 134 more
+- `ALPHA235` (AI Influencer Affiliate Integration): affiliate review structure. honesty converts better long-term.  
+- `ALPHA340` (@Hightrafficsite SEO Arbitrage): domain age arbitrage. instant da. $500-5000 investment.  
+- `ALPHA106270` (2026-03-18):  boost your conversions with 
+http://
+varify.io
+/?twclid=2-3trmrzxwj27pm7m29g9n0vb0h
+® - only $106/m
+- `ALPHA1773999595` (GitHub):  mit repo: nextify-limited/saasfly (2869 stars, typescript) 
+- `ALPHA5292` (@pipelineabuser (explicit-handles)):  tendersinfo .comgovernment contracts before they close.filter by country, department, budget, deadl
+- `ALPHA5311` (@pipelineabuser (explicit-handles)):  if you liked this post, you'll love the whale brief.my private newsletter where i share what's work
+- `ALPHA5419` (@ecomchigga (explicit-handles)):  i've launched 11 digital products in the last 9 months8 were profitable within 7 daysthe other 3 fl
+- `ALPHA6782` (r/startups):  [acquisition] how to sell your saas/apps? (i will not promote) 
+- `ALPHA8298` (r/micro_saas):  my saas just crossed 3,000 users in 60 days! 
+- `ALPHA9979` (r/microsaas):  [acquisition] how i built a tool to help small instagram creators track affiliate link performance 
+- `ALPHA10464` (r/EntrepreneurRideAlong):  how do you actually tell if a supplier in china is a real factory or a trading company reselling? 
+- `ALPHA11381` (r/microsaas):  [acquisition] from $0 → $4,457 mrr as a solo founder (now ~$50k arr) [rev: $$0] 
+- `ALPHA11438` (r/juststart): extracted signal: validating a hardware niche at 16 (metrics: $20k grant secured, $85 revenue, 1 cus
+- `ALPHA12299` (r/microsaas):  [acquisition] expanding my honorific email micro-saas from japan to korea — same pain point, differ
+- `ALPHA13141` (r/microsaas):  [acquisition] how often do you guys actually get refund requests in saas? [rev: $$20] 
+- ... and 490 more
 
-## REVENUE_METHOD — Revenue methods not yet wired into ventures (95 matches)
+## GROWTH_TACTIC — Growth/marketing tactics applicable to existing ventures (251 matches)
 
-- `ALPHA343` (@AntonioEscudero 4-Day SaaS Build): 4-day saas validation. vibe coding. gemini flash stack. stripe day 1.  
-- `ALPHA359` (@thomasunise + @robj3d3): saas mrr milestones psychology. cross-ref alpha346 for rbf.  
-- `ALPHA1086` (r/SaaS (Reddit)):  post: 53 paying customers, $4,150 mrr, and a cease-and-desist. ama. | content: aboutdiscussions and
-- `ALPHA1096` (r/Entrepreneur (Reddit)):  post: i spent 8 months building in stealth and launched to complete silence. here's what i do diffe
-- `ALPHA1334` (@Argona0x (high-signal-accounts)): tool/technique alpha. summary: i mass paying $200/month for ai subscriptionsdeployed my own in 60 se
-- `ALPHA106586` (2026-03-18):  unpopular opinion:
-you don't need vc funding to build a successful app.
-i built puffcount with $1,0
-- `ALPHA106733` (2026-03-18):  i tracked which marketing channels actually make money vs just send traffic. the results surprised 
-- `ALPHA106762` (2026-03-18):  i set up 6 ai agents that sell web services 24/7 (full breakdown) i know "ai agents" sounds like te
-- `ALPHA2716` (@JamesEbringer (meme-accounts)): extracted signal: 95% of affiliates are broke because they don’t understand one simple thingcpa is a
-- `ALPHA5302` (@pipelineabuser (explicit-handles)):  if you liked this post, you'll love the whale brief.my private newsletter where i share what's work
-- `ALPHA5304` (@pipelineabuser (explicit-handles)):  if you liked this post, you'll love the whale brief.my private newsletter where i share what's work
-- `ALPHA5309` (@pipelineabuser (explicit-handles)):  if you liked this post, you'll love the whale brief.my private newsletter where i share what's work
-- `ALPHA5375` (@Fortuze (explicit-handles)):  switching from shopify payments to a 3rd party checkout / gateway can instantly kill ur momentum an
-- `ALPHA5404` (@ecomchigga (explicit-handles)):  met a girl in a discord server who said she makes "digital stuff""like what""templates""how's that 
-- `ALPHA5422` (@ecomchigga (explicit-handles)):  your first digital product should take 4 hours to make and sell for $47not 4 months. not a 200 page
-- ... and 80 more
+- `ALPHA1431` (@MengTo (high-signal-accounts)): extracted signal: how i created these landing pages with gemini 3 from start to finishfirst, i start
+- `ALPHA106774` (2026-03-18):  looking for a small group of founders to grow with i’ve noticed something interesting with a few fo
+- `ALPHA106270` (2026-03-18):  boost your conversions with 
+http://
+varify.io
+/?twclid=2-3trmrzxwj27pm7m29g9n0vb0h
+® - only $106/m
+- `ALPHA5292` (@pipelineabuser (explicit-handles)):  tendersinfo .comgovernment contracts before they close.filter by country, department, budget, deadl
+- `ALPHA5366` (@Fortuze (explicit-handles)):  you can turn $2,000 into $642,000 in 60 days and the method is so stupid it'll piss you offno cours
+- `ALPHA5376` (@Fortuze (explicit-handles)):  a single customer is worth $50 or $500+ for your ecom storemost ecom brands accidentally choose $50
+- `ALPHA5419` (@ecomchigga (explicit-handles)):  i've launched 11 digital products in the last 9 months8 were profitable within 7 daysthe other 3 fl
+- `ALPHA6668` (ProductHunt):  [ph launch] vela: ai scheduling that works the way a great ea does 
+- `ALPHA6676` (ProductHunt):  [ph launch] translite: instant translation from anywhere on macos 
+- `ALPHA6703` (ProductHunt):  [ph launch] prompt library: all your best prompts. one shortcut away. 
+- `ALPHA107342` (ProductHunt):  [ph launch] clawmetry cloud: see your openclaw agents' costs, activity &amp; memory live 
+- `ALPHA8038` (r/microsaas):  [acquisition] on product hunt today with rankdots v2 
+- `ALPHA8380` (@unknown (bookmark)):  he's not wrong...i built duolingo for runningand sold it for 6 figures+(28 days after launch) 
+- `ALPHA1773999650` (ProductHunt):  [ph launch] gemini 3.1 flash live: making audio ai more natural and reliable 
+- `ALPHA11235` (ProductHunt):  [ph launch] pulsekit: your key metrics, as widgets across your apple devices 
+- ... and 236 more
 
-## SYSTEM_IMPROVEMENT — Security tools, performance optimization, system hardening (75 matches)
+## SYSTEM_IMPROVEMENT — Security tools, performance optimization, system hardening (180 matches)
 
-- `ALPHA249` (GitHub): ai ci/cd autonomous deployment  
-- `ALPHA302` (AppInstitute ASO Guide): 4.0+ rating = table stakes. creative testing > keyword tweaks.  
-- `ALPHA314` (Metronome Pricing Trends): value era shift. ai-driven pricing + outcome contracts. experimentation speed key.  
-- `ALPHA1334` (@Argona0x (high-signal-accounts)): tool/technique alpha. summary: i mass paying $200/month for ai subscriptionsdeployed my own in 60 se
-- `ALPHA5429` (@pounddz (explicit-handles)):  seedance 2 + chain of tiktok ugc pages promoting glitchy sweeps is the fastest method to get to $10
-- `ALPHA6792` (HackerNews):  [acquisition] show hn: out plane – deploy any app in 60s with per-second pricing 
-- `ALPHA8017` (ProductHunt):  [ph launch] spectre: an agentic coding workflow for product builders 
-- `ALPHA8040` (r/microsaas):  [acquisition] vp at a multinational here. vibe coded an ai agent that found $150m in pipeline. empl
-- `ALPHA8113` (@lottsnomad (high-signal-accounts)):  ugc fails when founders treat it like branding instead of testingyou’re not trying to look goodyou’
-- `ALPHA8796` (@Fortuze (explicit-handles)):  the alcohol free movement is not a trend. it’s a category shift.arkay zero proof is building in the
-- `ALPHA8863` (HackerNews):  [acquisition] show hn: keystone – configure dockerfiles and dev containers for any repo 
-- `ALPHA8901` (r/EntrepreneurRideAlong): case study with real numbers. analyze full post for replicable method. summary: i raised $2.7m to au
-- `ALPHA10338` (@eptwts (explicit-handles)):  on sports hedging. the sports insurance and re-insurance industry is big: the annual market is arou
-- `ALPHA10384` (ProductHunt):  [ph launch] pi-link speed radar: smart doppler radar powered by your phone 
-- `ALPHA10481` (r/growthhacking):  a/b testing manual edits vs akool ai video variations for paid ad 
-- ... and 60 more
+- `ALPHA1165` (r/SocialMediaMarketing):  is anyone here actively monitoring reddit as part of their social media strategy? 
+- `ALPHA106774` (2026-03-18):  looking for a small group of founders to grow with i’ve noticed something interesting with a few fo
+- `ALPHA5371` (@Fortuze (explicit-handles)):  project cassandra briefing - hezbollah bac and "the system": hezbollah’s business affairs component
+- `ALPHA6772` (r/indiehackers):  [acquisition] the weekend i lost to redis config hell – and how one docker command finally let me s
+- `ALPHA9979` (r/microsaas):  [acquisition] how i built a tool to help small instagram creators track affiliate link performance 
+- `ALPHA9981` (r/indiehackers):  [acquisition] the weekend redis + compose killed my self-host motivation – until one docker command
+- `ALPHA10153` (r/SideProject):  [acquisition] i built a windows explorer with ai that can batch process files locally — here it's e
+- `ALPHA10336` (@eptwts (explicit-handles)):  looking for love this valentine’s day?scammers are too.romance scams are one of the fastest-growing
+- `ALPHA10346` (@pounddz (explicit-handles)):  we're running real business workloads through nightshift . define your task, connect your data, run
+- `ALPHA13534` (ProductHunt):  [ph launch] qwarm: write tests in plain english ai agents run them in browsers 
+- `ALPHA20204` (@PrajwalTomar_ (high-signal-accounts)):  want to build your first saas?
+i dropped a 10-video course showing the exact workflow i use to go f
+- `ALPHA20232` (@godofprompt (high-signal-accounts)):   breaking: the strongest crypto bull case just stopped being ideological and became purely infrastr
+- `ALPHA21502` (@jasoncfox (high-signal-accounts)):  to be clear on what this is. you show up, i ask questions, i give you a straight audit of what's wo
+- `ALPHA21748` (r/smallbusiness):  employee constantly testing boundaries when i’m not at the store – how would you handle this? 
+- `ALPHA23032` (@unknown (bookmark)): instantly @grok @phanindra_ai @om_patel5 if you preprocessed your code into a llm optimised grammar 
+- ... and 165 more
 
-## TOOL_SCANNER — Tools, APIs, scanners, monitors that could become automations (4 matches)
+## TOOL_SCANNER — Tools, APIs, scanners, monitors that could become automations (48 matches)
 
-- `ALPHA21514` (@codyschneiderxx (high-signal-accounts)):  gtm engineering
-pr agent
-scrape forbes writers
-ai reads what they wrote recently 
-ai writes pitches
-- `ALPHA100881` (@jasoncfox (high-signal-accounts)):  the heygen team just wrapped our internal hackathon.
-in 2 days, our global team built 40+ projects 
-- `ALPHA101050` (HackerNews):  [acquisition] show hn: crowd-sourced lpg cylinder availability tracker for india's gas crisis 
-- `ALPHA101215` (@lilyraynyc (high-signal-accounts)):  is the "yen carry trade" about to nuke your bags? 
-the boj just hit a 30-year high at 0.75%, and we
+- `ALPHA25119` (@rryssf_ (high-signal-accounts)):  $200m arr in 11 months is real traction.
+"your first ai employee" is still marketing.
+the gap betwe
+- `ALPHA102733` (@iPullRank (high-signal-accounts)):  you don't need a cloud api for great ocr anymore.
+glm-ocr runs locally with just ~2gb vram, handles
+- `CB6D0FE5A0` (CRUNCHBASE): funding: pwc’s us ipo (ipo) — to understand what’s holding the 2026 ipo market back and what could u
+- `EDGARC5867DC0` (SEC_EDGAR): sec 8-k: blaize holdings, inc.  (bzai, bzaiw)  (cik 0001871638) —  blaize holdings, inc.  (bzai, bza
+- `EDGARF85FD3DF` (SEC_EDGAR): sec s-1: research alliance corp iii  (cik 0002118032) —  research alliance corp iii  (cik 0002118032
+- `BLB876EB33` (alpha_backlog_scanner): sec 8-k: super league enterprise, inc.  (sle)  (cik 0001621672) —  super league enterprise, inc.  (s
+- `BLAB6AB2EA` (alpha_backlog_scanner): funding: pwc’s us ipo (ipo) — to understand what’s holding the 2026 ipo market back and what could u
+- `ALPHA1773998674` (reddit/r/growthhacking): how we grew to 500+ users in 90 days: every growth channel breakdown how we grew to 500+ users in 90
+- `BLA7FF8B4E` (alpha_backlog_scanner):  20hrs+ of ugc research into 4 messages.
+immense productivity gains for your marketing team here.
++ 
+- `BLD5736175` (alpha_backlog_scanner): funding: pwc’s us ipo (ipo) — to understand what’s holding the 2026 ipo market back and what could u
+- `BLFEFB4402` (alpha_backlog_scanner):  show hn: vibefolio – a place to showcase your vibecoded projects. over the last months, more people
+- `CBCCD3D559` (CRUNCHBASE): funding: exclusive: yc doubles (series a) — trayd, a startup that is building a back office operatin
+- `BL3E639280` (alpha_backlog_scanner): funding: pwc’s us ipo (ipo) — to understand what’s holding the 2026 ipo market back and what could u
+- `BL0E41A9FE` (alpha_backlog_scanner): funding: pwc’s us ipo (ipo) — to understand what’s holding the 2026 ipo market back and what could u
+- `BLD2F650F4` (alpha_backlog_scanner): funding: the most active (seed) — to get a sense who’s buying in bulk, we used crunchbase data to pu
+- ... and 33 more
 
-## INTEGRATION_OPPORTUNITY — External services, APIs, platforms we could wire in via MCP/n8n (3 matches)
+## INTEGRATION_OPPORTUNITY — External services, APIs, platforms we could wire in via MCP/n8n (4 matches)
 
-- `ALPHA1334` (@Argona0x (high-signal-accounts)): tool/technique alpha. summary: i mass paying $200/month for ai subscriptionsdeployed my own in 60 se
-- `ALPHA6787` (HackerNews):  [acquisition] show hn: kai – a telegram bot that turns claude code into a personal dev asst 
-- `ALPHA100482` (@WorkflowWhisper (high-signal-accounts)):  karpathy's autoresearch project just went viral. everyone's asking 'is this cool?'
-i'm asking: how 
+- `ALPHA104777` (@WorkflowWhisper (daily scraper)):  okay, i found this insane app that builds any n8n workflow in plain english.
+and before you motherf
+- `ALPHA104862` (@rileybrown (daily scraper)):  n8n complete beginners guide
+agents, webhooks, integrations, http requests...
+and more.
+00:00 intro
+- `ALPHA105201` (HackerNews):  [acquisition] show hn: on-device embedding and vector search for apple devices, built in zig 
+- `ALPHA1774000282` (reddit/r/EntrepreneurRideAlong): day social media i got tired of paying for ai subscriptions, so i built a python tool that generates
 

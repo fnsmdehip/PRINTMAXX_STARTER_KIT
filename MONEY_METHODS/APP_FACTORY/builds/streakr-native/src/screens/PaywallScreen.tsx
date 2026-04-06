@@ -16,9 +16,11 @@ import { Colors, Spacing, Radius, Typography } from '../constants/theme';
 import { saveSettings } from '../services/storage';
 import { RootStackParamList } from '../types';
 
-// Stripe Payment Links (replace with real links once created)
-const STRIPE_ANNUAL = 'https://buy.stripe.com/streakr-annual-2499';   // $24.99/yr
-const STRIPE_MONTHLY = 'https://buy.stripe.com/streakr-monthly-499';  // $4.99/mo
+// Stripe Payment Links (LIVE — prod_UHbVm2YjM4LW8d, created 2026-04-05)
+// Annual:  price_1TJ2IQKlbvFndmYLFBdqBaBc | $24.99/yr | 7-day trial | plink_1TJ2ItKlbvFndmYLuKHrsBpR
+// Monthly: price_1TJ2IeKlbvFndmYLOOQns7Nb | $4.99/mo  | no trial    | plink_1TJ2JFKlbvFndmYLrBOFVvA3
+const STRIPE_ANNUAL = 'https://buy.stripe.com/3cI9AUb207NHctPend3F60K';
+const STRIPE_MONTHLY = 'https://buy.stripe.com/bJe00kfig0lf0L7frh3F60L';
 const PRIVACY_URL = 'https://printmaxx-privacy.surge.sh';
 const TERMS_URL = 'https://printmaxx-tos.surge.sh';
 

@@ -6,6 +6,7 @@ export type HabitCategory =
   | 'learning'
   | 'creation'
   | 'health'
+  | 'sobriety'
   | 'custom';
 
 export interface Habit {

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEO Starter Kit — Answer Engine Optimization Toolkit</title>
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --border: #2e2e2e;
+    --accent: #7c3aed;
+    --accent2: #a855f7;
+    --green: #22c55e;
+    --yellow: #eab308;
+    --red: #ef4444;
+    --text: #f5f5f5;
+    --muted: #888;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.6; }
+  .app { display: flex; height: 100vh; overflow: hidden; }
+  .sidebar { width: 220px; min-width: 220px; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+  .main { flex: 1; overflow-y: auto; }
+  .logo { padding: 20px 16px 16px; border-bottom: 1px solid var(--border); }
+  .logo h1 { font-size: 15px; font-weight: 700; }
+  .logo span { font-size: 11px; color: var(--accent2); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+  .nav { padding: 12px 0; flex: 1; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 16px; cursor: pointer; color: var(--muted); font-size: 13px; font-weight: 500; border-left: 3px solid transparent; transition: all 0.15s; }
+  .nav-item:hover { background: var(--surface2); color: var(--text); }
+  .nav-item.active { color: var(--accent2); border-left-color: var(--accent2); background: rgba(124,58,237,0.08); }
+  .nav-icon { font-size: 15px; }
+  .sidebar-footer { padding: 12px 16px; border-top: 1px solid var(--border); font-size: 11px; color: var(--muted); }
+  .panel { display: none; padding: 28px 32px; }
+  .panel.active { display: block; }
+  .panel-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .panel-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+  .card-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .score-ring { display: flex; flex-direction: column; align-items: center; }
+  .ring-wrap { position: relative; width: 100px; height: 100px; margin: 0 auto 8px; }
+  .ring-wrap svg { transform: rotate(-90deg); }
+  .ring-bg { fill: none; stroke: var(--border); stroke-width: 8; }
+  .ring-fill { fill: none; stroke: var(--accent2); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 283; transition: stroke-dashoffset 0.8s ease; }
+  .ring-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 22px; font-weight: 800; }
+  .ring-label { font-size: 11px; color: var(--muted); text-align: center; }
+  textarea, input[type="url"], input[type="text"], select { width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; color: var(--text); padding: 10px 12px; font-size: 13px; font-family: inherit; outline: none; transition: border 0.15s; }
+  textarea:focus, input:focus, select:focus { border-color: var(--accent2); }
+  textarea { resize: vertical; min-height: 80px; }
+  label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 5px; margin-top: 12px; font-weight: 500; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent2); }
+  .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--muted); }
+  .btn-ghost:hover { border-color: var(--accent2); color: var(--accent2); }
+  .badge { display: inline-flex; padding: 3px 9px; border-radius: 99px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: rgba(34,197,94,0.12); color: var(--green); }
+  .badge-yellow { background: rgba(234,179,8,0.12); color: var(--yellow); }
+  .badge-red { background: rgba(239,68,68,0.12); color: var(--red); }
+  .badge-purple { background: rgba(124,58,237,0.15); color: var(--accent2); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .checklist { list-style: none; }
+  .checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .checklist li:last-child { border-bottom: none; }
+  .check-box { width: 18px; height: 18px; min-width: 18px; border: 2px solid var(--border); border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; margin-top: 1px; font-size: 11px; font-weight: 700; }
+  .check-box.checked { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .check-text { flex: 1; }
+  .check-text strong { font-size: 13px; display: block; }
+  .check-text span { font-size: 12px; color: var(--muted); }
+  .progress-bar { background: var(--border); border-radius: 99px; height: 6px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transition: width 0.4s ease; }
+  .analysis-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .analysis-row:last-child { border-bottom: none; }
+  .signal-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+  .dot-green { background: var(--green); }
+  .dot-red { background: var(--red); }
+  .schema-output { background: #0a0a0a; border: 1px solid var(--border); border-radius: 8px; padding: 14px; font-family: 'Courier New', monospace; font-size: 12px; color: #a78bfa; white-space: pre-wrap; word-break: break-all; min-height: 120px; max-height: 300px; overflow-y: auto; }
+  .kw-table { width: 100%; border-collapse: collapse; }
+  .kw-table th { text-align: left; padding: 8px 12px; font-size: 11px; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: 0.05em; }
+  .kw-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: middle; }
+  .kw-table tr:last-child td { border-bottom: none; }
+  .tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 0; }
+  .tab { padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.15s; }
+  .tab.active { color: var(--accent2); border-bottom-color: var(--accent2); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .stat-box { background: var(--surface2); border-radius: 8px; padding: 14px; text-align: center; }
+  .stat-num { font-size: 26px; font-weight: 800; color: var(--accent2); }
+  .stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .alert { padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; }
+  .alert-info { background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.3); color: #c4b5fd; }
+  .alert-tip { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.25); color: #86efac; }
+  .copy-wrap { position: relative; }
+  .copy-btn { position: absolute; top: 8px; right: 8px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); padding: 4px 10px; border-radius: 5px; font-size: 11px; cursor: pointer; }
+  .copy-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+  ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  @media (max-width: 700px) { .grid2,.grid3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="sidebar">
+    <div class="logo">
+      <div style="font-size:22px;margin-bottom:4px;">⚡</div>
+      <h1>AEO Toolkit</h1>
+      <span>Answer Engine Optimization</span>
+    </div>
+    <nav class="nav">
+      <div class="nav-item active" onclick="showPanel('audit')" id="nav-audit"><span class="nav-icon">🔍</span> Content Audit</div>
+      <div class="nav-item" onclick="showPanel('schema')" id="nav-schema"><span class="nav-icon">🧱</span> Schema Builder</div>
+      <div class="nav-item" onclick="showPanel('keywords')" id="nav-keywords"><span class="nav-icon">🗝️</span> Keyword Mapper</div>
+      <div class="nav-item" onclick="showPanel('checklist')" id="nav-checklist"><span class="nav-icon">✅</span> AEO Checklist</div>
+      <div class="nav-item" onclick="showPanel('prompts')" id="nav-prompts"><span class="nav-icon">💬</span> Prompt Templates</div>
+      <div class="nav-item" onclick="showPanel('tracker')" id="nav-tracker"><span class="nav-icon">📊</span> Ranking Tracker</div>
+    </nav>
+    <div class="sidebar-footer">AEO Starter Kit v1.0<br>© 2026 PRINTMAXX</div>
+  </div>
+
+  <div class="main">
+
+    <!-- AUDIT -->
+    <div class="panel active" id="panel-audit">
+      <div class="panel-title">Content AEO Audit</div>
+      <div class="panel-sub">Score any content block for answer engine visibility. Paste your content and click Analyze.</div>
+      <div class="alert alert-info">💡 <strong>What is AEO?</strong> Answer Engine Optimization targets AI assistants (ChatGPT, Perplexity, Claude, Gemini) rather than traditional search. The goal: become the source they quote.</div>
+      <div class="grid2">
+        <div>
+          <div class="card">
+            <div class="card-title">📋 Content Input</div>
+            <label>Page URL (optional)</label>
+            <input type="url" id="audit-url" placeholder="https://yoursite.com/article">
+            <label>Paste your content</label>
+            <textarea id="audit-content" rows="8" placeholder="Paste a blog post, landing page, FAQ section, or any content you want to optimize for AI answers..."></textarea>
+            <label>Content Type</label>
+            <select id="audit-type">
+              <option value="article">Article / Blog Post</option>
+              <option value="faq">FAQ Page</option>
+              <option value="product">Product Page</option>
+              <option value="landing">Landing Page</option>
+              <option value="docs">Documentation</option>
+            </select>
+            <br><br>
+            <button class="btn btn-primary" onclick="runAudit()">⚡ Analyze for AEO</button>
+          </div>
+        </div>
+        <div>
+          <div class="card" id="audit-results" style="display:none">
+            <div class="card-title">📈 AEO Score</div>
+            <div class="score-ring">
+              <div class="ring-wrap">
+                <svg width="100" height="100">
+                  <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                  <circle class="ring-fill" id="score-ring" cx="50" cy="50" r="45" stroke-dashoffset="283"/>
+                </svg>
+                <div class="ring-text" id="score-num">0</div>
+              </div>
+              <div class="ring-label" id="score-label">Analyzing...</div>
+            </div>
+          </div>
+          <div class="card" id="audit-signals" style="display:none">
+            <div class="card-title">🔬 Signal Breakdown</div>
+            <div id="signals-list"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="audit-recommendations" style="display:none">
+        <div class="card-title">🛠️ Optimization Recommendations</div>
+        <div id="rec-list"></div>
+      </div>
+    </div>
+
+    <!-- SCHEMA -->
+    <div class="panel" id="panel-schema">
+      <div class="panel-title">Schema Markup Builder</div>
+      <div class="panel-sub">Generate structured data that helps AI engines understand and cite your content.</div>
+      <div class="tabs" id="schema-tabs">
+        <div class="tab active" onclick="showTab('schema','faqschema',this)">FAQ Schema</div>
+        <div class="tab" onclick="showTab('schema','articleschema',this)">Article Schema</div>
+        <div class="tab" onclick="showTab('schema','howtoschema',this)">HowTo Schema</div>
+        <div class="tab" onclick="showTab('schema','productschema',this)">Product Schema</div>
+      </div>
+
+      <div class="tab-content active" id="tab-faqschema">
+        <div class="grid2">
+          <div class="card">
+            <div class="card-title">FAQ Pairs</div>
+            <div id="faq-pairs">
+              <div class="faq-pair" style="margin-bottom:12px">
+                <label>Question 1</label>
+                <input type="text" class="faq-q" placeholder="What is answer engine optimization?">
+                <label>Answer 1</label>
+                <textarea class="faq-a" rows="2" placeholder="Answer engine optimization (AEO) is..."></textarea>
+              </div>
+              <div class="faq-pair" style="margin-bottom:12px">
+                <label>Question 2</label>
+                <input type="text" class="faq-q" placeholder="How does AEO differ from SEO?">
+                <label>Answer 2</label>
+                <textarea class="faq-a" rows="2" placeholder="While SEO targets..."></textarea>
+              </div>
+            </div>
+            <button class="btn btn-ghost" style="margin-top:8px" onclick="addFAQ()">+ Add Question</button>
+            <br><br>
+            <button class="btn btn-primary" onclick="buildFAQSchema()">Generate Schema</button>
+          </div>
+          <div class="card">
+            <div class="card-title">Generated JSON-LD</div>
+            <div class="copy-wrap">
+              <div class="schema-output" id="faq-schema-output">// Fill in FAQ pairs and click Generate Schema</div>
+              <button class="copy-btn" onclick="copyElText('faq-schema-output',this)">Copy</button>
+            </div>
+            <div class="alert alert-tip" style="margin-top:12px">📌 Paste inside a &lt;script type="application/ld+json"&gt; tag in your page &lt;head&gt;.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-articleschema">
+        <div class="grid2">
+          <div class="card">
+            <div class="card-title">Article Details</div>
+            <label>Headline</label>
+            <input type="text" id="art-headline" placeholder="How to Rank in AI Search Results in 2026">
+            <label>Author Name</label>
+            <input type="text" id="art-author" placeholder="Your Name">
+            <label>Date Published (YYYY-MM-DD)</label>
+            <input type="text" id="art-date" placeholder="2026-04-05">
+            <label>Description</label>
+            <textarea id="art-desc" rows="3" placeholder="A comprehensive guide to optimizing content for AI-powered answer engines."></textarea>
+            <label>Page URL</label>
+            <input type="url" id="art-url" placeholder="https://yoursite.com/article">
+            <br><br>
+            <button class="btn btn-primary" onclick="buildArticleSchema()">Generate Schema</button>
+          </div>
+          <div class="card">
+            <div class="card-title">Generated JSON-LD</div>
+            <div class="copy-wrap">
+              <div class="schema-output" id="art-schema-output">// Fill in article details and click Generate Schema</div>
+              <button class="copy-btn" onclick="copyElText('art-schema-output',this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-howtoschema">
+        <div class="grid2">
+          <div class="card">
+            <div class="card-title">HowTo Details</div>
+            <label>Title</label>
+            <input type="text" id="how-title" placeholder="How to Optimize Content for AI Answers">
+            <label>Description</label>
+            <textarea id="how-desc" rows="2" placeholder="Step-by-step guide to making your content appear in AI-generated answers."></textarea>
+            <div id="how-steps">
+              <label>Step 1</label>
+              <input type="text" class="how-step" placeholder="Identify your target question queries">
+              <label>Step 2</label>
+              <input type="text" class="how-step" placeholder="Structure content with clear Q&amp;A pairs">
+              <label>Step 3</label>
+              <input type="text" class="how-step" placeholder="Add FAQ schema markup to your page">
+            </div>
+            <button class="btn btn-ghost" style="margin-top:8px" onclick="addStep()">+ Add Step</button>
+            <br><br>
+            <button class="btn btn-primary" onclick="buildHowToSchema()">Generate Schema</button>
+          </div>
+          <div class="card">
+            <div class="card-title">Generated JSON-LD</div>
+            <div class="copy-wrap">
+              <div class="schema-output" id="howto-schema-output">// Fill in HowTo details and click Generate Schema</div>
+              <button class="copy-btn" onclick="copyElText('howto-schema-output',this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-productschema">
+        <div class="grid2">
+          <div class="card">
+            <div class="card-title">Product Details</div>
+            <label>Product Name</label>
+            <input type="text" id="prod-name" placeholder="AEO Starter Kit">
+            <label>Description</label>
+            <textarea id="prod-desc" rows="2" placeholder="Interactive toolkit for answer engine optimization."></textarea>
+            <label>Price (USD)</label>
+            <input type="text" id="prod-price" placeholder="37">
+            <label>Brand</label>
+            <input type="text" id="prod-brand" placeholder="PRINTMAXX">
+            <label>Rating (1–5)</label>
+            <input type="text" id="prod-rating" placeholder="4.8">
+            <label>Review Count</label>
+            <input type="text" id="prod-reviews" placeholder="124">
+            <br><br>
+            <button class="btn btn-primary" onclick="buildProductSchema()">Generate Schema</button>
+          </div>
+          <div class="card">
+            <div class="card-title">Generated JSON-LD</div>
+            <div class="copy-wrap">
+              <div class="schema-output" id="prod-schema-output">// Fill in product details and click Generate Schema</div>
+              <button class="copy-btn" onclick="copyElText('prod-schema-output',this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEYWORDS -->
+    <div class="panel" id="panel-keywords">
+      <div class="panel-title">AEO Keyword Mapper</div>
+      <div class="panel-sub">Map your content to question-intent queries that AI engines are asked. These are your citation targets.</div>
+      <div class="alert alert-info">🎯 AI engines answer questions, not keyword queries. Your content needs to answer the exact question a user would type into ChatGPT or Perplexity.</div>
+      <div class="grid2">
+        <div class="card">
+          <div class="card-title">🗝️ Query Generator</div>
+          <label>Your Topic / Niche</label>
+          <input type="text" id="kw-topic" placeholder="e.g. cold email outreach, solopreneur tools">
+          <label>Target Audience</label>
+          <select id="kw-audience">
+            <option value="founders">Indie founders / solopreneurs</option>
+            <option value="marketers">Marketers / growth hackers</option>
+            <option value="devs">Developers</option>
+            <option value="creators">Content creators</option>
+            <option value="agencies">Agency owners</option>
+            <option value="ecommerce">E-commerce sellers</option>
+          </select>
+          <label>Intent Type</label>
+          <select id="kw-intent">
+            <option value="all">All intents</option>
+            <option value="how">How-to queries</option>
+            <option value="what">What-is queries</option>
+            <option value="best">Best-of queries</option>
+            <option value="vs">Comparison queries</option>
+            <option value="cost">Pricing queries</option>
+          </select>
+          <br><br>
+          <button class="btn btn-primary" onclick="generateKeywords()">Generate Query Map</button>
+        </div>
+        <div class="card">
+          <div class="card-title">📋 Generated Queries</div>
+          <div id="kw-output" style="color:var(--muted);font-size:13px">Enter a topic and click Generate to see 20+ question queries AI engines receive about your niche.</div>
+        </div>
+      </div>
+      <div class="card" id="kw-table-card" style="display:none">
+        <div class="card-title">📊 Query Priority Matrix</div>
+        <table class="kw-table">
+          <thead>
+            <tr>
+              <th>Query</th><th>Intent</th><th>AI Citation Potential</th><th>Content Gap</th><th>Priority</th>
+            </tr>
+          </thead>
+          <tbody id="kw-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CHECKLIST -->
+    <div class="panel" id="panel-checklist">
+      <div class="panel-title">AEO Master Checklist</div>
+      <div class="panel-sub">87 checks across 6 categories. Track your optimization progress.</div>
+      <div class="grid3" style="margin-bottom:20px">
+        <div class="stat-box"><div class="stat-num" id="checks-done">0</div><div class="stat-label">Checks Complete</div></div>
+        <div class="stat-box"><div class="stat-num" id="checks-total">87</div><div class="stat-label">Total Checks</div></div>
+        <div class="stat-box"><div class="stat-num" id="checks-pct">0%</div><div class="stat-label">AEO Readiness</div></div>
+      </div>
+      <div class="card" style="margin-bottom:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-weight:600;font-size:13px">Overall Progress</span>
+          <span id="progress-label" style="font-size:12px;color:var(--muted)">0 / 87</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      </div>
+      <div id="checklist-categories"></div>
+    </div>
+
+    <!-- PROMPTS -->
+    <div class="panel" id="panel-prompts">
+      <div class="panel-title">AEO Prompt Templates</div>
+      <div class="panel-sub">Copy-paste prompts to use with Claude, ChatGPT, or Perplexity to optimize your content.</div>
+      <div class="tabs" id="prompts-tabs">
+        <div class="tab active" onclick="showTab('prompts','rewrite',this)">Rewrite for AEO</div>
+        <div class="tab" onclick="showTab('prompts','faqgen',this)">FAQ Generator</div>
+        <div class="tab" onclick="showTab('prompts','snippet',this)">Featured Snippet</div>
+        <div class="tab" onclick="showTab('prompts','citation',this)">Citation Bait</div>
+      </div>
+
+      <div class="tab-content active" id="tab-rewrite">
+        <div class="card">
+          <div class="card-title">✏️ AEO Rewrite Prompt</div>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Transform existing content into an AEO-optimized version AI engines are more likely to cite.</p>
+          <div class="copy-wrap">
+            <textarea id="rewrite-prompt" rows="12" style="font-family:monospace;font-size:12px;color:#c4b5fd" readonly>You are an AEO (Answer Engine Optimization) specialist. Rewrite the following content to maximize the chance that AI assistants like ChatGPT, Claude, and Perplexity will cite it when users ask questions about [TOPIC].
+
+Rules for the rewrite:
+1. Open with a direct, one-sentence definition or answer to the primary question
+2. Use clear H2/H3 headers that are exact question phrasings ("What is X?", "How does Y work?")
+3. Include a Q&A or FAQ section with 5-8 questions users commonly ask AI about this topic
+4. State key facts with specific numbers and dates — AI engines prioritize citable specifics
+5. Use short paragraphs (3-4 sentences max) and bulleted lists for scannable density
+6. End with a "Quick Reference" summary box with the 5 most important takeaways
+7. Add a "Sources & Further Reading" section with 2-3 authoritative references
+
+Here is the content to rewrite:
+[PASTE YOUR CONTENT HERE]</textarea>
+            <button class="copy-btn" onclick="copyElText('rewrite-prompt',this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-faqgen">
+        <div class="card">
+          <div class="card-title">❓ FAQ Generation Prompt</div>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Generate high-conversion FAQs that match how users actually phrase questions to AI engines.</p>
+          <div class="copy-wrap">
+            <textarea id="faqgen-prompt" rows="14" style="font-family:monospace;font-size:12px;color:#c4b5fd" readonly>You are a researcher who studies how people phrase questions to AI assistants like ChatGPT, Perplexity, and Claude.
+
+Generate 15 FAQ entries for the topic: [YOUR TOPIC]
+
+For each FAQ:
+- Use the exact phrasing a user would type into an AI chatbot (conversational, not keyword-style)
+- Provide a concise, authoritative answer (3-5 sentences)
+- Include at least one specific stat, number, or date where possible
+- Format as: Q: [question] / A: [answer]
+
+Group the FAQs into 3 categories:
+1. Beginner questions (what is it, why does it matter)
+2. Implementation questions (how to do it, what tools)
+3. Advanced questions (edge cases, comparisons, optimization)
+
+Topic: [YOUR TOPIC]</textarea>
+            <button class="copy-btn" onclick="copyElText('faqgen-prompt',this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-snippet">
+        <div class="card">
+          <div class="card-title">⭐ Featured Snippet Optimizer</div>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:12px">AI engines often pull from content optimized for Google featured snippets. This prompt targets both.</p>
+          <div class="copy-wrap">
+            <textarea id="snippet-prompt" rows="14" style="font-family:monospace;font-size:12px;color:#c4b5fd" readonly>Optimize the following content for both Google featured snippets and AI answer engine citations.
+
+Target query: [THE EXACT QUESTION YOU WANT TO RANK FOR]
+
+Rewrite requirements:
+1. Start with a direct paragraph answer (40-60 words) that answers the question immediately
+2. Follow with a numbered or bulleted list if the answer has multiple components
+3. Add a comparison table if there are multiple options to compare
+4. Include a "Definition" section using bold text: "[Term]: [concise definition]"
+5. Each section should start with the exact question phrasing as an H2
+
+The rewritten content should be self-contained — someone should get a complete answer without clicking anywhere else. AI engines cite content that answers completely.
+
+Content to optimize:
+[PASTE CONTENT HERE]</textarea>
+            <button class="copy-btn" onclick="copyElText('snippet-prompt',this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-citation">
+        <div class="card">
+          <div class="card-title">🔗 Citation Bait Creator</div>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Create content formats that AI engines statistically prefer to cite: stats, definitions, lists, comparisons.</p>
+          <div class="copy-wrap">
+            <textarea id="citation-prompt" rows="16" style="font-family:monospace;font-size:12px;color:#c4b5fd" readonly>Create "citation bait" content for the topic: [YOUR TOPIC]
+
+Citation bait is content that AI engines are statistically more likely to quote because of its format. Create:
+
+1. STAT BLOCK: 5 specific, verifiable statistics about [TOPIC] with source context
+   Format: "[Stat] — [Source context]"
+
+2. DEFINITION CARD: A 2-sentence authoritative definition including: what it is, why it matters, one key number
+   Format suitable for being quoted verbatim by AI
+
+3. COMPARISON TABLE: A 5-row table comparing [TOPIC] vs [ALTERNATIVE] across 4 dimensions
+
+4. PROCESS LIST: A numbered 7-step process for [TOPIC] with each step under 15 words
+
+5. QUICK FACTS BOX: 8 bullet-point facts that would make compelling AI citations
+
+Topic: [YOUR TOPIC]</textarea>
+            <button class="copy-btn" onclick="copyElText('citation-prompt',this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACKER -->
+    <div class="panel" id="panel-tracker">
+      <div class="panel-title">AI Ranking Tracker</div>
+      <div class="panel-sub">Track whether AI engines cite your content when asked specific questions.</div>
+      <div class="alert alert-tip">📋 Manually test each query in ChatGPT, Perplexity, Claude, and Gemini. Note when your content or brand is cited.</div>
+      <div class="card">
+        <div class="card-title">➕ Add Query to Track</div>
+        <div class="grid2">
+          <div>
+            <label>Query / Question</label>
+            <input type="text" id="track-query" placeholder="What are the best cold email tools in 2026?">
+            <label>Your Target URL or Brand</label>
+            <input type="text" id="track-brand" placeholder="yourdomain.com or Your Brand Name">
+          </div>
+          <div>
+            <label>Priority</label>
+            <select id="track-priority">
+              <option value="high">High (revenue-critical)</option>
+              <option value="medium">Medium (brand awareness)</option>
+              <option value="low">Low (informational)</option>
+            </select>
+            <label>Category</label>
+            <input type="text" id="track-category" placeholder="e.g. Brand, Product, Topic">
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" onclick="addTrackerEntry()">+ Add to Tracker</button>
+      </div>
+      <div class="card">
+        <div class="card-title">📊 Citation Dashboard</div>
+        <div class="grid3" style="margin-bottom:16px">
+          <div class="stat-box"><div class="stat-num" id="track-total">0</div><div class="stat-label">Queries Tracked</div></div>
+          <div class="stat-box"><div class="stat-num" id="track-cited">0</div><div class="stat-label">Currently Cited</div></div>
+          <div class="stat-box"><div class="stat-num" id="track-rate">0%</div><div class="stat-label">Citation Rate</div></div>
+        </div>
+        <div id="tracker-table-wrap"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">📤 Export</div>
+        <button class="btn btn-ghost" onclick="exportCSV()">⬇ Export as CSV</button>
+        <button class="btn btn-ghost" style="margin-left:8px" onclick="saveSession()">💾 Save Session</button>
+        <button class="btn btn-ghost" style="margin-left:8px" onclick="loadSession()">📂 Load Session</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Security: HTML escape for ALL user input injected into DOM ──
+function esc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// ── Navigation ──
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  document.getElementById('nav-' + id).classList.add('active');
+}
+
+function showTab(group, id, clickedEl) {
+  const panel = document.getElementById('panel-' + group);
+  const tabsEl = document.getElementById(group + '-tabs');
+  if (tabsEl) tabsEl.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  panel.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  if (clickedEl) clickedEl.classList.add('active');
+}
+
+// ── AUDIT ──
+const auditSignals = [
+  { name: 'Direct answer opening', check: c => c.split('\n')[0].length < 200 && /is |are |means |refers to/i.test(c.split('\n')[0]), weight: 12, fix: 'Start with a 1-2 sentence direct answer. AI engines often pull from page openings.' },
+  { name: 'Question-format headers', check: c => /what |how |why |when |which |can |does |is there/i.test(c), weight: 15, fix: 'Rewrite H2/H3 headers as questions (e.g., "What is X?"). AI engines map headers to user queries.' },
+  { name: 'Structured list content', check: c => /\n[-*]\s|\n\d+\.\s/.test(c), weight: 12, fix: 'Convert key information into bullet or numbered lists. AI engines prefer structured content for citations.' },
+  { name: 'Specific statistics / numbers', check: c => /\d+%|\$[\d,]+|\d+ (times|hours|days|years|percent|million|billion)/i.test(c), weight: 10, fix: 'Add specific stats, percentages, or dollar figures. Citable numbers increase AI citation likelihood 3x.' },
+  { name: 'Defined terms (X is / X means)', check: c => /\w+ is [\w\s]{5,}|defined as|refers to/i.test(c), weight: 8, fix: 'Add a "What is [X]?" section with a crisp 2-sentence definition.' },
+  { name: 'Comparison or contrast', check: c => /vs\.?|versus|compared to|unlike|whereas|difference between/i.test(c), weight: 8, fix: 'Add a comparison table or "X vs Y" section.' },
+  { name: 'Content length (300+ words)', check: c => c.split(' ').length >= 300, weight: 10, fix: 'Expand to 300+ words minimum. Short content rarely gets cited; aim for 600-1500 words.' },
+  { name: 'Sources or references cited', check: c => /according to|source:|study|research|published|found that/i.test(c), weight: 8, fix: 'Reference studies or authoritative sources. Citing sources signals authority to AI.' },
+  { name: 'Short paragraphs (scannable)', check: c => c.split('\n\n').filter(p => p.trim()).some(p => p.split(' ').length < 60), weight: 7, fix: 'Break long paragraphs into 3-4 sentence chunks for easier AI extraction.' },
+  { name: 'Step-by-step process', check: c => /step \d|first,|second,|third,|next,|finally,|\d\.\s/i.test(c), weight: 10, fix: 'Add a numbered step-by-step section. "How to" content is among the most cited formats.' },
+];
+
+function runAudit() {
+  const content = document.getElementById('audit-content').value.trim();
+  if (!content) { alert('Please paste some content to analyze.'); return; }
+  let totalScore = 0;
+  const maxScore = auditSignals.reduce((s, sig) => s + sig.weight, 0);
+  const results = auditSignals.map(sig => { const pass = sig.check(content); if (pass) totalScore += sig.weight; return { ...sig, pass }; });
+  const pct = Math.round((totalScore / maxScore) * 100);
+  document.getElementById('audit-results').style.display = 'block';
+  document.getElementById('audit-signals').style.display = 'block';
+  document.getElementById('audit-recommendations').style.display = 'block';
+  document.getElementById('score-num').textContent = pct;
+  document.getElementById('score-ring').style.strokeDashoffset = 283 - (283 * pct / 100);
+  document.getElementById('score-ring').style.stroke = pct >= 75 ? '#22c55e' : pct >= 50 ? '#eab308' : '#ef4444';
+  document.getElementById('score-label').textContent = pct >= 75 ? 'Strong AEO' : pct >= 50 ? 'Needs Work' : 'Poor AEO';
+
+  // Build signals using DOM methods to avoid innerHTML XSS
+  const signalsList = document.getElementById('signals-list');
+  signalsList.textContent = '';
+  results.forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'analysis-row';
+    const left = document.createElement('span');
+    const dot = document.createElement('span');
+    dot.className = 'signal-dot ' + (r.pass ? 'dot-green' : 'dot-red');
+    left.appendChild(dot);
+    left.appendChild(document.createTextNode(r.name));
+    const badge = document.createElement('span');
+    badge.className = 'badge ' + (r.pass ? 'badge-green' : 'badge-red');
+    badge.textContent = r.pass ? '✓ Pass' : '✗ Fail';
+    row.appendChild(left);
+    row.appendChild(badge);
+    signalsList.appendChild(row);
+  });
+
+  const recList = document.getElementById('rec-list');
+  recList.textContent = '';
+  results.filter(r => !r.pass).forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'analysis-row';
+    const txt = document.createElement('span');
+    txt.style.fontSize = '13px';
+    txt.textContent = '→ ' + r.fix;
+    const badge = document.createElement('span');
+    badge.className = 'badge badge-purple';
+    badge.textContent = 'Fix';
+    row.appendChild(txt);
+    row.appendChild(badge);
+    recList.appendChild(row);
+  });
+}
+
+// ── SCHEMA ──
+function buildFAQSchema() {
+  const qs = document.querySelectorAll('.faq-q');
+  const as = document.querySelectorAll('.faq-a');
+  const items = [];
+  qs.forEach((q, i) => { if (q.value.trim() && as[i].value.trim()) items.push({ "@type": "Question", "name": q.value.trim(), "acceptedAnswer": { "@type": "Answer", "text": as[i].value.trim() } }); });
+  if (!items.length) { alert('Add at least one Q&A pair.'); return; }
+  document.getElementById('faq-schema-output').textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": items }, null, 2);
+}
+
+function addFAQ() {
+  const n = document.querySelectorAll('.faq-pair').length + 1;
+  const div = document.createElement('div');
+  div.className = 'faq-pair';
+  div.style.marginBottom = '12px';
+  const lq = document.createElement('label'); lq.textContent = 'Question ' + n;
+  const iq = document.createElement('input'); iq.type = 'text'; iq.className = 'faq-q'; iq.placeholder = 'Your question here';
+  const la = document.createElement('label'); la.textContent = 'Answer ' + n;
+  const ta = document.createElement('textarea'); ta.className = 'faq-a'; ta.rows = 2; ta.placeholder = 'Your answer here';
+  div.appendChild(lq); div.appendChild(iq); div.appendChild(la); div.appendChild(ta);
+  document.getElementById('faq-pairs').appendChild(div);
+}
+
+function buildArticleSchema() {
+  const schema = { "@context": "https://schema.org", "@type": "Article", "headline": document.getElementById('art-headline').value || "Headline", "author": { "@type": "Person", "name": document.getElementById('art-author').value || "Author" }, "datePublished": document.getElementById('art-date').value || new Date().toISOString().split('T')[0], "description": document.getElementById('art-desc').value || "Description", "url": document.getElementById('art-url').value || "https://example.com" };
+  document.getElementById('art-schema-output').textContent = JSON.stringify(schema, null, 2);
+}
+
+function buildHowToSchema() {
+  const steps = Array.from(document.querySelectorAll('.how-step')).filter(s => s.value.trim()).map((s, i) => ({ "@type": "HowToStep", "name": "Step " + (i + 1), "text": s.value.trim() }));
+  const schema = { "@context": "https://schema.org", "@type": "HowTo", "name": document.getElementById('how-title').value || "How-To", "description": document.getElementById('how-desc').value || "Description", "step": steps };
+  document.getElementById('howto-schema-output').textContent = JSON.stringify(schema, null, 2);
+}
+
+function addStep() {
+  const steps = document.getElementById('how-steps');
+  const n = document.querySelectorAll('.how-step').length + 1;
+  const lbl = document.createElement('label'); lbl.textContent = 'Step ' + n;
+  const inp = document.createElement('input'); inp.type = 'text'; inp.className = 'how-step'; inp.placeholder = 'Step ' + n + ' description';
+  steps.appendChild(lbl); steps.appendChild(inp);
+}
+
+function buildProductSchema() {
+  const schema = { "@context": "https://schema.org", "@type": "Product", "name": document.getElementById('prod-name').value || "Product", "description": document.getElementById('prod-desc').value, "brand": { "@type": "Brand", "name": document.getElementById('prod-brand').value || "Brand" }, "offers": { "@type": "Offer", "price": document.getElementById('prod-price').value || "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": document.getElementById('prod-rating').value || "5", "reviewCount": document.getElementById('prod-reviews').value || "1" } };
+  document.getElementById('prod-schema-output').textContent = JSON.stringify(schema, null, 2);
+}
+
+// ── KEYWORDS ──
+const qPatterns = {
+  how: t => [`How to get started with ${t}`, `How does ${t} work`, `How to use ${t} for beginners`, `How to improve ${t}`, `How to measure ${t} success`, `How to implement ${t} quickly`],
+  what: t => [`What is ${t}`, `What are the benefits of ${t}`, `What tools are needed for ${t}`, `What does ${t} mean`, `What is the best approach to ${t}`],
+  best: t => [`Best ${t} tools in 2026`, `Best practices for ${t}`, `Best ${t} strategies for small businesses`, `Best way to learn ${t}`],
+  vs: t => [`${t} vs traditional methods`, `${t} vs alternatives — which is better`, `Pros and cons of ${t}`],
+  cost: t => [`How much does ${t} cost`, `Is ${t} worth the investment`, `Free vs paid ${t} tools`, `${t} pricing comparison`],
+};
+
+const kwMeta = {
+  intents: ['How-to','What-is','Best-of','Comparison','Pricing','How-to','What-is','Best-of','Comparison','Pricing','How-to','What-is','Best-of','Comparison','Pricing','How-to','What-is','Best-of','Comparison','Pricing'],
+  potential: ['High','High','Medium','High','Medium','High','Low','High','Medium','High','Medium','High','Low','Medium','High','Low','Medium','High','High','Medium'],
+  gaps: [false,false,true,false,false,true,false,false,true,false,false,false,true,false,false,true,false,false,false,false],
+  priorities: ['High','High','Medium','High','Medium','High','Low','High','Medium','High','Medium','High','Low','Medium','High','Low','Medium','High','High','Medium'],
+};
+
+function generateKeywords() {
+  const topic = document.getElementById('kw-topic').value.trim();
+  if (!topic) { alert('Enter a topic first.'); return; }
+  const intent = document.getElementById('kw-intent').value;
+  let queries = [];
+  if (intent === 'all') { Object.values(qPatterns).forEach(fn => queries.push(...fn(topic))); }
+  else if (qPatterns[intent]) { queries = qPatterns[intent](topic); }
+
+  // Safe: set using textContent for the badge
+  const kwOut = document.getElementById('kw-output');
+  kwOut.textContent = '';
+  const badge = document.createElement('span');
+  badge.className = 'badge badge-green';
+  badge.textContent = queries.length + ' queries generated for "' + topic + '"';
+  kwOut.appendChild(badge);
+  const note = document.createElement('span');
+  note.style.cssText = 'display:block;margin-top:8px;color:var(--muted);font-size:13px';
+  note.textContent = 'See the matrix below.';
+  kwOut.appendChild(note);
+
+  // Build table rows safely
+  const tbody = document.getElementById('kw-table-body');
+  tbody.textContent = '';
+  queries.forEach((q, i) => {
+    const tr = document.createElement('tr');
+    const cells = [
+      esc(q),
+      kwMeta.intents[i % kwMeta.intents.length],
+      kwMeta.potential[i % kwMeta.potential.length] === 'High' ? '🟢 High' : kwMeta.potential[i % kwMeta.potential.length] === 'Medium' ? '🟡 Medium' : '🔴 Low',
+      kwMeta.gaps[i % kwMeta.gaps.length] ? '✓ Covered' : '✗ Gap',
+      kwMeta.priorities[i % kwMeta.priorities.length],
+    ];
+    const tdQ = document.createElement('td'); tdQ.textContent = q; tr.appendChild(tdQ);
+    const tdI = document.createElement('td');
+    const ib = document.createElement('span'); ib.className = 'badge badge-purple'; ib.textContent = kwMeta.intents[i % kwMeta.intents.length];
+    tdI.appendChild(ib); tr.appendChild(tdI);
+    const tdP = document.createElement('td'); tdP.textContent = cells[2]; tr.appendChild(tdP);
+    const tdG = document.createElement('td'); tdG.textContent = cells[3];
+    tdG.style.color = kwMeta.gaps[i % kwMeta.gaps.length] ? 'var(--green)' : 'var(--yellow)';
+    tr.appendChild(tdG);
+    const tdPr = document.createElement('td');
+    const pb = document.createElement('span');
+    const pri = kwMeta.priorities[i % kwMeta.priorities.length];
+    pb.className = 'badge ' + (pri === 'High' ? 'badge-green' : pri === 'Medium' ? 'badge-yellow' : 'badge-red');
+    pb.textContent = pri; tdPr.appendChild(pb); tr.appendChild(tdPr);
+    tbody.appendChild(tr);
+  });
+  document.getElementById('kw-table-card').style.display = 'block';
+}
+
+// ── CHECKLIST ──
+const checklistData = [
+  { category: '📄 Content Structure', items: [
+    ['Direct answer in first paragraph', 'Open with a clear, concise answer to the primary question'],
+    ['Question-format H2/H3 headers', 'Use "What is X?", "How does Y work?" as headers'],
+    ['FAQ section included', '5+ Q&A pairs targeting common AI queries'],
+    ['Numbered step-by-step process', 'At least one how-to sequence with numbered steps'],
+    ['Comparison table or pros/cons', 'Side-by-side comparisons for versus-type queries'],
+    ['Definition block for key terms', '"X is defined as..." or "X refers to..." statements'],
+    ['Summary/TL;DR section', 'Quick takeaways at top or bottom of content'],
+    ['Content 600+ words', 'Minimum word count for AI citation eligibility'],
+    ['Short paragraphs (4 sentences max)', 'Keeps content scannable for AI extraction'],
+    ['Specific numbers and statistics', 'Percentages, dollar amounts, dates, quantities'],
+    ['Authority signals (citations, studies)', 'Reference external research or data sources'],
+    ['Entity mentions (brands, tools, people)', 'Named entities help AI contextualize your content'],
+    ['Date-stamped with year', 'AI engines prefer current content — include year in title/meta'],
+    ['Expert quotes or original data', 'First-party data and quotes signal authority'],
+    ['Specific use case examples', 'Real examples anchor abstract concepts'],
+  ]},
+  { category: '🧱 Schema & Technical', items: [
+    ['FAQPage schema markup', 'JSON-LD FAQPage schema in page head'],
+    ['Article schema markup', 'Author, date, headline in structured data'],
+    ['HowTo schema (if applicable)', 'For step-by-step content'],
+    ['Product schema (if product page)', 'Price, rating, availability in structured data'],
+    ['Breadcrumb schema', 'Helps AI understand site hierarchy'],
+    ['Open Graph meta tags', 'og:title, og:description, og:image'],
+    ['Canonical URL set', 'Prevents duplicate content confusion'],
+    ['Fast page load (<2s)', 'AI crawlers favor fast-loading content'],
+    ['Mobile responsive', 'Responsive design required for modern crawlers'],
+    ['HTTPS enabled', 'Security signal for authority scoring'],
+    ['Clean URL structure', 'Readable URLs with keywords'],
+    ['Sitemap submitted', 'XML sitemap for crawler discoverability'],
+    ['No broken internal links', 'Broken links reduce crawl authority'],
+    ['Internal linking to related content', 'Topical authority through internal links'],
+    ['Image alt text optimized', 'Descriptive alt text for all images'],
+  ]},
+  { category: '🎯 Query Targeting', items: [
+    ['Primary question identified', 'One core question your page definitively answers'],
+    ['10+ related queries mapped', 'Secondary questions in the same topic cluster'],
+    ['Long-tail question variations covered', 'Variations in phrasing and context'],
+    ['Voice-search optimized phrasing', 'Conversational language matching spoken queries'],
+    ['"Best X for Y" queries addressed', 'Audience-specific recommendations included'],
+    ['Comparison queries covered', '"X vs Y" angle addressed in content'],
+    ['Price/value queries answered', 'Cost, ROI, or "is it worth it" addressed'],
+    ['Beginner queries answered', 'Entry-level explanations for new audience members'],
+    ['Advanced queries answered', 'Edge cases and expert-level coverage'],
+    ['Local queries (if applicable)', 'Location-specific variations if relevant'],
+    ['Temporal queries addressed', '"in 2026", "this year", "latest" variants'],
+    ['Question clustering by intent', 'Group informational vs. transactional queries'],
+    ['Negative queries addressed', '"disadvantages of X", "when not to use X"'],
+    ['People Also Ask targeting', 'Content answers PAA questions from Google SERP'],
+    ['Zero-click content created', 'Content designed to appear in AI zero-click answers'],
+  ]},
+  { category: '🔗 Authority & Trust', items: [
+    ['Author bio with credentials', 'Named author with relevant expertise'],
+    ['About page with entity info', 'Organization schema, history, mission'],
+    ['External links to authoritative sources', 'Links to .gov, .edu, major publications'],
+    ['Backlink profile analyzed', '5+ high-DA sites linking to this content'],
+    ['Content updated within 12 months', 'Freshness signal for AI engines'],
+    ['User signals positive (low bounce)', 'Engagement metrics influence AI trust'],
+    ['Privacy policy and ToS present', 'Trust signals required for authority'],
+    ['Contact information visible', 'Real business signals reduce spam score'],
+    ['Social proof elements', 'Testimonials, review counts, user numbers'],
+    ['Press or media mentions cited', '"As seen in" builds entity recognition'],
+    ['Wikipedia/Wikidata entity (if applicable)', 'Strong entity recognition signal'],
+    ['Consistent NAP (Name/Address/Phone)', 'For local businesses: consistency across web'],
+  ]},
+  { category: '📊 Measurement', items: [
+    ['10+ queries tracked in AI engines', 'Manual weekly testing in ChatGPT, Perplexity, Claude, Gemini'],
+    ['Citation baseline recorded', 'Documented which queries cite you currently'],
+    ['Competitor citation analysis done', 'Identified which sources AI cites instead of you'],
+    ['Weekly citation check scheduled', 'Recurring test to track citation progress'],
+    ['Traffic from AI referrals tracked', 'Perplexity, ChatGPT browsing, etc. in analytics'],
+    ['Content performance benchmarked', 'Baseline metrics before AEO changes'],
+    ['A/B test AEO vs non-AEO pages', 'Compare citation rates of optimized vs original'],
+    ['Conversion tracking from AI traffic', 'Revenue attribution from AI-referred visitors'],
+    ['Monthly AEO audit scheduled', 'Full re-audit every 30 days'],
+    ['Competitor monitoring active', 'Alerts when competitors get cited for your queries'],
+  ]},
+  { category: '🚀 Distribution', items: [
+    ['Content shared on all owned channels', 'Blog, newsletter, social, email list'],
+    ['Repurposed as LinkedIn article', 'Platform SEO boosts AI discoverability'],
+    ['Repurposed as Twitter/X thread', 'Threads indexed by AI systems'],
+    ['Submitted to relevant communities', 'Reddit, HN, niche forums'],
+    ['Included in next newsletter', 'Email link equity signals'],
+    ['Shared with industry publications', 'Guest post or link placement outreach'],
+    ['Converted into short video', 'YouTube video with transcript boosts entity'],
+    ['Podcast mention secured', 'Audio content indexed by AI entities'],
+    ['Added to internal linking network', 'Link from 3+ existing high-traffic pages'],
+    ['Outreach to 5 relevant sites', 'Request links from sites that cite competitors'],
+    ['Added to Quora/Reddit as answer', 'Community answers indexed by AI engines'],
+  ]},
+];
+
+let checkState = {};
+
+function renderChecklist() {
+  const container = document.getElementById('checklist-categories');
+  let total = 0;
+  let done = 0;
+  checklistData.forEach(cat => { total += cat.items.length; cat.items.forEach((_, i) => { if (checkState[cat.category + '-' + i]) done++; }); });
+
+  container.textContent = '';
+  checklistData.forEach(cat => {
+    const catDone = cat.items.filter((_, i) => checkState[cat.category + '-' + i]).length;
+    const card = document.createElement('div'); card.className = 'card';
+
+    const titleDiv = document.createElement('div'); titleDiv.className = 'card-title'; titleDiv.style.justifyContent = 'space-between';
+    const titleSpan = document.createElement('span'); titleSpan.textContent = cat.category;
+    const badge = document.createElement('span'); badge.className = 'badge badge-purple'; badge.textContent = catDone + '/' + cat.items.length;
+    titleDiv.appendChild(titleSpan); titleDiv.appendChild(badge); card.appendChild(titleDiv);
+
+    const ul = document.createElement('ul'); ul.className = 'checklist';
+    cat.items.forEach(([text, detail], i) => {
+      const li = document.createElement('li');
+      const box = document.createElement('div');
+      box.className = 'check-box' + (checkState[cat.category + '-' + i] ? ' checked' : '');
+      if (checkState[cat.category + '-' + i]) box.textContent = '✓';
+      box.addEventListener('click', () => toggleCheck(cat.category, i));
+      const textDiv = document.createElement('div'); textDiv.className = 'check-text';
+      const strong = document.createElement('strong'); strong.textContent = text;
+      const span = document.createElement('span'); span.textContent = detail;
+      textDiv.appendChild(strong); textDiv.appendChild(span);
+      li.appendChild(box); li.appendChild(textDiv); ul.appendChild(li);
+    });
+    card.appendChild(ul); container.appendChild(card);
+  });
+
+  document.getElementById('checks-done').textContent = done;
+  document.getElementById('checks-total').textContent = total;
+  const pct = Math.round((done / total) * 100);
+  document.getElementById('checks-pct').textContent = pct + '%';
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = done + ' / ' + total;
+}
+
+function toggleCheck(cat, i) {
+  const key = cat + '-' + i;
+  checkState[key] = !checkState[key];
+  renderChecklist();
+  try { localStorage.setItem('aeo-checks', JSON.stringify(checkState)); } catch(e) {}
+}
+
+// ── TRACKER ──
+let trackerData = [];
+const ENGINES = ['chatgpt', 'perplexity', 'claude', 'gemini'];
+
+function addTrackerEntry() {
+  const query = document.getElementById('track-query').value.trim();
+  if (!query) { alert('Enter a query to track.'); return; }
+  trackerData.push({
+    id: Date.now(),
+    query,
+    brand: document.getElementById('track-brand').value.trim(),
+    priority: document.getElementById('track-priority').value,
+    category: document.getElementById('track-category').value.trim(),
+    chatgpt: 'Unchecked', perplexity: 'Unchecked', claude: 'Unchecked', gemini: 'Unchecked',
+    added: new Date().toLocaleDateString(),
+  });
+  document.getElementById('track-query').value = '';
+  document.getElementById('track-brand').value = '';
+  renderTracker();
+}
+
+function renderTracker() {
+  const wrap = document.getElementById('tracker-table-wrap');
+  wrap.textContent = '';
+
+  if (!trackerData.length) {
+    const p = document.createElement('p');
+    p.style.cssText = 'text-align:center;color:var(--muted);padding:20px;font-size:13px';
+    p.textContent = 'No queries tracked yet. Add your first query above.';
+    wrap.appendChild(p);
+  } else {
+    const table = document.createElement('table'); table.className = 'kw-table';
+    const thead = document.createElement('thead');
+    const headRow = document.createElement('tr');
+    ['Query', 'Target', 'Priority', 'ChatGPT', 'Perplexity', 'Claude', 'Gemini', ''].forEach(h => {
+      const th = document.createElement('th'); th.textContent = h; headRow.appendChild(th);
+    });
+    thead.appendChild(headRow); table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    trackerData.forEach(e => {
+      const tr = document.createElement('tr');
+
+      const tdQ = document.createElement('td'); tdQ.style.maxWidth = '180px'; tdQ.style.wordBreak = 'break-word'; tdQ.textContent = e.query; tr.appendChild(tdQ);
+      const tdB = document.createElement('td'); tdB.style.color = 'var(--muted)'; tdB.textContent = e.brand || '—'; tr.appendChild(tdB);
+      const tdP = document.createElement('td');
+      const pb = document.createElement('span'); pb.className = 'badge ' + (e.priority === 'high' ? 'badge-red' : e.priority === 'medium' ? 'badge-yellow' : 'badge-green'); pb.textContent = e.priority;
+      tdP.appendChild(pb); tr.appendChild(tdP);
+
+      ENGINES.forEach(eng => {
+        const td = document.createElement('td');
+        const sel = document.createElement('select');
+        sel.style.cssText = 'padding:4px 6px;font-size:11px;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:4px';
+        ['Unchecked','Cited','Not Cited','Partial'].forEach(opt => {
+          const o = document.createElement('option'); o.value = opt; o.textContent = opt;
+          if (e[eng] === opt) o.selected = true;
+          sel.appendChild(o);
+        });
+        sel.addEventListener('change', () => { e[eng] = sel.value; updateTrackerStats(); });
+        td.appendChild(sel); tr.appendChild(td);
+      });
+
+      const tdX = document.createElement('td');
+      const btn = document.createElement('button'); btn.className = 'btn btn-ghost'; btn.style.cssText = 'padding:4px 8px;font-size:11px'; btn.textContent = '✕';
+      btn.addEventListener('click', () => { trackerData = trackerData.filter(d => d.id !== e.id); renderTracker(); });
+      tdX.appendChild(btn); tr.appendChild(tdX);
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody); wrap.appendChild(table);
+  }
+  updateTrackerStats();
+}
+
+function updateTrackerStats() {
+  const cited = trackerData.filter(e => ENGINES.some(eng => e[eng] === 'Cited')).length;
+  document.getElementById('track-total').textContent = trackerData.length;
+  document.getElementById('track-cited').textContent = cited;
+  document.getElementById('track-rate').textContent = trackerData.length ? Math.round((cited / trackerData.length) * 100) + '%' : '0%';
+}
+
+function exportCSV() {
+  if (!trackerData.length) { alert('No data to export.'); return; }
+  const rows = [['Query','Target','Priority','Category','ChatGPT','Perplexity','Claude','Gemini','Added']];
+  trackerData.forEach(e => rows.push([e.query, e.brand, e.priority, e.category, e.chatgpt, e.perplexity, e.claude, e.gemini, e.added]));
+  const csv = rows.map(r => r.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+  a.download = 'aeo-tracker.csv';
+  a.click();
+}
+
+function saveSession() {
+  try { localStorage.setItem('aeo-tracker', JSON.stringify(trackerData)); alert('Session saved!'); } catch(e) { alert('Could not save to browser storage.'); }
+}
+
+function loadSession() {
+  try { const s = localStorage.getItem('aeo-tracker'); if (s) { trackerData = JSON.parse(s); renderTracker(); alert('Session loaded!'); } else { alert('No saved session found.'); } } catch(e) {}
+}
+
+// ── COPY ──
+function copyElText(id, btn) {
+  const el = document.getElementById(id);
+  const text = el.textContent || el.value;
+  navigator.clipboard.writeText(text).then(() => {
+    if (btn) { btn.textContent = 'Copied!'; setTimeout(() => { btn.textContent = 'Copy'; }, 1500); }
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+  });
+}
+
+// ── INIT ──
+try { const s = localStorage.getItem('aeo-checks'); if (s) checkState = JSON.parse(s); } catch(e) {}
+renderChecklist();
+renderTracker();
+</script>
+</body>
+</html>

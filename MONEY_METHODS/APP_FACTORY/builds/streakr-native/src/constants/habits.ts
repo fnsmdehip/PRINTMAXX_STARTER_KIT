@@ -170,6 +170,76 @@ export const HABIT_PRESETS: HabitPreset[] = [
       90: 'Three months of sleep discipline. Compounding restoration.',
     },
   },
+  // Sobriety — NoFap, alcohol-free, nicotine-free, social media detox
+  {
+    name: 'No PMO',
+    emoji: '🧠',
+    category: 'sobriety',
+    mvdLabel: 'Stay accountable — read your reason for quitting',
+    milestoneMessages: {
+      3: 'Three days. Dopamine receptors are beginning to reset.',
+      7: 'One week. Brain fog is starting to clear. Energy is returning.',
+      14: 'Two weeks. The urge cycle is weakening. You are rewiring.',
+      30: '30 days. You are not who you were. The science says so.',
+      90: '90 days. Full dopamine reset. This is the real baseline you.',
+      180: '6 months. You proved the 90-day mark was not a ceiling.',
+      365: 'One year. Different brain. Different life. This is permanent.',
+    },
+  },
+  {
+    name: 'Alcohol-free',
+    emoji: '🚫',
+    category: 'sobriety',
+    mvdLabel: 'Drink sparkling water instead — notice how you feel',
+    milestoneMessages: {
+      3: 'Three days clear. Liver enzymes are already improving.',
+      7: 'One week. Sleep quality is measurably better. Face is less inflamed.',
+      14: 'Two weeks. Cognitive function noticeably sharper.',
+      30: '30 days. Anxiety baseline dropped. Wallet is heavier.',
+      90: 'Three months. This is the new normal.',
+      365: 'One year alcohol-free. The person who started this would not recognize you.',
+    },
+  },
+  {
+    name: 'Nicotine-free',
+    emoji: '💨',
+    category: 'sobriety',
+    mvdLabel: 'Take 10 deep breaths — remember why you quit',
+    milestoneMessages: {
+      3: 'Three days without nicotine. Carbon monoxide levels normalized.',
+      7: 'One week. Taste and smell are returning. Lungs are clearing.',
+      14: 'Two weeks. Cravings are weaker. Neural pathways are changing.',
+      30: '30 days. Lung function improving. Blood pressure dropping.',
+      90: 'Three months. Cravings are rare now, not constant.',
+      365: 'One year. Risk of heart disease cut in half. This compounded.',
+    },
+  },
+  {
+    name: 'Social media detox',
+    emoji: '📵',
+    category: 'sobriety',
+    mvdLabel: 'Delete one app or set Screen Time limit right now',
+    milestoneMessages: {
+      3: 'Three days off. Notice how much more you notice.',
+      7: 'One week. Attention span is measurably recovering.',
+      14: 'Two weeks. The comparison loop is quieting.',
+      30: '30 days. Your dopamine baseline has reset. Real life is vivid again.',
+      90: 'Three months without the feed. Who are you when nobody is watching?',
+    },
+  },
+  {
+    name: 'No gambling',
+    emoji: '🎰',
+    category: 'sobriety',
+    mvdLabel: 'Block the site/app and log what you feel',
+    milestoneMessages: {
+      3: 'Three days. The urge is still loud but it lies.',
+      7: 'One week. Seven days of real money kept.',
+      14: 'Two weeks. Urge cycle is weakening. The brain is recalibrating.',
+      30: '30 days clean. Add up what you have not lost.',
+      90: 'Three months. Financial stability building. This compounds.',
+    },
+  },
 ];
 
 export const MILESTONE_DAYS = [3, 7, 14, 30, 60, 90, 180, 365];
@@ -192,6 +262,7 @@ export function getCategoryEmoji(category: HabitCategory): string {
     learning: '📚',
     creation: '✍️',
     health: '💚',
+    sobriety: '🧠',
     custom: '⭐',
   };
   return map[category];

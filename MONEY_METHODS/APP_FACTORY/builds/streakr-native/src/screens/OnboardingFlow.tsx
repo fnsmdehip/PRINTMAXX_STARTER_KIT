@@ -7,6 +7,7 @@ import {
   Animated,
   ScrollView,
   TextInput,
+  Switch,
   KeyboardAvoidingView,
   Platform,
   Dimensions,
@@ -14,6 +15,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
+import * as Notifications from 'expo-notifications';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Colors, Spacing, Radius, Typography } from '../constants/theme';
@@ -25,7 +27,16 @@ type NavProp = NativeStackNavigationProp<RootStackParamList>;
 
 const { width } = Dimensions.get('window');
 
-const ONBOARDING_STEPS = 5;
+// 8-step onboarding:
+// 0 Welcome + demo swipe
+// 1 Identity commitment ("I want to be someone who…")
+// 2 Pick category
+// 3 Pick habit preset
+// 4 Minimum Viable Day setup
+// 5 Reminder permission + time
+// 6 Streak science (why 21 days is a myth, 66 is real)
+// 7 Day 1 first check-in
+const ONBOARDING_STEPS = 8;
 
 const CATEGORY_TABS: { label: string; value: HabitCategory; emoji: string }[] = [
   { label: 'Fitness', value: 'fitness', emoji: '💪' },
@@ -33,6 +44,7 @@ const CATEGORY_TABS: { label: string; value: HabitCategory; emoji: string }[] = 
   { label: 'Learn', value: 'learning', emoji: '📚' },
   { label: 'Create', value: 'creation', emoji: '✍️' },
   { label: 'Health', value: 'health', emoji: '💚' },
+  { label: 'Sobriety', value: 'sobriety', emoji: '🧠' },
 ];
 
 export default function OnboardingFlow() {
@@ -44,6 +56,9 @@ export default function OnboardingFlow() {
   const [customEmoji, setCustomEmoji] = useState('⭐');
   const [customMvd, setCustomMvd] = useState('');
   const [useMvd, setUseMvd] = useState(false);
+  const [identityStatement, setIdentityStatement] = useState('');
+  const [reminderEnabled, setReminderEnabled] = useState(false);
+  const [reminderTime, setReminderTime] = useState('08:00');
   const [saving, setSaving] = useState(false);
 
   const fadeAnim = useRef(new Animated.Value(1)).current;
@@ -81,6 +96,26 @@ export default function OnboardingFlow() {
     ]).start();
   };
 
+  const handleRequestReminder = async () => {
+    const { status } = await Notifications.requestPermissionsAsync();
+    if (status === 'granted') {
+      setReminderEnabled(true);
+      await Notifications.scheduleNotificationAsync({
+        content: {
+          title: 'Time to check in.',
+          body: 'Keep your streak alive.',
+          sound: true,
+        },
+        trigger: {
+          type: Notifications.SchedulableTriggerInputTypes.DAILY,
+          hour: parseInt(reminderTime.split(':')[0], 10),
+          minute: parseInt(reminderTime.split(':')[1], 10),
+        },
+      });
+    }
+    goNext();
+  };
+
   const handleFinish = async () => {
     setSaving(true);
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
@@ -94,7 +129,12 @@ export default function OnboardingFlow() {
 
     const habit = createHabit(name, emoji, category, useMvd, mvdLabel);
     await addHabit(habit);
-    await saveSettings({ onboardingComplete: true });
+    await saveSettings({
+      onboardingComplete: true,
+      reminderEnabled,
+      reminderTime,
+      mvdMode: useMvd,
+    });
 
     navigation.replace('Main');
   };
@@ -105,7 +145,7 @@ export default function OnboardingFlow() {
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
-        {/* Progress dots */}
+        {/* Progress bar (dots) */}
         <View style={s.dotsRow}>
           {Array.from({ length: ONBOARDING_STEPS }).map((_, i) => (
             <View key={i} style={[s.dot, i === step && s.dotActive, i < step && s.dotDone]} />
@@ -113,15 +153,33 @@ export default function OnboardingFlow() {
         </View>
 
         <Animated.View style={[s.stepWrap, { opacity: fadeAnim }]}>
-          {step === 0 && <StepWelcome onNext={goNext} onDemoSwipe={handleDemoSwipe} swipeCardY={swipeCardY} swipeCardScale={swipeCardScale} />}
+          {/* Step 0: Welcome + demo swipe */}
+          {step === 0 && (
+            <StepWelcome
+              onNext={goNext}
+              onDemoSwipe={handleDemoSwipe}
+              swipeCardY={swipeCardY}
+              swipeCardScale={swipeCardScale}
+            />
+          )}
+          {/* Step 1: Identity commitment */}
           {step === 1 && (
+            <StepIdentity
+              value={identityStatement}
+              onChange={setIdentityStatement}
+              onNext={goNext}
+            />
+          )}
+          {/* Step 2: Pick category */}
+          {step === 2 && (
             <StepPickCategory
               selectedCategory={selectedCategory}
               onSelect={c => { setSelectedCategory(c); setSelectedPreset(null); }}
               onNext={goNext}
             />
           )}
-          {step === 2 && (
+          {/* Step 3: Pick habit preset */}
+          {step === 3 && (
             <StepPickHabit
               presets={presetsForCategory}
               selected={selectedPreset}
@@ -131,7 +189,8 @@ export default function OnboardingFlow() {
               onNext={goNext}
             />
           )}
-          {step === 3 && (
+          {/* Step 4: Minimum Viable Day */}
+          {step === 4 && (
             <StepMVD
               enabled={useMvd}
               onToggle={() => setUseMvd(v => !v)}
@@ -140,7 +199,20 @@ export default function OnboardingFlow() {
               onNext={goNext}
             />
           )}
-          {step === 4 && (
+          {/* Step 5: Reminder setup */}
+          {step === 5 && (
+            <StepReminder
+              enabled={reminderEnabled}
+              time={reminderTime}
+              onTimeChange={setReminderTime}
+              onEnable={handleRequestReminder}
+              onSkip={goNext}
+            />
+          )}
+          {/* Step 6: Streak science (identity reinforcement) */}
+          {step === 6 && <StepStreakScience onNext={goNext} />}
+          {/* Step 7: Day 1 first check-in */}
+          {step === 7 && (
             <StepFirstCheckIn
               habitName={(selectedPreset?.name ?? customName) || 'your habit'}
               habitEmoji={selectedPreset?.emoji ?? customEmoji}
@@ -155,6 +227,157 @@ export default function OnboardingFlow() {
 }
 
 // ─── Step sub-components ──────────────────────────────────────────────────────
+
+function StepIdentity({
+  value,
+  onChange,
+  onNext,
+}: {
+  value: string;
+  onChange: (s: string) => void;
+  onNext: () => void;
+}) {
+  const IDENTITY_OPTIONS = [
+    { label: 'Someone who works out consistently', emoji: '💪' },
+    { label: 'Someone who has quit for good', emoji: '🧠' },
+    { label: 'Someone who reads every day', emoji: '📚' },
+    { label: 'Someone who meditates', emoji: '🧘' },
+    { label: 'Someone who sleeps well', emoji: '🌙' },
+    { label: 'Someone who creates every day', emoji: '✍️' },
+  ];
+
+  return (
+    <View style={s.stepContent}>
+      <Text style={s.headline}>Who are you becoming?</Text>
+      <Text style={s.sub}>
+        Identity precedes behavior. Pick who you are building toward.
+      </Text>
+
+      <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
+        {IDENTITY_OPTIONS.map(opt => (
+          <TouchableOpacity
+            key={opt.label}
+            style={[s.identityRow, value === opt.label && s.identityRowSelected]}
+            onPress={() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); onChange(opt.label); }}
+            activeOpacity={0.7}
+          >
+            <Text style={s.identityEmoji}>{opt.emoji}</Text>
+            <Text style={[s.identityLabel, value === opt.label && s.identityLabelSelected]}>
+              {opt.label}
+            </Text>
+            {value === opt.label && (
+              <Ionicons name="checkmark-circle" size={20} color={Colors.emerald} />
+            )}
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+
+      <TouchableOpacity
+        style={[s.primaryBtn, !value && s.primaryBtnDisabled]}
+        onPress={value ? onNext : undefined}
+        activeOpacity={value ? 0.8 : 1}
+      >
+        <Text style={s.primaryBtnText}>This is me</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onNext} style={s.skipBtn}>
+        <Text style={s.skipBtnText}>Skip</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+function StepReminder({
+  enabled,
+  time,
+  onTimeChange,
+  onEnable,
+  onSkip,
+}: {
+  enabled: boolean;
+  time: string;
+  onTimeChange: (t: string) => void;
+  onEnable: () => void;
+  onSkip: () => void;
+}) {
+  const TIMES = ['06:00', '07:00', '08:00', '09:00', '18:00', '20:00', '21:00', '22:00'];
+
+  const formatTime = (t: string) => {
+    const [h, m] = t.split(':').map(Number);
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    const hour = h % 12 || 12;
+    return `${hour}:${m.toString().padStart(2, '0')} ${ampm}`;
+  };
+
+  return (
+    <View style={s.stepContent}>
+      <Text style={s.headline}>Set a daily reminder.</Text>
+      <Text style={s.sub}>
+        People with reminders are 3x more likely to keep their streak past day 7.
+      </Text>
+
+      <Text style={[s.sub, { marginBottom: 12 }]}>Pick your time:</Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 24 }}>
+        <View style={{ flexDirection: 'row', gap: 10, paddingRight: 16 }}>
+          {TIMES.map(t => (
+            <TouchableOpacity
+              key={t}
+              style={[s.timePill, time === t && s.timePillSelected]}
+              onPress={() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); onTimeChange(t); }}
+            >
+              <Text style={[s.timePillText, time === t && s.timePillTextSelected]}>
+                {formatTime(t)}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      </ScrollView>
+
+      <TouchableOpacity style={s.primaryBtn} onPress={onEnable}>
+        <Text style={s.primaryBtnText}>Enable daily reminder</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onSkip} style={s.skipBtn}>
+        <Text style={s.skipBtnText}>Skip — I'll remember</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+function StepStreakScience({ onNext }: { onNext: () => void }) {
+  return (
+    <View style={s.stepContent}>
+      <Text style={s.headline}>21 days is a myth.</Text>
+      <Text style={s.sub}>
+        The real number is 66. That is the median days to automaticity from a UCL study of 96 people across a range of behaviors.
+      </Text>
+
+      <View style={s.scienceRow}>
+        <ScienceStat number="66" label="median days to habit lock-in" />
+        <ScienceStat number="3" label="minimum days before it gets easier" />
+        <ScienceStat number="1" label="missed day will not break the chain" />
+      </View>
+
+      <View style={s.exampleBox}>
+        <Text style={s.exampleTitle}>The real goal</Text>
+        <Text style={s.exampleText}>
+          You are not trying to do this for 30 days. You are trying to do it long enough that skipping feels wrong. That takes about 66 days. Streakr tracks every single one.
+        </Text>
+      </View>
+
+      <TouchableOpacity style={s.primaryBtn} onPress={onNext}>
+        <Text style={s.primaryBtnText}>I'm ready to start</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+function ScienceStat({ number, label }: { number: string; label: string }) {
+  return (
+    <View style={s.scienceStat}>
+      <Text style={s.scienceNumber}>{number}</Text>
+      <Text style={s.scienceLabel}>{label}</Text>
+    </View>
+  );
+}
 
 function StepWelcome({
   onNext,
@@ -493,7 +716,7 @@ const s = StyleSheet.create({
     marginBottom: Spacing.xl,
   },
   categoryTile: {
-    width: (width - Spacing.lg * 2 - 12 * 2) / 3,
+    width: (width - Spacing.lg * 2 - 12 * 2) / 3,  // 3-column grid: 2 rows of 3
     backgroundColor: Colors.bgCard,
     borderRadius: Radius.md,
     paddingVertical: 16,
@@ -577,6 +800,53 @@ const s = StyleSheet.create({
   },
   exampleTitle: { ...Typography.captionMed, color: Colors.gold, marginBottom: 6, textTransform: 'uppercase' },
   exampleText: { ...Typography.caption, color: Colors.text, lineHeight: 20, fontStyle: 'italic' },
+  // Identity step
+  identityRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: Radius.md,
+    marginBottom: 8,
+    backgroundColor: Colors.bgCard,
+    borderWidth: 1.5,
+    borderColor: Colors.border,
+  },
+  identityRowSelected: { borderColor: Colors.emerald, backgroundColor: Colors.emeraldSubtle },
+  identityEmoji: { fontSize: 22 },
+  identityLabel: { ...Typography.body, color: Colors.textMuted, flex: 1 },
+  identityLabelSelected: { color: Colors.text },
+  // Reminder step
+  timePill: {
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: Radius.full,
+    backgroundColor: Colors.bgCard,
+    borderWidth: 1.5,
+    borderColor: Colors.border,
+  },
+  timePillSelected: { borderColor: Colors.emerald, backgroundColor: Colors.emeraldSubtle },
+  timePillText: { ...Typography.captionMed, color: Colors.textMuted },
+  timePillTextSelected: { color: Colors.emeraldDark },
+  // Science step
+  scienceRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginBottom: Spacing.lg,
+  },
+  scienceStat: {
+    flex: 1,
+    backgroundColor: Colors.bgCard,
+    borderRadius: Radius.md,
+    padding: 16,
+    alignItems: 'center',
+    gap: 4,
+    borderWidth: 1,
+    borderColor: Colors.border,
+  },
+  scienceNumber: { fontSize: 32, fontWeight: '800', color: Colors.emerald },
+  scienceLabel: { ...Typography.label, color: Colors.textMuted, textAlign: 'center' },
   // First check-in
   firstCheckCard: {
     backgroundColor: Colors.bgCard,

@@ -135,7 +135,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -151,7 +151,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -168,7 +168,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -184,7 +184,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -200,7 +200,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -216,7 +216,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -232,7 +232,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": []
     },
     {
@@ -246,7 +246,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -262,7 +262,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": []
     },
     {
@@ -276,7 +276,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -292,7 +292,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -308,7 +308,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:affiliate"
       ]
@@ -324,7 +324,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -341,14 +341,14 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-04T09:20:15Z",
+      "routed_at": "2026-04-06T02:17:42Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
     }
   ],
-  "last_run": "2026-04-04T09:20:15Z",
-  "duration_s": 5.5,
+  "last_run": "2026-04-06T02:17:42Z",
+  "duration_s": 0.19,
   "summary": {
     "researched": 40,
     "backtested": 20,

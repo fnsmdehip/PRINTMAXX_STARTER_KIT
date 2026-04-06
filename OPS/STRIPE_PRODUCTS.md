@@ -55,6 +55,8 @@ Note: ColdMaxx Pro already had a $19 product + price from 2026-03-20 (see App Pr
 | SoberStreak Pro Annual | prod_UGO9G2g6OzJsbV | $19.99/yr | price_1THrNoKlbvFndmYLdmLd2Cyi | https://buy.stripe.com/7sY14o7PO1pj9hD5QH3F60H |
 | RunningStreak Pro Annual | prod_UGOMpWzr0Rrl2g | $14.99/yr | price_1THra1KlbvFndmYLRkp7ni7N | https://buy.stripe.com/4gM5kEfig6JD9hD0wn3F60I |
 | RunningStreak Pro Monthly | prod_UGOMpWzr0Rrl2g | $1.99/mo | price_1THra2KlbvFndmYLoIPNFAjJ | https://buy.stripe.com/aFa00kfig4Bv79vfrh3F60J |
+| Streakr Pro Annual | prod_UHbVm2YjM4LW8d | $24.99/yr | price_1TJ2IQKlbvFndmYLFBdqBaBc | https://buy.stripe.com/3cI9AUb207NHctPend3F60K |
+| Streakr Pro Monthly | prod_UHbVm2YjM4LW8d | $4.99/mo | price_1TJ2IeKlbvFndmYLOOQns7Nb | https://buy.stripe.com/bJe00kfig0lf0L7frh3F60L |
 
 ## Before You (Ancestry Narrative Product)
 | Product | Price | Stripe Product ID | Stripe Price ID | Payment Link |
