@@ -787,6 +787,7 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
   useEffect(() => {
     return () => {
       if (analysisTimerRef.current) clearInterval(analysisTimerRef.current);
+      if (recordingRef.current) { recordingRef.current.stopAndUnloadAsync().catch(() => {}); recordingRef.current = null; }
       if (countdownTimerRef.current) clearInterval(countdownTimerRef.current);
     };
   }, []);
@@ -954,7 +955,7 @@ export default function PartyModeScreen({ navigation }: { navigation: any }) {
           facial: 0,        // No face analysis in party mode
         },
         question: r.question,
-        duration: ANALYSIS_DURATION_MS,
+        duration: ANALYSIS_DURATION_MS / 1000,
       })),
     );
 

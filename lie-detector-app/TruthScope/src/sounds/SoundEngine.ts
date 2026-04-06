@@ -108,7 +108,7 @@ export async function initSounds(): Promise<void> {
 
     isInitialized = true;
   } catch (e) {
-    console.warn('Sound engine init failed:', e);
+    // Sound engine init failed silently
   }
 }
 

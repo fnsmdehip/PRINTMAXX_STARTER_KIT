@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-05 22:32:03",
+  "generated_at": "2026-04-06 03:41:40",
   "sources": {
-    "alpha_staging_candidates": 3699,
+    "alpha_staging_candidates": 3759,
     "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
     "existing_specs_detected": 207
@@ -13,20 +13,20 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3705,
+    "total_candidates": 3757,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 59,
-      "BUILD_NEW_NOW": 48,
-      "SPEC_AND_TEST": 173,
-      "PARK": 3418,
+      "ITERATE_EXISTING_NOW": 63,
+      "BUILD_NEW_NOW": 50,
+      "SPEC_AND_TEST": 177,
+      "PARK": 3460,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
       "faith": 95,
-      "habits": 227,
-      "ai_utility": 2720,
+      "habits": 235,
+      "ai_utility": 2762,
       "fitness": 161,
-      "focus": 396,
+      "focus": 398,
       "sleep": 91,
       "meal": 15
     }
@@ -1318,6 +1318,68 @@
       "rank": 21
     },
     {
+      "candidate_id": "ALPHA1774000281",
+      "title": "Outsourced development to save money. $18K later I had code nobody on my team could maintain or understand. Solo founder. Non-technical. Found an offshore agency through a referral. $35/hr. Scoped the project at 500 hours. $17,500. Compared to US rates that felt like stealing. First 3 months went fine on the surface. Weekly demos. Features appearing. Progress reports. The product looked right. Then I hired a US-based contractor to add a small feature. He looked at the codebase for an hour and",
+      "source": "reddit/r/SaaS",
+      "source_url": "https://www.reddit.com/r/SaaS/comments/1sd50dh/outsourced_development_to_save_money_18k_later_i/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "P2",
+      "status": "APPROVED",
+      "engagement_authenticity": "UNCHECKED",
+      "earnings_verified": "N/A",
+      "applicable_niches": "",
+      "applicable_methods": "Outsourced development to save money",
+      "evidence": "Outsourced development to save money",
+      "compliance_notes": "",
+      "reviewer_notes": "AUTO-APPROVED 2026-04-06 (method discovery)",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA1774000281",
+        "source": "reddit/r/SaaS",
+        "source_url": "https://www.reddit.com/r/SaaS/comments/1sd50dh/outsourced_development_to_save_money_18k_later_i/",
+        "category": "APP_FACTORY",
+        "tactic": "Outsourced development to save money. $18K later I had code nobody on my team could maintain or understand. Solo founder. Non-technical. Found an offshore agency through a referral. $35/hr. Scoped the project at 500 hours. $17,500. Compared to US rates that felt like stealing. First 3 months went fine on the surface. Weekly demos. Features appearing. Progress reports. The product looked right. Then I hired a US-based contractor to add a small feature. He looked at the codebase for an hour and",
+        "roi_potential": "HIGHEST",
+        "priority": "METHOD_P2",
+        "status": "APPROVED",
+        "applicable_methods": "Outsourced development to save money",
+        "applicable_niches": "",
+        "synergy_score": "8.4",
+        "cross_sell_products": "",
+        "implementation_priority": "P2",
+        "engagement_authenticity": "UNCHECKED",
+        "earnings_verified": "N/A",
+        "extracted_method": "Outsourced development to save money",
+        "compliance_notes": "",
+        "reviewer_notes": "AUTO-APPROVED 2026-04-06 (method discovery)",
+        "created_at": "2026-04-05T22:25:04-04:00",
+        "ops_generated": "FALSE",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 94,
+      "cluster": "ai_utility",
+      "market_room": "HIGH",
+      "existing_app_target": "PORTFOLIO_WIDE_APP_UPGRADE",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
+      "paywall_variant": "after the first clear output, never before time-to-value",
+      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
+      "primary_monetization": "subscription with fast time-to-value and annual anchor",
+      "secondary_monetization": "paid upfront for privacy-first local tools; avoid ads unless usage is massive",
+      "price_test": "$6.99 to $9.99/mo and $39.99 to $59.99/yr",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 22
+    },
+    {
       "candidate_id": "ALPHA_CI_51_LTD_001",
       "title": "LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $17.7K upfront. Post warns about long-term support costs but initial cash is real.",
       "source": "reddit/SaaS",
@@ -1377,7 +1439,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 23
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -1439,7 +1501,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 24
     },
     {
       "candidate_id": "ALPHA_SCAN_078",
@@ -1501,7 +1563,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA25039",
@@ -1563,7 +1625,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA538",
@@ -1625,7 +1687,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA558",
@@ -1687,7 +1749,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA102378",
@@ -1749,7 +1811,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA103204",
@@ -1811,7 +1873,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA98946",
@@ -1873,7 +1935,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA1774000183",
@@ -1935,7 +1997,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 32
     },
     {
       "candidate_id": "alpha_daily_quantum_mechanics_foundations_streak_score_24_25_community_3_110_000_no_ap",
@@ -1997,7 +2059,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 33
     },
     {
       "candidate_id": "alpha_daily_quantum_computing_science_streak_score_24_25_community_2_220_000_no_app_st",
@@ -2059,7 +2121,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 34
     },
     {
       "candidate_id": "alpha_daily_cosmology_big_bang_science_streak_score_24_25_community_25_310_000_no_app_",
@@ -2121,7 +2183,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 35
     },
     {
       "candidate_id": "alpha_daily_dark_matter_dark_energy_science_streak_score_24_25_community_27_610_000_no",
@@ -2183,7 +2245,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 36
     },
     {
       "candidate_id": "alpha_daily_particle_physics_standard_model_streak_score_23_25_community_2_595_000_no_",
@@ -2245,7 +2307,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 37
     },
     {
       "candidate_id": "alpha_daily_astrophysics_black_hole_science_streak_score_23_25_community_25_335_000_no",
@@ -2307,7 +2369,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 38
     },
     {
       "candidate_id": "alpha_daily_gravitational_waves_ligo_science_streak_score_22_25_community_2_545_000_no",
@@ -2369,7 +2431,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 39
     },
     {
       "candidate_id": "alpha_daily_quantum_biology_science_streak_score_23_25_community_1_510_000_no_app_stor",
@@ -2405,68 +2467,6 @@
         "engagement_authenticity": "N/A",
         "earnings_verified": "",
         "extracted_method": "Daily Quantum Biology Science Streak | Score: 23/25 | Community: 1,510,000 | No App Store streak teaches: Fleming photosynthesis quantum coherence (2007 Science paper vs 2022 revisionist skepticism \u2014 both sides); cryptochrome radical pair mechanism in avian navigation (Ritz model, applied magnetic field disruption experiments); enzyme quantum tunneling (KIE > classical limit: alcohol dehydrogenase H-tunneling at room temp); olfaction quantum tunneling hypothesis (Turin theory vs shape theory debate); Tegmark brain decoherence timescales (why Penrose-Hameroff Orch-OR faces decoherence objection).",
-        "compliance_notes": "",
-        "reviewer_notes": "AUTO-APPROVED 2026-04-05 (high ROI)",
-        "created_at": "2026-04-06T02:14:47.627479+00:00",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": "2026-04-06"
-      },
-      "score": 88,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "alpha_daily_nuclear_physics_fusion_science_streak_score_24_25_community_2_050_000_no_a",
-      "title": "Daily Nuclear Physics & Fusion Science Streak | Score: 24/25 | Community: 2,050,000 | No App Store streak teaches: Gamow",
-      "source": "competitive_intel_c160",
-      "source_url": "",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "SYSTEMATIC_SCAN",
-      "status": "APPROVED",
-      "engagement_authenticity": "N/A",
-      "earnings_verified": "",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "Daily Nuclear Physics & Fusion Science Streak | Score: 24/25 | Community: 2,050,000 | No App Store streak teaches: Gamow tunneling factor \u2014 why fusion happens at T=10^7K not classical 10^10K (de Broglie wavelength + Coulomb barrier); Lawson criterion derivation (nT\u03c4 > threshold) and why NIF achieved Q>1 ignition 2022; magnetic confinement tokamak physics (safety factor q, disruptions, H-mode pedestal); ICF vs MCF vs stellarator vs FRC (Helion, Commonwealth Fusion, TAE approaches compared); nuclear waste half-life physics \u2014 why 30yr cesium-137 is the hard problem, not 4.5Gyr uranium.",
-      "compliance_notes": "",
-      "reviewer_notes": "AUTO-APPROVED 2026-04-05 (high ROI)",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "",
-        "source": "competitive_intel_c160",
-        "source_url": "",
-        "category": "APP_FACTORY",
-        "tactic": "",
-        "roi_potential": "HIGH",
-        "priority": "",
-        "status": "APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "SYSTEMATIC_SCAN",
-        "engagement_authenticity": "N/A",
-        "earnings_verified": "",
-        "extracted_method": "Daily Nuclear Physics & Fusion Science Streak | Score: 24/25 | Community: 2,050,000 | No App Store streak teaches: Gamow tunneling factor \u2014 why fusion happens at T=10^7K not classical 10^10K (de Broglie wavelength + Coulomb barrier); Lawson criterion derivation (nT\u03c4 > threshold) and why NIF achieved Q>1 ignition 2022; magnetic confinement tokamak physics (safety factor q, disruptions, H-mode pedestal); ICF vs MCF vs stellarator vs FRC (Helion, Commonwealth Fusion, TAE approaches compared); nuclear waste half-life physics \u2014 why 30yr cesium-137 is the hard problem, not 4.5Gyr uranium.",
         "compliance_notes": "",
         "reviewer_notes": "AUTO-APPROVED 2026-04-05 (high ROI)",
         "created_at": "2026-04-06T02:14:47.627479+00:00",

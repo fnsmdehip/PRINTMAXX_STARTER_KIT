@@ -73,3 +73,30 @@ export async function getBaseline(): Promise<{
 export function generateId(): string {
   return Date.now().toString(36) + Math.random().toString(36).substring(2, 8);
 }
+
+// Premium status check
+export async function getIsPremium(): Promise<boolean> {
+  const profile = await getProfile();
+  return profile.isPremium;
+}
+
+// Daily session limit enforcement
+const DAILY_FREE_LIMIT = 3;
+
+export async function canStartSession(): Promise<{ allowed: boolean; remaining: number }> {
+  const profile = await getProfile();
+  if (profile.isPremium) return { allowed: true, remaining: 999 };
+  
+  const sessions = await getSessions();
+  const today = new Date().toDateString();
+  const todaySessions = sessions.filter(
+    s => new Date(s.startTime).toDateString() === today
+  );
+  
+  const remaining = Math.max(0, DAILY_FREE_LIMIT - todaySessions.length);
+  return { allowed: remaining > 0, remaining };
+}
+
+export async function setPremium(isPremium: boolean): Promise<void> {
+  await saveProfile({ isPremium });
+}

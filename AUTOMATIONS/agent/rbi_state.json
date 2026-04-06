@@ -8,13 +8,10 @@
     "ALPHA272",
     "ALPHA324",
     "ALPHA1773993226",
-    "OPP_SCAN_20260402_03",
     "ALPHA1773998773",
-    "ALPHA_OPP069_SKILL_BUNDLES",
     "ALPHA8892",
     "ALPHA1773993235",
     "ALPHA1773999827",
-    "ALPHA_OPP071_AFFILIATE_FUNNEL",
     "ALPHA264",
     "ALPHA265",
     "ALPHA266",
@@ -28,7 +25,6 @@
     "ALPHA5407",
     "ALPHA11425",
     "ALPHA24174",
-    "ALPHA_OPP085_FB_FAST_TRACK",
     "ALPHA25276",
     "ALPHA105035",
     "ALPHA104720",
@@ -39,7 +35,11 @@
     "ALPHA_HN_47431288",
     "ALPHA100019",
     "ALPHA104818",
-    "ALPHA102693"
+    "ALPHA102693",
+    "ALPHA536",
+    "ALPHA1773999821",
+    "F01",
+    "F02"
   ],
   "backtested": [
     {
@@ -75,15 +75,7 @@
       "verdict": "PASS"
     },
     {
-      "id": "OPP_SCAN_20260402_03",
-      "verdict": "PASS"
-    },
-    {
       "id": "ALPHA1773998773",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA_OPP069_SKILL_BUNDLES",
       "verdict": "PASS"
     },
     {
@@ -96,10 +88,6 @@
     },
     {
       "id": "ALPHA1773999827",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA_OPP071_AFFILIATE_FUNNEL",
       "verdict": "PASS"
     },
     {
@@ -121,6 +109,18 @@
     {
       "id": "ALPHA269",
       "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA273",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA339",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA108053",
+      "verdict": "PASS"
     }
   ],
   "implemented": [
@@ -135,7 +135,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -151,7 +151,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -168,7 +168,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -184,7 +184,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -200,7 +200,7 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -216,24 +216,10 @@
         "monthly_high": 2500,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
-    },
-    {
-      "method_id": "OPP_SCAN_20260402_03",
-      "name": "Extract sanitized CLAUDE",
-      "target_venture": "PRODUCT",
-      "category": "DIGITAL_PRODUCTS",
-      "composite": 7.43,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-06T02:17:42Z",
-      "signals": []
     },
     {
       "method_id": "ALPHA1773998773",
@@ -246,24 +232,10 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
-    },
-    {
-      "method_id": "ALPHA_OPP069_SKILL_BUNDLES",
-      "name": "Build vertical skill bundles from existing /skills/ dir",
-      "target_venture": "PRODUCT",
-      "category": "DIGITAL_PRODUCTS",
-      "composite": 7.4,
-      "revenue_estimate": {
-        "monthly_low": 500,
-        "monthly_high": 2500,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-06T02:17:42Z",
-      "signals": []
     },
     {
       "method_id": "ALPHA1773993235",
@@ -276,7 +248,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
@@ -292,25 +264,9 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA_OPP071_AFFILIATE_FUNNEL",
-      "name": "Sign up for Leadpages + HubSpot + ClickFunnels affiliate programs",
-      "target_venture": "CONTENT",
-      "category": "AFFILIATE",
-      "composite": 7.26,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-06T02:17:42Z",
-      "signals": [
-        "AUTO_EXISTS:affiliate"
       ]
     },
     {
@@ -324,7 +280,7 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "PLAYBOOK_EXISTS",
         "AUTO_EXISTS:content"
@@ -341,20 +297,52 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-06T02:17:42Z",
+      "routed_at": "2026-04-06T07:40:15Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA339",
+      "name": "Micro > Mega ROI",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.25,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-04-06T07:40:15Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA108053",
+      "name": "Whale 0x049b opened 20x shorts on 428.73 $BTC($29.62M) and 13,852 $ETH($29.13M) 2 hours ago, and is ",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.21,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-04-06T07:40:15Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
     }
   ],
-  "last_run": "2026-04-06T02:17:42Z",
-  "duration_s": 0.19,
+  "last_run": "2026-04-06T07:40:15Z",
+  "duration_s": 0.09,
   "summary": {
     "researched": 40,
     "backtested": 20,
-    "passed": 14,
-    "conditional": 6,
+    "passed": 13,
+    "conditional": 7,
     "failed": 0,
-    "implemented": 14
+    "implemented": 13
   }
 }

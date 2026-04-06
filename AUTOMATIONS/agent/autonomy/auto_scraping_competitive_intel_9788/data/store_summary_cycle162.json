@@ -1,0 +1,108 @@
+{
+  "cycle": 162,
+  "timestamp": "2026-04-06T05:52:44.817980+00:00",
+  "strategy": "COSMOLOGY + DARK MATTER + DARK ENERGY + BIG BANG SCIENCE",
+  "niches_found": 10,
+  "duplicates_filtered": 0,
+  "ci_rows_added": 10,
+  "alpha_rows_added": 10,
+  "cumulative_blue_oceans": 993,
+  "p0_niches": [
+    "daily_dark_energy_science_streak",
+    "daily_dark_matter_science_streak",
+    "daily_big_bang_inflation_science_streak",
+    "daily_black_hole_physics_streak",
+    "daily_multiverse_science_streak"
+  ],
+  "p1_niches": [
+    "daily_cmb_early_universe_streak",
+    "daily_gravitational_wave_science_streak",
+    "daily_baryogenesis_antimatter_streak",
+    "daily_cosmic_web_structure_streak",
+    "daily_neutrino_physics_streak"
+  ],
+  "top_score": 25,
+  "top_community": 104630000,
+  "scored_niches": [
+    {
+      "key": "daily_dark_energy_science_streak",
+      "score": 25,
+      "priority": "P0",
+      "community": 86000000,
+      "price": "$7.99-$9.99/mo",
+      "revenue_model": "86M community \u00d7 0.04% = 34,400 users \u00d7 $8.99/mo = $309,056 MRR"
+    },
+    {
+      "key": "daily_dark_matter_science_streak",
+      "score": 25,
+      "priority": "P0",
+      "community": 84100000,
+      "price": "$7.99-$9.99/mo",
+      "revenue_model": "84.1M community \u00d7 0.04% = 33,640 users \u00d7 $8.99/mo = $302,313 MRR"
+    },
+    {
+      "key": "daily_big_bang_inflation_science_streak",
+      "score": 24,
+      "priority": "P0",
+      "community": 89500000,
+      "price": "$6.99-$8.99/mo",
+      "revenue_model": "89.5M community \u00d7 0.04% = 35,800 users \u00d7 $7.99/mo = $286,042 MRR"
+    },
+    {
+      "key": "daily_black_hole_physics_streak",
+      "score": 24,
+      "priority": "P0",
+      "community": 83992000,
+      "price": "$6.99-$8.99/mo",
+      "revenue_model": "84.0M community \u00d7 0.04% = 33,597 users \u00d7 $7.99/mo = $268,440 MRR"
+    },
+    {
+      "key": "daily_multiverse_science_streak",
+      "score": 23,
+      "priority": "P0",
+      "community": 88130000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "88.1M community \u00d7 0.04% = 35,252 users \u00d7 $6.99/mo = $246,411 MRR"
+    },
+    {
+      "key": "daily_cmb_early_universe_streak",
+      "score": 23,
+      "priority": "P1",
+      "community": 82900000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "82.9M community \u00d7 0.04% = 33,160 users \u00d7 $6.99/mo = $231,788 MRR"
+    },
+    {
+      "key": "daily_gravitational_wave_science_streak",
+      "score": 23,
+      "priority": "P1",
+      "community": 82774000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "82.8M community \u00d7 0.04% = 33,110 users \u00d7 $6.99/mo = $231,438 MRR"
+    },
+    {
+      "key": "daily_baryogenesis_antimatter_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 104630000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "104.6M community \u00d7 0.04% = 41,852 users \u00d7 $5.99/mo = $250,693 MRR"
+    },
+    {
+      "key": "daily_cosmic_web_structure_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 100700000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "100.7M community \u00d7 0.04% = 40,280 users \u00d7 $6.99/mo = $281,557 MRR"
+    },
+    {
+      "key": "daily_neutrino_physics_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 82900000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "82.9M community \u00d7 0.04% = 33,160 users \u00d7 $6.99/mo = $231,788 MRR"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-04-05 23:27
-Last session: 2026-04-05 22:31 (0.9h ago)
+# SESSION BRIEFING -- 2026-04-06 03:57
+Last session: 2026-04-06 03:50 (0.1h ago)
 
 ---
 
@@ -8,9 +8,6 @@ Last session: 2026-04-05 22:31 (0.9h ago)
 ### Daily Digest (latest)
 Revenue: $0 | Day 44 at zero
 - **1648 new entries** scraped
-
-### Agent Reports (1 since last session)
-- swarm_brain_report_20260405_c59.md
 
 ### System Heartbeat
 Leads: 192,700/1,454,245 analyzed | 17,484 hot | 95,187 warm | 1,286,777 pipeline
@@ -89,7 +86,3 @@ Total items: 95 (deduplicated from all sources)
 - [ ] - Blockers:
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Remaining blocker for mobile/iPhone access:**
-
-## Recently Updated State
-
-- Swarm state (updated 22:36)

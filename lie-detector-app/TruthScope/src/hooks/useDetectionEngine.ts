@@ -14,9 +14,6 @@
  */
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { Platform } from 'react-native';
-import { CameraView } from 'expo-camera';
-import { Audio } from 'expo-av';
 import { PPGEngine } from '../engines/PPGEngine';
 import { VoiceEngine } from '../engines/VoiceEngine';
 import { FaceEngine } from '../engines/FaceEngine';

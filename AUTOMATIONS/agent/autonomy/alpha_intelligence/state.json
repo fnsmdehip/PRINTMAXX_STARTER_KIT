@@ -1,84 +1,93 @@
 {
   "venture": "ALPHA_INTELLIGENCE",
-  "last_cycle": "2026-04-05T22:15:00Z",
-  "next_cycle": "2026-04-06T02:15:00Z",
+  "last_cycle": "2026-04-06T02:15:00Z",
+  "next_cycle": "2026-04-06T06:15:00Z",
   "cycle_interval_hours": 4,
-  "status": "IDLE_BETWEEN_CYCLES",
+  "status": "CYCLE_COMPLETE",
   
   "latest_cycle_metrics": {
-    "timestamp": "2026-04-05T22:15:00Z",
+    "timestamp": "2026-04-06T02:15:00Z",
     "duration_seconds": 900,
-    "scrape_entries": 31,
-    "processing_entries": 27,
-    "archived_entries": 41,
-    "deduped_entries": 1,
+    "scrape_entries": 52,
+    "processing_entries": 52,
+    "archived_entries": 50,
+    "deduped_entries": 27,
+    "new_ventures": 2,
     "content_generated": {
       "tweets": 3,
-      "threads": 1
+      "threads": 1,
+      "engagement_posts": 3
     }
   },
   
   "sources_health": {
     "twitter": {
-      "status": "RUNNING_BG",
+      "status": "AUTH_FRICTION",
       "last_success": "2026-04-05T22:10:00Z",
       "new_entries": 0,
-      "note": "Auth friction; duplicates detected"
+      "note": "Brave cookie likely stale; scraper running background"
     },
     "reddit": {
       "status": "OPERATIONAL",
-      "last_success": "2026-04-05T22:07:00Z",
-      "new_entries": 4,
-      "subreddits_scanned": 20
+      "last_success": "2026-04-06T02:18:00Z",
+      "new_entries": 5,
+      "subreddits_scanned": 20,
+      "note": "All 20 subreddits yielded high-signal posts"
     },
     "hackernews": {
       "status": "OPERATIONAL",
-      "last_success": "2026-04-05T22:11:00Z",
+      "last_success": "2026-04-06T02:16:00Z",
       "new_entries": 27,
-      "note": "HN top + Show HN working; signal > 40pts"
+      "note": "Filtered for >40pts; strong gov contracting/AI infra signal"
     },
     "producthunt": {
       "status": "BLOCKED",
       "last_success": "2026-03-31T10:00:00Z",
       "error": "403 Forbidden",
-      "note": "Auth token expired"
+      "note": "Auth token expired — needs manual refresh"
     }
   },
   
   "output_artifacts": {
-    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260405.md",
-    "content": "CONTENT/social/research_content_20260405.md",
-    "alpha_staging": "LEDGER/ALPHA_STAGING.csv"
+    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260406.md",
+    "alpha_staging": "LEDGER/ALPHA_STAGING.csv",
+    "content_queue": "CONTENT/social/posting_queue/"
   },
   
   "system_state": {
-    "alpha_entries_total": 18351,
+    "alpha_entries_total": 18755,
+    "alpha_approved_new": 2,
+    "freelance_opportunities_routed": 17,
+    "ecom_products_identified": 30,
     "master_ops_ready": 87,
     "master_ops_priority": 17,
-    "capital_genesis_p0": 830,
-    "content_files": 212
+    "master_ops_blocked": 179,
+    "capital_genesis_p0": 766,
+    "content_files": 212,
+    "posting_queue_pending": 3
   },
   
   "blockers": [
-    "ProductHunt scraper: 403 auth — needs token refresh",
-    "Twitter cookie: Likely stale — refresh before next cycle",
-    "Master ops: 179 blocked (await human action: account signups)"
+    "ProductHunt scraper: 403 auth — token needs refresh",
+    "Twitter cookie: Stale — Brave profile needs refresh",
+    "Master ops human blockers: 179 ops awaiting Stripe/Gumroad account creation"
   ],
   
   "recommendations": [
-    "Debug ProductHunt 403 error",
-    "Refresh Twitter auth cookies",
-    "Deploy generated content at optimal times",
-    "Monitor e-commerce watch category saturation",
-    "Escalate master ops blockers to human task"
+    "Priority 1: Refresh Twitter/Brave cookies before next cycle",
+    "Priority 2: Test ProductHunt API token refresh",
+    "Priority 3: Complete human blockers (Stripe, Gumroad accounts) to unblock 179 master ops",
+    "Priority 4: Generate 3-5 more engagement posts from approved alpha",
+    "Priority 5: Route 2 new ventures through full integration pipeline"
   ],
   
   "next_actions": [
-    "4-hour wait until 2026-04-06 02:15 UTC",
-    "Scrape Twitter, Reddit, HN, PH (if auth fixed)",
-    "Process findings through alpha_auto_processor",
-    "Route to ventures via decision_engine",
-    "Generate content (3 tweets + 1 thread)",
+    "4-hour wait until 2026-04-06 06:15 UTC",
+    "Refresh auth before next cycle",
+    "Scrape all sources",
+    "Process findings",
+    "Route ventures",
+    "Generate content (3 tweets + 1 thread min)",
     "Write cycle report"
   ]
 }

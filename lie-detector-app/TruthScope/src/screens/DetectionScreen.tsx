@@ -25,7 +25,7 @@ import Animated, {
   interpolateColor,
   runOnJS,
 } from 'react-native-reanimated';
-import Svg, { Path, Circle, Line, Defs, RadialGradient, Stop } from 'react-native-svg';
+import Svg, { Path, Circle, Line } from 'react-native-svg';
 import * as Haptics from 'expo-haptics';
 
 import { colors, spacing, typography, radii } from '../theme';
@@ -635,10 +635,19 @@ export default function DetectionScreen({ navigation, route }: Props) {
   const initialMode = route.params?.mode ?? 'finger';
   const [mode, setMode] = useState<DetectionMode>(initialMode);
   const [isRecording, setIsRecording] = useState(false);
-  const [isPremium] = useState(false); // Will come from store later
+  const [isPremium, setIsPremium] = useState(false);
+  const [sessionAllowed, setSessionAllowed] = useState(true);
   const [cameraPermission, requestCameraPermission] = useCameraPermissions();
 
   const { readings, processCameraFrame, processFaceData, markQuestion } = useDetectionEngine(isRecording, mode);
+
+  // Load premium status and session limit from store
+  useEffect(() => {
+    import('../store').then(({ getIsPremium, canStartSession }) => {
+      getIsPremium().then(setIsPremium);
+      canStartSession().then(({ allowed }) => setSessionAllowed(allowed));
+    });
+  }, []);
 
   // Request camera permission on mount
   useEffect(() => {
@@ -658,15 +667,43 @@ export default function DetectionScreen({ navigation, route }: Props) {
 
   const handleToggleRecording = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    setIsRecording((prev) => {
-      if (!prev) {
-        playSound('analyzeStart');
-      } else {
-        playSound('analyzeComplete');
+    if (!isRecording) {
+      playSound('analyzeStart');
+      setIsRecording(true);
+    } else {
+      playSound('analyzeComplete');
+      setIsRecording(false);
+      // Fix #2/#3: Save session and show results
+      if (readings.overallScore > 0) {
+        const result = {
+          id: Date.now().toString(36) + '_' + readings.overallScore.toString(36),
+          timestamp: Date.now(),
+          mode,
+          verdict: readings.verdict,
+          confidence: readings.confidence,
+          overallScore: readings.overallScore,
+          breakdown: {
+            physiological: readings.heartRate > 0 ? Math.round((readings.heartRate - 60) * 2) : 0,
+            vocal: readings.voiceStress,
+            facial: readings.faceScore,
+          },
+          duration: 0,
+        };
+        // Save to store
+        import('../store').then(({ saveSession, generateId }) => {
+          saveSession({
+            id: generateId(),
+            startTime: Date.now() - 30000,
+            endTime: Date.now(),
+            mode,
+            results: [result],
+            isPartyMode: false,
+          });
+        });
+        navigation.navigate('Result', { result });
       }
-      return !prev;
-    });
-  }, []);
+    }
+  }, [isRecording, readings, mode, navigation]);
 
   const handleMarkQuestion = useCallback(() => {
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);

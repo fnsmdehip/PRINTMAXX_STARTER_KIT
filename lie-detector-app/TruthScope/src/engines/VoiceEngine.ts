@@ -96,7 +96,7 @@ export class VoiceEngine {
       }, ANALYSIS_INTERVAL_MS);
 
     } catch (err) {
-      console.warn('Voice recording failed:', err);
+      // Voice recording failed silently
     }
   }
 

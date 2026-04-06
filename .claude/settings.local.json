@@ -298,7 +298,10 @@
       "Bash(export PATH=\"/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:$HOME/.maestro/bin:$PATH\")",
       "Bash(java -version)",
       "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" export LANG=en_US.UTF-8 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope npx tsc --noEmit)",
-      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")"
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt python3 AUTOMATIONS/app_factory/post_build_validator.py --path lie-detector-app/TruthScope)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope-v2 npm install)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt python3 AUTOMATIONS/app_factory/post_build_validator.py --path lie-detector-app/TruthScope-v2)"
     ]
   }
 }

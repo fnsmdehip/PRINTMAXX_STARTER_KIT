@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-
+  Alert,
   Dimensions,
   RefreshControl,
 } from 'react-native';
@@ -483,7 +483,37 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
     setRefreshing(false);
   }, [loadData]);
 
-  const handleModePress = (mode: DetectionMode) => {
+  const handleModePress = async (mode: DetectionMode) => {
+    const { getIsPremium, canStartSession } = await import('../store');
+    const premium = await getIsPremium();
+
+    // Gate premium modes (face, voice, multi) for free users
+    if (!premium && (mode === 'face' || mode === 'voice' || mode === 'multi')) {
+      Alert.alert(
+        'Premium Feature',
+        `${mode === 'multi' ? 'Multi-Modal' : mode === 'face' ? 'Face Scan' : 'Voice Analysis'} is available with TruthScope Premium. Free users can use Finger Pulse mode.`,
+        [
+          { text: 'Upgrade', onPress: () => navigation.navigate('Onboarding') },
+          { text: 'Use Finger Pulse', onPress: () => navigation.navigate('Detection', { mode: 'finger' }) },
+        ]
+      );
+      return;
+    }
+
+    // Check daily session limit for free users
+    const { allowed, remaining } = await canStartSession();
+    if (!allowed) {
+      Alert.alert(
+        'Daily Limit Reached',
+        'Free users get 3 sessions per day. Upgrade to Premium for unlimited sessions.',
+        [
+          { text: 'Upgrade', onPress: () => navigation.navigate('Onboarding') },
+          { text: 'OK' },
+        ]
+      );
+      return;
+    }
+
     navigation.navigate('Detection', { mode });
   };
 

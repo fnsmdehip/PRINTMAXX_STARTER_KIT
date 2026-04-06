@@ -4,7 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { colors } from '../theme';
-import { getProfile } from '../store';
+import { getProfile, setPremium } from '../store';
+import * as Linking from 'expo-linking';
 import { DetectionMode, DetectionResult } from '../utils/types';
 
 // Screen imports
@@ -32,6 +33,21 @@ export function AppNavigator() {
 
   useEffect(() => {
     checkOnboarding();
+
+    // Handle deep link for payment success (truthscope://premium-activated)
+    const handleDeepLink = ({ url }: { url: string }) => {
+      if (url.includes('premium-activated') || url.includes('payment-success')) {
+        setPremium(true);
+      }
+    };
+    const sub = Linking.addEventListener('url', handleDeepLink);
+    // Check initial URL (app opened from deep link)
+    Linking.getInitialURL().then(url => {
+      if (url && (url.includes('premium-activated') || url.includes('payment-success'))) {
+        setPremium(true);
+      }
+    });
+    return () => sub.remove();
   }, []);
 
   const checkOnboarding = async () => {

@@ -418,3 +418,26 @@ Redeployed 2026-03-29 with shortened subdomains (originals exceeded 63-char DNS 
 **Total Portfolio:** 419 live surge.sh deployments
 **Health Status:** FULLY_OPERATIONAL
 **Last Verified:** 2026-04-02 19:55 UTC
+
+## Telehealth Affiliate Network (34 pages, deployed 2026-04-06)
+
+### Main Comparisons
+- https://telehealth-reviews-hub.surge.sh
+- https://best-glp1-weight-loss-program-online.surge.sh
+- https://best-online-trt-program-men.surge.sh
+- https://best-peptide-therapy-online.surge.sh
+
+### SEO Article Hub (20 articles)
+- https://telehealth-articles.surge.sh
+
+### Longtail Pages
+- https://best-glp1-for-women-over-40.surge.sh
+- https://cheapest-semaglutide-online-no-insurance.surge.sh
+- https://best-trt-clinic-for-bodybuilders.surge.sh
+- https://bpc-157-peptide-online-prescription.surge.sh
+- https://ozempic-vs-compounded-semaglutide.surge.sh
+- https://best-online-ed-treatment-program.surge.sh
+- https://best-nad-therapy-online.surge.sh
+- https://tirzepatide-online-cheapest.surge.sh
+- https://best-hair-loss-treatment-online-men.surge.sh
+- https://sermorelin-therapy-online-cost.surge.sh
