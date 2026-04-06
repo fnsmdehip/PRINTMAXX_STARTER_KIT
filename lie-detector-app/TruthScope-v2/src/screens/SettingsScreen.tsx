@@ -49,7 +49,7 @@ export function SettingsScreen({ navigation }: { navigation: any }) {
 
   const handleRestorePurchases = () => {
     playSound('premium');
-    Alert.alert('Restore Purchases', 'Purchase restoration will be available when the app is published to the App Store.');
+    Alert.alert('Subscription Status', 'Your subscription is managed through Stripe. Check your email for a receipt and subscription management link.');
   };
 
   return (

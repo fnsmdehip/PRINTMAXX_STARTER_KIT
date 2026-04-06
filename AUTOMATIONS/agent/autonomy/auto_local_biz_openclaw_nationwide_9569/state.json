@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-06T03:01:21.267900",
-  "cycle_number": 20,
+  "last_run": "2026-04-06T07:52:21.507224",
+  "cycle_number": 21,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -241,12 +241,76 @@
     "Cookeville TN (plumber)",
     "Crossville TN (towing)",
     "Crossville TN (handyman)",
-    "Crossville TN (landscaping)"
+    "Crossville TN (landscaping)",
+    "Elizabethtown KY (towing)",
+    "Elizabethtown KY (plumber)",
+    "Elizabethtown KY (HVAC)",
+    "Elizabethtown KY (landscaping)",
+    "Campbellsville KY (towing)",
+    "Campbellsville KY (handyman)",
+    "Campbellsville KY (plumber)",
+    "Somerset KY (towing)",
+    "Somerset KY (handyman)",
+    "Somerset KY (auto repair)",
+    "Lebanon KY (towing)",
+    "Lebanon KY (handyman)",
+    "Lebanon KY (plumber)",
+    "Springfield KY (towing)",
+    "Springfield KY (handyman)",
+    "Pikeville KY (towing)",
+    "Pikeville KY (handyman)",
+    "Pikeville KY (auto repair)",
+    "Pikeville KY (plumber)",
+    "Hazard KY (towing)",
+    "Hazard KY (handyman)",
+    "Hazard KY (auto repair)",
+    "Morristown TN (towing)",
+    "Morristown TN (handyman)",
+    "Morristown TN (HVAC)",
+    "Morristown TN (landscaping)",
+    "Sevierville TN (towing)",
+    "Sevierville TN (handyman)",
+    "Sevierville TN (landscaping)",
+    "Gatlinburg TN (handyman)",
+    "Gatlinburg TN (landscaping)",
+    "Cleveland TN (towing)",
+    "Cleveland TN (handyman)",
+    "Cleveland TN (auto repair)",
+    "Cleveland TN (plumber)",
+    "Athens TN (towing)",
+    "Athens TN (handyman)",
+    "Athens TN (auto repair)",
+    "Searcy AR (towing)",
+    "Searcy AR (handyman)",
+    "Searcy AR (plumber)",
+    "Russellville AR (towing)",
+    "Russellville AR (handyman)",
+    "Russellville AR (auto repair)",
+    "Conway AR (towing)",
+    "Conway AR (handyman)",
+    "Conway AR (auto repair)",
+    "Conway AR (plumber)",
+    "Conway AR (HVAC)",
+    "Bristol VA (towing)",
+    "Bristol VA (handyman)",
+    "Bristol VA (auto repair)",
+    "Bristol VA (plumber)",
+    "Abingdon VA (towing)",
+    "Abingdon VA (handyman)",
+    "Abingdon VA (plumber)",
+    "Bluefield WV (towing)",
+    "Bluefield WV (handyman)",
+    "Bluefield WV (auto repair)",
+    "Bluefield WV (plumber)",
+    "Beckley WV (towing)",
+    "Beckley WV (handyman)",
+    "Beckley WV (auto repair)",
+    "Beckley WV (HVAC)"
   ],
-  "total_leads_all_cycles": 4569,
-  "total_previews_deployed": 2420,
+  "total_leads_all_cycles": 4878,
+  "total_previews_deployed": 2510,
   "total_sites_built_local": 8073,
-  "total_emails_queued": 2342,
+  "total_emails_queued": 2432,
   "emails_ready_to_send": 39,
   "emails_enriched_this_cycle": 0,
   "enricher_hit_rate": "0% (F-grade no-website segment)",
@@ -254,22 +318,19 @@
   "enricher_leads_remaining": 1058,
   "projected_emails_from_remaining": 0,
   "next_cities": [
-    "Elizabethtown KY (HVAC + landscaping bonus)",
-    "Campbellsville KY",
-    "Somerset KY",
-    "Lebanon KY",
-    "Sevierville TN",
-    "Cleveland TN",
-    "Athens TN",
-    "Searcy AR",
-    "Russellville AR",
-    "Conway AR",
-    "Bristol VA",
-    "Abingdon VA",
-    "Bluefield WV",
-    "Beckley WV",
-    "Pikeville KY",
-    "Hazard KY"
+    "Morehead KY",
+    "Mount Sterling KY",
+    "Winchester KY",
+    "Frankfort KY",
+    "Shelbyville KY",
+    "Bardstown KY",
+    "Oak Ridge TN",
+    "Maryville TN",
+    "Charleston WV",
+    "Huntington WV",
+    "Parkersburg WV",
+    "Roanoke VA",
+    "Salem VA"
   ],
   "surge_domains_used": [
     "auto-excel-lexington-ky.surge.sh",
@@ -308,7 +369,7 @@
   ],
   "blockers": [
     "P0: Add BREVO_SMTP_LOGIN + BREVO_SMTP_KEY, then: python3 AUTOMATIONS/email_sender.py --outreach AUTOMATIONS/leads/openclaw/outreach_queue.csv --provider brevo --max-sends 39",
-    "P1: Apollo.io 50 free lookups \u2192 priority: Elizabethtown KY (0 emails, 11 F-grade) + Kingsport TN new leads",
+    "P1: Apollo.io 50 free lookups \u2192 priority: Pikeville KY + Hazard KY (Eastern KY debut, high F-grade) + Elizabethtown KY",
     "P2: Surge upgrade $13/mo \u2014 frozen at 472, GH Pages primary channel"
   ],
   "status": "CYCLE_COMPLETE",
@@ -403,13 +464,13 @@
     "Next step: Netlify CLI deploy as replacement \u2014 free tier, 300 sites, no domain restriction"
   ],
   "pipeline_health": {
-    "discover": "HEALTHY \u2014 202 new leads",
-    "grade": "HEALTHY \u2014 14/202 F/D grade",
-    "build": "HEALTHY \u2014 29 preview sites built",
-    "deploy_ghpages": "OK \u2014 pushed \u2014 2420 total live",
+    "discover": "HEALTHY \u2014 309 new leads",
+    "grade": "HEALTHY \u2014 218/309 F/D grade",
+    "build": "HEALTHY \u2014 90 preview sites built",
+    "deploy_ghpages": "OK \u2014 pushed \u2014 2510 total live",
     "deploy_surge": "FROZEN \u2014 472 live, Student plan",
-    "enrich_email": "39/2342 have email",
-    "outreach_queue": "HEALTHY \u2014 2342 queued, 1775 with live URL",
+    "enrich_email": "39/2432 have email",
+    "outreach_queue": "HEALTHY \u2014 2432 queued, 1865 with live URL",
     "send": "BLOCKED \u2014 Brevo SMTP creds needed"
   },
   "metrics_history": [
@@ -622,9 +683,20 @@
       "ghpages_deployed": 2420,
       "outreach_queued": 2342,
       "ready_to_send": 39
+    },
+    {
+      "cycle": 21,
+      "date": "2026-04-06",
+      "total_leads": 4878,
+      "hot_leads": 2453,
+      "with_email": 39,
+      "surge_deployed": 472,
+      "ghpages_deployed": 2510,
+      "outreach_queued": 2432,
+      "ready_to_send": 39
     }
   ],
-  "ghpages_deployed": 2420,
+  "ghpages_deployed": 2510,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -1879,5 +1951,576 @@
       "HVAC"
     ],
     "observation": "Cycle 20: Tri-Cities TN entry (Kingsport/Johnson City) + KY 270 cluster completion + AR Pine Bluff + HVAC niche debut. 202 new leads, 14 F/D (7%). 29 new GH Pages pushed. Pipeline at 2342 outreach entries, 39 ready to send. Next: Central KY frontier + Appalachian corridor (VA/WV) = new high-F-grade territory."
+  },
+  "cycle_21_results": {
+    "cities_discovered": [
+      "Elizabethtown KY (towing)",
+      "Elizabethtown KY (plumber)",
+      "Elizabethtown KY (HVAC)",
+      "Elizabethtown KY (landscaping)",
+      "Campbellsville KY (towing)",
+      "Campbellsville KY (handyman)",
+      "Campbellsville KY (plumber)",
+      "Somerset KY (towing)",
+      "Somerset KY (handyman)",
+      "Somerset KY (auto repair)",
+      "Lebanon KY (towing)",
+      "Lebanon KY (handyman)",
+      "Lebanon KY (plumber)",
+      "Springfield KY (towing)",
+      "Springfield KY (handyman)",
+      "Pikeville KY (towing)",
+      "Pikeville KY (handyman)",
+      "Pikeville KY (auto repair)",
+      "Pikeville KY (plumber)",
+      "Hazard KY (towing)",
+      "Hazard KY (handyman)",
+      "Hazard KY (auto repair)",
+      "Morristown TN (towing)",
+      "Morristown TN (handyman)",
+      "Morristown TN (HVAC)",
+      "Morristown TN (landscaping)",
+      "Sevierville TN (towing)",
+      "Sevierville TN (handyman)",
+      "Sevierville TN (landscaping)",
+      "Gatlinburg TN (handyman)",
+      "Gatlinburg TN (landscaping)",
+      "Cleveland TN (towing)",
+      "Cleveland TN (handyman)",
+      "Cleveland TN (auto repair)",
+      "Cleveland TN (plumber)",
+      "Athens TN (towing)",
+      "Athens TN (handyman)",
+      "Athens TN (auto repair)",
+      "Searcy AR (towing)",
+      "Searcy AR (handyman)",
+      "Searcy AR (plumber)",
+      "Russellville AR (towing)",
+      "Russellville AR (handyman)",
+      "Russellville AR (auto repair)",
+      "Conway AR (towing)",
+      "Conway AR (handyman)",
+      "Conway AR (auto repair)",
+      "Conway AR (plumber)",
+      "Conway AR (HVAC)",
+      "Bristol VA (towing)",
+      "Bristol VA (handyman)",
+      "Bristol VA (auto repair)",
+      "Bristol VA (plumber)",
+      "Abingdon VA (towing)",
+      "Abingdon VA (handyman)",
+      "Abingdon VA (plumber)",
+      "Bluefield WV (towing)",
+      "Bluefield WV (handyman)",
+      "Bluefield WV (auto repair)",
+      "Bluefield WV (plumber)",
+      "Beckley WV (towing)",
+      "Beckley WV (handyman)",
+      "Beckley WV (auto repair)",
+      "Beckley WV (HVAC)"
+    ],
+    "city_stats": {
+      "Elizabethtown KY (towing)": {
+        "total": 6,
+        "f_grade": 0,
+        "grades": {
+          "B": 3,
+          "A": 3
+        }
+      },
+      "Elizabethtown KY (plumber)": {
+        "total": 5,
+        "f_grade": 0,
+        "grades": {
+          "A": 4,
+          "C": 1
+        }
+      },
+      "Elizabethtown KY (HVAC)": {
+        "total": 8,
+        "f_grade": 0,
+        "grades": {
+          "A": 8
+        }
+      },
+      "Elizabethtown KY (landscaping)": {
+        "total": 7,
+        "f_grade": 0,
+        "grades": {
+          "A": 5,
+          "B": 2
+        }
+      },
+      "Campbellsville KY (towing)": {
+        "total": 8,
+        "f_grade": 0,
+        "grades": {
+          "B": 4,
+          "A": 4
+        }
+      },
+      "Campbellsville KY (handyman)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Campbellsville KY (plumber)": {
+        "total": 3,
+        "f_grade": 2,
+        "grades": {
+          "F": 2,
+          "C": 1
+        }
+      },
+      "Somerset KY (towing)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Somerset KY (handyman)": {
+        "total": 5,
+        "f_grade": 4,
+        "grades": {
+          "F": 4,
+          "A": 1
+        }
+      },
+      "Somerset KY (auto repair)": {
+        "total": 3,
+        "f_grade": 1,
+        "grades": {
+          "C": 1,
+          "F": 1,
+          "A": 1
+        }
+      },
+      "Lebanon KY (towing)": {
+        "total": 1,
+        "f_grade": 1,
+        "grades": {
+          "F": 1
+        }
+      },
+      "Lebanon KY (handyman)": {
+        "total": 6,
+        "f_grade": 6,
+        "grades": {
+          "F": 6
+        }
+      },
+      "Lebanon KY (plumber)": {
+        "total": 1,
+        "f_grade": 1,
+        "grades": {
+          "F": 1
+        }
+      },
+      "Springfield KY (towing)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Springfield KY (handyman)": {
+        "total": 5,
+        "f_grade": 4,
+        "grades": {
+          "F": 4,
+          "A": 1
+        }
+      },
+      "Pikeville KY (towing)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Pikeville KY (handyman)": {
+        "total": 13,
+        "f_grade": 13,
+        "grades": {
+          "F": 13
+        }
+      },
+      "Pikeville KY (auto repair)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Pikeville KY (plumber)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Hazard KY (towing)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Hazard KY (handyman)": {
+        "total": 3,
+        "f_grade": 2,
+        "grades": {
+          "A": 1,
+          "F": 2
+        }
+      },
+      "Hazard KY (auto repair)": {
+        "total": 4,
+        "f_grade": 2,
+        "grades": {
+          "F": 2,
+          "A": 2
+        }
+      },
+      "Morristown TN (towing)": {
+        "total": 3,
+        "f_grade": 3,
+        "grades": {
+          "F": 3
+        }
+      },
+      "Morristown TN (handyman)": {
+        "total": 1,
+        "f_grade": 1,
+        "grades": {
+          "F": 1
+        }
+      },
+      "Morristown TN (HVAC)": {
+        "total": 14,
+        "f_grade": 14,
+        "grades": {
+          "F": 14
+        }
+      },
+      "Morristown TN (landscaping)": {
+        "total": 12,
+        "f_grade": 9,
+        "grades": {
+          "F": 9,
+          "A": 2,
+          "B": 1
+        }
+      },
+      "Sevierville TN (towing)": {
+        "total": 4,
+        "f_grade": 4,
+        "grades": {
+          "F": 4
+        }
+      },
+      "Sevierville TN (handyman)": {
+        "total": 4,
+        "f_grade": 2,
+        "grades": {
+          "F": 2,
+          "A": 1,
+          "B": 1
+        }
+      },
+      "Sevierville TN (landscaping)": {
+        "total": 6,
+        "f_grade": 3,
+        "grades": {
+          "F": 3,
+          "A": 2,
+          "B": 1
+        }
+      },
+      "Gatlinburg TN (handyman)": {
+        "total": 2,
+        "f_grade": 1,
+        "grades": {
+          "F": 1,
+          "B": 1
+        }
+      },
+      "Gatlinburg TN (landscaping)": {
+        "total": 4,
+        "f_grade": 4,
+        "grades": {
+          "F": 4
+        }
+      },
+      "Cleveland TN (towing)": {
+        "total": 1,
+        "f_grade": 1,
+        "grades": {
+          "F": 1
+        }
+      },
+      "Cleveland TN (handyman)": {
+        "total": 9,
+        "f_grade": 9,
+        "grades": {
+          "F": 9
+        }
+      },
+      "Cleveland TN (auto repair)": {
+        "total": 9,
+        "f_grade": 7,
+        "grades": {
+          "F": 7,
+          "A": 1,
+          "B": 1
+        }
+      },
+      "Cleveland TN (plumber)": {
+        "total": 9,
+        "f_grade": 6,
+        "grades": {
+          "F": 6,
+          "A": 2,
+          "C": 1
+        }
+      },
+      "Athens TN (towing)": {
+        "total": 1,
+        "f_grade": 1,
+        "grades": {
+          "F": 1
+        }
+      },
+      "Athens TN (handyman)": {
+        "total": 3,
+        "f_grade": 2,
+        "grades": {
+          "F": 2,
+          "A": 1
+        }
+      },
+      "Athens TN (auto repair)": {
+        "total": 9,
+        "f_grade": 7,
+        "grades": {
+          "A": 2,
+          "F": 7
+        }
+      },
+      "Searcy AR (towing)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Searcy AR (handyman)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Searcy AR (plumber)": {
+        "total": 6,
+        "f_grade": 3,
+        "grades": {
+          "A": 3,
+          "F": 3
+        }
+      },
+      "Russellville AR (towing)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Russellville AR (handyman)": {
+        "total": 1,
+        "f_grade": 1,
+        "grades": {
+          "F": 1
+        }
+      },
+      "Russellville AR (auto repair)": {
+        "total": 10,
+        "f_grade": 10,
+        "grades": {
+          "F": 10
+        }
+      },
+      "Conway AR (towing)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Conway AR (handyman)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Conway AR (auto repair)": {
+        "total": 11,
+        "f_grade": 10,
+        "grades": {
+          "F": 10,
+          "B": 1
+        }
+      },
+      "Conway AR (plumber)": {
+        "total": 5,
+        "f_grade": 5,
+        "grades": {
+          "F": 5
+        }
+      },
+      "Conway AR (HVAC)": {
+        "total": 9,
+        "f_grade": 7,
+        "grades": {
+          "F": 7,
+          "B": 1,
+          "A": 1
+        }
+      },
+      "Bristol VA (towing)": {
+        "total": 4,
+        "f_grade": 4,
+        "grades": {
+          "F": 4
+        }
+      },
+      "Bristol VA (handyman)": {
+        "total": 3,
+        "f_grade": 3,
+        "grades": {
+          "F": 3
+        }
+      },
+      "Bristol VA (auto repair)": {
+        "total": 9,
+        "f_grade": 8,
+        "grades": {
+          "F": 8,
+          "A": 1
+        }
+      },
+      "Bristol VA (plumber)": {
+        "total": 5,
+        "f_grade": 3,
+        "grades": {
+          "F": 3,
+          "A": 2
+        }
+      },
+      "Abingdon VA (towing)": {
+        "total": 17,
+        "f_grade": 0,
+        "grades": {
+          "B": 5,
+          "A": 11,
+          "C": 1
+        }
+      },
+      "Abingdon VA (handyman)": {
+        "total": 2,
+        "f_grade": 2,
+        "grades": {
+          "F": 2
+        }
+      },
+      "Abingdon VA (plumber)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Bluefield WV (towing)": {
+        "total": 9,
+        "f_grade": 8,
+        "grades": {
+          "F": 8,
+          "A": 1
+        }
+      },
+      "Bluefield WV (handyman)": {
+        "total": 9,
+        "f_grade": 7,
+        "grades": {
+          "A": 2,
+          "F": 7
+        }
+      },
+      "Bluefield WV (auto repair)": {
+        "total": 8,
+        "f_grade": 8,
+        "grades": {
+          "F": 8
+        }
+      },
+      "Bluefield WV (plumber)": {
+        "total": 12,
+        "f_grade": 11,
+        "grades": {
+          "F": 10,
+          "D": 1,
+          "A": 1
+        }
+      },
+      "Beckley WV (towing)": {
+        "total": 2,
+        "f_grade": 2,
+        "grades": {
+          "F": 2
+        }
+      },
+      "Beckley WV (handyman)": {
+        "total": 0,
+        "f_grade": 0,
+        "grades": {}
+      },
+      "Beckley WV (auto repair)": {
+        "total": 4,
+        "f_grade": 3,
+        "grades": {
+          "B": 1,
+          "F": 3
+        }
+      },
+      "Beckley WV (HVAC)": {
+        "total": 14,
+        "f_grade": 13,
+        "grades": {
+          "F": 13,
+          "A": 1
+        }
+      }
+    },
+    "new_leads": 309,
+    "new_f_grade": 218,
+    "new_sites_built": 90,
+    "new_ghpages_deploys": 90,
+    "total_ghpages_live": 2510,
+    "new_emails_queued": 90,
+    "file_urls_fixed": 0,
+    "ready_to_send_email": 39,
+    "top_performers": [
+      [
+        "Lebanon KY (towing)",
+        1,
+        1
+      ],
+      [
+        "Lebanon KY (handyman)",
+        6,
+        6
+      ],
+      [
+        "Lebanon KY (plumber)",
+        1,
+        1
+      ],
+      [
+        "Pikeville KY (handyman)",
+        13,
+        13
+      ],
+      [
+        "Morristown TN (towing)",
+        3,
+        3
+      ]
+    ],
+    "new_states_entered": [
+      "WV"
+    ],
+    "new_niches_tested": [
+      "HVAC (KY)",
+      "landscaping (KY)"
+    ],
+    "observation": "Cycle 21: KY Central Frontier + TN SE + AR I-40 + FIRST WV coverage (Bluefield/Beckley) + Eastern KY Appalachian corridor (Pikeville/Hazard). 309 new leads, 218 F/D (71%). 90 new GH Pages pushed. Pipeline at 2432 outreach entries, 39 ready to send. WV F-grade rate: 90%, Eastern KY F-grade rate: 85%."
   }
 }

@@ -1,110 +1,93 @@
 {
-  "cycle_id": "20260404_evening_1830",
-  "timestamp": "2026-04-04T18:30:00Z",
-  "status": "COMPLETE",
-  "duration_seconds": 480,
-  "phase": "compound_complete",
-  "metrics": {
-    "alpha_entries_scraped": 197,
-    "twitter_entries": 12,
-    "reddit_entries": 173,
-    "misc_entries": 12,
-    "new_entries_processed": 5,
-    "entries_scored": 5,
-    "methods_ranked": 8461,
-    "findings_routed": 8461,
-    "content_artifacts_generated": 11,
-    "twitter_posts": 3,
-    "thread_posts": 8,
-    "rule_9_compliance_ratio": 2.75,
-    "ventures_created": 1,
-    "p0_launch_methods": 7,
-    "p1_launch_methods": 835,
-    "p2_queue_methods": 7152
-  },
-  "outputs": {
-    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260404_1830.md",
-    "content_json": "CONTENT/alpha_posts_20260404.json",
-    "priority_stack": "OPS/CAPITAL_GENESIS_PRIORITY_STACK.md",
-    "rankings_csv": "OPS/CAPITAL_GENESIS_RANKINGS.csv"
-  },
-  "phase_breakdown": {
-    "scrape": {
-      "status": "COMPLETE",
-      "duration_sec": 120,
-      "twitter_entries": 12,
-      "reddit_entries": 173,
-      "misc_entries": 12,
-      "total_new": 197,
-      "notes": "Brave cookie extraction successful (15/15). Reddit JSON API operational. High signal from @swyx, @DHH networks."
-    },
-    "analyze": {
-      "status": "COMPLETE",
-      "duration_sec": 60,
-      "entries_processed": 5,
-      "entries_scored": 5,
-      "routed": 0,
-      "archived": 5,
-      "dedup_rate": 0.20,
-      "notes": "Low afternoon signal expected. 1 dedup caught. All 5 entries below routing threshold (score <30)."
-    },
-    "score": {
-      "status": "COMPLETE",
-      "duration_sec": 180,
-      "methods_ranked": 8461,
-      "p0_methods": 7,
-      "p1_methods": 835,
-      "p2_methods": 7152,
-      "watch_methods": 468,
-      "top_methods": [
-        "7.58: I thought this was fake",
-        "7.55: TikTok completion rate threshold 65%",
-        "7.55: Instagram DM shares = priority metric",
-        "7.55: TikTok Creator Rewards 10x payout",
-        "7.55: 1-to-20 hub-and-spoke repurposing"
-      ],
-      "notes": "All P0 methods are platform algorithm observations with 0% capital requirement and 8.5+ automation score."
-    },
-    "route": {
-      "status": "VERIFIED",
-      "duration_sec": 120,
-      "files_updated": 4,
-      "p0_routed": 7,
-      "p1_routed": 835,
-      "p2_queued": 7152,
-      "notes": "All 8,461 methods ranked and routed. New venture ALPHA1774000213 created. Master ops synced."
-    },
-    "compound": {
-      "status": "COMPLETE",
-      "duration_sec": 120,
-      "content_type": "platform_algorithm_shifts",
+  "venture": "ALPHA_INTELLIGENCE",
+  "last_cycle": "2026-04-06T06:27:00Z",
+  "next_cycle": "2026-04-06T10:27:00Z",
+  "cycle_interval_hours": 4,
+  "status": "CYCLE_COMPLETE",
+  
+  "latest_cycle_metrics": {
+    "timestamp": "2026-04-06T06:27:00Z",
+    "duration_seconds": 900,
+    "scrape_entries": 1,
+    "processing_entries": 1,
+    "archived_entries": 1,
+    "deduped_entries": 0,
+    "new_ventures": 0,
+    "content_generated": {
       "tweets": 3,
-      "thread_posts": 8,
-      "total_artifacts": 11,
-      "rule_9_compliance": "EXCEEDED (275%)",
-      "content_themes": [
-        "TikTok completion rate algorithm shift",
-        "Instagram DM shares ranking signal",
-        "Content repurposing automation (1-to-20 model)",
-        "Platform algorithm shift playbook"
-      ],
-      "notes": "Generated comprehensive algorithm shift thread with specific tactics. All content verified as real text (no stubs)."
+      "threads": 1,
+      "engagement_posts": 0
     }
   },
-  "execution_quality": {
-    "all_phases_complete": true,
-    "zero_stubs": true,
-    "zero_mock_data": true,
-    "all_outputs_verified": true,
-    "system_health": "100%",
-    "script_errors": 0,
-    "file_write_failures": 0,
-    "uptime": "100%"
+  
+  "sources_health": {
+    "twitter": {
+      "status": "AUTH_FRICTION",
+      "last_success": "2026-04-05T22:10:00Z",
+      "new_entries": 0,
+      "note": "Brave cookie stale; background scraper running"
+    },
+    "reddit": {
+      "status": "OPERATIONAL",
+      "last_success": "2026-04-06T06:26:00Z",
+      "new_entries": 1,
+      "subreddits_scanned": 20,
+      "note": "All 20 subreddits scanned; 1 new entry identified"
+    },
+    "hackernews": {
+      "status": "OPERATIONAL",
+      "last_success": "2026-04-06T02:16:00Z",
+      "new_entries": 0,
+      "note": "Scheduled for 8 AM UTC"
+    },
+    "producthunt": {
+      "status": "BLOCKED",
+      "last_success": "2026-03-31T10:00:00Z",
+      "error": "403 Forbidden",
+      "note": "Auth token expired — needs manual refresh"
+    }
   },
-  "next_cycle": {
-    "scheduled": true,
-    "interval_hours": 4,
-    "next_run": "2026-04-04T22:30:00Z",
-    "preparedness": "All scrapers warm. Brave cookies fresh. API quotas available. No blockers detected."
-  }
+  
+  "output_artifacts": {
+    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260406.md",
+    "alpha_staging": "LEDGER/ALPHA_STAGING.csv",
+    "content_queue": "CONTENT/social/posting_queue/tweets_20260406_research_cycle.md"
+  },
+  
+  "system_state": {
+    "alpha_entries_total": 19156,
+    "alpha_new_this_cycle": 1,
+    "freelance_opportunities_routed": 17,
+    "ecom_products_identified": 36,
+    "master_ops_ready": 87,
+    "master_ops_priority": 17,
+    "master_ops_blocked": 179,
+    "capital_genesis_p0": 785,
+    "content_pieces_generated": 4,
+    "posting_queue_pending": 4
+  },
+  
+  "blockers": [
+    "Twitter cookie: Stale — Brave profile needs refresh (non-critical, background running)",
+    "ProductHunt scraper: 403 auth — token needs refresh",
+    "Master ops human blockers: 179 ops awaiting Stripe/Gumroad/Pinterest account creation"
+  ],
+  
+  "recommendations": [
+    "Priority 1: Refresh Twitter/Brave cookies before 10:27 cycle (Restore 4/4 source coverage)",
+    "Priority 2: Test ProductHunt API token refresh (Unlock discovery source)",
+    "Priority 3: Complete human blockers (6 account signups unblock 179 master ops = $10K/mo)",
+    "Priority 4: Post generated content to social (3 tweets + 1 thread ready)",
+    "Priority 5: Monitor posting engagement (Track meta-insight about bottlenecks)"
+  ],
+  
+  "next_actions": [
+    "4-hour wait until 2026-04-06 10:27 UTC",
+    "Refresh auth sources before cycle",
+    "Scrape all 4 sources",
+    "Process findings through alpha pipeline",
+    "Route opportunities to ventures",
+    "Generate content (3 tweets + 1 thread min)",
+    "Write cycle report"
+  ]
 }

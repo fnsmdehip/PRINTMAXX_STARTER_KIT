@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archives — The Builder's Ledger</title>
+<meta name="description" content="Complete archive of The Builder's Ledger. Every weekly engineering report from a solo founder building in public. Real numbers, shipped products, no fluff.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="PRINTMAXX">
+<link rel="canonical" href="https://builders-ledger.surge.sh/archive/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Builder's Ledger">
+<meta property="og:title" content="Archives — The Builder's Ledger">
+<meta property="og:description" content="Complete archive of weekly engineering reports. Every edition, every number, every build.">
+<meta property="og:url" content="https://builders-ledger.surge.sh/archive/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Archives — The Builder's Ledger">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F4CA;</text></svg>">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+  :root{--ink:#1a1a1a;--paper:#f5f0e8;--paper-dark:#e8e0d0;--accent:#8b0000;--accent-light:#a52a2a;--rule:#333;--muted:#666;--green:#1a6b3c;--blue:#1a3d6b;--gold:#8b6914;--purple:#5a3d6b;--red:#c41}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:15px;line-height:1.55}
+  .page{max-width:1120px;margin:0 auto;padding:20px 30px 60px}
+  .masthead{text-align:center;padding:25px 0 12px;border-bottom:4px double var(--rule)}
+  .masthead h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(32px,5.5vw,58px);font-weight:900;letter-spacing:2px;line-height:1.1;margin-bottom:4px}
+  .masthead-sub{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+  .nav-bar{display:flex;justify-content:center;gap:20px;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+  .nav-bar a{color:var(--muted);text-decoration:none}
+  .nav-bar a:hover{color:var(--accent)}
+  .nav-bar a.active{color:var(--accent);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:2px}
+  .sh{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:3px;margin:28px 0 12px}
+  .edition-card{background:var(--paper-dark);border:1px solid #ccc;padding:20px 24px;margin-bottom:16px;display:block;text-decoration:none;color:var(--ink);transition:border-color 0.15s}
+  .edition-card:hover{border-color:var(--accent)}
+  .edition-card .ed-vol{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px}
+  .edition-card .ed-date{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .edition-card .ed-headline{font-family:'Playfair Display',serif;font-size:clamp(18px,2.5vw,24px);font-weight:900;line-height:1.15;margin-bottom:8px;color:var(--ink)}
+  .edition-card .ed-summary{font-size:14px;color:#444;line-height:1.45;margin-bottom:10px}
+  .edition-card .ed-stats{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)}
+  .tag{display:inline-block;font-family:'Inter',sans-serif;font-size:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;margin-right:3px;margin-bottom:3px}
+  .t-a{background:var(--green);color:#fff}.t-s{background:var(--blue);color:#fff}.t-b{background:var(--gold);color:#fff}.t-pub{background:var(--accent);color:#fff}
+  a{color:var(--accent)}a:hover{color:var(--accent-light)}
+  .footer{text-align:center;padding:16px;border-top:4px double var(--rule);margin-top:35px;font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);letter-spacing:1px}
+  .footer a{color:var(--accent);text-decoration:none}
+  .archive-note{font-family:'Source Serif 4',Georgia,serif;font-size:14px;font-style:italic;color:var(--muted);margin:16px 0 24px;text-align:center}
+  @media(max-width:768px){.page{padding:12px}.edition-card{padding:14px 16px}}
+  @media print{body{background:#fff}.page{max-width:100%}}
+</style>
+<script data-goatcounter="https://buildersledger.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <h1>THE BUILDER'S LEDGER</h1>
+  <div class="masthead-sub">Archives</div>
+</header>
+<nav class="nav-bar">
+  <a href="/">Current Edition</a>
+  <a href="/archive/" class="active">Archives</a>
+</nav>
+
+<div class="sh">All Editions</div>
+<p class="archive-note">Every weekly report since Day 45. Raw numbers, real builds, honest retrospectives.</p>
+
+<!-- Edition 2 -->
+<a href="/archive/index_2026-W15.html" class="edition-card">
+  <div class="ed-vol">Vol. I &mdash; No. 2</div>
+  <div class="ed-date">Week of March 31 &ndash; April 6, 2026 &bull; Day 51</div>
+  <div class="ed-headline">Telehealth Affiliate Empire: 36 Pages, 2 Brands, $350/Conversion Infrastructure Built in One Session</div>
+  <div class="ed-summary">Capital Genesis crowned MM080_TELEHEALTH_AFFILIATE the #1 method at 8.89 composite score. 34 comparison pages, 2 own-brand telehealth sites (Dosewell, Androx), 50 Meta ad variants, 21 email sequences, and 3 Stripe payment links. Also shipped: TruthScope lie detector app on iOS Simulator, 5 cnsnt desktop builds, research blog with 17 articles, and the full Builder's Ledger archive system.</div>
+  <div class="ed-stats">
+    <span class="tag t-pub">Lead Story</span>
+    <span class="tag t-a">36 Pages Deployed</span>
+    <span class="tag t-s">431 Live Sites</span>
+    <span class="tag t-b">$0 Revenue</span>
+    &mdash; 363 Scripts &bull; 33 Agents &bull; 9 Active Projects
+  </div>
+</a>
+
+<!-- Edition 1 -->
+<a href="/archive/index_2026-W14.html" class="edition-card">
+  <div class="ed-vol">Vol. I &mdash; No. 1</div>
+  <div class="ed-date">Week of March 15 &ndash; 21, 2026 &bull; Day 45</div>
+  <div class="ed-headline">PRINTMAXX: Not a Project. An Autonomous Revenue Operating System Running 33 Agents, 363 Scripts, and 5,277 Ranked Methods 24/7 on $200/mo.</div>
+  <div class="ed-summary">The inaugural edition. Full system breakdown: L0-L6 execution hierarchy, Capital Genesis scoring engine (7 dimensions, phase-aware weights), 4 iOS apps with Stripe payment links, 431 programmatic SEO pages, 22 digital products, and the agent swarm architecture. The entire PRINTMAXX operating system documented for the first time.</div>
+  <div class="ed-stats">
+    <span class="tag t-pub">Inaugural Issue</span>
+    <span class="tag t-a">395 Sites Deployed</span>
+    <span class="tag t-s">33 Agents</span>
+    <span class="tag t-b">$0 Revenue</span>
+    &mdash; 363 Scripts &bull; 5,277 Methods &bull; 6 Active Projects
+  </div>
+</a>
+
+<!-- ===================== FOOTER ===================== -->
+<div class="footer">
+  THE BUILDER'S LEDGER &bull; Archives &bull; 2 Editions Published<br>
+  <a href="https://github.com/fnsmdehip">github.com/fnsmdehip</a> &bull; Powered by Claude Max &bull; Built with PRINTMAXX<br>
+  <a href="/">Back to Current Edition</a>
+</div>
+
+</div>
+</body>
+</html>

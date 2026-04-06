@@ -1,10 +1,10 @@
 {
   "venture": "competitive_intel",
-  "last_cycle": 162,
-  "last_run": "2026-04-06T05:52:44.817980+00:00",
-  "cumulative_blue_oceans": 993,
-  "ci_csv_rows": 349,
-  "alpha_csv_rows": 53386,
+  "last_cycle": 165,
+  "last_run": "2026-04-06T10:20:07.888908+00:00",
+  "cumulative_blue_oceans": 1023,
+  "ci_csv_rows": 379,
+  "alpha_csv_rows": 53416,
   "strategies_covered": [
     "HEALTH + FITNESS + WELLNESS + NUTRITION",
     "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -60,9 +60,12 @@
     "INTERGENERATIONAL TRAUMA + EPIGENETICS OF ADVERSITY",
     "QUANTUM PHYSICS + PARTICLE PHYSICS + COSMOLOGY + QUANTUM COMPUTING",
     "STELLAR ASTROPHYSICS + EXOPLANET SCIENCE + ASTROBIOLOGY + SETI SCIENCE",
-    "COSMOLOGY + DARK MATTER + DARK ENERGY + BIG BANG SCIENCE"
+    "COSMOLOGY + DARK MATTER + DARK ENERGY + BIG BANG SCIENCE",
+    "ENVIRONMENTAL PSYCHOLOGY + NATURE DEFICIT DISORDER + ECOTHERAPY SCIENCE",
+    "LONELINESS SCIENCE + SOCIAL CONNECTION NEUROSCIENCE + BELONGING PSYCHOLOGY",
+    "POSITIVE PSYCHOLOGY + FLOURISHING SCIENCE + CHARACTER STRENGTHS"
   ],
-  "next_strategy": "ENVIRONMENTAL PSYCHOLOGY + NATURE DEFICIT DISORDER + ECOTHERAPY SCIENCE",
+  "next_strategy": "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
   "top_all_time": [
     {
       "name": "Daily CS Fundamentals Streak",
@@ -193,48 +196,48 @@
   "status": "RUNNING",
   "top_performers": [
     {
-      "niche": "daily_astrobiology_streak",
-      "display_name": "Daily Astrobiology",
+      "niche": "daily_via_character_strengths_streak",
+      "display_name": "Daily Via Character Strengths",
       "score": 25,
-      "community": 84490000,
+      "community": 41520000,
       "priority": "P0",
-      "price": "$7.99-$9.99/mo",
+      "price": "$6.99-$9.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_exoplanet_science_streak",
-      "display_name": "Daily Exoplanet Science",
+      "niche": "daily_perma_flourishing_science_streak",
+      "display_name": "Daily Perma Flourishing Science",
       "score": 25,
-      "community": 80445000,
+      "community": 37300000,
       "priority": "P0",
-      "price": "$7.99-$9.99/mo",
+      "price": "$6.99-$9.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_stellar_evolution_science_streak",
-      "display_name": "Daily Stellar Evolution Science",
-      "score": 24,
-      "community": 83870000,
+      "niche": "daily_gratitude_neuroscience_streak",
+      "display_name": "Daily Gratitude Neuroscience",
+      "score": 25,
+      "community": 40310000,
       "priority": "P0",
-      "price": "$6.99-$8.99/mo",
+      "price": "$5.99-$8.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_fermi_paradox_science_streak",
-      "display_name": "Daily Fermi Paradox Science",
-      "score": 24,
-      "community": 83200000,
+      "niche": "daily_happiness_science_set_point_streak",
+      "display_name": "Daily Happiness Science Set Point",
+      "score": 25,
+      "community": 41100000,
       "priority": "P0",
-      "price": "$6.99-$8.99/mo",
+      "price": "$6.99-$9.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_planetary_habitability_science_streak",
-      "display_name": "Daily Planetary Habitability Science",
-      "score": 24,
-      "community": 78095000,
+      "niche": "daily_self_compassion_neuroscience_streak",
+      "display_name": "Daily Self Compassion Neuroscience",
+      "score": 25,
+      "community": 39430000,
       "priority": "P0",
-      "price": "$7.99-$9.99/mo",
+      "price": "$5.99-$8.99/mo",
       "is_new": true
     }
   ]

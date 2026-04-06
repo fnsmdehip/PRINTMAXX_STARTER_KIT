@@ -301,7 +301,8 @@
       "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
       "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt python3 AUTOMATIONS/app_factory/post_build_validator.py --path lie-detector-app/TruthScope)",
       "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/lie-detector-app/TruthScope-v2 npm install)",
-      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt python3 AUTOMATIONS/app_factory/post_build_validator.py --path lie-detector-app/TruthScope-v2)"
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\" cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt python3 AUTOMATIONS/app_factory/post_build_validator.py --path lie-detector-app/TruthScope-v2)",
+      "Bash(export PATH=\"/opt/homebrew/Cellar/node/25.6.1/bin:/opt/homebrew/bin:$PATH\")"
     ]
   }
 }

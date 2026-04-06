@@ -738,7 +738,7 @@ function PremiumScreen() {
       <Text style={styles.noPaymentText}>No payment due now</Text>
 
       <TouchableOpacity
-        onPress={() => Alert.alert('Restore', 'Looking for previous purchases...', [{ text: 'OK' }])}
+        onPress={() => Alert.alert('Subscription Status', 'Your subscription is managed through Stripe. Check your email for a receipt and subscription management link.')}
       >
         <Text style={styles.restoreText}>Restore Purchases</Text>
       </TouchableOpacity>

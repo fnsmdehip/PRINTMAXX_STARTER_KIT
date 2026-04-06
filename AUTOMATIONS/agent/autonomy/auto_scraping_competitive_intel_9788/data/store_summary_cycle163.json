@@ -1,0 +1,108 @@
+{
+  "cycle": 163,
+  "timestamp": "2026-04-06T08:08:20.591154+00:00",
+  "strategy": "ENVIRONMENTAL PSYCHOLOGY + NATURE DEFICIT DISORDER + ECOTHERAPY SCIENCE",
+  "niches_found": 10,
+  "duplicates_filtered": 0,
+  "ci_rows_added": 10,
+  "alpha_rows_added": 10,
+  "cumulative_blue_oceans": 1003,
+  "p0_niches": [
+    "daily_nature_deficit_disorder_streak",
+    "daily_shinrin_yoku_forest_bathing_streak",
+    "daily_climate_anxiety_solastalgia_streak",
+    "daily_biophilic_design_psychology_streak",
+    "daily_blue_space_psychology_streak"
+  ],
+  "p1_niches": [
+    "daily_ecotherapy_green_therapy_streak",
+    "daily_animal_assisted_therapy_streak",
+    "daily_urban_nature_green_space_streak",
+    "daily_wilderness_therapy_science_streak",
+    "daily_horticultural_therapy_streak"
+  ],
+  "top_score": 25,
+  "top_community": 54350000,
+  "scored_niches": [
+    {
+      "key": "daily_nature_deficit_disorder_streak",
+      "score": 25,
+      "priority": "P0",
+      "community": 54350000,
+      "price": "$6.99-$8.99/mo",
+      "revenue_model": "54.4M community \u00d7 0.05% = 27,175 users \u00d7 $7.99/mo = $217,127 MRR"
+    },
+    {
+      "key": "daily_shinrin_yoku_forest_bathing_streak",
+      "score": 25,
+      "priority": "P0",
+      "community": 40800000,
+      "price": "$6.99-$8.99/mo",
+      "revenue_model": "40.8M community \u00d7 0.05% = 20,400 users \u00d7 $7.99/mo = $163,000 MRR"
+    },
+    {
+      "key": "daily_climate_anxiety_solastalgia_streak",
+      "score": 24,
+      "priority": "P0",
+      "community": 11695000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "11.7M community \u00d7 0.06% = 7,020 users \u00d7 $6.99/mo = $49,070 MRR"
+    },
+    {
+      "key": "daily_biophilic_design_psychology_streak",
+      "score": 23,
+      "priority": "P0",
+      "community": 45150000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "45.2M community \u00d7 0.04% = 18,080 users \u00d7 $6.99/mo = $126,379 MRR"
+    },
+    {
+      "key": "daily_blue_space_psychology_streak",
+      "score": 23,
+      "priority": "P0",
+      "community": 36010000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "36.0M community \u00d7 0.05% = 18,005 users \u00d7 $6.99/mo = $125,855 MRR"
+    },
+    {
+      "key": "daily_ecotherapy_green_therapy_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 15100000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "15.1M community \u00d7 0.05% = 7,550 users \u00d7 $6.99/mo = $52,775 MRR"
+    },
+    {
+      "key": "daily_animal_assisted_therapy_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 45780000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "45.8M community \u00d7 0.04% = 18,320 users \u00d7 $5.99/mo = $109,737 MRR"
+    },
+    {
+      "key": "daily_urban_nature_green_space_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 39880000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "39.9M community \u00d7 0.04% = 15,960 users \u00d7 $5.99/mo = $95,600 MRR"
+    },
+    {
+      "key": "daily_wilderness_therapy_science_streak",
+      "score": 21,
+      "priority": "P1",
+      "community": 12600000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "12.6M community \u00d7 0.04% = 5,040 users \u00d7 $5.99/mo = $30,190 MRR"
+    },
+    {
+      "key": "daily_horticultural_therapy_streak",
+      "score": 21,
+      "priority": "P1",
+      "community": 42475000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "42.5M community \u00d7 0.03% = 12,750 users \u00d7 $5.99/mo = $76,373 MRR"
+    }
+  ]
+}

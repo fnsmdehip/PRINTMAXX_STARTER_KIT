@@ -86,6 +86,14 @@
   .alert-box{border:2px solid var(--accent);padding:10px 14px;margin:10px 0;background:#fff5f5}
   .alert-box h4{color:var(--accent);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
   .alert-box p{font-size:13px;margin-bottom:0}
+  .nav-bar{display:flex;justify-content:center;gap:20px;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+  .nav-bar a{color:var(--muted);text-decoration:none}
+  .nav-bar a:hover{color:var(--accent)}
+  .nav-bar a.active{color:var(--accent);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:2px}
+  .edition-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;margin-top:20px;border-top:1px solid var(--rule);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+  .edition-nav a{color:var(--accent);text-decoration:none}
+  .edition-nav a:hover{color:var(--accent-light)}
+  .edition-nav .disabled{color:#bbb;cursor:default}
   @media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}.dv{border-left:none;padding-left:0;border-top:1px solid var(--rule);padding-top:12px}.page{padding:12px}.sg{grid-template-columns:repeat(2,1fr)}.vl{columns:1}}
   @media print{body{background:#fff}.page{max-width:100%}}
 </style>
@@ -99,6 +107,10 @@
   <h1>THE BUILDER'S LEDGER</h1>
   <div class="masthead-sub">Autonomous Revenue Systems &mdash; Weekly Engineering Intelligence</div>
 </header>
+<nav class="nav-bar">
+  <a href="/">Current Edition</a>
+  <a href="/archive/">Archives</a>
+</nav>
 <div class="edition-bar">
   <span>Vol. I &mdash; No. 1</span>
   <span>github.com/fnsmdehip</span>
@@ -1046,10 +1058,17 @@
 </div>
 
 <!-- ===================== FOOTER ===================== -->
+<!-- ===================== EDITION NAV ===================== -->
+<div class="edition-nav">
+  <span class="disabled">&larr; Previous Edition</span>
+  <a href="/archive/">All Editions</a>
+  <a href="/archive/index_2026-W15.html">Next: Vol. I No. 2 (Mar 31&ndash;Apr 6) &rarr;</a>
+</div>
+
 <div class="footer">
   THE BUILDER'S LEDGER &bull; Vol. I, No. 1 &bull; Published March 21, 2026<br>
   <a href="https://github.com/fnsmdehip">github.com/fnsmdehip</a> &bull; Powered by Claude Max &bull; Built with PRINTMAXX<br>
-  builders-ledger.surge.sh
+  builders-ledger.surge.sh &bull; <a href="/">Back to Current Edition</a>
 </div>
 
 </div>

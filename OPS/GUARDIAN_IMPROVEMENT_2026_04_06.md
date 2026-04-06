@@ -1,11 +1,12 @@
 # Guardian Improvement Report — 2026-04-06
-Generated: 00:00:00
+Generated: 04:00:00
 
 ## Gaps Found
 
-1. Stale data: FREELANCE_DEMAND_SCAN.csv (13d)
-2. Revenue still $0 — shipping is blocked
-3. Only 0 active accounts — #1 blocker
+1. Alpha backlog: 176 PENDING_REVIEW entries
+2. Stale data: FREELANCE_DEMAND_SCAN.csv (13d)
+3. Revenue still $0 — shipping is blocked
+4. Only 0 active accounts — #1 blocker
 
 ## Auto-Fixes Applied
 

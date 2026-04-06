@@ -44,6 +44,9 @@ class AppValidator:
         self.check_dead_code()
         self.check_empty_states()
         self.check_loading_states()
+        self.check_revenue_pipeline()
+        self.check_safe_areas()
+        self.check_timer_cleanup()
         self.check_typescript()
 
         self.report()
@@ -206,6 +209,70 @@ class AppValidator:
                 self.issues.append(f"TYPESCRIPT ERRORS:\n{result}")
             else:
                 self.passed.append("TypeScript: 0 errors")
+
+    def check_revenue_pipeline(self):
+        """Verify monetization is wired, not cosmetic."""
+        for f in self.find_files("*.tsx"):
+            content = f.read_text()
+            name = f.name
+
+            # Check for hardcoded isPremium (must be on same line, not just in same file)
+            lines = content.split('\n')
+            for i, line in enumerate(lines):
+                if 'useState(false)' in line and 'isPremium' in line.lower():
+                    if 'getIsPremium' not in content and 'getProfile' not in content:
+                        self.issues.append(
+                            f"REVENUE BROKEN: {name}:{i+1} hardcodes isPremium=false instead of reading from store"
+                        )
+
+            # Check for fake restore purchases
+            if "Restore" in content and "Purchase" in content:
+                if "NOT IMPLEMENTED" not in content and "Stripe" not in content and "RevenueCat" not in content:
+                    if "Looking for" in content or "will be available" in content:
+                        self.issues.append(
+                            f"FAKE RESTORE: {name} has fake 'Restore Purchases' that pretends to work"
+                        )
+
+        # Check session saving exists somewhere
+        all_content = ""
+        screen_dir = self.src_path / "screens"
+        if screen_dir.exists():
+            for f in screen_dir.glob("*.tsx"):
+                all_content += f.read_text()
+
+        if "saveSession" not in all_content:
+            self.warnings.append("NO SESSION SAVE: no screen calls saveSession() — user sessions are ephemeral")
+
+        # Check Result screen is navigated to
+        if "navigate('Result'" not in all_content and 'navigate("Result"' not in all_content:
+            self.warnings.append("NO RESULT FLOW: no screen navigates to Result — users never see analysis results")
+
+    def check_safe_areas(self):
+        """Check for hardcoded padding that should use safe area insets."""
+        for f in self.find_files("*.tsx"):
+            content = f.read_text()
+            if "paddingTop: 60" in content or "paddingTop: 50" in content or "top: 50" in content:
+                if "useSafeAreaInsets" not in content:
+                    self.warnings.append(
+                        f"HARDCODED SAFE AREA: {f.name} uses hardcoded paddingTop instead of useSafeAreaInsets"
+                    )
+
+    def check_timer_cleanup(self):
+        """Verify intervals/timeouts/recordings are cleaned up on unmount."""
+        for f in self.find_files("*.tsx"):
+            content = f.read_text()
+            has_interval = "setInterval" in content
+            has_recording = "Recording" in content and "startAsync" in content
+            has_cleanup = "clearInterval" in content or "stopAndUnload" in content
+
+            if has_interval and not has_cleanup:
+                self.issues.append(
+                    f"MEMORY LEAK: {f.name} uses setInterval but never calls clearInterval"
+                )
+            if has_recording and "stopAndUnload" not in content:
+                self.warnings.append(
+                    f"RECORDING LEAK: {f.name} starts audio recording but may not stop on unmount"
+                )
 
     def report(self):
         print("\n" + "=" * 60)

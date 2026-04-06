@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="Weekly engineering report for solo founders. Real numbers, shipped products, no fluff.">
 <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' fill='%23f5f0e8'%3E%3Crect width='1200' height='630'/%3E%3Ctext x='600' y='260' font-family='Georgia,serif' font-size='64' fill='%238b0000' font-weight='bold' text-anchor='middle' dominant-baseline='middle'%3EThe Builder%27s Ledger%3C/text%3E%3C/svg%3E">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F4CA;</text></svg>">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"The Builder's Ledger","url":"https://builders-ledger.surge.sh/","description":"Weekly engineering report for solo founders building in public. Real revenue numbers, shipped products, and honest retrospectives.","datePublished":"2026-03-28","dateModified":"2026-04-01","inLanguage":"en-US","author":{"@type":"Organization","name":"PRINTMAXX","url":"https://printmaxx.surge.sh/"},"publisher":{"@type":"Organization","name":"PRINTMAXX"},"potentialAction":{"@type":"ReadAction","target":"https://builders-ledger.surge.sh/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"The Builder's Ledger","url":"https://builders-ledger.surge.sh/","description":"Weekly engineering report for solo founders building in public. Real revenue numbers, shipped products, and honest retrospectives.","datePublished":"2026-03-28","dateModified":"2026-04-06","inLanguage":"en-US","author":{"@type":"Organization","name":"PRINTMAXX","url":"https://printmaxx.surge.sh/"},"publisher":{"@type":"Organization","name":"PRINTMAXX"},"potentialAction":{"@type":"ReadAction","target":"https://builders-ledger.surge.sh/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is The Builder's Ledger?","acceptedAnswer":{"@type":"Answer","text":"The Builder's Ledger is a weekly engineering and revenue report from a solo founder building in public. Each edition covers products shipped, deployments made, revenue pipeline status, technical decisions, and honest retrospectives on what worked and what didn't."}},{"@type":"Question","name":"Who writes The Builder's Ledger?","acceptedAnswer":{"@type":"Answer","text":"The Builder's Ledger is written by the founder of PRINTMAXX, a solo founder building an autonomous revenue system using AI agents, programmatic SEO, and a portfolio of apps and digital products. The goal is $0 to $50K/mo using no outside funding."}},{"@type":"Question","name":"How often is The Builder's Ledger published?","acceptedAnswer":{"@type":"Answer","text":"The Builder's Ledger is published weekly, typically covering the prior 7 days of building activity including apps launched, revenue metrics, and technical infrastructure updates."}},{"@type":"Question","name":"What makes The Builder's Ledger different from other indie hacker blogs?","acceptedAnswer":{"@type":"Answer","text":"The Builder's Ledger publishes the actual deployment numbers, failure counts, and automation architectures — not just wins. It covers the full stack: AI agent systems, programmatic SEO at scale, iOS app factory pipelines, and cold outreach automation. No vanity metrics."}}]}</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
@@ -86,6 +86,14 @@
   .alert-box{border:2px solid var(--accent);padding:10px 14px;margin:10px 0;background:#fff5f5}
   .alert-box h4{color:var(--accent);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
   .alert-box p{font-size:13px;margin-bottom:0}
+  .nav-bar{display:flex;justify-content:center;gap:20px;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+  .nav-bar a{color:var(--muted);text-decoration:none}
+  .nav-bar a:hover{color:var(--accent)}
+  .nav-bar a.active{color:var(--accent);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:2px}
+  .edition-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;margin-top:20px;border-top:1px solid var(--rule);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+  .edition-nav a{color:var(--accent);text-decoration:none}
+  .edition-nav a:hover{color:var(--accent-light)}
+  .edition-nav .disabled{color:#bbb;cursor:default}
   @media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}.dv{border-left:none;padding-left:0;border-top:1px solid var(--rule);padding-top:12px}.page{padding:12px}.sg{grid-template-columns:repeat(2,1fr)}.vl{columns:1}}
   @media print{body{background:#fff}.page{max-width:100%}}
 </style>
@@ -95,34 +103,124 @@
 <div class="page">
 
 <header class="masthead">
-  <div class="masthead-date">Week of March 15&ndash;21, 2026</div>
+  <div class="masthead-date">Week of March 31 &ndash; April 6, 2026</div>
   <h1>THE BUILDER'S LEDGER</h1>
   <div class="masthead-sub">Autonomous Revenue Systems &mdash; Weekly Engineering Intelligence</div>
 </header>
+<nav class="nav-bar">
+  <a href="/" class="active">Current Edition</a>
+  <a href="/archive/">Archives</a>
+</nav>
 <div class="edition-bar">
-  <span>Vol. I &mdash; No. 1</span>
+  <span>Vol. I &mdash; No. 2</span>
   <span>github.com/fnsmdehip</span>
-  <span>6 Active Projects &bull; 3,508 Agent Sessions &bull; Day 45 &bull; $0 Revenue</span>
+  <span>9 Active Projects &bull; 4,200+ Agent Sessions &bull; Day 51 &bull; $0 Revenue</span>
 </div>
 
 <!-- ===================== STATS ===================== -->
-<div class="sh">System Heartbeat &mdash; March 21, 2026</div>
+<div class="sh">System Heartbeat &mdash; April 6, 2026</div>
 <div class="sg">
   <div class="sc"><div class="sn">363</div><div class="sl">Automation Scripts</div></div>
   <div class="sc"><div class="sn">75K+</div><div class="sl">Lines Python (Top 60)</div></div>
   <div class="sc"><div class="sn">33</div><div class="sl">Autonomous Agents</div></div>
   <div class="sc"><div class="sn">111</div><div class="sl">Cron Jobs</div></div>
-  <div class="sc"><div class="sn">37</div><div class="sl">Revenue Verticals</div></div>
+  <div class="sc"><div class="sn">41</div><div class="sl">Revenue Verticals</div></div>
   <div class="sc"><div class="sn">5,277</div><div class="sl">Methods Ranked</div></div>
-  <div class="sc"><div class="sn">395</div><div class="sl">Live Deployed Sites</div></div>
+  <div class="sc"><div class="sn">431</div><div class="sl">Live Deployed Sites</div></div>
   <div class="sc"><div class="sn">191K</div><div class="sl">Leads Analyzed</div></div>
   <div class="sc"><div class="sn">132+</div><div class="sl">Products Built</div></div>
   <div class="sc"><div class="sn">2,277</div><div class="sl">Content Pieces Ready</div></div>
   <div class="sc"><div class="sn">65</div><div class="sl">Ralph Loop Dirs</div></div>
-  <div class="sc"><div class="sn">$0</div><div class="sl">Revenue (Day 45)</div></div>
+  <div class="sc"><div class="sn">$0</div><div class="sl">Revenue (Day 51)</div></div>
 </div>
 
 <hr class="rt">
+
+<!-- ===================== TELEHEALTH EMPIRE (APRIL 6 2026) ===================== -->
+<div class="sh">Lead Story - April 6, 2026</div>
+<div class="g2">
+<div>
+  <div class="h1">TELEHEALTH AFFILIATE EMPIRE: 36 Pages, 2 Brands, $350/Conversion Infrastructure Built in One Session</div>
+  <div class="by">April 6, 2026 &bull; MM080_TELEHEALTH_AFFILIATE &bull; Capital Genesis Score: 8.89 (#1 in Stack)</div>
+
+  <p class="lead">A solo founder studied how Medvi's creator hit $1.8B with AI tools and a white-label medical backend. Then built the entire affiliate infrastructure in a single session: 34 comparison pages, 2 own-brand telehealth sites, 50 ad variants, 21 email sequences, and 3 Stripe payment links. Zero ad spend. Everything organic-first.</p>
+
+  <p>The Medvi thesis is simple: telehealth is a $350-500 CPA vertical where one conversion per day produces $10,500/month at the floor. The founder behind Medvi ran the whole operation with AI - content, ads, fulfillment routing, customer support. We applied the same model but split the attack into two prongs: affiliate comparison pages that capture search intent, and own-brand telehealth sites that capture direct traffic.</p>
+
+  <div class="ssh">What Got Deployed (April 6)</div>
+  <div class="sg">
+    <div class="sc"><div class="sn">36</div><div class="sl">Pages Deployed</div></div>
+    <div class="sc"><div class="sn">2</div><div class="sl">Own-Brand Sites</div></div>
+    <div class="sc"><div class="sn">50</div><div class="sl">Meta Ad Variants</div></div>
+    <div class="sc"><div class="sn">21</div><div class="sl">Email Sequences</div></div>
+    <div class="sc"><div class="sn">91</div><div class="sl">Content Pieces Ready</div></div>
+    <div class="sc"><div class="sn">8.89</div><div class="sl">Capital Genesis Score</div></div>
+  </div>
+
+  <div class="ssh">The Two Prongs</div>
+  <p><strong>Prong 1 - Affiliate Comparison Pages (34 pages):</strong> Best-of and vs. comparison pages for GLP-1 weight loss programs, TRT therapy, peptide therapy, blood pressure supplements, hearing supplements, joint supplements, memory supplements, prostate supplements, sleep supplements, testosterone boosters, and more. Each page ranks for "[category] + best/review/compare" long-tail keywords. Email capture forms on all 14 comparison pages. All deployed to surge.sh with full Schema.org markup and sitemaps.</p>
+
+  <p><strong>Prong 2 - Own-Brand Sites (2 sites):</strong> <strong>Dosewell</strong> (GLP-1 weight loss - best-glp1-weight-loss-program-online) and <strong>Androx</strong> (TRT therapy - best-online-trt-program-men). These aren't affiliate links - they're branded landing pages that position us as the trusted review hub, capturing leads directly before routing to partner programs.</p>
+
+  <div class="ssh">Revenue Math</div>
+  <div class="formula">CPA per telehealth conversion:     $300-500
+Conversions needed for $10K/mo:    1/day (at $350 avg)
+Conversions needed for $50K/mo:    5/day
+Current ad spend:                  $0 (organic first)
+Break-even on paid:                1 conversion covers ~$350 in ad spend
+Projected month 3 (organic only):  $3,150-10,500/mo
+Projected month 6 (organic+paid):  $15,000-35,000/mo</div>
+
+  <div class="ssh">Content + Ad Arsenal</div>
+  <p><strong>50 Meta ad variants</strong> with corresponding image prompts - split across GLP-1, TRT, and peptide verticals. Before/after angles, doctor trust signals, cost comparison hooks, urgency triggers.</p>
+  <p><strong>10 video scripts</strong> for short-form vertical video (TikTok/Reels/Shorts). Three angles: personal transformation, doctor endorsement, cost savings vs. in-person.</p>
+  <p><strong>50 social posts</strong> ready to publish across platforms. Mix of educational (how GLP-1 works), social proof (transformation stories), and direct response (limited slots available).</p>
+  <p><strong>21 email nurture sequences</strong> - 7-day drip for each of 3 verticals (GLP-1, TRT, peptides). Day 1: education. Day 3: social proof. Day 5: objection handling. Day 7: urgency close.</p>
+</div>
+<div class="dv">
+  <div class="ssh">Why This Scored #1 (8.89)</div>
+  <div class="sm">
+  <p>Capital Genesis re-ranked the entire 5,277-method stack after this session. MM080_TELEHEALTH_AFFILIATE scored <strong>8.89</strong> - the highest composite score in the system, beating the previous leaders (content farm plays at 8.64).</p>
+  <p><strong>Scoring breakdown:</strong></p>
+  <table class="l">
+    <tr><th>Dimension</th><th>Score</th><th>Why</th></tr>
+    <tr><td>Revenue Potential</td><td>9.5</td><td>$350-500 CPA, recurring patient value</td></tr>
+    <tr><td>Speed to Revenue</td><td>8.0</td><td>Pages live NOW, affiliate signup in progress</td></tr>
+    <tr><td>Downside Risk</td><td>8.5</td><td>Legal vertical, real medical providers</td></tr>
+    <tr><td>Automation</td><td>9.0</td><td>Programmatic SEO, auto email sequences</td></tr>
+    <tr><td>Synergy</td><td>9.0</td><td>Feeds content farm, email list, ad testing</td></tr>
+    <tr><td>Upfront Cost</td><td>9.5</td><td>$0 hosting, $0 tools, organic traffic first</td></tr>
+    <tr><td>Liability Risk</td><td>8.0</td><td>Affiliate model, no medical claims</td></tr>
+  </table>
+  </div>
+  <hr class="r">
+
+  <div class="ssh">Also Built This Session</div>
+  <div class="sm">
+  <p><strong>NSFW AI Content Pipeline:</strong> 3 AI characters, 150 content prompts, 30-day editorial calendar. Separate revenue vertical with its own distribution channels. Stays walled off from the telehealth brand.</p>
+  <p><strong>AI Voice Agent Research:</strong> Scouted Bland AI, Retell, Vapi for automated outbound. $0.07-0.12/min. Potential for appointment setting at scale.</p>
+  <p><strong>3 Stripe Payment Links:</strong> $29 premium telehealth comparison reports. Direct monetization before affiliate commissions start flowing.</p>
+  <p><strong>Master KPI List:</strong> 170+ KPIs with leading/lagging indicators. Every metric tied to a specific revenue action.</p>
+  </div>
+  <hr class="r">
+
+  <div class="ssh">What Remains (Human Actions)</div>
+  <div class="sm">
+  <p><strong>Katalys affiliate signup</strong> - application submitted, approval pending. This is the primary telehealth affiliate network.</p>
+  <p><strong>Alternative networks:</strong> ShareASale, Impact, CJ Affiliate as backup. Most telehealth programs run through these.</p>
+  <p><strong>Email service provider:</strong> Kit or Beehiiv for the nurture sequences. A/B test already designed (Kit 10K free vs Beehiiv 2,500 free).</p>
+  <p><strong>Domain setup:</strong> Custom domains for Dosewell and Androx once affiliate accounts are live.</p>
+  </div>
+  <hr class="r">
+
+  <div class="alert-box">
+  <h4>Bottom Line</h4>
+  <p>91 content pieces. 36 pages live. 21 email sequences written. 50 ad creatives ready. $0 spent. One affiliate network approval away from turning on a $300-500/conversion machine. This is the highest-scored method in the entire PRINTMAXX stack for a reason: high CPA, low cost, high automation potential, and the infrastructure is already built.</p>
+  </div>
+</div>
+</div>
+
+<hr class="rd">
 
 <!-- ===================== THE META-SYSTEM ===================== -->
 <div class="sh">The Meta-System</div>
@@ -552,8 +650,8 @@
 <div class="sh">Complete Asset Inventory: 132+ Products, Zero Listed</div>
 
 <div class="alert-box">
-<h4>Revenue Status: $0 at Day 45</h4>
-<p>Every channel blocked on human account creation. Zero marketplace accounts created. Zero products listed. Zero emails sent. Zero content published. Estimated 30&ndash;60 minutes per platform to unblock.</p>
+<h4>Revenue Status: $0 at Day 51</h4>
+<p>Telehealth affiliate infrastructure built (36 pages, 91 content pieces, 21 email sequences). Blocked on affiliate network approval (Katalys pending). Marketplace accounts still needed. Estimated 30&ndash;60 minutes per platform to unblock.</p>
 </div>
 
 <div class="g3">
@@ -598,10 +696,11 @@
   <p><strong>Creative:</strong> beat-making-streak, music-theory-streak, photography-streak, outfit-design-streak</p>
   </div>
   <hr class="r">
-  <div class="ssh">Affiliate Comparison Pages (13)</div>
+  <div class="ssh">Affiliate Comparison Pages (47)</div>
   <div class="sm">
-  <p>semrush-vs-ahrefs, smartlead-vs-instantly, best-ai-tools-2026, n8n-vs-zapier-vs-make, convertkit-vs-beehiiv, framer-vs-webflow, best-cold-email-tools, best-lead-gen-tools, best-saas-tools-solopreneurs, lemlist-vs-instantly, klaviyo-alternative, best-newsletter-platforms, ai-stack-2026</p>
-  <p>All live with PLACEHOLDER affiliate IDs. Zero affiliate signups.</p>
+  <p><strong>SaaS/Tools (13):</strong> semrush-vs-ahrefs, smartlead-vs-instantly, best-ai-tools-2026, n8n-vs-zapier-vs-make, convertkit-vs-beehiiv, framer-vs-webflow, best-cold-email-tools, best-lead-gen-tools, best-saas-tools-solopreneurs, lemlist-vs-instantly, klaviyo-alternative, best-newsletter-platforms, ai-stack-2026</p>
+  <p><strong>Telehealth/Health (34):</strong> best-glp1-weight-loss-program-online (Dosewell), best-online-trt-program-men (Androx), best-peptide-therapy-online, telehealth-reviews-hub, best-blood-pressure-supplement-men-over-55, best-hearing-supplement-men-over-60, best-joint-supplement-men-over-50, best-memory-supplement-men-over-60, best-prostate-supplement-men-over-60, best-sleep-supplement-men-over-55, best-testosterone-booster-men-over-50, best-golf-accessories-seniors, + 22 more niche health comparison pages</p>
+  <p>SaaS pages: PLACEHOLDER affiliate IDs. Telehealth pages: Katalys approval pending. Email capture on all 14 telehealth comparison pages.</p>
   </div>
   <hr class="r">
   <div class="ssh">Lead Magnets/Calculators (15 live)</div>
@@ -782,7 +881,7 @@
 <hr class="rd">
 
 <!-- ===================== PORTFOLIO ===================== -->
-<div class="sh">Full Portfolio: 6 Active Projects This Week</div>
+<div class="sh">Full Portfolio: 9 Active Projects This Week</div>
 
 <div class="g3">
 <div>
@@ -828,6 +927,27 @@
   <p class="mono">~/Documents/ancestry-research</p>
   </div>
 </div>
+<div>
+  <div class="h3"><span class="dot d-a"></span>TELEHEALTH AFFILIATE EMPIRE</div>
+  <span class="tag t-n">NEW</span><span class="tag t-s">36 PAGES DEPLOYED</span>
+  <div class="sm">
+  <p><strong>$300-500 CPA telehealth affiliate infrastructure.</strong> 34 comparison pages (GLP-1, TRT, peptides, supplements), 2 own-brand sites (Dosewell, Androx), 50 ad variants, 21 email sequences, 3 Stripe payment links. Capital Genesis score: 8.89 (#1 in stack).</p>
+  <p><strong>This week:</strong> Full build from zero. Katalys affiliate application pending.</p>
+  <p class="mono">LANDING/affiliate-pages/ &bull; surge.sh</p>
+  </div>
+</div>
+<div>
+  <div class="h3"><span class="dot d-a"></span>TRUTHSCOPE</div>
+  <span class="tag t-n">NEW</span><span class="tag t-s">SIMULATOR VERIFIED</span>
+  <div class="sm">
+  <p><strong>AI lie detector app for iOS.</strong> 3 real biometric engines (PPG heart rate, voice stress, facial micro-expressions), multi-modal fusion, 14-screen onboarding, Party Mode. 17 source files, 8,315 lines TypeScript.</p>
+  <p><strong>Status:</strong> Running on iOS Simulator, Stripe LIVE ($4.99/mo, $29.99/yr).</p>
+  <p class="mono">lie-detector-app/TruthScope/</p>
+  </div>
+</div>
+</div>
+
+<div class="g3">
 <div>
   <div class="h3"><span class="dot d-a"></span>SWITCH CLOUD PLAY</div>
   <span class="tag t-n">NEW</span><span class="tag t-s">INITIAL COMMIT</span>
@@ -880,7 +1000,7 @@
   <hr class="r">
   <div class="ssh">Hosting</div>
   <div class="sm">
-  <p>surge.sh (395 sites, free tier)</p>
+  <p>surge.sh (431 sites, free tier)</p>
   <p>Vercel (selected sites)</p>
   <p>Options evaluated: Netlify, Cloudflare Pages, Oracle Cloud (2 FREE VMs), Hetzner ($3.79/mo)</p>
   </div>
@@ -1003,7 +1123,7 @@
   <hr class="r">
   <div class="ssh">The Bottleneck</div>
   <div class="sm">
-  <p>The system has been at $0 revenue for 45 days despite 363 scripts, 33 agents, 191K+ leads, 54 built apps, 132+ products, 2,277 content pieces, and 395 deployed sites. The bottleneck is not technical. It is 9 human account creation actions averaging 30&ndash;60 minutes each. Estimated total unblock time: 4.5&ndash;9 hours of human effort.</p>
+  <p>The system has been at $0 revenue for 51 days despite 363 scripts, 33 agents, 191K+ leads, 54 built apps, 132+ products, 2,277+ content pieces, and 431 deployed sites. The highest-value unblock is now a single affiliate network approval (Katalys, pending) that would activate $300-500/conversion telehealth commissions across 36 deployed pages. Remaining blockers: marketplace accounts averaging 30&ndash;60 minutes each.</p>
   </div>
 </div>
 </div>
@@ -1045,9 +1165,16 @@
   </div>
 </div>
 
+<!-- ===================== EDITION NAV ===================== -->
+<div class="edition-nav">
+  <a href="/archive/index_2026-W14.html">&larr; Previous: Vol. I No. 1 (Mar 15&ndash;21)</a>
+  <a href="/archive/">All Editions</a>
+  <span class="disabled">Next Edition &rarr;</span>
+</div>
+
 <!-- ===================== FOOTER ===================== -->
 <div class="footer">
-  THE BUILDER'S LEDGER &bull; Vol. I, No. 1 &bull; Published March 21, 2026<br>
+  THE BUILDER'S LEDGER &bull; Vol. I, No. 2 &bull; Updated April 6, 2026<br>
   <a href="https://github.com/fnsmdehip">github.com/fnsmdehip</a> &bull; Powered by Claude Max &bull; Built with PRINTMAXX<br>
   builders-ledger.surge.sh
 </div>

@@ -1,0 +1,108 @@
+{
+  "cycle": 164,
+  "timestamp": "2026-04-06T08:30:03.438635+00:00",
+  "strategy": "LONELINESS SCIENCE + SOCIAL CONNECTION NEUROSCIENCE + BELONGING PSYCHOLOGY",
+  "niches_found": 10,
+  "duplicates_filtered": 0,
+  "ci_rows_added": 10,
+  "alpha_rows_added": 10,
+  "cumulative_blue_oceans": 1013,
+  "p0_niches": [
+    "daily_loneliness_neuroscience_streak",
+    "daily_social_pain_brain_science_streak",
+    "daily_belonging_psychology_science_streak",
+    "daily_dunbar_social_brain_science_streak",
+    "daily_oxytocin_bonding_neuroscience_streak"
+  ],
+  "p1_niches": [
+    "daily_touch_affective_neuroscience_streak",
+    "daily_collective_effervescence_science_streak",
+    "daily_social_capital_network_science_streak",
+    "daily_solitude_restorative_science_streak",
+    "daily_friendship_formation_science_streak"
+  ],
+  "top_score": 25,
+  "top_community": 41770000,
+  "scored_niches": [
+    {
+      "key": "daily_loneliness_neuroscience_streak",
+      "score": 25,
+      "priority": "P0",
+      "community": 41770000,
+      "price": "$6.99-$8.99/mo",
+      "revenue_model": "41.8M community \u00d7 0.06% = 25,062 users \u00d7 $7.99/mo = $200,245 MRR"
+    },
+    {
+      "key": "daily_social_pain_brain_science_streak",
+      "score": 25,
+      "priority": "P0",
+      "community": 39750000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "39.8M community \u00d7 0.05% = 19,875 users \u00d7 $6.99/mo = $138,927 MRR"
+    },
+    {
+      "key": "daily_belonging_psychology_science_streak",
+      "score": 25,
+      "priority": "P0",
+      "community": 41950000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "42.0M community \u00d7 0.05% = 20,975 users \u00d7 $6.99/mo = $146,615 MRR"
+    },
+    {
+      "key": "daily_dunbar_social_brain_science_streak",
+      "score": 24,
+      "priority": "P0",
+      "community": 40060000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "40.1M community \u00d7 0.04% = 16,024 users \u00d7 $6.99/mo = $112,008 MRR"
+    },
+    {
+      "key": "daily_oxytocin_bonding_neuroscience_streak",
+      "score": 24,
+      "priority": "P0",
+      "community": 43435000,
+      "price": "$5.99-$7.99/mo",
+      "revenue_model": "43.4M community \u00d7 0.04% = 17,374 users \u00d7 $6.99/mo = $121,445 MRR"
+    },
+    {
+      "key": "daily_touch_affective_neuroscience_streak",
+      "score": 23,
+      "priority": "P1",
+      "community": 41855000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "41.9M community \u00d7 0.04% = 16,740 users \u00d7 $5.99/mo = $100,271 MRR"
+    },
+    {
+      "key": "daily_collective_effervescence_science_streak",
+      "score": 23,
+      "priority": "P1",
+      "community": 37352000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "37.4M community \u00d7 0.04% = 14,941 users \u00d7 $5.99/mo = $89,496 MRR"
+    },
+    {
+      "key": "daily_social_capital_network_science_streak",
+      "score": 23,
+      "priority": "P1",
+      "community": 37840000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "37.8M community \u00d7 0.04% = 15,136 users \u00d7 $5.99/mo = $90,665 MRR"
+    },
+    {
+      "key": "daily_solitude_restorative_science_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 40208000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "40.2M community \u00d7 0.03% = 12,062 users \u00d7 $5.99/mo = $72,252 MRR"
+    },
+    {
+      "key": "daily_friendship_formation_science_streak",
+      "score": 22,
+      "priority": "P1",
+      "community": 40310000,
+      "price": "$4.99-$6.99/mo",
+      "revenue_model": "40.3M community \u00d7 0.04% = 16,120 users \u00d7 $5.99/mo = $96,559 MRR"
+    }
+  ]
+}

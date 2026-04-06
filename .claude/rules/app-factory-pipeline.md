@@ -49,6 +49,8 @@ deep_qa.py --test PATH                 (Stage 3a: books exist? content real? cry
     ↓
 test_runner.py --test PATH             (Stage 3b: 13-point Apple rejection checklist)
     ↓
+post_build_validator.py --path PATH    (Stage 3c: nav/sound/data validation)
+    ↓
 build_submit.py --build-and-submit     (Stage 4: EAS Build + Submit)
     ↓
 distribution_engine.py --full          (Stage 5: ASO, screenshots, social, influencer)
@@ -58,6 +60,50 @@ portfolio_optimizer.py --optimize      (Stage 6: kill/scale/boost weekly)
 
 ## Deep QA Checks (auto-runs per app type)
 **All apps:** dead imports, empty screens, payment flow, onboarding (12+ screens), paywall rescue offer, hardcoded strings
+
+## Post-Build Validator Checks (Stage 3c — `post_build_validator.py`)
+Every app MUST pass these before claiming "done":
+1. **Navigation integrity** — all navigate() calls match registered screen names
+2. **Sound integration** — SoundTouchable or playSound in every screen with touchable elements
+3. **Zero simulated sensor data** — no Math.random in sensor/biometric contexts
+4. **Back navigation** — every non-root screen has goBack or back arrow
+5. **Dead code** — no _REMOVED_ markers or TODO:remove
+6. **Empty states** — lists/grids show message when empty
+7. **Loading states** — async operations show ActivityIndicator
+8. **TypeScript clean** — `npx tsc --noEmit` must pass with 0 errors
+
+## Revenue Pipeline Checklist (MUST verify before any app ships)
+Learned from TruthScope audit — these were ALL broken and caught late:
+1. **isPremium reads from store** — NEVER hardcode `useState(false)`. Load from AsyncStorage on mount.
+2. **Free tier ACTUALLY gated** — premium features blocked in code, not just labeled. Verify by testing as free user.
+3. **Session/usage limits enforced** — if paywall promises "3/day free", code MUST count and block at limit.
+4. **Payment callback wired** — Stripe success URL deep links back to app, sets isPremium=true.
+5. **Restore Purchases honest** — if using Stripe (not IAP), explain Stripe subscription management, don't fake "looking for purchases."
+6. **Recording/session saves** — every detection session MUST save to AsyncStorage AND navigate to Result screen. Ephemeral sessions = wasted user effort.
+7. **Paywall single CTA** — ONE primary action button, not two competing "skip" buttons. Rescue offer only on explicit decline.
+8. **Premium mode gating** — if paywall says "X mode free only", other modes MUST show upgrade prompt, not silently work.
+
+## Architecture Standards (from TruthScope v2 one-shot process)
+These must be in place FROM THE START, not added later:
+1. **babel.config.js** with reanimated/plugin — create during scaffold, not after first crash
+2. **SoundTouchable wrapper** — create as first component, import instead of TouchableOpacity in every screen
+3. **useDetectionEngine pattern** — sensor hook separate from screen, never inline simulated data in screen files
+4. **Deep linking** — URL scheme in app.json + linking config in navigator from day one
+5. **Safe area insets** — use `useSafeAreaInsets()`, never hardcode `paddingTop: 60`
+6. **Typed navigation** — `NativeStackNavigationProp<RootStackParamList>`, never `navigation: any`
+7. **Store functions for IDs** — use `generateId()` from store, not inline `Math.random()` in screens
+8. **Timer cleanup on unmount** — every setInterval, setTimeout, and Audio.Recording MUST be cleaned up in useEffect return
+9. **Duration consistency** — decide seconds or milliseconds and be consistent. Display always in seconds.
+10. **No console.log/warn in production** — gate behind `__DEV__` or remove entirely
+
+## Sound Design Checklist
+1. Copy Octave + Kenney CC0 sounds to `assets/sounds/` (22 files minimum)
+2. Create `src/sounds/SoundEngine.ts` with preloading + volume control
+3. Create `src/components/SoundTouchable.tsx` wrapper with auto sound+haptic
+4. Replace `TouchableOpacity` import with `SoundTouchable as TouchableOpacity` in EVERY screen
+5. Add contextual sounds: `swipe` on navigation, `success`/`error` on state changes, `toggle` on switches
+6. Set `playsInSilentModeIOS: true` (users in silent mode still need app sounds)
+7. Verify: `grep -rn playSound src/screens/` must show calls in ALL screen files
 **Ebook reader:** book catalog (50+ books?), content real (not empty), reader navigation
 **Religious reading:** Bible/scripture text verified, verse accuracy, translation gating
 **Nutrition tracker:** TDEE formula correct (Mifflin-St Jeor), macro split, AI scanning wired

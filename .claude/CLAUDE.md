@@ -2,6 +2,9 @@
 
 Read `OPS/PERSISTENT_TASK_TRACKER.md` FIRST every session. Read `AUTOMATIONS/SOUL.md` for behavioral directives.
 
+## Browser Rule
+- ALWAYS use `open -a "Google Chrome"` for URLs, NEVER bare `open`. Chrome = Claude in Chrome MCP + computer-use compatible. Brave = personal browser, don't touch.
+
 ## Session Start (10 min max)
 1. Read `OPS/SESSION_BRIEFING.md` + `OPS/PERSISTENT_TASK_TRACKER.md` + `OPS/DAILY_TACTICAL_PLAN.md`
 2. `python3 AUTOMATIONS/decision_engine.py --cycle`
