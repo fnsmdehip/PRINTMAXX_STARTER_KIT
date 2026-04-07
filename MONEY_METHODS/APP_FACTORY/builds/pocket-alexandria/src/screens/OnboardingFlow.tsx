@@ -18,6 +18,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { colors, fonts, spacing, borderRadius, shadows, APP_CONFIG } from '../constants/theme';
 import { categories, categoryIcons, getBooksByCategory, books } from '../data/catalog';
 import { completeOnboarding, saveOnboardingState } from '../services/storage';
+import { playSound } from '../sounds/SoundEngine';
 import {
   getOfferings,
   purchasePackage,
@@ -115,11 +116,17 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
   }, [fadeAnim, slideAnim]);
 
   const goNext = () => {
-    if (step < TOTAL_STEPS - 1) animateTransition(step + 1);
+    if (step < TOTAL_STEPS - 1) {
+      playSound('swipe');
+      animateTransition(step + 1);
+    }
   };
 
   const goBack = () => {
-    if (step > 0) animateTransition(step - 1);
+    if (step > 0) {
+      playSound('swipe');
+      animateTransition(step - 1);
+    }
   };
 
   // ---------- save preferences ----------
@@ -145,6 +152,7 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
 
   // ---------- finish handlers ----------
   const handleFinish = async () => {
+    playSound('success');
     await savePrefs();
     const cats = mappedCategories.length > 0 ? [...new Set(mappedCategories)] : [];
     await completeOnboarding(cats);
@@ -165,6 +173,7 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
       setPurchasing(true);
       await purchasePackage(pkg);
       await saveOnboardingState({ isPremium: true });
+      playSound('premium');
       await savePrefs();
       const cats = mappedCategories.length > 0 ? [...new Set(mappedCategories)] : [];
       await completeOnboarding(cats);

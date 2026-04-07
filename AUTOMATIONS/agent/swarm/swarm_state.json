@@ -6,11 +6,12 @@
       "interval": "weekly",
       "reason": "C64 PROMOTED B to A. 3 deploys (androx, dosewell, pocket-alexandria), 6 concrete gaps identified.",
       "tier": "A",
-      "launchd_status": "UNLOADED_C52",
+      "launchd_status": "UNLOADED_C65",
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "prev_hibernated_at": "2026-03-20T02:58:00Z",
       "prev_hibernated_by": "swarm_brain_cycle23",
-      "c64_updated": "2026-04-06T20:20:00+00:00"
+      "c64_updated": "2026-04-06T20:20:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "opportunity_scanner": {
       "installed_at": "2026-03-20T05:00:58.556575",
@@ -18,11 +19,13 @@
       "killed_at": "2026-04-02T20:47:00Z",
       "killed_by": "swarm_brain_cycle52",
       "reason": "PERMANENT KILL #5. LAUNCHD UNLOADED C52. Was still loaded at 4h interval despite 4 prior kills. Produced zombie report at 20:36. Unloaded via launchctl. Plist remains in ~/Library/LaunchAgents/ (guardrails prevent deletion). HUMAN: delete com.printmaxx.swarm.opportunity_scanner.plist",
-      "launchd_status": "UNLOADED_C52",
-      "kill_count": 6,
+      "launchd_status": "UNLOADED_C65",
+      "kill_count": 7,
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "c64_zombie_pid": 30369,
-      "c64_updated": "2026-04-06T20:20:00+00:00"
+      "c64_updated": "2026-04-06T20:20:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c65_zombie_pid_killed": 2856
     },
     "competitor_stalker": {
       "installed_at": "2026-03-20T05:00:58.730223",
@@ -38,13 +41,14 @@
       "installed_at": "2026-03-20T05:00:58.910698",
       "status": "ACTIVE",
       "reason": "C52 LAUNCHD UNLOADED. Was still loaded at 2h interval despite C51 weekly directive. 388 sites healthy, 0 new deploys possible (surge blocked). Weekly via manual trigger only.",
-      "launchd_status": "UNLOADED_C52",
+      "launchd_status": "UNLOADED_C65",
       "interval": "weekly",
       "tier": "B",
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "prev_killed_at": "2026-03-15T04:30:04Z",
       "prev_killed_by": "swarm_brain_cycle14",
-      "c64_updated": "2026-04-06T20:20:00+00:00"
+      "c64_updated": "2026-04-06T20:20:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "content_compounder": {
       "installed_at": "2026-03-20T05:00:59.080766",
@@ -52,9 +56,10 @@
       "killed_at": "2026-04-02T01:35:00Z",
       "killed_by": "swarm_brain_cycle50",
       "reason": "PERMANENT KILL (cycle 11). Force-killed PID 13545 + unloaded launchd plist. Was burning Opus 4.6 tokens generating content for non-existent social accounts. 1,485 posts in queue. If this respawns again, DELETE the plist file.",
-      "launchd_status": "UNLOADED",
+      "launchd_status": "UNLOADED_C65",
       "plist_unloaded_at": "2026-04-02T01:35:00Z",
-      "kill_count": 11
+      "kill_count": 11,
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "lead_machine": {
       "installed_at": "2026-03-20T05:00:59.278636",
@@ -65,12 +70,13 @@
       "leads_total": 170,
       "leads_contacted": 0,
       "wake_condition": "first_cold_email_sent",
-      "launchd_status": "UNLOADED",
+      "launchd_status": "UNLOADED_C65",
       "c47_note": "20 leads in 2 cycles, 5 email-ready with drafts. Blocked on email infra.",
       "c47_updated": "2026-04-01T04:34:04.609903+00:00",
       "prev_hibernated_at": "2026-03-19T14:50:00Z",
       "prev_hibernated_by": "swarm_brain_cycle22",
-      "c64_updated": "2026-04-06T20:20:00+00:00"
+      "c64_updated": "2026-04-06T20:20:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "seo_aso_optimizer": {
       "installed_at": "2026-03-20T05:00:59.458367",
@@ -78,12 +84,13 @@
       "hibernated_at": "2026-04-02T20:47:00Z",
       "hibernated_by": "swarm_brain_cycle52",
       "reason": "C52 LAUNCHD UNLOADED. Ran 3 times today (12:00, 18:00, 22:00) despite C50 hibernate + C51 enforcement. Was still loaded at 6h interval. Fixed 600 canonicals (valuable one-time). Unloaded from launchd. Wake: Surge Plus or Cloudflare.",
-      "launchd_status": "UNLOADED_C52",
+      "launchd_status": "UNLOADED_C65",
       "interval": "HIBERNATED",
       "tier": "S",
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "prev_killed_at": "2026-03-15T04:30:05Z",
-      "prev_killed_by": "swarm_brain_cycle14"
+      "prev_killed_by": "swarm_brain_cycle14",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "conversion_optimizer": {
       "installed_at": "2026-03-20T05:00:59.632353",
@@ -91,7 +98,8 @@
       "killed_at": "2026-03-08T19:30:00Z",
       "killed_by": "swarm_brain_cycle8",
       "reason": "7 cycles mandated to fix 17 dead CTAs, 0 fixed.",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "quality_enforcer": {
       "installed_at": "2026-03-20T05:00:59.644872",
@@ -99,9 +107,10 @@
       "killed_at": "2026-03-08T03:15:00Z",
       "killed_by": "swarm_brain_cycle5",
       "reason": "Redundant with quality_gate.",
-      "launchd_status": "UNLOADED",
+      "launchd_status": "UNLOADED_C65",
       "c64_zombie_pid": 30374,
-      "c64_updated": "2026-04-06T20:20:00+00:00"
+      "c64_updated": "2026-04-06T20:20:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "trend_synthesizer": {
       "installed_at": "2026-03-20T05:00:59.819510",
@@ -109,10 +118,11 @@
       "hibernated_at": "2026-03-13T15:35:04Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. Wake at first revenue.",
-      "launchd_status": "UNLOADED",
+      "launchd_status": "UNLOADED_C65",
       "c47_flag": "WASTEFUL_RUNNING",
       "c47_note": "Launchd running despite HIBERNATED state.",
-      "c47_updated": "2026-04-01T04:34:04.609903+00:00"
+      "c47_updated": "2026-04-01T04:34:04.609903+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "cross_pollinator": {
       "installed_at": "2026-03-20T05:00:59.982738",
@@ -123,22 +133,24 @@
       "connections": 42,
       "items_wired": 1842,
       "consecutive_s_tier": 10,
-      "launchd_status": "UNLOADED_C55",
+      "launchd_status": "UNLOADED_C65",
       "c55_updated": "2026-04-04T14:39:00+00:00",
       "c55_note": "UNLOADED from launchd. Plist still has 14400s (4h) despite C54 claiming 12h -- brain wrote fiction to state file for 3+ cycles. Plist interval was NEVER changed. To reload at 24h: human must edit ~/Library/LaunchAgents/com.printmaxx.swarm.cross_pollinator.plist to set <integer>86400</integer> then launchctl load it.",
       "cron_status": "DISABLED_C56",
-      "c56_updated": "2026-04-04T18:55:00+00:00"
+      "c56_updated": "2026-04-04T18:55:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "revenue_tracker": {
       "installed_at": "2026-03-20T05:01:00.701964",
       "status": "ACTIVE",
       "reason": "C52 PROMOTED to weekly. Was hibernated, BUT C14 output was the single most valuable agent output this cycle: found 7 revenue leaks, AUTONOMOUSLY FIXED 2 (storefront mailto\u2192Stripe, added 4 Claude Code products to shop). First agent to actually fix a revenue path. Unloaded from launchd 8h interval. Weekly manual trigger.",
       "tier": "A",
-      "launchd_status": "UNLOADED_C52",
+      "launchd_status": "UNLOADED_C65",
       "interval": "weekly",
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "prev_hibernated_at": "2026-03-17T10:55:03Z",
-      "prev_hibernated_by": "swarm_brain_cycle16"
+      "prev_hibernated_by": "swarm_brain_cycle16",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "system_healer": {
       "installed_at": "2026-03-28T22:17:32.921309",
@@ -148,9 +160,10 @@
       "promoted_by": "swarm_brain_cycle20",
       "reason": "C53 CRITICAL BUG: Plist prompt contains unescaped parentheses that crash bash -c. Error log shows hundreds of 'syntax error near unexpected token (' failures. NEVER successfully ran via launchd since deployment. All prior reports were from manual sessions. Unloaded. HUMAN FIX: rewrite plist to use wrapper script OR escape special chars in prompt.",
       "tier": "BROKEN",
-      "launchd_status": "UNLOADED_C53",
+      "launchd_status": "UNLOADED_C65",
       "c53_updated": "2026-04-03T02:41:00+00:00",
-      "bug": "PROCEDURAL MEMORY section in plist prompt has unescaped parens \u2014 bash interprets as subshell syntax"
+      "bug": "PROCEDURAL MEMORY section in plist prompt has unescaped parens \u2014 bash interprets as subshell syntax",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "data_janitor": {
       "installed_at": "2026-03-20T05:01:00.882015",
@@ -162,7 +175,8 @@
       "c54_updated": "2026-04-04T04:40:00+00:00",
       "c59_evaluation": "9.5/10. Best cycle: 3795 dupes removed, 882 status fields repaired, 529 JSON validated, 172 CSV validated.",
       "c59_updated": "2026-04-05T22:35:00+00:00",
-      "c64_updated": "2026-04-06T20:20:00+00:00"
+      "c64_updated": "2026-04-06T20:20:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "distribution_engine": {
       "installed_at": "2026-03-20T05:01:01.058336",
@@ -170,9 +184,10 @@
       "interval": "HIBERNATED",
       "reason": "C52 HIBERNATED + LAUNCHD UNLOADED. Was still loaded at 3h interval despite C51 weekly directive. 1,485+ content pieces, 0 posted. No social accounts exist. Hibernating until first social account created. Content is saturated.",
       "tier": "B",
-      "launchd_status": "UNLOADED_C52",
+      "launchd_status": "UNLOADED_C65",
       "wake_condition": "first_social_account_created",
-      "c52_updated": "2026-04-02T20:47:00+00:00"
+      "c52_updated": "2026-04-02T20:47:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "inbound_maximizer": {
       "installed_at": "2026-03-20T05:01:01.230752",
@@ -183,9 +198,10 @@
       "reason": "HIBERNATE Cycle 23. TRUE MINIMAL MAINTENANCE. 3 mandate violations, final warning. 15 lead magnets created, 0 with traffic. Spared from KILL \u2014 hibernation achieves same effect. Wake condition: any inbound traffic detected.",
       "tier": "B",
       "violations": 3,
-      "launchd_status": "UNLOADED",
+      "launchd_status": "UNLOADED_C65",
       "zombie_killed_at": "2026-03-29T01:50:00Z",
-      "zombie_killed_by": "swarm_brain_cycle35"
+      "zombie_killed_by": "swarm_brain_cycle35",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "swarm_brain": {
       "installed_at": "2026-03-23T12:45:07.326900",
@@ -200,7 +216,8 @@
       "c55_updated": "2026-04-04T14:39:00+00:00",
       "c59_updated": "2026-04-05T22:35:00+00:00",
       "launchd_actual_loaded": 7,
-      "launchd_should_be": 3
+      "launchd_should_be": 3,
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "video_factory": {
       "installed_at": "2026-03-06T23:06:18.197386",
@@ -208,7 +225,8 @@
       "killed_at": "2026-03-08T11:15:00Z",
       "killed_by": "swarm_brain_cycle6",
       "reason": "Zero distribution channels.",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "image_factory": {
       "installed_at": "2026-03-06T23:06:18.222274",
@@ -216,7 +234,8 @@
       "hibernated_at": "2026-03-13T15:35:06Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. 30+ unused PNGs.",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "quality_gate": {
       "installed_at": "2026-03-18T21:04:39.893054",
@@ -226,7 +245,8 @@
       "hibernated_by": "swarm_brain_cycle23",
       "reason": "HIBERNATE Cycle 23. TRUE MINIMAL MAINTENANCE. Nothing new being produced to gate. Wake condition: content production resumes.",
       "tier": "C",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "playwright_tester": {
       "installed_at": "2026-03-18T21:04:40.038605",
@@ -234,8 +254,9 @@
       "interval": "weekly",
       "reason": "C52 LAUNCHD UNLOADED. Was still loaded at 4h interval (PID 29431 active during C52) despite C51 weekly directive. 80.3% health stable across 909 sites. Weekly via manual trigger.",
       "tier": "B",
-      "launchd_status": "UNLOADED_C52",
-      "c52_updated": "2026-04-02T20:47:00+00:00"
+      "launchd_status": "UNLOADED_C65",
+      "c52_updated": "2026-04-02T20:47:00+00:00",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "alert_dispatcher": {
       "installed_at": "2026-03-08T03:42:03.272426",
@@ -243,7 +264,8 @@
       "hibernated_at": "2026-03-13T15:35:07Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. No notification channels.",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "social_poster": {
       "installed_at": "2026-03-08T03:42:04.287168",
@@ -251,14 +273,16 @@
       "hibernated_at": "2026-03-13T15:35:05Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. No accounts.",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "meta_executor": {
       "status": "KILLED",
       "killed_at": "2026-03-14T12:12:02Z",
       "killed_by": "swarm_brain_cycle13",
       "reason": "Dead 6 days. Mandate never delivered.",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     },
     "growth_strategist": {
       "installed_at": "2026-03-18T06:10:31.251997",
@@ -267,7 +291,8 @@
       "hibernated_by": "swarm_brain_cycle17",
       "reason": "HIBERNATE. Wake at first revenue or social account.",
       "tier": "C",
-      "launchd_status": "UNLOADED"
+      "launchd_status": "UNLOADED_C65",
+      "c65_updated": "2026-04-07T00:45:00+00:00"
     }
   },
   "deployed_at": "2026-03-23T12:45:07.327997",

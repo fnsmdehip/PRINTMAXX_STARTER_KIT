@@ -15,6 +15,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { colors, fonts, spacing, borderRadius, shadows } from '../../src/constants/theme';
 import { books, getBookById, categories, categoryIcons, getBooksByCategory } from '../../src/data/catalog';
 import { getAllProgress, getRecentBookIds, getLibraryBookIds } from '../../src/services/storage';
+import { playSound } from '../../src/sounds/SoundEngine';
 import BookCover from '../../src/components/BookCover';
 import SectionHeader from '../../src/components/SectionHeader';
 import DailyQuoteCard from '../../src/components/DailyQuote';
@@ -72,6 +73,7 @@ export default function LibraryTab() {
   const featuredCategories = (categories as unknown as string[]).slice(0, 3);
 
   const openReader = (bookId: string) => {
+    playSound('tap');
     router.push(`/reader/${bookId}`);
   };
 

@@ -1,0 +1,55 @@
+{
+  "agent": "Alpha Intelligence Research",
+  "venture": "Alpha Intelligence Research",
+  "status": "ACTIVE",
+  "last_cycle": "2026-04-07T00:35:00Z",
+  "cycle_duration_minutes": 10,
+  "next_cycle": "2026-04-07T04:35:00Z",
+  "metrics": {
+    "entries_scraped": 1648,
+    "entries_processed": 50,
+    "entries_approved": 24,
+    "entries_pending_review": 3097,
+    "content_generated": 4,
+    "ventures_routed": 1,
+    "approval_rate": "48%"
+  },
+  "scrapers_status": {
+    "twitter": "COMPLETED",
+    "reddit": "COMPLETED",
+    "hackernews": "QUEUED",
+    "product_hunt": "QUEUED",
+    "indiehackers": "QUEUED"
+  },
+  "top_findings": [
+    {
+      "id": "MONETIZATION_1",
+      "title": "Lunar signal relay opportunity",
+      "roi": "HIGHEST",
+      "status": "APPROVED"
+    },
+    {
+      "id": "APP_BLUE_OCEAN",
+      "title": "Emotional intelligence daily streak apps",
+      "roi": "HIGHEST",
+      "status": "PENDING_REVIEW",
+      "count": 7
+    },
+    {
+      "id": "REDDIT_SAAS_ALPHA",
+      "title": "Bootstrap SaaS playbook signals",
+      "roi": "HIGH",
+      "status": "PENDING_REVIEW"
+    }
+  ],
+  "system_health": {
+    "loops_ok": true,
+    "decision_cycle": "OK",
+    "alpha_processor": "OK",
+    "decision_engine": "OK"
+  },
+  "output_files": [
+    "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260407.md",
+    "CONTENT/social/posting_queue/alpha_research_content_20260407.csv"
+  ]
+}

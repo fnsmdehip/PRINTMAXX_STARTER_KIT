@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
+import { playSound } from '../sounds/SoundEngine';
 import * as Clipboard from 'expo-clipboard';
 import * as StoreReview from 'expo-store-review';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -78,6 +79,7 @@ export function DailyScreen() {
   }, [loadData]);
 
   const handleMarkAsRead = async () => {
+    playSound('success');
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     const previousStreak = streak;
     const updated = await StorageService.recordReading();
@@ -112,6 +114,7 @@ export function DailyScreen() {
 
   const handleBookmark = async () => {
     if (!verse) return;
+    playSound('tap');
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (!bookmarked) {
       await StorageService.addBookmark({

@@ -42,6 +42,8 @@ import {
 import { useAppState } from './hooks/useAppState';
 import purchaseService from './services/purchases';
 import vault from './services/encryption';
+import { initSounds } from './sounds/SoundEngine';
+import * as Linking from 'expo-linking';
 import { Colors, Typography, Shadows, MIN_TOUCH_SIZE, Assets } from './constants/theme';
 import type { RootStackParamList } from './types';
 
@@ -191,6 +193,22 @@ export default function App() {
 
   useEffect(() => {
     purchaseService.initialize();
+    initSounds();
+  }, []);
+
+  useEffect(() => {
+    const handleDeepLink = async ({ url }: { url: string }) => {
+      if (url.includes('premium-activated') || url.includes('payment-success')) {
+        await AsyncStorage.setItem('cnsnt_entitlement', 'pro');
+      }
+    };
+    const sub = Linking.addEventListener('url', handleDeepLink);
+    Linking.getInitialURL().then(async (url) => {
+      if (url && (url.includes('premium-activated') || url.includes('payment-success'))) {
+        await AsyncStorage.setItem('cnsnt_entitlement', 'pro');
+      }
+    });
+    return () => sub.remove();
   }, []);
 
   // Phase 1: Splash

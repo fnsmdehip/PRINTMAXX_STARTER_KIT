@@ -1,0 +1,130 @@
+{
+  "timestamp": 1775536852.096951,
+  "results": [
+    {
+      "site": "truthscope.surge.sh",
+      "url": "https://truthscope.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "cnsnt-web.surge.sh",
+      "url": "https://cnsnt-web.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "prayerlock-web.surge.sh",
+      "url": "https://prayerlock-web.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "cnsnt.surge.sh",
+      "url": "https://cnsnt.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "scripture-streak.surge.sh",
+      "url": "https://scripture-streak.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "mcp-marketplace.surge.sh",
+      "url": "https://mcp-marketplace.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "fnsmdehip-research.surge.sh",
+      "url": "https://fnsmdehip-research.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "printmaxx-payments.surge.sh",
+      "url": "https://printmaxx-payments.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "cnsnt-downloads.surge.sh",
+      "url": "https://cnsnt-downloads.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "claude-code-vs-opencode.surge.sh",
+      "url": "https://claude-code-vs-opencode.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "n8n-vs-zapier-vs-make.surge.sh",
+      "url": "https://n8n-vs-zapier-vs-make.surge.sh",
+      "status": "000",
+      "status_text": "PROBLEM"
+    },
+    {
+      "site": "best-cold-email-tools.surge.sh",
+      "url": "https://best-cold-email-tools.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "jeff-roads-handyman-services-okc-oklahoma-city-ok.surge.sh",
+      "url": "https://jeff-roads-handyman-services-okc-oklahoma-city-ok.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "watson-sons-carpet-cleaning-oklahoma-city-ok.surge.sh",
+      "url": "https://watson-sons-carpet-cleaning-oklahoma-city-ok.surge.sh",
+      "status": "000",
+      "status_text": "PROBLEM"
+    },
+    {
+      "site": "scripture-streak-landing.surge.sh",
+      "url": "https://scripture-streak-landing.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "meditation-streak.surge.sh",
+      "url": "https://meditation-streak.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "fitness-streak.surge.sh",
+      "url": "https://fitness-streak.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "roicalc.surge.sh",
+      "url": "https://roicalc.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "pagescorer.surge.sh",
+      "url": "https://pagescorer.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    },
+    {
+      "site": "ramadan-tracker.surge.sh",
+      "url": "https://ramadan-tracker.surge.sh",
+      "status": "200",
+      "status_text": "OK"
+    }
+  ],
+  "summary": {
+    "passed": 18,
+    "failed": 2,
+    "total": 20
+  }
+}

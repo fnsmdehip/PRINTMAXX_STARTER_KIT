@@ -1,0 +1,9 @@
+appId: com.printmaxx.cnsnt
+name: "Free Tier - Premium Template Gated"
+---
+- launchApp
+- tapOn:
+    text: ".*NDA.*"
+- assertVisible:
+    text: ".*Pro Template.*"
+- takeScreenshot: "template_gating"

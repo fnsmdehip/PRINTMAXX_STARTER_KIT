@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "gold_standard": "lie-detector-app/TruthScope/HANDOFF.md",
+  "output_dir": "APPS/specs",
+  "last_updated": null,
+  "apps": [
+    {
+      "id": "cnsnt",
+      "name": "cnsnt (Consent & Relationship Contracts)",
+      "priority": 1,
+      "status": "pending",
+      "current_spec": "tasks/prd-cnsnt-production-spec.md",
+      "source_dir": "MONEY_METHODS/APP_FACTORY/builds/cnsnt/src",
+      "app_json": "MONEY_METHODS/APP_FACTORY/builds/cnsnt/app.json",
+      "output_spec": "APPS/specs/cnsnt-refined.md",
+      "started_at": null,
+      "completed_at": null,
+      "notes": ""
+    },
+    {
+      "id": "scripture-streak",
+      "name": "Scripture Streak (Bible reading streak tracker)",
+      "priority": 2,
+      "status": "pending",
+      "current_spec": null,
+      "source_dir": "MONEY_METHODS/APP_FACTORY/builds/scripture-streak/src",
+      "app_json": "MONEY_METHODS/APP_FACTORY/builds/scripture-streak/app.json",
+      "output_spec": "APPS/specs/scripture-streak-refined.md",
+      "started_at": null,
+      "completed_at": null,
+      "notes": ""
+    },
+    {
+      "id": "nutriai",
+      "name": "NutriSnap / NutriAI (AI-powered nutrition tracker)",
+      "priority": 3,
+      "status": "pending",
+      "current_spec": null,
+      "source_dir": "MONEY_METHODS/APP_FACTORY/builds/nutriai/src",
+      "app_json": "MONEY_METHODS/APP_FACTORY/builds/nutriai/app.json",
+      "output_spec": "APPS/specs/nutriai-refined.md",
+      "started_at": null,
+      "completed_at": null,
+      "notes": ""
+    },
+    {
+      "id": "pocket-alexandria",
+      "name": "Pocket Alexandria (Ebook reader, 150+ public domain books)",
+      "priority": 4,
+      "status": "pending",
+      "current_spec": null,
+      "source_dir": "MONEY_METHODS/APP_FACTORY/builds/pocket-alexandria/src",
+      "app_json": "MONEY_METHODS/APP_FACTORY/builds/pocket-alexandria/app.json",
+      "output_spec": "APPS/specs/pocket-alexandria-refined.md",
+      "started_at": null,
+      "completed_at": null,
+      "notes": ""
+    }
+  ]
+}

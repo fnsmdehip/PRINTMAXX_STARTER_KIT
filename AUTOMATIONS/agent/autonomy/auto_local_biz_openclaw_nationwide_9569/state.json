@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-06T21:09:54.555070",
-  "cycle_number": 23,
+  "last_run": "2026-04-07T02:14:34.797889",
+  "cycle_number": 24,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -493,9 +493,35 @@
     "Zanesville OH (pressure washing)",
     "Zanesville OH (septic service)",
     "Pikeville KY (electrical contractor)",
-    "Pikeville KY (fence company)"
+    "Pikeville KY (fence company)",
+    "Marion AL (towing, handyman, auto repair, plumber)",
+    "Demopolis AL (towing, handyman, auto repair, HVAC)",
+    "Greensboro AL (towing, handyman, plumber)",
+    "Eutaw AL (towing, handyman, auto repair)",
+    "Livingston AL (towing, handyman, auto repair)",
+    "Camden AL (towing, handyman, plumber)",
+    "Monroeville AL (towing, handyman, auto repair, HVAC)",
+    "Grove Hill AL (towing, handyman)",
+    "Evergreen AL (towing, handyman, auto repair, plumber)",
+    "Brewton AL (towing, handyman, auto repair)",
+    "Berea KY (towing, handyman, auto repair, plumber)",
+    "Harlan KY (towing, handyman, auto repair)",
+    "Middlesboro KY (towing, handyman, auto repair, plumber)",
+    "Corbin KY (towing, handyman, auto repair, HVAC)",
+    "Hazard KY (towing, handyman, auto repair, plumber)",
+    "Whitesburg KY (towing, handyman)",
+    "Williamsburg KY (towing, handyman, auto repair)",
+    "Barbourville KY (towing, handyman, plumber)",
+    "Kosciusko MS (towing, handyman, auto repair, plumber)",
+    "Louisville MS (towing, handyman, auto repair)",
+    "Forest MS (towing, handyman, plumber)",
+    "Raleigh MS (towing, handyman)",
+    "Philadelphia MS (towing, handyman, auto repair)",
+    "Carthage MS (towing, handyman, auto repair)",
+    "Ackerman MS (towing, handyman)",
+    "Starkville MS expansion (towing, handyman, auto repair, plumber)"
   ],
-  "total_leads_all_cycles": 5938,
+  "total_leads_all_cycles": 6262,
   "total_previews_deployed": 2510,
   "total_sites_built_local": 8073,
   "total_emails_queued": 2432,
@@ -884,7 +910,7 @@
       "ready_to_send": 39
     }
   ],
-  "ghpages_deployed": 2710,
+  "ghpages_deployed": 2798,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -2711,8 +2737,8 @@
     ],
     "observation": "Cycle 21: KY Central Frontier + TN SE + AR I-40 + FIRST WV coverage (Bluefield/Beckley) + Eastern KY Appalachian corridor (Pikeville/Hazard). 309 new leads, 218 F/D (71%). 90 new GH Pages pushed. Pipeline at 2432 outreach entries, 39 ready to send. WV F-grade rate: 90%, Eastern KY F-grade rate: 85%."
   },
-  "total_hot_leads": 2525,
-  "total_outreach": 2632,
+  "total_hot_leads": 2613,
+  "total_outreach": 2720,
   "ready_to_send": 42,
   "cycles": {
     "cycle_22": {
@@ -4530,6 +4556,692 @@
         "septic service"
       ],
       "observation": "Cycle 23: Ohio Valley micro-cities (9% F-grade) + Indiana small towns (8% F-grade) + Deep rural WV (3% F-grade) + New niches test (electrical/fence/pressure wash/septic). 538 new leads, 37 F/D (6%). 100 new GH Pages pushed. Pipeline at 2632 outreach entries, 42 ready to send."
+    },
+    "cycle_24": {
+      "run_at": "2026-04-07T02:14:34.797847",
+      "cities_targeted": [
+        "Marion AL (towing, handyman, auto repair, plumber)",
+        "Demopolis AL (towing, handyman, auto repair, HVAC)",
+        "Greensboro AL (towing, handyman, plumber)",
+        "Eutaw AL (towing, handyman, auto repair)",
+        "Livingston AL (towing, handyman, auto repair)",
+        "Camden AL (towing, handyman, plumber)",
+        "Monroeville AL (towing, handyman, auto repair, HVAC)",
+        "Grove Hill AL (towing, handyman)",
+        "Evergreen AL (towing, handyman, auto repair, plumber)",
+        "Brewton AL (towing, handyman, auto repair)",
+        "Berea KY (towing, handyman, auto repair, plumber)",
+        "Harlan KY (towing, handyman, auto repair)",
+        "Middlesboro KY (towing, handyman, auto repair, plumber)",
+        "Corbin KY (towing, handyman, auto repair, HVAC)",
+        "Hazard KY (towing, handyman, auto repair, plumber)",
+        "Whitesburg KY (towing, handyman)",
+        "Williamsburg KY (towing, handyman, auto repair)",
+        "Barbourville KY (towing, handyman, plumber)",
+        "Kosciusko MS (towing, handyman, auto repair, plumber)",
+        "Louisville MS (towing, handyman, auto repair)",
+        "Forest MS (towing, handyman, plumber)",
+        "Raleigh MS (towing, handyman)",
+        "Philadelphia MS (towing, handyman, auto repair)",
+        "Carthage MS (towing, handyman, auto repair)",
+        "Ackerman MS (towing, handyman)",
+        "Starkville MS expansion (towing, handyman, auto repair, plumber)"
+      ],
+      "discover_results": {
+        "Marion AL (towing)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "B": 3,
+            "F": 1
+          }
+        },
+        "Marion AL (handyman)": {
+          "total": 3,
+          "f_grade": 1,
+          "grades": {
+            "F": 1,
+            "A": 2
+          }
+        },
+        "Marion AL (auto repair)": {
+          "total": 6,
+          "f_grade": 3,
+          "grades": {
+            "A": 3,
+            "F": 3
+          }
+        },
+        "Marion AL (plumber)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "B": 3,
+            "A": 1
+          }
+        },
+        "Demopolis AL (towing)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "A": 1
+          }
+        },
+        "Demopolis AL (handyman)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "F": 1
+          }
+        },
+        "Demopolis AL (auto repair)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "B": 1
+          }
+        },
+        "Demopolis AL (HVAC)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "C": 1,
+            "A": 3
+          }
+        },
+        "Greensboro AL (towing)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Greensboro AL (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Greensboro AL (plumber)": {
+          "total": 2,
+          "f_grade": 1,
+          "grades": {
+            "F": 1,
+            "B": 1
+          }
+        },
+        "Eutaw AL (towing)": {
+          "total": 6,
+          "f_grade": 2,
+          "grades": {
+            "A": 3,
+            "F": 2,
+            "B": 1
+          }
+        },
+        "Eutaw AL (handyman)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 6
+          }
+        },
+        "Eutaw AL (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "B": 1
+          }
+        },
+        "Livingston AL (towing)": {
+          "total": 7,
+          "f_grade": 1,
+          "grades": {
+            "B": 2,
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Livingston AL (handyman)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Livingston AL (auto repair)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "B": 2,
+            "A": 3,
+            "F": 1
+          }
+        },
+        "Camden AL (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "B": 3,
+            "A": 5
+          }
+        },
+        "Camden AL (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Camden AL (plumber)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "B": 1
+          }
+        },
+        "Monroeville AL (towing)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Monroeville AL (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Monroeville AL (auto repair)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Monroeville AL (HVAC)": {
+          "total": 11,
+          "f_grade": 0,
+          "grades": {
+            "A": 10,
+            "B": 1
+          }
+        },
+        "Grove Hill AL (towing)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 7,
+            "F": 1,
+            "B": 1
+          }
+        },
+        "Grove Hill AL (handyman)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "B": 1,
+            "F": 1,
+            "C": 2
+          }
+        },
+        "Evergreen AL (towing)": {
+          "total": 7,
+          "f_grade": 1,
+          "grades": {
+            "A": 6,
+            "F": 1
+          }
+        },
+        "Evergreen AL (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 5
+          }
+        },
+        "Evergreen AL (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 1
+          }
+        },
+        "Evergreen AL (plumber)": {
+          "total": 1,
+          "f_grade": 1,
+          "grades": {
+            "F": 1
+          }
+        },
+        "Brewton AL (towing)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 5
+          }
+        },
+        "Brewton AL (handyman)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "F": 1,
+            "A": 3
+          }
+        },
+        "Brewton AL (auto repair)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "A": 1
+          }
+        },
+        "Berea KY (towing)": {
+          "total": 10,
+          "f_grade": 1,
+          "grades": {
+            "A": 6,
+            "B": 3,
+            "F": 1
+          }
+        },
+        "Berea KY (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "C": 1
+          }
+        },
+        "Berea KY (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Berea KY (plumber)": {
+          "total": 3,
+          "f_grade": 2,
+          "grades": {
+            "F": 2,
+            "A": 1
+          }
+        },
+        "Harlan KY (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "B": 3,
+            "A": 5
+          }
+        },
+        "Harlan KY (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Harlan KY (auto repair)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 2
+          }
+        },
+        "Middlesboro KY (towing)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 2
+          }
+        },
+        "Middlesboro KY (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Middlesboro KY (auto repair)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 2
+          }
+        },
+        "Middlesboro KY (plumber)": {
+          "total": 1,
+          "f_grade": 1,
+          "grades": {
+            "F": 1
+          }
+        },
+        "Corbin KY (towing)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 1,
+            "B": 1
+          }
+        },
+        "Corbin KY (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 1,
+            "C": 1
+          }
+        },
+        "Corbin KY (auto repair)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 1,
+            "B": 1
+          }
+        },
+        "Corbin KY (HVAC)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Hazard KY (towing)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 1
+          }
+        },
+        "Hazard KY (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Hazard KY (auto repair)": {
+          "total": 2,
+          "f_grade": 1,
+          "grades": {
+            "A": 1,
+            "F": 1
+          }
+        },
+        "Hazard KY (plumber)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 2
+          }
+        },
+        "Whitesburg KY (towing)": {
+          "total": 3,
+          "f_grade": 1,
+          "grades": {
+            "B": 1,
+            "A": 1,
+            "F": 1
+          }
+        },
+        "Whitesburg KY (handyman)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "A": 1
+          }
+        },
+        "Williamsburg KY (towing)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "A": 1
+          }
+        },
+        "Williamsburg KY (handyman)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Williamsburg KY (auto repair)": {
+          "total": 1,
+          "f_grade": 1,
+          "grades": {
+            "F": 1
+          }
+        },
+        "Barbourville KY (towing)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Barbourville KY (handyman)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Barbourville KY (plumber)": {
+          "total": 4,
+          "f_grade": 4,
+          "grades": {
+            "F": 4
+          }
+        },
+        "Kosciusko MS (towing)": {
+          "total": 5,
+          "f_grade": 5,
+          "grades": {
+            "F": 5
+          }
+        },
+        "Kosciusko MS (handyman)": {
+          "total": 6,
+          "f_grade": 5,
+          "grades": {
+            "F": 5,
+            "A": 1
+          }
+        },
+        "Kosciusko MS (auto repair)": {
+          "total": 11,
+          "f_grade": 9,
+          "grades": {
+            "F": 9,
+            "C": 1,
+            "B": 1
+          }
+        },
+        "Kosciusko MS (plumber)": {
+          "total": 7,
+          "f_grade": 6,
+          "grades": {
+            "F": 6,
+            "B": 1
+          }
+        },
+        "Louisville MS (towing)": {
+          "total": 1,
+          "f_grade": 1,
+          "grades": {
+            "F": 1
+          }
+        },
+        "Louisville MS (handyman)": {
+          "total": 3,
+          "f_grade": 2,
+          "grades": {
+            "B": 1,
+            "F": 2
+          }
+        },
+        "Louisville MS (auto repair)": {
+          "total": 4,
+          "f_grade": 3,
+          "grades": {
+            "F": 3,
+            "A": 1
+          }
+        },
+        "Forest MS (towing)": {
+          "total": 1,
+          "f_grade": 1,
+          "grades": {
+            "F": 1
+          }
+        },
+        "Forest MS (handyman)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Forest MS (plumber)": {
+          "total": 9,
+          "f_grade": 7,
+          "grades": {
+            "F": 7,
+            "A": 2
+          }
+        },
+        "Raleigh MS (towing)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Raleigh MS (handyman)": {
+          "total": 1,
+          "f_grade": 1,
+          "grades": {
+            "F": 1
+          }
+        },
+        "Philadelphia MS (towing)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Philadelphia MS (handyman)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Philadelphia MS (auto repair)": {
+          "total": 3,
+          "f_grade": 2,
+          "grades": {
+            "F": 1,
+            "C": 1,
+            "D": 1
+          }
+        },
+        "Carthage MS (towing)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Carthage MS (handyman)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Carthage MS (auto repair)": {
+          "total": 5,
+          "f_grade": 4,
+          "grades": {
+            "F": 4,
+            "A": 1
+          }
+        },
+        "Ackerman MS (towing)": {
+          "total": 0,
+          "f_grade": 0,
+          "grades": {}
+        },
+        "Ackerman MS (handyman)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "A": 1
+          }
+        },
+        "Starkville MS expansion (towing)": {
+          "total": 2,
+          "f_grade": 2,
+          "grades": {
+            "F": 2
+          }
+        },
+        "Starkville MS expansion (handyman)": {
+          "total": 5,
+          "f_grade": 4,
+          "grades": {
+            "F": 4,
+            "A": 1
+          }
+        },
+        "Starkville MS expansion (auto repair)": {
+          "total": 2,
+          "f_grade": 2,
+          "grades": {
+            "F": 2
+          }
+        },
+        "Starkville MS expansion (plumber)": {
+          "total": 7,
+          "f_grade": 6,
+          "grades": {
+            "F": 6,
+            "A": 1
+          }
+        }
+      },
+      "new_leads": 324,
+      "new_f_grade": 88,
+      "new_sites_built": 88,
+      "new_ghpages_deploys": 88,
+      "total_ghpages_live": 2798,
+      "new_emails_queued": 88,
+      "ready_to_send_email": 42,
+      "file_urls_fixed": 0,
+      "top_performers": [
+        "Barbourville KY (plumber)",
+        "Kosciusko MS (towing)",
+        "Starkville MS expansion (towing)",
+        "Starkville MS expansion (auto repair)",
+        "Kosciusko MS (plumber)"
+      ],
+      "new_regions_entered": [
+        "Alabama Black Belt",
+        "Eastern KY deeper run",
+        "Rural MS tier 3"
+      ],
+      "al_f_rate": 10.429447852760736,
+      "ky_f_rate": 12.5,
+      "ms_f_rate": 82.1917808219178,
+      "observation": "Cycle 24: Alabama Black Belt (10% F-grade) + Eastern KY micro-cities (12% F-grade) + Rural MS tier 3 (82% F-grade). 324 new leads, 88 F/D (27%). 88 new GH Pages pushed. Pipeline at 2720 outreach entries, 42 ready to send."
     }
   }
 }

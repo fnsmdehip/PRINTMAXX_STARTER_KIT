@@ -1,0 +1,101 @@
+{
+  "timestamp": 1775536927.534971,
+  "results": [
+    {
+      "site": "truthscope.surge.sh",
+      "status": 200,
+      "title": "TruthScope - The First Real Lie Detector App",
+      "has_content": true,
+      "body_length": 3528,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "cnsnt-web.surge.sh",
+      "status": 200,
+      "title": "cnsnt - Encrypted Consent Vault | AES-256 Local-First PWA",
+      "has_content": true,
+      "body_length": 213,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "prayerlock-web.surge.sh",
+      "status": 200,
+      "title": "PrayerLock - Islamic Prayer Tracker App | Streak, Qibla & Tasbih",
+      "has_content": true,
+      "body_length": 484,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "mcp-marketplace.surge.sh",
+      "status": 200,
+      "title": "MCPHub - find the MCP server you need in 30 seconds",
+      "has_content": true,
+      "body_length": 945,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "fnsmdehip-research.surge.sh",
+      "status": 200,
+      "title": "Independent Research Notes \u2014 PEMF Therapy, WiFi Sensing, Consciousness, Cross-Domain Theory",
+      "has_content": true,
+      "body_length": 4603,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "n8n-vs-zapier-vs-make.surge.sh",
+      "status": 200,
+      "title": "n8n vs Zapier vs Make (2026): Which Automation Tool Wins?",
+      "has_content": true,
+      "body_length": 8607,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "watson-sons-carpet-cleaning-oklahoma-city-ok.surge.sh",
+      "status": 200,
+      "title": "Watson & Sons Carpet Cleaning | Oklahoma City OK",
+      "has_content": true,
+      "body_length": 849,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "claude-code-vs-opencode.surge.sh",
+      "status": 200,
+      "title": "Claude Code vs OpenCode (2026): Paid Agent vs Free Open-Source \u2014 Which Wins?",
+      "has_content": true,
+      "body_length": 8721,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    },
+    {
+      "site": "best-cold-email-tools.surge.sh",
+      "status": 200,
+      "title": "7 Best Cold Email Tools (2026): Tested Pricing, Features & Verdict",
+      "has_content": true,
+      "body_length": 8129,
+      "console_errors": 0,
+      "error_details": [],
+      "health": "GREEN"
+    }
+  ],
+  "summary": {
+    "green": 9,
+    "yellow": 0,
+    "red": 0,
+    "total": 9
+  }
+}

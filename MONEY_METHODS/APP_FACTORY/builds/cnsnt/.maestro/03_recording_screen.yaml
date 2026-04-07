@@ -1,0 +1,9 @@
+appId: com.printmaxx.cnsnt
+name: "Recording Screen - Pro Gated"
+---
+- launchApp
+- tapOn:
+    text: "Record Audio"
+- assertVisible:
+    text: ".*Pro Feature.*"
+- takeScreenshot: "recording_gated"

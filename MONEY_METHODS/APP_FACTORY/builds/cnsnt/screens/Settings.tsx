@@ -16,6 +16,7 @@ import {
   ActivityIndicator,
   Linking,
 } from 'react-native';
+import { SoundTouchable } from '../components/SoundTouchable';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -173,7 +174,7 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
     } else {
       Alert.alert(
         'Upgrade',
-        'Pro subscription requires a custom dev client build with RevenueCat SDK. The app currently operates in free mode.'
+        'Visit the payment page in your browser and complete checkout. Return to the app afterward — your Pro access will activate automatically.'
       );
     }
   };
@@ -184,7 +185,10 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
       setEntitlement('pro');
       Alert.alert('Restored', 'Pro subscription restored.');
     } else {
-      Alert.alert('No Purchase Found', 'No active Pro subscription was found.');
+      Alert.alert(
+        'No Purchase Found',
+        'Your subscription is managed through Stripe. If you subscribed, open your email for a receipt from Stripe — the subscription link there can be used to verify your status. Tap "Upgrade" to resubscribe if needed.'
+      );
     }
   };
 
@@ -222,18 +226,19 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
                 <View style={styles.proFeaturesList}>
                   {[
                     'Unlimited consent records',
-                    'All 8 premium templates',
+                    'All 11+ premium templates',
                     'Audio recording',
+                    'PDF export with digital signatures',
                     'Priority support',
                   ].map((f, i) => (
                     <Text key={i} style={styles.proFeature}>{'\u2713'}  {f}</Text>
                   ))}
                 </View>
-                <Pressable style={styles.upgradeButton} onPress={handleUpgrade}>
+                <SoundTouchable style={styles.upgradeButton} onPress={handleUpgrade} sound="tapHeavy" haptic="medium">
                   <Text style={styles.upgradeButtonText}>
                     Upgrade to Pro - {PRO_YEARLY_PRICE}/year
                   </Text>
-                </Pressable>
+                </SoundTouchable>
                 <Text style={styles.yearlyOption}>or {PRO_MONTHLY_PRICE}/month</Text>
               </>
             ) : (
@@ -241,9 +246,9 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
                 Unlimited records, all templates, audio recording.
               </Text>
             )}
-            <Pressable style={styles.restoreButton} onPress={handleRestorePurchases}>
+            <SoundTouchable style={styles.restoreButton} onPress={handleRestorePurchases} sound="tap" haptic="light">
               <Text style={styles.restoreText}>Restore Purchases</Text>
-            </Pressable>
+            </SoundTouchable>
           </View>
 
           {/* Security */}
@@ -278,13 +283,15 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
             </View>
             <View style={styles.optionsRow}>
               {AUTO_LOCK_OPTIONS.map((minutes) => (
-                <Pressable
+                <SoundTouchable
                   key={minutes}
                   style={[
                     styles.optionChip,
                     autoLockMinutes === minutes && styles.optionChipActive,
                   ]}
                   onPress={() => handleAutoLockChange(minutes)}
+                  sound="toggle"
+                  haptic="light"
                 >
                   <Text style={[
                     styles.optionChipText,
@@ -292,24 +299,26 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
                   ]}>
                     {minutes}m
                   </Text>
-                </Pressable>
+                </SoundTouchable>
               ))}
             </View>
 
-            <Pressable style={styles.settingAction} onPress={handleLockNow}>
+            <SoundTouchable style={styles.settingAction} onPress={handleLockNow} sound="scanLock" haptic="medium">
               <View style={styles.settingIconContainer}>
                 <Image source={Assets.iconShield} style={styles.settingImage} resizeMode="contain" />
               </View>
               <Text style={styles.settingActionText}>Lock Now</Text>
-            </Pressable>
+            </SoundTouchable>
           </View>
 
           {/* Data */}
           <Text style={styles.sectionTitle}>Data Management</Text>
           <View style={styles.settingsGroup}>
-            <Pressable
+            <SoundTouchable
               style={styles.settingAction}
               onPress={() => navigation.navigate('BackupSettings')}
+              sound="tap"
+              haptic="light"
             >
               <View style={[styles.settingIconContainer, { backgroundColor: '#E8F4FD' }]}>
                 <Ionicons name="cloud" size={18} color={Colors.primary} />
@@ -320,12 +329,14 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
               </View>
               <View style={[styles.backupHealthDot, { backgroundColor: HEALTH_COLORS[backupHealth] }]} />
               <Ionicons name="chevron-forward" size={16} color={Colors.textTertiary} />
-            </Pressable>
+            </SoundTouchable>
 
-            <Pressable
+            <SoundTouchable
               style={styles.settingAction}
               onPress={handleExportAll}
               disabled={exporting}
+              sound="analyzeStart"
+              haptic="light"
             >
               <View style={styles.settingIconContainer}>
                 <Image source={Assets.iconPdf} style={styles.settingImage} resizeMode="contain" />
@@ -333,14 +344,14 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
               <Text style={styles.settingActionText}>
                 {exporting ? 'Exporting...' : `Export All Data (${recordCount} records)`}
               </Text>
-            </Pressable>
+            </SoundTouchable>
 
-            <Pressable style={[styles.settingAction, styles.settingActionDanger]} onPress={handleDeleteAll}>
+            <SoundTouchable style={[styles.settingAction, styles.settingActionDanger]} onPress={handleDeleteAll} sound="error" haptic="error">
               <View style={[styles.settingIconContainer, { backgroundColor: Colors.errorLight }]}>
                 <Image source={Assets.iconShield} style={styles.settingImage} resizeMode="contain" />
               </View>
               <Text style={styles.settingActionDangerText}>Delete All Data</Text>
-            </Pressable>
+            </SoundTouchable>
           </View>
 
           {/* About */}
@@ -356,13 +367,13 @@ const Settings: React.FC<SettingsProps> = ({ onLock }) => {
               cnsnt is a record management tool only. It does not provide legal advice or legal services. Consult a qualified professional for legal guidance.
             </Text>
             <View style={styles.legalLinks}>
-              <Pressable style={styles.legalLink} onPress={() => Linking.openURL('https://printmaxx-privacy.surge.sh')}>
+              <SoundTouchable style={styles.legalLink} onPress={() => Linking.openURL('https://printmaxx-privacy.surge.sh')} sound="tap" haptic="light">
                 <Text style={styles.legalLinkText}>Privacy Policy</Text>
-              </Pressable>
+              </SoundTouchable>
               <Text style={styles.legalDot}>{'\u{2022}'}</Text>
-              <Pressable style={styles.legalLink} onPress={() => Linking.openURL('https://printmaxx-tos.surge.sh')}>
+              <SoundTouchable style={styles.legalLink} onPress={() => Linking.openURL('https://printmaxx-tos.surge.sh')} sound="tap" haptic="light">
                 <Text style={styles.legalLinkText}>Terms of Service</Text>
-              </Pressable>
+              </SoundTouchable>
             </View>
           </View>
 

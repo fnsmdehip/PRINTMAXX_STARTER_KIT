@@ -1,0 +1,11 @@
+appId: com.printmaxx.cnsnt
+name: "Settings - Subscription Section"
+---
+- launchApp
+- tapOn:
+    text: "Settings"
+- assertVisible: "Subscription"
+- assertVisible:
+    text: ".*FREE.*"
+- assertVisible: "Upgrade to Pro"
+- takeScreenshot: "settings_subscription"

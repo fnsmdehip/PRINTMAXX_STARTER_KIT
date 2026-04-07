@@ -141,7 +141,7 @@ export default function SearchTab() {
         `Free users can read the first ${FREE_BOOK_LIMIT} books. Upgrade to Premium to unlock all 156 texts.`,
         [
           { text: 'Maybe Later', style: 'cancel' },
-          { text: 'Upgrade', onPress: () => router.push('/paywall') },
+          { text: 'Upgrade', onPress: () => router.push('/paywall' as any) },
         ]
       );
       return;

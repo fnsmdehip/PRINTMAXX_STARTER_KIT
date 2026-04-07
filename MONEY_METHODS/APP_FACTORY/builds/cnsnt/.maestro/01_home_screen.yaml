@@ -1,0 +1,8 @@
+appId: com.printmaxx.cnsnt
+name: "Home - Templates Load"
+---
+- launchApp
+- assertVisible: "Consent Templates"
+- assertVisible: "Quick Actions"
+- assertVisible: "All Templates"
+- takeScreenshot: "home_screen"

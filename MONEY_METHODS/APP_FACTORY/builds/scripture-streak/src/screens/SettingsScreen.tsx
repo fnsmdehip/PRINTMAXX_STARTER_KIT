@@ -15,6 +15,8 @@ import * as Haptics from 'expo-haptics';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors, Spacing, Typography, BorderRadius } from '../constants/theme';
 import { Card } from '../components/Card';
+import { SoundTouchable } from '../components/SoundTouchable';
+import { playSound } from '../sounds/SoundEngine';
 import { StorageService } from '../services/storage';
 import { UserSettings } from '../types';
 import { TRANSLATIONS } from '../constants/bible';
@@ -172,10 +174,11 @@ export function SettingsScreen() {
         {!settings.isPremium && (
           <>
             <View style={styles.divider} />
-            <TouchableOpacity
+            <SoundTouchable
+              sound="premium"
+              haptic="medium"
               style={styles.upgradeButton}
               onPress={async () => {
-                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                 try {
                   const offering = await getOfferings();
                   if (!offering) {
@@ -192,6 +195,7 @@ export function SettingsScreen() {
                     const updated = { ...settings, isPremium: true };
                     setSettings(updated);
                     await StorageService.saveUserSettings(updated);
+                    playSound('success');
                     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
                     Alert.alert('Welcome to Premium!', 'You now have full access to all features.');
                   }
@@ -204,7 +208,7 @@ export function SettingsScreen() {
               <Ionicons name="sparkles" size={20} color={Colors.gold} style={{ marginRight: Spacing.sm }} />
               <Text style={styles.upgradeButtonText}>Upgrade to Premium</Text>
               <Text style={styles.upgradePrice}>$19.99/yr</Text>
-            </TouchableOpacity>
+            </SoundTouchable>
           </>
         )}
         {settings.isPremium && (
@@ -226,20 +230,26 @@ export function SettingsScreen() {
               <Ionicons name="chevron-forward" size={20} color={Colors.textMuted} />
             </TouchableOpacity>
             <View style={styles.divider} />
-            <TouchableOpacity
+            <SoundTouchable
+              sound="tap"
+              haptic="light"
               style={styles.settingRow}
               onPress={async () => {
-                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                 try {
                   const restored = await restorePurchases();
                   if (restored) {
                     const updated = { ...settings, isPremium: true };
                     setSettings(updated);
                     await StorageService.saveUserSettings(updated);
+                    playSound('success');
                     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
                     Alert.alert('Restored!', 'Your Premium subscription has been restored.');
                   } else {
-                    Alert.alert('No Purchase Found', 'No active Premium subscription was found.');
+                    Alert.alert(
+                      'Restore Purchases',
+                      'Your subscription is managed through Stripe. Check your confirmation email for a receipt and subscription management link. If you purchased on this device, tap Yes when the Stripe checkout confirmation appears.',
+                      [{ text: 'OK' }]
+                    );
                   }
                 } catch {
                   Alert.alert('Error', 'Failed to restore purchases. Please try again.');
@@ -250,10 +260,10 @@ export function SettingsScreen() {
               <View style={styles.settingInfo}>
                 <Text style={styles.settingLabel}>Restore Purchases</Text>
                 <Text style={styles.settingDescription}>
-                  Recover a previous subscription
+                  Subscription managed via Stripe
                 </Text>
               </View>
-            </TouchableOpacity>
+            </SoundTouchable>
           </>
         )}
       </Card>

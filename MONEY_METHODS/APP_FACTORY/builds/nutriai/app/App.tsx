@@ -23,6 +23,9 @@ import PaywallScreen from './screens/Paywall';
 import { setPremiumStatus } from './store/subscriptionSlice';
 import { useAppSelector } from './store/hooks';
 import { initPurchases, checkEntitlements } from './services/purchases';
+import { initSounds } from './sounds/SoundEngine';
+import * as Linking from 'expo-linking';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type TabParamList = {
   Home: undefined;
@@ -152,6 +155,22 @@ function AppContent(): React.JSX.Element {
         store.dispatch(setPremiumStatus(false));
       }
     })();
+    initSounds().catch(() => {});
+  }, []);
+
+  // Deep link handler: nutrisnap://premium-activated activates pro entitlement
+  useEffect(() => {
+    const sub = Linking.addEventListener('url', ({ url }) => {
+      if (url.includes('premium-activated') || url.includes('payment-success')) {
+        AsyncStorage.setItem(
+          '@nutrisnap_premium',
+          JSON.stringify({ isPremium: true, purchasedAt: new Date().toISOString(), plan: 'deep-link' })
+        ).then(() => {
+          store.dispatch(setPremiumStatus(true));
+        }).catch(() => {});
+      }
+    });
+    return () => sub.remove();
   }, []);
 
   const handleSplashFinish = useCallback(() => {

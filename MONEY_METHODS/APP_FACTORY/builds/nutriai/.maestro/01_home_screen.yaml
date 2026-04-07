@@ -1,0 +1,6 @@
+appId: com.printmaxx.nutrisnap
+name: "Home Screen Loads"
+---
+- launchApp
+- waitForAnimationToEnd
+- takeScreenshot: "home_screen"

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Animated, StyleSheet, ViewStyle, Dimensions } from 'react-native';
+import { View, Animated, StyleSheet, ViewStyle, Dimensions, DimensionValue } from 'react-native';
 import { Theme } from '../../utils/theme';
 
 const CONTENT_WIDTH = Dimensions.get('window').width - 40;
 
 interface SkeletonProps {
-  width: number | string;
+  width: DimensionValue;
   height: number;
   borderRadius?: number;
   style?: ViewStyle;

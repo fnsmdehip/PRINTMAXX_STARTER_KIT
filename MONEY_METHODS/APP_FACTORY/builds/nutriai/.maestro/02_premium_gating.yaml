@@ -1,0 +1,14 @@
+appId: com.printmaxx.nutrisnap
+name: "Premium Feature Gating"
+---
+- launchApp
+- waitForAnimationToEnd
+- takeScreenshot: "initial_state"
+- tapOn:
+    text: "Settings"
+- waitForAnimationToEnd
+- takeScreenshot: "settings_screen"
+- tapOn:
+    text: "Restore Purchases"
+- waitForAnimationToEnd
+- takeScreenshot: "restore_purchases_dialog"

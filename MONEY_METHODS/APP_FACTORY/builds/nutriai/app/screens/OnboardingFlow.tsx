@@ -33,6 +33,7 @@ import { setDailyGoal } from '../store/nutritionSlice';
 import { setPremiumStatus } from '../store/subscriptionSlice';
 import { Theme } from '../utils/theme';
 import { haptics } from '../utils/haptics';
+import { playSound } from '../sounds/SoundEngine';
 import {
   calculateFullPlan,
   feetInchesToCm,
@@ -248,12 +249,14 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
 
   // ── Navigation ──
   const goNext = useCallback(() => {
+    playSound('swipe');
     haptics.light();
     animateTransition('forward', () => setStep((s: number) => Math.min(s + 1, TOTAL_STEPS - 1)));
   }, [animateTransition]);
 
   const goBack = useCallback(() => {
     if (step === 0) return;
+    playSound('swipe');
     haptics.light();
     animateTransition('back', () => setStep((s: number) => Math.max(s - 1, 0)));
   }, [step, animateTransition]);
@@ -318,6 +321,7 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
       if (!pkg) throw new Error('No package');
       await purchasePackage(pkg);
       dispatch(setPremiumStatus(true));
+      playSound('premium');
       await saveOnboardingData();
       onComplete();
     } catch (error) {
@@ -1814,6 +1818,14 @@ const s = StyleSheet.create({
     width: 1,
     height: 36,
     backgroundColor: Theme.colors.border,
+  },
+
+  // ── Options container (gender/goal selection grids) ──
+  optionsContainer: {
+    flexDirection: 'row' as const,
+    flexWrap: 'wrap' as const,
+    gap: 12,
+    marginTop: 8,
   },
 
   // ── Calorie breakdown / pie ──

@@ -50,6 +50,7 @@ const ASSETS = {
   bgPaper: require('../assets/bg_paper_texture.png'),
 };
 import purchaseService from '../services/purchases';
+import { playSound } from '../sounds/SoundEngine';
 import {
   Colors,
   Typography,
@@ -223,12 +224,14 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
 
   const goNext = useCallback(() => {
     if (step < TOTAL_STEPS - 1) {
+      playSound('swipe');
       animateTransition(step + 1);
     }
   }, [step, animateTransition]);
 
   const goBack = useCallback(() => {
     if (step > 0) {
+      playSound('tap');
       setShowRescue(false);
       animateTransition(step - 1);
     }
@@ -252,9 +255,13 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
         await saveAnswers();
         const success = await purchaseService.purchasePackage(plan);
         if (success) {
+          playSound('premium');
           onComplete();
+        } else {
+          playSound('error');
         }
       } catch (e) {
+        playSound('error');
         Alert.alert('Purchase Error', 'Something went wrong. Please try again.');
       } finally {
         setPurchasing(false);
@@ -269,9 +276,13 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
       await saveAnswers();
       const success = await purchaseService.purchasePackage('yearly');
       if (success) {
+        playSound('premium');
         onComplete();
+      } else {
+        playSound('error');
       }
     } catch (e) {
+      playSound('error');
       Alert.alert('Purchase Error', 'Something went wrong. Please try again.');
     } finally {
       setPurchasing(false);
@@ -280,9 +291,11 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
 
   const handleDeclinePaywall = useCallback(() => {
     if (!showRescue) {
+      playSound('error');
       setShowRescue(true);
     } else {
       // User declined rescue too -- let them in with free tier
+      playSound('tap');
       saveAnswers().then(() => onComplete());
     }
   }, [showRescue, saveAnswers, onComplete]);
@@ -302,7 +315,8 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
 
   const handleNotificationPermission = useCallback(async () => {
     // On iOS, this would call Notifications.requestPermissionsAsync()
-    // For now, advance -- permission request is handled at OS level
+    // Permission request is handled at OS level -- play grant sound on advance
+    playSound('permissionGranted');
     goNext();
   }, [goNext]);
 
@@ -355,6 +369,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
             key={opt.id}
             style={[s.optionCard, answers.useCase === opt.id && s.optionCardSelected]}
             onPress={() => {
+              playSound('toggle');
               setAnswer('useCase', opt.id);
               setTimeout(goNext, 300);
             }}
@@ -384,6 +399,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
             key={opt.id}
             style={[s.optionCard, answers.industry === opt.id && s.optionCardSelected]}
             onPress={() => {
+              playSound('toggle');
               setAnswer('industry', opt.id);
               setTimeout(goNext, 300);
             }}
@@ -413,6 +429,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
             key={opt.id}
             style={[s.volumeCard, answers.volume === opt.id && s.volumeCardSelected]}
             onPress={() => {
+              playSound('toggle');
               setAnswer('volume', opt.id);
               setTimeout(goNext, 300);
             }}
@@ -445,6 +462,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
             key={opt.id}
             style={[s.painCard, answers.painPoint === opt.id && s.painCardSelected]}
             onPress={() => {
+              playSound('toggle');
               setAnswer('painPoint', opt.id);
               setTimeout(goNext, 300);
             }}

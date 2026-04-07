@@ -20,6 +20,7 @@ import { haptics } from '../utils/haptics';
 import { useAppSelector, useAppDispatch } from '../store/hooks';
 import { setPremiumStatus } from '../store/subscriptionSlice';
 import { restorePurchases } from '../services/purchases';
+import { playSound } from '../sounds/SoundEngine';
 
 const SettingsScreen = (): React.JSX.Element => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
@@ -54,20 +55,28 @@ const SettingsScreen = (): React.JSX.Element => {
 
   const handleManageSubscription = (): void => {
     haptics.light();
+    playSound('tap');
     if (isPremium) {
       Alert.alert(
         'Manage Subscription',
-        'You can manage or cancel your subscription in your App Store settings.',
+        'Your subscription is managed through Stripe. Visit the Stripe customer portal to change your plan or cancel. Check your original purchase confirmation email for the management link.',
         [
           {
-            text: 'Open App Store Settings',
-            onPress: () => Linking.openURL('https://apps.apple.com/account/subscriptions'),
+            text: 'Open Stripe Portal',
+            onPress: () => Linking.openURL('https://billing.stripe.com/p/login/printmaxx'),
           },
           { text: 'Cancel', style: 'cancel' },
         ],
       );
     } else {
-      navigation.navigate('Paywall');
+      Alert.alert(
+        'Upgrade to Premium',
+        'Unlock unlimited scans, detailed macro tracking, and AI-powered meal plans.',
+        [
+          { text: 'Upgrade', onPress: () => { playSound('premium'); navigation.navigate('Paywall'); } },
+          { text: 'Not Now', style: 'cancel' },
+        ],
+      );
     }
   };
 
@@ -79,6 +88,7 @@ const SettingsScreen = (): React.JSX.Element => {
 
       if (isPremiumRestored) {
         dispatch(setPremiumStatus(true));
+        playSound('success');
         haptics.success();
         Alert.alert(
           'Purchases Restored',
@@ -86,8 +96,9 @@ const SettingsScreen = (): React.JSX.Element => {
         );
       } else {
         Alert.alert(
-          'No Subscription Found',
-          'We could not find an active subscription to restore. If you believe this is an error, please contact support at support@printmaxx.com',
+          'Restore Purchases',
+          'Your subscription is managed through Stripe. Check your confirmation email for a receipt and subscription management link. If you purchased on this device, tap Yes when the Stripe checkout confirmation appears.',
+          [{ text: 'OK' }],
         );
       }
     } catch {

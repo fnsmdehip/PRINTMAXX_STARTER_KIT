@@ -18,6 +18,7 @@ import { Colors, Spacing, BorderRadius } from '../constants/theme';
 import { StorageService } from '../services/storage';
 import { NotificationService } from '../services/notifications';
 import { getOfferings, purchasePackage, restorePurchases } from '../services/purchases';
+import { playSound } from '../sounds/SoundEngine';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const TOTAL_STEPS = 12;
@@ -107,10 +108,10 @@ function computeProjection(answers: OnboardingAnswers): { chapters: number; days
   let milestone = 'the entire Bible';
   if (answers.goal === 'peace') {
     milestone = 'Psalms & Proverbs';
-    return { chapters: 181, days: Math.ceil(181 / chaptersPerSession / daysPerWeek * 7) };
+    return { chapters: 181, days: Math.ceil(181 / chaptersPerSession / daysPerWeek * 7), milestone };
   }
   if (answers.goal === 'whole') {
-    return { chapters: totalChapters, days: daysToComplete };
+    return { chapters: totalChapters, days: daysToComplete, milestone };
   }
   // For deepening faith or building habit, show New Testament (260 chapters)
   const ntChapters = 260;
@@ -180,6 +181,7 @@ export function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
 
   const goNext = useCallback(() => {
     if (step < TOTAL_STEPS - 1) {
+      playSound('swipe');
       animateToStep(step + 1);
     }
   }, [step, animateToStep]);
@@ -190,16 +192,19 @@ export function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
       return;
     }
     if (step > 0) {
+      playSound('swipe');
       animateToStep(step - 1);
     }
   }, [step, showRescue, animateToStep]);
 
   const updateAnswer = useCallback((key: keyof OnboardingAnswers, value: string) => {
+    playSound('toggle');
     setAnswers(prev => ({ ...prev, [key]: value }));
   }, []);
 
   const saveAndComplete = useCallback(async () => {
     try {
+      playSound('success');
       await AsyncStorage.setItem(ONBOARDING_COMPLETE_KEY, 'true');
       await AsyncStorage.setItem(ONBOARDING_ANSWERS_KEY, JSON.stringify(answers));
       // Save settings based on answers

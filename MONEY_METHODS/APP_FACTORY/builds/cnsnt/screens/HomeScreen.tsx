@@ -12,6 +12,7 @@ import {
   StyleSheet,
   Pressable,
   SectionList,
+  Alert,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -68,11 +69,25 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   const handleTemplatePress = (template: ConsentTemplate) => {
     if (template.isPremium && !canUseTemplates) {
-      navigation.navigate('Settings');
+      Alert.alert(
+        'Pro Template',
+        `"${template.name}" is available with cnsnt Pro. Free users have access to basic templates.`,
+        [
+          { text: 'Upgrade to Pro', onPress: () => navigation.navigate('Settings') },
+          { text: 'Cancel', style: 'cancel' },
+        ]
+      );
       return;
     }
     if (!canCreateRecord) {
-      navigation.navigate('Settings');
+      Alert.alert(
+        'Record Limit Reached',
+        `Free accounts can store up to ${FREE_TIER_LIMIT} consent records. Upgrade to Pro for unlimited records.`,
+        [
+          { text: 'Upgrade to Pro', onPress: () => navigation.navigate('Settings') },
+          { text: 'Cancel', style: 'cancel' },
+        ]
+      );
       return;
     }
     navigation.navigate('TemplateForm', { templateId: template.id });
@@ -113,7 +128,14 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
             style={styles.quickActionCard}
             onPress={() => {
               if (!canRecord) {
-                navigation.navigate('Settings');
+                Alert.alert(
+                  'Pro Feature',
+                  'Audio recording is available with cnsnt Pro. Upgrade to capture voice consent.',
+                  [
+                    { text: 'Upgrade to Pro', onPress: () => navigation.navigate('Settings') },
+                    { text: 'Cancel', style: 'cancel' },
+                  ]
+                );
                 return;
               }
               navigation.navigate('Recording');
@@ -129,7 +151,14 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
             style={styles.quickActionCard}
             onPress={() => {
               if (!canCreateRecord) {
-                navigation.navigate('Settings');
+                Alert.alert(
+                  'Record Limit Reached',
+                  `Free accounts can store up to ${FREE_TIER_LIMIT} consent records. Upgrade to Pro for unlimited records.`,
+                  [
+                    { text: 'Upgrade to Pro', onPress: () => navigation.navigate('Settings') },
+                    { text: 'Cancel', style: 'cancel' },
+                  ]
+                );
                 return;
               }
               navigation.navigate('ConsentBuilder', { title: 'Consent Checklist' });

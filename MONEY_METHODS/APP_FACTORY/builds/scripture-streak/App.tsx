@@ -2,11 +2,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
+import * as Linking from 'expo-linking';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TabNavigator } from './src/navigation/TabNavigator';
 import { SplashScreen } from './src/screens/SplashScreen';
 import { OnboardingFlow, isOnboardingComplete } from './src/screens/OnboardingFlow';
 import { StorageService } from './src/services/storage';
 import { initPurchases } from './src/services/purchases';
+import { initSounds } from './src/sounds/SoundEngine';
 import type { AppScreen } from './src/types';
 
 export default function App() {
@@ -42,6 +45,20 @@ export default function App() {
 
   useEffect(() => {
     initPurchases().catch(() => {});
+    initSounds().catch(() => {});
+  }, []);
+
+  // Deep link handler: scripture-streak://premium-activated activates pro entitlement
+  useEffect(() => {
+    const sub = Linking.addEventListener('url', ({ url }) => {
+      if (url.includes('premium-activated') || url.includes('payment-success')) {
+        AsyncStorage.setItem(
+          '@scripture_streak_premium',
+          JSON.stringify({ isPremium: true, purchasedAt: new Date().toISOString(), plan: 'deep-link' })
+        ).catch(() => {});
+      }
+    });
+    return () => sub.remove();
   }, []);
 
   const handleOnboardingComplete = useCallback(() => {

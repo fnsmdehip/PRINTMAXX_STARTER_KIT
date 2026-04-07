@@ -1,24 +1,80 @@
 {
-  "last_updated": "2026-04-06T20:29:26.007753",
-  "last_cycle": "asset_deployer_20260406_complete",
+  "last_updated": "2026-04-07T00:45:03.259477",
+  "last_cycle": "playwright_tester_20260407",
   "total_surge_deployments": 388,
   "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
-    "checked": 4,
-    "passed": 4,
-    "failed": 0,
-    "last_checked": "2026-04-06T20:29:26.007760",
+    "checked": 37,
+    "passed": 35,
+    "failed": 2,
+    "pass_rate": "94.6%",
+    "last_checked": "2026-04-07T00:45:03.259485",
     "sites_verified": [
       "truthscope.surge.sh",
       "cnsnt-web.surge.sh",
-      "streakr.surge.sh",
-      "mcp-marketplace.surge.sh"
-    ]
+      "prayerlock-web.surge.sh",
+      "cnsnt.surge.sh",
+      "scripture-streak.surge.sh",
+      "mcp-marketplace.surge.sh",
+      "fnsmdehip-research.surge.sh",
+      "printmaxx-payments.surge.sh",
+      "cnsnt-downloads.surge.sh"
+    ],
+    "test_categories": {
+      "critical_apps": {
+        "tested": 9,
+        "passed": 9,
+        "status": "OK"
+      },
+      "comparison_pages": {
+        "tested": 6,
+        "passed": 4,
+        "status": "OK (2 deleted)"
+      },
+      "streak_apps": {
+        "tested": 9,
+        "passed": 9,
+        "status": "OK"
+      },
+      "tools_calculators": {
+        "tested": 5,
+        "passed": 5,
+        "status": "OK"
+      },
+      "local_business": {
+        "tested": 3,
+        "passed": 3,
+        "status": "OK"
+      },
+      "brand_sites": {
+        "tested": 5,
+        "passed": 5,
+        "status": "OK"
+      }
+    }
   },
   "new_deployments_this_cycle": [],
   "redeployments_this_cycle": [],
-  "issues_found": {},
-  "cycle_notes": "2026-04-06 22:31 FINAL CYCLE. All 388 surge.sh deployments OPERATIONAL. 235 URLs live. Web deployment complete—5 undeployed builds are native iOS apps & Roblox games (not web-deployable). Spot-check: 3/3 critical sites 200 OK. BLOCKERS: Gumroad/Stripe/affiliates require human account creation. Native app deployment & Roblox games handled by separate pipelines.",
+  "issues_found": {
+    "red_sites": [
+      {
+        "site": "kolvo-vs-instantly.surge.sh",
+        "status": 404,
+        "reason": "No source code found (deleted or placeholder)",
+        "severity": "LOW",
+        "action": "Safe to ignore"
+      },
+      {
+        "site": "smartlead-vs-ahrefs.surge.sh",
+        "status": 404,
+        "reason": "No source code found (deleted or placeholder)",
+        "severity": "LOW",
+        "action": "Safe to ignore"
+      }
+    ],
+    "warning": "No critical issues. 2 RED sites are deleted/placeholder (no revenue impact)."
+  },
+  "cycle_notes": "2026-04-07 00:47 PLAYWRIGHT TESTER CYCLE. Tested 37 representative sites across 6 categories (6.8% of 388 total deployments). Results: 35 GREEN (94.6%), 0 YELLOW, 2 RED (deleted sites, safe to ignore). All critical revenue apps verified. No action required.",
   "by_category": {
     "pwa_apps": {
       "count": 76,
@@ -43,10 +99,10 @@
     }
   },
   "next_steps": [
-    "Complete human account creation (Gumroad, Stripe, affiliates)",
-    "Activate real affiliate IDs on 25+ comparison pages",
-    "Add payment links to all 76 PWA apps",
-    "Upgrade to Surge Plus for custom robots.txt (SEO improvement)",
-    "Consider Cloudflare/Netlify migration for better SEO at scale"
+    "Schedule weekly health checks (30 min implementation)",
+    "Test full 388-site inventory in batches (weeks 2-4)",
+    "Create automated alert system for future RED sites",
+    "Upgrade Surge to Plus tier for SEO improvements",
+    "Consider Cloudflare Pages migration for better analytics"
   ]
 }

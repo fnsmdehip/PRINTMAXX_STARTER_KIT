@@ -15,6 +15,8 @@ import { colors, fonts, spacing, borderRadius, shadows, readerThemes, APP_CONFIG
 import { getSettings, saveSettings, getStats, getAllProgress, resetOnboarding } from '../services/storage';
 import { getCacheSize, clearCache, downloadBook } from '../services/bookDownloader';
 import { restorePurchases, isPremiumCached } from '../services/purchases';
+import { playSound } from '../sounds/SoundEngine';
+import { haptics } from '../utils/haptics';
 import { books } from '../data/catalog';
 import { ReaderTheme, ReaderSettings, ReadingStats } from '../types';
 
@@ -398,14 +400,22 @@ export default function SettingsScreen() {
           <TouchableOpacity
             style={styles.settingRow}
             onPress={async () => {
+              playSound('tap');
+              haptics.light();
               setRestoringPurchases(true);
               try {
                 const restored = await restorePurchases();
                 if (restored) {
                   setIsPremium(true);
+                  playSound('success');
+                  haptics.success();
                   Alert.alert('Restored', 'Your premium access has been restored!');
                 } else {
-                  Alert.alert('No Subscription Found', 'We could not find an active subscription for this account.');
+                  Alert.alert(
+                    'Restore Purchases',
+                    'Your subscription is managed through Stripe. Check your confirmation email for a receipt and subscription management link. If you purchased on this device, tap Yes when the Stripe checkout confirmation appears.',
+                    [{ text: 'OK' }],
+                  );
                 }
               } catch {
                 Alert.alert('Restore Failed', 'Please check your connection and try again.');

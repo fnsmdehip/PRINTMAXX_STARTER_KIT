@@ -25,6 +25,7 @@ import { Ionicons } from '@expo/vector-icons';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PaywallGate from '../components/PaywallGate';
 import usePurchases from '../hooks/usePurchases';
+import { playSound } from '../sounds/SoundEngine';
 import { Colors, Typography, Spacing, BorderRadius, Shadows, CardBorder } from '../constants/theme';
 
 interface RecordingScreenProps {
@@ -109,20 +110,34 @@ const RecordingScreen: React.FC<RecordingScreenProps> = () => {
       });
 
       const { recording: newRecording } = await Audio.Recording.createAsync(
-        Audio.RecordingOptionsPresets.HIGH_QUALITY
+        Audio.RecordingOptionsPresets.HIGH_QUALITY,
+        undefined,
+        250  // metering update interval in ms
       );
 
       setRecording(newRecording);
       setIsRecording(true);
+      playSound('analyzeStart');
       setDuration(0);
       setWaveformData([]);
 
-      durationTimer.current = setInterval(() => {
+      durationTimer.current = setInterval(async () => {
         setDuration((prev) => prev + 1);
-        setWaveformData((prev) => [
-          ...prev,
-          0.2 + Math.random() * 0.8,
-        ]);
+        try {
+          if (newRecording) {
+            const status = await newRecording.getStatusAsync();
+            if (status.isRecording && status.metering !== undefined) {
+              // metering is in dB, typically -160 to 0. Normalize to 0-1.
+              const normalized = Math.max(0, Math.min(1, (status.metering + 60) / 60));
+              setWaveformData((prev) => [...prev, normalized]);
+            } else {
+              // No metering data -- show flat line (not random)
+              setWaveformData((prev) => [...prev, 0.05]);
+            }
+          }
+        } catch {
+          setWaveformData((prev) => [...prev, 0.05]);
+        }
       }, 1000);
     } catch (_error) {
       Alert.alert('Error', 'Failed to start recording. Check permissions.');
@@ -139,6 +154,7 @@ const RecordingScreen: React.FC<RecordingScreenProps> = () => {
       }
 
       setIsRecording(false);
+      playSound('analyzeComplete');
 
       await recording.stopAndUnloadAsync();
       await Audio.setAudioModeAsync({
@@ -180,6 +196,7 @@ const RecordingScreen: React.FC<RecordingScreenProps> = () => {
 
       setSound(newSound);
       setIsPlaying(true);
+      playSound('tap');
     } catch (_error) {
       Alert.alert('Error', 'Failed to play recording.');
     }

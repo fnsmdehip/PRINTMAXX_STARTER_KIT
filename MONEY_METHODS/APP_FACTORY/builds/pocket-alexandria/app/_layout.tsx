@@ -3,9 +3,12 @@ import { View, StyleSheet } from 'react-native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
+import * as Linking from 'expo-linking';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { colors } from '../src/constants/theme';
 import { getOnboardingState } from '../src/services/storage';
 import { initPurchases, checkEntitlements } from '../src/services/purchases';
+import { initSounds } from '../src/sounds/SoundEngine';
 import AnimatedSplash from '../src/components/AnimatedSplash';
 import OnboardingScreen from '../src/screens/OnboardingFlow';
 
@@ -31,6 +34,20 @@ export default function RootLayout() {
         await SplashScreen.hideAsync();
       }
     })();
+    initSounds().catch(() => {});
+  }, []);
+
+  // Deep link handler: pocket-alexandria://premium-activated activates pro entitlement
+  useEffect(() => {
+    const sub = Linking.addEventListener('url', ({ url }) => {
+      if (url.includes('premium-activated') || url.includes('payment-success')) {
+        AsyncStorage.setItem(
+          '@pocket_alexandria_premium',
+          JSON.stringify({ isPremium: true, purchasedAt: new Date().toISOString(), plan: 'deep-link' })
+        ).catch(() => {});
+      }
+    });
+    return () => sub.remove();
   }, []);
 
   const handleSplashFinish = useCallback(() => {

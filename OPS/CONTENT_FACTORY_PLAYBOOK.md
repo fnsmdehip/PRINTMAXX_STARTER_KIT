@@ -320,3 +320,14 @@ Track these after deploying the factory:
 - Ensure date format is YYYY-MM-DD and time is HH:MM.
 - Check for unescaped quotes in post text.
 - Try importing one file at a time.
+
+
+---
+
+## Pending Enhancement (ALPHA_OPP_082_SKILL_SPRINT, Score: 35)
+
+**Source:** swarm_opportunity_scanner | **URL:** 
+**Added:** 2026-04-07T00:38:54-04:00
+
+Skill Sprint Mini-Course Factory: package existing playbooks/scripts as 2-3hr focused workshops at $37-97. Market shifting from long courses to sprint workshops. 2277 content pieces already exist.
+
