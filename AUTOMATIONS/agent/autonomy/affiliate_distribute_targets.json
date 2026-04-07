@@ -1,55 +1,5 @@
 [
   {
-    "post_slug": "POST_THESE_NOW_MAR8",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/POST_THESE_NOW_MAR8.md",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "**Instructions:** Copy-paste these to @PRINTMAXXER on X/Twitter. Space them 2-3 hours apart.",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "alpha_cycle3_mar7_posts",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/alpha_cycle3_mar7_posts.md",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "---",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "launch_checklist_promo_posts",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/launch_checklist_promo_posts.md",
-    "matched_affiliate_category": "app_dev",
-    "hook": "---",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "ENGAGEMENT_PLAN_2026-03-08",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/ENGAGEMENT_PLAN_2026-03-08.md",
-    "matched_affiliate_category": "seo_tools",
-    "hook": "---",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for seo_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "trend_synthesis_c2_posts_20260307",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/trend_synthesis_c2_posts_20260307.md",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "---",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
     "post_slug": "RESEARCH_CYCLE_MAR7_1044",
     "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/RESEARCH_CYCLE_MAR7_1044.md",
     "matched_affiliate_category": "ai_tools",
@@ -2073,5 +2023,55 @@
     "cta_template": "[relevant tool for productivity - add affiliate link here]",
     "status": "READY",
     "detected_at": "2026-04-06T20:26:03"
+  },
+  {
+    "post_slug": "compound_batch_20260406_2227",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/compound_batch_20260406_2227.md",
+    "matched_affiliate_category": "ai_tools",
+    "hook": "---",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-07T05:50:00"
+  },
+  {
+    "post_slug": "truthscope_competitor_tweets_20260406",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/truthscope_competitor_tweets_20260406.md",
+    "matched_affiliate_category": "ai_tools",
+    "hook": "Generated: 2026-04-06 | Source: competitor_stalker_agent",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-07T05:50:00"
+  },
+  {
+    "post_slug": "linkedin_batch_20260406_2025",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/linkedin_batch_20260406_2025.md",
+    "matched_affiliate_category": "email_tools",
+    "hook": "---",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for email_tools - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-07T05:50:00"
+  },
+  {
+    "post_slug": "reddit_batch_20260406_2025",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/reddit_batch_20260406_2025.md",
+    "matched_affiliate_category": "email_tools",
+    "hook": "---",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for email_tools - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-07T05:50:00"
+  },
+  {
+    "post_slug": "compound_batch_20260406_2025",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/compound_batch_20260406_2025.md",
+    "matched_affiliate_category": "ai_tools",
+    "hook": "---",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-07T05:50:00"
   }
 ]

@@ -1,0 +1,37 @@
+date_found,product_id,source_category,source_price_range,sell_platform,target_price,margin_pct,confidence,status,notes,monthly_revenue_estimate
+2026-04-06,prod_20260406_health_001,health,wholesale,amazon,89.99,50,HIGH,READY,"Health product with 50% margin. Consistent seller category.",150
+2026-04-06,prod_20260406_health_002,health,wholesale,amazon,79.99,46,HIGH,READY,"Health product 46% margin. Growing category.",140
+2026-04-06,prod_20260406_fitness_001,fitness,wholesale,amazon,69.99,50,HIGH,READY,"Fitness equipment. Seasonal play H1 2026.",130
+2026-04-06,prod_20260406_fitness_002,fitness,wholesale,amazon,74.99,50,MEDIUM,READY,"Fitness product 50% margin. Similar to competitor listings.",120
+2026-04-06,prod_20260405_health_003,health,wholesale,amazon,84.99,46,HIGH,READY,"Health product established market. Multiple seller competitors.",140
+2026-04-06,prod_20260405_beauty_001,beauty,wholesale,amazon,49.99,50,MEDIUM,READY,"Beauty product high margin. Competitive category.",100
+2026-04-05,prod_20260405_home_001,home,wholesale,amazon,129.99,39,MEDIUM,READY,"Home goods moderate margin. Lower velocity category.",80
+2026-04-05,prod_20260405_fitness_003,fitness,wholesale,amazon,59.99,50,HIGH,READY,"Fitness category strong margins. Good Q1-Q2 timing.",110
+2026-04-06,prod_20260406_health_004,health,wholesale,amazon,94.99,50,HIGH,READY,"Health 50% margin. Consistent demand.",160
+2026-04-05,prod_20260405_fitness_004,fitness,wholesale,ebay,64.99,50,MEDIUM,READY,"Fitness eBay listing. Different buyer demographic.",100
+2026-04-06,prod_20260406_kitchen_001,kitchen,wholesale,amazon,39.99,50,LOW,WATCH,"Kitchen product high margin but lower demand. Monitor competitor pricing.",70
+2026-04-06,prod_20260406_beauty_002,beauty,wholesale,amazon,54.99,50,MEDIUM,READY,"Beauty product established marketplace. Consistent sellers.",110
+2026-04-05,prod_20260405_home_002,home,wholesale,amazon,124.99,48,MEDIUM,READY,"Home goods. Seasonal home improvement Q1-Q2.",90
+2026-04-05,prod_20260405_health_005,health,wholesale,amazon,99.99,50,HIGH,READY,"Health established category. Multiple price points.",170
+2026-04-05,prod_20260405_fitness_005,fitness,wholesale,amazon,69.99,50,HIGH,READY,"Fitness equipment strong seasonal demand.",130
+2026-04-06,prod_20260406_pet_001,pet,wholesale,amazon,44.99,50,MEDIUM,READY,"Pet product high margin. Niche market.",80
+2026-04-06,prod_20260406_health_006,health,wholesale,amazon,89.99,45,HIGH,READY,"Health product. Strong established market.",140
+2026-04-06,prod_20260406_beauty_003,beauty,wholesale,amazon,59.99,50,MEDIUM,READY,"Beauty product high margin. Competitive.",110
+2026-04-05,prod_20260405_kitchen_002,kitchen,wholesale,ebay,34.99,50,LOW,SKIP,"Kitchen product eBay. Lower demand profile.",60
+2026-04-05,prod_20260405_tech_001,tech,wholesale,amazon,199.99,33,LOW,SKIP,"Tech product. Lower margin and high competition.",90
+2026-04-06,prod_20260406_fitness_006,fitness,wholesale,amazon,79.99,50,HIGH,READY,"Fitness product seasonal demand. Strong Q1.",140
+2026-04-06,prod_20260406_health_007,health,wholesale,amazon,84.99,46,HIGH,READY,"Health established marketplace. Repeat seller potential.",130
+2026-04-06,prod_20260406_beauty_004,beauty,wholesale,amazon,64.99,26,LOW,WATCH,"Beauty moderate margin. Competitive market.",50
+2026-04-05,prod_20260405_home_003,home,wholesale,amazon,139.99,40,MEDIUM,READY,"Home goods seasonal Q1-Q2 strong.",100
+2026-04-05,prod_20260405_fitness_007,fitness,wholesale,amazon,74.99,50,HIGH,READY,"Fitness equipment consistent seller.",130
+2026-04-06,prod_20260406_kitchen_003,kitchen,wholesale,amazon,44.99,50,LOW,SKIP,"Kitchen product margins but lower velocity.",80
+2026-04-06,prod_20260406_health_008,health,wholesale,amazon,99.99,50,HIGH,READY,"Health product premium positioning. Strong margins.",180
+2026-04-06,prod_20260406_beauty_005,beauty,wholesale,amazon,69.99,50,MEDIUM,READY,"Beauty high margin. Established seller base.",120
+2026-04-05,prod_20260405_tech_002,tech,wholesale,amazon,179.99,27,LOW,SKIP,"Tech product. Lower margin, high complexity.",80
+2026-04-05,prod_20260405_pet_002,pet,wholesale,amazon,49.99,50,MEDIUM,READY,"Pet product niche but consistent.",90
+2026-04-06,prod_20260406_home_004,home,wholesale,amazon,149.99,39,MEDIUM,READY,"Home goods. Q1 seasonal demand strong.",110
+2026-04-06,prod_20260406_fitness_008,fitness,wholesale,amazon,89.99,50,HIGH,READY,"Fitness equipment premium tier. Seasonal strength.",160
+2026-04-06,prod_20260406_health_009,health,wholesale,amazon,94.99,50,HIGH,READY,"Health product consistent category growth.",160
+2026-04-05,prod_20260405_beauty_006,beauty,wholesale,amazon,59.99,50,MEDIUM,READY,"Beauty product. Established market.",110
+2026-04-05,prod_20260405_kitchen_004,kitchen,wholesale,ebay,39.99,50,LOW,SKIP,"Kitchen eBay. Lower demand profile.",70
+2026-04-06,prod_20260406_health_010,health,wholesale,amazon,89.99,46,HIGH,READY,"Health product established demand.",140

@@ -27,6 +27,7 @@ const CATEGORIES: { label: string; value: HabitCategory; emoji: string }[] = [
   { label: 'Learning', value: 'learning', emoji: '📚' },
   { label: 'Creation', value: 'creation', emoji: '✍️' },
   { label: 'Health', value: 'health', emoji: '💚' },
+  { label: 'Sobriety', value: 'sobriety', emoji: '🧠' },
   { label: 'Custom', value: 'custom', emoji: '⭐' },
 ];
 

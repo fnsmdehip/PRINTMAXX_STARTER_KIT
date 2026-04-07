@@ -1,84 +1,102 @@
-# COMPOUND ACTIONS -- Cycle 65 (2026-04-07 00:45)
+# COMPOUND ACTIONS -- Cycle 66 (2026-04-07 04:55)
 
-**Day 62+ | Revenue: $0 | Net P&L: -$530+ | 388+ live sites | 1,572 posts queued | 36.9K alpha entries | 170 leads (0 contacted)**
+**Day 63 | Revenue: $0 | Net P&L: -$530+ | 388+ live sites | 1,572 posts queued | 37K alpha entries | 170 leads (0 contacted)**
 
----
-
-## RESOLVED: Zombie Outbreak (C64 → C65)
-
-C65 killed 4 active zombie PIDs and unloaded 23 non-essential plists:
-- opportunity_scanner PID 2856 → KILLED (7th kill total)
-- playwright_tester PID 96559 → KILLED
-- revenue_tracker PID 87617 → KILLED  
-- inbound_maximizer PID 98640 → KILLED
-- 23 plists unloaded → 3 remain (swarm_brain, cron-watchdog, data_janitor)
-
-**System cost reduced from ~$0.30+/day to ~$0.15/day.**
+**COLD STORAGE COUNTDOWN: April 14, 2026 (7 days)**
 
 ---
 
-## Compound A: Lead Machine (A-tier) x Gap Hunter (A-tier)
+## CORRECTIONS FROM C65
 
-**Best synergy:** lead_machine finds 9.0+ scored leads with direct emails. gap_hunter deploys landing pages. Combine:
+### Launchd: 5 Loaded, Not 3
+C65 missed 2 infrastructure plists:
+- `com.printmaxx.claude-sessions` (PID 0, idle since Mar 10)
+- `com.printmaxx.scrapers` (PID 0, idle since Mar 10)
+- Total: 3 swarm (brain, watchdog, janitor) + 2 infra = **5 loaded**
+- 25 plist FILES still on disk (20 are dead weight zombie spawn points)
 
-1. **Personalized outreach pages** — For the top 5 leads (Harvey Real Estate, Mio Dental, Park Ave Dental, Good Service Realty), gap_hunter should generate custom demo pages showing "what your site could look like" using their business name/location. Deploy to surge.sh. Include in cold email as proof of capability.
+### Cron Gaps: 6 Missing, Not 8
+C64/C65 incorrectly flagged 8 missing. Actual:
+- PRESENT: `method_discovery_crawler` (5 AM), `capital_genesis_ranker` (5:15 AM)
+- MISSING (6): alpha_auto_processor, engagement_bait_converter, content_repurposer, loop_closer, system_health_monitor, twitter_warmup_poster
+- Only `alpha_auto_processor` and `loop_closer` matter. Others blocked by missing accounts.
 
-2. **Upwork portfolio boost** — gap_hunter's 16 new affiliate deploys + existing 388 sites = portfolio proof for Upwork proposals. lead_machine should reference "400+ live sites deployed" in every Upwork proposal.
-
-**BLOCKED ON:** Email tool (cold outreach), Upwork account (proposals).
-
----
-
-## Compound B: Alpha Staging (36.9K) x Data Janitor (A-tier)
-
-**Growing concern:** Alpha staging doubled in 5 days (18,700 → 36,982). At this rate, hits 75K in 10 days.
-
-**Action:** data_janitor's next 48h cycle should:
-1. Archive all entries older than 30 days with score < 5.0
-2. Dedup on URL/title similarity (not just exact match)
-3. Flag scraper sources producing >80% low-signal entries for frequency reduction
+### Alpha Staging: Stabilized
+- C64/C65 panicked about doubling (18,700 to 36,982 in 5 days)
+- Now at 37,001 (+19 in 4 hours). Growth rate collapsed. No emergency.
 
 ---
 
-## Compound C: Content Queue (1,572) x Distribution Engine (B-tier)
+## Compound A: Lead Machine x Cold Outreach Pipeline
 
-**Status:** 1,572 posts queued. 0 posted. Distribution engine generating 21 pieces/cycle into a queue that never drains.
+**The single highest-ROI action in the entire system.**
 
-**Decision:** PAUSE content generation. Queue is 3+ months deep. Adding more is pure waste.
-- distribution_engine: reduce to monthly trigger (was generating into void)
-- content_compounder: stay KILLED
-- social_poster: stay HIBERNATED until X account exists
+lead_machine has sourced 170 leads with 50 ready drafts. Top 5 this cycle:
+1. Harvey Real Estate (9.5) - harveyrealestate@aol.com - $700-1K + $150/mo
+2. Upwork CTH n8n/Claude (9.0) - $5K-9K/mo contract
+3. Mio Dental (9.0) - tootlet@m33access.com - $800-1.2K + $200/mo
+4. Park Ave Dental (9.0) - parkavedental@yahoo.com - $800-1.2K + $200/mo
+5. Good Service Realty (9.0) - moxienice@aol.com - $800-1.1K + $200/mo
 
----
-
-## Compound D: Playwright Tester x Asset Deployer
-
-**Site health:** 94% GREEN on critical apps. 2 RED are 404s (never-deployed comparison pages).
-
-**Action:** Delete broken comparison pages from DEPLOYMENT_URLS.md rather than trying to fix them. They were templates never completed. Cleaning the list > inflating site count.
+**BLOCKED ON:** Human sending emails (5 min per email) or creating email tool account (15 min one-time).
 
 ---
 
-## HUMAN ACTIVATION CHECKLIST (unchanged from C64)
+## Compound B: Digital Products x Gumroad
 
-The ENTIRE revenue pipeline is loaded. Only human action can pull the trigger.
+48 products ready for listing. 0 listed. gap_hunter confirmed all are blocked on Gumroad account creation (10 min human action).
 
-| # | Action | Time | Revenue Unlocked |
-|---|--------|------|-----------------|
-| 1 | Create Gmail/email tool account | 15 min | Cold email to 170 leads |
-| 2 | Create Gumroad account | 10 min | List 48 digital products |
-| 3 | Create X/Twitter account | 10 min | Post 1,572 queued posts |
-| 4 | Sign up for 5 affiliate programs | 30 min | Monetize 49 landing pages |
-| 5 | Create Stripe account (if not done) | 10 min | Accept payments on all apps |
-| 6 | Apply to top 3 Upwork jobs | 15 min | $2,500-9,000/mo contracts |
-
-**Total: ~90 minutes → $1,800-9,000/mo pipeline activated**
+Revenue potential: $500-2,000/mo from digital products alone.
 
 ---
 
-## Next Cycle (C66) Focus
+## Compound C: Content Queue -- PAUSED
 
-1. Monitor alpha staging growth rate — if still doubling, escalate to cron frequency reduction
-2. Verify zombie PIDs stay dead (check `launchctl list | grep printmaxx`)
-3. If human creates any account, immediately shift all resources to that channel
-4. Consider cold storage for lowest-value 50% of alpha staging to reduce DB size
+1,572 posts queued. Queue is 3+ months deep. distribution_engine HIBERNATED this cycle. No more content generation until social accounts exist.
+
+---
+
+## Compound D: Affiliate Pages x Real Affiliate IDs
+
+49 affiliate landing pages deployed to surge.sh. 0 have real affiliate IDs. All use placeholder IDs.
+
+**BLOCKED ON:** Human signing up for 5 affiliate programs (30-45 min total).
+Revenue potential: $200-1,500/mo passive.
+
+---
+
+## COLD STORAGE PROTOCOL (triggers Apr 14 if no revenue)
+
+If $0 revenue and no account creation by April 14:
+1. Unload `com.printmaxx.swarm.swarm_brain` from launchd
+2. Disable all crons except `perpetual_guardian` (4h) and `cron-watchdog`
+3. Set `data_janitor` to 7-day interval
+4. Write full system state snapshot for rapid restart
+5. Total system cost drops to ~$0.02/day (watchdog only)
+
+**Restart trigger:** Any account creation OR revenue event.
+
+---
+
+## HUMAN ACTIVATION CHECKLIST (CRITICAL -- 90 min total)
+
+| # | Action | Time | Revenue Unlocked | Priority |
+|---|--------|------|-----------------|----------|
+| 1 | **Send 5 cold emails** (copy from drafts) | 10 min | First revenue possible in 48h | P0 |
+| 2 | **Apply to top 3 Upwork jobs** (drafts ready) | 15 min | $2,500-9,000/mo contracts | P0 |
+| 3 | Create Gumroad account + list 5 products | 15 min | $500-2,000/mo digital products | P0 |
+| 4 | Create X/Twitter account | 10 min | Distribution for 1,572 posts | P1 |
+| 5 | Sign up for 5 affiliate programs | 30 min | $200-1,500/mo passive | P1 |
+| 6 | Delete 20 dead plist files | 2 min | Prevents zombie respawns | P2 |
+
+**Minimum viable action: Items 1-2 (25 min) = potential $3,200-10,200/mo**
+
+---
+
+## Next Cycle (C67) Focus
+- Monitor cold storage countdown (6 days remaining)
+- Verify no new zombie PIDs spawned
+- Check if alpha staging growth stays stable
+- Evaluate if any human action has been taken
+
+*C66 | 861 total decisions | 66 cycles | System cost: ~$0.15/day | Cold storage: Apr 14*

@@ -43,6 +43,13 @@ export default function TodayScreen() {
 
   const allDoneToday = habits.length > 0 && habits.every(h => isCheckedInToday(h));
 
+  // MVD Day Won: user set MVD habits and all of them are checked in (even if other habits remain)
+  const mvdHabits = habits.filter(h => h.mvdEnabled);
+  const mvdDayWon =
+    mvdHabits.length > 0 &&
+    mvdHabits.every(h => isCheckedInToday(h)) &&
+    !allDoneToday;
+
   const handleCheckIn = async (habitId: string) => {
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     setCelebratingId(habitId);
@@ -101,6 +108,7 @@ export default function TodayScreen() {
           showsVerticalScrollIndicator={false}
         >
           {allDoneToday && <AllDoneBanner />}
+          {mvdDayWon && <MvdWonBanner count={mvdHabits.length} remaining={habits.length - mvdHabits.length} />}
 
           {habits.map(habit => (
             <SwipeHabitCard
@@ -250,6 +258,21 @@ function AllDoneBanner() {
   );
 }
 
+function MvdWonBanner({ count, remaining }: { count: number; remaining: number }) {
+  return (
+    <View style={s.mvdWonBanner}>
+      <Text style={s.mvdWonEmoji}>🏆</Text>
+      <View style={s.mvdWonText}>
+        <Text style={s.mvdWonTitle}>Minimum Viable Day won.</Text>
+        <Text style={s.mvdWonSub}>
+          {count} non-negotiable{count !== 1 ? 's' : ''} done.
+          {remaining > 0 ? ` ${remaining} bonus habit${remaining !== 1 ? 's' : ''} left if you want them.` : ''}
+        </Text>
+      </View>
+    </View>
+  );
+}
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function formatDate(): string {
@@ -370,6 +393,22 @@ const s = StyleSheet.create({
   allDoneEmoji: { fontSize: 28 },
   allDoneTitle: { ...Typography.h3, color: Colors.emeraldDark },
   allDoneSub: { ...Typography.caption, color: Colors.emeraldDark, opacity: 0.8 },
+  // MVD won banner
+  mvdWonBanner: {
+    backgroundColor: Colors.goldLight,
+    borderRadius: Radius.lg,
+    padding: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: Colors.gold,
+  },
+  mvdWonEmoji: { fontSize: 24 },
+  mvdWonText: { flex: 1 },
+  mvdWonTitle: { ...Typography.bodyMed, color: Colors.gold, fontWeight: '700' },
+  mvdWonSub: { ...Typography.caption, color: Colors.gold, opacity: 0.85, marginTop: 2 },
   // Empty state
   emptyState: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: Spacing.xl },
   emptyEmoji: { fontSize: 52, marginBottom: 16 },

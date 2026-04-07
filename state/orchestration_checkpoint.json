@@ -1,5 +1,5 @@
 {
-  "ts": "2026-04-06T09:05:11.090+00:00",
+  "ts": "2026-04-07T09:05:08.887+00:00",
   "meta": {
     "mode": "dag",
     "resume": false
@@ -12,7 +12,7 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 300039,
+      "duration_ms": 300125,
       "result": {
         "status": "failed",
         "output_tail": "Timeout after 300s"
@@ -25,10 +25,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 89709,
+      "duration_ms": 78523,
       "result": {
         "status": "ok",
-        "output_tail": "NS/reddit_scraper_output/reddit_20260406_050130.json\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
+        "output_tail": "NS/reddit_scraper_output/reddit_20260407_050119.json\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
       }
     },
     "scrape_hn": {
@@ -38,10 +38,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 71591,
+      "duration_ms": 84478,
       "result": {
         "status": "ok",
-        "output_tail": "MAT': 1}\n  By ROI:      {'HIGHEST': 3, 'MEDIUM': 20}\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
+        "output_tail": "By ROI:      {'MEDIUM': 44, 'HIGH': 6, 'HIGHEST': 4}\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
       }
     },
     "merge_results": {
@@ -55,12 +55,12 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 0,
+      "duration_ms": 26,
       "result": {
         "twitter": "failed",
         "reddit": "ok",
         "hn": "ok",
-        "merged_at": "2026-04-06T05:05:00.719582",
+        "merged_at": "2026-04-07T05:05:01.537800",
         "scrapers_ok": 2,
         "scrapers_total": 3
       }
@@ -74,10 +74,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 3802,
+      "duration_ms": 3319,
       "result": {
         "status": "ok",
-        "output_tail": "\n\nTotal rows in CSV:  19144\nEntries processed:  100\nEntries scored:     100\n\nRouting breakdown:\n  NEW VENTURE:      2\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         98\n    (of which deduped: 77)\n[2026-04-06T05:05:04-04:00] === Alpha Auto-Processor complete ===\n"
+        "output_tail": "\n\nTotal rows in CSV:  18939\nEntries processed:  100\nEntries scored:     100\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   5\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         95\n    (of which deduped: 13)\n[2026-04-07T05:05:05-04:00] === Alpha Auto-Processor complete ===\n"
       }
     },
     "intelligence_router": {
@@ -89,7 +89,7 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 81,
+      "duration_ms": 100,
       "result": {
         "status": "failed",
         "output_tail": "usage: intelligence_router.py [-h] [--venture VENTURE] [--task TASK] [--json]\n                              [--brief] [--full] [--stats] [--catalog]\n                              [--list-ventures] [--alpha-count ALPHA_COUNT]\nintelligence_router.py: error: unrecognized arguments: --refresh\n"
@@ -104,10 +104,10 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 6269,
+      "duration_ms": 3703,
       "result": {
         "status": "ok",
-        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[05:05:11] [RANKER] [INFO] Wrote 8373 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[05:05:11] [RANKER] [INFO] Full ranking cycle complete\n[05:05:11] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
+        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[05:05:08] [RANKER] [INFO] Wrote 8413 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[05:05:08] [RANKER] [INFO] Full ranking cycle complete\n[05:05:08] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
       }
     }
   }

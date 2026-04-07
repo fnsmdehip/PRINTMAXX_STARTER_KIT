@@ -5,6 +5,293 @@
     "niche": "automation for freelancers",
     "category": "TOOL_APP",
     "priority": "P0",
+    "source": "freelance_demand_gaps_2026-04-07",
+    "cycle": "cross_pollinator_v2_c18",
+    "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 193 job posts, $11290 budget seen",
+    "market_signal": "validated_demand \u2014 193 freelance postings, max_score 90",
+    "urgency": "193 freelancers actively paying for this. Build lean tool, charge monthly.",
+    "build_template": "web tool or simple mobile utility",
+    "content_source": "Productize 'automation' service into SaaS/tool (seen 193 times on r/forhire)",
+    "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+    "aso_keywords": "['automation', 'automation tool', 'automation automation', 'freelance automation']",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00",
+    "demand_evidence": [
+      "[HIRING] UX/Website Designer, emphasis on design. Delivery: HTML/CSS files.",
+      "[Hiring] Email specialist{ Earn $50-$90/hr}",
+      "[HIRING] User Interface Software Developer [\ud83d\udcb0 $120,000 - 130,000 / year]"
+    ]
+  },
+  {
+    "niche_slug": "freelance_website_tool",
+    "app_name": "Website Pro",
+    "niche": "website for freelancers",
+    "category": "TOOL_APP",
+    "priority": "P0",
+    "source": "freelance_demand_gaps_2026-04-07",
+    "cycle": "cross_pollinator_v2_c18",
+    "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 148 job posts, $8579 budget seen",
+    "market_signal": "validated_demand \u2014 148 freelance postings, max_score 85",
+    "urgency": "148 freelancers actively paying for this. Build lean tool, charge monthly.",
+    "build_template": "web tool or simple mobile utility",
+    "content_source": "Productize 'website' service into SaaS/tool (seen 148 times on r/forhire)",
+    "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+    "aso_keywords": "['website', 'website tool', 'website automation', 'freelance website']",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00",
+    "demand_evidence": [
+      "[HIRING] UX/Website Designer, emphasis on design. Delivery: HTML/CSS files.",
+      "[HIRING] [US] 30 Remote Javascript jobs",
+      "[Hiring] Need a graphic designer for a logo rebrand (paid)"
+    ]
+  },
+  {
+    "niche_slug": "freelance_data_entry_tool",
+    "app_name": "Data_Entry Pro",
+    "niche": "data_entry for freelancers",
+    "category": "TOOL_APP",
+    "priority": "P0",
+    "source": "freelance_demand_gaps_2026-04-07",
+    "cycle": "cross_pollinator_v2_c18",
+    "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 110 job posts, $5246 budget seen",
+    "market_signal": "validated_demand \u2014 110 freelance postings, max_score 85",
+    "urgency": "110 freelancers actively paying for this. Build lean tool, charge monthly.",
+    "build_template": "web tool or simple mobile utility",
+    "content_source": "Productize 'data_entry' service into SaaS/tool (seen 110 times on r/forhire)",
+    "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+    "aso_keywords": "['data_entry', 'data_entry tool', 'data_entry automation', 'freelance data_entry']",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00",
+    "demand_evidence": [
+      "Title: [Hiring] Operations Assistant \u2013 Admin Tasks &amp; Reporting ($20 per hour",
+      "[HIRING] [US] 30 Remote Javascript jobs",
+      "[hiring] Looking for outreach / lead generation partners (remote, commission bas"
+    ]
+  },
+  {
+    "niche_slug": "freelance_social_media_tool",
+    "app_name": "Social_Media Pro",
+    "niche": "social_media for freelancers",
+    "category": "TOOL_APP",
+    "priority": "P0",
+    "source": "freelance_demand_gaps_2026-04-07",
+    "cycle": "cross_pollinator_v2_c18",
+    "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 103 job posts, $9002 budget seen",
+    "market_signal": "validated_demand \u2014 103 freelance postings, max_score 90",
+    "urgency": "103 freelancers actively paying for this. Build lean tool, charge monthly.",
+    "build_template": "web tool or simple mobile utility",
+    "content_source": "Productize 'social_media' service into SaaS/tool (seen 103 times on r/forhire)",
+    "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+    "aso_keywords": "['social_media', 'social_media tool', 'social_media automation', 'freelance social_media']",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00",
+    "demand_evidence": [
+      "[offer] art slave for a month! get as many commissions as you want from me.",
+      "[TASK] Looking for a Twitch Stream Clipper (Short-Form) \u2013 $80/month + Bonuses (L",
+      "[Hiring]| Hiring Full Time Video Editor (Reels and Brand Content) | STELORA MEDI"
+    ]
+  },
+  {
+    "niche_slug": "freelance_logo_tool",
+    "app_name": "Logo Pro",
+    "niche": "logo for freelancers",
+    "category": "TOOL_APP",
+    "priority": "P1",
+    "source": "freelance_demand_gaps_2026-04-07",
+    "cycle": "cross_pollinator_v2_c18",
+    "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 77 job posts, $4621 budget seen",
+    "market_signal": "validated_demand \u2014 77 freelance postings, max_score 85",
+    "urgency": "77 freelancers actively paying for this. Build lean tool, charge monthly.",
+    "build_template": "web tool or simple mobile utility",
+    "content_source": "Productize 'logo' service into SaaS/tool (seen 77 times on r/forhire)",
+    "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+    "aso_keywords": "['logo', 'logo tool', 'logo automation', 'freelance logo']",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00",
+    "demand_evidence": [
+      "[HIRING] Needing Instagram Carousel Templates for Tech Company - $100-500 pay de",
+      "[Hiring] Need a graphic designer for a logo rebrand (paid)",
+      "[HIRING] Looking for a graphic designer with editorial collage design skills"
+    ]
+  },
+  {
+    "niche_slug": "freelance_video_editing_tool",
+    "app_name": "Video_Editing Pro",
+    "niche": "video_editing for freelancers",
+    "category": "TOOL_APP",
+    "priority": "P2",
+    "source": "freelance_demand_gaps_2026-04-07",
+    "cycle": "cross_pollinator_v2_c18",
+    "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 35 job posts, $2317 budget seen",
+    "market_signal": "validated_demand \u2014 35 freelance postings, max_score 70",
+    "urgency": "35 freelancers actively paying for this. Build lean tool, charge monthly.",
+    "build_template": "web tool or simple mobile utility",
+    "content_source": "Productize 'video_editing' service into SaaS/tool (seen 35 times on r/forhire)",
+    "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+    "aso_keywords": "['video_editing', 'video_editing tool', 'video_editing automation', 'freelance video_editing']",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00",
+    "demand_evidence": [
+      "[TASK] Looking for a Twitch Stream Clipper (Short-Form) \u2013 $80/month + Bonuses (L",
+      "[Hiring]| Hiring Full Time Video Editor (Reels and Brand Content) | STELORA MEDI",
+      "[hiring] Looking for outreach / lead generation partners (remote, commission bas"
+    ]
+  },
+  {
+    "niche_slug": "freelance_cold_email_tool",
+    "app_name": "Cold_Email Pro",
+    "niche": "cold_email for freelancers",
+    "category": "TOOL_APP",
+    "priority": "P2",
+    "source": "freelance_demand_gaps_2026-04-07",
+    "cycle": "cross_pollinator_v2_c18",
+    "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 33 job posts, $1955 budget seen",
+    "market_signal": "validated_demand \u2014 33 freelance postings, max_score 80",
+    "urgency": "33 freelancers actively paying for this. Build lean tool, charge monthly.",
+    "build_template": "web tool or simple mobile utility",
+    "content_source": "Productize 'cold_email' service into SaaS/tool (seen 33 times on r/forhire)",
+    "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+    "aso_keywords": "['cold_email', 'cold_email tool', 'cold_email automation', 'freelance cold_email']",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00",
+    "demand_evidence": [
+      "[Hiring] Remote Lead Generators \u2013 Earn $100 Per Qualified Lead (No Sales, Simple",
+      "[hiring] Looking for outreach / lead generation partners (remote, commission bas",
+      "[Hiring] Remote Lead Gen / Scouters \u2013 Earn $100 Per Landlord Referral (Simple So"
+    ]
+  },
+  {
+    "niche_slug": "daily_resilience_science_streak",
+    "app_name": "Resilience Science Daily",
+    "niche": "resilience science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_stress_inoculation_science",
+    "app_name": "Stress Inoculation Science Daily",
+    "niche": "stress inoculation science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_hardiness_science_streak",
+    "app_name": "Hardiness Science Daily",
+    "niche": "hardiness science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_antifragility_science_streak",
+    "app_name": "Antifragility Science Daily",
+    "niche": "antifragility science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_adversity_quotient_science",
+    "app_name": "Adversity Quotient Science Daily",
+    "niche": "adversity quotient science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_post_traumatic_growth_science_2",
+    "app_name": "Post Traumatic Growth Science 2 Daily",
+    "niche": "post traumatic growth science 2",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_coping_science_streak",
+    "app_name": "Coping Science Daily",
+    "niche": "coping science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_cognitive_reappraisal_science",
+    "app_name": "Cognitive Reappraisal Science Daily",
+    "niche": "cognitive reappraisal science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "daily_equanimity_stoicism_science",
+    "app_name": "Equanimity Stoicism Science Daily",
+    "niche": "equanimity stoicism science",
+    "category": "STREAK_APP",
+    "priority": "P0",
+    "source": "competitive_intel_blue_ocean",
+    "cycle": 176,
+    "strategy_theme": "RESILIENCE SCIENCE + STRESS INOCULATION THEORY + HARDINESS",
+    "cumulative_blue_oceans": 1103,
+    "market_signal": "blue_ocean_low_competition",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "freelance_automation_tool",
+    "app_name": "Automation Pro",
+    "niche": "automation for freelancers",
+    "category": "TOOL_APP",
+    "priority": "P0",
     "source": "freelance_demand_gaps_2026-04-06",
     "cycle": "cross_pollinator_v2_c18",
     "strategy_theme": "FREELANCE DEMAND VALIDATED \u2014 193 job posts, $11290 budget seen",
@@ -1669,132 +1956,6 @@
     "added_at": "2026-03-09T16:25:11.539097"
   },
   {
-    "source_file": "APP_SPEC_ALPHA2154.md",
-    "title": "App Spec: ALPHA2154",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-09T16:25:11.539126"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA11070.md",
-    "title": "App Spec: ALPHA11070",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-09T16:25:11.539154"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA14537.md",
-    "title": "App Spec: ALPHA14537",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-09T16:25:11.539184"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA20449.md",
-    "title": "App Spec: ALPHA20449",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-10T08:30:01.437529"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA21413.md",
-    "title": "App Spec: ALPHA21413",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-10T20:30:01.512311"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA22404.md",
-    "title": "App Spec: ALPHA22404",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-12T00:30:00.828155"
-  },
-  {
-    "source_file": "APP_SPEC_VAULT_GTM_UPGRADE_20260312.md",
-    "title": "App Spec: VAULT_GTM_UPGRADE_2026_03_12",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-12T04:30:01.505283"
-  },
-  {
-    "source_file": "APP_SPEC_STREAKR_ENHANCEMENT_20260312.md",
-    "title": "App Spec: STREAKR_ENHANCEMENT_2026_03_12",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-12T04:30:01.505481"
-  },
-  {
-    "source_file": "APP_SPEC_PRAYERLOCK_AI_LAYER_20260312.md",
-    "title": "App Spec: PRAYERLOCK_AI_LAYER_2026_03_12",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-12T04:30:01.505700"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA22670.md",
-    "title": "App Spec: ALPHA22670",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-12T08:30:00.905432"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA22671.md",
-    "title": "App Spec: ALPHA22671",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-12T08:30:00.905473"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA23022.md",
-    "title": "App Spec: ALPHA23022",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-12T08:30:00.905513"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA23793.md",
-    "title": "App Spec: ALPHA23793",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-13T08:30:00.628551"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA24979.md",
-    "title": "App Spec: ALPHA24979",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-14T08:30:01.169770"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA25041.md",
-    "title": "App Spec: ALPHA25041",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-14T08:30:01.170692"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA25277.md",
-    "title": "App Spec: ALPHA25277",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-14T08:30:01.171555"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA25040.md",
-    "title": "App Spec: ALPHA25040",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-14T08:30:01.171830"
-  },
-  {
-    "source_file": "APP_SPEC_ALPHA98721.md",
-    "title": "App Spec: ALPHA98721",
-    "status": "QUEUED",
-    "priority": "MEDIUM",
-    "added_at": "2026-03-14T20:30:00.707696"
-  },
-  {
     "niche_slug": "daily_smb_owner_streak",
     "app_name": "Daily Smb Owner Streak",
     "niche": "daily smb owner",
@@ -1804,7 +1965,7 @@
     "alpha_id": "C087_DAILY_SMB_OWNER_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_side_hustle_streak",
@@ -1816,7 +1977,7 @@
     "alpha_id": "C087_DAILY_SIDE_HUSTLE_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_stock_analysis_streak",
@@ -1828,7 +1989,7 @@
     "alpha_id": "C087_DAILY_STOCK_ANALYSIS_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_cold_outreach_streak",
@@ -1840,7 +2001,7 @@
     "alpha_id": "C087_DAILY_COLD_OUTREACH_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_solopreneur_habit_streak",
@@ -1852,7 +2013,7 @@
     "alpha_id": "C087_DAILY_SOLOPRENEUR_HABIT_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_options_trading_streak",
@@ -1864,7 +2025,7 @@
     "alpha_id": "C087_DAILY_OPTIONS_TRADING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_passive_income_streak",
@@ -1876,7 +2037,7 @@
     "alpha_id": "C087_DAILY_PASSIVE_INCOME_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_dividend_investing_strea",
@@ -1888,7 +2049,7 @@
     "alpha_id": "C087_DAILY_DIVIDEND_INVESTING_STREA",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_digital_nomad_streak",
@@ -1900,7 +2061,7 @@
     "alpha_id": "C087_DAILY_DIGITAL_NOMAD_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_house_hacking_streak",
@@ -1912,7 +2073,7 @@
     "alpha_id": "C087_DAILY_HOUSE_HACKING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_real_estate_investing_st",
@@ -1924,7 +2085,7 @@
     "alpha_id": "C087_DAILY_REAL_ESTATE_INVESTING_ST",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_freelancing_streak",
@@ -1936,7 +2097,7 @@
     "alpha_id": "C087_DAILY_FREELANCING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_dropshipping_streak",
@@ -1948,7 +2109,7 @@
     "alpha_id": "C087_DAILY_DROPSHIPPING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_wholesaling_streak",
@@ -1960,7 +2121,7 @@
     "alpha_id": "C087_DAILY_WHOLESALING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "daily_saas_founder_streak",
@@ -1972,7 +2133,7 @@
     "alpha_id": "C087_DAILY_SAAS_FOUNDER_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_active_listening_streak",
@@ -1984,7 +2145,7 @@
     "alpha_id": "C088_DAILY_ACTIVE_LISTENING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_communication_skills_str",
@@ -1996,7 +2157,7 @@
     "alpha_id": "C088_DAILY_COMMUNICATION_SKILLS_STR",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_couples_habit_streak",
@@ -2008,7 +2169,7 @@
     "alpha_id": "C088_DAILY_COUPLES_HABIT_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_body_scan_meditation_str",
@@ -2020,7 +2181,7 @@
     "alpha_id": "C088_DAILY_BODY_SCAN_MEDITATION_STR",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_gentle_parenting_streak",
@@ -2032,7 +2193,7 @@
     "alpha_id": "C088_DAILY_GENTLE_PARENTING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_reading_to_kids_streak",
@@ -2044,7 +2205,7 @@
     "alpha_id": "C088_DAILY_READING_TO_KIDS_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_family_dinner_streak",
@@ -2056,7 +2217,7 @@
     "alpha_id": "C088_DAILY_FAMILY_DINNER_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_networking_habit_streak",
@@ -2068,7 +2229,7 @@
     "alpha_id": "C088_DAILY_NETWORKING_HABIT_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_conversation_skills_stre",
@@ -2080,7 +2241,7 @@
     "alpha_id": "C088_DAILY_CONVERSATION_SKILLS_STRE",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_public_speaking_streak",
@@ -2092,7 +2253,7 @@
     "alpha_id": "C088_DAILY_PUBLIC_SPEAKING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_mindful_eating_streak",
@@ -2104,7 +2265,7 @@
     "alpha_id": "C088_DAILY_MINDFUL_EATING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_social_confidence_streak",
@@ -2116,7 +2277,7 @@
     "alpha_id": "C088_DAILY_SOCIAL_CONFIDENCE_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_gratitude_practice_strea",
@@ -2128,7 +2289,7 @@
     "alpha_id": "C088_DAILY_GRATITUDE_PRACTICE_STREA",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_breathwork_streak",
@@ -2140,7 +2301,7 @@
     "alpha_id": "C088_DAILY_BREATHWORK_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c088_daily_toddler_activity_streak",
@@ -2152,7 +2313,7 @@
     "alpha_id": "C088_DAILY_TODDLER_ACTIVITY_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_meal_prep_streak",
@@ -2164,7 +2325,7 @@
     "alpha_id": "C089_DAILY_MEAL_PREP_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_worldbuilding_streak",
@@ -2176,7 +2337,7 @@
     "alpha_id": "C089_DAILY_WORLDBUILDING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_home_cooking_skill_strea",
@@ -2188,7 +2349,7 @@
     "alpha_id": "C089_DAILY_HOME_COOKING_SKILL_STREA",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_coffee_brewing_streak",
@@ -2200,7 +2361,7 @@
     "alpha_id": "C089_DAILY_COFFEE_BREWING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_self_compassion_streak",
@@ -2212,7 +2373,7 @@
     "alpha_id": "C089_DAILY_SELF_COMPASSION_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_cbt_exercise_streak",
@@ -2224,7 +2385,7 @@
     "alpha_id": "C089_DAILY_CBT_EXERCISE_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_screenwriting_streak",
@@ -2236,7 +2397,7 @@
     "alpha_id": "C089_DAILY_SCREENWRITING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_mood_tracking_streak",
@@ -2248,7 +2409,7 @@
     "alpha_id": "C089_DAILY_MOOD_TRACKING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_poetry_writing_streak",
@@ -2260,7 +2421,7 @@
     "alpha_id": "C089_DAILY_POETRY_WRITING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_wild_camping_streak",
@@ -2272,7 +2433,7 @@
     "alpha_id": "C089_DAILY_WILD_CAMPING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
   },
   {
     "niche_slug": "c089_daily_sourdough_baking_streak",
@@ -2284,6 +2445,30 @@
     "alpha_id": "C089_DAILY_SOURDOUGH_BAKING_STREAK",
     "market_signal": "alpha_validated_build_app",
     "status": "PENDING_BUILD",
-    "added_at": "2026-04-03T02:38:37"
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "c089_daily_foraging_streak",
+    "app_name": "Daily Foraging Streak",
+    "niche": "daily foraging",
+    "category": "STREAK_APP",
+    "priority": "P1",
+    "source": "alpha_staging_build_app",
+    "alpha_id": "C089_DAILY_FORAGING_STREAK",
+    "market_signal": "alpha_validated_build_app",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
+  },
+  {
+    "niche_slug": "c089_daily_rock_climbing_streak",
+    "app_name": "Daily Rock Climbing Streak",
+    "niche": "daily rock climbing",
+    "category": "STREAK_APP",
+    "priority": "P1",
+    "source": "alpha_staging_build_app",
+    "alpha_id": "C089_DAILY_ROCK_CLIMBING_STREAK",
+    "market_signal": "alpha_validated_build_app",
+    "status": "PENDING_BUILD",
+    "added_at": "2026-04-07T05:50:00"
   }
 ]
