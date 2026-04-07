@@ -1,10 +1,10 @@
 {
   "venture": "competitive_intel",
-  "last_cycle": 169,
-  "last_run": "2026-04-06T19:06:07.337950+00:00",
-  "cumulative_blue_oceans": 1061,
-  "ci_csv_rows": 75,
-  "alpha_csv_rows": 36877,
+  "last_cycle": 172,
+  "last_run": "2026-04-07T02:51:33.178795+00:00",
+  "cumulative_blue_oceans": 1086,
+  "ci_csv_rows": 119,
+  "alpha_csv_rows": 36895,
   "strategies_covered": [
     "HEALTH + FITNESS + WELLNESS + NUTRITION",
     "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -68,9 +68,12 @@
     "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
     "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
     "COGNITIVE LOAD THEORY + WORKING MEMORY + ATTENTION SCIENCE",
-    "DECISION MAKING SCIENCE + JUDGMENT UNDER UNCERTAINTY + HEURISTICS & BIASES"
+    "DECISION MAKING SCIENCE + JUDGMENT UNDER UNCERTAINTY + HEURISTICS & BIASES",
+    "MOTIVATION SCIENCE + SELF-DETERMINATION THEORY + GOAL PURSUIT SCIENCE",
+    "EMOTIONAL INTELLIGENCE + EMPATHY SCIENCE + SOCIAL COGNITION",
+    "ATTACHMENT THEORY + RELATIONSHIP SCIENCE + INTERPERSONAL NEUROSCIENCE"
   ],
-  "next_strategy": "EMOTIONAL INTELLIGENCE + EMPATHY SCIENCE + SOCIAL COGNITION",
+  "next_strategy": "TRAUMA BONDING + CODEPENDENCY SCIENCE + RELATIONAL HEALING",
   "top_all_time": [
     {
       "name": "Daily CS Fundamentals Streak",
@@ -246,53 +249,78 @@
       "name": "Daily Decision Fatigue Science Streak",
       "score": 24,
       "cycle": 169
+    },
+    {
+      "name": "Daily Emotional Intelligence Streak",
+      "score": 25,
+      "cycle": 171
+    },
+    {
+      "name": "Daily Emotional Regulation Streak",
+      "score": 25,
+      "cycle": 171
+    },
+    {
+      "name": "Daily Attachment Theory Streak",
+      "score": 25,
+      "cycle": 172
+    },
+    {
+      "name": "Daily Secure Attachment Streak",
+      "score": 25,
+      "cycle": 172
+    },
+    {
+      "name": "Daily Anxious Avoidant Attachment Streak",
+      "score": 25,
+      "cycle": 172
     }
   ],
   "status": "RUNNING",
   "top_performers": [
     {
-      "niche": "daily_cognitive_bias_science_streak",
-      "display_name": "Daily Cognitive Bias Science Streak",
+      "niche": "daily_attachment_theory_streak",
+      "display_name": "Daily Attachment Theory Streak",
       "score": 25,
-      "community": 82000000,
+      "community": 68400000,
       "priority": "P0",
       "price": "$6.99-$10.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_mental_models_science_streak",
-      "display_name": "Daily Mental Models Science Streak",
+      "niche": "daily_secure_attachment_streak",
+      "display_name": "Daily Secure Attachment Streak",
       "score": 25,
-      "community": 71500000,
+      "community": 72300000,
       "priority": "P0",
       "price": "$6.99-$10.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_confirmation_bias_science_streak",
-      "display_name": "Daily Confirmation Bias Science Streak",
+      "niche": "daily_anxious_avoidant_attachment_streak",
+      "display_name": "Daily Anxious Avoidant Attachment Streak",
+      "score": 25,
+      "community": 63700000,
+      "priority": "P0",
+      "price": "$6.99-$10.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_adult_attachment_styles_streak",
+      "display_name": "Daily Adult Attachment Styles Streak",
       "score": 24,
-      "community": 67000000,
+      "community": 66900000,
       "priority": "P0",
       "price": "$5.99-$9.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_decision_fatigue_science_streak",
-      "display_name": "Daily Decision Fatigue Science Streak",
+      "niche": "daily_relationship_neuroscience_streak",
+      "display_name": "Daily Relationship Neuroscience Streak",
       "score": 24,
-      "community": 52000000,
+      "community": 58100000,
       "priority": "P0",
       "price": "$5.99-$9.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_anchoring_bias_science_streak",
-      "display_name": "Daily Anchoring Bias Science Streak",
-      "score": 23,
-      "community": 44000000,
-      "priority": "P0",
-      "price": "$5.99-$8.99/mo",
       "is_new": true
     }
   ],

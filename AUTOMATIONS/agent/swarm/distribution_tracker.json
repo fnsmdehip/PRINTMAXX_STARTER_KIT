@@ -1,7 +1,44 @@
 {
-  "last_updated": "2026-04-06T19:25:44.225830",
+  "last_updated": "2026-04-06T21:00:00.000000",
   "last_cycle": "2026-04-06",
-  "cycle_number": 43,
+  "cycle_number": 44,
+  "distribution_engine_cycle_44": {
+    "run_at": "2026-04-06T21:00:00",
+    "assets_covered": [
+      "Claude Code Agent Bible ($47)",
+      "TruthScope (truthscope.surge.sh)",
+      "cnsnt (cnsnt-web.surge.sh)",
+      "Cold Email System ($37)",
+      "Comparison pages cluster (n8n-vs-zapier-vs-make.surge.sh, best-email-newsletter-platform.surge.sh)"
+    ],
+    "content_created": {
+      "twitter_threads": 4,
+      "twitter_singles": 9,
+      "reddit_posts": 7,
+      "hn_show_posts": 3,
+      "linkedin_posts": 3,
+      "total_pieces": 26
+    },
+    "files_created": [
+      "CONTENT/social/distribution/twitter_claude_agent_bible_20260406.md",
+      "CONTENT/social/distribution/reddit_claude_agent_bible_20260406.md",
+      "CONTENT/social/distribution/twitter_truthscope_cnsnt_20260406.md",
+      "CONTENT/social/distribution/hn_claude_agent_bible_20260406.md",
+      "CONTENT/social/distribution/reddit_apps_tools_20260406.md",
+      "CONTENT/social/distribution/linkedin_products_20260406.md"
+    ],
+    "channels": ["twitter", "reddit", "hackernews", "linkedin"],
+    "subreddits_targeted": [
+      "r/ClaudeAI",
+      "r/SideProject",
+      "r/MachineLearning",
+      "r/entrepreneur",
+      "r/privacy",
+      "r/iphone",
+      "r/productivity",
+      "r/Entrepreneur"
+    ]
+  },
   "coverage": {
     "twitter": {
       "threads": 16,

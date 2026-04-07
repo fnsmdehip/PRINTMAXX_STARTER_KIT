@@ -1,0 +1,108 @@
+{
+  "cycle_start": "2026-04-06T20:42:21.023914",
+  "cycle_end": "2026-04-06T20:42:21.044349",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 20,
+  "new_intel_rows_written": 0,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Taught Claude to talk like a caveman to use 75% less tokens.",
+      "subreddit": "ClaudeAI",
+      "score": 10417,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sble09/taught_claude_to_talk_like_a_caveman_to_use_75/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Snap chat Bots are easily spotted.",
+      "subreddit": "ChatGPT",
+      "score": 6092,
+      "url": "https://reddit.com/r/ChatGPT/comments/1s8a8aj/snap_chat_bots_are_easily_spotted/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I tracked every \"passive income\" idea I tried over 2 years. Here's what actually made money and what was a complete wast",
+      "subreddit": "passive_income",
+      "score": 4989,
+      "url": "https://reddit.com/r/passive_income/comments/1s92wwq/i_tracked_every_passive_income_idea_i_tried_over/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "obviously not from Dall-E but still a hilarious example of what CGPT slop coukd actually be good at (Harry Potter and th",
+      "subreddit": "ChatGPT",
+      "score": 3944,
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1scvrgd/obviously_not_from_dalle_but_still_a_hilarious/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Automated pigeon defense system",
+      "subreddit": "SideProject",
+      "score": 2490,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s9ywir/automated_pigeon_defense_system/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "Taught Claude to talk like a caveman to use 75% less tokens.",
+      "subreddit": "ClaudeAI",
+      "score": 10417,
+      "comments": 461,
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sble09/taught_claude_to_talk_like_a_caveman_to_use_75/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA61"
+    },
+    {
+      "title": "Snap chat Bots are easily spotted.",
+      "subreddit": "ChatGPT",
+      "score": 6092,
+      "comments": 258,
+      "url": "https://reddit.com/r/ChatGPT/comments/1s8a8aj/snap_chat_bots_are_easily_spotted/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "1s8a8aj"
+    },
+    {
+      "title": "I tracked every \"passive income\" idea I tried over 2 years. Here's what actually made money and what was a complete wast",
+      "subreddit": "passive_income",
+      "score": 4989,
+      "comments": 344,
+      "url": "https://reddit.com/r/passive_income/comments/1s92wwq/i_tracked_every_passive_income_idea_i_tried_over/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "1s92wwq"
+    },
+    {
+      "title": "obviously not from Dall-E but still a hilarious example of what CGPT slop coukd actually be good at (Harry Potter and th",
+      "subreddit": "ChatGPT",
+      "score": 3944,
+      "comments": 331,
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1scvrgd/obviously_not_from_dalle_but_still_a_hilarious/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA55"
+    },
+    {
+      "title": "Automated pigeon defense system",
+      "subreddit": "SideProject",
+      "score": 2490,
+      "comments": 142,
+      "url": "https://www.reddit.com/r/SideProject/comments/1s9ywir/automated_pigeon_defense_system/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA1"
+    }
+  ]
+}

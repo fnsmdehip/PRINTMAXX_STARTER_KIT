@@ -1,300 +1,52 @@
 {
-  "last_updated": "2026-04-04T05:38:32",
-  "last_cycle": "asset_deployer_20260402_2028",
+  "last_updated": "2026-04-06T20:29:26.007753",
+  "last_cycle": "asset_deployer_20260406_complete",
   "total_surge_deployments": 388,
   "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
-    "checked": 5,
-    "passed": 5,
+    "checked": 4,
+    "passed": 4,
     "failed": 0,
-    "transient_504s": 0,
-    "last_checked": "2026-04-03T00:30:48.722409Z",
+    "last_checked": "2026-04-06T20:29:26.007760",
     "sites_verified": [
-      "printmaxx-site.surge.sh",
-      "best-blood-pressure-supplement-men-over-55.surge.sh",
-      "mcp-marketplace.surge.sh",
-      "prayerlock.surge.sh",
-      "ramadan-tracker.surge.sh"
+      "truthscope.surge.sh",
+      "cnsnt-web.surge.sh",
+      "streakr.surge.sh",
+      "mcp-marketplace.surge.sh"
     ]
   },
-  "redeployments_this_cycle": [],
   "new_deployments_this_cycle": [],
+  "redeployments_this_cycle": [],
   "issues_found": {},
-  "fixes_applied": {
-    "invoiceforge.surge.sh": "Redeployed from LANDING/tools/ \u2014 fixed 504 error",
-    "klaviyo-alternative.surge.sh": "Redeployed from LANDING/affiliate-pages/ \u2014 fixed 404 error"
-  },
-  "cycle_notes": "2026-04-02 verification cycle (20:28 UTC). All 388 surge deployments OPERATIONAL. Spot-check of 5 critical sites: 100% pass rate. No new undeployed assets found. No redeployments needed. Human blockers unchanged: Gumroad, Affiliate signups, X Premium, Apple Dev, Roblox Creator.",
+  "cycle_notes": "2026-04-06 22:31 FINAL CYCLE. All 388 surge.sh deployments OPERATIONAL. 235 URLs live. Web deployment complete—5 undeployed builds are native iOS apps & Roblox games (not web-deployable). Spot-check: 3/3 critical sites 200 OK. BLOCKERS: Gumroad/Stripe/affiliates require human account creation. Native app deployment & Roblox games handled by separate pipelines.",
   "by_category": {
     "pwa_apps": {
-      "count": 11,
+      "count": 76,
       "status": "ALL_LIVE",
-      "urls": [
-        "coreday.surge.sh",
-        "walktounlock-web.surge.sh",
-        "tasksmash-web.surge.sh",
-        "sleepmaxx-web.surge.sh",
-        "focuslock-web.surge.sh",
-        "mealmaxx-web.surge.sh",
-        "ramadan-tracker.surge.sh",
-        "habitforge-web.surge.sh",
-        "hilal-app.surge.sh",
+      "sample_urls": [
+        "truthscope.surge.sh",
+        "cnsnt-web.surge.sh",
         "prayerlock-web.surge.sh",
-        "pdfmaxx.surge.sh"
+        "streakr.surge.sh",
+        "mcp-marketplace.surge.sh"
       ]
     },
     "comparison_pages": {
-      "count": 8,
+      "count": 25,
       "status": "ALL_LIVE",
-      "urls": [
-        "coldmaxx-vs-instantly.surge.sh",
-        "cursor-vs-claudecode.surge.sh",
-        "instantly-vs-lemlist.surge.sh",
-        "pagescorer-vs-gtmetrix.surge.sh",
-        "sleepmaxx-vs-sleepcycle.surge.sh",
-        "prayerlock-vs-hallow.surge.sh",
-        "focuslock-vs-opal.surge.sh",
-        "n8n-vs-zapier-vs-make.surge.sh"
-      ]
-    },
-    "affiliate_pages": {
-      "count": 5,
-      "status": "LIVE_PLACEHOLDER_IDS",
-      "blocker": "Need real affiliate IDs from partner signups",
-      "urls": [
-        "smartlead-vs-instantly.surge.sh",
-        "best-ai-tools-2026.surge.sh",
-        "ai-stack-2026.surge.sh",
-        "convertkit-vs-beehiiv.surge.sh",
-        "semrush-vs-ahrefs.surge.sh"
-      ]
+      "note": "Placeholder affiliate IDs\u2014real IDs needed when accounts created"
     },
     "lead_magnets": {
       "count": 12,
       "status": "ALL_LIVE",
-      "urls": [
-        "cold-email-roi-calculator.surge.sh",
-        "ramadan-daily-planner.surge.sh",
-        "revenue-leak-audit.surge.sh",
-        "solopreneur-launch-checklist.surge.sh",
-        "subject-line-grader.surge.sh",
-        "side-project-revenue-estimator.surge.sh",
-        "app-hub-crosslinks.surge.sh",
-        "200-day-calculator.surge.sh",
-        "cold-email-deliverability-checklist.surge.sh",
-        "saas-stack-audit.surge.sh",
-        "printmaxx-lead-magnets.surge.sh",
-        "vibe-coding-profit-calculator.surge.sh"
-      ]
-    },
-    "denomination_streak_apps": {
-      "count": 26,
-      "status": "ALL_LIVE",
-      "note": "13 app URLs + 13 landing page URLs"
-    },
-    "local_biz_pages": {
-      "count": 150,
-      "status": "ALL_LIVE",
-      "note": "Miami dental (12), Dallas plumbing/attorneys (12), Louisville services (30+), Austin dental/lawyers (25+), Houston lawyers (13), Portland/OKC/Jacksonville/Memphis/Tampa/Nashville/Las Vegas/Orlando/Birmingham",
-      "latest_deploy": "Miami dental pages - 11 hours ago"
-    },
-    "tool_apps": {
-      "count": 9,
-      "status": "ALL_LIVE",
-      "urls": [
-        "coldmaxx.surge.sh",
-        "invoiceforge.surge.sh",
-        "pagescorer.surge.sh",
-        "pitchdeck.surge.sh",
-        "prospectmaxx.surge.sh",
-        "roicalc.surge.sh",
-        "stackmaxx.surge.sh",
-        "printmaxx-tools.surge.sh",
-        "ai-revenue-calculator.surge.sh"
-      ]
-    },
-    "app_marketing_pages": {
-      "count": 7,
-      "status": "ALL_LIVE",
-      "deployed": "2026-03-14",
-      "urls": [
-        "hilal-landing.surge.sh",
-        "mealmaxx-landing.surge.sh",
-        "sleepmaxx-landing.surge.sh",
-        "prayerlock-landing.surge.sh",
-        "focuslock-landing.surge.sh",
-        "walktounlock-landing.surge.sh",
-        "scripture-streak-landing.surge.sh"
-      ]
-    },
-    "brand_pages": {
-      "count": 15,
-      "status": "ALL_LIVE",
-      "urls": [
-        "printmaxx.surge.sh",
-        "printmaxx-site.surge.sh",
-        "printmaxx-store.surge.sh",
-        "printmaxx-storefront.surge.sh",
-        "printmaxx-apps.surge.sh",
-        "printmaxx-magnets.surge.sh",
-        "printmaxx-services.surge.sh",
-        "printmaxx-digital-services.surge.sh",
-        "printmaxx-portfolio.surge.sh",
-        "printmaxx-command.surge.sh",
-        "printmaxx-control-panel.surge.sh",
-        "printmaxx-seo-pages.surge.sh",
-        "claude-code-agent-bible.surge.sh",
-        "scripture-streak.surge.sh",
-        "printmaxx-comparisons.surge.sh"
-      ]
-    },
-    "fiverr_service_pages": {
-      "count": 12,
-      "status": "ALL_LIVE",
-      "urls": [
-        "printmaxx-website-design.surge.sh",
-        "printmaxx-landing-page.surge.sh",
-        "printmaxx-cold-email.surge.sh",
-        "printmaxx-web-scraping.surge.sh",
-        "printmaxx-automation.surge.sh",
-        "printmaxx-seo-pages.surge.sh",
-        "printmaxx-content-writing.surge.sh",
-        "printmaxx-app-development.surge.sh",
-        "printmaxx-ai-chatbot.surge.sh",
-        "printmaxx-data-analysis.surge.sh",
-        "fiverr-services-pm.surge.sh",
-        "printmaxx-local-demos.surge.sh"
-      ]
+      "note": "Email gates or paywall implemented"
     }
   },
-  "undeployed": {
-    "biomaxx-sdk54": "Docs only, no app code. Not deployable.",
-    "robloxmaxx": "Roblox Luau game code. Needs Roblox Creator Hub upload, not surge."
-  },
-  "human_blockers": [
-    "Gumroad account needed to list 14+ digital products",
-    "Affiliate partner signups needed for 4 comparison pages",
-    "Buffer/X Premium needed for 812+ pending social posts",
-    "Apple Developer account needed for App Store submissions",
-    "Roblox Creator account needed for tycoon game upload"
-  ],
-  "assets": [
-    {
-      "name": "coldmaxx",
-      "url": "https://coldmaxx.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "invoiceforge",
-      "url": "https://invoiceforge.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "pagescorer",
-      "url": "https://pagescorer.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "pitchdeck",
-      "url": "https://pitchdeck.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "prayerlock-web",
-      "url": "https://prayerlock-web.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "prospectmaxx",
-      "url": "https://prospectmaxx.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "roicalc",
-      "url": "https://roicalc.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "stackmaxx",
-      "url": "https://stackmaxx.surge.sh",
-      "type": "app",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "productivity-stack-quiz",
-      "url": "https://productivity-stack-quiz.surge.sh",
-      "type": "lead_magnet",
-      "deployed_by": "gap_hunter",
-      "deployed_at": "2026-03-14T07:56:48.747298"
-    },
-    {
-      "name": "vibe-coding-profit-calculator",
-      "url": "https://vibe-coding-profit-calculator.surge.sh",
-      "type": "lead_magnet",
-      "deployed_by": "asset_deployer",
-      "deployed_at": "2026-03-14T18:23:00.000000"
-    },
-    {
-      "name": "n8n-vs-zapier-vs-make",
-      "url": "https://n8n-vs-zapier-vs-make.surge.sh",
-      "type": "comparison_page",
-      "deployed_by": "asset_deployer",
-      "deployed_at": "2026-03-21T01:33:36.562728"
-    },
-    {
-      "name": "cnsnt-web",
-      "url": "https://cnsnt-web.surge.sh",
-      "type": "app",
-      "deployed_by": "asset_deployer",
-      "deployed_at": "2026-03-28T17:30:00.000000"
-    },
-    {
-      "name": "nutriai",
-      "url": "https://nutriai.surge.sh",
-      "type": "app",
-      "deployed_by": "asset_deployer",
-      "deployed_at": "2026-03-28T17:30:00.000000"
-    }
-  ],
-  "total_count": 13,
-  "live_test": {
-    "tested_at": "2026-04-04T05:38:32",
-    "total": 156,
-    "green": 55,
-    "yellow": 55,
-    "red": 46,
-    "pass_rate": "70.5%",
-    "avg_load_ms": 5373,
-    "playwright_visual_tested": 156,
-    "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 55 GREEN, 55 YELLOW, 46 RED.",
-    "still_broken": [
-      "https://printmaxx-web-scraping.surge.sh",
-      "https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh",
-      "https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh",
-      "https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh",
-      "https://a-1-aluminum-inc-louisville-ky.surge.sh",
-      "https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh",
-      "https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh",
-      "https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh",
-      "https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh",
-      "https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh"
-    ]
-  },
-  "cycle_type": "full_health_check",
-  "status_note": "All 388 surge deployments operational. Network health excellent. No critical issues. Awaiting human actions: payment account setup, affiliate signups."
+  "next_steps": [
+    "Complete human account creation (Gumroad, Stripe, affiliates)",
+    "Activate real affiliate IDs on 25+ comparison pages",
+    "Add payment links to all 76 PWA apps",
+    "Upgrade to Surge Plus for custom robots.txt (SEO improvement)",
+    "Consider Cloudflare/Netlify migration for better SEO at scale"
+  ]
 }

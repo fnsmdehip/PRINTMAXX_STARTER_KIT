@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-06T13:03:37.666196",
-  "cycle_number": 22,
+  "last_run": "2026-04-06T21:09:54.555070",
+  "cycle_number": 23,
   "cities_covered": [
     "Lexington KY",
     "Albuquerque NM",
@@ -396,9 +396,106 @@
     "Tallahassee FL (handyman)",
     "Tallahassee FL (auto repair)",
     "Tallahassee FL (plumber)",
-    "Tallahassee FL (HVAC)"
+    "Tallahassee FL (HVAC)",
+    "Zanesville OH (towing)",
+    "Zanesville OH (handyman)",
+    "Zanesville OH (auto repair)",
+    "Zanesville OH (plumber)",
+    "Zanesville OH (electrical contractor)",
+    "Chillicothe OH (towing)",
+    "Chillicothe OH (handyman)",
+    "Chillicothe OH (auto repair)",
+    "Chillicothe OH (plumber)",
+    "Lancaster OH (towing)",
+    "Lancaster OH (handyman)",
+    "Lancaster OH (auto repair)",
+    "Lancaster OH (HVAC)",
+    "Marietta OH (towing)",
+    "Marietta OH (handyman)",
+    "Marietta OH (auto repair)",
+    "Marietta OH (plumber)",
+    "Ironton OH (towing)",
+    "Ironton OH (handyman)",
+    "Ironton OH (auto repair)",
+    "Gallipolis OH (towing)",
+    "Gallipolis OH (handyman)",
+    "Gallipolis OH (plumber)",
+    "Portsmouth OH (towing)",
+    "Portsmouth OH (handyman)",
+    "Portsmouth OH (auto repair)",
+    "Portsmouth OH (plumber)",
+    "Jackson OH (towing)",
+    "Jackson OH (handyman)",
+    "Jackson OH (auto repair)",
+    "McConnelsville OH (towing)",
+    "McConnelsville OH (handyman)",
+    "McConnelsville OH (plumber)",
+    "Circleville OH (towing)",
+    "Circleville OH (handyman)",
+    "Circleville OH (auto repair)",
+    "Washington Court House OH (towing)",
+    "Washington Court House OH (handyman)",
+    "Washington Court House OH (auto repair)",
+    "Vincennes IN (towing)",
+    "Vincennes IN (handyman)",
+    "Vincennes IN (auto repair)",
+    "Vincennes IN (plumber)",
+    "Washington IN (towing)",
+    "Washington IN (handyman)",
+    "Washington IN (auto repair)",
+    "Sullivan IN (towing)",
+    "Sullivan IN (handyman)",
+    "Sullivan IN (plumber)",
+    "Princeton IN (towing)",
+    "Princeton IN (handyman)",
+    "Princeton IN (auto repair)",
+    "Jasper IN (towing)",
+    "Jasper IN (handyman)",
+    "Jasper IN (auto repair)",
+    "Jasper IN (HVAC)",
+    "Terre Haute IN (towing)",
+    "Terre Haute IN (handyman)",
+    "Terre Haute IN (auto repair)",
+    "Terre Haute IN (plumber)",
+    "Terre Haute IN (HVAC)",
+    "Linton IN (towing)",
+    "Linton IN (handyman)",
+    "Bloomfield IN (towing)",
+    "Bloomfield IN (handyman)",
+    "Martinsville IN (towing)",
+    "Martinsville IN (handyman)",
+    "Martinsville IN (auto repair)",
+    "Logan WV (towing)",
+    "Logan WV (handyman)",
+    "Logan WV (auto repair)",
+    "Logan WV (plumber)",
+    "Point Pleasant WV (towing)",
+    "Point Pleasant WV (handyman)",
+    "Point Pleasant WV (auto repair)",
+    "Summersville WV (towing)",
+    "Summersville WV (handyman)",
+    "Summersville WV (plumber)",
+    "Lewisburg WV (towing)",
+    "Lewisburg WV (handyman)",
+    "Lewisburg WV (auto repair)",
+    "Williamson WV (towing)",
+    "Williamson WV (handyman)",
+    "Weston WV (towing)",
+    "Weston WV (handyman)",
+    "Weston WV (auto repair)",
+    "Cookeville TN (electrical contractor)",
+    "Cookeville TN (fence company)",
+    "Cookeville TN (pressure washing)",
+    "Morristown TN (electrical contractor)",
+    "Morristown TN (fence company)",
+    "Morristown TN (septic service)",
+    "Zanesville OH (fence company)",
+    "Zanesville OH (pressure washing)",
+    "Zanesville OH (septic service)",
+    "Pikeville KY (electrical contractor)",
+    "Pikeville KY (fence company)"
   ],
-  "total_leads_all_cycles": 5400,
+  "total_leads_all_cycles": 5938,
   "total_previews_deployed": 2510,
   "total_sites_built_local": 8073,
   "total_emails_queued": 2432,
@@ -787,7 +884,7 @@
       "ready_to_send": 39
     }
   ],
-  "ghpages_deployed": 2610,
+  "ghpages_deployed": 2710,
   "phone_outreach_queue": 1497,
   "cycle_7_results": {
     "cities_discovered": [
@@ -2614,9 +2711,9 @@
     ],
     "observation": "Cycle 21: KY Central Frontier + TN SE + AR I-40 + FIRST WV coverage (Bluefield/Beckley) + Eastern KY Appalachian corridor (Pikeville/Hazard). 309 new leads, 218 F/D (71%). 90 new GH Pages pushed. Pipeline at 2432 outreach entries, 39 ready to send. WV F-grade rate: 90%, Eastern KY F-grade rate: 85%."
   },
-  "total_hot_leads": 2488,
-  "total_outreach": 2532,
-  "ready_to_send": 39,
+  "total_hot_leads": 2525,
+  "total_outreach": 2632,
+  "ready_to_send": 42,
   "cycles": {
     "cycle_22": {
       "run_at": "2026-04-06T13:03:37.666170",
@@ -3496,6 +3593,943 @@
       ],
       "new_niches_tested": [],
       "observation": "Cycle 22: WV Full Sweep (8 cities, 9% F-grade) + VA Interior (Roanoke/Lynchburg/Harrisonburg/Salem) + NC Western Appalachian foothills + SC Upstate FIRST COVERAGE (3% F-grade) + FL Panhandle FIRST COVERAGE (9% F-grade). 522 new leads, 35 F/D (6%). 100 new GH Pages pushed. Pipeline at 2532 outreach entries, 39 ready to send."
+    },
+    "cycle_23": {
+      "run_at": "2026-04-06T21:09:54.555036",
+      "cities_targeted": [
+        "Zanesville OH (towing)",
+        "Zanesville OH (handyman)",
+        "Zanesville OH (auto repair)",
+        "Zanesville OH (plumber)",
+        "Zanesville OH (electrical contractor)",
+        "Chillicothe OH (towing)",
+        "Chillicothe OH (handyman)",
+        "Chillicothe OH (auto repair)",
+        "Chillicothe OH (plumber)",
+        "Lancaster OH (towing)",
+        "Lancaster OH (handyman)",
+        "Lancaster OH (auto repair)",
+        "Lancaster OH (HVAC)",
+        "Marietta OH (towing)",
+        "Marietta OH (handyman)",
+        "Marietta OH (auto repair)",
+        "Marietta OH (plumber)",
+        "Ironton OH (towing)",
+        "Ironton OH (handyman)",
+        "Ironton OH (auto repair)",
+        "Gallipolis OH (towing)",
+        "Gallipolis OH (handyman)",
+        "Gallipolis OH (plumber)",
+        "Portsmouth OH (towing)",
+        "Portsmouth OH (handyman)",
+        "Portsmouth OH (auto repair)",
+        "Portsmouth OH (plumber)",
+        "Jackson OH (towing)",
+        "Jackson OH (handyman)",
+        "Jackson OH (auto repair)",
+        "McConnelsville OH (towing)",
+        "McConnelsville OH (handyman)",
+        "McConnelsville OH (plumber)",
+        "Circleville OH (towing)",
+        "Circleville OH (handyman)",
+        "Circleville OH (auto repair)",
+        "Washington Court House OH (towing)",
+        "Washington Court House OH (handyman)",
+        "Washington Court House OH (auto repair)",
+        "Vincennes IN (towing)",
+        "Vincennes IN (handyman)",
+        "Vincennes IN (auto repair)",
+        "Vincennes IN (plumber)",
+        "Washington IN (towing)",
+        "Washington IN (handyman)",
+        "Washington IN (auto repair)",
+        "Sullivan IN (towing)",
+        "Sullivan IN (handyman)",
+        "Sullivan IN (plumber)",
+        "Princeton IN (towing)",
+        "Princeton IN (handyman)",
+        "Princeton IN (auto repair)",
+        "Jasper IN (towing)",
+        "Jasper IN (handyman)",
+        "Jasper IN (auto repair)",
+        "Jasper IN (HVAC)",
+        "Terre Haute IN (towing)",
+        "Terre Haute IN (handyman)",
+        "Terre Haute IN (auto repair)",
+        "Terre Haute IN (plumber)",
+        "Terre Haute IN (HVAC)",
+        "Linton IN (towing)",
+        "Linton IN (handyman)",
+        "Bloomfield IN (towing)",
+        "Bloomfield IN (handyman)",
+        "Martinsville IN (towing)",
+        "Martinsville IN (handyman)",
+        "Martinsville IN (auto repair)",
+        "Logan WV (towing)",
+        "Logan WV (handyman)",
+        "Logan WV (auto repair)",
+        "Logan WV (plumber)",
+        "Point Pleasant WV (towing)",
+        "Point Pleasant WV (handyman)",
+        "Point Pleasant WV (auto repair)",
+        "Summersville WV (towing)",
+        "Summersville WV (handyman)",
+        "Summersville WV (plumber)",
+        "Lewisburg WV (towing)",
+        "Lewisburg WV (handyman)",
+        "Lewisburg WV (auto repair)",
+        "Williamson WV (towing)",
+        "Williamson WV (handyman)",
+        "Weston WV (towing)",
+        "Weston WV (handyman)",
+        "Weston WV (auto repair)",
+        "Cookeville TN (electrical contractor)",
+        "Cookeville TN (fence company)",
+        "Cookeville TN (pressure washing)",
+        "Morristown TN (electrical contractor)",
+        "Morristown TN (fence company)",
+        "Morristown TN (septic service)",
+        "Zanesville OH (fence company)",
+        "Zanesville OH (pressure washing)",
+        "Zanesville OH (septic service)",
+        "Pikeville KY (electrical contractor)",
+        "Pikeville KY (fence company)"
+      ],
+      "discover_results": {
+        "Zanesville OH (towing)": {
+          "total": 11,
+          "f_grade": 0,
+          "grades": {
+            "B": 5,
+            "A": 6
+          }
+        },
+        "Zanesville OH (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 2
+          }
+        },
+        "Zanesville OH (auto repair)": {
+          "total": 3,
+          "f_grade": 1,
+          "grades": {
+            "A": 2,
+            "F": 1
+          }
+        },
+        "Zanesville OH (plumber)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "B": 1,
+            "A": 4,
+            "D": 1
+          }
+        },
+        "Zanesville OH (electrical contractor)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "F": 1
+          }
+        },
+        "Chillicothe OH (towing)": {
+          "total": 9,
+          "f_grade": 2,
+          "grades": {
+            "B": 3,
+            "A": 4,
+            "F": 2
+          }
+        },
+        "Chillicothe OH (handyman)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "B": 1
+          }
+        },
+        "Chillicothe OH (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "B": 1
+          }
+        },
+        "Chillicothe OH (plumber)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "C": 1,
+            "A": 1
+          }
+        },
+        "Lancaster OH (towing)": {
+          "total": 7,
+          "f_grade": 1,
+          "grades": {
+            "B": 1,
+            "F": 1,
+            "A": 5
+          }
+        },
+        "Lancaster OH (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Lancaster OH (auto repair)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "B": 1,
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Lancaster OH (HVAC)": {
+          "total": 11,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "C": 1,
+            "B": 3
+          }
+        },
+        "Marietta OH (towing)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "F": 1
+          }
+        },
+        "Marietta OH (handyman)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Marietta OH (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 3
+          }
+        },
+        "Marietta OH (plumber)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 2,
+            "C": 1
+          }
+        },
+        "Ironton OH (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 6,
+            "B": 2
+          }
+        },
+        "Ironton OH (handyman)": {
+          "total": 8,
+          "f_grade": 2,
+          "grades": {
+            "C": 2,
+            "B": 2,
+            "F": 2,
+            "A": 2
+          }
+        },
+        "Ironton OH (auto repair)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "A": 3,
+            "F": 1
+          }
+        },
+        "Gallipolis OH (towing)": {
+          "total": 8,
+          "f_grade": 2,
+          "grades": {
+            "A": 5,
+            "B": 1,
+            "D": 1,
+            "F": 1
+          }
+        },
+        "Gallipolis OH (handyman)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "C": 1
+          }
+        },
+        "Gallipolis OH (plumber)": {
+          "total": 1,
+          "f_grade": 0,
+          "grades": {
+            "B": 1
+          }
+        },
+        "Portsmouth OH (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "B": 1
+          }
+        },
+        "Portsmouth OH (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 1
+          }
+        },
+        "Portsmouth OH (auto repair)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 2
+          }
+        },
+        "Portsmouth OH (plumber)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 2,
+            "C": 1
+          }
+        },
+        "Jackson OH (towing)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 7,
+            "B": 1,
+            "F": 1
+          }
+        },
+        "Jackson OH (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Jackson OH (auto repair)": {
+          "total": 3,
+          "f_grade": 1,
+          "grades": {
+            "B": 1,
+            "A": 1,
+            "F": 1
+          }
+        },
+        "McConnelsville OH (towing)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 2
+          }
+        },
+        "McConnelsville OH (handyman)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1
+          }
+        },
+        "McConnelsville OH (plumber)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Circleville OH (towing)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 7,
+            "F": 1,
+            "B": 1
+          }
+        },
+        "Circleville OH (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 2
+          }
+        },
+        "Circleville OH (auto repair)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "B": 2,
+            "A": 2,
+            "F": 1
+          }
+        },
+        "Washington Court House OH (towing)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Washington Court House OH (handyman)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 4
+          }
+        },
+        "Washington Court House OH (auto repair)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1,
+            "B": 1
+          }
+        },
+        "Vincennes IN (towing)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 2,
+            "B": 4
+          }
+        },
+        "Vincennes IN (handyman)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 1,
+            "B": 1
+          }
+        },
+        "Vincennes IN (auto repair)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 1,
+            "B": 2,
+            "C": 1,
+            "F": 1
+          }
+        },
+        "Vincennes IN (plumber)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "A": 2,
+            "B": 1,
+            "F": 1
+          }
+        },
+        "Washington IN (towing)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 2
+          }
+        },
+        "Washington IN (handyman)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 1,
+            "B": 2
+          }
+        },
+        "Washington IN (auto repair)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Sullivan IN (towing)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 2
+          }
+        },
+        "Sullivan IN (handyman)": {
+          "total": 3,
+          "f_grade": 1,
+          "grades": {
+            "A": 2,
+            "F": 1
+          }
+        },
+        "Sullivan IN (plumber)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 3
+          }
+        },
+        "Princeton IN (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "B": 1
+          }
+        },
+        "Princeton IN (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 5
+          }
+        },
+        "Princeton IN (auto repair)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 1
+          }
+        },
+        "Jasper IN (towing)": {
+          "total": 10,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "F": 1,
+            "B": 4
+          }
+        },
+        "Jasper IN (handyman)": {
+          "total": 4,
+          "f_grade": 2,
+          "grades": {
+            "A": 2,
+            "F": 2
+          }
+        },
+        "Jasper IN (auto repair)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Jasper IN (HVAC)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Terre Haute IN (towing)": {
+          "total": 9,
+          "f_grade": 2,
+          "grades": {
+            "A": 7,
+            "F": 1,
+            "D": 1
+          }
+        },
+        "Terre Haute IN (handyman)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 2
+          }
+        },
+        "Terre Haute IN (auto repair)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 1
+          }
+        },
+        "Terre Haute IN (plumber)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "A": 5,
+            "F": 1
+          }
+        },
+        "Terre Haute IN (HVAC)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Linton IN (towing)": {
+          "total": 9,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 8
+          }
+        },
+        "Linton IN (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 4
+          }
+        },
+        "Bloomfield IN (towing)": {
+          "total": 9,
+          "f_grade": 2,
+          "grades": {
+            "F": 2,
+            "A": 5,
+            "B": 2
+          }
+        },
+        "Bloomfield IN (handyman)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 1
+          }
+        },
+        "Martinsville IN (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 6,
+            "B": 2
+          }
+        },
+        "Martinsville IN (handyman)": {
+          "total": 4,
+          "f_grade": 1,
+          "grades": {
+            "A": 2,
+            "F": 1,
+            "B": 1
+          }
+        },
+        "Martinsville IN (auto repair)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 1
+          }
+        },
+        "Logan WV (towing)": {
+          "total": 7,
+          "f_grade": 0,
+          "grades": {
+            "A": 7
+          }
+        },
+        "Logan WV (handyman)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Logan WV (auto repair)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "A": 2
+          }
+        },
+        "Logan WV (plumber)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 4
+          }
+        },
+        "Point Pleasant WV (towing)": {
+          "total": 9,
+          "f_grade": 1,
+          "grades": {
+            "A": 7,
+            "B": 1,
+            "F": 1
+          }
+        },
+        "Point Pleasant WV (handyman)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 1
+          }
+        },
+        "Point Pleasant WV (auto repair)": {
+          "total": 6,
+          "f_grade": 1,
+          "grades": {
+            "B": 2,
+            "A": 3,
+            "F": 1
+          }
+        },
+        "Summersville WV (towing)": {
+          "total": 9,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "B": 2
+          }
+        },
+        "Summersville WV (handyman)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 4
+          }
+        },
+        "Summersville WV (plumber)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 2
+          }
+        },
+        "Lewisburg WV (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 8
+          }
+        },
+        "Lewisburg WV (handyman)": {
+          "total": 5,
+          "f_grade": 1,
+          "grades": {
+            "A": 4,
+            "F": 1
+          }
+        },
+        "Lewisburg WV (auto repair)": {
+          "total": 2,
+          "f_grade": 0,
+          "grades": {
+            "B": 1,
+            "A": 1
+          }
+        },
+        "Williamson WV (towing)": {
+          "total": 8,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "B": 1
+          }
+        },
+        "Williamson WV (handyman)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 6
+          }
+        },
+        "Weston WV (towing)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 2
+          }
+        },
+        "Weston WV (handyman)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 1
+          }
+        },
+        "Weston WV (auto repair)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 5,
+            "B": 1
+          }
+        },
+        "Cookeville TN (electrical contractor)": {
+          "total": 4,
+          "f_grade": 0,
+          "grades": {
+            "A": 3,
+            "B": 1
+          }
+        },
+        "Cookeville TN (fence company)": {
+          "total": 7,
+          "f_grade": 1,
+          "grades": {
+            "F": 1,
+            "A": 6
+          }
+        },
+        "Cookeville TN (pressure washing)": {
+          "total": 9,
+          "f_grade": 0,
+          "grades": {
+            "A": 7,
+            "B": 2
+          }
+        },
+        "Morristown TN (electrical contractor)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "A": 3
+          }
+        },
+        "Morristown TN (fence company)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 6
+          }
+        },
+        "Morristown TN (septic service)": {
+          "total": 11,
+          "f_grade": 0,
+          "grades": {
+            "A": 8,
+            "B": 2,
+            "C": 1
+          }
+        },
+        "Zanesville OH (fence company)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "A": 4,
+            "B": 2
+          }
+        },
+        "Zanesville OH (pressure washing)": {
+          "total": 5,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 3
+          }
+        },
+        "Zanesville OH (septic service)": {
+          "total": 9,
+          "f_grade": 0,
+          "grades": {
+            "B": 5,
+            "A": 3,
+            "C": 1
+          }
+        },
+        "Pikeville KY (electrical contractor)": {
+          "total": 3,
+          "f_grade": 0,
+          "grades": {
+            "B": 2,
+            "A": 1
+          }
+        },
+        "Pikeville KY (fence company)": {
+          "total": 6,
+          "f_grade": 0,
+          "grades": {
+            "B": 3,
+            "A": 3
+          }
+        }
+      },
+      "new_leads": 538,
+      "new_f_grade": 37,
+      "new_sites_built": 100,
+      "new_ghpages_deploys": 100,
+      "total_ghpages_live": 2710,
+      "new_emails_queued": 100,
+      "ready_to_send_email": 42,
+      "file_urls_fixed": 0,
+      "top_performers": [
+        [
+          "Jasper IN (handyman)",
+          2,
+          4
+        ],
+        [
+          "Zanesville OH (auto repair)",
+          1,
+          3
+        ],
+        [
+          "Jackson OH (auto repair)",
+          1,
+          3
+        ],
+        [
+          "Sullivan IN (handyman)",
+          1,
+          3
+        ],
+        [
+          "Ironton OH (handyman)",
+          2,
+          8
+        ]
+      ],
+      "new_regions_entered": [
+        "Ohio Valley (OH)",
+        "Indiana (IN)",
+        "Deep rural WV"
+      ],
+      "new_niches_tested": [
+        "electrical contractor",
+        "fence company",
+        "pressure washing",
+        "septic service"
+      ],
+      "observation": "Cycle 23: Ohio Valley micro-cities (9% F-grade) + Indiana small towns (8% F-grade) + Deep rural WV (3% F-grade) + New niches test (electrical/fence/pressure wash/septic). 538 new leads, 37 F/D (6%). 100 new GH Pages pushed. Pipeline at 2632 outreach entries, 42 ready to send."
     }
   }
 }

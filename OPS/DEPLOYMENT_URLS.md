@@ -149,6 +149,22 @@
 | lemlist-vs-instantly | https://lemlist-vs-instantly.surge.sh | LIVE (2026-03-19) — needs affiliate IDs | 20-40% recurring (Instantly) + 20-35% recurring (Lemlist) |
 | best-lead-generation-tools | https://best-lead-generation-tools.surge.sh | LIVE (2026-03-20) — needs affiliate IDs | Mixed: Apollo, Instantly, Smartlead, Clay, Lemlist, Phantombuster |
 | n8n-vs-zapier-vs-make | https://n8n-vs-zapier-vs-make.surge.sh | LIVE (2026-03-22) — gap-hunter redeploy with full slug | n8n referral + Zapier/Make affiliate |
+| best-back-pain-supplement-men-over-55 | https://best-back-pain-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-blood-sugar-supplement-men-over-55 | https://best-blood-sugar-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-cholesterol-supplement-men-over-55 | https://best-cholesterol-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-ed-supplement-men-over-50 | https://best-ed-supplement-men-over-50.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-eye-health-supplement-men-over-55 | https://best-eye-health-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-heart-health-supplement-men-over-60 | https://best-heart-health-supplement-men-over-60.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-vision-supplement-men-over-55 | https://best-vision-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-weight-loss-supplement-men-over-55 | https://best-weight-loss-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health affiliate |
+| best-medicare-supplement-plans | https://best-medicare-supplement-plans.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | insurance affiliate |
+| best-mobility-aids-seniors | https://best-mobility-aids-seniors.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | senior products |
+| best-fishing-gear-seniors | https://best-fishing-gear-seniors.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | outdoor affiliate |
+| best-power-tools-seniors | https://best-power-tools-seniors.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | tools affiliate |
+| best-crm-small-business | https://best-crm-small-business.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | SaaS affiliate |
+| best-email-newsletter-platform | https://best-email-newsletter-platform.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | SaaS affiliate |
+| mens-health-hub-over-50 | https://mens-health-hub-over-50.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | health hub page |
+| seo-articles | https://seo-articles.surge.sh | LIVE — gap-hunter deploy 2026-04-06 | SEO content |
 
 ---
 

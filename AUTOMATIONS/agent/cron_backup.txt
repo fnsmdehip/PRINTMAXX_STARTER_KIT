@@ -117,3 +117,4 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 # C56 replacements (reduced frequency)
 30 5 * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
 35 5 * * * cd $BASE && $PYTHON AUTOMATIONS/usage_optimizer.py --optimize >> AUTOMATIONS/logs/usage_optimizer.log 2>&1
+50 5 * * * cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/cross_pollinator_v2.py --cycle >> AUTOMATIONS/logs/cross_pollinator_v2.log 2>&1

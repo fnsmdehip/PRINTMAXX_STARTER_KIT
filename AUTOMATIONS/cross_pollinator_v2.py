@@ -1536,11 +1536,372 @@ def wire_affiliate_candidates_to_content_promo():
         connections[name] = {"status": "deduped_or_no_candidates", "items": 0}
 
 
+# ─── CONNECTION 18: Freelance Demand Gaps → App Factory Spec Queue ────────────
+# freelance_demand_gaps.json has 10 service types with demand_count and budgets
+# validated by real Upwork/Reddit job postings. Each gap with demand_count >50
+# is a proven niche for a micro-SaaS or tool app. Wire directly to spec queue.
+def wire_freelance_gaps_to_app_specs():
+    global wired_total
+    name = "Freelance Demand Gaps → App Factory Spec Queue"
+
+    gaps_path = AUTOMATIONS / "agent" / "autonomy" / "freelance_demand_gaps.json"
+    if not gaps_path.exists():
+        connections[name] = {"status": "no_gaps_file", "items": 0}
+        return
+
+    try:
+        gaps = json.loads(gaps_path.read_text(encoding="utf-8", errors="replace"))
+    except Exception:
+        connections[name] = {"status": "parse_error", "items": 0}
+        return
+
+    spec_queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json")
+    existing_specs = []
+    if spec_queue_path.exists():
+        try:
+            existing_specs = json.loads(spec_queue_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_specs = []
+    existing_titles = {s.get("title", "") for s in existing_specs}
+
+    new_specs = []
+    for gap in gaps:
+        if not isinstance(gap, dict):
+            continue
+        service_type = gap.get("service_type", "")
+        demand_count = int(gap.get("demand_count", 0) or 0)
+        max_score = int(gap.get("max_score", 0) or 0)
+        total_budget = int(gap.get("total_budget_seen", 0) or 0)
+        opportunity = gap.get("opportunity", "")
+        examples = gap.get("examples", "")
+
+        if demand_count < 30:
+            continue  # only validated demand
+
+        app_title = f"Freelance Tool: {service_type.title()} Automation"
+        if app_title in existing_titles:
+            continue
+
+        # Higher demand = higher priority
+        if demand_count >= 100 or total_budget >= 10000:
+            priority = "P0"
+        elif demand_count >= 50:
+            priority = "P1"
+        else:
+            priority = "P2"
+
+        niche_slug = f"freelance_{service_type.lower().replace(' ', '_')}_tool"
+        spec = {
+            "niche_slug": niche_slug,
+            "app_name": f"{service_type.title()} Pro",
+            "niche": f"{service_type} for freelancers",
+            "category": "TOOL_APP",
+            "priority": priority,
+            "source": f"freelance_demand_gaps_{TODAY}",
+            "cycle": "cross_pollinator_v2_c18",
+            "strategy_theme": f"FREELANCE DEMAND VALIDATED — {demand_count} job posts, ${total_budget} budget seen",
+            "market_signal": f"validated_demand — {demand_count} freelance postings, max_score {max_score}",
+            "urgency": f"{demand_count} freelancers actively paying for this. Build lean tool, charge monthly.",
+            "build_template": "web tool or simple mobile utility",
+            "content_source": opportunity[:200],
+            "monetization": "Monthly $9.99 + Annual $79.99 via Stripe",
+            "aso_keywords": f"['{service_type}', '{service_type} tool', '{service_type} automation', 'freelance {service_type}']",
+            "status": "PENDING_BUILD",
+            "added_at": TIMESTAMP,
+            "demand_evidence": examples[:300] if examples else "",
+        }
+        new_specs.append(spec)
+        existing_titles.add(app_title)
+
+    if new_specs:
+        all_specs = new_specs + existing_specs
+        all_specs = all_specs[:250]
+        spec_queue_path.write_text(json.dumps(all_specs, indent=2))
+        wired_total += len(new_specs)
+        connections[name] = {"status": "OK", "items": len(new_specs)}
+    else:
+        connections[name] = {"status": "deduped_or_no_qualifying_gaps", "items": 0}
+
+
+# ─── CONNECTION 19: Gov AI Contract Awards → Cold Outreach Prospect Angles ───
+# USASpending AI contract file has agencies buying AI services at $500K+ scale.
+# These agencies = proven AI budget holders = B2B outreach targets for consulting,
+# automation tools, or SBIR-adjacent services. Wire agency names + descriptions
+# into outreach_trend_angles so Cold Outreach can use them as credibility proof.
+def wire_gov_ai_contracts_to_outreach():
+    global wired_total
+    name = "Gov AI Contract Awards → Cold Outreach Credibility Angles"
+
+    gov_path = AUTOMATIONS.parent / "AUTOMATIONS" / "leads" / "usaspending_ai.csv"
+    if not gov_path.exists():
+        connections[name] = {"status": "no_gov_data", "items": 0}
+        return
+
+    gov_rows = load_csv_safe(gov_path, max_rows=200)
+    if not gov_rows:
+        connections[name] = {"status": "no_rows", "items": 0}
+        return
+
+    angles_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "outreach_trend_angles.json")
+    existing_angles = []
+    if angles_path.exists():
+        try:
+            existing_angles = json.loads(angles_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_angles = []
+    existing_ids = {a.get("alpha_id", "") for a in existing_angles}
+
+    new_angles = []
+    for row in gov_rows:
+        award_id = row.get("Award ID", row.get("generated_internal_id", ""))
+        agency = row.get("Awarding Agency", "")
+        description = row.get("Description", "")
+        amount = row.get("Award Amount", "0")
+        recipient = row.get("Recipient Name", "")
+
+        if not agency or not description:
+            continue
+        if len(description) < 10:
+            continue
+
+        angle_id = f"GOV_AI_{award_id[:20]}"
+        if angle_id in existing_ids:
+            continue
+
+        try:
+            amt_float = float(amount)
+        except Exception:
+            amt_float = 0.0
+
+        desc_short = description[:120].strip()
+        outreach_hook = (
+            f"the government just paid {recipient} ${int(amt_float):,} "
+            f"for '{desc_short[:80]}'. "
+            f"that means {agency} has an active AI budget. "
+            f"we do the same thing for small businesses without the government contract price tag."
+        )
+
+        new_angles.append({
+            "alpha_id": angle_id,
+            "category": "GOV_AI_CONTRACT",
+            "roi_potential": "HIGH" if amt_float >= 500000 else "MEDIUM",
+            "tactic_summary": f"Gov AI buy: {agency} paid ${int(amt_float):,} for AI — {desc_short[:100]}",
+            "outreach_hook": outreach_hook[:400],
+            "source": "usaspending_ai_contracts",
+            "status": "READY_FOR_OUTREACH",
+            "added_at": TIMESTAMP,
+        })
+        existing_ids.add(angle_id)
+
+        if len(new_angles) >= 20:
+            break
+
+    if new_angles:
+        all_angles = new_angles + existing_angles
+        all_angles = all_angles[:200]
+        angles_path.write_text(json.dumps(all_angles, indent=2))
+        wired_total += len(new_angles)
+        connections[name] = {"status": "OK", "items": len(new_angles)}
+    else:
+        connections[name] = {"status": "deduped_or_no_ai_contracts", "items": 0}
+
+
+# ─── CONNECTION 20: Hot Leads (with verified emails) → Cold Email Gen Queue ───
+# HOT_LEADS.csv has 21 businesses with verified email addresses already scraped.
+# These are the HIGHEST-VALUE outreach targets: qualified by website score AND
+# have confirmed email. They should flow directly into the cold email generator.
+# Wire them into a structured cold_email_ready_queue.json that generate_cold_emails.py
+# can read as a prioritized input source.
+def wire_hot_leads_to_email_queue():
+    global wired_total
+    name = "Hot Leads (Verified Emails) → Cold Email Generator Queue"
+
+    hot_leads_path = AUTOMATIONS.parent / "AUTOMATIONS" / "leads" / "HOT_LEADS.csv"
+    if not hot_leads_path.exists():
+        connections[name] = {"status": "no_hot_leads_file", "items": 0}
+        return
+
+    hot_rows = load_csv_safe(hot_leads_path, max_rows=200)
+    qualified = [
+        r for r in hot_rows
+        if r.get("email_if_found", "").strip()
+        and "@" in r.get("email_if_found", "")
+        and r.get("website_score", "0") != ""
+    ]
+
+    if not qualified:
+        connections[name] = {"status": "no_leads_with_emails", "items": 0}
+        return
+
+    queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "cold_email_ready_queue.json")
+    existing_queue = []
+    if queue_path.exists():
+        try:
+            existing_queue = json.loads(queue_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_queue = []
+    existing_websites = {item.get("website", "") for item in existing_queue}
+
+    new_entries = []
+    for row in qualified:
+        website = row.get("website", "").strip()
+        if not website or website in existing_websites:
+            continue
+
+        biz_name = row.get("business_name", "there")[:60]
+        email = row.get("email_if_found", "").strip()
+        category = row.get("category", "business")
+        city = row.get("city", "")
+        try:
+            score = int(row.get("website_score", "0") or 0)
+        except Exception:
+            score = 0
+        signals = row.get("signals_detected", "")
+
+        # Derive pain points from signal string
+        pain_points = []
+        if "NOT_mobile" in signals:
+            pain_points.append("not mobile-friendly")
+        if "no_social" in signals:
+            pain_points.append("no social proof")
+        if "no_form" in signals:
+            pain_points.append("no lead capture form")
+        if "OLD_" in signals:
+            pain_points.append("outdated design")
+        if "no_schema" in signals:
+            pain_points.append("no structured data (hurts SEO)")
+
+        pain_str = ", ".join(pain_points[:3]) if pain_points else "website has improvement opportunities"
+
+        entry = {
+            "business_name": biz_name,
+            "website": website,
+            "email": email,
+            "category": category,
+            "city": city,
+            "website_score": score,
+            "pain_points_detected": pain_points,
+            "email_subject": f"quick question about {website.replace('https://','').replace('http://','')[:40]}",
+            "email_hook": (
+                f"noticed {pain_str} on your site. "
+                f"built a free preview of what it could look like modernized. "
+                f"30 seconds to view. want me to send it over?"
+            ),
+            "priority": "P0" if score < 30 else "P1",
+            "status": "READY_TO_SEND",
+            "source": "hot_leads_verified_email",
+            "added_at": TIMESTAMP,
+        }
+        new_entries.append(entry)
+        existing_websites.add(website)
+
+    if new_entries:
+        all_entries = sorted(new_entries + existing_queue, key=lambda x: x.get("website_score", 99))
+        queue_path.write_text(json.dumps(all_entries[:100], indent=2))
+        wired_total += len(new_entries)
+        connections[name] = {"status": "OK", "items": len(new_entries)}
+    else:
+        connections[name] = {"status": "deduped_or_no_new_leads", "items": 0}
+
+
+# ─── CONNECTION 21: Competitive Intel MASTER high-score posts → Content Farm ─
+# COMPETITIVE_INTEL_MASTER.csv has Reddit/HN posts scored 10-100. High-score posts
+# (score >= 15) with APP_FACTORY or SAAS signal_type = proven viral content hooks.
+# These high-engagement posts should seed the content farm topic queue directly
+# since they already proved engagement in the market.
+def wire_comp_intel_posts_to_content():
+    global wired_total
+    name = "Competitive Intel High-Score Posts → Content Farm Topics"
+
+    ci_path = PROJECT_ROOT / "LEDGER" / "COMPETITIVE_INTEL_MASTER.csv"
+    if not ci_path.exists():
+        connections[name] = {"status": "no_ci_master", "items": 0}
+        return
+
+    ci_rows = load_csv_safe(ci_path, max_rows=500)
+    if not ci_rows:
+        connections[name] = {"status": "no_ci_rows", "items": 0}
+        return
+
+    topic_queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json")
+    existing_topics = []
+    if topic_queue_path.exists():
+        try:
+            existing_topics = json.loads(topic_queue_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing_topics = []
+    existing_urls = {t.get("source_url", "") for t in existing_topics}
+    existing_ids = {t.get("alpha_id", "") for t in existing_topics}
+
+    new_topics = []
+    for row in ci_rows:
+        title = row.get("title", "").strip()
+        url = row.get("url", "").strip()
+        signal_type = row.get("signal_type", "")
+        source = row.get("source", "")
+        try:
+            score = int(row.get("score", 0) or 0)
+        except Exception:
+            score = 0
+
+        if score < 15:
+            continue
+        if not title or len(title) < 20:
+            continue
+        if url in existing_urls:
+            continue
+
+        alpha_id = f"CI_{url[-30:].replace('/', '_').replace('?', '_')}"
+        if alpha_id in existing_ids:
+            continue
+
+        # Generate content hook from the high-performing title
+        title_lower = title.lower()
+        if "bootstrapped" in title_lower or "no funding" in title_lower or "$0" in title_lower:
+            hook = f"this bootstrapper story is worth reading.\n\n{title}\n\nhere's the pattern they used."
+        elif "mrr" in title_lower or "revenue" in title_lower or "k/month" in title_lower:
+            hook = f"real revenue number dropped in the wild.\n\n{title}\n\nbreaking down what actually worked."
+        elif "app" in title_lower or "ios" in title_lower or "mobile" in title_lower:
+            hook = f"this app strategy keeps working in {datetime.now().year}.\n\n{title}\n\nsteal the framework."
+        elif "ai" in title_lower or "gpt" in title_lower or "llm" in title_lower:
+            hook = f"ai angle that's generating real results.\n\n{title}\n\nactually executable. here's how."
+        else:
+            hook = f"high-signal post worth turning into a thread.\n\n{title}\n\nbreak it down, add context, post it."
+
+        new_topics.append({
+            "alpha_id": alpha_id,
+            "category": signal_type or "COMPETITIVE_INTEL",
+            "roi": "HIGH" if score >= 30 else "MEDIUM",
+            "synergy_score": str(min(score, 100)),
+            "tactic_preview": title[:300],
+            "draft_hook": hook,
+            "source_url": url,
+            "source_platform": source,
+            "status": "QUEUED",
+            "added_at": TIMESTAMP,
+            "source": "competitive_intel_master_high_score",
+        })
+        existing_urls.add(url)
+        existing_ids.add(alpha_id)
+
+        if len(new_topics) >= 30:
+            break
+
+    if new_topics:
+        all_topics = new_topics + existing_topics
+        all_topics = all_topics[:200]
+        topic_queue_path.write_text(json.dumps(all_topics, indent=2))
+        wired_total += len(new_topics)
+        connections[name] = {"status": "OK", "items": len(new_topics)}
+    else:
+        connections[name] = {"status": "deduped_or_low_score_only", "items": 0}
+
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def run_cycle():
     print("=" * 65)
-    print("CROSS-POLLINATOR V2 (17 connections)")
+    print("CROSS-POLLINATOR V2 (21 connections)")
     print(f"Time: {TIMESTAMP}")
     print("=" * 65)
 
@@ -1568,6 +1929,12 @@ def run_cycle():
     wire_build_app_alpha_to_spec_queue()
     wire_spec_queue_to_content_teasers()
     wire_affiliate_candidates_to_content_promo()
+
+    # Connections 18-21 (added 2026-04-06)
+    wire_freelance_gaps_to_app_specs()
+    wire_gov_ai_contracts_to_outreach()
+    wire_hot_leads_to_email_queue()
+    wire_comp_intel_posts_to_content()
 
     print("\n--- WIRING RESULTS ---")
     for conn_name, result in connections.items():
