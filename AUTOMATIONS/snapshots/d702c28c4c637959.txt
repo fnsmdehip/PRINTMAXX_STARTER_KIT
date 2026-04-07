@@ -1,3 +1,4 @@
+Railway
 Pricing
 Railway
 Product
@@ -27,7 +28,7 @@ For hobbyist developers building side projects
 Includes $5 of monthly usage credits
 After credits are used, you'll only be charged for extra resource usage
 Up to 48 vCPU / 48 GB RAM per service
-Up to 6 replicas, at 8 vCPU / 8 GB RAM per replica
+Up to 5 replicas, at 8 vCPU / 8 GB RAM per replica
 Up to 5 GB storage
 Single developer workspace
 Community support
@@ -42,7 +43,7 @@ For professional developers and teams shipping production applications
 Includes $20 of monthly usage credits
 After credits are used, you'll only be charged for extra resource usage
 Up to 1,000 vCPU / 1 TB RAM per service
-Up to 50 replicas, at 32 vCPU / 32 GB RAM per replica
+Up to 42 replicas, at 24 vCPU / 24 GB RAM per replica
 Up to 1 TB storage
 Unlimited workspace seats included
 Railway Support
@@ -61,6 +62,8 @@ Support SLOs
 Highest compute limits
 Dedicated VMs
 Bring your own cloud
+Up to 2,400 vCPU / 2,4 TB RAM per service
+Up to 50 replicas, at 48 vCPU / 48 GB RAM per service
 Contact Sales
 Memory
 $
@@ -127,7 +130,7 @@ Up to 5 TB
 Volumes per project
 3 during trial, then 1
 10
-10, can be increased
+20, can be increased
 Unlimited
 Buckets per project
 3 during trial, then 1
@@ -148,7 +151,7 @@ Scaling
 Replicas per service
 2 during the free trial, then 1
 Up to 6
-Up to 50
+Up to 42
 Highest compute limits
 Vertical autoscaling
 Horizontal scaling via replicas
@@ -276,10 +279,10 @@ HIPAA BAAs
 HIPAA Business Associate Agreements for compliant health data handling.
 $1,000
 Log History, RBAC, SSO, Audit Logs
-Control access to your workspace resources with role-based permissions, seamless authentication with single sign-on, extended audit log retention.
+Control access to your workspace resources with role-based permissions, seamless authentication with single sign-on, and extended audit log retention.
 $2,000
-Enterprise Support, Cloud Regions
-Everything above, plus prioritized support with SLOs, a dedicated Slack Connect channel, and cloud regions.
+Enterprise Support, Cloud Regions, Higher Resource Limits
+Everything above, plus prioritized support with SLOs, a dedicated Slack Connect channel, cloud regions, and services with 48vCPU/48GB RAM per replica.
 $5,000
 Dedicated VMs
 Everything above, plus custom dedicated infrastructure for enhanced performance and control.
@@ -302,11 +305,6 @@ We went from a $1600 Heroku bill to a $300 Railway bill.
 Brandon Gell
 Head of Consulting at Every
 “
-We spent ~$100K / year running on AWS - we have since cut that by 90% moving to Railway and get a significantly improved developer experience.
-”
-Antoine Vulcain
-Founder & CEO at Capitalyze
-“
 We cut our hosting costs by 75% migrating from Heroku to Railway. This was possible with auto-scaling and transient PR environments.
 ”
 Dillon Chen
@@ -321,6 +319,11 @@ We went from a $1600 Heroku bill to a $300 Railway bill.
 ”
 Brandon Gell
 Head of Consulting at Every
+“
+We cut our hosting costs by 75% migrating from Heroku to Railway. This was possible with auto-scaling and transient PR environments.
+”
+Dillon Chen
+Founder at Common
 You're overpaying for compute. Let's fix that.
 Most customers save ~40% by switching to Railway.
 1

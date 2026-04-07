@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-04-02 (gap-hunter cycle)
+**Last updated:** 2026-04-06 (gap-hunter cycle)
 
 ---
 
@@ -8,6 +8,9 @@
 
 | App | URL | Status |
 |-----|-----|--------|
+| androx-trt | https://androx-trt.surge.sh | LIVE — gap-hunter deploy 2026-04-06 |
+| dosewell | https://dosewell.surge.sh | LIVE — gap-hunter deploy 2026-04-06 |
+| pocket-alexandria | https://pocket-alexandria.surge.sh | LIVE — gap-hunter deploy 2026-04-06 |
 | truthscope | https://truthscope.surge.sh | LIVE — gap-hunter deploy 2026-04-01 |
 | beat-making-streak-landing | https://beat-making-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |
 | music-theory-streak-landing | https://music-theory-streak-landing.surge.sh | LIVE — gap-hunter deploy 2026-03-22 |

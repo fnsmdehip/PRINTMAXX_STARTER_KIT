@@ -3,7 +3,7 @@ Migrate from Heroku and get up to $10k in credits
 Get started
 Product
 Platform Overview
-HIPAA on Render
+Workflows
 Features
 Autoscaling
 Private Networking
@@ -63,6 +63,7 @@ Blog
 Changelog
 Docs
 Pricing
+Render for Startups
 Articles
 Security
 Community
@@ -82,17 +83,15 @@ LinkedIn
 GitHub
 © Render 2026
 Predictable pricing that scales with you.
-View
-workspace plans
-, pricing for
-compute
-/
-Postgres
-/
-Key Value
+Jump to
+monthly plans
+,
+compute pricing
 , and
 FAQs
 .
+Are you a VC-funded startup? Get up to $100K in credits with
+Render for Startups ↗
 Hobby
 Professional
 Organization
@@ -489,6 +488,46 @@ Up to 512 GB
 Up to 64
 Show
 Pricing
+Workflows (Beta)
+From
+$
+1
+USD
+per month
+Fully-managed durable execution
+Run 1000s of parallel, async tasks
+Sub-second task spin-up
+Automatic task retries
+Task compute
+$/Hour
+CPU
+RAM
+Starter
+$0.05
+0.5
+512MB
+Standard
+$0.20
+1
+2GB
+Pro
+$0.40
+2
+4GB
+Pro Plus
+$1.00
+4
+8GB
+Pro Max
+$2.00
+4
+16GB
+Pro Ultra
+$7.00
+8
+32GB
+Show
+Pricing
 Features
 Compare plans and features.
 Hobby
@@ -616,6 +655,26 @@ Environment groups
 Monorepo support
 Automatic Brotli compression
 Wildcard domains
+Workflows (Beta)
+Concurrent task runs
+20
+50
+100
+Custom
+Additional concurrency
+$10/month per 50 task runs
+$10/month per 50 task runs
+Custom
+Compute plan types
+Up to Pro
+Up to Pro (Request higher plans via docs)
+Up to Pro (Request higher plans via docs)
+Custom
+Task spinup times
+Standard
+Standard
+Standard
+Guaranteed warm starts
 Compare Pricing
 Find the plan that meets your needs.
 Select Plan
@@ -718,6 +777,14 @@ Environment groups
 Monorepo support
 Automatic Brotli compression
 Wildcard domains
+Workflows (Beta)
+Concurrent task runs
+20
+Additional concurrency
+Compute plan types
+Up to Pro
+Task spinup times
+Standard
 Frequently Asked Questions
 How does billing work?
 We charge for your workspace plan and your total compute usage at the end of the month. Plan costs depend on your workspace type and the number of team members in the workspace. Compute usage is billed and prorated by the second. If you create a service and delete it after a day, you pay for just a day.

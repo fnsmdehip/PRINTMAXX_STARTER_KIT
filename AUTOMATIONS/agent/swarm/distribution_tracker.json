@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-04-02T19:43:52.570977",
-  "last_cycle": "2026-04-02",
-  "cycle_number": 42,
+  "last_updated": "2026-04-06T19:25:44.225830",
+  "last_cycle": "2026-04-06",
+  "cycle_number": 43,
   "coverage": {
     "twitter": {
-      "threads": 15,
-      "singles": 85,
-      "reply_baits": 32,
+      "threads": 16,
+      "singles": 89,
+      "reply_baits": 35,
       "qt_captions": 15,
-      "total_pieces": 210,
+      "total_pieces": 218,
       "last_cycle": 42,
       "new_this_cycle": [
         "tw_newsletter_platforms_comparison",
@@ -54,159 +54,45 @@
         "rb_fiverr_poll",
         "rb_biometrics_question",
         "rb_ramadan_tech_question"
+      ],
+      "new_this_cycle_43": [
+        "tw_truthscope_4day_retro",
+        "tw_cnsnt_first_coverage",
+        "tw_day48_zero_revenue",
+        "tw_nutriai_first_coverage",
+        "thread_n8n_vs_zapier_vs_make",
+        "rb_automation_tools",
+        "rb_privacy_local_apps",
+        "rb_calorie_counting_ai"
       ]
     },
     "reddit": {
-      "posts_ready": 130,
-      "subreddits": [
-        "r/nocode",
-        "r/automation",
-        "r/coldemail",
-        "r/sales",
-        "r/Entrepreneur",
-        "r/selfimprovement",
-        "r/productivity",
-        "r/leadsgeneration",
-        "r/SEO",
-        "r/emailmarketing",
-        "r/islam",
-        "r/hinduism",
-        "r/Sikh",
-        "r/Meditation",
-        "r/books",
-        "r/Journaling",
-        "r/learnprogramming",
-        "r/languagelearning",
-        "r/relationships",
-        "r/photography",
-        "r/analog",
-        "r/WeAreTheMusicMakers",
-        "r/edmproduction",
-        "r/musictheory",
-        "r/Guitar",
-        "r/femalefashionadvice",
-        "r/streetwear",
-        "r/learnhistory",
-        "r/MapPorn",
-        "r/hydrohomies",
-        "r/cycling",
-        "r/relationship_advice",
-        "r/geography",
-        "r/history",
-        "r/Muslim",
-        "r/MuslimLounge",
-        "r/yoga",
-        "r/bodyweightfitness",
-        "r/running",
-        "r/HIIT",
-        "r/stopdrinking",
-        "r/Plank",
-        "r/travel",
-        "r/ClaudeAI",
-        "r/ChatGPT",
-        "r/PromptEngineering",
-        "r/mcp",
-        "r/TheGirlSurvivalGuide",
-        "r/solopreneur",
-        "r/content_marketing",
-        "r/newsletters",
-        "r/nutrition",
-        "r/MealPrepSunday",
-        "r/loseit",
-        "r/sobriety",
-        "r/n8n",
-        "r/freelance"
-      ],
-      "last_cycle": 41,
-      "new_this_cycle": [
-        "cursor_vs_claudecode_chatgptcoding",
-        "quran_streak_islam",
-        "cnsnt_privacy",
-        "day44_revenue_solopreneur",
-        "cnsnt_freelance"
-      ],
-      "new_this_cycle_38": [
-        "r/sobriety_soberstreak",
-        "r/blender_addon_opportunity",
-        "r/ObsidianMD_vault_systems",
-        "r/Entrepreneur_automation_dysmorphia",
-        "r/SEO_surgehsh_robots",
-        "r/ClaudeAI_x402_protocol",
-        "r/Entrepreneur_vibe_coder_job_board"
-      ],
-      "new_this_cycle_40": [
-        "r/newsletters_best_newsletter_platforms",
-        "r/emailmarketing_best_newsletter_platforms",
-        "r/nutrition_nutriai",
-        "r/MealPrepSunday_nutriai",
-        "r/stopdrinking_soberstreak",
-        "r/sobriety_soberstreak",
-        "r/nocode_n8n_vs_zapier",
-        "r/n8n_comparison",
-        "r/freelance_automation_pricing"
-      ],
-      "new_this_cycle_41": [
-        "r/ClaudeAI_ai_slop_detector",
-        "r/ChatGPT_ai_slop_detector",
-        "r/writing_ai_slop_detector",
-        "r/coldemail_subject_line_grader",
-        "r/breathwork_breathwork_streak",
-        "r/Entrepreneur_revenue_leak_audit",
-        "r/SideProject_newsletter_platforms"
-      ],
-      "new_this_cycle_42": [
-        "rd_truthscope_ios_launch",
-        "rd_truthscope_ioprogramming",
-        "rd_ramadan_final_window",
-        "rd_coldemail_data_analysis",
-        "rd_vibe_coding_calculator",
-        "rd_app_dev_lessons"
+      "total_pieces": 5,
+      "last_cycle": 43,
+      "new_this_cycle_43": [
+        "reddit_cnsnt_r_privacy",
+        "reddit_cnsnt_r_selfhosted",
+        "reddit_n8n_comparison_r_n8n",
+        "reddit_n8n_comparison_r_nocode",
+        "reddit_day48_r_sideproject",
+        "reddit_day48_r_entrepreneur"
       ]
     },
     "hacker_news": {
-      "posts_ready": 35,
-      "last_cycle": 41,
-      "new_this_cycle": [
-        "show_hn_truthscope_pending",
-        "ask_hn_cursor_vs_claude_code",
-        "show_hn_cnsnt",
-        "ask_hn_x402_payments"
-      ],
-      "new_this_cycle_40": [
-        "show_hn_nutriai_food_scanner",
-        "ask_hn_lie_detector_fake_data",
-        "pending_show_hn_truthscope_appstore"
-      ],
-      "new_this_cycle_41": [
-        "ask_hn_newsletter_platforms",
-        "show_hn_ai_slop_detector"
+      "total_pieces": 2,
+      "last_cycle": 43,
+      "new_this_cycle_43": [
+        "hn_show_hn_cnsnt",
+        "hn_ask_hn_automated_system_revenue"
       ]
     },
     "linkedin": {
-      "posts_ready": 44,
-      "last_cycle": 41,
-      "new_this_cycle": [
-        "day44_zero_revenue",
-        "cursor_vs_claude_code",
-        "truthscope_prelaunch",
-        "mcp_ecosystem_update"
-      ],
-      "new_this_cycle_40": [
-        "li_388_sites_zero_revenue_lessons",
-        "li_nutriai_launch_clinical_formula",
-        "li_newsletter_platform_comparison"
-      ],
-      "new_this_cycle_41": [
-        "li_cnsnt_web_professional_liability",
-        "li_soberstreak_professional_sobriety",
-        "li_ai_slop_detector_content_qa"
-      ],
-      "posts": 4,
-      "new_this_cycle_42": [
-        "li_truthscope_launch",
-        "li_day45_honest_update",
-        "li_vibe_coding_professional",
-        "li_web_scraping_competitive_intel"
+      "total_pieces": 3,
+      "last_cycle": 43,
+      "new_this_cycle_43": [
+        "li_cnsnt_professional_launch",
+        "li_day48_zero_revenue",
+        "li_truthscope_4day_professional"
       ]
     },
     "indie_hackers": {
@@ -234,12 +120,11 @@
       ]
     },
     "indiehackers": {
-      "posts_ready": 4,
-      "last_cycle": 32,
-      "posts": 2,
-      "new_this_cycle_42": [
-        "ih_truthscope_launch",
-        "ih_vibe_coding_calculator"
+      "total_pieces": 2,
+      "last_cycle": 43,
+      "new_this_cycle_43": [
+        "ih_cnsnt_launch",
+        "ih_day48_retrospective"
       ]
     },
     "health_affiliates": "cycle_33",
