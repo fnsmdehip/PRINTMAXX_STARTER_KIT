@@ -1,9 +1,9 @@
 # Guardian Improvement Report — 2026-04-07
-Generated: 12:00:00
+Generated: 16:00:00
 
 ## Gaps Found
 
-1. Stale data: TREND_SIGNALS.csv (4d), FREELANCE_DEMAND_SCAN.csv (14d)
+1. Stale data: TREND_SIGNALS.csv (5d), FREELANCE_DEMAND_SCAN.csv (15d)
 2. Revenue still $0 — shipping is blocked
 3. Only 0 active accounts — #1 blocker
 

@@ -3,6 +3,16 @@
 # Usage: bash AUTOMATIONS/ralph_spec_refine_loop.sh
 # Runs overnight — each iteration refines one app spec using Opus at max quality
 # Stop anytime with Ctrl+C
+#
+# PREREQUISITE: Claude Code CLI must be installed.
+# If not installed: curl -fsSL https://claude.ai/install.sh | bash
+# Then restart your terminal.
+#
+# MODEL: claude-opus-4-6 — highest quality available
+# TOKENS: 32000 max (Opus limit via CLI)
+# NOTE: Extended thinking (budget_tokens) is not exposed as a CLI flag.
+#       Use --max-tokens 32000 + Opus for max quality via claude -p.
+#       The prompt is written to elicit deep analysis naturally.
 
 set -euo pipefail
 
@@ -10,7 +20,34 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 STATE_FILE="$BASE_DIR/AUTOMATIONS/ralph_spec_refine_state.json"
 PROMPT_FILE="$BASE_DIR/AUTOMATIONS/ralph_spec_refine_prompt.md"
 LOG_FILE="$BASE_DIR/AUTOMATIONS/logs/ralph_spec_refine.log"
-CLAUDE_BIN="${CLAUDE_BIN:-claude}"
+
+# Find claude binary — check common install locations
+CLAUDE_BIN="${CLAUDE_BIN:-}"
+if [ -z "$CLAUDE_BIN" ]; then
+  for loc in \
+    "$(command -v claude 2>/dev/null)" \
+    "$HOME/.claude/local/claude" \
+    "/usr/local/bin/claude" \
+    "$HOME/.npm-global/bin/claude" \
+    "$HOME/.nvm/versions/node/$(node --version 2>/dev/null)/bin/claude" \
+    "$(npm bin -g 2>/dev/null)/claude"; do
+    if [ -n "$loc" ] && [ -x "$loc" ]; then
+      CLAUDE_BIN="$loc"
+      break
+    fi
+  done
+fi
+
+if [ -z "$CLAUDE_BIN" ]; then
+  echo "ERROR: Claude Code CLI not found." >&2
+  echo ""
+  echo "Install it with:"
+  echo "  curl -fsSL https://claude.ai/install.sh | bash"
+  echo ""
+  echo "Then restart your terminal and run this script again."
+  echo "Or set CLAUDE_BIN=/path/to/claude and re-run."
+  exit 1
+fi
 
 # Ensure log dir exists
 mkdir -p "$BASE_DIR/AUTOMATIONS/logs"
