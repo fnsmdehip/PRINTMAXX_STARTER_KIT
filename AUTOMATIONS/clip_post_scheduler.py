@@ -129,9 +129,9 @@ class PostScheduler:
             post_text = self._generate_post_text(clip, slot['platform'])
 
             schedule.append({
-                'clip_id': clip['clip_id'],
+                'clip_id': clip.get('clip_id') or clip.get('script_id', ''),
                 'post_text': post_text,
-                'media_path': clip['output_path'],
+                'media_path': clip.get('output_path') or clip.get('script_file', ''),
                 'platform': slot['platform'],
                 'account': account,
                 'scheduled_time': slot['time'].isoformat(),
