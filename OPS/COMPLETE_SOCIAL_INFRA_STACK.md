@@ -283,6 +283,44 @@ Updated: 2026-04-17 | Sources: 3 research agents + master ops xlsx + 200+ existi
 
 ---
 
+## HIDDEN GEMS (from deep research -- cut costs 25-75%)
+
+These are tools power users on Reddit/BlackHatWorld actually use vs. what companies advertise:
+
+### Proxy Hidden Gems
+| Tool | Cost | Why it's special |
+|------|------|-----------------|
+| **iProxy.online** | $6/mo per phone | Turn any old Android phone into a 4G proxy. 5 phones + prepaid SIMs = 5 dedicated mobile proxies for ~$80/mo vs $445+ from TheSocialProxy |
+| **Evomi** | $0.49/GB residential | Swiss newcomer. 7-10x cheaper than Bright Data. Free trial. |
+| **NodeMaven** | Varies | 7-DAY sticky sessions (vs 30min everywhere else). 95% clean IP filtering. Perfect for warmup. |
+| **Proxidize** | Hardware cost | Build and OWN your proxy farm. Costs drop from $12/GB to $2/GB over time. |
+| **FleetProxy** | $2.65/GB PAYG | No contract, no minimum, no bandwidth expiration. |
+| **CyberYozh** | Varies | All-in-one: proxies + SMS + IP/number fraud-score checking before you use them |
+
+### Phone Verification Hidden Gems
+| Tool | Cost | Why it's special |
+|------|------|-----------------|
+| **SMSPool** | From $0.02 | Real SIM-backed non-VoIP. Flat pricing. Auto-refund. 150+ countries. Cheapest non-VoIP found. |
+| **Getatext** | $0.10+ | Real AT&T/T-Mobile/Verizon SIMs. Interactive map for geo-targeted area codes. Match proxy geo to phone geo. |
+| **VoidMob** | Varies | Unified proxy + SMS + eSIM. No KYC. Accepts crypto. 95%+ verification success. |
+| **SadCaptcha** | $0.0005/solve | TikTok CAPTCHA solver. 98-100% accuracy. Python/API/Chrome extension. MUST-HAVE for automated TikTok account creation. |
+
+### Email Hidden Gems
+| Tool | Cost | Why it's special |
+|------|------|-----------------|
+| **Purelymail** | $10/YEAR | Unlimited users, domains, storage, aliases. IMAP/POP3/SMTP. Cheapest credible email hosting anywhere. |
+| **TrulyInbox** | $22/mo | UNLIMITED inbox warmup (competitors charge $15-96 PER inbox) |
+| **ImprovMX** | $2.50/mo | 100 domains SMTP forwarding |
+| **Forward Email** | Free | Open source, 1.6M+ domains served |
+
+### Cloud Phone Hidden Gems
+| Tool | Cost | Why it's special |
+|------|------|-----------------|
+| **Redfinger** | $3.99/mo per phone | Budget cloud Android for TikTok farming. Way cheaper than GeeLark. |
+| **GeeLark** | $1.20/day cap | Real hardware IDs (IMEI, Android ID). Highest account survival per PVACreator users. |
+
+---
+
 ## RECOMMENDED STACKS BY BUDGET
 
 ### $0/mo -- BOOTSTRAPPING
@@ -302,50 +340,63 @@ Updated: 2026-04-17 | Sources: 3 research agents + master ops xlsx + 200+ existi
 | Layer | Tool | Cost |
 |-------|------|------|
 | Anti-detect | GoLogin (100 profiles) | $24 |
-| Proxy | Webshare residential 2GB | $3 |
-| Phone | Hushed (3 numbers) + 5sim for bulk | $7 |
-| Email | Cloudflare + SimpleLogin | $2.50 |
+| Proxy | Evomi residential ($0.49/GB, ~4GB) | $2 |
+| Phone | SMSPool (non-VoIP, $0.02-0.50 each) | $3 |
+| Email | Purelymail ($10/yr = ~$0.83/mo) | $1 |
 | Scheduling | Publer (9 platforms, 5 accounts) | $12 |
 | Video | CapCut (free) | $0 |
 | Outreach | Apollo free + Bland AI free | $0 |
-| LinkedIn | Linked Helper | $0 (use GoLogin profiles) |
-| **Total** | **15-20 accounts** | **~$49/mo** |
+| Cloud phone | Redfinger (1 TikTok phone) | $4 |
+| **Total** | **15-20 accounts** | **~$46/mo** |
+
+### $70/mo -- STARTER+ (with hidden gems)
+| Layer | Tool | Cost |
+|-------|------|------|
+| Anti-detect | GoLogin (100 profiles) | $24 |
+| Proxy mobile | iProxy.online (2 old phones as proxies) | $12 |
+| Proxy residential | Evomi 5GB | $2.50 |
+| Phone | SMSPool bulk | $5 |
+| Email | Purelymail + Cloudflare catch-all | $1 |
+| Scheduling | Publer | $12 |
+| Cloud phones | Redfinger (2 for TikTok) | $8 |
+| Warmup | TrulyInbox (unlimited email warmup) | -- |
+| **Total** | **20-30 accounts** | **~$65/mo** |
 
 ### $150/mo -- GROWTH
 | Layer | Tool | Cost |
 |-------|------|------|
 | Anti-detect | GoLogin 300 profiles | $49 |
 | Cloud phones | GeeLark (3 TikTok phones) | $25 |
-| Proxy residential | Decodo 5GB | $18 |
-| Proxy mobile | ProxyLTE (2 ports for TikTok) | $50 |
-| Phone | Hushed + 5sim | $7 |
-| Email | Proton Plus + catch-all | $4 |
+| Proxy mobile | iProxy.online (3 phones) + ProxyLTE (1 port) | $43 |
+| Proxy residential | Evomi 10GB | $5 |
+| Phone | SMSPool + Hushed (persistent) | $8 |
+| Email | Purelymail + SimpleLogin | $4 |
 | Scheduling | SocialPilot (10 accounts) | $30 |
 | Cold email | Instantly.ai | $30 |
+| Email warmup | TrulyInbox (unlimited) | $22 |
 | Video | CapCut + Opus Clip | $15 |
-| LinkedIn | Dripify | $39 |
-| Repurpose | Repurpose.io | $25 |
-| **Total** | **30-50 accounts, full automation** | **~$292/mo** |
+| TikTok CAPTCHA | SadCaptcha | $1 |
+| **Total** | **30-50 accounts, full automation** | **~$232/mo** |
 
-Trim: drop Dripify (-$39), drop Repurpose.io (-$25), drop 1 ProxyLTE port (-$25) = **~$148/mo**
+Trim: drop TrulyInbox, drop 2 iProxy phones, drop Hushed = **~$147/mo**
 
 ### $300/mo -- SCALE
 | Layer | Tool | Cost |
 |-------|------|------|
 | Anti-detect | Multilogin X Team (100 profiles + cloud phones) | $100 |
 | Cloud phones | GeeLark (5 TikTok phones) | $42 |
+| Proxy mobile | iProxy (5 phones) + Coronium (1 device) | $129 |
 | Proxy residential | Decodo 10GB | $35 |
-| Proxy mobile | TheSocialProxy (1 port unlimited) | $89 |
-| Phone | Hushed + 5sim bulk | $10 |
-| Email | Proton + SimpleLogin | $7 |
+| Phone | SMSPool + Getatext (geo-matched) | $15 |
+| Email | Purelymail + TrulyInbox (unlimited warmup) | $23 |
 | Scheduling | SocialPilot Ultimate (50+ accounts) | $60 |
 | Cold email | Instantly.ai Growth | $58 |
 | Video | CapCut + Opus Clip + HeyGen | $44 |
-| LinkedIn | Dripify + Sales Nav | $120 |
+| LinkedIn | Dripify | $39 |
 | Ad spy | PiPiADS | $77 |
 | Repurpose | Repurpose.io | $25 |
-| Analytics | Pentos (TikTok) + Metricool | $18 |
-| **Total** | **50-100+ accounts, agency-grade** | **~$685/mo** |
+| Analytics | Pentos + Metricool | $18 |
+| **Total** | **50-100+ accounts, agency-grade** | **~$665/mo** |
 
 Pick and choose -- you don't need everything at once.
 

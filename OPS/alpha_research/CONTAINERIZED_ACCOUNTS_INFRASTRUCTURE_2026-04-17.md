@@ -381,6 +381,275 @@ This gives you mobile-grade proxies (best for TikTok), containerized browser pro
 
 ---
 
+# SECTION 8: HIDDEN GEMS & POWER-USER TOOLS (Underground Intel)
+
+Sources: Reddit, BlackHatWorld, account farming communities, niche tools missed by mainstream comparison sites. This section covers what the pros actually use vs what the SEO blogs recommend.
+
+---
+
+## 8A. PROXY HIDDEN GEMS
+
+### Evomi -- The $0.49/GB Disruptor
+Swiss-based newcomer offering residential proxies at $0.49/GB -- roughly 7-10x cheaper than Bright Data and Decodo. Mobile proxies at $2.20/GB. Free trial available with no commitment.
+- **Why it matters**: At 50 accounts needing ~50GB/mo residential, that's $24.50/mo vs $175+ on Decodo
+- **Caveat**: Mixed community reliability reports. Test thoroughly before scaling.
+- **Best for**: Budget residential rotation for Instagram/X where mobile isn't strictly needed
+
+| Metric | Evomi | Decodo | Bright Data |
+|--------|-------|--------|-------------|
+| Residential $/GB | $0.49 | $3.50 | $5.88 |
+| Mobile $/GB | $2.20 | $8.00 | $8-15 |
+| ISP Static $/IP | $1.00 | varies | varies |
+| Free Trial | Yes | 100MB | Yes |
+
+### FleetProxy -- $2.65/GB No-Contract Residential
+Newer provider with 195+ country coverage, sticky sessions up to 30min, 99.99% claimed uptime. No minimum spend, no contracts, no bandwidth expiration. Mobile LTE proxies available.
+- **Why it matters**: No-contract PAYG at $2.65/GB undercuts Decodo ($3.50) and IPRoyal ($3.50)
+- **Best for**: Operators who want flexibility without subscription commitments
+
+### Coronium -- Mobile Proxy Marketplace ($99/device, Unlimited Bandwidth)
+Not a proxy provider but a proxy marketplace. You rent private mobile devices with real SIM cards. Flat $99/device/month with unlimited data transfer. Also does residential at $7/GB.
+- **Why it matters**: True device-level isolation. Each device = unique IMEI, unique SIM, unique carrier fingerprint. 95%+ trust scores
+- **Best for**: High-value TikTok accounts where trust score matters most
+- **Support via Telegram** @coroniumio
+
+### ProxyEmpire -- Dedicated Mobile with Full IP Control
+$1.97 trial. Dedicated 4G/5G with unlimited bandwidth in 50+ US cities plus UK/Austria/Israel. Full IP reset on demand. HTTP/SOCKS5.
+- **Why it matters**: BHW users report highest account survival rates with dedicated mobile proxies
+- **Best for**: Long-term account farming (weeks/months on same IP)
+
+### NodeMaven -- 7-Day Sticky Sessions + IP Quality Filtering
+Real-time IP quality filtering ensures 95% of IPs are clean and undetected. Sticky sessions up to 7 DAYS (vs 30min at most competitors). 99.54% success rate.
+- **Why it matters**: 7-day sticky sessions are unheard of. Perfect for social media where you need the same IP across days of warmup
+- **Caveat**: Higher pricing than budget options
+- **Best for**: Account warmup periods where IP consistency is critical
+
+### DIY Mobile Proxy Farm (Build Your Own)
+
+**Why power users build their own**: $6/mo per proxy vs $25-119/mo buying from providers. Full control. Clean IPs that only you use.
+
+| Solution | Hardware | Software | Cost/Proxy/Mo | Scale Limit |
+|----------|----------|----------|---------------|-------------|
+| **iProxy.online** | Any Android phone | iProxy app ($6-8/mo per device) | $6-8 + data plan | Unlimited |
+| **Proxidize** | USB modems + Proxidize hardware ($59/proxy or $1/GB) | Proxidize cloud dashboard | $59 (hosted) or DIY | 20 modems per Pi |
+| **ProxySmart** | USB modems | ProxySmart software | Data plan only | Unlimited modems |
+| **SocSeeds** | OpenWRT routers, Linux, Android, RPi | SocSeeds UDP proxy | Data plan only | Per hardware |
+| **Raspberry Pi DIY** | RPi 5 + Huawei E3372h USB modems | 3Proxy + huawei-lte-api | ~$5/mo (data) | ~20 modems/Pi |
+
+**iProxy.online is the hidden gem here**: Turn any old Android phone into a 4G/5G proxy for $6/mo. Buy 5 cheap Android phones ($50 each used), 5 prepaid data SIMs ($10-20/mo each), run iProxy. Total: $250 one-time + $80-130/mo for 5 dedicated mobile proxies with unlimited bandwidth. Compare to $445-595 from TheSocialProxy for 5 ports.
+
+**Proxidize** is the pro-tier version: actual hardware product + cloud management. Users report dropping proxy costs from $12/GB to $2/GB. Hardware ships in batches so expect 2-3 week delivery.
+
+### CyberYozh -- All-In-One Proxy + SMS + Fraud Score Checker
+This is not just a proxy provider. CyberYozh combines: mobile/residential/datacenter proxies, SMS activation from 140+ countries ($0.02+), AND fraud-score verification for IPs and phone numbers.
+- **Why it matters**: Check if your proxy IP is already flagged BEFORE running an account through it. Check if a phone number is already burned BEFORE trying to verify
+- **One dashboard for proxies + phone numbers + reputation checking**
+- Browser extension for Chrome/Firefox
+- API for automation (Selenium, Playwright, Puppeteer)
+- **Best for**: Operators who want pre-flight checks on every number and IP
+
+---
+
+## 8B. PHONE VERIFICATION HIDDEN GEMS
+
+### SMSPool -- Non-VoIP from $0.02, Flat Pricing
+Real SIM-backed numbers (not VoIP). Starts at $0.02/verification. 150+ countries. No price surges during demand spikes (competitors jack prices during peak). Auto-refund if code doesn't arrive. $3 minimum deposit.
+- **Why it matters**: Unlike 5sim which mixes VoIP and real numbers, SMSPool is explicitly non-VoIP SIM-backed
+- Platforms confirmed: Steam, Discord, Google, Gmail, Instagram, Twitter/X, WhatsApp, Snapchat, Signal, Uber
+- **TikTok not explicitly listed** -- test before relying on it
+
+### Getatext -- Real Carrier US Numbers (AT&T, T-Mobile, Verizon) + Geo-Filtering
+DaisySMS replacement. Real physical SIM cards from major US carriers. Interactive MAP that lets you filter by state, area code, ZIP code. $0.10+ per verification. $0.50 free welcome balance. No KYC.
+- **Why it matters**: Geo-targeted numbers. If your account claims to be from NYC, you can get a 212/917 area code number. This matches the IP geolocation from your proxy.
+- Auto-refund on failure
+- **Best DaisySMS replacement** (DaisySMS died March 26, 2026)
+
+### VoidMob -- Unified Proxy + SMS + eSIM Platform
+Combines: dedicated/shared 4G/5G mobile proxies, non-VoIP SMS verifications (95%+ success rate), and global eSIMs. One dashboard, no KYC, accepts crypto.
+- **Why it matters**: Buy your proxy AND verify your account from the same platform. Reduces vendor sprawl. Carrier-issued numbers, not recycled VoIP.
+- $3.50-5.50 per successful verification
+- **Best for**: Operators who want one login for proxy + SMS
+
+### HeroSMS -- Bulk-Optimized, 500K+ Daily Numbers
+Built on SMS-Activate heritage. API access and wholesale pricing for high-volume buyers. 500K+ numbers in daily inventory. Covers 700+ platforms.
+- **Caveat**: Support model is built for bulk buyers. If one number fails, you're told "try another country" rather than getting a refund
+- Some users report 99% success; others report frustration
+- **Best for**: High-volume operators (100+ verifications) who can absorb occasional failures
+
+### GrizzlySMS -- Competent Mid-Tier
+78% success rate in testing. Good for Telegram and Discord, weaker on WhatsApp/Instagram. Competitive pricing, 80+ countries.
+- **Best for**: Non-social-media verifications or as a backup provider
+
+### SadCaptcha -- TikTok CAPTCHA Solver ($0.0005-$0.002/solve)
+Not a phone service but essential for TikTok account creation at scale. Solves TikTok's puzzle, rotate, and 3D shape CAPTCHAs with 98-100% accuracy. Python library, REST API, or Chrome extension. Integrates with Selenium and Playwright.
+- Pricing: $0.002/solve (2,500 pack) down to $0.0005/solve (3M pack)
+- PVACreator users report SadCaptcha has highest TikTok mobile registration captcha success rate
+- **Must-have for automated TikTok account creation**
+
+### DEAD SERVICES (Do Not Use)
+| Service | Status | Died |
+|---------|--------|------|
+| SMS-Activate | DEAD | March 2026 (payment processor loss) |
+| DaisySMS | DEAD | March 26, 2026 (no migration) |
+| SMS-Activate.org | DEAD | December 29, 2025 |
+
+**Market consolidation happening**: Three major SMS services died in 4 months. Remaining providers are gaining pricing power. Lock in bulk rates now.
+
+---
+
+## 8C. EMAIL HIDDEN GEMS
+
+### Purelymail -- $10/YEAR for Unlimited Everything
+$10/year flat. No limits on users, domains, storage, or aliases. IMAP, POP3, SMTP. DKIM, catch-all, Rspamd spam filtering. Works with any email client.
+- **Why it matters**: That's $0.83/mo for unlimited custom domain email. Cheaper than every competitor including Zoho's free tier (which caps at 5 users)
+- **Best for**: Maximum aliases per dollar. 50 accounts on custom domains for under a buck a month
+- **Caveat**: Tiny operation. Less reliable than Fastmail/Proton. But for account creation emails, reliability isn't critical
+
+### ImprovMX -- Free Email Forwarding + $2.50/mo SMTP
+Free plan: forward emails from custom domains. Catch-all supported. Up to 100 domains on paid ($2.50/mo).
+- **Why it matters**: Another free forwarding option alongside Cloudflare Email Routing
+- Unlike Cloudflare, doesn't require CF nameservers
+
+### Forward Email -- Open Source, 1.6M+ Domains Served
+Free: unlimited domains, unlimited aliases (forwarding only). Paid: adds SMTP sending. 100% open source.
+- **Why it matters**: Community-trusted, privacy-focused, serves 1.6M+ domains including governments
+- Self-hostable if you want full control
+
+### The Optimal Email Stack for 50 Accounts
+```
+Layer 1: 3 domains registered on Cloudflare ($2-3/mo total)
+Layer 2: Cloudflare Email Routing (catch-all on all 3 domains) -- FREE
+Layer 3: Purelymail ($10/yr) for SMTP sending from any alias
+         OR SimpleLogin ($30/yr) for Proton-integrated reply-from-alias
+Total: $3-5/mo for 50+ unique email addresses that can send AND receive
+```
+
+---
+
+## 8D. EMAIL WARMUP TOOLS (For Cold Email, Not Social Signup)
+
+Relevant if you're using these accounts for outbound or want email deliverability.
+
+| Tool | $/Mo | Unlimited Inboxes? | Free Tier? | Best Feature |
+|------|------|-------------------|-----------|-------------|
+| **TrulyInbox** | $22+ (annual) | Yes (all paid plans) | 10 warmup/day on 1 account | Cheapest per-inbox, charges by daily volume not account count |
+| **Mailivery** | $29 | Yes | 7-day trial | 50K+ active warmup network, unlimited mailboxes |
+| **Warmup Inbox** | $15/inbox (annual) | No (per-inbox) | No | Simple, reliable, lowest per-inbox price |
+| **Mailreach** | $25/inbox | No (per-inbox) | No | Best spam testing integration |
+| **Instantly** | $47+ | Yes (all plans) | 7-day trial (no CC) | Warm-up + full cold email outreach platform |
+| **Lemwarm** | $29/account | No (per-account) | No | Lemlist ecosystem integration |
+
+**Hidden gem**: TrulyInbox at $22/mo with unlimited inboxes. An agency with 10 inboxes pays $22/mo total vs $150-250/mo on per-inbox competitors. At 50 inboxes: $22/mo vs $750-1,250/mo. Massive savings.
+
+**Note**: Email warmup is for cold outreach deliverability, not for social media account creation. But if you're running outbound from these accounts (DMs, cold email campaigns), warmup tools prevent your emails from landing in spam.
+
+---
+
+## 8E. CLOUD PHONES (Alternative to Antidetect Browsers for Mobile-Native Platforms)
+
+TikTok and Instagram are mobile-first platforms. Running them through a desktop antidetect browser is detectable. Cloud phones run real Android instances in the cloud with genuine hardware identifiers.
+
+| Platform | $/Device/Mo | Free Tier | Key Feature | Best For |
+|----------|-------------|-----------|-------------|----------|
+| **GeeLark** | $0.007/min (~$1.20/day cap) | Free minutes included | Real hardware IDs (IMEI, Android ID, MAC) | TikTok farming (mobile-native behavior) |
+| **MoreLogin** | $9+ | Limited | Cloud phone + antidetect browser combo | Multi-platform ops |
+| **Redfinger** | $3.99/mo | 30 min free | Cheapest cloud Android | Budget mobile farming |
+| **BitCloudPhone** | Varies | Trial | Browser-based Android emulator | Quick testing |
+
+**Why cloud phones beat antidetect browsers for TikTok**: TikTok's app checks for real mobile device characteristics -- IMEI, Android ID, cellular signal, device model, touch patterns. An antidetect browser running TikTok's web version lacks all of these signals. Cloud phones emulate real Android devices with genuine hardware fingerprints.
+
+**GeeLark is the power-user pick**: PVACreator users report highest account survival with GeeLark + AntiDetect Browser + automation tools. The $1.20/day cap per device = $36/mo for one always-on virtual phone.
+
+**Budget play**: Redfinger at $3.99/mo per cloud phone. 10 devices = $40/mo for TikTok-native mobile behavior.
+
+---
+
+## 8F. AUTOMATION TOOLKIT (What the Pros Actually Wire Together)
+
+### The Pro Stack (from PVACreator blog + BHW threads)
+```
+PVACreator (bulk account creation)
+  + SadCaptcha (TikTok CAPTCHA solving)
+  + DaisySMS/Getatext/SMSPool (phone verification)
+  + Antidetect Browser (GoLogin/Multilogin)
+  + Mobile Proxies (TheSocialProxy/ProxyLTE/iProxy DIY)
+  + GeeLark (cloud phone for TikTok mobile farming)
+  + JarveePro (social media automation/scheduling)
+```
+
+### Account Survival Tips from BHW/Reddit Power Users
+1. **One mobile proxy can handle ~15 accounts** (BHW consensus) -- but NEVER simultaneously
+2. **Dedicated residential proxies (1 IP per account)** for the highest survival on Instagram
+3. **Mobile proxies for farming/creation, ISP residential for long-term management**
+4. **Warm accounts for 21+ days before ANY promotional content**
+5. **Never use automation tools in the first 14 days** -- manual-like behavior only
+6. **Match proxy geo to phone number geo to email geo** -- consistency signals trust
+7. **If account gets a "verify your identity" prompt, STOP automation for 48 hours** -- manual only
+8. **Android > iOS for verification** -- more number types accepted, less fingerprint scrutiny
+
+### Tools to Avoid (BHW Warnings)
+- **WebBots and Telegram scripts** -- still causing bans and data leaks
+- **Free public SMS numbers** -- 100% burned
+- **Datacenter proxies for social media** -- instantly flagged
+- **Any "unlimited accounts" service under $50/mo** -- either selling your data or using stolen numbers
+
+---
+
+## 8G. REVISED BUDGET TIERS (With Hidden Gems)
+
+### Ultra-Budget: 15 Accounts ($65/mo)
+| Component | Solution | Cost/Mo |
+|-----------|----------|---------|
+| Antidetect | GoLogin 100 profiles | $49 |
+| Proxy | iProxy.online x3 (old Android phones + prepaid SIMs) | ~$18 (app) + data |
+| Phone | SMSPool one-time ($0.02-0.50 x 15) + 5sim backup | ~$5 one-time |
+| Email | Cloudflare catch-all + Purelymail ($10/yr) | $1.66 |
+| **TOTAL** | | **~$69/mo + ~$155 one-time (phones)** |
+
+### Optimized: 30 Accounts ($150/mo)
+| Component | Solution | Cost/Mo |
+|-----------|----------|---------|
+| Antidetect | GoLogin 100 profiles | $49 |
+| Proxy | 5 iProxy devices + 20GB Evomi residential | $40 + $10 = $50 |
+| Phone | Getatext x30 one-time + Hushed x10 persistent | $5 setup + $20/mo |
+| Email | 2 domains + CF catch-all + Purelymail | $2.50 |
+| Captcha | SadCaptcha (TikTok) | ~$5 |
+| **TOTAL** | | **~$127/mo + ~$260 one-time** |
+
+### Full Operation: 50 Accounts ($280/mo)
+| Component | Solution | Cost/Mo |
+|-----------|----------|---------|
+| Antidetect | GoLogin (desktop) + Redfinger x10 cloud phones (TikTok) | $49 + $40 = $89 |
+| Proxy | 8 iProxy devices + 40GB Evomi residential | $64 + $20 = $84 |
+| Phone | SMSPool/Getatext x50 + Hushed x15 persistent | $10 setup + $30/mo |
+| Email | 3 domains + CF catch-all + Purelymail | $3.33 |
+| Captcha | SadCaptcha | ~$10 |
+| Warmup | TrulyInbox (if cold email needed) | $22 |
+| **TOTAL** | | **~$238/mo + ~$460 one-time** |
+
+vs. the "mainstream" 50-account stack at $316-957/mo. Hidden gems cut costs 25-75%.
+
+---
+
+# SECTION 9: DECISION MATRIX -- WHAT TO BUY FIRST
+
+Priority order for spending your first dollar:
+
+| Priority | Component | Why First | Spend |
+|----------|-----------|-----------|-------|
+| 1 | Domain (Cloudflare) | Emails unlock everything | $10/yr |
+| 2 | GoLogin | Profile isolation is non-negotiable | $49/mo |
+| 3 | Prepaid SIMs + old Android phones | DIY mobile proxies = best $/proxy | ~$200 one-time |
+| 4 | iProxy.online | Turns phones into proxies | $6-8/mo per device |
+| 5 | SMSPool or Getatext | Real non-VoIP verification | ~$5-25 per batch |
+| 6 | SadCaptcha | Unlocks automated TikTok creation | ~$5/mo |
+| 7 | Purelymail | SMTP sending from aliases | $10/yr |
+| 8 | CyberYozh | Pre-flight IP/number reputation checks | Per-use |
+
+**Total to get started with 15 real accounts**: ~$270 one-time + ~$65/mo recurring.
+
+---
+
 Sources:
 - [Proxyway Social Media Proxies 2026](https://proxyway.com/best/social-media-proxies)
 - [Bright Data vs Oxylabs vs Smartproxy 2026](https://dev.to/agenthustler/bright-data-vs-oxylabs-vs-smartproxy-which-proxy-provider-should-you-choose-in-2026-2bk5)
@@ -405,3 +674,34 @@ Sources:
 - [VerifySMS SMS-Activate Alternatives 2026](https://verifysms.app/blog/sms-activate-alternative-2026/)
 - [Nadanada Free vs Paid SMS 2026](https://nadanada.me/blog/free-vs-paid-sms-verification-services-2026)
 - [Mailcow VPS Hosting 2026](https://ventusserver.com/for-mailcow-hosting-2026/)
+- [Evomi $0.49/GB Residential Proxies](https://evomi.com/)
+- [FleetProxy Affordable Proxies](https://fleetproxy.io/)
+- [Coronium Mobile Proxy Marketplace](https://www.coronium.io/)
+- [ProxyEmpire Dedicated Mobile Proxies](https://proxyempire.io/dedicated-mobile-proxies-4g/)
+- [NodeMaven 7-Day Sticky Sessions](https://nodemaven.com/)
+- [iProxy.online Turn Phone Into Proxy](https://iproxy.online/)
+- [Proxidize Build Your Own Proxy Farm](https://proxidize.com/)
+- [ProxySmart Mobile Proxy Farm Software](https://proxysmart.org/)
+- [SocSeeds UDP Mobile Proxy Farm](https://socseeds.com/)
+- [SMSPool Non-VoIP Numbers from $0.02](https://www.smspool.net/)
+- [Getatext Real US Carrier Numbers](https://getatext.com/)
+- [VoidMob Unified Proxy + SMS + eSIM](https://voidmob.com/)
+- [HeroSMS Bulk SMS Verification](https://hero-sms.com/)
+- [GrizzlySMS Mid-Tier Verification](https://grizzlysms.com/)
+- [CyberYozh All-In-One Proxy+SMS+Fraud Check](https://app.cyberyozh.com/)
+- [SadCaptcha TikTok CAPTCHA Solver](https://www.sadcaptcha.com/)
+- [DaisySMS Shutdown Notice / Alternatives](https://voidmob.com/blog/best-daisysms-alternatives-2026)
+- [Purelymail $10/Year Unlimited Email](https://purelymail.com/)
+- [ImprovMX Free Email Forwarding](https://improvmx.com/)
+- [Forward Email Open Source 1.6M Domains](https://forwardemail.net/)
+- [TrulyInbox Unlimited Warmup $22/mo](https://www.trulyinbox.com/)
+- [Mailivery Unlimited Mailbox Warmup](https://mailivery.io/)
+- [Instantly Email Warmup + Cold Email](https://instantly.ai/)
+- [GeeLark Cloud Phone for Account Farming](https://www.geelark.com/)
+- [Redfinger Budget Cloud Android](https://www.onrec.com/news/news-archive/top-5-cloud-android-emulators-for-2026-why-redfinger-still-leads-the-pack)
+- [PVACreator Account Farming Tools](https://blog.pvacreator.com/PVACreator-Knowledge-Base/Tools-Pros-Use-to-Farm-Accounts-Without-Getting-Banned-(Even-If-You're-New)/14151)
+- [BlackHatWorld Best ISP Proxies TikTok 2026](https://www.blackhatworld.com/seo/best-isp-proxies-for-tiktok-2026.1797646/)
+- [BlackHatWorld SMS Verification Top 5 2026](https://www.blackhatworld.com/seo/my-top-5-sms-verification-providers-for-account-farming-in-2026.1804544/)
+- [BlackHatWorld Static Residential for Social Media](https://www.blackhatworld.com/seo/what-is-the-highest-quality-static-residential-proxies-provider-for-social-media.1610056/)
+- [Yesim Virtual Numbers for TikTok](https://yesim.app/virtual-number/tiktok/)
+- [Pixelscan Non-VoIP Numbers 2026](https://pixelscan.net/blog/best-non-voip-numbers-for-sms-verification/)
