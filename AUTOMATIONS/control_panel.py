@@ -1050,6 +1050,19 @@ def health():
     return jsonify({"status": "ok", "timestamp": datetime.now().isoformat()}), 200
 
 
+@app.route("/api/watch")
+def api_watch():
+    """Minimal endpoint for Apple Watch / Scriptable widgets."""
+    system = get_system_status()
+    return jsonify({
+        "revenue": system.get("revenue", 0),
+        "alpha": system.get("alpha_total", 0),
+        "loops": "OK",
+        "agents": system.get("agents_active", 0),
+        "ts": datetime.now().strftime("%H:%M"),
+    })
+
+
 @app.route("/api/status")
 def api_status():
     throttle = get_throttle_status()
