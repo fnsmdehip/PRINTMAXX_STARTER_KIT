@@ -1061,11 +1061,42 @@ def compute_composite(scores: dict[str, float], phase: int | None = None) -> flo
     return round(total, 2)
 
 
+def apply_blocker_penalty(composite: float, method: dict) -> float:
+    """Penalize methods blocked by human account creation.
+
+    Methods that can't physically execute today shouldn't be P0.
+    Engagement bait snippets (tweet hooks) get routed to content, not ranked.
+    """
+    text = str(method.get("method", "") or method.get("title", "")).lower()
+
+    # Engagement bait detection: tweet hooks that aren't real methods
+    bait_signals = [
+        text.startswith("i ") and len(text) < 100,
+        text.startswith('"') and text.endswith('"'),
+        "thought this was fake" in text,
+        "no one talks about" in text,
+        "here's what happened" in text,
+    ]
+    if sum(bait_signals) >= 1 and len(text) < 120:
+        return composite * 0.6  # Demote engagement bait from P0
+
+    # Account blocker penalty
+    blockers = str(method.get("blockers", "") or method.get("status", "")).upper()
+    if "NEED_ACCOUNT" in blockers or "HUMAN_BLOCKED" in blockers or "BLOCKED" in blockers:
+        return composite * 0.5  # Methods that can't run today aren't P0
+
+    return composite
+
+
 def assign_priority(composite: float, upfront_cost: float, speed: float) -> str:
     """Assign P0/P1/P2/P3/KILL based on composite, cost, and speed.
 
     P0 threshold at 7.5 (not 8.0) because at $0 revenue, the system needs
     to surface enough actionable methods to hit first dollar fast.
+
+    INFRA-FIRST: Nothing runs without accounts and infra. Methods requiring
+    unresolved human blockers are penalized before this function via
+    apply_blocker_penalty().
     """
     if composite >= 7.5 and upfront_cost <= 100 and speed >= 6:
         return "P0"
@@ -1163,6 +1194,7 @@ def rank_all(methods: Optional[list[dict]] = None, only_new: bool = False,
             "liability_risk": liab_score,
         }
         composite = compute_composite(scores, phase)
+        composite = apply_blocker_penalty(composite, method)
         priority = assign_priority(composite, est_cost, speed_score)
         action = recommend_action(priority, method.get("status", "NEW"), composite)
 
