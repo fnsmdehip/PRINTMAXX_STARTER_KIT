@@ -1,5 +1,5 @@
 {
-  "ts": "2026-04-17T07:36:15.575+00:00",
+  "ts": "2026-04-17T09:05:11.386+00:00",
   "meta": {
     "mode": "dag",
     "resume": false
@@ -12,10 +12,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 27072,
+      "duration_ms": 300056,
       "result": {
         "status": "failed",
-        "output_tail": "pl/_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_CLOSED at https://x.com/home\nCall log:\n  - navigating to \"https://x.com/home\", waiting until \"domcontentloaded\"\n\n"
+        "output_tail": "Timeout after 300s"
       }
     },
     "scrape_reddit": {
@@ -25,10 +25,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 84046,
+      "duration_ms": 92961,
       "result": {
         "status": "ok",
-        "output_tail": "20] r/LocalLLaMA...\n    \u2192 Found 10 posts with signal\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
+        "output_tail": "NS/reddit_scraper_output/reddit_20260417_050134.json\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
       }
     },
     "scrape_hn": {
@@ -38,10 +38,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 177659,
+      "duration_ms": 83227,
       "result": {
         "status": "ok",
-        "output_tail": "By ROI:      {'MEDIUM': 71, 'HIGH': 8, 'HIGHEST': 3}\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
+        "output_tail": "1, 'CONTENT_FORMAT': 1}\n  By ROI:      {'MEDIUM': 9}\n/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.4.0) or chardet (7.2.0)/charset_normalizer (3.4.2) doesn't match a supported version!\n  warnings.warn(\n"
       }
     },
     "merge_results": {
@@ -60,7 +60,7 @@
         "twitter": "failed",
         "reddit": "ok",
         "hn": "ok",
-        "merged_at": "2026-04-17T03:35:59.111875",
+        "merged_at": "2026-04-17T05:05:01.612815",
         "scrapers_ok": 2,
         "scrapers_total": 3
       }
@@ -74,10 +74,10 @@
       "retry_count": 1,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 7759,
+      "duration_ms": 4367,
       "result": {
         "status": "ok",
-        "output_tail": "===\n\nTotal rows in CSV:  19656\nEntries processed:  82\nEntries scored:     82\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         82\n    (of which deduped: 0)\n[2026-04-17T03:36:07-04:00] === Alpha Auto-Processor complete ===\n"
+        "output_tail": "==\n\nTotal rows in CSV:  19884\nEntries processed:  85\nEntries scored:     85\n\nRouting breakdown:\n  NEW VENTURE:      0\n  BOLSTER EXISTING: 0\n  RESEARCH TASKS:   0\n  HIGH-VALUE QUEUE: 0\n  ARCHIVED:         85\n    (of which deduped: 18)\n[2026-04-17T05:05:06-04:00] === Alpha Auto-Processor complete ===\n"
       }
     },
     "intelligence_router": {
@@ -89,7 +89,7 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 122,
+      "duration_ms": 107,
       "result": {
         "status": "failed",
         "output_tail": "usage: intelligence_router.py [-h] [--venture VENTURE] [--task TASK] [--json]\n                              [--brief] [--full] [--stats] [--catalog]\n                              [--list-ventures] [--alpha-count ALPHA_COUNT]\nintelligence_router.py: error: unrecognized arguments: --refresh\n"
@@ -104,10 +104,10 @@
       "retry_count": 0,
       "status": "COMPLETE",
       "error": "",
-      "duration_ms": 8298,
+      "duration_ms": 4925,
       "result": {
         "status": "ok",
-        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[03:36:15] [RANKER] [INFO] Wrote 8953 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[03:36:15] [RANKER] [INFO] Full ranking cycle complete\n[03:36:15] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
+        "output_tail": "/CAPITAL_GENESIS_PRIORITY_STACK.md\n[05:05:11] [RANKER] [INFO] Wrote 9003 rankings to /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CAPITAL_GENESIS_RANKINGS.csv\n[05:05:11] [RANKER] [INFO] Full ranking cycle complete\n[05:05:11] [RANKER] [INFO] === Capital Genesis Ranker complete ===\n"
       }
     }
   }

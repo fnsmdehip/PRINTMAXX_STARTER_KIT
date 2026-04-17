@@ -2,9 +2,9 @@
   "agents": {
     "gap_hunter": {
       "installed_at": "2026-03-20T05:00:58.543679",
-      "status": "ACTIVE",
-      "interval": "weekly",
-      "reason": "C64 PROMOTED B to A. 3 deploys (androx, dosewell, pocket-alexandria), 6 concrete gaps identified.",
+      "status": "COLD_STORAGE",
+      "interval": "COLD_STORAGE",
+      "reason": "C68 COLD STORAGE. 49/49 affiliate pages deployed, all with placeholder IDs. Wake when any affiliate account created.",
       "tier": "A",
       "launchd_status": "UNLOADED_C65",
       "c52_updated": "2026-04-02T20:47:00+00:00",
@@ -12,7 +12,10 @@
       "prev_hibernated_by": "swarm_brain_cycle23",
       "c64_updated": "2026-04-06T20:20:00+00:00",
       "c65_updated": "2026-04-07T00:45:00+00:00",
-      "c67_updated": "2026-04-07T08:57:00+00:00"
+      "c67_updated": "2026-04-07T08:57:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z",
+      "wake_condition": "any_affiliate_account_created"
     },
     "opportunity_scanner": {
       "installed_at": "2026-03-20T05:00:58.556575",
@@ -30,28 +33,32 @@
     },
     "competitor_stalker": {
       "installed_at": "2026-03-20T05:00:58.730223",
-      "status": "ACTIVE",
+      "status": "COLD_STORAGE",
       "reason": "C51 PROMOTED B\u2192A-tier. Found TruthScopeAI.com naming collision (saves trademark dispute + App Store rejection). Updated Agent Bible listing w/ competitive diff vs ClaudeCodeAgents.com. Whop 3% vs Gumroad 10%. Best output since inception.",
       "tier": "A",
-      "interval": "monthly",
+      "interval": "COLD_STORAGE",
       "launchd_status": "UNLOADED",
       "c48_note": "Strategic intel value. Claude Code edu death changes entire product strategy.",
       "c48_updated": "2026-04-01T04:58:00+00:00",
-      "c67_updated": "2026-04-07T08:57:00+00:00"
+      "c67_updated": "2026-04-07T08:57:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "asset_deployer": {
       "installed_at": "2026-03-20T05:00:58.910698",
-      "status": "ACTIVE",
+      "status": "COLD_STORAGE",
       "reason": "C52 LAUNCHD UNLOADED. Was still loaded at 2h interval despite C51 weekly directive. 388 sites healthy, 0 new deploys possible (surge blocked). Weekly via manual trigger only.",
       "launchd_status": "UNLOADED_C65",
-      "interval": "weekly",
+      "interval": "COLD_STORAGE",
       "tier": "B",
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "prev_killed_at": "2026-03-15T04:30:04Z",
       "prev_killed_by": "swarm_brain_cycle14",
       "c64_updated": "2026-04-06T20:20:00+00:00",
       "c65_updated": "2026-04-07T00:45:00+00:00",
-      "c67_updated": "2026-04-07T08:57:00+00:00"
+      "c67_updated": "2026-04-07T08:57:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "content_compounder": {
       "installed_at": "2026-03-20T05:00:59.080766",
@@ -66,25 +73,25 @@
     },
     "lead_machine": {
       "installed_at": "2026-03-20T05:00:59.278636",
-      "status": "ACTIVE",
-      "interval": "3h",
-      "reason": "C64 PROMOTED B to A. 10 leads (3 at 8.0+), 5 Upwork proposals, 5 HVAC, 1 phone, 10 drafts. Best lead quality since inception.",
+      "status": "COLD_STORAGE",
+      "interval": "COLD_STORAGE",
+      "reason": "C68 COLD STORAGE. 170 leads, 0 contacted. Agent produced A-tier output but pipeline blocked on human outreach. Wake on first email/application sent.",
       "tier": "A",
       "leads_total": 170,
       "leads_contacted": 0,
-      "wake_condition": "first_cold_email_sent",
+      "wake_condition": "first_cold_email_sent_or_upwork_application",
       "launchd_status": "UNLOADED_C65",
-      "c47_note": "20 leads in 2 cycles, 5 email-ready with drafts. Blocked on email infra.",
       "c47_updated": "2026-04-01T04:34:04.609903+00:00",
       "prev_hibernated_at": "2026-03-19T14:50:00Z",
       "prev_hibernated_by": "swarm_brain_cycle22",
       "c64_updated": "2026-04-06T20:20:00+00:00",
-      "c65_updated": "2026-04-07T00:45:00+00:00",
-      "c67_updated": "2026-04-07T08:57:00+00:00"
+      "c67_updated": "2026-04-07T08:57:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "seo_aso_optimizer": {
       "installed_at": "2026-03-20T05:00:59.458367",
-      "status": "HIBERNATED",
+      "status": "COLD_STORAGE",
       "hibernated_at": "2026-04-02T20:47:00Z",
       "hibernated_by": "swarm_brain_cycle52",
       "reason": "C52 LAUNCHD UNLOADED. Ran 3 times today (12:00, 18:00, 22:00) despite C50 hibernate + C51 enforcement. Was still loaded at 6h interval. Fixed 600 canonicals (valuable one-time). Unloaded from launchd. Wake: Surge Plus or Cloudflare.",
@@ -94,16 +101,19 @@
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "prev_killed_at": "2026-03-15T04:30:05Z",
       "prev_killed_by": "swarm_brain_cycle14",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     },
     "conversion_optimizer": {
       "installed_at": "2026-03-20T05:00:59.632353",
-      "status": "ACTIVE",
+      "status": "COLD_STORAGE",
       "killed_at": "2026-03-08T19:30:00Z",
       "killed_by": "swarm_brain_cycle8",
       "reason": "7 cycles mandated to fix 17 dead CTAs, 0 fixed.",
       "launchd_status": "UNLOADED_C65",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "quality_enforcer": {
       "installed_at": "2026-03-20T05:00:59.644872",
@@ -118,7 +128,7 @@
     },
     "trend_synthesizer": {
       "installed_at": "2026-03-20T05:00:59.819510",
-      "status": "ACTIVE",
+      "status": "COLD_STORAGE",
       "hibernated_at": "2026-03-13T15:35:04Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. Wake at first revenue.",
@@ -126,12 +136,14 @@
       "c47_flag": "WASTEFUL_RUNNING",
       "c47_note": "Launchd running despite HIBERNATED state.",
       "c47_updated": "2026-04-01T04:34:04.609903+00:00",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "cross_pollinator": {
       "installed_at": "2026-03-20T05:00:59.982738",
-      "status": "ACTIVE",
-      "interval": "MANUAL_ONLY",
+      "status": "COLD_STORAGE",
+      "interval": "COLD_STORAGE",
       "reason": "C56: GHOST EXECUTION PATH SEALED. Launchd unloaded C55. Cron disabled C56. Both off. Wake: manual trigger only.",
       "tier": "A",
       "connections": 42,
@@ -142,23 +154,27 @@
       "c55_note": "UNLOADED from launchd. Plist still has 14400s (4h) despite C54 claiming 12h -- brain wrote fiction to state file for 3+ cycles. Plist interval was NEVER changed. To reload at 24h: human must edit ~/Library/LaunchAgents/com.printmaxx.swarm.cross_pollinator.plist to set <integer>86400</integer> then launchctl load it.",
       "cron_status": "DISABLED_C56",
       "c56_updated": "2026-04-04T18:55:00+00:00",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "revenue_tracker": {
       "installed_at": "2026-03-20T05:01:00.701964",
-      "status": "ACTIVE",
+      "status": "COLD_STORAGE",
       "reason": "C52 PROMOTED to weekly. Was hibernated, BUT C14 output was the single most valuable agent output this cycle: found 7 revenue leaks, AUTONOMOUSLY FIXED 2 (storefront mailto\u2192Stripe, added 4 Claude Code products to shop). First agent to actually fix a revenue path. Unloaded from launchd 8h interval. Weekly manual trigger.",
       "tier": "A",
       "launchd_status": "UNLOADED_C65",
-      "interval": "weekly",
+      "interval": "COLD_STORAGE",
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "prev_hibernated_at": "2026-03-17T10:55:03Z",
       "prev_hibernated_by": "swarm_brain_cycle16",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "system_healer": {
       "installed_at": "2026-03-28T22:17:32.921309",
-      "status": "BROKEN",
+      "status": "COLD_STORAGE",
       "interval": "UNLOADED",
       "promoted_at": "2026-03-19T05:15:00Z",
       "promoted_by": "swarm_brain_cycle20",
@@ -167,15 +183,17 @@
       "launchd_status": "UNLOADED_C65",
       "c53_updated": "2026-04-03T02:41:00+00:00",
       "bug": "PROCEDURAL MEMORY section in plist prompt has unescaped parens \u2014 bash interprets as subshell syntax",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     },
     "data_janitor": {
       "installed_at": "2026-03-20T05:01:00.882015",
-      "status": "ACTIVE",
-      "interval": "48h",
-      "reason": "C64 CONFIRMED A-tier. 904 alpha dupes, 374 competitive intel dupes (91%), 425MB freed.",
+      "status": "COLD_STORAGE",
+      "interval": "7d",
+      "reason": "C68 COLD STORAGE. Move from 48h to 7-day. Alpha staging 39,157 rows stable. 99.93% JSON health. Wake on human reactivation.",
       "tier": "A",
-      "launchd_status": "LOADED_48H",
+      "launchd_status": "SHOULD_UNLOAD",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
       "c54_updated": "2026-04-04T04:40:00+00:00",
       "c59_evaluation": "9.5/10. Best cycle: 3795 dupes removed, 882 status fields repaired, 529 JSON validated, 172 CSV validated.",
       "c59_updated": "2026-04-05T22:35:00+00:00",
@@ -185,7 +203,7 @@
     },
     "distribution_engine": {
       "installed_at": "2026-03-20T05:01:01.058336",
-      "status": "HIBERNATED",
+      "status": "COLD_STORAGE",
       "interval": "HIBERNATED",
       "reason": "C66 CONFIRMED HIBERNATED. 1,572 posts queued, 0 posted. No social accounts. Content backlog 3+ months deep. Generating more is pure waste. Wake condition unchanged.",
       "tier": "HIBERNATED",
@@ -195,12 +213,13 @@
       "c65_updated": "2026-04-07T00:45:00+00:00",
       "c66_updated": "2026-04-07T04:55:00+00:00",
       "c66_demoted_from": "B",
-      "c67_updated": "2026-04-07T08:57:00+00:00"
+      "c67_updated": "2026-04-07T08:57:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     },
     "inbound_maximizer": {
       "installed_at": "2026-03-20T05:01:01.230752",
-      "status": "ACTIVE",
-      "interval": "HIBERNATED",
+      "status": "COLD_STORAGE",
+      "interval": "COLD_STORAGE",
       "hibernated_at": "2026-03-20T02:58:00Z",
       "hibernated_by": "swarm_brain_cycle23",
       "reason": "HIBERNATE Cycle 23. TRUE MINIMAL MAINTENANCE. 3 mandate violations, final warning. 15 lead magnets created, 0 with traffic. Spared from KILL \u2014 hibernation achieves same effect. Wake condition: any inbound traffic detected.",
@@ -209,25 +228,30 @@
       "launchd_status": "UNLOADED_C65",
       "zombie_killed_at": "2026-03-29T01:50:00Z",
       "zombie_killed_by": "swarm_brain_cycle35",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "swarm_brain": {
       "installed_at": "2026-03-23T12:45:07.326900",
-      "status": "ACTIVE",
-      "interval": "24h",
-      "reason": "C66: Corrected launchd count (5 loaded not 3), cron gaps (6 not 8), alpha stabilized. distribution_engine hibernated. COLD STORAGE COUNTDOWN Apr 14. System in best technical shape. Revenue sole blocker.",
+      "status": "COLD_STORAGE",
+      "interval": "COLD_STORAGE",
+      "reason": "C68 COLD STORAGE EXECUTED. Day 73, $0 revenue. 68 cycles, 880 decisions. System feature-complete. All agents cold-stored. Wake on any human revenue action.",
       "tier": "S",
-      "launchd_status": "LOADED",
-      "last_cycle": 66,
-      "last_run": "2026-04-07T04:55:00Z",
-      "c55_note": "Cycle 55. CRON AUDIT. Discovered venture_autonomy/ceo_agent/loop_closer burning rate limit via cron while launchd agents frozen. Recommended disabling 3 cron entries. Cross_pollinator 12h to 24h. Day 65 cold storage trigger if no human action.",
+      "launchd_status": "SHOULD_UNLOAD",
+      "last_cycle": 68,
+      "last_run": "2026-04-17T04:10:00Z",
       "c55_updated": "2026-04-04T14:39:00+00:00",
       "c59_updated": "2026-04-05T22:35:00+00:00",
       "launchd_actual_loaded": 5,
-      "launchd_should_be": 3,
+      "launchd_should_be": 0,
       "c65_updated": "2026-04-07T00:45:00+00:00",
       "c66_updated": "2026-04-07T04:55:00+00:00",
-      "cold_storage_trigger": "2026-04-14T00:00:00Z"
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_executed": "2026-04-17T04:10:00Z",
+      "cold_storage_trigger": "2026-04-14T00:00:00Z",
+      "total_cycles": 68,
+      "total_decisions": 880
     },
     "video_factory": {
       "installed_at": "2026-03-06T23:06:18.197386",
@@ -240,52 +264,58 @@
     },
     "image_factory": {
       "installed_at": "2026-03-06T23:06:18.222274",
-      "status": "HIBERNATED",
+      "status": "COLD_STORAGE",
       "hibernated_at": "2026-03-13T15:35:06Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. 30+ unused PNGs.",
       "launchd_status": "UNLOADED_C65",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     },
     "quality_gate": {
       "installed_at": "2026-03-18T21:04:39.893054",
-      "status": "HIBERNATED",
+      "status": "COLD_STORAGE",
       "interval": "HIBERNATED",
       "hibernated_at": "2026-03-20T02:58:00Z",
       "hibernated_by": "swarm_brain_cycle23",
       "reason": "HIBERNATE Cycle 23. TRUE MINIMAL MAINTENANCE. Nothing new being produced to gate. Wake condition: content production resumes.",
       "tier": "C",
       "launchd_status": "UNLOADED_C65",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     },
     "playwright_tester": {
       "installed_at": "2026-03-18T21:04:40.038605",
-      "status": "ACTIVE",
-      "interval": "weekly",
+      "status": "COLD_STORAGE",
+      "interval": "COLD_STORAGE",
       "reason": "C52 LAUNCHD UNLOADED. Was still loaded at 4h interval (PID 29431 active during C52) despite C51 weekly directive. 80.3% health stable across 909 sites. Weekly via manual trigger.",
       "tier": "B",
       "launchd_status": "UNLOADED_C65",
       "c52_updated": "2026-04-02T20:47:00+00:00",
       "c65_updated": "2026-04-07T00:45:00+00:00",
-      "c67_updated": "2026-04-07T08:57:00+00:00"
+      "c67_updated": "2026-04-07T08:57:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00",
+      "cold_storage_at": "2026-04-17T04:10:00Z"
     },
     "alert_dispatcher": {
       "installed_at": "2026-03-08T03:42:03.272426",
-      "status": "HIBERNATED",
+      "status": "COLD_STORAGE",
       "hibernated_at": "2026-03-13T15:35:07Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. No notification channels.",
       "launchd_status": "UNLOADED_C65",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     },
     "social_poster": {
       "installed_at": "2026-03-08T03:42:04.287168",
-      "status": "HIBERNATED",
+      "status": "COLD_STORAGE",
       "hibernated_at": "2026-03-13T15:35:05Z",
       "hibernated_by": "swarm_brain_cycle12",
       "reason": "RE-HIBERNATE. No accounts.",
       "launchd_status": "UNLOADED_C65",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     },
     "meta_executor": {
       "status": "KILLED",
@@ -297,20 +327,21 @@
     },
     "growth_strategist": {
       "installed_at": "2026-03-18T06:10:31.251997",
-      "status": "HIBERNATED",
+      "status": "COLD_STORAGE",
       "hibernated_at": "2026-03-18T16:00:06Z",
       "hibernated_by": "swarm_brain_cycle17",
       "reason": "HIBERNATE. Wake at first revenue or social account.",
       "tier": "C",
       "launchd_status": "UNLOADED_C65",
-      "c65_updated": "2026-04-07T00:45:00+00:00"
+      "c65_updated": "2026-04-07T00:45:00+00:00",
+      "c68_updated": "2026-04-17T04:10:00+00:00"
     }
   },
   "deployed_at": "2026-03-23T12:45:07.327997",
-  "brain_cycles": 66,
-  "last_brain_cycle": 67,
+  "brain_cycles": 68,
+  "last_brain_cycle": 68,
   "conservation_mode": true,
-  "conservation_level": "DEEP_FREEZE",
+  "conservation_level": "COLD_STORAGE",
   "daily_runs_target": 1,
   "feedback_loop_status": "DEFUNCT_CYCLE12_CONFIRMED_BROKEN_C53",
   "agents_hibernated_cycle23": [
@@ -346,7 +377,7 @@
   "disk_gb_free": 139,
   "site_health_pct": 82.1,
   "site_count_tested": 156,
-  "alpha_entries_total": 21035,
+  "alpha_entries_total": 39157,
   "zombie_schedules_purged_cycle40": 12,
   "zombie_processes_killed_cycle40": 4,
   "posts_queued": 1485,
@@ -376,10 +407,10 @@
     "growth_strategist": "first_revenue_or_social_account",
     "ALL_AGENTS": "any_human_activation_action"
   },
-  "last_brain_run": "2026-04-06T20:20:00+00:00",
-  "day_count": 62,
+  "last_brain_run": "2026-04-17T04:10:00+00:00",
+  "day_count": 73,
   "revenue": 0,
-  "last_brain_ts": "2026-04-07T08:57:00Z",
+  "last_brain_ts": "2026-04-17T04:10:00Z",
   "cron_entries_active": 42,
   "cron_backup": "AUTOMATIONS/agent/cron_backup_pre_c56.txt",
   "launchd_agents_should_be": 3,
@@ -402,5 +433,15 @@
   "c64_note": "ZOMBIE OUTBREAK. 26 launchd loaded vs 3 needed. 5 active PIDs should be dead. lead_machine+gap_hunter promoted A-tier. 8 missing crons. Pipeline healthy.",
   "c64_updated": "2026-04-06T20:20:00+00:00",
   "cold_storage_date": "2026-04-14",
-  "cold_storage_days_remaining": 6
+  "cold_storage_days_remaining": 0,
+  "cold_storage_executed": "2026-04-17",
+  "cold_storage_executed_cycle": 68,
+  "reactivation_triggers": {
+    "upwork_application": "wake lead_machine",
+    "gumroad_account": "wake gap_hunter + distribution_engine",
+    "first_cold_email": "wake lead_machine + outbound ventures",
+    "stripe_payment": "wake revenue_tracker + all A-tier",
+    "social_account": "wake content_compounder + social_poster",
+    "affiliate_signup": "wake gap_hunter + affiliate ventures"
+  }
 }

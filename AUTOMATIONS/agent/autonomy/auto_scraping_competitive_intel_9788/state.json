@@ -1,10 +1,10 @@
 {
     "venture": "competitive_intel",
-    "last_cycle": 178,
-    "last_run": "2026-04-07T13:38:12.224568+00:00",
-    "cumulative_blue_oceans": 1120,
-    "ci_csv_rows": 156,
-    "alpha_csv_rows": 36911,
+    "last_cycle": 181,
+    "last_run": "2026-04-17T10:54:11.689118+00:00",
+    "cumulative_blue_oceans": 1150,
+    "ci_csv_rows": 230,
+    "alpha_csv_rows": 40126,
     "strategies_covered": [
         "HEALTH + FITNESS + WELLNESS + NUTRITION",
         "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -73,9 +73,12 @@
         "EMOTIONAL INTELLIGENCE + EMPATHY SCIENCE + SOCIAL COGNITION",
         "ATTACHMENT THEORY + RELATIONSHIP SCIENCE + INTERPERSONAL NEUROSCIENCE",
         "TRAUMA SCIENCE + POLYVAGAL THEORY + NERVOUS SYSTEM REGULATION + SOMATIC THERAPY",
-        "GRIEF SCIENCE + LOSS PSYCHOLOGY + BEREAVEMENT NEUROSCIENCE"
+        "GRIEF SCIENCE + LOSS PSYCHOLOGY + BEREAVEMENT NEUROSCIENCE",
+        "LANGUAGE LEARNING NEUROSCIENCE + BILINGUALISM + POLYGLOT SCIENCE",
+        "SOCIAL COGNITION NEUROSCIENCE + THEORY OF MIND + EMPATHY SCIENCE",
+        "PERSUASION SCIENCE + INFLUENCE PSYCHOLOGY + SOCIAL PROOF NEUROSCIENCE"
     ],
-    "next_strategy": "LANGUAGE LEARNING NEUROSCIENCE + BILINGUALISM + POLYGLOT SCIENCE",
+    "next_strategy": "COMMITMENT + CONSISTENCY PSYCHOLOGY + COGNITIVE DISSONANCE NEUROSCIENCE",
     "top_all_time": [
         {
             "name": "Daily CS Fundamentals Streak",
@@ -276,33 +279,58 @@
             "name": "Daily Anxious Avoidant Attachment Streak",
             "score": 25,
             "cycle": 172
+        },
+        {
+            "name": "Daily Social Proof Neuroscience Streak",
+            "score": 25,
+            "cycle": 181
+        },
+        {
+            "name": "Daily Cialdini Influence Science Streak",
+            "score": 25,
+            "cycle": 181
+        },
+        {
+            "name": "Daily Reciprocity Neuroscience Streak",
+            "score": 25,
+            "cycle": 181
+        },
+        {
+            "name": "Daily Scarcity FOMO Neuroscience Streak",
+            "score": 25,
+            "cycle": 181
+        },
+        {
+            "name": "Daily Persuasion Neural Pathways Streak",
+            "score": 25,
+            "cycle": 181
         }
     ],
     "status": "RUNNING",
     "top_performers": [
         {
-            "niche": "daily_grief_neuroscience_streak",
-            "display_name": "Daily Grief Neuroscience Streak",
+            "niche": "daily_social_proof_neuroscience_streak",
+            "display_name": "Daily Social Proof Neuroscience Streak",
             "score": 25,
-            "community": 48320000,
+            "community": 36470000,
             "priority": "P0",
             "price": "$5.99-$9.99/mo",
             "is_new": true
         },
         {
-            "niche": "daily_bereavement_science_streak",
-            "display_name": "Daily Bereavement Science Streak",
+            "niche": "daily_scarcity_fomo_neuroscience_streak",
+            "display_name": "Daily Scarcity FOMO Neuroscience Streak",
             "score": 25,
-            "community": 55450000,
+            "community": 36790000,
             "priority": "P0",
             "price": "$5.99-$9.99/mo",
             "is_new": true
         },
         {
-            "niche": "daily_complicated_grief_science_streak",
-            "display_name": "Daily Complicated Grief Science Streak",
+            "niche": "daily_persuasion_neural_pathways_streak",
+            "display_name": "Daily Persuasion Neural Pathways Streak",
             "score": 25,
-            "community": 34240000,
+            "community": 35660000,
             "priority": "P0",
             "price": "$5.99-$9.99/mo",
             "is_new": true
@@ -378,6 +406,31 @@
             "name": "Daily Complicated Grief Science Streak",
             "score": 25,
             "cycle": 178
+        },
+        {
+            "name": "Daily Bilingualism Neuroscience Streak",
+            "score": 25,
+            "cycle": 179
+        },
+        {
+            "name": "Daily Polyglot Brain Science Streak",
+            "score": 25,
+            "cycle": 179
+        },
+        {
+            "name": "Daily Critical Period Language Neuroscience Streak",
+            "score": 25,
+            "cycle": 179
+        },
+        {
+            "name": "Daily Language Acquisition Neuroscience Streak",
+            "score": 25,
+            "cycle": 179
+        },
+        {
+            "name": "Daily Multilingualism Dementia Prevention Streak",
+            "score": 25,
+            "cycle": 179
         }
     ]
 }

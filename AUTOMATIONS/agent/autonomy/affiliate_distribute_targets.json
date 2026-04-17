@@ -1,85 +1,5 @@
 [
   {
-    "post_slug": "alpha_cycle_mar7_compound",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/alpha_cycle_mar7_compound.md",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "---",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "POST_THESE_NOW_MAR7",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/POST_THESE_NOW_MAR7.md",
-    "matched_affiliate_category": "productivity",
-    "hook": "```",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for productivity - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "opp_scanner_posts_20260307",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/opp_scanner_posts_20260307.md",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "**Status:** PENDING_REVIEW",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "inbound_cta_20260318",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/inbound_cta_20260318.txt",
-    "matched_affiliate_category": "app_dev",
-    "hook": "--- POST 1 (reply bait / tool alpha) ---",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "twitter_PRINTMAXXER_20260318_1915",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/twitter_PRINTMAXXER_20260318_1915.txt",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "PROFILE: @PRINTMAXXER",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "research_cycle_20260318_1850",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/research_cycle_20260318_1850.txt",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "---",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-03-18T20:40:56"
-  },
-  {
-    "post_slug": "20260401_claude_code_cheatsheet_amplify_3",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/20260401_claude_code_cheatsheet_amplify_3.md",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "Platform: X/Twitter",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-04-01T00:46:18"
-  },
-  {
-    "post_slug": "20260401_claude_code_cheatsheet_amplify_2",
-    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/20260401_claude_code_cheatsheet_amplify_2.md",
-    "matched_affiliate_category": "ai_tools",
-    "hook": "Platform: X/Twitter",
-    "distribute_action": "append_affiliate_cta",
-    "cta_template": "[relevant tool for ai_tools - add affiliate link here]",
-    "status": "READY",
-    "detected_at": "2026-04-01T00:46:18"
-  },
-  {
     "post_slug": "20260401_claude_code_cheatsheet_amplify_1",
     "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/20260401_claude_code_cheatsheet_amplify_1.md",
     "matched_affiliate_category": "ai_tools",
@@ -2073,5 +1993,85 @@
     "cta_template": "[relevant tool for app_dev - add affiliate link here]",
     "status": "READY",
     "detected_at": "2026-04-15T05:50:00"
+  },
+  {
+    "post_slug": "app_teaser_daily_grief_resilience_science_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_grief_resilience_science_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Grief Resilience Science Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
+  },
+  {
+    "post_slug": "app_teaser_daily_pet_loss_grief_science_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_pet_loss_grief_science_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Pet Loss Grief Science Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
+  },
+  {
+    "post_slug": "app_teaser_daily_disenfranchised_grief_science_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_disenfranchised_grief_science_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Disenfranchised Grief Science Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
+  },
+  {
+    "post_slug": "app_teaser_daily_anticipatory_grief_science_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_anticipatory_grief_science_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Anticipatory Grief Science Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
+  },
+  {
+    "post_slug": "app_teaser_daily_grief_integration_science_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_grief_integration_science_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Grief Integration Science Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
+  },
+  {
+    "post_slug": "app_teaser_daily_complicated_grief_science_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_complicated_grief_science_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Complicated Grief Science Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
+  },
+  {
+    "post_slug": "app_teaser_daily_bereavement_science_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_bereavement_science_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Bereavement Science Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
+  },
+  {
+    "post_slug": "app_teaser_daily_grief_neuroscience_streak_20260415",
+    "file": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/CONTENT/social/posting_queue/app_teaser_daily_grief_neuroscience_streak_20260415.md",
+    "matched_affiliate_category": "app_dev",
+    "hook": "building Grief Neuroscience Daily",
+    "distribute_action": "append_affiliate_cta",
+    "cta_template": "[relevant tool for app_dev - add affiliate link here]",
+    "status": "READY",
+    "detected_at": "2026-04-17T05:50:01"
   }
 ]
