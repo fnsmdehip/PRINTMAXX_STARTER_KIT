@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-15T05:00:51.973269",
+  "api_calls": 19,
+  "total_filings": 113,
+  "unique_filings": 2,
+  "written_to_alpha": 2,
+  "top_results": [
+    {
+      "company": "Blaize Holdings, Inc.  (BZAI, BZAIW)  (CIK 0001871638)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "First Choice Healthcare Solutions, Inc.  (FCHS)  (CIK 0001416876)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}

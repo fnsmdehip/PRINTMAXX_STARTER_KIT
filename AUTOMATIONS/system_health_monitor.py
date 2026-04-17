@@ -80,16 +80,16 @@ LIVE_SITES = [
 
 # Key crontab markers that prove the right crontab is installed
 CRON_MARKERS = [
-    "overnight_master_runner",
-    "daily_nocost_rbi_scanner",
-    "venture_performance_tracker",
-    "freelance_demand_scanner",
-    "ecom_arb_engine",
-    "trend_aggregator",
-    "signal_aggregator",
-    "memory_manager",
-    "closed_loop_pipeline",
-    "printmaxx_brain",
+    "morning_intelligence_dag",
+    "capital_genesis_ranker",
+    "decision_engine",
+    "rbi_loop",
+    "daily_digest",
+    "session_briefing",
+    "auto_approve",
+    "perpetual_guardian",
+    "backup_system",
+    "system_health_monitor",
 ]
 
 # ANSI color codes

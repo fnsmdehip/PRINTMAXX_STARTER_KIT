@@ -1,6 +1,36 @@
 # PERSISTENT TASK TRACKER
 # Status: ACTIVE — READ THIS EVERY SESSION START, AFTER EVERY COMPACTION
-# Updated: 2026-03-21
+# Updated: 2026-04-17
+
+### INFRA RECOVERY SESSION — 2026-04-17 (Opus 4.6 1M)
+- **Status:** COMPLETE
+- **What happened:**
+  - [x] CEO lock file removed (stale since Mar 28, PID 60730)
+  - [x] Morning pipeline fired manually (DAG, auto-approve, aggregator, digest, health)
+  - [x] INFRA_AUDIT.md corrected (4 inaccuracies fixed)
+  - [x] Health monitor cron markers updated from pre-v9 to v9 names
+  - [x] Control panel /health endpoint added
+  - [x] 10 dispatch worktrees cleaned (8.2GB freed)
+  - [x] DISPATCH_STATUS.md created
+  - [x] CURRENT_STATUS.md updated (was 43 days stale)
+  - [x] SESSION_LOG.md updated (was 38 days stale)
+  - [x] MOBILE_CONTROL_PLAYBOOK.md expanded with 6 creative options (NFC, PWA, Scriptable widgets, Pushover/Watch, voice control, Cloudflare Tunnel)
+  - [x] KPI audit completed (findings: missing system health KPIs, P0 scoring bias, stale day count)
+  - [x] Infra stack audit completed (findings: Python 3.9/3.12 split, git push failing, surge account mismatch)
+- **System state post-session:**
+  - All 4 loops: OK
+  - Capital Genesis: 8,899 methods (current)
+  - Alpha: 19,520 entries, 54 newly approved
+  - Health: 25% (up from 22%, mostly staleness from laptop offline)
+  - CEO agent: unblocked, ready to run
+  - Master Ops: 14 sheets, 2,157 rows, working
+  - Disk: ~86% (freed 8.2GB)
+- **Remaining blockers (HUMAN ONLY):**
+  - Surge.sh login fix (5 min)
+  - Tailscale login (5 min)
+  - Gumroad account (15-45 min)
+  - Fiverr/Upwork profiles (20 min)
+  - Affiliate signups (30 min)
 
 ### MONETIZATION AUTO-WIRE SYSTEM DEPLOYED — 2026-03-21
 - **Status:** COMPLETE — all future builds auto-wire Stripe/RevenueCat/AdMob

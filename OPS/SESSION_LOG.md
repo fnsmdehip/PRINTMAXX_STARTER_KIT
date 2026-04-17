@@ -1,5 +1,18 @@
 ## Session Log (Most Recent First)
 
+### 2026-04-17 — INFRA RECOVERY + AUDIT + PIPELINE CATCHUP (Opus 4.6 1M)
+- **Dispatch handoff:** 3 prior sessions ran 85-99 turns, produced INFRA_AUDIT.md + MOBILE_CONTROL_PLAYBOOK.md. Burned context reading 27GB project.
+- **Corrections applied:** Infra audit had 4 inaccuracies (openpyxl installed, loops OK, master ops working, CEO lock was sole blocker). All corrected.
+- **CEO lock cleared:** Stale lock from PID 60730 (Mar 28) removed. L0 orchestrator unblocked.
+- **Pipeline recovery:** Morning DAG, auto-approve (54 alpha), aggregator (87 items), digest, health all fired manually. Capital Genesis already current (02:03 today).
+- **Health monitor fixed:** Cron markers updated from pre-v9 names to actual v9 crontab entries. Health improved 22%->25%.
+- **Control panel:** Added /health endpoint (was returning 404).
+- **Worktree cleanup:** 10 dispatch worktrees deleted, 8.2GB freed. Disk from 89.8% to ~86%.
+- **Files written:** DISPATCH_STATUS.md, CURRENT_STATUS.md updated, INFRA_AUDIT.md corrected, SESSION_LOG.md updated.
+- **KPI audit findings:** Missing system health KPIs, automation efficiency KPIs. Content P0 scoring bias toward engagement bait over executable methods. Day count stale (35->58).
+- **Infra stack findings:** Python 3.9/3.12 split on control panel. Git push failing 11+ days (13 unpushed). Surge.sh account mismatch blocking 136 sites.
+- **System state:** Revenue $0 (Day 58). 8,899 methods ranked. 19,520 alpha. All 4 loops OK. 87 READY master ops. 179 blocked (human accounts).
+
 ### 2026-03-10 — SWARM BRAIN CYCLE 11: DEEP CONSERVATION MODE
 - **Swarm Brain Cycle 11 completed.** 13 decisions. Mode shifted from SURVIVAL to DEEP CONSERVATION.
 - **Agent changes:** Hibernated 3 (trend_synthesizer, social_poster, image_factory). Throttled 3 (gap_hunter 3h→8h, competitor_stalker →24h, alpha_intelligence →12h). Redirected meta_executor to "activation packager" role. Kept 3 active (system_healer 2h, cross_pollinator 4h, gap_hunter 8h).

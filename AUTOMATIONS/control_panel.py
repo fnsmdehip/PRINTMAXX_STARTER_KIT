@@ -1045,6 +1045,11 @@ def index():
     return "<h1>Control panel HTML not found</h1>", 404
 
 
+@app.route("/health")
+def health():
+    return jsonify({"status": "ok", "timestamp": datetime.now().isoformat()}), 200
+
+
 @app.route("/api/status")
 def api_status():
     throttle = get_throttle_status()

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-07 05:05:05",
+  "generated_at": "2026-04-17 03:36:06",
   "sources": {
-    "alpha_staging_candidates": 3714,
+    "alpha_staging_candidates": 3848,
     "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
     "existing_specs_detected": 217
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3720,
+    "total_candidates": 3854,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 51,
-      "BUILD_NEW_NOW": 48,
-      "SPEC_AND_TEST": 168,
-      "PARK": 3446,
+      "ITERATE_EXISTING_NOW": 57,
+      "BUILD_NEW_NOW": 59,
+      "SPEC_AND_TEST": 203,
+      "PARK": 3528,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
       "faith": 95,
-      "habits": 234,
-      "ai_utility": 2751,
-      "fitness": 155,
-      "focus": 385,
+      "habits": 245,
+      "ai_utility": 2861,
+      "fitness": 162,
+      "focus": 390,
       "sleep": 85,
-      "meal": 15
+      "meal": 16
     }
   },
   "queue": [
@@ -1249,6 +1249,68 @@
       "rank": 20
     },
     {
+      "candidate_id": "ALPHA_HN_47767296",
+      "title": "Show HN: AriaType \u2013 open-source privacy-first and local-first voice-to-text app",
+      "source": "HackerNews (showhn)",
+      "source_url": "https://github.com/joe223/AriaType",
+      "source_type": "alpha_staging",
+      "roi_potential": "MEDIUM",
+      "priority": "SOON",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "",
+      "applicable_methods": "",
+      "evidence": "Show HN: AriaType \u2013 open-source privacy-first and local-first voice-to-text app",
+      "compliance_notes": "",
+      "reviewer_notes": "AUTO-APPROVED 2026-04-15 (empty content)",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_HN_47767296",
+        "source": "HackerNews (showhn)",
+        "source_url": "https://github.com/joe223/AriaType",
+        "category": "APP_FACTORY",
+        "tactic": "Show HN: AriaType \u2013 open-source privacy-first and local-first voice-to-text app",
+        "roi_potential": "MEDIUM",
+        "priority": "SOON",
+        "status": "APPROVED",
+        "applicable_methods": "",
+        "applicable_niches": "",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "AUTO-APPROVED 2026-04-15 (empty content)",
+        "created_at": "2026-04-15T09:01:18.821363+00:00",
+        "ops_generated": "FALSE",
+        "quality_issues": "",
+        "date_added": "2026-04-15"
+      },
+      "score": 95,
+      "cluster": "ai_utility",
+      "market_room": "HIGH",
+      "existing_app_target": "NEW_BUILD",
+      "execution_lane": "NEW_BUILD",
+      "build_decision": "BUILD_NEW_NOW",
+      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
+      "paywall_variant": "after the first clear output, never before time-to-value",
+      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
+      "primary_monetization": "subscription with fast time-to-value and annual anchor",
+      "secondary_monetization": "paid upfront or one-time pro unlock is valid here because privacy is the wedge",
+      "price_test": "$9.99 to $29.99 upfront, plus optional pro unlock",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "monetization: paid upfront vs free trial subscription"
+      ],
+      "risk_score": 0,
+      "rank": 21
+    },
+    {
       "candidate_id": "RF_001",
       "title": "HTML interactive tools as digital products ($17 price point validated)",
       "source": "r/passive_income",
@@ -1315,7 +1377,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 21
+      "rank": 22
     },
     {
       "candidate_id": "ALPHA_CI059_STUDY_STREAK",
@@ -1377,7 +1439,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 23
     },
     {
       "candidate_id": "ALPHA_CI_51_LTD_001",
@@ -1439,7 +1501,69 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 24
+    },
+    {
+      "candidate_id": "ALPHA_HN_47774393",
+      "title": "Show HN: Lumon, browser agents as interactive sprites. Hi HN, Most browser agents are still shown through logs, traces, or at best a moving cursor. I wanted them to have some personality. Lumon started as a class project. I kept wishing agents felt less like invisible processes and more like something you could actually watch, understand, and step in on",
+      "source": "HackerNews (showhn)",
+      "source_url": "https://lumon-live.netlify.app",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "SOON",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "",
+      "applicable_methods": "",
+      "evidence": "Show HN: Lumon, browser agents as interactive sprites. Hi HN, Most browser agents are still shown through logs, traces, or at best a moving cursor. I wanted them to have some personality. Lumon started as a class project. I kept wishing agents felt less like invisible processes and more like something you could actually watch, understand, and step in on",
+      "compliance_notes": "",
+      "reviewer_notes": "AUTO-APPROVED 2026-04-15 (high ROI)",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_HN_47774393",
+        "source": "HackerNews (showhn)",
+        "source_url": "https://lumon-live.netlify.app",
+        "category": "APP_FACTORY",
+        "tactic": "Show HN: Lumon, browser agents as interactive sprites. Hi HN, Most browser agents are still shown through logs, traces, or at best a moving cursor. I wanted them to have some personality. Lumon started as a class project. I kept wishing agents felt less like invisible processes and more like something you could actually watch, understand, and step in on",
+        "roi_potential": "HIGHEST",
+        "priority": "SOON",
+        "status": "APPROVED",
+        "applicable_methods": "",
+        "applicable_niches": "",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "AUTO-APPROVED 2026-04-15 (high ROI)",
+        "created_at": "2026-04-15T09:01:18.818941+00:00",
+        "ops_generated": "FALSE",
+        "quality_issues": "",
+        "date_added": "2026-04-15"
+      },
+      "score": 93,
+      "cluster": "fitness",
+      "market_room": "HIGH",
+      "existing_app_target": "Steplock",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
+      "paywall_variant": "after plan preview or first logged action",
+      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
+      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
+      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -1501,7 +1625,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA_SCAN_078",
@@ -1563,7 +1687,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA25039",
@@ -1625,7 +1749,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA538",
@@ -1687,7 +1811,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA558",
@@ -1749,7 +1873,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA102378",
@@ -1811,7 +1935,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA103204",
@@ -1873,7 +1997,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA98946",
@@ -1935,7 +2059,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA1774000183",
@@ -1997,7 +2121,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA1774000278",
@@ -2059,7 +2183,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA1774000288",
@@ -2121,7 +2245,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA229",
@@ -2183,7 +2307,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA555",
@@ -2245,7 +2369,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA228",
@@ -2307,7 +2431,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA552",
@@ -2367,130 +2491,6 @@
         "pricing: annual-first anchor vs cheaper monthly plan",
         "review prompt: milestone trigger only, never session-one prompt",
         "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 38
-    },
-    {
-      "candidate_id": "ALPHA102962",
-      "title": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
-      "source": "@StevenCravotta (high-signal-accounts)",
-      "source_url": "https://x.com/StevenCravotta/status/2033543588122902933",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "HIGH",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "UNCHECKED",
-      "earnings_verified": "",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
-      "compliance_notes": "",
-      "reviewer_notes": "\ud83d\udc4d59 \ud83d\udd015 \ud83d\udcac12 \ud83d\udc418770 [ROUTED: 2026-03-17 to APP by gap_hunter]",
-      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA102962.md",
-      "raw": {
-        "alpha_id": "ALPHA102962",
-        "source": "@StevenCravotta (high-signal-accounts)",
-        "source_url": "https://x.com/StevenCravotta/status/2033543588122902933",
-        "category": "APP_FACTORY",
-        "tactic": "App developers don't want you to know this secret. Because if you did, you wouldn't need to hire them. Here's how I build apps without writing code: Step 1: Use vibe coding app like Rork \u00b7 Type what you want to build \u00b7 Gets you 80% of the way there Step 2: Hire a dev on",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "UNCHECKED",
-        "earnings_verified": "",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "\ud83d\udc4d59 \ud83d\udd015 \ud83d\udcac12 \ud83d\udc418770 [ROUTED: 2026-03-17 to APP by gap_hunter]",
-        "created_at": "2026-03-16T17:03:39.581735",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 86,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA_SCAN_073",
-      "title": "Agent Observability Dashboard SaaS: hosted real-time monitoring for multi-agent Claude Code/Codex sessions. 166 stars in 7 days validates demand. Free/Pro/Team tiers at $19-49/mo.",
-      "source": "swarm_opportunity_scanner",
-      "source_url": "https://github.com/simple10/agents-observe",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "NOW",
-      "status": "AUTO_APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "",
-      "applicable_niches": "DEVELOPER_TOOLS",
-      "applicable_methods": "APP_FACTORY,MONETIZATION",
-      "evidence": "Agent Observability Dashboard SaaS: hosted real-time monitoring for multi-agent Claude Code/Codex sessions. 166 stars in 7 days validates demand. Free/Pro/Team tiers at $19-49/mo.",
-      "compliance_notes": "",
-      "reviewer_notes": "Score 9/10. GitHub repo agents-observe validates demand. Zero commercial competitors. AUTO_APPROVED 2026-04-02T15:57:48-04:00 (roi>=HIGH)",
-      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA_SCAN_073.md",
-      "raw": {
-        "alpha_id": "ALPHA_SCAN_073",
-        "source": "swarm_opportunity_scanner",
-        "source_url": "https://github.com/simple10/agents-observe",
-        "category": "APP_FACTORY",
-        "tactic": "Agent Observability Dashboard SaaS: hosted real-time monitoring for multi-agent Claude Code/Codex sessions. 166 stars in 7 days validates demand. Free/Pro/Team tiers at $19-49/mo.",
-        "roi_potential": "HIGH",
-        "priority": "NOW",
-        "status": "AUTO_APPROVED",
-        "applicable_methods": "APP_FACTORY,MONETIZATION",
-        "applicable_niches": "DEVELOPER_TOOLS",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "Score 9/10. GitHub repo agents-observe validates demand. Zero commercial competitors. AUTO_APPROVED 2026-04-02T15:57:48-04:00 (roi>=HIGH)",
-        "created_at": "2026-04-02T01:13:34.551091",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 86,
-      "cluster": "ai_utility",
-      "market_room": "HIGH",
-      "existing_app_target": "NEW_BUILD",
-      "execution_lane": "NEW_BUILD",
-      "build_decision": "BUILD_NEW_NOW",
-      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
-      "paywall_variant": "after the first clear output, never before time-to-value",
-      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
-      "primary_monetization": "subscription with fast time-to-value and annual anchor",
-      "secondary_monetization": "paid upfront for privacy-first local tools; avoid ads unless usage is massive",
-      "price_test": "$6.99 to $9.99/mo and $39.99 to $59.99/yr",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
       "rank": 40
