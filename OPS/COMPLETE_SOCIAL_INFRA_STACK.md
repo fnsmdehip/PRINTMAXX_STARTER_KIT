@@ -3,6 +3,93 @@ Updated: 2026-04-17 | Sources: 3 research agents + master ops xlsx + 200+ existi
 
 ---
 
+## SPEED SETUP (do right now, 15 min, ~$50 first month)
+
+| # | Action | URL | Time |
+|---|--------|-----|------|
+| 1 | Buy GoLogin Professional (100 profiles, $24/mo) | gologin.com/pricing | 3 min |
+| 2 | Buy Publer Starter (9 platforms, $12/mo) | publer.io/pricing | 2 min |
+| 3 | Sign up Purelymail ($10/yr) + add your domain | purelymail.com | 3 min |
+| 4 | Sign up SMSPool + add $10 credit (UNVERIFIED -- test first) | smspool.net | 2 min |
+| 5 | Sign up Decodo/Smartproxy PAYG ($3.50/GB, PROVEN) | smartproxy.com | 2 min |
+| 6 | Download GoLogin on iPhone (Android app -- no iOS) | Google Play | 1 min |
+| 7 | Download RustDesk on iPhone | App Store: "RustDesk" | 1 min |
+
+**PROVEN STACK fallback** (if hidden gems fail testing): GoLogin + Decodo + TextVerified ($0.25/code) + Cloudflare email routing. ~$40/mo, zero surprise failures.
+
+**TEST BEFORE COMMITTING:** Create 1 TikTok account through your chosen proxy + phone combo. If it survives 7 days of warmup without flag, proceed with the rest. Budget $20 for testing.
+
+---
+
+## ACCOUNT ACQUISITION: Buy vs Build vs Warm
+
+Not everything needs to be created from scratch. Options for faster starts:
+
+| Method | Cost | Pros | Cons | Best for |
+|--------|------|------|------|----------|
+| **Create fresh + warmup** | $0 + 1-3 weeks | Cleanest, you control everything | Slow, TikTok warmup = 3 weeks | Primary/long-term accounts |
+| **Buy aged accounts** | $5-50 each | Skip warmup, instant posting | Risk of previous flags, seller scams | A/B testing, burner accounts |
+| **Buy aged + re-warm** | $5-50 + 1 week | Best of both worlds | Still need proxy/fingerprint isolation | Scale accounts |
+| **Rent accounts** | $20-100/mo | Full access, maintained by seller | Shared risk, can be reclaimed | Testing platforms before committing |
+
+**Where to buy accounts:**
+| Platform | Source | Price Range | Notes |
+|----------|--------|-------------|-------|
+| X/Twitter | AccsMarket, BulkAccounts, Z-Social | $2-15/aged account | Verify email + phone attached. Re-warm 3-5 days. |
+| TikTok | AccsMarket, FameSwap, PlayerUp | $5-50/aged | Check follower quality. TikTok bans transfers aggressively. |
+| Instagram | FameSwap, Swapd, SocialTradia | $10-200/aged | Niche-relevant followers matter more than count. |
+| Reddit | PlayerUp, OGUsers | $5-30/aged | Karma matters. Buy 1K+ karma accounts for posting credibility. |
+| LinkedIn | Rare/risky | $20-100 | Not recommended -- LinkedIn verification is strict. Build organic. |
+
+**A/B Testing Strategy:**
+- Buy 3 aged TikTok accounts ($15-45) + create 3 fresh ones
+- Run identical content on both sets for 2 weeks
+- Measure: reach, follower growth rate, engagement rate, shadowban frequency
+- Winner = your default approach for scaling
+
+---
+
+## GROWTH STACK INTEGRATION
+
+Your existing growth playbooks (8,461+ lines) integrate directly with this infra:
+
+### Edge Growth (from `OPS/GREY_HAT_EDGE_GROWTH_MASTER.md`)
+| Tactic | Infra needed | Risk | Guide |
+|--------|-------------|------|-------|
+| Multi-account cross-promotion | GoLogin profiles + unique proxies | Medium | Grey Hat Master, Section: Cross-Promotion |
+| Engagement pods (manual) | 5-10 warmed accounts, coordinated likes/comments | Medium | Grey Hat Master, Section: Engagement Pods |
+| Comment farming | Aged accounts + mobile proxies | High | Grey Hat Master, Section: Comment Strategy |
+| Follow/unfollow automation | Anti-detect + rate limiting | High | `OPS/SAFE_WARMUP_AUTOMATION_GUIDE.md` |
+| Hashtag hijacking | Trend monitoring + fast posting | Low | Content queue + Publer scheduling |
+| DM automation (X/Twitter) | Xreacher or DMpro + GoLogin | Medium | `03_PLAYBOOKS/COLD_OUTBOUND/COLD_DM_TEMPLATES_ALL_NICHES.md` |
+
+### Normal Growth (organic, no risk)
+| Tactic | Infra needed | Guide |
+|--------|-------------|-------|
+| Content compounding (post 5-10x/day) | Publer + content queue (1,588 posts ready) | `OPS/CONTENT_FACTORY_PLAYBOOK.md` |
+| Reply engagement strategy | Templates + monitoring | `CONTENT/social/REPLY_ENGAGEMENT_STRATEGY.md` (100 templates) |
+| Cross-platform repurposing | Repurpose.io or manual | `OPS/alpha_research/SOCIAL_MEDIA_AUTOMATION_STACK_2026-04-17.md` |
+| Trend riding | Pentos (TikTok) + Metricool | Content queue + trend hooks |
+| Community building | Discord/Skool/Telegram kits | `PRODUCTS/community/` (3 launch kits ready) |
+
+### Grey Hat Growth (from `OPS/GREY_HAT_LEGAL_PLAYBOOK_2026.md`)
+| Tactic | Legal status | Infra | Guide |
+|--------|-------------|-------|-------|
+| Multiple accounts (same person) | ALLOWED (unless coordinated inauthentic) | GoLogin + proxies | `CONTENT/growth/buildout/G01_G15_growth/grey_hat_legal.md` |
+| AI-generated personas | ALLOWED (FTC may require disclosure) | HeyGen + Nano Banana | `MONEY_METHODS/AI_INFLUENCER/` |
+| Faceless content farms | ALLOWED | CapCut + Kling AI | `MONEY_METHODS/CONTENT_FARM/` |
+| Purchased followers/engagement | RISKY (platform TOS violation) | Third-party services | NOT recommended -- wastes money and triggers algorithmic demotion |
+
+### Warmup-Aware Execution Order
+1. **Week 0:** Set up infra (GoLogin, proxies, emails, phones). Create all accounts. BUY 3-5 aged accounts for A/B testing.
+2. **Week 1:** Fresh accounts = browse + engage only. Aged accounts = test posting immediately.
+3. **Week 2:** Fresh accounts = replies + comments. Aged accounts = full content + edge tactics.
+4. **Week 3:** Fresh accounts = start posting original content. Compare performance vs aged.
+5. **Week 4+:** Scale winner approach. Kill underperformers. Double down on best-performing platform/account type.
+6. **Ongoing:** Edge growth on warmed accounts. Normal growth on primary accounts. A/B test everything.
+
+---
+
 ## BUDGET TIER SUMMARY (pick your level, follow the stack)
 
 | Tier | Monthly | What you get |

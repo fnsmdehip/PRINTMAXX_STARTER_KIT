@@ -206,6 +206,27 @@ VENTURES = {
         },
         "context_files": [],
     },
+    "INFRA_STACK": {
+        "name": "Infrastructure & Social Stack",
+        "root": "OPS",
+        "review_files": [
+            "OPS/COMPLETE_SOCIAL_INFRA_STACK.md",
+            "OPS/ANTIDETECT_BROWSER_MARKET_COMPARISON_2026.md",
+            "OPS/ANTIDETECT_MOBILE_MANAGEMENT.md",
+            "OPS/MASTER_LAUNCH_PLAYBOOK.md",
+            "OPS/ACCOUNT_CREATION_CHECKLIST.md",
+            "OPS/NEXT_MOVES_ACCOUNTS.md",
+            "MOBILE_CONTROL_PLAYBOOK.md",
+        ],
+        "review_files_dynamic": {
+            "base": "OPS/alpha_research",
+            "patterns": ["*CONTAINERIZED*", "*SOCIAL_MEDIA_AUTOMATION*"],
+        },
+        "context_files": [
+            "OPS/KPI_DASHBOARD.md",
+            "OPS/RESOURCE_MANIFEST.md",
+        ],
+    },
 }
 
 
@@ -532,6 +553,49 @@ def list_ventures():
         print(f"                  {file_count}/{total} review files exist | root: {v['root']}")
 
 
+def run_recent(hours=2):
+    """Auto-detect which ventures had files modified recently and refine those.
+
+    Checks each venture's review files for modifications within the last N hours.
+    Only runs the refiner on ventures that actually changed.
+    Use after meta tasks to auto-critique new work.
+    """
+    import time
+    cutoff = time.time() - (hours * 3600)
+    changed = []
+
+    for key in VENTURES:
+        review_files = _resolve_review_files(key)
+        for rel_path in review_files:
+            full_path = PROJECT_ROOT / rel_path
+            if full_path.exists() and full_path.stat().st_mtime > cutoff:
+                changed.append(key)
+                break  # One changed file is enough to trigger
+
+    if not changed:
+        print(f"No ventures had files modified in the last {hours}h. Nothing to refine.")
+        return {}
+
+    print(f"\n{'#'*60}")
+    print(f"USER-SIM REFINER — RECENT CHANGES ({hours}h) — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"Ventures with changes: {', '.join(changed)}")
+    print(f"{'#'*60}")
+
+    results = {}
+    for key in changed:
+        try:
+            output = run_cycle(key)
+            results[key] = "OK" if output and "TIMEOUT" not in output and "not available" not in output else "WARN"
+        except Exception as e:
+            print(f"\nERROR on {key}: {e}")
+            results[key] = f"ERROR: {e}"
+
+    print(f"\n--- RECENT REFINER SUMMARY ---")
+    for key, status in results.items():
+        print(f"  {key:15s} {status}")
+    return results
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
 
@@ -544,6 +608,12 @@ if __name__ == "__main__":
         list_ventures()
     elif "--all" in args:
         run_all()
+    elif "--recent" in args:
+        hours = 2
+        for i, arg in enumerate(args):
+            if arg == "--hours" and i + 1 < len(args):
+                hours = float(args[i + 1])
+        run_recent(hours)
     elif "--cycle" in args and venture:
         run_cycle(venture)
     elif "--loop" in args and venture:
