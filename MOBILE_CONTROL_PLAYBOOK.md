@@ -810,7 +810,13 @@ def manifest():
 
 Then on iPhone Safari: Share > Add to Home Screen. Opens full-screen like a native app.
 
-### Option 12: Pushover + Apple Watch (15 min - wrist notifications)
+### Option 12: Pushover + Apple Watch via Watchsmith (15-25 min - wrist status)
+
+**Watchsmith ($3.99 iOS app)** supports "Web" complications that fetch JSON from a URL. Point it at `http://control-node.tailnet:9999/api/watch` over Tailscale and it displays extracted values as gauge/text complications. No coding needed. Update every 15-60 min.
+
+A `/api/watch` endpoint has been added to control_panel.py (this session) returning exactly 4 glanceable values: revenue, alpha count, loop health, agents active.
+
+### Option 12b: Pushover for Emergency Escalation ($5 one-time)
 
 **What it does:** Pushover ($5 one-time purchase) delivers push notifications with custom sounds, priority levels, and an Apple Watch complication showing the last alert.
 
