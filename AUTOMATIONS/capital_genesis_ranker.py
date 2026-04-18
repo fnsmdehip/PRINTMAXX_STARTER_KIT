@@ -1062,28 +1062,38 @@ def compute_composite(scores: dict[str, float], phase: int | None = None) -> flo
 
 
 def apply_blocker_penalty(composite: float, method: dict) -> float:
-    """Penalize methods blocked by human account creation.
+    """Penalize methods that can't physically execute today.
 
-    Methods that can't physically execute today shouldn't be P0.
-    Engagement bait snippets (tweet hooks) get routed to content, not ranked.
+    1. Engagement bait: CONTENT_FARM tweets that scored high on $0 cost
+       but aren't executable methods. Demote so real methods surface as P0.
+    2. Account blockers: anything requiring human account creation.
     """
-    text = str(method.get("method", "") or method.get("title", "")).lower()
+    name = str(method.get("method_name", "") or method.get("method", "") or method.get("title", "")).lower().strip()
+    category = str(method.get("category", "")).upper()
 
-    # Engagement bait detection: tweet hooks that aren't real methods
-    bait_signals = [
-        text.startswith("i ") and len(text) < 100,
-        text.startswith('"') and text.endswith('"'),
-        "thought this was fake" in text,
-        "no one talks about" in text,
-        "here's what happened" in text,
+    # --- Engagement bait demotion ---
+    # CONTENT_FARM entries that are tweet-length hooks, not executable methods
+    if category == "CONTENT_FARM" and len(name) < 80:
+        return composite * 0.6  # Short CONTENT_FARM = engagement bait
+
+    # Known bait patterns regardless of category
+    bait_patterns = [
+        "thought this was fake",
+        "no one talks about",
+        "here's what happened",
+        "here's how i",
+        "this changed everything",
+        "stop doing this",
     ]
-    if sum(bait_signals) >= 1 and len(text) < 120:
-        return composite * 0.6  # Demote engagement bait from P0
+    if any(pat in name for pat in bait_patterns):
+        return composite * 0.6
 
-    # Account blocker penalty
-    blockers = str(method.get("blockers", "") or method.get("status", "")).upper()
-    if "NEED_ACCOUNT" in blockers or "HUMAN_BLOCKED" in blockers or "BLOCKED" in blockers:
-        return composite * 0.5  # Methods that can't run today aren't P0
+    # --- Account blocker penalty ---
+    status = str(method.get("status", "")).upper()
+    blockers = str(method.get("blockers", "")).upper()
+    all_text = status + " " + blockers
+    if any(kw in all_text for kw in ["NEED_ACCOUNT", "HUMAN_BLOCKED", "BLOCKED_HUMAN", "ACCOUNT_REQUIRED"]):
+        return composite * 0.5
 
     return composite
 
