@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-04-17 06:50
-Last session: 2026-04-17 06:30 (0.3h ago)
+# SESSION BRIEFING -- 2026-04-17 08:57
+Last session: 2026-04-17 08:13 (0.7h ago)
 
 ---
 
@@ -22,7 +22,10 @@ Blocker: Account creation → `OPS/ACCOUNT_CREATION_NOW.md`
 
 ## Changes Since Last Session
 
-No git commits since last session (or not a git repo).
+### Human/Agent Commits (1)
+- 31e3a20a Ranker: blocker penalty + engagement bait demotion (from refiner critique)
+
+**Diff summary:** 1 file changed, 32 insertions(+)
 
 ## Actionable Queue
 
