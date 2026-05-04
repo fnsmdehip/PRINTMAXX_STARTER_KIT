@@ -1,0 +1,233 @@
+[
+  {
+    "subreddit": "indiehackers",
+    "title": "Went from $0 to $1k MRR. If I started my SaaS over, here's exactly what I'd do",
+    "score": 50,
+    "num_comments": 189,
+    "url": "https://reddit.com/r/indiehackers/comments/1riyr34/went_from_0_to_1k_mrr_if_i_started_my_saas_over/",
+    "selftext": "After going from $0 to $1K MRR, I've learned that what you focus on matters, but the order you focus on it matters even more.\n\nHere are the 7 steps, in the exact sequence I'd follow if I started over:\n\n**1) Solve a recurring painpoint**\n\nThis is a non-negotiable. My earlier projects solved one-time problems and slowly died. This one solves a problem that comes back every week, which means recurring revenue. If your users can't explain why they're paying in one sentence, it's probably a nice-to-h",
+    "author": "RighteousRetribution",
+    "created_utc": 1772471634.0,
+    "flair": "Sharing story/journey/experience"
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "built PageFlow \u2014 a private, offline-first book tracker for iPhone",
+    "score": 2,
+    "num_comments": 1,
+    "url": "https://reddit.com/r/SideProject/comments/1ro3s0n/built_pageflow_a_private_offlinefirst_book/",
+    "selftext": "I\u2019m an indie iOS developer and reader, and I built PageFlow because I wanted a book tracker that felt calm and stayed out of the way.\n\nNo account. No social feed. No streaks. No badges. No ads.\n\nYour library stays on your device, backs up and syncs with iCloud, and the app is designed to work offline.\n\n\n\nCurrent features:\n\n* To Read / Reading / Finished / DNF\n* quick progress updates\n* ratings\n* reading stats\n* custom book covers\n* CSV export + import\n* Dynamic Type + VoiceOver support\n\n\n\nIt\u2019s f",
+    "author": "EquivalentTrouble253",
+    "created_utc": 1772973262.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "My first app just got its first paying user",
+    "score": 3,
+    "num_comments": 2,
+    "url": "https://reddit.com/r/SideProject/comments/1rncpeo/my_first_app_just_got_its_first_paying_user/",
+    "selftext": "Hey everyone,\n\nSmall milestone but I\u2019m pretty hyped: I just got my first paying user on my app **Habitum**, a gamified habit tracker.\n\nIt\u2019s my first app, first side project, and first time building in public. Seeing a stranger actually pay for something I coded is a good dopamine shot.\n\n**The Pitch:** The idea is simple: Turn your life into a video game. You track habits, gain XP, build streaks, and level up in 4 pillars (Body, Mind, Heart, Will).\n\nI built it because I found most trackers either",
+    "author": "Efficient-Age8725",
+    "created_utc": 1772897228.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "I built a social music website that connects you with people listening to the same track, right now",
+    "score": 2,
+    "num_comments": 0,
+    "url": "https://reddit.com/r/SideProject/comments/1rnppry/i_built_a_social_music_website_that_connects_you/",
+    "selftext": "Hey everyone,\n\nI've been working on\u00a0[https://heare.me](https://heare.me), a side project that connects people who are listening to the same song at the same time, anywhere in the world.\n\nWe tried to create a concept that makes room for music and direct messages, while also incorporating an element of chance and randomness. We also wanted something without downscrolling, something that invites you to wait and share a moment instead.\n\nHow it works:\n\nYou sign in with your\u00a0Last.fm account (which wor",
+    "author": "_Aleph_Y",
+    "created_utc": 1772928484.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "I built CodeScroll - practice coding in 15-30 minutes a day like you're scrolling your feed",
+    "score": 2,
+    "num_comments": 2,
+    "url": "https://reddit.com/r/SideProject/comments/1rl89ai/i_built_codescroll_practice_coding_in_1530/",
+    "selftext": "The idea of CodeScroll is simple and straightforward, which consists of coding challenges delivered in a scroll-based feed, just like TikTok or Instagram, but instead of brain rot, you're practicing and improving. Each sessions are short, similar to Duolingo.\n\nThe concepts that you can practice are algorithms, data structures, programming languages, problem-solving and interview-style challenges. The point is to stay consistent such as putting in daily reps.\n\nIt will include some gamification fe",
+    "author": "MeltinHD",
+    "created_utc": 1772685842.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "I'm building a tool that helps me stay focus and motivated",
+    "score": 2,
+    "num_comments": 3,
+    "url": "https://reddit.com/r/SideProject/comments/1rj0akf/im_building_a_tool_that_helps_me_stay_focus_and/",
+    "selftext": "Hey,\n\nI wanted a simple focus timer that helps me stay motivated and disciplined, especially on days when focus is hard and distractions are everywhere.\n\nSo I built [kaizenfocus.app](http://kaizenfocus.app)\n\nhttps://reddit.com/link/1rj0akf/video/j3ukzjpl9omg1/player\n\nOver these months of building, here are some things we implemented:\n\n* Customizable focus sessions. Choose or create any durations and the app saves your last settings\n* Flexible timer mode. Switch between the countdown or count up,",
+    "author": "ExoticPut4318",
+    "created_utc": 1772474907.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "One timing change added 0.8 stars to my app rating without touching a single feature",
+    "score": 10,
+    "num_comments": 12,
+    "url": "https://reddit.com/r/SideProject/comments/1rjq37g/one_timing_change_added_08_stars_to_my_app_rating/",
+    "selftext": "my app was stuck at 3.2 stars despite decent retention and almost zero churn.   \n  \nMy review was stuck because I used to show the review prompt early. After first launch. After three sessions. Maybe right after onboarding completes. It feels logical  get in front of users while they're engaged.\n\nThe problem is that \"engaged\" doesn't mean \"happy.\" A user three sessions in might have hit a confusing screen, lost their progress, or just gotten interrupted twice. You have no idea what emotional sta",
+    "author": "Silent_Employment966",
+    "created_utc": 1772546466.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "I built a tiny open-source \u201cgym\u201d that nudges you to move while Claude Code is running",
+    "score": 12,
+    "num_comments": 4,
+    "url": "https://reddit.com/r/SideProject/comments/1rij0jk/i_built_a_tiny_opensource_gym_that_nudges_you_to/",
+    "selftext": "I use Claude Code a lot \u2014 plan mode, multi-agent, long tool streaks \u2014 and I kept catching myself 45 minutes into a session having not moved at all. Just watching Claude think.\n\nSo I built Claude Gym. It watches Claude Code's local JSONL logs (no APIs, nothing over the network) and throws up pixel-art exercise prompts when Claude doesn't need you. Plan mode kicks in, you get squats. Sub-agent spawns, wall sit. Long tool streak, stretch. It goes away when Claude needs input again. There's a cat th",
+    "author": "Sea_Pitch_7830",
+    "created_utc": 1772425194.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "Built an AI pre-match football prediction app",
+    "score": 3,
+    "num_comments": 4,
+    "url": "https://reddit.com/r/SideProject/comments/1ri0lvl/built_an_ai_prematch_football_prediction_app/",
+    "selftext": "Before matches I always check form, injuries, context, etc. So I built a small app that:\n\n* Predicts a score\n* Explains it in plain text along with match analysis \n* Lets users submit their own prediction + detailed analysis \n* Tracks streaks, daily trivia, daily login\n\nIt\u2019s not a betting app. Just a fun pre-match analysis tool with some gamification.\n\nStill early and experimenting.\n\nCurious if you\u2019re into football, would you use something like this before a game? Or does it need something more?",
+    "author": "VegetableSection4595",
+    "created_utc": 1772380197.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "My little habit app got its first serious paying user. He\u2019s using it in a way I never imagined.",
+    "score": 124,
+    "num_comments": 40,
+    "url": "https://reddit.com/r/SideProject/comments/1rhw9oy/my_little_habit_app_got_its_first_serious_paying/",
+    "selftext": "Hey SidePorject,\n\nSo I have this small iOS app called **Ban It**. It\u2019s a pretty simple side project of mine. You track bad habits like caffeine, gambling, smoking, etc. The main idea is that it tracks both progress and slip-ups instead of just streaks. I built it mostly for myself because I hated that \u201creset to zero\u201d feeling.\n\nA few days ago, one of my first paying users messaged me about a small bug. We fixed it quickly. After that, just out of curiosity, I asked him:\n\n\u201cBy the way, what habit a",
+    "author": "Exact_Valuable_1299",
+    "created_utc": 1772368689.0,
+    "flair": null
+  },
+  {
+    "subreddit": "SideProject",
+    "title": "I built a fasting app because every other one made me feel like I was failing",
+    "score": 3,
+    "num_comments": 1,
+    "url": "https://reddit.com/r/SideProject/comments/1riqrmu/i_built_a_fasting_app_because_every_other_one/",
+    "selftext": "I started fasting because I wanted to get healthier. Simple as that.\n\nBut once I started, the questions wouldn't stop:\n\n*What's actually happening in my body right now? Am I burning fat or muscle? When does autophagy kick in? Why do I feel amazing on day 2 but terrible on day 3? When I eat again, what should I eat first? How much protein do I need? Can I work out fasted without losing muscle?*\n\nI looked for an app that could answer these. None of them did. They all just gave me a countdown timer",
+    "author": "nanaco110",
+    "created_utc": 1772452229.0,
+    "flair": null
+  },
+  {
+    "subreddit": "AppBusiness",
+    "title": "Building My First App \u2014 When Should I Start Thinking About Monetization?",
+    "score": 3,
+    "num_comments": 19,
+    "url": "https://reddit.com/r/AppBusiness/comments/1rjoivz/building_my_first_app_when_should_i_start/",
+    "selftext": "I\u2019m building a decision-making app inspired by my own struggle with overthinking.\n\nThe MVP logic is complete and I\u2019m currently integrating AI features.\n\nMy question is more on the business side:\nFor first-time app founders:\nWhen did you introduce monetization?\nFreemium from day one?\nOr free until traction?\n\nI\u2019m trying to balance building a useful tool while also treating it like a real business.\n\nWould appreciate insights from people who\u2019ve shipped apps before.",
+    "author": "Vaibhav-Raj09",
+    "created_utc": 1772542320.0,
+    "flair": null
+  },
+  {
+    "subreddit": "AppBusiness",
+    "title": "Solo dev: Paid ads are working but I\u2019m going broke lol \u2014 how do you grow without ads?",
+    "score": 3,
+    "num_comments": 8,
+    "url": "https://reddit.com/r/AppBusiness/comments/1rjg5mi/solo_dev_paid_ads_are_working_but_im_going_broke/",
+    "selftext": "r/AppBusiness \u2014 looking for advice, not trying to promo (no app name / no links).\n\nI\u2019m a solo dev building a gaming social app (game hubs + feed + \u201cfind people to play with\u201d type stuff). It\u2019s one of those products where it\u2019s way better when there are people actively using it\u2026 so yeah, cold start / network effects.\n\nWhere I\u2019m at\n\nMost of my installs are coming from ads, and honestly I\u2019m getting broke trying to keep it going.\n\nSome recent numbers just for context:\n\n\t\u2022\t\\~1.4k total installs\n\n\t\u2022\tLas",
+    "author": "AlexZ8872",
+    "created_utc": 1772513309.0,
+    "flair": null
+  },
+  {
+    "subreddit": "AppBusiness",
+    "title": "Launched a small AI football app and still figuring out retention",
+    "score": 2,
+    "num_comments": 4,
+    "url": "https://reddit.com/r/AppBusiness/comments/1ri08d5/launched_a_small_ai_football_app_and_still/",
+    "selftext": "I\u2019ve been building a football prediction app for the last few months - GameRead.\n\nIt gives:\n\n* Predicted score\n* Short AI analysis and breakdowns (to understand why that score makes sense)\n* Users can write detailed y analysis \n* Coins, streaks, leaderboards and overall some element of gamification \n\nStack is KMM + Firebase. Monetization is 1 free prediction/day via daily trivia, ads on demand if user needs extra gems and daily login for gems also. Coins can be bought for a shortcut for the ai p",
+    "author": "VegetableSection4595",
+    "created_utc": 1772379323.0,
+    "flair": null
+  },
+  {
+    "subreddit": "passive_income",
+    "title": "Vimo | 87 users, \u20ac33 revenue, and a lot of motivation",
+    "score": 2,
+    "num_comments": 4,
+    "url": "https://reddit.com/r/passive_income/comments/1rni750/vimo_87_users_33_revenue_and_a_lot_of_motivation/",
+    "selftext": "This screenshot might not look impressive.\n\nBut to me it means a lot.\n\n* **87**\u00a0families using\u00a0[Vimo](https://apps.apple.com/us/app/vimo-visual-routine/id6759303834)\n* **\u20ac33**\u00a0total revenue\n* **First**\u00a0active subscription\n* **\u20ac2**\u00a0MRR\n\nVimo started as something I built to help my own son with ADHD and autism manage his routines.\n\nNow other parents are finding it useful too.\n\nThat\u2019s the real milestone \u261d\ufe0f\u2764\ufe0f\n\nhttps://preview.redd.it/qs10yuzr7ong1.png?width=2582&amp;format=png&amp;auto=webp&amp;s=cf",
+    "author": "caiobzen",
+    "created_utc": 1772910061.0,
+    "flair": "My Experience"
+  },
+  {
+    "subreddit": "passive_income",
+    "title": "2k users, $800 with a Habit Tracker - I can't explain how good this feels",
+    "score": 76,
+    "num_comments": 27,
+    "url": "https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/",
+    "selftext": "App name - [HabitSwipe](http://www.habitswipe.app) \n\nPlatform - Android &amp; iOS\n\nNumber of users  - 2500\n\nTotal Revenue in last 2 months - $799\n\nTotal Reviews - 120 \n\n**Story**\n\nI've crossed 2k installs. It might sound a small number but the journey from to idea to \\~2500 users is just incredible. \n\nI built this app for my personal use, a very minimalist 2 screen app, but the reddit community has showed soo much love to this by sharing ideas, feedback and helping me grow.\n\nThe idea was simple,",
+    "author": "_hussainint",
+    "created_utc": 1772799929.0,
+    "flair": "My Experience"
+  },
+  {
+    "subreddit": "passive_income",
+    "title": "I made a digital product in one day and listed it for $17. Here's the honest breakdown of what I built and why that price.",
+    "score": 44,
+    "num_comments": 93,
+    "url": "https://reddit.com/r/passive_income/comments/1rno1wq/i_made_a_digital_product_in_one_day_and_listed_it/",
+    "selftext": "Not a huge success story (yet). But I want to share\nthe thinking because I think it's applicable to anyone\ntrying to sell digital products with zero audience.\n\n**What I built:**\nA searchable interactive tool with 150 AI prompts\nfor freelancers. Organized by role \u2014 copywriter,\ndesigner, developer, consultant, marketer.\nNot a PDF. An HTML file that works like an app.\nOpens in any browser. Works offline. Own it forever.\n\n**Why HTML and not a PDF:**\nPDFs feel like homework. A dark-themed interactive",
+    "author": "Feeling-teaching950",
+    "created_utc": 1772924169.0,
+    "flair": "My Experience"
+  },
+  {
+    "subreddit": "passive_income",
+    "title": "Built a simple utility app that now generates passive income",
+    "score": 9,
+    "num_comments": 5,
+    "url": "https://reddit.com/r/passive_income/comments/1rm3lq6/built_a_simple_utility_app_that_now_generates/",
+    "selftext": "I\u2019m a full-time police officer and I build small apps on the side as a way to create additional income streams.\n\nOne problem I kept running into at work was getting turned around in unfamiliar areas. Apartment complexes, backyards, rural roads, or large properties. Dispatch asks where you are and you realize you don\u2019t actually know the closest address.\n\nSo I built a simple tool called [LOC8](https://apps.apple.com/us/app/coordinates-locator-loc8/id6759589628).\n\nThe moment you open it, it instant",
+    "author": "alion94",
+    "created_utc": 1772769601.0,
+    "flair": "Just here to brag"
+  },
+  {
+    "subreddit": "passive_income",
+    "title": "Could a niche web dashboard like this realistically generate passive income?",
+    "score": 3,
+    "num_comments": 2,
+    "url": "https://reddit.com/r/passive_income/comments/1rlupux/could_a_niche_web_dashboard_like_this/",
+    "selftext": "I\u2019m a web developer and recently built a project called SportsFlux: a browser/mobile based live sports dashboard:\n\n[https://sportsflux.live\u2060](https://sportsflux.live\u2060)\n\nThe idea is that it aggregates live match information from multiple leagues into one interface so fans can see what\u2019s happening across different competitions without jumping between a bunch of apps or tabs.\n\nRight now it\u2019s just a functional web tool, but it got me thinking about whether something like this could eventually turn i",
+    "author": "No_Examples",
+    "created_utc": 1772747031.0,
+    "flair": "Seeking Advice/Help"
+  },
+  {
+    "subreddit": "passive_income",
+    "title": "How to build a profitable startup with $0.",
+    "score": 27,
+    "num_comments": 7,
+    "url": "https://reddit.com/r/passive_income/comments/1rijtb8/how_to_build_a_profitable_startup_with_0/",
+    "selftext": "I've built multiple products to $50k+ in revenue as a solo founder with zero funding. Here's everything I've learned condensed into the system I actually follow.\n\n**1. Find a problem by reading complaints, not brainstorming ideas**\n\nReddit threads reveal what people are looking for but are unable to locate. You may find out exactly what people dislike about current software by reading G2 and Capterra reviews. You may see what jobs people already pay individuals to complete manually by looking at",
+    "author": "SureBobcat834",
+    "created_utc": 1772427667.0,
+    "flair": "POD"
+  },
+  {
+    "subreddit": "passive_income",
+    "title": "8 months of failed dropshipping launches before i understood what i was actually doing wrong",
+    "score": 11,
+    "num_comments": 2,
+    "url": "https://reddit.com/r/passive_income/comments/1rimts8/8_months_of_failed_dropshipping_launches_before_i/",
+    "selftext": "Eight months in, and I was genuinely worn down. The routine never changed: wake up, check the store, see nothing, spend hours researching products, launch something, and go to bed frustrated. I kept convincing myself that persistence would eventually pay off, but the results stayed the same no matter what I did.\n\nThe revenue side was brutal. Not slow sales, just nothing consistent at all. Every new product seemed to have potential, but it would often sell only 2 or 3 units before going completel",
+    "author": "Administrative-Bat17",
+    "created_utc": 1772437992.0,
+    "flair": "Real Estate"
+  }
+]

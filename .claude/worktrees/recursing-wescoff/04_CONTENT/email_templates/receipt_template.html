@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Receipt for your {{app_name}} purchase</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style type="text/css">
+    body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+  </style>
+  <![endif]-->
+</head>
+<!--
+PLAIN TEXT VERSION:
+Receipt from {{company_name}}
+
+Order #{{order_number}}
+Date: {{order_date}}
+
+Hi {{first_name}},
+
+Thanks for your purchase.
+
+ORDER DETAILS
+{{product_name}}
+{{product_description}}
+Quantity: {{quantity}}
+Price: {{item_price}}
+
+Subtotal: {{subtotal}}
+Tax: {{tax_amount}}
+Total: {{total_amount}}
+
+Payment method: {{payment_method}}
+
+NEXT STEPS
+1. {{next_step_1}}
+2. {{next_step_2}}
+3. {{next_step_3}}
+
+Access your purchase: {{access_url}}
+
+Need help? Contact us at {{support_email}}
+
+{{company_name}}
+{{company_address}}
+-->
+<body style="margin: 0; padding: 0; background-color: #f0f0f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <!-- Preheader text -->
+  <div style="display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; mso-hide: all;">{{preheader_text}} &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;</div>
+
+  <!-- Email wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0f0f0;">
+    <tr>
+      <td align="center" style="padding: 24px 16px;">
+
+        <!-- Email container -->
+        <!--[if mso]>
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 600px;">
+        <tr>
+        <td>
+        <![endif]-->
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; overflow: hidden;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 24px; text-align: center; background-color: #22c55e;">
+              <p style="color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Payment confirmed</p>
+              <p style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{company_name}}</p>
+            </td>
+          </tr>
+
+          <!-- Body content -->
+          <tr>
+            <td style="padding: 32px 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a;">
+
+              <!-- Order info bar -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f8f9fa; border-radius: 8px; margin: 0 0 24px 0;">
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                          <p style="font-size: 12px; color: #666666; margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.5px;">Order number</p>
+                          <p style="font-size: 14px; color: #1a1a1a; font-weight: 600; margin: 0;">{{order_number}}</p>
+                        </td>
+                        <td style="text-align: right; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                          <p style="font-size: 12px; color: #666666; margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.5px;">Date</p>
+                          <p style="font-size: 14px; color: #1a1a1a; font-weight: 600; margin: 0;">{{order_date}}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 0 0 16px 0;">Hi {{first_name}},</p>
+
+              <p style="margin: 0 0 24px 0;">Thanks for your purchase. Here's your receipt.</p>
+
+              <!-- Order details -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border: 1px solid #e5e5e5; border-radius: 8px; overflow: hidden; margin: 24px 0;">
+                <!-- Product row -->
+                <tr>
+                  <td style="padding: 20px; border-bottom: 1px solid #e5e5e5;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="vertical-align: top; width: 60px;">
+                          <img src="{{product_image}}" alt="{{product_name}}" width="50" height="50" style="border-radius: 4px; border: 0;">
+                        </td>
+                        <td style="vertical-align: top; padding-left: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                          <p style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 0 0 4px 0;">{{product_name}}</p>
+                          <p style="font-size: 14px; color: #666666; margin: 0;">{{product_description}}</p>
+                        </td>
+                        <td style="vertical-align: top; text-align: right; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                          <p style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 0;">{{item_price}}</p>
+                          <p style="font-size: 14px; color: #666666; margin: 4px 0 0 0;">Qty: {{quantity}}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Subtotal -->
+                <tr>
+                  <td style="padding: 12px 20px; background-color: #fafafa;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; color: #666666;">Subtotal</td>
+                        <td style="text-align: right; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; color: #1a1a1a;">{{subtotal}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Tax -->
+                <tr>
+                  <td style="padding: 12px 20px; background-color: #fafafa;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; color: #666666;">Tax</td>
+                        <td style="text-align: right; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; color: #1a1a1a;">{{tax_amount}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Total -->
+                <tr>
+                  <td style="padding: 16px 20px; background-color: #1a1a1a;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;">Total</td>
+                        <td style="text-align: right; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; color: #ffffff;">{{total_amount}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Payment method -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 24px 0;">
+                <tr>
+                  <td style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <p style="font-size: 12px; color: #666666; margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.5px;">Payment method</p>
+                    <p style="font-size: 14px; color: #1a1a1a; margin: 0;">{{payment_method}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA Button -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center" style="padding: 16px 0;">
+                    <!--[if mso]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{access_url}}" style="height:52px;v-text-anchor:middle;width:280px;" arcsize="12%" strokecolor="#2563eb" fillcolor="#2563eb">
+                    <w:anchorlock/>
+                    <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Access your purchase</center>
+                    </v:roundrect>
+                    <![endif]-->
+                    <!--[if !mso]><!-->
+                    <a href="{{access_url}}" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 16px 48px; border-radius: 6px; font-weight: 600; font-size: 16px; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Access your purchase</a>
+                    <!--<![endif]-->
+                  </td>
+                </tr>
+              </table>
+
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 24px 0;">
+
+              <!-- Next steps -->
+              <p style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 0 0 16px 0;">Next steps:</p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="padding: 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; color: #1a1a1a;">
+                    <span style="display: inline-block; width: 24px; height: 24px; background-color: #2563eb; color: #ffffff; border-radius: 50%; text-align: center; line-height: 24px; font-size: 12px; font-weight: 600; margin-right: 12px;">1</span> {{next_step_1}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; color: #1a1a1a;">
+                    <span style="display: inline-block; width: 24px; height: 24px; background-color: #2563eb; color: #ffffff; border-radius: 50%; text-align: center; line-height: 24px; font-size: 12px; font-weight: 600; margin-right: 12px;">2</span> {{next_step_2}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; color: #1a1a1a;">
+                    <span style="display: inline-block; width: 24px; height: 24px; background-color: #2563eb; color: #ffffff; border-radius: 50%; text-align: center; line-height: 24px; font-size: 12px; font-weight: 600; margin-right: 12px;">3</span> {{next_step_3}}
+                  </td>
+                </tr>
+              </table>
+
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 24px 0;">
+
+              <!-- Upsell section -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f8f9fa; border-radius: 8px; margin: 24px 0;">
+                <tr>
+                  <td style="padding: 24px;">
+                    <p style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 0 0 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{upsell_headline}}</p>
+                    <p style="font-size: 14px; color: #666666; margin: 0 0 16px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{upsell_description}}</p>
+                    <a href="{{upsell_url}}" style="font-size: 14px; font-weight: 600; color: #2563eb; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Learn more &#8594;</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Support link -->
+              <p style="font-size: 14px; color: #666666; margin: 24px 0 0 0; text-align: center;">
+                Need help? <a href="mailto:{{support_email}}" style="color: #2563eb; text-decoration: none;">Contact support</a>
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f5f5f5; padding: 24px; text-align: center; font-size: 13px; color: #666666; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+              <p style="margin: 0 0 8px 0;">
+                {{company_name}}<br>
+                {{company_address}}
+              </p>
+
+              <p style="margin: 8px 0; font-size: 11px; color: #999999;">
+                This is a transactional email confirming your purchase.
+              </p>
+
+              <p style="margin: 8px 0;">
+                <a href="{{download_receipt_url}}" style="color: #666666; text-decoration: none;">Download PDF receipt</a> | <a href="{{account_url}}" style="color: #666666; text-decoration: none;">Manage account</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!--[if mso]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

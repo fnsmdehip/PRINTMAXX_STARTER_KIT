@@ -1,0 +1,6 @@
+date,asset_class,ticker_or_name,platform,action,quantity,price_per_unit,total_value,fees,current_value,gain_loss_pct,thesis,exit_target,notes
+2026-01-27,INDEX_FUND,VOO,EXAMPLE_BROKER,BUY,0,0.00,0.00,0.00,0.00,0.0,S&P 500 long-term compounding. DCA monthly.,Never sell. Hold 30+ years.,EXAMPLE ROW - delete when real data added
+2026-01-27,CRYPTO,BTC,EXAMPLE_EXCHANGE,BUY,0,0.00,0.00,0.00,0.00,0.0,Digital gold thesis. Max 5% of portfolio.,2x from entry,EXAMPLE ROW - delete when real data added
+2026-01-27,INDIVIDUAL_STOCK,AAPL,EXAMPLE_BROKER,BUY,0,0.00,0.00,0.00,0.00,0.0,Platform ecosystem moat.,Hold indefinitely,EXAMPLE ROW - delete when real data added
+2026-01-27,DOMAIN,example-domain.com,Namecheap,BUY,1,12.00,12.00,0.00,12.00,0.0,Brandable one-word domain in trending niche.,10x purchase price,EXAMPLE ROW - delete when real data added
+2026-01-27,BUSINESS_ACQUISITION,EXAMPLE_APP,Acquire.com,BUY,1,0.00,0.00,0.00,0.00,0.0,Profitable app with existing users. 3x multiple.,5x revenue in 12 months,EXAMPLE ROW - delete when real data added

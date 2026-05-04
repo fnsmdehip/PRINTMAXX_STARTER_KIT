@@ -1,0 +1,31 @@
+{
+  "sequence_name": "lead_magnet_followup",
+  "description": "3-email sequence after lead magnet download",
+  "trigger": "lead_magnet_download",
+  "emails": [
+    {
+      "id": "magnet_01",
+      "delay_hours": 0,
+      "subject": "Your [Lead Magnet Name] is ready",
+      "preview_text": "Download link inside + quick tip to get the most from it",
+      "body": "Here's your download:\n\n[DOWNLOAD LINK]\n\nQuick tip: Don't just save this. Use it today.\n\nMost people download resources and never open them. Be different.\n\nPick ONE thing from the guide and implement it in the next 24 hours. That's how you actually get results.\n\nI'll check in tomorrow with a specific action step.\n\n[Name]",
+      "cta": "download"
+    },
+    {
+      "id": "magnet_02",
+      "delay_hours": 24,
+      "subject": "Did you try it yet?",
+      "preview_text": "Here's exactly what to do first",
+      "body": "Quick check-in.\n\nIf you downloaded the [Lead Magnet Name] but haven't used it yet, here's your action step:\n\n**Do this in the next 15 minutes:**\n1. Open the guide\n2. Go to page [X]\n3. Complete the [specific exercise/template]\n\nThat's it. 15 minutes.\n\nPeople who take action in the first 48 hours are 10x more likely to see results. Don't be the person who collects resources but never uses them.\n\nReply and tell me when you've done it.\n\n[Name]",
+      "cta": "reply"
+    },
+    {
+      "id": "magnet_03",
+      "delay_hours": 72,
+      "subject": "The next step (when you're ready)",
+      "preview_text": "Here's how to go deeper",
+      "body": "You've had the [Lead Magnet Name] for a few days.\n\nIf you've used it, you've probably noticed [common insight/result].\n\nHere's the next level:\n\n[PRODUCT/SERVICE SOFT PITCH]\n\nThis isn't for everyone. Only makes sense if:\n- You've completed the basics from the guide\n- You want to [specific outcome]\n- You're ready to invest [time/money] in faster results\n\nIf that's you: [CTA LINK]\n\nIf not, no worries. Keep using the free guide. It works.\n\nEither way, reply if you have questions. I read everything.\n\n[Name]",
+      "cta": "product_link"
+    }
+  ]
+}

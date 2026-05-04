@@ -1,0 +1,31 @@
+{
+  "sequence_name": "re_engagement",
+  "description": "3-email sequence to win back cold subscribers",
+  "trigger": "no_open_60_days",
+  "emails": [
+    {
+      "id": "reengage_01",
+      "delay_hours": 0,
+      "subject": "Still interested in [TOPIC]?",
+      "preview_text": "Quick check-in (no hard feelings either way)",
+      "body": "Hey,\n\nNoticed you haven't opened an email in a while.\n\nNo judgment. Inboxes get overwhelming.\n\nBut I want to make sure I'm only emailing people who actually want to hear from me.\n\nQuick question: Are you still interested in [TOPIC/NICHE]?\n\n**If yes:** Just click this link and you'll keep getting my best stuff:\n[STAY SUBSCRIBED LINK]\n\n**If no:** No action needed. I'll remove you from the list in a few days.\n\nEither way, thanks for being here.\n\n[Name]",
+      "cta": "stay_subscribed"
+    },
+    {
+      "id": "reengage_02",
+      "delay_hours": 72,
+      "subject": "Did you see this?",
+      "preview_text": "My most popular piece from the last 3 months",
+      "body": "In case you missed it, here's what people loved most recently:\n\n[BEST PERFORMING CONTENT TITLE]\n[BRIEF DESCRIPTION]\n[LINK]\n\nThis got [X views/shares/comments] because [reason it resonated].\n\nIf this looks interesting, you might want to stick around. I send stuff like this every week.\n\n[STAY SUBSCRIBED LINK]\n\nIf not your thing, no worries. I'll clean up the list soon.\n\n[Name]",
+      "cta": "read_content"
+    },
+    {
+      "id": "reengage_03",
+      "delay_hours": 168,
+      "subject": "Goodbye (unless...)",
+      "preview_text": "Last email unless you want to stay",
+      "body": "This is the last email you'll get from me.\n\nI'm removing inactive subscribers today. You're on that list.\n\nIf you want to stay:\n[STAY SUBSCRIBED BUTTON]\n\nIf you don't click, you'll be unsubscribed automatically. No hard feelings.\n\nHere's what you'd miss:\n- Weekly breakdowns of what's working in [NICHE]\n- Real numbers from my projects\n- Tools and templates I use\n\nYour call.\n\n[Name]\n\nP.S. If you stay, reply and tell me what you'd like me to cover. I'll prioritize it.",
+      "cta": "stay_subscribed"
+    }
+  ]
+}

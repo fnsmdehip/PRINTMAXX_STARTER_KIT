@@ -1,0 +1,67 @@
+{
+  "carousel_id": "CAROUSEL006",
+  "title": "X algorithm hacks (from the actual code)",
+  "platform": "both",
+  "slides": [
+    {
+      "slide_num": 1,
+      "headline": "X open-sourced their algorithm",
+      "body": "Here's what I found in the code",
+      "visual_note": "GitHub code snippet background, X logo"
+    },
+    {
+      "slide_num": 2,
+      "headline": "Hack 1: Images get 2x boost",
+      "body": "The code literally doubles the score for tweets with images. Video gets 1.5x. Text-only gets 1x.",
+      "visual_note": "Multiplier visual: Image 2x, Video 1.5x, Text 1x"
+    },
+    {
+      "slide_num": 3,
+      "headline": "Hack 2: Replies matter more than likes",
+      "body": "Reply weight: 1.0. Like weight: 0.5. Retweet weight: 0.3. The algorithm wants conversations, not applause.",
+      "visual_note": "Weight scale showing reply highest"
+    },
+    {
+      "slide_num": 4,
+      "headline": "Hack 3: Link penalty is real",
+      "body": "External links get -0.5 score. Put links in comments, not the main tweet. Or use reply-to-self pattern.",
+      "visual_note": "Link icon with minus sign"
+    },
+    {
+      "slide_num": 5,
+      "headline": "Hack 4: First hour is everything",
+      "body": "Time decay is aggressive. Tweet performance in first 60 min determines total reach. Front-load engagement.",
+      "visual_note": "Clock showing first hour highlighted"
+    },
+    {
+      "slide_num": 6,
+      "headline": "Hack 5: Thread boost",
+      "body": "Threads get algorithmic boost. Each reply in your own thread compounds. 4-7 tweets is the sweet spot.",
+      "visual_note": "Thread visual showing connected tweets"
+    },
+    {
+      "slide_num": 7,
+      "headline": "Hack 6: Negative signals tank you",
+      "body": "Mutes, unfollows, and 'not interested' clicks are tracked. One viral tweet to wrong audience can hurt your account.",
+      "visual_note": "Red warning indicators"
+    },
+    {
+      "slide_num": 8,
+      "headline": "Hack 7: Blue check still matters",
+      "body": "Verified accounts get ranking boost. $8/month = more reach. The math works out for most creators.",
+      "visual_note": "Blue checkmark with boost arrow"
+    },
+    {
+      "slide_num": 9,
+      "headline": "The summary",
+      "body": "Post images. Ask questions. Avoid links in main tweet. Thread your best content. Engage in first hour.",
+      "visual_note": "Checklist summary visual"
+    }
+  ],
+  "cta_slide": {
+    "headline": "I test these hacks every week",
+    "action": "Follow for the results"
+  },
+  "hashtags": ["twitteralgorithm", "xalgorithm", "twittergrowth", "socialmediatips", "contentcreator", "growthhacking", "xgrowth"],
+  "estimated_engagement": "HIGH"
+}

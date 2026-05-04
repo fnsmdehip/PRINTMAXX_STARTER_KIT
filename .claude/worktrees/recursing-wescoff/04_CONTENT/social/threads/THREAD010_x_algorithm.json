@@ -1,0 +1,18 @@
+{
+  "thread_id": "THREAD010",
+  "topic": "X algorithm breakdown: replies > likes",
+  "hook": "X algorithm breakdown: replies > likes.\n\nI tested this for 90 days.\n\nPosts with 50 replies outperformed posts with 500 likes.\n\nHere's what I learned about how the algorithm actually works:",
+  "tweets": [
+    "The hierarchy (based on my testing):\n\n1. Replies (10x weight)\n2. Retweets (5x weight)\n3. Bookmarks (3x weight)\n4. Quote tweets (3x weight)\n5. Likes (1x weight)\n\nA reply is worth 10 likes in the algorithm.",
+    "Why replies matter more:\n\n1. Replies = time on platform (people read threads)\n2. Replies = more content (users create it for free)\n3. Replies = engagement bait (X wants this)\n4. Replies = distribution (your post shows in repliers' feeds)\n\nX optimizes for attention. Replies win.",
+    "The test:\n\nPosted 2 tweets with same topic, same time of day.\n\nTweet A: Got 450 likes, 12 replies\nTweet B: Got 180 likes, 67 replies\n\nTweet B got 3x more impressions.\n\nReplies > likes. Not close.",
+    "How to get more replies:\n\n1. Ask a direct question\n2. Make a controversial (but defensible) take\n3. Share something incomplete (people fill gaps)\n4. Post \"what's your X?\" content\n5. End with \"agree?\" or \"thoughts?\"\n\nInvite interaction. Don't just broadcast.",
+    "The self-reply hack:\n\nTop reply is usually from the author.\n\nReply to your own tweet with:\n- Additional context\n- A CTA\n- A link (replies don't get throttled like main tweets)\n\nThis also bumps your post in the algorithm.",
+    "Bookmarks are underrated:\n\nBookmark = \"I want to come back to this\"\n\nX loves bookmarks because it means high-value content.\n\nHow to get bookmarks: Post actionable lists, templates, resources.\n\n\"Bookmark this\" in the tweet helps (yes, it works).",
+    "What kills reach:\n\n1. External links in main tweet (add in reply instead)\n2. Editing within 30 minutes\n3. Tweeting and immediately deleting/reposting\n4. Too many hashtags (1-2 max)\n5. Posting and going offline\n\nStay online for 30 minutes after posting. Reply to comments fast.",
+    "The engagement window:\n\nFirst 30-60 minutes = critical.\n\nIf you get replies in that window, algorithm pushes to more feeds.\n\nIf not, post dies.\n\nStrategy: Post when your audience is online. Reply to every comment immediately."
+  ],
+  "cta": "Grew from 2k to 14k followers using these patterns.\n\nFollow @PRINTMAXXER for more algorithm breakdowns.\n\nWhat's your best engagement hack? Reply below (see what I did there).",
+  "estimated_engagement": "HIGH",
+  "best_time": "7:30 AM EST Thursday"
+}

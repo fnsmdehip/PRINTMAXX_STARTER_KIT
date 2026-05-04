@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 675px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Niche color themes - set via data-niche on body */
+  body[data-niche="printmaxxer"] {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  }
+  body[data-niche="selahmoments"] {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #1a0f0a 100%);
+  }
+  body[data-niche="drifthour"] {
+    background: linear-gradient(135deg, #0a0a0a 0%, #0a1a1a 50%, #0a1a0f 100%);
+  }
+  body[data-niche="repscheme"] {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #1a0a16 100%);
+  }
+  .accent-bar {
+    width: 50px;
+    height: 3px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+  body[data-niche="printmaxxer"] .accent-bar,
+  body[data-niche="printmaxxer"] .highlight {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+  }
+  body[data-niche="selahmoments"] .accent-bar {
+    background: linear-gradient(90deg, #d4a574, #c9956b);
+  }
+  body[data-niche="selahmoments"] .highlight {
+    background: linear-gradient(90deg, #d4a574, #c9956b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body[data-niche="drifthour"] .accent-bar {
+    background: linear-gradient(90deg, #4ecdc4, #44a08d);
+  }
+  body[data-niche="drifthour"] .highlight {
+    background: linear-gradient(90deg, #4ecdc4, #44a08d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body[data-niche="repscheme"] .accent-bar {
+    background: linear-gradient(90deg, #e44d26, #f16529);
+  }
+  body[data-niche="repscheme"] .highlight {
+    background: linear-gradient(90deg, #e44d26, #f16529);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body[data-niche="printmaxxer"] .highlight {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hook {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+  .subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    max-width: 700px;
+    line-height: 1.5;
+  }
+  .handle {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.25);
+  }
+</style>
+</head>
+<body data-niche="printmaxxer">
+  <div class="accent-bar"></div>
+  <div class="hook">
+    <!-- REPLACE: hook text -->
+    <span class="highlight">32 AI agents</span> running 24/7. cost: $0. revenue: also $0. the bottleneck is pressing publish.
+  </div>
+  <div class="subtitle">
+    <!-- REPLACE: subtitle -->
+    building in public, for real
+  </div>
+  <div class="handle">@printmaxxer</div>
+</body>
+</html>

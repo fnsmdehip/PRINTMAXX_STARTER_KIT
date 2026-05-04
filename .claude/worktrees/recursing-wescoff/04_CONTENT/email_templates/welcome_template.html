@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Welcome to {{app_name}}</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    a {
+      color: {{primary_color}};
+      text-decoration: none;
+    }
+
+    .preheader {
+      display: none !important;
+      visibility: hidden;
+      opacity: 0;
+      color: transparent;
+      height: 0;
+      width: 0;
+      max-height: 0;
+      max-width: 0;
+      overflow: hidden;
+      mso-hide: all;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .body-content {
+      padding: 32px 24px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #1a1a1a;
+    }
+
+    .header {
+      padding: 24px;
+      text-align: center;
+      background-color: {{primary_color}};
+    }
+
+    .header img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .header-text {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 16px 0;
+    }
+
+    p {
+      margin: 0 0 16px 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: {{primary_color}};
+      color: #ffffff !important;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      margin: 16px 0;
+    }
+
+    .cta-button:hover {
+      background-color: {{primary_color_dark}};
+    }
+
+    .steps-list {
+      margin: 24px 0;
+      padding: 0;
+    }
+
+    .steps-list li {
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+      margin: 24px 0;
+    }
+
+    .footer {
+      background-color: #f5f5f5;
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #666666;
+    }
+
+    .footer a {
+      color: #666666;
+    }
+
+    .social-icons {
+      margin: 16px 0;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 8px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .ps-text {
+      font-size: 14px;
+      color: #666666;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      .body-content {
+        background-color: #1a1a1a !important;
+        color: #e5e5e5 !important;
+      }
+
+      h1 {
+        color: #ffffff !important;
+      }
+
+      .footer {
+        background-color: #0d0d0d !important;
+        color: #999999 !important;
+      }
+
+      .footer a {
+        color: #999999 !important;
+      }
+
+      .divider {
+        border-top-color: #333333 !important;
+      }
+
+      .ps-text {
+        color: #999999 !important;
+        border-top-color: #333333 !important;
+      }
+    }
+
+    /* Mobile styles */
+    @media screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+      }
+
+      .body-content {
+        padding: 24px 16px !important;
+      }
+
+      .header {
+        padding: 20px 16px !important;
+      }
+
+      h1 {
+        font-size: 22px !important;
+      }
+
+      .cta-button {
+        display: block !important;
+        text-align: center;
+        padding: 16px 24px !important;
+      }
+
+      .footer {
+        padding: 20px 16px !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f0f0f0;">
+  <!-- Preheader text (shows in email preview) -->
+  <div class="preheader">{{preheader_text}} &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;</div>
+
+  <!-- Email wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0f0f0;">
+    <tr>
+      <td align="center" style="padding: 24px 16px;">
+
+        <!-- Email container -->
+        <table role="presentation" class="email-container" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden;">
+
+          <!-- Header -->
+          <tr>
+            <td class="header">
+              <!-- Logo placeholder - replace src with actual logo URL -->
+              <!--[if mso]>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center">
+              <![endif]-->
+              <!-- <img src="{{logo_url}}" alt="{{app_name}}" width="150"> -->
+              <p class="header-text">{{app_name}}</p>
+              <!--[if mso]>
+                  </td>
+                </tr>
+              </table>
+              <![endif]-->
+            </td>
+          </tr>
+
+          <!-- Body content -->
+          <tr>
+            <td class="body-content">
+              <h1>Welcome, {{first_name}}</h1>
+
+              <p>Your resource is ready.</p>
+
+              <p>Here's what you requested:</p>
+
+              <!-- CTA Button -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center">
+                    <a href="{{download_link}}" class="cta-button">Download now</a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin-top: 24px;"><strong>How to use it:</strong></p>
+
+              <ol class="steps-list">
+                <li>{{step_1}}</li>
+                <li>{{step_2}}</li>
+                <li>{{step_3}}</li>
+              </ol>
+
+              <p>Takes about {{setup_time}} to set up.</p>
+
+              <p>Over the next few days, I'll send you more tips on {{topic}}.</p>
+
+              <p>Talk soon.</p>
+
+              <p><strong>{{sender_name}}</strong></p>
+
+              <div class="ps-text">
+                <p>P.S. Hit reply if you have questions. I read every email.</p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="footer">
+              <!-- Social icons -->
+              <div class="social-icons">
+                <a href="{{twitter_url}}" aria-label="Twitter">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter" width="24" height="24" style="filter: invert(40%);">
+                </a>
+                <a href="{{instagram_url}}" aria-label="Instagram">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="24" height="24" style="filter: invert(40%);">
+                </a>
+                <a href="{{youtube_url}}" aria-label="YouTube">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" width="24" height="24" style="filter: invert(40%);">
+                </a>
+              </div>
+
+              <p style="margin: 16px 0 8px 0;">
+                {{company_name}}<br>
+                {{company_address}}
+              </p>
+
+              <p style="margin: 8px 0;">
+                <a href="{{unsubscribe_url}}">Unsubscribe</a> | <a href="{{preferences_url}}">Email preferences</a>
+              </p>
+
+              <p style="margin: 8px 0; font-size: 11px; color: #999999;">
+                You received this email because you signed up at {{signup_source}}.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- End email container -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- End email wrapper -->
+</body>
+</html>

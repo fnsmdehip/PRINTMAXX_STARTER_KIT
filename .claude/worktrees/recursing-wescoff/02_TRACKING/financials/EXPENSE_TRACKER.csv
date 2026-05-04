@@ -1,0 +1,10 @@
+date,category,vendor,description,amount,currency,payment_method,recurring,frequency,method_id,tax_deductible,receipt_url,notes
+2026-01-01,ai_tools,Leonardo.ai,AI image generation subscription,12.00,USD,credit_card,TRUE,monthly,ALL,TRUE,,AI art for app icons and marketing assets
+2026-01-01,ai_tools,ElevenLabs,AI voice synthesis subscription,5.00,USD,credit_card,TRUE,monthly,MM009,TRUE,,Base plan - upgrade to $22/mo when scaling AI influencer
+2026-01-01,ai_tools,D-ID,AI video generation subscription,5.90,USD,credit_card,TRUE,monthly,MM009,TRUE,,AI avatar videos for influencer content
+2026-01-01,ai_tools,Anthropic,Claude Max subscription,100.00,USD,credit_card,TRUE,monthly,ALL,TRUE,,Primary AI coding and content tool
+2026-01-01,domain_hosting,Registrar,Domain registration - printmaxx.com,12.00,USD,credit_card,TRUE,yearly,ALL,TRUE,,Primary domain
+2026-01-01,developer_accounts,Apple,Apple Developer Program,99.00,USD,credit_card,TRUE,yearly,MM001,TRUE,,Required for iOS App Store
+2026-01-01,developer_accounts,Google,Google Play Developer Console,25.00,USD,credit_card,FALSE,one_time,MM001,TRUE,,One-time fee for Android publishing
+2026-01-27,EXAMPLE,EXAMPLE,EXAMPLE expense entry,0.00,USD,credit_card,FALSE,one_time,NONE,FALSE,,EXAMPLE ROW - delete when real data added
+2026-02-02,paper_trade,Paper Trade Test,Paper trade PAPER_TRADE_001 for MM007_COLD_OUTBOUND,50.0,USD,various,FALSE,one_time,MM007,TRUE,,Paper trade validation cost. Decision: SCALE

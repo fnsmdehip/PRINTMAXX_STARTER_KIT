@@ -1,0 +1,47 @@
+{
+  "sequence_name": "welcome_sequence",
+  "description": "5-email welcome sequence for new subscribers",
+  "trigger": "newsletter_signup",
+  "emails": [
+    {
+      "id": "welcome_01",
+      "delay_hours": 0,
+      "subject": "You're in. Here's what happens next",
+      "preview_text": "Plus the one thing that actually moved the needle",
+      "body": "Hey,\n\nYou just joined 2,400+ solopreneurs building profitable side projects.\n\nQuick intro: I'm building apps and content systems that generate passive income. Every week I share what's working, what failed, and the actual numbers.\n\nNo fluff. No motivational quotes. Just tactics you can use today.\n\nHere's what to expect:\n- Weekly breakdown of a revenue-generating system\n- Real numbers (revenue, costs, time spent)\n- Tools and templates I actually use\n\nFirst up: Reply to this email with what you're building. I read every response.\n\nTalk soon,\n[Name]",
+      "cta": "reply"
+    },
+    {
+      "id": "welcome_02",
+      "delay_hours": 24,
+      "subject": "The $3k/month system I built in a weekend",
+      "preview_text": "Copy this. It still works.",
+      "body": "Quick story.\n\nLast March I built a simple tool in 2 days. Nothing fancy. Solves one problem for one audience.\n\nToday it makes $3,200/month on autopilot. I spend maybe 2 hours per week on it.\n\nHere's the breakdown:\n\n**The Build:**\n- Day 1: Core functionality (8 hours)\n- Day 2: Landing page + payment (6 hours)\n- Total cost: $47 (domain + hosting)\n\n**The Growth:**\n- Posted in 3 relevant subreddits\n- One thread got 200+ upvotes\n- 40 signups in 48 hours\n\n**Current Numbers:**\n- 847 paying users at $3.99/month\n- Churn: 4.2%\n- Support tickets: 3-4 per week\n\nThe lesson: Small tools that solve one problem well beat complex apps every time.\n\nTomorrow I'll share the exact stack I used.\n\n[Name]",
+      "cta": "read"
+    },
+    {
+      "id": "welcome_03",
+      "delay_hours": 72,
+      "subject": "My tech stack (copy this)",
+      "preview_text": "Everything I use to build and ship fast",
+      "body": "People ask what tools I use. Here's the full list:\n\n**Building:**\n- Next.js (frontend + API)\n- Supabase (database + auth)\n- Vercel (hosting)\n- Stripe (payments)\n\n**Content:**\n- Notion (planning)\n- Buffer (scheduling)\n- Descript (video editing)\n- Canva (graphics)\n\n**Automation:**\n- Make.com (workflows)\n- Zapier (simple triggers)\n- n8n (complex stuff)\n\n**Analytics:**\n- Plausible (privacy-friendly)\n- Posthog (product analytics)\n- RevenueCat (subscription tracking)\n\nTotal monthly cost: $127\n\nRevenue generated: $8,400/month\n\nThe expensive tools aren't worth it until you're making money. Start free, upgrade when you have revenue.\n\nNext email: The content system that drives 80% of my traffic.\n\n[Name]",
+      "cta": "read"
+    },
+    {
+      "id": "welcome_04",
+      "delay_hours": 120,
+      "subject": "How I get 50k views/month without ads",
+      "preview_text": "The 1:20 content system",
+      "body": "I create one piece of content per week.\n\nIt becomes 20+ pieces across platforms.\n\nHere's the system:\n\n**Monday: Record**\n- 10-minute video explaining one concept\n- Takes 30 minutes including setup\n\n**Tuesday: Transform**\n- Video becomes 5 short clips\n- AI transcribes to blog post\n- Extract 3 tweet threads\n\n**Wednesday: Distribute**\n- YouTube (long form)\n- TikTok/Reels/Shorts (clips)\n- Twitter (threads)\n- LinkedIn (professional take)\n\n**Thursday: Engage**\n- Reply to every comment\n- DM new followers\n- Note what performed best\n\n**Results:**\n- 50k+ monthly views\n- 200+ new email subscribers/month\n- 3-5 inbound leads/week\n\nTime spent: 4 hours/week.\n\nOne camera, one topic, one hour of recording. The rest is distribution.\n\n[Name]",
+      "cta": "read"
+    },
+    {
+      "id": "welcome_05",
+      "delay_hours": 168,
+      "subject": "What to build next (based on what works)",
+      "preview_text": "3 opportunities I'd pursue today",
+      "body": "You've been here a week. Time for the good stuff.\n\nIf I were starting today, I'd build one of these:\n\n**1. Niche Timer App**\n- Pick any habit (prayer, meditation, exercise)\n- Add gamification (streaks, badges)\n- Charge $4.99/month\n- Market: Instagram + TikTok content\n- Potential: $5-10k/month\n\n**2. Faceless YouTube Channel**\n- Pick: relaxation, motivation, or clips\n- Use AI for voiceover\n- Post 2x daily\n- Revenue: Ad share + sponsorships\n- Potential: $2-5k/month at 100k subs\n\n**3. Cold Email for Local Businesses**\n- Offer one service (SEO audits, social management)\n- Charge $500-2000/month\n- 5 clients = $5k/month\n- Tools: Instantly + Apollo\n\nAll three can be built in under a week.\n\nPick one. Start today. Ship something by Friday.\n\nThat's the game.\n\n[Name]\n\nP.S. Hit reply and tell me which one you're going for. I'll share specific resources for that path.",
+      "cta": "reply"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+id,platform,subreddit,title,category,status,timestamp
+twitter_launch_0_20260325T140813Z,twitter,,,twitter_launch,failed,20260325T140813Z
+twitter_launch_1_20260325T140813Z,twitter,,,twitter_launch,failed,20260325T140813Z
+twitter_launch_2_20260325T140813Z,twitter,,,twitter_launch,failed,20260325T140813Z
+twitter_benchmark_0_20260325T140813Z,twitter,,,twitter_benchmark,failed,20260325T140813Z
+twitter_benchmark_1_20260325T140813Z,twitter,,,twitter_benchmark,failed,20260325T140813Z
+twitter_tips_0_20260325T140813Z,twitter,,,twitter_tips,failed,20260325T140813Z
+reddit_cursor_20260325T140813Z,reddit,cursor,[Composer 2] My honest benchmark vs Claude & GPT-4o after 1 week,,failed,20260325T140813Z
+reddit_localllama_20260325T140813Z,reddit,LocalLLaMA,Cursor Composer 2 token efficiency breakdown — better than GPT-4o for code?,,failed,20260325T140813Z
+hn_post_20260325T140813Z,hackernews,,Cursor Composer 2 – token-efficient frontier coding model (PH #1 today),,failed,20260325T140813Z

@@ -1,0 +1,67 @@
+{
+  "carousel_id": "CAROUSEL010",
+  "title": "5 tools I use to automate everything",
+  "platform": "both",
+  "slides": [
+    {
+      "slide_num": 1,
+      "headline": "I spend 2 hours/week running my business",
+      "body": "These 5 tools do the rest",
+      "visual_note": "Clock showing 2 hours, robot hand doing work"
+    },
+    {
+      "slide_num": 2,
+      "headline": "1. Claude Code (overnight builds)",
+      "body": "Write a spec. Go to sleep. Wake up to working code. I've shipped 3 apps this way. $20/month.",
+      "visual_note": "Terminal window, moon icon"
+    },
+    {
+      "slide_num": 3,
+      "headline": "2. Make.com (workflow automation)",
+      "body": "Connects everything. New lead in form? Auto-add to CRM, send Slack alert, trigger email sequence. Zero code.",
+      "visual_note": "Make.com workflow diagram"
+    },
+    {
+      "slide_num": 4,
+      "headline": "3. Remotion (video factory)",
+      "body": "Programmatic video generation. One template = 100 variations. Each TikTok rendered automatically. $0/month (self-hosted).",
+      "visual_note": "Video template with variables highlighted"
+    },
+    {
+      "slide_num": 5,
+      "headline": "4. Playwright (web automation)",
+      "body": "Browser automation for anything. Scrape competitors. Auto-post to socials. Fill forms. Test apps. Free and open source.",
+      "visual_note": "Browser with robot cursor clicking"
+    },
+    {
+      "slide_num": 6,
+      "headline": "5. Clay (lead enrichment)",
+      "body": "Find signal on any company. Job changes, funding, tech stack. Auto-enrich leads. Skip the manual research. $150/month.",
+      "visual_note": "Lead card being enriched with data"
+    },
+    {
+      "slide_num": 7,
+      "headline": "How they connect",
+      "body": "Playwright scrapes opportunities. Clay enriches them. Make.com routes to CRM. Claude builds features. Remotion creates content.",
+      "visual_note": "Flow diagram connecting all 5 tools"
+    },
+    {
+      "slide_num": 8,
+      "headline": "Total monthly cost",
+      "body": "Claude: $20. Make: $15. Remotion: $0. Playwright: $0. Clay: $150. Total: $185/month for a full automation stack.",
+      "visual_note": "Cost breakdown with totals"
+    },
+    {
+      "slide_num": 9,
+      "headline": "Time saved",
+      "body": "Before automation: 40 hours/week. After: 8 hours/week. Same output. More time to build new things.",
+      "visual_note": "Before/after time comparison bar"
+    }
+  ],
+  "cta_slide": {
+    "headline": "I share new automation setups weekly",
+    "action": "Follow for the workflows"
+  },
+  "hashtags": ["automation", "nocode", "solofounder", "productivity", "buildtools", "workflowautomation", "aitools"],
+  "estimated_engagement": "MEDIUM"
+}

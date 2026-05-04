@@ -1,24 +1,6 @@
 {
   "researched": [
-    "ALPHA1773999754",
-    "ALPHA263",
-    "ALPHA268",
-    "ALPHA270",
-    "ALPHA271",
-    "ALPHA272",
-    "ALPHA324",
-    "ALPHA1773993226",
-    "ALPHA1773998773",
     "ALPHA8892",
-    "ALPHA1773993235",
-    "ALPHA1773999827",
-    "ALPHA264",
-    "ALPHA265",
-    "ALPHA266",
-    "ALPHA267",
-    "ALPHA269",
-    "ALPHA273",
-    "ALPHA339",
     "ALPHA108053",
     "ALPHA1773999858",
     "ALPHA105219",
@@ -39,285 +21,109 @@
     "ALPHA104818",
     "ALPHA102693",
     "ALPHA536",
-    "ALPHA1773999821"
+    "ALPHA1773999821",
+    "F01",
+    "F02",
+    "F03",
+    "F05",
+    "N10",
+    "N25",
+    "N44",
+    "ALPHA22498",
+    "ALPHA1774000834",
+    "ALPHA543",
+    "ALPHA104844",
+    "ALPHA5438",
+    "ALPHA544",
+    "ALPHA105058",
+    "ALPHA_CI_51_LTD_001",
+    "ALPHA20293",
+    "ALPHA8404",
+    "ALPHA25039"
   ],
   "backtested": [
-    {
-      "id": "ALPHA1773999754",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA263",
-      "verdict": "CONDITIONAL"
-    },
-    {
-      "id": "ALPHA268",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA270",
-      "verdict": "CONDITIONAL"
-    },
-    {
-      "id": "ALPHA271",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA272",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA324",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA1773993226",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA1773998773",
-      "verdict": "PASS"
-    },
     {
       "id": "ALPHA8892",
       "verdict": "CONDITIONAL"
     },
     {
-      "id": "ALPHA1773993235",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA1773999827",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA264",
-      "verdict": "CONDITIONAL"
-    },
-    {
-      "id": "ALPHA265",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA266",
-      "verdict": "CONDITIONAL"
-    },
-    {
-      "id": "ALPHA267",
-      "verdict": "PASS"
-    },
-    {
-      "id": "ALPHA269",
-      "verdict": "CONDITIONAL"
-    },
-    {
-      "id": "ALPHA273",
-      "verdict": "CONDITIONAL"
-    },
-    {
-      "id": "ALPHA339",
-      "verdict": "PASS"
-    },
-    {
       "id": "ALPHA108053",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA1773999858",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA105219",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA5407",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA11425",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA24174",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA25276",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA105035",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA1774000294",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA_OPP055_SKILLS_MARKETPLACE",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA104720",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA105643",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA1773998845",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA20296",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA1774001080",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA_HN_47431288",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA100019",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "id": "ALPHA104818",
+      "verdict": "PASS"
+    },
+    {
+      "id": "ALPHA102693",
       "verdict": "PASS"
     }
   ],
   "implemented": [
-    {
-      "method_id": "ALPHA1773999754",
-      "name": "I thought this was fake",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.58,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA268",
-      "name": "IG: DM shares = new priority metric + first 2 seconds critical",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.55,
-      "revenue_estimate": {
-        "monthly_low": 500,
-        "monthly_high": 2500,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "PLAYBOOK_EXISTS",
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA271",
-      "name": "1-to-20 repurposing hub-and-spoke model with AI automation",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.55,
-      "revenue_estimate": {
-        "monthly_low": 500,
-        "monthly_high": 2500,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA272",
-      "name": "Stacked monetization model: CPM varies by niche + sponsorships highest ROI",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.55,
-      "revenue_estimate": {
-        "monthly_low": 500,
-        "monthly_high": 2500,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA324",
-      "name": "ALPHA324",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.55,
-      "revenue_estimate": {
-        "monthly_low": 500,
-        "monthly_high": 2500,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA1773993226",
-      "name": "My first real week of sales on my website",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.43,
-      "revenue_estimate": {
-        "monthly_low": 500,
-        "monthly_high": 2500,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA1773998773",
-      "name": "Clipping is the best side hustle in 2026",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.41,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA1773993235",
-      "name": "If had no followers, no email list, and no idea what to sell",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.31,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA1773999827",
-      "name": "This is honestly one of the easiest side hustle right now \ud83d\udc47",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.28,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA265",
-      "name": "Systems vs outcomes messaging trend + accountability content",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.25,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "PLAYBOOK_EXISTS",
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA267",
-      "name": "18-22 Shorts/month optimal + trending audio first 5 sec",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.25,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
-    {
-      "method_id": "ALPHA339",
-      "name": "Micro > Mega ROI",
-      "target_venture": "CONTENT",
-      "category": "CONTENT_FARM",
-      "composite": 7.25,
-      "revenue_estimate": {
-        "monthly_low": 200,
-        "monthly_high": 1000,
-        "comparables": 1
-      },
-      "routed_at": "2026-04-17T09:20:09Z",
-      "signals": [
-        "AUTO_EXISTS:content"
-      ]
-    },
     {
       "method_id": "ALPHA108053",
       "name": "Whale 0x049b opened 20x shorts on 428.73 $BTC($29.62M) and 13,852 $ETH($29.13M) 2 hours ago, and is ",
@@ -329,20 +135,264 @@
         "monthly_high": 1000,
         "comparables": 1
       },
-      "routed_at": "2026-04-17T09:20:09Z",
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA1773999858",
+      "name": "I made $78,120 in March 2026.\n\n TrustMRR \u2014 $36K\n DataFast \u2014 $21K\n ShipFast \u2014 $9.2K\n CodeFast \u2014 $8.3K",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.21,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "ACCT_OK:x",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA105219",
+      "name": "The app space is saturated is a complete myth.\n95% of apps have no idea about distribution.\nThe barr",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.17,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA5407",
+      "name": "sold my first faceless account last month for $47,000i built it in 11 weekslet me explain why this i",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.16,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA11425",
+      "name": "You need to realize that there is almost no competition right now. More and more people are drawn to",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.16,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA24174",
+      "name": "Phantom Profits is live\nthe complete system for building faceless pages that print $10k-30k/month\n12",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.11,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA25276",
+      "name": "Set app base price at $9",
+      "target_venture": "MONETIZE",
+      "category": "MONETIZATION",
+      "composite": 7.09,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:app"
+      ]
+    },
+    {
+      "method_id": "ALPHA105035",
+      "name": "autistic content hack:\nsharing YOUR LOSSES makes more money than sharing wins\ni told my clippers to ",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 7.09,
+      "revenue_estimate": {
+        "monthly_low": 50,
+        "monthly_high": 250,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA1774000294",
+      "name": "What's the most underrated way you've made money online that most people overloo",
+      "target_venture": "CONTENT",
+      "category": "AFFILIATE",
+      "composite": 7.08,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "AUTO_EXISTS:affiliate"
+      ]
+    },
+    {
+      "method_id": "ALPHA_OPP055_SKILLS_MARKETPLACE",
+      "name": "Monetize existing skills portfolio",
+      "target_venture": "PRODUCT",
+      "category": "DIGITAL_PRODUCTS",
+      "composite": 7.04,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": []
+    },
+    {
+      "method_id": "ALPHA1773998845",
+      "name": "I researched 50 side hustle, online income &amp; passive income ideas and here\u2019s",
+      "target_venture": "OUTBOUND",
+      "category": "OUTBOUND",
+      "composite": 7.01,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "AUTO_EXISTS:outbound"
+      ]
+    },
+    {
+      "method_id": "ALPHA20296",
+      "name": "Service tiers: Launch ($500) Growth ($1500) Empire ($3000) Retainer ($500/mo)",
+      "target_venture": "MONETIZE",
+      "category": "MONETIZATION",
+      "composite": 6.99,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "PLAYBOOK_EXISTS"
+      ]
+    },
+    {
+      "method_id": "ALPHA1774001080",
+      "name": "affiliate income using a content batch",
+      "target_venture": "CONTENT",
+      "category": "AFFILIATE",
+      "composite": 6.99,
+      "revenue_estimate": {
+        "monthly_low": 200,
+        "monthly_high": 1000,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA_HN_47431288",
+      "name": "An industrial piping contractor on Claude Code [video]",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FORMAT",
+      "composite": 6.98,
+      "revenue_estimate": {
+        "monthly_low": 500,
+        "monthly_high": 2500,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA104818",
+      "name": "My first 5 clients came from the simplest DM\nMy first $500k came from a simple DM and content\nMy fir",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 6.96,
+      "revenue_estimate": {
+        "monthly_low": 50,
+        "monthly_high": 250,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
+      "signals": [
+        "PLAYBOOK_EXISTS",
+        "AUTO_EXISTS:content"
+      ]
+    },
+    {
+      "method_id": "ALPHA102693",
+      "name": "brands that ran UGC campaigns saw up to 460% engagement growth  \none campaign generated 1.5 million ",
+      "target_venture": "CONTENT",
+      "category": "CONTENT_FARM",
+      "composite": 6.93,
+      "revenue_estimate": {
+        "monthly_low": 50,
+        "monthly_high": 250,
+        "comparables": 1
+      },
+      "routed_at": "2026-05-03T22:04:19Z",
       "signals": [
         "AUTO_EXISTS:content"
       ]
     }
   ],
-  "last_run": "2026-04-17T09:20:09Z",
-  "duration_s": 1.85,
+  "last_run": "2026-05-03T22:04:19Z",
+  "duration_s": 1.34,
   "summary": {
     "researched": 40,
     "backtested": 20,
-    "passed": 13,
-    "conditional": 7,
+    "passed": 16,
+    "conditional": 4,
     "failed": 0,
-    "implemented": 13
+    "implemented": 16
   }
 }

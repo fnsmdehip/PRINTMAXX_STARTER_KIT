@@ -1,0 +1,144 @@
+#!/usr/bin/env python3
+"""
+KPI Tracker — auto-updates weekly, adjusts monthly targets based on actuals.
+Cron: 0 8 * * 1 (every Monday 8AM)
+
+Reads: LEDGER/*.csv for revenue data, ALPHA_STAGING for alpha count,
+       agent state files for automation health
+Writes: OPS/KPI_WEEKLY_CHECKIN.md (weekly), updates OPS/MONTHLY_ROADMAP_*.md
+"""
+import csv
+import json
+import os
+import subprocess
+import sys
+from datetime import datetime, timedelta
+from pathlib import Path
+
+PROJECT = Path(__file__).resolve().parent.parent
+OPS = PROJECT / "OPS"
+LEDGER = PROJECT / "LEDGER"
+AUTOMATIONS = PROJECT / "AUTOMATIONS"
+
+def get_revenue_data():
+    """Pull revenue from available sources."""
+    revenue = {"total": 0, "by_source": {}}
+    # Check Gumroad sales
+    gumroad_csv = LEDGER / "GUMROAD_SALES.csv"
+    if gumroad_csv.exists():
+        with open(gumroad_csv) as f:
+            for row in csv.DictReader(f):
+                amt = float(row.get("amount", row.get("price", "0")).replace("$", "").replace(",", "") or "0")
+                revenue["total"] += amt
+                revenue["by_source"]["gumroad"] = revenue["by_source"].get("gumroad", 0) + amt
+
+    # Check freelance earnings
+    freelance_csv = LEDGER / "FREELANCE_EARNINGS.csv"
+    if freelance_csv.exists():
+        with open(freelance_csv) as f:
+            for row in csv.DictReader(f):
+                amt = float(row.get("amount", "0").replace("$", "").replace(",", "") or "0")
+                revenue["total"] += amt
+                revenue["by_source"]["freelance"] = revenue["by_source"].get("freelance", 0) + amt
+
+    return revenue
+
+def get_content_metrics():
+    """Count content produced this week."""
+    metrics = {"tweets": 0, "videos": 0, "posts": 0}
+    posting_queue = PROJECT / "CONTENT" / "social" / "posting_queue"
+    if posting_queue.exists():
+        week_ago = datetime.now() - timedelta(days=7)
+        for f in posting_queue.iterdir():
+            if f.stat().st_mtime > week_ago.timestamp():
+                if "tweet" in f.name.lower() or "twitter" in f.name.lower():
+                    metrics["tweets"] += 1
+                elif "video" in f.name.lower() or "youtube" in f.name.lower():
+                    metrics["videos"] += 1
+                else:
+                    metrics["posts"] += 1
+    return metrics
+
+def get_automation_health():
+    """Check how many cron jobs ran successfully."""
+    health = {"total_crons": 0, "logs_recent": 0}
+    try:
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=5)
+        if result.returncode == 0:
+            health["total_crons"] = len([l for l in result.stdout.split("\n") if l.strip() and not l.startswith("#")])
+    except Exception:
+        pass
+    
+    logs_dir = AUTOMATIONS / "logs"
+    if logs_dir.exists():
+        week_ago = datetime.now() - timedelta(days=7)
+        for f in logs_dir.iterdir():
+            if f.is_file() and f.stat().st_mtime > week_ago.timestamp():
+                health["logs_recent"] += 1
+    return health
+
+def generate_weekly_checkin():
+    """Generate weekly KPI check-in report."""
+    revenue = get_revenue_data()
+    content = get_content_metrics()
+    health = get_automation_health()
+    
+    now = datetime.now()
+    week_num = (now.day - 1) // 7 + 1
+    
+    report = f"""# Weekly KPI Check-in — {now.strftime('%Y-%m-%d')} (Week {week_num})
+
+## Revenue
+- **Total this period:** ${revenue['total']:.2f}
+- **By source:** {json.dumps(revenue['by_source'], indent=2) if revenue['by_source'] else 'No revenue tracked yet'}
+
+## Content
+- Tweets/posts created: {content['tweets']}
+- Videos created: {content['videos']}
+- Other content: {content['posts']}
+
+## Automation Health
+- Active cron jobs: {health['total_crons']}
+- Log files updated this week: {health['logs_recent']}
+
+## Adjustment Recommendations
+"""
+    
+    if revenue['total'] == 0:
+        report += """
+### URGENT: $0 revenue. Resolve human blockers immediately:
+1. Create Gumroad account and list products
+2. Post first Fiverr/Upwork gigs
+3. Send first cold email batch
+4. Finalize Twitter profile and start posting
+
+### Recommended focus for next week:
+- 80% effort on freelance (fastest path to first dollar)
+- 20% effort on content pipeline (compound growth)
+"""
+    elif revenue['total'] < 500:
+        report += f"""
+### Revenue at ${revenue['total']:.0f}. Identify what's working:
+- Top revenue source: {max(revenue['by_source'], key=revenue['by_source'].get) if revenue['by_source'] else 'N/A'}
+- Recommendation: 3x resources on top source
+- Kill any venture with $0 after 14 days of effort
+"""
+    else:
+        report += f"""
+### Revenue at ${revenue['total']:.0f}. Scaling mode:
+- Top source: {max(revenue['by_source'], key=revenue['by_source'].get) if revenue['by_source'] else 'N/A'}
+- Recommendation: maintain winners, test 2 new channels
+- Consider moving to Phase 1 budget tiers (LOW/MID)
+"""
+    
+    report += f"\n\n*Auto-generated by kpi_tracker.py at {now.isoformat()}*\n"
+    
+    output = OPS / "KPI_WEEKLY_CHECKIN.md"
+    with open(output, "w") as f:
+        f.write(report)
+    
+    print(f"Weekly check-in saved: {output}")
+    print(f"Revenue: ${revenue['total']:.2f} | Content: {content['tweets']} tweets, {content['videos']} videos | Crons: {health['total_crons']}")
+
+if __name__ == "__main__":
+    generate_weekly_checkin()

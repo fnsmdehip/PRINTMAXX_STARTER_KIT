@@ -1,0 +1,271 @@
+{
+  "scrape_date": "2026-03-14",
+  "source": "producthunt",
+  "scrape_method": "websearch+webfetch via hunted.space and decohack.com (PH direct blocked by Cloudflare)",
+  "total_products_found": 29,
+  "products_logged_to_alpha": 16,
+  "alpha_id_range": "ALPHA98728-ALPHA98743",
+  "summary": "ProductHunt March 13-14 2026 scrape. 29 products identified across both days. 16 solopreneur-relevant products logged to ALPHA_STAGING.csv. Top signals: OpenClaw ecosystem exploding (Agent37 managed hosting, ClawMote voice control), AI coding orchestration validated (KingCoding + Mozzie), Garry Tan's gstack open-sourcing Claude Code workflows, Perplexity adding skill files (validates SKILL.md format).",
+  "top_launches_march_14": [
+    {
+      "rank": 1,
+      "name": "Agent 37",
+      "tagline": "Your own OpenClaw instance for $3.99/mo",
+      "url": "https://www.producthunt.com/products/agent-37",
+      "website": "https://www.agent37.com/",
+      "upvotes": 321,
+      "comments": 34,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "HIGHEST",
+      "alpha_id": "ALPHA98728",
+      "solopreneur_relevance": "Managed OpenClaw hosting eliminates server ops. Could run PRINTMAXX agents here. Skill monetization marketplace = revenue opportunity.",
+      "key_insight": "Containerized AI agent hosting at $3.99/mo with 850+ app integrations. Study their business model for hosting play."
+    },
+    {
+      "rank": 2,
+      "name": "Lemon",
+      "tagline": "Voice-Powered AI Agent That Turns Speech Into Done Tasks",
+      "url": "https://www.producthunt.com/products/lemon-3",
+      "website": "https://heylemon.ai/",
+      "upvotes": 254,
+      "comments": 16,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "HIGH",
+      "alpha_id": "ALPHA98729",
+      "solopreneur_relevance": "Free during early access. Mac native. Voice-to-task for email, docs, search. Could 12x email reply speed for outbound.",
+      "key_insight": "Voice-first productivity tool. Free now, pricing TBD. Mac only. 70% fewer tabs opened = real productivity claim."
+    },
+    {
+      "rank": 3,
+      "name": "Struct",
+      "tagline": "AI agent that root-causes engineering alerts",
+      "url": "https://www.producthunt.com/products/struct-2",
+      "upvotes": 252,
+      "comments": 34,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98730",
+      "solopreneur_relevance": "DevOps monitoring. Less directly relevant but validates AI agents for niche verticals as product pattern.",
+      "key_insight": "Niche AI agent for incident management. Pattern: vertical-specific AI agents = growing PH category."
+    },
+    {
+      "rank": 4,
+      "name": "Socra",
+      "tagline": "From Curiosity to Mastery: Socrates-Powered Learning",
+      "url": "https://www.producthunt.com/products/socra-socratic-ai-tutor-partner",
+      "website": "https://hisocra.com/",
+      "upvotes": 177,
+      "comments": 14,
+      "category": "PRODUCT_DISCOVERY",
+      "roi_potential": "MEDIUM",
+      "solopreneur_relevance": "AI tutoring platform. Interesting product pattern but not directly actionable for PRINTMAXX revenue lanes.",
+      "key_insight": "Socratic dialogue AI tutor. Knowledge product generation feature: conversations become study guides, blog posts, podcasts."
+    },
+    {
+      "rank": 5,
+      "name": "Campee",
+      "tagline": "Your estimations, frictionless",
+      "url": "https://www.producthunt.com/products/campee-planning-poker-online",
+      "website": "https://www.campee.app/",
+      "upvotes": 151,
+      "comments": 14,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "LOW",
+      "solopreneur_relevance": "Planning poker tool. Not relevant to solopreneur ops.",
+      "key_insight": "Free, no-account planning poker. 'Zero business model' launch strategy got 151 upvotes."
+    }
+  ],
+  "top_launches_march_13": [
+    {
+      "rank": 1,
+      "name": "Perplexity Computer Skills",
+      "tagline": "Extend Computer's capabilities with repeatable instructions",
+      "url": "https://www.producthunt.com/products/perplexity-computer-skills",
+      "upvotes": 448,
+      "comments": 12,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "HIGHEST",
+      "alpha_id": "ALPHA98732",
+      "solopreneur_relevance": "SKILL.md import = validates our skill file format. Cross-platform skill distribution opportunity. Package PRINTMAXX skills for Perplexity.",
+      "key_insight": "Perplexity adding skill files validates SKILL.md as industry standard. Our 5 packaged skills could distribute here too."
+    },
+    {
+      "rank": 2,
+      "name": "Ask Maps by Google",
+      "tagline": "Ask Maps questions, drive with immersive navigation",
+      "url": "https://www.producthunt.com/products/ask-maps-by-google",
+      "upvotes": 396,
+      "comments": 10,
+      "category": "PRODUCT_DISCOVERY",
+      "roi_potential": "LOW",
+      "solopreneur_relevance": "Google product. Not actionable for solopreneurs.",
+      "key_insight": "Google adding conversational AI to Maps. Not relevant to PRINTMAXX."
+    },
+    {
+      "rank": 3,
+      "name": "GStack",
+      "tagline": "Use Garry Tan's exact Claude Code setup",
+      "url": "https://www.producthunt.com/products/gstack",
+      "website": "https://github.com/garrytan/gstack",
+      "upvotes": 388,
+      "comments": 30,
+      "category": "APP_FACTORY",
+      "roi_potential": "HIGHEST",
+      "alpha_id": "ALPHA98731",
+      "solopreneur_relevance": "YC president open-sourcing Claude Code workflow. 8 skills: plan review, code review, shipping, browser automation. MIT license. INSTALL IMMEDIATELY.",
+      "key_insight": "Persistent headless Chromium daemon for browser automation. Cold start 3-5s, subsequent calls 100-200ms. Direct upgrade to our Claude Code setup."
+    },
+    {
+      "rank": 4,
+      "name": "Pinnacle",
+      "tagline": "Turn your phone into a brain performance coach",
+      "url": "https://www.producthunt.com/products/pinnacle",
+      "website": "https://www.heypinnacle.com",
+      "upvotes": 345,
+      "comments": 74,
+      "category": "PRODUCT_DISCOVERY",
+      "roi_potential": "HIGH",
+      "alpha_id": "ALPHA98742",
+      "solopreneur_relevance": "Health/wellness AI app with strong PH performance. iPhone sensor + AI coaching pattern. App factory intelligence.",
+      "key_insight": "345 upvotes + 74 comments = exceptional engagement. Wellness + AI + phone sensors = hot app category. Free core tier. Study freemium model."
+    },
+    {
+      "rank": 5,
+      "name": "Perfectly",
+      "tagline": "The first AI-native recruiting agency. Fill roles in days",
+      "url": "https://www.producthunt.com/products/perfectly",
+      "upvotes": 199,
+      "comments": 16,
+      "category": "PRODUCT_DISCOVERY",
+      "roi_potential": "MEDIUM",
+      "solopreneur_relevance": "AI recruiting. Pattern: 'AI-native X agency' positioning.",
+      "key_insight": "AI replacing recruiting agencies. B2B SaaS with agency positioning."
+    }
+  ],
+  "additional_relevant_products": [
+    {
+      "name": "GhostDesk",
+      "tagline": "Real-time AI overlay invisible during screen sharing",
+      "url": "https://www.producthunt.com/products/ghostdesk",
+      "upvotes": 98,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "HIGH",
+      "alpha_id": "ALPHA98733",
+      "key_insight": "Invisible AI overlay for calls. Windows only. Mac equivalent = app factory opportunity. Uses Deepgram + GPT-4.1 + Llama 4."
+    },
+    {
+      "name": "KingCoding",
+      "tagline": "Run Claude, Codex & Cursor in parallel from one dashboard",
+      "url": "https://www.producthunt.com/products/kingcoding",
+      "upvotes": 90,
+      "category": "APP_FACTORY",
+      "roi_potential": "HIGH",
+      "alpha_id": "ALPHA98734",
+      "key_insight": "Solo dev from Japan built multi-agent coding orchestrator. Built using itself. King Mode = goal-to-execution automation."
+    },
+    {
+      "name": "ReplylessAI",
+      "tagline": "Affordable AI email app for inbox zero",
+      "url": "https://www.producthunt.com/products/replylessai",
+      "upvotes": 122,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98735",
+      "key_insight": "Affordable Superhuman alternative. Made by Superpage founder (YC exit). 50% off at launch."
+    },
+    {
+      "name": "doXmind",
+      "tagline": "AI editor with Notion-like database features",
+      "url": "https://www.producthunt.com/products/doxmind",
+      "upvotes": 110,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98736",
+      "key_insight": "AI + Notion alternative. Combining popular tool categories = product pattern."
+    },
+    {
+      "name": "MascotVibe",
+      "tagline": "Generate and animate brand mascots in minutes",
+      "url": "https://www.producthunt.com/products/mascotvibe",
+      "upvotes": 89,
+      "category": "CONTENT_FORMAT",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98737",
+      "key_insight": "AI mascot generation. Useful for PRINTMAXX brand assets. Quick branding tool."
+    },
+    {
+      "name": "WPCursor",
+      "tagline": "Build complete WordPress sites via AI conversation",
+      "url": "https://www.producthunt.com/products/wpcursor",
+      "upvotes": 87,
+      "category": "APP_FACTORY",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98738",
+      "key_insight": "Conversational WordPress builder. Service offering potential for local biz clients."
+    },
+    {
+      "name": "Mozzie",
+      "tagline": "Parallel AI programming assistant coordination",
+      "url": "https://www.producthunt.com/products/mozzie",
+      "upvotes": 87,
+      "category": "APP_FACTORY",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98739",
+      "key_insight": "Second multi-agent coding tool same day as KingCoding. Validated demand for agent orchestration."
+    },
+    {
+      "name": "LocalPDF.io",
+      "tagline": "Process legal, medical, financial docs locally",
+      "url": "https://www.producthunt.com/products/localpdf-io",
+      "upvotes": 75,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98741",
+      "key_insight": "Privacy-first PDF processing. No cloud upload. Pattern: take cloud tool, make it local/private."
+    },
+    {
+      "name": "ClawMote",
+      "tagline": "One-handed OpenClaw control via voice",
+      "url": "https://www.producthunt.com/products/clawmote-one-hand-openclaw-wispr-flow",
+      "upvotes": 98,
+      "category": "TOOL_ALPHA",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98743",
+      "key_insight": "Voice control for OpenClaw. Accessibility angle. OpenClaw ecosystem tools = growing PH category."
+    },
+    {
+      "name": "Pre",
+      "tagline": "Enable everyone to become an operator",
+      "url": "https://www.producthunt.com/products/pre-2",
+      "upvotes": 139,
+      "category": "GROWTH_HACK",
+      "roi_potential": "MEDIUM",
+      "alpha_id": "ALPHA98740",
+      "key_insight": "'Operator' is trending positioning in AI space. Study GTM for naming conventions."
+    }
+  ],
+  "meta_insights": {
+    "dominant_themes": [
+      "OpenClaw ecosystem products (Agent37 managed hosting, ClawMote voice, GStack skills)",
+      "AI coding agent orchestration (KingCoding, Mozzie, GStack)",
+      "Voice-first interfaces (Lemon, ClawMote, Solo Voice)",
+      "Privacy-first tools (LocalPDF.io, Solo Voice)",
+      "Skill/workflow files as product category (Perplexity Computer Skills, GStack)"
+    ],
+    "actionable_for_printmaxx": [
+      "INSTALL gstack immediately - Garry Tan's Claude Code workflow with plan/code review skills",
+      "Package PRINTMAXX skills for Perplexity Computer Skills (SKILL.md format validated)",
+      "Try Agent37 for running PRINTMAXX background agents at $3.99/mo instead of Mac mini",
+      "Download Lemon for voice-powered email/content creation (free during early access)",
+      "Study KingCoding UX for control_panel.py improvements",
+      "Build Mac equivalent of GhostDesk (invisible AI call overlay) for app factory",
+      "LocalPDF.io pattern: 'take cloud tool, make it local' = repeatable app factory formula"
+    ],
+    "app_factory_opportunities": [
+      "Mac GhostDesk equivalent (invisible AI overlay for calls - Windows only currently)",
+      "AI coding agent orchestrator (KingCoding/Mozzie pattern)",
+      "Privacy-first document processor (LocalPDF.io pattern)",
+      "Conversational site builder for non-WordPress platforms"
+    ]
+  }
+}

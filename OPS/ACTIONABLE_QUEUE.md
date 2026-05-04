@@ -436,3 +436,16 @@ Total items: 95 (deduplicated from all sources)
 - **P1** | YouTube Shorts: search SEO now matters + 50-60 sec sweet spot | Blockers: NEED_ACCOUNT:youtube
 - **P1** | IG Originality Score penalty system + remove TikTok watermarks + 3-5/week | Blockers: NEED_ACCOUNT:tiktok
 - **P1** | TikTok search: text overlays boost discoverability + tutorials winning | Blockers: NEED_ACCOUNT:tiktok
+
+
+## RBI Conditional Methods
+*Updated: 2026-05-03T22:04:19Z*
+
+- **P1** | how to get millions of tiktok views in one week using openclaw(the exact playboo | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | I analyzed 10,000 Jenni AI tiktok viral videos and found top 5 emotions that gen | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | I made 39k in the last 7 days with TikTok Shop
+How?
+By not reinventing the wheel | Blockers: NEED_ACCOUNT:tiktok
+- **P1** | biggest mistake i made with openclaw
+automating TikTok without data
+it was just  | Blockers: NEED_ACCOUNT:tiktok

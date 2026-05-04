@@ -1,0 +1,324 @@
+{
+  "name": "PRINTMAXX - Google Maps Lead Scraper + Email Enrichment",
+  "nodes": [
+    {
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 1-5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Set Search Params",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [450, 300],
+      "parameters": {
+        "mode": "manual",
+        "duplicateItem": false,
+        "assignments": {
+          "assignments": [
+            {
+              "id": "search_query",
+              "name": "searchQuery",
+              "value": "small business owner",
+              "type": "string"
+            },
+            {
+              "id": "location",
+              "name": "location",
+              "value": "United States",
+              "type": "string"
+            },
+            {
+              "id": "max_results",
+              "name": "maxResults",
+              "value": 50,
+              "type": "number"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Apify Google Maps Scraper",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/nwua9Gu5YrADL7ZDj/runs?token={{$credentials.apifyApiToken}}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"searchStringsArray\": [\"{{ $json.searchQuery }}\"],\n  \"locationQuery\": \"{{ $json.location }}\",\n  \"maxCrawledPlacesPerSearch\": {{ $json.maxResults }},\n  \"language\": \"en\",\n  \"includeWebResults\": false,\n  \"maxImages\": 0,\n  \"maxReviews\": 0,\n  \"onlyDataFromSearchPage\": false\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "apify_auth",
+          "name": "Apify API Token"
+        }
+      }
+    },
+    {
+      "name": "Wait for Scrape",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [850, 300],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.apify.com/v2/acts/nwua9Gu5YrADL7ZDj/runs/last/dataset/items?token={{$credentials.apifyApiToken}}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 120000
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "apify_auth",
+          "name": "Apify API Token"
+        }
+      }
+    },
+    {
+      "name": "Extract Business Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Extract and clean business data from Apify results\nconst results = [];\n\nfor (const item of $input.all()) {\n  const data = item.json;\n  if (!data.title || !data.website) continue;\n  \n  results.push({\n    json: {\n      businessName: data.title || '',\n      address: data.address || '',\n      phone: data.phone || '',\n      website: data.website || '',\n      category: data.categoryName || '',\n      rating: data.totalScore || 0,\n      reviewCount: data.reviewsCount || 0,\n      city: data.city || '',\n      state: data.state || '',\n      scrapedAt: new Date().toISOString(),\n      email: '',\n      emailSource: 'pending_extraction'\n    }\n  });\n}\n\nreturn results.length > 0 ? results : [{json: {error: 'No results with websites found'}}];"
+      }
+    },
+    {
+      "name": "Scrape Website for Email",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1250, 300],
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.website }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          },
+          "timeout": 10000,
+          "redirect": {
+            "redirect": {
+              "followRedirects": true,
+              "maxRedirects": 3
+            }
+          }
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Extract Email with AI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1450, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.openAiApiKey}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"gpt-4o-mini\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Extract the most relevant business email from this HTML. Return ONLY the email address. If no email found, return 'none'.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"{{ $json.data ? $json.data.substring(0, 4000) : 'No HTML content' }}\"\n    }\n  ],\n  \"max_tokens\": 50,\n  \"temperature\": 0\n}",
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Merge Email with Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1650, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Merge extracted email back into lead data\nconst item = $input.item;\nconst emailResponse = item.json?.choices?.[0]?.message?.content || 'none';\nconst email = emailResponse.trim().toLowerCase();\n\n// Validate email format\nconst emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\nconst validEmail = emailRegex.test(email) ? email : '';\n\nreturn [{\n  json: {\n    ...item.json,\n    extractedEmail: validEmail,\n    emailFound: validEmail !== '',\n    enrichedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Filter Has Email",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1850, 300],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "email_check",
+              "leftValue": "={{ $json.emailFound }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Save to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [2050, 200],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_GOOGLE_SHEET_ID_HERE"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Leads"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Telegram Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [2250, 200],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=New leads scraped: {{ $json.businessName }} ({{ $json.city }}, {{ $json.state }})\nEmail: {{ $json.extractedEmail }}\nPhone: {{ $json.phone }}\nCategory: {{ $json.category }}\nRating: {{ $json.rating }}/5 ({{ $json.reviewCount }} reviews)",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Log No Email",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [2050, 400],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_GOOGLE_SHEET_ID_HERE"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Leads_NoEmail"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [[{"node": "Set Search Params", "type": "main", "index": 0}]]
+    },
+    "Set Search Params": {
+      "main": [[{"node": "Apify Google Maps Scraper", "type": "main", "index": 0}]]
+    },
+    "Apify Google Maps Scraper": {
+      "main": [[{"node": "Wait for Scrape", "type": "main", "index": 0}]]
+    },
+    "Wait for Scrape": {
+      "main": [[{"node": "Extract Business Data", "type": "main", "index": 0}]]
+    },
+    "Extract Business Data": {
+      "main": [[{"node": "Scrape Website for Email", "type": "main", "index": 0}]]
+    },
+    "Scrape Website for Email": {
+      "main": [[{"node": "Extract Email with AI", "type": "main", "index": 0}]]
+    },
+    "Extract Email with AI": {
+      "main": [[{"node": "Merge Email with Lead", "type": "main", "index": 0}]]
+    },
+    "Merge Email with Lead": {
+      "main": [[{"node": "Filter Has Email", "type": "main", "index": 0}]]
+    },
+    "Filter Has Email": {
+      "main": [
+        [{"node": "Save to Google Sheets", "type": "main", "index": 0}],
+        [{"node": "Log No Email", "type": "main", "index": 0}]
+      ]
+    },
+    "Save to Google Sheets": {
+      "main": [[{"node": "Telegram Notification", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "lead-generation"},
+    {"name": "P0"}
+  ]
+}

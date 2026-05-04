@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-17 08:10:25",
+  "generated_at": "2026-05-03 18:20:46",
   "sources": {
-    "alpha_staging_candidates": 3923,
+    "alpha_staging_candidates": 4055,
     "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
     "existing_specs_detected": 217
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3929,
+    "total_candidates": 4026,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 57,
-      "BUILD_NEW_NOW": 59,
-      "SPEC_AND_TEST": 204,
-      "PARK": 3601,
+      "ITERATE_EXISTING_NOW": 61,
+      "BUILD_NEW_NOW": 65,
+      "SPEC_AND_TEST": 222,
+      "PARK": 3670,
       "VALIDATE_FIRST": 8
     },
     "cluster_counts": {
       "faith": 97,
-      "habits": 255,
-      "ai_utility": 2914,
-      "fitness": 164,
-      "focus": 396,
-      "sleep": 86,
-      "meal": 17
+      "habits": 258,
+      "ai_utility": 2992,
+      "fitness": 170,
+      "focus": 403,
+      "sleep": 88,
+      "meal": 18
     }
   },
   "queue": [
@@ -1187,6 +1187,130 @@
       "rank": 19
     },
     {
+      "candidate_id": "ALPHA_HN_47814208",
+      "title": "Show HN: I can't write Python. It works anyway. Read an article about analyzing Garmin data with AI. Sounded great \u2014 except I didn&#x27;t want to send my health data to any cloud service. So I asked Claude to write me 2-3 scripts and a dashboard. This escalated a bit. 30 days and 20$ later I have this: A local-first Garmin archive with interactiv",
+      "source": "HackerNews (showhn)",
+      "source_url": "https://github.com/Wewoc/Garmin_Local_Archive",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "SOON",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "",
+      "applicable_methods": "",
+      "evidence": "Show HN: I can't write Python. It works anyway. Read an article about analyzing Garmin data with AI. Sounded great \u2014 except I didn&#x27;t want to send my health data to any cloud service. So I asked Claude to write me 2-3 scripts and a dashboard. This escalated a bit. 30 days and 20$ later I have this: A local-first Garmin archive with interactiv",
+      "compliance_notes": "",
+      "reviewer_notes": "AUTO-APPROVED 2026-05-03 (high ROI)",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_HN_47814208",
+        "source": "HackerNews (showhn)",
+        "source_url": "https://github.com/Wewoc/Garmin_Local_Archive",
+        "category": "APP_FACTORY",
+        "tactic": "Show HN: I can't write Python. It works anyway. Read an article about analyzing Garmin data with AI. Sounded great \u2014 except I didn&#x27;t want to send my health data to any cloud service. So I asked Claude to write me 2-3 scripts and a dashboard. This escalated a bit. 30 days and 20$ later I have this: A local-first Garmin archive with interactiv",
+        "roi_potential": "HIGHEST",
+        "priority": "SOON",
+        "status": "APPROVED",
+        "applicable_methods": "",
+        "applicable_niches": "",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "AUTO-APPROVED 2026-05-03 (high ROI)",
+        "created_at": "2026-04-20T09:01:16.354356+00:00",
+        "ops_generated": "FALSE",
+        "quality_issues": "",
+        "date_added": "2026-04-20"
+      },
+      "score": 96,
+      "cluster": "ai_utility",
+      "market_room": "HIGH",
+      "existing_app_target": "NEW_BUILD",
+      "execution_lane": "NEW_BUILD",
+      "build_decision": "BUILD_NEW_NOW",
+      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
+      "paywall_variant": "after the first clear output, never before time-to-value",
+      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
+      "primary_monetization": "subscription with fast time-to-value and annual anchor",
+      "secondary_monetization": "paid upfront or one-time pro unlock is valid here because privacy is the wedge",
+      "price_test": "$9.99 to $29.99 upfront, plus optional pro unlock",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "monetization: paid upfront vs free trial subscription"
+      ],
+      "risk_score": 0,
+      "rank": 20
+    },
+    {
+      "candidate_id": "ALPHA1774001435",
+      "title": "10 niches with almost no competition and a buyer in a crisis The make money online space has so much free content that your $67 product is competing against an ocean of YouTube videos, blog posts, and Twitter threads. The wedding vows niche has almost nothing free. Something always beats nothing. That is the whole framework. Everything below is just proof of it. The pages doing $7K to $13K a month with under 5,000 followers are not in fitness. They are not in passive income or crypto. They ar",
+      "source": "reddit/r/passive_income",
+      "source_url": "https://www.reddit.com/r/passive_income/comments/1sqaey1/10_niches_with_almost_no_competition_and_a_buyer/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "P2",
+      "status": "APPROVED",
+      "engagement_authenticity": "UNCHECKED",
+      "earnings_verified": "N/A",
+      "applicable_niches": "",
+      "applicable_methods": "10 niches with almost no competition and a buyer in a crisis",
+      "evidence": "10 niches with almost no competition and a buyer in a crisis",
+      "compliance_notes": "",
+      "reviewer_notes": "AUTO-APPROVED 2026-05-03 (method discovery)",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA1774001435",
+        "source": "reddit/r/passive_income",
+        "source_url": "https://www.reddit.com/r/passive_income/comments/1sqaey1/10_niches_with_almost_no_competition_and_a_buyer/",
+        "category": "APP_FACTORY",
+        "tactic": "10 niches with almost no competition and a buyer in a crisis The make money online space has so much free content that your $67 product is competing against an ocean of YouTube videos, blog posts, and Twitter threads. The wedding vows niche has almost nothing free. Something always beats nothing. That is the whole framework. Everything below is just proof of it. The pages doing $7K to $13K a month with under 5,000 followers are not in fitness. They are not in passive income or crypto. They ar",
+        "roi_potential": "HIGHEST",
+        "priority": "METHOD_P2",
+        "status": "APPROVED",
+        "applicable_methods": "10 niches with almost no competition and a buyer in a crisis",
+        "applicable_niches": "",
+        "synergy_score": "6.0",
+        "cross_sell_products": "",
+        "implementation_priority": "P2",
+        "engagement_authenticity": "UNCHECKED",
+        "earnings_verified": "N/A",
+        "extracted_method": "10 niches with almost no competition and a buyer in a crisis",
+        "compliance_notes": "",
+        "reviewer_notes": "AUTO-APPROVED 2026-05-03 (method discovery)",
+        "created_at": "2026-04-20T05:04:10-04:00",
+        "ops_generated": "FALSE",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 96,
+      "cluster": "fitness",
+      "market_room": "HIGH",
+      "existing_app_target": "Steplock",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
+      "paywall_variant": "after plan preview or first logged action",
+      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
+      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
+      "secondary_monetization": "test free with ads + remove-ads unlock only if usage frequency is very high",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 21
+    },
+    {
       "candidate_id": "ALPHA406",
       "title": "Specific numbers + clear method. High signal. [ROUTED: 2026-03-17 to RESEARCH by gap_hunter]",
       "source": "r/AppBusiness",
@@ -1246,7 +1370,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 20
+      "rank": 22
     },
     {
       "candidate_id": "ALPHA_HN_47767296",
@@ -1308,7 +1432,7 @@
         "monetization: paid upfront vs free trial subscription"
       ],
       "risk_score": 0,
-      "rank": 21
+      "rank": 23
     },
     {
       "candidate_id": "RF_001",
@@ -1377,7 +1501,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 24
     },
     {
       "candidate_id": "ALPHA_CI059_STUDY_STREAK",
@@ -1439,7 +1563,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA_CI_51_LTD_001",
@@ -1501,7 +1625,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA_HN_47774393",
@@ -1563,7 +1687,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -1625,7 +1749,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA_SCAN_078",
@@ -1687,7 +1811,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA25039",
@@ -1749,7 +1873,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA538",
@@ -1811,7 +1935,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA558",
@@ -1873,7 +1997,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA102378",
@@ -1935,7 +2059,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA103204",
@@ -1997,7 +2121,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA98946",
@@ -2059,7 +2183,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA1774000183",
@@ -2121,7 +2245,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA1774000278",
@@ -2183,7 +2307,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA1774000288",
@@ -2245,7 +2369,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA229",
@@ -2307,7 +2431,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA555",
@@ -2361,130 +2485,6 @@
       "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
       "primary_monetization": "subscription with 7-day trial and annual-first pricing",
       "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 38
-    },
-    {
-      "candidate_id": "ALPHA228",
-      "title": "Fitness niche AI influencer. Combine with APP_FACTORY fitness apps.",
-      "source": "AI Influencer Fitness Niche",
-      "source_url": "AI_INFLUENCER/FITNESS_COACHES research",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "Fitness niche AI influencer. Combine with APP_FACTORY fitness apps.",
-      "compliance_notes": "",
-      "reviewer_notes": "APPROVED. Fitness niche AI influencer playbook. Cross-sell with WalkToUnlock and other fitness apps. Content-to-app funnel. Synergy score high with APP_FACTORY. [ROUTED: 2026-03-17 to CONTENT by gap_hunter]",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA228",
-        "source": "AI Influencer Fitness Niche",
-        "source_url": "AI_INFLUENCER/FITNESS_COACHES research",
-        "category": "AI_INFLUENCER",
-        "tactic": "",
-        "roi_potential": "HIGH",
-        "priority": "",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "",
-        "extracted_method": "Fitness niche AI influencer. Combine with APP_FACTORY fitness apps.",
-        "compliance_notes": "",
-        "reviewer_notes": "APPROVED. Fitness niche AI influencer playbook. Cross-sell with WalkToUnlock and other fitness apps. Content-to-app funnel. Synergy score high with APP_FACTORY. [ROUTED: 2026-03-17 to CONTENT by gap_hunter]",
-        "created_at": "",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 86,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA552",
-      "title": "PWA store listing: Google Play accepts via Bubblewrap/PWABuilder. Apple needs native wrapper. PWABuilder packages for both stores.",
-      "source": "Mobiloud / PWABuilder",
-      "source_url": "https://www.mobiloud.com/blog/publishing-pwa-app-store",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGHEST",
-      "priority": "HIGHEST",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "TRUE",
-      "applicable_niches": "tech",
-      "applicable_methods": "APP_FACTORY",
-      "evidence": "PWABuilder to package PWA for both stores. Google Play = easy. iOS = wrapper needed.",
-      "compliance_notes": "",
-      "reviewer_notes": "[CONTENT_GENERATED: 2026-03-05] Key infra intel. PrayerLock PWA CAN get on app stores. PWABuilder = fastest path. [BOLSTERED: 2026-02-28, VENTURE_ALPHA6603_app_factory.md] [ROUTED: 2026-03-07 to APP_FACTORY by gap_hunter]",
-      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA552.md",
-      "raw": {
-        "alpha_id": "ALPHA552",
-        "source": "Mobiloud / PWABuilder",
-        "source_url": "https://www.mobiloud.com/blog/publishing-pwa-app-store",
-        "category": "APP_FACTORY",
-        "tactic": "PWA store listing: Google Play accepts via Bubblewrap/PWABuilder. Apple needs native wrapper. PWABuilder packages for both stores.",
-        "roi_potential": "HIGHEST",
-        "priority": "PENDING_REVIEW",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "APP_FACTORY",
-        "applicable_niches": "tech",
-        "synergy_score": "90",
-        "cross_sell_products": "",
-        "implementation_priority": "HIGHEST",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "TRUE",
-        "extracted_method": "PWABuilder to package PWA for both stores. Google Play = easy. iOS = wrapper needed.",
-        "compliance_notes": "",
-        "reviewer_notes": "[CONTENT_GENERATED: 2026-03-05] Key infra intel. PrayerLock PWA CAN get on app stores. PWABuilder = fastest path. [BOLSTERED: 2026-02-28, VENTURE_ALPHA6603_app_factory.md] [ROUTED: 2026-03-07 to APP_FACTORY by gap_hunter]",
-        "created_at": "2026-02-10T14:00:00",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 86,
-      "cluster": "faith",
-      "market_room": "MEDIUM_HIGH",
-      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
-      "paywall_variant": "after first devotional value moment, annual-first anchor",
-      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
-      "primary_monetization": "subscription with 7-day trial",
-      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
       "price_test": "$24.99 to $39.99/yr first",
       "experiments": [
         "paywall timing: after first value moment vs after onboarding preview",

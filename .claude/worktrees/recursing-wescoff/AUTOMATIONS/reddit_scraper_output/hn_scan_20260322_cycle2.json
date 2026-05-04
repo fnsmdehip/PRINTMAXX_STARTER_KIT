@@ -1,0 +1,192 @@
+{
+  "scan_date": "2026-03-22",
+  "scan_time": "12:23:25",
+  "cycle": 2,
+  "source": "HackerNews API (topstories) + ProductHunt Atom Feed",
+  "hn_stories_fetched": 30,
+  "hn_new_stories": 23,
+  "hn_actionable": 8,
+  "ph_products_fetched": 17,
+  "ph_actionable": 15,
+  "results_hn": [
+    {
+      "id": 47477158,
+      "title": "Bored of eating your own dogfood? Try smelling your own farts",
+      "url": "https://shkspr.mobi/blog/2026/03/bored-of-eating-your-own-dogfood-try-smelling-your-own-farts/",
+      "score": 212,
+      "comments": 123,
+      "category": "BUSINESS",
+      "note": "High-engagement blog post (212pts) on product testing bias. Content repurposing opportunity for indie hacker audience. Hook structure worth studying."
+    },
+    {
+      "id": 47478401,
+      "title": "A Coherent Vision for the Future of Version Control",
+      "url": "https://bramcohen.com/p/manyana",
+      "score": 7,
+      "comments": 0,
+      "category": "TOOL",
+      "note": "Bram Cohen (BitTorrent creator) on next-gen VCS. Track for potential paradigm shift in developer tools space."
+    },
+    {
+      "id": 47477024,
+      "title": "Apple's intentional crippling of Mobile Safari continues",
+      "url": "https://pwa.gripe/",
+      "score": 88,
+      "comments": 79,
+      "category": "APP",
+      "note": "Apple blocking PWA features. Content opportunity: thread on PWA limitations. Affects our PWA apps (PrayerLock etc). May need native wrappers. High engagement topic (88pts, 79 comments)."
+    },
+    {
+      "id": 47428117,
+      "title": "Node.js worker threads are problematic, but they work great for us",
+      "url": "https://www.inngest.com/blog/node-worker-threads",
+      "score": 38,
+      "comments": 17,
+      "category": "TOOL",
+      "note": "Node.js worker threads practical guide from Inngest. Relevant for our Node-based automation scripts. Performance optimization for concurrent processing."
+    },
+    {
+      "id": 47470773,
+      "title": "Tinybox \u2013 A powerful computer for deep learning",
+      "url": "https://tinygrad.org/#tinybox",
+      "score": 550,
+      "comments": 318,
+      "category": "AI",
+      "note": "Tinygrad hardware for local AI inference. Track for cost reduction in AI pipelines. If price drops under $5K, could replace API costs for batch inference."
+    },
+    {
+      "id": 47476772,
+      "title": "$ teebot.dev \u2013 from terminal to tee in 6 seconds",
+      "url": "https://teebot.dev",
+      "score": 23,
+      "comments": 29,
+      "category": "SAAS",
+      "note": "Terminal-to-tee-shirt in 6 seconds. Novel print-on-demand angle from CLI. Study the niche for low-competition POD opportunities."
+    },
+    {
+      "id": 47474967,
+      "title": "HopTab\u2013free,open source macOS app switcher and tiler that replaces Cmd+Tab",
+      "url": "https://www.royalbhati.com/hoptab",
+      "score": 82,
+      "comments": 23,
+      "category": "APP",
+      "note": "Open source macOS app switcher with tiling. Study their Product Hunt / HN launch strategy. Also potential competitor intel for productivity app niche."
+    },
+    {
+      "id": 47471801,
+      "title": "Floci \u2013 A free, open-source local AWS emulator",
+      "url": "https://github.com/hectorvent/floci",
+      "score": 249,
+      "comments": 85,
+      "category": "TOOL",
+      "note": "Free LocalStack alternative. Useful for testing AWS integrations (S3, Lambda, SQS) locally before deploying. Direct cost savings for cloud dev."
+    }
+  ],
+  "results_ph": [
+    {
+      "title": "Design Agent by Lokuma",
+      "tagline": "The designer for your AI agents (Openclaw, CC, Codex)",
+      "url": "https://www.producthunt.com/products/lokuma-ai",
+      "category": "AI",
+      "note": "AI design agent compatible with OpenClaw, CC, Codex. Design automation for our landing pages and app screenshots."
+    },
+    {
+      "title": "Claude Code Scheduled Tasks",
+      "tagline": "Schedule recurring tasks locally and in the cloud easily",
+      "url": "https://www.producthunt.com/products/claude-code-scheduled-tasks",
+      "category": "AI",
+      "note": "Tool to schedule recurring Claude Code tasks. Direct competitor/complement to our Ralph loops and cron automation. Study their approach for potential integration or improvement ideas."
+    },
+    {
+      "title": "Bench for Claude Code",
+      "tagline": "Store, review, and share your Claude Code sessions",
+      "url": "https://www.producthunt.com/products/bench-for-claude-code",
+      "category": "TOOL",
+      "note": "Session storage and sharing for Claude Code. Could be useful for our multi-session workflows. Competitor intel for developer tooling space."
+    },
+    {
+      "title": "Edgee Claude Code Compression",
+      "tagline": "Extend Claude Pro's limit by 26.2%",
+      "url": "https://www.producthunt.com/products/edgee",
+      "category": "AI",
+      "note": "Extends Claude Pro limit by 26.2% via context compression. Directly relevant to our context management challenges. Evaluate for integration."
+    },
+    {
+      "title": "Replit Agent 4",
+      "tagline": "Build design, and ship anything AI fast in one flow",
+      "url": "https://www.producthunt.com/products/replit-agent-4",
+      "category": "AI",
+      "note": "Major Replit update for AI app building. Direct competitor to our app factory approach. Study their flow for improvements to our pipeline."
+    },
+    {
+      "title": "Claude Code Channels",
+      "tagline": "Push events and chat with Claude Code via Telegram & Discord",
+      "url": "https://www.producthunt.com/products/claude",
+      "category": "AI",
+      "note": "Push Claude Code events to Telegram and Discord. Could wire our automation alerts through this instead of custom notification scripts."
+    },
+    {
+      "title": "Visdiff",
+      "tagline": "Stop bridging the design-to-code gap, close it",
+      "url": "https://www.producthunt.com/products/visdiff",
+      "category": "TOOL",
+      "note": "Design-to-code gap closer. Could speed up our landing page builds from Figma/screenshots to code."
+    },
+    {
+      "title": "OctoClaw",
+      "tagline": "Hire AI specialists for marketing, sales, support, and more",
+      "url": "https://www.producthunt.com/products/octoclaw",
+      "category": "SAAS",
+      "note": "AI specialists for marketing, sales, support. Competitor to our agent swarm concept. Study their agent specialization model."
+    },
+    {
+      "title": "Context.dev",
+      "tagline": "One API to scrape, enrich, and understand the web.",
+      "url": "https://www.producthunt.com/products/context-dev",
+      "category": "TOOL",
+      "note": "Unified API for web scraping and enrichment. Potential replacement/complement for our 37+ scrapers. One API vs many custom scripts."
+    },
+    {
+      "title": "Claude Cowork Projects",
+      "tagline": "Tasks, context, and files organized in one workspace",
+      "url": "https://www.producthunt.com/products/claude-cowork-projects",
+      "category": "AI",
+      "note": "Workspace organization for Claude projects. Study for ideas on organizing our 392+ scripts and multi-venture workflow."
+    },
+    {
+      "title": "Cursor Glass",
+      "tagline": "Unified agent workspace with seamless cloud handoff power",
+      "url": "https://www.producthunt.com/products/glass-4",
+      "category": "TOOL",
+      "note": "Unified agent workspace with cloud handoff. Study their handoff pattern vs our agent_swarm handoff system."
+    },
+    {
+      "title": "Fig Prompt",
+      "tagline": "Build Figma plugins with just a prompt",
+      "url": "https://www.producthunt.com/products/fig-prompt",
+      "category": "TOOL",
+      "note": "Build Figma plugins with prompts. Low-effort tool for creating design assets from text descriptions."
+    },
+    {
+      "title": "Context Overflow",
+      "tagline": "Knowledge Sharing for AI Agents",
+      "url": "https://www.producthunt.com/products/context-overflow",
+      "category": "AI",
+      "note": "Knowledge sharing between AI agents. Directly relevant to our multi-agent swarm communication. Study for improvements."
+    },
+    {
+      "title": "Composer 2 by Cursor",
+      "tagline": "Fast, token-efficient frontier-level coding model",
+      "url": "https://www.producthunt.com/products/cursor",
+      "category": "AI",
+      "note": "Cursor new coding model. Competitor intel. Track for potential code quality improvements if switching models."
+    },
+    {
+      "title": "Fundable API",
+      "tagline": "Startup data via API",
+      "url": "https://www.producthunt.com/products/fundable-2",
+      "category": "SAAS",
+      "note": "Startup data via API. Could feed our competitive intelligence pipeline. Evaluate as data source for venture research."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "carousel_id": "CAROUSEL009",
+  "title": "The solo founder tech stack (2026 edition)",
+  "platform": "both",
+  "slides": [
+    {
+      "slide_num": 1,
+      "headline": "My 2026 solo founder stack",
+      "body": "Build faster than funded teams",
+      "visual_note": "Solo developer silhouette with tech logos floating"
+    },
+    {
+      "slide_num": 2,
+      "headline": "Code: Claude Code + Cursor",
+      "body": "Claude Code for overnight builds (runs autonomously). Cursor for real-time pair programming. Cost: $20/month each.",
+      "visual_note": "Claude and Cursor logos"
+    },
+    {
+      "slide_num": 3,
+      "headline": "Frontend: Next.js + Tailwind",
+      "body": "Next.js 15 with App Router. Tailwind for styling. shadcn/ui for components. Deploys to Vercel in 30 seconds.",
+      "visual_note": "Framework logos stacked"
+    },
+    {
+      "slide_num": 4,
+      "headline": "Mobile: React Native + Expo",
+      "body": "One codebase, iOS and Android. Expo for easy builds. EAS for app store submissions. Skip Swift/Kotlin entirely.",
+      "visual_note": "React Native logo with phone mockups"
+    },
+    {
+      "slide_num": 5,
+      "headline": "Backend: Supabase",
+      "body": "Postgres database. Auth built-in. Edge functions. Real-time subscriptions. Free tier handles most MVPs.",
+      "visual_note": "Supabase logo with features list"
+    },
+    {
+      "slide_num": 6,
+      "headline": "Payments: Stripe + RevenueCat",
+      "body": "Stripe for web. RevenueCat for mobile subscriptions. Both handle taxes, refunds, analytics. Set up once, forget.",
+      "visual_note": "Payment flow diagram"
+    },
+    {
+      "slide_num": 7,
+      "headline": "Content: Remotion + ElevenLabs",
+      "body": "Remotion for programmatic videos. ElevenLabs for AI voiceovers. Generate 100 TikToks while you sleep.",
+      "visual_note": "Video generation pipeline visual"
+    },
+    {
+      "slide_num": 8,
+      "headline": "Analytics: PostHog + Plausible",
+      "body": "PostHog for product analytics (funnels, cohorts). Plausible for privacy-friendly web analytics. Both have generous free tiers.",
+      "visual_note": "Dashboard mockups"
+    },
+    {
+      "slide_num": 9,
+      "headline": "Total monthly cost",
+      "body": "Claude Code: $20. Cursor: $20. Vercel: $0. Supabase: $0. RevenueCat: $0. PostHog: $0. Total: $40/month to run a SaaS.",
+      "visual_note": "Cost breakdown table"
+    }
+  ],
+  "cta_slide": {
+    "headline": "I share my stack updates weekly",
+    "action": "Follow for the best tools"
+  },
+  "hashtags": ["techstack", "solofounder", "indiedev", "buildinpublic", "saas", "startuptools", "webdev"],
+  "estimated_engagement": "MEDIUM"
+}

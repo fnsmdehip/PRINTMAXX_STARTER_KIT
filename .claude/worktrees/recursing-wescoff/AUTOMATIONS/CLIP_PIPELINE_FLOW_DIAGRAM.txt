@@ -1,0 +1,460 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                    AUTOMATED CLIP PIPELINE - FULL FLOW                         ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+INPUT SOURCES
+─────────────
+┌─────────────────┐
+│  YouTube VODs   │
+│  Twitch Streams │──────┐
+│  Podcasts       │      │
+│  Interviews     │      │
+│  Webinars       │      │
+└─────────────────┘      │
+                         ▼
+                 ┌───────────────┐
+                 │  URLs File    │
+                 │ example_urls  │
+                 │    .txt       │
+                 └───────┬───────┘
+                         │
+                         ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                         STAGE 1: DOWNLOAD (yt-dlp)                            ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │ auto_clip     │
+                 │ _pipeline.py  │
+                 └───────┬───────┘
+                         │
+                         ▼
+                 ┌───────────────┐
+                 │   yt-dlp      │◄────── Supports: YouTube, Twitch,
+                 │   Download    │        Vimeo, 1000+ sites
+                 └───────┬───────┘
+                         │
+                         ▼
+             ┌────────────────────────┐
+             │  clips/downloads/      │
+             │  video_id.mp4          │
+             └────────────────────────┘
+                         │
+                         ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    STAGE 2: TRANSCRIBE (Whisper)                              ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │ OpenAI        │
+                 │ Whisper       │
+                 │ (base model)  │
+                 └───────┬───────┘
+                         │
+                         ▼
+         ┌───────────────────────────────┐
+         │  Word-level timestamps        │
+         │  Segment boundaries           │
+         │  Speaker detection (future)   │
+         └───────────────┬───────────────┘
+                         │
+                         ▼
+             ┌────────────────────────┐
+             │  clips/transcripts/    │
+             │  video_id.json         │
+             └────────────────────────┘
+                         │
+                         ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                   STAGE 3: ANALYZE (Claude Sonnet 4)                          ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │  Claude API   │
+                 │  Sonnet 4     │
+                 └───────┬───────┘
+                         │
+                 ┌───────┴───────┐
+                 │ Analyze for:  │
+                 │               │
+                 │ • Funny       │
+                 │ • Surprising  │
+                 │ • Emotional   │
+                 │ • Quotable    │
+                 │ • Controversial│
+                 │ • "Wait what?"│
+                 └───────┬───────┘
+                         │
+                         ▼
+         ┌───────────────────────────────┐
+         │  For each moment:             │
+         │  • Timestamp range            │
+         │  • Viral score (1-10)         │
+         │  • Viral reason               │
+         │  • Suggested caption          │
+         │  • Transcript snippet         │
+         └───────────────┬───────────────┘
+                         │
+                         ▼
+             ┌────────────────────────┐
+             │  Moment candidates     │
+             │  (JSON array)          │
+             └────────────────────────┘
+                         │
+                         ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                      STAGE 4: CLIP (FFmpeg)                                   ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │   FFmpeg      │
+                 │   Pipeline    │
+                 └───────┬───────┘
+                         │
+         ┌───────────────┴───────────────┐
+         │                               │
+         ▼                               ▼
+┌──────────────────┐          ┌──────────────────┐
+│ 1. Extract clip  │          │ 2. Generate SRT  │
+│    (timestamp)   │          │    subtitles     │
+└────────┬─────────┘          └────────┬─────────┘
+         │                             │
+         ▼                             │
+┌──────────────────┐                  │
+│ 3. Vertical crop │                  │
+│    (9:16 ratio)  │                  │
+│    Center frame  │                  │
+└────────┬─────────┘                  │
+         │                             │
+         ▼                             │
+┌──────────────────┐                  │
+│ 4. Burn-in       │◄─────────────────┘
+│    captions      │
+│    (styled SRT)  │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│ 5. Export MP4    │
+│    H.264 codec   │
+│    AAC audio     │
+└────────┬─────────┘
+         │
+         ▼
+┌────────────────────────┐
+│  clips/clips/          │
+│  video_id_clip01.mp4   │
+│  video_id_clip02.mp4   │
+│  ...                   │
+└────────────────────────┘
+         │
+         ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                        STAGE 5: METADATA OUTPUT                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │  CSV Writer   │
+                 └───────┬───────┘
+                         │
+                         ▼
+         ┌───────────────────────────────┐
+         │  clips_metadata.csv           │
+         │                               │
+         │  clip_id                      │
+         │  source_url                   │
+         │  timestamp_start              │
+         │  timestamp_end                │
+         │  duration                     │
+         │  transcript_snippet           │
+         │  viral_score                  │
+         │  viral_reason                 │
+         │  caption_text                 │
+         │  output_path                  │
+         │  created_at                   │
+         └───────────────┬───────────────┘
+                         │
+                         ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    STAGE 6: SCHEDULING (Post Scheduler)                       ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │ clip_post_    │
+                 │ scheduler.py  │
+                 └───────┬───────┘
+                         │
+         ┌───────────────┴───────────────┐
+         │                               │
+         ▼                               ▼
+┌──────────────────┐          ┌──────────────────┐
+│ Sort by viral    │          │ Map to accounts  │
+│ score (high→low) │          │ (round-robin)    │
+└────────┬─────────┘          └────────┬─────────┘
+         │                             │
+         └─────────────┬───────────────┘
+                       │
+                       ▼
+         ┌─────────────────────────────┐
+         │  Generate time slots:       │
+         │                             │
+         │  TikTok:  9am, 12pm, 5pm, 7pm │
+         │  Twitter: 8am, 12pm, 5pm, 9pm │
+         │  Instagram: 9am, 12pm, 5pm, 7pm │
+         │  YouTube: 2pm, 5pm, 8pm     │
+         └─────────────┬───────────────┘
+                       │
+                       ▼
+         ┌─────────────────────────────┐
+         │  Platform-specific format:  │
+         │                             │
+         │  • Twitter: 280 char        │
+         │  • TikTok: + 5 hashtags     │
+         │  • Instagram: + 10 hashtags │
+         │  • YouTube: Title format    │
+         └─────────────┬───────────────┘
+                       │
+                       ▼
+         ┌─────────────────────────────┐
+         │  posting_schedule.csv       │
+         │                             │
+         │  clip_id                    │
+         │  post_text                  │
+         │  media_path                 │
+         │  platform                   │
+         │  account                    │
+         │  scheduled_time             │
+         │  viral_score                │
+         │  caption                    │
+         └─────────────┬───────────────┘
+                       │
+                       ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    STAGE 7: DISTRIBUTION (Buffer/Publer)                      ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │  Import CSV   │
+                 │  to Buffer    │
+                 └───────┬───────┘
+                         │
+         ┌───────────────┴───────────────┐
+         │                               │
+         ▼                               ▼
+┌──────────────────┐          ┌──────────────────┐
+│   TikTok         │          │   Twitter        │
+│   @printmaxxer   │          │   @printmaxxer   │
+└──────────────────┘          └──────────────────┘
+         │                               │
+         ▼                               ▼
+┌──────────────────┐          ┌──────────────────┐
+│   Instagram      │          │   YouTube        │
+│   @printmaxxer   │          │   Shorts         │
+└──────────────────┘          └──────────────────┘
+         │                               │
+         └───────────────┬───────────────┘
+                         │
+                         ▼
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                        STAGE 8: PERFORMANCE TRACKING                          ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+                 ┌───────────────┐
+                 │  Monitor:     │
+                 │               │
+                 │  • Views      │
+                 │  • Engagement │
+                 │  • Shares     │
+                 │  • Comments   │
+                 └───────┬───────┘
+                         │
+                         ▼
+         ┌───────────────────────────────┐
+         │  viral_content_scanner.py     │
+         │  (tracks performance)         │
+         └───────────────┬───────────────┘
+                         │
+                         ▼
+         ┌───────────────────────────────┐
+         │  LEDGER/                      │
+         │  VIRAL_CONTENT_TRACKER.csv    │
+         │                               │
+         │  Compare predicted vs actual  │
+         └───────────────┬───────────────┘
+                         │
+                         ▼
+         ┌───────────────────────────────┐
+         │  ALPHA FEEDBACK LOOP          │
+         │                               │
+         │  • Refine Claude prompt       │
+         │  • Adjust clip duration       │
+         │  • Optimize posting times     │
+         │  • Improve captions           │
+         └───────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                            PARALLEL PROCESSING
+═══════════════════════════════════════════════════════════════════════════════
+
+Multiple videos can be processed simultaneously:
+
+Video 1 → Pipeline Instance 1 → Clips 1-10
+Video 2 → Pipeline Instance 2 → Clips 11-20
+Video 3 → Pipeline Instance 3 → Clips 21-30
+Video 4 → Pipeline Instance 4 → Clips 31-40
+
+Run: python3 auto_clip_pipeline.py --urls-file batch.txt &
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                           RESUME CAPABILITY
+═══════════════════════════════════════════════════════════════════════════════
+
+processed_urls.log tracks completed videos:
+
+URL 1 ✓ (skip on re-run)
+URL 2 ✓ (skip on re-run)
+URL 3 ✗ (process on re-run)
+URL 4 ✗ (process on re-run)
+
+Safe to interrupt and resume batch jobs.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                             FALLBACK MODES
+═══════════════════════════════════════════════════════════════════════════════
+
+No Whisper → Evenly-spaced clips (still functional)
+No Claude → Generic viral detection (still functional)
+No yt-dlp → Manual download (provide local file)
+No ffmpeg → Cannot process (required)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                          INTEGRATION POINTS
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         PRINTMAXX ECOSYSTEM                             │
+│                                                                         │
+│  Content Calendar ←── posting_schedule.csv                             │
+│  Niche Accounts   ←── account mapping                                  │
+│  Zero Waste       ←── clip multiplication                              │
+│  Viral Tracker    ←── performance data                                 │
+│  Financial        ←── revenue tracking                                 │
+│  Alpha Staging    ←── insights feedback                                │
+│  Service Offering ←── client deliverables                              │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                         REVENUE MULTIPLICATION
+═══════════════════════════════════════════════════════════════════════════════
+
+      1 Long Video (2 hours)
+              ↓
+      10 Viral Clips (30-60s each)
+              ↓
+      4 Platforms × 10 clips = 40 posts
+              ↓
+      ┌──────────────────────────────────┐
+      │ Direct Revenue                   │
+      │ • YouTube Shorts ad revenue      │
+      │ • TikTok Creator Fund            │
+      │ • Affiliate link clicks          │
+      │ • Product placements             │
+      │                                  │
+      │ Service Revenue                  │
+      │ • Client clip packages $500-1K   │
+      │ • Monthly clip service $2K/mo    │
+      │                                  │
+      │ Time Savings                     │
+      │ • Manual: 3 hours per video      │
+      │ • Automated: 5 minutes           │
+      │ • Value: $145 per video          │
+      └──────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                              DAILY WORKFLOW
+═══════════════════════════════════════════════════════════════════════════════
+
+MORNING (2am - automated cron):
+  1. Download yesterday's streams
+  2. Process through pipeline
+  3. Generate posting schedule
+  4. Import to Buffer
+
+REVIEW (10am - 5 minutes):
+  1. Review generated clips
+  2. Approve posting schedule
+  3. Monitor performance
+
+ITERATE (Evening - 5 minutes):
+  1. Check viral performance
+  2. Note what worked
+  3. Adjust settings
+  4. Add insights to ALPHA_STAGING
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                           SUCCESS METRICS
+═══════════════════════════════════════════════════════════════════════════════
+
+Track in LEDGER/MEGA_SHEET/:
+  • Clips generated per week
+  • Average viral score
+  • Predicted vs actual performance
+  • Views per clip
+  • Revenue per clip
+  • Time saved
+  • Client projects delivered
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                          END-TO-END EXAMPLE
+═══════════════════════════════════════════════════════════════════════════════
+
+Input:  2-hour podcast episode
+        https://youtube.com/watch?v=abc123
+
+Output: 10 vertical clips (30-60s each)
+        - Funny moments: 3 clips
+        - Controversial takes: 2 clips
+        - Quotable insights: 3 clips
+        - Surprising reveals: 2 clips
+
+        40 scheduled posts:
+        - TikTok: 10 posts
+        - Twitter: 10 posts
+        - Instagram: 10 posts
+        - YouTube Shorts: 10 posts
+
+        Spread over 7 days with optimal timing
+
+Result: 450K views across platforms
+        $300 ad revenue
+        15 product sales ($750 commission)
+        Total: $1,050 from one video
+
+        ROI: $1,050 revenue / 5 minutes work = $12,600/hour effective rate
+
+
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                             THE PRINTMAXX WAY                                  ║
+║                                                                                ║
+║  One video → Multiple clips → Cross-platform → Automated → Revenue             ║
+║                                                                                ║
+║  That's the force multiplier. That's PRINTMAXXING.                            ║
+╚════════════════════════════════════════════════════════════════════════════════╝

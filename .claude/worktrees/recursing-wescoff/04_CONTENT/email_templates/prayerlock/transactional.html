@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>{{subject_line}}</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    a {
+      color: #1e40af;
+      text-decoration: none;
+    }
+
+    .preheader {
+      display: none !important;
+      visibility: hidden;
+      opacity: 0;
+      color: transparent;
+      height: 0;
+      width: 0;
+      max-height: 0;
+      max-width: 0;
+      overflow: hidden;
+      mso-hide: all;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .body-content {
+      padding: 32px 24px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #1a1a1a;
+    }
+
+    /* PrayerLock: Gold/Blue header */
+    .header {
+      padding: 24px;
+      text-align: center;
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    .header-text {
+      color: #fbbf24;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e3a8a;
+      margin: 0 0 16px 0;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1e3a8a;
+      margin: 20px 0 8px 0;
+    }
+
+    p {
+      margin: 0 0 16px 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      color: #ffffff !important;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      margin: 16px 0;
+      box-shadow: 0 2px 4px rgba(217, 119, 6, 0.3);
+    }
+
+    /* Status badges */
+    .status-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .status-success {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+
+    .status-pending {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+
+    .status-failed {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+
+    .detail-box {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .detail-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .detail-table td {
+      padding: 10px 0;
+      border-bottom: 1px solid #bfdbfe;
+    }
+
+    .detail-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .detail-table .label {
+      color: #1e3a8a;
+      font-size: 14px;
+      width: 40%;
+    }
+
+    .detail-table .value {
+      font-weight: 600;
+      text-align: right;
+      color: #1e3a8a;
+    }
+
+    .total-row td {
+      padding-top: 16px;
+      font-size: 18px;
+    }
+
+    .code-block {
+      background-color: #dbeafe;
+      border: 1px solid #93c5fd;
+      border-radius: 6px;
+      padding: 16px;
+      font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+      font-size: 24px;
+      letter-spacing: 4px;
+      text-align: center;
+      margin: 16px 0;
+      color: #1e3a8a;
+    }
+
+    .alert-box {
+      background-color: #fef3c7;
+      border: 1px solid #fbbf24;
+      border-radius: 6px;
+      padding: 16px;
+      margin: 20px 0;
+    }
+
+    .alert-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #92400e;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #dbeafe;
+      margin: 24px 0;
+    }
+
+    .help-text {
+      font-size: 14px;
+      color: #4b5563;
+      margin-top: 24px;
+    }
+
+    .footer {
+      background-color: #1e3a8a;
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #93c5fd;
+    }
+
+    .footer a {
+      color: #fbbf24;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      .body-content {
+        background-color: #0f172a !important;
+        color: #e2e8f0 !important;
+      }
+
+      h1, h2 {
+        color: #fbbf24 !important;
+      }
+
+      .detail-box {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+      }
+
+      .detail-table td {
+        border-bottom-color: #334155 !important;
+      }
+
+      .detail-table .label,
+      .detail-table .value {
+        color: #e2e8f0 !important;
+      }
+
+      .code-block {
+        background-color: #1e293b !important;
+        border-color: #334155 !important;
+        color: #fbbf24 !important;
+      }
+
+      .alert-box {
+        background-color: #422006 !important;
+        border-color: #d97706 !important;
+      }
+
+      .alert-box p {
+        color: #fde68a !important;
+      }
+
+      .footer {
+        background-color: #020617 !important;
+      }
+
+      .divider {
+        border-top-color: #334155 !important;
+      }
+
+      .help-text {
+        color: #94a3b8 !important;
+      }
+    }
+
+    /* Mobile styles */
+    @media screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+      }
+
+      .body-content {
+        padding: 24px 16px !important;
+      }
+
+      .header {
+        padding: 20px 16px !important;
+      }
+
+      h1 {
+        font-size: 20px !important;
+      }
+
+      .cta-button {
+        display: block !important;
+        text-align: center;
+        padding: 16px 24px !important;
+      }
+
+      .code-block {
+        font-size: 20px !important;
+        letter-spacing: 2px !important;
+      }
+
+      .footer {
+        padding: 20px 16px !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f0f4f8;">
+  <!-- Preheader text -->
+  <div class="preheader">{{preheader_text}} &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;</div>
+
+  <!-- Email wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0f4f8;">
+    <tr>
+      <td align="center" style="padding: 24px 16px;">
+
+        <!-- Email container -->
+        <table role="presentation" class="email-container" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+
+          <!-- Header -->
+          <tr>
+            <td class="header">
+              <p class="header-text">PrayerLock</p>
+            </td>
+          </tr>
+
+          <!-- Body content -->
+          <tr>
+            <td class="body-content">
+              <!-- Status badge -->
+              <span class="status-badge status-success">{{status_text}}</span>
+
+              <h1 style="margin-top: 16px;">{{headline}}</h1>
+
+              <p>{{first_name}},</p>
+
+              <p>{{intro_text}}</p>
+
+              <!-- Transaction details -->
+              <div class="detail-box">
+                <table class="detail-table" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="label">{{detail_label_1}}</td>
+                    <td class="value">{{detail_value_1}}</td>
+                  </tr>
+                  <tr>
+                    <td class="label">{{detail_label_2}}</td>
+                    <td class="value">{{detail_value_2}}</td>
+                  </tr>
+                  <tr>
+                    <td class="label">{{detail_label_3}}</td>
+                    <td class="value">{{detail_value_3}}</td>
+                  </tr>
+                  <tr class="total-row">
+                    <td class="label">{{total_label}}</td>
+                    <td class="value">{{total_value}}</td>
+                  </tr>
+                </table>
+              </div>
+
+              <!-- CTA Button -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center">
+                    <a href="{{cta_url}}" class="cta-button">{{cta_text}}</a>
+                  </td>
+                </tr>
+              </table>
+
+              <hr class="divider">
+
+              <div class="help-text">
+                <p>Questions? Reply to this email or contact <a href="mailto:support@prayerlock.app">support@prayerlock.app</a>.</p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="footer">
+              <p style="margin: 0 0 8px 0;">
+                PrayerLock<br>
+                {{company_address}}
+              </p>
+
+              <p style="margin: 8px 0;">
+                <a href="{{unsubscribe_url}}">Manage email preferences</a>
+              </p>
+
+              <p style="margin: 8px 0; font-size: 11px; color: #93c5fd;">
+                This is a transactional email about your PrayerLock account.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

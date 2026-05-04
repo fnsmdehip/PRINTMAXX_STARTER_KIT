@@ -1,0 +1,222 @@
+{
+  "name": "PRINTMAXX - Content Repurposing Factory",
+  "nodes": [
+    {
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "content-repurpose",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "webhookId": "content-repurpose-hook"
+    },
+    {
+      "name": "Validate Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const body = $input.item.json.body || $input.item.json;\nconst content = body.content || body.text || '';\nconst title = body.title || 'Untitled';\nconst sourceType = body.sourceType || 'blog'; // blog, youtube, newsletter, thread\n\nif (!content || content.length < 100) {\n  throw new Error('Content too short. Minimum 100 characters.');\n}\n\nreturn [{\n  json: {\n    originalContent: content,\n    title: title,\n    sourceType: sourceType,\n    contentLength: content.length,\n    receivedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Generate Twitter Posts",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 150],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.openAiApiKey}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"gpt-4o-mini\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Generate 5 Twitter/X posts from this content. Rules: 1) consequence-first hooks, 2) specific numbers always, 3) max 280 chars each, 4) lowercase casual tone, 5) no em dashes, 6) no AI vocabulary (leverage, delve, comprehensive), 7) no hashtags, 8) each post stands alone. Return as JSON array: [{\\\"post\\\": \\\"text\\\", \\\"hook_type\\\": \\\"type\\\"}]\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Title: {{ $json.title }}\\n\\nContent: {{ $json.originalContent.substring(0, 3000) }}\"\n    }\n  ],\n  \"max_tokens\": 1000,\n  \"temperature\": 0.8\n}",
+        "options": {}
+      }
+    },
+    {
+      "name": "Generate Twitter Thread",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.openAiApiKey}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"gpt-4o-mini\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Generate a 5-7 tweet thread from this content. Rules: 1) first tweet = consequence-first hook with specific number, 2) each tweet max 280 chars, 3) lowercase casual, 4) last tweet = soft CTA (follow for more / link in bio), 5) no em dashes, 6) no AI slop words. Return as JSON array of strings.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Title: {{ $json.title }}\\n\\nContent: {{ $json.originalContent.substring(0, 3000) }}\"\n    }\n  ],\n  \"max_tokens\": 1500,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      }
+    },
+    {
+      "name": "Generate LinkedIn Post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 450],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.openAiApiKey}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"gpt-4o-mini\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Generate 1 LinkedIn post from this content. Rules: 1) professional but not corporate, 2) open with a bold statement or specific result, 3) 150-300 words, 4) use line breaks for readability, 5) end with a question to drive comments, 6) no hashtag spam (max 3), 7) no AI vocabulary. Return as plain text.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Title: {{ $json.title }}\\n\\nContent: {{ $json.originalContent.substring(0, 3000) }}\"\n    }\n  ],\n  \"max_tokens\": 800,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      }
+    },
+    {
+      "name": "Generate Newsletter Section",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 600],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.openAiApiKey}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"gpt-4o-mini\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Generate a newsletter section from this content. 200-400 words. Conversational tone, specific insights, actionable takeaway at the end. No AI vocabulary. Return as plain text with a subject line on the first line.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Title: {{ $json.title }}\\n\\nContent: {{ $json.originalContent.substring(0, 3000) }}\"\n    }\n  ],\n  \"max_tokens\": 800,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      }
+    },
+    {
+      "name": "Aggregate All Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 375],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Collect all generated content into one structured output\nconst items = $input.all();\n\nconst parseResponse = (item) => {\n  try {\n    return item.json?.choices?.[0]?.message?.content || '';\n  } catch(e) {\n    return '';\n  }\n};\n\n// Items arrive in order: tweets, thread, linkedin, newsletter\nconst twitterPosts = parseResponse(items[0] || {});\nconst twitterThread = parseResponse(items[1] || {});\nconst linkedinPost = parseResponse(items[2] || {});\nconst newsletterSection = parseResponse(items[3] || {});\n\nconst timestamp = new Date().toISOString();\nconst dateStr = timestamp.split('T')[0];\n\nreturn [{\n  json: {\n    title: 'Content Repurpose Batch',\n    date: dateStr,\n    twitterPosts: twitterPosts,\n    twitterThread: twitterThread,\n    linkedinPost: linkedinPost,\n    newsletterSection: newsletterSection,\n    status: 'PENDING_REVIEW',\n    generatedAt: timestamp,\n    platformCount: 4,\n    contentPieces: '5 tweets + 1 thread + 1 linkedin + 1 newsletter'\n  }\n}];"
+      }
+    },
+    {
+      "name": "Save to Content Calendar",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1100, 375],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_CONTENT_CALENDAR_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Generated"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Telegram Confirmation",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1300, 375],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=Content Repurposed\n\n{{ $json.contentPieces }}\nStatus: {{ $json.status }}\nSaved to content calendar.",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [[{"node": "Validate Input", "type": "main", "index": 0}]]
+    },
+    "Validate Input": {
+      "main": [
+        [
+          {"node": "Generate Twitter Posts", "type": "main", "index": 0},
+          {"node": "Generate Twitter Thread", "type": "main", "index": 0},
+          {"node": "Generate LinkedIn Post", "type": "main", "index": 0},
+          {"node": "Generate Newsletter Section", "type": "main", "index": 0}
+        ]
+      ]
+    },
+    "Generate Twitter Posts": {
+      "main": [[{"node": "Aggregate All Content", "type": "main", "index": 0}]]
+    },
+    "Generate Twitter Thread": {
+      "main": [[{"node": "Aggregate All Content", "type": "main", "index": 0}]]
+    },
+    "Generate LinkedIn Post": {
+      "main": [[{"node": "Aggregate All Content", "type": "main", "index": 0}]]
+    },
+    "Generate Newsletter Section": {
+      "main": [[{"node": "Aggregate All Content", "type": "main", "index": 0}]]
+    },
+    "Aggregate All Content": {
+      "main": [[{"node": "Save to Content Calendar", "type": "main", "index": 0}]]
+    },
+    "Save to Content Calendar": {
+      "main": [[{"node": "Telegram Confirmation", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "content"},
+    {"name": "P0"}
+  ]
+}

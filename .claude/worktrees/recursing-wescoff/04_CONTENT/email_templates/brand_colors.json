@@ -1,0 +1,173 @@
+{
+  "prayerlock": {
+    "name": "PrayerLock",
+    "tagline": "Start your day with purpose",
+    "theme": "Calming faith-focused",
+    "colors": {
+      "primary": "#1e40af",
+      "primary_dark": "#1e3a8a",
+      "primary_light": "#dbeafe",
+      "secondary": "#d97706",
+      "secondary_dark": "#b45309",
+      "secondary_light": "#fef3c7",
+      "accent": "#fbbf24",
+      "background": "#f0f4f8",
+      "background_dark": "#0f172a",
+      "text": "#1a1a1a",
+      "text_light": "#4b5563",
+      "text_dark_mode": "#e2e8f0",
+      "footer_bg": "#1e3a8a",
+      "footer_text": "#93c5fd"
+    },
+    "gradients": {
+      "header": "linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)",
+      "cta": "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
+      "highlight": "linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)",
+      "verse": "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)"
+    },
+    "social_platforms": ["twitter", "instagram"]
+  },
+  "walktounlock": {
+    "name": "WalkToUnlock",
+    "tagline": "Move to use your phone",
+    "theme": "Energetic fitness-focused",
+    "colors": {
+      "primary": "#059669",
+      "primary_dark": "#047857",
+      "primary_light": "#d1fae5",
+      "secondary": "#10b981",
+      "secondary_dark": "#059669",
+      "secondary_light": "#ecfdf5",
+      "accent": "#34d399",
+      "background": "#f0fdf4",
+      "background_dark": "#0f1f1a",
+      "text": "#1a1a1a",
+      "text_light": "#4b5563",
+      "text_dark_mode": "#e2e8f0",
+      "footer_bg": "#047857",
+      "footer_text": "#d1fae5"
+    },
+    "gradients": {
+      "header": "linear-gradient(135deg, #059669 0%, #047857 100%)",
+      "cta": "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+      "highlight": "linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)"
+    },
+    "social_platforms": ["twitter", "instagram", "tiktok"]
+  },
+  "studylock": {
+    "name": "StudyLock",
+    "tagline": "Focus mode for your phone",
+    "theme": "Focused academic",
+    "colors": {
+      "primary": "#7c3aed",
+      "primary_dark": "#6d28d9",
+      "primary_light": "#ede9fe",
+      "secondary": "#8b5cf6",
+      "secondary_dark": "#7c3aed",
+      "secondary_light": "#f5f3ff",
+      "accent": "#a78bfa",
+      "background": "#faf5ff",
+      "background_dark": "#1e1033",
+      "text": "#1a1a1a",
+      "text_light": "#4b5563",
+      "text_dark_mode": "#e2e8f0",
+      "footer_bg": "#6d28d9",
+      "footer_text": "#ddd6fe"
+    },
+    "gradients": {
+      "header": "linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)",
+      "cta": "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
+      "highlight": "linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)"
+    },
+    "social_platforms": ["twitter", "instagram", "tiktok"]
+  },
+  "promptvault": {
+    "name": "PromptVault",
+    "tagline": "Save prompts that actually work",
+    "theme": "Tech-focused productivity",
+    "colors": {
+      "primary": "#3b82f6",
+      "primary_dark": "#1e3a8a",
+      "primary_light": "#eff6ff",
+      "secondary": "#8b5cf6",
+      "secondary_dark": "#4c1d95",
+      "secondary_light": "#f5f3ff",
+      "accent": "#60a5fa",
+      "background": "#f0f5ff",
+      "background_dark": "#0f172a",
+      "text": "#1a1a1a",
+      "text_light": "#4b5563",
+      "text_dark_mode": "#e2e8f0",
+      "footer_bg": "#1e3a8a",
+      "footer_text": "#dbeafe",
+      "code_bg": "#1e293b",
+      "code_text": "#e2e8f0",
+      "code_comment": "#64748b",
+      "code_string": "#a5f3fc",
+      "code_keyword": "#c4b5fd"
+    },
+    "gradients": {
+      "header": "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+      "cta": "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+      "highlight": "linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%)",
+      "footer": "linear-gradient(135deg, #1e3a8a 0%, #4c1d95 100%)"
+    },
+    "social_platforms": ["twitter", "github", "discord"]
+  },
+  "dailyanchor": {
+    "name": "DailyAnchor",
+    "tagline": "Ground your morning",
+    "theme": "Warm mindfulness",
+    "colors": {
+      "primary": "#f97316",
+      "primary_dark": "#ea580c",
+      "primary_light": "#fff7ed",
+      "secondary": "#eab308",
+      "secondary_dark": "#ca8a04",
+      "secondary_light": "#fef3c7",
+      "accent": "#fb923c",
+      "background": "#fffbeb",
+      "background_dark": "#1c1917",
+      "text": "#1a1a1a",
+      "text_light": "#4b5563",
+      "text_dark_mode": "#e7e5e4",
+      "footer_bg": "#9a3412",
+      "footer_text": "#fed7aa"
+    },
+    "gradients": {
+      "header": "linear-gradient(135deg, #f97316 0%, #eab308 100%)",
+      "cta": "linear-gradient(135deg, #f97316 0%, #ea580c 100%)",
+      "highlight": "linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%)",
+      "footer": "linear-gradient(135deg, #9a3412 0%, #78350f 100%)"
+    },
+    "social_platforms": ["twitter", "instagram"]
+  },
+  "femfit": {
+    "name": "FemFit",
+    "tagline": "Fitness designed for you",
+    "theme": "Feminine wellness",
+    "colors": {
+      "primary": "#ec4899",
+      "primary_dark": "#db2777",
+      "primary_light": "#fdf2f8",
+      "secondary": "#a855f7",
+      "secondary_dark": "#7e22ce",
+      "secondary_light": "#fae8ff",
+      "accent": "#f9a8d4",
+      "background": "#fdf2f8",
+      "background_dark": "#1a0a14",
+      "text": "#1a1a1a",
+      "text_light": "#4b5563",
+      "text_dark_mode": "#fce7f3",
+      "footer_bg": "#9d174d",
+      "footer_text": "#fce7f3"
+    },
+    "gradients": {
+      "header": "linear-gradient(135deg, #ec4899 0%, #a855f7 100%)",
+      "cta": "linear-gradient(135deg, #ec4899 0%, #db2777 100%)",
+      "highlight": "linear-gradient(135deg, #fdf2f8 0%, #fae8ff 100%)",
+      "footer": "linear-gradient(135deg, #9d174d 0%, #7e22ce 100%)"
+    },
+    "social_platforms": ["twitter", "instagram", "tiktok"]
+  }
+}

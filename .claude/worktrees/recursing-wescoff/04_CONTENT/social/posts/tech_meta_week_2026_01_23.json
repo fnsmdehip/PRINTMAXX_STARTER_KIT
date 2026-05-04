@@ -1,0 +1,108 @@
+{
+  "generated_date": "2026-01-23",
+  "niche": "tech_solopreneur",
+  "meta_week": "2026-01-20_to_2026-01-26",
+  "posts": [
+    {
+      "id": "TECH001",
+      "type": "reply_bait",
+      "content": "Claude Code or Cursor?\n\nPick one. Defend it below.",
+      "notes": "Simple A/B engagement. Forces comments.",
+      "best_time": "12:00 PM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "TECH002",
+      "type": "a_b_contrarian",
+      "version_a": "start\nusing\nclaude\ncode",
+      "version_b": "stop\nusing\nclaude\ncode",
+      "notes": "Vertical text format like @aftermagics. Post both, track which wins.",
+      "best_time": "10:00 AM / 2:00 PM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "TECH003",
+      "type": "current_meta_meme",
+      "content": "\"Mom, how did we get so rich?\"\n\n\"Your father and I lived in the era of the $200 claude code max plan\"",
+      "notes": "Rich family dinner meme format. Needs accompanying image. Adapt @0xgaut format.",
+      "image_needed": true,
+      "image_type": "rich_family_dinner_meme",
+      "best_time": "8:00 PM",
+      "expected_engagement": "HIGHEST"
+    },
+    {
+      "id": "TECH004",
+      "type": "reply_bait",
+      "content": "Your tech stack for 2026 in 3 words. Go.",
+      "notes": "Simple engagement driver. Easy to reply to.",
+      "best_time": "9:00 AM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "TECH005",
+      "type": "current_meta",
+      "content": "Everyone's talking about ralph loops.\n\nBut most of you are still doing tasks manually.\n\nThe gap between people who automate and people who don't is about to become a canyon.",
+      "notes": "References ralph loops meta. Slightly contrarian angle.",
+      "best_time": "11:00 AM",
+      "expected_engagement": "MEDIUM"
+    },
+    {
+      "id": "TECH006",
+      "type": "a_b_contrarian",
+      "version_a": "vibe coding is the future",
+      "version_b": "vibe coding is a trap",
+      "notes": "Test both takes. Current meta debate.",
+      "best_time": "3:00 PM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "TECH007",
+      "type": "reply_bait",
+      "content": "Rate my dev setup 1-10:\n\n- Claude Code Max ($200/mo)\n- Cursor Pro ($20/mo)\n- Supabase (free tier)\n- Vercel (free tier)\n- Linear ($10/mo)\n\nTotal: $230/mo",
+      "notes": "Humble brag format that invites comments.",
+      "best_time": "4:00 PM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "TECH008",
+      "type": "engagement_bait",
+      "content": "Comment \"RALPH\" if you want me to share my autonomous agent setup.",
+      "notes": "DM funnel trigger. Classic engagement hack.",
+      "best_time": "6:00 PM",
+      "expected_engagement": "MEDIUM"
+    },
+    {
+      "id": "TECH009",
+      "type": "current_meta",
+      "content": "The \"permanent underclass\" of developers isn't real.\n\nThe ones who can't adapt to AI tools will struggle.\n\nThe ones who use AI as a multiplier will print.\n\nSame as every other technology shift.",
+      "notes": "Addresses permanent underclass meme with balanced take.",
+      "best_time": "7:00 PM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "TECH010",
+      "type": "reply_bait",
+      "content": "Unpopular opinion: Most indie hackers fail because they're building products nobody wants.\n\nNot because of:\n- Bad marketing\n- Wrong tech stack\n- Lack of funding\n\nJust... nobody wants it.",
+      "notes": "Contrarian take that will generate discussion.",
+      "best_time": "8:00 AM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "TECH011",
+      "type": "a_b_contrarian",
+      "version_a": "build in public",
+      "version_b": "build in private",
+      "notes": "Classic debate. Post both versions.",
+      "best_time": "1:00 PM",
+      "expected_engagement": "MEDIUM"
+    },
+    {
+      "id": "TECH012",
+      "type": "current_meta_meme",
+      "content": "2024: \"I'll never pay for AI\"\n\n2025: \"$20/mo is reasonable\"\n\n2026: \"$200/mo claude code max is a steal\"",
+      "notes": "Evolution meme format. No image needed.",
+      "best_time": "5:00 PM",
+      "expected_engagement": "HIGH"
+    }
+  ]
+}

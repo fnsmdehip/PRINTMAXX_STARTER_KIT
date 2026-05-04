@@ -1,0 +1,292 @@
+# PRINTMAXX Automated Cron Jobs v2 — Updated 2026-03-05 with new intelligence scripts
+# Install: crontab AUTOMATIONS/crontab_printmaxx_v2.txt
+# Or merge: crontab -l > /tmp/cron_backup && cat AUTOMATIONS/crontab_printmaxx_v2.txt >> /tmp/cron_backup && crontab /tmp/cron_backup
+#
+# Python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+# Base dir: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+# Log dir: AUTOMATIONS/logs/ (append-only, never deleted)
+#
+# NEW in v2 (Mar 5): opportunity_radar, competitive_intelligence_engine,
+#   financial_intelligence, engagement_optimizer, health_check_all, auto_scheduler
+# All scripts have proper paths, error handling via stderr redirect, log rotation
+
+SHELL=/bin/bash
+PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/macbookpro/.local/bin
+BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+
+# =============================================================================
+# DAILY (every day) — ordered by time
+# =============================================================================
+
+# 2:00 AM - Master overnight runner (all scrapers + analyzers)
+0 2 * * * cd $BASE && bash AUTOMATIONS/overnight_master_runner.sh >> AUTOMATIONS/logs/cron_overnight.log 2>&1
+
+# 4:00 AM - [NEW] Competitive intelligence engine (full daily scan)
+0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/competitive_intelligence_engine.py --scan-all >> AUTOMATIONS/logs/competitive_intel.log 2>&1
+
+# 5:00 AM - [NEW] Health check all systems
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/health_check_all.py --check >> AUTOMATIONS/logs/health_check_all.log 2>&1
+
+# 6:00 AM - [NEW] Opportunity radar daily scan
+0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/opportunity_radar.py --daily >> AUTOMATIONS/logs/opportunity_radar.log 2>&1
+
+# 6:05 AM - Twitter signal account scraper (staggered 5min to avoid collision with radar)
+5 6 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_twitter_scraper.py >> AUTOMATIONS/logs/scraper_daily.log 2>&1
+
+# 6:15 AM - Reddit subreddit scraper
+15 6 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_reddit_scraper.py >> AUTOMATIONS/logs/scraper_daily_reddit.log 2>&1
+
+# 7:00 AM - [NEW] Financial intelligence dashboard
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/financial_intelligence.py --dashboard >> AUTOMATIONS/logs/financial_intelligence.log 2>&1
+
+# 7:05 AM - [NEW] Auto content scheduler (generate Buffer CSV for the day)
+5 7 * * * cd $BASE && $PYTHON AUTOMATIONS/auto_scheduler.py --generate >> AUTOMATIONS/logs/auto_scheduler.log 2>&1
+
+# 7:10 AM - Platform algo detection
+10 7 * * * cd $BASE && $PYTHON AUTOMATIONS/platform_algo_detection.py >> AUTOMATIONS/logs/algo_detection.log 2>&1
+
+# 7:15 AM - Hashtag and audio tracking
+15 7 * * * cd $BASE && $PYTHON AUTOMATIONS/hashtag_audio_tracking.py >> AUTOMATIONS/logs/hashtag_audio.log 2>&1
+
+# 8:00 AM - Daily no-cost RBI scan
+0 8 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_nocost_rbi_scanner.py --scan >> AUTOMATIONS/logs/rbi_scanner.log 2>&1
+
+# Auto-resume monitor: every 30 min between midnight and 8am
+*/30 0-8 * * * cd $BASE && bash AUTOMATIONS/auto_resume_monitor.sh >> AUTOMATIONS/logs/auto_resume.log 2>&1
+
+# =============================================================================
+# WEEKLY (Mondays)
+# =============================================================================
+
+# 3:00 AM Monday - Platform RPM tracking
+0 3 * * 1 cd $BASE && $PYTHON AUTOMATIONS/platform_rpm_tracking.py >> AUTOMATIONS/logs/rpm_tracking.log 2>&1
+
+# 3:30 AM Monday - Creator program monitoring
+30 3 * * 1 cd $BASE && $PYTHON AUTOMATIONS/creator_program_monitoring.py >> AUTOMATIONS/logs/creator_programs.log 2>&1
+
+# 4:00 AM Monday - ASO keyword research
+0 4 * * 1 cd $BASE && $PYTHON AUTOMATIONS/aso_keyword_research.py >> AUTOMATIONS/logs/aso_keywords.log 2>&1
+
+# 4:30 AM Monday - Gov tenders refresh
+30 4 * * 1 cd $BASE && $PYTHON AUTOMATIONS/gov_tenders_scraper.py --all-sources --days 7 --top 50 >> AUTOMATIONS/logs/gov_tenders.log 2>&1
+
+# 5:00 AM Monday - Ecom arb + trending products
+0 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_scanner.py >> AUTOMATIONS/logs/ecom_arb.log 2>&1
+15 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/trending_products_scanner.py >> AUTOMATIONS/logs/trending_products.log 2>&1
+
+# 6:00 AM Monday - [NEW] Engagement optimizer weekly schedule
+0 6 * * 1 cd $BASE && $PYTHON AUTOMATIONS/engagement_optimizer.py --schedule-week >> AUTOMATIONS/logs/engagement_optimizer.log 2>&1
+
+# =============================================================================
+# EVERY 2-4 HOURS (recurring scans)
+# =============================================================================
+
+# Ecom arb engine - scan for profitable products every 2 hours
+0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_engine.py --hourly --top 5 >> AUTOMATIONS/logs/ecom_arb_engine.log 2>&1
+
+# Freelance demand scanner - find active hiring posts every 3 hours
+0 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/freelance_demand_scanner.py --hourly >> AUTOMATIONS/logs/freelance_demand.log 2>&1
+
+# Trend aggregator - multi-source viral trend detection every 4 hours
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/trend_aggregator.py --hourly >> AUTOMATIONS/logs/trend_aggregator.log 2>&1
+
+# =============================================================================
+# EVERY 6 HOURS
+# =============================================================================
+
+# SAM.gov monitor (federal contracts update frequently)
+0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/sam_gov_monitor.py >> AUTOMATIONS/logs/sam_gov.log 2>&1
+
+# Alpha screening on new entries
+30 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_screening.py --pending >> AUTOMATIONS/logs/alpha_screen.log 2>&1
+
+# =============================================================================
+# PROMPT LOGGING & META-REVIEW SYSTEM
+# =============================================================================
+
+# 7:30 AM - Actionable aggregator (after tactical engine at 7:15)
+30 7 * * * cd $BASE && $PYTHON AUTOMATIONS/actionable_aggregator.py --save >> AUTOMATIONS/logs/actionable_aggregator.log 2>&1
+
+# 8:00 AM every 2 days - Prompt meta-review (analyzes last 48h of user prompts via claude -p)
+0 8 */2 * * cd $BASE && $PYTHON AUTOMATIONS/prompt_meta_review.py --days 2 --save >> AUTOMATIONS/logs/prompt_meta_review.log 2>&1
+
+# =============================================================================
+# RESILIENCE & SECURITY (NEW — Mar 8)
+# =============================================================================
+
+# 3:30 AM daily - Rebuild SQLite FTS alpha index (only if CSV changed)
+30 3 * * * cd $BASE && $PYTHON AUTOMATIONS/sqlite_alpha_index.py --rebuild --stats >> AUTOMATIONS/logs/alpha_index.log 2>&1
+
+# 4:30 AM Sunday - Security audit (weekly deep scan)
+30 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/security_audit.py --quick >> AUTOMATIONS/logs/security_audit.log 2>&1
+
+# =============================================================================
+# ORCHESTRATION LAYER (NEW — Mar 8, Gap Hunter Cycle 2)
+# Critical scripts that close the loop between intake and output
+# =============================================================================
+
+# Every 4h - CEO agent (16-phase orchestrator, xlsx scoring, git failsafes)
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/ceo_agent.py --run >> AUTOMATIONS/logs/ceo_agent.log 2>&1
+
+# Every 2h (offset 15min) - Venture autonomy (8 venture pipelines, self-managing)
+15 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_autonomy.py --run-all >> AUTOMATIONS/logs/venture_autonomy.log 2>&1
+
+# Every 2h (offset 30min) - Loop closer (decisions + feedback + pipeline advancement)
+30 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/loop_closer.py --cycle >> AUTOMATIONS/logs/loop_closer.log 2>&1
+
+# Every 3h (offset 45min) - Alpha auto-processor (route APPROVED entries to ventures)
+45 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_auto_processor.py --process-new >> AUTOMATIONS/logs/alpha_processor.log 2>&1
+
+# Every 2h (offset 45min) - Quality gate (block slop, rewrite bad content, reject low-quality)
+45 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/quality_gate.py --gate >> AUTOMATIONS/logs/quality_gate.log 2>&1
+
+# Every 1h - System health monitor (quick checks)
+0 * * * * cd $BASE && $PYTHON AUTOMATIONS/system_health_monitor.py --quick >> AUTOMATIONS/logs/system_health.log 2>&1
+
+# =============================================================================
+# DAILY ORCHESTRATION (NEW — Mar 8)
+# =============================================================================
+
+# 5:00 AM - Growth strategist (venture growth strategies)
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/growth_strategist.py >> AUTOMATIONS/logs/growth_strategist.log 2>&1
+
+# 5:45 AM - Build codebase grammar (LLM-optimized grammar)
+45 5 * * * cd $BASE && $PYTHON AUTOMATIONS/build_codebase_grammar.py >> AUTOMATIONS/logs/codebase_grammar.log 2>&1
+
+# 6:00 AM - Freshness auditor (detect stale data across all ledgers)
+0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/freshness_auditor.py >> AUTOMATIONS/logs/freshness_auditor.log 2>&1
+
+# 7:00 AM - Daily digest (revenue + ops summary)
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_digest.py >> AUTOMATIONS/logs/daily_digest.log 2>&1
+
+# 7:15 AM - Daily tactical engine (today's tactical plan)
+15 7 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_tactical_engine.py --save >> AUTOMATIONS/logs/tactical_engine.log 2>&1
+
+# =============================================================================
+# DISTRIBUTION & INTELLIGENCE (NEW — Mar 8)
+# =============================================================================
+
+# Every 4h (offset 20min) - Session briefing generator
+20 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/session_briefing.py >> AUTOMATIONS/logs/session_briefing.log 2>&1
+
+# Every 6h - Cron health checker (self-monitoring)
+0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/cron_health_checker.py >> AUTOMATIONS/logs/cron_health.log 2>&1
+
+# Every 4h (offset 40min) - Wire missed intelligence (route unprocessed intel)
+40 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/wire_missed_intelligence.py >> AUTOMATIONS/logs/wire_intel.log 2>&1
+
+# Every 2h (offset 10min) - Content queue processor
+10 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/content_queue.py >> AUTOMATIONS/logs/content_queue.log 2>&1
+
+# Every 3h (offset 20min) - Distribution engine
+20 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/distribution_engine.py >> AUTOMATIONS/logs/distribution_engine.log 2>&1
+
+# === CLOSED-LOOP PIPELINE (gap_hunter cycle 3 additions) ===
+
+# Every 3h - Decision engine (master closed-loop: reads data → scores → acts → logs)
+0 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/decision_engine.py --cycle >> AUTOMATIONS/logs/decision_engine.log 2>&1
+
+# Every 4h (offset 30min) - Cross-pollinator (wires venture outputs to venture inputs)
+30 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/cross_pollinator.py --cycle >> AUTOMATIONS/logs/cross_pollinator.log 2>&1
+
+# Every 6h (offset 15min) - Alpha auto-approver (unblocks alpha_to_ops pipeline)
+15 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_auto_processor.py --process-new >> AUTOMATIONS/logs/alpha_auto_processor.log 2>&1
+
+# Every 4h (offset 50min) - Closed-loop lead pipeline (qualify → email → track)
+50 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/closed_loop_pipeline.py >> AUTOMATIONS/logs/closed_loop_pipeline.log 2>&1
+
+# Daily 5:30 AM - Research orchestrator (chains all scrapers + dedup)
+30 5 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_research_orchestrator.py --full >> AUTOMATIONS/logs/research_orchestrator.log 2>&1
+
+# Daily 9:15 PM - Incremental backup
+15 21 * * * cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --incremental >> AUTOMATIONS/logs/backup.log 2>&1
+
+# Daily 4 AM - Log rotation (prune >30 day, compress archives)
+0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/log_rotator.py --rotate >> AUTOMATIONS/logs/log_rotator.log 2>&1
+
+# Every 4h - Perpetual guardian (self-healing watchdog)
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/perpetual_guardian.py --full >> AUTOMATIONS/logs/perpetual_guardian.log 2>&1
+
+# Weekly (Sunday 4 AM) - MEGA_SHEET rebuild (consolidates all LEDGER CSVs)
+0 4 * * 0 cd $BASE && $PYTHON LEDGER/MEGA_SHEET/build_mega_sheet.py >> LEDGER/MEGA_SHEET/build.log 2>&1
+
+# =============================================================================
+# OPENCLAW LOCAL BIZ DISCOVERY — Birmingham AL retry queue
+# Rate-limit cooldown: mobile_detailing + handyman blocked by DDG/Bing/Google
+# Retry at 4h spacing to let IP rate-limit window clear
+# =============================================================================
+
+# Birmingham AL mobile_detailing — delayed retry (runs tonight after rate-limit clears)
+0 22 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --discover "Birmingham AL" "mobile detailing" --limit 15 >> AUTOMATIONS/logs/openclaw_discovery.log 2>&1
+
+# Birmingham AL handyman — 30 min after mobile detailing to avoid collision
+30 22 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --discover "Birmingham AL" "handyman" --limit 15 >> AUTOMATIONS/logs/openclaw_discovery.log 2>&1
+
+# =============================================================================
+# WEEKLY: Louisville KY — small operator niches (BBB Playwright fallback active)
+# Runs Mon 11 PM; 20-min gaps per niche to avoid DDG rate-limiting
+# Falls back to Playwright BBB automatically if all search engines are blocked
+# =============================================================================
+0 23 * * 1 cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --discover "Louisville KY" "junk removal" --limit 15 >> AUTOMATIONS/logs/openclaw_discovery.log 2>&1
+20 23 * * 1 cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --discover "Louisville KY" "tree service" --limit 15 >> AUTOMATIONS/logs/openclaw_discovery.log 2>&1
+40 23 * * 1 cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --discover "Louisville KY" "window cleaning" --limit 15 >> AUTOMATIONS/logs/openclaw_discovery.log 2>&1
+0 0 * * 2 cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --discover "Louisville KY" "pressure washing" --limit 15 >> AUTOMATIONS/logs/openclaw_discovery.log 2>&1
+
+# Daily build + deploy: picks up new discoveries and retries file:// stalled deployments
+# Runs at 6 AM daily (after surge daily quota resets at midnight)
+0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --build >> AUTOMATIONS/logs/openclaw_build.log 2>&1
+
+# Daily outreach queue refresh: generates emails for any newly deployed sites
+15 6 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --outreach >> AUTOMATIONS/logs/openclaw_outreach.log 2>&1
+
+# =============================================================================
+# INBOUND LEAD TRACKER — daily scan of Reddit + Twitter + freelance responses
+# Runs at 8:30 AM after scrapers have completed their 6 AM runs
+# =============================================================================
+30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/inbound_lead_tracker.py --scan >> AUTOMATIONS/logs/inbound_lead_tracker.log 2>&1
+
+# =============================================================================
+# GAP HUNTER ADDITIONS — 2026-03-14 19:30 (Cycle 4)
+# =============================================================================
+
+# Intelligence router: routes alpha to ventures before actions (every 3h)
+20 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/intelligence_router.py --venture ALL --task general --json >> AUTOMATIONS/logs/intelligence_router.log 2>&1
+
+# Master ops bridge: rebuild xlsx cache (every 6h, 12h TTL)
+30 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/master_ops_bridge.py --rebuild >> AUTOMATIONS/logs/master_ops_bridge.log 2>&1
+
+# App factory autopilot: auto-approve + process bookmarks (daily 7 AM)
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_autopilot.py --run >> AUTOMATIONS/logs/app_factory_autopilot.log 2>&1
+
+# App factory command center: refresh priority queue (every 6h)
+0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_command_center.py --refresh --top 8 >> AUTOMATIONS/logs/app_factory_command_center.log 2>&1
+
+# Compliance scanner: content compliance audit (daily 9 PM)
+0 21 * * * cd $BASE && $PYTHON AUTOMATIONS/compliance_scanner.py --audit-all >> AUTOMATIONS/logs/compliance_scanner.log 2>&1
+
+# =============================================================================
+# RESTRUCTURE_V2 AGENTS — Added 2026-03-15
+# All use jitter_run.sh to prevent simultaneous API hits
+# =============================================================================
+
+# 8:00 AM daily - Shakespeare agent (content generation, --dry-run until posting accounts live)
+0 8 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/shakespeare_agent.py --generate --dry-run >> AUTOMATIONS/logs/shakespeare.log 2>&1
+
+# Every 4 hours - Observer agent (engagement monitoring)
+0 */4 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/observer_agent.py --scan >> AUTOMATIONS/logs/observer.log 2>&1
+
+# 9:00 AM daily - Quinn agent (warm outreach, --dry-run until outreach channels live)
+0 9 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/quinn_agent.py --process --dry-run >> AUTOMATIONS/logs/quinn.log 2>&1
+
+# 10:00 AM daily - Challenger agents (review CEO decisions)
+0 10 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/challenger_agents.py --review >> AUTOMATIONS/logs/challenger.log 2>&1
+
+# Every 2 hours (offset :30) - Gates health check
+30 */2 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/gates.py --stats >> AUTOMATIONS/logs/gates.log 2>&1
+
+# Every hour (offset :15) - Task graph dependency readiness check
+15 * * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/task_graph.py --ready >> AUTOMATIONS/logs/task_graph.log 2>&1
+
+# 11:00 PM daily - Conversation logger: extract Claude session transcripts
+0 23 * * * cd $BASE && $PYTHON AUTOMATIONS/conversation_logger.py --extract >> AUTOMATIONS/logs/conversation_logger.log 2>&1

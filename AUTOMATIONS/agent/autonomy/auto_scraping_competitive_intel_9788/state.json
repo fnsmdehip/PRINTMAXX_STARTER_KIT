@@ -1,462 +1,463 @@
 {
-    "venture": "competitive_intel",
-    "last_cycle": 182,
-    "last_run": "2026-04-17T13:00:30.268612+00:00",
-    "cumulative_blue_oceans": 1160,
-    "ci_csv_rows": 243,
-    "alpha_csv_rows": 40129,
-    "strategies_covered": [
-        "HEALTH + FITNESS + WELLNESS + NUTRITION",
-        "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
-        "HISTORY + WORLD CULTURES + ANTHROPOLOGY",
-        "PSYCHOLOGY + COGNITIVE SCIENCE + BEHAVIORAL ECONOMICS",
-        "SCIENCE + TECHNOLOGY + ENGINEERING + MATHEMATICS",
-        "PARENTING + CHILD DEVELOPMENT + EDUCATION",
-        "CREATIVE ARTS + MUSIC + VISUAL ARTS + PERFORMANCE",
-        "SCIENCE & TECHNOLOGY HISTORY + INNOVATION",
-        "PHILOSOPHY OF MIND & CONSCIOUSNESS",
-        "NEUROSCIENCE & BRAIN SCIENCE",
-        "MILITARY HISTORY & STRATEGY",
-        "GEOPOLITICS & INTERNATIONAL RELATIONS",
-        "PSYCHOLOGY OF CREATIVITY & GENIUS",
-        "LANGUAGE & LINGUISTICS HISTORY",
-        "HISTORY OF MATHEMATICS",
-        "GENETICS",
-        "FINANCE & ECONOMICS HISTORY",
-        "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
-        "CULINARY SCIENCE & FOOD HISTORY",
-        "ASTRONOMY & SPACE SCIENCE",
-        "CLIMATE SCIENCE & ENVIRONMENTAL SCIENCE",
-        "MEDICINE & HUMAN PHYSIOLOGY",
-        "PHILOSOPHY & ETHICS + LOGIC",
-        "BEHAVIORAL ECONOMICS",
-        "SOCIOLOGY & SOCIAL DYNAMICS",
-        "POLITICAL SCIENCE & GOVERNANCE",
-        "LITERATURE & LITERARY THEORY",
-        "ARCHITECTURE & DESIGN THEORY",
-        "LEGAL THEORY & JURISPRUDENCE",
-        "ENVIRONMENTAL LAW & CLIMATE GOVERNANCE",
-        "PUBLIC HEALTH LAW & BIOETHICS",
-        "PHILOSOPHY & ETHICS",
-        "CRIMINAL LAW & CRIMINAL PROCEDURE",
-        "INTELLECTUAL PROPERTY LAW",
-        "INTERNATIONAL LAW & GLOBAL GOVERNANCE",
-        "COMPARATIVE CONSTITUTIONAL LAW",
-        "ADMINISTRATIVE LAW & REGULATORY THEORY",
-        "CONSTITUTIONAL LAW: SEPARATION OF POWERS & FEDERALISM",
-        "FIRST AMENDMENT & CIVIL LIBERTIES",
-        "SPORTS SCIENCE + PERFORMANCE PSYCHOLOGY + ATHLETIC OPTIMIZATION",
-        "ENTREPRENEURSHIP + STARTUP CULTURE + VENTURE CAPITAL",
-        "CLIMATE TECH + SUSTAINABILITY + CLEANTECH + IMPACT INVESTING",
-        "URBAN TECH + SMART CITIES + PROPTECH + REAL ESTATE INNOVATION",
-        "BIOTECH + LIFE SCIENCES + PHARMACEUTICAL INNOVATION + DRUG DEVELOPMENT",
-        "AGING + LONGEVITY SCIENCE + GEROSCIENCE + HEALTHSPAN OPTIMIZATION",
-        "MICROBIOME + GUT HEALTH + LONGEVITY SCIENCE + PSYCHOBIOTICS",
-        "COGNITIVE SCIENCE + LEARNING SCIENCE + METACOGNITION + NEUROPLASTICITY",
-        "SLEEP SCIENCE + CIRCADIAN BIOLOGY + CHRONOBIOLOGY + SLEEP OPTIMIZATION",
-        "MENTAL HEALTH SCIENCE + NEUROSCIENCE OF STRESS + ANXIETY RESEARCH",
-        "ADDICTION SCIENCE + NEUROSCIENCE OF HABIT FORMATION + BEHAVIORAL ADDICTION",
-        "TRAUMA SCIENCE + PTSD NEUROSCIENCE + ADVERSE CHILDHOOD EXPERIENCES",
-        "INTERGENERATIONAL TRAUMA + EPIGENETICS OF ADVERSITY",
-        "QUANTUM PHYSICS + PARTICLE PHYSICS + COSMOLOGY + QUANTUM COMPUTING",
-        "STELLAR ASTROPHYSICS + EXOPLANET SCIENCE + ASTROBIOLOGY + SETI SCIENCE",
-        "COSMOLOGY + DARK MATTER + DARK ENERGY + BIG BANG SCIENCE",
-        "ENVIRONMENTAL PSYCHOLOGY + NATURE DEFICIT DISORDER + ECOTHERAPY SCIENCE",
-        "LONELINESS SCIENCE + SOCIAL CONNECTION NEUROSCIENCE + BELONGING PSYCHOLOGY",
-        "POSITIVE PSYCHOLOGY + FLOURISHING SCIENCE + CHARACTER STRENGTHS",
-        "FINANCIAL PSYCHOLOGY + MONEY MINDSET + BEHAVIORAL FINANCE NEUROSCIENCE",
-        "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
-        "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
-        "COGNITIVE LOAD THEORY + WORKING MEMORY + ATTENTION SCIENCE",
-        "DECISION MAKING SCIENCE + JUDGMENT UNDER UNCERTAINTY + HEURISTICS & BIASES",
-        "MOTIVATION SCIENCE + SELF-DETERMINATION THEORY + GOAL PURSUIT SCIENCE",
-        "EMOTIONAL INTELLIGENCE + EMPATHY SCIENCE + SOCIAL COGNITION",
-        "ATTACHMENT THEORY + RELATIONSHIP SCIENCE + INTERPERSONAL NEUROSCIENCE",
-        "TRAUMA SCIENCE + POLYVAGAL THEORY + NERVOUS SYSTEM REGULATION + SOMATIC THERAPY",
-        "GRIEF SCIENCE + LOSS PSYCHOLOGY + BEREAVEMENT NEUROSCIENCE",
-        "LANGUAGE LEARNING NEUROSCIENCE + BILINGUALISM + POLYGLOT SCIENCE",
-        "SOCIAL COGNITION NEUROSCIENCE + THEORY OF MIND + EMPATHY SCIENCE",
-        "PERSUASION SCIENCE + INFLUENCE PSYCHOLOGY + SOCIAL PROOF NEUROSCIENCE",
-        "COMMITMENT + CONSISTENCY PSYCHOLOGY + COGNITIVE DISSONANCE NEUROSCIENCE"
-    ],
-    "next_strategy": "SELF-CONTROL SCIENCE + WILLPOWER NEUROSCIENCE + EGO DEPLETION RESEARCH",
-    "top_all_time": [
-        {
-            "name": "Daily CS Fundamentals Streak",
-            "score": 25,
-            "cycle": 111
-        },
-        {
-            "name": "Daily Film Studies Streak",
-            "score": 25,
-            "cycle": 106
-        },
-        {
-            "name": "Daily Neuroscience Streak",
-            "score": 25,
-            "cycle": 111
-        },
-        {
-            "name": "Daily Oncology Science Streak",
-            "score": 25,
-            "cycle": 127
-        },
-        {
-            "name": "Daily Copyright Law Streak",
-            "score": 25,
-            "cycle": 141
-        },
-        {
-            "name": "Daily Ai Ip Law Streak",
-            "score": 25,
-            "cycle": 141
-        },
-        {
-            "name": "Daily Chevron Judicial Review Streak",
-            "score": 25,
-            "cycle": 144
-        },
-        {
-            "name": "Daily Tech Ai Regulation Streak",
-            "score": 25,
-            "cycle": 144
-        },
-        {
-            "name": "Daily Separation Of Powers Streak",
-            "score": 25,
-            "cycle": 145
-        },
-        {
-            "name": "Daily Presidential Immunity Streak",
-            "score": 25,
-            "cycle": 145
-        },
-        {
-            "name": "Daily Sports Psychology Streak",
-            "score": 25,
-            "cycle": 147
-        },
-        {
-            "name": "Daily Strength Conditioning Science Streak",
-            "score": 25,
-            "cycle": 147
-        },
-        {
-            "name": "Daily Sports Analytics Streak",
-            "score": 25,
-            "cycle": 147
-        },
-        {
-            "name": "Daily Venture Capital Fundamentals Streak",
-            "score": 25,
-            "cycle": 148
-        },
-        {
-            "name": "Daily Product Market Fit Streak",
-            "score": 25,
-            "cycle": 148
-        },
-        {
-            "name": "Daily Corporate Climate Disclosure Streak",
-            "score": 25,
-            "cycle": 149
-        },
-        {
-            "name": "Daily Real Estate Investing Fundamentals Streak",
-            "score": 25,
-            "cycle": 150
-        },
-        {
-            "name": "Daily Biotech Investing Streak",
-            "score": 25,
-            "cycle": 151
-        },
-        {
-            "name": "Daily Drug Discovery Science Streak",
-            "score": 25,
-            "cycle": 151
-        },
-        {
-            "name": "Daily Pharmacology Fundamentals Streak",
-            "score": 25,
-            "cycle": 151
-        },
-        {
-            "name": "Daily Mtor Longevity Pathways Streak",
-            "score": 25,
-            "cycle": 152
-        },
-        {
-            "name": "Daily Flow State Science Streak",
-            "score": 25,
-            "cycle": 167
-        },
-        {
-            "name": "Daily Growth Mindset Neuroscience Streak",
-            "score": 25,
-            "cycle": 167
-        },
-        {
-            "name": "Daily Attention Science Streak",
-            "score": 25,
-            "cycle": 168
-        },
-        {
-            "name": "Daily Multitasking Myth Science Streak",
-            "score": 25,
-            "cycle": 168
-        },
-        {
-            "name": "Daily Executive Function Science Streak",
-            "score": 25,
-            "cycle": 168
-        },
-        {
-            "name": "Daily Focus Protocol Science Streak",
-            "score": 25,
-            "cycle": 168
-        },
-        {
-            "name": "Daily Cognitive Bias Science Streak",
-            "score": 25,
-            "cycle": 169
-        },
-        {
-            "name": "Daily Mental Models Science Streak",
-            "score": 25,
-            "cycle": 169
-        },
-        {
-            "name": "Daily Emotional Intelligence Streak",
-            "score": 25,
-            "cycle": 171
-        },
-        {
-            "name": "Daily Emotional Regulation Streak",
-            "score": 25,
-            "cycle": 171
-        },
-        {
-            "name": "Daily Attachment Theory Streak",
-            "score": 25,
-            "cycle": 172
-        },
-        {
-            "name": "Daily Secure Attachment Streak",
-            "score": 25,
-            "cycle": 172
-        },
-        {
-            "name": "Daily Anxious Avoidant Attachment Streak",
-            "score": 25,
-            "cycle": 172
-        },
-        {
-            "name": "Daily Social Proof Neuroscience Streak",
-            "score": 25,
-            "cycle": 181
-        },
-        {
-            "name": "Daily Cialdini Influence Science Streak",
-            "score": 25,
-            "cycle": 181
-        },
-        {
-            "name": "Daily Reciprocity Neuroscience Streak",
-            "score": 25,
-            "cycle": 181
-        },
-        {
-            "name": "Daily Scarcity FOMO Neuroscience Streak",
-            "score": 25,
-            "cycle": 181
-        },
-        {
-            "name": "Daily Persuasion Neural Pathways Streak",
-            "score": 25,
-            "cycle": 181
-        },
-        {
-            "name": "Daily Cognitive Dissonance Science Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Commitment Consistency Psychology Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Belief Change Neuroscience Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Identity Behavior Science Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Post Decision Rationalization Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Sunk Cost Fallacy Neuroscience Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Commitment Device Science Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Cognitive Dissonance Reduction Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Behavioral Consistency Neuroscience Streak",
-            "score": 25,
-            "cycle": 182
-        }
-    ],
-    "status": "RUNNING",
-    "top_performers": [
-        {
-            "niche": "daily_cognitive_dissonance_science_streak",
-            "display_name": "Daily Cognitive Dissonance Science Streak",
-            "score": 25,
-            "community": 35300000,
-            "priority": "P0",
-            "price": "$5.99-$9.99/mo",
-            "is_new": true
-        },
-        {
-            "niche": "daily_sunk_cost_fallacy_neuroscience_streak",
-            "display_name": "Daily Sunk Cost Fallacy Neuroscience Streak",
-            "score": 25,
-            "community": 51750000,
-            "priority": "P0",
-            "price": "$5.99-$9.99/mo",
-            "is_new": true
-        },
-        {
-            "niche": "daily_commitment_device_science_streak",
-            "display_name": "Daily Commitment Device Science Streak",
-            "score": 25,
-            "community": 51080000,
-            "priority": "P0",
-            "price": "$5.99-$9.99/mo",
-            "is_new": true
-        }
-    ],
-    "top_niches_all_time": [
-        {
-            "name": "Daily SDT Autonomy Needs",
-            "score": 25,
-            "cycle": 167
-        },
-        {
-            "name": "Daily Intrinsic Motivation Diagnostics",
-            "score": 25,
-            "cycle": 167
-        },
-        {
-            "name": "Daily Self-Concordance Goals Science",
-            "score": 25,
-            "cycle": 167
-        },
-        {
-            "name": "Daily Behavioral Finance Science Streak",
-            "score": 25,
-            "cycle": 166
-        },
-        {
-            "name": "Daily Prospect Theory Loss Aversion Streak",
-            "score": 25,
-            "cycle": 166
-        },
-        {
-            "name": "Daily Polyvagal Theory Streak",
-            "score": 25,
-            "cycle": 173
-        },
-        {
-            "name": "Daily Complex Trauma Science Streak",
-            "score": 25,
-            "cycle": 173
-        },
-        {
-            "name": "Daily Nervous System Regulation Science",
-            "score": 25,
-            "cycle": 173
-        },
-        {
-            "name": "Daily Trauma Bonding Science Streak",
-            "score": 25,
-            "cycle": 174
-        },
-        {
-            "name": "Daily Narcissistic Abuse Neuroscience Streak",
-            "score": 25,
-            "cycle": 174
-        },
-        {
-            "name": "Daily Codependency Recovery Science",
-            "score": 25,
-            "cycle": 174
-        },
-        {
-            "name": "Daily Grief Neuroscience Streak",
-            "score": 25,
-            "cycle": 178
-        },
-        {
-            "name": "Daily Bereavement Science Streak",
-            "score": 25,
-            "cycle": 178
-        },
-        {
-            "name": "Daily Complicated Grief Science Streak",
-            "score": 25,
-            "cycle": 178
-        },
-        {
-            "name": "Daily Bilingualism Neuroscience Streak",
-            "score": 25,
-            "cycle": 179
-        },
-        {
-            "name": "Daily Polyglot Brain Science Streak",
-            "score": 25,
-            "cycle": 179
-        },
-        {
-            "name": "Daily Critical Period Language Neuroscience Streak",
-            "score": 25,
-            "cycle": 179
-        },
-        {
-            "name": "Daily Language Acquisition Neuroscience Streak",
-            "score": 25,
-            "cycle": 179
-        },
-        {
-            "name": "Daily Multilingualism Dementia Prevention Streak",
-            "score": 25,
-            "cycle": 179
-        },
-        {
-            "name": "Daily Sunk Cost Fallacy Neuroscience Streak",
-            "score": 25,
-            "cycle": 182
-        },
-        {
-            "name": "Daily Commitment Device Science Streak",
-            "score": 25,
-            "cycle": 182
-        }
-    ]
+  "venture": "competitive_intel",
+  "last_cycle": 183,
+  "last_run": "2026-05-03T23:23:24.848851+00:00",
+  "cumulative_blue_oceans": 1165,
+  "ci_csv_rows": 253,
+  "alpha_csv_rows": 40131,
+  "strategies_covered": [
+    "HEALTH + FITNESS + WELLNESS + NUTRITION",
+    "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+    "HISTORY + WORLD CULTURES + ANTHROPOLOGY",
+    "PSYCHOLOGY + COGNITIVE SCIENCE + BEHAVIORAL ECONOMICS",
+    "SCIENCE + TECHNOLOGY + ENGINEERING + MATHEMATICS",
+    "PARENTING + CHILD DEVELOPMENT + EDUCATION",
+    "CREATIVE ARTS + MUSIC + VISUAL ARTS + PERFORMANCE",
+    "SCIENCE & TECHNOLOGY HISTORY + INNOVATION",
+    "PHILOSOPHY OF MIND & CONSCIOUSNESS",
+    "NEUROSCIENCE & BRAIN SCIENCE",
+    "MILITARY HISTORY & STRATEGY",
+    "GEOPOLITICS & INTERNATIONAL RELATIONS",
+    "PSYCHOLOGY OF CREATIVITY & GENIUS",
+    "LANGUAGE & LINGUISTICS HISTORY",
+    "HISTORY OF MATHEMATICS",
+    "GENETICS",
+    "FINANCE & ECONOMICS HISTORY",
+    "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
+    "CULINARY SCIENCE & FOOD HISTORY",
+    "ASTRONOMY & SPACE SCIENCE",
+    "CLIMATE SCIENCE & ENVIRONMENTAL SCIENCE",
+    "MEDICINE & HUMAN PHYSIOLOGY",
+    "PHILOSOPHY & ETHICS + LOGIC",
+    "BEHAVIORAL ECONOMICS",
+    "SOCIOLOGY & SOCIAL DYNAMICS",
+    "POLITICAL SCIENCE & GOVERNANCE",
+    "LITERATURE & LITERARY THEORY",
+    "ARCHITECTURE & DESIGN THEORY",
+    "LEGAL THEORY & JURISPRUDENCE",
+    "ENVIRONMENTAL LAW & CLIMATE GOVERNANCE",
+    "PUBLIC HEALTH LAW & BIOETHICS",
+    "PHILOSOPHY & ETHICS",
+    "CRIMINAL LAW & CRIMINAL PROCEDURE",
+    "INTELLECTUAL PROPERTY LAW",
+    "INTERNATIONAL LAW & GLOBAL GOVERNANCE",
+    "COMPARATIVE CONSTITUTIONAL LAW",
+    "ADMINISTRATIVE LAW & REGULATORY THEORY",
+    "CONSTITUTIONAL LAW: SEPARATION OF POWERS & FEDERALISM",
+    "FIRST AMENDMENT & CIVIL LIBERTIES",
+    "SPORTS SCIENCE + PERFORMANCE PSYCHOLOGY + ATHLETIC OPTIMIZATION",
+    "ENTREPRENEURSHIP + STARTUP CULTURE + VENTURE CAPITAL",
+    "CLIMATE TECH + SUSTAINABILITY + CLEANTECH + IMPACT INVESTING",
+    "URBAN TECH + SMART CITIES + PROPTECH + REAL ESTATE INNOVATION",
+    "BIOTECH + LIFE SCIENCES + PHARMACEUTICAL INNOVATION + DRUG DEVELOPMENT",
+    "AGING + LONGEVITY SCIENCE + GEROSCIENCE + HEALTHSPAN OPTIMIZATION",
+    "MICROBIOME + GUT HEALTH + LONGEVITY SCIENCE + PSYCHOBIOTICS",
+    "COGNITIVE SCIENCE + LEARNING SCIENCE + METACOGNITION + NEUROPLASTICITY",
+    "SLEEP SCIENCE + CIRCADIAN BIOLOGY + CHRONOBIOLOGY + SLEEP OPTIMIZATION",
+    "MENTAL HEALTH SCIENCE + NEUROSCIENCE OF STRESS + ANXIETY RESEARCH",
+    "ADDICTION SCIENCE + NEUROSCIENCE OF HABIT FORMATION + BEHAVIORAL ADDICTION",
+    "TRAUMA SCIENCE + PTSD NEUROSCIENCE + ADVERSE CHILDHOOD EXPERIENCES",
+    "INTERGENERATIONAL TRAUMA + EPIGENETICS OF ADVERSITY",
+    "QUANTUM PHYSICS + PARTICLE PHYSICS + COSMOLOGY + QUANTUM COMPUTING",
+    "STELLAR ASTROPHYSICS + EXOPLANET SCIENCE + ASTROBIOLOGY + SETI SCIENCE",
+    "COSMOLOGY + DARK MATTER + DARK ENERGY + BIG BANG SCIENCE",
+    "ENVIRONMENTAL PSYCHOLOGY + NATURE DEFICIT DISORDER + ECOTHERAPY SCIENCE",
+    "LONELINESS SCIENCE + SOCIAL CONNECTION NEUROSCIENCE + BELONGING PSYCHOLOGY",
+    "POSITIVE PSYCHOLOGY + FLOURISHING SCIENCE + CHARACTER STRENGTHS",
+    "FINANCIAL PSYCHOLOGY + MONEY MINDSET + BEHAVIORAL FINANCE NEUROSCIENCE",
+    "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
+    "SELF-DETERMINATION THEORY + AUTONOMY MOTIVATION + INTRINSIC DRIVE SCIENCE",
+    "COGNITIVE LOAD THEORY + WORKING MEMORY + ATTENTION SCIENCE",
+    "DECISION MAKING SCIENCE + JUDGMENT UNDER UNCERTAINTY + HEURISTICS & BIASES",
+    "MOTIVATION SCIENCE + SELF-DETERMINATION THEORY + GOAL PURSUIT SCIENCE",
+    "EMOTIONAL INTELLIGENCE + EMPATHY SCIENCE + SOCIAL COGNITION",
+    "ATTACHMENT THEORY + RELATIONSHIP SCIENCE + INTERPERSONAL NEUROSCIENCE",
+    "TRAUMA SCIENCE + POLYVAGAL THEORY + NERVOUS SYSTEM REGULATION + SOMATIC THERAPY",
+    "GRIEF SCIENCE + LOSS PSYCHOLOGY + BEREAVEMENT NEUROSCIENCE",
+    "LANGUAGE LEARNING NEUROSCIENCE + BILINGUALISM + POLYGLOT SCIENCE",
+    "SOCIAL COGNITION NEUROSCIENCE + THEORY OF MIND + EMPATHY SCIENCE",
+    "PERSUASION SCIENCE + INFLUENCE PSYCHOLOGY + SOCIAL PROOF NEUROSCIENCE",
+    "COMMITMENT + CONSISTENCY PSYCHOLOGY + COGNITIVE DISSONANCE NEUROSCIENCE",
+    "PRODUCTIVITY SCIENCE + TIME MANAGEMENT + DEEP WORK PSYCHOLOGY"
+  ],
+  "next_strategy": "SELF-CONTROL SCIENCE + WILLPOWER NEUROSCIENCE + EGO DEPLETION RESEARCH",
+  "top_all_time": [
+    {
+      "name": "Daily CS Fundamentals Streak",
+      "score": 25,
+      "cycle": 111
+    },
+    {
+      "name": "Daily Film Studies Streak",
+      "score": 25,
+      "cycle": 106
+    },
+    {
+      "name": "Daily Neuroscience Streak",
+      "score": 25,
+      "cycle": 111
+    },
+    {
+      "name": "Daily Oncology Science Streak",
+      "score": 25,
+      "cycle": 127
+    },
+    {
+      "name": "Daily Copyright Law Streak",
+      "score": 25,
+      "cycle": 141
+    },
+    {
+      "name": "Daily Ai Ip Law Streak",
+      "score": 25,
+      "cycle": 141
+    },
+    {
+      "name": "Daily Chevron Judicial Review Streak",
+      "score": 25,
+      "cycle": 144
+    },
+    {
+      "name": "Daily Tech Ai Regulation Streak",
+      "score": 25,
+      "cycle": 144
+    },
+    {
+      "name": "Daily Separation Of Powers Streak",
+      "score": 25,
+      "cycle": 145
+    },
+    {
+      "name": "Daily Presidential Immunity Streak",
+      "score": 25,
+      "cycle": 145
+    },
+    {
+      "name": "Daily Sports Psychology Streak",
+      "score": 25,
+      "cycle": 147
+    },
+    {
+      "name": "Daily Strength Conditioning Science Streak",
+      "score": 25,
+      "cycle": 147
+    },
+    {
+      "name": "Daily Sports Analytics Streak",
+      "score": 25,
+      "cycle": 147
+    },
+    {
+      "name": "Daily Venture Capital Fundamentals Streak",
+      "score": 25,
+      "cycle": 148
+    },
+    {
+      "name": "Daily Product Market Fit Streak",
+      "score": 25,
+      "cycle": 148
+    },
+    {
+      "name": "Daily Corporate Climate Disclosure Streak",
+      "score": 25,
+      "cycle": 149
+    },
+    {
+      "name": "Daily Real Estate Investing Fundamentals Streak",
+      "score": 25,
+      "cycle": 150
+    },
+    {
+      "name": "Daily Biotech Investing Streak",
+      "score": 25,
+      "cycle": 151
+    },
+    {
+      "name": "Daily Drug Discovery Science Streak",
+      "score": 25,
+      "cycle": 151
+    },
+    {
+      "name": "Daily Pharmacology Fundamentals Streak",
+      "score": 25,
+      "cycle": 151
+    },
+    {
+      "name": "Daily Mtor Longevity Pathways Streak",
+      "score": 25,
+      "cycle": 152
+    },
+    {
+      "name": "Daily Flow State Science Streak",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Growth Mindset Neuroscience Streak",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Attention Science Streak",
+      "score": 25,
+      "cycle": 168
+    },
+    {
+      "name": "Daily Multitasking Myth Science Streak",
+      "score": 25,
+      "cycle": 168
+    },
+    {
+      "name": "Daily Executive Function Science Streak",
+      "score": 25,
+      "cycle": 168
+    },
+    {
+      "name": "Daily Focus Protocol Science Streak",
+      "score": 25,
+      "cycle": 168
+    },
+    {
+      "name": "Daily Cognitive Bias Science Streak",
+      "score": 25,
+      "cycle": 169
+    },
+    {
+      "name": "Daily Mental Models Science Streak",
+      "score": 25,
+      "cycle": 169
+    },
+    {
+      "name": "Daily Emotional Intelligence Streak",
+      "score": 25,
+      "cycle": 171
+    },
+    {
+      "name": "Daily Emotional Regulation Streak",
+      "score": 25,
+      "cycle": 171
+    },
+    {
+      "name": "Daily Attachment Theory Streak",
+      "score": 25,
+      "cycle": 172
+    },
+    {
+      "name": "Daily Secure Attachment Streak",
+      "score": 25,
+      "cycle": 172
+    },
+    {
+      "name": "Daily Anxious Avoidant Attachment Streak",
+      "score": 25,
+      "cycle": 172
+    },
+    {
+      "name": "Daily Social Proof Neuroscience Streak",
+      "score": 25,
+      "cycle": 181
+    },
+    {
+      "name": "Daily Cialdini Influence Science Streak",
+      "score": 25,
+      "cycle": 181
+    },
+    {
+      "name": "Daily Reciprocity Neuroscience Streak",
+      "score": 25,
+      "cycle": 181
+    },
+    {
+      "name": "Daily Scarcity FOMO Neuroscience Streak",
+      "score": 25,
+      "cycle": 181
+    },
+    {
+      "name": "Daily Persuasion Neural Pathways Streak",
+      "score": 25,
+      "cycle": 181
+    },
+    {
+      "name": "Daily Cognitive Dissonance Science Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Commitment Consistency Psychology Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Belief Change Neuroscience Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Identity Behavior Science Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Post Decision Rationalization Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Sunk Cost Fallacy Neuroscience Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Commitment Device Science Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Cognitive Dissonance Reduction Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Behavioral Consistency Neuroscience Streak",
+      "score": 25,
+      "cycle": 182
+    }
+  ],
+  "status": "RUNNING",
+  "top_performers": [
+    {
+      "niche": "daily_cognitive_dissonance_science_streak",
+      "display_name": "Daily Cognitive Dissonance Science Streak",
+      "score": 25,
+      "community": 35300000,
+      "priority": "P0",
+      "price": "$5.99-$9.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_sunk_cost_fallacy_neuroscience_streak",
+      "display_name": "Daily Sunk Cost Fallacy Neuroscience Streak",
+      "score": 25,
+      "community": 51750000,
+      "priority": "P0",
+      "price": "$5.99-$9.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_commitment_device_science_streak",
+      "display_name": "Daily Commitment Device Science Streak",
+      "score": 25,
+      "community": 51080000,
+      "priority": "P0",
+      "price": "$5.99-$9.99/mo",
+      "is_new": true
+    }
+  ],
+  "top_niches_all_time": [
+    {
+      "name": "Daily SDT Autonomy Needs",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Intrinsic Motivation Diagnostics",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Self-Concordance Goals Science",
+      "score": 25,
+      "cycle": 167
+    },
+    {
+      "name": "Daily Behavioral Finance Science Streak",
+      "score": 25,
+      "cycle": 166
+    },
+    {
+      "name": "Daily Prospect Theory Loss Aversion Streak",
+      "score": 25,
+      "cycle": 166
+    },
+    {
+      "name": "Daily Polyvagal Theory Streak",
+      "score": 25,
+      "cycle": 173
+    },
+    {
+      "name": "Daily Complex Trauma Science Streak",
+      "score": 25,
+      "cycle": 173
+    },
+    {
+      "name": "Daily Nervous System Regulation Science",
+      "score": 25,
+      "cycle": 173
+    },
+    {
+      "name": "Daily Trauma Bonding Science Streak",
+      "score": 25,
+      "cycle": 174
+    },
+    {
+      "name": "Daily Narcissistic Abuse Neuroscience Streak",
+      "score": 25,
+      "cycle": 174
+    },
+    {
+      "name": "Daily Codependency Recovery Science",
+      "score": 25,
+      "cycle": 174
+    },
+    {
+      "name": "Daily Grief Neuroscience Streak",
+      "score": 25,
+      "cycle": 178
+    },
+    {
+      "name": "Daily Bereavement Science Streak",
+      "score": 25,
+      "cycle": 178
+    },
+    {
+      "name": "Daily Complicated Grief Science Streak",
+      "score": 25,
+      "cycle": 178
+    },
+    {
+      "name": "Daily Bilingualism Neuroscience Streak",
+      "score": 25,
+      "cycle": 179
+    },
+    {
+      "name": "Daily Polyglot Brain Science Streak",
+      "score": 25,
+      "cycle": 179
+    },
+    {
+      "name": "Daily Critical Period Language Neuroscience Streak",
+      "score": 25,
+      "cycle": 179
+    },
+    {
+      "name": "Daily Language Acquisition Neuroscience Streak",
+      "score": 25,
+      "cycle": 179
+    },
+    {
+      "name": "Daily Multilingualism Dementia Prevention Streak",
+      "score": 25,
+      "cycle": 179
+    },
+    {
+      "name": "Daily Sunk Cost Fallacy Neuroscience Streak",
+      "score": 25,
+      "cycle": 182
+    },
+    {
+      "name": "Daily Commitment Device Science Streak",
+      "score": 25,
+      "cycle": 182
+    }
+  ]
 }

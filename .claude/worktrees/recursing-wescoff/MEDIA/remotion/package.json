@@ -1,0 +1,30 @@
+{
+  "name": "remotion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render:social": "remotion render src/index.ts SocialHook out/social_hook.mp4",
+    "render:stats": "remotion render src/index.ts StatsDashboard out/stats_dashboard.mp4",
+    "render:quote": "remotion render src/index.ts QuoteCard out/quote_card.mp4",
+    "render:pressure": "remotion render src/index.ts PipelinePressure out/pipeline_pressure.mp4",
+    "render:all": "npm run render:social && npm run render:stats && npm run render:quote && npm run render:pressure"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@remotion/bundler": "^4.0.434",
+    "@remotion/cli": "^4.0.434",
+    "@remotion/renderer": "^4.0.434",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.434"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "typescript": "^5.9.3"
+  }
+}

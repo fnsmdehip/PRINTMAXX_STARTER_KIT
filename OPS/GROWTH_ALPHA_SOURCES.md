@@ -537,3 +537,14 @@ MONITOR_KEYWORDS:
 2. Upgrade to Decodo mobile proxies for production accounts
 3. Build automated Product Hunt launch workflow
 4. Set up Growth.Design case study scraper (monthly)
+
+
+---
+
+## Pending Enhancement (CB180BCE1D, Score: 25)
+
+**Source:** CRUNCHBASE | **URL:** https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/
+**Added:** 2026-04-20T05:05:02-04:00
+
+Sources: Cursor in talks to — Sources: Cursor in talks to raise $2B+ at $50B valuation as enterprise growth su
+

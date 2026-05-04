@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 675px;
+    background: linear-gradient(160deg, #0a0a0a 0%, #0f0f23 40%, #1a1a2e 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 80px;
+    overflow: hidden;
+    position: relative;
+  }
+  .thread-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .thread-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #667eea;
+  }
+  .thread-line {
+    width: 40px;
+    height: 2px;
+    background: rgba(102,126,234,0.3);
+  }
+  .thread-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(102,126,234,0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .hook {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 28px;
+    max-width: 950px;
+  }
+  .hook .highlight {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .bullet {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.55);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .bullet::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    flex-shrink: 0;
+  }
+  .handle {
+    position: absolute;
+    bottom: 35px;
+    right: 55px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.2);
+  }
+  .corner-glow {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+  <div class="corner-glow"></div>
+  <div class="thread-indicator">
+    <div class="thread-dot"></div>
+    <div class="thread-line"></div>
+    <div class="thread-label">THREAD</div>
+  </div>
+  <div class="hook">
+    cold email reality check: ran <span class="highlight">464K emails</span> last year.
+  </div>
+  <div class="bullets">
+    <div class="bullet">tested every list source</div>
+    <div class="bullet">buying lists is dead</div>
+    <div class="bullet">here's what actually works</div>
+  </div>
+  <div class="handle">@printmaxxer</div>
+</body>
+</html>

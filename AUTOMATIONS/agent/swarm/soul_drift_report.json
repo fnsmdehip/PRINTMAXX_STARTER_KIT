@@ -1,7 +1,7 @@
 {
-  "ts": "2026-04-17T02:02:58.019916",
+  "ts": "2026-05-03T18:20:11.678443",
   "avg_score": 8.5,
-  "total_scored": 9,
+  "total_scored": 8,
   "drifted_count": 1,
   "drifted_agents": [
     "playwright_tester"
@@ -14,7 +14,6 @@
     "conversion_optimizer": 10.0,
     "conversion_audit_20260320": 8.0,
     "lead_machine": 10.0,
-    "gap_hunter": 8.5,
     "ceo_decision_2026-03-15": 10.0
   }
 }

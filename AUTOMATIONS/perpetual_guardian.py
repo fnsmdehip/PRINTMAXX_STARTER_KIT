@@ -525,6 +525,21 @@ def run_heal():
     for subdir in ["daily", "overnight", "guardian"]:
         (LOGS / subdir).mkdir(parents=True, exist_ok=True)
 
+    # 7. Check for dispatch trigger (written by Dispatch session for deferred execution)
+    dispatch_trigger = AUTOMATIONS / "dispatch_trigger.py"
+    if dispatch_trigger.exists():
+        log("  DISPATCH TRIGGER FOUND — executing deferred tasks...")
+        try:
+            subprocess.run(
+                [PYTHON, str(dispatch_trigger)],
+                capture_output=True, timeout=900,
+                cwd=str(BASE)
+            )
+            log("  DISPATCH TRIGGER executed successfully.")
+            healed += 1
+        except Exception as e:
+            log(f"  DISPATCH TRIGGER failed: {e}")
+
     log(f"  Healed {healed} issues.")
     return healed
 

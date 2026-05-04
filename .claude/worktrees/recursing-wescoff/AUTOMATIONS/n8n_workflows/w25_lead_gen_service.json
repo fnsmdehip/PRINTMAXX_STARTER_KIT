@@ -1,0 +1,197 @@
+{
+  "name": "PRINTMAXX - Lead Gen Service (Broker Play)",
+  "nodes": [
+    {
+      "name": "Daily Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 1-5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Load Client Config",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Client configurations for lead gen service\n// Each client pays $500-2K/mo for leads delivered to their Google Sheet\nconst clients = [\n  {\n    id: 'client_001',\n    name: 'Example Dental Marketing',\n    niche: 'dental practices',\n    location: 'Austin TX',\n    keywords: ['dentist', 'dental office', 'orthodontist'],\n    sheetId: 'CLIENT_SHEET_ID_1',\n    leadsPerDay: 10,\n    monthlyFee: 500\n  },\n  {\n    id: 'client_002',\n    name: 'Example HVAC Leads',\n    niche: 'HVAC contractors',\n    location: 'Dallas TX',\n    keywords: ['HVAC', 'air conditioning', 'heating repair'],\n    sheetId: 'CLIENT_SHEET_ID_2',\n    leadsPerDay: 15,\n    monthlyFee: 1000\n  },\n  {\n    id: 'client_003',\n    name: 'Example Legal Leads',\n    niche: 'personal injury attorneys',\n    location: 'Houston TX',\n    keywords: ['personal injury lawyer', 'accident attorney'],\n    sheetId: 'CLIENT_SHEET_ID_3',\n    leadsPerDay: 8,\n    monthlyFee: 2000\n  }\n];\n\nconst today = new Date().toISOString().split('T')[0];\nreturn clients.map(c => ({ json: { ...c, date: today } }));"
+      }
+    },
+    {
+      "name": "Scrape Leads via GMaps API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://maps.googleapis.com/maps/api/place/textsearch/json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $json.keywords[0] }} near {{ $json.location }}"
+            },
+            {
+              "name": "key",
+              "value": "{{$credentials.googleMapsApiKey}}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Extract and Enrich Leads",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const clientData = $('Load Client Config').item.json;\nconst mapsResponse = $input.item.json;\n\nconst results = mapsResponse.results || [];\nconst leads = results.slice(0, clientData.leadsPerDay).map((place, idx) => ({\n  leadId: `${clientData.id}_${clientData.date}_${idx + 1}`,\n  clientId: clientData.id,\n  businessName: place.name || '',\n  address: place.formatted_address || '',\n  rating: place.rating || 0,\n  totalReviews: place.user_ratings_total || 0,\n  placeId: place.place_id || '',\n  niche: clientData.niche,\n  location: clientData.location,\n  scrapedAt: new Date().toISOString(),\n  status: 'NEW'\n}));\n\nreturn [{ json: { clientId: clientData.id, sheetId: clientData.sheetId, leads, leadCount: leads.length, date: clientData.date } }];"
+      }
+    },
+    {
+      "name": "Deliver to Client Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1050, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.sheetId }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Leads"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Log Delivery",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1250, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const data = $input.item.json;\nconst deliveryData = $('Extract and Enrich Leads').item.json;\n\nreturn [{\n  json: {\n    clientId: deliveryData.clientId,\n    leadsDelivered: deliveryData.leadCount,\n    date: deliveryData.date,\n    deliveredAt: new Date().toISOString(),\n    sheetId: deliveryData.sheetId,\n    status: deliveryData.leadCount > 0 ? 'DELIVERED' : 'NO_LEADS'\n  }\n}];"
+      }
+    },
+    {
+      "name": "Track in Master Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1450, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_BROKERING_TRACKING_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "LeadGenDeliveries"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Alert on Delivery",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1650, 300],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=Lead Gen Service Delivery\n\nClient: {{ $json.clientId }}\nLeads Delivered: {{ $json.leadsDelivered }}\nDate: {{ $json.date }}\nStatus: {{ $json.status }}\nTime: {{ $json.deliveredAt }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily Trigger": {
+      "main": [[{"node": "Load Client Config", "type": "main", "index": 0}]]
+    },
+    "Load Client Config": {
+      "main": [[{"node": "Scrape Leads via GMaps API", "type": "main", "index": 0}]]
+    },
+    "Scrape Leads via GMaps API": {
+      "main": [[{"node": "Extract and Enrich Leads", "type": "main", "index": 0}]]
+    },
+    "Extract and Enrich Leads": {
+      "main": [[{"node": "Deliver to Client Sheet", "type": "main", "index": 0}]]
+    },
+    "Deliver to Client Sheet": {
+      "main": [[{"node": "Log Delivery", "type": "main", "index": 0}]]
+    },
+    "Log Delivery": {
+      "main": [[{"node": "Track in Master Sheet", "type": "main", "index": 0}]]
+    },
+    "Track in Master Sheet": {
+      "main": [[{"node": "Alert on Delivery", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "brokering"},
+    {"name": "lead-gen-service"},
+    {"name": "revenue"},
+    {"name": "P0"}
+  ]
+}
