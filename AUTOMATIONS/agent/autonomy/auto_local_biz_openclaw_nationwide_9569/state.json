@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-04-17T07:34:52.326506",
-  "cycle_number": 26,
+  "last_run": "2026-05-03T20:45:55.777882",
+  "cycle_number": 27,
   "cities_covered": [
     "Forrest City AR",
     "Corinth MS",
@@ -591,7 +591,67 @@
     "Kingsport TN (plumber)",
     "Wheeling WV (towing)",
     "Colorado Springs CO",
-    "Harrodsburg KY (handyman)"
+    "Harrodsburg KY (handyman)",
+    "Caruthersville MO",
+    "Kennett MO",
+    "Poplar Bluff MO",
+    "Sikeston MO",
+    "Charleston MO",
+    "Hayti MO",
+    "Portageville MO",
+    "Campbell MO",
+    "Dexter MO",
+    "Malden MO",
+    "Jasper TX",
+    "Center TX",
+    "San Augustine TX",
+    "Hemphill TX",
+    "Carthage TX",
+    "Lufkin TX",
+    "Nacogdoches TX",
+    "Livingston TX",
+    "Woodville TX",
+    "Silsbee TX",
+    "Norton VA",
+    "Wise VA",
+    "Pound VA",
+    "Coeburn VA",
+    "Big Stone Gap VA",
+    "Jonesville VA",
+    "Gate City VA",
+    "Clintwood VA",
+    "St Paul VA",
+    "Idabel OK",
+    "Broken Bow OK",
+    "Antlers OK",
+    "Wilburton OK",
+    "Stigler OK",
+    "Talihina OK",
+    "Hugo OK",
+    "Atoka OK",
+    "Coalgate OK",
+    "Bainbridge GA",
+    "Camilla GA",
+    "Cairo GA",
+    "Pelham GA",
+    "Blakely GA",
+    "Cuthbert GA",
+    "Dawson GA",
+    "Rainsville AL",
+    "Boaz AL",
+    "Albertville AL",
+    "Fort Payne AL",
+    "Guntersville AL",
+    "Oneonta AL",
+    "Ashville AL",
+    "Centre AL",
+    "New Albany MS",
+    "Booneville MS",
+    "Corinth MS fringe",
+    "Iuka MS",
+    "Ripley MS",
+    "Tishomingo MS",
+    "Alcorn County MS"
   ],
   "total_leads_all_cycles": 6556,
   "total_previews_deployed": 3114,
@@ -2810,7 +2870,7 @@
     "observation": "Cycle 21: KY Central Frontier + TN SE + AR I-40 + FIRST WV coverage (Bluefield/Beckley) + Eastern KY Appalachian corridor (Pikeville/Hazard). 309 new leads, 218 F/D (71%). 90 new GH Pages pushed. Pipeline at 2432 outreach entries, 39 ready to send. WV F-grade rate: 90%, Eastern KY F-grade rate: 85%."
   },
   "total_hot_leads": 2991,
-  "total_outreach": 3269,
+  "total_outreach": 2863,
   "ready_to_send": 42,
   "cycles": {
     "cycle_22": {
@@ -5486,5 +5546,125 @@
     "outreach_added": 83,
     "commit_ok": true,
     "push_ok": true
+  },
+  "total_leads": 8094,
+  "total_previews": 3108,
+  "cycle_27": {
+    "new_leads": 850,
+    "new_fd": 115,
+    "new_previews": 115,
+    "new_outreach": 115,
+    "region_stats": {
+      "MO": {
+        "leads": 147,
+        "fd": 18,
+        "cities": [
+          "Caruthersville MO",
+          "Kennett MO",
+          "Poplar Bluff MO",
+          "Sikeston MO",
+          "Charleston MO",
+          "Hayti MO",
+          "Portageville MO",
+          "Campbell MO",
+          "Dexter MO",
+          "Malden MO"
+        ]
+      },
+      "TX": {
+        "leads": 159,
+        "fd": 19,
+        "cities": [
+          "Jasper TX",
+          "Center TX",
+          "San Augustine TX",
+          "Hemphill TX",
+          "Carthage TX",
+          "Lufkin TX",
+          "Nacogdoches TX",
+          "Livingston TX",
+          "Woodville TX",
+          "Silsbee TX"
+        ]
+      },
+      "VA": {
+        "leads": 124,
+        "fd": 17,
+        "cities": [
+          "Norton VA",
+          "Wise VA",
+          "Pound VA",
+          "Coeburn VA",
+          "Big Stone Gap VA",
+          "Jonesville VA",
+          "Gate City VA",
+          "Clintwood VA",
+          "St Paul VA"
+        ]
+      },
+      "OK": {
+        "leads": 127,
+        "fd": 20,
+        "cities": [
+          "Idabel OK",
+          "Broken Bow OK",
+          "Antlers OK",
+          "Wilburton OK",
+          "Stigler OK",
+          "Talihina OK",
+          "Hugo OK",
+          "Atoka OK",
+          "Coalgate OK"
+        ]
+      },
+      "GA": {
+        "leads": 97,
+        "fd": 14,
+        "cities": [
+          "Bainbridge GA",
+          "Camilla GA",
+          "Cairo GA",
+          "Pelham GA",
+          "Blakely GA",
+          "Cuthbert GA",
+          "Dawson GA"
+        ]
+      },
+      "AL": {
+        "leads": 108,
+        "fd": 13,
+        "cities": [
+          "Rainsville AL",
+          "Boaz AL",
+          "Albertville AL",
+          "Fort Payne AL",
+          "Guntersville AL",
+          "Oneonta AL",
+          "Ashville AL",
+          "Centre AL"
+        ]
+      },
+      "MS": {
+        "leads": 81,
+        "fd": 14,
+        "cities": [
+          "New Albany MS",
+          "Booneville MS",
+          "Iuka MS",
+          "Ripley MS",
+          "Tishomingo MS",
+          "Alcorn County MS"
+        ]
+      },
+      "fringe": {
+        "leads": 7,
+        "fd": 0,
+        "cities": [
+          "Corinth MS fringe"
+        ]
+      }
+    },
+    "committed": true,
+    "pushed": true
   }
 }

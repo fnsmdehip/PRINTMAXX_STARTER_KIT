@@ -1,10 +1,10 @@
 {
   "venture": "competitive_intel",
-  "last_cycle": 183,
-  "last_run": "2026-05-03T23:23:24.848851+00:00",
-  "cumulative_blue_oceans": 1165,
-  "ci_csv_rows": 253,
-  "alpha_csv_rows": 40131,
+  "last_cycle": 186,
+  "last_run": "2026-05-05T18:19:25.286677+00:00",
+  "cumulative_blue_oceans": 1185,
+  "ci_csv_rows": 283,
+  "alpha_csv_rows": 40151,
   "strategies_covered": [
     "HEALTH + FITNESS + WELLNESS + NUTRITION",
     "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -78,9 +78,12 @@
     "SOCIAL COGNITION NEUROSCIENCE + THEORY OF MIND + EMPATHY SCIENCE",
     "PERSUASION SCIENCE + INFLUENCE PSYCHOLOGY + SOCIAL PROOF NEUROSCIENCE",
     "COMMITMENT + CONSISTENCY PSYCHOLOGY + COGNITIVE DISSONANCE NEUROSCIENCE",
-    "PRODUCTIVITY SCIENCE + TIME MANAGEMENT + DEEP WORK PSYCHOLOGY"
+    "PRODUCTIVITY SCIENCE + TIME MANAGEMENT + DEEP WORK PSYCHOLOGY",
+    "MOTIVATION SCIENCE + WILLPOWER NEUROSCIENCE + SELF-REGULATION PSYCHOLOGY",
+    "SELF-CONTROL SCIENCE + WILLPOWER NEUROSCIENCE + EGO DEPLETION RESEARCH",
+    "SELF-REGULATION FAILURE MODES + BREAKDOWN SCIENCE + RECOVERY PSYCHOLOGY"
   ],
-  "next_strategy": "SELF-CONTROL SCIENCE + WILLPOWER NEUROSCIENCE + EGO DEPLETION RESEARCH",
+  "next_strategy": "BEHAVIORAL ACTIVATION + ANTI-ANHEDONIA SCIENCE + REWARD SENSITIVITY RECOVERY",
   "top_all_time": [
     {
       "name": "Daily CS Fundamentals Streak",
@@ -326,30 +329,84 @@
   "status": "RUNNING",
   "top_performers": [
     {
-      "niche": "daily_cognitive_dissonance_science_streak",
-      "display_name": "Daily Cognitive Dissonance Science Streak",
-      "score": 25,
-      "community": 35300000,
+      "niche": "daily_relapse_prevention_neuroscience_streak",
+      "display_name": "Daily Relapse Prevention Neuroscience Streak",
+      "score": 29,
+      "community": 8980000,
       "priority": "P0",
-      "price": "$5.99-$9.99/mo",
+      "price": "$4.99-$8.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_sunk_cost_fallacy_neuroscience_streak",
-      "display_name": "Daily Sunk Cost Fallacy Neuroscience Streak",
-      "score": 25,
-      "community": 51750000,
+      "niche": "daily_failure_mode_analysis_streak",
+      "display_name": "Daily Failure Mode Analysis Science Streak",
+      "score": 28,
+      "community": 8140000,
       "priority": "P0",
-      "price": "$5.99-$9.99/mo",
+      "price": "$4.99-$8.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_commitment_device_science_streak",
-      "display_name": "Daily Commitment Device Science Streak",
-      "score": 25,
-      "community": 51080000,
+      "niche": "daily_breakdown_recovery_protocol_streak",
+      "display_name": "Daily Breakdown Recovery Protocol Science Streak",
+      "score": 29,
+      "community": 9140000,
       "priority": "P0",
-      "price": "$5.99-$9.99/mo",
+      "price": "$4.99-$8.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_behavior_change_dark_patterns_streak",
+      "display_name": "Daily Behavior Change Dark Patterns Science Streak",
+      "score": 28,
+      "community": 7540000,
+      "priority": "P0",
+      "price": "$4.99-$8.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_stress_regulation_collapse_streak",
+      "display_name": "Daily Stress Regulation Collapse Science Streak",
+      "score": 27,
+      "community": 9280000,
+      "priority": "P0",
+      "price": "$4.99-$7.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_motivational_interviewing_science_streak",
+      "display_name": "Daily Motivational Interviewing Science Streak",
+      "score": 26,
+      "community": 7960000,
+      "priority": "P0",
+      "price": "$4.99-$8.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_cognitive_flexibility_failure_streak",
+      "display_name": "Daily Cognitive Flexibility Failure Science Streak",
+      "score": 26,
+      "community": 7090000,
+      "priority": "P0",
+      "price": "$4.99-$7.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_goal_disengagement_science_streak",
+      "display_name": "Daily Goal Disengagement Science Streak",
+      "score": 27,
+      "community": 8140000,
+      "priority": "P0",
+      "price": "$4.99-$7.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_habit_disruption_recovery_streak",
+      "display_name": "Daily Habit Disruption Recovery Science Streak",
+      "score": 27,
+      "community": 8140000,
+      "priority": "P0",
+      "price": "$4.99-$7.99/mo",
       "is_new": true
     }
   ],

@@ -104,6 +104,17 @@
 | research-blog | https://fnsmdehip-research.surge.sh | LIVE — UAF research blog (17 articles) |
 | privacy | https://printmaxx-privacy.surge.sh | LIVE — privacy policy (required for app store) |
 | tos | https://printmaxx-tos.surge.sh | LIVE — terms of service |
+| best-ai-video-tools-creators-2026 | https://best-ai-video-tools-creators-2026.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-anti-snoring-solution-men | https://best-anti-snoring-solution-men.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-coq10-supplement-statin-users | https://best-coq10-supplement-statin-users.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-cpap-machine-2026 | https://best-cpap-machine-2026.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-cpap-supplies-online | https://best-cpap-supplies-online.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-digestive-supplement-men-over-55 | https://best-digestive-supplement-men-over-55.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-final-expense-life-insurance-seniors | https://best-final-expense-life-insurance-seniors.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-medical-alert-system-seniors | https://best-medical-alert-system-seniors.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-otc-hearing-aids-2026 | https://best-otc-hearing-aids-2026.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| best-senior-car-insurance-2026 | https://best-senior-car-insurance-2026.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
+| monday-vs-asana-vs-clickup-2026 | https://monday-vs-asana-vs-clickup-2026.surge.sh | LIVE — gap-hunter deploy 2026-05-05 |
 
 ---
 

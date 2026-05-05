@@ -1,7 +1,56 @@
 {
-  "last_updated": "2026-04-06T21:00:00.000000",
-  "last_cycle": "2026-04-06",
-  "cycle_number": 44,
+  "last_updated": "2026-05-05T15:15:00.000000",
+  "last_cycle": "2026-05-05",
+  "cycle_number": 45,
+  "distribution_engine_cycle_45": {
+    "run_at": "2026-05-05T15:15:00",
+    "assets_covered": [
+      "TruthScope (truthscope.surge.sh) — biometric lie detector",
+      "MCP Marketplace (mcp-marketplace.surge.sh)",
+      "Research Blog (fnsmdehip-research.surge.sh) — UAF physics",
+      "cnsnt (cnsnt-web.surge.sh) — consent documentation",
+      "Pocket Alexandria (pocket-alexandria.surge.sh)",
+      "androx-trt (androx-trt.surge.sh / androx.surge.sh)",
+      "Day 44 meta-narrative (76 apps / $0 revenue)"
+    ],
+    "content_created": {
+      "twitter_threads": 3,
+      "twitter_singles": 7,
+      "twitter_reply_baits": 3,
+      "twitter_qt_captions": 3,
+      "reddit_posts": 7,
+      "hn_show_posts": 3,
+      "hn_ask_posts": 1,
+      "linkedin_posts": 4,
+      "total_pieces": 31
+    },
+    "files_created": [
+      "CONTENT/social/distribution/20260505_twitter_cycle45.md",
+      "CONTENT/social/distribution/20260505_reddit_cycle45.md",
+      "CONTENT/social/distribution/20260505_hn_cycle45.md",
+      "CONTENT/social/distribution/20260505_linkedin_cycle45.md",
+      "CONTENT/social/distribution/COVERAGE_MAP_CYCLE45.md"
+    ],
+    "channels": ["twitter", "reddit", "hackernews", "linkedin"],
+    "subreddits_targeted": [
+      "r/ClaudeAI",
+      "r/SideProject",
+      "r/privacy",
+      "r/iphone",
+      "r/productivity",
+      "r/MachineLearning",
+      "r/learnprogramming"
+    ],
+    "gaps_identified": [
+      "IndieHackers post — Day 44 narrative",
+      "r/privacytools + r/selfhosted — cnsnt",
+      "r/TRT — androx",
+      "Digital products (Claude Code Bible, Cold Email) — blocked on Gumroad account",
+      "ProductHunt — blocked on account creation",
+      "dosewell uncovered this cycle"
+    ]
+  },
+  "last_cycle_number_44": 44,
   "distribution_engine_cycle_44": {
     "run_at": "2026-04-06T21:00:00",
     "assets_covered": [
@@ -41,12 +90,12 @@
   },
   "coverage": {
     "twitter": {
-      "threads": 16,
-      "singles": 89,
-      "reply_baits": 35,
-      "qt_captions": 15,
-      "total_pieces": 218,
-      "last_cycle": 42,
+      "threads": 19,
+      "singles": 96,
+      "reply_baits": 38,
+      "qt_captions": 18,
+      "total_pieces": 249,
+      "last_cycle": 45,
       "new_this_cycle": [
         "tw_newsletter_platforms_comparison",
         "tw_nutriai_personalized_macros",

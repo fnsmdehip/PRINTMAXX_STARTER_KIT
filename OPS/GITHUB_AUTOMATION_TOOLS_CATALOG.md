@@ -3371,3 +3371,20 @@ Show HN: sllm – Split a GPU node with other developers, unlimited tokens. Runn
 
 Show HN: Crabby – Claude Code skill that reviews code like the Rust compiler. I built a Claude Code skill called crabby that makes Claude output diagnostics in rustc error format - severity codes, location arrows, causation spans, and a paste-able fix every time. The twist: Claude becomes Ferris the crab, grumpy and unimpressed, but technically precise. The format works for c
 
+
+
+---
+
+## Pending Enhancement (ALPHA1774001681, Score: 35)
+
+**Source:** @yijiefeng (bookmarks) | **URL:** https://x.com/yijiefeng/status/2050670759912305107
+**Added:** 2026-05-03T20:00:12-04:00
+
+I'm noticing a trend 
+
+there's a growing number of "AI consulting" firms charging $20K+ to "deploy Claude" to legacy businesses (mid-sized law, accounting, PE firms) as "Anthropic enterprise partners"
+
+what this means:
+- they install claude code, cowork
+- run a few commands to
+
