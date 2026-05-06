@@ -1,7 +1,7 @@
-# GAP HUNTER REPORT — 2026-05-05 18:30 (UPDATED)
+# GAP HUNTER REPORT — 2026-05-05 22:45 (UPDATED)
 
 ## Summary
-Day 44 at $0 revenue. 68 app builds, 76+ deployed sites, 14 PDFs ready to sell, 1,627 queued posts, 3,342 approved alpha entries unprocessed. The system is a fully loaded gun with no trigger pull — every gap traces to human account creation blockers. Surge auth expired since last cycle — no new deploys possible until re-auth.
+Day 44 at $0 revenue. 67 app builds, 92 deployed sites, 14 PDFs ready to sell, 404 queued posts (posting_queue), 3,342 approved alpha entries. Surge auth RESTORED — deployed best-online-therapy-platform this cycle. All 61 affiliate pages now live. Revenue bottleneck remains 100% human account creation.
 
 ---
 
@@ -123,9 +123,12 @@ All the same blockers from `OPS/ACCOUNT_CREATION_NOW.md`:
 | Revenue | $0 (Day 44) | — |
 | Surge auth | EXPIRED | NEW BLOCKER |
 
-## 18:30 Cycle Notes
-- Surge token missing from .env — all deploys blocked until `surge login`
-- 1 affiliate page still undeployed (best-online-therapy-platform) due to auth failure
-- Cron verified healthy: all 45 jobs reference existing scripts
-- 2 native iOS apps (soberstreak-native, streakr-native) built, not submitted — need Apple Developer account
-- biomaxx-sdk54 and robloxmaxx are non-web (native/Roblox) — cannot surge deploy
+## 22:45 Cycle Notes
+- Surge auth RESTORED — deployed best-online-therapy-platform.surge.sh successfully
+- ALL 61 affiliate pages now live (was 60, now 61)
+- 92 total surge sites live (up from 76+)
+- 404 posts in posting_queue (markdown files), content ready but no posting access
+- 69 marketplace products ready across Gumroad (48) + Fiverr (12) + Whop (9)
+- 251 cold emails written and personalized, zero sent
+- 5 undeployed builds are all native/Roblox — correctly not on surge
+- Cron: 23 active entries, pipeline functional (scan → process → rank → decide → report)

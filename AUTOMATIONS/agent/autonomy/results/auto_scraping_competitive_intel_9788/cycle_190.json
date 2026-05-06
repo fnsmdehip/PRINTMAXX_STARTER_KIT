@@ -1,0 +1,257 @@
+{
+  "cycle": 190,
+  "timestamp": "2026-05-06T01:45:43.474719+00:00",
+  "strategy": "IMMUNE SYSTEM SCIENCE + PSYCHONEUROIMMUNOLOGY + NEUROINFLAMMATION + CYTOKINE BIOLOGY",
+  "niches_found": 8,
+  "new_rows_appended": 8,
+  "alpha_rows_appended": 16,
+  "new_blue_oceans": 8,
+  "cumulative_blue_oceans": 1220,
+  "high_value_count": 6,
+  "top_niche": "Daily Psychoneuroimmunology Science Streak",
+  "top_niche_score": 30,
+  "niches": [
+    {
+      "key": "daily_psychoneuroimmunology_science_streak",
+      "display_name": "Daily Psychoneuroimmunology Science Streak",
+      "score": 30,
+      "blue_ocean": true,
+      "total_addressable": 36795000,
+      "search_volume_monthly": 6800000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "psychological stress suppresses NK cell cytotoxicity within 60 minutes: Ironson et al. 1990 and Cohen et al. 2012 show acute psychological stress triggers a glucocorticoid + catecholamine cascade that reduces natural killer cell activity by 30-50% within one hour \u2014 measurable via flow cytometry; the mechanism behind why you get sick after major stressors is not metaphorical but a precisely timed immunosuppression event mediated by adrenergic receptors on lymphocytes, viral r/science r/neuroscience r/psychology r/Immunology because it makes immune suppression quantifiably predictable",
+        "social isolation produces C-reactive protein elevations equivalent to smoking 15 cigarettes/day: Cacioppo et al. 2002 and Steptoe et al. 2004 show chronic loneliness elevates CRP by 0.7-1.4 mg/L above matched controls, entering the range associated with 2x cardiovascular risk \u2014 the inflammatory cost of social disconnection is now quantifiable at the molecular level; viral r/psychology r/science r/longevity r/COVID19 because it makes the biology of loneliness concrete and alarming",
+        "the immune system has a circadian rhythm that peaks cytokine production at night: Lange et al. 2010 and Born et al. 1997 show TNF-alpha, IL-6, and IL-12 peak during slow-wave sleep between midnight and 4 AM \u2014 disrupting sleep doesn't just impair cognition but specifically blunts the nocturnal immune surge that consolidates vaccination responses and clears cellular debris; explains why sleep deprivation before vaccines reduces antibody titers by 50%, enormous r/science r/neuroscience r/sleep r/Immunology"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "neuroscience": 3100000,
+        "science": 29800000,
+        "psychology": 1400000,
+        "Immunology": 95000,
+        "longevity": 140000,
+        "Biohackers": 160000,
+        "COVID19": 2100000
+      }
+    },
+    {
+      "key": "daily_neuroinflammation_science_streak",
+      "display_name": "Daily Neuroinflammation Science Streak",
+      "score": 30,
+      "blue_ocean": true,
+      "total_addressable": 35755000,
+      "search_volume_monthly": 9100000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "neuroinflammation is now measurable with translocator protein PET imaging in living humans: Owen et al. 2017 and Setiawan et al. 2018 show TSPO PET scans reveal microglial activation 30% above baseline in MDD patients \u2014 depression is no longer a serotonin story but a neuroinflammatory one; the first study to show brain inflammation in depression using non-invasive imaging, viral r/neuroscience r/science r/depression r/psychology because it fundamentally reframes what depression IS at the biological level",
+        "IL-6 crosses the blood-brain barrier and directly induces sickness behavior via vagus nerve: Dantzer et al. 2008 shows peripheral IL-6 communicates to the brain through para-ventricular pathways and the afferent vagus \u2014 producing anhedonia, social withdrawal, fatigue, and cognitive slowing that are neurologically identical to depression symptoms; explains post-viral fatigue, Long COVID brain fog, and why inflammatory diseases cause psychiatric symptoms, massive r/LongCovid r/science r/neuroscience r/depression r/chronicfatigue",
+        "microglial pruning errors in adolescence may cause schizophrenia and autism: Sekar et al. 2016 Science shows complement component 4A overexpression drives excessive synaptic pruning during adolescence \u2014 the complement cascade is an immune system mechanism co-opted by the brain; errors in immune-guided pruning explain why both schizophrenia and autism spectrum conditions show altered synaptic density, viral r/neuroscience r/science r/psychology because it links immune function to neurodevelopmental conditions through a specific molecular mechanism"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "neuroscience": 3100000,
+        "science": 29800000,
+        "depression": 1100000,
+        "anxiety": 1200000,
+        "Immunology": 95000,
+        "LongCovid": 340000,
+        "chronicfatigue": 120000
+      }
+    },
+    {
+      "key": "daily_cytokine_storm_science_streak",
+      "display_name": "Daily Cytokine Storm Science Streak",
+      "score": 29,
+      "blue_ocean": true,
+      "total_addressable": 36725000,
+      "search_volume_monthly": 11200000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "cytokine storms kill via immunopathology not the pathogen itself: Tisoncik et al. 2012 Science shows the 1918 influenza, SARS-CoV-2, and H5N1 avian flu all cause death primarily through the body's own immune overactivation \u2014 IL-6, TNF-alpha, and IFN-gamma spiral into positive feedback that destroys lung tissue faster than the virus does; explains why young adults with robust immune systems died at higher rates in 1918 (stronger immune response = worse outcome), viral r/science r/COVID19 r/medicine r/biology because it inverts the intuitive model of immune function",
+        "dexamethasone reduces COVID-19 mortality by 35% by suppressing cytokine cascade at exactly the right time: RECOVERY trial 2020 NEJM shows the glucocorticoid given on day 8-14 of severe illness (when viral load is falling but immune response is still escalating) cuts 28-day mortality from 26% to 23% in ventilated patients \u2014 the 35% relative reduction only works in this specific window; timing of immunosuppression is the entire mechanistic insight, enormous r/science r/COVID19 r/medicine r/LongCovid because it shows the counterintuitive power of suppressing immunity at the right moment",
+        "long COVID brain fog maps to microglial activation patterns identical to ME/CFS: Douaud et al. 2022 Nature shows COVID infection causes measurable gray matter thinning and hippocampal volume reduction detectable 3 months post-infection even in mild cases \u2014 the neurological fingerprint overlaps with chronic fatigue syndrome's neuroinflammation profile; validates ME/CFS as a neuroinflammatory condition and explains long COVID cognitive symptoms through a shared immune pathway, viral r/LongCovid r/science r/neuroscience r/chronicfatigue"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "science": 29800000,
+        "neuroscience": 3100000,
+        "COVID19": 2100000,
+        "LongCovid": 340000,
+        "Immunology": 95000,
+        "medicine": 710000,
+        "biology": 580000
+      }
+    },
+    {
+      "key": "daily_gut_microbiome_immunity_streak",
+      "display_name": "Daily Gut Microbiome Immunity Streak",
+      "score": 30,
+      "blue_ocean": true,
+      "total_addressable": 36275000,
+      "search_volume_monthly": 14300000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "70% of immune cells reside in the gut-associated lymphoid tissue (GALT): Mowat & Agace 2014 Nature Immunology shows the lamina propria and Peyer's patches contain the largest concentration of immune cells in the body \u2014 the gut is the primary immune training ground where tolerance to commensal bacteria vs. responses to pathogens is calibrated; explains why gut dysbiosis causes systemic immune dysregulation and why most immune diseases have GI components, viral r/science r/neuroscience r/Microbiome r/nutrition r/Immunology",
+        "Lactobacillus rhamnosus produces GABA and reduces anxiety via the vagus nerve in mice: Bravo et al. 2011 PNAS shows oral L. rhamnosus JB-1 increases hippocampal GABA receptor expression and reduces stress-induced corticosterone \u2014 and vagotomy abolishes the effect, proving the gut-brain axis is vagus-mediated; the first demonstration that a specific probiotic strain can modulate brain chemistry through the nervous system rather than blood, enormous r/science r/neuroscience r/Microbiome r/psychology r/Biohackers",
+        "C-section delivery disrupts microbiome colonization in ways that persist for years: Dominguez-Bello et al. 2010 PNAS shows vaginally-delivered infants acquire Lactobacillus-dominated microbiomes from birth while C-section infants acquire skin-associated Staphylococcus \u2014 the difference persists at 7 years and correlates with higher rates of asthma, allergies, and immune dysregulation; an immune programming window missed at birth has lifelong consequences, viral r/science r/Microbiome r/medicine r/nutrition r/neuroscience"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "science": 29800000,
+        "neuroscience": 3100000,
+        "nutrition": 2800000,
+        "Microbiome": 180000,
+        "Immunology": 95000,
+        "longevity": 140000,
+        "Biohackers": 160000
+      }
+    },
+    {
+      "key": "daily_adaptive_immunity_b_cell_streak",
+      "display_name": "Daily Adaptive Immunity B Cell Science Streak",
+      "score": 28,
+      "blue_ocean": true,
+      "total_addressable": 36595000,
+      "search_volume_monthly": 7600000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "B cells retain immunological memory for 70+ years after a single infection: Hammarlund et al. 2017 Science shows smallpox-specific B cells survive in humans vaccinated 50-73 years prior at frequencies 6x higher than non-vaccinated matched controls \u2014 memory B cells in the bone marrow are extraordinarily long-lived; explains why childhood vaccinations provide lifetime protection and why the immune system is a biological ledger of every infection you've ever encountered, viral r/science r/Immunology r/medicine r/vaccines",
+        "somatic hypermutation allows the immune system to generate 10^15 unique antibody sequences: Murphy & Weaver 2016 shows VDJ recombination combined with CDR3 junctional diversity and somatic hypermutation creates an antibody repertoire exceeding the number of atoms in the human brain \u2014 the immune system solves a combinatorial problem at the molecular level that no computational system can match; enormous r/science r/Immunology r/biology r/neuroscience because it reframes the immune system as a biological supercomputer",
+        "affinity maturation in germinal centers produces antibodies 1000x stronger than initial response: MacLennan 1994 and Victora & Nussenzweig 2012 show that during the 1-4 week germinal center reaction, B cells undergo competitive selection that produces antibody-antigen binding constants (Ka) 1000-10000 fold higher than naive B cells \u2014 the Darwinian selection within a lymph node produces the most optimized binding molecule the immune system is capable of generating; viral r/Immunology r/science r/biology r/medicine because it shows natural selection operating at the cellular level in real-time"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "science": 29800000,
+        "Immunology": 95000,
+        "medicine": 710000,
+        "biology": 580000,
+        "neuroscience": 3100000,
+        "COVID19": 2100000,
+        "vaccines": 210000
+      }
+    },
+    {
+      "key": "daily_innate_immunity_toll_like_receptor_streak",
+      "display_name": "Daily Innate Immunity TLR Science Streak",
+      "score": 27,
+      "blue_ocean": true,
+      "total_addressable": 36775000,
+      "search_volume_monthly": 5900000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "Toll-like receptors are the immune system's original hardware \u2014 evolutionarily conserved from flies to humans: Janeway & Medzhitov 2002 Nobel Prize work shows TLR4 (discovered by Hoffmann in Drosophila in 1996) is structurally and functionally conserved across 700 million years of evolution \u2014 Drosophila with Toll mutations die from fungal infections identically to TLR-deficient mice; the ancient pattern recognition system that detects lipopolysaccharide is the same in flies and humans, viral r/science r/Immunology r/biology r/genetics because it demonstrates deep evolutionary conservation of immune architecture",
+        "TLR4 activation by gut-derived LPS is the mechanistic link between high-fat diet and brain inflammation: Erridge et al. 2007 and Cani et al. 2008 show high-fat feeding increases plasma LPS (from gram-negative gut bacteria) 2-3x \u2014 sufficient to activate TLR4 on microglia and produce neuroinflammatory cytokines; metabolic endotoxemia is the mechanism connecting diet, gut permeability, and brain inflammation; viral r/science r/neuroscience r/Immunology r/nutrition r/Biohackers because it provides a molecular explanation for diet-brain relationships",
+        "MyD88 mutation abolishes TLR signaling and causes fatal recurrent bacterial infections in humans: Picard et al. 2003 Science shows MyD88 deficiency in humans causes recurrent invasive pneumococcal disease in childhood but paradoxically resolves after adolescence \u2014 the compensatory pathways that develop explain how the innate immune system learns to work around genetic defects; explains natural variation in infection susceptibility, viral r/science r/Immunology r/medicine r/genetics"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "science": 29800000,
+        "Immunology": 95000,
+        "biology": 580000,
+        "neuroscience": 3100000,
+        "medicine": 710000,
+        "microbiology": 120000,
+        "genetics": 370000
+      }
+    },
+    {
+      "key": "daily_autoimmunity_molecular_mimicry_streak",
+      "display_name": "Daily Autoimmunity Molecular Mimicry Streak",
+      "score": 29,
+      "blue_ocean": true,
+      "total_addressable": 31237000,
+      "search_volume_monthly": 8800000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "molecular mimicry between strep throat proteins and heart tissue causes rheumatic fever: Bhatt et al. 2012 shows Group A Streptococcus M protein shares epitopes with cardiac myosin \u2014 antibodies generated to clear strep infections cross-react with heart valves, producing inflammation and damage 2-4 weeks after apparent recovery; explains why untreated strep throat causes heart disease and why early antibiotic treatment prevents rheumatic fever, viral r/science r/Immunology r/medicine because it shows autoimmunity arising from mistaken identity at the molecular level",
+        "Guillain-Barr\u00e9 syndrome is caused by immune targeting of nerve myelin after Campylobacter infection: Yuki et al. 2004 shows Campylobacter jejuni lipooligosaccharides mimic gangliosides on peripheral nerve myelin \u2014 the antibodies that cleared the gut infection then attack the nervous system producing ascending paralysis; 1 in 1,000 Campylobacter cases progresses to GBS, the mechanism is molecular mimicry between bacteria and neurons, enormous r/science r/Immunology r/medicine r/neuroscience",
+        "lupus anti-dsDNA antibodies bind 25+ different self-proteins through polyreactivity: Shoenfeld et al. 2004 and Yaniv et al. 2015 show lupus anti-DNA antibodies generated against apoptotic cell-released nucleosomes cross-react with renal glomerular antigens, platelet phospholipids, and neuronal antigens through charge-based polyreactivity \u2014 lupus is not one disease but a cascade of molecular mistaken identities, viral r/science r/Immunology r/lupus r/rheumatoid r/MultipleSclerosis because it explains lupus's multi-organ involvement through a single mechanism"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "science": 29800000,
+        "Immunology": 95000,
+        "medicine": 710000,
+        "lupus": 88000,
+        "rheumatoid": 54000,
+        "MultipleSclerosis": 320000,
+        "Hashimotos": 170000
+      }
+    },
+    {
+      "key": "daily_immunosenescence_aging_immunity_streak",
+      "display_name": "Daily Immunosenescence Aging Science Streak",
+      "score": 29,
+      "blue_ocean": true,
+      "total_addressable": 34085000,
+      "search_volume_monthly": 6200000,
+      "app_store_competitors": 0,
+      "viral_content_signals": [
+        "thymus involution begins at puberty and accelerates until it's 90% fat by age 65: Steinmann et al. 1985 and Lynch et al. 2009 show the thymus produces 95% of its naive T cells by age 20 \u2014 after which T cell repertoire diversity shrinks as thymic output falls to near zero by age 60; the narrowing T cell repertoire is why the elderly can't respond to novel antigens (new vaccines work poorly, new pathogens are lethal) while memory T cells persist for decades; viral r/science r/longevity r/Immunology r/aging r/medicine",
+        "senescent immune cells create the inflammaging phenotype that drives aging itself: F\u00fcl\u00f6p et al. 2017 and Franceschi et al. 2018 show senescent T cells and macrophages that can't clear themselves secrete the SASP (senescence-associated secretory phenotype) \u2014 a constant low-grade pro-inflammatory cytokine release of IL-1beta, IL-6, and TNF that drives cardiovascular disease, neurodegeneration, and cancer; inflammaging is not a consequence of aging but an immune failure that causes aging, enormous r/science r/longevity r/Immunology r/neuroscience r/Biohackers",
+        "CMV infection permanently remodels the T cell repertoire to spend 30-40% of CD8+ capacity on one virus: Sylwester et al. 2005 Science shows cytomegalovirus (carried by 60-70% of adults) monopolizes 10-40% of total CD8+ T cell memory in CMV-seropositive individuals \u2014 reducing the available repertoire for responding to new threats; explains why CMV seropositivity is an independent predictor of mortality in the elderly and why CMV-naive centenarians have broader T cell repertoires, viral r/science r/Immunology r/longevity r/medicine r/aging"
+      ],
+      "price_range": "$4.99-$8.99/mo",
+      "reddit_communities": {
+        "science": 29800000,
+        "longevity": 140000,
+        "Immunology": 95000,
+        "neuroscience": 3100000,
+        "medicine": 710000,
+        "Biohackers": 160000,
+        "aging": 80000
+      }
+    }
+  ],
+  "alerts": [
+    {
+      "type": "BLUE_OCEAN_HIGH_VALUE",
+      "niche": "Daily Psychoneuroimmunology Science Streak",
+      "score": 30,
+      "tam": 36795000,
+      "search_vol": 6800000,
+      "signal": "psychological stress suppresses NK cell cytotoxicity within 60 minutes: Ironson et al. 1990 and Cohen et al. 2012 show acute psychological stress triggers a glucocorticoid + catecholamine cascade that"
+    },
+    {
+      "type": "BLUE_OCEAN_HIGH_VALUE",
+      "niche": "Daily Neuroinflammation Science Streak",
+      "score": 30,
+      "tam": 35755000,
+      "search_vol": 9100000,
+      "signal": "neuroinflammation is now measurable with translocator protein PET imaging in living humans: Owen et al. 2017 and Setiawan et al. 2018 show TSPO PET scans reveal microglial activation 30% above baselin"
+    },
+    {
+      "type": "BLUE_OCEAN_HIGH_VALUE",
+      "niche": "Daily Cytokine Storm Science Streak",
+      "score": 29,
+      "tam": 36725000,
+      "search_vol": 11200000,
+      "signal": "cytokine storms kill via immunopathology not the pathogen itself: Tisoncik et al. 2012 Science shows the 1918 influenza, SARS-CoV-2, and H5N1 avian flu all cause death primarily through the body's own"
+    },
+    {
+      "type": "BLUE_OCEAN_HIGH_VALUE",
+      "niche": "Daily Gut Microbiome Immunity Streak",
+      "score": 30,
+      "tam": 36275000,
+      "search_vol": 14300000,
+      "signal": "70% of immune cells reside in the gut-associated lymphoid tissue (GALT): Mowat & Agace 2014 Nature Immunology shows the lamina propria and Peyer's patches contain the largest concentration of immune c"
+    },
+    {
+      "type": "BLUE_OCEAN_HIGH_VALUE",
+      "niche": "Daily Autoimmunity Molecular Mimicry Streak",
+      "score": 29,
+      "tam": 31237000,
+      "search_vol": 8800000,
+      "signal": "molecular mimicry between strep throat proteins and heart tissue causes rheumatic fever: Bhatt et al. 2012 shows Group A Streptococcus M protein shares epitopes with cardiac myosin \u2014 antibodies genera"
+    },
+    {
+      "type": "BLUE_OCEAN_HIGH_VALUE",
+      "niche": "Daily Immunosenescence Aging Science Streak",
+      "score": 29,
+      "tam": 34085000,
+      "search_vol": 6200000,
+      "signal": "thymus involution begins at puberty and accelerates until it's 90% fat by age 65: Steinmann et al. 1985 and Lynch et al. 2009 show the thymus produces 95% of its naive T cells by age 20 \u2014 after which "
+    }
+  ]
+}

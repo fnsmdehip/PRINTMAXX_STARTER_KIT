@@ -1,19 +1,19 @@
 {
-  "last_updated": "2026-05-05T18:35:00.000000",
+  "last_updated": "2026-05-05T22:48:29",
   "last_cycle": "2026-05-05",
-  "cycle_number": 46,
+  "cycle_number": 47,
   "distribution_engine_cycle_46": {
     "run_at": "2026-05-05T18:35:00",
     "assets_covered": [
-      "cnsnt — r/privacytools + r/selfhosted + HN Show + LinkedIn + IndieHackers",
-      "dosewell — Twitter + r/Supplements + HN Show + AlternativeTo",
-      "androx-trt — r/Testosterone + AlternativeTo",
-      "Pocket Alexandria — r/books + AlternativeTo",
-      "Day 44 narrative — Twitter thread + r/SideProject + HN Ask HN + LinkedIn + IH",
-      "Comparison pages (12 total) — Twitter + LinkedIn SEO strategy",
-      "Claude Code Agent Bible — Twitter + r/ClaudeAI",
-      "Cold email products — Twitter singles",
-      "MCP Marketplace — AlternativeTo submission"
+      "cnsnt \u2014 r/privacytools + r/selfhosted + HN Show + LinkedIn + IndieHackers",
+      "dosewell \u2014 Twitter + r/Supplements + HN Show + AlternativeTo",
+      "androx-trt \u2014 r/Testosterone + AlternativeTo",
+      "Pocket Alexandria \u2014 r/books + AlternativeTo",
+      "Day 44 narrative \u2014 Twitter thread + r/SideProject + HN Ask HN + LinkedIn + IH",
+      "Comparison pages (12 total) \u2014 Twitter + LinkedIn SEO strategy",
+      "Claude Code Agent Bible \u2014 Twitter + r/ClaudeAI",
+      "Cold email products \u2014 Twitter singles",
+      "MCP Marketplace \u2014 AlternativeTo submission"
     ],
     "content_created": {
       "twitter_threads": 1,
@@ -31,11 +31,11 @@
     "gaps_filled": [
       "cnsnt r/privacytools (pending since c45)",
       "cnsnt r/selfhosted (pending since c45)",
-      "dosewell — first distribution ever",
+      "dosewell \u2014 first distribution ever",
       "androx-trt Reddit coverage (only had Twitter)",
       "Pocket Alexandria r/books (pending since c45)",
       "IndieHackers Day 44 narrative (pending since c45)",
-      "AlternativeTo — 5 tool submissions drafted",
+      "AlternativeTo \u2014 5 tool submissions drafted",
       "Day 44 cross-platform build-in-public push"
     ],
     "files_created": [
@@ -51,10 +51,10 @@
   "distribution_engine_cycle_45": {
     "run_at": "2026-05-05T15:15:00",
     "assets_covered": [
-      "TruthScope (truthscope.surge.sh) — biometric lie detector",
+      "TruthScope (truthscope.surge.sh) \u2014 biometric lie detector",
       "MCP Marketplace (mcp-marketplace.surge.sh)",
-      "Research Blog (fnsmdehip-research.surge.sh) — UAF physics",
-      "cnsnt (cnsnt-web.surge.sh) — consent documentation",
+      "Research Blog (fnsmdehip-research.surge.sh) \u2014 UAF physics",
+      "cnsnt (cnsnt-web.surge.sh) \u2014 consent documentation",
       "Pocket Alexandria (pocket-alexandria.surge.sh)",
       "androx-trt (androx-trt.surge.sh / androx.surge.sh)",
       "Day 44 meta-narrative (76 apps / $0 revenue)"
@@ -77,7 +77,12 @@
       "CONTENT/social/distribution/20260505_linkedin_cycle45.md",
       "CONTENT/social/distribution/COVERAGE_MAP_CYCLE45.md"
     ],
-    "channels": ["twitter", "reddit", "hackernews", "linkedin"],
+    "channels": [
+      "twitter",
+      "reddit",
+      "hackernews",
+      "linkedin"
+    ],
     "subreddits_targeted": [
       "r/ClaudeAI",
       "r/SideProject",
@@ -88,11 +93,11 @@
       "r/learnprogramming"
     ],
     "gaps_identified": [
-      "IndieHackers post — Day 44 narrative",
-      "r/privacytools + r/selfhosted — cnsnt",
-      "r/TRT — androx",
-      "Digital products (Claude Code Bible, Cold Email) — blocked on Gumroad account",
-      "ProductHunt — blocked on account creation",
+      "IndieHackers post \u2014 Day 44 narrative",
+      "r/privacytools + r/selfhosted \u2014 cnsnt",
+      "r/TRT \u2014 androx",
+      "Digital products (Claude Code Bible, Cold Email) \u2014 blocked on Gumroad account",
+      "ProductHunt \u2014 blocked on account creation",
       "dosewell uncovered this cycle"
     ]
   },
@@ -122,7 +127,12 @@
       "CONTENT/social/distribution/reddit_apps_tools_20260406.md",
       "CONTENT/social/distribution/linkedin_products_20260406.md"
     ],
-    "channels": ["twitter", "reddit", "hackernews", "linkedin"],
+    "channels": [
+      "twitter",
+      "reddit",
+      "hackernews",
+      "linkedin"
+    ],
     "subreddits_targeted": [
       "r/ClaudeAI",
       "r/SideProject",
@@ -1336,5 +1346,73 @@
       "date": "2026-04-02",
       "type": "full_launch_day_push"
     }
-  }
+  },
+  "distribution_engine_cycle_47": {
+    "run_at": "2026-05-05T22:48:29",
+    "assets_covered": [
+      "Pocket Alexandria \u2014 r/classicliterature (gap from c46)",
+      "androx-trt \u2014 r/hormones (gap from c46)",
+      "dosewell \u2014 r/productivity + r/getmotivated (gap from c46)",
+      "PrayerLock \u2014 r/islam + r/MuslimLounge (TIME-SENSITIVE Ramadan)",
+      "Ramadan Tracker \u2014 r/quran (Ramadan)",
+      "804 sites milestone \u2014 Twitter thread + r/SideProject + LinkedIn + IH",
+      "Research Blog \u2014 LinkedIn + HN Show HN",
+      "cnsnt \u2014 Dev.to technical article (AES-256-GCM)",
+      "AEO Starter Kit \u2014 Twitter single + HN Show HN",
+      "MCP Marketplace \u2014 awesome-mcp GitHub PR template",
+      "Day 45 narrative \u2014 Twitter + LinkedIn + IH",
+      "Digital products catalog \u2014 LinkedIn"
+    ],
+    "content_created": {
+      "twitter_threads": 2,
+      "twitter_singles": 3,
+      "twitter_reply_baits": 1,
+      "twitter_qt_captions": 1,
+      "reddit_posts": 8,
+      "hn_show_posts": 2,
+      "hn_ask_posts": 1,
+      "github_prs": 1,
+      "linkedin_posts": 3,
+      "devto_articles": 1,
+      "indie_hackers_posts": 2,
+      "total_pieces": 25
+    },
+    "gaps_filled": [
+      "r/classicliterature \u2014 Pocket Alexandria (deferred from c46)",
+      "r/hormones \u2014 androx-trt (deferred from c46)",
+      "r/productivity + r/getmotivated \u2014 dosewell (deferred from c46)",
+      "r/islam + r/MuslimLounge \u2014 PrayerLock Ramadan (NEW \u2014 time-sensitive)",
+      "r/quran \u2014 Quran streak + Ramadan tracker (NEW)",
+      "Research Blog LinkedIn + HN (deferred from c46)",
+      "cnsnt Dev.to technical article (deferred from c46)",
+      "AEO Starter Kit first distribution (NEW)",
+      "804 sites milestone thread (NEW)",
+      "awesome-mcp PR template (NEW)"
+    ],
+    "files_created": [
+      "CONTENT/social/distribution/20260505_twitter_cycle47.md",
+      "CONTENT/social/distribution/20260505_reddit_cycle47.md",
+      "CONTENT/social/distribution/20260505_hn_cycle47.md",
+      "CONTENT/social/distribution/20260505_linkedin_cycle47.md",
+      "CONTENT/social/distribution/20260505_devto_cycle47.md",
+      "CONTENT/social/distribution/20260505_indiehackers_cycle47.md",
+      "CONTENT/social/distribution/COVERAGE_MAP_CYCLE47.md"
+    ],
+    "time_sensitive": [
+      "PrayerLock + Ramadan Tracker posts \u2014 Ramadan active ~25 days remaining",
+      "r/islam, r/MuslimLounge, r/quran \u2014 post ASAP before Ramadan ends"
+    ]
+  },
+  "known_gaps": [
+    "r/suggestmeabook \u2014 Pocket Alexandria (c48)",
+    "r/ummah \u2014 PrayerLock (c48)",
+    "r/physics \u2014 Research Blog UAF (c48)",
+    "r/cognitivescience \u2014 Research Blog (c48)",
+    "LinkedIn \u2014 AEO Starter Kit (c48)",
+    "r/SEO \u2014 AEO Starter Kit + comparison pages (c48)",
+    "HN Show HN \u2014 Pocket Alexandria (c48)",
+    "r/reactnative \u2014 TruthScope (c48)",
+    "Dev.to \u2014 UAF intro article (c48)",
+    "IH \u2014 TruthScope showcase (c48)"
+  ]
 }

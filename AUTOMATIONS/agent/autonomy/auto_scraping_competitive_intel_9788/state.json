@@ -1,10 +1,10 @@
 {
   "venture": "competitive_intel",
-  "last_cycle": 189,
-  "last_run": "2026-05-05T22:32:51.069610+00:00",
-  "cumulative_blue_oceans": 1212,
-  "ci_csv_rows": 323,
-  "alpha_csv_rows": 40182,
+  "last_cycle": 190,
+  "last_run": "2026-05-06T01:45:54.881320+00:00",
+  "cumulative_blue_oceans": 1220,
+  "ci_csv_rows": 331,
+  "alpha_csv_rows": 40198,
   "strategies_covered": [
     "HEALTH + FITNESS + WELLNESS + NUTRITION",
     "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -84,7 +84,8 @@
     "SELF-REGULATION FAILURE MODES + BREAKDOWN SCIENCE + RECOVERY PSYCHOLOGY",
     "BEHAVIORAL ACTIVATION + ANTI-ANHEDONIA SCIENCE + REWARD SENSITIVITY RECOVERY",
     "SLEEP SCIENCE + CIRCADIAN BIOLOGY + CHRONOBIOLOGY + SLEEP DEPRIVATION NEUROSCIENCE",
-    "STRESS BIOLOGY + CORTISOL SCIENCE + HPA AXIS + ALLOSTATIC LOAD NEUROSCIENCE"
+    "STRESS BIOLOGY + CORTISOL SCIENCE + HPA AXIS + ALLOSTATIC LOAD NEUROSCIENCE",
+    "IMMUNE SYSTEM SCIENCE + PSYCHONEUROIMMUNOLOGY + NEUROINFLAMMATION + CYTOKINE BIOLOGY"
   ],
   "next_strategy": "AUTONOMIC NERVOUS SYSTEM SCIENCE + SYMPATHETIC-PARASYMPATHETIC BALANCE + VAGAL TONE NEUROSCIENCE",
   "top_all_time": [
@@ -532,6 +533,48 @@
       "name": "Daily Stress Epigenetics Streak",
       "score": 27,
       "cycle": 189
+    }
+  ],
+  "top_niches": [
+    {
+      "name": "Daily Psychoneuroimmunology Science Streak",
+      "score": 30,
+      "cycle": 190
+    },
+    {
+      "name": "Daily Neuroinflammation Science Streak",
+      "score": 30,
+      "cycle": 190
+    },
+    {
+      "name": "Daily Gut Microbiome Immunity Streak",
+      "score": 30,
+      "cycle": 190
+    },
+    {
+      "name": "Daily Cytokine Storm Science Streak",
+      "score": 29,
+      "cycle": 190
+    },
+    {
+      "name": "Daily Autoimmunity Molecular Mimicry Streak",
+      "score": 29,
+      "cycle": 190
+    },
+    {
+      "name": "Daily Immunosenescence Aging Science Streak",
+      "score": 29,
+      "cycle": 190
+    },
+    {
+      "name": "Daily Adaptive Immunity B Cell Science Streak",
+      "score": 28,
+      "cycle": 190
+    },
+    {
+      "name": "Daily Innate Immunity TLR Science Streak",
+      "score": 27,
+      "cycle": 190
     }
   ]
 }
