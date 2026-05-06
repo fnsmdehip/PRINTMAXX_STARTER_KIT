@@ -140,6 +140,8 @@
 | breathwork-streak | https://breathwork-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-20 | $1.99 lifetime |
 | gratitude-streak | https://gratitude-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-20 | $1.99 lifetime |
 | water-streak | https://water-streak.surge.sh | LIVE — gap-hunter deploy 2026-03-20 | $1.99 lifetime |
+| claude-code-revenue-audit | https://claude-code-revenue-audit.surge.sh | LIVE — inbound deploy 2026-05-05 | email gate before fix list |
+| app-store-launch-scorecard | https://app-store-launch-scorecard.surge.sh | LIVE — inbound deploy 2026-05-05 | email gate for fix guide + playbook |
 
 ---
 

@@ -1,0 +1,277 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "PeakT" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "How It Works" [ref=e6] [cursor=pointer]:
+          - /url: /how-it-works.html
+        - link "Pricing" [ref=e7] [cursor=pointer]:
+          - /url: /pricing.html
+        - link "FAQ" [ref=e8] [cursor=pointer]:
+          - /url: /faq.html
+        - link "About" [ref=e9] [cursor=pointer]:
+          - /url: /about.html
+        - link "Get Started" [ref=e10] [cursor=pointer]:
+          - /url: "#waitlist"
+  - generic [ref=e12]:
+    - generic [ref=e13]: Physician-supervised. FDA-regulated medications.
+    - heading "Online testosterone therapy. Bloodwork included." [level=1] [ref=e14]:
+      - text: Online testosterone therapy.
+      - text: Bloodwork included.
+    - paragraph [ref=e15]: Lab testing, doctor consultations, and treatment shipped to your door. Real medical oversight, not a pill mill. From $149/month.
+    - generic [ref=e16]:
+      - link "Check Your Eligibility" [ref=e17] [cursor=pointer]:
+        - /url: "#waitlist"
+      - link "See How It Works" [ref=e18] [cursor=pointer]:
+        - /url: /how-it-works.html
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: $149
+        - generic [ref=e22]: Starting monthly
+      - generic [ref=e23]:
+        - generic [ref=e24]: 48 hrs
+        - generic [ref=e25]: Average lab turnaround
+      - generic [ref=e26]:
+        - generic [ref=e27]: 50 states
+        - generic [ref=e28]: Licensed nationwide
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: How It Works
+      - heading "Three steps. No waiting rooms." [level=2] [ref=e33]
+      - paragraph [ref=e34]: From blood draw to treatment delivery, the entire process happens at home. Your time matters.
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: "1"
+        - heading "At-Home Blood Test" [level=3] [ref=e38]
+        - paragraph [ref=e39]: We ship a lab kit to your door. A simple finger-prick collection takes 5 minutes. Mail it back in the prepaid envelope. Results in about 48 hours.
+        - generic [ref=e40]: "Tests: Total T, Free T, Estradiol, SHBG, CBC, Metabolic Panel, PSA, Lipids, Thyroid"
+      - generic [ref=e41]:
+        - generic [ref=e42]: "2"
+        - heading "Physician Consultation" [level=3] [ref=e43]
+        - paragraph [ref=e44]: A licensed endocrinologist or urologist reviews your bloodwork and medical history. You meet via video call to discuss your results and treatment options.
+        - generic [ref=e45]: Your doctor creates a personalized protocol based on your specific levels and health profile.
+      - generic [ref=e46]:
+        - generic [ref=e47]: "3"
+        - heading "Treatment Delivered" [level=3] [ref=e48]
+        - paragraph [ref=e49]: If prescribed, your medication ships from a licensed pharmacy directly to you. Ongoing blood monitoring included. Dose adjustments as needed.
+        - generic [ref=e50]: Follow-up labs at 6 weeks, 12 weeks, then every 3-6 months depending on your protocol.
+    - link "Full Process Details →" [ref=e52] [cursor=pointer]:
+      - /url: /how-it-works.html
+  - generic [ref=e54]:
+    - generic [ref=e55]:
+      - paragraph [ref=e56]: Recognize the Signs
+      - heading "Low testosterone affects more than the gym" [level=2] [ref=e57]
+      - paragraph [ref=e58]: These symptoms are common in men over 30 and often dismissed as "just aging." They don't have to be.
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]: ⚡
+        - generic [ref=e62]: Persistent fatigue despite adequate sleep
+      - generic [ref=e63]:
+        - generic [ref=e64]: 😤
+        - generic [ref=e65]: Decreased libido or sexual function
+      - generic [ref=e66]:
+        - generic [ref=e67]: 💪
+        - generic [ref=e68]: Loss of muscle mass or strength
+      - generic [ref=e69]:
+        - generic [ref=e70]: 🧠
+        - generic [ref=e71]: Brain fog and difficulty concentrating
+      - generic [ref=e72]:
+        - generic [ref=e73]: 💔
+        - generic [ref=e74]: Irritability or mood changes
+      - generic [ref=e75]:
+        - generic [ref=e76]: 💤
+        - generic [ref=e77]: Poor sleep quality or insomnia
+      - generic [ref=e78]:
+        - generic [ref=e79]: ⚖
+        - generic [ref=e80]: Increased body fat, especially midsection
+      - generic [ref=e81]:
+        - generic [ref=e82]: 😢
+        - generic [ref=e83]: Feeling flat, unmotivated, or depressed
+    - paragraph [ref=e84]: If you're experiencing several of these, bloodwork is the first step. Not everyone with these symptoms has low T, but it's worth checking.
+  - generic [ref=e86]:
+    - generic [ref=e87]:
+      - paragraph [ref=e88]: Pricing
+      - heading "Transparent pricing. No hidden fees." [level=2] [ref=e89]
+      - paragraph [ref=e90]: "Everything included: labs, consultations, medication, shipping, and ongoing monitoring."
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - paragraph [ref=e93]: Monthly Plan
+        - paragraph [ref=e94]: $199/mo
+        - paragraph [ref=e95]: Billed monthly. Cancel anytime.
+        - list [ref=e96]:
+          - listitem [ref=e97]: ✓ Full blood panel (every 3 months)
+          - listitem [ref=e98]: ✓ Physician consultations
+          - listitem [ref=e99]: ✓ Testosterone medication
+          - listitem [ref=e100]: ✓ Syringes and supplies included
+          - listitem [ref=e101]: ✓ Free shipping
+          - listitem [ref=e102]: ✓ Dose adjustments as needed
+          - listitem [ref=e103]: ✓ Ongoing lab monitoring
+          - listitem [ref=e104]: ✓ Direct messaging with care team
+        - link "Get Started" [ref=e105] [cursor=pointer]:
+          - /url: "#waitlist"
+      - generic [ref=e106]:
+        - generic [ref=e107]: Save $600/year
+        - paragraph [ref=e108]: Annual Plan
+        - paragraph [ref=e109]: $149/mo
+        - paragraph [ref=e110]: Billed annually at $1,788. Best value.
+        - list [ref=e111]:
+          - listitem [ref=e112]: "✓ Everything in Monthly, plus:"
+          - listitem [ref=e113]: ✓ Priority scheduling
+          - listitem [ref=e114]: ✓ Quarterly full hormone panel
+          - listitem [ref=e115]: ✓ Free gel-to-injection switch (or reverse)
+          - listitem [ref=e116]: ✓ DHEA and ancillary support included
+          - listitem [ref=e117]: ✓ Body composition tracking
+          - listitem [ref=e118]: ✓ Annual wellness review
+          - listitem [ref=e119]: ✓ Price locked for 12 months
+        - link "Get Started" [ref=e120] [cursor=pointer]:
+          - /url: "#waitlist"
+    - link "See full pricing breakdown including injection vs. gel options →" [ref=e122] [cursor=pointer]:
+      - /url: /pricing.html
+  - generic [ref=e124]:
+    - generic [ref=e125]:
+      - paragraph [ref=e126]: Why Androx
+      - heading "Built on medical standards, not marketing" [level=2] [ref=e127]
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - generic [ref=e130]: ⚕
+        - heading "Licensed Physicians" [level=3] [ref=e131]
+        - paragraph [ref=e132]: Board-certified doctors specializing in hormone therapy. Not nurse practitioners rubber-stamping prescriptions.
+      - generic [ref=e133]:
+        - generic [ref=e134]: 🔒
+        - heading "HIPAA Compliant" [level=3] [ref=e135]
+        - paragraph [ref=e136]: Your health data is encrypted end-to-end. We follow the same privacy standards as hospitals.
+      - generic [ref=e137]:
+        - generic [ref=e138]: 🧪
+        - heading "Real Lab Testing" [level=3] [ref=e139]
+        - paragraph [ref=e140]: CLIA-certified labs process your blood work. Same quality as your local Quest or LabCorp.
+      - generic [ref=e141]:
+        - generic [ref=e142]: 📈
+        - heading "Ongoing Monitoring" [level=3] [ref=e143]
+        - paragraph [ref=e144]: Regular follow-up labs track your levels. Your protocol gets adjusted based on real data, not guesswork.
+  - generic [ref=e146]:
+    - generic [ref=e147]:
+      - paragraph [ref=e148]: What's Included
+      - heading "Everything you need. Nothing you don't." [level=2] [ref=e149]
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - generic [ref=e152]: ✓
+        - generic [ref=e153]:
+          - heading "Full Hormone Panel" [level=4] [ref=e154]
+          - paragraph [ref=e155]: Total Testosterone, Free Testosterone, Estradiol, SHBG, Prolactin, LH, FSH, CBC, CMP, Lipids, PSA, Thyroid panel.
+      - generic [ref=e156]:
+        - generic [ref=e157]: ✓
+        - generic [ref=e158]:
+          - heading "Video Consultations" [level=4] [ref=e159]
+          - paragraph [ref=e160]: Face-to-face with your prescribing physician. Initial consultation plus follow-ups at each lab review.
+      - generic [ref=e161]:
+        - generic [ref=e162]: ✓
+        - generic [ref=e163]:
+          - heading "Medication & Supplies" [level=4] [ref=e164]
+          - paragraph [ref=e165]: Testosterone cypionate or gel (your choice), syringes, alcohol swabs, sharps container. All included.
+      - generic [ref=e166]:
+        - generic [ref=e167]: ✓
+        - generic [ref=e168]:
+          - heading "Ongoing Lab Monitoring" [level=4] [ref=e169]
+          - paragraph [ref=e170]: Follow-up labs at 6 weeks, 12 weeks, then quarterly. Tracks T levels, hematocrit, liver function, and more.
+      - generic [ref=e171]:
+        - generic [ref=e172]: ✓
+        - generic [ref=e173]:
+          - heading "Dose Adjustments" [level=4] [ref=e174]
+          - paragraph [ref=e175]: Your doctor fine-tunes your protocol based on labs and how you feel. Not a set-it-and-forget-it approach.
+      - generic [ref=e176]:
+        - generic [ref=e177]: ✓
+        - generic [ref=e178]:
+          - heading "Ancillary Support" [level=4] [ref=e179]
+          - paragraph [ref=e180]: Estrogen management (anastrozole if needed), HCG for fertility preservation (if applicable), DHEA included on annual plan.
+      - generic [ref=e181]:
+        - generic [ref=e182]: ✓
+        - generic [ref=e183]:
+          - heading "Direct Messaging" [level=4] [ref=e184]
+          - paragraph [ref=e185]: Message your care team through the patient portal. Questions about injection technique, side effects, timing - answered same day.
+      - generic [ref=e186]:
+        - generic [ref=e187]: ✓
+        - generic [ref=e188]:
+          - heading "Free Shipping" [level=4] [ref=e189]
+          - paragraph [ref=e190]: Medication shipped via temperature-controlled packaging. Delivered to your home or a discreet pickup location.
+  - generic [ref=e192]:
+    - generic [ref=e193]:
+      - paragraph [ref=e194]: Straight Talk
+      - heading "What we won't tell you" [level=2] [ref=e195]
+      - paragraph [ref=e196]: Other clinics promise miracles. We don't. Here's the honest version.
+    - generic [ref=e197]:
+      - generic [ref=e198]:
+        - generic [ref=e199]: "!"
+        - generic [ref=e200]:
+          - heading "TRT is not for everyone" [level=4] [ref=e201]
+          - paragraph [ref=e202]: If your bloodwork comes back normal, we won't prescribe. We treat clinical hypogonadism, not vanity. Roughly 30% of consultations don't result in a prescription.
+      - generic [ref=e203]:
+        - generic [ref=e204]: "!"
+        - generic [ref=e205]:
+          - heading "Side effects exist" [level=4] [ref=e206]
+          - paragraph [ref=e207]: "Potential side effects include: raised hematocrit, acne, hair thinning, testicular atrophy, mood changes, and sleep apnea worsening. Your doctor monitors for these."
+      - generic [ref=e208]:
+        - generic [ref=e209]: "!"
+        - generic [ref=e210]:
+          - heading "Fertility impact" [level=4] [ref=e211]
+          - paragraph [ref=e212]: Exogenous testosterone suppresses natural production and can reduce sperm count. If you're planning children, discuss HCG co-therapy or alternative protocols first.
+      - generic [ref=e213]:
+        - generic [ref=e214]: "!"
+        - generic [ref=e215]:
+          - heading "It's a commitment" [level=4] [ref=e216]
+          - paragraph [ref=e217]: Most men on TRT stay on it long-term. Stopping abruptly can cause withdrawal symptoms and temporarily lower natural production below baseline. Plan accordingly.
+  - generic [ref=e220]:
+    - heading "Check your eligibility" [level=2] [ref=e221]
+    - paragraph [ref=e222]: Enter your email and we'll send you a free symptom assessment and lab order within 24 hours.
+    - generic [ref=e223]:
+      - textbox "Email address" [ref=e224]:
+        - /placeholder: you@email.com
+      - button "Get Started" [ref=e225] [cursor=pointer]
+    - paragraph [ref=e226]:
+      - text: No spam. Your information stays private.
+      - link "Privacy Policy" [ref=e227] [cursor=pointer]:
+        - /url: /privacy.html
+  - generic [ref=e229]:
+    - strong [ref=e230]: "Medical Disclaimer:"
+    - text: Androx provides telehealth services connecting patients with licensed physicians. Testosterone therapy requires a prescription based on bloodwork and clinical evaluation. Not all patients qualify. This website is for informational purposes and does not constitute medical advice. FDA-regulated medications are dispensed by licensed pharmacies. Testosterone is a Schedule III controlled substance. Individual results vary. Side effects may include changes in red blood cell count, acne, hair loss, mood changes, and other effects discussed during your consultation. Always discuss risks and benefits with your prescribing physician.
+  - contentinfo [ref=e231]:
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - heading "PeakT" [level=3] [ref=e235]
+          - paragraph [ref=e236]: Physician-supervised testosterone therapy delivered to your door. Lab testing, real doctors, ongoing monitoring.
+        - generic [ref=e237]:
+          - heading "Company" [level=4] [ref=e238]
+          - link "About" [ref=e239] [cursor=pointer]:
+            - /url: /about.html
+          - link "FAQ" [ref=e240] [cursor=pointer]:
+            - /url: /faq.html
+          - link "How It Works" [ref=e241] [cursor=pointer]:
+            - /url: /how-it-works.html
+          - link "Pricing" [ref=e242] [cursor=pointer]:
+            - /url: /pricing.html
+        - generic [ref=e243]:
+          - heading "Resources" [level=4] [ref=e244]
+          - link "Understanding Bloodwork" [ref=e245] [cursor=pointer]:
+            - /url: /faq.html#bloodwork
+          - link "Injection vs. Gel" [ref=e246] [cursor=pointer]:
+            - /url: /faq.html#trt-types
+          - link "Side Effects" [ref=e247] [cursor=pointer]:
+            - /url: /faq.html#side-effects
+          - link "TRT & Fertility" [ref=e248] [cursor=pointer]:
+            - /url: /faq.html#fertility
+        - generic [ref=e249]:
+          - heading "Legal" [level=4] [ref=e250]
+          - link "Privacy Policy" [ref=e251] [cursor=pointer]:
+            - /url: https://printmaxx-privacy.surge.sh
+          - link "Terms of Service" [ref=e252] [cursor=pointer]:
+            - /url: https://printmaxx-tos.surge.sh
+          - link "HIPAA Notice" [ref=e253] [cursor=pointer]:
+            - /url: /faq.html#hipaa
+      - generic [ref=e254]:
+        - paragraph [ref=e255]: © 2026 Androx. All rights reserved. Androx is a telehealth platform, not a pharmacy.
+        - generic [ref=e256]:
+          - link "Privacy" [ref=e257] [cursor=pointer]:
+            - /url: https://printmaxx-privacy.surge.sh
+          - link "Terms" [ref=e258] [cursor=pointer]:
+            - /url: https://printmaxx-tos.surge.sh

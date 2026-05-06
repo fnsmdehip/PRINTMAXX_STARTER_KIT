@@ -19,6 +19,7 @@ import { colors, fonts, spacing, borderRadius, shadows, APP_CONFIG } from '../co
 import { categories, categoryIcons, getBooksByCategory, books } from '../data/catalog';
 import { completeOnboarding, saveOnboardingState } from '../services/storage';
 import { playSound } from '../sounds/SoundEngine';
+import * as StoreReview from 'expo-store-review';
 import {
   getOfferings,
   purchasePackage,
@@ -97,6 +98,15 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
           console.warn('[Onboarding] Could not load offerings:', err);
         }
       })();
+    }
+  }, [step]);
+
+  // Trigger in-app review at step 8 — peak engagement before paywall
+  useEffect(() => {
+    if (step === 8) {
+      StoreReview.isAvailableAsync().then(available => {
+        if (available) StoreReview.requestReview();
+      });
     }
   }, [step]);
 

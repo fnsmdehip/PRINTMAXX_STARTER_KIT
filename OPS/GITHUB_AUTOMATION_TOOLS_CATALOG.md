@@ -3388,3 +3388,66 @@ what this means:
 - they install claude code, cowork
 - run a few commands to
 
+
+
+---
+
+## Pending Enhancement (ALPHA1774001688, Score: 52)
+
+**Source:** @levikov (bookmarks) | **URL:** https://x.com/levikov/status/2050613967324922178
+**Added:** 2026-05-05T16:00:10-04:00
+
+Fuck dropshipping, Fuck claude code, Fuck building AI startups
+
+it's all for poors
+
+The easiest way to print $30k/mo with AI in 2026 is running a fake old lady on tiktok who sells vitamins to women in their 60s....
+
+99% of you won't do it because it's too embarrassing to admit
+
+I
+
+
+
+---
+
+## Pending Enhancement (ALPHA1774001691, Score: 34)
+
+**Source:** @X_FINALBOSS (bookmarks) | **URL:** https://x.com/X_FINALBOSS/status/2050388106214322343
+**Added:** 2026-05-05T16:00:10-04:00
+
+7 random kids in Los Angeles California made $65 million dollars last year selling AI generated ebooks
+
+no employees. no office. no college degree between them
+
+they forced Claude AI to generate and make 300 posts in 45 seconds, every single day, getting 15M+ organic views per
+
+
+
+---
+
+## Pending Enhancement (ALPHA1774001695, Score: 22)
+
+**Source:** @levelsio (high-signal-accounts) | **URL:** https://x.com/levelsio/status/2050213288609235424
+**Added:** 2026-05-05T16:00:10-04:00
+
+And..... DONE!
+
+The Vibe Jam of 2026 sponsored by 
+@cursor_ai
+ + 
+@boltdotnew
+ + 
+@heyglif
+ + 
+@tripoai
+ is officially closed
+
+ 945 games submitted
+ 242,212 players
+ ~12 million views on X
+
+Now me and 
+@s13k_
+ will start the judging process, probably pre-vetting games first with
+

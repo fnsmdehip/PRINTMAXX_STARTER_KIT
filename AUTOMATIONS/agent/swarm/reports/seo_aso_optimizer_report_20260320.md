@@ -1,36 +1,34 @@
----
-agent: seo_aso_optimizer
-date: 2026-03-20
-status: COMPLETE
----
+# SEO/ASO Optimizer — Cycle Report 2026-05-05
 
-SEO/ASO Optimizer Cycle Report -- 2026-03-20 -- STATUS: COMPLETE
+**Status:** COMPLETE (deploy pending human action)  
+**Full audit:** `AUTOMATIONS/agent/swarm/reports/seo_audit_20260505.md`
 
-## WORK DONE
+## Summary of Changes
 
-Fitness Streak Apps (5) -- FULL SEO OVERHAUL -- DEPLOYED:
-- yoga-streak, pushup-streak, plank-streak, hiit-streak, cycling-streak
-- Added: keyword titles, 40-word descriptions, 10+ keywords, complete OG tags, Twitter cards, JSON-LD MobileApplication + FAQPage schemas, sitemap.xml, fixed robots.txt
+| Fix | Count | Impact |
+|-----|-------|--------|
+| data:URI OG images fixed | 54 sites | Social sharing previews now functional |
+| Missing OG images added | 30 pages | Social CTR improvement |
+| JSON-LD structured data added | 3 pages | Eligible for rich results |
+| dateModified updated | 71 pages | Improved recrawl priority |
+| Sitemaps updated (lastmod) | 87 files | Better crawl scheduling |
+| New og.png files generated | 4 files | Branded 1200x630 via Pillow |
 
-Affiliate Pages (8) -- SITEMAPS ADDED -- DEPLOYED:
-- best-ai-tools-2026, best-cold-email-tools, framer-vs-webflow, klaviyo-alternative, lemlist-vs-instantly, semrush-vs-ahrefs, smartlead-vs-instantly
-- Added: sitemap.xml, Sitemap: directive in robots.txt
+## Key Blocker
 
-Non-Fitness Streak Landings (7) -- TITLE+DESC UPGRADES -- DEPLOYED:
-- art-streak, coding-streak, fitness-streak, journal-streak, language-streak, meditation-streak, reading-streak
-- Updated: keyword-rich titles, expanded descriptions, added keywords meta tag, sitemap.xml
+Surge session expired. All local changes staged. After `surge login`:
+```bash
+bash AUTOMATIONS/seo_deploy_changed_sites.sh
+```
 
-Bug Fixes DEPLOYED:
-- hilal-landing: sitemap URL was wrong (hilal-app.surge.sh -> hilal-landing.surge.sh)
-- hilal robots.txt: missing https:// on sitemap URL
-- cursor-vs-claudecode: missing sitemap.xml
+## Critical Ongoing Blocker
 
-Bulk Sitemap Creation (39 apps):
-- All remaining APP_FACTORY builds now have sitemap.xml (not yet deployed -- awaiting correct Surge account)
+Surge free plan robots.txt blocks Google crawl entirely. Until upgraded to Surge Plus ($13/mo) or migrated to Netlify/Cloudflare, no SEO improvements reach Google.
 
-METRICS: 50+ pages optimized | 25 sites deployed | 50+ sitemaps created | 10 JSON-LD schemas added
+## Top Keyword Opportunities
 
-BLOCKER: Surge Student plan serves Disallow: / at CDN level -- all 355 sites blocked from Googlebot.
-FIX: Upgrade to Surge Plus ($13/mo) -- P0.
-
-NEXT CYCLE: OG images for fitness apps | JSON-LD for sleepmaxx/soberstreak/deskbreak | cross-link streak app footers
+1. `lie detector app` 22.2K/mo, Low — TruthScope
+2. `testosterone replacement therapy online` 14.8K/mo — Androx/affiliate cluster
+3. `GLP-1 weight loss online` 12.1K/mo — affiliate cluster
+4. `PEMF therapy research` 2.9K/mo, Low — research blog
+5. `Muslim prayer lock app` 1.6K/mo, Low — PrayerLock

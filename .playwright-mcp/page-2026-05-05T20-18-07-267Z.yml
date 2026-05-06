@@ -1,0 +1,70 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "Privacy Policy" [level=1] [ref=e3]
+    - paragraph [ref=e4]: PrintMaxx Mobile Applications
+  - generic [ref=e5]:
+    - paragraph [ref=e6]: This Privacy Policy describes how PrintMaxx ("we", "us", or "our") handles information in connection with our mobile applications, including cnsnt, NutriSnap, Pocket Alexandria, Scripture Streak, and related apps (collectively, the "Apps").
+    - heading "1. Information We Collect" [level=2] [ref=e7]
+    - heading "Data Stored Locally on Your Device" [level=3] [ref=e8]
+    - paragraph [ref=e9]: Our Apps store data locally on your device. This includes content you create (such as documents, reading progress, meal logs, streaks, and settings). This data remains on your device and is not transmitted to our servers.
+    - heading "Data You Provide Voluntarily" [level=3] [ref=e10]
+    - paragraph [ref=e11]: If you contact us for support, you may provide your name and email address. We use this only to respond to your inquiry.
+    - heading "Crash Reporting" [level=3] [ref=e12]
+    - paragraph [ref=e13]: We may collect anonymous crash reports through Apple's standard crash reporting. These reports do not contain personal information and help us improve app stability.
+    - heading "2. How Data Is Stored" [level=2] [ref=e14]
+    - list [ref=e15]:
+      - listitem [ref=e16]: All user-created content is stored locally on your device using encrypted storage where supported by the operating system.
+      - listitem [ref=e17]: If you enable optional cloud backup (Google Drive, iCloud, or Dropbox), your data is transferred to the cloud provider you select. This transfer is governed by that provider's privacy policy.
+      - listitem [ref=e18]: We do not operate servers that store your personal data.
+    - heading "3. Third-Party Services" [level=2] [ref=e19]
+    - paragraph [ref=e20]: "Our Apps may integrate with the following third-party services:"
+    - list [ref=e21]:
+      - listitem [ref=e22]:
+        - strong [ref=e23]: Apple App Store / RevenueCat
+        - text: "- For processing in-app purchases and subscriptions. Apple and RevenueCat handle payment information directly; we never see or store your payment details."
+      - listitem [ref=e24]:
+        - strong [ref=e25]: Google Drive, iCloud, Dropbox
+        - text: "- For optional cloud backup, if you choose to enable it. Governed by each provider's own privacy policy."
+    - heading "4. Data Sharing" [level=2] [ref=e26]
+    - paragraph [ref=e27]: We do not sell, rent, or share your personal information with third parties for marketing purposes. We do not serve targeted advertisements. We do not use analytics tracking beyond basic crash reporting provided by Apple.
+    - heading "5. Data Retention and Deletion" [level=2] [ref=e28]
+    - paragraph [ref=e29]: Since your data is stored locally on your device, you have full control over it at all times. Deleting the App removes all locally stored data. If you have enabled cloud backups, you may delete those backups through the respective cloud provider's interface.
+    - heading "6. GDPR Compliance (European Users)" [level=2] [ref=e30]
+    - paragraph [ref=e31]: "If you are a resident of the European Economic Area, you have the following rights:"
+    - list [ref=e32]:
+      - listitem [ref=e33]:
+        - strong [ref=e34]: Right to Access
+        - text: "- Your data is stored on your device; you can access it at any time within the App."
+      - listitem [ref=e35]:
+        - strong [ref=e36]: Right to Rectification
+        - text: "- You can edit your data directly within the App."
+      - listitem [ref=e37]:
+        - strong [ref=e38]: Right to Erasure
+        - text: "- Delete the App to remove all locally stored data. Contact us if you need help removing cloud backups."
+      - listitem [ref=e39]:
+        - strong [ref=e40]: Right to Data Portability
+        - text: "- Our Apps provide export features where applicable."
+      - listitem [ref=e41]:
+        - strong [ref=e42]: Right to Restrict Processing
+        - text: "- Since data is processed locally, you control all processing."
+    - heading "7. California Privacy Rights (CCPA)" [level=2] [ref=e43]
+    - paragraph [ref=e44]: "If you are a California resident, you have the right to:"
+    - list [ref=e45]:
+      - listitem [ref=e46]: Know what personal information is collected about you.
+      - listitem [ref=e47]: Request deletion of your personal information.
+      - listitem [ref=e48]: Opt out of the sale of personal information. We do not sell personal information.
+      - listitem [ref=e49]: Non-discrimination for exercising your privacy rights.
+    - heading "8. Children's Privacy (COPPA)" [level=2] [ref=e50]
+    - paragraph [ref=e51]: Our Apps are not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information to us, please contact us and we will take steps to remove that information.
+    - heading "9. Security" [level=2] [ref=e52]
+    - paragraph [ref=e53]: We implement appropriate technical measures to protect information stored within our Apps, including AES-256 encryption and biometric authentication where supported. However, no method of electronic storage is 100% secure.
+    - heading "10. Changes to This Policy" [level=2] [ref=e54]
+    - paragraph [ref=e55]: We may update this Privacy Policy from time to time. Changes will be reflected in the "Last Updated" date below. Continued use of our Apps after changes constitutes acceptance of the updated policy.
+    - generic [ref=e56]:
+      - heading "Contact Us" [level=3] [ref=e57]
+      - paragraph [ref=e58]: "If you have questions about this Privacy Policy or your data, contact us at:"
+      - paragraph [ref=e59]:
+        - strong [ref=e60]: "Email:"
+        - link "support@printmaxx.com" [ref=e61] [cursor=pointer]:
+          - /url: mailto:support@printmaxx.com
+    - paragraph [ref=e62]: "Last Updated: March 25, 2026"

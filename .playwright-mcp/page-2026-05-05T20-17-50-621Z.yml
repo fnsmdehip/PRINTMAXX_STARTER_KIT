@@ -1,0 +1,98 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: 🎯
+        - heading "FocusLock" [level=1] [ref=e6]
+      - generic [ref=e8]: 0 🍅
+  - navigation [ref=e9]:
+    - generic [ref=e10]:
+      - button "Timer" [ref=e11] [cursor=pointer]
+      - button "Tasks" [ref=e12] [cursor=pointer]
+      - button "Sounds" [ref=e13] [cursor=pointer]
+      - button "Stats" [ref=e14] [cursor=pointer]
+      - button "Tools" [ref=e15] [cursor=pointer]
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - img [ref=e21]
+          - generic [ref=e24]:
+            - generic [ref=e25]: Focus Time
+            - generic [ref=e26]: 25:00
+            - generic [ref=e27]: "Session #1"
+        - generic [ref=e28]:
+          - button "Start Focus" [ref=e29] [cursor=pointer]
+          - button [ref=e30] [cursor=pointer]:
+            - img [ref=e31]
+        - generic [ref=e34]: "Today:"
+      - generic [ref=e44]:
+        - heading "Timer settings" [level=3] [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]: Focus
+            - generic [ref=e49]:
+              - button "-" [ref=e50] [cursor=pointer]
+              - generic [ref=e51]: "25"
+              - button "+" [ref=e52] [cursor=pointer]
+            - generic [ref=e53]: min
+          - generic [ref=e54]:
+            - generic [ref=e55]: Short break
+            - generic [ref=e56]:
+              - button "-" [ref=e57] [cursor=pointer]
+              - generic [ref=e58]: "5"
+              - button "+" [ref=e59] [cursor=pointer]
+            - generic [ref=e60]: min
+          - generic [ref=e61]:
+            - generic [ref=e62]: Long break
+            - generic [ref=e63]:
+              - button "-" [ref=e64] [cursor=pointer]
+              - generic [ref=e65]: "15"
+              - button "+" [ref=e66] [cursor=pointer]
+            - generic [ref=e67]: min
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - heading "Screen Wake Lock" [level=3] [ref=e71]
+          - paragraph [ref=e72]: Keeps screen on during focus sessions
+        - checkbox [ref=e74]
+  - link "Upgrade to Pro" [ref=e76] [cursor=pointer]:
+    - /url: https://buy.stripe.com/9B6fZida86JD51ncf53F60i
+    - img [ref=e77]
+    - text: Upgrade to Pro
+  - generic [ref=e79]:
+    - paragraph [ref=e80]: more free tools
+    - generic [ref=e81]:
+      - link "TaskSmash ADHD task breaker. free goblin tools alternative." [ref=e82] [cursor=pointer]:
+        - /url: https://tasksmash.surge.sh
+        - generic [ref=e83]: TaskSmash
+        - text: ADHD task breaker. free goblin tools alternative.
+      - link "CoreDay 3 non-negotiables. that's it. win your day." [ref=e84] [cursor=pointer]:
+        - /url: https://coreday.surge.sh
+        - generic [ref=e85]: CoreDay
+        - text: 3 non-negotiables. that's it. win your day.
+      - link "HabitForge build streaks. track habits. no BS." [ref=e86] [cursor=pointer]:
+        - /url: https://habitforge-web.surge.sh
+        - generic [ref=e87]: HabitForge
+        - text: build streaks. track habits. no BS.
+      - link "MealMaxx meal planning that doesn't suck." [ref=e88] [cursor=pointer]:
+        - /url: https://mealmaxx-web.surge.sh
+        - generic [ref=e89]: MealMaxx
+        - text: meal planning that doesn't suck.
+      - link "SleepMaxx sleep tracking and optimization." [ref=e90] [cursor=pointer]:
+        - /url: https://sleepmaxx-web.surge.sh
+        - generic [ref=e91]: SleepMaxx
+        - text: sleep tracking and optimization.
+      - link "WalkToUnlock walking incentive. earn your screen time." [ref=e92] [cursor=pointer]:
+        - /url: https://walktounlock-web.surge.sh
+        - generic [ref=e93]: WalkToUnlock
+        - text: walking incentive. earn your screen time.
+      - link "Hilal ramadan companion. fasting, prayer, quran." [ref=e94] [cursor=pointer]:
+        - /url: https://ramadan-tracker.surge.sh
+        - generic [ref=e95]: Hilal
+        - text: ramadan companion. fasting, prayer, quran.
+    - generic [ref=e96]:
+      - paragraph [ref=e97]: join 2,000+ solopreneurs
+      - paragraph [ref=e98]: free tools, no fluff. unsubscribe any time.
+      - generic [ref=e99]:
+        - textbox "your@email.com" [ref=e100]
+        - button "get updates" [ref=e101] [cursor=pointer]

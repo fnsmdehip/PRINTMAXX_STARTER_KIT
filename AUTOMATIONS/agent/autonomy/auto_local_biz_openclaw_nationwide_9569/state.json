@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-05-03T20:45:55.777882",
-  "cycle_number": 27,
+  "last_run": "2026-05-05T17:56:14.576005",
+  "cycle_number": 28,
   "cities_covered": [
     "Forrest City AR",
     "Corinth MS",
@@ -651,7 +651,62 @@
     "Iuka MS",
     "Ripley MS",
     "Tishomingo MS",
-    "Alcorn County MS"
+    "Alcorn County MS",
+    "Cairo IL",
+    "Mound City IL",
+    "Metropolis IL",
+    "Anna IL",
+    "Jonesboro IL",
+    "Vienna IL",
+    "Golconda IL",
+    "Shawneetown IL",
+    "Harrisburg IL",
+    "Marion IL",
+    "Many LA",
+    "Leesville LA",
+    "DeRidder LA",
+    "Oberlin LA",
+    "Mansfield LA",
+    "Natchitoches LA",
+    "Winnfield LA",
+    "Jena LA",
+    "Coushatta LA",
+    "Franklinton LA",
+    "Bonifay FL",
+    "Chipley FL",
+    "Marianna FL",
+    "Blountstown FL",
+    "Bristol FL",
+    "Port St Joe FL",
+    "Wewahitchka FL",
+    "Carrabelle FL",
+    "Quincy FL",
+    "Monticello FL",
+    "Inez KY",
+    "Hindman KY",
+    "Hyden KY",
+    "Irvine KY",
+    "Beattyville KY",
+    "McKee KY",
+    "Marks MS",
+    "Charleston MS",
+    "Carrollton MS",
+    "Houston MS",
+    "Okolona MS",
+    "Pontotoc MS",
+    "McAlester OK",
+    "Eufaula OK",
+    "Holdenville OK",
+    "Wewoka OK",
+    "Shawnee OK",
+    "Ada OK",
+    "Tishomingo OK",
+    "Farmerville LA",
+    "Ruston LA",
+    "Arcadia LA",
+    "Jonesboro LA",
+    "Colfax LA",
+    "Columbia LA"
   ],
   "total_leads_all_cycles": 6556,
   "total_previews_deployed": 3114,
@@ -2870,7 +2925,7 @@
     "observation": "Cycle 21: KY Central Frontier + TN SE + AR I-40 + FIRST WV coverage (Bluefield/Beckley) + Eastern KY Appalachian corridor (Pikeville/Hazard). 309 new leads, 218 F/D (71%). 90 new GH Pages pushed. Pipeline at 2432 outreach entries, 39 ready to send. WV F-grade rate: 90%, Eastern KY F-grade rate: 85%."
   },
   "total_hot_leads": 2991,
-  "total_outreach": 2863,
+  "total_outreach": 3118,
   "ready_to_send": 42,
   "cycles": {
     "cycle_22": {
@@ -5547,8 +5602,8 @@
     "commit_ok": true,
     "push_ok": true
   },
-  "total_leads": 8094,
-  "total_previews": 3108,
+  "total_leads": 9015,
+  "total_previews": 3435,
   "cycle_27": {
     "new_leads": 850,
     "new_fd": 115,
@@ -5661,6 +5716,107 @@
         "fd": 0,
         "cities": [
           "Corinth MS fringe"
+        ]
+      }
+    },
+    "committed": true,
+    "pushed": true
+  },
+  "cycle_28": {
+    "new_leads": 921,
+    "new_fd": 327,
+    "new_previews": 327,
+    "new_outreach": 327,
+    "region_stats": {
+      "IL": {
+        "leads": 185,
+        "fd": 29,
+        "cities": [
+          "Cairo IL",
+          "Mound City IL",
+          "Metropolis IL",
+          "Anna IL",
+          "Jonesboro IL",
+          "Vienna IL",
+          "Golconda IL",
+          "Shawneetown IL",
+          "Harrisburg IL",
+          "Marion IL"
+        ]
+      },
+      "LA": {
+        "leads": 314,
+        "fd": 167,
+        "cities": [
+          "Many LA",
+          "Leesville LA",
+          "DeRidder LA",
+          "Oberlin LA",
+          "Mansfield LA",
+          "Natchitoches LA",
+          "Winnfield LA",
+          "Jena LA",
+          "Coushatta LA",
+          "Franklinton LA",
+          "Farmerville LA",
+          "Ruston LA",
+          "Arcadia LA",
+          "Jonesboro LA",
+          "Colfax LA",
+          "Columbia LA"
+        ]
+      },
+      "FL": {
+        "leads": 165,
+        "fd": 60,
+        "cities": [
+          "Bonifay FL",
+          "Chipley FL",
+          "Marianna FL",
+          "Blountstown FL",
+          "Bristol FL",
+          "Port St Joe FL",
+          "Wewahitchka FL",
+          "Carrabelle FL",
+          "Quincy FL",
+          "Monticello FL"
+        ]
+      },
+      "KY": {
+        "leads": 74,
+        "fd": 19,
+        "cities": [
+          "Inez KY",
+          "Hindman KY",
+          "Hyden KY",
+          "Irvine KY",
+          "Beattyville KY",
+          "McKee KY"
+        ]
+      },
+      "MS": {
+        "leads": 89,
+        "fd": 19,
+        "cities": [
+          "Marks MS",
+          "Charleston MS",
+          "Carrollton MS",
+          "Houston MS",
+          "Okolona MS",
+          "Pontotoc MS"
+        ]
+      },
+      "OK": {
+        "leads": 94,
+        "fd": 33,
+        "cities": [
+          "McAlester OK",
+          "Eufaula OK",
+          "Holdenville OK",
+          "Wewoka OK",
+          "Shawnee OK",
+          "Ada OK",
+          "Tishomingo OK"
         ]
       }
     },

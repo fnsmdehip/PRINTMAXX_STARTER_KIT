@@ -1,7 +1,53 @@
 {
-  "last_updated": "2026-05-05T15:15:00.000000",
+  "last_updated": "2026-05-05T18:35:00.000000",
   "last_cycle": "2026-05-05",
-  "cycle_number": 45,
+  "cycle_number": 46,
+  "distribution_engine_cycle_46": {
+    "run_at": "2026-05-05T18:35:00",
+    "assets_covered": [
+      "cnsnt — r/privacytools + r/selfhosted + HN Show + LinkedIn + IndieHackers",
+      "dosewell — Twitter + r/Supplements + HN Show + AlternativeTo",
+      "androx-trt — r/Testosterone + AlternativeTo",
+      "Pocket Alexandria — r/books + AlternativeTo",
+      "Day 44 narrative — Twitter thread + r/SideProject + HN Ask HN + LinkedIn + IH",
+      "Comparison pages (12 total) — Twitter + LinkedIn SEO strategy",
+      "Claude Code Agent Bible — Twitter + r/ClaudeAI",
+      "Cold email products — Twitter singles",
+      "MCP Marketplace — AlternativeTo submission"
+    ],
+    "content_created": {
+      "twitter_threads": 1,
+      "twitter_singles": 5,
+      "twitter_reply_baits": 1,
+      "twitter_qt_captions": 1,
+      "reddit_posts": 7,
+      "hn_show_posts": 2,
+      "hn_ask_posts": 1,
+      "linkedin_posts": 4,
+      "indie_hackers_posts": 2,
+      "alternative_to_submissions": 5,
+      "total_pieces": 29
+    },
+    "gaps_filled": [
+      "cnsnt r/privacytools (pending since c45)",
+      "cnsnt r/selfhosted (pending since c45)",
+      "dosewell — first distribution ever",
+      "androx-trt Reddit coverage (only had Twitter)",
+      "Pocket Alexandria r/books (pending since c45)",
+      "IndieHackers Day 44 narrative (pending since c45)",
+      "AlternativeTo — 5 tool submissions drafted",
+      "Day 44 cross-platform build-in-public push"
+    ],
+    "files_created": [
+      "CONTENT/social/distribution/20260505_twitter_cycle46.md",
+      "CONTENT/social/distribution/20260505_reddit_cycle46.md",
+      "CONTENT/social/distribution/20260505_hn_cycle46.md",
+      "CONTENT/social/distribution/20260505_linkedin_cycle46.md",
+      "CONTENT/social/distribution/20260505_indiehackers_cycle46.md",
+      "CONTENT/social/distribution/20260505_alternativeto_cycle46.md",
+      "CONTENT/social/distribution/COVERAGE_MAP_CYCLE46.md"
+    ]
+  },
   "distribution_engine_cycle_45": {
     "run_at": "2026-05-05T15:15:00",
     "assets_covered": [

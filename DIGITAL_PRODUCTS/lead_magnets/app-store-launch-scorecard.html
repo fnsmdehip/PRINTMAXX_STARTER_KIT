@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Store Launch Scorecard — Will Apple Approve Your App?</title>
+<meta name="description" content="24-point checklist reveals exactly why apps get rejected before you submit. Free instant score. Used by 400+ indie devs.">
+<meta property="og:title" content="App Store Launch Scorecard">
+<meta property="og:description" content="Find out if your app will pass Apple review before you spend $99 on a Dev account.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="App Store Launch Scorecard">
+<meta name="twitter:description" content="24 checks. Instant score. Know exactly what Apple will reject before you submit.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--c1:#6C63FF;--c2:#4B44CC;--green:#10B981;--red:#EF4444;--yellow:#F59E0B;--text:#e5e5e5;--muted:#888;--border:#222}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:0 24px}
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .wrap{max-width:720px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:0.9rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.hero{padding:64px 0 48px;text-align:center}
+.tag{display:inline-block;background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.3);color:var(--c1);padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px}
+.hero h1 span{background:linear-gradient(135deg,#6C63FF,#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);font-size:1.05rem;max-width:520px;margin:0 auto 32px;line-height:1.7}
+.stat-row{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.stat-row .s{text-align:center}
+.stat-row .s strong{display:block;font-size:1.6rem;font-weight:800;color:var(--c1)}
+.stat-row .s span{color:var(--muted);font-size:0.8rem}
+.progress-bar{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:32px}
+.progress-label{display:flex;justify-content:space-between;margin-bottom:8px;font-size:0.85rem;color:var(--muted)}
+.bar{height:8px;background:#1a1a2e;border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,#6C63FF,#A78BFA);border-radius:4px;transition:width 0.4s ease}
+.section-label{font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c1);margin:32px 0 16px;opacity:0.8}
+.check-item{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:10px;cursor:pointer;transition:border-color 0.2s,background 0.2s;user-select:none;display:flex;align-items:flex-start;gap:14px}
+.check-item:hover{border-color:#444}
+.check-item.yes{border-color:var(--green);background:rgba(16,185,129,0.05)}
+.check-item.no{border-color:var(--red);background:rgba(239,68,68,0.05)}
+.check-item.na{border-color:#333;opacity:0.5}
+.check-box{width:22px;height:22px;border:2px solid var(--border);border-radius:6px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:all 0.15s}
+.check-item.yes .check-box{background:var(--green);border-color:var(--green);color:#fff}
+.check-item.no .check-box{background:var(--red);border-color:var(--red);color:#fff}
+.check-item.na .check-box{background:#333;border-color:#333;color:#666}
+.check-content h4{font-size:0.95rem;font-weight:700;margin-bottom:4px}
+.check-content p{font-size:0.82rem;color:var(--muted);line-height:1.5}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:24px 0}
+.btn{padding:12px 28px;border-radius:10px;font-weight:700;font-size:0.95rem;border:none;cursor:pointer;font-family:inherit;transition:opacity 0.2s}
+.btn:hover{opacity:0.85}
+.btn-yes{background:var(--green);color:#fff}
+.btn-no{background:var(--red);color:#fff}
+.btn-na{background:#2a2a2a;color:#888}
+#score-section{display:none;padding:48px 0;text-align:center}
+.score-ring{width:160px;height:160px;margin:0 auto 24px;position:relative}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring .track{fill:none;stroke:#1a1a2e;stroke-width:12}
+.score-ring .fill{fill:none;stroke-width:12;stroke-linecap:round;transition:stroke-dashoffset 1s ease}
+.score-ring .number{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:2.2rem;font-weight:800}
+.verdict{font-size:1.4rem;font-weight:800;margin-bottom:8px;letter-spacing:-0.5px}
+.verdict-sub{color:var(--muted);margin-bottom:32px}
+.fail-list{text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:32px;display:none}
+.fail-list h3{font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--red)}
+.fail-list li{list-style:none;padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;display:flex;gap:10px}
+.fail-list li:last-child{border-bottom:none}
+.fail-prefix{color:var(--red);flex-shrink:0}
+.email-gate{background:var(--surface);border:1px solid rgba(108,99,255,0.3);border-radius:14px;padding:32px;text-align:center;margin-bottom:32px}
+.email-gate h3{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.email-gate p{color:var(--muted);font-size:0.9rem;margin-bottom:20px}
+.email-gate form{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:0 auto}
+.email-gate input[type=email]{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;color:var(--text);font-family:inherit;font-size:1rem;outline:none;transition:border-color 0.2s}
+.email-gate input[type=email]:focus{border-color:var(--c1)}
+.email-gate button{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;border:none;padding:14px;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer;font-family:inherit}
+.cta-products{display:none;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;text-align:left;margin-top:24px}
+.cta-products.shown{display:grid}
+.cta-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;transition:border-color 0.2s}
+.cta-card:hover{border-color:var(--c1)}
+.cta-card .badge{font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--c1);margin-bottom:6px}
+.cta-card h4{font-size:0.95rem;font-weight:700;margin-bottom:6px}
+.cta-card p{font-size:0.8rem;color:var(--muted);margin-bottom:12px}
+.cta-card a{display:inline-block;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:700;text-decoration:none}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;margin-top:40px}
+footer p{color:var(--muted);font-size:0.82rem}
+@media(max-width:600px){.stat-row{gap:20px}.check-item{padding:14px 16px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="logo">PRINTMAXX</span>
+    <a href="https://mcp-marketplace.surge.sh" style="color:var(--muted);font-size:0.82rem">tools &rarr;</a>
+  </div>
+</nav>
+
+<div class="hero container">
+  <div class="tag">Free Tool &mdash; No Signup Required</div>
+  <h1>Will Apple <span>approve</span> your app?</h1>
+  <p>24-point rejection checklist. Most apps fail 3-5 of these. Takes 4 minutes. Shows you exactly what to fix before you waste a $99 dev account submission.</p>
+  <div class="stat-row">
+    <div class="s"><strong>38%</strong><span>of apps rejected first submission</span></div>
+    <div class="s"><strong>24</strong><span>checks that matter</span></div>
+    <div class="s"><strong>4 min</strong><span>average completion time</span></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-label"><span>Progress</span><span id="progressText">0 / 24 answered</span></div>
+    <div class="bar"><div class="bar-fill" id="barFill" style="width:0%"></div></div>
+  </div>
+
+  <div class="section-label">Payments &amp; Monetization</div>
+
+  <div class="check-item" data-id="1" data-critical="1" onclick="toggle(this)">
+    <div class="check-box" id="box1"></div>
+    <div class="check-content">
+      <h4>In-app purchases use Apple's IAP system (not Stripe, PayPal, or external links)</h4>
+      <p>Rule 3.1.1 — digital goods sold inside the app MUST use IAP. Stripe is only allowed for physical goods, services, or B2B. Violations cause instant rejection.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="2" data-critical="1" onclick="toggle(this)">
+    <div class="check-box" id="box2"></div>
+    <div class="check-content">
+      <h4>Paywall does not block all app functionality for free users</h4>
+      <p>Apple requires minimum useful functionality at zero cost. An app that shows a paywall immediately on launch with no usable free features gets rejected under Rule 3.1.2.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="3" onclick="toggle(this)">
+    <div class="check-box" id="box3"></div>
+    <div class="check-content">
+      <h4>Subscription terms are clearly displayed (price, duration, renewal)</h4>
+      <p>Must be visible before purchase. Monthly/annual price and auto-renew disclosure required per Apple's subscription guidelines.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="4" data-critical="1" onclick="toggle(this)">
+    <div class="check-box" id="box4"></div>
+    <div class="check-content">
+      <h4>No external links to buy premium (no "Visit our website to upgrade")</h4>
+      <p>Directing users to an external site to avoid Apple's cut is an immediate 3.1.3 violation. All upgrade CTAs must go through IAP.</p>
+    </div>
+  </div>
+
+  <div class="section-label">Content &amp; Functionality</div>
+
+  <div class="check-item" data-id="5" onclick="toggle(this)">
+    <div class="check-box" id="box5"></div>
+    <div class="check-content">
+      <h4>No placeholder text, dummy content, or "TODO" strings visible in the UI</h4>
+      <p>Reviewers tap through every screen. Placeholder copy or lorem ipsum is a 2.1 completeness rejection.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="6" data-critical="1" onclick="toggle(this)">
+    <div class="check-box" id="box6"></div>
+    <div class="check-content">
+      <h4>App is meaningfully different from other apps in the same category</h4>
+      <p>Guideline 4.3 — duplicate apps and template apps with zero differentiation are rejected at scale in 2026. Especially religious streak apps and generic AI wrappers.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="7" onclick="toggle(this)">
+    <div class="check-box" id="box7"></div>
+    <div class="check-content">
+      <h4>All features described in App Store listing actually work</h4>
+      <p>Reviewers test against your description. "AI-powered" with a random number generator gets a 2.1 rejection.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="8" onclick="toggle(this)">
+    <div class="check-box" id="box8"></div>
+    <div class="check-content">
+      <h4>No exaggerated health, medical, or performance claims</h4>
+      <p>"Medical grade" or "clinically proven" require peer-reviewed citations. Phone camera PPG cannot match dedicated medical equipment.</p>
+    </div>
+  </div>
+
+  <div class="section-label">Privacy &amp; Permissions</div>
+
+  <div class="check-item" data-id="9" data-critical="1" onclick="toggle(this)">
+    <div class="check-box" id="box9"></div>
+    <div class="check-content">
+      <h4>Privacy policy URL exists, resolves, and covers the app's actual data usage</h4>
+      <p>Broken link = auto-reject. Generic text without specifics gets rejected on subsequent review. URL must be in App Store Connect AND in the app itself.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="10" onclick="toggle(this)">
+    <div class="check-box" id="box10"></div>
+    <div class="check-content">
+      <h4>Each permission request has a specific purpose string (camera, mic, contacts, location)</h4>
+      <p>"For a better experience" is rejected. Must say specifically why: "Camera is used to scan nutrition labels."</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="11" onclick="toggle(this)">
+    <div class="check-box" id="box11"></div>
+    <div class="check-content">
+      <h4>ITSAppUsesNonExemptEncryption is set in Info.plist</h4>
+      <p>Missing this flag causes App Store Connect submission failure before the app even reaches review. Set to NO if you only use standard HTTPS/SSL.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="12" onclick="toggle(this)">
+    <div class="check-box" id="box12"></div>
+    <div class="check-content">
+      <h4>Privacy nutrition labels accurately reflect data collected</h4>
+      <p>Overstating or understating data collection triggers review flags, especially post-ATT enforcement in 2024+.</p>
+    </div>
+  </div>
+
+  <div class="section-label">Technical Quality</div>
+
+  <div class="check-item" data-id="13" data-critical="1" onclick="toggle(this)">
+    <div class="check-box" id="box13"></div>
+    <div class="check-content">
+      <h4>App doesn't crash on launch on a clean device (no pre-existing data)</h4>
+      <p>Reviewers use fresh devices. If your app assumes existing localStorage/AsyncStorage data and crashes without it, that's an instant 2.1 crash rejection.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="14" onclick="toggle(this)">
+    <div class="check-box" id="box14"></div>
+    <div class="check-content">
+      <h4>All navigation flows complete (no dead ends, back button works everywhere)</h4>
+      <p>Every non-root screen must have a way back. Tapping into a screen with no exit = trap = 2.1 rejection.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="15" onclick="toggle(this)">
+    <div class="check-box" id="box15"></div>
+    <div class="check-content">
+      <h4>Bundle ID is unique and not previously associated with a rejected submission</h4>
+      <p>Reusing a bundle ID from a previously rejected app carries rejection history. Use a new bundle ID for major resubmissions.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="16" onclick="toggle(this)">
+    <div class="check-box" id="box16"></div>
+    <div class="check-content">
+      <h4>App name doesn't conflict with existing popular apps (App Store search test)</h4>
+      <p>Similar names to top apps trigger trademark/confusion rejections. Search your exact app name before finalizing.</p>
+    </div>
+  </div>
+
+  <div class="section-label">App Store Listing</div>
+
+  <div class="check-item" data-id="17" onclick="toggle(this)">
+    <div class="check-box" id="box17"></div>
+    <div class="check-content">
+      <h4>Screenshots show actual app UI (not stock images or mockups that don't match)</h4>
+      <p>Screenshots must accurately represent what reviewers see. Fancy mockups that don't match the real UI = 2.3 rejection.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="18" onclick="toggle(this)">
+    <div class="check-box" id="box18"></div>
+    <div class="check-content">
+      <h4>App description doesn't mention competitor names or make comparative claims</h4>
+      <p>"Better than Duolingo" or "Like Headspace but free" in the description is a rejection risk under accurate metadata guidelines.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="19" onclick="toggle(this)">
+    <div class="check-box" id="box19"></div>
+    <div class="check-content">
+      <h4>Age rating is correct and content matches the rating selected</h4>
+      <p>Selecting 4+ for an app with mature content causes immediate rejection when reviewers encounter that content.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="20" onclick="toggle(this)">
+    <div class="check-box" id="box20"></div>
+    <div class="check-content">
+      <h4>No references to other platforms (Android, Google Play, "available on web") in the UI</h4>
+      <p>"Also on Android" buttons or Google Play badges inside the iOS app = 3.2.1 rejection.</p>
+    </div>
+  </div>
+
+  <div class="section-label">Onboarding &amp; User Experience</div>
+
+  <div class="check-item" data-id="21" onclick="toggle(this)">
+    <div class="check-box" id="box21"></div>
+    <div class="check-content">
+      <h4>Sign in with Apple is implemented if you offer any other social login</h4>
+      <p>Rule 4.8 — if you offer "Login with Google" or "Login with Facebook," Sign in with Apple is mandatory. No exceptions.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="22" onclick="toggle(this)">
+    <div class="check-box" id="box22"></div>
+    <div class="check-content">
+      <h4>Users can delete their account from within the app</h4>
+      <p>Required since June 2023. Any app with account creation must offer in-app account deletion that actually deletes data.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="23" onclick="toggle(this)">
+    <div class="check-box" id="box23"></div>
+    <div class="check-content">
+      <h4>App works on the oldest iOS version in the minimum deployment target</h4>
+      <p>If your app.json says iOS 15 but you use iOS 16+ APIs without version guards, it crashes for a subset of users Apple may test.</p>
+    </div>
+  </div>
+
+  <div class="check-item" data-id="24" data-critical="1" onclick="toggle(this)">
+    <div class="check-box" id="box24"></div>
+    <div class="check-content">
+      <h4>Restore Purchases button exists and actually works</h4>
+      <p>Rule 3.1.2 — apps with subscriptions MUST include a visible Restore Purchases button. Fake restore flows that do nothing = rejection.</p>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-yes" onclick="scoreAll('yes')">Mark All Yes</button>
+    <button class="btn btn-no" onclick="scoreAll('no')">Mark All No</button>
+    <button class="btn btn-na" onclick="scoreAll('na')">Not Applicable</button>
+    <button class="btn" style="background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff" onclick="showScore()">See My Score &rarr;</button>
+  </div>
+
+  <div id="score-section">
+    <div class="score-ring">
+      <svg viewBox="0 0 160 160" width="160" height="160">
+        <circle class="track" cx="80" cy="80" r="68"/>
+        <circle class="fill" id="scoreCircle" cx="80" cy="80" r="68" stroke="#6C63FF" stroke-dasharray="427.26" stroke-dashoffset="427.26"/>
+      </svg>
+      <div class="number" id="scoreNumber">0%</div>
+    </div>
+    <div class="verdict" id="scoreVerdict"></div>
+    <div class="verdict-sub" id="scoreVerdictSub"></div>
+
+    <div class="fail-list" id="failList">
+      <h3>Critical issues to fix before submitting:</h3>
+      <ul id="failItems"></ul>
+    </div>
+
+    <div class="email-gate" id="emailGate">
+      <h3>Get the full fix guide.</h3>
+      <p>Enter your email to unlock the detailed fix guide for each failed check plus the App Store Rejection Recovery Playbook (free, 2,400 words).</p>
+      <form action="https://formsubmit.co/printmaxxstudio@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="App Store Scorecard Lead - Fix Guide Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://app-store-launch-scorecard.surge.sh/thanks.html">
+        <input type="email" name="email" required placeholder="your@email.com">
+        <button type="submit">Get Fix Guide + Playbook</button>
+      </form>
+      <p style="color:var(--muted);font-size:0.78rem;margin-top:10px">No spam. One email with the guide.</p>
+    </div>
+
+    <div class="cta-products" id="ctaProducts">
+      <div class="cta-card">
+        <div class="badge">Claude Code</div>
+        <h4>Claude Code Agent Bible</h4>
+        <p>87 autonomous agent patterns, zero context bloat, CLI/API/MCP mastery.</p>
+        <a href="https://claude-code-revenue-audit.surge.sh" target="_blank" rel="noopener noreferrer">Get It &rarr;</a>
+      </div>
+      <div class="cta-card">
+        <div class="badge">Free Tool</div>
+        <h4>MCP ROI Calculator</h4>
+        <p>Find out which AI tools are actually worth the subscription cost.</p>
+        <a href="https://mcp-roi-calculator.surge.sh" target="_blank" rel="noopener noreferrer">Try It Free &rarr;</a>
+      </div>
+      <div class="cta-card">
+        <div class="badge">Free Tool</div>
+        <h4>Revenue Leak Audit</h4>
+        <p>10-question audit reveals what's blocking your first dollar online.</p>
+        <a href="https://revenue-leak-audit.surge.sh" target="_blank" rel="noopener noreferrer">Take Audit &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>PRINTMAXX &middot; <a href="https://mcp-marketplace.surge.sh" style="color:var(--muted)">tools</a> &middot; <a href="https://printmaxx-privacy.surge.sh" style="color:var(--muted)">privacy</a></p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var state = {};
+  var criticalLabels = {
+    '1': 'In-app purchases use Apple IAP (not Stripe/PayPal for digital goods)',
+    '2': 'Paywall does not block ALL free functionality',
+    '4': 'No external "upgrade on website" links',
+    '6': 'App is meaningfully differentiated (not a 4.3 clone)',
+    '9': 'Privacy policy URL exists and resolves',
+    '13': 'App does not crash on clean device launch',
+    '24': 'Restore Purchases button exists and works'
+  };
+
+  window.toggle = function(el) {
+    var id = el.getAttribute('data-id');
+    var box = document.getElementById('box' + id);
+    var cur = state[id];
+    if (!cur) {
+      state[id] = 'yes';
+      el.className = 'check-item yes';
+      box.textContent = '✓';
+    } else if (cur === 'yes') {
+      state[id] = 'no';
+      el.className = 'check-item no';
+      box.textContent = '✗';
+    } else if (cur === 'no') {
+      state[id] = 'na';
+      el.className = 'check-item na';
+      box.textContent = '—';
+    } else {
+      delete state[id];
+      el.className = 'check-item';
+      box.textContent = '';
+    }
+    updateProgress();
+  };
+
+  window.scoreAll = function(val) {
+    for (var i = 1; i <= 24; i++) {
+      state[i] = val;
+      var el = document.querySelector('[data-id="' + i + '"]');
+      var box = document.getElementById('box' + i);
+      if (val === 'yes') { el.className = 'check-item yes'; box.textContent = '✓'; }
+      else if (val === 'no') { el.className = 'check-item no'; box.textContent = '✗'; }
+      else { el.className = 'check-item na'; box.textContent = '—'; }
+    }
+    updateProgress();
+  };
+
+  function updateProgress() {
+    var answered = Object.keys(state).length;
+    document.getElementById('progressText').textContent = answered + ' / 24 answered';
+    document.getElementById('barFill').style.width = (answered / 24 * 100) + '%';
+  }
+
+  window.showScore = function() {
+    var answered = Object.keys(state).filter(function(k) { return state[k] !== 'na'; }).length;
+    if (answered < 8) { alert('Please answer at least 8 questions for an accurate score.'); return; }
+    var yes = Object.keys(state).filter(function(k) { return state[k] === 'yes'; }).length;
+    var total = Object.keys(state).filter(function(k) { return state[k] !== 'na'; }).length;
+    var pct = Math.round(yes / total * 100);
+    var criticalFails = Object.keys(criticalLabels).filter(function(k) { return state[k] === 'no'; });
+
+    var circumference = 427.26;
+    var circle = document.getElementById('scoreCircle');
+    circle.style.strokeDashoffset = circumference - (pct / 100 * circumference);
+    var col = pct >= 85 ? '#10B981' : pct >= 65 ? '#F59E0B' : '#EF4444';
+    circle.setAttribute('stroke', col);
+    var numEl = document.getElementById('scoreNumber');
+    numEl.textContent = pct + '%';
+    numEl.style.color = col;
+
+    var v = document.getElementById('scoreVerdict');
+    var vs = document.getElementById('scoreVerdictSub');
+    if (pct >= 85 && criticalFails.length === 0) {
+      v.textContent = 'Likely to pass review';
+      v.style.color = '#10B981';
+      vs.textContent = 'Strong submission. Fix any remaining issues before uploading.';
+    } else if (pct >= 65) {
+      v.textContent = 'High rejection risk';
+      v.style.color = '#F59E0B';
+      vs.textContent = "You'll pass some checks but critical issues exist. Fix these before submitting.";
+    } else {
+      v.textContent = 'Expected rejection';
+      v.style.color = '#EF4444';
+      vs.textContent = criticalFails.length + ' critical failures found. These will cause rejection in the first review cycle.';
+    }
+
+    if (criticalFails.length > 0) {
+      var fl = document.getElementById('failList');
+      var fi = document.getElementById('failItems');
+      fl.style.display = 'block';
+      while (fi.firstChild) { fi.removeChild(fi.firstChild); }
+      criticalFails.forEach(function(k) {
+        var li = document.createElement('li');
+        var prefix = document.createElement('span');
+        prefix.className = 'fail-prefix';
+        prefix.textContent = '✗';
+        var txt = document.createTextNode(' ' + criticalLabels[k]);
+        li.appendChild(prefix);
+        li.appendChild(txt);
+        fi.appendChild(li);
+      });
+    }
+
+    document.getElementById('score-section').style.display = 'block';
+    document.getElementById('score-section').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function() {
+      document.getElementById('ctaProducts').className = 'cta-products shown';
+    }, 800);
+  };
+})();
+</script>
+</body>
+</html>

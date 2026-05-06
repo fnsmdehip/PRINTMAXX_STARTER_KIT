@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "The 10 Best Handyman Services in Las Vegas, NV (2026) - HomeGuide" [level=1] [ref=e3]
+    - paragraph [ref=e4]: Your trusted Handyman professionals in Las Vegas NV. Quality service, real results.
+    - link "Call Contact Us" [ref=e5] [cursor=pointer]:
+      - /url: tel:#
+  - generic [ref=e6]:
+    - heading "Our Services" [level=2] [ref=e7]
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - heading "Home Repairs" [level=3] [ref=e10]
+        - paragraph [ref=e11]: Professional home repairs services for Las Vegas NV residents.
+      - generic [ref=e12]:
+        - heading "Drywall & Painting" [level=3] [ref=e13]
+        - paragraph [ref=e14]: Professional drywall & painting services for Las Vegas NV residents.
+      - generic [ref=e15]:
+        - heading "Furniture Assembly" [level=3] [ref=e16]
+        - paragraph [ref=e17]: Professional furniture assembly services for Las Vegas NV residents.
+      - generic [ref=e18]:
+        - heading "Door & Window Repair" [level=3] [ref=e19]
+        - paragraph [ref=e20]: Professional door & window repair services for Las Vegas NV residents.
+      - generic [ref=e21]:
+        - heading "Tile Work" [level=3] [ref=e22]
+        - paragraph [ref=e23]: Professional tile work services for Las Vegas NV residents.
+      - generic [ref=e24]:
+        - heading "Deck & Fence Repair" [level=3] [ref=e25]
+        - paragraph [ref=e26]: Professional deck & fence repair services for Las Vegas NV residents.
+  - generic [ref=e27]:
+    - heading "Get in Touch" [level=2] [ref=e28]
+    - paragraph [ref=e29]:
+      - text: "Phone:"
+      - link "Contact Us" [ref=e30] [cursor=pointer]:
+        - /url: tel:#
+    - link "Call Now" [ref=e32] [cursor=pointer]:
+      - /url: tel:#
+  - generic [ref=e33]:
+    - paragraph [ref=e34]: © 2026 The 10 Best Handyman Services in Las Vegas, NV (2026) - HomeGuide. All rights reserved.
+    - paragraph [ref=e35]:
+      - text: Website by
+      - link "PRINTMAXX" [ref=e36] [cursor=pointer]:
+        - /url: https://printmaxx.co

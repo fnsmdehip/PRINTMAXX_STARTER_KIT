@@ -660,3 +660,52 @@ All I do is generate this content, post on Snapchat and sell more exclusive cont
 
 I’ve created a guide on how to make this content and what to do on Snapchat to funnel these men over to your pages to make
 
+
+
+---
+
+## Pending Enhancement (ALPHA1774001693, Score: 23)
+
+**Source:** @FedotOff90 (bookmarks) | **URL:** https://x.com/FedotOff90/status/2050270006622216529
+**Added:** 2026-05-05T16:00:10-04:00
+
+Got connected to a 33-year-old Saudi guy through our WhatsApp community who sells collagen supplements across the Gulf region.
+
+$1.8M/month across Saudi Arabia, UAE, Kuwait, and Bahrain.
+
+One product. One funnel. Arabic-language ads.
+
+He told me something that completely reframed
+
+
+
+---
+
+## Pending Enhancement (ALPHA1774001694, Score: 32)
+
+**Source:** @TrunksInu (bookmarks) | **URL:** https://x.com/TrunksInu/status/2050243855404929396
+**Added:** 2026-05-05T16:00:10-04:00
+
+Two formats printing money on Facebook right now.
+
+1. Chalkboard quizzes.
+2. Viral message overlays.
+
+No face. No voice. AI-generated images only.
+
+One creator: $13,500/month.
+Another: $2,200 from a SINGLE post.
+
+The format is the weapon. 
+
+
+
+---
+
+## Pending Enhancement (ALPHA1774001798, Score: 34)
+
+**Source:** @jasonfried (high-signal-accounts) | **URL:** https://x.com/davidsenra/status/2050938428146246123
+**Added:** 2026-05-05T18:33:35-04:00
+
+This is the best founder you've never heard of. Adam Foroughi's company prints $5 billion in cash a year with just 400 people. When his stock price dropped by 92%, he borrowed money to buy back $6 billion in stock. That bet made the company more than $60 billion. The entire
+

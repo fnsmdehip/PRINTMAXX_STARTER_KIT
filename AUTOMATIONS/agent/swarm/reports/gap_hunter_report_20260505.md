@@ -1,7 +1,7 @@
-# GAP HUNTER REPORT — 2026-05-05 15:20
+# GAP HUNTER REPORT — 2026-05-05 18:30 (UPDATED)
 
 ## Summary
-Day 44 at $0 revenue. 67 app builds, 100+ deployed sites, 14 PDFs ready to sell, 1,619 queued posts, 2,608 approved alpha entries unprocessed. The system is building massively but revenue is blocked by human account creation.
+Day 44 at $0 revenue. 68 app builds, 76+ deployed sites, 14 PDFs ready to sell, 1,627 queued posts, 3,342 approved alpha entries unprocessed. The system is a fully loaded gun with no trigger pull — every gap traces to human account creation blockers. Surge auth expired since last cycle — no new deploys possible until re-auth.
 
 ---
 
@@ -104,20 +104,28 @@ All the same blockers from `OPS/ACCOUNT_CREATION_NOW.md`:
 
 ---
 
-## Metrics
+## Metrics (18:30 update)
 
-| Metric | Value |
-|--------|-------|
-| Total app builds | 67 |
-| Deployed sites (surge) | 100+ |
-| Digital products (PDF) | 14 ready |
-| Content posts queued | 1,619 |
-| Alpha entries total | 42,280 |
-| Alpha APPROVED | 3,319 |
-| Alpha PENDING_REVIEW | 3,168 |
-| Alpha processed (ops=TRUE) | 711 (21%) |
-| Leads in pipeline | 8,036 |
-| Scripts in AUTOMATIONS/ | 539 |
-| Scripts in cron | 34 |
-| Revenue | $0 (Day 44) |
-| Affiliate pages deployed today | 11 |
+| Metric | Value | Delta from 15:20 |
+|--------|-------|------------------|
+| Total app builds | 68 | +1 |
+| Deployed sites (surge) | 76+ | verified count |
+| Digital products (PDF) | 14 ready | — |
+| Product listings written | 12 | — |
+| Content posts queued | 1,627 | +8 |
+| Alpha entries total | 42,550 | +270 |
+| Alpha APPROVED | 3,342 | +23 |
+| Leads in pipeline | 134 files | — |
+| Hot leads with emails | 21 | — |
+| Scripts in AUTOMATIONS/ | 568 | +29 |
+| Scripts in cron | 45 | +11 |
+| Cron health | CLEAN (0 broken) | — |
+| Revenue | $0 (Day 44) | — |
+| Surge auth | EXPIRED | NEW BLOCKER |
+
+## 18:30 Cycle Notes
+- Surge token missing from .env — all deploys blocked until `surge login`
+- 1 affiliate page still undeployed (best-online-therapy-platform) due to auth failure
+- Cron verified healthy: all 45 jobs reference existing scripts
+- 2 native iOS apps (soberstreak-native, streakr-native) built, not submitted — need Apple Developer account
+- biomaxx-sdk54 and robloxmaxx are non-web (native/Roblox) — cannot surge deploy

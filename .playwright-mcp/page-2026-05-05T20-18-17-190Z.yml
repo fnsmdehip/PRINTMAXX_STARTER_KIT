@@ -1,0 +1,129 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "fnsmdehip" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+      - link "Home" [ref=e5] [cursor=pointer]:
+        - /url: index.html
+      - link "UAF Series" [ref=e6] [cursor=pointer]:
+        - /url: uaf-series.html
+      - link "PEMF" [ref=e7] [cursor=pointer]:
+        - /url: pemf.html
+      - link "WiFi Sensing" [ref=e8] [cursor=pointer]:
+        - /url: wifi-sensing.html
+      - link "Projects" [ref=e9] [cursor=pointer]:
+        - /url: projects.html
+      - link "search" [ref=e10] [cursor=pointer]:
+        - /url: search.html
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - heading "fnsmdehip research notes" [level=1] [ref=e14]
+      - generic [ref=e15]: cross-domain theory, health experiments, signal intelligence, autonomous systems
+    - paragraph [ref=e16]: "Independent research across physics, biology, software architecture, and signal processing. The throughline: structural patterns that repeat across domains. Everything is written to be falsifiable. Claims come with kill switches. If the data kills an idea, the idea stays dead."
+    - generic [ref=e17]:
+      - generic [ref=e18]: UAF Series (13 articles)
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - text: 2026-03-28
+          - 'link "The Unified Aetheric Framework: overview" [ref=e21] [cursor=pointer]':
+            - /url: uaf.html
+          - generic [ref=e22]: The core PDE, 9 carrier channels, dual attractor basins, hivemind 5 levels, religion as protocol stack, phase debt, surrogate activities, toroidal field, civilizational cycles of excess and reset
+        - generic [ref=e23]:
+          - text: 2026-03-28
+          - link "The aetheric wind and why the system fights back" [ref=e24] [cursor=pointer]:
+            - /url: uaf-immune-response.html
+          - generic [ref=e25]: Aetheric wind 4-phase mechanism, survival-vs-surplus cycle with historical reset patterns, immune response intensity model, multi-channel resistance vectors, strategic navigation
+        - generic [ref=e26]:
+          - text: 2026-03-28
+          - link "The observer gate, four competing models, and why testing can kill the effect" [ref=e27] [cursor=pointer]:
+            - /url: uaf-consciousness.html
+          - generic [ref=e28]: Observer gate chi(t), four candidate formalisms (collapse, retrocausal, pilot-wave, multi-channel), presentiment 26 studies p<10^-12, collective dynamics, sensitivity
+        - generic [ref=e29]:
+          - text: 2026-03-28
+          - link "The alignment-testing paradox" [ref=e30] [cursor=pointer]:
+            - /url: uaf-testing-paradox.html
+          - generic [ref=e31]: Why institutional science systematically nullifies certain effects. The suppression law. Five interference pathways. Three competing models with priors and breakpoints
+        - generic [ref=e32]:
+          - text: 2026-03-28
+          - link "Disease as field distortion" [ref=e33] [cursor=pointer]:
+            - /url: uaf-disease-biology.html
+          - generic [ref=e34]: Phonon model, fascia impedance matching, CSF ventricular resonance, heart-brain mechanical coupling, crystal effects with 3 competing models, piezoelectric constitutive relations
+        - generic [ref=e35]:
+          - text: 2026-03-28
+          - link "How you'd actually test this" [ref=e36] [cursor=pointer]:
+            - /url: uaf-evidence.html
+          - generic [ref=e37]: RNG/REG evidence, biological markers, environmental coupling (geomagnetics, Schumann, EM saturation), protocol sensitivity, when nulls are weak evidence, instrument roadmap
+        - generic [ref=e38]:
+          - text: 2026-03-28
+          - link "Karmic mathematics" [ref=e39] [cursor=pointer]:
+            - /url: uaf-karmic-math.html
+          - generic [ref=e40]: Distortion energy E[s], Euler-Lagrange conditions, standing wave decay proof, sink matching, social enforcement threshold model, strategic indulgence
+        - generic [ref=e41]:
+          - text: 2026-03-28
+          - link "Control surfaces and how to actually apply this" [ref=e42] [cursor=pointer]:
+            - /url: uaf-practical.html
+          - generic [ref=e43]: State handles, source scheduling, sink matching, regime selection, heart-breath coherence protocol, High-Q drive amplification (sexual/creative energy channeling), coherence proxies
+        - generic [ref=e44]:
+          - text: 2026-03-28
+          - link "Cancer and addiction are the same trap" [ref=e45] [cursor=pointer]:
+            - /url: uaf-cancer-addiction.html
+          - generic [ref=e46]: Warburg-UAF bridge, cancer-addiction isomorphism, fascial decoherence as cancer location predictor, tissue-discordant aging, low-dose naltrexone, reverse Warburg
+        - generic [ref=e47]:
+          - text: 2026-03-28
+          - link "Longevity as sigma-restoration" [ref=e48] [cursor=pointer]:
+            - /url: uaf-bryan-johnson.html
+          - generic [ref=e49]: 12 hallmarks unified, sigma-restoration hierarchy, PEARL rapamycin null predicted, NAD+ nulls, CALERIE dissociation, HRV as sigma proxy, novel cross-domain derivations J.3-J.6
+        - generic [ref=e50]:
+          - text: 2026-03-28
+          - link "Framework comparisons and cross-tradition mappings" [ref=e51] [cursor=pointer]:
+            - /url: uaf-social-dynamics.html
+          - generic [ref=e52]: "What makes UAF non-redundant vs IIT/Global Workspace/predictive coding. Gnostic/Eastern/Abrahamic/Indigenous parallels. Practical extraction: what to keep vs discard"
+        - generic [ref=e53]:
+          - text: 2026-03-28
+          - link "Saturn, the Gnostic mapping, and anthropomorphized abstractions" [ref=e54] [cursor=pointer]:
+            - /url: uaf-traditions.html
+          - generic [ref=e55]: Saturn/polar configuration with honest speculative assessment, Gnostic Monad-Demiurge mapping table, the entity question (4 possibility spaces), loosh/non-local farming dynamics, historical cycles
+        - generic [ref=e56]:
+          - text: 2026-03-28
+          - link "Macro-scale dynamics, system stability, and the instrument roadmap" [ref=e57] [cursor=pointer]:
+            - /url: uaf-systems.html
+          - generic [ref=e58]: Perpetual harmony as control problem, governance AI, macro-scale steering, longevity under constraints, instrument roadmap by information density per dollar, refinement loop
+    - generic [ref=e59]:
+      - generic [ref=e60]: PEMF Series (2 articles)
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - text: 2026-03-28
+          - 'link "PEMF therapy: the 17 RCTs they''d rather you didn''t read" [ref=e63] [cursor=pointer]':
+            - /url: pemf.html
+          - generic [ref=e64]: What PEMF does to cells, 17 RCTs / 1,197 patients in osteoarthritis, FDA-cleared bone healing, sepsis models, coma recovery, neurodegeneration pilots
+        - generic [ref=e65]:
+          - text: 2026-03-28
+          - link "How Rockefeller money killed electrotherapy (and it's coming back)" [ref=e66] [cursor=pointer]:
+            - /url: pemf-history.html
+          - generic [ref=e67]: The 1910 Flexner Report, which medical schools were closed, modern institutional groupthink, the financial trap of unpatentable therapies
+    - generic [ref=e68]:
+      - generic [ref=e69]: WiFi Sensing (2 articles)
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - text: 2026-03-28
+          - 'link "WiFi can see you move: camera-free motion detection" [ref=e72] [cursor=pointer]':
+            - /url: wifi-sensing.html
+          - generic [ref=e73]: CSI physics, ESPectre processing pipeline, 99%+ accuracy across ESP32 variants, 7 detection approaches ranked, privacy advantages
+        - generic [ref=e74]:
+          - text: 2026-03-28
+          - link "7 ways to detect people with just your MacBook" [ref=e75] [cursor=pointer]:
+            - /url: wifi-sensing-macbook.html
+          - generic [ref=e76]: ARP scanning, RSSI monitoring, WiFi fingerprinting, probe request sniffing, BLE scanning. Working Python code for each method
+    - generic [ref=e77]:
+      - generic [ref=e78]: Other
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - text: 2026-03-28
+          - link "Health experiments and longevity notes" [ref=e81] [cursor=pointer]:
+            - /url: health.html
+          - generic [ref=e82]: Ongoing experiments in biohacking, longevity interventions, biological age markers
+        - generic [ref=e83]:
+          - text: 2026-03-28
+          - link "Project index" [ref=e84] [cursor=pointer]:
+            - /url: projects.html
+          - generic [ref=e85]: Active and shipped projects across autonomous systems, signal intelligence, music production, iOS apps, open-source tools

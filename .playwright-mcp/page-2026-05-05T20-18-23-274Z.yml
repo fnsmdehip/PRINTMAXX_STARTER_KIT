@@ -1,0 +1,129 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: PRINTMAXX
+      - generic [ref=e5]: updated march 2026
+  - generic [ref=e7]:
+    - generic [ref=e8]: tested daily since jan 2026
+    - heading "7 AI Tools That Actually Make Money in 2026" [level=1] [ref=e9]
+    - paragraph [ref=e10]: "not a \"top 50 tools\" SEO blog. these are the 7 tools I pay for every month and use to run a solo operation. total cost: $490/mo. total output: more than most 5-person teams."
+    - generic [ref=e11]:
+      - text: "Disclosure: some links on this page are affiliate links. I get a commission if you sign up through them, at no extra cost to you. I only recommend tools I actually use and pay for."
+      - link "FTC info" [ref=e12] [cursor=pointer]:
+        - /url: https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: 01 / the brain
+      - generic [ref=e17]:
+        - generic [ref=e18]: Claude Max (Anthropic)
+        - generic [ref=e19]: $200/mo
+      - paragraph [ref=e20]: the only AI that writes code that actually runs on the first try. I use Claude Code as my co-developer. it built 7 apps, 20+ landing pages, and 130 cold email sequences in 2 months. not a copilot that suggests snippets. a full engineer that writes, debugs, and ships.
+      - list [ref=e21]:
+        - listitem [ref=e22]: ✓ 200K context window. paste entire codebases, get working refactors back
+        - listitem [ref=e23]: ✓ Claude Code CLI runs autonomously. I describe what I want, it builds it
+        - listitem [ref=e24]: ✓ writes Python scrapers, Next.js apps, bash automations. all production-grade
+      - link "try Claude Max — autonomous code generation, $200/mo" [ref=e25] [cursor=pointer]:
+        - /url: https://claude.ai/upgrade
+      - generic [ref=e26]:
+        - strong [ref=e27]: "bottom line:"
+        - text: $200/mo sounds steep until you realize it replaces a $6,000/mo junior dev. I ship 10x faster than I did with ChatGPT. the code quality gap is not close.
+    - generic [ref=e28]:
+      - generic [ref=e29]: 02 / the outbound engine
+      - generic [ref=e30]:
+        - generic [ref=e31]: Instantly
+        - generic [ref=e32]: $30/mo
+      - paragraph [ref=e33]: I send 5,000 cold emails per week through Instantly. 30 email accounts, 30 sends each, auto-rotated. built-in warmup pool keeps deliverability above 90%. the campaign builder lets me A/B test subject lines across 500-email batches in a single afternoon.
+      - list [ref=e34]:
+        - listitem [ref=e35]: ✓ unlimited email accounts on every plan. connect 30, 50, 100. no extra charge
+        - listitem [ref=e36]: ✓ warmup pool of 10,000+ inboxes. inbox placement stays above 90% in my tests
+        - listitem [ref=e37]: ✓ campaign analytics show open/reply/bounce per variant. kill losers in real time
+      - link "start with Instantly — 5K emails/week from $30/mo" [ref=e38] [cursor=pointer]:
+        - /url: https://instantly.ai/
+      - generic [ref=e39]:
+        - strong [ref=e40]: "bottom line:"
+        - text: $30/mo to send 5K+ emails/week with real warmup. compared to hiring an SDR at $4K/mo, this is free. I booked 14 calls last month from cold email alone.
+    - generic [ref=e41]:
+      - generic [ref=e42]: 03 / the newsletter money printer
+      - generic [ref=e43]:
+        - generic [ref=e44]: Beehiiv
+        - generic [ref=e45]: free-$49/mo
+      - paragraph [ref=e46]: Beehiiv monetizes at $3 CPM through their ad network. that means 10,000 subscribers = $30 per send just from native ads, before you sell anything. I run 2 newsletters and the built-in referral program grows them on autopilot. free tier handles up to 2,500 subs.
+      - list [ref=e47]:
+        - listitem [ref=e48]: ✓ ad network pays $2-5 CPM depending on niche. tech and finance pay the most
+        - listitem [ref=e49]: ✓ referral program built in. readers share your newsletter for rewards you define
+        - listitem [ref=e50]: ✓ free tier is actually usable. no "upgrade to send" gates like Mailchimp
+      - link "start with Beehiiv — free up to 2,500 subs, ad revenue included" [ref=e51] [cursor=pointer]:
+        - /url: https://beehiiv.com/
+      - generic [ref=e52]:
+        - strong [ref=e53]: "bottom line:"
+        - text: the only newsletter platform where you earn money FROM the platform, not just through it. at 10K subs the ad revenue alone covers the $49/mo plan 6x over.
+    - generic [ref=e54]:
+      - generic [ref=e55]: 04 / the competitor x-ray
+      - generic [ref=e56]:
+        - generic [ref=e57]: SEMrush
+        - generic [ref=e58]: $130/mo
+      - paragraph [ref=e59]: I pulled my top competitor's entire keyword strategy in 20 minutes. 847 keywords they rank for, their backlink sources, their paid ad copy, and the exact pages driving 80% of their traffic. then I built better pages targeting the same terms. SEMrush is the reason I know what to build before I build it.
+      - list [ref=e60]:
+        - listitem [ref=e61]: ✓ domain overview shows any site's traffic, top keywords, and backlink profile
+        - listitem [ref=e62]: ✓ keyword gap tool finds terms competitors rank for that you don't. pure alpha
+        - listitem [ref=e63]: ✓ site audit catches technical SEO issues. I run it weekly on all my sites
+      - link "try SEMrush free — 7-day full access, no commitment" [ref=e64] [cursor=pointer]:
+        - /url: https://semrush.com/
+      - generic [ref=e65]:
+        - strong [ref=e66]: "bottom line:"
+        - text: $130/mo is the most expensive tool on this list. but one competitor keyword audit paid for 6 months of the subscription. if you're publishing content without SEMrush data, you're guessing.
+    - generic [ref=e67]:
+      - generic [ref=e68]: 05 / the inbox army
+      - generic [ref=e69]:
+        - generic [ref=e70]: Smartlead
+        - generic [ref=e71]: $39/mo
+      - paragraph [ref=e72]: Smartlead is what I use when I need to scale past Instantly's limits. unlimited mailboxes, unlimited warmup, and the inbox rotation is the best I've tested. 94% inbox placement in my 6-month test. I run it alongside Instantly for different campaigns and ICPs.
+      - list [ref=e73]:
+        - listitem [ref=e74]: ✓ unlimited mailboxes and unlimited warmup on every plan. no per-seat pricing
+        - listitem [ref=e75]: ✓ inbox rotation spreads sends across accounts automatically. no manual setup
+        - listitem [ref=e76]: ✓ unified inbox pulls all replies into one view. reply in seconds, not minutes
+      - link "try Smartlead — unlimited mailboxes, 94% inbox placement" [ref=e77] [cursor=pointer]:
+        - /url: https://smartlead.ai/
+      - generic [ref=e78]:
+        - strong [ref=e79]: "bottom line:"
+        - text: Instantly for simplicity. Smartlead for scale. if you're sending 10K+ emails/week or managing multiple client campaigns, Smartlead's inbox rotation is worth the extra $9/mo.
+    - generic [ref=e80]:
+      - generic [ref=e81]: 06 / the creator email engine
+      - generic [ref=e82]:
+        - generic [ref=e83]: Kit (formerly ConvertKit)
+        - generic [ref=e84]: free-$29/mo
+      - paragraph [ref=e85]: Kit handles the warm side of email. landing pages, opt-in forms, and automated sequences that nurture leads after they download something. I use it for all my lead magnets. free tier supports 10,000 subscribers and the visual automation builder is better than anything at this price.
+      - list [ref=e86]:
+        - listitem [ref=e87]: ✓ free tier covers 10K subs. that's 10x more than Mailchimp's free plan
+        - listitem [ref=e88]: ✓ visual automation builder. if subscriber clicks X, send Y, wait 3 days, send Z
+        - listitem [ref=e89]: ✓ commerce built in. sell digital products directly from Kit with zero extra tools
+      - link "start with Kit free — 10K subs, visual automations included" [ref=e90] [cursor=pointer]:
+        - /url: https://kit.com/
+      - generic [ref=e91]:
+        - strong [ref=e92]: "bottom line:"
+        - text: "Beehiiv for newsletters. Kit for everything else: lead magnets, product launches, drip sequences, and digital product sales. the free tier is genuinely generous."
+    - generic [ref=e93]:
+      - generic [ref=e94]: 07 / the time defender
+      - generic [ref=e95]:
+        - generic [ref=e96]: Reclaim.ai
+        - generic [ref=e97]: free-$12/mo
+      - paragraph [ref=e98]: Reclaim blocks focus time on my calendar automatically. it watches my tasks, priorities, and meetings, then defends 3-4 hour deep work blocks every day. before Reclaim I was context-switching 15+ times a day. now I get 4 uninterrupted hours minimum to actually build things.
+      - list [ref=e99]:
+        - listitem [ref=e100]: ✓ auto-schedules tasks around existing meetings. no manual calendar tetris
+        - listitem [ref=e101]: ✓ defends focus time blocks. if someone books over one, it reschedules automatically
+        - listitem [ref=e102]: ✓ free tier covers 1 calendar and basic scheduling. paid adds team features
+      - link "try Reclaim" [ref=e103] [cursor=pointer]:
+        - /url: https://reclaim.ai/
+      - generic [ref=e104]:
+        - strong [ref=e105]: "bottom line:"
+        - text: the cheapest tool on this list and honestly the one that changed my daily output the most. 4 hours of protected deep work per day is worth more than any SaaS tool.
+  - generic [ref=e108]:
+    - heading "get the full AI stack breakdown" [level=2] [ref=e109]
+    - paragraph [ref=e110]: the exact configs, automations, and workflows I run with these 7 tools. no fluff, just the setup files and step-by-step.
+    - generic [ref=e111]:
+      - textbox "Email address" [ref=e112]:
+        - /placeholder: your email
+      - button "send it" [ref=e113] [cursor=pointer]
+    - paragraph [ref=e114]: no spam. one email with the breakdown. unsubscribe anytime.
+  - contentinfo [ref=e115]:
+    - generic [ref=e116]: PRINTMAXX 2026. built with the tools on this page.

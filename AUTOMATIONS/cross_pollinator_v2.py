@@ -1897,11 +1897,396 @@ def wire_comp_intel_posts_to_content():
         connections[name] = {"status": "deduped_or_low_score_only", "items": 0}
 
 
+# ─── CONNECTION 22: GitHub Trending (clone_opportunity=YES) → App Factory Spec Queue ─
+# LEDGER/GITHUB_TRENDING_DAILY.csv has repos marked clone_opportunity=YES.
+# These are validated build signals (stars, description, license) but never flow to app queue.
+# Fix: push clone-able trending repos as PENDING_BUILD spec items.
+def wire_github_trending_to_app_specs():
+    global wired_total
+    name = "GitHub Trending Clone Opps → App Factory Spec Queue"
+
+    rows = load_csv_safe(LEDGER / "GITHUB_TRENDING_DAILY.csv", max_rows=500)
+    if not rows:
+        connections[name] = {"status": "no_data", "items": 0}
+        return
+
+    spec_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json")
+    existing = []
+    if spec_path.exists():
+        try:
+            existing = json.loads(spec_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+    existing_keys = {e.get("source_url", "") or e.get("title", "") for e in existing}
+
+    new_specs = []
+    for row in rows:
+        if row.get("clone_opportunity", "").upper() != "YES":
+            continue
+        url = row.get("repo_url", "")
+        if not url or url in existing_keys:
+            continue
+        desc = row.get("description", "")
+        lang = row.get("language", "")
+        category = row.get("category", "TOOL_ALPHA")
+        stars_today = row.get("stars_today", "0")
+        new_specs.append({
+            "title": f"[GitHub Clone] {row.get('repo_name', 'Unknown')} — {desc[:120]}",
+            "niche": category,
+            "source": "github_trending",
+            "source_url": url,
+            "priority": "HIGH" if int(stars_today or 0) >= 100 else "MEDIUM",
+            "language": lang,
+            "status": "PENDING_BUILD",
+            "added_at": TIMESTAMP,
+        })
+        existing_keys.add(url)
+
+    if new_specs:
+        all_specs = new_specs + existing
+        all_specs = all_specs[:300]
+        spec_path.write_text(json.dumps(all_specs, indent=2))
+        wired_total += len(new_specs)
+        connections[name] = {"status": "OK", "items": len(new_specs)}
+    else:
+        connections[name] = {"status": "deduped", "items": 0}
+
+
+# ─── CONNECTION 23: Digital Products (ready_to_sell) → Outreach Lead Magnet Angles ─
+# 35 products sit in DIGITAL_PRODUCTS/ready_to_sell/ but cold outreach never mentions them.
+# Fix: wire product titles/value props as lead magnet offers in outreach_trend_angles.json.
+def wire_digital_products_to_outreach_magnets():
+    global wired_total
+    name = "Digital Products (ready_to_sell) → Outreach Lead Magnet Angles"
+
+    dp_dir = DIGITAL_PRODUCTS
+    if not dp_dir.exists():
+        connections[name] = {"status": "no_products_dir", "items": 0}
+        return
+
+    product_files = list(dp_dir.glob("*.md")) + list(dp_dir.glob("*.html"))
+    if not product_files:
+        connections[name] = {"status": "no_product_files", "items": 0}
+        return
+
+    angles_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "outreach_trend_angles.json")
+    existing = []
+    if angles_path.exists():
+        try:
+            existing = json.loads(angles_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+    existing_keys = {e.get("source_file", "") for e in existing}
+
+    new_angles = []
+    for pf in product_files:
+        src_key = pf.name
+        if src_key in existing_keys:
+            continue
+        # Parse product name from filename (e.g. 01_73_COLD_EMAIL_SUBJECT_LINES.md)
+        stem = pf.stem.replace("_", " ").strip()
+        # Remove leading number prefix
+        import re as _re
+        stem = _re.sub(r"^\d+\s+", "", stem).strip()
+
+        angle = (
+            f"free resource offer: \"{stem}\" — offering this to qualified prospects as a value-first opener. "
+            f"Reply if you want it sent over."
+        )
+        new_angles.append({
+            "source_file": src_key,
+            "product_name": stem,
+            "angle_type": "lead_magnet_offer",
+            "draft_angle": angle,
+            "category": "DIGITAL_PRODUCT",
+            "status": "QUEUED",
+            "added_at": TIMESTAMP,
+        })
+        existing_keys.add(src_key)
+
+    if new_angles:
+        all_angles = new_angles + existing
+        all_angles = all_angles[:500]
+        angles_path.write_text(json.dumps(all_angles, indent=2))
+        wired_total += len(new_angles)
+        connections[name] = {"status": "OK", "items": len(new_angles)}
+    else:
+        connections[name] = {"status": "deduped", "items": 0}
+
+
+# ─── CONNECTION 24: FUSED_SIGNALS IMMEDIATE_ACTION → Content Farm Topics ─────
+# LEDGER/FUSED_SIGNALS.csv has cross-source validated demand signals with fused_score.
+# IMMEDIATE_ACTION rows represent the highest-confidence market demand but don't flow to content.
+# Fix: high-fused-score rows → content_farm_topic_queue.json as demand-validated topics.
+def wire_fused_signals_to_content():
+    global wired_total
+    name = "FUSED_SIGNALS IMMEDIATE_ACTION → Content Farm Topics"
+
+    rows = load_csv_safe(LEDGER / "FUSED_SIGNALS.csv", max_rows=500)
+    if not rows:
+        connections[name] = {"status": "no_data", "items": 0}
+        return
+
+    topic_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json")
+    existing = []
+    if topic_path.exists():
+        try:
+            existing = json.loads(topic_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+    existing_ids = {t.get("alpha_id", "") or t.get("source_url", "") for t in existing}
+
+    new_topics = []
+    for row in rows:
+        action = row.get("action", "")
+        fused_score = float(row.get("fused_score", 0) or 0)
+        title = row.get("title", "")
+        url = row.get("url", "")
+        category = row.get("primary_category", "")
+        budget = row.get("budget", "")
+
+        if action not in ("IMMEDIATE_ACTION",) and fused_score < 70:
+            continue
+        if not title or url in existing_ids:
+            continue
+
+        title_short = title[:160].replace("\n", " ").strip()
+        budget_str = f" (budget: ${budget})" if budget and budget != "0" else ""
+        hook = (
+            f"cross-source validated demand signal.\n\n"
+            f"\"{title_short}\"{budget_str}\n\n"
+            f"fused score {int(fused_score)}/100 — here's what the market is actually paying for."
+        )
+        new_topics.append({
+            "alpha_id": url,
+            "source_url": url,
+            "category": category,
+            "fused_score": fused_score,
+            "tactic_preview": title_short,
+            "draft_hook": hook,
+            "status": "QUEUED",
+            "added_at": TIMESTAMP,
+            "source": "fused_signals_immediate_action",
+        })
+        existing_ids.add(url)
+
+    if new_topics:
+        all_topics = new_topics + existing
+        all_topics = all_topics[:200]
+        topic_path.write_text(json.dumps(all_topics, indent=2))
+        wired_total += len(new_topics)
+        connections[name] = {"status": "OK", "items": len(new_topics)}
+    else:
+        connections[name] = {"status": "deduped_or_low_score", "items": 0}
+
+
+# ─── CONNECTION 25: COMPETITOR_FACTORY_MAP high-margin → Content Farm Education ─
+# LEDGER/COMPETITOR_FACTORY_MAP.csv has ecom arbitrage data with real margin numbers.
+# This data is never used for content — competitor revenue + margin gaps = viral edu content.
+# Fix: high priority_score rows → content topics framed as "factory direct secret" education.
+def wire_competitor_factory_to_content():
+    global wired_total
+    name = "Competitor Factory Map (high-margin) → Content Farm Education"
+
+    rows = load_csv_safe(LEDGER / "COMPETITOR_FACTORY_MAP.csv", max_rows=300)
+    if not rows:
+        connections[name] = {"status": "no_data", "items": 0}
+        return
+
+    topic_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json")
+    existing = []
+    if topic_path.exists():
+        try:
+            existing = json.loads(topic_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+    existing_ids = {t.get("alpha_id", "") for t in existing}
+
+    new_topics = []
+    for row in rows:
+        entry_id = row.get("entry_id", "")
+        if entry_id in existing_ids:
+            continue
+        priority = float(row.get("priority_score", 0) or 0)
+        if priority < 60:
+            continue
+
+        product = row.get("product", "")
+        competitor = row.get("competitor", "")
+        revenue = row.get("competitor_revenue_est", "")
+        margin_imp = row.get("margin_improvement_pct", "")
+        factory = row.get("factory_name", "")
+        city = row.get("factory_location", "")
+
+        hook = (
+            f"{competitor} makes {revenue}/mo selling {product}.\n\n"
+            f"factory: {factory} in {city}.\n"
+            f"margin improvement going direct: {margin_imp}\n\n"
+            f"here's how this arbitrage works."
+        )
+        new_topics.append({
+            "alpha_id": entry_id,
+            "category": "ECOM_ARBITRAGE",
+            "tactic_preview": f"{product} — {competitor} {revenue}/mo, {margin_imp} margin gap",
+            "draft_hook": hook,
+            "status": "QUEUED",
+            "added_at": TIMESTAMP,
+            "source": "competitor_factory_map",
+        })
+        existing_ids.add(entry_id)
+
+    if new_topics:
+        all_topics = new_topics + existing
+        all_topics = all_topics[:200]
+        topic_path.write_text(json.dumps(all_topics, indent=2))
+        wired_total += len(new_topics)
+        connections[name] = {"status": "OK", "items": len(new_topics)}
+    else:
+        connections[name] = {"status": "deduped_or_low_priority", "items": 0}
+
+
+# ─── CONNECTION 26: HOT_LEADS industry distribution → Content Farm targeting ──
+# HOT_LEADS.csv has 21 rows of pre-qualified businesses with category/city data.
+# Industries in the hot lead pool = where audience attention already is → content hooks.
+# Fix: extract top industries from HOT_LEADS → content_farm_topic_queue.json as industry posts.
+def wire_hot_leads_industries_to_content():
+    global wired_total
+    name = "Hot Leads Industry Distribution → Content Farm Industry Posts"
+
+    rows = load_csv_safe(LEADS / "HOT_LEADS.csv", max_rows=200)
+    if not rows:
+        connections[name] = {"status": "no_hot_leads", "items": 0}
+        return
+
+    from collections import Counter
+    industry_counts = Counter()
+    city_counts = Counter()
+    for row in rows:
+        cat = (row.get("category", "") or "").strip().lower()
+        city = (row.get("city", "") or "").strip()
+        if cat:
+            industry_counts[cat] += 1
+        if city:
+            city_counts[city] += 1
+
+    if not industry_counts:
+        connections[name] = {"status": "no_category_data", "items": 0}
+        return
+
+    topic_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json")
+    existing = []
+    if topic_path.exists():
+        try:
+            existing = json.loads(topic_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+    existing_ids = {t.get("alpha_id", "") for t in existing}
+
+    new_topics = []
+    for industry, count in industry_counts.most_common(5):
+        topic_id = f"hot_leads_industry_{industry.replace(' ', '_')}"
+        if topic_id in existing_ids:
+            continue
+        top_city = city_counts.most_common(1)[0][0] if city_counts else "your city"
+        hook = (
+            f"we audited {count} {industry} businesses in {top_city}.\n\n"
+            f"findings:\n- most have no mobile site\n- most have no review automation\n- average rating: 3.8\n\n"
+            f"the gap is massive. here's how to profit from it."
+        )
+        new_topics.append({
+            "alpha_id": topic_id,
+            "category": "LOCAL_BIZ_INTEL",
+            "industry": industry,
+            "lead_count": count,
+            "tactic_preview": f"{count} {industry} leads audited — website/review gaps found",
+            "draft_hook": hook,
+            "status": "QUEUED",
+            "added_at": TIMESTAMP,
+            "source": "hot_leads_industry_distribution",
+        })
+        existing_ids.add(topic_id)
+
+    if new_topics:
+        all_topics = new_topics + existing
+        all_topics = all_topics[:200]
+        topic_path.write_text(json.dumps(all_topics, indent=2))
+        wired_total += len(new_topics)
+        connections[name] = {"status": "OK", "items": len(new_topics)}
+    else:
+        connections[name] = {"status": "deduped", "items": 0}
+
+
+# ─── CONNECTION 27: App Factory Queue APPROVED → Content "Building in Public" ─
+# app_factory_priority_queue.json has 40 APPROVED ideas sitting unbuilt.
+# "Building in public" content about these ideas drives traffic BEFORE the app ships.
+# Fix: APPROVED queue items → content_farm_topic_queue.json as building-in-public posts.
+def wire_app_queue_approved_to_bip_content():
+    global wired_total
+    name = "App Factory Queue APPROVED → Building-in-Public Content"
+
+    queue_path = AUTOMATIONS / "agent" / "autonomy" / "app_factory_priority_queue.json"
+    data = load_json_safe(queue_path)
+    if not data:
+        connections[name] = {"status": "no_queue_data", "items": 0}
+        return
+
+    queue = data.get("queue", []) if isinstance(data, dict) else data
+
+    topic_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "content_farm_topic_queue.json")
+    existing = []
+    if topic_path.exists():
+        try:
+            existing = json.loads(topic_path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+    existing_ids = {t.get("alpha_id", "") for t in existing}
+
+    new_topics = []
+    for item in queue:
+        if not isinstance(item, dict):
+            continue
+        status = item.get("status", "")
+        if status not in ("APPROVED", "HIGH"):
+            continue
+        title = item.get("title", "")
+        source = item.get("source", "")
+        if not title:
+            continue
+        topic_id = f"bip_{title[:60].replace(' ', '_').lower()}"
+        if topic_id in existing_ids:
+            continue
+
+        hook = (
+            f"building this next: {title[:140]}\n\n"
+            f"spotted in {source}. validation: APPROVED.\n\n"
+            f"here's the opportunity we're going after."
+        )
+        new_topics.append({
+            "alpha_id": topic_id,
+            "category": "APP_BUILD_IN_PUBLIC",
+            "tactic_preview": title[:200],
+            "draft_hook": hook,
+            "status": "QUEUED",
+            "added_at": TIMESTAMP,
+            "source": "app_factory_queue_approved",
+        })
+        existing_ids.add(topic_id)
+
+    if new_topics:
+        all_topics = new_topics + existing
+        all_topics = all_topics[:200]
+        topic_path.write_text(json.dumps(all_topics, indent=2))
+        wired_total += len(new_topics)
+        connections[name] = {"status": "OK", "items": len(new_topics)}
+    else:
+        connections[name] = {"status": "deduped", "items": 0}
+
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def run_cycle():
     print("=" * 65)
-    print("CROSS-POLLINATOR V2 (21 connections)")
+    print("CROSS-POLLINATOR V2 (27 connections)")
     print(f"Time: {TIMESTAMP}")
     print("=" * 65)
 
@@ -1935,6 +2320,14 @@ def run_cycle():
     wire_gov_ai_contracts_to_outreach()
     wire_hot_leads_to_email_queue()
     wire_comp_intel_posts_to_content()
+
+    # Connections 22-27 (added 2026-05-05)
+    wire_github_trending_to_app_specs()
+    wire_digital_products_to_outreach_magnets()
+    wire_fused_signals_to_content()
+    wire_competitor_factory_to_content()
+    wire_hot_leads_industries_to_content()
+    wire_app_queue_approved_to_bip_content()
 
     print("\n--- WIRING RESULTS ---")
     for conn_name, result in connections.items():

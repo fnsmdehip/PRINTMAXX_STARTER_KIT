@@ -34,6 +34,7 @@ import { setPremiumStatus } from '../store/subscriptionSlice';
 import { Theme } from '../utils/theme';
 import { haptics } from '../utils/haptics';
 import { playSound } from '../sounds/SoundEngine';
+import * as StoreReview from 'expo-store-review';
 import {
   calculateFullPlan,
   feetInchesToCm,
@@ -225,6 +226,15 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps): React.JSX.Element 
       useNativeDriver: false,
     }).start();
   }, [step, progressAnim]);
+
+  // Trigger in-app review at step 8 — peak engagement before paywall
+  useEffect(() => {
+    if (step === 8) {
+      StoreReview.isAvailableAsync().then(available => {
+        if (available) StoreReview.requestReview();
+      });
+    }
+  }, [step]);
 
   // ── Transition animation ──
   const animateTransition = useCallback(

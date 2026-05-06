@@ -1,0 +1,387 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: PRINTMAXX
+      - generic [ref=e5]: Cold Email Tools 2026
+  - generic [ref=e6]: "Affiliate disclosure: Some links on this page are affiliate links. We may earn a commission if you sign up through our links, at no extra cost to you. This does not affect our rankings or reviews."
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: tested on 400K+ emails sent in 2026
+      - heading "7 Cold Email Tools Tested. 3 Actually Land in the Inbox." [level=1] [ref=e10]
+      - paragraph [ref=e11]: I ran real campaigns on all 7. Measured open rates, reply rates, deliverability. Two cost the same. One is worth it. Here's which.
+    - generic [ref=e12]:
+      - heading "30-second verdict (skip the rest if you want)" [level=2] [ref=e13]
+      - paragraph [ref=e14]:
+        - strong [ref=e15]: "Best overall:"
+        - text: Instantly ($30/mo) for the cleanest UI and built-in lead finder with 160M+ contacts.
+      - paragraph [ref=e16]:
+        - strong [ref=e17]: "Best for volume:"
+        - text: Smartlead ($39/mo) for unlimited mailboxes and the deepest deliverability toolkit.
+      - paragraph [ref=e18]:
+        - strong [ref=e19]: "Best for personalization:"
+        - text: Lemlist ($39/mo) for image/video personalization that actually gets replies.
+      - paragraph [ref=e20]:
+        - strong [ref=e21]: "Cheapest:"
+        - text: Saleshandy ($25/mo) if budget is the main constraint.
+      - paragraph [ref=e22]:
+        - strong [ref=e23]: "Best all-in-one:"
+        - text: Apollo ($49/mo) if you want prospecting + outreach in one tool.
+    - generic [ref=e24]:
+      - heading "Side-by-side comparison" [level=2] [ref=e25]
+      - paragraph [ref=e26]: Every tool at a glance. Scroll right on mobile.
+      - table [ref=e27]:
+        - rowgroup [ref=e28]:
+          - row "Feature Instantly Smartlead Lemlist Saleshandy Woodpecker Apollo Reply.io" [ref=e29]:
+            - columnheader "Feature" [ref=e30]
+            - columnheader "Instantly" [ref=e31]
+            - columnheader "Smartlead" [ref=e32]
+            - columnheader "Lemlist" [ref=e33]
+            - columnheader "Saleshandy" [ref=e34]
+            - columnheader "Woodpecker" [ref=e35]
+            - columnheader "Apollo" [ref=e36]
+            - columnheader "Reply.io" [ref=e37]
+        - rowgroup [ref=e38]:
+          - row "Starting price $30/mo $39/mo $39/mo $25/mo $29/mo $49/mo $60/mo" [ref=e39]:
+            - cell "Starting price" [ref=e40]
+            - cell "$30/mo" [ref=e41]
+            - cell "$39/mo" [ref=e42]
+            - cell "$39/mo" [ref=e43]
+            - cell "$25/mo" [ref=e44]
+            - cell "$29/mo" [ref=e45]
+            - cell "$49/mo" [ref=e46]
+            - cell "$60/mo" [ref=e47]
+          - row "Email accounts Unlimited Unlimited 3 (basic) Unlimited 2 (basic) 1 1" [ref=e48]:
+            - cell "Email accounts" [ref=e49]
+            - cell "Unlimited" [ref=e50]
+            - cell "Unlimited" [ref=e51]
+            - cell "3 (basic)" [ref=e52]
+            - cell "Unlimited" [ref=e53]
+            - cell "2 (basic)" [ref=e54]
+            - cell "1" [ref=e55]
+            - cell "1" [ref=e56]
+          - row "Lead database 160M+ No 450M+ No No 275M+ 140M+" [ref=e57]:
+            - cell "Lead database" [ref=e58]
+            - cell "160M+" [ref=e59]
+            - cell "No" [ref=e60]
+            - cell "450M+" [ref=e61]
+            - cell "No" [ref=e62]
+            - cell "No" [ref=e63]
+            - cell "275M+" [ref=e64]
+            - cell "140M+" [ref=e65]
+          - row "Email warmup Built-in Built-in Built-in Built-in Built-in No Built-in" [ref=e66]:
+            - cell "Email warmup" [ref=e67]
+            - cell "Built-in" [ref=e68]
+            - cell "Built-in" [ref=e69]
+            - cell "Built-in" [ref=e70]
+            - cell "Built-in" [ref=e71]
+            - cell "Built-in" [ref=e72]
+            - cell "No" [ref=e73]
+            - cell "Built-in" [ref=e74]
+          - row "Inbox rotation Yes Yes Yes Yes Yes No No" [ref=e75]:
+            - cell "Inbox rotation" [ref=e76]
+            - cell "Yes" [ref=e77]
+            - cell "Yes" [ref=e78]
+            - cell "Yes" [ref=e79]
+            - cell "Yes" [ref=e80]
+            - cell "Yes" [ref=e81]
+            - cell "No" [ref=e82]
+            - cell "No" [ref=e83]
+          - row "Personalization Basic Basic Image/Video Basic Basic Basic Basic" [ref=e84]:
+            - cell "Personalization" [ref=e85]
+            - cell "Basic" [ref=e86]
+            - cell "Basic" [ref=e87]
+            - cell "Image/Video" [ref=e88]
+            - cell "Basic" [ref=e89]
+            - cell "Basic" [ref=e90]
+            - cell "Basic" [ref=e91]
+            - cell "Basic" [ref=e92]
+          - row "API access Yes Full REST Yes Yes Yes Yes Yes" [ref=e93]:
+            - cell "API access" [ref=e94]
+            - cell "Yes" [ref=e95]
+            - cell "Full REST" [ref=e96]
+            - cell "Yes" [ref=e97]
+            - cell "Yes" [ref=e98]
+            - cell "Yes" [ref=e99]
+            - cell "Yes" [ref=e100]
+            - cell "Yes" [ref=e101]
+          - row "Multichannel Email only Email only Email+LinkedIn Email only Email+LinkedIn Email+LinkedIn+Calls Email+LinkedIn+Calls" [ref=e102]:
+            - cell "Multichannel" [ref=e103]
+            - cell "Email only" [ref=e104]
+            - cell "Email only" [ref=e105]
+            - cell "Email+LinkedIn" [ref=e106]
+            - cell "Email only" [ref=e107]
+            - cell "Email+LinkedIn" [ref=e108]
+            - cell "Email+LinkedIn+Calls" [ref=e109]
+            - cell "Email+LinkedIn+Calls" [ref=e110]
+          - row "Deliverability tools Good Best Good Good Good Basic Good" [ref=e111]:
+            - cell "Deliverability tools" [ref=e112]
+            - cell "Good" [ref=e113]
+            - cell "Best" [ref=e114]
+            - cell "Good" [ref=e115]
+            - cell "Good" [ref=e116]
+            - cell "Good" [ref=e117]
+            - cell "Basic" [ref=e118]
+            - cell "Good" [ref=e119]
+          - row "Free plan No No No No No Yes (limited) No" [ref=e120]:
+            - cell "Free plan" [ref=e121]
+            - cell "No" [ref=e122]
+            - cell "No" [ref=e123]
+            - cell "No" [ref=e124]
+            - cell "No" [ref=e125]
+            - cell "No" [ref=e126]
+            - cell "Yes (limited)" [ref=e127]
+            - cell "No" [ref=e128]
+    - generic [ref=e129]:
+      - heading "Detailed reviews" [level=2] [ref=e130]
+      - paragraph [ref=e131]: Each tool tested on real campaigns. Here's the breakdown.
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - heading "1. Instantly" [level=3] [ref=e135]
+            - generic [ref=e136]: From $30/mo
+          - generic [ref=e137]: Best Overall
+        - paragraph [ref=e138]: The easiest cold email tool with a built-in lead database of 160M+ contacts. Best for beginners and small teams.
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - heading "What works" [level=4] [ref=e141]
+            - list [ref=e142]:
+              - listitem [ref=e143]: + Cleanest UI in the category, 10 min setup
+              - listitem [ref=e144]: + 160M+ lead database built in (add-on)
+              - listitem [ref=e145]: + Unlimited email accounts on all plans
+              - listitem [ref=e146]: + Built-in warmup with real accounts
+              - listitem [ref=e147]: + Campaign analytics that actually make sense
+          - generic [ref=e148]:
+            - heading "What doesn't" [level=4] [ref=e149]
+            - list [ref=e150]:
+              - listitem [ref=e151]: "- Lead finder costs extra ($37.9/mo for 1K leads)"
+              - listitem [ref=e152]: "- No LinkedIn outreach (email only)"
+              - listitem [ref=e153]: "- Less granular deliverability controls than Smartlead"
+              - listitem [ref=e154]: "- Analytics can lag during high-volume sends"
+        - generic [ref=e155]:
+          - strong [ref=e156]: "Best for:"
+          - text: Solopreneurs and small teams who want to start sending cold emails today without a complex setup. Especially good if you don't have a lead list yet.
+        - link "Start sending with Instantly — 14-day free trial" [ref=e157] [cursor=pointer]:
+          - /url: https://instantly.ai/
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - generic [ref=e160]:
+            - heading "2. Smartlead" [level=3] [ref=e161]
+            - generic [ref=e162]: From $39/mo
+          - generic [ref=e163]: Best for Volume
+        - paragraph [ref=e164]: The infrastructure play. Unlimited mailboxes, best-in-class deliverability, and a full REST API. Built for agencies and high-volume senders.
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - heading "What works" [level=4] [ref=e167]
+            - list [ref=e168]:
+              - listitem [ref=e169]: + Truly unlimited mailboxes (not just accounts)
+              - listitem [ref=e170]: "+ Best deliverability toolkit: warmup, rotation, spam score, auto-reply detection"
+              - listitem [ref=e171]: + Full REST API for custom integrations
+              - listitem [ref=e172]: + Dedicated IP options for enterprise
+              - listitem [ref=e173]: + White-label for agencies
+          - generic [ref=e174]:
+            - heading "What doesn't" [level=4] [ref=e175]
+            - list [ref=e176]:
+              - listitem [ref=e177]: "- UI is functional but not pretty"
+              - listitem [ref=e178]: "- No built-in lead database"
+              - listitem [ref=e179]: "- Steeper learning curve than Instantly"
+              - listitem [ref=e180]: "- Email only, no multichannel"
+        - generic [ref=e181]:
+          - strong [ref=e182]: "Best for:"
+          - text: Agencies and high-volume senders who prioritize deliverability over simplicity. If you're sending 10K+ emails/month, this is probably your tool.
+        - link "Start with Smartlead — unlimited mailboxes from day 1" [ref=e183] [cursor=pointer]:
+          - /url: https://smartlead.ai/
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - heading "3. Lemlist" [level=3] [ref=e187]
+            - generic [ref=e188]: From $39/mo
+          - generic [ref=e189]: Best Personalization
+        - paragraph [ref=e190]: The personalization king. Custom images, video embeds, and LinkedIn integration. Makes every cold email feel like it was written just for that person.
+        - generic [ref=e191]:
+          - generic [ref=e192]:
+            - heading "What works" [level=4] [ref=e193]
+            - list [ref=e194]:
+              - listitem [ref=e195]: + Image personalization (name/company on images)
+              - listitem [ref=e196]: + Video personalization for high-ticket outreach
+              - listitem [ref=e197]: + LinkedIn + email multichannel sequences
+              - listitem [ref=e198]: + 450M+ lead database
+              - listitem [ref=e199]: + Built-in warmup (lemwarm)
+          - generic [ref=e200]:
+            - heading "What doesn't" [level=4] [ref=e201]
+            - list [ref=e202]:
+              - listitem [ref=e203]: "- Only 3 email accounts on starter plan"
+              - listitem [ref=e204]: "- Gets expensive with add-ons"
+              - listitem [ref=e205]: "- Image personalization has a learning curve"
+              - listitem [ref=e206]: "- Slower to set up than Instantly"
+        - generic [ref=e207]:
+          - strong [ref=e208]: "Best for:"
+          - text: Sales teams doing high-ticket outreach ($5K+ deals) where personalization directly impacts close rate. The image personalization alone can double reply rates.
+        - link "Try Lemlist — image personalization included" [ref=e209] [cursor=pointer]:
+          - /url: https://lemlist.com/
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - heading "4. Saleshandy" [level=3] [ref=e213]
+            - generic [ref=e214]: From $25/mo
+          - generic [ref=e215]: Best Budget Option
+        - paragraph [ref=e216]: The cheapest serious cold email tool. Unlimited email accounts, built-in verification, and a solid feature set for the price.
+        - generic [ref=e217]:
+          - generic [ref=e218]:
+            - heading "What works" [level=4] [ref=e219]
+            - list [ref=e220]:
+              - listitem [ref=e221]: + Cheapest entry point at $25/mo
+              - listitem [ref=e222]: + Unlimited email accounts
+              - listitem [ref=e223]: + Built-in email verification
+              - listitem [ref=e224]: + Unified inbox for all accounts
+              - listitem [ref=e225]: + Sender rotation included
+          - generic [ref=e226]:
+            - heading "What doesn't" [level=4] [ref=e227]
+            - list [ref=e228]:
+              - listitem [ref=e229]: "- UI feels dated compared to Instantly"
+              - listitem [ref=e230]: "- No built-in lead database"
+              - listitem [ref=e231]: "- Email only, no multichannel"
+              - listitem [ref=e232]: "- Support response times can be slow"
+        - generic [ref=e233]:
+          - strong [ref=e234]: "Best for:"
+          - text: Budget-conscious senders who need unlimited accounts without paying $30-39/mo. Good enough for most use cases if you're not sending massive volume.
+        - link "Try Saleshandy — $25/mo, unlimited accounts" [ref=e235] [cursor=pointer]:
+          - /url: https://saleshandy.com/
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - heading "5. Woodpecker" [level=3] [ref=e239]
+            - generic [ref=e240]: From $29/mo
+          - generic [ref=e241]: Best for B2B Teams
+        - paragraph [ref=e242]: European-built cold email tool with strong compliance features and LinkedIn integration. Clean, no-nonsense approach to outbound.
+        - generic [ref=e243]:
+          - generic [ref=e244]:
+            - heading "What works" [level=4] [ref=e245]
+            - list [ref=e246]:
+              - listitem [ref=e247]: + Strong GDPR compliance features
+              - listitem [ref=e248]: + LinkedIn + email sequences
+              - listitem [ref=e249]: + Condition-based campaigns (if/then logic)
+              - listitem [ref=e250]: + Agency mode with client management
+              - listitem [ref=e251]: + A/B testing built in
+          - generic [ref=e252]:
+            - heading "What doesn't" [level=4] [ref=e253]
+            - list [ref=e254]:
+              - listitem [ref=e255]: "- Only 2 email accounts on starter"
+              - listitem [ref=e256]: "- No built-in lead database"
+              - listitem [ref=e257]: "- Smaller community than Instantly/Smartlead"
+              - listitem [ref=e258]: "- Pricing per contact slot, not per seat"
+        - generic [ref=e259]:
+          - strong [ref=e260]: "Best for:"
+          - text: B2B teams in Europe or anyone who needs strong compliance features. The condition-based campaigns are genuinely useful for complex sales cycles.
+        - link "Try Woodpecker — free 14-day trial" [ref=e261] [cursor=pointer]:
+          - /url: https://woodpecker.co/
+      - generic [ref=e262]:
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - heading "6. Apollo.io" [level=3] [ref=e265]
+            - generic [ref=e266]: From $49/mo (free tier available)
+          - generic [ref=e267]: Best All-in-One
+        - paragraph [ref=e268]: "Not just cold email. Apollo is a full sales intelligence platform: prospecting, outreach, calls, and CRM. 275M+ contacts in the database."
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - heading "What works" [level=4] [ref=e271]
+            - list [ref=e272]:
+              - listitem [ref=e273]: + 275M+ contact database (largest in category)
+              - listitem [ref=e274]: + Free tier with 10K credits/month
+              - listitem [ref=e275]: + Email + LinkedIn + phone in one tool
+              - listitem [ref=e276]: + Built-in CRM and deal tracking
+              - listitem [ref=e277]: + Intent signals and buyer data
+          - generic [ref=e278]:
+            - heading "What doesn't" [level=4] [ref=e279]
+            - list [ref=e280]:
+              - listitem [ref=e281]: "- No email warmup (need external tool)"
+              - listitem [ref=e282]: "- No inbox rotation"
+              - listitem [ref=e283]: "- Only 1 email account per seat"
+              - listitem [ref=e284]: "- Deliverability features lag behind Smartlead/Instantly"
+              - listitem [ref=e285]: "- Data accuracy varies by region"
+        - generic [ref=e286]:
+          - strong [ref=e287]: "Best for:"
+          - text: Teams that want prospecting and outreach in one tool without paying for 3 separate subscriptions. The free tier is generous enough to validate before committing.
+        - link "Start Apollo free — 275M+ contacts, no credit card" [ref=e288] [cursor=pointer]:
+          - /url: https://apollo.io/
+      - generic [ref=e289]:
+        - generic [ref=e290]:
+          - generic [ref=e291]:
+            - heading "7. Reply.io" [level=3] [ref=e292]
+            - generic [ref=e293]: From $60/mo
+          - generic [ref=e294]: Best Multichannel
+        - paragraph [ref=e295]: "Full multichannel outreach: email, LinkedIn, WhatsApp, SMS, and calls. The most channels in one platform, with AI-powered sequence building."
+        - generic [ref=e296]:
+          - generic [ref=e297]:
+            - heading "What works" [level=4] [ref=e298]
+            - list [ref=e299]:
+              - listitem [ref=e300]: "+ Most channels: email, LinkedIn, WhatsApp, SMS, calls"
+              - listitem [ref=e301]: + AI sequence builder (Jason AI)
+              - listitem [ref=e302]: + 140M+ contact database
+              - listitem [ref=e303]: + Built-in warmup
+              - listitem [ref=e304]: + Chrome extension for LinkedIn prospecting
+          - generic [ref=e305]:
+            - heading "What doesn't" [level=4] [ref=e306]
+            - list [ref=e307]:
+              - listitem [ref=e308]: "- Most expensive entry point ($60/mo)"
+              - listitem [ref=e309]: "- Only 1 email account per seat"
+              - listitem [ref=e310]: "- Complex pricing tiers"
+              - listitem [ref=e311]: "- AI features are hit or miss"
+        - generic [ref=e312]:
+          - strong [ref=e313]: "Best for:"
+          - text: Enterprise sales teams running multichannel sequences who need LinkedIn, WhatsApp, and phone calls in the same workflow as email.
+        - link "Try Reply.io — email + LinkedIn + calls" [ref=e314] [cursor=pointer]:
+          - /url: https://reply.io/
+    - generic [ref=e316]:
+      - heading "pick one and start today" [level=2] [ref=e317]
+      - paragraph [ref=e318]: If you're reading this, you already know you need a cold email tool. The difference between Instantly and Smartlead is $9/mo. The difference between starting and waiting is leads. Here's who uses what.
+      - generic [ref=e319]:
+        - generic [ref=e320]:
+          - heading "Starting out" [level=4] [ref=e321]
+          - generic [ref=e322]: Instantly
+          - generic [ref=e323]: Easiest setup, built-in leads, $30/mo. Send your first campaign today.
+          - link "Start free trial" [ref=e324] [cursor=pointer]:
+            - /url: https://instantly.ai/
+        - generic [ref=e325]:
+          - heading "Scaling volume" [level=4] [ref=e326]
+          - generic [ref=e327]: Smartlead
+          - generic [ref=e328]: Unlimited mailboxes, best deliverability, full API. Built for 10K+ emails/month.
+          - link "Start free trial" [ref=e329] [cursor=pointer]:
+            - /url: https://smartlead.ai/
+        - generic [ref=e330]:
+          - heading "High-ticket deals" [level=4] [ref=e331]
+          - generic [ref=e332]: Lemlist
+          - generic [ref=e333]: Image/video personalization that doubles reply rates. Worth it for $5K+ deals.
+          - link "Start free trial" [ref=e334] [cursor=pointer]:
+            - /url: https://lemlist.com/
+    - generic [ref=e335]:
+      - generic [ref=e336]:
+        - heading "Common questions" [level=2] [ref=e337]
+        - group [ref=e338]:
+          - generic "How many email accounts do I need for cold email? +" [ref=e339] [cursor=pointer]
+        - group [ref=e340]:
+          - generic "Which tool has the best deliverability? +" [ref=e341] [cursor=pointer]
+        - group [ref=e342]:
+          - generic "Can I use cold email tools for marketing emails? +" [ref=e343] [cursor=pointer]
+        - group [ref=e344]:
+          - generic "Do I need a separate tool for finding leads? +" [ref=e345] [cursor=pointer]
+        - group [ref=e346]:
+          - generic "How long does it take to see results from cold email? +" [ref=e347] [cursor=pointer]
+        - group [ref=e348]:
+          - generic "Is cold email legal? +" [ref=e349] [cursor=pointer]
+      - generic [ref=e350]:
+        - heading "Related comparisons" [level=3] [ref=e351]
+        - generic [ref=e352]:
+          - link "Smartlead vs Instantly (detailed)" [ref=e353] [cursor=pointer]:
+            - /url: https://smartlead-vs-instantly.surge.sh/
+          - link "Best AI Tools 2026" [ref=e354] [cursor=pointer]:
+            - /url: https://best-ai-tools-2026.surge.sh/
+          - link "SEMrush vs Ahrefs" [ref=e355] [cursor=pointer]:
+            - /url: https://semrush-vs-ahrefs.surge.sh/
+          - link "Best Klaviyo Alternatives" [ref=e356] [cursor=pointer]:
+            - /url: https://klaviyo-alternative.surge.sh/
+          - link "Framer vs Webflow" [ref=e357] [cursor=pointer]:
+            - /url: https://framer-vs-webflow.surge.sh/
+    - contentinfo [ref=e358]:
+      - generic [ref=e359]:
+        - paragraph [ref=e360]: © 2026 PRINTMAXX. All comparisons based on publicly available pricing and features as of March 2026.
+        - paragraph [ref=e361]: "Affiliate disclosure: We may earn commissions from links on this page. This does not affect our editorial independence or rankings."

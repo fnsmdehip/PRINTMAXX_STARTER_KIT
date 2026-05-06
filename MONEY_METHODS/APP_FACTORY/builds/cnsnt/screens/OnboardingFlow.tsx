@@ -51,6 +51,7 @@ const ASSETS = {
 };
 import purchaseService from '../services/purchases';
 import { playSound } from '../sounds/SoundEngine';
+import * as StoreReview from 'expo-store-review';
 import {
   Colors,
   Typography,
@@ -203,6 +204,15 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) => {
       useNativeDriver: false,
     }).start();
   }, [step, progressAnim]);
+
+  // Trigger in-app review at step 8 — peak engagement before paywall
+  useEffect(() => {
+    if (step === 8) {
+      StoreReview.isAvailableAsync().then(available => {
+        if (available) StoreReview.requestReview();
+      });
+    }
+  }, [step]);
 
   const animateTransition = useCallback(
     (nextStep: number) => {

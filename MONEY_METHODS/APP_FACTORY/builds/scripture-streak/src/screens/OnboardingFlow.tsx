@@ -19,6 +19,7 @@ import { StorageService } from '../services/storage';
 import { NotificationService } from '../services/notifications';
 import { getOfferings, purchasePackage, restorePurchases } from '../services/purchases';
 import { playSound } from '../sounds/SoundEngine';
+import * as StoreReview from 'expo-store-review';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const TOTAL_STEPS = 12;
@@ -151,6 +152,15 @@ export function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
       duration: 300,
       useNativeDriver: false,
     }).start();
+  }, [step]);
+
+  // Trigger in-app review at step 8 (Feature Showcase) — peak engagement before paywall
+  useEffect(() => {
+    if (step === 8) {
+      StoreReview.isAvailableAsync().then(available => {
+        if (available) StoreReview.requestReview();
+      });
+    }
   }, [step]);
 
   const animateToStep = useCallback((nextStep: number) => {

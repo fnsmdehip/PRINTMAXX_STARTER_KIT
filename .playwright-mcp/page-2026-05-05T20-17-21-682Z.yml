@@ -1,0 +1,83 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: TruthScope
+    - link "Get Early Access" [ref=e4] [cursor=pointer]:
+      - /url: "#signup"
+  - generic [ref=e5]:
+    - generic [ref=e6]: Coming Soon to iOS · Real Science
+    - heading "TruthScope" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - text: Every other lie detector app is a
+      - strong [ref=e9]: prank
+      - text: . This one uses
+      - strong [ref=e10]: real biometric science
+      - text: to measure deception through your phone.
+    - link "Join the Waitlist" [ref=e11] [cursor=pointer]:
+      - /url: "#signup"
+      - img [ref=e12]
+      - text: Join the Waitlist
+    - paragraph [ref=e14]: Free early access. No spam. Unsubscribe anytime.
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - paragraph [ref=e17]: Core Technology
+      - heading "Three sensors. One verdict." [level=2] [ref=e18]
+      - paragraph [ref=e19]: TruthScope combines three independent biometric signals for a composite truthfulness score no single method can achieve alone.
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: ♥
+        - heading "Finger Pulse (PPG)" [level=3] [ref=e23]
+        - paragraph [ref=e24]: Place your finger on the camera. We measure real-time heart rate variability through photoplethysmography, the same tech used in medical pulse oximeters, to detect autonomic stress responses linked to deception.
+      - generic [ref=e25]:
+        - generic [ref=e26]: ♫
+        - heading "Voice Stress Analysis" [level=3] [ref=e27]
+        - paragraph [ref=e28]: Speak naturally. Our algorithm analyzes micro-tremors, pitch shifts, and frequency patterns in your vocal cords. Stress from deception produces measurable changes in the 8-12 Hz range that are invisible to the human ear.
+      - generic [ref=e29]:
+        - generic [ref=e30]: ◉
+        - heading "Facial Micro-Expressions" [level=3] [ref=e31]
+        - paragraph [ref=e32]: Look at the camera. We track 68 facial landmarks in real time to detect fleeting expressions, the involuntary flashes of emotion that last 1/25th of a second and reveal concealed feelings.
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - paragraph [ref=e35]: How It Works
+      - heading "Three steps. Thirty seconds." [level=2] [ref=e36]
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - heading "Calibrate" [level=3] [ref=e39]
+        - paragraph [ref=e40]: Answer a few simple truth-known questions so TruthScope learns your personal biometric baseline. Everyone's different.
+      - generic [ref=e41]:
+        - heading "Ask & Answer" [level=3] [ref=e42]
+        - paragraph [ref=e43]: Ask your question. The subject answers while TruthScope silently monitors pulse, voice, and face simultaneously.
+      - generic [ref=e44]:
+        - heading "See the Verdict" [level=3] [ref=e45]
+        - paragraph [ref=e46]: Get a composite truthfulness score with a confidence breakdown across all three biometric channels. Swipe to see the raw data.
+  - generic [ref=e48]:
+    - paragraph [ref=e49]: Viral Feature
+    - heading "Party Mode" [level=2] [ref=e50]
+    - paragraph [ref=e51]: Pass the phone around. Truth or Dare meets real science. Built-in question packs for game nights, couples, friends, and team-building. The room gets loud when someone's score drops.
+    - generic [ref=e52]: Most requested feature in beta
+  - generic [ref=e53]:
+    - generic [ref=e54]:
+      - paragraph [ref=e55]: The Science
+      - heading "How we actually detect deception" [level=2] [ref=e56]
+      - paragraph [ref=e57]: No gimmicks. No random number generators. Real peer-reviewed biometric methods adapted for mobile hardware.
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - heading "Photoplethysmography (PPG)" [level=3] [ref=e60]
+        - paragraph [ref=e61]: Your phone's camera LED illuminates blood vessels beneath the skin. As your heart beats, blood volume changes cause subtle color shifts captured at 30+ fps. We extract heart rate, HRV, and pulse transit time -- the same signals clinical polygraphs use, adapted for a phone camera sensor.
+      - generic [ref=e62]:
+        - heading "Vocal Micro-Tremor Analysis" [level=3] [ref=e63]
+        - paragraph [ref=e64]: Under cognitive load, the muscles controlling your vocal cords exhibit involuntary micro-tremors. TruthScope's audio pipeline isolates these sub-audible patterns by analyzing fundamental frequency jitter, shimmer, and harmonic-to-noise ratio in real time using your phone's microphone.
+      - generic [ref=e65]:
+        - heading "AU-Coded Facial Tracking" [level=3] [ref=e66]
+        - paragraph [ref=e67]: Using the Facial Action Coding System (FACS), we map 68 facial landmarks and track Action Units associated with deception -- asymmetric expressions, delayed smiles, blink-rate changes, and gaze aversion. On-device ML inference keeps all processing local and private.
+  - generic [ref=e69]:
+    - paragraph [ref=e70]: Early Access
+    - heading "Be first to know when we launch" [level=2] [ref=e71]
+    - paragraph [ref=e72]: Join the waitlist for free early access and a lifetime discount.
+    - generic [ref=e73]:
+      - textbox "Email address" [ref=e74]:
+        - /placeholder: you@email.com
+      - button "Join Waitlist" [ref=e75] [cursor=pointer]
+    - paragraph [ref=e76]: No spam. Unsubscribe anytime. We never share your email.
+  - contentinfo [ref=e77]:
+    - paragraph [ref=e78]: TruthScope is designed for entertainment, social gaming, and personal curiosity. It is not a replacement for a clinical polygraph, law enforcement tool, or diagnostic device. Biometric signals measured via smartphone sensors have inherent limitations compared to medical-grade equipment. Results should not be used to make legal, employment, or relationship decisions. Always use responsibly.
+    - paragraph [ref=e79]: © 2026 TruthScope. All rights reserved.

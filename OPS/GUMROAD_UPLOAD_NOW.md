@@ -755,3 +755,20 @@ JUST IN: Silver crashes under $70, falling over 5% today.
 
 [ACQUISITION] What are you building today? Let's self promote.
 
+
+
+---
+
+## Pending Enhancement (ALPHA1774001762, Score: 35)
+
+**Source:** @Naval (high-signal-accounts) | **URL:** https://x.com/alexbass/status/2047645157080658335
+**Added:** 2026-05-05T16:00:10-04:00
+
+Fundrise VCX is exactly why USVC needs to exist.
+
+Retail wants access to OpenAI, Anthropic, SpaceX, xAI, etc. That demand is not going away.
+
+VCX turned that demand into a liquid public wrapper that still trades around 4-5x NAV.
+
+At today’s ~$90 price vs. recent NAV references
+

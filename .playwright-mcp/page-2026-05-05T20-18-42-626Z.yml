@@ -1,0 +1,114 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e10]:
+    - generic [ref=e12]:
+      - generic [ref=e14]: SWIPE
+      - generic [ref=e15]:
+        - generic [ref=e17]: 💪
+        - generic [ref=e18]:
+          - generic [ref=e19]: Exercise
+          - generic [ref=e20]: 7 day streak
+    - generic [ref=e21]: The habit app for people who hate habit apps.
+    - generic [ref=e22]: Pick 3 non-negotiables. Swipe to complete. That's a win.
+    - button "Get Started" [ref=e23] [cursor=pointer]
+  - generic:
+    - generic:
+      - generic:
+        - generic: Today
+      - generic:
+        - generic "Add habit": +
+    - generic:
+      - img
+      - text: Swipe up to complete
+    - generic:
+      - generic:
+        - generic: ☶
+        - text: Today
+      - generic:
+        - generic: 📈
+        - text: Progress
+      - generic:
+        - generic: ⚙
+        - text: Settings
+  - generic:
+    - generic:
+      - generic: Your Progress
+    - generic:
+      - generic:
+        - generic: ☶
+        - text: Today
+      - generic:
+        - generic: 📈
+        - text: Progress
+      - generic:
+        - generic: ⚙
+        - text: Settings
+  - generic:
+    - generic:
+      - generic: Settings
+    - generic:
+      - generic:
+        - generic: ☶
+        - text: Today
+      - generic:
+        - generic: 📈
+        - text: Progress
+      - generic:
+        - generic: ⚙
+        - text: Settings
+  - generic:
+    - generic:
+      - button "✕"
+      - generic: 🔥
+      - generic: Keep Every Streak Going
+      - generic: Unlock unlimited habits, streak repair, and milestone sharing.
+      - generic:
+        - generic:
+          - generic: ✓
+          - generic:
+            - strong: Unlimited habits
+            - text: "— Free tier: up to 3 habits"
+        - generic:
+          - generic: ✓
+          - generic:
+            - strong: Streak repair
+            - text: — Forgive one slip per 30 days
+        - generic:
+          - generic: ✓
+          - generic:
+            - strong: Milestone sharing
+            - text: — Cards at 7, 30, 90, 365 days
+        - generic:
+          - generic: ✓
+          - generic:
+            - strong: Habit packs
+            - text: — Morning Routine, Deep Work, Fitness
+        - generic:
+          - generic: ✓
+          - generic:
+            - strong: History export
+            - text: — Full CSV of your streak data
+      - generic:
+        - generic:
+          - generic:
+            - generic: Most Popular
+            - generic: Annual
+            - generic:
+              - strong: $29.99
+              - text: /year ($2.50/mo)
+          - generic: 7-day free trial
+        - generic:
+          - generic:
+            - generic: Monthly
+            - generic:
+              - strong: $4.99
+              - text: /month
+      - generic: 7-day free trial, then $29.99/year. Cancel any time.
+      - button "Start Free Trial"
+      - button "Maybe later"
+      - generic: ★★★★★ 4.8 from 1,200+ reviews
+  - generic:
+    - generic:
+      - generic: Add a habit
+      - textbox "Habit name..."
+      - button "Add Habit"
+      - button "Cancel"

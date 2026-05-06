@@ -1,10 +1,10 @@
 {
   "venture": "competitive_intel",
-  "last_cycle": 186,
-  "last_run": "2026-05-05T18:19:25.286677+00:00",
-  "cumulative_blue_oceans": 1185,
-  "ci_csv_rows": 283,
-  "alpha_csv_rows": 40151,
+  "last_cycle": 189,
+  "last_run": "2026-05-05T22:32:51.069610+00:00",
+  "cumulative_blue_oceans": 1212,
+  "ci_csv_rows": 323,
+  "alpha_csv_rows": 40182,
   "strategies_covered": [
     "HEALTH + FITNESS + WELLNESS + NUTRITION",
     "PERSONAL FINANCE + INVESTING + ECONOMICS + TRADING",
@@ -81,9 +81,12 @@
     "PRODUCTIVITY SCIENCE + TIME MANAGEMENT + DEEP WORK PSYCHOLOGY",
     "MOTIVATION SCIENCE + WILLPOWER NEUROSCIENCE + SELF-REGULATION PSYCHOLOGY",
     "SELF-CONTROL SCIENCE + WILLPOWER NEUROSCIENCE + EGO DEPLETION RESEARCH",
-    "SELF-REGULATION FAILURE MODES + BREAKDOWN SCIENCE + RECOVERY PSYCHOLOGY"
+    "SELF-REGULATION FAILURE MODES + BREAKDOWN SCIENCE + RECOVERY PSYCHOLOGY",
+    "BEHAVIORAL ACTIVATION + ANTI-ANHEDONIA SCIENCE + REWARD SENSITIVITY RECOVERY",
+    "SLEEP SCIENCE + CIRCADIAN BIOLOGY + CHRONOBIOLOGY + SLEEP DEPRIVATION NEUROSCIENCE",
+    "STRESS BIOLOGY + CORTISOL SCIENCE + HPA AXIS + ALLOSTATIC LOAD NEUROSCIENCE"
   ],
-  "next_strategy": "BEHAVIORAL ACTIVATION + ANTI-ANHEDONIA SCIENCE + REWARD SENSITIVITY RECOVERY",
+  "next_strategy": "AUTONOMIC NERVOUS SYSTEM SCIENCE + SYMPATHETIC-PARASYMPATHETIC BALANCE + VAGAL TONE NEUROSCIENCE",
   "top_all_time": [
     {
       "name": "Daily CS Fundamentals Streak",
@@ -329,84 +332,48 @@
   "status": "RUNNING",
   "top_performers": [
     {
-      "niche": "daily_relapse_prevention_neuroscience_streak",
-      "display_name": "Daily Relapse Prevention Neuroscience Streak",
+      "niche": "daily_cortisol_awakening_response_streak",
+      "display_name": "Daily Cortisol Awakening Response Streak",
+      "score": 30,
+      "community": 9250000,
+      "priority": "P0",
+      "price": "$4.99-$8.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_hpa_axis_neuroscience_streak",
+      "display_name": "Daily HPA Axis Neuroscience Streak",
+      "score": 30,
+      "community": 8250000,
+      "priority": "P0",
+      "price": "$4.99-$8.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_allostatic_load_science_streak",
+      "display_name": "Daily Allostatic Load Science Streak",
+      "score": 30,
+      "community": 8330000,
+      "priority": "P0",
+      "price": "$4.99-$8.99/mo",
+      "is_new": true
+    },
+    {
+      "niche": "daily_chronic_stress_hippocampus_streak",
+      "display_name": "Daily Chronic Stress Hippocampus Streak",
       "score": 29,
-      "community": 8980000,
+      "community": 8230000,
       "priority": "P0",
       "price": "$4.99-$8.99/mo",
       "is_new": true
     },
     {
-      "niche": "daily_failure_mode_analysis_streak",
-      "display_name": "Daily Failure Mode Analysis Science Streak",
-      "score": 28,
-      "community": 8140000,
-      "priority": "P0",
-      "price": "$4.99-$8.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_breakdown_recovery_protocol_streak",
-      "display_name": "Daily Breakdown Recovery Protocol Science Streak",
+      "niche": "daily_cortisol_metabolism_science_streak",
+      "display_name": "Daily Cortisol Metabolism Science Streak",
       "score": 29,
-      "community": 9140000,
+      "community": 10250000,
       "priority": "P0",
       "price": "$4.99-$8.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_behavior_change_dark_patterns_streak",
-      "display_name": "Daily Behavior Change Dark Patterns Science Streak",
-      "score": 28,
-      "community": 7540000,
-      "priority": "P0",
-      "price": "$4.99-$8.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_stress_regulation_collapse_streak",
-      "display_name": "Daily Stress Regulation Collapse Science Streak",
-      "score": 27,
-      "community": 9280000,
-      "priority": "P0",
-      "price": "$4.99-$7.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_motivational_interviewing_science_streak",
-      "display_name": "Daily Motivational Interviewing Science Streak",
-      "score": 26,
-      "community": 7960000,
-      "priority": "P0",
-      "price": "$4.99-$8.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_cognitive_flexibility_failure_streak",
-      "display_name": "Daily Cognitive Flexibility Failure Science Streak",
-      "score": 26,
-      "community": 7090000,
-      "priority": "P0",
-      "price": "$4.99-$7.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_goal_disengagement_science_streak",
-      "display_name": "Daily Goal Disengagement Science Streak",
-      "score": 27,
-      "community": 8140000,
-      "priority": "P0",
-      "price": "$4.99-$7.99/mo",
-      "is_new": true
-    },
-    {
-      "niche": "daily_habit_disruption_recovery_streak",
-      "display_name": "Daily Habit Disruption Recovery Science Streak",
-      "score": 27,
-      "community": 8140000,
-      "priority": "P0",
-      "price": "$4.99-$7.99/mo",
       "is_new": true
     }
   ],
@@ -515,6 +482,56 @@
       "name": "Daily Commitment Device Science Streak",
       "score": 25,
       "cycle": 182
+    },
+    {
+      "name": "Daily Cortisol Awakening Response Streak",
+      "score": 30,
+      "cycle": 189
+    },
+    {
+      "name": "Daily HPA Axis Neuroscience Streak",
+      "score": 30,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Allostatic Load Science Streak",
+      "score": 30,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Chronic Stress Hippocampus Streak",
+      "score": 29,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Cortisol Metabolism Science Streak",
+      "score": 29,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Stress Immune Science Streak",
+      "score": 28,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Glucocorticoid Receptor Science Streak",
+      "score": 26,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Stress-Induced Neuroplasticity Streak",
+      "score": 27,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Adrenal Science Debunked Streak",
+      "score": 26,
+      "cycle": 189
+    },
+    {
+      "name": "Daily Stress Epigenetics Streak",
+      "score": 27,
+      "cycle": 189
     }
   ]
 }
