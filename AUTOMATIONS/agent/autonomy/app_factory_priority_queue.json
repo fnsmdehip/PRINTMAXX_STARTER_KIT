@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-06 05:05:01",
+  "generated_at": "2026-05-06 08:00:12",
   "sources": {
-    "alpha_staging_candidates": 4179,
+    "alpha_staging_candidates": 4184,
     "app_factory_methods_candidates": 2,
     "reddit_findings_candidates": 6,
     "existing_specs_detected": 217
@@ -13,18 +13,18 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 4126,
+    "total_candidates": 4131,
     "decision_counts": {
       "ITERATE_EXISTING_NOW": 96,
-      "BUILD_NEW_NOW": 67,
-      "SPEC_AND_TEST": 241,
-      "PARK": 3714,
+      "BUILD_NEW_NOW": 71,
+      "SPEC_AND_TEST": 243,
+      "PARK": 3713,
       "VALIDATE_FIRST": 8
     },
     "cluster_counts": {
       "faith": 97,
       "habits": 302,
-      "ai_utility": 3040,
+      "ai_utility": 3045,
       "fitness": 171,
       "focus": 409,
       "sleep": 89,
@@ -1814,6 +1814,68 @@
       "rank": 29
     },
     {
+      "candidate_id": "ALPHA_HN_47984675",
+      "title": "Show HN: Filling PDF forms with AI using client-side tool calling. Hey HN! I built SimplePDF Copilot: an AI assistant that can interact with the PDF editor. It fills fields, answers questions, focuses on a specific field, adds fields, deletes pages, and so on. It&#x27;s built on top of SimplePDF that I started 7 years ago, pioneering privacy-respecting client-side",
+      "source": "HackerNews (showhn)",
+      "source_url": "https://copilot.simplepdf.com/?share=a7d00ad073c75a75d493228e6ff7b11eb3f2d945b6175913e87898ec96ca8076&form=w9&lang=en",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "SOON",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "",
+      "applicable_methods": "",
+      "evidence": "Show HN: Filling PDF forms with AI using client-side tool calling. Hey HN! I built SimplePDF Copilot: an AI assistant that can interact with the PDF editor. It fills fields, answers questions, focuses on a specific field, adds fields, deletes pages, and so on. It&#x27;s built on top of SimplePDF that I started 7 years ago, pioneering privacy-respecting client-side",
+      "compliance_notes": "",
+      "reviewer_notes": "AUTO-APPROVED 2026-05-06 (high ROI)",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_HN_47984675",
+        "source": "HackerNews (showhn)",
+        "source_url": "https://copilot.simplepdf.com/?share=a7d00ad073c75a75d493228e6ff7b11eb3f2d945b6175913e87898ec96ca8076&form=w9&lang=en",
+        "category": "APP_FACTORY",
+        "tactic": "Show HN: Filling PDF forms with AI using client-side tool calling. Hey HN! I built SimplePDF Copilot: an AI assistant that can interact with the PDF editor. It fills fields, answers questions, focuses on a specific field, adds fields, deletes pages, and so on. It&#x27;s built on top of SimplePDF that I started 7 years ago, pioneering privacy-respecting client-side",
+        "roi_potential": "HIGHEST",
+        "priority": "SOON",
+        "status": "APPROVED",
+        "applicable_methods": "",
+        "applicable_niches": "",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "AUTO-APPROVED 2026-05-06 (high ROI)",
+        "created_at": "2026-05-06T09:01:04.467643+00:00",
+        "ops_generated": "FALSE",
+        "quality_issues": "",
+        "date_added": "2026-05-06"
+      },
+      "score": 94,
+      "cluster": "ai_utility",
+      "market_room": "HIGH",
+      "existing_app_target": "NEW_BUILD",
+      "execution_lane": "NEW_BUILD",
+      "build_decision": "BUILD_NEW_NOW",
+      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
+      "paywall_variant": "after the first clear output, never before time-to-value",
+      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
+      "primary_monetization": "subscription with fast time-to-value and annual anchor",
+      "secondary_monetization": "paid upfront or one-time pro unlock is valid here because privacy is the wedge",
+      "price_test": "$9.99 to $29.99 upfront, plus optional pro unlock",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "monetization: paid upfront vs free trial subscription"
+      ],
+      "risk_score": 0,
+      "rank": 30
+    },
+    {
       "candidate_id": "ALPHA_CI_51_LTD_001",
       "title": "LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $17.7K upfront. Post warns about long-term support costs but initial cash is real.",
       "source": "reddit/SaaS",
@@ -1873,7 +1935,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA_HN_47774393",
@@ -1935,7 +1997,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 32
     },
     {
       "candidate_id": "CI_184_DAILY_WILLPOWER_DEPL",
@@ -1997,7 +2059,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 33
     },
     {
       "candidate_id": "CI_184_DAILY_GRIT_RESILIENC",
@@ -2059,7 +2121,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 34
     },
     {
       "candidate_id": "CI_184_DAILY_DELAYED_GRATIF",
@@ -2121,7 +2183,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 35
     },
     {
       "candidate_id": "CI_184_DAILY_REWARD_PREDICT",
@@ -2183,7 +2245,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 36
     },
     {
       "candidate_id": "CI_185_DAILY_EGO_DEPLETION_",
@@ -2245,7 +2307,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 37
     },
     {
       "candidate_id": "CI_185_DAILY_IMPLEMENTATION",
@@ -2307,7 +2369,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 38
     },
     {
       "candidate_id": "CI_185_DAILY_SELF_REGULATIO",
@@ -2369,7 +2431,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 39
     },
     {
       "candidate_id": "CI_185_DAILY_TEMPTATION_RES",
@@ -2405,68 +2467,6 @@
         "engagement_authenticity": "AUTHENTIC",
         "earnings_verified": "",
         "extracted_method": "Build Daily Temptation Resistance Neuroscience Streak app | $4.99-$8.99/mo | Viral hook: attention redeployment beats suppression for cravings: Versace et al. 2020 shows deliberately directing attention AWAY from temptation cues (attention redeployment) reduces craving-induced urges 58% m",
-        "compliance_notes": "",
-        "reviewer_notes": "AUTO-APPROVED cycle 185 \u2014 blue ocean P0",
-        "created_at": "2026-05-04T01:28:13.269804+00:00",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": "2026-05-04"
-      },
-      "score": 93,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "CI_185_DAILY_SELF_MONITORIN",
-      "title": "Blue ocean: Daily Self-Monitoring Behavior Science Streak | 0 competitors | community=5,112,000 | score=26",
-      "source": "competitive_intel_scraper",
-      "source_url": "",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "P0",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "",
-      "applicable_niches": "daily_self_monitoring_science_streak",
-      "applicable_methods": "APP_FACTORY",
-      "evidence": "Build Daily Self-Monitoring Behavior Science Streak app | $4.99-$7.99/mo | Viral hook: self-monitoring as the #1 behavior change ingredient: Burke et al.'s meta-analysis of 138 weight-loss studies found self-monitoring (tracking food/exercise) accounts for more outcome variance than die",
-      "compliance_notes": "",
-      "reviewer_notes": "AUTO-APPROVED cycle 185 \u2014 blue ocean P0",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "CI_185_DAILY_SELF_MONITORIN",
-        "source": "competitive_intel_scraper",
-        "source_url": "",
-        "category": "APP_FACTORY",
-        "tactic": "Blue ocean: Daily Self-Monitoring Behavior Science Streak | 0 competitors | community=5,112,000 | score=26",
-        "roi_potential": "HIGH",
-        "priority": "SOON",
-        "status": "APPROVED",
-        "applicable_methods": "APP_FACTORY",
-        "applicable_niches": "daily_self_monitoring_science_streak",
-        "synergy_score": "26",
-        "cross_sell_products": "",
-        "implementation_priority": "P0",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "",
-        "extracted_method": "Build Daily Self-Monitoring Behavior Science Streak app | $4.99-$7.99/mo | Viral hook: self-monitoring as the #1 behavior change ingredient: Burke et al.'s meta-analysis of 138 weight-loss studies found self-monitoring (tracking food/exercise) accounts for more outcome variance than die",
         "compliance_notes": "",
         "reviewer_notes": "AUTO-APPROVED cycle 185 \u2014 blue ocean P0",
         "created_at": "2026-05-04T01:28:13.269804+00:00",

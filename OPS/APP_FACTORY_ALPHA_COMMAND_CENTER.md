@@ -1,9 +1,9 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-05-06 05:05:01
+Generated: 2026-05-06 08:00:12
 
 ## Inputs
-- ALPHA_STAGING app candidates: 4179
+- ALPHA_STAGING app candidates: 4184
 - APP_FACTORY_METHODS candidates: 2
 - Reddit findings consumed: 6
 - Existing app specs detected: 217
@@ -45,7 +45,7 @@ Generated: 2026-05-06 05:05:01
 | 24 | Show HN: I can't write Python. It works anyway. Read an article about analyzing  | NEW_BUILD | 96 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 27 | Show HN: AriaType – open-source privacy-first and local-first voice-to-text app | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 28 | HTML interactive tools as digital products ($17 price point validated) | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 30 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 30 | Show HN: Filling PDF forms with AI using client-side tool calling. Hey HN! I bui | NEW_BUILD | 94 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.
