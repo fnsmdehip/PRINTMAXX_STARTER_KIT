@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-05-06T05:00:48.861007",
+  "api_calls": 19,
+  "total_filings": 129,
+  "unique_filings": 2,
+  "written_to_alpha": 2,
+  "top_results": [
+    {
+      "company": "Workday, Inc.  (WDAY)  (CIK 0001327811)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "FortuneX Acquisition Corp  (FXAC)  (CIK 0002121703)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}
