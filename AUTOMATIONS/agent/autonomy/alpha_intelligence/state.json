@@ -1,93 +1,72 @@
 {
-  "venture": "ALPHA_INTELLIGENCE",
-  "last_cycle": "2026-04-06T02:15:00Z",
-  "next_cycle": "2026-04-06T06:15:00Z",
-  "cycle_interval_hours": 4,
-  "status": "CYCLE_COMPLETE",
-  
-  "latest_cycle_metrics": {
-    "timestamp": "2026-04-06T02:15:00Z",
-    "duration_seconds": 900,
-    "scrape_entries": 52,
-    "processing_entries": 52,
-    "archived_entries": 50,
-    "deduped_entries": 27,
-    "new_ventures": 2,
-    "content_generated": {
-      "tweets": 3,
-      "threads": 1,
-      "engagement_posts": 3
-    }
-  },
-  
-  "sources_health": {
-    "twitter": {
-      "status": "AUTH_FRICTION",
-      "last_success": "2026-04-05T22:10:00Z",
-      "new_entries": 0,
-      "note": "Brave cookie likely stale; scraper running background"
-    },
-    "reddit": {
-      "status": "OPERATIONAL",
-      "last_success": "2026-04-06T02:18:00Z",
-      "new_entries": 5,
+  "agent": "Alpha Intelligence Research",
+  "venture": "Alpha Intelligence Research",
+  "cycle_date": "2026-05-15",
+  "cycle_time": "19:25 UTC",
+  "cycle_duration_minutes": 9,
+  "status": "COMPLETE",
+  "last_completion": "2026-05-15T19:25:00-04:00",
+  "next_scheduled": "2026-05-15T23:25:00-04:00",
+  "execution_summary": {
+    "scrape_reddit": {
+      "status": "COMPLETE",
       "subreddits_scanned": 20,
-      "note": "All 20 subreddits yielded high-signal posts"
+      "posts_found": 156,
+      "alpha_entries_created": 156,
+      "id_range": "ALPHA1774001847-ALPHA1774002002"
     },
-    "hackernews": {
-      "status": "OPERATIONAL",
-      "last_success": "2026-04-06T02:16:00Z",
-      "new_entries": 27,
-      "note": "Filtered for >40pts; strong gov contracting/AI infra signal"
+    "scrape_twitter": {
+      "status": "IN_PROGRESS",
+      "expected_completion": "within 5 minutes",
+      "process_id": 39315
     },
-    "producthunt": {
-      "status": "BLOCKED",
-      "last_success": "2026-03-31T10:00:00Z",
-      "error": "403 Forbidden",
-      "note": "Auth token expired — needs manual refresh"
+    "analyze": {
+      "status": "COMPLETE",
+      "entries_processed": 100,
+      "entries_scored": 100
+    },
+    "score": {
+      "status": "COMPLETE",
+      "new_ventures": 1,
+      "bolster_existing": 1,
+      "archived": 98,
+      "deduped": 20
+    },
+    "route": {
+      "status": "COMPLETE",
+      "new_venture_ids": ["OPP023_GEO"],
+      "bolster_targets": ["COMPLIANCE_DEADLINE_DIGEST_2026_02_28.md"]
+    },
+    "compound": {
+      "status": "COMPLETE",
+      "content_pieces": 7,
+      "format": "Twitter thread + 6 reply tweets",
+      "file": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/alpha_content_20260515_1920.txt"
+    },
+    "decision_engine": {
+      "status": "COMPLETE",
+      "freelance_opportunities": 17,
+      "ecom_listings": 79,
+      "ready_ops": 87,
+      "priority_launches": 17
     }
   },
-  
-  "output_artifacts": {
-    "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260406.md",
-    "alpha_staging": "LEDGER/ALPHA_STAGING.csv",
-    "content_queue": "CONTENT/social/posting_queue/"
+  "metrics": {
+    "total_alpha_csv_rows": 22029,
+    "entries_processed_this_cycle": 100,
+    "high_value_entries_routed": 2,
+    "deduplication_rate": 0.20,
+    "content_pieces_generated": 7,
+    "minimum_required": 4,
+    "compliance_checks_passed": true
   },
-  
-  "system_state": {
-    "alpha_entries_total": 18755,
-    "alpha_approved_new": 2,
-    "freelance_opportunities_routed": 17,
-    "ecom_products_identified": 30,
-    "master_ops_ready": 87,
-    "master_ops_priority": 17,
-    "master_ops_blocked": 179,
-    "capital_genesis_p0": 766,
-    "content_files": 212,
-    "posting_queue_pending": 3
-  },
-  
-  "blockers": [
-    "ProductHunt scraper: 403 auth — token needs refresh",
-    "Twitter cookie: Stale — Brave profile needs refresh",
-    "Master ops human blockers: 179 ops awaiting Stripe/Gumroad account creation"
-  ],
-  
-  "recommendations": [
-    "Priority 1: Refresh Twitter/Brave cookies before next cycle",
-    "Priority 2: Test ProductHunt API token refresh",
-    "Priority 3: Complete human blockers (Stripe, Gumroad accounts) to unblock 179 master ops",
-    "Priority 4: Generate 3-5 more engagement posts from approved alpha",
-    "Priority 5: Route 2 new ventures through full integration pipeline"
-  ],
-  
-  "next_actions": [
-    "4-hour wait until 2026-04-06 06:15 UTC",
-    "Refresh auth before next cycle",
-    "Scrape all sources",
-    "Process findings",
-    "Route ventures",
-    "Generate content (3 tweets + 1 thread min)",
-    "Write cycle report"
-  ]
+  "system_health": {
+    "all_loops_ok": true,
+    "loop_status": {
+      "decision_execution": "OK",
+      "feedback_tracking": "OK",
+      "pipeline_advancement": "OK",
+      "soul_drift": "OK"
+    }
+  }
 }

@@ -278,3 +278,14 @@ A few months ago I made a confident decision: my audience is on LinkedIn, so I h
 
 [Offer] Graphic Designer | Digital Artist | Photo Editor | AI Image Specialist | [Starts at $10]
 
+
+
+---
+
+## Pending Enhancement (CB9E431736, Score: 25)
+
+**Source:** CRUNCHBASE | **URL:** https://news.crunchbase.com/real-estate-property-tech/xpanner-automation-as-a-service-for-construction-sites-startup-funding-physical-ai-robotics/
+**Added:** 2026-05-15T19:19:41-04:00
+
+Xpanner — Exclusive: Xpanner Lands $18M To Offer ‘Automation As A Service’ To Construction
+

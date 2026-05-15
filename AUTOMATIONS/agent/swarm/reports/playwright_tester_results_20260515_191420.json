@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-05-15T19:13:38.548662",
+  "total_tested": 19,
+  "by_status": {
+    "GREEN": 19,
+    "YELLOW": 0,
+    "RED": 0
+  },
+  "by_category": {
+    "app": {
+      "total": 5,
+      "passed": 5
+    },
+    "landing": {
+      "total": 4,
+      "passed": 4
+    },
+    "legal": {
+      "total": 2,
+      "passed": 2
+    },
+    "content": {
+      "total": 1,
+      "passed": 1
+    },
+    "tool": {
+      "total": 2,
+      "passed": 2
+    },
+    "comparison": {
+      "total": 5,
+      "passed": 5
+    }
+  },
+  "sites": [
+    {
+      "url": "truthscope.surge.sh",
+      "category": "app",
+      "name": "Lie Detector",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:38.548740"
+    },
+    {
+      "url": "cnsnt-web.surge.sh",
+      "category": "app",
+      "name": "Consent Manager",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:40.602554"
+    },
+    {
+      "url": "prayerlock-web.surge.sh",
+      "category": "app",
+      "name": "Prayer Lock",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:42.430765"
+    },
+    {
+      "url": "focuslock-web.surge.sh",
+      "category": "app",
+      "name": "Focus Lock",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:45.271768"
+    },
+    {
+      "url": "androx.surge.sh",
+      "category": "landing",
+      "name": "Androx",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:47.771103"
+    },
+    {
+      "url": "printmaxx-privacy.surge.sh",
+      "category": "legal",
+      "name": "Privacy Policy",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:50.029014"
+    },
+    {
+      "url": "printmaxx-tos.surge.sh",
+      "category": "legal",
+      "name": "Terms of Service",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:51.773090"
+    },
+    {
+      "url": "fnsmdehip-research.surge.sh",
+      "category": "content",
+      "name": "Research Blog",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:53.544825"
+    },
+    {
+      "url": "invoiceforge.surge.sh",
+      "category": "tool",
+      "name": "Invoice Forge",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:54.981851"
+    },
+    {
+      "url": "pagescorer.surge.sh",
+      "category": "tool",
+      "name": "Page Scorer",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:57.425123"
+    },
+    {
+      "url": "coldmaxx.surge.sh",
+      "category": "app",
+      "name": "ColdMaxx",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:13:59.504079"
+    },
+    {
+      "url": "smartlead-vs-instantly.surge.sh",
+      "category": "comparison",
+      "name": "Smartlead vs Instantly",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:01.856060"
+    },
+    {
+      "url": "n8n-vs-zapier-vs-make.surge.sh",
+      "category": "comparison",
+      "name": "n8n vs Zapier",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:04.086740"
+    },
+    {
+      "url": "best-cold-email-tools.surge.sh",
+      "category": "comparison",
+      "name": "Cold Email Tools",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:06.343663"
+    },
+    {
+      "url": "scripture-streak-landing.surge.sh",
+      "category": "landing",
+      "name": "Scripture Streak",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:08.416369"
+    },
+    {
+      "url": "hilal-landing.surge.sh",
+      "category": "landing",
+      "name": "Hilal",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:10.407057"
+    },
+    {
+      "url": "couples-streak-landing.surge.sh",
+      "category": "landing",
+      "name": "Couples Streak",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:12.472996"
+    },
+    {
+      "url": "best-ai-tools-2026.surge.sh",
+      "category": "comparison",
+      "name": "Best AI Tools 2026",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:14.530876"
+    },
+    {
+      "url": "best-saas-tools-solopreneurs.surge.sh",
+      "category": "comparison",
+      "name": "Best SaaS Tools",
+      "status": "GREEN",
+      "http_status": "200",
+      "errors": [],
+      "timestamp": "2026-05-15T19:14:16.635566"
+    }
+  ]
+}

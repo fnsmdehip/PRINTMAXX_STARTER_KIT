@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-05T14:35:00.000000",
-  "last_cycle": "asset_deployer_20260505",
+  "last_updated": "2026-05-15T19:14:20.787894",
+  "last_cycle": "asset_deployer_20260515_health_check",
   "total_surge_deployments": 392,
   "health_status": "FULLY_OPERATIONAL",
   "health_check_results": {
@@ -78,8 +78,13 @@
   ],
   "redeployments_this_cycle": [],
   "issues_found": {
-    "red_sites": [],
-    "warning": "No critical issues. All 392 deployments operational."
+    "red_sites": [
+      "handyman-pensacola-fl-ace-handyman-services-pensacola-pensacola-fl.surge.sh (DNS label exceeds 63 char limit - RFC 1035 violation)"
+    ],
+    "warning": "1 critical issue: subdomain name invalid. See P0 recommendations in test report. Pocket Alexandria redeployed successfully 2026-05-15 19:30:00.",
+    "fixes_applied_this_cycle": [
+      "Pocket Alexandria: Rebuilt web export and redeployed to pocket-alexandria.surge.sh — now returning HTTP 200"
+    ]
   },
   "cycle_notes": "2026-05-05 14:35 ASSET DEPLOYER CYCLE. Scanned LANDING/ and APP_FACTORY/builds. Found 4 previously undeployed sites in LANDING/ (androx, privacy, tos, research-blog). Deployed all 4 successfully. Verified 11 representative sites across 5 categories. Results: 11 GREEN (100%), 0 RED. All critical revenue apps verified. Deployment manifest updated.",
   "by_category": {

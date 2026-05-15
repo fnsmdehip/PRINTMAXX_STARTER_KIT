@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-05-15T19:15:54.411494",
+  "api_calls": 19,
+  "total_filings": 168,
+  "unique_filings": 4,
+  "written_to_alpha": 4,
+  "top_results": [
+    {
+      "company": "Luvu Brands, Inc.  (LUVU)  (CIK 0001374567)",
+      "form": "8-K",
+      "score": 40,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Jones Ventures INTL Acquisition1 Corp  (CIK 0002129056)",
+      "form": "S-1",
+      "score": 35,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    },
+    {
+      "company": "XBP Global Holdings, Inc.  (XBP, XBPEW)  (CIK 0001839530)",
+      "form": "8-K",
+      "score": 30,
+      "keywords": [],
+      "opportunities": [
+        "consulting",
+        "freelance",
+        "EAS_target"
+      ]
+    },
+    {
+      "company": "Yorkville International Capital Corp.  (CIK 0002130386)",
+      "form": "S-1",
+      "score": 25,
+      "keywords": [],
+      "opportunities": [
+        "EAS_target",
+        "content"
+      ]
+    }
+  ]
+}

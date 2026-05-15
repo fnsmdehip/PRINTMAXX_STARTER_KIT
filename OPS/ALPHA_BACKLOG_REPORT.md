@@ -1,93 +1,104 @@
-# Alpha Backlog Report — 2026-05-06 05:10
+# Alpha Backlog Report — 2026-05-15 19:19
 
-**Matches found:** 409
+**Matches found:** 1489
 **Staged for integration:** 67
 
-## REVENUE_METHOD — Revenue methods not yet wired into ventures (162 matches)
+## REVENUE_METHOD — Revenue methods not yet wired into ventures (782 matches)
 
-- `ALPHA_SAM_GOV_MONI_137BCC40` (sam_gov_monitor): gov contract: test set, radio | agency: navsup weapon systems support mech | deadline: 2026-04-30 | 
-- `ALPHA_SAM_GOV_MONI_317924A3` (sam_gov_monitor): gov contract: vrel | agency: navsup weapon systems support mech | deadline: 2026-05-04 | source: sam
-- `ALPHA_SAM_GOV_MONI_8021D58B` (sam_gov_monitor): gov contract: control unit | agency: navsup weapon systems support mech | deadline: 2026-04-17 | sou
-- `ALPHA_SAM_GOV_MONI_C9480307` (sam_gov_monitor): gov contract: anode assy,rope gua | agency: navsup weapon systems support mech | deadline: 2026-04-2
-- `ALPHA_SAM_GOV_MONI_E7F1AEFF` (sam_gov_monitor): gov contract: logic rack | agency: navsup weapon systems support mech | deadline: 2026-04-20 | sourc
-- `ALPHA_SAM_GOV_MONI_0986D7CE` (sam_gov_monitor): gov contract: storage sled | agency: navsup weapon systems support mech | deadline: 2026-05-04 | sou
-- `ALPHA_SAM_GOV_MONI_5D4C3BF3` (sam_gov_monitor): gov contract: mount,resilient,gen | agency: sprmm1 dla mechanicsburg | deadline: 2026-06-17 | source
-- `ALPHA_SAM_GOV_MONI_8CDF050B` (sam_gov_monitor): gov contract: power supply | agency: sprmm1 dla mechanicsburg | deadline: 2026-06-17 | source: sam.g
-- `ALPHA_SAM_GOV_MONI_2FB09A19` (sam_gov_monitor): gov contract: sources sought - fy26 brunswick inner harbor maintenance dredging project | agency: w0
-- `ALPHA_SAM_GOV_MONI_2FF8E4A5` (sam_gov_monitor): gov contract: pump,rotary | agency: sprmm1 dla mechanicsburg | deadline: 2026-05-04 | source: sam.go
-- `ALPHA_SAM_GOV_MONI_00AEA22E` (sam_gov_monitor): gov contract: diesel engine wiring harness repair | agency: pearl harbor naval shipyard imf | deadli
-- `ALPHA_SAM_GOV_MONI_14F11604` (sam_gov_monitor): gov contract: power supply | agency: navsup weapon systems support mech | deadline: 2026-04-15 | sou
-- `ALPHA_SAM_GOV_MONI_FC02109E` (sam_gov_monitor): gov contract: liner,combustion ch | agency: navsup weapon systems support mech | deadline: 2026-04-0
-- `ALPHA_SAM_GOV_MONI_6F52F701` (sam_gov_monitor): gov contract: coupling,shaft,flex | agency: navsup weapon systems support mech | deadline: 2026-04-1
-- `ALPHA_SAM_GOV_MONI_BE5A07B3` (sam_gov_monitor): gov contract: hex input assy | agency: sprmm1 dla mechanicsburg | deadline: 2026-05-15 | source: sam
-- ... and 147 more
+- `ALPHA_SAM_GOV_MONI_3B8920CC` (sam_gov_monitor): gov contract: fuse panel assy | agency: navsup weapon systems support mech | deadline: 2026-05-04 | 
+- `ALPHA_SAM_GOV_MONI_6D40D509` (sam_gov_monitor): gov contract: connection box | agency: navsup weapon systems support mech | deadline: 2026-04-14 | s
+- `ALPHA_SAM_GOV_MONI_7D24BB63` (sam_gov_monitor): gov contract: 736 sfs ninja dismount | agency: fa5240  36 cons lgc | deadline: 2026-04-10 | source: 
+- `ALPHA_SAM_GOV_MONI_1D9A73B9` (sam_gov_monitor): gov contract: emergency diesel generator (edg) rentals | agency: puget sound naval shipyard imf | de
+- `ALPHA_SAM_GOV_MONI_7ACA3A94` (sam_gov_monitor): gov contract: 53--screw, cap, slflkg | agency: navsup weapon systems support mech | deadline: 2026-0
+- `ALPHA_SAM_GOV_MONI_87F18897` (sam_gov_monitor): gov contract: power supply | agency: sprmm1 dla mechanicsburg | deadline: 2026-04-28 | source: sam.g
+- `ALPHA_SAM_GOV_MONI_01FB3922` (sam_gov_monitor): gov contract: advanced manufacturing training | agency: w6qm micc-ft bliss | deadline: 2026-04-10 | 
+- `ALPHA_SAM_GOV_MONI_6CA6213A` (sam_gov_monitor): gov contract: request for information - executive writing course | agency: fa7014  afdw pk | deadlin
+- `ALPHA_SAM_GOV_MONI_C0B1D7BC` (sam_gov_monitor): gov contract: justification for idiq and task order award to john hopkins university applied physics
+- `ALPHA_SAM_GOV_MONI_7E9698AD` (sam_gov_monitor): gov contract: seal,ball inboard | agency: navsup weapon systems support mech | deadline: 2026-04-06 
+- `ALPHA_SAM_GOV_MONI_2BBAB76C` (sam_gov_monitor): gov contract: power supply | agency: sprmm1 dla mechanicsburg | deadline: 2026-04-27 | source: sam.g
+- `ALPHA_SAM_GOV_MONI_1701EEC3` (sam_gov_monitor): gov contract: 6515--thyroid uptake equipment | agency: 262-network contract office 22 (36c262) | dea
+- `ALPHA_SAM_GOV_MONI_BD29151F` (sam_gov_monitor): gov contract: fy26 willapa sediment characterization service | agency: w071 endist seattle | deadlin
+- `ALPHA_SAM_GOV_MONI_AEA8BADB` (sam_gov_monitor): gov contract: stacking cable | agency: navsup weapon systems support mech | deadline: 2026-04-10 | s
+- `ALPHA_SAM_GOV_MONI_A1FB0049` (sam_gov_monitor): gov contract: layberthing services for long-term safe lay berth for ro/ro cape r vessels on the us e
+- ... and 767 more
 
-## GROWTH_TACTIC — Growth/marketing tactics applicable to existing ventures (143 matches)
+## GROWTH_TACTIC — Growth/marketing tactics applicable to existing ventures (377 matches)
 
-- `ALPHA_OPP_032` (swarm_opportunity_scanner): build automation toolkit for tiktok shop sellers, sell on gumroad/whop tiktok shop seller automation
-- `ALPHA_HN_47539942` (HackerNews (top)):  the first ev with a semi-solid-state battery is launching in europe 
-- `ALPHA_HN_47520448` (HackerNews (showhn)):  show hn: τ³-bench is out – can agents handle complex docs and live calls?. τ-bench is an open bench
-- `ALPHA_HN_47509972` (HackerNews (showhn)):  show hn: a/b test images with your eyes using arkit face tracking. saccade uses arkit face tracking
-- `ALPHA_HN_47468209` (HackerNews (top)):  apple announces new mac sales record following macbook neo launch 
-- `ALPHA_HN_47439399` (HackerNews (top)):  show hn: budibase agents beta – model-agnostic ai agents for internal workflows. hi there, mike her
-- `ALPHA_HN_47417335` (HackerNews (top)):  launch hn: kita (yc w26) – automate credit review in emerging markets. hey hn! we’re carmel and rhe
-- `ALPHA103105` (r/indiehackers): ltd at $199 for 3 weeks. target: 50-100 deals. gets $10-20k upfront. then convert to subscription at
-- `ALPHA_HN_47398441` (HackerNews (showhn)):  show hn: hackerbrief – top posts on hacker news summarized daily 
-- `ALPHA20296` (swarm_opportunity_scanner): service tiers: launch ($500) growth ($1500) empire ($3000) retainer ($500/mo). templatize for 10 nic
-- `ALPHA1083` (r/indiehackers (Reddit)):  post: i've shipped 8 apps with lovable + supabase in the last few months. here's what actually trip
-- `ALPHA1134` (r/growthhacking):  how different is ai seo from traditional one, and how can my business ride this wave? 
-- `ALPHA106727` (2026-03-18):  i'm building a youtube intelligence api because vidiq and tubebuddy have 30m users but zero public 
-- `ALPHA1431` (@MengTo (high-signal-accounts)): extracted signal: how i created these landing pages with gemini 3 from start to finishfirst, i start
-- `ALPHA106733` (2026-03-18):  i tracked which marketing channels actually make money vs just send traffic. the results surprised 
-- ... and 128 more
+- `ALPHA_HN_47532717` (HackerNews (top)):  trust signals as sparklines for hacker news 
+- `ALPHA_HN_47404074` (HackerNews (top)):  nvidia launches vera cpu, purpose-built for agentic ai 
+- `ALPHA1152` (r/SEO):  i just automated my pseo with openclaw &amp; seeing some good results 
+- `ALPHA4320` (r/micro_saas):  day 4 of launch. getting that first piece of user feedback feels... surreal. 
+- `ALPHA6673` (ProductHunt):  [ph launch] figr ai: learns your product. thinks through ux. 
+- `ALPHA6693` (ProductHunt):  [ph launch] marketing agents squad: find ai agents to delegate your daily marketing grind 
+- `ALPHA6699` (ProductHunt):  [ph launch] enough cream: perfect coffee, every time. 
+- `ALPHA6744` (SAM.gov):  [gov contract] nursing home nurse staffing outreach campaign (deadline: 2029-02-28) 
+- `ALPHA8018` (ProductHunt):  [ph launch] flixier generate ai video in timeline: extend shots, connect clips, generate from any f
+- `ALPHA8019` (ProductHunt):  [ph launch] konta: gitops for docker compose on low‑resource vps 
+- `ALPHA8023` (ProductHunt):  [ph launch] omnia: become the brand ai recommends. 
+- `ALPHA8026` (ProductHunt):  [ph launch] stud: cursor for roblox studio 
+- `ALPHA8187` (r/SEO):  seo interview question i must know in 2026? 
+- `ALPHA8904` (r/AppBusiness):  i got 2,600 pre-registrations before my app even launched 🚀 
+- `ALPHA11234` (ProductHunt):  [ph launch] woise: ai voice &amp; screen recording tool for websites 
+- ... and 362 more
 
-## SYSTEM_IMPROVEMENT — Security tools, performance optimization, system hardening (89 matches)
+## SYSTEM_IMPROVEMENT — Security tools, performance optimization, system hardening (251 matches)
 
-- `ALPHA_SAM_GOV_MONI_137BCC40` (sam_gov_monitor): gov contract: test set, radio | agency: navsup weapon systems support mech | deadline: 2026-04-30 | 
-- `ALPHA_OPPORTUNITY__F7E15DE5` (opportunity_radar/GitHub): opportunity: ultraworkers/claw-code | [rust] the repo is finally unlocked. enjoy the party! the fast
-- `ALPHA_HN_47645806` (HackerNews (showhn)):  show hn: yoink functionality from dependencies and avoid supply chain attacks. yoink is a claude co
-- `ALPHA_HN_47587089` (HackerNews (top)):  zml-smi: universal monitoring tool for gpus, tpus and npus 
-- `ALPHA_HN_47626462` (HackerNews (top)):  big-endian testing with qemu 
-- `ALPHA_HN_47564996` (HackerNews (showhn)):  show hn: /slot-machine development (cc vs. codex; ce vs. superpowers). i built an opensource skill 
-- `ALPHA_HN_47540903` (HackerNews (top)):  ninja: a small build system with a focus on speed 
-- `ALPHA_HN_47524778` (HackerNews (top)):  technology: the (nearly) perfect usb cable tester does exist 
-- `ALPHA_HN_47539422` (HackerNews (showhn)):  show hn: run, build, and govern ai agent workflows for devops. hey hn, two things kept coming up wh
-- `ALPHA_HN_47509972` (HackerNews (showhn)):  show hn: a/b test images with your eyes using arkit face tracking. saccade uses arkit face tracking
-- `ALPHA_HN_47517664` (HackerNews (showhn)):  show hn: cognium – tree-sitter+taint tracking sast for java,python,js,rust. open-source static anal
-- `ALPHA_HN_47520234` (HackerNews (showhn)):  show hn: i built an integration for rl training of browser agents for everyone. this integration al
-- `ALPHA_HN_47508089` (HackerNews (showhn)):  show hn: updated giantjson viewer – opening 100gb jsons on android (rust+simd). hey there, around 2
-- `ALPHA_HN_47507150` (HackerNews (top)):  wine 11 rewrites how linux runs windows games at kernel with massive speed gains 
-- `ALPHA_HN_47439399` (HackerNews (top)):  show hn: budibase agents beta – model-agnostic ai agents for internal workflows. hi there, mike her
-- ... and 74 more
+- `ALPHA_HN_47501211` (HackerNews (top)):  nanobrew: the fastest macos package manager compatible with brew 
+- `ALPHA_HN_47463851` (HackerNews (showhn)):  show hn: agent-password – a local macos password manager for agent workflows 
+- `ALPHA_HN_47423299` (HackerNews (showhn)):  show hn: a client-side visual workflow builder for pdfs 
+- `ALPHA_HN_47401734` (HackerNews (top)):  speed at the cost of quality: study of use of cursor ai in open source projects 
+- `ALPHA_HN_47393805` (HackerNews (top)):  an experiment to use github actions as a control plane for a paas 
+- `ALPHA72857` (hackernews): security for ai coding agents is emerging niche. content + tools opportunity. infisical: secure secr
+- `ALPHA319` (@pipelineabuser Visualping Competitor Intel): visualping competitor monitoring. $5-50/mo. 30-second alerts.  
+- `ALPHA1385` (2026-02-13):  90% of vibe coded apps have security issueshere's the full playbook to fix that:1/ never trust user
+- `ALPHA4343` (r/AlphaandBetaUsers): case study with real numbers. analyze full post for replicable method. summary: we added $88k in mrr
+- `ALPHA5371` (@Fortuze (explicit-handles)):  project cassandra briefing - hezbollah bac and "the system": hezbollah’s business affairs component
+- `ALPHA102425` (SAM.gov):  [gov contract] ehrm waves k, l, m (visn 23) and n, o (visn 15) deployments (deadline: 2026-08-02) 
+- `ALPHA8019` (ProductHunt):  [ph launch] konta: gitops for docker compose on low‑resource vps 
+- `ALPHA8419` (r/LocalLLaMA):  [r/localllama] we tested the same int8 model on 5 snapdragon chipsets. accuracy ranged from 93% to 
+- `ALPHA10336` (@eptwts (explicit-handles)):  looking for love this valentine’s day?scammers are too.romance scams are one of the fastest-growing
+- `ALPHA20263` (@purpdevvv (high-signal-accounts)):  an ai assistant designed to handle real tasks — from scheduling meetings to managing everyday workf
+- ... and 236 more
 
-## TOOL_SCANNER — Tools, APIs, scanners, monitors that could become automations (11 matches)
+## TOOL_SCANNER — Tools, APIs, scanners, monitors that could become automations (71 matches)
 
-- `ALPHA_HN_47650726` (HackerNews (top)):  codex pricing to align with api token usage, instead of per-message 
-- `ALPHA_HN_47574871` (HackerNews (showhn)):  show hn: zerobox – sandbox any command with file, network, credential controls. i&#x27;m excited to
-- `ALPHA_HN_47396566` (HackerNews (showhn)):  show hn: signbee – an api that lets ai agents send documents for signature. hi hn, i built signbee 
-- `ALPHA5286` (@pipelineabuser (explicit-handles)):  triggering events nobody tracks:- leadership change (theorg)- office move (google alerts + address)
-- `ALPHA10064` (r/SideProject):  [acquisition] moatifi - free ai stock screener that scores companies on competitive moats and ai di
-- `ALPHA22638` (HackerNews):  [acquisition] show hn: cloud vms with a built-in rest api for ai agents 
-- `ALPHA25436` (@lottsnomad (high-signal-accounts)):  the blueprint to build a successful app is public
-top apps leave footprints everywhere
-download the
-- `ALPHA101117` (@steipete (high-signal-accounts)):  beta test tandem browser for openclaw first.
-v0.62.4
-i use it as my daily driver :) and openclaw lo
-- `ALPHA101281` (@every (high-signal-accounts)):  from every studio:
-– 
-@coracomputer
- opens api tokens so ai agents can pull context from your inbox
-- `ALPHA103371` (HackerNews/ymarkov):  [hn] launch hn: voygr (yc w26) – a better maps api for agents and ai apps 
-- `ALPHA102796` (r/microsaas):  [acquisition] built a working allergen detection api for grocery retail apps — looking for a buyer 
+- `ALPHA_HN_47500549` (HackerNews (showhn)):  show hn: offline-first uk train planner. hey hn! i&#x27;d like to share my personal experiment with
+- `ALPHA8918` (r/Emailmarketing):  anyone using a bulk email api for sending large updates? 
+- `ALPHA23889` (@codyschneiderxx (high-signal-accounts)):  "facebook ads don't work for me my audience is too small"
+find your target customers linkedin pofil
+- `ALPHA107421` (r/SideProject):  [acquisition] failed to start a hedge fund. built an equity research agent instead. it pulls sec fi
+- `BL4ACD2ED1` (alpha_backlog_scanner): monetization method. summary: $amzn - amazon faces longest slump since 2006amazon shares are on trac
+- `BL64E4CC0E` (alpha_backlog_scanner):  i just watched the most important 2 hour ai podcast of 2026.dario amodei (anthropic ceo) sat down &
+- `CBD1828D72` (CRUNCHBASE): the crunchbase tech (news) — over 127,000 workers at u.s.-based tech companies were laid off in mass
+- `BL3A096F91` (alpha_backlog_scanner): funding: the most active (seed) — to get a sense who’s buying in bulk, we used crunchbase data to pu
+- `ALPHA1773998632` (@dhh (high-signal-accounts)):  i've been happily using 
+@ubiquiti
+ since forever, but it's been incredible to watch their insane p
+- `BLEBD59AC5` (alpha_backlog_scanner): sec s-1: west enclave merger corp.  (wenc)  (cik 0002104260) —  west enclave merger corp.  (wenc)  (
+- `BLD5736175` (alpha_backlog_scanner): funding: pwc’s us ipo (ipo) — to understand what’s holding the 2026 ipo market back and what could u
+- `BL67746376` (alpha_backlog_scanner): the crunchbase tech (news) — over 127,000 workers at u.s.-based tech companies were laid off in mass
+- `EDGARDEAA66EA` (SEC_EDGAR): sec s-1: inflection point acquisition corp. vi  (ipfx)  (cik 0002102041) —  inflection point acquisi
+- `ALPHA1773998851` (reddit/r/passive_income): would automation be the  key to increase income would automation be the  key to increase income?
 
-## INTEGRATION_OPPORTUNITY — External services, APIs, platforms we could wire in via MCP/n8n (4 matches)
+be
+- `BL8E32871F` (alpha_backlog_scanner): sec s-1: west enclave merger corp.  (wenc)  (cik 0002104260) —  west enclave merger corp.  (wenc)  (
+- ... and 56 more
 
-- `ALPHA1334` (@Argona0x (high-signal-accounts)): tool/technique alpha. summary: i mass paying $200/month for ai subscriptionsdeployed my own in 60 se
-- `ALPHA23981` (@nicbstme (high-signal-accounts)):  as a business owner, one of my favorite agent skills is /cash
-one command and it pulls live from th
-- `ALPHA24033` (@WorkflowWhisper (high-signal-accounts)):  claude code now has agent teams in research preview
-and the implications for automation builders ar
-- `ALPHA102627` (@maverickecom (high-signal-accounts)):  "act as a ceo" prompts are lazy and destroy ai output. 
-i built 10 production-grade claude agents t
+## INTEGRATION_OPPORTUNITY — External services, APIs, platforms we could wire in via MCP/n8n (8 matches)
+
+- `ALPHA107698` (@WorkflowWhisper (high-signal-accounts)):  most people add error handling to their n8n workflows after something breaks in production.
+by then
+- `ALPHA1773997479` (r/ClaudeAI):  [r/claudeai] i built a dating app for claude agents 
+- `ALPHA1774000282` (reddit/r/EntrepreneurRideAlong): day social media i got tired of paying for ai subscriptions, so i built a python tool that generates
+- `ALPHA1774000369` (@levelsio (high-signal-accounts)):   done
+
+ made an auto-dispute response system for interior ai to see how easy it'd be
+
+it syncs old 
+- `ALPHA_OPPORTUNITY__F2EEE33A` (opportunity_radar/HackerNews): opportunity: needle: we distilled gemini tool calling into a 26m model | show hn: 747 points, 207 co
+- `OPP025_N8N_$(date +%s)` (swarm_opportunity_scanner): convert existing python logic to n8n json. $19-79/template, $197 bundle. list on gumroad + r/n8n + n
+- `ALPHA1774001886` (r/indiehackers):  i built an ai slack bot that answers questions from your company docs, looking for 5 beta workspace
+- `ALPHA1774001879` (@alexalbert__ (high-signal-accounts)):  starting june 15, paid claude plans include a monthly claude agent sdk credit. 
+
+it covers usage on
 

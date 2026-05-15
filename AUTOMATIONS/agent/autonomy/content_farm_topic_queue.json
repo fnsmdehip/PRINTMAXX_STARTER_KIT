@@ -1,11 +1,20 @@
 [
   {
+    "alpha_id": "bip_review_prompt_timing_hack:_+0.8_stars_by_delaying_review_req",
+    "category": "APP_BUILD_IN_PUBLIC",
+    "tactic_preview": "Review prompt timing hack: +0.8 stars by delaying review request to value moment",
+    "draft_hook": "building this next: Review prompt timing hack: +0.8 stars by delaying review request to value moment\n\nspotted in r/SideProject. validation: APPROVED.\n\nhere's the opportunity we're going after.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "app_factory_queue_approved"
+  },
+  {
     "alpha_id": "bip_blue_ocean:_daily_sleep_deprivation_neuroscience_streak_|_0_",
     "category": "APP_BUILD_IN_PUBLIC",
     "tactic_preview": "Blue ocean: Daily Sleep Deprivation Neuroscience Streak | 0 competitors | community=7,230,000 | score=30",
     "draft_hook": "building this next: Blue ocean: Daily Sleep Deprivation Neuroscience Streak | 0 competitors | community=7,230,000 | score=30\n\nspotted in competitive_intel_scraper. validation: APPROVED.\n\nhere's the opportunity we're going after.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "app_factory_queue_approved"
   },
   {
@@ -14,7 +23,7 @@
     "tactic_preview": "Blue ocean: Daily Adenosine Sleep Drive Science Streak | 0 competitors | community=6,890,000 | score=29",
     "draft_hook": "building this next: Blue ocean: Daily Adenosine Sleep Drive Science Streak | 0 competitors | community=6,890,000 | score=29\n\nspotted in competitive_intel_scraper. validation: APPROVED.\n\nhere's the opportunity we're going after.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "app_factory_queue_approved"
   },
   {
@@ -23,8 +32,182 @@
     "tactic_preview": "Blue ocean: Daily Sleep Architecture Science Streak | 0 competitors | community=5,670,000 | score=28",
     "draft_hook": "building this next: Blue ocean: Daily Sleep Architecture Science Streak | 0 competitors | community=5,670,000 | score=28\n\nspotted in competitive_intel_scraper. validation: APPROVED.\n\nhere's the opportunity we're going after.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "app_factory_queue_approved"
+  },
+  {
+    "alpha_id": "bip_show_hn:_filling_pdf_forms_with_ai_using_client-side_tool_ca",
+    "category": "APP_BUILD_IN_PUBLIC",
+    "tactic_preview": "Show HN: Filling PDF forms with AI using client-side tool calling. Hey HN! I built SimplePDF Copilot: an AI assistant that can interact with the PDF editor. It fills fields, answers questions, focuses",
+    "draft_hook": "building this next: Show HN: Filling PDF forms with AI using client-side tool calling. Hey HN! I built SimplePDF Copilot: an AI assistant that can interact with\n\nspotted in HackerNews (showhn). validation: APPROVED.\n\nhere's the opportunity we're going after.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "app_factory_queue_approved"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_2518FF6B",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: POWER SUPPLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-16 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: POWER SUPPLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-16 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_71080FA3",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: RELAY,SOLID STATE | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: RELAY,SOLID STATE | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C5F351B4",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: SWITCH SUBASSEMBLY | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: SWITCH SUBASSEMBLY | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_0E29BE71",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: LOGIC SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-02 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: LOGIC SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-02 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_0EB08733",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: TEST SET,ELECTRICAL | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: TEST SET,ELECTRICAL | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_858ED318",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: EJECTOR ASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-03-26 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: EJECTOR ASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-03-26 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C9EDFE7F",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: FUSE AND CNTRL P A | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: FUSE AND CNTRL P A | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_9F3E6D78",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 59--DIP LOOP CAB 46FT | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 59--DIP LOOP CAB 46FT | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_9A8DE13C",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 48--STEM SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-01 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 48--STEM SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-01 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_E40B0FD0",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 48--SEAT,VALVE | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-13 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 48--SEAT,VALVE | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-13 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_98F3B280",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 20--ACCUMULATOR,HYDRAUL | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-06-29 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 20--ACCUMULATOR,HYDRAUL | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-06-29 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_E30DD337",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 59--CIRCUIT CARD ASSEMB, IN REPAIR/MODIFICATION OF | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-10 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 59--CIRCUIT CARD ASSEMB, IN REPAIR/MODIFICATION OF | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-10 | Source: SAM.gov\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C3EC693A",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 43--COUPLING | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-24 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 43--COUPLING | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-24 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_9F23A699",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 58--NRP,MODULE,ACOUSTIC, IN REPAIR/MODIFICATION OF | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 58--NRP,MODULE,ACOUSTIC, IN REPAIR/MODIFICATION OF | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_8B791532",
+    "category": "GOV_CONTRACT",
+    "roi": "HIGH",
+    "synergy_score": "5",
+    "tactic_preview": "Gov contract: 60--CV FIBER CBL W5 - AND SIMILAR REPLACEMENT PARTS | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
+    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 60--CV FIBER CBL W5 - AND SIMILAR REPLACEMENT PARTS | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.go\n\nno cold calling. no sales pitch. just responding to published RFPs.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "brokering_gov_contracts"
   },
   {
     "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_4C9D057B",
@@ -34,7 +217,7 @@
     "tactic_preview": "Gov contract: 59--CIRCUIT CARD ASSEMB | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-05-04 | Source: SAM.gov Search API",
     "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 59--CIRCUIT CARD ASSEMB | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-05-04 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "brokering_gov_contracts"
   },
   {
@@ -45,7 +228,7 @@
     "tactic_preview": "Gov contract: MOTOR,DIRECT CURREN | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-09 | Source: SAM.gov Search API",
     "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: MOTOR,DIRECT CURREN | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-09 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "brokering_gov_contracts"
   },
   {
@@ -56,8 +239,184 @@
     "tactic_preview": "Gov contract: DISPLAY UNIT | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-03-27 | Source: SAM.gov Search API",
     "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: DISPLAY UNIT | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-03-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "brokering_gov_contracts"
+  },
+  {
+    "alpha_id": "ALPHA_MICRO_INFO_001",
+    "category": "MONETIZATION",
+    "roi": "HIGH",
+    "synergy_score": "85",
+    "tactic_preview": "$29-39 micro info products. Sell tight specific solutions. 60-80 proven examples in one doc. 1-2 hour build time. 400 buyers x $34 = $13600/mo. Platforms: Gumroad or Whop. Lead with proof not features",
+    "draft_hook": "most people selling info products skip this step.\n\n$29-39 micro info products. Sell tight specific solutions. 60-80 proven examples in one doc. 1-2 hour build time. 400 buyers x $34 = $13600/mo. Platfo\n\nsteal it.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA220",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "HeyGen video avatar creation tool.",
+    "draft_hook": "found a pattern worth tracking.\n\nHeyGen video avatar creation tool.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA221",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGHEST",
+    "synergy_score": "",
+    "tactic_preview": "ElevenLabs voice synthesis for AI persona consistency.",
+    "draft_hook": "found a pattern worth tracking.\n\nElevenLabs voice synthesis for AI persona consistency.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA222",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGHEST",
+    "synergy_score": "",
+    "tactic_preview": "Leonardo.ai for visual consistency in AI influencer images.",
+    "draft_hook": "found a pattern worth tracking.\n\nLeonardo.ai for visual consistency in AI influencer images.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA223",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGHEST",
+    "synergy_score": "",
+    "tactic_preview": "AI influencer revenue diversification model.",
+    "draft_hook": "found a pattern worth tracking.\n\nAI influencer revenue diversification model.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA224",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "ASMR niche for AI influencers. Lower barrier to entry.",
+    "draft_hook": "found a pattern worth tracking.\n\nASMR niche for AI influencers. Lower barrier to entry.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA225",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGHEST",
+    "synergy_score": "",
+    "tactic_preview": "Findom niche. High revenue. Higher risk. Adult compliance required.",
+    "draft_hook": "found a pattern worth tracking.\n\nFindom niche. High revenue. Higher risk. Adult compliance required.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA226",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGHEST",
+    "synergy_score": "",
+    "tactic_preview": "FTC compliance framework for AI influencers. Non-negotiable.",
+    "draft_hook": "found a pattern worth tracking.\n\nFTC compliance framework for AI influencers. Non-negotiable.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA227",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "Transparency builds trust faster than hiding AI nature.",
+    "draft_hook": "found a pattern worth tracking.\n\nTransparency builds trust faster than hiding AI nature.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA228",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "Fitness niche AI influencer. Combine with APP_FACTORY fitness apps.",
+    "draft_hook": "found a pattern worth tracking.\n\nFitness niche AI influencer. Combine with APP_FACTORY fitness apps.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA229",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "Faith niche AI influencer. Combine with PrayerLock app.",
+    "draft_hook": "found a pattern worth tracking.\n\nFaith niche AI influencer. Combine with PrayerLock app.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA230",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "Content calendar framework. Value-first builds monetization trust.",
+    "draft_hook": "found a pattern worth tracking.\n\nContent calendar framework. Value-first builds monetization trust.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA231",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGHEST",
+    "synergy_score": "",
+    "tactic_preview": "AI influencer starter tool stack. $40/mo entry cost.",
+    "draft_hook": "found a pattern worth tracking.\n\nAI influencer starter tool stack. $40/mo entry cost.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA232",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "Platform priority for AI influencers. Focus beats spreading thin.",
+    "draft_hook": "found a pattern worth tracking.\n\nPlatform priority for AI influencers. Focus beats spreading thin.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA234",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "AI-appropriate content framing. Language builds trust.",
+    "draft_hook": "found a pattern worth tracking.\n\nAI-appropriate content framing. Language builds trust.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
+  },
+  {
+    "alpha_id": "ALPHA235",
+    "category": "AI_INFLUENCER",
+    "roi": "HIGH",
+    "synergy_score": "",
+    "tactic_preview": "Affiliate review structure. Honesty converts better long-term.",
+    "draft_hook": "found a pattern worth tracking.\n\nAffiliate review structure. Honesty converts better long-term.\n\nbeen validated. applies now.",
+    "status": "QUEUED",
+    "added_at": "2026-05-15T19:30:13",
+    "source": "alpha_intelligence_approved"
   },
   {
     "alpha_id": "ALPHA249",
@@ -67,7 +426,7 @@
     "tactic_preview": "AI CI/CD autonomous deployment",
     "draft_hook": "found a pattern worth tracking.\n\nAI CI/CD autonomous deployment\n\nbeen validated. applies now.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -78,7 +437,7 @@
     "tactic_preview": "No-code browser automation via AI",
     "draft_hook": "found a pattern worth tracking.\n\nNo-code browser automation via AI\n\nbeen validated. applies now.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -89,7 +448,7 @@
     "tactic_preview": "1-bit LLMs for consumer-grade local inference",
     "draft_hook": "found a pattern worth tracking.\n\n1-bit LLMs for consumer-grade local inference\n\nbeen validated. applies now.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -100,7 +459,7 @@
     "tactic_preview": "n8n AI-native workflow automation",
     "draft_hook": "found a pattern worth tracking.\n\nn8n AI-native workflow automation\n\nbeen validated. applies now.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -111,7 +470,7 @@
     "tactic_preview": "TikTok algo shift: completion rate threshold increased + follower-first testing",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nTikTok algo shift: completion rate threshold increased + follower-first testing\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -122,7 +481,7 @@
     "tactic_preview": "First hour determines TikTok distribution + active creator signal",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nFirst hour determines TikTok distribution + active creator signal\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -133,7 +492,7 @@
     "tactic_preview": "Systems vs outcomes messaging trend + accountability content",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nSystems vs outcomes messaging trend + accountability content\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -144,7 +503,7 @@
     "tactic_preview": "YouTube Shorts: search SEO now matters + 50-60 sec sweet spot",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nYouTube Shorts: search SEO now matters + 50-60 sec sweet spot\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -155,7 +514,7 @@
     "tactic_preview": "18-22 Shorts/month optimal + trending audio first 5 sec",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\n18-22 Shorts/month optimal + trending audio first 5 sec\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -166,7 +525,7 @@
     "tactic_preview": "IG: DM shares = new priority metric + first 2 seconds critical",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nIG: DM shares = new priority metric + first 2 seconds critical\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -177,7 +536,7 @@
     "tactic_preview": "IG Originality Score penalty system + remove TikTok watermarks + 3-5/week",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nIG Originality Score penalty system + remove TikTok watermarks + 3-5/week\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -188,7 +547,7 @@
     "tactic_preview": "TikTok Creator Rewards 10x payout + sponsorships > AdSense",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nTikTok Creator Rewards 10x payout + sponsorships > AdSense\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -199,7 +558,7 @@
     "tactic_preview": "1-to-20 repurposing hub-and-spoke model with AI automation",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\n1-to-20 repurposing hub-and-spoke model with AI automation\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -210,7 +569,7 @@
     "tactic_preview": "Stacked monetization model: CPM varies by niche + sponsorships highest ROI",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nStacked monetization model: CPM varies by niche + sponsorships highest ROI\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -221,7 +580,7 @@
     "tactic_preview": "TikTok search: text overlays boost discoverability + tutorials winning",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nTikTok search: text overlays boost discoverability + tutorials winning\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -232,7 +591,7 @@
     "tactic_preview": "Inbox placement shifted from opens to engagement depth",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nInbox placement shifted from opens to engagement depth\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -243,7 +602,7 @@
     "tactic_preview": "Intent-based timing 2-4x reply rate",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nIntent-based timing 2-4x reply rate\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -254,7 +613,7 @@
     "tactic_preview": "Gmail warns users about tracking pixels - disable completely",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nGmail warns users about tracking pixels - disable completely\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -265,7 +624,7 @@
     "tactic_preview": "Step 1 email = 58% of all replies - prioritize first email quality",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nStep 1 email = 58% of all replies - prioritize first email quality\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -276,7 +635,7 @@
     "tactic_preview": "80/20 split: AI for research + human for strategy",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\n80/20 split: AI for research + human for strategy\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -287,7 +646,7 @@
     "tactic_preview": "First name tokens = spam flag. Business context = replies.",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nFirst name tokens = spam flag. Business context = replies.\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -298,7 +657,7 @@
     "tactic_preview": "Too polished = AI detection flag. Casual beats perfect.",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nToo polished = AI detection flag. Casual beats perfect.\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -309,7 +668,7 @@
     "tactic_preview": "Warmup timeline increased from 7-14 to 14-21 days in 2026",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nWarmup timeline increased from 7-14 to 14-21 days in 2026\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -320,7 +679,7 @@
     "tactic_preview": "500+ peer warmup network size matters",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\n500+ peer warmup network size matters\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -331,7 +690,7 @@
     "tactic_preview": "Volume consistency > volume size. Daily sending patterns matter.",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nVolume consistency > volume size. Daily sending patterns matter.\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -342,7 +701,7 @@
     "tactic_preview": "Subdomain mandatory for cold email. Protect main domain.",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nSubdomain mandatory for cold email. Protect main domain.\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -353,7 +712,7 @@
     "tactic_preview": "4-6 lines sweet spot for cold email length",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\n4-6 lines sweet spot for cold email length\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -364,7 +723,7 @@
     "tactic_preview": "2026 email tool landscape update",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\n2026 email tool landscape update\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -375,7 +734,7 @@
     "tactic_preview": "Intent data qualification: target active researchers only",
     "draft_hook": "the reply rate on cold outreach changed when we switched to this.\n\nIntent data qualification: target active researchers only\n\ntested on 400+ prospects. works.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -386,7 +745,7 @@
     "tactic_preview": "$500 to $35K/month AI influencer. Fanvue > Patreon. Chatter labor arbitrage.",
     "draft_hook": "found a pattern worth tracking.\n\n$500 to $35K/month AI influencer. Fanvue > Patreon. Chatter labor arbitrage.\n\nbeen validated. applies now.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -397,7 +756,7 @@
     "tactic_preview": "Fanvue/Fansly > OnlyFans for AI creators. Disclosure mandatory.",
     "draft_hook": "found a pattern worth tracking.\n\nFanvue/Fansly > OnlyFans for AI creators. Disclosure mandatory.\n\nbeen validated. applies now.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -408,7 +767,7 @@
     "tactic_preview": "$500+ UGC cost reduced to pennies. 38% conversion boost. Sell as service.",
     "draft_hook": "found a pattern worth tracking.\n\n$500+ UGC cost reduced to pennies. 38% conversion boost. Sell as service.\n\nbeen validated. applies now.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -419,7 +778,7 @@
     "tactic_preview": "Core Web Vitals mandatory. Helpful content filter. Thin content penalized.",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\nCore Web Vitals mandatory. Helpful content filter. Thin content penalized.\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
   },
   {
@@ -430,17 +789,8 @@
     "tactic_preview": "43% citation increase with GEO. McKinsey $750B consumer spending via AI.",
     "draft_hook": "this distribution pattern keeps showing up in the top performers.\n\n43% citation increase with GEO. McKinsey $750B consumer spending via AI.\n\nrun it yourself.",
     "status": "QUEUED",
-    "added_at": "2026-05-06T05:50:01",
+    "added_at": "2026-05-15T19:30:13",
     "source": "alpha_intelligence_approved"
-  },
-  {
-    "alpha_id": "bip_review_prompt_timing_hack:_+0.8_stars_by_delaying_review_req",
-    "category": "APP_BUILD_IN_PUBLIC",
-    "tactic_preview": "Review prompt timing hack: +0.8 stars by delaying review request to value moment",
-    "draft_hook": "building this next: Review prompt timing hack: +0.8 stars by delaying review request to value moment\n\nspotted in r/SideProject. validation: APPROVED.\n\nhere's the opportunity we're going after.",
-    "status": "QUEUED",
-    "added_at": "2026-05-05T16:21:09",
-    "source": "app_factory_queue_approved"
   },
   {
     "alpha_id": "bip_habit_tracker_apps_are_printing:_habitswipe_$800_revenue,_2.",
@@ -1859,358 +2209,6 @@
     "synergy_score": "5",
     "tactic_preview": "Gov contract: Lab Coat Services | Agency: FDA OFFICE OF ACQ  GRANT SVCS | Deadline: 2026-04-06 | Source: SAM.gov Search API",
     "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Lab Coat Services | Agency: FDA OFFICE OF ACQ  GRANT SVCS | Deadline: 2026-04-06 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_8654B26E",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: MTE Nitrogen for K2A | Agency: GREAT PLAINS REGIONAL OFFICE | Deadline: 2026-04-09 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: MTE Nitrogen for K2A | Agency: GREAT PLAINS REGIONAL OFFICE | Deadline: 2026-04-09 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_A64BF14D",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Q999--Pharmacy Repackaging and Dispensing Services for the  VA Salt Lake City in Support of the State of Utah  Veterans Homes | Agency: NETWORK CONTRACT OFFICE 19 (36C259) | Deadline: 20",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Q999--Pharmacy Repackaging and Dispensing Services for the  VA Salt Lake City in Support of the State of Utah  Veterans Homes | Agency: \n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_0DB88CD1",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Sources Sought: Hand Held Assembly (NSN: 6665-01-568-0616) | Agency: W6QK ACC- DTA | Deadline: 2026-04-13 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Sources Sought: Hand Held Assembly (NSN: 6665-01-568-0616) | Agency: W6QK ACC- DTA | Deadline: 2026-04-13 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_B9DC9056",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Southwest Fisheries Science Center DNA Genotyping Services | Agency: DEPT OF COMMERCE NOAA | Deadline: 2026-04-08 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Southwest Fisheries Science Center DNA Genotyping Services | Agency: DEPT OF COMMERCE NOAA | Deadline: 2026-04-08 | Source: SAM.gov Sear\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_20EFAD4D",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Q301--Kidney Disease Genetic Panel | Agency: 250-NETWORK CONTRACT OFFICE 10 (36C250) | Deadline: 2026-03-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Q301--Kidney Disease Genetic Panel | Agency: 250-NETWORK CONTRACT OFFICE 10 (36C250) | Deadline: 2026-03-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_765B19A0",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: W036--Lease of Reproduction Automation Printer and Mail Equipment | Agency: 262-NETWORK CONTRACT OFFICE 22 (36C262) | Deadline: 2026-03-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: W036--Lease of Reproduction Automation Printer and Mail Equipment | Agency: 262-NETWORK CONTRACT OFFICE 22 (36C262) | Deadline: 2026-03-\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_EA2A78A4",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Sanding Booth-Tobyhanna-Sources Sought | Agency: W6QK ACC-APG CONT CT TYAD OFC | Deadline: 2026-03-30 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Sanding Booth-Tobyhanna-Sources Sought | Agency: W6QK ACC-APG CONT CT TYAD OFC | Deadline: 2026-03-30 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_262B3E02",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: 3066 NAO Derrickboat Elizabeth Replacement | Agency: W2SD ENDIST PHILADELPHIA | Deadline: 2026-05-26 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 3066 NAO Derrickboat Elizabeth Replacement | Agency: W2SD ENDIST PHILADELPHIA | Deadline: 2026-05-26 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_ECD0EDF8",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: BROAD AGENCY ANNOUNCEMENT (BAA) RESEARCH AND DEVELOPMENT IN SUPPORT OF THE JOINT PROGRAM EXECUTIVE OFFICE FOR CHEMICAL, BIOLOGICAL, RADIOLOGICAL AND N | Agency: W6QK ACC-APG | Deadline:",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: BROAD AGENCY ANNOUNCEMENT (BAA) RESEARCH AND DEVELOPMENT IN SUPPORT OF THE JOINT PROGRAM EXECUTIVE OFFICE FOR CHEMICAL, BIOLOGICAL, RADI\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_8E92DD9D",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: UPS Maintenance Services | Agency: NAVSUP FLT LOG CTR JACKSONVILLE | Deadline: 2026-03-30 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: UPS Maintenance Services | Agency: NAVSUP FLT LOG CTR JACKSONVILLE | Deadline: 2026-03-30 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_2405EB71",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: TOOL,FASTENER | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: TOOL,FASTENER | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_82F11014",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Firm-Fixed Price, Commercial Item, Purchase Order, to provide servers | Agency: GREAT PLAINS AREA INDIAN HEALTH SVC | Deadline: 2026-03-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Firm-Fixed Price, Commercial Item, Purchase Order, to provide servers | Agency: GREAT PLAINS AREA INDIAN HEALTH SVC | Deadline: 2026-03-\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C8165049",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: R420--John D. Dingell VA Medical Center DEMCA FY26 Membership Dues | Agency: 250-NETWORK CONTRACT OFFICE 10 (36C250) | Deadline: N/A | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: R420--John D. Dingell VA Medical Center DEMCA FY26 Membership Dues | Agency: 250-NETWORK CONTRACT OFFICE 10 (36C250) | Deadline: N/A | S\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C2AEA72E",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Forklift Rental | Agency: PEARL HARBOR NAVAL SHIPYARD IMF | Deadline: 2026-03-26 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Forklift Rental | Agency: PEARL HARBOR NAVAL SHIPYARD IMF | Deadline: 2026-03-26 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_A1FB0049",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Layberthing Services for Long-Term Safe Lay Berth for Ro/Ro CAPE R Vessels on the US East Coast | Agency: 693JF7 DOT  MARITIME ADMINISTRATION | Deadline: 2026-04-01 | Source: SAM.gov Sea",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Layberthing Services for Long-Term Safe Lay Berth for Ro/Ro CAPE R Vessels on the US East Coast | Agency: 693JF7 DOT  MARITIME ADMINISTR\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_EEA22264",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: IBS-CUS Bridge Action | Agency: FA8555  AFLCMC HBKA | Deadline: N/A | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: IBS-CUS Bridge Action | Agency: FA8555  AFLCMC HBKA | Deadline: N/A | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_6D6BF877",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Intelligence Technology Discovery Experiment (ITDX) 2026 | Agency: W6QK ACC-APG CONT CT SW SECTOR | Deadline: 2026-04-25 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Intelligence Technology Discovery Experiment (ITDX) 2026 | Agency: W6QK ACC-APG CONT CT SW SECTOR | Deadline: 2026-04-25 | Source: SAM.g\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C3522BCA",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Mobile Communications Unit for Region 13 - National | Agency: USDA FOREST SERVICE | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Mobile Communications Unit for Region 13 - National | Agency: USDA FOREST SERVICE | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_125D9331",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Department of War Enterprise Agreements  Request for Information (RFI) Direct to Software Publisher versus Value Added Reseller | Agency: NIWC PACIFIC | Deadline: 2026-04-13 | Source: SA",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Department of War Enterprise Agreements  Request for Information (RFI) Direct to Software Publisher versus Value Added Reseller | Agency\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_6317B39D",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: DA10--36C24126Q0309 Embase Database VISN1 Library FY26  Intent to Sole Source to LB Software Publisher Elsevier Inc  Embase.com Copyrights/Licenses Pr | Agency: 241-NETWORK CONTRACT OFFI",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: DA10--36C24126Q0309 Embase Database VISN1 Library FY26  Intent to Sole Source to LB Software Publisher Elsevier Inc  Embase.com Copyrigh\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_E1FC03FD",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Emergency Teleradiology Services for Northern  Arizona VA Health Care System (NAVAHCS) and Phoenix VA Health Care System (PVAHCS) | Agency: 262-NETWORK CONTRACT OFFICE 22 (36C262) | Dead",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Emergency Teleradiology Services for Northern  Arizona VA Health Care System (NAVAHCS) and Phoenix VA Health Care System (PVAHCS) | Agen\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_9B8C4947",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: Course Development and Delivery Services\ufffd | Agency: FA3002  338 ESS CC | Deadline: N/A | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: Course Development and Delivery Services\ufffd | Agency: FA3002  338 ESS CC | Deadline: N/A | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_5F812EEF",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: HORN,SIGNAL | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: HORN,SIGNAL | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_2518FF6B",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: POWER SUPPLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-16 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: POWER SUPPLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-16 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_71080FA3",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: RELAY,SOLID STATE | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: RELAY,SOLID STATE | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C5F351B4",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: SWITCH SUBASSEMBLY | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: SWITCH SUBASSEMBLY | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_0E29BE71",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: LOGIC SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-02 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: LOGIC SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-02 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_0EB08733",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: TEST SET,ELECTRICAL | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: TEST SET,ELECTRICAL | Agency: SPRMM1 DLA MECHANICSBURG | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_858ED318",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: EJECTOR ASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-03-26 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: EJECTOR ASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-03-26 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_C9EDFE7F",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: FUSE AND CNTRL P A | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: FUSE AND CNTRL P A | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_9F3E6D78",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: 59--DIP LOOP CAB 46FT | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 59--DIP LOOP CAB 46FT | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-27 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
-    "status": "QUEUED",
-    "added_at": "2026-04-02T01:16:20",
-    "source": "brokering_gov_contracts"
-  },
-  {
-    "alpha_id": "brokering_ALPHA_SAM_GOV_MONI_9A8DE13C",
-    "category": "GOV_CONTRACT",
-    "roi": "HIGH",
-    "synergy_score": "5",
-    "tactic_preview": "Gov contract: 48--STEM SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-01 | Source: SAM.gov Search API",
-    "draft_hook": "government contracts are one of the most overlooked revenue channels.\n\nGov contract: 48--STEM SUBASSEMBLY | Agency: NAVSUP WEAPON SYSTEMS SUPPORT MECH | Deadline: 2026-04-01 | Source: SAM.gov Search API\n\nno cold calling. no sales pitch. just responding to published RFPs.",
     "status": "QUEUED",
     "added_at": "2026-04-02T01:16:20",
     "source": "brokering_gov_contracts"

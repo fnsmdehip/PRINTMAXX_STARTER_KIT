@@ -151,3 +151,13 @@ Total regulations tracked: 21
 | ADVERTISING | 1 |
 | EMAIL | 1 |
 | BUSINESS | 1 |
+
+---
+
+## Pending Enhancement (OPP024_AI_ACT_$(date +%s), Score: 35)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://www.softwareseni.com/ai-slop-defence-provenance-verification-data-quality-gates-and-content-governance/
+**Added:** 2026-05-15T19:19:51-04:00
+
+EU AI Act compliance SaaS - auto C2PA labeling for AI content - August 2026 deadline
+
