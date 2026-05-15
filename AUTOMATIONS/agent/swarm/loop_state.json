@@ -1,10 +1,10 @@
 {
-  "last_decision_cycle": "2026-05-03T18:20:11.308111",
-  "last_feedback_cycle": "2026-05-03T18:20:11.513623",
-  "last_pipeline_cycle": "2026-05-03T18:20:11.670229",
+  "last_decision_cycle": "2026-05-15T19:13:08.875809",
+  "last_feedback_cycle": "2026-05-15T19:13:08.960068",
+  "last_pipeline_cycle": "2026-05-15T19:13:09.073214",
   "decisions_executed": 25,
-  "feedback_updates": 6269,
-  "pipeline_advances": 95,
+  "feedback_updates": 6294,
+  "pipeline_advances": 96,
   "agent_scores": {
     "gap_hunter": {
       "total_runs": 191,
@@ -103,12 +103,12 @@
       "last_seen": "2026-04-03T04:00:00.576941"
     },
     "system_healer": {
-      "total_runs": 217,
-      "produced_output": 217,
+      "total_runs": 218,
+      "produced_output": 218,
       "led_to_action": 536,
       "led_to_revenue": 0,
       "effectiveness": 100.0,
-      "last_seen": "2026-04-03T04:00:00.582446"
+      "last_seen": "2026-05-15T19:13:08.917200"
     },
     "data_janitor": {
       "total_runs": 54,
@@ -157,20 +157,20 @@
       "effectiveness": 100.0
     },
     "quality_gate": {
-      "total_runs": 123,
-      "produced_output": 120,
+      "total_runs": 124,
+      "produced_output": 121,
       "led_to_action": 326,
       "led_to_revenue": 0,
       "effectiveness": 99.0,
-      "last_seen": "2026-04-03T00:00:01.228586"
+      "last_seen": "2026-05-15T19:13:08.940864"
     },
     "playwright_tester": {
-      "total_runs": 160,
-      "produced_output": 158,
+      "total_runs": 161,
+      "produced_output": 159,
       "led_to_action": 419,
       "led_to_revenue": 0,
       "effectiveness": 99.5,
-      "last_seen": "2026-04-03T04:00:00.636826"
+      "last_seen": "2026-05-15T19:13:08.944077"
     },
     "alert_dispatcher": {
       "total_runs": 69,
@@ -202,8 +202,8 @@
       "last_seen": "2026-04-02T16:00:00.766334"
     }
   },
-  "last_drift_check": "2026-05-03T18:20:11.679241",
-  "last_drift_score": 8.5,
+  "last_drift_check": "2026-05-15T19:13:09.083501",
+  "last_drift_score": 9.0,
   "cross_pollinator_last_run": "2026-04-01T00:46",
   "cross_pollinator_bridges": {
     "connections_run": 4,

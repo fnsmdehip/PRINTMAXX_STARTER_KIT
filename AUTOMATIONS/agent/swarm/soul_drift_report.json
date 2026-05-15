@@ -1,19 +1,18 @@
 {
-  "ts": "2026-05-03T18:20:11.678443",
-  "avg_score": 8.5,
-  "total_scored": 8,
-  "drifted_count": 1,
-  "drifted_agents": [
-    "playwright_tester"
-  ],
+  "ts": "2026-05-15T19:13:09.082574",
+  "avg_score": 9.0,
+  "total_scored": 9,
+  "drifted_count": 0,
+  "drifted_agents": [],
   "scores": {
-    "swarm_brain": 7.0,
-    "data_janitor": 8.0,
-    "playwright_tester_final_20260407": 8.5,
-    "playwright_tester": 6.5,
-    "conversion_optimizer": 10.0,
-    "conversion_audit_20260320": 8.0,
     "lead_machine": 10.0,
+    "distribution_engine": 8.5,
+    "gap_hunter": 7.0,
+    "asset_deployer": 8.5,
+    "seo_aso_optimizer": 10.0,
+    "seo_audit_20260505": 10.0,
+    "competitor_stalker": 10.0,
+    "competitor_intel_20260505": 7.0,
     "ceo_decision_2026-03-15": 10.0
   }
 }

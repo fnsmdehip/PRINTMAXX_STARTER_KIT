@@ -1,0 +1,41 @@
+[   11071ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2 @ https://labs.google/fx/tools/image-fx:228
+[   11071ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/materialiconsoutlined/v110/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUcel5euIg.woff2 @ https://labs.google/fx/tools/image-fx:228
+[   14524ms] [LOG] {event: CustomEvent, detail: Object} @ https://labs.google/fx/tools/image-fx:23
+[   15650ms] [ERROR] Invalid variant passed into ImageFxCardFront SPECIAL @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   15688ms] [ERROR] Invalid variant passed into ImageFxCardFront SPECIAL @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   16107ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://labs.google/fx/api/trpc/media.fetchMedia?input=%7B%22json%22%3A%7B%22mediaKey%22%3A%22CAMaJDZiZjRkOTJiLWZkYWItNGU3YS1iYmM4LTRjMDhkNmVhNDBiNCIDQ0FFKiQ0ZjUxYWQ2YS00Y2UyLTRkMzktYjBlNC04MjVkZjcwZTljZGY%22%7D%7D:0
+[   16108ms] [ERROR] TRPCClientError: {
+  "error": {
+    "code": 404,
+    "message": "Requested entity was not found.",
+    "status": "NOT_FOUND"
+  }
+}
+
+    at _0x4d347e.from (https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:1:391099)
+    at https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:1:400752 @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   16109ms] [ERROR] TRPCClientError: {
+  "error": {
+    "code": 404,
+    "message": "Requested entity was not found.",
+    "status": "NOT_FOUND"
+  }
+}
+
+    at _0x4d347e.from (https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:1:391099)
+    at https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:1:400752 @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   16109ms] [ERROR] TRPCClientError: {
+  "error": {
+    "code": 404,
+    "message": "Requested entity was not found.",
+    "status": "NOT_FOUND"
+  }
+}
+
+    at _0x4d347e.from (https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:1:391099)
+    at https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:1:400752 @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   16112ms] [ERROR] Invalid variant passed into ImageFxCardFront SPECIAL @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   19481ms] [ERROR] Invalid variant passed into ImageFxCardFront SPECIAL @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   19623ms] [ERROR] Invalid variant passed into ImageFxCardFront SPECIAL @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   20912ms] [ERROR] Invalid variant passed into ImageFxCardFront SPECIAL @ https://labs.google/fx/_next/static/chunks/pages/_app-fed27076ddb66550.js:0
+[   23771ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2 @ https://www.gstatic.com/recaptcha/releases/79clEdOi5xQbrrpL2L8kGmK3/recaptcha__en.js:786

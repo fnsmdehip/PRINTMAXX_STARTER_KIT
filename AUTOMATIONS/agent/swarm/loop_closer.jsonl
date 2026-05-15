@@ -289,3 +289,5 @@
 {"ts": "2026-05-03T18:20:01.311194", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=8.5/10, drifted=1"}
 {"ts": "2026-05-03T18:20:11.660555", "action": "pipeline_advance", "target": "plumber_sites", "result": "OK", "details": "Failed to trigger seo_aso_optimizer (is it installed?)"}
 {"ts": "2026-05-03T18:20:11.678760", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=8.5/10, drifted=1"}
+{"ts": "2026-05-15T19:13:09.061101", "action": "pipeline_advance", "target": "plumber_sites", "result": "OK", "details": "Triggered: seo_aso_optimizer \u2014 check logs with --logs seo_aso_optimizer"}
+{"ts": "2026-05-15T19:13:09.083078", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.0/10, drifted=0"}

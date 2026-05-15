@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""
+DISPATCH TRIGGER — Written by Dispatch to auto-execute on next cron cycle.
+This script is called by perpetual_guardian via the dispatch hook.
+Self-disables after execution by renaming itself.
+"""
+import subprocess
+import os
+import sys
+from pathlib import Path
+from datetime import datetime
+
+BASE = Path(__file__).resolve().parent.parent
+LOG = BASE / "AUTOMATIONS" / "logs" / "dispatch_execute.log"
+SCRIPT = BASE / "AUTOMATIONS" / "dispatch_cleanup_and_execute.sh"
+
+def log(msg):
+    with open(LOG, "a") as f:
+        f.write(f"[{datetime.now().isoformat()}] {msg}\n")
+    print(msg)
+
+def main():
+    log("=== DISPATCH TRIGGER FIRED ===")
+
+    # Step 1: Clean worktrees
+    log("[1] Cleaning worktrees...")
+    wt_dir = BASE / ".claude" / "worktrees"
+    if wt_dir.exists():
+        for d in wt_dir.iterdir():
+            if d.is_dir():
+                try:
+                    subprocess.run(["rm", "-rf", str(d)], capture_output=True, timeout=60)
+                    log(f"  Removed: {d.name}")
+                except Exception as e:
+                    log(f"  Failed: {d.name}: {e}")
+
+    subprocess.run(["git", "worktree", "prune"], capture_output=True, cwd=str(BASE))
+
+    # Also clean .git/worktrees
+    git_wt = BASE / ".git" / "worktrees"
+    if git_wt.exists():
+        for d in git_wt.iterdir():
+            if d.is_dir():
+                try:
+                    subprocess.run(["rm", "-rf", str(d)], capture_output=True, timeout=60)
+                except Exception:
+                    pass
+
+    subprocess.run(["git", "worktree", "prune"], capture_output=True, cwd=str(BASE))
+    result = subprocess.run(["git", "worktree", "list"], capture_output=True, text=True, cwd=str(BASE))
+    log(f"[1] Worktrees remaining: {len(result.stdout.strip().split(chr(10)))}")
+
+    # Step 2: Prevent sleep
+    subprocess.Popen(["caffeinate", "-dims"])
+    log("[2] Sleep prevention active")
+
+    # Step 3: Install ComfyUI
+    comfy = Path.home() / "Documents" / "ComfyUI"
+    if not comfy.exists():
+        log("[3] Cloning ComfyUI...")
+        subprocess.run(["git", "clone", "https://github.com/comfyanonymous/ComfyUI.git"],
+                       cwd=str(Path.home() / "Documents"), capture_output=True, timeout=120)
+        log("[3] Installing PyTorch...")
+        subprocess.run([sys.executable, "-m", "pip", "install", "torch", "torchvision", "torchaudio",
+                       "--break-system-packages"], capture_output=True, timeout=600)
+        subprocess.run([sys.executable, "-m", "pip", "install", "-r", str(comfy / "requirements.txt"),
+                       "--break-system-packages"], capture_output=True, timeout=300)
+        # ComfyUI Manager
+        cn = comfy / "custom_nodes"
+        if not (cn / "ComfyUI-Manager").exists():
+            subprocess.run(["git", "clone", "https://github.com/ltdrdata/ComfyUI-Manager.git"],
+                          cwd=str(cn), capture_output=True, timeout=60)
+        log("[3] ComfyUI installed")
+    else:
+        log("[3] ComfyUI already exists")
+
+    # Step 4: Test image
+    test_dir = BASE / "MONEY_METHODS" / "AI_ART_VENTURE" / "test_output"
+    test_dir.mkdir(parents=True, exist_ok=True)
+    test_img = test_dir / "test_character.png"
+    if not test_img.exists():
+        subprocess.run(["curl", "-sL", "--max-time", "60", "-o", str(test_img),
+                       "https://image.pollinations.ai/prompt/anime+digital+art+character+portrait+elegant+fantasy+woman+detailed?width=1024&height=1024&nologo=true&seed=42"],
+                      capture_output=True, timeout=90)
+        log(f"[4] Test image: {'saved' if test_img.exists() else 'failed'}")
+
+    # Step 5: Run scrapers
+    log("[5] Running scrapers...")
+    for scraper, args in [
+        ("twitter_alpha_scraper.py", ["--all", "--days", "14"]),
+        ("background_reddit_scraper.py", ["--scrape"]),
+        ("method_discovery_crawler.py", ["--crawl"]),
+    ]:
+        script = BASE / "AUTOMATIONS" / scraper
+        if script.exists():
+            try:
+                r = subprocess.run([sys.executable, str(script)] + args,
+                                  capture_output=True, text=True, timeout=300, cwd=str(BASE))
+                log(f"  {scraper}: exit={r.returncode}")
+            except subprocess.TimeoutExpired:
+                log(f"  {scraper}: timeout")
+            except Exception as e:
+                log(f"  {scraper}: error={e}")
+
+    # Step 6: Process alpha
+    ap = BASE / "AUTOMATIONS" / "alpha_auto_processor.py"
+    if ap.exists():
+        subprocess.run([sys.executable, str(ap), "--process-new"],
+                      capture_output=True, timeout=120, cwd=str(BASE))
+        log("[6] Alpha processed")
+
+    # Step 7: Fire autonomous systems
+    for script, args in [
+        ("loop_closer.py", ["--cycle"]),
+        ("decision_engine.py", ["--cycle"]),
+        ("venture_autonomy.py", ["--status"]),
+    ]:
+        s = BASE / "AUTOMATIONS" / script
+        if s.exists():
+            try:
+                subprocess.run([sys.executable, str(s)] + args,
+                              capture_output=True, timeout=120, cwd=str(BASE))
+                log(f"[7] {script}: done")
+            except Exception as e:
+                log(f"[7] {script}: {e}")
+
+    # Step 8: Launch ComfyUI in background
+    if comfy.exists():
+        subprocess.Popen([sys.executable, str(comfy / "main.py"), "--force-fp16"],
+                        cwd=str(comfy), stdout=open("/tmp/comfyui.log", "w"),
+                        stderr=subprocess.STDOUT)
+        log("[8] ComfyUI launched on :8188")
+
+    # Step 9: Ensure control panel running
+    cp = BASE / "AUTOMATIONS" / "control_panel.py"
+    result = subprocess.run(["pgrep", "-f", "control_panel.py"], capture_output=True)
+    if result.returncode != 0 and cp.exists():
+        subprocess.Popen([sys.executable, str(cp)],
+                        cwd=str(BASE), stdout=open(str(BASE / "AUTOMATIONS" / "logs" / "control_panel.log"), "a"),
+                        stderr=subprocess.STDOUT)
+        log("[9] Control panel started")
+
+    log("=== DISPATCH TRIGGER COMPLETE ===")
+
+    # Self-disable
+    me = Path(__file__)
+    me.rename(me.with_suffix(".py.executed"))
+
+if __name__ == "__main__":
+    main()

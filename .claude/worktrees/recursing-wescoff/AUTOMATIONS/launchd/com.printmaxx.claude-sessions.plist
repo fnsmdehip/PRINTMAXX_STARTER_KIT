@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.printmaxx.claude-sessions</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/schedule_claude.sh</string>
+        <string>morning</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <array>
+        <!-- Morning session at 7 AM -->
+        <dict>
+            <key>Hour</key>
+            <integer>7</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <!-- Midday session at 1 PM -->
+        <dict>
+            <key>Hour</key>
+            <integer>13</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <!-- Evening session at 6 PM -->
+        <dict>
+            <key>Hour</key>
+            <integer>18</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/launchd_claude.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/launchd_claude_err.log</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/macbookpro/.local/bin</string>
+        <key>HOME</key>
+        <string>/Users/macbookpro</string>
+    </dict>
+</dict>
+</plist>
